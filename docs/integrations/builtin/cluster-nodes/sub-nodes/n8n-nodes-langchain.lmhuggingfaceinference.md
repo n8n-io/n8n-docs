@@ -5,7 +5,7 @@ description: Documentation for the Hugging Face Inference Model node in n8n, a w
 
 # Hugging Face Inference Model
 
-The Hugging Face Inference Model node allows you to use Hugging Face's models.
+Use the Hugging Face Inference Model node to use Hugging Face's models.
 
 On this page, you'll find the node parameters for the Hugging Face Inference Model node, and links to more resources.
 

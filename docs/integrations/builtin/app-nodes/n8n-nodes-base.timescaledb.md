@@ -6,7 +6,7 @@ contentType: integration
 
 # TimescaleDB
 
-The TimescaleDB node allows you to automate work in TimescaleDB, and integrate TimescaleDB with other applications. n8n has built-in support for a wide range of TimescaleDB features, including executing an SQL query, as well as inserting and updating rows in a database. 
+Use the TimescaleDB node to automate work in TimescaleDB, and integrate TimescaleDB with other applications. n8n has built-in support for a wide range of TimescaleDB features, including executing an SQL query, as well as inserting and updating rows in a database. 
 
 On this page, you'll find a list of operations the TimescaleDB node supports and links to more resources.
 

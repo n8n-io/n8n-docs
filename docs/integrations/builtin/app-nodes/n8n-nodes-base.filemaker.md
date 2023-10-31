@@ -6,7 +6,7 @@ contentType: integration
 
 # FileMaker
 
-The FileMaker node allows you to automate work in FileMaker, and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, including creating, finding, getting, editing, and duplicating files.
+Use the FileMaker node to automate work in FileMaker, and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, including creating, finding, getting, editing, and duplicating files.
 
 On this page, you'll find a list of operations the FileMaker node supports and links to more resources.
 

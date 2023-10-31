@@ -6,7 +6,7 @@ contentType: integration
 
 # Vonage
 
-The Vonage node allows you to automate work in Vonage, and integrate Vonage with other applications. n8n supports sending SMS with Vonage. 
+Use the Vonage node to automate work in Vonage, and integrate Vonage with other applications. n8n supports sending SMS with Vonage. 
 
 On this page, you'll find a list of operations the Vonage node supports and links to more resources.
 

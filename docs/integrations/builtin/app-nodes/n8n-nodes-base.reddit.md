@@ -6,7 +6,7 @@ contentType: integration
 
 # Reddit
 
-The Reddit node allows you to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
+Use the Reddit node to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
 
 On this page, you'll find a list of operations the Reddit node supports and links to more resources.
 

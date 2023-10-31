@@ -6,7 +6,7 @@ contentType: integration
 
 # Magento 2
 
-The Magento 2 node allows you to automate work in Magento 2, and integrate Magento 2 with other applications. n8n has built-in support for a wide range of Magento 2 features, including creating, updating, deleting, and getting customers, invoices, orders, and projects. 
+Use the Magento 2 node to automate work in Magento 2, and integrate Magento 2 with other applications. n8n has built-in support for a wide range of Magento 2 features, including creating, updating, deleting, and getting customers, invoices, orders, and projects. 
 
 On this page, you'll find a list of operations the Magento 2 node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Mindee
 
-The Mindee node allows you to automate work in Mindee, and integrate Mindee with other applications. n8n has built-in support for a wide range of Mindee features, including predicting invoices. 
+Use the Mindee node to automate work in Mindee, and integrate Mindee with other applications. n8n has built-in support for a wide range of Mindee features, including predicting invoices. 
 
 On this page, you'll find a list of operations the Mindee node supports and links to more resources.
 

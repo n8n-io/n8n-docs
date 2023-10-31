@@ -5,7 +5,7 @@ description: 'Documentation for the Zep Vector Store: Insert node in n8n, a work
 
 # Zep Vector Store: Insert
 
-The Zep Vector Store: Insert node allows you to insert data into a Zep vector database.
+Use the Zep Vector Store: Insert node to insert data into a Zep vector database.
 
 On this page, you'll find the node parameters for the Zep Vector Store: Insert node, and links to more resources.
 

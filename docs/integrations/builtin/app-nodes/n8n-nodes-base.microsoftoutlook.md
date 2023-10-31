@@ -6,7 +6,7 @@ contentType: integration
 
 # Microsoft Outlook
 
-The Microsoft Outlook node allows you to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
+Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
 
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 

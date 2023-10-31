@@ -6,7 +6,7 @@ contentType: integration
 
 # Demio
 
-The Demio node allows you to automate work in Demio, and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, including getting, and registering events and reports.
+Use the Demio node to automate work in Demio, and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, including getting, and registering events and reports.
 
 On this page, you'll find a list of operations the Demio node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Tasks
 
-The Google Tasks node allows you to automate work in Google Tasks, and integrate Google Tasks with other applications. n8n has built-in support for a wide range of Google Tasks features, including adding, updating, and retrieving contacts. 
+Use the Google Tasks node to automate work in Google Tasks, and integrate Google Tasks with other applications. n8n has built-in support for a wide range of Google Tasks features, including adding, updating, and retrieving contacts. 
 
 On this page, you'll find a list of operations the Google Tasks node supports and links to more resources.
 

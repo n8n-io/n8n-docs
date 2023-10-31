@@ -6,7 +6,7 @@ contentType: integration
 
 # AWS S3
 
-The AWS S3 node allows you to automate work in AWS S3, and integrate AWS S3 with other applications. n8n has built-in support for a wide range of AWS S3 features, including creating and deleting buckets, copying and downloading files, as well as getting folders.
+Use the AWS S3 node to automate work in AWS S3, and integrate AWS S3 with other applications. n8n has built-in support for a wide range of AWS S3 features, including creating and deleting buckets, copying and downloading files, as well as getting folders.
 
 On this page, you'll find a list of operations the AWS S3 node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # OpenWeatherMap
 
-The OpenWeatherMap node allows you to automate work in OpenWeatherMap, and integrate OpenWeatherMap with other applications. n8n supports retrieving current and upcoming weather data with OpenWeatherMap.
+Use the OpenWeatherMap node to automate work in OpenWeatherMap, and integrate OpenWeatherMap with other applications. n8n supports retrieving current and upcoming weather data with OpenWeatherMap.
 
 On this page, you'll find a list of operations the OpenWeatherMap node supports and links to more resources.
 

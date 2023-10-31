@@ -5,7 +5,7 @@ description: Documentation for the Embeddings TensorFlow node in n8n, a workflow
 
 # Embeddings TensorFlow
 
-The Embeddings TensorFlow node allows you to generate embeddings for a given text.
+Use the Embeddings TensorFlow node to generate embeddings for a given text.
 
 On this page, you'll find the node parameters for the Embeddings TensorFlow node, and links to more resources.
 

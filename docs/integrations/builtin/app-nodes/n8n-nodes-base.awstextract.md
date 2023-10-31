@@ -6,7 +6,7 @@ contentType: integration
 
 # AWS Textract
 
-The AWS Textract node allows you to automate work in AWS Textract, and integrate AWS Textract with other applications. n8n has built-in support for a wide range of AWS Textract features, including analyzing invoices.
+Use the AWS Textract node to automate work in AWS Textract, and integrate AWS Textract with other applications. n8n has built-in support for a wide range of AWS Textract features, including analyzing invoices.
 
 On this page, you'll find a list of operations the AWS Textract node supports and links to more resources.
 

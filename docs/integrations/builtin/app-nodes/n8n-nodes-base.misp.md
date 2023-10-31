@@ -6,7 +6,7 @@ contentType: integration
 
 # MISP
 
-The MISP node allows you to automate work in MISP, and integrate MISP with other applications. n8n has built-in support for a wide range of MISP features, including creating, updating, deleting and getting events, feeds, and organizations. 
+Use the MISP node to automate work in MISP, and integrate MISP with other applications. n8n has built-in support for a wide range of MISP features, including creating, updating, deleting and getting events, feeds, and organizations. 
 
 On this page, you'll find a list of operations the MISP node supports and links to more resources.
 

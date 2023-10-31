@@ -6,7 +6,7 @@ contentType: integration
 
 # Brevo
 
-The Brevo node allows you to automate work in Brevo, and integrate Brevo with other applications. n8n has built-in support for a wide range of Brevo features, including creating, updating, deleting, and getting contacts, attributes, as well as sending emails. 
+Use the Brevo node to automate work in Brevo, and integrate Brevo with other applications. n8n has built-in support for a wide range of Brevo features, including creating, updating, deleting, and getting contacts, attributes, as well as sending emails. 
 
 On this page, you'll find a list of operations the Brevo node supports and links to more resources.
 

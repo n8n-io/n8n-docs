@@ -6,7 +6,7 @@ contentType: integration
 
 # Zoho CRM
 
-The Zoho CRM node allows you to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
+Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with other applications. n8n has built-in support for a wide range of Zoho CRM features, including creating and deleting accounts, contacts, and deals. 
 
 On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 

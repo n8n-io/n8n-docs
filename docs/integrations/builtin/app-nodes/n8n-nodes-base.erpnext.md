@@ -6,7 +6,7 @@ contentType: integration
 
 # ERPNext
 
-The ERPNext node allows you to automate work in ERPNext, and integrate ERPNext with other applications. n8n has built-in support for a wide range of ERPNext features, including creating, updating, retrieving, and deleting documents. 
+Use the ERPNext node to automate work in ERPNext, and integrate ERPNext with other applications. n8n has built-in support for a wide range of ERPNext features, including creating, updating, retrieving, and deleting documents. 
 
 On this page, you'll find a list of operations the ERPNext node supports and links to more resources.
 

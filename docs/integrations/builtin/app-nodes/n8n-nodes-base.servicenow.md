@@ -6,7 +6,7 @@ contentType: integration
 
 # ServiceNow
 
-The ServiceNow node allows you to automate work in ServiceNow, and integrate ServiceNow with other applications. n8n has built-in support for a wide range of ServiceNow features, including getting business services, departments, configuration items, and dictionary as well as creating, updating, and deleting incidents, users, and table records. 
+Use the ServiceNow node to automate work in ServiceNow, and integrate ServiceNow with other applications. n8n has built-in support for a wide range of ServiceNow features, including getting business services, departments, configuration items, and dictionary as well as creating, updating, and deleting incidents, users, and table records. 
 
 On this page, you'll find a list of operations the ServiceNow node supports and links to more resources.
 

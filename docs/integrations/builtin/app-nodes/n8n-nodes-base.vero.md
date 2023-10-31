@@ -6,7 +6,7 @@ contentType: integration
 
 # Vero
 
-The Vero node allows you to automate work in Vero, and integrate Vero with other applications. n8n has built-in support for a wide range of Vero features, including creating and deleting users. 
+Use the Vero node to automate work in Vero, and integrate Vero with other applications. n8n has built-in support for a wide range of Vero features, including creating and deleting users. 
 
 On this page, you'll find a list of operations the Vero node supports and links to more resources.
 

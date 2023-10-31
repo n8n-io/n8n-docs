@@ -6,7 +6,7 @@ contentType: integration
 
 # Raindrop
 
-The Raindrop node allows you to automate work in Raindrop, and integrate Raindrop with other applications. n8n has built-in support for a wide range of Raindrop features, including getting users, deleting tags, and creating, updating, deleting and getting collections and bookmarks. 
+Use the Raindrop node to automate work in Raindrop, and integrate Raindrop with other applications. n8n has built-in support for a wide range of Raindrop features, including getting users, deleting tags, and creating, updating, deleting and getting collections and bookmarks. 
 
 On this page, you'll find a list of operations the Raindrop node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # ClickUp
 
-The ClickUp node allows you to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
+Use the ClickUp node to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
 
 On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 

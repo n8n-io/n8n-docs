@@ -6,7 +6,7 @@ contentType: integration
 
 # Drift
 
-The Drift node allows you to automate work in Drift, and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, including creating, updating, deleting, and getting contacts. 
+Use the Drift node to automate work in Drift, and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, including creating, updating, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 

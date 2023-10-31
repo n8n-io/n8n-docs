@@ -6,7 +6,7 @@ contentType: integration
 
 # Bubble
 
-The Bubble node allows you to automate work in Bubble, and integrate Bubble with other applications. n8n has built-in support for a wide range of Bubble features, including creating, deleting, getting, and updating objects.
+Use the Bubble node to automate work in Bubble, and integrate Bubble with other applications. n8n has built-in support for a wide range of Bubble features, including creating, deleting, getting, and updating objects.
 
 On this page, you'll find a list of operations the Bubble node supports and links to more resources.
 

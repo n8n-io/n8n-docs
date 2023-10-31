@@ -6,7 +6,7 @@ contentType: integration
 
 # Linear
 
-The Linear node allows you to automate work in Linear, and integrate Linear with other applications. n8n has built-in support for a wide range of Linear features, including creating, updating, deleting, and getting issues. 
+Use the Linear node to automate work in Linear, and integrate Linear with other applications. n8n has built-in support for a wide range of Linear features, including creating, updating, deleting, and getting issues. 
 
 On this page, you'll find a list of operations the Linear node supports and links to more resources.
 

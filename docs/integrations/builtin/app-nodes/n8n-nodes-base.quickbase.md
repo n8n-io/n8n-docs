@@ -6,7 +6,7 @@ contentType: integration
 
 # Quick Base
 
-The Quick Base node allows you to automate work in Quick Base, and integrate Quick Base with other applications. n8n has built-in support for a wide range of Quick Base features, including creating, updating, deleting, and getting records, as well as getting fields, and downloading files. 
+Use the Quick Base node to automate work in Quick Base, and integrate Quick Base with other applications. n8n has built-in support for a wide range of Quick Base features, including creating, updating, deleting, and getting records, as well as getting fields, and downloading files. 
 
 On this page, you'll find a list of operations the Quick Base node supports and links to more resources.
 

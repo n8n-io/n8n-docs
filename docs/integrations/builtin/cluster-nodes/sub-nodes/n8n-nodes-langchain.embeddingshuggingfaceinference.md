@@ -5,7 +5,7 @@ description: Documentation for the Embeddings HuggingFace Inference node in n8n,
 
 # Embeddings HuggingFace Inference
 
-The Embeddings HuggingFace Inference node allows you to generate embeddings for a given text.
+Use the Embeddings HuggingFace Inference node to generate embeddings for a given text.
 
 On this page, you'll find the node parameters for the Embeddings HuggingFace Inference, and links to more resources.
 

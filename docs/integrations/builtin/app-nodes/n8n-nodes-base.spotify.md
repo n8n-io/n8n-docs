@@ -6,7 +6,7 @@ contentType: integration
 
 # Spotify
 
-The Spotify node allows you to automate work in Spotify, and integrate Spotify with other applications. n8n has built-in support for a wide range of Spotify features, including getting album and artist information. 
+Use the Spotify node to automate work in Spotify, and integrate Spotify with other applications. n8n has built-in support for a wide range of Spotify features, including getting album and artist information. 
 
 On this page, you'll find a list of operations the Spotify node supports and links to more resources.
 

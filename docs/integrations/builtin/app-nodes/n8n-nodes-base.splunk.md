@@ -6,7 +6,7 @@ contentType: integration
 
 # Splunk
 
-The Splunk node allows you to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including retrieving fired alerts reports, as well as deleting and retrieving search configuration. 
+Use the Splunk node to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including retrieving fired alerts reports, as well as deleting and retrieving search configuration. 
 
 On this page, you'll find a list of operations the Splunk node supports and links to more resources.
 

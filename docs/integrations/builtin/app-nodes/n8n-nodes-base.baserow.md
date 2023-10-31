@@ -6,7 +6,7 @@ contentType: integration
 
 # Baserow
 
-The Baserow node allows you to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
+Use the Baserow node to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
 
 On this page, you'll find a list of operations the Baserow node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Elastic Security
 
-The Elastic Security node allows you to automate work in Elastic Security, and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, including creating, updating, deleting, retrieving, and getting cases.
+Use the Elastic Security node to automate work in Elastic Security, and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, including creating, updating, deleting, retrieving, and getting cases.
 
 On this page, you'll find a list of operations the Elastic Security node supports and links to more resources.
 

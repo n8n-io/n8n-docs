@@ -6,7 +6,7 @@ contentType: integration
 
 # crowd.dev
 
-The crowd.dev node allows you to automate work in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev features, which includes creating, updating, and deleting members, notes, organizations, and tasks.
+Use the crowd.dev node to automate work in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev features, which includes creating, updating, and deleting members, notes, organizations, and tasks.
 
 _On this page, you'll find a list of operations the crowd.dev node supports, and links to more resources._
 

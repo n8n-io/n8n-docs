@@ -6,7 +6,7 @@ contentType: integration
 
 # Stackby
 
-The Stackby node allows you to automate work in Stackby, and integrate Stackby with other applications. n8n has built-in support for a wide range of Stackby features, including appending, deleting, listing and reading. 
+Use the Stackby node to automate work in Stackby, and integrate Stackby with other applications. n8n has built-in support for a wide range of Stackby features, including appending, deleting, listing and reading. 
 
 On this page, you'll find a list of operations the Stackby node supports and links to more resources.
 

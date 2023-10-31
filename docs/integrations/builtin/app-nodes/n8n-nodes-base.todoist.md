@@ -6,7 +6,7 @@ contentType: integration
 
 # Todoist
 
-The Todoist node allows you to automate work in Todoist, and integrate Todoist with other applications. n8n has built-in support for a wide range of Todoist features, including creating, updating, deleting, and getting tasks. 
+Use the Todoist node to automate work in Todoist, and integrate Todoist with other applications. n8n has built-in support for a wide range of Todoist features, including creating, updating, deleting, and getting tasks. 
 
 On this page, you'll find a list of operations the Todoist node supports and links to more resources.
 

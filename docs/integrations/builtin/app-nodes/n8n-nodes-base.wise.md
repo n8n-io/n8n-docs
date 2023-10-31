@@ -6,7 +6,7 @@ contentType: integration
 
 # Wise
 
-The Wise node allows you to automate work in Wise, and integrate Wise with other applications. n8n has built-in support for a wide range of Wise features, including getting profiles, exchange rates, and recipients. 
+Use the Wise node to automate work in Wise, and integrate Wise with other applications. n8n has built-in support for a wide range of Wise features, including getting profiles, exchange rates, and recipients. 
 
 On this page, you'll find a list of operations the Wise node supports and links to more resources.
 

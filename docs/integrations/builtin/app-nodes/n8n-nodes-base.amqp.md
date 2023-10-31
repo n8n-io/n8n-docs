@@ -6,7 +6,7 @@ contentType: integration
 
 # AMQP Sender
 
-The AMQP Sender node allows you to automate work in AMQP Sender, and integrate AMQP Sender with other applications. n8n has built-in support for a wide range of AMQP Sender features, including sending messages.
+Use the AMQP Sender node to automate work in AMQP Sender, and integrate AMQP Sender with other applications. n8n has built-in support for a wide range of AMQP Sender features, including sending messages.
 
 On this page, you'll find a list of operations the AMQP Sender node supports and links to more resources.
 

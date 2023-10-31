@@ -5,7 +5,7 @@ description: Documentation for the In Memory Vector Store Insert node in n8n, a 
 
 # In Memory Vector Store Insert
 
-The In Memory Vector Store Insert node allows you to store embeddings in-memory.
+Use the In Memory Vector Store Insert node to store embeddings in-memory.
 
 On this page, you'll find the node parameters for the In Memory Vector Store node, and links to more resources.
 

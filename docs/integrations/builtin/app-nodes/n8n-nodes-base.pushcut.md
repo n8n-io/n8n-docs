@@ -6,7 +6,7 @@ contentType: integration
 
 # Pushcut
 
-The Pushcut node allows you to automate work in Pushcut, and integrate Pushcut with other applications. n8n supports sending notifications with Pushcut.
+Use the Pushcut node to automate work in Pushcut, and integrate Pushcut with other applications. n8n supports sending notifications with Pushcut.
 
 On this page, you'll find a list of operations the Pushcut node supports and links to more resources.
 

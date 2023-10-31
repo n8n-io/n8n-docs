@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Analytics
 
-The Google Analytics node allows you to automate work in Google Analytics, and integrate Google Analytics with other applications. n8n has built-in support for a wide range of Google Analytics features, including returning reports and user activities.
+Use the Google Analytics node to automate work in Google Analytics, and integrate Google Analytics with other applications. n8n has built-in support for a wide range of Google Analytics features, including returning reports and user activities.
 
 
 On this page, you'll find a list of operations the Google Analytics node supports and links to more resources.

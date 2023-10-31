@@ -6,7 +6,7 @@ contentType: integration
 
 # Xero
 
-The Xero node allows you to automate work in Xero, and integrate Xero with other applications. n8n has built-in support for a wide range of Xero features, including creating, updating, and getting contacts and invoices. 
+Use the Xero node to automate work in Xero, and integrate Xero with other applications. n8n has built-in support for a wide range of Xero features, including creating, updating, and getting contacts and invoices. 
 
 On this page, you'll find a list of operations the Xero node supports and links to more resources.
 

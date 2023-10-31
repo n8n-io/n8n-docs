@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Cloud Realtime Database
 
-The Google Cloud Realtime Database node allows you to automate work in Google Cloud Realtime Database, and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, including writing, deleting, getting, and appending databases.
+Use the Google Cloud Realtime Database node to automate work in Google Cloud Realtime Database, and integrate Google Cloud Realtime Database with other applications. n8n has built-in support for a wide range of Google Cloud Realtime Database features, including writing, deleting, getting, and appending databases.
 
 On this page, you'll find a list of operations the Google Cloud Realtime Database node supports and links to more resources.
 

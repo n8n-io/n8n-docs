@@ -5,7 +5,7 @@ description: Documentation for the GitHub Document Loader node in n8n, a workflo
 
 # GitHub Document Loader
 
-The GitHub Document Loader node allows you to load data from GitHub for vector stores or summarization.
+Use the GitHub Document Loader node to load data from GitHub for vector stores or summarization.
 
 On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.
 

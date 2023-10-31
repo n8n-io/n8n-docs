@@ -6,7 +6,7 @@ contentType: integration
 
 # Customer.io
 
-The Customer.io node allows you to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating and updating customers, tracking events, and getting campaigns.
+Use the Customer.io node to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating and updating customers, tracking events, and getting campaigns.
 
 On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 

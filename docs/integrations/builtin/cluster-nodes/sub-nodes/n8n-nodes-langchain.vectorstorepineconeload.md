@@ -5,7 +5,7 @@ description: 'Documentation for the Pinecone: Load node in n8n, a workflow autom
 
 # Pinecone: Load
 
-The Pinecone: Load node allows you to load data from a Pinecone vector database.
+Use the Pinecone: Load node to load data from a Pinecone vector database.
 
 On this page, you'll find the node parameters for the Pinecone: Load node, and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Telegram
 
-The Telegram node allows you to automate work in Telegram, and integrate Telegram with other applications. n8n has built-in support for a wide range of Telegram features, including getting files as well as deleting and editing messages. 
+Use the Telegram node to automate work in Telegram, and integrate Telegram with other applications. n8n has built-in support for a wide range of Telegram features, including getting files as well as deleting and editing messages. 
 
 On this page, you'll find a list of operations the Telegram node supports and links to more resources.
 

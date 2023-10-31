@@ -6,7 +6,7 @@ contentType: integration
 
 # Odoo
 
-The Odoo node allows you to automate work in Odoo, and integrate Odoo with other applications. n8n has built-in support for a wide range of Odoo features, including creating, updating, deleting, and getting contracts, resources, and opportunities. 
+Use the Odoo node to automate work in Odoo, and integrate Odoo with other applications. n8n has built-in support for a wide range of Odoo features, including creating, updating, deleting, and getting contracts, resources, and opportunities. 
 
 On this page, you'll find a list of operations the Odoo node supports and links to more resources.
 

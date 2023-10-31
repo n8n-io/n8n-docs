@@ -6,7 +6,7 @@ contentType: integration
 
 # OpenThesaurus
 
-The OpenThesaurus node allows you to automate work in OpenThesaurus, and integrate OpenThesaurus with other applications. n8n supports synonym look-up for German words. 
+Use the OpenThesaurus node to automate work in OpenThesaurus, and integrate OpenThesaurus with other applications. n8n supports synonym look-up for German words. 
 
 On this page, you'll find a list of operations the OpenThesaurus node supports and links to more resources.
 

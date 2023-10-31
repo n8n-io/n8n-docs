@@ -6,7 +6,7 @@ contentType: integration
 
 # SyncroMSP
 
-The SyncroMSP node allows you to automate work in SyncroMSP, and integrate SyncroMSP with other applications. n8n has built-in support for a wide range of SyncroMSP features, including creating and deleting new customers, tickets, and contacts. 
+Use the SyncroMSP node to automate work in SyncroMSP, and integrate SyncroMSP with other applications. n8n has built-in support for a wide range of SyncroMSP features, including creating and deleting new customers, tickets, and contacts. 
 
 On this page, you'll find a list of operations the SyncroMSP node supports and links to more resources.
 

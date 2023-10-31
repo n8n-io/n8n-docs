@@ -6,7 +6,7 @@ contentType: integration
 
 # LingvaNex
 
-The LingvaNex node allows you to automate work in LingvaNex, and integrate LingvaNex with other applications. n8n has built-in support for translating data with LingvaNex.
+Use the LingvaNex node to automate work in LingvaNex, and integrate LingvaNex with other applications. n8n has built-in support for translating data with LingvaNex.
 
 On this page, you'll find a list of operations the LingvaNex node supports and links to more resources.
 

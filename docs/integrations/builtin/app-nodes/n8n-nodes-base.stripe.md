@@ -6,7 +6,7 @@ contentType: integration
 
 # Stripe
 
-The Stripe node allows you to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge, and deleting customers. 
+Use the Stripe node to automate work in Stripe, and integrate Stripe with other applications. n8n has built-in support for a wide range of Stripe features, including getting balance, creating charge, and deleting customers. 
 
 On this page, you'll find a list of operations the Stripe node supports and links to more resources.
 

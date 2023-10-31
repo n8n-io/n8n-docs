@@ -6,7 +6,7 @@ contentType: integration
 
 # Monica CRM
 
-The Monica CRM node allows you to automate work in Monica CRM, and integrate Monica CRM with other applications. n8n has built-in support for a wide range of Monica CRM features, including creating, updating, deleting, and getting activities, calls, contracts, messages, tasks, and notes. 
+Use the Monica CRM node to automate work in Monica CRM, and integrate Monica CRM with other applications. n8n has built-in support for a wide range of Monica CRM features, including creating, updating, deleting, and getting activities, calls, contracts, messages, tasks, and notes. 
 
 On this page, you'll find a list of operations the Monica CRM node supports and links to more resources.
 

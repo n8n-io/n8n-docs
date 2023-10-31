@@ -5,7 +5,7 @@ description: Documentation for the LangChain Code node in n8n, a workflow automa
 
 # LangChain Code
 
-The LangChain Code node allows you to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it.
+Use the LangChain Code node to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it.
 
 On this page, you'll find the node parameters for the LangChain Code node, and links to more resources.
 

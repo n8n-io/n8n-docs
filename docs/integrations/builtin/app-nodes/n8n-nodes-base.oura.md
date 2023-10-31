@@ -6,7 +6,7 @@ contentType: integration
 
 # Oura
 
-The Oura node allows you to automate work in Oura, and integrate Oura with other applications. n8n has built-in support for a wide range of Oura features, including getting profiles, and summaries. 
+Use the Oura node to automate work in Oura, and integrate Oura with other applications. n8n has built-in support for a wide range of Oura features, including getting profiles, and summaries. 
 
 On this page, you'll find a list of operations the Oura node supports and links to more resources.
 

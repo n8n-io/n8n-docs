@@ -6,7 +6,7 @@ contentType: integration
 
 # Matrix
 
-The Matrix node allows you to automate work in Matrix, and integrate Matrix with other applications. n8n has built-in support for a wide range of Matrix features, including getting current user's account information, sending media and messages to a room, and getting room members and messages.
+Use the Matrix node to automate work in Matrix, and integrate Matrix with other applications. n8n has built-in support for a wide range of Matrix features, including getting current user's account information, sending media and messages to a room, and getting room members and messages.
 
 On this page, you'll find a list of operations the Matrix node supports and links to more resources.
 

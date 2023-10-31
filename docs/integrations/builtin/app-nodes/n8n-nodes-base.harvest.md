@@ -6,7 +6,7 @@ contentType: integration
 
 # Harvest
 
-The Harvest node allows you to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
+Use the Harvest node to automate work in Harvest, and integrate Harvest with other applications. n8n has built-in support for a wide range of Harvest features, including creating, updating, deleting, and getting clients, contacts, invoices, tasks, expenses, users, and projects. 
 
 On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 

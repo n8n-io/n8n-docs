@@ -6,7 +6,7 @@ contentType: integration
 
 # Salesmate
 
-The Salesmate node allows you to automate work in Salesmate, and integrate Salesmate with other applications. n8n has built-in support for a wide range of Salesmate features, including creating, updating, deleting, and getting activities, companies, and deals. 
+Use the Salesmate node to automate work in Salesmate, and integrate Salesmate with other applications. n8n has built-in support for a wide range of Salesmate features, including creating, updating, deleting, and getting activities, companies, and deals. 
 
 On this page, you'll find a list of operations the Salesmate node supports and links to more resources.
 

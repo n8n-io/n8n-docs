@@ -6,7 +6,7 @@ contentType: integration
 
 # Supabase
 
-The Supabase node allows you to automate work in Supabase, and integrate Supabase with other applications. n8n has built-in support for a wide range of Supabase features, including creating, deleting, and getting rows. 
+Use the Supabase node to automate work in Supabase, and integrate Supabase with other applications. n8n has built-in support for a wide range of Supabase features, including creating, deleting, and getting rows. 
 
 On this page, you'll find a list of operations the Supabase node supports and links to more resources.
 

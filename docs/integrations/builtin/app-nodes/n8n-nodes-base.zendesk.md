@@ -6,7 +6,7 @@ contentType: integration
 
 # Zendesk
 
-The Zendesk node allows you to automate work in Zendesk, and integrate Zendesk with other applications. n8n has built-in support for a wide range of Zendesk features, including creating, and deleting tickets, users, and organizations. 
+Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with other applications. n8n has built-in support for a wide range of Zendesk features, including creating, and deleting tickets, users, and organizations. 
 
 On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
 

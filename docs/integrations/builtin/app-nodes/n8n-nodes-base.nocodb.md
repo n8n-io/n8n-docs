@@ -6,7 +6,7 @@ contentType: integration
 
 # NocoDB
 
-The NocoDB node allows you to automate work in NocoDB, and integrate NocoDB with other applications. n8n has built-in support for a wide range of NocoDB features, including creating, updating, deleting, and retrieving rows. 
+Use the NocoDB node to automate work in NocoDB, and integrate NocoDB with other applications. n8n has built-in support for a wide range of NocoDB features, including creating, updating, deleting, and retrieving rows. 
 
 On this page, you'll find a list of operations the NocoDB node supports and links to more resources.
 

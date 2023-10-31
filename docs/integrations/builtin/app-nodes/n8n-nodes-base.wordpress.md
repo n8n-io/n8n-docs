@@ -6,7 +6,7 @@ contentType: integration
 
 # WordPress
 
-The WordPress node allows you to automate work in WordPress, and integrate WordPress with other applications. n8n has built-in support for a wide range of WordPress features, including creating, updating, and getting posts and users.
+Use the WordPress node to automate work in WordPress, and integrate WordPress with other applications. n8n has built-in support for a wide range of WordPress features, including creating, updating, and getting posts and users.
 
 On this page, you'll find a list of operations the WordPress node supports and links to more resources.
 

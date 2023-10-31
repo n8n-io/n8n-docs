@@ -6,7 +6,7 @@ contentType: integration
 
 # Zammad
 
-The Zammad node allows you to automate work in Zammad, and integrate Zammad with other applications. n8n has built-in support for a wide range of Zammad features, including creating, retrieving, and deleting groups and organizations.
+Use the Zammad node to automate work in Zammad, and integrate Zammad with other applications. n8n has built-in support for a wide range of Zammad features, including creating, retrieving, and deleting groups and organizations.
 
 On this page, you'll find a list of operations the Zammad node supports and links to more resources.
 

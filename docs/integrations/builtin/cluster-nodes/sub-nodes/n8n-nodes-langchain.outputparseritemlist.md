@@ -5,7 +5,7 @@ description: Documentation for the Item List Output Parser node in n8n, a workfl
 
 # Item List Output Parser
 
-The Item List Output Parser node allows you to return a list of items with a specific length and separator.
+Use the Item List Output Parser node to return a list of items with a specific length and separator.
 
 On this page, you'll find the node parameters for the Item List Output Parser node, and links to more resources.
 

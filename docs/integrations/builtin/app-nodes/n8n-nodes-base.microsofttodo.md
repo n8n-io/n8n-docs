@@ -6,7 +6,7 @@ contentType: integration
 
 # Microsoft To Do
 
-The Microsoft To Do node allows you to automate work in Microsoft To Do, and integrate Microsoft To Do with other applications. n8n has built-in support for a wide range of Microsoft To Do features, including creating, updating, deleting, and getting linked resources, lists, and tasks. 
+Use the Microsoft To Do node to automate work in Microsoft To Do, and integrate Microsoft To Do with other applications. n8n has built-in support for a wide range of Microsoft To Do features, including creating, updating, deleting, and getting linked resources, lists, and tasks. 
 
 On this page, you'll find a list of operations the Microsoft To Do node supports and links to more resources.
 

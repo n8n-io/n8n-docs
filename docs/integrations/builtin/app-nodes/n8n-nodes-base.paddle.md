@@ -6,7 +6,7 @@ contentType: integration
 
 # Paddle
 
-The Paddle node allows you to automate work in Paddle, and integrate Paddle with other applications. n8n has built-in support for a wide range of Paddle features, including creating, updating, and getting coupons, as well as getting plans, products, and users. 
+Use the Paddle node to automate work in Paddle, and integrate Paddle with other applications. n8n has built-in support for a wide range of Paddle features, including creating, updating, and getting coupons, as well as getting plans, products, and users. 
 
 On this page, you'll find a list of operations the Paddle node supports and links to more resources.
 

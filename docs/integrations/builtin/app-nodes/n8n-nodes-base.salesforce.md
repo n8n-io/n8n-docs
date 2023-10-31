@@ -6,7 +6,7 @@ contentType: integration
 
 # Salesforce
 
-The Salesforce node allows you to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachements, cases, and leads, as well as uploading documents. 
+Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachements, cases, and leads, as well as uploading documents. 
 
 On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 

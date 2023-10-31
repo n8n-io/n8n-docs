@@ -6,7 +6,7 @@ contentType: integration
 
 # Email trigger (IMAP)
 
-The IMAP Email node allows you to receive emails using an IMAP email server. This node is a trigger node.
+Use the IMAP Email node to receive emails using an IMAP email server. This node is a trigger node.
 
 !!! note "Credential"
     You can find authentication information for this node [here](/integrations/builtin/credentials/imap/).

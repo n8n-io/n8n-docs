@@ -5,7 +5,7 @@ description: Documentation for the Summarization Chain node in n8n, a workflow a
 
 # Summarization Chain
 
-The Summarization Chain node allows you to summarize multiple documents.
+Use the Summarization Chain node to summarize multiple documents.
 
 On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
 

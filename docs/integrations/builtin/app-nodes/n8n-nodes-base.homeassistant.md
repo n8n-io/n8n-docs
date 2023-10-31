@@ -6,7 +6,7 @@ contentType: integration
 
 # Home Assistant
 
-The Home Assistant node allows you to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configs, logs, services, and templates. 
+Use the Home Assistant node to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configs, logs, services, and templates. 
 
 On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # LoneScale trigger
 
-The LoneScale trigger node allows you to respond to workflow events in LoneScale and integrate LoneScale with other applications.
+Use the LoneScale trigger node to respond to workflow events in LoneScale and integrate LoneScale with other applications.
 
 On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
 

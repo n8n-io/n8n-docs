@@ -5,7 +5,7 @@ description: Documentation for the JSON Input Loader node in n8n, a workflow aut
 
 # JSON Input Loader
 
-The JSON Input Loader node allows you to load JSON data for vector stores or summarization.
+Use the JSON Input Loader node to load JSON data for vector stores or summarization.
 
 On this page, you'll find the node parameters for the JSON Input Loader node, and links to more resources.
 

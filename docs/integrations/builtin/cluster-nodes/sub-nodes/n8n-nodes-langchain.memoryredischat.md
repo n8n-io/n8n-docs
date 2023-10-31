@@ -5,7 +5,7 @@ description: Documentation for the Redis Chat Memory node in n8n, a workflow aut
 
 # Redis Chat Memory
 
-The Redis Chat Memory node allows you to use Redis as a memory server.
+Use the Redis Chat Memory node to use Redis as a memory server.
 
 On this page, you'll find a list of operations the Redis Chat Memory node supports, and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Strapi
 
-The Strapi node allows you to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
+Use the Strapi node to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
 
 On this page, you'll find a list of operations the Strapi node supports and links to more resources.
 

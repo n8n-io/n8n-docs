@@ -5,7 +5,7 @@ description: Documentation for the Motorhead node in n8n, a workflow automation 
 
 # Motorhead
 
-The Motorhead node allows you to use Motorhead as a memory server.
+Use the Motorhead node to use Motorhead as a memory server.
 
 On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.
 

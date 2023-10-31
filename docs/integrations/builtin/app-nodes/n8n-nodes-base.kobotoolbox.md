@@ -6,7 +6,7 @@ contentType: integration
 
 # KoBo Toolbox
 
-The KoBo Toolbox node allows you to automate work in KoBo Toolbox, and integrate KoBo Toolbox with other applications. n8n has built-in support for a wide range of KoBo Toolbox features, including creating, updating, deleting, and getting files, forms, hooks, and submissions. 
+Use the KoBo Toolbox node to automate work in KoBo Toolbox, and integrate KoBo Toolbox with other applications. n8n has built-in support for a wide range of KoBo Toolbox features, including creating, updating, deleting, and getting files, forms, hooks, and submissions. 
 
 On this page, you'll find a list of operations the KoBo Toolbox node supports and links to more resources.
 

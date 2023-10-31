@@ -6,7 +6,7 @@ contentType: integration
 
 # Mocean
 
-The Mocean node allows you to automate work in Mocean, and integrate Mocean with other applications. n8n has built-in support for a wide range of Mocean features, including sending SMS, and voice messages. 
+Use the Mocean node to automate work in Mocean, and integrate Mocean with other applications. n8n has built-in support for a wide range of Mocean features, including sending SMS, and voice messages. 
 
 On this page, you'll find a list of operations the Mocean node supports and links to more resources.
 

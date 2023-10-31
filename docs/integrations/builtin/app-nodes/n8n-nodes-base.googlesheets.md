@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Sheets
 
-The Google Sheets node allows you to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
+Use the Google Sheets node to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
 
 On this page, you'll find a list of operations the Google Sheets node supports and links to more resources.
 

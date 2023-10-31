@@ -6,7 +6,7 @@ contentType: integration
 
 # Phantombuster
 
-The Phantombuster node allows you to automate work in Phantombuster, and integrate Phantombuster with other applications. n8n has built-in support for a wide range of Phantombuster features, including adding, deleting, and getting agents. 
+Use the Phantombuster node to automate work in Phantombuster, and integrate Phantombuster with other applications. n8n has built-in support for a wide range of Phantombuster features, including adding, deleting, and getting agents. 
 
 On this page, you'll find a list of operations the Phantombuster node supports and links to more resources.
 

@@ -5,7 +5,7 @@ description: Documentation for the Code Tool node in n8n, a workflow automation 
 
 # Code Tool
 
-The Code Tool node allows you to write code that an agent can run.
+Use the Code Tool node to write code that an agent can run.
 
 On this page, you'll find the node parameters for the Code Tool node, and links to more resources.
 

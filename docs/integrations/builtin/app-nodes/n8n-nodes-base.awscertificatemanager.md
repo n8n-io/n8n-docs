@@ -6,7 +6,7 @@ contentType: integration
 
 # AWS Certificate Manager
 
-The AWS Certificate Manager node allows you to automate work in AWS Certificate Manager, and integrate AWS Certificate Manager with other applications. n8n has built-in support for a wide range of AWS Certificate Manager features, including creating, deleting, getting, and renewing SSL certificates.
+Use the AWS Certificate Manager node to automate work in AWS Certificate Manager, and integrate AWS Certificate Manager with other applications. n8n has built-in support for a wide range of AWS Certificate Manager features, including creating, deleting, getting, and renewing SSL certificates.
 
 On this page, you'll find a list of operations the AWS Certificate Manager node supports and links to more resources.
 

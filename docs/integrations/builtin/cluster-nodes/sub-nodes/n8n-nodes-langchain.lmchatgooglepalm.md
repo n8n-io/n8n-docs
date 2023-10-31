@@ -5,7 +5,7 @@ description: Documentation for the Google PaLM Chat Model node in n8n, a workflo
 
 # Google PaLM Chat Model
 
-The Google PaLM Chat Model node allows you to use Google's PaLM chat models with conversational agents.
+Use the Google PaLM Chat Model node to use Google's PaLM chat models with conversational agents.
 
 On this page, you'll find the node parameters for the Google PaLM Chat Model node, and links to more resources.
 

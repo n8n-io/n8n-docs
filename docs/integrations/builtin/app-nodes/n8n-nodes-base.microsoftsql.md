@@ -6,7 +6,7 @@ contentType: integration
 
 # Microsoft SQL
 
-The Microsoft SQL node allows you to automate work in Microsoft SQL, and integrate Microsoft SQL with other applications. n8n has built-in support for a wide range of Microsoft SQL features, including executing SQL queries, and inserting rows into the database. 
+Use the Microsoft SQL node to automate work in Microsoft SQL, and integrate Microsoft SQL with other applications. n8n has built-in support for a wide range of Microsoft SQL features, including executing SQL queries, and inserting rows into the database. 
 
 On this page, you'll find a list of operations the Microsoft SQL node supports and links to more resources.
 

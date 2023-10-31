@@ -6,7 +6,7 @@ contentType: integration
 
 # Asana
 
-The Asana node allows you to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
+Use the Asana node to automate work in Asana, and integrate Asana with other applications. n8n has built-in support for a wide range of Asana features, including creating, updating, deleting, and getting users, tasks, projects, and subtasks.
 
 On this page, you'll find a list of operations the Asana node supports and links to more resources.
 

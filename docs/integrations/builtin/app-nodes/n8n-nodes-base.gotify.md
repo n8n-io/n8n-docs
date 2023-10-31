@@ -6,7 +6,7 @@ contentType: integration
 
 # Gotify
 
-The Gotify node allows you to automate work in Gotify, and integrate Gotify with other applications. n8n has built-in support for a wide range of Gotify features, including creating, deleting, and getting messages. 
+Use the Gotify node to automate work in Gotify, and integrate Gotify with other applications. n8n has built-in support for a wide range of Gotify features, including creating, deleting, and getting messages. 
 
 On this page, you'll find a list of operations the Gotify node supports and links to more resources.
 

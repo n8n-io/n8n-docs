@@ -6,7 +6,7 @@ contentType: integration
 
 # ConvertKit
 
-The ConvertKit node allows you to automate work in ConvertKit, and integrate ConvertKit with other applications. n8n has built-in support for a wide range of ConvertKit features, including creating and deleting custom fields, getting tags, and adding subscribers.
+Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit with other applications. n8n has built-in support for a wide range of ConvertKit features, including creating and deleting custom fields, getting tags, and adding subscribers.
 
 On this page, you'll find a list of operations the ConvertKit node supports and links to more resources.
 

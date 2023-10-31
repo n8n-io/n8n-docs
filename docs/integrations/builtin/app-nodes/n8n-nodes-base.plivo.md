@@ -6,7 +6,7 @@ contentType: integration
 
 # Plivo
 
-The Plivo node allows you to automate work in Plivo, and integrate Plivo with other applications. n8n has built-in support for a wide range of Plivo features, including making calls, and sending SMS/MMS. 
+Use the Plivo node to automate work in Plivo, and integrate Plivo with other applications. n8n has built-in support for a wide range of Plivo features, including making calls, and sending SMS/MMS. 
 
 On this page, you'll find a list of operations the Plivo node supports and links to more resources.
 

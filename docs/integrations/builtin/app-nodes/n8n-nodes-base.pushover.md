@@ -6,7 +6,7 @@ contentType: integration
 
 # Pushover
 
-The Pushover node allows you to automate work in Pushover, and integrate Pushover with other applications. n8n supports sending push notifications with Pushover.
+Use the Pushover node to automate work in Pushover, and integrate Pushover with other applications. n8n supports sending push notifications with Pushover.
 
 On this page, you'll find a list of operations the Pushover node supports and links to more resources.
 

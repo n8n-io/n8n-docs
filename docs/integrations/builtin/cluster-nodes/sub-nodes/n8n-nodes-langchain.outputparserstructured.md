@@ -5,7 +5,7 @@ description: Documentation for the Structured Output Parser node in n8n, a workf
 
 # Structured Output Parser
 
-The Structured Output Parser node allows you to return fields based on a JSON Schema.
+Use the Structured Output Parser node to return fields based on a JSON Schema.
 
 On this page, you'll find the node parameters for the Structured Output Parser node, and links to more resources.
 

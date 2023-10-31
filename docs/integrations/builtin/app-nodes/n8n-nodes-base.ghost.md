@@ -6,7 +6,7 @@ contentType: integration
 
 # Ghost
 
-The Ghost node allows you to automate work in Ghost, and integrate Ghost with other applications. n8n has built-in support for a wide range of Ghost features, including creating, updating, deleting, and getting posts for the Admin and content API. 
+Use the Ghost node to automate work in Ghost, and integrate Ghost with other applications. n8n has built-in support for a wide range of Ghost features, including creating, updating, deleting, and getting posts for the Admin and content API. 
 
 On this page, you'll find a list of operations the Ghost node supports and links to more resources.
 

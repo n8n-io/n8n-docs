@@ -6,7 +6,7 @@ contentType: integration
 
 # TheHive 5
 
-The TheHive 5 node allows you to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
+Use the TheHive 5 node to automate work in TheHive, and integrate TheHive with other applications. n8n has built-in support for a wide range of TheHive features, including creating alerts, counting tasks logs, cases, and observables. 
 
 On this page, you'll find a list of operations the TheHive node supports and links to more resources.
 

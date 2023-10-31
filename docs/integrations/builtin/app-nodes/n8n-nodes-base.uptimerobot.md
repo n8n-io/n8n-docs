@@ -6,7 +6,7 @@ contentType: integration
 
 # UptimeRobot
 
-The UptimeRobot node allows you to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
+Use the UptimeRobot node to automate work in UptimeRobot, and integrate UptimeRobot with other applications. n8n has built-in support for a wide range of UptimeRobot features, including creating and deleting alerts, as well as getting account details. 
 
 On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 

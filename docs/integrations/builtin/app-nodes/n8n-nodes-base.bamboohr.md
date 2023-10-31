@@ -6,7 +6,7 @@ contentType: integration
 
 # BambooHR
 
-The BambooHR node allows you to automate work in BambooHR, and integrate BambooHR with other applications. n8n has built-in support for a wide range of BambooHR features, including creating, deleting, downloading, and getting company reports, employee documents, and files.
+Use the BambooHR node to automate work in BambooHR, and integrate BambooHR with other applications. n8n has built-in support for a wide range of BambooHR features, including creating, deleting, downloading, and getting company reports, employee documents, and files.
 
 On this page, you'll find a list of operations the BambooHR node supports and links to more resources.
 

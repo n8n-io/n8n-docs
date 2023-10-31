@@ -6,7 +6,7 @@ contentType: integration
 
 # LinkedIn
 
-The LinkedIn node allows you to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
+Use the LinkedIn node to automate work in LinkedIn, and integrate LinkedIn with other applications. n8n supports creating posts.
 
 On this page, you'll find a list of operations the LinkedIn node supports and links to more resources.
 

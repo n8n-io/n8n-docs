@@ -6,7 +6,7 @@ contentType: integration
 
 # Facebook Graph API
 
-The Facebook Graph API node allows you to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
+Use the Facebook Graph API node to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
 
 On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 

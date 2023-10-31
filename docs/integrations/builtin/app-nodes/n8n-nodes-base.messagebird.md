@@ -6,7 +6,7 @@ contentType: integration
 
 # MessageBird
 
-The MessageBird node allows you to automate work in MessageBird, and integrate MessageBird with other applications. n8n has built-in support for a wide range of MessageBird features, including sending messages, and getting balances. 
+Use the MessageBird node to automate work in MessageBird, and integrate MessageBird with other applications. n8n has built-in support for a wide range of MessageBird features, including sending messages, and getting balances. 
 
 On this page, you'll find a list of operations the MessageBird node supports and links to more resources.
 

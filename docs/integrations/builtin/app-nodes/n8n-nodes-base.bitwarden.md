@@ -6,7 +6,7 @@ contentType: integration
 
 # Bitwarden
 
-The Bitwarden node allows you to automate work in Bitwarden, and integrate Bitwarden with other applications. n8n has built-in support for a wide range of Bitwarden features, including creating, getting, deleting, and updating collections, events, groups, and members.
+Use the Bitwarden node to automate work in Bitwarden, and integrate Bitwarden with other applications. n8n has built-in support for a wide range of Bitwarden features, including creating, getting, deleting, and updating collections, events, groups, and members.
 
 On this page, you'll find a list of operations the Bitwarden node supports and links to more resources.
 

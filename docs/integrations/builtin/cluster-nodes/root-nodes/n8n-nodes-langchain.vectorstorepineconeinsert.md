@@ -5,7 +5,7 @@ description: 'Documentation for the Pinecone: Insert node in n8n, a workflow aut
 
 # Pinecone: Insert
 
-The Pinecone: Insert node allows you to insert data into a Pinecone vector database.
+Use the Pinecone: Insert node to insert data into a Pinecone vector database.
 
 On this page, you'll find the node parameters for the Pinecone: Insert node, and links to more resources.
 

@@ -5,7 +5,7 @@ description: Documentation for the OpenAI Model node in n8n, a workflow automati
 
 # OpenAI Model
 
-The OpenAI Model node allows you to use OpenAI Model's models.
+Use the OpenAI Model node to use OpenAI Model's models.
 
 On this page, you'll find the node parameters for the OpenAI Model node, and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Cloud Natural Language
 
-The Google Cloud Natural Language node allows you to automate work in Google Cloud Natural Language, and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, including analyzing documents.
+Use the Google Cloud Natural Language node to automate work in Google Cloud Natural Language, and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, including analyzing documents.
 
 On this page, you'll find a list of operations the Google Cloud Natural Language node supports and links to more resources.
 

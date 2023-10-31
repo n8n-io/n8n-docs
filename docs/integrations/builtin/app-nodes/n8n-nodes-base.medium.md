@@ -6,7 +6,7 @@ contentType: integration
 
 # Medium
 
-The Medium node allows you to automate work in Medium, and integrate Medium with other applications. n8n has built-in support for a wide range of Medium features, including creating posts, and getting publications. 
+Use the Medium node to automate work in Medium, and integrate Medium with other applications. n8n has built-in support for a wide range of Medium features, including creating posts, and getting publications. 
 
 On this page, you'll find a list of operations the Medium node supports and links to more resources.
 

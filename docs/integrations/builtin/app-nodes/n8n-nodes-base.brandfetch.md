@@ -6,7 +6,7 @@ contentType: integration
 
 # Brandfetch
 
-The Brandfetch node allows you to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information.
+Use the Brandfetch node to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information.
 
 On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Jira
 
-The Jira node allows you to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
+Use the Jira node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
 
 On this page, you'll find a list of operations the Jira node supports and links to more resources.
 

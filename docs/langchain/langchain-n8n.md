@@ -20,7 +20,7 @@ This page includes lists of the LangChain-focused nodes in n8n. You can use any 
 
 ## Credentials
 
-* [Anthropic	](/integrations/builtin/credentials/anthropic/)
+* [Anthropic](/integrations/builtin/credentials/anthropic/)
 * [Cohere](/integrations/builtin/credentials/cohere/)
 * [Hugging Face](/integrations/builtin/credentials/huggingface/)
 * [Motorhead](/integrations/builtin/credentials/motorhead/)
@@ -60,6 +60,15 @@ Available nodes:
 * [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 
 Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}.
+
+#### Vector store insert
+
+Vector stores store embedded data, and perform vector searches on it.
+
+* [In Memory Vector Store Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemoryinsert/)
+* [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/)
+* [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/)
+* [Zep Vector Store: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/)
 
 #### Miscellaneous
 
@@ -174,16 +183,13 @@ Available nodes:
 Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
 
 
-#### Vector stores
+#### Vector store load
 
 Vector stores store embedded data, and perform vector searches on it.
 
-* [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemory/)
-* [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/)
+* * [In Memory Vector Store Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemoryload/)
 * [Pinecone: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/)
-* [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/)
 * [Supabase: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseload/)
-* [Zep Vector Store: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/)
 * [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepload/)
 
 Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.

@@ -4,9 +4,11 @@ description: Link n8n to your Git provider.
 contentType: howto
 ---
 
-# Set up source control
+# Set up source control for environments
 
 Link a Git repository to an n8n instance and configure your source control.
+
+n8n uses source control to provide environments. Refer to [Environments in n8n](/source-control-environments/understand/environments/) for more information.
 
 ## Prerequisites
 

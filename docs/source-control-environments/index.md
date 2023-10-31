@@ -16,7 +16,7 @@ In this section:
 	* [Environments in n8n](/source-control-environments/understand/environments/): The purpose of environments, and how they work in n8n.
 	* [Git and n8n](/source-control-environments/understand/git/): How n8n uses Git. 
 	* [Branch patterns](/source-control-environments/understand/patterns/): The possible relationships between n8n instances and Git branches.
-* [Set up source control](/source-control-environments/setup/): How to connect your n8n instance to Git.
+* [Set up source control for environments](/source-control-environments/setup/): How to connect your n8n instance to Git.
 * [Using](/source-control-environments/using/):
 	* [Push and pull](/source-control-environments/using/push-pull/): Send work to Git, and fetch work from Git to your instance.
 	* [Copy work between environments](/source-control-environments/using/copy-work/): How to copy work between different n8n instances.

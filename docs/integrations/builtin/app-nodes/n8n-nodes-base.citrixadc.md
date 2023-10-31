@@ -6,7 +6,7 @@ contentType: integration
 
 # Citrix ADC
 
-The Citrix ADC node allows you to automate work in Citrix ADC, and integrate Citrix ADC with other applications. n8n has built-in support for a wide range of Citrix ADC features, including creating and installing certificates and files.
+Use the Citrix ADC node to automate work in Citrix ADC, and integrate Citrix ADC with other applications. n8n has built-in support for a wide range of Citrix ADC features, including creating and installing certificates and files.
 
 On this page, you'll find a list of operations the Citrix ADC node supports and links to more resources.
 

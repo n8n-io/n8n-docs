@@ -6,7 +6,7 @@ contentType: integration
 
 # Hacker News
 
-The Hacker News node allows you to automate work in Hacker News, and integrate Hacker News with other applications. n8n has built-in support for a wide range of Hacker News features, including getting articles, and users. 
+Use the Hacker News node to automate work in Hacker News, and integrate Hacker News with other applications. n8n has built-in support for a wide range of Hacker News features, including getting articles, and users. 
 
 On this page, you'll find a list of operations the Hacker News node supports and links to more resources.
 

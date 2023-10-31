@@ -6,7 +6,7 @@ contentType: integration
 
 # uProc
 
-The uProc node allows you to automate work in uProc, and integrate uProc with other applications. n8n has built-in support for a wide range of uProc features, including getting advanced human audio file, communication data, company, finance and product information. 
+Use the uProc node to automate work in uProc, and integrate uProc with other applications. n8n has built-in support for a wide range of uProc features, including getting advanced human audio file, communication data, company, finance and product information. 
 
 On this page, you'll find a list of operations the uProc node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Keap
 
-The Keap node allows you to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
+Use the Keap node to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
 
 On this page, you'll find a list of operations the Keap node supports and links to more resources.
 

@@ -21,7 +21,7 @@ There are two places in your workflows where you can use code:
 
 - __Code node__
 
-	The Code node allows you to add JavaScript or Python to your workflow.
+	Use the Code node to add JavaScript or Python to your workflow.
 
 	[:octicons-arrow-right-24: Code node](/code/code-node/)
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Box
 
-The Box node allows you to automate work in Box, and integrate Box with other applications. n8n has built-in support for a wide range of Box features, including creating, copying, deleting, searching, uploading, and downloading files and folders.
+Use the Box node to automate work in Box, and integrate Box with other applications. n8n has built-in support for a wide range of Box features, including creating, copying, deleting, searching, uploading, and downloading files and folders.
 
 On this page, you'll find a list of operations the Box node supports and links to more resources.
 

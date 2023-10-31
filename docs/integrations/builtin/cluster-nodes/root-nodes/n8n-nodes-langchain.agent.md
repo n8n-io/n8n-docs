@@ -5,7 +5,7 @@ description: Documentation for the Agent node in n8n, a workflow automation plat
 
 # Agent
 
-The Agent node allows you to set which agent type you want to use.
+Use the Agent node to set which agent type you want to use.
 
 On this page, you'll find the node parameters for the Agent node, and links to more resources.
 
@@ -29,7 +29,7 @@ Send a message to the agent before the conversation starts. Use this to guide th
 
 ## OpenAI Functions Agent parameters
 
-The OpenAI Functions Agent node allows you to use an [OpenAI functions model](https://platform.openai.com/docs/guides/gpt/function-calling){:target=_blank .external-link}. These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
+Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/gpt/function-calling){:target=_blank .external-link}. These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 

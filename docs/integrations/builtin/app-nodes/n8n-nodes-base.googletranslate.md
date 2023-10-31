@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Translate
 
-The Google Translate node allows you to automate work in Google Translate, and integrate Google Translate with other applications. n8n has built-in support for a wide range of Google Translate features, including translating languages.
+Use the Google Translate node to automate work in Google Translate, and integrate Google Translate with other applications. n8n has built-in support for a wide range of Google Translate features, including translating languages.
 
 On this page, you'll find a list of operations the Google Translate node supports and links to more resources.
 

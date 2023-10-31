@@ -6,7 +6,7 @@ contentType: integration
 
 # Mattermost
 
-The Mattermost node allows you to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, deleting, and getting channels, and users, as well as posting messages, and adding reactions.
+Use the Mattermost node to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, deleting, and getting channels, and users, as well as posting messages, and adding reactions.
 
 On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
 

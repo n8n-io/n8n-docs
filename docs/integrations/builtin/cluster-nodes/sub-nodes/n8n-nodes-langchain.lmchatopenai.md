@@ -5,7 +5,7 @@ description: Documentation for the OpenAI Chat Model node in n8n, a workflow aut
 
 # OpenAI Chat Model
 
-The OpenAI Chat Model node allows you to use OpenAI's chat models with conversational agents.
+Use the OpenAI Chat Model node to use OpenAI's chat models with conversational agents.
 
 On this page, you'll find the node parameters for the OpenAI Chat Model node, and links to more resources.
 

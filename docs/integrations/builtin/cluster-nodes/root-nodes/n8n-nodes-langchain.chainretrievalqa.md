@@ -5,7 +5,7 @@ description: Documentation for the Retrieval Q&A Chain node in n8n, a workflow a
 
 # Retrieval Q&A Chain
 
-The Retrieval Q&A Chain node allows you to use a vector store as a retriever.
+Use the Retrieval Q&A Chain node to use a vector store as a retriever.
 
 On this page, you'll find the node parameters for the Retrieval Q&A Chain node, and links to more resources.
 

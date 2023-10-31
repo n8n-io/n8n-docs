@@ -6,7 +6,7 @@ contentType: integration
 
 # Philips Hue
 
-The Philips Hue node allows you to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
+Use the Philips Hue node to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
 
 On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 

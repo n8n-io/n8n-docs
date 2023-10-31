@@ -5,7 +5,7 @@ description: Documentation for the Chat Messages Retriever node in n8n, a workfl
 
 # Chat Messages Retriever
 
-The Chat Messages Retriever node allows you to retrieve data from the in-memory vector store.
+Use the Chat Messages Retriever node to retrieve data from the in-memory vector store.
 
 On this page, you'll find a list of operations the Chat Messages Retriever node supports, and links to more resources.
 

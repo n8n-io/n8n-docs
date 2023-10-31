@@ -5,7 +5,7 @@ description: Documentation for the Manual Chat Trigger node in n8n, a workflow a
 
 # Manual Chat Trigger
 
-The Manual Chat Trigger node allows you to test LangChain workflows that require a user conversation as input.
+Use the Manual Chat Trigger node to test LangChain workflows that require a user conversation as input.
 
 On this page, you'll find information on how to use the Manual Chat Trigger, and links to more resources.
 

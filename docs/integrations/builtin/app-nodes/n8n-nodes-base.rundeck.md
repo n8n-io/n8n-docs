@@ -6,7 +6,7 @@ contentType: integration
 
 # Rundeck
 
-The Rundeck node allows you to automate work in Rundeck, and integrate Rundeck with other applications. n8n has built-in support for executing jobs and getting metadata.
+Use the Rundeck node to automate work in Rundeck, and integrate Rundeck with other applications. n8n has built-in support for executing jobs and getting metadata.
 
 On this page, you'll find a list of operations the Rundeck node supports and links to more resources.
 

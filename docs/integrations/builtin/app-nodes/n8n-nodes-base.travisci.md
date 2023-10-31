@@ -6,7 +6,7 @@ contentType: integration
 
 # Travis CI
 
-The Travis CI node allows you to automate work in Travis CI, and integrate Travis CI with other applications. n8n has built-in support for a wide range of Travis CI features, including cancelling and getting builds. 
+Use the Travis CI node to automate work in Travis CI, and integrate Travis CI with other applications. n8n has built-in support for a wide range of Travis CI features, including cancelling and getting builds. 
 
 On this page, you'll find a list of operations the Travis CI node supports and links to more resources.
 

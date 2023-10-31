@@ -6,7 +6,7 @@ contentType: integration
 
 # Pushbullet
 
-The Pushbullet node allows you to automate work in Pushbullet, and integrate Pushbullet with other applications. n8n has built-in support for a wide range of Pushbullet features, including creating, updating, deleting, and getting a push. 
+Use the Pushbullet node to automate work in Pushbullet, and integrate Pushbullet with other applications. n8n has built-in support for a wide range of Pushbullet features, including creating, updating, deleting, and getting a push. 
 
 On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
 

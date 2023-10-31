@@ -6,7 +6,7 @@ contentType: integration
 
 # Peekalink
 
-The Peekalink node allows you to automate work in Peekalink, and integrate Peekalink with other applications. n8n supports checking, and reviewing links with Peekalink.
+Use the Peekalink node to automate work in Peekalink, and integrate Peekalink with other applications. n8n supports checking, and reviewing links with Peekalink.
 
 On this page, you'll find a list of operations the Peekalink node supports and links to more resources.
 

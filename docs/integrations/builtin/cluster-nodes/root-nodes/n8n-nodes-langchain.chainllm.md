@@ -5,7 +5,7 @@ description: Documentation for the Basic LLM Chain node in n8n, a workflow autom
 
 # Basic LLM Chain
 
-The Basic LLM Chain node allows you to set the prompt that the model will use along with setting an optional parser for the response.
+Use the Basic LLM Chain node to set the prompt that the model will use along with setting an optional parser for the response.
 
 On this page, you'll find the node parameters for the Basic LLM Chain node, and links to more resources.
 

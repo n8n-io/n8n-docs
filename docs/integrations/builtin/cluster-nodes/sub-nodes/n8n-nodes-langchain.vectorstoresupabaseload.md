@@ -5,7 +5,7 @@ description: 'Documentation for the Supabase: Load node in n8n, a workflow autom
 
 # Supabase: Load
 
-The Supabase: Load node allows you to load data from Supabase vector database.
+Use the Supabase: Load node to load data from Supabase vector database.
 
 On this page, you'll find the node parameters for the Supabase: Load node, and links to more resources.
 

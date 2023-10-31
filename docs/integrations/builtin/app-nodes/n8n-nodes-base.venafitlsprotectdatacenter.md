@@ -6,7 +6,7 @@ contentType: integration
 
 # Venafi TLS Protect Datacenter
 
-The Venafi TLS Protect Datacenter node allows you to automate work in Venafi TLS Protect Datacenter, and integrate Venafi TLS Protect Datacenter with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Datacenter features, including creating, deleting, and getting certificates. 
+Use the Venafi TLS Protect Datacenter node to automate work in Venafi TLS Protect Datacenter, and integrate Venafi TLS Protect Datacenter with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Datacenter features, including creating, deleting, and getting certificates. 
 
 On this page, you'll find a list of operations the Venafi TLS Protect Datacenter node supports and links to more resources.
 

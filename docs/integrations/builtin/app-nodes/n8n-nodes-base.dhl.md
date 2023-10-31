@@ -6,7 +6,7 @@ contentType: integration
 
 # DHL
 
-The DHL node allows you to automate work in DHL, and integrate DHL with other applications. n8n has built-in support for a wide range of DHL features, including tracking shipment. 
+Use the DHL node to automate work in DHL, and integrate DHL with other applications. n8n has built-in support for a wide range of DHL features, including tracking shipment. 
 
 On this page, you'll find a list of operations the DHL node supports and links to more resources.
 

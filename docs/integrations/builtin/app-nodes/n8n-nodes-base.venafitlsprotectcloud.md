@@ -6,7 +6,7 @@ contentType: integration
 
 # Venafi TLS Protect Cloud
 
-The Venafi TLS Protect Cloud node allows you to automate work in Venafi TLS Protect Cloud, and integrate Venafi TLS Protect Cloud with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Cloud features, including deleting and downloading certificates, as well as creating certificates requests. 
+Use the Venafi TLS Protect Cloud node to automate work in Venafi TLS Protect Cloud, and integrate Venafi TLS Protect Cloud with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Cloud features, including deleting and downloading certificates, as well as creating certificates requests. 
 
 On this page, you'll find a list of operations the Venafi TLS Protect Cloud node supports and links to more resources.
 

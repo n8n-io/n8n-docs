@@ -6,7 +6,7 @@ contentType: integration
 
 # Automizy
 
-The Automizy node allows you to automate work in Automizy, and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, including creating, reading, listing, updating, deleting contacts, and lists.
+Use the Automizy node to automate work in Automizy, and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, including creating, reading, listing, updating, deleting contacts, and lists.
 
 On this page, you'll find a list of operations the Automizy node supports and links to more resources.
 

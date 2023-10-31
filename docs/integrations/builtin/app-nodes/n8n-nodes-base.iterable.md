@@ -6,7 +6,7 @@ contentType: integration
 
 # Iterable
 
-The Iterable node allows you to automate work in Iterable, and integrate Iterable with other applications. n8n has built-in support for a wide range of Iterable features, including creating users, recording the actions performed by the users, and adding and removing users from the list. 
+Use the Iterable node to automate work in Iterable, and integrate Iterable with other applications. n8n has built-in support for a wide range of Iterable features, including creating users, recording the actions performed by the users, and adding and removing users from the list. 
 
 On this page, you'll find a list of operations the Iterable node supports and links to more resources.
 

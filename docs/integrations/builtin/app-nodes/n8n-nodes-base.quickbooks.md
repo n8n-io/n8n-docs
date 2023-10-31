@@ -6,7 +6,7 @@ contentType: integration
 
 # QuickBooks
 
-The QuickBooks node allows you to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
+Use the QuickBooks node to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
 
 On this page, you'll find a list of operations the QuickBooks node supports and links to more resources.
 

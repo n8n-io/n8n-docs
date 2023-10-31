@@ -6,7 +6,7 @@ contentType: integration
 
 # Webflow
 
-The Webflow node allows you to automate work in Webflow, and integrate Webflow with other applications. n8n has built-in support for a wide range of Webflow features, including creating, updating, deleting, and getting items. 
+Use the Webflow node to automate work in Webflow, and integrate Webflow with other applications. n8n has built-in support for a wide range of Webflow features, including creating, updating, deleting, and getting items. 
 
 On this page, you'll find a list of operations the Webflow node supports and links to more resources.
 

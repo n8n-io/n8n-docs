@@ -6,7 +6,7 @@ contentType: integration
 
 # Clearbit
 
-The Clearbit node allows you to automate work in Clearbit, and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, including auto-completing and looking up companies and persons.
+Use the Clearbit node to automate work in Clearbit, and integrate Clearbit with other applications. n8n has built-in support for a wide range of Clearbit features, including auto-completing and looking up companies and persons.
 
 On this page, you'll find a list of operations the Clearbit node supports and links to more resources.
 

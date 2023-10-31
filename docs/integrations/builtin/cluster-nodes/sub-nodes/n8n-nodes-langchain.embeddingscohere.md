@@ -5,7 +5,7 @@ description: Documentation for the Embeddings Cohere node in n8n, a workflow aut
 
 # Embeddings Cohere
 
-The Embeddings Cohere node allows you to generate embeddings for a given text.
+Use the Embeddings Cohere node to generate embeddings for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Cohere node, and links to more resources.
 

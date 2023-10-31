@@ -6,7 +6,7 @@ contentType: integration
 
 # sms77
 
-The sms77 node allows you to automate work in sms77, and integrate sms77 with other applications. n8n has built-in support for a wide range of sms77 features, including sending SMS, and converting text to voice. 
+Use the sms77 node to automate work in sms77, and integrate sms77 with other applications. n8n has built-in support for a wide range of sms77 features, including sending SMS, and converting text to voice. 
 
 On this page, you'll find a list of operations the sms77 node supports and links to more resources.
 

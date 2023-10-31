@@ -6,7 +6,7 @@ contentType: integration
 
 # Strava
 
-The Strava node allows you to automate work in Strava, and integrate Strava with other applications. n8n has built-in support for a wide range of Strava features, including creating new activities, and getting activity information. 
+Use the Strava node to automate work in Strava, and integrate Strava with other applications. n8n has built-in support for a wide range of Strava features, including creating new activities, and getting activity information. 
 
 On this page, you'll find a list of operations the Strava node supports and links to more resources.
 

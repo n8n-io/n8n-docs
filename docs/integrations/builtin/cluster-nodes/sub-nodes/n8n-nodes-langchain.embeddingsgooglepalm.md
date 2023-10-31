@@ -5,7 +5,7 @@ description: Documentation for the Embeddings Google PaLM node in n8n, a workflo
 
 # Embeddings Google PaLM
 
-The Embeddings Google PaLM node allows you to generate embeddings for a given text.
+Use the Embeddings Google PaLM node to generate embeddings for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Google PaLM node, and links to more resources.
 

@@ -5,7 +5,7 @@ description: Documentation for the In Memory Vector Store Load node in n8n, a wo
 
 # In Memory Vector Store Load
 
-The In Memory Vector Store Load node allows you to load embeddings from memory.
+Use the In Memory Vector Store Load node to load embeddings from memory.
 
 On this page, you'll find the node parameters for the In Memory Vector Store node, and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # SIGNL4
 
-The SIGNL4 node allows you to automate work in SIGNL4, and integrate SIGNL4 with other applications. n8n supports sending and resolving alerts with SIGNL4.
+Use the SIGNL4 node to automate work in SIGNL4, and integrate SIGNL4 with other applications. n8n supports sending and resolving alerts with SIGNL4.
 
 On this page, you'll find a list of operations the SIGNL4 node supports and links to more resources.
 

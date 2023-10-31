@@ -6,7 +6,7 @@ contentType: integration
 
 # Flow
 
-The Flow node allows you to automate work in Flow, and integrate Flow with other applications. n8n has built-in support for a wide range of Flow features, including creating, updating, and getting tasks.
+Use the Flow node to automate work in Flow, and integrate Flow with other applications. n8n has built-in support for a wide range of Flow features, including creating, updating, and getting tasks.
 
 On this page, you'll find a list of operations the Flow node supports and links to more resources.
 

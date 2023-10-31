@@ -6,7 +6,7 @@ contentType: integration
 
 # Mailjet
 
-The Mailjet node allows you to automate work in Mailjet, and integrate Mailjet with other applications. n8n has built-in support for a wide range of Mailjet features, including sending emails, and sms. 
+Use the Mailjet node to automate work in Mailjet, and integrate Mailjet with other applications. n8n has built-in support for a wide range of Mailjet features, including sending emails, and sms. 
 
 On this page, you'll find a list of operations the Mailjet node supports and links to more resources.
 

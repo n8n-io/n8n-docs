@@ -6,7 +6,7 @@ contentType: integration
 
 # Kafka
 
-The Kafka node allows you to automate work in Kafka, and integrate Kafka with other applications. n8n has built-in support for a wide range of Kafka features, including sending messages. 
+Use the Kafka node to automate work in Kafka, and integrate Kafka with other applications. n8n has built-in support for a wide range of Kafka features, including sending messages. 
 
 On this page, you'll find a list of operations the Kafka node supports and links to more resources.
 

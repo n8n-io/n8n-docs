@@ -6,7 +6,7 @@ contentType: integration
 
 # Emelia
 
-The Emelia node allows you to automate work in Emelia, and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, including creating campaigns, and adding contacts to a list. 
+Use the Emelia node to automate work in Emelia, and integrate Emelia with other applications. n8n has built-in support for a wide range of Emelia features, including creating campaigns, and adding contacts to a list. 
 
 On this page, you'll find a list of operations the Emelia node supports and links to more resources.
 

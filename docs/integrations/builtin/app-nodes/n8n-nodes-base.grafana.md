@@ -6,7 +6,7 @@ contentType: integration
 
 # Grafana
 
-The Grafana node allows you to automate work in Grafana, and integrate Grafana with other applications. n8n has built-in support for a wide range of Grafana features, including creating, updating, deleting, and getting dashboards, teams, and users.
+Use the Grafana node to automate work in Grafana, and integrate Grafana with other applications. n8n has built-in support for a wide range of Grafana features, including creating, updating, deleting, and getting dashboards, teams, and users.
 
 On this page, you'll find a list of operations the Grafana node supports and links to more resources.
 

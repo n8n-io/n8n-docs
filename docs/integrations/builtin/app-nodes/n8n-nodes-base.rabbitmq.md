@@ -6,7 +6,7 @@ contentType: integration
 
 # RabbitMQ
 
-The RabbitMQ node allows you to automate work in RabbitMQ, and integrate RabbitMQ with other applications. n8n has built-in support for a wide range of RabbitMQ features, including accepting, and forwarding messages. 
+Use the RabbitMQ node to automate work in RabbitMQ, and integrate RabbitMQ with other applications. n8n has built-in support for a wide range of RabbitMQ features, including accepting, and forwarding messages. 
 
 On this page, you'll find a list of operations the RabbitMQ node supports and links to more resources.
 

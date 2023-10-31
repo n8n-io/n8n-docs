@@ -5,7 +5,7 @@ description: 'Documentation for the Zep Vector Store: Load node in n8n, a workfl
 
 # Zep Vector Store: Load
 
-The Zep Vector Store: Load node allows you to load data from a Zep vector database.
+Use the Zep Vector Store: Load node to load data from a Zep vector database.
 
 On this page, you'll find the node parameters for the Zep Vector Store: Load node, and links to more resources.
 

@@ -5,7 +5,7 @@ description: Documentation for the Binary Input Loader node in n8n, a workflow a
 
 # Binary Input Loader
 
-The Binary Input Loader node allows you to load binary data files for vector stores or summarization.
+Use the Binary Input Loader node to load binary data files for vector stores or summarization.
 
 On this page, you'll find a list of parameters the Binary Input Loader node supports, and links to more resources.
 

@@ -5,7 +5,7 @@ description: Documentation for the Workflow Retriever node in n8n, a workflow au
 
 # Workflow Retriever
 
-The Workflow Retriever node allows you to retrieve data from an n8n workflow for use in a Retrieval QA Chain or another Retriever node.
+Use the Workflow Retriever node to retrieve data from an n8n workflow for use in a Retrieval QA Chain or another Retriever node.
 
 On this page, you'll find the node parameters for the Workflow Retriever node, and links to more resources.
 

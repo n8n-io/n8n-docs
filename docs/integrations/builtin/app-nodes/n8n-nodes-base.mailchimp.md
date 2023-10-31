@@ -6,7 +6,7 @@ contentType: integration
 
 # Mailchimp
 
-The Mailchimp node allows you to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, and deleting campaigns, as well as getting list groups. 
+Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, and deleting campaigns, as well as getting list groups. 
 
 On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 

@@ -5,7 +5,7 @@ description: 'Documentation for the Supabase: Insert node in n8n, a workflow aut
 
 # Supabase: Insert
 
-The Supabase: Insert node allows you to insert data into a Supabase vector database.
+Use the Supabase: Insert node to insert data into a Supabase vector database.
 
 On this page, you'll find the node parameters for the Supabase: Insert node, and links to more resources.
 

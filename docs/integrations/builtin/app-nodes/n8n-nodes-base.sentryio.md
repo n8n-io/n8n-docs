@@ -6,7 +6,7 @@ contentType: integration
 
 # Sentry.io
 
-The Sentry.io node allows you to automate work in Sentry.io, and integrate Sentry.io with other applications. n8n has built-in support for a wide range of Sentry.io features, including creating, updating, deleting, and getting, issues, projects, and releases, as well as getting all events.
+Use the Sentry.io node to automate work in Sentry.io, and integrate Sentry.io with other applications. n8n has built-in support for a wide range of Sentry.io features, including creating, updating, deleting, and getting, issues, projects, and releases, as well as getting all events.
 
 On this page, you'll find a list of operations the Sentry.io node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Wekan
 
-The Wekan node allows you to automate work in Wekan, and integrate Wekan with other applications. n8n has built-in support for a wide range of Wekan features, including creating, updating, deleting, and getting boards and cards. 
+Use the Wekan node to automate work in Wekan, and integrate Wekan with other applications. n8n has built-in support for a wide range of Wekan features, including creating, updating, deleting, and getting boards and cards. 
 
 On this page, you'll find a list of operations the Wekan node supports and links to more resources.
 

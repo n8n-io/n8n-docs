@@ -5,7 +5,7 @@ description: Documentation for the Zep node in n8n, a workflow automation platfo
 
 # Zep
 
-The Zep node allows you to use Zep as a memory server.
+Use the Zep node to use Zep as a memory server.
 
 On this page, you'll find a list of operations the Zep node supports, and links to more resources.
 

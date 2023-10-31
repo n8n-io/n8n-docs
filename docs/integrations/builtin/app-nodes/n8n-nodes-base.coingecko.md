@@ -6,7 +6,7 @@ contentType: integration
 
 # CoinGecko
 
-The CoinGecko node allows you to automate work in CoinGecko, and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, including getting coins and events.
+Use the CoinGecko node to automate work in CoinGecko, and integrate CoinGecko with other applications. n8n has built-in support for a wide range of CoinGecko features, including getting coins and events.
 
 On this page, you'll find a list of operations the CoinGecko node supports and links to more resources.
 

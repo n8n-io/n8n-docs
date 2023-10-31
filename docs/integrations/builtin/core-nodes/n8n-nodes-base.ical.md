@@ -6,7 +6,7 @@ contentType: integration
 
 # iCalendar
 
-The iCalendar node allows you to create event files that can be shared as an attachment.
+Use the iCalendar node to create event files that can be shared as an attachment.
 
 ## Basic Operations
 

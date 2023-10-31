@@ -6,7 +6,7 @@ contentType: integration
 
 # Mautic
 
-The Mautic node allows you to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campagin contacts. 
+Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campagin contacts. 
 
 On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 

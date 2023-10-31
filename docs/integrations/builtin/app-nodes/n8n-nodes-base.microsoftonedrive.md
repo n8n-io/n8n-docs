@@ -6,7 +6,7 @@ contentType: integration
 
 # Microsoft OneDrive
 
-The Microsoft OneDrive node allows you to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
+Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
 
 On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 

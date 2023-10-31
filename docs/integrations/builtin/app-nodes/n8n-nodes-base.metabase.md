@@ -6,7 +6,7 @@ contentType: integration
 
 # Metabase
 
-The Metabase node allows you to automate work in Metabase, and integrate Metabase with other applications. n8n has built-in support for a wide range of Metabase features, including adding, and getting alerts, databases, metrics, and questions. 
+Use the Metabase node to automate work in Metabase, and integrate Metabase with other applications. n8n has built-in support for a wide range of Metabase features, including adding, and getting alerts, databases, metrics, and questions. 
 
 On this page, you'll find a list of operations the Metabase node supports and links to more resources.
 

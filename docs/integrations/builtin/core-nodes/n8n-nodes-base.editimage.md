@@ -6,7 +6,7 @@ contentType: integration
 
 # Edit Image
 
-The Edit Image node allows you to manipulate and edit images.
+Use the Edit Image node to manipulate and edit images.
 
 !!! note "Dependencies"
     1. If you aren't running n8n on Docker, you need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html){:target=_blank .external-link}.  

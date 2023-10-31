@@ -5,7 +5,7 @@ description: Documentation for the Window Buffer Memory node in n8n, a workflow 
 
 # Window Buffer Memory
 
-The Window Buffer Memory node allows you to persist chat history in your workflow.
+Use the Window Buffer Memory node to persist chat history in your workflow.
 
 On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
 

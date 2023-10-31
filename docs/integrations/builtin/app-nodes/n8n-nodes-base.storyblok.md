@@ -6,7 +6,7 @@ contentType: integration
 
 # Storyblok
 
-The Storyblok node allows you to automate work in Storyblok, and integrate Storyblok with other applications. n8n has built-in support for a wide range of Storyblok features, including getting, deleting, and publishing stories. 
+Use the Storyblok node to automate work in Storyblok, and integrate Storyblok with other applications. n8n has built-in support for a wide range of Storyblok features, including getting, deleting, and publishing stories. 
 
 On this page, you'll find a list of operations the Storyblok node supports and links to more resources.
 

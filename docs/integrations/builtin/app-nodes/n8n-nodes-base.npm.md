@@ -6,7 +6,7 @@ contentType: integration
 
 # npm
 
-The npm node allows you to automate work in npm, and integrate npm with other applications.
+Use the npm node to automate work in npm, and integrate npm with other applications.
 
 On this page, you'll find a list of operations the npm node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Invoice Ninja
 
-The Invoice Ninja node allows you to automate work in Invoice Ninja, and integrate Invoice Ninja with other applications. n8n has built-in support for a wide range of Invoice Ninja features, including creating, updating, deleting, and getting clients, expense, invoice, payments and quotes. 
+Use the Invoice Ninja node to automate work in Invoice Ninja, and integrate Invoice Ninja with other applications. n8n has built-in support for a wide range of Invoice Ninja features, including creating, updating, deleting, and getting clients, expense, invoice, payments and quotes. 
 
 On this page, you'll find a list of operations the Invoice Ninja node supports and links to more resources.
 

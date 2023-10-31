@@ -6,7 +6,7 @@ contentType: integration
 
 # DeepL
 
-The DeepL node allows you to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
+Use the DeepL node to automate work in DeepL, and integrate DeepL with other applications. n8n has built-in support for a wide range of DeepL features, including translating languages.
 
 On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Intercom
 
-The Intercom node allows you to automate work in Intercom, and integrate Intercom with other applications. n8n has built-in support for a wide range of Intercom features, including creating, updating, deleting, and getting companies, leads, and users. 
+Use the Intercom node to automate work in Intercom, and integrate Intercom with other applications. n8n has built-in support for a wide range of Intercom features, including creating, updating, deleting, and getting companies, leads, and users. 
 
 On this page, you'll find a list of operations the Intercom node supports and links to more resources.
 

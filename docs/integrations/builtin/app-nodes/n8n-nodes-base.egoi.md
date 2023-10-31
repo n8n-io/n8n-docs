@@ -6,7 +6,7 @@ contentType: integration
 
 # E-goi
 
-The E-goi node allows you to automate work in E-goi, and integrate E-goi with other applications. n8n has built-in support for a wide range of E-goi features, including creating, updating, deleting, and getting contacts. 
+Use the E-goi node to automate work in E-goi, and integrate E-goi with other applications. n8n has built-in support for a wide range of E-goi features, including creating, updating, deleting, and getting contacts. 
 
 On this page, you'll find a list of operations the E-goi node supports and links to more resources.
 

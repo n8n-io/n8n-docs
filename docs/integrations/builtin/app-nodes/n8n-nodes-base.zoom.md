@@ -6,7 +6,7 @@ contentType: integration
 
 # Zoom
 
-The Zoom node allows you to automate work in Zoom, and integrate Zoom with other applications. n8n has built-in support for a wide range of Zoom features, including creating, retrieving, deleting, and updating meetings. 
+Use the Zoom node to automate work in Zoom, and integrate Zoom with other applications. n8n has built-in support for a wide range of Zoom features, including creating, retrieving, deleting, and updating meetings. 
 
 On this page, you'll find a list of operations the Zoom node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Segment
 
-The Segment node allows you to automate work in Segment, and integrate Segment with other applications. n8n has built-in support for a wide range of Segment features, including adding users to groups, creating identities, and tracking activities. 
+Use the Segment node to automate work in Segment, and integrate Segment with other applications. n8n has built-in support for a wide range of Segment features, including adding users to groups, creating identities, and tracking activities. 
 
 On this page, you'll find a list of operations the Segment node supports and links to more resources.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # HubSpot
 
-The HubSpot node allows you to automate work in HubSpot, and integrate HubSpot with other applications. n8n has built-in support for a wide range of HubSpot features, including creating, updating, deleting, and getting contacts, deals, lists, engagements and companies. 
+Use the HubSpot node to automate work in HubSpot, and integrate HubSpot with other applications. n8n has built-in support for a wide range of HubSpot features, including creating, updating, deleting, and getting contacts, deals, lists, engagements and companies. 
 
 On this page, you'll find a list of operations the HubSpot node supports and links to more resources.
 

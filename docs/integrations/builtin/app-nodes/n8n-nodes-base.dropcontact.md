@@ -6,7 +6,7 @@ contentType: integration
 
 # Dropcontact
 
-The Dropcontact node allows you to automate work in Dropcontact, and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, including  fetching contacts. 
+Use the Dropcontact node to automate work in Dropcontact, and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, including  fetching contacts. 
 
 On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
 

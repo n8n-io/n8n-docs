@@ -6,7 +6,7 @@ contentType: integration
 
 # Tapfiliate
 
-The Tapfiliate node allows you to automate work in Tapfiliate, and integrate Tapfiliate with other applications. n8n has built-in support for a wide range of Tapfiliate features, including creating and deleting affiliates, and adding affiliate metadata. 
+Use the Tapfiliate node to automate work in Tapfiliate, and integrate Tapfiliate with other applications. n8n has built-in support for a wide range of Tapfiliate features, including creating and deleting affiliates, and adding affiliate metadata. 
 
 On this page, you'll find a list of operations the Tapfiliate node supports and links to more resources.
 

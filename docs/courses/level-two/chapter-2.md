@@ -17,7 +17,7 @@ You're most likely familiar with HTML and XML.
 
 If you need to process HTML or XML data in your n8n workflows, use the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
 
-The HTML node allows you to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
+Use the HTML node to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
 ### Exercise
 
@@ -53,7 +53,7 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 	</details>
 
 
-The XML node allows you to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON, and need to get and submit data between them in the two formats.
+Use the XML node to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON, and need to get and submit data between them in the two formats.
 
 ### Exercise
 

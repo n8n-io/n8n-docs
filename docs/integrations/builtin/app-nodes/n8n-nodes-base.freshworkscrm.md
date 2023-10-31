@@ -6,7 +6,7 @@ contentType: integration
 
 # Freshworks CRM
 
-The Freshworks CRM node allows you to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
+Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
 
 On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
 

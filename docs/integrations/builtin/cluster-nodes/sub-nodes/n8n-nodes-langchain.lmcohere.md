@@ -5,7 +5,7 @@ description: Documentation for the Cohere Model node in n8n, a workflow automati
 
 # Cohere Model
 
-The Cohere Model node allows you to use Cohere Model's models.
+Use the Cohere Model node to use Cohere Model's models.
 
 On this page, you'll find the node parameters for the Cohere Model node, and links to more resources.
 

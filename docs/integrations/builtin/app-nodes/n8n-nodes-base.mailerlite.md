@@ -6,7 +6,7 @@ contentType: integration
 
 # MailerLite
 
-The MailerLite node allows you to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
+Use the MailerLite node to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
 
 On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
 

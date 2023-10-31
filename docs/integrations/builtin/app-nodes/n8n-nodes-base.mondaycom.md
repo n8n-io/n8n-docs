@@ -6,7 +6,7 @@ contentType: integration
 
 # monday.com
 
-The monday.com node allows you to automate work in monday.com, and integrate monday.com with other applications. n8n has built-in support for a wide range of monday.com features, including creating a new board, and adding, deleting, and getting items on the board.
+Use the monday.com node to automate work in monday.com, and integrate monday.com with other applications. n8n has built-in support for a wide range of monday.com features, including creating a new board, and adding, deleting, and getting items on the board.
 
 On this page, you'll find a list of operations the monday.com node supports and links to more resources.
 

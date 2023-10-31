@@ -6,7 +6,7 @@ contentType: integration
 
 # Freshdesk
 
-The Freshdesk node allows you to automate work in Freshdesk and integrate Freshdesk with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting contacts and tickets.
+Use the Freshdesk node to automate work in Freshdesk and integrate Freshdesk with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting contacts and tickets.
 
 On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
 

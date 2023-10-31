@@ -5,7 +5,7 @@ description: Documentation for the Vector Store Retriever node in n8n, a workflo
 
 # Vector Store Retriever
 
-The Vector Store Retriever node allows you to retrieve documents from a vector store.
+Use the Vector Store Retriever node to retrieve documents from a vector store.
 
 On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
 

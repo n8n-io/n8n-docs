@@ -6,7 +6,7 @@ contentType: integration
 
 # LoneScale 
 
-The LoneScale node allows you to automate work in LoneScale and integrate LoneScale with other applications. n8n has built-in support for managing Lists and Items in LoneScale. 
+Use the LoneScale node to automate work in LoneScale and integrate LoneScale with other applications. n8n has built-in support for managing Lists and Items in LoneScale. 
 
 On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
 

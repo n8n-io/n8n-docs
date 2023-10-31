@@ -5,7 +5,7 @@ description: Documentation for the Anthropic Chat Model node in n8n, a workflow 
 
 # Anthropic Chat Model
 
-The Anthropic Chat Model node allows you to use Anthropic's Claude family of chat models with conversational agents.
+Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational agents.
 
 On this page, you'll find the node parameters for the Anthropic Chat Model node, and links to more resources.
 

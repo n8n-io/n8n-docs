@@ -6,7 +6,7 @@ contentType: integration
 
 # Google Docs
 
-The Google Docs node allows you to automate work in Google Docs, and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, including creating, updating, and getting documents. 
+Use the Google Docs node to automate work in Google Docs, and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, including creating, updating, and getting documents. 
 
 On this page, you'll find a list of operations the Google Docs node supports and links to more resources.
 

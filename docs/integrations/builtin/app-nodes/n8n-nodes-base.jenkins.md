@@ -6,7 +6,7 @@ contentType: integration
 
 # Jenkins
 
-The Jenkins node allows you to automate work in Jenkins, and integrate Jenkins with other applications. n8n has built-in support for a wide range of Jenkins features, including listing builds, managing instances, and creating and copying jobs. 
+Use the Jenkins node to automate work in Jenkins, and integrate Jenkins with other applications. n8n has built-in support for a wide range of Jenkins features, including listing builds, managing instances, and creating and copying jobs. 
 
 On this page, you'll find a list of operations the Jenkins node supports and links to more resources.
 

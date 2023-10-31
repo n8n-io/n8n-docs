@@ -6,7 +6,7 @@ contentType: integration
 
 # Pipedrive
 
-The Pipedrive node allows you to automate work in Pipedrive, and integrate Pipedrive with other applications. n8n has built-in support for a wide range of Pipedrive features, including creating, updating, deleting, and getting activity, files, notes, organizations, and leads. 
+Use the Pipedrive node to automate work in Pipedrive, and integrate Pipedrive with other applications. n8n has built-in support for a wide range of Pipedrive features, including creating, updating, deleting, and getting activity, files, notes, organizations, and leads. 
 
 On this page, you'll find a list of operations the Pipedrive node supports and links to more resources.
 

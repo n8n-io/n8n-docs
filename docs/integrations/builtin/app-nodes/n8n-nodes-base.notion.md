@@ -6,7 +6,7 @@ contentType: integration
 
 # Notion
 
-The Notion node allows you to automate work in Notion, and integrate Notion with other applications. n8n has built-in support for a wide range of Notion features, including getting and searching databases, creating pages, and getting users.
+Use the Notion node to automate work in Notion, and integrate Notion with other applications. n8n has built-in support for a wide range of Notion features, including getting and searching databases, creating pages, and getting users.
 
 On this page, you'll find a list of operations the Notion node supports and links to more resources.
 

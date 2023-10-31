@@ -6,7 +6,7 @@ contentType: integration
 
 # YouTube
 
-The YouTube node allows you to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving and updating channels, as well as creating and deleting playlists. 
+Use the YouTube node to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving and updating channels, as well as creating and deleting playlists. 
 
 On this page, you'll find a list of operations the YouTube node supports and links to more resources.
 

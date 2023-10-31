@@ -5,7 +5,7 @@ description: Documentation for the Character Text Splitter node in n8n, a workfl
 
 # Character Text Splitter
 
-The Character Text Splitter node allows you to split document data based on characters.
+Use the Character Text Splitter node to split document data based on characters.
 
 On this page, you'll find the node parameters for the Character Text Splitter node, and links to more resources.
 

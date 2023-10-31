@@ -5,7 +5,7 @@ description: Documentation for the Google PaLM Language Model node in n8n, a wor
 
 # Google PaLM Language Model
 
-The Google PaLM Language Model node allows you to use Google's PaLM models.
+Use the Google PaLM Language Model node to use Google's PaLM models.
 
 On this page, you'll find the node parameters for the Google PaLM Language Model node, and links to more resources.
 

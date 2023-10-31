@@ -6,7 +6,7 @@ contentType: integration
 
 # MongoDB
 
-The MongoDB node allows you to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
+Use the MongoDB node to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
 
 On this page, you'll find a list of operations the MongoDB node supports and links to more resources.
 

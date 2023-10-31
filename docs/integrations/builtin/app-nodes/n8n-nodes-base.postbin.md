@@ -6,7 +6,7 @@ contentType: integration
 
 # Postbin
 
-PostBin is a service that helps you test API clients and webhooks. The PostBin node allows you to automate work in Postbin, and integrate PostBin with other applications. n8n has built-in support for a wide range of PostBin features, including creating and deleting bins, and getting and sending requests. 
+PostBin is a service that helps you test API clients and webhooks. Use the PostBin node to automate work in Postbin, and integrate PostBin with other applications. n8n has built-in support for a wide range of PostBin features, including creating and deleting bins, and getting and sending requests. 
 
 On this page, you'll find a list of operations the PostBin node supports, and links to more resources.
 

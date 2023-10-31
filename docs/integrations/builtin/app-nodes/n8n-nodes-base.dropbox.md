@@ -6,7 +6,7 @@ contentType: integration
 
 # Dropbox
 
-The Dropbox node allows you to automate work in Dropbox, and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, including creating, downloading, moving, and copying files and folders.
+Use the Dropbox node to automate work in Dropbox, and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, including creating, downloading, moving, and copying files and folders.
 
 On this page, you'll find a list of operations the Dropbox node supports and links to more resources.
 

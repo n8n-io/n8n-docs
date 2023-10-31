@@ -6,7 +6,7 @@ contentType: integration
 
 # crowd.dev trigger
 
-The crowd.dev trigger node allows you to respond to events in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev events, which includes new activities and new members.
+Use the crowd.dev trigger node to respond to events in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev events, which includes new activities and new members.
 
 On this page, you'll find a list of events the crowd.dev trigger node can respond to, and links to more resources.
 

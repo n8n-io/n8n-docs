@@ -6,7 +6,7 @@ contentType: integration
 
 # Mailcheck
 
-The Mailcheck node allows you to automate work in Mailcheck, and integrate Mailcheck with other applications. n8n has built-in support for a wide range of Mailcheck features, including checking emails. 
+Use the Mailcheck node to automate work in Mailcheck, and integrate Mailcheck with other applications. n8n has built-in support for a wide range of Mailcheck features, including checking emails. 
 
 On this page, you'll find a list of operations the Mailcheck node supports and links to more resources.
 

@@ -13,6 +13,8 @@ The Date & Time node manipulates date and time data and convert it to different 
 
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
+!!! note "Date and time in other nodes"
+	You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/luxon/) for more information.
 
 ## Operations
 
@@ -28,7 +30,7 @@ The Date & Time node manipulates date and time data and convert it to different 
 
 View [example workflows and related content](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} on n8n's website.
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. 
+The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. You can also use Luxon in the Code node and expressions. Refer to [Date and time with Luxon](/code/luxon/) for more information.
 
 ### Supported date formats
 

@@ -34,6 +34,7 @@ This includes:
 	| `$runIndex` | How many times n8n has executed the current node. Zero-based (the first run is 0, the second is 1, and so on). | :white_check_mark: |
 	| `$secrets` | Contains information about your [External secrets](/external-secrets/) setup. | :white_check_mark: |
 	| `$vars` | Contains the [Variables](/code/variables/) available in the active environment. | :white_check_mark: |
+	| | `$version` | The node version. | :x: |
 	| `$workflow.active` | Whether the workflow is active (true) or not (false). | :white_check_mark: |
 	| `$workflow.id` | The workflow ID. | :white_check_mark: |
 	| `$workflow.name` | The workflow name. | :white_check_mark: |

@@ -64,8 +64,7 @@ You can choose to send additional information with your request. The data you ne
 * **Send Headers**: include request headers. Headers contain metadata about your request.
 * **Send Body**: send additional information in the body of your request.
 
-
-### Options
+## Node options
 
 Select **Add Option** to view and select these options.
 
@@ -73,8 +72,39 @@ Select **Add Option** to view and select these options.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
 - **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.
+- **Pagination**: handle query results that are too big for the API to return in a single call.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.
+
+### Pagination
+
+Use this option to paginate results.
+
+!!! note "Inspect the API data first"
+	Some options for pagination require knowledge of the data returned by the API you're using. Before setting up pagination, either check the API documentation, or do an API call without pagination, to see the data it returns.
+
+??? Details "What is pagination?"
+    Pagination means splitting a large set of data into multiple pages. The amount of data on each page depends on the limit you set.
+  
+    For example, you make an API call to an endpoint called `/users`. The API wants to send back information on 300 users, but this is too much data for the API to send in one response. 
+  
+    If the API supports pagination, you can incrementally fetch the data. To do this, you call `/users` with a pagination limit, and a page number or URL to tell the API which page to send. In this example, say you use a limit of 10, and start from page 0. The API sends the first 10 users in its response. You then call the API again, increasing the page number by 1, to get the next 10 results.
+
+Configure the pagination settings:
+
+* **Pagination Mode**:
+	* **Off**: turn off pagination.
+	* **Update a Parameter in Each Request**: use this when you need to dynamically set parameters for each request.
+	* **Response Contains Next URL**: use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
+
+For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination/).
+
+n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
+
+--8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-variables.md"
+
+--8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-api-differences.md"
+
 
 ## Import curl command
 

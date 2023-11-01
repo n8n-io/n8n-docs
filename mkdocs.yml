@@ -612,6 +612,7 @@ nav:
       - Output of other nodes: code/builtin/output-other-nodes.md
       - Date and time: code/builtin/date-time.md
       - JMESPath: code/builtin/jmespath.md
+      - HTTP node: code/builtin/http-node-variables.md
       - n8n metadata: code/builtin/n8n-metadata.md
       - Convenience methods: code/builtin/convenience.md
       - Data transformation functions: 
@@ -642,6 +643,9 @@ nav:
         - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
         - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
         - Output to the browser console: code/cookbook/code-node/console-log.md
+      - HTTP Request node:
+        - code/cookbook/http-node/index.md
+        - Pagination: code/cookbook/http-node/pagination.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

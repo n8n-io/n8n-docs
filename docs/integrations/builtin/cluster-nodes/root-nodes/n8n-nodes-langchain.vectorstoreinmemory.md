@@ -14,7 +14,7 @@ On this page, you'll find the node parameters for the In Memory Vector Store nod
 
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
 
 Parameters for **Get Many**:

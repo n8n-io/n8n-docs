@@ -17,7 +17,7 @@ On this page, you'll find the node parameters for the Zep Vector Store node, and
 	
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
 Parameters for **Insert Documents**:
 

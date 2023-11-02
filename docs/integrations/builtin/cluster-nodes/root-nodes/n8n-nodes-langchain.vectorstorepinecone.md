@@ -14,6 +14,9 @@ On this page, you'll find the node parameters for the Pinecone node, and links t
 
 !!! note "Examples and templates"
 	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/pinecone-insert/){:target=_blank .external-link} page.
+
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
 ## Node parameters
 
@@ -39,9 +42,7 @@ Parameters for **Retrieve Documents (For Agent/Chain)**:
 * Metadata Filter: available in **Get Many** mode.
 * Clear Namespace: available in **Insert Documents** mode.
 
-## Node reference
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

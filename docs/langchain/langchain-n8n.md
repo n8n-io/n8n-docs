@@ -65,10 +65,10 @@ Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/age
 
 Vector stores store embedded data, and perform vector searches on it.
 
-* [In Memory Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemory/)
-* [Pinecone Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepinecone/)
-* [Supabase Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabase/)
-* [Zep Vector Store](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezep/)
+* [In Memory Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/)
+* [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/)
+* [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
+* [Zep Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/)
 
 Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
 

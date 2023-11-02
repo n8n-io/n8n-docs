@@ -28,9 +28,9 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.15.0
+## n8n@1.15.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.2...n8n@1.15.0){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.2...n8n@1.15.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-02
 
 This release contains new features, node enhancements, and bug fixes.
@@ -40,6 +40,11 @@ This release contains new features, node enhancements, and bug fixes.
 #### Dark mode
 
 _Almost_ in time for Halloween: this release introduces dark mode.
+
+To enable dark mode:
+
+1. Select **Settings** > **Personal**.
+1. Under **Personalisation**, change **Theme** to **Dark theme**.
 
 </div>
 

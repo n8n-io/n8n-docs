@@ -28,6 +28,48 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.15.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.2...n8n@1.15.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-11-02
+
+This release contains new features, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Dark mode
+
+_Almost_ in time for Halloween: this release introduces dark mode.
+
+To enable dark mode:
+
+1. Select **Settings** > **Personal**.
+1. Under **Personalisation**, change **Theme** to **Dark theme**.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Optional error output for nodes
+
+All nodes apart from sub-nodes have a new optional output: **Error**. Use this to add steps to handle node errors.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Pagination support added to HTTP Request node
+
+The HTTP Request node now supports an pagination. Read the [node docs](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) for information and examples.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}
+
 ## n8n@1.14.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.1...n8n@1.14.2){:target=_blank .external-link} for this version.<br />
@@ -54,8 +96,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.13.0...n8n@1.14.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-25
-
-
 
 This release contains node enhancements and bug fixes.
 

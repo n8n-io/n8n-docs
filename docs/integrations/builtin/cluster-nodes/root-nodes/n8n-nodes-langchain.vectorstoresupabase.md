@@ -19,7 +19,7 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 	
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md""
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
 
 Parameters for **Get Many**:
 

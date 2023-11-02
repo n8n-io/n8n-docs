@@ -54,7 +54,7 @@ Create the question fields for your form. Select **Add Form Field** to add a new
 Every field has the following settings:
 
 * **Field Label**: 
-* **Field Type**: this can be **Text**, **Number**, **Date**, or **Dropdown List**. 
+* **Field Type**: this can be **Text**, **Textarea**, **Number**, **Date**, **Dropdown List**, or **Password**. 
 	* If you select **Date**, n8n includes a date picker in the form.
 	* If you select **Dropdown List**, n8n displays **Field Options** in the node: use this to add the dropdown options. By default, the dropdown is single-choice. To make it multiple choice, activate the **Multiple Choice** toggle in **Field Options**.
 * **Required Field**: activate this toggle to require users to complete this field on the form.

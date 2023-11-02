@@ -19,27 +19,24 @@ On this page, you'll find the node parameters for the Zep Vector Store node, and
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
 
-**Insert Documents Mode**
+Parameters for **Insert Documents**:
+
 * Collection Name
 
-Configuration options:
-* Embedding Dimensions
-* Is Auto Embedded
+Parameters for **Get Many**:
 
-**Get Many Mode**
 * Collection Name
 * Prompt
 * Limit
 
-Configuration options:
-* Embedding Dimensions
-* Metadata Filter
+Parameters for **Retrieve Documents (For Agent/Chain)**:
 
-**Retrieve Documents Mode**
 * Collection Name
 
-Configuration options:
+## Node configuration
+
 * Embedding Dimensions
+* Is Auto Embedded: available in **Insert Documents** mode.
 * Metadata Filter
 
 ## Node reference

@@ -19,27 +19,24 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
 
-**Insert Documents Mode**
-* Table Name
+Parameters for **Get Many**:
 
-Configuration options:
-* Query Name
-
-**Get Many Mode**
 * Table Name
 * Prompt
 * Limit
 
-Configuration options:
-* Query Name
-* Metadata Filter
+Parameters for **Insert Documents**:
 
-**Retrieve Documents Mode**
 * Table Name
 
-Configuration options:
+Parameters for **Retrieve Documents (For Agent/Chain)**:
+
+* Table Name
+
+## Node configuration
+
 * Query Name
-* Metadata Filter
+* Metadata Filter (not available for **Insert Documents** mode)
 
 ## Node reference
 

@@ -42,6 +42,7 @@ npx
 Okta
 onboarding
 Pipedrive
+Pinecone
 Pluralsight
 Postbin
 Postgres

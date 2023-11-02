@@ -5,7 +5,7 @@ description: 'Documentation for the Pinecone node in n8n, a workflow automation 
 
 # Pinecone
 
-Use the Pinecone node to interact with your Pinecone database as vector store. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
+Use the Pinecone node to interact with your Pinecone database as vector store. You can insert documents into a vector database, get documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 
 On this page, you'll find the node parameters for the Pinecone node, and links to more resources.
 
@@ -19,28 +19,25 @@ On this page, you'll find the node parameters for the Pinecone node, and links t
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
 
-**Insert Documents Mode**
-* Pinecone Index
+Parameters for **Get Many**:
 
-Configuration options:
-* Pinecone Namespace
-* Clear Namespace
-
-**Get Many Mode**
 * Pinecone Index
 * Prompt
 * Limit
 
-Configuration options:
-* Pinecone Namespace
-* Metadata Filter
+Parameters for **Insert Documents**:
 
-**Retrieve Documents Mode**
 * Pinecone Index
 
-Configuration options:
+Parameters for **Retrieve Documents (For Agent/Chain)**:
+
+* Pinecone Index
+
+## Node options
+
 * Pinecone Namespace
-* Metadata Filter
+* Metadata Filter: available in **Get Many** mode.
+* Clear Namespace: available in **Insert Documents** mode.
 
 ## Node reference
 

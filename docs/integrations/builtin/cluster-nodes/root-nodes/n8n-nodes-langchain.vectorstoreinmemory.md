@@ -16,16 +16,21 @@ On this page, you'll find the node parameters for the In Memory Vector Store nod
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-moed.md"
 
-**Insert Documents Mode**
-* Memory Key
-* Clear Store
 
-**Get Many Mode**
+Parameters for **Get Many**:
+
 * Memory Key
 * Prompt
 * Limit
 
-**Retrieve Documents Mode**
+
+Parameters for **Insert Documents**:
+
+* Memory Key
+* Clear Store
+
+Parameters for **Retrieve Documents (For Agent/Chain)**:
+
 * Memory Key
 
 ## Node reference

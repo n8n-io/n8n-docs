@@ -53,6 +53,7 @@ serverless
 Shopify
 shopify
 Strapi
+Supabase
 There are
 Tooltip
 tooltip

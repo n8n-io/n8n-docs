@@ -3,7 +3,7 @@ title: 'Pinecone'
 description: 'Documentation for the Pinecone node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.'
 ---
 
-# Pinecone
+# Pinecone Vector Store
 
 Use the Pinecone node to interact with your Pinecone database as vector store. You can insert documents into a vector database, get documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 

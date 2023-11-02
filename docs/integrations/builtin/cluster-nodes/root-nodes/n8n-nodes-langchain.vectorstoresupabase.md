@@ -3,7 +3,7 @@ title: 'Supabase'
 description: 'Documentation for the Supabase node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.'
 ---
 
-# Supabase
+# Supabase Vector Store
 
 Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 

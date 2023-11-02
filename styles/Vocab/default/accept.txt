@@ -42,6 +42,7 @@ npx
 Okta
 onboarding
 Pipedrive
+Pinecone
 Pluralsight
 Postbin
 Postgres
@@ -52,6 +53,7 @@ serverless
 Shopify
 shopify
 Strapi
+Supabase
 There are
 Tooltip
 tooltip
@@ -66,3 +68,4 @@ URIs
 URL
 Venafi
 Vuex
+Zep

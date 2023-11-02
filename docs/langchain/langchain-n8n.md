@@ -61,14 +61,16 @@ Available nodes:
 
 Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}.
 
-#### Vector store insert
+#### Vector stores
 
 Vector stores store embedded data, and perform vector searches on it.
 
-* [In Memory Vector Store Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemoryinsert/)
-* [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/)
-* [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/)
-* [Zep Vector Store: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/)
+* [In Memory Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/)
+* [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/)
+* [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
+* [Zep Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/)
+
+Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
 
 #### Miscellaneous
 
@@ -99,6 +101,7 @@ LLMs (large language models) are programs that analyze datasets. They're the key
 Available nodes:
 
 * [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
+* [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock)
 * [Cohere Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere/)
 * [Google PaLM Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/)
 * [Google PaLM Language Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/)
@@ -174,6 +177,8 @@ Utility tools.
 
 Available nodes:
 
+
+* [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock)
 * [Embeddings Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere/)
 * [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm/)
 * [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference/)
@@ -183,16 +188,9 @@ Available nodes:
 Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
 
 
-#### Vector store load
 
-Vector stores store embedded data, and perform vector searches on it.
 
-* * [In Memory Vector Store Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemoryload/)
-* [Pinecone: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/)
-* [Supabase: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseload/)
-* [Zep Vector Store: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepload/)
 
-Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
 
 #### Miscellaneous
 

@@ -8,6 +8,7 @@ contentType: integration
 
 You can use these credentials to authenticate the following nodes with AWS.
 
+- [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock)
 - [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager/)
 - [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/)
 - [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb/)
@@ -20,6 +21,7 @@ You can use these credentials to authenticate the following nodes with AWS.
 - [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/)
 - [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/)
 - [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/)
+- [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock)
 
 ## Prerequisites
 

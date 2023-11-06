@@ -7,8 +7,8 @@ description: Documentation for the Pinecone credentials. Use these credentials t
 
 You can use these credentials to authenticate the following nodes:
 
-* [Pinecone: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/)
-* [Pinecone: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/)
+* [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/)
+
 
 ## Prerequisites
 

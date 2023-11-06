@@ -9,8 +9,8 @@ contentType: integration
 You can use these credentials to authenticate the following nodes with Supabase.
 
 - [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/)
-- [Supabase: Insert](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/)
-- [Supabase: Load](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseload/)
+- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
+
 
 ## Prerequisites
 

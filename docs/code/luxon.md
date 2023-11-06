@@ -10,10 +10,12 @@ n8n passes dates between nodes as strings, so you need to parse them. Luxon make
 
 /// note | Python support
 Luxon is a JavaScript library. The two convenience [variables](#variables) created by n8n are available when using Python in the Code node, but their functionality is limited:
+
+* You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`. 
+
+* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-Luxon), isn't available for Python users.
 ///	
-	* You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`. 
-	
-	* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-Luxon), isn't available for Python users.
+
 
 ## Variables
 

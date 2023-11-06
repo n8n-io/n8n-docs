@@ -40,6 +40,18 @@ This release contains new features, node enhancements, and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
+#### Workflow history
+
+This release introduces workflow history: view and load previous versions of your workflows. 
+
+Workflow history is available in Enterprise n8n, and with limited history for Cloud Pro.
+
+Learn more in the [Workflow history](/workflows/history/) documentation.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
 #### Dark mode
 
 _Almost_ in time for Halloween: this release introduces dark mode.

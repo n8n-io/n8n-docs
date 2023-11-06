@@ -8,10 +8,10 @@
 1. Add other nodes as needed to build your sub-workflow functionality.		
 1. Save the sub-workflow.
 
-///  note  | Sub-workflow mustn't contain errors
+/// note | Sub-workflow mustn't contain errors
 If there are errors in the sub-workflow, the parent workflow can't trigger it.  
 ///
-///  note  | Load data into sub-workflow before building
+/// note | Load data into sub-workflow before building
 This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
 ///
 	If you want to load data into your subworkflow to use while building it:

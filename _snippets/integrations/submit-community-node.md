@@ -1,4 +1,4 @@
-///  note  | Subject to change
+/// note | Subject to change
 The standards described in this document are for the first release of the community nodes repository. These may change in future releases.
 ///
 Community nodes are npm packages, hosted in the npm registry.

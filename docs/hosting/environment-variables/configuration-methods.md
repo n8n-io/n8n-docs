@@ -69,18 +69,20 @@ Example file:
 
 /// note | Formatting as JSON
 You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
-///
-	```json
-	{
-		"endpoints": {
-			"metrics": {
-				"enable": true
-			}
+
+```json
+{
+	"endpoints": {
+		"metrics": {
+			"enable": true
 		}
 	}
-	```
+}
+```
 
-	Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
+Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
+///
+
 
 ### Docker
 

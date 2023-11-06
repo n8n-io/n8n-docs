@@ -76,10 +76,12 @@ A complete `docker-compose` file for Postgres can be found [here](https://github
 
 /// warning | Deprecated
 n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-///
-	n8n recommends using PostgreSQL. 
 
-	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
+n8n recommends using PostgreSQL. 
+
+Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
+///
+
 
 To use n8n with MySQL, provide the corresponding [configuration](/hosting/configuration/):
 

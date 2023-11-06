@@ -59,11 +59,12 @@ The configuration of the settings for the *Hacker News node* looks like this:
 
 /// note | Renaming a node
 You can rename the node with a name that's more descriptive for your use case. There are two ways to do this:
-///
-    - Select the node you want to rename and at the same time press the F2 key on your keyboard.
-    - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click *Rename* to save the node under the new name.
 
-	<figure><img src="/_images/courses/level-one/chapter-two/l1-c2-renaming-a-node-from-the-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
+- Select the node you want to rename and at the same time press the F2 key on your keyboard.
+- Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click *Rename* to save the node under the new name.
+
+<figure><img src="/_images/courses/level-one/chapter-two/l1-c2-renaming-a-node-from-the-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
+///
 
 
 ## 3. Save the workflow

@@ -23,10 +23,12 @@ n8n creates a new version when you:
 
 /// note | Workflow history and execution history
 Don't confuse workflow history with the [Workflow-level executions list](/workflows/executions/single-workflow-executions/).
-///
-	Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
 
-	Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
+Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
+
+Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
+///
+
 
 ## View workflow history
 

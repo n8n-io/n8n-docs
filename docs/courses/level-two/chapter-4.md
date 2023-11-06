@@ -110,10 +110,12 @@ The Stop and Error node can only be added as the last node in a workflow.
 
 /// note | When to throw errors
 Throwing exceptions with the Stop and Error node is useful for verifying the data (or assumptions about the data) from a node and returning custom error messages.
+
+If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers.
+
+Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
+
+
+<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>
 ///
-	If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers.
 
-	Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
-
-
-	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>

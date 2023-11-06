@@ -83,7 +83,6 @@ The following video demonstrates the steps to authenticate the Slack node on [n8
     You can refer to the list of scopes on the officials Slack [Scopes and permissions](https://api.slack.com/scopes){:target=_blank .external-link} documentation.
     ///
     
-
 8. From the **OAuth Tokens for Your Workspace** section selec **Install to Workspace**.
 9. Select**Allow**.
 10. In n8n, enter the **Access Token** created above.

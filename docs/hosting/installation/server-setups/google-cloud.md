@@ -155,10 +155,12 @@ kubectl apply -f .
 
 /// note | Namespace error
 You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+
+```shell
+kubectl apply -f namespace.yaml
+```
 ///
-    ```shell
-    kubectl apply -f namespace.yaml
-    ```
+
 
 ## Set up DNS
 

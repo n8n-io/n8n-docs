@@ -170,10 +170,12 @@ Available flags:
 
 /// note | Migrating to SQLite
 n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
-///
-    This might result in errors like **Data too long for column name** during the import process.
 
-    In this case, you can edit the names from the n8n interface and export again, or edit the JSON file directly before importing.
+This might result in errors like **Data too long for column name** during the import process.
+
+In this case, you can edit the names from the n8n interface and export again, or edit the JSON file directly before importing.
+///
+
 
 
 

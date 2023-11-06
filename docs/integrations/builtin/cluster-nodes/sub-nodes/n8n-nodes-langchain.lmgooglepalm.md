@@ -20,6 +20,7 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 /// note | Models
 Models are dynamically loaded from the Google PaLM API and you will only see the models available to your account.
 ///
+
 * Model
 
 ## Node reference

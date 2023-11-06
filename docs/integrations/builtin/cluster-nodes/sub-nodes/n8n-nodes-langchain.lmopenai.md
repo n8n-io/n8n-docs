@@ -17,7 +17,7 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 ///	
 ## Node parameters
 
-///  node  | Models
+/// note | Models
 Models are dynamically loaded from OpenAI Model and you will only see the models available to your account.
 ///
 * Model

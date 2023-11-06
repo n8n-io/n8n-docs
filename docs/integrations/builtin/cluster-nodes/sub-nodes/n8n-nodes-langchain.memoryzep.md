@@ -9,12 +9,12 @@ Use the Zep node to use Zep as a memory server.
 
 On this page, you'll find a list of operations the Zep node supports, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/zep/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/zep/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/zep/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/zep/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Session ID

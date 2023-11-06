@@ -16,9 +16,9 @@ Create a [Eventbrite](https://www.eventbrite.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Eventbrite account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Eventbrite account to n8n.
+///
 
 1. Log in to your Eventbrite account.
 2. Click on the user icon in the top right.

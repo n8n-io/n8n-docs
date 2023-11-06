@@ -8,9 +8,9 @@ contentType: integration
 
 [GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
+///
 
 ## Events
 

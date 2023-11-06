@@ -6,9 +6,9 @@ contentType: integration
 
 # Start
 
-!!! warning "Deprecated"
-	The Start node was removed from n8n in 0.199.0. It is still available in legacy workflows.
-
+/// warning | Deprecated
+The Start node was removed from n8n in 0.199.0. It is still available in legacy workflows.
+///
 The start node is the first node in a workflow. It exists by default when you create a new workflow and looks like the following image.
 
 ![A new workflow with the Start node](/_images/integrations/builtin/core-nodes/start/workflow.png)

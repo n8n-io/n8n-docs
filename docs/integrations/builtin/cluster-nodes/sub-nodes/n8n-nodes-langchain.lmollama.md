@@ -9,12 +9,12 @@ The Ollama Model node allows you use local Llama 2 models.
 
 On this page, you'll find the node parameters for the Ollama Model node, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/ollama-model/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/ollama-model/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Model

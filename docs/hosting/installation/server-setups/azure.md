@@ -60,9 +60,9 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default storage class is suitable for this purpose and is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
 
-!!! note "Specialized storage classes"
-    If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes){:target="_blank" .external-link}.
-
+/// note | Specialized storage classes
+If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes){:target="_blank" .external-link}.
+///
 ### Postgres environment variables
 
 Postgres needs some environment variables set to pass to the application running in the containers.
@@ -141,9 +141,9 @@ Send all the manifests to the cluster with the following command:
 kubectl apply -f .
 ```
 
-!!! note "Namespace error"
-    You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
-
+/// note | Namespace error
+You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+///
     ```shell
     kubectl apply -f namespace.yaml
     ```
@@ -152,9 +152,9 @@ kubectl apply -f .
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & ingresses** menu item of the cluster you want to use under the **External IP** column. You need to add the n8n port, "5678" to the URL.
 
-!!! note "Static IP addresses with AKS"
-  [Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip){:target="_blank" .external-link} for more details on how to use a static IP address with AKS.
-
+/// note | Static IP addresses with AKS
+[Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip){:target="_blank" .external-link} for more details on how to use a static IP address with AKS.
+///
 ## Delete resources
 
 Remove the resources created by the manifests with the following command:

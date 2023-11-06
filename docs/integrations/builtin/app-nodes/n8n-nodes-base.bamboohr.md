@@ -10,12 +10,12 @@ Use the BambooHR node to automate work in BambooHR, and integrate BambooHR with 
 
 On this page, you'll find a list of operations the BambooHR node supports and links to more resources.
 
-!!! note "Credentials"
-     Refer to [BambooHR credentials](/integrations/builtin/credentials/bamboohr/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-     For usage examples and templates to help you get started, take a look at n8n's [BambooHR integrations](https://n8n.io/integrations/bamboohr/){:target=_blank .external-link} list.
-
+/// note | Credentials
+Refer to [BambooHR credentials](/integrations/builtin/credentials/bamboohr/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [BambooHR integrations](https://n8n.io/integrations/bamboohr/){:target=_blank .external-link} list.
+///
 
 
 ## Basic Operations

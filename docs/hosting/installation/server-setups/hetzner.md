@@ -21,12 +21,12 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 You can change most of the settings to suit your needs, but as this guide uses Docker to run the application, under the **Image** section, select "Docker CE" from the **APPS** tab.
 
-!!! note "Type"
-	When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
-
-!!! note "SSH keys"
-	Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
-
+/// note | Type
+When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
+///
+/// note | SSH keys
+Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+///
 ## Log in to your server
 
 The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg){:target="_blank" .external-link} for more information. You can find the public IP in the listing of the servers in your project.

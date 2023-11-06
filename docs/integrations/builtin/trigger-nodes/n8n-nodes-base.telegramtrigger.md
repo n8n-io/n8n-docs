@@ -8,9 +8,9 @@ contentType: integration
 
 [Telegram](https://telegram.org/) is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/telegram/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/telegram/).
+///
 
 ## Updates
 
@@ -82,9 +82,9 @@ In the screenshot below, you will notice that the node sends a reply to the mess
 
 ![Using the Telegram node to send a message with an image and instruction of a cocktail](/_images/integrations/builtin/trigger-nodes/telegramtrigger/telegram_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Telegram Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Telegram Trigger node.
+///
 
 
 

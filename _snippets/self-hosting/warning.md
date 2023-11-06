@@ -1,6 +1,6 @@
-!!! note "Self-hosting knowledge prerequisites"
-    Self-hosting n8n requires technical knowledge, including:
-
+///  note  | Self-hosting knowledge prerequisites
+Self-hosting n8n requires technical knowledge, including:
+///
     * Setting up and configuring servers and containers
     * Managing application resources and scaling
     * Securing servers and applications

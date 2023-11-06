@@ -15,9 +15,9 @@ This includes:
 * Metadata about workflows, executions, and nodes.
 * Information about instance [Variables](/code/variables/) and [External secrets](/external-secrets/).
 
-!!! note "Python support"
-	You can use Python in the Code node. It isn't available in expressions.
-
+/// note | Python support
+You can use Python in the Code node. It isn't available in expressions.
+///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |

@@ -8,12 +8,12 @@ contentType: integration
 
 The Write Binary File node writes a file to the host machine that runs n8n.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Write Binary File integrations](https://n8n.io/integrations/write-binary-file/){:target=_blank .external-link} page.
-
-!!! note "File locations"
-    * If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
-	* This node will look for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Write Binary File integrations](https://n8n.io/integrations/write-binary-file/){:target=_blank .external-link} page.
+///
+/// note | File locations
+* If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
+///	* This node will look for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
 
 
 ## Node parameters

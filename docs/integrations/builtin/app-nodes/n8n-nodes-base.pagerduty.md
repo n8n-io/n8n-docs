@@ -10,12 +10,12 @@ Use the PagerDuty node to automate work in PagerDuty, and integrate PagerDuty wi
 
 On this page, you'll find a list of operations the PagerDuty node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [PagerDuty integrations](https://n8n.io/integrations/pagerduty/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [PagerDuty integrations](https://n8n.io/integrations/pagerduty/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

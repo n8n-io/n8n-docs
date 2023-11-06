@@ -16,9 +16,9 @@ Merging data can involve:
 - Creating one data set from multiple sources.
 - Synchronizing data between multiple systems. For example, removing duplicate data, or updating data in one system when it changes in another.
 
-!!! note "One-way vs. two-way sync"
-    In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
-
+/// note | One-way vs. two-way sync
+In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
+///
     In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
  
     [This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
@@ -38,13 +38,13 @@ Notice that three of these modes require a key (Merge By Key, Keep Key Matches, 
 
 <figure><img src="/_images/courses/level-two/chapter-three/explanation_mergepropertyinput.png" alt="" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
 
-!!! warning "Property Input in dot notation"
+/// warning | Property Input in dot notation
+If you want to reference nested values in the *Merge node* parameters `Property Input 1` and `Property Input 2`, you need to enter the property key in dot-notation format (as text, not as an expression).
+///
 
-	If you want to reference nested values in the *Merge node* parameters `Property Input 1` and `Property Input 2`, you need to enter the property key in dot-notation format (as text, not as an expression).
-
-!!! note
-
-	You can also find the Merge node under the alias Join. This might be more intuitive if you're familiar with SQL joins.
+/// note
+You can also find the Merge node under the alias Join. This might be more intuitive if you're familiar with SQL joins.
+///
 
 ### Exercise
 
@@ -80,10 +80,9 @@ To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:
 
 If you need to process large incoming data, execute the Code node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Loop Over Items node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
-!!! warning "Execution of Loop Over Items node"
-
-	The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it is not necessary to add an IF node to stop the loop.
-
+/// warning | Execution of Loop Over Items node
+The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it is not necessary to add an IF node to stop the loop.
+///
 
 ### Exercise
 

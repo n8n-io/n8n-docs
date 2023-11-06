@@ -7,9 +7,9 @@ description: How to handle execution errors.
 
 When designing your flow logic, it's a good practice to consider potential errors, and set up methods to handle them gracefully. With an error workflow, you can control how n8n responds to a workflow execution failure.
 
-!!! note "Investigating errors"
-	To investigate failed executions, you can:
-
+/// note | Investigating errors
+To investigate failed executions, you can:
+///
 	* Review your [Executions](/workflows/executions/), for a [single workflow](/workflows/executions/single-workflow-executions/) or [all workflows you have access to](/workflows/executions/all-executions/). You can [load data from previous execution](/workflows/executions/debug/) into your current workflow.
 	* Enable [Log streaming](/log-streaming/).
 

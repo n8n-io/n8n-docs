@@ -11,9 +11,9 @@ contentType: reference
 
 This gives access to the static workflow data.
 
-!!! note "Experimental feature"
-	Static data isn't available when testing workflows. The workflow must be active and called by a trigger or webhook to save static data.
-
+/// note | Experimental feature
+Static data isn't available when testing workflows. The workflow must be active and called by a trigger or webhook to save static data.
+///
 You can save data directly in the workflow. This data should be small.
 
 As an example: you can save a timestamp of the last item processed from

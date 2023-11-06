@@ -8,9 +8,9 @@ contentType: integration
 
 [Airtable](https://airtable.com/) is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/airtable/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/airtable/).
+///
 
 ## Example Usage
 
@@ -57,7 +57,7 @@ In the screenshot below, you will notice that the node sends a message in Matter
 
 ![Using the Mattermost node to send a message of the new data](/_images/integrations/builtin/trigger-nodes/airtabletrigger/mattermost_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Airtable Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Airtable Trigger node.
+///
 

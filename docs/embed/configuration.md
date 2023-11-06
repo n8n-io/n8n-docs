@@ -24,17 +24,17 @@ n8n offers two ways to apply credential overwrites: using Environment Variable a
 
 Credential overwrites can be set using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
-!!! warning
-    Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
-
+/// warning
+Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
+///
 
 #### Using REST APIs
 
 The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available.
 
-!!! note
-    The endpoints can be called just one at a time for security reasons.
-
+/// note
+The endpoints can be called just one at a time for security reasons.
+///
 
 For example:
 
@@ -65,10 +65,10 @@ For example:
     curl -H "Content-Type: application/json" --data @oauth-credentials.json http://localhost:5678/send-credentials
     ```
 
-!!! note
-    There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`. 
-    In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) which will be used by all child-credentials (`googleSheetsOAuth2Api`).
-
+/// note
+There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`. 
+In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) which will be used by all child-credentials (`googleSheetsOAuth2Api`).
+///
 
 ## Environment variables
 

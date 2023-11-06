@@ -10,12 +10,12 @@ Use the ServiceNow node to automate work in ServiceNow, and integrate ServiceNow
 
 On this page, you'll find a list of operations the ServiceNow node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [ServiceNow credentials](/integrations/builtin/credentials/servicenow/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [ServiceNow integrations](https://n8n.io/integrations/servicenow/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [ServiceNow credentials](/integrations/builtin/credentials/servicenow/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [ServiceNow integrations](https://n8n.io/integrations/servicenow/){:target="_blank" .external-link} list.
+///
 
 ## Basic operations
 

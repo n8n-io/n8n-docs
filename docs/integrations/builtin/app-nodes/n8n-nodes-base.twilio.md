@@ -10,12 +10,12 @@ Use the Twilio node to automate work in Twilio, and integrate Twilio with other 
 
 On this page, you'll find a list of operations the Twilio node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Twilio credentials](/integrations/builtin/credentials/twilio/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Twilio integrations](https://n8n.io/integrations/twilio/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Twilio credentials](/integrations/builtin/credentials/twilio/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Twilio integrations](https://n8n.io/integrations/twilio/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

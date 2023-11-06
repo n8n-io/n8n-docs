@@ -11,9 +11,9 @@ This page explains how LangChain concepts and features map to n8n nodes.
 This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
 
 
-!!! note "n8n implements LangChain JS"
-	This feature is n8n's implementation of [LangChain's JavaScript framework](https://js.langchain.com/docs/get_started/introduction){:target=_blank .external-link}.
-
+/// note | n8n implements LangChain JS
+This feature is n8n's implementation of [LangChain's JavaScript framework](https://js.langchain.com/docs/get_started/introduction){:target=_blank .external-link}.
+///
 ## Trigger nodes
 
 [On new manual Chat Message](/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/)

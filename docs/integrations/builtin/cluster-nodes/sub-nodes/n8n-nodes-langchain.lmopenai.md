@@ -9,17 +9,17 @@ Use the OpenAI Model node to use OpenAI Model's models.
 
 On this page, you'll find the node parameters for the OpenAI Model node, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/openai-model/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/openai-model/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
-!!! node "Models"
-	Models are dynamically loaded from OpenAI Model and you will only see the models available to your account.
-
+///  node  | Models
+Models are dynamically loaded from OpenAI Model and you will only see the models available to your account.
+///
 * Model
 
 ## Node reference

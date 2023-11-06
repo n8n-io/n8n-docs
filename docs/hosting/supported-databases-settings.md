@@ -66,9 +66,9 @@ You can choose between these configurations:
 
 ## MySQL / MariaDB
 
-!!! warning "Deprecated"
-	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
+/// warning | Deprecated
+n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+///
 	n8n recommends using PostgreSQL. 
 
 	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.

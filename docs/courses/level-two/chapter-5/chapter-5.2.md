@@ -30,10 +30,9 @@ The first part of the workflow consists of five nodes:
 3. Use the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external} to merge data from the Airtable and HTTP Request node, based on the common key `customer ID`.
 4. Use the [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/){:target="_blank" .external} to sort data by orderPrice in descending order.
 
-!!! question "Quiz questions"
-
-    * What is the name of the employee assigned to customer 1?
-    * What is the order status of customer 6?
+///  question  | Quiz questions
+* What is the name of the employee assigned to customer 1?
+///    * What is the order status of customer 6?
     * What is the highest order price?
 
 ## Part 2 – Generating file for regional sales
@@ -50,10 +49,9 @@ The second part of the workflow consists of five nodes:
     * Webhook URL: The webhook URL you received in the email when you signed up for this course.
     * Text: "I sent the file via email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
 
-!!! question "Quiz questions"
-
-    * How many orders are assigned to the region Americas?
-    * What is the total price of the orders in the region Americas?
+///  question  | Quiz questions
+* How many orders are assigned to the region Americas?
+///    * What is the total price of the orders in the region Americas?
     * How many items are returned by the *Write Binary File node*?
 
 ## Part 3 – Generating files for total sales
@@ -70,8 +68,7 @@ The third part of the workflow consists of seven nodes:
     * Webhook URL: The webhook URL you received in the email when you signed up for this course.
     * Text: "I created the spreadsheet `{file name}`. My ID:" followed by your ID. <br/> The `{file name}` should be an expression that references data from the Spreadsheet File node.<br/>
 
-!!! question "Quiz questions"
-
-    * What is the lowest order price in the first batch of items?
-    * What is the formatted date of customer 7?
+///  question  | Quiz questions
+* What is the lowest order price in the first batch of items?
+///    * What is the formatted date of customer 7?
     * How many items are returned by the *Spreadsheet File node*?

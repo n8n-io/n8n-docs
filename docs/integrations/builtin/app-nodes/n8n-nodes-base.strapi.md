@@ -10,12 +10,12 @@ Use the Strapi node to automate work in Strapi, and integrate Strapi with other 
 
 On this page, you'll find a list of operations the Strapi node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Strapi integrations](https://n8n.io/integrations/strapi/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Strapi integrations](https://n8n.io/integrations/strapi/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

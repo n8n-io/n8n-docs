@@ -14,9 +14,9 @@ contentType: tutorial
 
 Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}.
 
-!!! note "Linux Users"
-    Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
-
+/// note | Linux Users
+Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
+///
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -46,9 +46,9 @@ It's important to still persist data in the `/home/node/.n8n` folder as it conta
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
-!!! note "Keep in mind"
-    Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
-
+/// note | Keep in mind
+Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
+///
 ### PostgresDB
 
 To use n8n with Postgres, provide the corresponding [configuration](/hosting/configuration/):
@@ -74,9 +74,9 @@ A complete `docker-compose` file for Postgres can be found [here](https://github
 
 ### MySQL
 
-!!! warning "Deprecated"
-	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
+/// warning | Deprecated
+n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+///
 	n8n recommends using PostgreSQL. 
 
 	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.

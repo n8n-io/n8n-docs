@@ -24,8 +24,9 @@ Using service accounts is more complex than OAuth2. Before you begin:
 
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
 
-	!!! note "Generic and specific credentials"
-		If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+    /// note | Generic and specific credentials
+    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+    ///
 
 		* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
 		* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.

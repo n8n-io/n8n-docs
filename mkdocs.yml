@@ -61,11 +61,25 @@ extra_javascript:
 markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
   - attr_list
-  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
-  - admonition
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - md_in_html
   - meta
+  - pymdownx.blocks.admonition:
+      types:
+      - note
+      - abstract
+      - info
+      - tip
+      - success
+      - question
+      - warning
+      - failure
+      - danger
+      - bug
+      - example
+      - quote
+      # custom types
+      - details
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:

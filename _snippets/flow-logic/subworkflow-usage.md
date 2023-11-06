@@ -8,12 +8,12 @@
 1. Add other nodes as needed to build your sub-workflow functionality.		
 1. Save the sub-workflow.
 
-!!! note "Sub-workflow mustn't contain errors"
-	If there are errors in the sub-workflow, the parent workflow can't trigger it.  
-
-!!! note "Load data into sub-workflow before building"
-	This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
-
+///  note  | Sub-workflow mustn't contain errors
+If there are errors in the sub-workflow, the parent workflow can't trigger it.  
+///
+///  note  | Load data into sub-workflow before building
+This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
+///
 	If you want to load data into your subworkflow to use while building it:
 
 	1. Create the subworkflow and add the **Execute Workflow Trigger**. 
@@ -28,8 +28,9 @@
 1. Add the **Execute Workflow** node.
 1. In the **Execute Workflow** node, set the sub-workflow you want to call. You can choose to call the workflow by ID, load a workflow from a local file, add workflow JSON as a parameter in the node, or target a workflow by URL.
 
-	!!! note "Find your workflow ID"
-		Your sub-workflow's ID is the alphanumeric string at the end of its URL.
+    /// note | Find your workflow ID
+    Your sub-workflow's ID is the alphanumeric string at the end of its URL.
+    ///
 
 1. Save your workflow.
 

@@ -10,12 +10,12 @@ Use the LoneScale node to automate work in LoneScale and integrate LoneScale wit
 
 On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LoneScale integrations](https://n8n.io/integrations/lonescale/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LoneScale integrations](https://n8n.io/integrations/lonescale/){:target=_blank .external-link} page.
+///	
 ## Operations
 
 * List

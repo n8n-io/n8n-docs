@@ -33,9 +33,9 @@ In n8n, all data passed between nodes is an array of objects. It has the followi
 ]
 ```
 
-!!! note "Skipping the 'json' key and array syntax"
-    From 0.166.0 onwards, when using the Function node or Code node, n8n automatically adds the `json` key if it's missing. It also automatically wraps your items in an array (`[]`) if needed. This is only the case when using the Function or Code nodes. When building your own nodes, you must still make sure the node returns data with the `json` key.
-
+/// note | Skipping the 'json' key and array syntax
+From 0.166.0 onwards, when using the Function node or Code node, n8n automatically adds the `json` key if it's missing. It also automatically wraps your items in an array (`[]`) if needed. This is only the case when using the Function or Code nodes. When building your own nodes, you must still make sure the node returns data with the `json` key.
+///
 ## Data item processing
 
 --8<-- "_snippets/flow-logic/data-flow-nodes.md"

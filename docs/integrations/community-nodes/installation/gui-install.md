@@ -4,9 +4,9 @@ contentType: howto
 
 # Install community nodes in the n8n app
 
-!!! note "Limited to n8n instance owners"
-    Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management.
-
+/// note | Limited to n8n instance owners
+Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management.
+///
 ## Install a community node
 
 To install a community node:
@@ -26,9 +26,9 @@ To install a community node:
     <!-- vale on -->
 6. Select **Install**. n8n installs the node, and returns to the **Community Nodes** list in **Settings**.
 
-!!! note "Nodes on the blocklist"
-    n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist/) for more information.
-
+/// note | Nodes on the blocklist
+n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist/) for more information.
+///
 ## Uninstall a community node
 
 To uninstall a community node:
@@ -40,9 +40,9 @@ To uninstall a community node:
 
 ## Upgrade a community node
 
-!!! warning "Breaking changes in versions"
-    Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#downgrade-a-community-node).
-
+/// warning | Breaking changes in versions
+Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#downgrade-a-community-node).
+///
 ### Upgrade to the latest version
 
 You can upgrade community nodes to the latest version from the node list in **Settings** > **community nodes**.

@@ -6,8 +6,9 @@ description: How to get the n8n version that includes LangChain
 
 # Access LangChain in n8n
 
-!!! info "Feature availability"
-	This feature is available on Cloud and self-hosted n8n. To access it, you need either a separate Cloud account, or the LangChain n8n Docker image.
+/// info | Feature availability
+This feature is available on Cloud and self-hosted n8n. To access it, you need either a separate Cloud account, or the LangChain n8n Docker image.
+///
 
 ## Self-hosted
 
@@ -35,9 +36,9 @@ You need to create a new account. This is separate to your existing n8n Cloud ac
 2. Enter your details, then select **Try for free**.
 3. n8n prompts you to choose your n8n flavor. Select **n8n with LangChain**, then select **Continue**.
 
-!!! note "Existing n8n users can't reuse email address"
-	If you have an existing n8n Cloud account, you must use a different email address when signing up for the AI trial.
-
+/// note | Existing n8n users can't reuse email address
+If you have an existing n8n Cloud account, you must use a different email address when signing up for the AI trial.
+///
 ## Browse the LangChain nodes
 
 1. Create a new workflow.

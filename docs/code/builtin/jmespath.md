@@ -9,9 +9,9 @@ hide:
 
 This is an n8n-provided method for working with the [JMESPath](/code/jmespath/) library.
 
-!!! note "Python support"
-	You can use Python in the Code node. It isn't available in expressions.
-
+/// note | Python support
+You can use Python in the Code node. It isn't available in expressions.
+///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |

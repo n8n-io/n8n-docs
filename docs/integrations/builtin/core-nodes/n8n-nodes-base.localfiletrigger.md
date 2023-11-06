@@ -8,9 +8,9 @@ contentType: integration
 
 The Local File trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed or deleted.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Local File Trigger's integrations](https://n8n.io/integrations/local-file-trigger/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Local File Trigger's integrations](https://n8n.io/integrations/local-file-trigger/){:target=_blank .external-link} page.
+///
 ## Parameters
 
 You can choose what event to watch for:

@@ -1,6 +1,6 @@
-!!! note "AI generated code overwrites your code"
-	If you've already written some code on the **Code** tab, the AI generated code will replace it. n8n recommends using AI as a starting point to create your initial code, then editing it as needed.
-
+///  note  | AI generated code overwrites your code
+If you've already written some code on the **Code** tab, the AI generated code will replace it. n8n recommends using AI as a starting point to create your initial code, then editing it as needed.
+///
 To use ChatGPT to generate code in the Code node:
 
 1. In the Code node, set **Language** to **JavaScript**.

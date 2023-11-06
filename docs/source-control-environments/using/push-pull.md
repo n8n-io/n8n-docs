@@ -14,9 +14,9 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 ## Fetch other people's work
 
-!!! note "Restricted to instance owners"
-	Ordinary users can't fetch work from Git.
-
+/// note | Restricted to instance owners
+Ordinary users can't fetch work from Git.
+///
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png)</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
@@ -33,9 +33,9 @@ If you pull changes to an active workflow, n8n sets the workflow to inactive whi
 
 ## Send your work to Git
 
-!!! note "Restricted to instance owners"
-	Ordinary users can't send work to Git.
-
+/// note | Restricted to instance owners
+Ordinary users can't send work to Git.
+///
 --8<-- "_snippets/source-control-environments/push.md"
 
 ## What gets committed
@@ -48,9 +48,9 @@ n8n commits the following to Git:
 
 You can programmatically [Manage variables](/source-control-environments/using/manage-variables/) using the n8n API.
 
-!!! note "Coming soon: credential support with secret managers"
-	n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.
-
+/// note | Coming soon: credential support with secret managers
+n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.
+///
 ## Merge behaviors and conflicts
 
 n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.
@@ -88,5 +88,6 @@ On push:
 * n8n overwrites the entire variables and tags files.
 * If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
 
-!!! note "Manage credentials with an external secrets vault"
-	If you need different credentials on different n8n environments, use [External secrets](/external-secrets/).
+/// note | Manage credentials with an external secrets vault
+If you need different credentials on different n8n environments, use [External secrets](/external-secrets/).
+///

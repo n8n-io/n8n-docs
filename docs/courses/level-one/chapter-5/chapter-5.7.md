@@ -18,9 +18,9 @@ In your workflow, add the Schedule trigger node, and configure its parameters:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-7-schedule-trigger-node.png" alt="Schedule Trigger Node" style="width:100%"><figcaption align = "center"><i>Schedule Trigger Node</i></figcaption></figure>
 
-!!! warning "Keep in mind"
-    To ensure accurate scheduling with the Schedule Trigger Node, be sure the timezone is set correctly for your n8n instance (or the workflow).
-
+/// warning | Keep in mind
+To ensure accurate scheduling with the Schedule Trigger Node, be sure the timezone is set correctly for your n8n instance (or the workflow).
+///
 
 ## What's next?
 

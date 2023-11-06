@@ -10,12 +10,12 @@ Use the Wise node to automate work in Wise, and integrate Wise with other applic
 
 On this page, you'll find a list of operations the Wise node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Wise integrations](https://n8n.io/integrations/wise/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Wise integrations](https://n8n.io/integrations/wise/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

@@ -17,9 +17,9 @@ Create a [Mailchimp](https://www.mailchimp.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
+///
 
 1. Access your Mailchimp dashboard.
 2. Click on your user icon on the top right.

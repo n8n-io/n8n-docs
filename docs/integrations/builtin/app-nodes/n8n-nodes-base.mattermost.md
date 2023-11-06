@@ -10,12 +10,12 @@ Use the Mattermost node to automate work in Mattermost, and integrate Mattermost
 
 On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Mattermost integrations](https://n8n.io/integrations/mattermost/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Mattermost integrations](https://n8n.io/integrations/mattermost/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

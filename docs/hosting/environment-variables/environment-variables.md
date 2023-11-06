@@ -9,9 +9,9 @@ hide:
 
 # Configuration environment variables
 
-!!! note "File-based configuration"
-    You can provide a [configuration file](/hosting/environment-variables/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
-
+/// note | File-based configuration
+You can provide a [configuration file](/hosting/environment-variables/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+///
 ## Credentials
 
 Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
@@ -31,9 +31,9 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ### MySQL
 
-!!! warning "Deprecated"
-	n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
+/// warning | Deprecated
+n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
+///
 	n8n recommends using PostgreSQL. 
 
 	Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.

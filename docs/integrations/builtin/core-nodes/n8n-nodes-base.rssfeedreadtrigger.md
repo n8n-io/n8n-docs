@@ -9,9 +9,9 @@ The RSS Feed Trigger node allows you start an n8n workflow when a new RSS feed i
 
 On this page, you'll find a list of operations the RSS Feed Trigger node supports, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [RSS Feed Trigger's integrations](https://n8n.io/integrations/rss-feed-trigger/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [RSS Feed Trigger's integrations](https://n8n.io/integrations/rss-feed-trigger/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Feed URL

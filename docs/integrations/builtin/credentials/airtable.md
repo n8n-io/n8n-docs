@@ -42,6 +42,6 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 
 ## Using API Key
 
-!!! note "API Key deprecation"
-    API Keys will be deprecated by the end of January 2024, see [this article](https://support.airtable.com/docs/airtable-api-key-deprecation-notice){:target=_blank .external-link} for more details. n8n recommends using Personal Access Token instead.
-
+/// note | API Key deprecation
+API Keys will be deprecated by the end of January 2024, see [this article](https://support.airtable.com/docs/airtable-api-key-deprecation-notice){:target=_blank .external-link} for more details. n8n recommends using Personal Access Token instead.
+///

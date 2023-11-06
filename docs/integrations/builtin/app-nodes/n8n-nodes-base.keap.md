@@ -10,12 +10,12 @@ Use the Keap node to automate work in Keap, and integrate Keap with other applic
 
 On this page, you'll find a list of operations the Keap node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Keap credentials](/integrations/builtin/credentials/keap/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Keap integrations](https://n8n.io/integrations/keap/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Keap credentials](/integrations/builtin/credentials/keap/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Keap integrations](https://n8n.io/integrations/keap/){:target="_blank" .external-link} list.
+///
 
 
 ## Basic Operations

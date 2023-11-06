@@ -10,12 +10,12 @@ Use the APITemplate.io node to automate work in APITemplate.io, and integrate AP
 
 On this page, you'll find a list of operations the APITemplate.io node supports and links to more resources.
 
-!!! note "Credentials"
-	Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitemplateio/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [APITemplate.io integrations](https://n8n.io/integrations/apitemplateio/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitemplateio/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [APITemplate.io integrations](https://n8n.io/integrations/apitemplateio/){:target="_blank" .external-link} list.
+///
 
 
 ## Basic Operations
@@ -100,7 +100,7 @@ In the screenshot below, you will notice that the node creates an invoice using 
 
 ![Using the APITemplate.io node to create an invoice](/_images/integrations/builtin/app-nodes/apitemplateio/apitemplate.io_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Typeform Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Typeform Trigger node.
+///
 

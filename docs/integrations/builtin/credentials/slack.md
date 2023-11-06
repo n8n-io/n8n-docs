@@ -17,9 +17,9 @@ Create a [Slack](https://slack.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Slack account to n8n.
+///
 
 1. Open the [Slack API](https://api.slack.com/) page.
 2. Click on the **Create an app** button and select **From scratch**.
@@ -79,8 +79,9 @@ The following video demonstrates the steps to authenticate the Slack node on [n8
     * If you want your app to act on behalf of users that authorize the app, add the required scopes under the **User Token Scopes** section.
     * If you're building a bot, add the required scopes under the **Bot Token Scopes** section. 
     
-    !!! note "Scopes"
-        You can refer to the list of scopes on the officials Slack [Scopes and permissions](https://api.slack.com/scopes){:target=_blank .external-link} documentation.
+    /// note | Scopes
+    You can refer to the list of scopes on the officials Slack [Scopes and permissions](https://api.slack.com/scopes){:target=_blank .external-link} documentation.
+    ///
     
 
 8. From the **OAuth Tokens for Your Workspace** section selec **Install to Workspace**.

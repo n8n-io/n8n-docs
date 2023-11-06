@@ -10,12 +10,12 @@ Use the Tapfiliate node to automate work in Tapfiliate, and integrate Tapfiliate
 
 On this page, you'll find a list of operations the Tapfiliate node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Tapfiliate integrations](https://n8n.io/integrations/tapfiliate/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Tapfiliate integrations](https://n8n.io/integrations/tapfiliate/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

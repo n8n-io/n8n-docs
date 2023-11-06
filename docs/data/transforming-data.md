@@ -14,8 +14,8 @@ For example, the image below shows the output of an [HTTP Request](/integrations
 
 To transform this kind of structure into the n8n data structure you can use the [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) node.
 
-!!! note
-    If you're using the HTTP Request node, you should use the Split Into items option to transform the data. You don't have to use a Code node in that case.
-
+/// note
+If you're using the HTTP Request node, you should use the Split Into items option to transform the data. You don't have to use a Code node in that case.
+///
 
     

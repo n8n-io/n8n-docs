@@ -11,22 +11,22 @@ You can use these credentials to authenticate the following nodes with HubSpot.
 - [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/)
 - [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/)
 
-!!! note "API key deprecated"
-	HubSpot deprecated the API key authentication method. The option still appears in n8n, but you should use OAuth or APP Token.
-
+/// note | API key deprecated
+HubSpot deprecated the API key authentication method. The option still appears in n8n, but you should use OAuth or APP Token.
+///
 ## Prerequisites
 
 Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You can skip these steps. Enter the credential name, then select **Connect my account** in the OAuth section to connect your HubSpot account to n8n.
+/// note | Note for n8n Cloud users
+You can skip these steps. Enter the credential name, then select **Connect my account** in the OAuth section to connect your HubSpot account to n8n.
+///
 
-
-!!! warning "HubSpot old accounts"
-    Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
-
+/// warning | HubSpot old accounts
+Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
+///
 
 1. Access your [HubSpot Developer Home](https://developers.hubspot.com/){:target=_blank .external-link}.
 2. Select **Manage apps**.
@@ -59,9 +59,10 @@ Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} acco
         * forms,
         * tickets,
 
-		!!! note "Exact scope needed"
-	    	If you grant access to more or less scopes than listed above, this can cause an issue with the authentication step.
-
+	    /// note | Exact scope needed
+	    If you grant access to more or less scopes than listed above, this can cause an issue with the authentication step.
+		///
+		
 10. Select **Save** to save your settings in HubSpot.
 11. In n8n, select **Connect my account** in the OAuth section to connect your HubSpot account to n8n.
 12. Click the **Save** button to save your credentials.

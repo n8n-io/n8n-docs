@@ -8,9 +8,9 @@ contentType: overview
 
 This sections provides guides to install n8n for self-hosting. You can use these guides for both the Enterprise and Community editions.
 
-!!! note "Looking for LangChain?"
-	n8n's LangChain support is in beta. This means it's not part of the main product yet. Refer to [Access LangChain in n8n](/langchain/access-langchain/) for information on how to try it out.
-
+/// note | Looking for LangChain?
+n8n's LangChain support is in beta. This means it's not part of the main product yet. Refer to [Access LangChain in n8n](/langchain/access-langchain/) for information on how to try it out.
+///
 
 ## Installation guides for n8n
 

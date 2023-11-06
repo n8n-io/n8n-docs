@@ -8,9 +8,9 @@ contentType: integration
 
 [Clockify](https://clockify.me/) is a free time tracker and timesheet app for tracking work hours across projects.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/clockify/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/clockify/).
+///
 
 **Note:** This node uses the workflow timezone setting to specify the range of time entries starting time. You have to configure the workflow timezone setting if you want this Trigger node to retrieve the right time entries.
 
@@ -33,7 +33,7 @@ The final workflow should look like the following image.
 
 **Note:** This node uses polling to get new time entries. You have to use the *Add Poll Time* button if you want this Trigger node to run and retrieve new time entries regularly.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Clockify Trigger node.
+///
 

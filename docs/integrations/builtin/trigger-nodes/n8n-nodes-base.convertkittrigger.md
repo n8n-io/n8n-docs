@@ -8,9 +8,9 @@ contentType: integration
 
 [ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit/).
+///
 
 ## Example Usage
 
@@ -29,7 +29,7 @@ The final workflow should look like the following image.
 3. Select the form from the ***Form ID*** dropdown list.
 4. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ConvertKit Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ConvertKit Trigger node.
+///
 

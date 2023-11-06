@@ -10,12 +10,12 @@ Use the Philips Hue node to automate work in Philips Hue, and integrate Philips 
 
 On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Philips Hue integrations](https://n8n.io/integrations/philips-hue/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Philips Hue integrations](https://n8n.io/integrations/philips-hue/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

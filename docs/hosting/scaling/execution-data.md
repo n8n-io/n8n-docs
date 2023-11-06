@@ -12,9 +12,9 @@ To do this, configure the corresponding [environment variables](/hosting/environ
 
 ## Reduce saved data
 
-!!! note "Configuration at workflow level"
-	You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/workflows/#workflow-settings).
-
+/// note | Configuration at workflow level
+You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/workflows/#workflow-settings).
+///
 You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
 
 ```sh
@@ -92,5 +92,6 @@ n8n:
 	  	- EXECUTIONS_DATA_PRUNE_MAX_COUNT=50000
 ```
 
-!!! note "SQLite"
-	If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
+/// note | SQLite
+If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/environment-variables/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
+///

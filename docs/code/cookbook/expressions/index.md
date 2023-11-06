@@ -7,9 +7,9 @@ contentType: overview
 
 This section contains examples and recipes for tasks you can do with expressions.
 
-!!! note "Python support"
-	You can use Python in the Code node. It isn't available in expressions.
-
+/// note | Python support
+You can use Python in the Code node. It isn't available in expressions.
+///
 [[% import "_macros/section-toc.html" as sectionToc %]]
 
 [[ sectionToc.sectionToc(page) ]]

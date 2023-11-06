@@ -10,12 +10,12 @@ Use the Contentful node to automate work in Contentful, and integrate Contentful
 
 On this page, you'll find a list of operations the Contentful node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Contentful credentials](/integrations/builtin/credentials/contentful/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Contentful integrations](https://n8n.io/integrations/contentful/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Contentful credentials](/integrations/builtin/credentials/contentful/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Contentful integrations](https://n8n.io/integrations/contentful/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

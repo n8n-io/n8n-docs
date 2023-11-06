@@ -10,12 +10,12 @@ Use the AWS Comprehend node to automate work in AWS Comprehend, and integrate AW
 
 On this page, you'll find a list of operations the AWS Comprehend node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [AWS Comprehend credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [AWS Comprehend integrations](https://n8n.io/integrations/aws-comprehend/){:target=_blank .external-link} list.
-
+/// note | Credentials
+Refer to [AWS Comprehend credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [AWS Comprehend integrations](https://n8n.io/integrations/aws-comprehend/){:target=_blank .external-link} list.
+///
 
 ## Basic Operations
 
@@ -106,7 +106,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/awscomprehend/noop_node.png)
 
-!!! note "Activate workflow for production"
-    This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
-
+/// note | Activate workflow for production
+This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+///
 

@@ -17,9 +17,9 @@ You can use the Webhook node as a trigger for a workflow when you want to receiv
 
 The webhook allows you to trigger workflows from services that don't have a dedicated app trigger node.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Webhook integrations](https://n8n.io/integrations/webhook/){:target=_blank .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Webhook integrations](https://n8n.io/integrations/webhook/){:target=_blank .external-link} list.
+///
 
 
 ## Build and test workflows
@@ -59,9 +59,9 @@ You can require authentication for any service calling your webhook URL.
 * [**Basic Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the username and password in the request header.
 * [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the specified header parameter. For example, use this method when you want to authenticate using an API key or an access token.
 		
-	!!! note  Credential data can vary
+    /// note | Credential data can vary
 	The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
-		
+	///		
 
 ### HTTP Method
 
@@ -138,9 +138,10 @@ The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 You can use [curl](https://curl.se/){:target=_blank .external-link} to make HTTP requests that trigger the Webhook node. 
 
-!!! note
-	In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
-	The examples make GET requests. You can use whichever HTTP method you set in **HTTP Method**.
+/// note
+In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
+The examples make GET requests. You can use whichever HTTP method you set in **HTTP Method**.
+///
 
 Make an HTTP request without any parameters:
 

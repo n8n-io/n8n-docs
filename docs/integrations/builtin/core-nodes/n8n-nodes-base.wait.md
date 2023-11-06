@@ -14,9 +14,9 @@ The Wait node can resume on the following conditions:
 * At specified time
 * On webhook call
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Wait integrations](https://n8n.io/integrations/wait/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Wait integrations](https://n8n.io/integrations/wait/){:target=_blank .external-link} page.
+///
 ## Operations
 
 * Resume

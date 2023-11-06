@@ -33,12 +33,12 @@ The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with 
 
 On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [_Name_'s integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
-	
+///  note  | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+///
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [_Name_'s integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
+///	
 ## Operations
 
 * _Bullet list_

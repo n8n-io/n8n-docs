@@ -10,12 +10,12 @@ Use the DeepL node to automate work in DeepL, and integrate DeepL with other app
 
 On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [DeepL credentials](/integrations/builtin/credentials/deepl/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [DeepL integrations](https://n8n.io/integrations/deepl/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [DeepL credentials](/integrations/builtin/credentials/deepl/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [DeepL integrations](https://n8n.io/integrations/deepl/){:target="_blank" .external-link} list.
+///
 
 
 ## Basic Operations

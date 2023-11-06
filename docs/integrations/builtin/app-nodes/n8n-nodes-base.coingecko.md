@@ -10,9 +10,9 @@ Use the CoinGecko node to automate work in CoinGecko, and integrate CoinGecko wi
 
 On this page, you'll find a list of operations the CoinGecko node supports and links to more resources.
 
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [CoinGecko integrations](https://n8n.io/integrations/coingecko/){:target="_blank" .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [CoinGecko integrations](https://n8n.io/integrations/coingecko/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 * Coin

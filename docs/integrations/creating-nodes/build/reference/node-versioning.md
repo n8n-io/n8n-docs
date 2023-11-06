@@ -11,9 +11,9 @@ Be aware of how n8n decides which node version to load:
 * If a user builds and saves a workflow using version 1, n8n continues to use version 1 in that workflow, even if you create and publish a version 2 of the node.
 * When a user creates a new workflow and browses for nodes, n8n always loads the latest version of the node.
 
-!!! note "Versioning type restricted by node style"
-    If you build a node using the declarative style, you can't use full versioning.
-
+/// note | Versioning type restricted by node style
+If you build a node using the declarative style, you can't use full versioning.
+///
 ## Light versioning
 
 This is available for all node types.

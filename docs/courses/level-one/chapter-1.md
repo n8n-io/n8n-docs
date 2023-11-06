@@ -10,10 +10,9 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 First of all, you need to get n8n. There are different [ways to set up n8n](/hosting/options/){:target="_blank" .external}, choose the option that best suits your skills and needs.
 
-!!! warning "n8n version"
-
-    This course was developed on n8n version 0.175.1. In other versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.
-
+/// warning | n8n version
+This course was developed on n8n version 0.175.1. In other versions, the Editor UI might look different, but the core functionality of the workflows should not be impacted.
+///
 Once you have n8n running, open the Editor UI in a browser window. It should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-one/editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
@@ -63,9 +62,9 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
 
 <figure><img src="/_images/courses/level-one/chapter-one/workflow-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 
-!!! note "Moving the canvas"
-    You can move the workflow canvas around in two ways:
-
+/// note | Moving the canvas
+You can move the workflow canvas around in two ways:
+///
     - Click **Ctrl + Left Mouse Button** on the canvas and move it around
     - Place two fingers on your touchpad and slide
 
@@ -75,18 +74,18 @@ Don't worry about workflow execution and activation for now, we will explain the
 
 You can think of nodes as building blocks that serve different functions but, when put together, they make up a functioning machinery – an automated workflow.
 
-!!! note "Node"
-    A node is an individual step in your workflow — one that either (a) loads, (b) processes or (c) sends data.
-
+/// note | Node
+A node is an individual step in your workflow — one that either (a) loads, (b) processes or (c) sends data.
+///
 
 Based on their function, nodes can be classified into two types:
 
 - **Regular Nodes** add, remove, and edit data, as well as request and send external data.
 - **Trigger Nodes** start a workflow and supply the initial data.
 
-!!! note "Keep in mind"
-    Among the Regular and Trigger nodes there are some nodes that do not represent any app or service, instead they serve general functions like scheduling workflows (e.g. Cron and Interval nodes) or adding JavaScript functions (e.g. Function and Function Item nodes). We refer to these as *Core Nodes*.
-
+/// note | Keep in mind
+Among the Regular and Trigger nodes there are some nodes that do not represent any app or service, instead they serve general functions like scheduling workflows (e.g. Cron and Interval nodes) or adding JavaScript functions (e.g. Function and Function Item nodes). We refer to these as *Core Nodes*.
+///
 
 ### Start node
 
@@ -134,9 +133,9 @@ If you hover on a node, you'll notice that four icons appear on top:
 <figure><img src="/_images/courses/level-one/chapter-one/Node-buttons.gif" alt="The four node buttons" style="width:100%"><figcaption align = "center"><i>The four node buttons</i></figcaption></figure>
 
 
-!!! note "Moving a workflow"
-    To move a workflow around the canvas, select all nodes with your mouse or by clicking **Ctrl + A**, click and hold on a node, then drag it to any point you want on the canvas.
-
+/// note | Moving a workflow
+To move a workflow around the canvas, select all nodes with your mouse or by clicking **Ctrl + A**, click and hold on a node, then drag it to any point you want on the canvas.
+///
 
 ## Summary
 

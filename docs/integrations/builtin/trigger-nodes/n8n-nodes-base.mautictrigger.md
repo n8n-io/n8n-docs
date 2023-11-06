@@ -8,9 +8,9 @@ contentType: integration
 
 [Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mautic/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/mautic/).
+///
 
 ## Example Usage
 
@@ -58,7 +58,7 @@ In the screenshot below, you will notice that the node sends an SMS to the submi
 
 ![Using the Twilio node to send an SMS](/_images/integrations/builtin/trigger-nodes/mautictrigger/twilio_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Mautic Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Mautic Trigger node.
+///
 

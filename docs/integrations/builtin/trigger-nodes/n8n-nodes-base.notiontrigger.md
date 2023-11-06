@@ -8,9 +8,9 @@ contentType: integration
 
 [Notion](https://notion.so) is an all-in-one workspace for your notes, tasks, wikis, and databases.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/notion/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/notion/).
+///
 
 ## Events
 

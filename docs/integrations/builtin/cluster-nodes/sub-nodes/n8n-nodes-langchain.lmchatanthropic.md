@@ -9,12 +9,12 @@ Use the Anthropic Chat Model node to use Anthropic's Claude family of chat model
 
 On this page, you'll find the node parameters for the Anthropic Chat Model node, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Model

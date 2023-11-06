@@ -19,9 +19,9 @@ In the previous chapter, you used a specific action in the app (YCombinator). Ho
 
 Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data via the [***HTTP Request node***](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank" .external} in n8n.
 
-!!! note "No node for that service?"
-    The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
-
+/// note | No node for that service?
+The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
+///
 
 Now, in your Editor UI, add an *HTTP Request node* like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.
 
@@ -36,9 +36,9 @@ In the panel, select:
 - *Authentication > Generic Credential Type > Generic Auth Type:* Header Auth<br/>
     This option requires credentials to allow you to access the data.
 
-!!! note "Credentials"
-    Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
-
+/// note | Credentials
+Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
+///
 
 To add your credentials, click on the field *Credential for Header Auth* and select *Create New Credential*. This will open the Credentials window.
 
@@ -47,9 +47,9 @@ In the *Connection* tab, fill in the two fields:
 - *Name:* The Header Auth name you received in the email when you signed up for this course.
 - *Value:* The Header Auth value you received in the email when you signed up for this course.
 
-!!! note "Credentials naming"
-    New credentials are named "*node name* account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app/service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
-
+/// note | Credentials naming
+New credentials are named "*node name* account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app/service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
+///
 Click on the *Save* button in the top right corner to save your credentials. Your *Credentials Connection* window should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>

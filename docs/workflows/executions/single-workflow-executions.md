@@ -7,12 +7,12 @@ contentType: howto
 
 The **Executions** list in a workflow shows all executions for that workflow.
 
-!!! note "Deleted workflows"
-	When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
-
-!!! note "Execution history and workflow history"
-	Don't confuse the execution list with [Workflow history](/workflows/history/).
-
+/// note | Deleted workflows
+When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
+///
+/// note | Execution history and workflow history
+Don't confuse the execution list with [Workflow history](/workflows/history/).
+///
 	Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
 
 	Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.

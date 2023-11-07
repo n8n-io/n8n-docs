@@ -7,7 +7,7 @@ description: 'Documentation for the Zep Vector Store node in n8n, a workflow aut
 
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 
-On this page, you'll find the node parameters for the Zep Vector Store node, and links to more resources. It has been done before.
+On this page, you'll find the node parameters for the Zep Vector Store node, and links to more resources.
 
 !!! note "Credentials"
     You can find authentication information for this node [here](/integrations/builtin/credentials/zep/).
@@ -23,7 +23,7 @@ On this page, you'll find the node parameters for the Zep Vector Store node, and
 
 Parameters for **Insert Documents**:
 
-* Collection Name
+* Collection Name: [TODO: similar to index. Differentiates where the data is stored]
 
 Parameters for **Get Many**:
 
@@ -37,9 +37,22 @@ Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 ## Node options
 
-* Embedding Dimensions
-* Is Auto Embedded: available in **Insert Documents** mode.
-* Metadata Filter
+### Embedding Dimensions
+
+Must be the same when embedding the data and when querying it.
+
+
+[TODO: this sets how many numbers are used to represent a text - in more sophisticated terms, the size of the array. Find a way to word this better and maybe add link to some explanation of embeddings]
+
+### Is Auto Embedded
+
+Available in **Insert Documents** mode. This is enabled by default.
+
+Disable this to configure your embeddings in Zep instead of in n8n.
+
+### Metadata Filter
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/vector-store-metadata-filter.md"
 
 
 ## Related resources

@@ -5,6 +5,8 @@ description: Documentation for the Binary Input Loader node in n8n, a workflow a
 
 # Binary Input Loader
 
+[TODO: merge with JSON]
+
 Use the Binary Input Loader node to load binary data files for vector stores or summarization.
 
 On this page, you'll find a list of parameters the Binary Input Loader node supports, and links to more resources.
@@ -23,6 +25,15 @@ On this page, you'll find a list of parameters the Binary Input Loader node supp
 	* Text
 * Binary Data Key
 * Pointers
+
+[TODO: when selecting data format, if the incoming file MIME type doesn't match what you selected, it throws error. If you use automatic, it will fall back to text if it can't detect a supported type]
+
+## Options
+[TODO
+Metadata: set metadata for vector store. This is what's being matched in the metadata filter
+
+
+]
 
 ## Node reference
 

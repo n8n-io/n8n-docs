@@ -17,8 +17,14 @@ On this page, you'll find the node parameters for the GitHub Document Loader nod
 	
 ## Node parameters
 
+[TODO: add explanation]
 * Repository Link
 * Branch
+
+## Node options
+
+* Recursive: whether to include sub-folders and files.
+* Ignore Paths: set directories to ignore.
 
 ## Node reference
 

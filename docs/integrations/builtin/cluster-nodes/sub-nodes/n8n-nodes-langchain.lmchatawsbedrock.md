@@ -19,7 +19,7 @@ On this page, you'll find the node parameters for the AWS Bedrock Chat Model nod
 	
 ## Node parameters
 
-* Model
+* Model: the name of the model.
 
 
 ## Related resources

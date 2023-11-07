@@ -22,21 +22,19 @@ On this page, you'll find the node parameters for the In Memory Vector Store nod
 
 Parameters for **Get Many**:
 
-* Memory Key
-* Prompt
-* Limit
+* Memory Key: the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* Prompt: search query.
+* Limit: how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 
 Parameters for **Insert Documents**:
 
 * Memory Key
-* Clear Store
+* Clear Store: whether to wipe the vector store for the given memory key for this workflow before inserting data. [TODO: phrase this better]
 
 Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 * Memory Key
-
-
 	
 ## Related resources
 

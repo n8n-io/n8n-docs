@@ -17,6 +17,9 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
+
+[TODO: add link to supabase setup quickstart https://supabase.com/docs/guides/ai/langchain?database-method=sql and tell them if they change stuff there they need to know what they're doing]
+
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
@@ -37,8 +40,13 @@ Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 ## Node options
 
-* Query Name
-* Metadata Filter (not available for **Insert Documents** mode)
+### Query Name
+
+The name of the matching function you set up in Supabase. If you follow the [Supabase quickstart](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}, this will be `match_documents`.
+
+### Metadata Filter
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/vector-store-metadata-filter.md"
 
 
 ## Related resources

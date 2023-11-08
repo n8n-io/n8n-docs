@@ -30,10 +30,9 @@ Then, you can take further actions by connecting other nodes, for example sendin
 
 The only difference between a regular workflow and an Error Workflow is that the latter contains an Error Trigger node. Make sure to create this node before you set a workflow as Error Workflow.
 
-!!! note "Error workflows"
-
-	- You don't need to activate workflows that use the Error Workflow node.
-	- A workflow that uses the *Error Trigger node* uses itself as the error workflow.
+/// note | Error workflows
+- You don't need to activate workflows that use the Error Workflow node.
+///	- A workflow that uses the *Error Trigger node* uses itself as the error workflow.
 	- The Error Trigger node is designed to get triggered only when the monitored workflow gets executed automatically. This means you can't test this (to see the result of) an error workflow while executing the monitored workflow manually.
 	- You can set the same Error Workflow for multiple workflows.
 
@@ -109,13 +108,14 @@ Another way of troubleshooting workflows is to include a [Stop and Error node](/
 
 The Stop and Error node can only be added as the last node in a workflow.
 
-!!! note "When to throw errors"
+/// note | When to throw errors
+Throwing exceptions with the Stop and Error node is useful for verifying the data (or assumptions about the data) from a node and returning custom error messages.
 
-	Throwing exceptions with the Stop and Error node is useful for verifying the data (or assumptions about the data) from a node and returning custom error messages.
+If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers.
 
-	If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers.
-
-	Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
+Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
 
 
-	<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>
+///
+

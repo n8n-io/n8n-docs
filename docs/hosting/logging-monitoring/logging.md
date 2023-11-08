@@ -6,9 +6,9 @@ contentType: howto
 
 Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.
 
-!!! note "Log streaming"
-	n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming/), in addition to the logging options described in this document.
-
+/// note | Log streaming
+n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming/), in addition to the logging options described in this document.
+///
 ## Setup
 
 To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/#configuration-via-file))

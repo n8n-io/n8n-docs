@@ -10,13 +10,13 @@ Use the AWS DynamoDB node to automate work in AWS DynamoDB, and integrate AWS Dy
 
 On this page, you'll find a list of operations the AWS DynamoDB node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+/// note | Credentials
+Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+///
 
-
-!!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [AWS DynamoDB integrations](https://n8n.io/integrations/aws-dynamodb/){:target=_blank .external-link} list.
-
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [AWS DynamoDB integrations](https://n8n.io/integrations/aws-dynamodb/){:target=_blank .external-link} list.
+///
 
 
 

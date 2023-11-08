@@ -8,9 +8,9 @@ contentType: integration
 
 [Asana](https://asana.com/) is a web and mobile application designed to help teams organize, track, and manage their work.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/asana/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/asana/).
+///
 
 ## Example Usage
 
@@ -29,7 +29,7 @@ The final workflow should look like the following image.
 3. Enter the name of the workspace in the ***Workspace*** field.
 4. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Asana Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Asana Trigger node.
+///
 

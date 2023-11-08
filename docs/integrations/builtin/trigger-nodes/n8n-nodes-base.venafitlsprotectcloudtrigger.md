@@ -10,6 +10,6 @@ contentType: integration
 
 Use the n8n Venafi TLS Protect Cloud trigger node to start a workflow in n8n in response to events in the [cloud-based Venafi TLS Protect](https://vaas.venafi.com/){:target=_blank} service.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/venafitlsprotectcloud/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/venafitlsprotectcloud/).
+///

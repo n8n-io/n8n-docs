@@ -10,12 +10,12 @@ Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit
 
 On this page, you'll find a list of operations the ConvertKit node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [ConvertKit integrations](https://n8n.io/integrations/convertkit/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [ConvertKit integrations](https://n8n.io/integrations/convertkit/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

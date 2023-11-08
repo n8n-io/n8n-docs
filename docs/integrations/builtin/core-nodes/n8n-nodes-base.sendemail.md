@@ -8,9 +8,9 @@ contentType: integration
 
 The Send Email node sends emails using an SMTP email server.
 
-!!! note "Credential"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sendemail/).
-
+/// note | Credential
+You can find authentication information for this node [here](/integrations/builtin/credentials/sendemail/).
+///
 ## Operations
 
 - Send an email

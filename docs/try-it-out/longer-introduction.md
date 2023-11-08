@@ -18,7 +18,8 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 ## Step one: Sign up for n8n
 
-!!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
+/// note | Skip this section if you've already installed n8n or signed up for a Cloud account
+///
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
@@ -75,8 +76,9 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
     ```
     This generates a date in the correct format, seven days before the current date.
 
-    !!! note "Date and time in n8n"
-        n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/luxon/). 
+    /// note | Date and time in n8n
+    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/luxon/). 
+    ///
 
 7. Close the **Edit Expression** modal to return to the NASA node.
 8. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
@@ -93,17 +95,19 @@ Add the If node:
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. Select **Add condition** > **String**.
 5. You need to check the value of the `classType` property in the NASA data. To do this:
-	1. drag and drop **classType** into **Value 1**.
+	1. Drag and drop **classType** into **Value 1**.
 
-    !!! note "Make sure you ran the NASA node in the previous section"
-        If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
+		/// note | Make sure you ran the NASA node in the previous section
+		If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
+		///
 
     2. In **Operation**, select **Contains**.
     3. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
 6. You can now check that the node is working and returning the expected date: select **Execute node** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
-!!! note "Weeks without large solar flares"
-    In this tutorial, you are working with live date. If you find there are no X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
+/// note | Weeks without large solar flares
+In this tutorial, you are working with live date. If you find there are no X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
+///
 
 ## Step six: Output data from your workflow
 
@@ -134,9 +138,9 @@ The last step of the workflow is to send the two reports about solar flares. For
 2. Go back to your Postbin bin. Refresh the page to see the output.
 3. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
 
-!!! note "Time limit"
-    Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.
-
+/// note | Time limit
+Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.
+///
 
 ## Next steps
 

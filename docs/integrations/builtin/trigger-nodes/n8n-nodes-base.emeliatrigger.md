@@ -8,9 +8,9 @@ contentType: integration
 
 [Emelia](https://emelia.io) is a cold-mailing tool.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/emelia/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/emelia/).
+///
 
 ## Events
 
@@ -60,7 +60,7 @@ In the screenshot below, you will notice that the node sends a message with a re
 
 ![Using the Mattermost node to send a message](/_images/integrations/builtin/trigger-nodes/emeliatrigger/mattermost_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Emelia Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Emelia Trigger node.
+///
 

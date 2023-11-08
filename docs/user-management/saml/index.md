@@ -4,11 +4,13 @@ contentType: overview
 
 # Security Assertion Markup Language (SAML)
 
-!!! info "Feature availability"
-	* Available on Enterprise plans.
-	* You need access to the n8n instance owner account to enable and configure SAML
+/// info | Feature availability
+* Available on Enterprise plans.
+* You need access to the n8n instance owner account to enable and configure SAML
 
-	Available from version 0.225.0 onwards.
+Available from version 0.225.0 onwards.
+///	
+
 
 This section provides guidance on using SAML SSO (single sign-on) with n8n. It assumes you're familiar with SAML. If you're not, [SAML Explained in Plain English](https://www.onelogin.com/learn/saml){:target=_blank .external-link} can help you understand how SAML works, and its benefits.
 

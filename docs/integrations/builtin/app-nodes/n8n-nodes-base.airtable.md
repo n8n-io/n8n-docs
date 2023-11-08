@@ -10,12 +10,12 @@ Use the Airtable node to automate work in Airtable, and integrate Airtable with 
 
 On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 
-!!! note "Credentials"
-	Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [Airtable integrations](https://n8n.io/integrations/airtable/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Airtable integrations](https://n8n.io/integrations/airtable/){:target="_blank" .external-link} list.
+///
 
 
 ## Operations

@@ -10,12 +10,12 @@ Use the UptimeRobot node to automate work in UptimeRobot, and integrate UptimeRo
 
 On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [UptimeRobot integrations](https://n8n.io/integrations/uptimerobot/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [UptimeRobot integrations](https://n8n.io/integrations/uptimerobot/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

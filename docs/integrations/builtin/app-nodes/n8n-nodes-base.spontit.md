@@ -10,12 +10,12 @@ Use the Spontit node to automate work in Spontit, and integrate Spontit with oth
 
 On this page, you'll find a list of operations the Spontit node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Spontit credentials](/integrations/builtin/credentials/spontit/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Spontit integrations](https://n8n.io/integrations/spontit/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Spontit credentials](/integrations/builtin/credentials/spontit/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Spontit integrations](https://n8n.io/integrations/spontit/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

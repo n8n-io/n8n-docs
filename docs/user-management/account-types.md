@@ -19,5 +19,6 @@ There are two account types, owner and member. The account type affects the user
     * Change their own password.
     * See their own workflows.
 
-!!! note "Create a member-level account for the owner"
-    We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+/// note | Create a member-level account for the owner
+We recommend that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+///

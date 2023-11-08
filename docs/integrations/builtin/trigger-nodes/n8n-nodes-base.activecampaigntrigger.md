@@ -8,9 +8,9 @@ contentType: integration
 
 [ActiveCampaign](https://www.activecampaign.com/) is a cloud software platform for small-to-mid-sized business. The company offers software for customer experience automation, which combines the email marketing, marketing automation, sales automation, and CRM categories.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/activecampaign/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/activecampaign/).
+///
 
 
 ## Example Usage
@@ -30,7 +30,7 @@ The final workflow should look like the following image.
 3. Select 'Admin' from the *Source* dropdown list.
 4. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ActiveCampaign Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ActiveCampaign Trigger node.
+///
 

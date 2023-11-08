@@ -1,5 +1,6 @@
-!!! note "Programmatic-style nodes only"
-    This guidance applies to programmatic-style nodes. If you're using declarative style, n8n handles paired items for you automatically.
+/// note | Programmatic-style nodes only
+This guidance applies to programmatic-style nodes. If you're using declarative style, n8n handles paired items for you automatically.
+///
 
 n8n's item linking allows users to access data from items that precede the current item. n8n needs to know which input item a given output item comes from. If this information is missing, expressions in other nodes may break. As a node developer, you must ensure any items returned by your node support this. 
 

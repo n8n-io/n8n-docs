@@ -8,9 +8,9 @@ contentType: integration
 
 [Workable](https://www.workable.com/) is a recruiting platform.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/workable/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/workable/).
+///
 
 ## Trigger Events
 

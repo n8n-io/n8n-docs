@@ -10,12 +10,12 @@ Use the GitHub node to automate work in GitHub, and integrate GitHub with other 
 
 On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [GitHub integrations](https://n8n.io/integrations/github/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [GitHub integrations](https://n8n.io/integrations/github/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

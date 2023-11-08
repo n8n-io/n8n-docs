@@ -15,9 +15,9 @@ When managing an embedded n8n deployment, spanning across teams or organizations
 
 
 
-!!! warning
-    The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
-
+/// warning
+The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
+///
 
 ## Workflow per user
 

@@ -22,9 +22,9 @@ You need some understanding of:
 
 In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
 
-!!! note "Existing node"
-    n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
-
+/// note | Existing node
+n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
+///
 ### Step 1: Set up the project
 
 
@@ -87,9 +87,9 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
-!!! note "Class names and file names"
-	Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
-
+/// note | Class names and file names
+Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
+///
 ```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {

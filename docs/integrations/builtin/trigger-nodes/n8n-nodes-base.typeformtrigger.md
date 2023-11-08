@@ -8,8 +8,9 @@ contentType: integration
 
 [Typeform](https://www.typeform.com/) is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/typeform/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Typeform trigger integrations](https://n8n.io/integrations/typeform-trigger/){:target=_blank .external-link} page.
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/typeform/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Typeform trigger integrations](https://n8n.io/integrations/typeform-trigger/){:target=_blank .external-link} page.
+///

@@ -7,9 +7,9 @@ description: Documentation for the n8n Form Trigger node in n8n, a workflow auto
 
 Use the n8n Form Trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [n8n Form Trigger integrations](https://n8n.io/integrations/n8n-form-trigger/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [n8n Form Trigger integrations](https://n8n.io/integrations/n8n-form-trigger/){:target=_blank .external-link} page.
+///
 
 ## Build and test workflows
 

@@ -10,12 +10,12 @@ Use the Rundeck node to automate work in Rundeck, and integrate Rundeck with oth
 
 On this page, you'll find a list of operations the Rundeck node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Rundeck integrations](https://n8n.io/integrations/rundeck/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Rundeck integrations](https://n8n.io/integrations/rundeck/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

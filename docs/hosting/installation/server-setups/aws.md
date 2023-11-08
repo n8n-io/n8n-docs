@@ -143,12 +143,14 @@ Send all the manifests to the cluster by running the following command in the `n
 kubectl apply -f .
 ```
 
-!!! note "Namespace error"
-    You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+/// note | Namespace error
+You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
 
-    ```shell
-    kubectl apply -f namespace.yaml
-    ```
+```shell
+kubectl apply -f namespace.yaml
+```
+///
+
 
 ## Set up DNS
 
@@ -161,9 +163,9 @@ To find the address of the n8n service running on the instance:
 3. Select the **Resources** tab, then **Service and networking** > **Services**.
 4. Select the **n8n** service and copy the **Load balancer URLs** value. Use this value suffixed with the n8n service port (5678) for DNS.
 
-!!! note "Use HTTP"
-	This guide uses HTTP connections for the services it defines, for example in `n8n-deployment.yaml`. However, if you click the **Load balancer URLs** value, EKS takes you to an "HTTPS" URL which results in an error. To solve this, when you open the n8n subdomain, make sure to use HTTP.
-
+/// note | Use HTTP
+This guide uses HTTP connections for the services it defines, for example in `n8n-deployment.yaml`. However, if you click the **Load balancer URLs** value, EKS takes you to an "HTTPS" URL which results in an error. To solve this, when you open the n8n subdomain, make sure to use HTTP.
+///
 ## Delete resources
 
 If you need to delete the setup, you can remove the resources created by the manifests with the following command:

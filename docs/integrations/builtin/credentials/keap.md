@@ -17,9 +17,9 @@ Create a [Keap](https://keap.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Keap account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Keap account to n8n.
+///
 
 1. Access your [Keap Developer Console](https://keys.developer.keap.com/my-apps).
 2. Click on your email address in the top right corner and select 'Apps' from the dropdown list.

@@ -9,9 +9,9 @@ hide:
 
 n8n provides these methods to make it easier to perform common tasks in expressions.
 
-!!! note "Python support"
-	You can use Python in the Code node. It isn't available in expressions.
-
+/// note | Python support
+You can use Python in the Code node. It isn't available in expressions.
+///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :---------------------: |

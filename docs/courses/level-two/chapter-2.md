@@ -11,10 +11,9 @@ In this chapter, you will learn how to process different types of data using [n8
 
 You're most likely familiar with HTML and XML.
 
-!!! note "HTML vs. XML"
-
-    HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
-
+/// note | HTML vs. XML
+HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
+///
 If you need to process HTML or XML data in your n8n workflows, use the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
 
 Use the HTML node to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
@@ -280,12 +279,13 @@ In n8n, you can process binary data with the following nodes:
 
 To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
 
-!!! warning "Naming the right path"
+/// warning | Naming the right path
+The file path looks slightly different depending on how you are running n8n:
 
-	The file path looks slightly different depending on how you are running n8n:
+- npm: `~/my_file.json`
+- n8n cloud / Docker: `/tmp/my_file.json`
+///
 
-	- npm: `~/my_file.json`
-	- n8n cloud / Docker: `/tmp/my_file.json`
 
 
 ### Exercise

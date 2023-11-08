@@ -5,9 +5,10 @@ contentType: howTo
 
 # External storage
 
-!!! info "Feature availability"
-	* Available on Self-hosted Enterprise plans
-	* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+/// info | Feature availability
+* Available on Self-hosted Enterprise plans
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+///
 
 n8n can store binary data produced by workflow executions externally. This feature is useful to avoid relying on the filesystem for storing large amounts of binary data. 
 
@@ -17,9 +18,9 @@ n8n will introduce external storage for other data types in the future.
 
 n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html){:target=_blank .external-link} as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
 
-!!! info "Enterprise-tier feature"
-    You will need an [Enterprise license key](/enterprise-key/) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
-
+/// info | Enterprise-tier feature
+You will need an [Enterprise license key](/enterprise-key/) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
+///
 ### Setup
 
 Create and configure a bucket following the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html){:target=_blank .external-link}. You can use the following policy, replacing `<bucket-name>` with the name of the bucket you created:
@@ -50,9 +51,9 @@ export N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY=...
 export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
 ```
 
-!!! note "No region"
-    If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`. 
-
+/// note | No region
+If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`. 
+///
 Tell n8n to store binary data in S3:
 
 ```sh
@@ -74,5 +75,6 @@ n8n continues to read older binary data stored in the filesystem from the filesy
 
 If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
 
-!!! note "Binary data pruning"
-    Binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. This may change in future.
+/// note | Binary data pruning
+Binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. This may change in future.
+///

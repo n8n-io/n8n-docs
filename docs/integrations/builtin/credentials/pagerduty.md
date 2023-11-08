@@ -16,9 +16,9 @@ Create a [PagerDuty](https://pagerduty.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your PagerDuty account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your PagerDuty account to n8n.
+///
 
 1. Access your PagerDuty dashboard.
 2. Select 'Developer Mode' from the number pad icon in the top right.

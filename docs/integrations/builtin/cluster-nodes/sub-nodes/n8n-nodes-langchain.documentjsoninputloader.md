@@ -9,9 +9,9 @@ Use the JSON Input Loader node to load JSON data for vector stores or summarizat
 
 On this page, you'll find the node parameters for the JSON Input Loader node, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/json-input-loader/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/json-input-loader/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Pointers

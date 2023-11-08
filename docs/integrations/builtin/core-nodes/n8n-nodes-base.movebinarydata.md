@@ -8,12 +8,12 @@ contentType: integration
 
 The Convert to/from binary data node is useful to move data between binary and JSON properties.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Convert to/from binary data integrations](https://n8n.io/integrations/move-binary-data/){:target=_blank .external-link} page.
-
-!!! note "CSV to JSON"
-    If you need to convert an entire CSV file to JSON, use the [Spreadsheet File](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) node.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Convert to/from binary data integrations](https://n8n.io/integrations/move-binary-data/){:target=_blank .external-link} page.
+///
+/// note | CSV to JSON
+If you need to convert an entire CSV file to JSON, use the [Spreadsheet File](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) node.
+///
 
 ## Node reference
 

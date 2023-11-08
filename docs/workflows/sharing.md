@@ -30,9 +30,9 @@ There are two workflow roles: owner and editor. The owner is the user who create
 
 You can't change the workflow owner, except when deleting the user.
 
-!!! note "Credentials"
-	Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
-
+/// note | Credentials
+Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
+///
 ### Permissions
 
 | Permissions | Owner | Editor | 

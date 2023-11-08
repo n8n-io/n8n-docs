@@ -1,6 +1,6 @@
-!!! info "0.236.0 and below"
-	n8n removed this execution behavior in version 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before version 1.0. You can change the execution order in your [workflow settings](/workflows/settings/).
-
+/// info | 0.236.0 and below
+n8n removed this execution behavior in version 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before version 1.0. You can change the execution order in your [workflow settings](/workflows/settings/).
+///
 If you add a Merge node to a workflow containing an If node, it can result in both output branches of the If node executing.
 
 The Merge node is triggered by one branch, then goes and executes the other branch.

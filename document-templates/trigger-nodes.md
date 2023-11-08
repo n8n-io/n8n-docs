@@ -34,12 +34,12 @@ The _Name_ trigger node allows you to respond to events in _Name_ and integrate 
 
 On this page, you'll find a list of events the _Name_ trigger node can respond to, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
-
+///  note  | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+///
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
+///
 ## Events
 
 * _Bullet list_

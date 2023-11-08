@@ -10,12 +10,12 @@ Use the PostHog node to automate work in PostHog, and integrate PostHog with oth
 
 On this page, you'll find a list of operations the PostHog node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [PostHog credentials](/integrations/builtin/credentials/posthog/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [PostHog integrations](https://n8n.io/integrations/posthog/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [PostHog credentials](/integrations/builtin/credentials/posthog/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [PostHog integrations](https://n8n.io/integrations/posthog/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -70,7 +70,7 @@ In the screenshot below, you will notice that the node creates a new event in Po
 
 ![Using the PostHog node to create a new event](/_images/integrations/builtin/app-nodes/posthog/posthog_node.png)
 
-!!! note "Activate workflow for production"
-    This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
-
+/// note | Activate workflow for production
+This example workflow uses the Webhook node, which is a Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered every time a GET request is sent to the ***Production*** webhook URL.
+///
 

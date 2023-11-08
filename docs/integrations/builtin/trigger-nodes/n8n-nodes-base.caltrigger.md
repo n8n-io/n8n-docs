@@ -8,9 +8,9 @@ contentType: integration
 
 [Cal](https://cal.com/) is the event-juggling scheduler for everyone. Focus on meeting, not making meetings.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/cal/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/cal/).
+///
 
 
 ## Example Usage
@@ -34,7 +34,7 @@ The final workflow should look like the following image.
 
 Click on **Add Field** under advanced fields and select the option(s) you wish to add. You can enter an EventType ID, an App ID and a payload template. Note that the eventType ID must be of a team EventType.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cal Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Cal Trigger node.
+///
 

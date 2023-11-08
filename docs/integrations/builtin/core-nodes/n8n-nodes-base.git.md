@@ -8,9 +8,9 @@ contentType: integration
 
 [Git](https://git-scm.com/) is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/git/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/git/).
+///
 
 
 ## Basic Operations

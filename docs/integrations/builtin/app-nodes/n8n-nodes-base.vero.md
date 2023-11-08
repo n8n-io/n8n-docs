@@ -10,12 +10,12 @@ Use the Vero node to automate work in Vero, and integrate Vero with other applic
 
 On this page, you'll find a list of operations the Vero node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Vero credentials](/integrations/builtin/credentials/vero/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Vero integrations](https://n8n.io/integrations/vero/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Vero credentials](/integrations/builtin/credentials/vero/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Vero integrations](https://n8n.io/integrations/vero/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

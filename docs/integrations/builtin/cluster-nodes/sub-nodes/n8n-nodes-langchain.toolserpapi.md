@@ -9,12 +9,12 @@ The SerpAPI node allows an agent in your workflow to call Google's Search API.
 
 On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/serp/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/serpapi/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/serp/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/serpapi/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 ### Options

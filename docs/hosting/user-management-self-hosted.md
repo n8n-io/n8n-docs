@@ -19,9 +19,9 @@ For LDAP setup information, refer to [LDAP](/user-management/ldap/).
 
 For SAML setup information, refer to [SAML](/user-management/saml/).
 
-!!! note "Basic auth and JWT removed"
-	n8n removed support for basic auth and JWT in version 1.0.
-
+/// note | Basic auth and JWT removed
+n8n removed support for basic auth and JWT in version 1.0.
+///
 ## Setup
 
 There are three stages to set up user management in n8n:
@@ -34,9 +34,9 @@ There are three stages to set up user management in n8n:
 
 n8n recommends setting up an SMTP server, for user invites and password resets. 
 
-!!! note "Optional from 0.210.1"
-	From version 0.210.1 onward, this step is optional. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
-
+/// note | Optional from 0.210.1
+From version 0.210.1 onward, this step is optional. You can choose to manually copy and send invite links instead of setting up SMTP. Note that if you skip this step, users can't reset passwords.
+///
 Get the following information from your SMTP provider:
 
 * Server name
@@ -62,13 +62,13 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 
-!!! note "More configuration options"
-    There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
+/// note | More configuration options
+There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
+///
 
-
-!!! note "New to SMTP?"
-    If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.com/blog/what-is-an-smtp-server/) offers a short introduction, while [Wikipedia's Simple Mail Transfer Protocol article](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) provides more detailed technical background.
-
+/// note | New to SMTP?
+If you're not familiar with SMTP, this [blog post by SendGrid](https://sendgrid.com/blog/what-is-an-smtp-server/) offers a short introduction, while [Wikipedia's Simple Mail Transfer Protocol article](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) provides more detailed technical background.
+///
 
 ### Step two: In-app setup
 

@@ -9,9 +9,9 @@ Use the Binary Input Loader node to load binary data files for vector stores or 
 
 On this page, you'll find a list of parameters the Binary Input Loader node supports, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/binary-input-loader/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/binary-input-loader/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Loader Type

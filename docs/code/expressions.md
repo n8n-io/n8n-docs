@@ -21,12 +21,12 @@ n8n supports two libraries:
 - [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, for working with data and time.
 - [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
 
-!!! note "No Python support"
-	Expressions must use JavaScript.
-
-!!! note "Data in n8n"
-	When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/) for more information on working with data in your workflows.
-
+/// note | No Python support
+Expressions must use JavaScript.
+///
+/// note | Data in n8n
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/) for more information on working with data in your workflows.
+///
 ## Writing expressions
 
 

@@ -1,16 +1,16 @@
 # Function
 
-!!! warning "Deprecated in 0.198.0"
-	n8n deprecated this node in version 0.198.0. Older workflows continue to work, and the node is still available in older versions n8n. From 0.198.0, n8n replaces the Function node with the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
-
+/// warning | Deprecated in 0.198.0
+n8n deprecated this node in version 0.198.0. Older workflows continue to work, and the node is still available in older versions n8n. From 0.198.0, n8n replaces the Function node with the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
+///
 Using the function node, you can:
 
 * Transform data from other nodes
 * Implement custom functionality
 
-!!! note "Function node and function item node"
-    Note that the Function node is different from the [Function Item](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) node. Refer to [Data | Code](/data/code/) to learn about the difference between the two.
-
+///  note  | Function node and function item node
+Note that the Function node is different from the [Function Item](/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/) node. Refer to [Data | Code](/data/code/) to learn about the difference between the two.
+///
 
 The Function node supports:
 

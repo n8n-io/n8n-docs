@@ -10,12 +10,12 @@ Use the MySQL node to automate work in MySQL, and integrate MySQL with other app
 
 On this page, you'll find a list of operations the MySQL node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [MySQL integrations](https://n8n.io/integrations/mysql/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [MySQL integrations](https://n8n.io/integrations/mysql/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

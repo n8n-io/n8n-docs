@@ -13,9 +13,9 @@ n8n Cloud is n8n's hosted solution. In addition to all the features of n8n, it p
 
 [Sign up for n8n Cloud](https://www.n8n.cloud/){:target=_blank .external-link}
 
-!!! note "Russia and Belarus"
-    n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
-
+/// note | Russia and Belarus
+n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
+///
 ## Cloud configuration
 
 You can configure settings for your n8n instance in your [Admin dashboard](/cloud-admin-dashboard/). This includes changing your n8n version.
@@ -23,9 +23,9 @@ You can configure settings for your n8n instance in your [Admin dashboard](/clou
 
 ## Cloud IP addresses
 
-!!! warning "Cloud IP addresses change without warning"
-    n8n can't guarantee static source IPs, as Cloud operates in a dynamic cloud provider environment and scales its infrastructure to meet demand. You should use strong authentication and secure transport protocols when connecting into and out of n8n.
-
+/// warning | Cloud IP addresses change without warning
+n8n can't guarantee static source IPs, as Cloud operates in a dynamic cloud provider environment and scales its infrastructure to meet demand. You should use strong authentication and secure transport protocols when connecting into and out of n8n.
+///
 Outbound traffic may currently appear to originate from any of:
 
 * 20.79.227.226

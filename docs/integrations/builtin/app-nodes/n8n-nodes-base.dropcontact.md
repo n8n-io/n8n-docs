@@ -10,12 +10,12 @@ Use the Dropcontact node to automate work in Dropcontact, and integrate Dropcont
 
 On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Dropcontact integrations](https://n8n.io/integrations/dropcontact/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Dropcontact integrations](https://n8n.io/integrations/dropcontact/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

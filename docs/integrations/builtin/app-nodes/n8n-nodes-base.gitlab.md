@@ -10,12 +10,12 @@ Use the GitLab node to automate work in GitLab, and integrate GitLab with other 
 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [GitLab integrations](https://n8n.io/integrations/gitlab/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [GitLab integrations](https://n8n.io/integrations/gitlab/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

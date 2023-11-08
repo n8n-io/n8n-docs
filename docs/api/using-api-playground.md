@@ -29,8 +29,8 @@ N8N_HOST:N8N_PORT/N8N_PATH/api/v<api-version-number>/credentials/schema/{credent
 ```
 
 /// note | How to find `credentialTypeName`
-To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api` :
-///```json
+To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api`:
+```json
 {
     ...,
     "credentials": {
@@ -40,4 +40,5 @@ To find the type, download your workflow as JSON and examine it. For example, fo
         }
     }
 }
-``` 
+```
+/// 

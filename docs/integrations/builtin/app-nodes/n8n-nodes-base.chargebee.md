@@ -10,12 +10,12 @@ Use the Chargebee node to automate work in Chargebee, and integrate Chargebee wi
 
 On this page, you'll find a list of operations the Chargebee node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Chargebee credentials](/integrations/builtin/credentials/chargebee/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Chargebee integrations](https://n8n.io/integrations/chargebee/){:target=_blank .external-link} list.
-
+/// note | Credentials
+Refer to [Chargebee credentials](/integrations/builtin/credentials/chargebee/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [Chargebee integrations](https://n8n.io/integrations/chargebee/){:target=_blank .external-link} list.
+///
 
 
 

@@ -14,9 +14,9 @@ hide:
 
 Use the If node to split a workflow conditionally based on comparison operations.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [IF integrations](https://n8n.io/integrations/if/){:target=_blank .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [IF integrations](https://n8n.io/integrations/if/){:target=_blank .external-link} list.
+///
 ## Add conditions
 
 Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.

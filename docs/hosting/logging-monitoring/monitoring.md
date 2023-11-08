@@ -28,8 +28,9 @@ Access the endpoint:
 <your-instance-url>/metrics
 ```
 
-!!! info "Feature availability"
-	The `/metrics` endpoint isn't available on n8n Cloud.
+/// info | Feature availability
+The `/metrics` endpoint isn't available on n8n Cloud.
+///
 
 ## Enable metrics and healthz for self-hosted n8n
 

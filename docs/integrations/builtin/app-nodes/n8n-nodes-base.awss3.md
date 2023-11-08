@@ -10,13 +10,13 @@ Use the AWS S3 node to automate work in AWS S3, and integrate AWS S3 with other 
 
 On this page, you'll find a list of operations the AWS S3 node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+/// note | Credentials
+Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+///
 
-
-!!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [AWS S3 integrations](https://n8n.io/integrations/aws-s3/){:target=_blank .external-link} list.
-
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [AWS S3 integrations](https://n8n.io/integrations/aws-s3/){:target=_blank .external-link} list.
+///
 
 
 ## Basic Operations

@@ -12,9 +12,9 @@ The Markdown node converts between Markdown and HTML formats.
 
 You can configure the node's output using **Options**. Click **Add Option** to view and select your options.
 
-!!! note "Test out the options"
-    Some of the options depend on each other, or can interact. We recommend testing out options to check the effects are what you want.
-
+/// note | Test out the options
+Some of the options depend on each other, or can interact. We recommend testing out options to check the effects are what you want.
+///
 ### Markdown to HTML
 
 | Option | Description | Default |

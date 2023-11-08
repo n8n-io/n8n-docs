@@ -8,9 +8,9 @@ contentType: integration
 
 The Read Binary Files node reads files from the host machine that runs n8n.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Read Binary Files integrations](https://n8n.io/integrations/read-binary-files/){:target=_blank .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Read Binary Files integrations](https://n8n.io/integrations/read-binary-files/){:target=_blank .external-link} list.
+///
 
 ## Related resources
 

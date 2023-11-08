@@ -76,8 +76,9 @@ When using the Remove Duplicates operation, configure the following parameters a
 
 The Sort operation allows you to organize lists of in a desired ordering, or generate a random selection.
 
-!!! note "Array sort behavior
-    The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. Refer to [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){:target=_blank .external-link} to learn more.
+/// note | Array sort behavior
+The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. Refer to [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){:target=_blank .external-link} to learn more.
+///
 
 
 When using the Sort operation, configure the following parameters and options:

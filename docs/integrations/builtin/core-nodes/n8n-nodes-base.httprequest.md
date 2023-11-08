@@ -12,9 +12,9 @@ When using this node, you're creating a REST API call. You need some understandi
 
 There are two ways to create an HTTP request: configure the [node fields](#node-fields) or [import a curl command](#import-curl-command).
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [HTTP Request integrations](https://n8n.io/integrations/http-request/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [HTTP Request integrations](https://n8n.io/integrations/http-request/){:target=_blank .external-link} page.
+///
 ## Node parameters
 
 ### Method
@@ -80,9 +80,9 @@ Select **Add Option** to view and select these options.
 
 Use this option to paginate results.
 
-!!! note "Inspect the API data first"
-	Some options for pagination require knowledge of the data returned by the API you're using. Before setting up pagination, either check the API documentation, or do an API call without pagination, to see the data it returns.
-
+/// note | Inspect the API data first
+Some options for pagination require knowledge of the data returned by the API you're using. Before setting up pagination, either check the API documentation, or do an API call without pagination, to see the data it returns.
+///
 ??? Details "What is pagination?"
     Pagination means splitting a large set of data into multiple pages. The amount of data on each page depends on the limit you set.
   

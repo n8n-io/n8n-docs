@@ -11,9 +11,9 @@ PostBin is a service that helps you test API clients and webhooks. Use the PostB
 On this page, you'll find a list of operations the PostBin node supports, and links to more resources.
 
 
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Postbin integrations](https://n8n.io/integrations/postbin/){:target="_blank" .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Postbin integrations](https://n8n.io/integrations/postbin/){:target="_blank" .external-link} list.
+///
 # Operations
 
 * Bin

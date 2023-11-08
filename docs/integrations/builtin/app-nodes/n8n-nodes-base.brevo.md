@@ -10,12 +10,12 @@ Use the Brevo node to automate work in Brevo, and integrate Brevo with other app
 
 On this page, you'll find a list of operations the Brevo node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Brevo credentials](/integrations/builtin/credentials/brevo/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Brevo integrations](https://n8n.io/integrations/brevo/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Brevo credentials](/integrations/builtin/credentials/brevo/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Brevo integrations](https://n8n.io/integrations/brevo/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 * Contact

@@ -6,9 +6,9 @@ contentType: explanation
 
 # AI coding with GPT
 
-!!! info "Experimental feature with limited availability"
-	As an experimental feature, n8n is gradually rolling this out on Cloud from version 1.3.0. If you don't see the feature when you first upgrade to 1.3.0, please be patient: it's coming soon.  
-	Not available on self-hosted.  
+/// info | Experimental feature with limited availability
+As an experimental feature, n8n is gradually rolling this out on Cloud from version 1.3.0. If you don't see the feature when you first upgrade to 1.3.0, please be patient: it's coming soon.  
+///	Not available on self-hosted.  
 	Python isn't supported.
 
 ## Use AI in the Code node

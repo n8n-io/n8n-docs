@@ -10,12 +10,12 @@ Use the Shopify node to automate work in Shopify, and integrate Shopify with oth
 
 On this page, you'll find a list of operations the Shopify node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Shopify credentials](/integrations/builtin/credentials/shopify/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Shopify integrations](https://n8n.io/integrations/shopify/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Shopify credentials](/integrations/builtin/credentials/shopify/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Shopify integrations](https://n8n.io/integrations/shopify/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

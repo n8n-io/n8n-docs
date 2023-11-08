@@ -6,9 +6,9 @@ contentType: howto
 
 n8n can be run in different modes depending on your needs. The queue mode provides the best scalability, and its configuration is detailed here.
 
-!!! note "Binary data storage"
- 	n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
-
+/// note | Binary data storage
+n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
+///
 ## How it works
 
 When running in `queue` mode you have multiple n8n instances set up (as many as desired or necessary to handle your workload), with one main instance receiving workflow information (e.g. triggers) and the worker instances performing the executions.
@@ -37,9 +37,9 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 
 ### Set executions mode
 
-!!! note "Database considerations"
-    n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
-
+/// note | Database considerations
+n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
+///
 Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
 
 ```bash
@@ -50,9 +50,9 @@ Alternatively, you can set `executions.mode` to `queue` in the [configuration fi
 
 ### Start Redis
 
-!!! note "Keep in mind"
-    You can run Redis on a separate machine, just make sure that it is accessible by the n8n instance.
-
+/// note | Keep in mind
+You can run Redis on a separate machine, just make sure that it is accessible by the n8n instance.
+///
 To run Redis in a Docker container, follow the instructions below.
 
 Run the following command to start a Redis instance:
@@ -105,14 +105,14 @@ When running n8n with queues, all the production workflow executions get process
 
 Redis is used as the message broker, and the database is used to persist data, so access to both is required. **Running a distributed system with this setup over SQLite is not recommended.**
 
-!!! note "Migrate data"
-    If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
-
+/// note | Migrate data
+If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
+///
 ## Webhook processors
 
-!!! note "Keep in mind"
-    Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
-
+/// note | Keep in mind
+Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+///
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
 
 This method allows n8n to process a huge number of parallel requests. All you have to do is add more webhook processes and workers accordingly. The webhook process will listen to requests on the same port (default: `5678`). Run these processes in containers or separate machines, and have a load balancing system to route requests accordingly.

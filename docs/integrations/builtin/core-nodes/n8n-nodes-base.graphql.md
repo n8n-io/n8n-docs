@@ -8,9 +8,9 @@ contentType: integration
 
 [GraphQL](https://graphql.org/){:target=_blank .external-link} is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [GraphQL integrations](https://n8n.io/integrations/graphql/){:target=_blank .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [GraphQL integrations](https://n8n.io/integrations/graphql/){:target=_blank .external-link} list.
+///
 ## Operations
 
 Query a GraphQL endpoint.

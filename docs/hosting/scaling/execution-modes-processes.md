@@ -28,9 +28,9 @@ This is the default mode. When using `main` mode, all executions will run in the
 
 ### Own
 
-!!! warning "Deprecated"
-	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
-	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+/// warning | Deprecated
+n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
+///	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
 
 In `own` mode, each execution runs in its own, newly instantiated process (one execution equals one running process). Running in this mode has the following benefits and disadvantages:
 
@@ -57,7 +57,7 @@ This is the default setting for n8n. When running n8n in the `regular` mode, eve
 
 `Queue` mode requires more setup than `regular` mode, but provides great scalability and stability with minimal latency.
 
-!!! note "Binary data storage"
-	n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
-
+/// note | Binary data storage
+n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
+///
 To learn more see the [Scaling n8n](/hosting/scaling/) documentation.

@@ -8,9 +8,9 @@ contentType: integration
 
 Use the Edit Fields node to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Edit Fields integrations](https://n8n.io/integrations/set/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Edit Fields integrations](https://n8n.io/integrations/set/){:target=_blank .external-link} page.
+///
 
 
 

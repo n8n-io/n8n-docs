@@ -8,9 +8,9 @@ contentType: integration
 
 [Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/strava/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/strava/).
+///
 
 ## Events
 
@@ -72,7 +72,7 @@ In the screenshot below, you will notice that this node gets the information of 
 
 ![Using the Twitter node to tweet about the activity](/_images/integrations/builtin/trigger-nodes/stravatrigger/twitter_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
+///
 

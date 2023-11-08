@@ -8,9 +8,9 @@ contentType: integration
 
 The Spreadsheet File node is used to access data from spreadsheet files.
 
-!!! note "Keep in mind"
-    You will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Spreadsheet File node.
-
+/// note | Keep in mind
+You will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Spreadsheet File node.
+///
 
 ## Basic Operations
 

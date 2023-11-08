@@ -153,21 +153,22 @@ Send all the manifests to the cluster with the following command:
 kubectl apply -f .
 ```
 
-!!! note "Namespace error"
-    You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+/// note | Namespace error
+You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
 
-    ```shell
-    kubectl apply -f namespace.yaml
-    ```
+```shell
+kubectl apply -f namespace.yaml
+```
+///
+
 
 ## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
 
-!!! note "GKE and IP addresses"
-
-  [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
-
+/// note | GKE and IP addresses
+[Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
+///
 ## Delete resources
 
 Remove the resources created by the manifests with the following command:

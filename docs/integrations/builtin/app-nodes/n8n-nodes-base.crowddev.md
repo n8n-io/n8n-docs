@@ -10,12 +10,12 @@ Use the crowd.dev node to automate work in crowd.dev and integrate crowd.dev wit
 
 _On this page, you'll find a list of operations the crowd.dev node supports, and links to more resources._
 
-!!! note "Credentials"
-	You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [crowd.dev integrations](https://n8n.io/integrations/crowddev/){:target="_blank" .external-link} list.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [crowd.dev integrations](https://n8n.io/integrations/crowddev/){:target="_blank" .external-link} list.
+///	
 ## Operations
 
 * Activity

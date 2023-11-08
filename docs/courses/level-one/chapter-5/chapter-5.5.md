@@ -13,9 +13,9 @@ The next step in Nathan's workflow is to calculate two values from the booked or
 
 To calculate data and add more functionality to your workflows you can use the **Code node**, which lets you write custom JavaScript code.
 
-!!! warning "Code node modes"
-    The **Code node** has two operational *Modes* that change the way it processes data. The *Run Once for All Items* mode allows you to accumulate data from all items on the input list. The *Run Once for Each Item* is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/){:target="_blank" .external}.
-
+/// warning | Code node modes
+The **Code node** has two operational *Modes* that change the way it processes data. The *Run Once for All Items* mode allows you to accumulate data from all items on the input list. The *Run Once for Each Item* is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/){:target="_blank" .external}.
+///
 - Create your own node.
 - Write custom expressions.
 - Use the Code node.
@@ -69,9 +69,9 @@ return [{json:{totalBooked, bookedSum}}];
 Notice the format in which we return the results of the calculation:
 `return [{json:{totalBooked, bookedSum}}]`
 
-!!! warning "Data structure error"
-    If you don't use the correct data structure, you will get an error message: `Error: Always an Array of items has to be returned!`
-
+/// warning | Data structure error
+If you don't use the correct data structure, you will get an error message: `Error: Always an Array of items has to be returned!`
+///
 
 Now execute the node and you should see the following results:
 

@@ -10,12 +10,12 @@ Use the Odoo node to automate work in Odoo, and integrate Odoo with other applic
 
 On this page, you'll find a list of operations the Odoo node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Odoo credentials](/integrations/builtin/credentials/odoo/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Odoo integrations](https://n8n.io/integrations/odoo/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Odoo credentials](/integrations/builtin/credentials/odoo/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Odoo integrations](https://n8n.io/integrations/odoo/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

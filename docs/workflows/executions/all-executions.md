@@ -7,9 +7,9 @@ contentType: howto
 
 The **All executions** list shows all executions for all workflows you have access to.
 
-!!! note "Deleted workflows"
-	When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
-
+/// note | Deleted workflows
+When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
+///
 ## Browse executions
 
 Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png)</span> to open the list. 

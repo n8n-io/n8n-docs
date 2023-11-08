@@ -9,9 +9,9 @@ hide:
 
 Methods for working with date and time. 
 
-!!! note "Python support"
-	You can use Python in the Code node. It isn't available in expressions.
-
+/// note | Python support
+You can use Python in the Code node. It isn't available in expressions.
+///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |

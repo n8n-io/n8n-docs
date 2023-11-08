@@ -9,8 +9,9 @@ Use the Default Data Loader node to load binary data files or JSON data for vect
 
 On this page, you'll find a list of parameters the Default Data Loader node supports, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/default-data-loader/){:target=_blank .external-link} page.
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/default-data-loader/){:target=_blank .external-link} page.
+///
 
 ## Node parameters
 

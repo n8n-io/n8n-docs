@@ -10,12 +10,12 @@ Use the Adalo node to automate work in Adalo, and integrate Adalo with other app
 
 On this page, you'll find a list of operations the Adalo node supports and links to more resources.
 
-!!! note "Credentials"
-	Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
-	
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [Adalo integrations list](https://n8n.io/integrations/adalo/){:target=_blank .external-link}.
-
+/// note | Credentials
+Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
+///	
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Adalo integrations list](https://n8n.io/integrations/adalo/){:target=_blank .external-link}.
+///
 ## Operations
 
 * Collection

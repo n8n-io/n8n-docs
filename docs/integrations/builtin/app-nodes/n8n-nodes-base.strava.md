@@ -10,12 +10,12 @@ Use the Strava node to automate work in Strava, and integrate Strava with other 
 
 On this page, you'll find a list of operations the Strava node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Strava credentials](/integrations/builtin/credentials/strava/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Strava integrations](https://n8n.io/integrations/strava/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Strava credentials](/integrations/builtin/credentials/strava/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Strava integrations](https://n8n.io/integrations/strava/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

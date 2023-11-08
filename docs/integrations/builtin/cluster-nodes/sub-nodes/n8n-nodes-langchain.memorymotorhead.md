@@ -9,12 +9,12 @@ Use the Motorhead node to use Motorhead as a memory server.
 
 On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/motorhead/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/motorhead/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Session ID

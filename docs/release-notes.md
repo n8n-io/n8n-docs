@@ -28,13 +28,24 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.15.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.15.1...n8n@1.15.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-11-07
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.15.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.2...n8n@1.15.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-02
 
-!!! note "Next version"
-	This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 
 This release contains new features, node enhancements, and bug fixes.
 
@@ -67,7 +78,7 @@ To enable dark mode:
 
 #### Optional error output for nodes
 
-All nodes apart from sub-nodes have a new optional output: **Error**. Use this to add steps to handle node errors.
+All nodes apart from sub-nodes and trigger nodes have a new optional output: **Error**. Use this to add steps to handle node errors.
 
 </div>
 
@@ -90,8 +101,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.1...n8n@1.14.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-26
 
-!!! note "Latest version"
-	This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
 
 This release contains bug fixes.
 
@@ -130,9 +142,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.12.2...n8n@1.13.0
 
 This release contains new features, feature enhancements, and bug fixes.
 
-!!! note "Upgrade directly to 1.14.0"
-	This release failed to publish to npm. Upgrade directly to 1.14.0.
-
+/// note | Upgrade directly to 1.14.0
+This release failed to publish to npm. Upgrade directly to 1.14.0.
+///
 <div class="n8n-new-features" markdown>
 
 #### RSS Feed trigger node
@@ -422,9 +434,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.5.1...n8n@1.6.0){
 
 This release contains bug fixes, new features, and node enhancements.
 
-!!! note "Upgrade directly to 1.6.1"
-	Skip this version and upgrade directly to 1.6.1, which contains essential bug fixes.
-
+/// note | Upgrade directly to 1.6.1
+Skip this version and upgrade directly to 1.6.1, which contains essential bug fixes.
+///
 <div class="n8n-new-features" markdown>
 
 #### TheHive 5
@@ -456,9 +468,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.4.1...n8n@1.5.0){
 
 This release contains new features, node enhancements, and bug fixes.
 
-!!! note "Upgrade directly to 1.5.1"
-	Skip this version and upgrade directly to 1.5.1, which contains essential bug fixes.
-
+/// note | Upgrade directly to 1.5.1
+Skip this version and upgrade directly to 1.5.1, which contains essential bug fixes.
+///
 ### Highlights
 
 <div class="n8n-new-features" markdown>
@@ -590,9 +602,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.1...n8n@1.2.0){
 
 This release contains new features, node enhancements, bug fixes, and performance improvements.
 
-!!! note "Upgrade directly to 1.2.1"
-	When upgrading, skip this release and go directly to 1.2.1.
-
+/// note | Upgrade directly to 1.2.1
+When upgrading, skip this release and go directly to 1.2.1.
+///
 ### Highlights
 
 <div class="n8n-new-features" markdown>
@@ -640,9 +652,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.0...n8n@1.1.1){
 
 This is a bug fix release.
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.1.0
@@ -652,9 +664,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.5...n8n@1.1.0){
 
 This release contains new features, bug fixes, and node enhancements.
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 ### Highlights
 
 <div class="n8n-new-features" markdown>
@@ -689,9 +701,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.4...n8n@1.0.5){
 
 This is a bug fix release.
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.0.4
@@ -702,9 +714,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.3...n8n@1.0.4){
 
 This is a bug fix release.
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
@@ -742,9 +754,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.2...n8n@1.0.3){
 
 This release contains API enhancements and adds support for sending messages to forum threads in the Telegram node.
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
@@ -767,9 +779,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.1...n8n@1.0.2){
 
 This is a bug fix release.
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 ### Contributors
 
 [Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}
@@ -779,9 +791,9 @@ This is a bug fix release.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.0...n8n@1.0.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-07-05
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+///
 This is n8n's version one release.
 
 For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
@@ -846,9 +858,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.235
 
 This release contains new features, new nodes, node enhancements, and bug fixes.
 
-!!! warning "Unstable version"
-	This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
-
+/// warning | Unstable version
+This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
+///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
@@ -863,13 +875,15 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234
 
 This release contains new features, new nodes, node enhancements, and bug fixes.	
 
-!!! warning "Unstable version"
-	This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
+/// warning | Unstable version
+This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
+///
+/// warning | Irreversible database migration
+This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
 
-!!! warning "Irreversible database migration"
-    This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
+If you upgrade to 0.234.0, you can't roll back to an earlier version.
+///
 
-    If you upgrade to 0.234.0, you can't roll back to an earlier version.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -1155,9 +1169,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.225.2...n8n@0.226
 
 This release contains new features, node enhancements, and bug fixes.
 
-!!! warning "Breaking changes"
-    Please note that this version contains a breaking change to `extractDomain` and `isDomain`. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02260){:target=_blank .external-link}.
-
+/// warning | Breaking changes
+Please note that this version contains a breaking change to `extractDomain` and `isDomain`. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02260){:target=_blank .external-link}.
+///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### New features
@@ -1327,9 +1341,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.222.1...n8n@0.223
 
 This release contains new features and bug fixes.
 
-!!! warning "Breaking changes"
-    Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230){:target=_blank .external-link}.
-
+/// warning | Breaking changes
+Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230){:target=_blank .external-link}.
+///
 
 ### New features
 
@@ -1446,9 +1460,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.221.2...n8n@0.222
 
 This release contains new features, including custom filters for the executions list, and a new node to filter items in your workflows.
 
-!!! note "Upgrade to 0.222.1"
-	Upgrade directly to 0.222.1.
-
+/// note | Upgrade to 0.222.1
+Upgrade directly to 0.222.1.
+///
 ### New features
 
 <div class="n8n-new-features" markdown>
@@ -2034,9 +2048,9 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.213.0...n8n@0.214
 
 This release contains new features, node enhancements, and bug fixes. The expressions editor now supports autocomplete for some [built in data transformation functions](/code/builtin/data-transformation-functions/). The new features also include two of interest to node builders: a way to allow users to drag and drop data keys, and the new HTML editor component.
 
-!!! warning "Breaking changes"
-    Please note that this version contains a breaking change to Luxon. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02140){:target=_blank .external-link}.
-
+/// warning | Breaking changes
+Please note that this version contains a breaking change to Luxon. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02140){:target=_blank .external-link}.
+///
 ### New features
 
 <div class="n8n-new-features" markdown>
@@ -2273,9 +2287,9 @@ Editor: suppress validation errors for freshly added nodes.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.210.2...n8n@0.211.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-01-13
 
-!!! warning "Don't use this version"
-	Upgrade directly to 0.211.1.
-
+/// warning | Don't use this version
+Upgrade directly to 0.211.1.
+///
 ### New features
 
 * Add demo experiment to help users activate.
@@ -3098,9 +3112,9 @@ This is a bug fix release.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.197.1...n8n@0.198.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-10-14
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes to the Merge node. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01980){:target=_blank .external-link}.
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes to the Merge node. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01980){:target=_blank .external-link}.
+///
 ### New features
 
 * Editor: update the expressions display.
@@ -4535,9 +4549,9 @@ This is a small bug fix release.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.170.0...n8n@0.171.0) for this version.<br />
 **Release date:** 2022-04-03
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01710).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01710).
+///
 
 This release focuses on bug fixes and node enhancements, with one new feature, and one breaking change to the GraphQL node.
 
@@ -4810,9 +4824,9 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 For a comprehensive list of changes, view the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.164.1...n8n@0.165.0) for this version.<br />
 **Release date:** 2022-02-28
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01650).
-
+/// warning | Breaking changes
+Please note that this version contains breaking changes. You can read more about them [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01650).
+///
 
 
 ### New nodes
@@ -5781,9 +5795,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n%400.134.0...n8n@0.135.0) for this version.<br />
 **Release date:** 2021-08-22
 
-!!! warning "Breaking changes"
-    Please note that this version contains breaking changes. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350).
-    The features that introduced the breaking changes have been flagged below.
+/// warning | Breaking changes
+Please note that this version contains breaking changes. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350).
+///    The features that introduced the breaking changes have been flagged below.
 
 
 ### New nodes
@@ -5906,9 +5920,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.130.0...n8n@0.131.0) for this version.<br />
 **Release date:** 2021-07-24
 
-!!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01310).
-    The features that introduced the breaking changes have been flagged below.
+/// warning | Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01310).
+///    The features that introduced the breaking changes have been flagged below.
 
 
 ### New nodes
@@ -5940,9 +5954,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.129.0...n8n@0.130.0) for this version.<br />
 **Release date:** 2021-07-18
 
-!!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/  blob/master/packages/cli/BREAKING-CHANGES.md#01300).
-    The features that introduced the breaking changes have been flagged below.
+/// warning | Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/  blob/master/packages/cli/BREAKING-CHANGES.md#01300).
+///    The features that introduced the breaking changes have been flagged below.
 
 
 
@@ -6017,9 +6031,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.126.1...n8n@0.127.0) for this version.<br />
 **Release date:** 2021-07-04
 
-!!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01270).
-    The features that introduced the breaking changes have been flagged below.
+/// warning | Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01270).
+///    The features that introduced the breaking changes have been flagged below.
 
 
 ### Enhanced nodes
@@ -6346,9 +6360,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.117.0...n8n@0.118.0) for this version.<br />
 **Release date:** 2021-05-02
 
-!!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180).
-    The features that introduced the breaking changes have been flagged below.
+/// warning | Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180).
+///    The features that introduced the breaking changes have been flagged below.
 
 
 ### New nodes
@@ -6395,9 +6409,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.116.1...n8n@0.117.0) for this version.<br />
 **Release date:** 2021-04-24
 
-!!! warning "Breaking change"
-    Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170).
-    The features that introduced the breaking changes have been flagged below.
+/// warning | Breaking change
+Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170).
+///    The features that introduced the breaking changes have been flagged below.
 
 
 ### New nodes

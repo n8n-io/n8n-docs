@@ -16,9 +16,9 @@ Create a [Drift](https://www.drift.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Drift account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Drift account to n8n.
+///
 
 1. Access your [Drift apps](https://dev.drift.com/apps) page.
 2. Click on the ***Build Your App*** button. You can also select an existing app if you already have one.

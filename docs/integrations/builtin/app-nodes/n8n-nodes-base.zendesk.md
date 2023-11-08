@@ -10,12 +10,12 @@ Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with oth
 
 On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Zendesk integrations](https://n8n.io/integrations/zendesk/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Zendesk integrations](https://n8n.io/integrations/zendesk/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

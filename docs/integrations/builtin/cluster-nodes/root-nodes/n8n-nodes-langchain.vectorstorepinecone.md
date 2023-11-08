@@ -9,12 +9,12 @@ Use the Pinecone node to interact with your Pinecone database as vector store. Y
 
 On this page, you'll find the node parameters for the Pinecone node, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pinecone/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/pinecone-insert/){:target=_blank .external-link} page.
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/pinecone/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/pinecone-insert/){:target=_blank .external-link} page.
+///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	

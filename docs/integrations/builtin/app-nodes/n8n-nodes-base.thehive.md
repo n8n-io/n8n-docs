@@ -10,15 +10,15 @@ Use the TheHive node to automate work in TheHive, and integrate TheHive with oth
 
 On this page, you'll find a list of operations the TheHive node supports and links to more resources.
 
-!!! note "TheHive and TheHive 5"
-	n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
-
-!!! note "Credentials"
-    Refer to [TheHive credentials](/integrations/builtin/credentials/thehive/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive/){:target="_blank" .external-link} list.
-
+/// note | TheHive and TheHive 5
+n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
+///
+/// note | Credentials
+Refer to [TheHive credentials](/integrations/builtin/credentials/thehive/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

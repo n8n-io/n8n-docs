@@ -18,9 +18,9 @@ Create a [GitHub](https://github.com/){:target=_blank .external-link} account.
 
 ## Using OAuth
 
-!!! note "n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
-
+/// note | n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
+///
 
 1. Open your GitHub [dashboard](https://github.com){:target=_blank .external-link}.
 2. Select your user icon in the top right.

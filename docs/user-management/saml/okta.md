@@ -8,9 +8,9 @@ contentType: tutorial
 
 Set up SAML SSO in n8n with Okta.
 
-!!! note "Workforce Identity and Customer Identity"
-	This guide covers setting up Workforce Identity. This is the original Okta product. Customer Identity is Okta's name for Auth0, which they've acquired.
-
+/// note | Workforce Identity and Customer Identity
+This guide covers setting up Workforce Identity. This is the original Okta product. Customer Identity is Okta's name for Auth0, which they've acquired.
+///
 ## Prerequisites
 
 You need an Okta Workforce Identity account, and the redirect URL and entity ID from n8n's SAML settings.

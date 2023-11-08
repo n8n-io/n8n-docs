@@ -45,9 +45,9 @@ n8n execute --file <WORKFLOW_FILE>
 
 You can change the active status of a workflow using the CLI.
 
-!!! note "Restart required"
-    These commands operate on your n8n database. If you execute them
-	while n8n is running, the changes don't take effect until you restart n8n.
+/// note | Restart required
+These commands operate on your n8n database. If you execute them
+///	while n8n is running, the changes don't take effect until you restart n8n.
 
 Set the active status of a workflow by its ID to false:
 
@@ -144,9 +144,9 @@ n8n export:credentials --backup --output=backups/latest/
 
 Export all the credentials in plain text format. You can use this to migrate from one installation to another that has a different secret key in the configuration file.
 
-!!! warning "Sensitive information"
-	All sensitive information is visible in the files.
-
+/// warning | Sensitive information
+All sensitive information is visible in the files.
+///
 ```bash
 n8n export:credentials --all --decrypted --output=backups/decrypted.json
 ```
@@ -156,9 +156,9 @@ n8n export:credentials --all --decrypted --output=backups/decrypted.json
 
 You can import your workflows and credentials from n8n using the CLI.
 
-!!! warning "Update the IDs"
-    When exporting workflows and credentials, n8n also exports their IDs. If you have workflows and credentials with the same IDs in your existing database, they will be overwritten. To avoid this, delete or change the IDs before importing.
-
+/// warning | Update the IDs
+When exporting workflows and credentials, n8n also exports their IDs. If you have workflows and credentials with the same IDs in your existing database, they will be overwritten. To avoid this, delete or change the IDs before importing.
+///
 
 Available flags:
 
@@ -168,12 +168,14 @@ Available flags:
 | --input | Input file name or directory if you use --separate. |
 | --separate | Imports `*.json` files from directory provided by --input. |
 
-!!! note "Migrating to SQLite"
-    n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
+/// note | Migrating to SQLite
+n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
 
-    This might result in errors like **Data too long for column name** during the import process.
+This might result in errors like **Data too long for column name** during the import process.
 
-    In this case, you can edit the names from the n8n interface and export again, or edit the JSON file directly before importing.
+In this case, you can edit the names from the n8n interface and export again, or edit the JSON file directly before importing.
+///
+
 
 
 

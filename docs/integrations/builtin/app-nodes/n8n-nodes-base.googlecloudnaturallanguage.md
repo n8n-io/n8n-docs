@@ -10,12 +10,12 @@ Use the Google Cloud Natural Language node to automate work in Google Cloud Natu
 
 On this page, you'll find a list of operations the Google Cloud Natural Language node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Natural Language integrations](https://n8n.io/integrations/google-cloud-natural-language/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Natural Language integrations](https://n8n.io/integrations/google-cloud-natural-language/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -101,7 +101,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/googlecloudnaturallanguage/noop_node.png)
 
-!!! note "Activate workflow for production"
-    This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
-
+/// note | Activate workflow for production
+This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+///
 

@@ -6,9 +6,9 @@ contentType: reference
 
 n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.
 
-!!! note "Programmatic style only"
-	The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
-
+/// note | Programmatic style only
+The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
+///
 ## Usage
 
 Call the helper inside the `execute` function. 

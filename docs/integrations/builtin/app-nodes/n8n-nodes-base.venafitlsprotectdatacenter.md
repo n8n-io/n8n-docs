@@ -10,12 +10,12 @@ Use the Venafi TLS Protect Datacenter node to automate work in Venafi TLS Protec
 
 On this page, you'll find a list of operations the Venafi TLS Protect Datacenter node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Datacenter integrations](https://n8n.io/integrations/venafi-tls-protect-datacenter/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Datacenter integrations](https://n8n.io/integrations/venafi-tls-protect-datacenter/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 * Certificate

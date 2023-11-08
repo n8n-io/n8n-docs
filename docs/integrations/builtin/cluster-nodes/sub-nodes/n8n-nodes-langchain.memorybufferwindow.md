@@ -9,9 +9,9 @@ Use the Window Buffer Memory node to persist chat history in your workflow.
 
 On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/window-buffer-memory/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/window-buffer-memory/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Session Key

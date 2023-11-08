@@ -194,9 +194,9 @@ The above example would result in: <https://n8n.example.com>
 
 n8n will only be reachable using `https` and not using `http`.
 
-!!! warning "Secure your n8n instance"
-    Make sure that you [set up authentication](/hosting/user-management/) your n8n instance.
-
+/// warning | Secure your n8n instance
+Make sure that you [set up authentication](/hosting/user-management/) your n8n instance.
+///
 ## Next steps
 
 --8<-- "_snippets/self-hosting/installation/server-setups-next-steps.md"

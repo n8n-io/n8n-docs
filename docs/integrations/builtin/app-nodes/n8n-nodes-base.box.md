@@ -10,12 +10,12 @@ Use the Box node to automate work in Box, and integrate Box with other applicati
 
 On this page, you'll find a list of operations the Box node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Box credentials](/integrations/builtin/credentials/box/) for guidance on setting up authentication. 
-
-!!! note "Examples and Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Box integrations](https://n8n.io/integrations/box/){:target=_blank .external-link} list.
-
+/// note | Credentials
+Refer to [Box credentials](/integrations/builtin/credentials/box/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [Box integrations](https://n8n.io/integrations/box/){:target=_blank .external-link} list.
+///
  
 
 ## Basic Operations

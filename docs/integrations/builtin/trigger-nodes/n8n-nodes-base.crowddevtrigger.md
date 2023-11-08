@@ -10,13 +10,13 @@ Use the crowd.dev trigger node to respond to events in crowd.dev and integrate c
 
 On this page, you'll find a list of events the crowd.dev trigger node can respond to, and links to more resources.
 
-!!! note "Credentials"
-	You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
+///
 
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [crowd.dev integrations](https://n8n.io/integrations/crowddev/){:target="_blank" .external-link} list.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [crowd.dev integrations](https://n8n.io/integrations/crowddev/){:target="_blank" .external-link} list.
+///	
 
 ## Events
 

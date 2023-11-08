@@ -24,9 +24,9 @@ You need some understanding of:
 
 In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/){:target=_blank .external-link}. You'll create a node that implements one piece of SendGrid functionality: create a contact.
 
-!!! note "Existing node"
-    n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
-
+/// note | Existing node
+n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
+///
 ### Step 1: Set up the project
 
 n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
@@ -101,9 +101,9 @@ import {
 
 The node must export an interface that implements `INodeType`. This interface must include a `description` interface, which in turn contains the `properties` array.
 
-!!! note "Class names and file names"
-	Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
-
+/// note | Class names and file names
+Make sure the class name and the file name match. For example, given a class `FriendGrid`, the filename must be `FriendGrid.node.ts`.
+///
 ```typescript
 export class FriendGrid implements INodeType {
 	description: INodeTypeDescription = {

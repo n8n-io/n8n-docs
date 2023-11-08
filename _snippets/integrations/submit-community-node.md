@@ -1,6 +1,6 @@
-!!! note "Subject to change"
-    The standards described in this document are for the first release of the community nodes repository. These may change in future releases.
-
+/// note | Subject to change
+The standards described in this document are for the first release of the community nodes repository. These may change in future releases.
+///
 Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:

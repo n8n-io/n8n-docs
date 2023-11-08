@@ -10,12 +10,12 @@ Use the Twitter node to automate work in Twitter, and integrate Twitter with oth
 
 On this page, you'll find a list of operations the Twitter node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Twitter credentials](/integrations/builtin/credentials/twitter/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Twitter integrations](https://n8n.io/integrations/twitter/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Twitter credentials](/integrations/builtin/credentials/twitter/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Twitter integrations](https://n8n.io/integrations/twitter/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

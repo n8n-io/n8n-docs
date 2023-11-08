@@ -8,9 +8,9 @@ contentType: integration
 
 Use the Execute Workflow node to run a different workflow on the host machine that runs n8n.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Execute Workflow integrations](https://n8n.io/integrations/execute-workflow/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Execute Workflow integrations](https://n8n.io/integrations/execute-workflow/){:target=_blank .external-link} page.
+///
 
 ## Properties
 

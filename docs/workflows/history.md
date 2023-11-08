@@ -6,9 +6,10 @@ description: View and restore previous versions of your workflow.
 
 # Workflow history
 
-!!! info "Feature availability"
-	* Full workflow history is available on Enterprise Cloud and Enterprise Self-hosted.
-	* Versions from the last five days are available for Cloud Pro users.
+/// info | Feature availability
+* Full workflow history is available on Enterprise Cloud and Enterprise Self-hosted.
+* Versions from the last five days are available for Cloud Pro users.
+///	
 
 Use workflow history to view and restore previous versions of your workflows. 
 
@@ -20,12 +21,14 @@ n8n creates a new version when you:
  * Restore an old version. n8n saves the latest version before restoring.
  * Pull from a Git repository using [Source control](/source-control-environments/). Note that n8n saves versions to the instance database, not to Git.
 
-!!! note "Workflow history and execution history"
-	Don't confuse workflow history with the [Workflow-level executions list](/workflows/executions/single-workflow-executions/).
+/// note | Workflow history and execution history
+Don't confuse workflow history with the [Workflow-level executions list](/workflows/executions/single-workflow-executions/).
 
-	Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
+Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
 
-	Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
+Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
+///
+
 
 ## View workflow history
 

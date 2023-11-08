@@ -10,12 +10,12 @@ Use the Pushbullet node to automate work in Pushbullet, and integrate Pushbullet
 
 On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Pushbullet integrations](https://n8n.io/integrations/pushbullet/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Pushbullet integrations](https://n8n.io/integrations/pushbullet/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

@@ -8,13 +8,13 @@ contentType: integration
 
 [Google Drive](https://drive.google.com) is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+///
 
-
-!!! note "Manual Executions vs. Activation"
-    On manual executions this node will return the last event matching its search criteria. If no event matches the criteria (for example because you are watching for files to be created but no files have been created so far), an error is thrown. Once saved and activated, the node will regularly check for any matching events and will trigger your workflow for each event found.
-
+/// note | Manual Executions vs. Activation
+On manual executions this node will return the last event matching its search criteria. If no event matches the criteria (for example because you are watching for files to be created but no files have been created so far), an error is thrown. Once saved and activated, the node will regularly check for any matching events and will trigger your workflow for each event found.
+///
 
 ## Example Usage
 

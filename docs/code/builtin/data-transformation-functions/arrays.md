@@ -8,9 +8,9 @@ contentType: reference
 
 A reference document listing built-in convenience functions to support data transformation in expressions for arrays.
 
-!!! note "JavaScript in expressions"
-	You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions/) for more information.
-
+/// note | JavaScript in expressions
+You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions/) for more information.
+///
 [[% import "_macros/data-functions.html" as dataFunctions %]]
 
 [[% for func in df_array %]]

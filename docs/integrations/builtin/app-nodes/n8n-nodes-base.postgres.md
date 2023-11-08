@@ -10,12 +10,12 @@ Use the Postgres node to automate work in Postgres, and integrate Postgres with 
 
 On this page, you'll find a list of operations the Postgres node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Postgres credentials](/integrations/builtin/credentials/postgres/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Postgres integrations](https://n8n.io/integrations/postgres/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Postgres credentials](/integrations/builtin/credentials/postgres/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Postgres integrations](https://n8n.io/integrations/postgres/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

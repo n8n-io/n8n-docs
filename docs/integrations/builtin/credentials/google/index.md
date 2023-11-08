@@ -48,13 +48,15 @@ Once configured, you can use your credentials to authenticate the following node
 	| [Google Translate](/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/) | :white_check_mark: | :white_check_mark: |
 	| [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youtube/) | :white_check_mark: | :x: |
 
-!!! note "Note for n8n Cloud users"
-    For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
+/// note | Note for n8n Cloud users
+For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
 
-    * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
-    * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
-    * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
-    * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+* [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
+* [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
+* [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
+* [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+///
+
 
 
 

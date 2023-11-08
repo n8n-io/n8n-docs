@@ -10,12 +10,12 @@ Use the Marketstack node to automate work in Marketstack, and integrate Marketst
 
 On this page, you'll find a list of operations the Marketstack node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Marketstack credentials](/integrations/builtin/credentials/marketstack/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Marketstack integrations](https://n8n.io/integrations/marketstack/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Marketstack credentials](/integrations/builtin/credentials/marketstack/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Marketstack integrations](https://n8n.io/integrations/marketstack/){:target="_blank" .external-link} list.
+///
 
 ## Basic operations
 

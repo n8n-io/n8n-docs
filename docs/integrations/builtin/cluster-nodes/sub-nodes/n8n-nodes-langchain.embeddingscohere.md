@@ -9,12 +9,12 @@ Use the Embeddings Cohere node to generate embeddings for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Cohere node, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/embeddings-cohere/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/embeddings-cohere/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Model

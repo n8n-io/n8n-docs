@@ -17,9 +17,9 @@ Create a [Webflow](https://webflow.com/){:target=_blank .external-link} account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    Enter the credential name, then select **Connect my account** circle button in the OAuth section to connect your Webflow account to n8n automatically.
-
+/// note | Note for n8n Cloud users
+Enter the credential name, then select **Connect my account** circle button in the OAuth section to connect your Webflow account to n8n automatically.
+///
 
 1. In your Webflow dashboard, select **Account**.
 1. Select **Workspaces** from the dropdown list.

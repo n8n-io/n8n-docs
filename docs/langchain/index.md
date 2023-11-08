@@ -44,4 +44,5 @@ n8n provides code snippets for the chatbot, pre-populated with your settings:
 1. Add the Manual Chat Trigger to your workflow.
 1. Select **Chat**.
 1. Select **More info** in the help text:
+
 	> Add chat to external applications using the n8n chat package. More info

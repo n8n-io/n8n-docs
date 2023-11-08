@@ -21,7 +21,8 @@ When you add a new node to the Editor UI, the node will be automatically activat
 
 /// note | Parameters vs Settings
 *Parameters* are different for each node, depending on its functionality.<br />
-///	*Settings* are the same for all nodes.
+*Settings* are the same for all nodes.
+///
 
 
 ### Parameters

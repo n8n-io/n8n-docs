@@ -21,9 +21,8 @@ The workflow should look like this:
 
 <figure><img src="/_images/courses/level-two/chapter-five/workflow3.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 3 for monitoring workflow errors</i></figcaption></figure>
 
-!!! question "Quiz questions"
-
-    * What fields does the Error Trigger node return?
-    * What information about the execution does the Error Trigger node return?
+///  question  | Quiz questions
+* What fields does the Error Trigger node return?
+///    * What information about the execution does the Error Trigger node return?
     * What information about the workflow does the Error Trigger node return?
     * What is the expression to reference the workflow name?

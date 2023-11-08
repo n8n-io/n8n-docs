@@ -10,12 +10,12 @@ Use the Iterable node to automate work in Iterable, and integrate Iterable with 
 
 On this page, you'll find a list of operations the Iterable node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Iterable credentials](/integrations/builtin/credentials/iterable/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Iterable integrations](https://n8n.io/integrations/iterable/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Iterable credentials](/integrations/builtin/credentials/iterable/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Iterable integrations](https://n8n.io/integrations/iterable/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

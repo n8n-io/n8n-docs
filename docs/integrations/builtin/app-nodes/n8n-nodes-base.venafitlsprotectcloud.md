@@ -10,12 +10,12 @@ Use the Venafi TLS Protect Cloud node to automate work in Venafi TLS Protect Clo
 
 On this page, you'll find a list of operations the Venafi TLS Protect Cloud node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Cloud integrations](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Cloud integrations](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 * Certificate

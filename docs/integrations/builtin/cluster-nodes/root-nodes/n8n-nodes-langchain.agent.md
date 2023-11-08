@@ -9,14 +9,17 @@ Use the Agent node to set which agent type you want to use.
 
 On this page, you'll find the node parameters for the Agent node, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
+///
 
 n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 
 
 [TODO: wording to suggest other agents are more advanced]
 
 ## Conversational Agent
+
+## Conversational Agent parameters
 
 This agent is optimised for conversation allowing it to chat with the user.
 
@@ -84,8 +87,9 @@ The input from the chat. This is the user's query, also known as the prompt.
 
 The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_blank .external-link} logic. ReAct (reasoning and action) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
 
-!!! note "No memory"
-	The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts, or simulate an ongoing conversation.
+/// note | No memory
+The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts, or simulate an ongoing conversation.
+///
 
 ### Parameters
 
@@ -126,12 +130,10 @@ The final part of the message. Sent before the user prompt.
 
 The SQL Agent uses a SQL database as a data source. The agent builds a SQL query based on the natural language query in the prompt.
 
-!!! note "Postgres and MySQL Agents"
-    If you are using Postgres or MySQL this doesn't support the tunnel options you can set in the credential.
-
-### Parameters
-
-#### Data Source
+/// note | Postgres and MySQL Agents
+If you are using Postgres or MySQL this doesn't support the tunnel options you can set in the credential.
+///
+### Data Source
 
 Options:
 
@@ -139,10 +141,10 @@ Options:
 * SQLite
 * Postgres
 
-!!! note "SQLite"
-	To use SQLite you will need to use a [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node before the Agent to read your SQLite file. 
-
-#### Prompt
+/// note | SQLite
+To use SQLite you will need to use a [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node before the Agent to read your SQLite file. 
+///
+### Prompt
 
 The query to run on the data.
 

@@ -27,9 +27,9 @@ The *Workflow Executions* window displays a table with the following information
 * _Status / Running time:_ The status of the workflow (Running, Succeeded or Error) / The duration it took the workflow to execute
 * _Execution ID:_ The ID of this workflow execution
 
-!!! note "Workflow execution status"
-    In the **Workflow Executions** window you can filter the displayed executions by workflow and by status (**All**, **Error**, **Running**, or **Success**).
-The information displayed here depends on what workflows and executions you set up in *Workflow Settings* to be saved.
+/// note | Workflow execution status
+In the **Workflow Executions** window you can filter the displayed executions by workflow and by status (**All**, **Error**, **Running**, or **Success**).
+///The information displayed here depends on what workflows and executions you set up in *Workflow Settings* to be saved.
 
 
 **Workflow Settings**

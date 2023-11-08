@@ -8,12 +8,12 @@ contentType: integration
 
 The TOTP node provides a way to generate a TOTP (time-based one-time password).
 
-!!! note "Credentials"
-	Refer to [TOTP credentials](/integrations/builtin/credentials/totp/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [TOTP integrations](https://n8n.io/integrations/totp/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [TOTP credentials](/integrations/builtin/credentials/totp/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [TOTP integrations](https://n8n.io/integrations/totp/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 Generate Secret

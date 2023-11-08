@@ -8,9 +8,9 @@ contentType: integration
 
 [Customer.io](https://customer.io/) enables users to send newsletters to selected segments of customers using their website data. You can send targeted emails, push notifications, and SMS to lower churn, create stronger relationships, and drive subscriptions.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/customerio/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/customerio/).
+///
 
 ## Example Usage
 
@@ -28,6 +28,6 @@ The final workflow should look like the following image.
 2. Select 'Customer Unsubscribe' from the ***Event*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Customer.io Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Customer.io Trigger node.
+///

@@ -10,12 +10,12 @@ Use the Jenkins node to automate work in Jenkins, and integrate Jenkins with oth
 
 On this page, you'll find a list of operations the Jenkins node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Jenkins credentials](/integrations/builtin/credentials/jenkins/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Jenkins integrations](https://n8n.io/integrations/jenkins/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Jenkins credentials](/integrations/builtin/credentials/jenkins/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Jenkins integrations](https://n8n.io/integrations/jenkins/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

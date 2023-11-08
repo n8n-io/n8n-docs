@@ -10,12 +10,12 @@ Use the Cloudflare node to automate work in Cloudflare, and integrate Cloudflare
 
 On this page, you'll find a list of operations the Cloudflare node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Cloudflare integrations](https://n8n.io/integrations/cloudflare/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Cloudflare integrations](https://n8n.io/integrations/cloudflare/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

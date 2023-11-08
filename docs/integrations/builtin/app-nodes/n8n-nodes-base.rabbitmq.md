@@ -10,12 +10,12 @@ Use the RabbitMQ node to automate work in RabbitMQ, and integrate RabbitMQ with 
 
 On this page, you'll find a list of operations the RabbitMQ node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [RabbitMQ integrations](https://n8n.io/integrations/rabbitmq/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [RabbitMQ integrations](https://n8n.io/integrations/rabbitmq/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

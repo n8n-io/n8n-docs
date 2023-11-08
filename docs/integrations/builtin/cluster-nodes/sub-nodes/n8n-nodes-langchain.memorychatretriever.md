@@ -9,9 +9,9 @@ Use the Chat Messages Retriever node to retrieve data from the in-memory vector 
 
 On this page, you'll find a list of operations the Chat Messages Retriever node supports, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/chat-messages-retriever/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/chat-messages-retriever/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Simplify Output

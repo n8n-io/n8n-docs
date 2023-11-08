@@ -5,17 +5,18 @@ contentType: howto
 
 # Custom variables
 
-!!! info "Feature availability"
-	* Available on Self-hosted Enterprise and Pro Cloud plans.
-	* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
+/// info | Feature availability
+* Available on Self-hosted Enterprise and Pro Cloud plans.
+* You need access to the n8n instance owner account to create and edit variables. All users can use existing variables.
 
-	Available in version 0.225.0 and above.
+Available in version 0.225.0 and above.
+///	
 
 Custom variables allow you to store and reuse values in n8n workflows. 
 
-!!! warning "Variables are shared"
-	When you create a variable, it's available to everyone on your n8n instance.
-
+/// warning | Variables are shared
+When you create a variable, it's available to everyone on your n8n instance.
+///
 ## Create variables
 
 To create a new variable:

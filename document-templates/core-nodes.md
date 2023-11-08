@@ -26,12 +26,12 @@ Local File trigger
 
 _Briefly summarize the functionality._
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
-
+///  note  | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+///
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
+///
 
 ## Node parameters
 

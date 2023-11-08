@@ -20,12 +20,12 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 3. In your project, select **Droplets** from the **Manage** menu. 
 4. [Create a new Droplet](https://docs.digitalocean.com/products/droplets/how-to/create/){:target=_blank .external-link} using the [Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" .external-link} available on the **Marketplace** tab.
 
-!!! note "Droplet resources"
-	When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
-
-!!! note "SSH or Password"
-	DigitalOcean lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
-
+/// note | Droplet resources
+When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
+///
+/// note | SSH or Password
+DigitalOcean lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+///
 ## Log in to your Droplet and create new user
 
 The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.

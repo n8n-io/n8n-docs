@@ -10,12 +10,12 @@ Use the Bubble node to automate work in Bubble, and integrate Bubble with other 
 
 On this page, you'll find a list of operations the Bubble node supports and links to more resources.
 
-!!! note "Credentials"
-     Refer to [Bubble credentials](/integrations/builtin/credentials/bubble/) for guidance on setting up authentication. 
-
-!!! note "Examples the Templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Bubble integrations](https://n8n.io/integrations/bubble/){:target=_blank .external-link} list.
-
+/// note | Credentials
+Refer to [Bubble credentials](/integrations/builtin/credentials/bubble/) for guidance on setting up authentication. 
+///
+/// note | Examples the Templates
+For usage examples and templates to help you get started, take a look at n8n's [Bubble integrations](https://n8n.io/integrations/bubble/){:target=_blank .external-link} list.
+///
 
 
 

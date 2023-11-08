@@ -9,9 +9,9 @@ The Workflow Tool node is a tool that allows an agent to run another n8n workflo
 
 On this page, you'll find the node parameters for the Workflow Tool node, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/workflow-tool/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/workflow-tool/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 ### Name

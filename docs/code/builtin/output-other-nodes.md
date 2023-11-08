@@ -9,9 +9,9 @@ hide:
 
 Methods for working with the output of other nodes. Some methods and variables aren't available in the Code node.
 
-!!! note "Python support"
-	You can use Python in the Code node. It isn't available in expressions.
-
+/// note | Python support
+You can use Python in the Code node. It isn't available in expressions.
+///
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |

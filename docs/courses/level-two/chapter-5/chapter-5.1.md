@@ -22,9 +22,8 @@ The workflow should look like this:
 <figure><img src="/_images/courses/level-two/chapter-five/workflow1.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 1 for merging data from Airtable and the Countries API</i></figcaption></figure>
 
 
-!!! question "Quiz questions"
-
-    * How many items does the HTTP Request node return?
-    * How many items does the Merge node return?
+///  question  | Quiz questions
+* How many items does the HTTP Request node return?
+///    * How many items does the Merge node return?
     * How many unique regions are assigned in the customers table?
     * What is the subregion assigned to the customerID 10?

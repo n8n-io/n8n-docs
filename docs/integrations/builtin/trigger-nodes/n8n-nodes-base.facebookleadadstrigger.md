@@ -10,12 +10,12 @@ Use the Facebook Lead Ads trigger node to respond to events in Facebook Lead Ads
 
 On this page, you'll find a list of events the Facebook Lead Ads trigger node can respond to, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Facebook Lead Ads integrations](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} page.
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Facebook Lead Ads integrations](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} page.
+///
 ## Events
 
 * New lead

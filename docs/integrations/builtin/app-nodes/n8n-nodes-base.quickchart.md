@@ -10,9 +10,9 @@ Use the QuickChart node to automate work in QuickChart, and integrate QuickChart
 
 On this page, you'll find a list of operations the QuickChart node supports and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, take a look at n8n's [QuickChart integrations](https://n8n.io/integrations/quickchart/){:target="_blank" .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [QuickChart integrations](https://n8n.io/integrations/quickchart/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 Create a chart by selecting the chart type:

@@ -8,9 +8,9 @@ contentType: integration
 
 [Postmark](https://postmarkapp.com) helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and, spam complaints.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/postmark/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/postmark/).
+///
 
 ## Example Usage
 
@@ -30,7 +30,7 @@ The final workflow should look like the following image.
 4. Toggle the ***Include Content*** field to true.
 5. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Postmark Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Postmark Trigger node.
+///
 

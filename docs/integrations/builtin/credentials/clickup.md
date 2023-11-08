@@ -17,9 +17,9 @@ Create a [ClickUp](https://www.clickup.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your ClickUp account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your ClickUp account to n8n.
+///
 
 1. Open your ClickUp [dashboard](https://app.clickup.com).
 2. Click on your profile icon in the bottom left.

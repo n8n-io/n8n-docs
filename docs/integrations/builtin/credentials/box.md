@@ -17,9 +17,9 @@ Create a [Box](https://www.box.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Box account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Box account to n8n.
+///
 
 1. Access the [Box Developers Console](https://app.box.com/developers/console).
 2. Click on the *Create New App* button.

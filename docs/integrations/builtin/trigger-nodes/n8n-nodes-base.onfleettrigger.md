@@ -8,9 +8,9 @@ contentType: integration
 
 [Onfleet](https://onfleet.com/) is a logistics platform offering a last-mile delivery solution.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet/).
+///
 
 ## Operations
 

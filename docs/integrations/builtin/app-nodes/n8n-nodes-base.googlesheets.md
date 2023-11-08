@@ -10,12 +10,12 @@ Use the Google Sheets node to automate work in Google Sheets, and integrate Goog
 
 On this page, you'll find a list of operations the Google Sheets node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Google Sheets integrations](https://n8n.io/integrations/google-sheets/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Google Sheets integrations](https://n8n.io/integrations/google-sheets/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 
@@ -82,9 +82,9 @@ To read from a sheet:
 3. In **Operation**, select **Get Many Rows**.
 4. Choose the **Document** and **Sheet** you want to read from.
 
-!!! note "First row"
-	n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
-
+/// note | First row
+n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
+///
 ### Filters
 
 By default, the Google Sheets node reads and returns all rows in the sheet. To return a limited set of results:

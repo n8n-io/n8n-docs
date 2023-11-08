@@ -8,14 +8,14 @@ contentType: integration
 
 The Date & Time node manipulates date and time data and convert it to different formats.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Date & Time integrations](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Date & Time integrations](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} list.
+///
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
-!!! note "Date and time in other nodes"
-	You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/luxon/) for more information.
-
+/// note | Date and time in other nodes
+You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/luxon/) for more information.
+///
 ## Operations
 
 * Add to a Date

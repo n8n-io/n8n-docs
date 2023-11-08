@@ -29,9 +29,9 @@ You can use the Merge node to combine data from two previous nodes, even if the 
 
 Use the Code node to merge data from multiple node executions. This is useful in some [Looping](/flow-logic/looping/) scenarios.
 
-!!! note "Node executions and workflow executions"
-	This section describes merging data from multiple node executions. This is when a node executes multiple times during a single workflow execution. 
-
+/// note | Node executions and workflow executions
+This section describes merging data from multiple node executions. This is when a node executes multiple times during a single workflow execution. 
+///
 Refer to this [example workflow](https://n8n.io/workflows/1814-merge-multiple-runs-into-one/){:target=_blank .external-link} using Loop Over Items and Wait to artificially create multiple executions.
 
 ## Compare, merge, and split again

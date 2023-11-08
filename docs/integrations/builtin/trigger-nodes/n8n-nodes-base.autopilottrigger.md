@@ -8,9 +8,9 @@ contentType: integration
 
 [Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/autopilot/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/autopilot/).
+///
 
 ## Events
 

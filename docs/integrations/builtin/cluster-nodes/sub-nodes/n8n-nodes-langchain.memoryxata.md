@@ -9,12 +9,12 @@ Use the Xata node to use Xata as a memory server.
 
 On this page, you'll find a list of operations the Xata node supports, and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/xata/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/xata/){:target=_blank .external-link} page.
-	
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/xata/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/xata/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Session ID

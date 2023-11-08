@@ -67,20 +67,22 @@ Example file:
 }
 ```
 
-!!! note "Formatting as JSON"
-	You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
+/// note | Formatting as JSON
+You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
 
-	```json
-	{
-		"endpoints": {
-			"metrics": {
-				"enable": true
-			}
+```json
+{
+	"endpoints": {
+		"metrics": {
+			"enable": true
 		}
 	}
-	```
+}
+```
 
-	Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
+Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
+///
+
 
 ### Docker
 
@@ -123,9 +125,9 @@ The following environment variables support file input:
 
 ### Base URL
 
-!!! warning "Requires manual UI build"
-    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image. The default is `/`, meaning that it uses the root-domain.
-
+/// warning | Requires manual UI build
+This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image. The default is `/`, meaning that it uses the root-domain.
+///
 Tells the front end how to reach the REST API of the back end:
 
 ```bash
@@ -145,9 +147,9 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 
 ### Execute all workflows in the same process
 
-!!! warning "Deprecated"
-	n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
-	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+/// warning | Deprecated
+n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
+///	Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
 
 All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
 
@@ -234,9 +236,9 @@ export WEBHOOK_URL=https://n8n.example.com/
 
 ### Prometheus
 
-!!! note "Experimental"
-    Prometheus metrics are an experimental feature.
-
+/// note | Experimental
+Prometheus metrics are an experimental feature.
+///
 To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 
 The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.

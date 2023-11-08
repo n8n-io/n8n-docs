@@ -10,12 +10,12 @@ Use the ProfitWell node to automate work in ProfitWell, and integrate ProfitWell
 
 On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [ProfitWell integrations](https://n8n.io/integrations/profitwell/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [ProfitWell integrations](https://n8n.io/integrations/profitwell/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

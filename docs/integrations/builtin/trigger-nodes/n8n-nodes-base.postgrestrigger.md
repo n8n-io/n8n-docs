@@ -8,12 +8,12 @@ contentType: integration
 
 Use the Postgres trigger node to respond to events in Postgres and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/postgres/).
-
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Postgres' integrations](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} page.
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/postgres/).
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Postgres' integrations](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} page.
+///
 ## Events
 
 You can configure how the node listens for events.

@@ -10,12 +10,12 @@ Use the Trello node to automate work in Trello, and integrate Trello with other 
 
 On this page, you'll find a list of operations the Trello node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Trello integrations](https://n8n.io/integrations/trello/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Trello integrations](https://n8n.io/integrations/trello/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

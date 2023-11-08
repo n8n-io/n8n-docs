@@ -15,7 +15,8 @@ You will:
 
 ## Step one: Sign up for n8n
 
-!!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
+/// note | Skip this section if you've already installed n8n or signed up for a Cloud account
+///
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 

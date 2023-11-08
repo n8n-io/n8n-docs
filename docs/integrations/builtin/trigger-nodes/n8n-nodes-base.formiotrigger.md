@@ -8,9 +8,9 @@ contentType: integration
 
 [Form.io](https://www.form.io/) is an enterprise class combined form and API data management platform for building complex form-based business process applications.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/formiotrigger/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/formiotrigger/).
+///
 
 ## Example Usage
 
@@ -31,6 +31,6 @@ The final workflow should look like the following image.
 4. Select **Submission Created** from the *Trigger Events* dropdown list.
 5. Click on **Execute Node** to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Form.io Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Form.io Trigger node.
+///

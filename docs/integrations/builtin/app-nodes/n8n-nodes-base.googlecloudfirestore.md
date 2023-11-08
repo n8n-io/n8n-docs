@@ -10,13 +10,13 @@ Use the Google Cloud Firestore node to automate work in Google Cloud Firestore, 
 
 On this page, you'll find a list of operations the Google Cloud Firestore node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+/// note | Credentials
+Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+///
 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Firestore integrations](https://n8n.io/integrations/google-cloud-firestore/){:target="_blank" .external-link} list.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Firestore integrations](https://n8n.io/integrations/google-cloud-firestore/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

@@ -10,12 +10,12 @@ Use the Webflow node to automate work in Webflow, and integrate Webflow with oth
 
 On this page, you'll find a list of operations the Webflow node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Webflow credentials](/integrations/builtin/credentials/webflow/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Webflow integrations](https://n8n.io/integrations/webflow/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Webflow credentials](/integrations/builtin/credentials/webflow/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Webflow integrations](https://n8n.io/integrations/webflow/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

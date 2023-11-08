@@ -572,9 +572,9 @@ Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nod
 
 If your node performs insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. A common pattern is to use a Set node before the node that sends data, to convert the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node, rather than using a Set node. The resource mapper component can also validate input data against the schema provided in the node, and cast input data into the expected type.
 
-!!! note "Mapping and matching"
-	Matching is the process of using column names to identify the row(s) to update.
-	Mapping is the process of setting the input data to use as values when updating row(s).
+/// note | Mapping and matching
+Matching is the process of using column names to identify the row(s) to update.
+///	Mapping is the process of setting the input data to use as values when updating row(s).
 
 
 ```js

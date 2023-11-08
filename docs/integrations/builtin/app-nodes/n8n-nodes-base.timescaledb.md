@@ -10,12 +10,12 @@ Use the TimescaleDB node to automate work in TimescaleDB, and integrate Timescal
 
 On this page, you'll find a list of operations the TimescaleDB node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [TimescaleDB integrations](https://n8n.io/integrations/timescaledb/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [TimescaleDB integrations](https://n8n.io/integrations/timescaledb/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 

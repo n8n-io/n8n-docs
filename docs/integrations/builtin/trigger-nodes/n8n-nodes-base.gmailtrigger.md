@@ -8,9 +8,9 @@ contentType: integration
 
 [Gmail](https://www.gmail.com) is an email service developed by Google.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+///
 ## Events
 
 * Message Received

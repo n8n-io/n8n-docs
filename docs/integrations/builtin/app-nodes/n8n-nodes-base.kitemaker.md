@@ -10,12 +10,12 @@ Use the Kitemaker node to automate work in Kitemaker, and integrate Kitemaker wi
 
 On this page, you'll find a list of operations the Kitemaker node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Kitemaker integrations](https://n8n.io/integrations/kitemaker/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Kitemaker integrations](https://n8n.io/integrations/kitemaker/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

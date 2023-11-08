@@ -5,13 +5,15 @@ contentType: howto
 
 # Set up user management on n8n Cloud
 
-!!! info "Feature availability"		
-	Available on paid self-hosted and selected Cloud plans. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
+/// info "Feature availability"		
+Available on paid self-hosted and selected Cloud plans. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for more information.
+///
 
 To access user management, upgrade to version 0.195.0 or newer.
 
-!!! warning "Irreversible upgrade"
-	Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
+/// warning | Irreversible upgrade
+Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
+///
 
 ## Step one: in-app setup
 

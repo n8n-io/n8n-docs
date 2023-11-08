@@ -10,9 +10,9 @@ Use the Manual Chat Trigger node to test LangChain workflows that require a user
 On this page, you'll find information on how to use the Manual Chat Trigger, and links to more resources.
 
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/manual-chat-trigger/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/manual-chat-trigger/){:target=_blank .external-link} page.
+///
 ## Usage
 
 Use this node to start a workflow with a chat session. This node is part of the LangChain feature. You can use it with the [Conversational Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).

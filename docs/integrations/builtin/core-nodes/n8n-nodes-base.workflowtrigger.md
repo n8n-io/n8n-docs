@@ -8,9 +8,9 @@ contentType: integration
 
 The Workflow trigger node gets triggered when a workflow is updated or activated.
 
-!!! note "Keep in mind"
-    If you want to use the Workflow trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
-
+/// note | Keep in mind
+If you want to use the Workflow trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
+///
 
 The Workflow trigger node gets triggered for the workflow that it gets added to. The Workflow trigger node can be used to trigger a workflow to notify the state of the workflow.
 

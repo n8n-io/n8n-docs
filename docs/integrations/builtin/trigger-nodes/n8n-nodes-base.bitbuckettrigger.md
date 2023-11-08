@@ -8,9 +8,9 @@ contentType: integration
 
 [Bitbucket](https://bitbucket.org/) is a web-based version control repository hosting service owned by Atlassian, for source code and development projects that use either Mercurial or Git revision control systems.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/bitbucket/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/bitbucket/).
+///
 
 
 ## Example Usage
@@ -32,7 +32,7 @@ The final workflow should look like the following image.
 4. Select the events you want to receive updates for from the *Events* dropdown list.
 5. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Bitbucket Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Bitbucket Trigger node.
+///
 

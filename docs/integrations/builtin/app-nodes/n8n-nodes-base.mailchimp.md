@@ -10,12 +10,12 @@ Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp wi
 
 On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Mailchimp integrations](https://n8n.io/integrations/mailchimp/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Mailchimp integrations](https://n8n.io/integrations/mailchimp/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

@@ -9,9 +9,9 @@ Use the Vector Store Retriever node to retrieve documents from a vector store.
 
 On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/vector-store-retriever/){:target=_blank .external-link} page.
-	
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/vector-store-retriever/){:target=_blank .external-link} page.
+///	
 ## Node parameters
 
 * Top K

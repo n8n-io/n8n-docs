@@ -10,12 +10,12 @@ Use the Unleashed Software node to automate work in Unleashed Software, and inte
 
 On this page, you'll find a list of operations the Unleashed Software node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Unleashed Software integrations](https://n8n.io/integrations/unleashed-software/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Unleashed Software integrations](https://n8n.io/integrations/unleashed-software/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

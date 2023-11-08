@@ -10,12 +10,12 @@ Use the Spotify node to automate work in Spotify, and integrate Spotify with oth
 
 On this page, you'll find a list of operations the Spotify node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Spotify credentials](/integrations/builtin/credentials/spotify/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Spotify integrations](https://n8n.io/integrations/spotify/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Spotify credentials](/integrations/builtin/credentials/spotify/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Spotify integrations](https://n8n.io/integrations/spotify/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

@@ -18,9 +18,9 @@ When the node execution completes, it combines all the data and returns it throu
 - **Options**:
     - **Reset:** if set to true, the node will reset.
 
-!!! note "Check if you need this node"
-    n8n automatically processes incoming items. You may not need the Loop Over Items node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
-
+/// note | Check if you need this node
+n8n automatically processes incoming items. You may not need the Loop Over Items node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).
+///
 
 ## Example usage: Read RSS feed from two different sources
 

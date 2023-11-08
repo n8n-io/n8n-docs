@@ -16,9 +16,9 @@ Create a [Salesforce](https://www.salesforce.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name, Access Token URL, and click on the circle button in the OAuth section to connect your Salesforce account to n8n. You can find details on how to obtain the Access Token URL in the instructions below.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name, Access Token URL, and click on the circle button in the OAuth section to connect your Salesforce account to n8n. You can find details on how to obtain the Access Token URL in the instructions below.
+///
 
 1. Access your Salesforce Dashboard.
 2. Click on the gear icon in the top right and select ***Setup*** from the dropdown list.

@@ -8,9 +8,9 @@ contentType: integration
 
 The FTP node is useful to access and upload files to an FTP server.
 
-!!! note "Credential"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
-
+/// note | Credential
+You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
+///
 
 ## Basic Operations
 

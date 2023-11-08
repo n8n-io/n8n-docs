@@ -10,12 +10,12 @@ Use the Drift node to automate work in Drift, and integrate Drift with other app
 
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 
-!!! note "Credentials"
-    Refer to [Drift credentials](/integrations/builtin/credentials/drift/) for guidance on setting up authentication. 
-
-!!! note "Examples and templates"
-    For usage examples and templates to help you get started, take a look at n8n's [Drift integrations](https://n8n.io/integrations/drift/){:target="_blank" .external-link} list.
-
+/// note | Credentials
+Refer to [Drift credentials](/integrations/builtin/credentials/drift/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Drift integrations](https://n8n.io/integrations/drift/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 

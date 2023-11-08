@@ -8,9 +8,9 @@ contentType: integration
 
 [Formstack](https://www.formstack.com/) is a workplace productivity platform that helps organizations streamline digital work through no-code online forms, documents, and signatures.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger/).
+///
 
 ## Example Usage
 
@@ -29,6 +29,6 @@ The final workflow should look like the following image.
 2. Enter the form you want to receive updates for using the *Form Name/ID* field.
 3. Click on **Execute Node** to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Form.io Trigger node.
-
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Form.io Trigger node.
+///

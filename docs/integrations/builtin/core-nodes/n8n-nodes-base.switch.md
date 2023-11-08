@@ -8,9 +8,9 @@ contentType: integration
 
 Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node, but supports multiple output routes.
 
-!!! note "Examples and templates"
-	For usage examples and templates to help you get started, refer to n8n's [Switch integrations](https://n8n.io/integrations/switch/){:target=_blank .external-link} page.
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Switch integrations](https://n8n.io/integrations/switch/){:target=_blank .external-link} page.
+///
 ## Node reference
 
 **Mode**: select whether to define the conditions as rules in the node, or as an expression, programmatically.

@@ -77,7 +77,7 @@ To enable dark mode:
 
 #### Optional error output for nodes
 
-All nodes apart from sub-nodes have a new optional output: **Error**. Use this to add steps to handle node errors.
+All nodes apart from sub-nodes and trigger nodes have a new optional output: **Error**. Use this to add steps to handle node errors.
 
 </div>
 

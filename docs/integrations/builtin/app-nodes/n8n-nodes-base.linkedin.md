@@ -27,9 +27,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 * **Post As**: choose whether to post as a **Person** or **Organization**.
 * **Person Name or ID** and **Organization URN**: enter an identifier for the person or organization.
+
 	/// note | Posting as organization
 	If posting as an Organization enter the organization number in the URN field. For example, `03262013` not `urn:li:company:03262013`.
 	///
+	
 * **Text**: the post contents.
 * **Media Category**: use this when including images or article URLs in your post.
 

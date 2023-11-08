@@ -5797,7 +5797,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 /// warning | Breaking changes
 Please note that this version contains breaking changes. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01350).
-///    The features that introduced the breaking changes have been flagged below.
+The features that introduced the breaking changes have been flagged below.
+///
 
 
 ### New nodes
@@ -5922,7 +5923,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 /// warning | Breaking change
 Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01310).
-///    The features that introduced the breaking changes have been flagged below.
+The features that introduced the breaking changes have been flagged below.
+///
 
 
 ### New nodes
@@ -5956,7 +5958,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 /// warning | Breaking change
 Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/  blob/master/packages/cli/BREAKING-CHANGES.md#01300).
-///    The features that introduced the breaking changes have been flagged below.
+The features that introduced the breaking changes have been flagged below.
+///
 
 
 
@@ -6033,7 +6036,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 /// warning | Breaking change
 Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01270).
-///    The features that introduced the breaking changes have been flagged below.
+The features that introduced the breaking changes have been flagged below.
+///
 
 
 ### Enhanced nodes
@@ -6362,8 +6366,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 /// warning | Breaking change
 Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01180).
-///    The features that introduced the breaking changes have been flagged below.
-
+The features that introduced the breaking changes have been flagged below.
+///
 
 ### New nodes
 
@@ -6411,7 +6415,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 /// warning | Breaking change
 Please note that this version contains a breaking change. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170).
-///    The features that introduced the breaking changes have been flagged below.
+The features that introduced the breaking changes have been flagged below.
+///
 
 
 ### New nodes

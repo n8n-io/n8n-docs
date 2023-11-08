@@ -67,17 +67,11 @@ markdown_extensions:
   - pymdownx.blocks.admonition:
       types:
         - note
-        - abstract
         - info
         - tip
-        - success
         - question
         - warning
-        - failure
         - danger
-        - bug
-        - example
-        - quote
         # custom types
         - details
   - pymdownx.details

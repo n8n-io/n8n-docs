@@ -10,9 +10,9 @@ You've learned a lot about workflow automation and built your first business wor
 
 You can test your knowledge by taking a **quiz**, which consists of questions about the theoretical concepts and workflows covered in this course.
 
-    - You need to have at least 80% correct answers in each part to pass the quiz.
-    - You can take the quiz as many times as you want.
-    - There is no time limit on answering the quiz questions.
+- You need to have at least 80% correct answers in each part to pass the quiz.
+- You can take the quiz as many times as you want.
+- There is no time limit on answering the quiz questions.
 
 <br/>
 <div style="text-align:center;">

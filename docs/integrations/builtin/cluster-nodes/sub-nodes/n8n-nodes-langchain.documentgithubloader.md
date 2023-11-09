@@ -17,8 +17,14 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 ///	
 ## Node parameters
 
+[TODO: add explanation]
 * Repository Link
 * Branch
+
+## Node options
+
+* Recursive: whether to include sub-folders and files.
+* Ignore Paths: set directories to ignore.
 
 ## Node reference
 

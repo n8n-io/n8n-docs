@@ -22,6 +22,13 @@ This is the prompt that the model uses. For example:
 Tell me a joke about {{ $json.input }}
 ```
 
+### Chat Messages
+
+Use this when using a chat model to set a message. n8n ignores these options if you don't connect a chat model.
+
+* AI: provide a response. The model will try to respond in the same way in its messages.
+* System: set a system message to accompany the user input. Use this for things like defining tone. For example "Always respond talking like a pirate".
+* User: provide a sample user input. Using this with the AI option can help improve the output of the agent. Using both together provides a sample of an input and expected response (the AI message) for the model to follow.
 
 ## Related resources
 

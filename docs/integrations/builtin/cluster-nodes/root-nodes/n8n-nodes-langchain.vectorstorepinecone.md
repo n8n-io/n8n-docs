@@ -22,11 +22,13 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+[TODO: add screenshot]
+
 Parameters for **Get Many**:
 
 * Pinecone Index
-* Prompt
-* Limit
+* Prompt: search query.
+* Limit: how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 Parameters for **Insert Documents**:
 
@@ -38,11 +40,17 @@ Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 ## Node options
 
-* Pinecone Namespace
-* Metadata Filter: available in **Get Many** mode.
-* Clear Namespace: available in **Insert Documents** mode.
+#### Pinecone Namespace 
 
+[TODO: see screenshot. Another segregation option for how to store your data within the index]
 
+### Metadata Filter
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/vector-store-metadata-filter.md"
+
+### Clear Namespace
+
+Available in **Insert Documents** mode. Deletes all data from the namespace before inserting the new data.
 
 ## Related resources
 

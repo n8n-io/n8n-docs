@@ -24,7 +24,9 @@ The type of summarization to run.
 
 ### Options
 
-* **Combine Map Prompt**: write a prompt to guide the agent when combining summaries..
+[TODO: direct user to UI example]
+
+* **Combine Map Prompt**: write a prompt to guide the agent when combining summaries.
 * **Prompt**: write a prompt to guide the agent when generating individual summaries.
 
 ## Related resources

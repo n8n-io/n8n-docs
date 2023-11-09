@@ -12,9 +12,11 @@ On this page, you'll find the node parameters for the Hugging Face Inference Mod
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/hugging-face-inference-model/){:target=_blank .external-link} page.
 ///	
+
 ## Node parameters
 
 * Model

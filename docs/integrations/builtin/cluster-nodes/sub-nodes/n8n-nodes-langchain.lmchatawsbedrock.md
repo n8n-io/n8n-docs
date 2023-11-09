@@ -19,7 +19,7 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 	
 ## Node parameters
 
-* Model
+* Model: the name of the model.
 
 
 ## Related resources

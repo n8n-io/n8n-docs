@@ -1,4 +1,9 @@
 
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentjsoninputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
+
+
 /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/
 /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/
 /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezepinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/

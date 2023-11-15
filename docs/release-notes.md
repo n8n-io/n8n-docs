@@ -28,6 +28,44 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.17.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.16.0...n8n@1.17.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-11-15
+
+This release contains node enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Worker Details View
+
+Enterprise-tier accounts can now view worker details and the status of job's from your main n8n instance.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Sticky Note Colors
+
+You can now select background colors for sticky notes.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Discord Node Overhaul
+
+An overhaul of the Discord node, improving the UI making it easier to configure, improving error handling, and fixing issues.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}  
+[teomane](https://github.com/teomane){:target=_blank .external-link}  
+
 ## n8n@1.16.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.15.2...n8n@1.16.0){:target=_blank .external-link} for this version.<br />
@@ -42,7 +80,6 @@ This is the `latest` version. n8n recommends using the `latest` version. The `ne
 ///
 
 
-
 This release contains node enhancements and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -51,10 +88,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.15.1...n8n@1.15.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-07
-
-
-
-
 
 This release contains bug fixes.
 
@@ -213,10 +246,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.11.1...n8n@1.11.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-23
 
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -230,8 +259,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.11.1...n8n@1.12.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-18
-
-
 
 This release contains new features, node enhancements, and bug fixes.
 

@@ -32,6 +32,7 @@ You can:
 * Drag a Sticky Note anywhere on the canvas.
 * Drag Sticky Notes behind nodes. You can use this to visually group nodes.
 * Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
+* Change the color: select **Options** <span class="inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png)</span> to open the color selector.
 
 ## Writing in Markdown
 

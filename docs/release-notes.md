@@ -55,7 +55,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}
+[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link} 
 [teomane](https://github.com/teomane){:target=_blank .external-link}
 
 ## n8n@1.16.0

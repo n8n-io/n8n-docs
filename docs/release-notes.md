@@ -53,6 +53,11 @@ An overhaul of the Discord node, improving the UI making it easier to configure,
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
+### Contributors
+
+[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}
+[teomane](https://github.com/teomane){:target=_blank .external-link}
+
 ## n8n@1.16.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.15.2...n8n@1.16.0){:target=_blank .external-link} for this version.<br />

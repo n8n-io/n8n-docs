@@ -37,14 +37,6 @@ This release contains node enhancements and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
-#### Worker Details View
-
-Enterprise-tier accounts can now view worker details and the status of job's from your main n8n instance.
-
-</div>
-
-<div class="n8n-new-features" markdown>
-
 #### Sticky Note Colors
 
 You can now select background colors for sticky notes.

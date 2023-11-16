@@ -292,3 +292,11 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `N8N_LICENSE_AUTO_RENEW_ENABLED` | Boolean | `true` | Whether autorenew for licenses is enabled (true) or not (false). |
 | `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | How many seconds before expiry a license should automatically renew. |
 | `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |
+
+## Multi-main setup
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_MULTI_MAIN_SETUP_ENABLED` | Boolean | `false` | Whether to enable multi-main setup for queue mode (license required). |
+| `N8N_MULTI_MAIN_SETUP_KEY_TTL` | Number | `10` | Time to live (in seconds) for leader key in multi-main setup. |
+| `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL` | Number | `3` | Interval (in seconds) for leader check in multi-main setup. |

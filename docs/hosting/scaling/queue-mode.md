@@ -188,7 +188,7 @@ In a single-mode setup, the `main` process is responsible for:
 - listening for webhooks,
 - handling manual executions,
 - running triggers and pollers,
-- handle specific licensing tasks,
+- handling specific licensing tasks,
 - pruning executions and binary data, etc.
 
 In a multi-main setup, n8n will run the API, serve the UI, listen for webhooks, and handle manual executions on all `main` processes. n8n will also automatically designate a leader `main` process, which is the only process in charge of running triggers and pollers, handling specific licensing tasks, pruning executions and binary data, etc. All non-leader `main` processes are known as followers.

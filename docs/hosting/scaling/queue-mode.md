@@ -171,3 +171,43 @@ You can define the number of jobs a worker can run in parallel by using the `con
 ```bash
 n8n worker --concurrency=5
 ```
+
+## Multi-main setup
+
+/// info | Feature availability
+* Available on Self-hosted Enterprise plans
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+///
+
+Optionally, queue mode also supports running multiple `main` processes for high availability.
+
+In a single-mode setup, the `main` process is responsible for:
+
+- running the API,
+- serving the UI,
+- listening for webhooks,
+- handling manual executions,
+- running triggers and pollers,
+- handle specific licensing tasks,
+- pruning executions and binary data, etc.
+
+In a multi-main setup, n8n runs the API, serve the UI, listen for webhooks, and handle manual executions on all `main` processes. n8n also automatically designates a leader `main` process, which is uniquely entitled to run triggers and pollers, handle specific licensing tasks, prune executions and binary data, etc. All non-leader `main` processes are known as followers.
+
+The leader `main` process regularly reports to Redis, setting a quickly expiring key. If the leader ever fails to set the key, e.g. because it crashed or because its event loop has become overly busy, one of `follower` main processes will be designated as the new leader to take over the former leader's responsibilities. If the former leader later becomes responsive again, it will become a follower.
+
+### Configuring multi-main setup
+
+To deploy n8n in multi-main setup, ensure you have a valid license and are running in queue mode.
+
+Then, for each main process, set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true` and set `N8N_PORT` to a different port.
+
+If needed, you can adjust the leader check options:
+
+| Via configuration file | Via environment variables | Description |
+| ------ | ------ | ----- |
+| `multiMainSetup.multiMainSetup:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
+| `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
+
+/// note | Keep in mind
+We recommend running the multiple main processes behind a load balancer that supports **session persistence**, also known as **sticky sessions**.
+///

@@ -474,7 +474,7 @@ Example:
 	name: 'cardID',
 	type: 'resourceLocator',
 	default: '',
-	description: 'Get a card'
+	description: 'Get a card',
 	modes: [
 		{
 			displayName: 'ID',
@@ -485,61 +485,66 @@ Example:
 				{
 					type: 'regex',
 					properties: {
-						regex: '^[0-9]'
-						errorMessage: 'The ID must start with a number'
-					},	
+						regex: '^[0-9]',
+						errorMessage: 'The ID must start with a number',
+					},
 				},
 			],
 			placeholder: '12example',
 			// How to use the ID in API call
-			url: '=http://api-base-url.com/?id={{$value}}'
+			url: '=http://api-base-url.com/?id={{$value}}',
 		},
-		displayName: 'URL',
-		name: 'url',
-		type: 'string',
-		hint: 'Enter a URL',
-		validation: [
-			{
-				type: 'regex',
+		{
+			displayName: 'URL',
+			name: 'url',
+			type: 'string',
+			hint: 'Enter a URL',
+			validation: [
+				{
+					type: 'regex',
 					properties: {
-						regex: '^http'
-						errorMessage: 'Invalid URL'
-					},	
+						regex: '^http',
+						errorMessage: 'Invalid URL',
+					},
+				},
+			],
+			placeholder: 'https://example.com/card/12example/',
+			// How to get the ID from the URL
+			extractValue: {
+				type: 'regex',
+				regex: 'example.com/card/([0-9]*.*)/',
 			},
-		],
-		placeholder: 'https://example.com/card/12example/',
-		// How to get the ID from the URL
-		extractValue: {
-			type: 'regex',
-			regex: 'example\.com\/card\/([0-9]*.*)\/'
 		},
-		displayName: 'List',
-		name: 'list',
-		type: 'list',
-		typeOptions: {
-			// You must always provide a search method
-			// Write this method within the methods object in your base file
-			// The method must populate the list, and handle searching if searchable: true
-			searchListMethod: 'searchMethod'
-			// If you want users to be able to search the list
-			searchable: true,
-			// Set to true if you want to force users to search
-			// When true, users can't browse the list
-			// Or false if users can browse a list
-			searchFilterRequired: true
-		}
+		{
+			displayName: 'List',
+			name: 'list',
+			type: 'list',
+			typeOptions: {
+				// You must always provide a search method
+				// Write this method within the methods object in your base file
+				// The method must populate the list, and handle searching if searchable: true
+				searchListMethod: 'searchMethod',
+				// If you want users to be able to search the list
+				searchable: true,
+				// Set to true if you want to force users to search
+				// When true, users can't browse the list
+				// Or false if users can browse a list
+				searchFilterRequired: true,
+			},
+		},
 	],
-	displayOptions: { // the resources and operations to display this element with
+	displayOptions: {
+		// the resources and operations to display this element with
 		show: {
 			resource: [
 				// comma-separated list of resource names
 			],
 			operation: [
 				// comma-separated list of operation names
-			]
-		}
+			],
+		},
 	},
-}
+},
 ```
 
 Refer to the following for live examples:

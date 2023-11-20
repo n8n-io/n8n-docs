@@ -191,7 +191,7 @@ In a single-mode setup, the `main` process is responsible for:
 - Handling specific licensing tasks
 - Pruning executions and binary data
 
-In a multi-main setup, every `main` process runs the API, serves the UI, listens for webhooks, and handles manual executions. n8n automatically designates a leader `main` process, which is the process in charge of running triggers and pollers, handling specific licensing tasks, pruning executions and binary data. All non-leader `main` processes are known as followers.
+In a multi-main setup, every `main` process runs the API, serves the UI, listens for webhooks, and handles manual executions. n8n automatically designates a leader `main` process, which is the process in charge of running any non-HTTP triggers, handling specific licensing tasks, pruning executions and binary data. All non-leader `main` processes are known as followers.
 
 The leader `main` process reports to Redis, setting a short-lived key. If the leader ever fails to renew the key, for example because it crashed or because its event loop became overly busy, n8n designates one of the follower `main` processes as the new leader to take over the former leader's responsibilities. If the previous leader becomes responsive again, it becomes a follower.
 

@@ -187,7 +187,7 @@ In a single-mode setup, the `main` process is responsible for:
 - Serving the UI
 - Listening for webhooks
 - Handling manual executions
-- Running triggers and pollers
+- Running non-HTTP related triggers, such as timers, persistent connections like RabbitMQ and IMAP
 - Handling specific licensing tasks
 - Pruning executions and binary data
 

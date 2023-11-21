@@ -20,7 +20,7 @@ You can export and import workflows in two ways:
 
 * From the Editor UI:
     * Export: From the top navigation bar click on the 3 dots in the top right and click 'Download'. This will download your current workflow as a JSON file on your computer.
-    * Import: From the top navigation bar click on the 3 dots in the top right and click on 'Import from URL' (to import a published workflow) or 'Import from File' (to import a workflow as a JSON file).
+    * Import: From the top navigation bar click on the 3 dots in the top right and click on _Import from URL_ (to import a published workflow) or _Import from File_ (to import a workflow as a JSON file).
 * From the command line:
     * Export: See the [full list of commands ](/hosting/cli-commands/){:target="_blank" .external} for exporting workflows or credentials.
     * Import: See the [full list of commands ](/hosting/cli-commands/#import-workflows-and-credentials){:target="_blank" .external} for importing workflows or credentials.

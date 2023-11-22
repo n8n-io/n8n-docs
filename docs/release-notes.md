@@ -33,6 +33,10 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.17.1...n8n@1.18.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-22
 
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
 This release contains new features and bug fixes.
 
 <div class="n8n-new-features" markdown>
@@ -58,9 +62,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.17.0...n8n@1.17.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-17
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains bug fixes.
 
@@ -106,6 +108,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.15.2...n8n@1.16.0
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+
 
 
 

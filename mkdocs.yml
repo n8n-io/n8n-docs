@@ -186,6 +186,7 @@ nav:
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Data pinning: data/data-pinning.md
       - Data editing: data/data-editing.md
+      - Data filtering: data/data-filtering.md
       - Binary data: data/binary-data.md
     - User management:
       - user-management/index.md

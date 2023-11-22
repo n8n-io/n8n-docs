@@ -29,32 +29,9 @@ The following video demonstrates the steps of sharing workflows on the community
 
 </div>
 
-<!--
+## Contribute a workflow template
 
-## Contribute a workflow
-
-You can publish workflows on [n8n.io](https://n8n.io/workflows){:target=_blank class=.external-link} to help other users to get started.
-
-To share a workflow, follow these steps:
-
-1. Sign in to [n8n.io](https://n8n.io/login){:target=_blank class=.external-link}.
-2. Open the [workflows](https://n8n.io/workflows){:target=_blank class=.external-link} page.
-3. Select **+ Share New Workflow**.
-4. Enter the name of your workflow in the **Name** field. The name should be short and descriptive, so that other users can understand the purpose of the workflow at a glance.
-5. Enter a detailed description of the workflow in the **Description** field. Add a screenshot of the workflow and briefly explain what the nodes used in the workflow do.
-6. In your n8n instance, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
-7. Back on the workflows page, delete the existing code in the **Workflow Code** field and paste your workflow in it (Ctrl + V or Cmd + V).
-8. Select **Publish Workflow to Share** to share your workflow.
-
-See the above steps in action in this video:
-
-<div class="video-container">
-
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/wcoirYBEgYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
-
--->
+--8<-- "_snippets/workflows/submit-templates.md"
 
 ## Build a node
 

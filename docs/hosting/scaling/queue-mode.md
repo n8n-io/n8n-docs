@@ -109,9 +109,7 @@ You can set up multiple worker processes. Make sure that all the worker processe
 * If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 ///
 
-You can view running workers and their performance metrics in n8n:
-
-1. [TODO]
+You can view running workers and their performance metrics in n8n by select **Settings** <span class="inline-image">![Settings icon](/_images/common-icons/settings.png)</span> > **Workers**.
 
 ## Running n8n with queues
 

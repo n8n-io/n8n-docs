@@ -21,6 +21,7 @@ n8n provides keyboard shortcuts for some actions.
  - **Ctrl** + **s**: save the current workflow 
  - **Ctrl** + **z**: undo
  - **Ctrl** + **shift** + **z**: redo
+ - **Ctrl** + **Enter**: execute workflow
 
 ## Canvas
 
@@ -44,6 +45,7 @@ n8n provides keyboard shortcuts for some actions.
 
 - **Ctrl** + **a**: select all nodes
 - **Ctrl** + **v**: paste nodes
+- **Shift** + **s**: add sticky note
 
 ### With one or more nodes selected in canvas
 

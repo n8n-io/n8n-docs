@@ -12,6 +12,7 @@ On this page, you'll find the node parameters for the Retrieval Q&A Chain node, 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/retrieval-qanda-chain/){:target=_blank .external-link} page.
 ///	
+
 ## Node parameters
 
 ### Query

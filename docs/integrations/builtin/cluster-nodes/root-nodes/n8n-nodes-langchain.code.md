@@ -12,9 +12,11 @@ On this page, you'll find the node parameters for the LangChain Code node, and l
 /// note | Not available on Cloud
 This node is only available on self-hosted n8n.
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} page.
 ///	
+
 ## Node parameters
 
 You must create the connectors for this node.

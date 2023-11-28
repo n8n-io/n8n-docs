@@ -12,6 +12,7 @@ On this page, you'll find the node parameters for the Summarization Chain node, 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/summarization-chain/){:target=_blank .external-link} page.
 ///	
+
 ## Node parameters
 
 ### Type
@@ -24,10 +25,10 @@ The type of summarization to run.
 
 ### Options
 
-[TODO: direct user to UI example]
-
 * **Combine Map Prompt**: write a prompt to guide the agent when combining summaries.
 * **Prompt**: write a prompt to guide the agent when generating individual summaries.
+
+You can view prompt examples in the node.
 
 ## Related resources
 

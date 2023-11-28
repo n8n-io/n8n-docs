@@ -12,13 +12,14 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/supabase/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/supabase/){:target=_blank .external-link} page.
 ///
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
-
-[TODO: add link to supabase setup quickstart https://supabase.com/docs/guides/ai/langchain?database-method=sql and tell them if they change stuff there they need to know what they're doing]
+Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}. If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
 
 ## Node parameters
 

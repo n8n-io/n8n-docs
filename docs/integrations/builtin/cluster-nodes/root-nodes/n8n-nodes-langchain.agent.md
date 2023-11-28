@@ -15,11 +15,7 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 
 n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 
 
-[TODO: wording to suggest other agents are more advanced]
-
 ## Conversational Agent
-
-## Conversational Agent parameters
 
 This agent is optimised for conversation allowing it to chat with the user.
 
@@ -99,11 +95,10 @@ The input from the chat. This is the user's query, also known as the prompt.
 
 ### Options
 
-Use the options to create a message to send to the agent at the start of the conversation.
+Use the options to create a message to send to the agent at the start of the conversation. The message type depends on the model you're using.
 
-[TODO: might move this to a broader intro. Consider being clear about what type of message is being set - do we need to be this specific?]
-* Chat models: have the concept of AI, system, and human. Can receive system messages and human messages (prompts).
-* Instruct models: don't have the concept of AI, system, and human. They receive one body of text, the instruct message.
+* Chat models: these models have the concept of three components interacting (AI, system, and human). They can receive system messages and human messages (prompts).
+* Instruct models: these models don't have the concept of separate AI, system, and human components. They receive one body of text, the instruct message.
 
 #### Human Message Template
 
@@ -133,6 +128,7 @@ The SQL Agent uses a SQL database as a data source. The agent builds a SQL query
 /// note | Postgres and MySQL Agents
 If you are using Postgres or MySQL this doesn't support the tunnel options you can set in the credential.
 ///
+
 ### Data Source
 
 Options:
@@ -144,6 +140,7 @@ Options:
 /// note | SQLite
 To use SQLite you will need to use a [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node before the Agent to read your SQLite file. 
 ///
+
 ### Prompt
 
 The query to run on the data.
@@ -159,9 +156,7 @@ Use the options to refine the agent's behavior.
 * Suffix Prompt: set the final part of the message. Includes the user input and agent scratchpad. 
 * Top K: number of database results the agent should keep in its context.
 
-
-[TODO: decide whether to include examples or point user to example in UI]
-
+You can view prompt examples in the node.
 
 ## Related resources
 

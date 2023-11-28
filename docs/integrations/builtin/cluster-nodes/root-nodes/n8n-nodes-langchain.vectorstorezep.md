@@ -12,26 +12,28 @@ On this page, you'll find the node parameters for the Zep Vector Store node, and
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/zep/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/zep-vector-store-load/){:target=_blank .external-link} page.
 ///
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
-Parameters for **Insert Documents**:
+### Parameters for **Insert Documents**
 
-* Collection Name: [TODO: similar to index. Differentiates where the data is stored]
+* Collection Name: differentiates where the data is stored.
 
-Parameters for **Get Many**:
+### Parameters for **Get Many**
 
 * Collection Name
 * Prompt
 * Limit
 
-Parameters for **Retrieve Documents (For Agent/Chain)**:
+### Parameters for **Retrieve Documents (For Agent/Chain)**
 
 * Collection Name
 
@@ -41,8 +43,9 @@ Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 Must be the same when embedding the data and when querying it.
 
+This sets the size of the array of floats used to represent the semantic meaning of a text document. 
 
-[TODO: this sets how many numbers are used to represent a text - in more sophisticated terms, the size of the array. Find a way to word this better and maybe add link to some explanation of embeddings]
+Read more about Zep embeddings in [Zep's embeddings documentation](https://docs.getzep.com/deployment/embeddings/){:target=_blank .external-link}
 
 ### Is Auto Embedded
 

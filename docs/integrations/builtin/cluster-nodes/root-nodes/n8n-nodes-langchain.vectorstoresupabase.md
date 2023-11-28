@@ -12,11 +12,15 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/supabase/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/supabase/){:target=_blank .external-link} page.
 ///
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
+Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}. If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
+
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
@@ -37,8 +41,13 @@ Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 ## Node options
 
-* Query Name
-* Metadata Filter (not available for **Insert Documents** mode)
+### Query Name
+
+The name of the matching function you set up in Supabase. If you follow the [Supabase quickstart](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}, this will be `match_documents`.
+
+### Metadata Filter
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
 
 ## Related resources

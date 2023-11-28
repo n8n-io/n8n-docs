@@ -5,20 +5,27 @@ description: Documentation for the GitHub Document Loader node in n8n, a workflo
 
 # GitHub Document Loader
 
-Use the GitHub Document Loader node to load data from GitHub for vector stores or summarization.
+Use the GitHub Document Loader node to load data from a GitHub repository for vector stores or summarization.
 
 On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/github/). This node doesn't support OAuth for authentication.
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/github-document-loader/){:target=_blank .external-link} page.
 ///	
+
 ## Node parameters
 
-* Repository Link
-* Branch
+* Repository Link: URL of your GitHub repository.
+* Branch: the branch name.
+
+## Node options
+
+* Recursive: whether to include sub-folders and files.
+* Ignore Paths: set directories to ignore.
 
 ## Node reference
 

@@ -10,7 +10,7 @@ Use the Basic LLM Chain node to set the prompt that the model will use along wit
 On this page, you'll find the node parameters for the Basic LLM Chain node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/basic-llm-chain/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Basic LLM Chain integrations](https://n8n.io/integrations/basic-llm-chain/){:target=_blank .external-link} page.
 ///	
 
 ## Node parameters

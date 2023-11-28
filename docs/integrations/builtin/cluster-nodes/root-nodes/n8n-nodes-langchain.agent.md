@@ -10,7 +10,7 @@ Use the Agent node to set which agent type you want to use.
 On this page, you'll find the node parameters for the Agent node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Agent integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
 ///
 
 n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 

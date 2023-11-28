@@ -10,7 +10,7 @@ Use the In Memory Vector Store node to store and retrieve embeddings in-memory.
 On this page, you'll find the node parameters for the In Memory Vector Store node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/in-memory-vector-store/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [In Memory Vector Store integrations](https://n8n.io/integrations/in-memory-vector-store/){:target=_blank .external-link} page.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

@@ -14,7 +14,7 @@ This node is only available on self-hosted n8n.
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [LangChain Code integrations](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} page.
 ///	
 
 ## Node parameters

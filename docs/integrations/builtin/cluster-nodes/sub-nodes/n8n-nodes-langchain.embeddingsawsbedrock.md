@@ -12,9 +12,11 @@ On this page, you'll find the node parameters for the Embeddings AWS Bedrock nod
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/embeddings-awsbedrock/){:target=_blank .external-link} page.
 ///
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -26,6 +28,6 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 
 View [example workflows and related content](https://n8n.io/integrations/embeddings-awsbedrock/){:target=_blank .external-link} on n8n's website.
 
-Refer to [LangChains's OpenAI embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/bedrock){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's AWS Bedrock embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/bedrock){:target=_blank .external-link} and the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/){:target=_blank .external-link} for more information about AWS Bedrock.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

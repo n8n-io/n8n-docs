@@ -8,13 +8,15 @@ info:
   license:
     name: Sustainable Use License
     url: 'https://github.com/n8n-io/n8n/blob/master/packages/cli/LICENSE.md'
-  version: 1.1.0
+  version: 1.1.1
 externalDocs:
   description: n8n API documentation
   url: 'https://docs.n8n.io/api/'
 servers:
   - url: /api/v1
 tags:
+  - name: User
+    description: Operations about users
   - name: Audit
     description: Operations about security audit
   - name: Execution
@@ -23,6 +25,8 @@ tags:
     description: Operations about workflows
   - name: Credential
     description: Operations about credentials
+  - name: SourceControl
+    description: Operations about source control
 paths:
   /audit:
     post:
@@ -107,7 +111,7 @@ paths:
           description: The credential ID that needs to be deleted
           required: true
           schema:
-            type: number
+            type: string
       responses:
         '200':
           description: Operation successful.
@@ -421,6 +425,73 @@ paths:
           $ref: '#/components/responses/Unauthorized'
         '404':
           $ref: '#/components/responses/NotFound'
+  /users:
+    get:
+      x-eov-operation-id: getUsers
+      x-eov-operation-handler: v1/handlers/users/users.handler.ee
+      tags:
+        - User
+      summary: Retrieve all users
+      description: Retrieve all users from your instance. Only available for the instance owner.
+      parameters:
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Cursor'
+        - $ref: '#/components/parameters/IncludeRole'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserList'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  '/users/{id}':
+    get:
+      x-eov-operation-id: getUser
+      x-eov-operation-handler: v1/handlers/users/users.handler.ee
+      tags:
+        - User
+      summary: Get user by ID/Email
+      description: Retrieve a user from your instance. Only available for the instance owner.
+      parameters:
+        - $ref: '#/components/parameters/UserIdentifier'
+        - $ref: '#/components/parameters/IncludeRole'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+  /source-control/pull:
+    post:
+      x-eov-operation-id: pull
+      x-eov-operation-handler: v1/handlers/sourceControl/sourceControl.handler
+      tags:
+        - SourceControl
+      summary: Pull changes from the remote repository
+      description: Requires the Source Control feature to be licensed and connected to a repository.
+      requestBody:
+        description: Pull options
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pull'
+      responses:
+        '200':
+          description: Import result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportResult'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
 components:
   schemas:
     Error:
@@ -434,6 +505,32 @@ components:
           type: string
         description:
           type: string
+    Role:
+      readOnly: true
+      type: object
+      properties:
+        id:
+          type: number
+          readOnly: true
+          example: 1
+        name:
+          type: string
+          example: owner
+          readOnly: true
+        scope:
+          type: string
+          readOnly: true
+          example: global
+        createdAt:
+          type: string
+          description: Time the role was created.
+          format: date-time
+          readOnly: true
+        updatedAt:
+          type: string
+          description: Last time the role was updated.
+          format: date-time
+          readOnly: true
     Execution:
       type: object
       properties:
@@ -513,9 +610,9 @@ components:
           type: number
         waitBetweenTries:
           type: number
-        continueOnFail:
-          type: boolean
-          example: false
+        onError:
+          type: string
+          example: stopWorkflow
         position:
           type: array
           items:
@@ -568,9 +665,9 @@ components:
         - settings
       properties:
         id:
-          type: number
+          type: string
           readOnly: true
-          example: 1
+          example: 2tUt1wbLX592XDdX
         name:
           type: string
           example: Workflow 1
@@ -636,8 +733,8 @@ components:
           example: 3600
           maxLength: 3600
         errorWorkflow:
-          type: number
-          example: 10
+          type: string
+          example: VzqKEW0ShTXA5vPj
           description: The ID of the workflow that contains the error trigger node.
         timezone:
           type: string
@@ -674,9 +771,9 @@ components:
       type: object
       properties:
         id:
-          type: number
+          type: string
           readOnly: true
-          example: 42
+          example: R2DjclaysHbqn778
         name:
           type: string
           example: Joe's Github Credentials
@@ -790,6 +887,125 @@ components:
                   - kind: community
                     nodeType: n8n-nodes-test.test
                     packageUrl: 'https://www.npmjs.com/package/n8n-nodes-test'
+    Pull:
+      type: object
+      properties:
+        force:
+          type: boolean
+          example: true
+        variables:
+          type: object
+          example:
+            foo: bar
+    ImportResult:
+      type: object
+      additionalProperties: true
+      properties:
+        variables:
+          type: object
+          properties:
+            added:
+              type: array
+              items:
+                type: string
+            changed:
+              type: array
+              items:
+                type: string
+        credentials:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              type:
+                type: string
+        workflows:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+        tags:
+          type: object
+          properties:
+            tags:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+            mappings:
+              type: array
+              items:
+                type: object
+                properties:
+                  workflowId:
+                    type: string
+                  tagId:
+                    type: string
+    UserList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+        nextCursor:
+          type: string
+          description: Paginate through users by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    User:
+      required:
+        - email
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+          example: 123e4567-e89b-12d3-a456-426614174000
+        email:
+          type: string
+          format: email
+          example: john.doe@company.com
+        firstName:
+          maxLength: 32
+          type: string
+          description: User's first name
+          readOnly: true
+          example: john
+        lastName:
+          maxLength: 32
+          type: string
+          description: User's last name
+          readOnly: true
+          example: Doe
+        isPending:
+          type: boolean
+          description: Whether the user finished setting up their account in response to the invitation (true) or not (false).
+          readOnly: true
+        createdAt:
+          type: string
+          description: Time the user was created.
+          format: date-time
+          readOnly: true
+        updatedAt:
+          type: string
+          description: Last time the user was updated.
+          format: date-time
+          readOnly: true
+        globalRole:
+          $ref: '#/components/schemas/Role'
   responses:
     NotFound:
       description: The specified resource was not found.
@@ -797,6 +1013,8 @@ components:
       description: Unauthorized
     BadRequest:
       description: The request is invalid or provides malformed data.
+    Conflict:
+      description: Conflict
   parameters:
     Cursor:
       name: cursor
@@ -829,7 +1047,7 @@ components:
       description: The ID of the workflow.
       required: true
       schema:
-        type: number
+        type: string
     IncludeData:
       name: includeData
       in: query
@@ -837,6 +1055,23 @@ components:
       required: false
       schema:
         type: boolean
+    UserIdentifier:
+      name: id
+      in: path
+      description: The ID or email of the user.
+      required: true
+      schema:
+        type: string
+        format: identifier
+    IncludeRole:
+      name: includeRole
+      in: query
+      description: Whether to include the user's role or not.
+      required: false
+      schema:
+        type: boolean
+        example: true
+        default: false
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

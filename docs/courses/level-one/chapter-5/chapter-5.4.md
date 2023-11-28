@@ -26,10 +26,11 @@ In your workflow, add a new *Set* node between the *IF* node and the *Airtable* 
   - *Value:* `{{$json["employeeName"]}}`
     *Current Node > Input Data > JSON > employeeName*
 
+After setting the two values, also make sure you set the option "Include in output" to "No input fields" to only include the fields specified above. 
 
-After setting the two values click on *Execute Node* and you should see the following results:
+Then click on *Execute Node* and you should see the following results:
 
-<figure><img src="/_images/courses/level-one/chapter-two/set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
 
 Next, we need to insert these values into Airtable. Go to your Airtable account and add a new table called *processingOrders* with two columns, *orderId* and *employeeName*, just like you learned in the lesson [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/).
 
@@ -39,7 +40,7 @@ Once that's done, execute the *Airtable* node in the workflow and you should see
 
 At this stage, it looks like this:
 
-<figure><img src="/_images/courses/level-one/chapter-two/workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
 
 ## What's next?
 

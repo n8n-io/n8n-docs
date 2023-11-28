@@ -1,5 +1,5 @@
 ---
-description: 
+description: n8n's built-in custom methods and variables.
 contentType: overview
 ---
 
@@ -9,8 +9,10 @@ n8n provides built-in methods and variables for working with data and accessing 
 
 /// note | Availability in the expressions editor and the Code node
 Some methods and variables aren't available in the Code node. These are noted in the documentation.
+
+All data transformation functions are only available in the expressions editor.
 ///		
-	All data transformation functions are only available in the expressions editor.
+
 
 The [Cookbook](/code/cookbook/) contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/) functions.
 

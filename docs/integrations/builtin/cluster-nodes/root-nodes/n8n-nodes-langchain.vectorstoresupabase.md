@@ -47,7 +47,7 @@ The name of the matching function you set up in Supabase. If you follow the [Sup
 
 ### Metadata Filter
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/vector-store-metadata-filter.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
 
 ## Related resources

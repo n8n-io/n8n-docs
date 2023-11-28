@@ -55,7 +55,7 @@ Disable this to configure your embeddings in Zep instead of in n8n.
 
 ### Metadata Filter
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/vector-store-metadata-filter.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
 
 ## Related resources

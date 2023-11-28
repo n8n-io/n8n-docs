@@ -45,7 +45,7 @@ Another segregation option for how to store your data within the index.
 
 ### Metadata Filter
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/vector-store-metadata-filter.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
 ### Clear Namespace
 

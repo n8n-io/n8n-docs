@@ -59,11 +59,11 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 
 #### System Message 
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/system-message.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"
 
 #### Max Iterations
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/root-nodes/max-iterations.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/max-iterations.md"
 
 ## OpenAI Functions Agent 
 

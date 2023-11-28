@@ -14,7 +14,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/supabase/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Supabase integrations](https://n8n.io/integrations/supabase-vector-store/){:target=_blank .external-link} page.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

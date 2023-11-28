@@ -10,7 +10,7 @@ Use the Retrieval Q&A Chain node to use a vector store as a retriever.
 On this page, you'll find the node parameters for the Retrieval Q&A Chain node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/retrieval-qanda-chain/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Retrivel Q&A Chain integrations](https://n8n.io/integrations/retrieval-qanda-chain/){:target=_blank .external-link} page.
 ///	
 
 ## Node parameters

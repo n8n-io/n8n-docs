@@ -14,7 +14,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/github-document-loader/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [GitHub Document Loader](https://n8n.io/integrations/github-document-loader/){:target=_blank .external-link} page.
 ///	
 
 ## Node parameters

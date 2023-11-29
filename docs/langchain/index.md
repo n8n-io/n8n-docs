@@ -2,7 +2,6 @@
 contentType: overview
 title: LangChain
 description: Use n8n's LangChain integrations to build AI-powered functionality within your workflows. Connect your LangChain functionality to other data sources and services.
-status: beta
 ---
 
 # LangChain

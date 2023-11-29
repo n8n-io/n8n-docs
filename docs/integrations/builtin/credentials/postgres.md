@@ -9,6 +9,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes with Postgres.
 
 - [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/)
+- [Postgres Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger/)
 - [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
 
 /// note | Agent node users
@@ -16,7 +17,7 @@ The Agent node doesn't support tunnels
 ///
 ## Prerequisites
 
-Create an user account on a Postgres server. 
+Create a user account on a Postgres server with the correct privileges.
 
 ## Using Database Connection
 
@@ -24,4 +25,3 @@ Create an user account on a Postgres server.
 2. Use the credentials and connection parameters with your Postgres node credentials in n8n.
 
 ![Getting Postgres credentials](/_images/integrations/builtin/credentials/postgres/using-database-connection.gif)
-

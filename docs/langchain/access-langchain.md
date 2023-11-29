@@ -7,12 +7,18 @@ description: How to get the n8n version that includes LangChain
 # Access LangChain in n8n
 
 /// info | Feature availability
-This feature is available on Cloud and self-hosted n8n. To access it, you need either a separate Cloud account, or the LangChain n8n Docker image.
+This feature is available on Cloud and self-hosted n8n. In version 1.19.0 and above, LangChain functionality is included with n8n, and you don't need to do any special signup or installation steps.
+
+If you want to test the latest AI functionality, the beta version is available. This may be unstable.
 ///
 
-## Self-hosted
+/// note | End of beta
+The AI beta will close in 2024. If you're using a beta version, n8n will migrate you to the main n8n version.
+///
 
-Try out LangChain in n8n by fetching the Docker image:
+## Access the self-hosted AI beta
+
+Try out LangChain beta by fetching the Docker image:
 
 ```sh
 docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n:ai-beta
@@ -28,7 +34,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n
 
 Refer to [Installation | Docker](/hosting/installation/docker/) for more information on using n8n Docker images.
 
-## Cloud
+## Access the Cloud AI beta
 
 You need to create a new account. This is separate to your existing n8n Cloud account. n8n offers a 14-day free trial to try AI.
 
@@ -39,6 +45,7 @@ You need to create a new account. This is separate to your existing n8n Cloud ac
 /// note | Existing n8n users can't reuse email address
 If you have an existing n8n Cloud account, you must use a different email address when signing up for the AI trial.
 ///
+
 ## Browse the LangChain nodes
 
 1. Create a new workflow.

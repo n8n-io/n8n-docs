@@ -5,9 +5,7 @@ description: Documentation for the LangChain Code node in n8n, a workflow automa
 
 # LangChain Code
 
-Use the LangChain Code node to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it.
-
-By configuring the LangChain Code node connectors you can use it as a normal node, root node or sub-node.
+Use the LangChain Code node to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it. By configuring the LangChain Code node connectors you can use it as a normal node, root node or sub-node.
 
 On this page, you'll find the node parameters, guidance on configuring the node, and links to more resources.
 
@@ -24,6 +22,8 @@ For usage examples and templates to help you get started, refer to n8n's [LangCh
 ### Add Code
 
 Add your custom code. Choose either **Execute** or **Supply Data** mode. You can only use one mode.
+
+Unlike the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/), the LangChain Code node doesn't support Python.
 
 * **Execute**: use the LangChain Code node like n8n's own Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
 * **Supply Data**: use the LangChain Code node as a sub-node, sending data to a root node. This uses an output other than main.

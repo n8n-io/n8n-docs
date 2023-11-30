@@ -28,11 +28,22 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@[TODO: version number]
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.1...n8n@[TODO: version number]){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-11-30
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.19.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.0...n8n@1.19.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-29
+
+/// note | Upgrade directly to [TODO: version number]
+Due to issues with this release, upgrade directly to [TODO: version number].
+///
 
 This release contains new features, node enhancements, and bug fixes.
 
@@ -48,7 +59,7 @@ This release adds LangChain support to the main n8n version. Refer to [LangChain
 
 #### Show avatars of users working on the same workflow
 
-This release imrpoves the experience of users collaborating on workflows. You can now see who else is editing at the same time as you.
+This release improves the experience of users collaborating on workflows. You can now see who else is editing at the same time as you.
 
 </div>
 

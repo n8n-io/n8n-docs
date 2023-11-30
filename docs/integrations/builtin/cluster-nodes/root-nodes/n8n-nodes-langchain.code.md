@@ -42,7 +42,7 @@ Choose the output types.
 
 The main output is the normal connector found in all n8n workflows. If you have a main input and output set in the node, **Execute** code is required.
 
-## Understand the node inputs and outputs
+## Node inputs and outputs configuration
 
 By configuring the LangChain Code node connectors (inputs and outputs) you can use it as an app node, root node or sub-node.
 

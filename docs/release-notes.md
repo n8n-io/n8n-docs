@@ -31,8 +31,12 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 ## n8n@[TODO: version number]
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.1...n8n@[TODO: version number]){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-11-30
+**Release date:** 2023-11-[TODO]
 
+[TODO: confirm ARM v7 still missing - it was in 1.19.3]
+/// warning | Missing ARM v7 support
+This version doesn't support ARM v7. We're working on fixing this in future releases.
+///
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -62,6 +66,13 @@ This release adds LangChain support to the main n8n version. Refer to [LangChain
 This release improves the experience of users collaborating on workflows. You can now see who else is editing at the same time as you.
 
 </div>
+
+## n8n@1.18.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.0...n8n@1.18.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-11-30
+
+This is a bug fix release.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -98,10 +109,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.17.0...n8n@1.17.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-17
-
-
-
-
 
 This release contains bug fixes.
 

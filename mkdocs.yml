@@ -1071,6 +1071,7 @@ nav:
       - Date and time: code/builtin/date-time.md
       - JMESPath: code/builtin/jmespath.md
       - HTTP node: code/builtin/http-node-variables.md
+      - LangChain Code node: code/builtin/langchain-methods.md
       - n8n metadata: code/builtin/n8n-metadata.md
       - Convenience methods: code/builtin/convenience.md
       - Data transformation functions: 

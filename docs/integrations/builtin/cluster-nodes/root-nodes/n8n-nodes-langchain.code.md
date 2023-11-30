@@ -55,6 +55,12 @@ By configuring the LangChain Code node connectors (inputs and outputs) you can u
 | Sub-node | - | A type other than main. Must match the input type you want to connect to. | Supply Data |
 | Sub-node with sub-nodes | A type other than main |A type other than main. Must match the input type you want to connect to. | Supply Data |
 
+## Built-in methods
+
+n8n provides these methods to make it easier to perform common tasks in the LangChain Code node.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/langchaincode/builtin-methods.md"
+
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} on n8n's website.

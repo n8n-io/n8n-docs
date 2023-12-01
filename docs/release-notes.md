@@ -28,12 +28,11 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@[TODO: version number]
+## n8n@1.19.4
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.1...n8n@[TODO: version number]){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-11-[TODO]
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.0...n8n@1.19.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-01
 
-[TODO: confirm ARM v7 still missing - it was in 1.19.3]
 /// warning | Missing ARM v7 support
 This version doesn't support ARM v7. We're working on fixing this in future releases.
 ///

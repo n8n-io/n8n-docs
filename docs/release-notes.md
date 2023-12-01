@@ -44,8 +44,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.0...n8n@1.19.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-29
 
-/// note | Upgrade directly to [TODO: version number]
-Due to issues with this release, upgrade directly to [TODO: version number].
+/// note | Upgrade directly to 1.19.4
+Due to issues with this release, upgrade directly to 1.19.4.
 ///
 
 This release contains new features, node enhancements, and bug fixes.

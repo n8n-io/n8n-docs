@@ -443,7 +443,11 @@ This release contains new features, performance improvements, and bug fixes.
 
 #### Tournament
 
-This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-linmk}. You can now use arrow functions in expressions.
+This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-linmk}. You can now use arrow functions in expressions.<br />
+
+#### `N8N_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` removed
+
+The env vars `N8N_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` no longer have any effect and can be safely removed. Instead of relying on a TTL system for binary data, n8n currently cleans up binary data together with executions during pruning.
 
 </div>
 
@@ -533,6 +537,10 @@ This release introduces support for TheHive API version 5. This uses a new node 
 * [TheHive 5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
 * [TheHive 5 trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
 * [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/)
+
+#### `N8N_PERSISTED_BINARY_DATA_TTL` removed
+
+The env var `N8N_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be removed. This legacy flag was originally introduced to support ephemeral executions (see [details](https://github.com/n8n-io/n8n/pull/7046)), which are no longer supported.
 
 </div>
 

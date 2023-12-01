@@ -540,7 +540,7 @@ This release introduces support for TheHive API version 5. This uses a new node 
 
 #### `N8N_PERSISTED_BINARY_DATA_TTL` removed
 
-The env var `N8N_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be safely removed. This is a legacy flag originally introduced for binary data of executions of unsaved workflows, which are no longer supported. 
+The env var `N8N_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be removed. This legacy flag was originally introduced to support ephemeral executions (see [Details](https://github.com/n8n-io/n8n/pull/7046)), which are no longer supported.
 
 </div>
 

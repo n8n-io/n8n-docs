@@ -18,19 +18,6 @@ This feature is n8n's implementation of [LangChain's JavaScript framework](https
 
 [On new manual Chat Message](/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/)
 
-## Credentials
-
-* [Anthropic](/integrations/builtin/credentials/anthropic/)
-* [Cohere](/integrations/builtin/credentials/cohere/)
-* [Hugging Face](/integrations/builtin/credentials/huggingface/)
-* [Motorhead](/integrations/builtin/credentials/motorhead/)
-* [Ollama](/integrations/builtin/credentials/ollama/)
-* [Pinecone](/integrations/builtin/credentials/pinecone/)
-* [Serp](/integrations/builtin/credentials/serp/)
-* [Wolfram|Alpha](/integrations/builtin/credentials/wolframalpha/)
-* [Xata](/integrations/builtin/credentials/xata/)
-* [Zep](/integrations/builtin/credentials/zep/)
-
 ## Cluster nodes
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"

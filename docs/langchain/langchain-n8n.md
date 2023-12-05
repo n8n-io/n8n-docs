@@ -169,7 +169,6 @@ Available nodes:
 * [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm/)
 * [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference/)
 * [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai/)
-* [Embeddings TensorFlow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingstensorflow/)
 
 Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
 

@@ -18,6 +18,7 @@ To use admin accounts, you need a pro or enterprise plan.
     * See and share all workflows    
 	* See and share all credentials (but not see the sensitive information)
 	* Delete tags
+	* Set up and use [Source control](/source-control-environments/)
 * Admin: elevated permissions within the app.
   An admin can do everything that an owner can, except:
 	* Access the Cloud dashboard

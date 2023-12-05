@@ -19,20 +19,25 @@ For usage examples and templates to help you get started, refer to n8n's [IF int
 ///
 ## Add conditions
 
-Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
+Add comparison conditions using the **Add Condition** filter. The available comparison operations vary for each data type.
 
-**Boolean:**
+**Basic**:
+[TODO: double check case]
+- exists
+- does not exist
+
+**Boolean**:
 
 - Equal
 - Not Equal
 
-**Date & Time:**
+**Date & Time**:
 
 - Occurred After
 - Occurred Before
 
 
-**Number:**
+**Number**:
 
 - Smaller
 - Smaller or Equal
@@ -44,7 +49,7 @@ Add comparison conditions using the **Add Condition** dropdown. The available co
 - Is Not Empty
 
 
-**String:**
+**String**:
 
 - Contains
 - Not Contains

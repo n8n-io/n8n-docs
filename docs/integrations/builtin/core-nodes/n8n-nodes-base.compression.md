@@ -6,14 +6,18 @@ contentType: integration
 
 # Compression
 
-The Compression node is useful to compress and decompress files. You can either use the `gzip` or `zip` file format.
+Use the Compression node to compress and decompress files. Supports Zip and Gzip formats.
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Compression integrations](https://n8n.io/integrations/compression/){:target=_blank .external-link} page.
+///
 
-## Node Reference
+## Node parameters
 
-- Operations
-	- Compress
-	- Decompress
+- **Operation** > **Compress**:
+	- **Input Binary Field(s)**: the name of the fields in the input data that contain the binary files you want to compress. To compress more than one file, use a comma-separated list.
+	- **Output Format**: choose from  **Zip** and **Gzip**.
+	- **File Name**: the name of the zip file you create.
 - Options
     - ***Binary Property*** field: This field allows you to specify the name of the binary property
     - ***Output Prefix*** field: This field allows you to specify a prefix for the name of the file that gets generated. This field gets displayed for the 'Decompress' operation and the 'gzip' output format for the 'Compress' operation

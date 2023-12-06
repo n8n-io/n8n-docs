@@ -168,7 +168,7 @@ The two most common operations for data transformation are:
 
 There are several ways to transform data for the purposes mentioned above:
 
-- With the [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemLists){:target="_blank" .external}, you can `Split Out Items` or `Aggregate Items`. This node is the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node.
+- Using n8n's [data transformation nodes](/data/#data-transformation-nodes). This the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node. Use [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) to separate a single data item containing a list into multiple items, and [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) to take separate items, or portions of them, and group them together into individual items.
 - With the Code node, you can write JavaScript functions to modify the data structure of incoming data using the *Run Once for All Items* mode:
 
     To create multiple items from a single item, you can use this JavaScript code:

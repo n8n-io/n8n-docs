@@ -6,6 +6,17 @@ contentType: integration
 
 # Item Lists
 
+/// warning | Removed in [TODO: version]
+n8n removed the Item Lists node in version [TODO]. Use the following nodes instead:
+
+* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): take separate items, or portions of them, and group them together into individual items.
+* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): remove items beyond a defined maximum number.
+* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/): identify items that are identical across all fields or a subset of fields.
+* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/): organize lists of in a desired ordering, or generate a random selection.
+[Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/): separate a single data item containing a list into multiple items.
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables. 
+///
+
 The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to change the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes or write custom JavaScript.
 
 ## Operations

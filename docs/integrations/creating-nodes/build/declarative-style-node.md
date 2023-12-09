@@ -75,7 +75,7 @@ Every node must have a base file. Refer to [Node base file](/integrations/creati
 
 In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
-#### Step 5.1: Imports
+#### Step 3.1: Imports
 
 Start by adding the import statements:
 

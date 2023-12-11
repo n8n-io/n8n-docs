@@ -246,7 +246,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
@@ -258,13 +258,13 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executionData.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.ical.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
         - integrations/builtin/core-nodes/n8n-nodes-base.itemlists.md
@@ -279,15 +279,13 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.readpdf.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
         - integrations/builtin/core-nodes/n8n-nodes-base.start.md
@@ -297,7 +295,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
         - integrations/builtin/core-nodes/n8n-nodes-base.webhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
       - Actions:
         - integrations/builtin/app-nodes/index.md

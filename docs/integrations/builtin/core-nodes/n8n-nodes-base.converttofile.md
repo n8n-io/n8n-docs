@@ -8,7 +8,7 @@ description: Documentation for the Convert to File node in n8n, a workflow autom
 Use the Convert to File node to take input data and output it as a file. This converts the input JSON data into a binary format.
 
 
-///  note  | Examples and templates
+/// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Convert to File integrations](https://n8n.io/integrations/convert-to-file/){:target=_blank .external-link} page.
 ///
 

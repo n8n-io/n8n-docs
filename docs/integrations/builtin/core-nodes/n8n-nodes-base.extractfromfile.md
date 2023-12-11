@@ -7,7 +7,7 @@ description: Documentation for the Extract From File node in n8n, a workflow aut
 
 Use the Extract From File node to get data from a binary format and convert it to JSON.
 
-///  note  | Examples and templates
+/// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Extract From File integrations](https://n8n.io/integrations/extract-from-file/){:target=_blank .external-link} page.
 ///
 

@@ -8,7 +8,7 @@ description: Documentation for the Read/Write Files from Disk node in n8n, a wor
 Use the Read/Write Files from Disk node to read and write files to/from the machine where n8n is running.
 
 
-///  note  | Examples and templates
+/// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Read/Write Files from Disk integrations](https://n8n.io/integrations/read-write-files-from-disk/){:target=_blank .external-link} page.
 ///
 

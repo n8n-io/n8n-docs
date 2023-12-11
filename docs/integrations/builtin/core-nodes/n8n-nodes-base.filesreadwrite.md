@@ -12,6 +12,10 @@ Use the Read/Write Files from Disk node to read and write files to/from the mach
 For usage examples and templates to help you get started, refer to n8n's [Read/Write Files from Disk integrations](https://n8n.io/integrations/read-write-files-from-disk/){:target=_blank .external-link} page.
 ///
 
+/// note | Self-hosted n8n only
+This node isn't available on n8n Cloud.
+///
+
 ## Node parameters
 
 * **Operation** > **Read File(s) From Disk**:

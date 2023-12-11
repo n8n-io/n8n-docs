@@ -224,7 +224,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readBinaryFile\", \"n8n-nodes-base.readBinaryFiles\", \"n8n-nodes-base.writeBinaryFile\"]"` |
+| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"` |
 | `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
 | `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |

@@ -272,10 +272,10 @@ So far, you have mainly worked with text data. But what if you want to process d
 
 In n8n, you can process binary data with the following nodes:
 
-- [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/) to move data between binary and JSON properties.
-- [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) to read multiple files from the host machine that runs n8n.
-- [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/) to write a file to the host machine that runs n8n.
-- [Spreadsheet File node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files to/from the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
+
 
 To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
 

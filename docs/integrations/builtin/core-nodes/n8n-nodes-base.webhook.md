@@ -101,7 +101,7 @@ Choose what data to include in the response body.
 Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
 
 
-* **Binary Data**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
+* **Binary Property**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
 * **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
 * **No Response Body**: enable this to prevent n8n sending a body with the response.
 * **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.

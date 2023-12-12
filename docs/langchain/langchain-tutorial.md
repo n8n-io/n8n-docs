@@ -63,7 +63,40 @@ Use the connectors on the bottom of the AI Agent node to connect the following:
 		1. Close the credential modal.
 * **Memory**: Window Buffer Memory
 
-## Step six: 
+You can now try out the workflow: close any open nodes, then select **Chat** to start talking with the AI.
+
+## Step six: Get data from another n8n workflow
+
+One unique feature of AI in n8n is the ability to pull in data from other n8n workflows. This means you can:
+
+* Load your own custom data
+* Create custom functionality in another workflow
+
+Because n8n can connect to any service with a public API, this is a very powerful tool.
+
+This example generates some fake data in a workflow, and loads it in to the AI workflow. The AI workflow passes a parameter to the workflow generating the data, to ensure it only returns data that is intended to be public.
+
+1. Create a new workflow, then copy in this workflow JSON:
+	```json
+	[TODO: once you've actually got an example working]
+	```
+	The workflow uses the Code node to generate a sample data set, containing a list of fruits, their colors, and whether this information should be public or private. [TODO: this is a really stupid example]
+1. Copy the workflow ID from workflow URL. The ID is the group of random numbers and letters at the end of the URL.
+1. In the AI workflow, select the **Tool** output on the **AI Agent**. n8n opens the nodes panel.
+1. Select **Custom n8n Workflow Tool**. n8n adds the node to the canvas and opens it.
+1. Configure the node parameters:
+	* **Name**: `Fruit`
+	* **Description**: `Call this tool to get a list of fruit.`
+	* **Workflow ID**: Paste in the workflow ID that you copied from the example workflow URL.
+	* **Response Property Name**: `data`. This is the name of the item created in the Aggregate node in the example workflow.
+1. Select **Add Value** in **Workflow Values** to pass information to the workflow you're calling. Configure the value as follows:
+	* **Name**: `visibility`
+	* **Type**: String
+	* **Value**: `public`
+
+You can now try out the workflow: close any open nodes, then select **Chat** to start talking with the AI. Ask `Please give me a list of fruits`. The AI Agent node executes the workflow you specified in **Workflow ID**, passing in the value of `visibility` from the **Workflow Values** field. The workflow generates some sample data, filters it to remove any items that aren't set to `public`, and returns the resulting data.
+
+
 
 ## Next steps
 

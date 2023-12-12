@@ -18,19 +18,11 @@ This guide shows you how to automate a task using a workflow in n8n, explaining 
 
 ## Step one: Sign up for n8n
 
-/// note | Skip this section if you've already installed n8n or signed up for a Cloud account
-///
-
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
 ## Step two: New workflow
 
-When you open n8n, you'll see the **Workflows** list. 
-
-To create a new workflow for this tutorial:
-
-* If you have no workflows, select **Start from scratch**.
-* If you already built a workflow, select **Add workflow**,
+--8<-- "_snippets/try-it-out/new-workflow.md"
 
 
 ## Step three: Add a trigger node
@@ -145,4 +137,4 @@ Postbin's bins exist for 30 minutes after creation. You may need to create a new
 ## Next steps
 
 * Take n8n's [courses](/courses/).
-* Explore more examples in workflow templates.
+* Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.

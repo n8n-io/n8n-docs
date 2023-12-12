@@ -220,9 +220,10 @@ nav:
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
     - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
-    - LangChain:
+    - AI with LangChain:
         - langchain/index.md
         - Access LangChain in n8n: langchain/access-langchain.md
+        - "Tutorial: Build an AI workflow in n8n": langchain/langchain-tutorial.md
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain concepts in n8n: langchain/langchain-n8n.md
     - Cloud admin dashboard: cloud-admin-dashboard.md

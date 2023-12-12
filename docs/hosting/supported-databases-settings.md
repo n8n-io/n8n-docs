@@ -64,38 +64,6 @@ You can choose between these configurations:
 - Declaring only the CA and unauthorized flag: Connect with `SSL=on` and verify the server's signature
 - Declaring `_{CERT,KEY}` and the above: Use the certificate and key for client TLS authentication
 
-## MySQL / MariaDB
-
-/// warning | Deprecated
-n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
-n8n recommends using PostgreSQL. 
-
-Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
-///
-
-
-To use MySQL or MariaDB, provide the following environment variables:
-
- - `DB_TYPE=mysqldb` or `DB_TYPE=mariadb`
- - `DB_MYSQLDB_DATABASE` (default: 'n8n')
- - `DB_MYSQLDB_HOST` (default: 'localhost')
- - `DB_MYSQLDB_PORT` (default: 3306)
- - `DB_MYSQLDB_USER` (default: 'root')
- - `DB_MYSQLDB_PASSWORD` (default: empty)
-
-
-```bash
-export DB_TYPE=mysqldb
-export DB_MYSQLDB_DATABASE=n8n
-export DB_MYSQLDB_HOST=mysqldb
-export DB_MYSQLDB_PORT=3306
-export DB_MYSQLDB_USER=n8n
-export DB_MYSQLDB_PASSWORD=n8n
-
-n8n start
-```
-
 ## SQLite
 
 This is the default database that gets used if nothing is defined.
@@ -106,7 +74,7 @@ The database file is located at:
 
 ## Other databases
 
-n8n officially supports SQLite and PostgresDB. 
+n8n officially supports SQLite and PostgresDB.
 
 n8n internally uses [TypeORM](https://typeorm.io){:target=_blank .external-link}, so adding support for the following databases
 should be possible:

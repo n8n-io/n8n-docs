@@ -79,6 +79,9 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
+| `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public api (false) or not (true). |
+| `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public api endpoints. |
+
 
 ## Binary data
 

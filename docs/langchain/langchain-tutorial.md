@@ -19,7 +19,7 @@ In this tutorial you will:
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
-## Step two: New workflow
+## Step two: Create a new workflow
 
 --8<-- "_snippets/try-it-out/new-workflow.md"
 
@@ -55,13 +55,17 @@ Use the connectors on the bottom of the AI Agent node to connect the following:
 
 * **Model**: OpenAI Chat Model. 
 	Set up the credentials for this node.
+
 	??? Details "Credential setup steps"
 		1. Create an account with [OpenAI](https://openai.com/){:target=_blank .external-link}. 1. [Create API key](https://platform.openai.com/api-keys){:target=_blank .external-link}. 
 		1. In the OpenAI Chat Model node, select **Credential to connect with** > **Create New Credential** to open the credential modal.
 		1. Paste the API key into **API Key**.
 		1. Select **Save**. n8n tests the connection and confirms if the key is working.
 		1. Close the credential modal.
+
 * **Memory**: Window Buffer Memory
+
+### Test the workflow
 
 You can now try out the workflow: close any open nodes, then select **Chat** to start talking with the AI.
 
@@ -94,11 +98,11 @@ This example generates some fake data in a workflow, and loads it in to the AI w
 	* **Type**: String
 	* **Value**: `public`
 
-You can now try out the workflow: close any open nodes, then select **Chat** to start talking with the AI. Ask `Please give me a list of fruits`. The AI Agent node executes the workflow you specified in **Workflow ID**, passing in the value of `visibility` from the **Workflow Values** field. The workflow generates some sample data, filters it to remove any items that aren't set to `public`, and returns the resulting data.
+### Test the workflow
 
-
+You can now try out the workflow again: close any open nodes, then select **Chat** to start talking with the AI. Ask `Please give me a list of fruits`. The AI Agent node executes the workflow you specified in **Workflow ID**, passing in the value of `visibility` from the **Workflow Values** field. The workflow generates some sample data, filters it to remove any items that aren't set to `public`, and returns the resulting data.
 
 ## Next steps
 
-* Read [What product people need to know about LangChain](https://www.commandbar.com/blog/langchain-guide){:target=_blank .external-link} to learn more about AI concepts and terminology.
 * Explore n8n using the [Quickstarts](/try-it-out/) and [Workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.
+* Read [What product people need to know about LangChain](https://www.commandbar.com/blog/langchain-guide){:target=_blank .external-link} to learn more about AI concepts and terminology.

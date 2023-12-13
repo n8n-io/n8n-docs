@@ -26,27 +26,8 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb` (deprecated), `mysqldb` (deprecated), `postgresdb` | `sqlite` | The database to use. |
+| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
-
-### MySQL
-
-/// warning | Deprecated
-n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
-n8n recommends using PostgreSQL. 
-
-Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
-///
-
-
-| Variable | Type  | Default  | Description |
-| :------- | :---- | :------- | :---------- |
-| `DB_MYSQLDB_DATABASE`<br>/`_FILE` | String | `n8n` | The name of the MySQL database. Default value is `n8n`. |
-| `DB_MYSQLDB_HOST`<br>/`_FILE` | String | `localhost` | The MySQL host. Default value is `localhost`. |
-| `DB_MYSQLDB_PORT`<br>/`_FILE` | Number | `3306` | The MySQL port. Default value is `3306`. |
-| `DB_MYSQLDB_USER`<br>/`_FILE` | String | `root` | The MySQL user. Default value is `root`. |
-| `DB_MYSQLDB_PASSWORD`<br>/`_FILE` | String | - | The MySQL password. |
 
 ### PostgreSQL
 
@@ -98,6 +79,9 @@ Refer to [how to export and import workflows and credentials](/hosting/cli-comma
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
+| `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (false) or not (true). |
+| `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
+
 
 ## Binary data
 

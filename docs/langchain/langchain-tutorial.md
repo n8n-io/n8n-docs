@@ -39,7 +39,7 @@ An agent takes an input, such as a user query, then uses a collection of tools t
 ??? Details "Cluster nodes: root and sub-nodes"
 	--8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector. n8n opens the nodes panel.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector. n8n opens the nodes panel.
 1. Search for **Agent**. n8n shows a list of nodes that match the search.
 1. Select **AI Agent**. n8n adds the node to the canvas and opens it.
 1. Close the node details view to return to the canvas.

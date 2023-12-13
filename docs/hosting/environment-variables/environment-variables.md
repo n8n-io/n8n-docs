@@ -80,7 +80,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
 | `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (false) or not (true). |
-| `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public api endpoints. |
+| `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
 
 
 ## Binary data

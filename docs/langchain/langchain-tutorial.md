@@ -57,7 +57,8 @@ Use the connectors on the bottom of the AI Agent node to connect the following:
 	Set up the credentials for this node.
 
 	??? Details "Credential setup steps"
-		1. Create an account with [OpenAI](https://openai.com/){:target=_blank .external-link}. 1. [Create API key](https://platform.openai.com/api-keys){:target=_blank .external-link}. 
+		1. Create an account with [OpenAI](https://openai.com/){:target=_blank .external-link}. 
+		1. [Create API key](https://platform.openai.com/api-keys){:target=_blank .external-link}. 
 		1. In the OpenAI Chat Model node, select **Credential to connect with** > **Create New Credential** to open the credential modal.
 		1. Paste the API key into **API Key**.
 		1. Select **Save**. n8n tests the connection and confirms if the key is working.

@@ -7,7 +7,7 @@ contentType: integration
 # Item Lists
 
 /// warning | Removed in 1.21.0
-n8n removed the Item Lists node in version [TODO]. Use the following nodes instead:
+n8n removed the Item Lists node in version 1.21.0. Use the following nodes instead:
 
 * [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): take separate items, or portions of them, and group them together into individual items.
 * [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): remove items beyond a defined maximum number.

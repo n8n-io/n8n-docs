@@ -72,7 +72,7 @@ You can now try out the workflow: close any open nodes, then select **Chat** to 
 
 ## Step six: Get data from another n8n workflow
 
-One unique feature of AI in n8n is the ability to pull in data from other n8n workflows. This means you can:
+One unique feature of AI in n8n is the ability to pull in data from other n8n workflows using the [Custom n8n Workflow Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/). This means you can:
 
 * Load your own custom data
 * Create custom functionality in another workflow
@@ -198,6 +198,8 @@ This example generates some fake data in a workflow, and loads it in to the AI w
 	* **Name**: `visibility`
 	* **Type**: String
 	* **Value**: `public`
+
+	n8n makes this value available to the workflow in the output data of the trigger node in the workflow you're calling. In this example, to access the value in an expression, use `{{ $('Execute Workflow Trigger').item.json.visibility }}`. You can see this in practice in the Filter node in the sample workflow.
 
 ### Test the workflow
 

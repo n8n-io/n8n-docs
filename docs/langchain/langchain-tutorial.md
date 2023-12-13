@@ -19,6 +19,10 @@ In this tutorial you will:
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
+/// note | n8n version 1.21.0 or above
+This tutorial requires n8n version 1.21.0 or above.
+///
+
 ## Step two: Create a new workflow
 
 --8<-- "_snippets/try-it-out/new-workflow.md"

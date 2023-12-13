@@ -41,7 +41,7 @@ And nodes for performing common tasks:
 
 You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/).
 
-To split or concatenate binary data items, use the [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) node.
+To split or concatenate binary data items, use the [data transformation nodes](/data/#data-transformation-nodes).
 
 ### Code
 

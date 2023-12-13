@@ -70,9 +70,6 @@ Use the connectors on the bottom of the AI Agent node to connect the following:
 
 * **Memory**: Window Buffer Memory
 
-### Test the workflow
-
-You can now try out the workflow: close any open nodes, then select **Chat** to start talking with the AI.
 
 ## Step six: Get data from another n8n workflow
 
@@ -205,9 +202,9 @@ This example generates some fake data in a workflow, and loads it in to the AI w
 
 	n8n makes this value available to the workflow in the output data of the trigger node in the workflow you're calling. In this example, to access the value in an expression, use `{{ $('Execute Workflow Trigger').item.json.visibility }}`. You can see this in practice in the Filter node in the sample workflow.
 
-### Test the workflow
+## Step seven: Test the workflow
 
-You can now try out the workflow again: close any open nodes, then select **Chat** to start talking with the AI. Ask `Please give me a list of fruits`. The AI Agent node executes the workflow you specified in **Workflow ID**, passing in the value of `visibility` from the **Workflow Values** field. The workflow generates some sample data, filters it to remove any items that aren't set to `public`, and returns the resulting data.
+You can now try out the workflow: close any open nodes, then select **Chat** to start talking with the AI. Ask `Please give me a list of fruits`. The AI Agent node executes the workflow you specified in **Workflow ID**, passing in the value of `visibility` from the **Workflow Values** field. The workflow generates some sample data, filters it to remove any items that aren't set to `public`, and returns the resulting data.
 
 ## Next steps
 

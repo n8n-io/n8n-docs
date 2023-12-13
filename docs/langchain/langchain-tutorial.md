@@ -82,9 +82,109 @@ This example generates some fake data in a workflow, and loads it in to the AI w
 
 1. Create a new workflow, then copy in this workflow JSON:
 	```json
-	[TODO: once you've actually got an example working]
+	{
+		"name": "Workflow tool example",
+		"nodes": [
+			{
+			"parameters": {
+				"jsCode": "return [{\"fruit\": \"apple\", \"color\": \"green\", \"dataPrivacyLevel\": \"public\"},{\"fruit\": \"banana\", \"color\": \"yellow\", \"dataPrivacyLevel\": \"public\"},{\"fruit\": \"tomato\", \"color\": \"red\", \"dataPrivacyLevel\": \"private\"}]"
+			},
+			"id": "4a30b74c-ed27-4668-8e68-c2e3a630ecd9",
+			"name": "Code",
+			"type": "n8n-nodes-base.code",
+			"typeVersion": 2,
+			"position": [
+				1180,
+				500
+			]
+			},
+			{
+			"parameters": {
+				"conditions": {
+				"string": [
+					{
+					"value1": "={{ $json.dataPrivacyLevel }}",
+					"value2": "={{ $('Execute Workflow Trigger').item.json.visibility  }}"
+					}
+				]
+				}
+			},
+			"id": "eb479841-8099-4537-b89b-4b9867446688",
+			"name": "Filter",
+			"type": "n8n-nodes-base.filter",
+			"typeVersion": 1,
+			"position": [
+				1380,
+				500
+			]
+			},
+			{
+			"parameters": {
+				"aggregate": "aggregateAllItemData",
+				"include": "specifiedFields",
+				"fieldsToInclude": "fruit, color",
+				"options": {}
+			},
+			"id": "6d6c847d-7417-4780-8a8b-b99996cd6166",
+			"name": "Aggregate",
+			"type": "n8n-nodes-base.aggregate",
+			"typeVersion": 1,
+			"position": [
+				1600,
+				500
+			]
+			},
+			{
+			"parameters": {},
+			"id": "1ec54b09-7533-4280-8bf2-54407d6bf134",
+			"name": "Execute Workflow Trigger",
+			"type": "n8n-nodes-base.executeWorkflowTrigger",
+			"typeVersion": 1,
+			"position": [
+				1000,
+				500
+			]
+			}
+		],
+		"pinData": {},
+		"connections": {
+			"Code": {
+			"main": [
+				[
+				{
+					"node": "Filter",
+					"type": "main",
+					"index": 0
+				}
+				]
+			]
+			},
+			"Filter": {
+			"main": [
+				[
+				{
+					"node": "Aggregate",
+					"type": "main",
+					"index": 0
+				}
+				]
+			]
+			},
+			"Execute Workflow Trigger": {
+			"main": [
+				[
+				{
+					"node": "Code",
+					"type": "main",
+					"index": 0
+				}
+				]
+			]
+			}
+		}
+	}
 	```
-	The workflow uses the Code node to generate a sample data set, containing a list of fruits, their colors, and whether this information should be public or private. [TODO: this is a really stupid example]
+	The workflow uses the Code node to generate a sample data set, containing a list of fruits, their colors, and whether this information should be public or private.
 1. Copy the workflow ID from workflow URL. The ID is the group of random numbers and letters at the end of the URL.
 1. In the AI workflow, select the **Tool** output on the **AI Agent**. n8n opens the nodes panel.
 1. Select **Custom n8n Workflow Tool**. n8n adds the node to the canvas and opens it.

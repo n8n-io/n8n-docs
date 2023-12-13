@@ -250,6 +250,11 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | :------- | :---- | :------- | :---------- |
 | `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](/source-control-environments/setup/). |
 
+## External secrets
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` | Number | `300` (5 minutes) | How often (in seconds) to check for secret updates. |
 
 ## Timezone and localization
 

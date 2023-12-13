@@ -266,7 +266,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | :------- | :---- | :------- | :---------- |
 | `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](/source-control-environments/setup/). |
 
-## External Secrets
+## External secrets
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

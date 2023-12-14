@@ -33,7 +33,7 @@ Options in **Summarization Method**:
 * **Refine**: learn more about [Refine](https://js.langchain.com/docs/modules/chains/document/refine){:target=_blank .external-link} in the LangChain documentation.
 * **Stuff**: learn more about [Stuff](https://js.langchain.com/docs/modules/chains/document/stuff){:target=_blank .external-link} in the LangChain documentation.
 
-You can define the prompts for individual summaries and the final summary combination. There are examples in the node. You must include the `"{text}"` placeholder.
+You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
 ## Related resources
 

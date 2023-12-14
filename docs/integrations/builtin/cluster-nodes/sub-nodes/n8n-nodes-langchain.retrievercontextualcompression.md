@@ -23,3 +23,4 @@ View [example workflows and related content](https://n8n.io/integrations/context
 Refer to [LangChain's contextual compression retriever documentation](https://js.langchain.com/docs/modules/data_connection/retrievers/integrations/contextual-compression-retriever){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

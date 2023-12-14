@@ -12,14 +12,24 @@ On this page, you'll find the node parameters for the Anthropic Chat Model node,
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Anthropic Chat Model integrations](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} page.
 ///	
+
 ## Node parameters
 
-* Model
+* **Model**: the model that generates the completion. Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}. 
+	Available models:
 	* Claude
 	* Claude Instant
+
+## Node options
+
+* **Maximum Number of Tokens**: the completion length, in characters.
+* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: the number of token choices the model uses to generate the next token.
+* **Top P**: use a lower value to ignore less probable options. 
 
 ## Node reference
 
@@ -32,3 +42,5 @@ View [example workflows and related content](https://n8n.io/integrations/anthrop
 Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/anthropic){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+--8<-- "_glossary/ai-glossary.md"

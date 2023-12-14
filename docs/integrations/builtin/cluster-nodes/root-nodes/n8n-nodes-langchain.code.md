@@ -66,3 +66,4 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 View [example workflows and related content](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

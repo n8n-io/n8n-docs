@@ -38,3 +38,4 @@ View [example workflows and related content](https://n8n.io/integrations/github-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

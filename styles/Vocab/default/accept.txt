@@ -40,6 +40,7 @@ Nodelinter
 npm
 npx
 Okta
+Ollama
 onboarding
 Pipedrive
 Pinecone

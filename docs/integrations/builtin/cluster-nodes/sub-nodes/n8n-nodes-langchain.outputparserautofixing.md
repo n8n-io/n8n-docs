@@ -20,3 +20,4 @@ View [example workflows and related content](https://n8n.io/integrations/auto-fi
 Refer to [LangChain's Auto-fixing parser documentation](https://js.langchain.com/docs/modules/model_io/output_parsers/output_fixing_parser){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

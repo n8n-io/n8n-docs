@@ -26,3 +26,4 @@ View [example workflows and related content](https://n8n.io/integrations/wolfram
 Refer to [Wolfram|Alpha's documentation](https://products.wolframalpha.com/api){:target=_blank .external-link} for more information about the service. You can also view [LangChain's documentation on their WolframAlpha Tool](https://js.langchain.com/docs/modules/agents/tools/integrations/wolframalpha){:target=_blank .external-link}.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

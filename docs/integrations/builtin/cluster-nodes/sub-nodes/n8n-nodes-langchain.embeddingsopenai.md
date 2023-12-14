@@ -22,10 +22,10 @@ For usage examples and templates to help you get started, refer to n8n's [OpenAI
 
 ## Node options
 
-* Base URL: the URL to send the request to. Use this if you are using a self-hosted OpenAI-like model. 
-* Batch Size: maximum number of documents to send in each request.
-* Strip New Lines: whether to strip new lines from input text. n8n enables this by default.
-* Timeout: maximum amount of time a request can take in seconds. Set to -1 for no timeout.
+* **Base URL**: the URL to send the request to. Use this if you are using a self-hosted OpenAI-like model. 
+* **Batch Size**: maximum number of documents to send in each request.
+* **Strip New Lines**: whether to remove new line characters from input text. n8n enables this by default.
+* **Timeout**: maximum amount of time a request can take in seconds. Set to -1 for no timeout.
 	
 ## Related resources
 
@@ -34,3 +34,4 @@ View [example workflows and related content](https://n8n.io/integrations/embeddi
 Refer to [LangChains's OpenAI embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/openai){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

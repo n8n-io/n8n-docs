@@ -30,3 +30,4 @@ View [example workflows and related content](https://n8n.io/integrations/motorhe
 Refer to [LangChain's Motorhead documentation](https://js.langchain.com/docs/modules/memory/integrations/motorhead_memory){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

@@ -18,6 +18,7 @@ If you want to test the latest AI functionality, the beta version is available. 
 This feature is in beta. Send feedback to ai@n8n.io.
 ///
 
+* [Tutorial: Build an AI workflow in n8n](/langchain/langchain-tutorial/): learn how to build AI workflows using n8n's LangChain implementation.
 * [Access LangChain in n8n](/langchain/access-langchain/): how to get the n8n version that includes LangChain.
 * [Learning resources](/langchain/learning-resources/): n8n's documentation for LangChain assumes you're familiar with AI and LangChain concepts. This page provides links to learning resources.
 * [LangChain concepts and features in n8n](/langchain/langchain-n8n/): how n8n represents LangChain concepts and features.

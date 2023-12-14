@@ -1,16 +1,16 @@
 ---
-title: Workflow Tool
-description: Documentation for the Workflow Tool node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Custom n8n Workflow Tool
+description: Documentation for the Custom n8n Workflow Tool node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Workflow Tool
+# Custom n8n Workflow Tool
 
 The Workflow Tool node is a tool that allows an agent to run another n8n workflow and fetch its output data. 
 
 On this page, you'll find the node parameters for the Workflow Tool node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/workflow-tool/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Custom n8n Workflow Tool integrations](https://n8n.io/integrations/workflow-tool/){:target=_blank .external-link} page.
 ///	
 ## Node parameters
 
@@ -38,6 +38,13 @@ This must match the name of the output property in the workflow you're calling.
 ### Workflow Values
 
 Set values to pass to the workflow you're calling.
+
+These values appear in the output data of the trigger node in the workflow you call. You can access these values in expressions in the workflow. For example, if you have:
+
+* **Workflow Values** with a **Name** of `myCustomValue`
+* A workflow with an Execute Workflow Trigger node as its trigger
+
+The expression to access the value of `myCustomValue` is `{{ $('Execute Workflow Trigger').item.json.myCustomValue }}`.
 
 ## Node reference
 

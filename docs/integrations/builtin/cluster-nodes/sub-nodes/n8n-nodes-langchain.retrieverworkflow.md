@@ -12,14 +12,22 @@ On this page, you'll find the node parameters for the Workflow Retriever node, a
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/workflow-retriever/){:target=_blank .external-link} page.
 ///	
-## Node parameters
-
-* Source
-* Workflow ID
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+### Source
+
+Tell n8n which workflow to call. You can choose either:
+
+* **Database**, then enter a workflow ID.
+* **Parameter**, then copy in a complete [workflow JSON](/workflows/export-import/).
+
+### Workflow values
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/workflow-values.md"
+
 
 ## Related resources
 

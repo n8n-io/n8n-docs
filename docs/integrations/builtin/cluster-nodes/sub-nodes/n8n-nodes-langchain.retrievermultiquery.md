@@ -10,11 +10,14 @@ The MultiQuery Retriever node automates the process of prompt tuning by using an
 On this page, you'll find the node parameters for the MultiQuery Retriever node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/multiquery-retriever/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [MultiQuery Retriever integrations](https://n8n.io/integrations/multiquery-retriever/){:target=_blank .external-link} page.
 ///
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node options
+
+**Query Count**: how many different versions of the query to generate.
 
 ## Related resources
 

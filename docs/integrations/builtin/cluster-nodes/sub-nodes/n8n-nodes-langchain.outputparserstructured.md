@@ -10,15 +10,14 @@ Use the Structured Output Parser node to return fields based on a JSON Schema.
 On this page, you'll find the node parameters for the Structured Output Parser node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/structured-output-parser/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Structured Output Parser integrations](https://n8n.io/integrations/structured-output-parser/){:target=_blank .external-link} page.
 ///	
-## Node parameters
-
-* JSON Schema
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+**JSON Schema**: a JSON schema to structure and validate the output. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} for help creating a valid JSON schema.
 
 ## Related resources
 

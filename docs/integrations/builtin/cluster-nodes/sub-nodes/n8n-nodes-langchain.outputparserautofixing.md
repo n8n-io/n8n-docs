@@ -7,11 +7,12 @@ description: Documentation for the Auto-fixing Output Parser node in n8n, a work
 
 The Auto-fixing Output Parser node wraps another output parser, if the first one fails it calls out to another LLM to fix any errors
 
-On this page, you'll find the node parameters for the Auto-fixing Output Parser node, and links to more resources.
-
-## Node reference
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Auto-fixing Output Parser integrations](https://n8n.io/integrations/auto-fixing-output-parser/){:target=_blank .external-link} page.
+///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 
 ## Related resources
 

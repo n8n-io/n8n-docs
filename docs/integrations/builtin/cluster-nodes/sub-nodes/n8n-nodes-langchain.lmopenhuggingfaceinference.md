@@ -14,16 +14,24 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/hugging-face-inference-model/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Hugging Face Inference Model integrations](https://n8n.io/integrations/hugging-face-inference-model/){:target=_blank .external-link} page.
 ///	
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* Model
+**Model**: the model to use to generate the completion.
 
-## Node reference
+## Node options
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+* **Custom Inference Endpoint**: endpoint URL.
+* **Frequency Penalty**: increase this to reduce the chance of the model repeating itself.
+* **Maximum Number of Tokens**: the completion length, in characters.
+* **Presence Penalty**: increase this to increase the chance of the model talking about new topics.
+* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: the number of token choices the model uses to generate the next token.
+* **Top P**: use a lower value to ignore less probable options. 
 
 ## Related resources
 

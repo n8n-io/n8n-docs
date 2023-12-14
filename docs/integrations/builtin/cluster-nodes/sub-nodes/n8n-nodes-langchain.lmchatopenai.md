@@ -17,6 +17,8 @@ You can find authentication information for this node [here](/integrations/built
 For usage examples and templates to help you get started, refer to n8n's [OpenAI Chat Model integrations](https://n8n.io/integrations/openai-chat-model/){:target=_blank .external-link} page.
 ///	
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
 **Model**: the model to use to generate the completion. n8n dynamically loads models from OpenAI and you will only see the models available to your account.
@@ -33,9 +35,6 @@ For usage examples and templates to help you get started, refer to n8n's [OpenAI
 * **Max Retries**: maximum number of times to retry a request.
 * **Top P**: use a lower value to ignore less probable options. 
 
-## Node reference
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

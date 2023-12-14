@@ -12,9 +12,13 @@ On this page, you'll find the node parameters for the Embeddings Cohere node, an
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Cohere Embeddings integrations](https://n8n.io/integrations/embeddings-cohere/){:target=_blank .external-link} page.
 ///	
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
 **Model**: the model to use to generate the embedding. Learn more about available models in [Cohere's models documentation](https://docs.cohere.com/docs/models){:target=_blank .external-link} 
@@ -23,9 +27,6 @@ For usage examples and templates to help you get started, refer to n8n's [Cohere
 	* Embed-English-Light-v2.0(1024 Dimensions)
 	* Embed-Multilingual-v2.0(768 Dimensions)
 
-## Node reference
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

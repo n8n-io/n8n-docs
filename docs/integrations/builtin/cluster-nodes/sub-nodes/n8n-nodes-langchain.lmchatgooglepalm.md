@@ -15,7 +15,9 @@ You can find authentication information for this node [here](/integrations/built
 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Google PaLM Chat Model integrations](https://n8n.io/integrations/google-palm-chat-model/){:target=_blank .external-link} page.
-///	
+///
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
@@ -27,9 +29,6 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options. 
 
-## Node reference
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

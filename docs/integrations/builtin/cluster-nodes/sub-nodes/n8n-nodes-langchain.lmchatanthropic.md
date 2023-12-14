@@ -17,6 +17,8 @@ You can find authentication information for this node [here](/integrations/built
 For usage examples and templates to help you get started, refer to n8n's [Anthropic Chat Model integrations](https://n8n.io/integrations/anthropic-chat-model/){:target=_blank .external-link} page.
 ///	
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
 * **Model**: the model that generates the completion. Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}. 
@@ -31,9 +33,6 @@ For usage examples and templates to help you get started, refer to n8n's [Anthro
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options. 
 
-## Node reference
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 

@@ -8,10 +8,8 @@ description: Documentation for the Calculator node in n8n, a workflow automation
 The Calculator node is a tool that allows an agent to run mathematical calculations. 
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/calculator/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Calculator Tool integrations](https://n8n.io/integrations/calculator/){:target=_blank .external-link} page.
 ///
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 

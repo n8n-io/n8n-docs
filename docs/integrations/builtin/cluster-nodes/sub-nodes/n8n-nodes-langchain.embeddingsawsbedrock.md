@@ -14,14 +14,14 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/embeddings-awsbedrock/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Amazon Bedrock integrations](https://n8n.io/integrations/embeddings-awsbedrock/){:target=_blank .external-link} page.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* Model
+**Model**: the model to use to generate the embedding. Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html){:target=_blank .external-link}. 
 
 	
 ## Related resources

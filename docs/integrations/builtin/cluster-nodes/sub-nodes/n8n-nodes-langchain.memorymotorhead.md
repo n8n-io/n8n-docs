@@ -12,12 +12,13 @@ On this page, you'll find a list of operations the Motorhead node supports, and 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/motorhead/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Motorhead	integrations](https://n8n.io/integrations/motorhead/){:target=_blank .external-link} page.
 ///	
 ## Node parameters
 
-* Session ID
+**Session ID**: n8n creates a new session, or connect to an existing one, with the specified ID. [TODO: confirm - not confident of this]
 
 ## Node reference
 

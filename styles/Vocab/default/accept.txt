@@ -69,4 +69,5 @@ URIs
 URL
 Venafi
 Vuex
+Xata
 Zep

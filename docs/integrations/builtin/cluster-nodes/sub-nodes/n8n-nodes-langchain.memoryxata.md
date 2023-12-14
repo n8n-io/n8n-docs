@@ -12,16 +12,17 @@ On this page, you'll find a list of operations the Xata node supports, and links
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/xata/).
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/xata/){:target=_blank .external-link} page.
 ///	
-## Node parameters
-
-* Session ID
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+**Session ID**: n8n creates a new session, or connect to an existing one, with the specified ID. [TODO: confirm - not confident of this]
+
 
 ## Related resources
 

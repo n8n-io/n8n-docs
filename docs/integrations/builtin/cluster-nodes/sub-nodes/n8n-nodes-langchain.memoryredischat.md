@@ -12,17 +12,17 @@ On this page, you'll find a list of operations the Redis Chat Memory node suppor
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/redis/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/redis-chat-memory/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Redis Chat Memory integrations](https://n8n.io/integrations/redis-chat-memory/){:target=_blank .external-link} page.
 ///	
-## Node parameters
-
-* Session Key
-* Session Time To Live
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+* **Session Key**: the key to use to store the memory in the workflow data.
+* **Session Time To Live**: make the session expire after a given number of seconds.
 
 ## Related resources
 

@@ -28,7 +28,7 @@ For usage examples and templates to help you get started, refer to n8n's [Anthro
 
 ## Node options
 
-* **Maximum Number of Tokens**: the completion length, in characters.
+* **Maximum Number of Tokens**: the completion length.
 * **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options. 

@@ -25,7 +25,7 @@ For usage examples and templates to help you get started, refer to n8n's [Amazon
 
 ## Node options
 
-* **Maximum Number of Tokens**: the completion length, in characters.
+* **Maximum Number of Tokens**: the completion length.
 * **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 
 

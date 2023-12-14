@@ -10,17 +10,16 @@ Use the Character Text Splitter node to split document data based on characters.
 On this page, you'll find the node parameters for the Character Text Splitter node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/character-text-splitter/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Character Text Splitter integrations](https://n8n.io/integrations/character-text-splitter/){:target=_blank .external-link} page.
 ///	
-## Node parameters
-
-* Separator
-* Chunk Size
-* Chunk Overlap
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+* **Separator**: the separator used to split the document into separate items.
+* **Chunk Size**: number of characters in each chunk.
+* **Chunk Overlap**: how much overlap to have between chunks.
 
 ## Related resources
 

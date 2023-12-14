@@ -10,16 +10,15 @@ The Recursive Character Text Splitter node splits document data recursively to k
 On this page, you'll find the node parameters for the Recursive Character Text Splitter node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/recursive-character-text-splitter/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Recursive Character Text Splitter integrations](https://n8n.io/integrations/recursive-character-text-splitter/){:target=_blank .external-link} page.
 ///	
-## Node parameters
-
-* Chunk Size
-* Chunk Overlap
-
-## Node reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+* **Chunk Size**: number of characters in each chunk.
+* **Chunk Overlap**: how much overlap to have between chunks.
 
 ## Related resources
 

@@ -13,6 +13,10 @@ On this page, you'll find the node parameters for the Agent node, and links to m
 For usage examples and templates to help you get started, refer to n8n's [Agent integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
 ///
 
+/// note | Connect a tool
+You must connect at least one tool sub-node.
+///
+
 n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 
 
 ## Conversational Agent

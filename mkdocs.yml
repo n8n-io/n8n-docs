@@ -243,6 +243,7 @@ nav:
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
@@ -267,8 +268,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.ical.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.itemlists.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger.md
@@ -281,17 +282,21 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
         - integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles.md
         - integrations/builtin/core-nodes/n8n-nodes-base.readpdf.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
         - integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
         - integrations/builtin/core-nodes/n8n-nodes-base.start.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
         - integrations/builtin/core-nodes/n8n-nodes-base.totp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
@@ -650,6 +655,7 @@ nav:
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.openaiassistant.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
@@ -663,7 +669,6 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingstensorflow.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
@@ -1073,6 +1078,7 @@ nav:
       - Date and time: code/builtin/date-time.md
       - JMESPath: code/builtin/jmespath.md
       - HTTP node: code/builtin/http-node-variables.md
+      - LangChain Code node: code/builtin/langchain-methods.md
       - n8n metadata: code/builtin/n8n-metadata.md
       - Convenience methods: code/builtin/convenience.md
       - Data transformation functions: 

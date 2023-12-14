@@ -28,7 +28,7 @@ The first part of the workflow consists of five nodes:
 
 2. Use the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/){:target="_blank" .external} to list data from the `customers` table (where you updated the fields `region` and `subregion`).
 3. Use the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external} to merge data from the Airtable and HTTP Request node, based on the common key `customer ID`.
-4. Use the [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/){:target="_blank" .external} to sort data by orderPrice in descending order.
+4. Use the [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/) node to sort data by orderPrice in descending order.
 
 /// question | Quiz questions
 * What is the name of the employee assigned to customer 1?

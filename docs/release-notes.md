@@ -28,14 +28,99 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.19.4
+## n8n@1.21.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.0...n8n@1.19.4){:target=_blank .external-link} for this version.<br />
-**Release date:** 2023-12-01
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.20.0...n8n@1.21.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-13
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains new features and nodes, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New user role: Admin
+
+This release introduces a third account type: admin. This role is available on pro and enterprise plans. Admins have similar permissions to instance owners.
+
+[Read more about user roles](/user-management/account-types/)
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New data transformation nodes
+
+This release replaces the Item Lists node with a collection of nodes for data transformation tasks:
+
+* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): take separate items, or portions of them, and group them together into individual items.
+* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): remove items beyond a defined maximum number.
+* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/): identify items that are identical across all fields or a subset of fields.
+* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/): organize lists of in a desired ordering, or generate a random selection.
+* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/): separate a single data item containing a list into multiple items.
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables. 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Increased sharing permissions for owners and admins
+
+Instance owners and users with the admin role can now see and share all workflows and credentials. They can't view sensitive credential information.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.20.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.5...n8n@1.20.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-06
+
+
+
+This release contains bug fixes, node enhancements, and ongoing new feature work.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Andrey Starostin](https://github.com/mayorandrew){:target=_blank .external-link}
+
+## n8n@1.19.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.4...n8n@1.19.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-05
+
+This is a bug fix release.
+
+/// warning | Breaking change
+This release removes the TensorFlow Embeddings node.
+///
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.18.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.1...n8n@1.18.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-05
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.19.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.0...n8n@1.19.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-01
 
 /// warning | Missing ARM v7 support
 This version doesn't support ARM v7. We're working on fixing this in future releases.
@@ -84,9 +169,11 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.17.1...n8n@1.18.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-22
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
+
+
+
+
 
 
 

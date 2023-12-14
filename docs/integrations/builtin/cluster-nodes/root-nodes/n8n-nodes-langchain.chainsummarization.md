@@ -15,20 +15,25 @@ For usage examples and templates to help you get started, refer to n8n's [Summar
 
 ## Node parameters
 
-### Type
+Choose the type of data you need to summarize in **Data to Summarize**. The data type you choose determines the other node parameters.
 
-The type of summarization to run.
+* **Use Node Input (JSON)** and **Use Node Input (Binary)**: summarize the data coming into the node from the workflow. 
+	* You can configure the **Chunking Strategy**: choose what strategy to use to define the data chunk sizes.
+		* If you choose **Simple (Define Below)** you can then set **Characters Per Chunk** and **Chunk Overlap (Characters)**.
+		* Choose **Advanced** if you want to connect a splitter sub-node that provides more configuration options.
+* **Use Document Loader**: summarize data provided by a document loader sub-node.
 
-* Map Reduce ([Map Reduce](https://js.langchain.com/docs/modules/chains/document/map_reduce){:target=_blank .external-link} in the LangChain documentation)
-* Refine ([Refine](https://js.langchain.com/docs/modules/chains/document/refine){:target=_blank .external-link} in the LangChain documentation)
-* Stuff ([Stuff](https://js.langchain.com/docs/modules/chains/document/stuff){:target=_blank .external-link} in the LangChain documentation)
+## Node Options
 
-### Options
+You can configure the summarization method and prompts. Select **Add Option** > **Summarization Method and Prompts**.
 
-* **Combine Map Prompt**: write a prompt to guide the agent when combining summaries.
-* **Prompt**: write a prompt to guide the agent when generating individual summaries.
+Options in **Summarization Method**:
 
-You can view prompt examples in the node.
+* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/docs/modules/chains/document/map_reduce){:target=_blank .external-link} in the LangChain documentation.
+* **Refine**: learn more about [Refine](https://js.langchain.com/docs/modules/chains/document/refine){:target=_blank .external-link} in the LangChain documentation.
+* **Stuff**: learn more about [Stuff](https://js.langchain.com/docs/modules/chains/document/stuff){:target=_blank .external-link} in the LangChain documentation.
+
+You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
 ## Related resources
 

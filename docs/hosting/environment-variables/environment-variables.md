@@ -81,7 +81,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
 | `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (false) or not (true). |
 | `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
-| `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | Number | `30` | How long should n8n process wait (in seconds) for components to shut down before exiting the process. |
+| `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | Number | `30` | How long should the n8n process wait (in seconds) for components to shut down before exiting the process. |
 
 ## Binary data
 

@@ -12,20 +12,27 @@ On this page, you'll find the node parameters for the Ollama Chat Model node, an
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/openai-model/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Ollama Chat Model integrations](https://n8n.io/integrations/ollama-chat-model/){:target=_blank .external-link} page.
 ///	
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
-* Model
+* **Model**: the model that generates the completion. Choose from:
 	* Llama2
 	* Llama2 13B
 	* Llama2 70B
 	* Llama2 Uncensored
 
-## Node reference
+## Node options
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: the number of token choices the model uses to generate the next token.
+* **Top P**: use a lower value to ignore less probable options. 
+
 
 ## Related resources
 
@@ -34,3 +41,4 @@ View [example workflows and related content](https://n8n.io/integrations/openai-
 Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/ollama){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

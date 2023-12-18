@@ -13,6 +13,8 @@ On this page, you'll find a list of parameters the Default Data Loader node supp
 For usage examples and templates to help you get started, refer to n8n's [Default Data Loader](https://n8n.io/integrations/default-data-loader/){:target=_blank .external-link} page.
 ///
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
 * **Type of Data**: select **Binary** or **JSON**.
@@ -25,9 +27,6 @@ For usage examples and templates to help you get started, refer to n8n's [Defaul
 
 * **Metadata**: set the metadata that should accompany the document in the vector store. This is what you match to using the **Metadata Filter** option when retrieving data using the vector store nodes.
 
-## Node reference
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 
@@ -36,3 +35,4 @@ View [example workflows and related content](https://n8n.io/integrations/binary-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

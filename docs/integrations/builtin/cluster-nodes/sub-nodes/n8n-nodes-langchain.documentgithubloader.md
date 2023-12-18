@@ -17,6 +17,8 @@ You can find authentication information for this node [here](/integrations/built
 For usage examples and templates to help you get started, refer to n8n's [GitHub Document Loader](https://n8n.io/integrations/github-document-loader/){:target=_blank .external-link} page.
 ///	
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
 * Repository Link: URL of your GitHub repository.
@@ -27,9 +29,6 @@ For usage examples and templates to help you get started, refer to n8n's [GitHub
 * Recursive: whether to include sub-folders and files.
 * Ignore Paths: set directories to ignore.
 
-## Node reference
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Related resources
 
@@ -38,3 +37,4 @@ View [example workflows and related content](https://n8n.io/integrations/github-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

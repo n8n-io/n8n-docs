@@ -12,20 +12,23 @@ On this page, you'll find the node parameters for the Google PaLM Chat Model nod
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/googlepalm/).
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain integrations](https://n8n.io/integrations/google-palm-chat-model/){:target=_blank .external-link} page.
-///	
-## Node parameters
 
-/// note | Models
-Models are dynamically loaded from the Google PaLM API and you will only see the models available to your account.
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Google PaLM Chat Model integrations](https://n8n.io/integrations/google-palm-chat-model/){:target=_blank .external-link} page.
 ///
 
-* Model
-
-## Node reference
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+## Node parameters
+
+**Model**: the model to use to generate the completion. n8n dynamically loads models from the Google PaLM API and you will only see the models available to your account.
+
+## Node options
+
+* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: the number of token choices the model uses to generate the next token.
+* **Top P**: use a lower value to ignore less probable options. 
+
 
 ## Related resources
 
@@ -34,3 +37,4 @@ View [example workflows and related content](https://n8n.io/integrations/google-
 Refer to [LangChain's Google PaLM documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/google_palm){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

@@ -46,3 +46,4 @@ Choose the [OpenAI Assistants Tools](https://platform.openai.com/docs/assistants
 View [example workflows and related content](https://n8n.io/integrations/openai-assistant/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's OpenAI assistant documentation](https://js.langchain.com/docs/modules/agents/agent_types/openai_assistant){:target=_blank .external-link} for more information about the service.
+--8<-- "_glossary/ai-glossary.md"

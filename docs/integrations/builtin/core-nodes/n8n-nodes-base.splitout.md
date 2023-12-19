@@ -19,10 +19,10 @@ For usage examples and templates to help you get started, refer to n8n's [Split 
     * **No Other Fields**
     * **All Other Fields**
     * **Selected Other Fields**: when selected, n8n displays **Fields to Include**. Enter a comma separated list of desired fields.
-	* **Options** > **Add Field**: use this to add more optional settings, including:
-		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).	
-		* **Destination Field Name**: optionally set the field name under which to put the new split contents.
-		* **Include Binary**: include binary data from the input in the new output.
+* **Options** > **Add Field**: use this to add more optional settings, including:
+	* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).	
+	* **Destination Field Name**: optionally set the field name under which to put the new split contents.
+	* **Include Binary**: include binary data from the input in the new output.
 
 ## Related resources
 

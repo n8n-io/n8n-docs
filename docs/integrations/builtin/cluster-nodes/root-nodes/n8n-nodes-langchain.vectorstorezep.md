@@ -65,3 +65,4 @@ View [example workflows and related content](https://n8n.io/integrations/zep-vec
 Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/zep){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

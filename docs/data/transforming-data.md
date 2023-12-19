@@ -12,10 +12,13 @@ For example, the image below shows the output of an [HTTP Request](/integrations
 
 ![HTTP Request node output](/_images/data/transforming-data/HTTPRequest_output.png)
 
-To transform this kind of structure into the n8n data structure you can use the [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) node.
+To transform this kind of structure into the n8n data structure you can use the data transformation nodes:
 
-/// note
-If you're using the HTTP Request node, you should use the Split Into items option to transform the data. You don't have to use a Code node in that case.
-///
+* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): take separate items, or portions of them, and group them together into individual items.
+* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): remove items beyond a defined maximum number.
+* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/): identify and delete items that are identical across all fields or a subset of fields.
+* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/): organize lists of in a desired ordering, or generate a random selection.
+* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/): separate a single data item containing a list into multiple items.
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables. 
 
     

@@ -1,5 +1,5 @@
 ---
-contentType: howTo
+contentType: howto
 title: Access LangChain in n8n
 description: How to get the n8n version that includes LangChain
 ---

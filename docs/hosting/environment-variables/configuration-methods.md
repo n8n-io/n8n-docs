@@ -46,7 +46,7 @@ export N8N_CONFIG_FILES=/<path-to-config>/my-config.json
 export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/production.json
 
 # PowerShell - Single file, persist for current user
-# Note that setting scope (Process, User, Machine) has no effect on Unix systems 
+# Note that setting scope (Process, User, Machine) has no effect on Unix systems
 [Environment]::SetEnvironmentVariable('N8N_CONFIG_FILES', '<path-to-config>\config.json', 'User')
 ```
 
@@ -104,11 +104,6 @@ The following environment variables support file input:
 
 - `CREDENTIALS_OVERWRITE_DATA_FILE`
 - `DB_TYPE_FILE`
-- `DB_MYSQLDB_DATABASE_FILE`
-- `DB_MYSQLDB_HOST_FILE`
-- `DB_MYSQLDB_PORT_FILE`
-- `DB_MYSQLDB_USER_FILE`
-- `DB_MYSQLDB_PASSWORD_FILE`
 - `DB_POSTGRESDB_DATABASE_FILE`
 - `DB_POSTGRESDB_HOST_FILE`
 - `DB_POSTGRESDB_PASSWORD_FILE`

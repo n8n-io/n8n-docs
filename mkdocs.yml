@@ -28,6 +28,8 @@ theme:
     - content.tabs.link
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
+    # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#improved-tooltips
+    - content.tooltips
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
@@ -60,7 +62,12 @@ extra_css:
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js
+watch:
+  - _glossary
+  - _snippets
 markdown_extensions:
+  # used for https://squidfunk.github.io/mkdocs-material/reference/tooltips/
+  - abbr
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/reference/images/
@@ -87,7 +94,9 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
   - pymdownx.inlinehilite
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - _glossary/main.md
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
   - pymdownx.superfences:
       # https://squidfunk.github.io/mkdocs-material/reference/diagrams/
@@ -220,9 +229,10 @@ nav:
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
     - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
-    - LangChain:
+    - AI with LangChain:
         - langchain/index.md
         - Access LangChain in n8n: langchain/access-langchain.md
+        - "Tutorial: Build an AI workflow in n8n": langchain/langchain-tutorial.md
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain concepts in n8n: langchain/langchain-n8n.md
     - Cloud admin dashboard: cloud-admin-dashboard.md
@@ -243,6 +253,7 @@ nav:
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
@@ -267,8 +278,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.itemlists.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger.md
@@ -280,16 +291,21 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
         - integrations/builtin/core-nodes/n8n-nodes-base.start.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
         - integrations/builtin/core-nodes/n8n-nodes-base.totp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md

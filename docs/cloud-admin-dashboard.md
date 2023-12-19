@@ -1,6 +1,6 @@
 ---
 description: How to access the Cloud admin dashboard.
-contentType: howTo
+contentType: howto
 ---
 
 # Cloud admin dashboard

@@ -5,6 +5,7 @@
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
 /integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
 
+
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentjsoninputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
 

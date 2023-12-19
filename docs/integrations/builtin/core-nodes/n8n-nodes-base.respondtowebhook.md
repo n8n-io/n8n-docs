@@ -50,9 +50,7 @@ The Respond to Webhook node runs once, using the first incoming data item. This 
 If you need to return more than one data item, you can either:
 
 - Instead of using the Respond to Webhook node, use the **When Last Node Finishes** option in **Respond** in the Webhook node. Use this when you want to return the final data that the workflow outputs.
-- Use the [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Use the following parameter settings in the Item Lists node:
-	- **Operation** > **Concatenate Items**
-	- **Aggregate** > **All Item Data (Into a Single List)**
+- Use the [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Set **Aggregate** to **All Item Data (Into a Single List)**.
 
 ## Workflow behavior
 

@@ -13,6 +13,10 @@ On this page, you'll find the node parameters for the Agent node, and links to m
 For usage examples and templates to help you get started, refer to n8n's [Agent integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
 ///
 
+/// note | Connect a tool
+You must connect at least one tool sub-node.
+///
+
 n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 
 
 ## Conversational Agent
@@ -165,3 +169,4 @@ View [example workflows and related content](https://n8n.io/integrations/agent/)
 Refer to [LangChain's documentation on agents](https://js.langchain.com/docs/modules/agents/agent_types/){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

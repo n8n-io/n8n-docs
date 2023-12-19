@@ -40,7 +40,7 @@ Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/cha
 
 #### Agents
 
-> An agent has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://js.langchain.com/docs/modules/agents/)
+> An agent has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}
 
 Available nodes:
 
@@ -171,10 +171,6 @@ Available nodes:
 * [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai/)
 
 Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
-
-
-
-
 
 
 #### Miscellaneous

@@ -15,7 +15,7 @@ For usage examples and templates to help you get started, refer to n8n's [Aggreg
 ## Node parameters
 
 * **Aggregate**: choose whether to aggregate **Individual Fields** or **All Item Data**.
-* If you choose **Individual Fields**, you can then configure the fields you want to aggregat with the following parameters:
+* If you choose **Individual Fields**, you can then configure the fields you want to aggregate with the following parameters:
 	* **Input Field Name**: the name of the field in the input data to be aggregated together.
 	* **Rename Field**: enable this toggle to enter a field name for the aggregated output data. When aggregating multiple fields you must provide new output field names. You can't leave multiple fields undefined.
 	* **Output Field Name**: displayed when you enable **Rename Field**. The field name for the aggregated output data.
@@ -27,6 +27,8 @@ For usage examples and templates to help you get started, refer to n8n's [Aggreg
 * If you choose **All Item Data**, you can then set:
 	* **Put Output in Field**: the name of the output field.
 	* **Include**: choose from **All fields**, **Specified Fields**, or **All Fields Except**.
+	* **Options** > **Add Field**: use this to add the setting:
+		* **Include Binaries**: include binary data from the input in the new output.
 
 ## Related resources
 

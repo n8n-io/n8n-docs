@@ -21,7 +21,7 @@ For usage examples and templates to help you get started, refer to n8n's [Zep in
 
 ## Node parameters
 
-**Session ID**: n8n creates a new session, or connect to an existing one, with the specified ID. [TODO: confirm - not confident of this]
+**Session ID**: the ID to use to store the memory in the workflow data.
 
 ## Related resources
 

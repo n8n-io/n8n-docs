@@ -30,7 +30,7 @@ Parameters for **Get Many**:
 Parameters for **Insert Documents**:
 
 * Memory Key
-* Clear Store: whether to wipe the vector store for the given memory key for this workflow before inserting data. [TODO: phrase this better]
+* Clear Store: whether to wipe the vector store for the given memory key for this workflow before inserting data.
 
 Parameters for **Retrieve Documents (For Agent/Chain)**:
 

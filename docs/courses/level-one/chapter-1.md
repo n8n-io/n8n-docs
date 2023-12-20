@@ -69,9 +69,10 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 
 /// note | Moving the canvas
-You can move the workflow canvas around in two ways:
+You can move the workflow canvas around in three ways:
 
 - Click **Ctrl + Left Mouse Button** on the canvas and move it around
+- Click **Middle Mouse Button** on the canvas and move it around
 - Place two fingers on your touchpad and slide
 ///
 

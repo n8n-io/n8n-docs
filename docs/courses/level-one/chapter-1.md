@@ -4,6 +4,8 @@ contentType: tutorial
 
 # Navigating the Editor UI
 
+[TODO: do not merge]
+
 In this lesson you will learn how to navigate the Editor UI. We will walk through the canvas and show you what each icon means and where to find things you will need while building workflows in n8n.
 
 ## Getting started

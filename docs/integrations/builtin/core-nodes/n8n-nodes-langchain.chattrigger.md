@@ -7,6 +7,8 @@ description: Documentation for the Chat Trigger node in n8n, a workflow automati
 
 Use the Chat Trigger node when AI workflows for chatbots and other chat interfaces.
 
+You must connect either an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/).
+
 
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Chat Trigger integrations](https://n8n.io/integrations/chat-trigger/){:target=_blank .external-link} page.

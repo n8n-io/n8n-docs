@@ -20,7 +20,8 @@
 
 
 /variables/   /code/variables/
-/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/
+/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/
+/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/
 
 /flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/
 /flow-logic/error-handling/memory-errors/   /hosting/scaling/memory-errors/

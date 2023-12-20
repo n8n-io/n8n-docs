@@ -33,15 +33,19 @@ Available options depend on the chat mode.
 ### Hosted chat
 
 * **Input Placeholder**, **Title**, and **Subtitle**: set text elements in the chat interface.
+
 	??? Details "View screenshot"
 		![Customizable text elements](/_images/integrations/builtin/core-nodes/chat-trigger/hosted-text-elements.png)
+
 * **Load Previous Session**: whether to load chat messages from a previous chat session.
 * **Response Mode**: use this when building a workflow with steps after the agent or chain that's handling the chat.
 	* **When Last Node Finishes**: the Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
 	* **Using 'Respond to Webhook' Node**: the Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 * **Require Button Click to Start Chat**: display a **New Conversation** button on the chat interface.
+
 	??? Details "View screenshot"
 		![New Conversation button](/_images/integrations/builtin/core-nodes/chat-trigger/new-conversation-button.png)
+		
 * **Allowed Origin (CORS)**: which origins can access the chat URL.
 
 ### Embedded chat

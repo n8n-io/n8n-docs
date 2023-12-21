@@ -5,7 +5,7 @@ description: Documentation for the Read/Write Files from Disk node in n8n, a wor
 
 # Read/Write Files from Disk
 
-Use the Read/Write Files from Disk node to read and write files to/from the machine where n8n is running.
+Use the Read/Write Files from Disk node to read and write files from/to the machine where n8n is running.
 
 
 /// note | Examples and templates

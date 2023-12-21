@@ -272,7 +272,7 @@ So far, you have mainly worked with text data. But what if you want to process d
 
 In n8n, you can process binary data with the following nodes:
 
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files to/from the machine where n8n is running.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
 - [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
 - [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
 
@@ -280,7 +280,7 @@ In n8n, you can process binary data with the following nodes:
 Reading and writing files to disk isn't available on n8n Cloud. You'll read and write to the machine where you installed n8n. If you run n8n in Docker, your command runs in the n8n container and not the Docker host. The Read/Write Files From Disk node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
 ///
 
-To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
+To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation), or in the node's `File Path and Name` parameter (for the Write operation).
 
 /// warning | Naming the right path
 The file path looks slightly different depending on how you are running n8n:
@@ -383,7 +383,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 ### Exercise
 
-Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and convert the returned data from JSON to binary using the Convert to File node. Then, write the new binary data to a file. Finally, to check that it worked out, read the generated binary file referencing it with an expression in the node.
+Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and convert the returned data from JSON to binary using the Convert to File node. Then, write the new binary file data to the machine where n8n is running. Finally, to check that it worked out, read the generated binary file from the machine referencing it with an expression in the node.
 
 ??? note "Show me the solution"
 

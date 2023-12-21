@@ -29,7 +29,7 @@ To extract data from a file and convert it to JSON, use the [Extract from File](
 	* **End**: event end time.
 	* **All Day**: whether the event is an all day event (enabled) or not (disabled).
 	* **Put Output File in Field**: set the name of the field in the output data to contain the file.
-* * **Operation** > **Convert to JSON**:
+* **Operation** > **Convert to JSON**:
 	* **Mode**: choose **All Items to One File** to send all input items to a single file, or **Each Item to Separate File** to create a file for every input item.
 	* **Put Output File in Field**: set the name of the field in the output data to contain the file.
 * **Operation** > **Convert to ODS**:

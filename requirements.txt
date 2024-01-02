@@ -1,1 +1,2 @@
+mkdocs-glightbox
 mkdocs-macros-plugin==1.0.4

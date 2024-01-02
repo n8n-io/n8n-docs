@@ -122,6 +122,18 @@ plugins:
   # - info
   # Search is built in, but must be enabled when you add other plugins
   - search
+  # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
+  - glightbox:
+      touchNavigation: false
+      loop: false
+      effect: zoom
+      slide_effect: none
+      width: auto
+      height: auto
+      zoomable: false
+      draggable: false
+      auto_caption: false
+      caption_position: bottom
   # https://mkdocs-macros-plugin.readthedocs.io/en/latest/
   - macros:
       # https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files

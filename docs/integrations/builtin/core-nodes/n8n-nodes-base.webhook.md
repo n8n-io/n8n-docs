@@ -101,7 +101,7 @@ Choose what data to include in the response body.
 Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
 
 
-* **Binary Data**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
+* **Binary Property**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
 * **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
 * **No Response Body**: enable this to prevent n8n sending a body with the response.
 * **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
@@ -109,6 +109,7 @@ Select **Add Option** to view more configuration options. The available options 
 * **Response Data**: send custom data with the response.
 * **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
+* **Allowed Origins (CORS)**: set the permitted cross-origin domains.
 
 
 | Option | Required node configuration |
@@ -121,6 +122,7 @@ Select **Add Option** to view more configuration options. The available options 
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
 | Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
+| Allowed Origins (CORS) | Any |
 
 ## Use the HTTP Request node to trigger the Webhook node
 

@@ -95,7 +95,7 @@ df_string:
     description: Formats a string to snake case.
   - funcName: toTitleCase
     returns: String
-    description: Formats a string to title case.
+    description: Formats a string to title case. Will not change already uppercase letters to prevent losing information from acronyms and trademarks such as iPhone or FAANG.
   - funcName: toWholeNumber
     returns: Number
     description: Converts a string to a whole number.

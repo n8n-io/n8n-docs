@@ -1,4 +1,10 @@
-# ConvertKit
+---
+title: ConvertKit credentials
+description: Documentation for ConvertKit credentials. Use these credentials to authenticate ConvertKit in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# ConvertKit credentials
 
 You can use these credentials to authenticate the following nodes with ConvertKit.
 
@@ -18,3 +24,4 @@ Create a [ConvertKit](https://convertkit.com/) account.
 5. Click on the ***Save*** button to save your credentials.
 
 ![Getting ConvertKit access token](/_images/integrations/builtin/credentials/convertkit/using-access-token.gif)
+

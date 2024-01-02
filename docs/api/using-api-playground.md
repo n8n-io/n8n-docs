@@ -1,34 +1,35 @@
 ---
 description: How to use the API playground to try out n8n's public REST API.
+contentType: howto
 ---
 
 # Using the API playground
 
-The n8n API comes with a built-in Swagger UI playground. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.
+/// info | Feature availability
+The API playground isn't available on Cloud. It's available for all self-hosted pricing tiers.
+///
 
-For self-hosted users, n8n constructs the path from values set in your environment variables:
+The n8n API comes with a built-in Swagger UI playground in self-hosted versions. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.
 
-```shell
-N8N_HOST:N8N_PORT/N8N_PATH/api/v<version-number>/docs
-```
-
-For n8n Cloud users, the API playground path contains your cloud instance URL:
+n8n constructs the path from values set in your environment variables:
 
 ```shell
-<your-cloud-instance>/api/v<version-number>/docs
+N8N_HOST:N8N_PORT/N8N_PATH/api/v<api-version-number>/docs
 ```
 
-!!! warning "Real data"
-    If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. However, be aware you can change or delete real data.
+The API version number is `1`. There may be multiple versions available in the future.
 
+/// warning | Real data
+If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. However, be aware you can change or delete real data.
+///
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 
 ```shell
-<your-cloud-instance>/api/v<version-number>/credentials/schema/{credentialTypeName}
+N8N_HOST:N8N_PORT/N8N_PATH/api/v<api-version-number>/credentials/schema/{credentialTypeName}
 ```
 
-!!! note "How to find `credentialTypeName`"
-    To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api` :
+/// note | How to find `credentialTypeName`
+To find the type, download your workflow as JSON and examine it. For example, for a Google Drive node the `{credentialTypeName}` is `googleDriveOAuth2Api`:
 ```json
 {
     ...,
@@ -39,4 +40,5 @@ The API includes built-in documentation about credential formats. This is availa
         }
     }
 }
-``` 
+```
+/// 

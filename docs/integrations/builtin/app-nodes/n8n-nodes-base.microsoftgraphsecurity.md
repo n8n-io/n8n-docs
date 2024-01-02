@@ -1,9 +1,21 @@
+---
+title: Microsoft Graph Security
+description: Documentation for the Microsoft Graph Security node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Microsoft Graph Security
 
-The [Microsoft Graph Security API](https://docs.microsoft.com/en-us/graph/security-concept-overview) allows connecting to Microsoft security products, services, and partners to streamline security operations and improve threat protection, detection, and response capabilities.
+Use the Microsoft Graph Security node to automate work in Microsoft Graph Security, and integrate Microsoft Graph Security with other applications. n8n has built-in support for a wide range of Microsoft Graph Security features, including getting, and updating scores, and profiles. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
+On this page, you'll find a list of operations the Microsoft Graph Security node supports and links to more resources.
+
+/// note | Credentials
+Refer to [Microsoft Graph Security credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Microsoft Graph Security integrations](https://n8n.io/integrations/microsoft-graph-security/){:target="_blank" .external-link} list.
+///
 
 
 ## Basic Operations
@@ -15,3 +27,4 @@ The [Microsoft Graph Security API](https://docs.microsoft.com/en-us/graph/securi
     * Get
     * Get All
     * Update
+

@@ -1,9 +1,21 @@
+---
+title: Autopilot
+description: Documentation for the Autopilot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Autopilot
 
-[Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
+Use the Autopilot node to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, deleting, and updating contacts, as well as adding contacts to a list.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/autopilot/).
+On this page, you'll find a list of operations the Autopilot node supports and links to more resources.
+
+/// note | Credentials
+Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [Autopilot integrations](https://n8n.io/integrations/autopilot/){:target=_blank .external-link} list.
+///
 
 
 ## Basic Operations
@@ -98,3 +110,4 @@ This node returns all the contacts of the `n8n-docs` list that we created using 
 In the screenshot below, you will notice that the node returns all the contacts that are present in the list `n8n-docs`.
 
 ![Using the Autopilot node to get all the contacts in a list](/_images/integrations/builtin/app-nodes/autopilot/autopilot3_node.png)
+

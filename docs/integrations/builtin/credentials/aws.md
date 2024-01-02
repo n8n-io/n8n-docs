@@ -1,7 +1,14 @@
-# AWS
+---
+title: AWS credentials
+description: Documentation for AWS credentials. Use these credentials to authenticate AWS in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# AWS credentials
 
 You can use these credentials to authenticate the following nodes with AWS.
 
+- [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock)
 - [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager/)
 - [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/)
 - [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb/)
@@ -14,6 +21,7 @@ You can use these credentials to authenticate the following nodes with AWS.
 - [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/)
 - [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/)
 - [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/)
+- [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock)
 
 ## Prerequisites
 
@@ -39,3 +47,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/zJgHOSSwC4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

@@ -1,4 +1,10 @@
-# Twist
+---
+title: Twist credentials
+description: Documentation for Twist credentials. Use these credentials to authenticate Twist in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Twist credentials
 
 You can use these credentials to authenticate the following nodes with Twist.
 
@@ -10,9 +16,9 @@ Create a [Twist](https://twist.com/) account.
 
 ## Using OAuth
 
-!!! note "Callback URL with Twist"
-    **Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. Twist doesn't accept the localhost callback URL. Refer to the [FAQs](#how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
-
+/// note | Callback URL with Twist
+**Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. Twist doesn't accept the localhost callback URL. Refer to the [FAQs](#how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
+///
 
 1. Access your [Twist](https://twist.com) workspace.
 2. Click on your avatar in the top right corner.
@@ -46,3 +52,4 @@ export WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Start your n8n instance.
 4. Follow the instructions mentioned in the [Using OAuth](#using-oauth) section to configure your credentials.
+

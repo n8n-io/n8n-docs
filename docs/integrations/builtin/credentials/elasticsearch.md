@@ -1,4 +1,10 @@
-# Elasticsearch
+---
+title: Elasticsearch credentials
+description: Documentation for Elasticsearch credentials. Use these credentials to authenticate Elasticsearch in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Elasticsearch credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -24,3 +30,4 @@ You can use these credentials to authenticate the following nodes:
     * Password
     * Base URL: The Elasticsearch application endpoint obtained above.
 3. Click ***Create*** to save your credentials.
+

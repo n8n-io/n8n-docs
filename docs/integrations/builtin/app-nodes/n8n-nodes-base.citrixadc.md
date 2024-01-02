@@ -1,9 +1,21 @@
+---
+title: Citrix ADC
+description: Documentation for the Citrix ADC node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Citrix ADC
 
-[Citrix ADC](https://www.citrix.com/en-gb/products/citrix-adc/){:target=_blank .external-link} is an application delivery and load balancing solution for monolithic and microservices-based applications.
+Use the Citrix ADC node to automate work in Citrix ADC, and integrate Citrix ADC with other applications. n8n has built-in support for a wide range of Citrix ADC features, including creating and installing certificates and files.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/citrixadc/).
+On this page, you'll find a list of operations the Citrix ADC node supports and links to more resources.
+
+/// note | Credentials
+Refer to [Citrix ADC credentials](/integrations/builtin/credentials/citrixadc/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Citrix ADC integrations](https://n8n.io/integrations/citrix-adc/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 
@@ -20,3 +32,4 @@
 Refer to [Citrix ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/){:target=_blank .external-link} for more information about the service.
 
 View [example workflows and related content](https://n8n.io/integrations/citrix-adc/){:target=_blank .external-link} on n8n's website.
+

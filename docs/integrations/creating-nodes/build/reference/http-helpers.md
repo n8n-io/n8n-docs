@@ -1,23 +1,31 @@
-# Making HTTP Requests
+---
+contentType: reference
+---
 
-!!! note "Programmatic style only"
-	The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
-
-It's common to call external APIs or make HTTP requests to other services from a node.
-
-This plays a major role during node development, maintenance, and improvements.
+# HTTP request helper for node builders
 
 n8n provides a flexible helper for making HTTP requests, which abstracts away most of the complexity.
 
-## How to use
+/// note | Programmatic style only
+The information in this document is for node building using the programmatic style. It doesn't apply to declarative style nodes.
+///
+## Usage
 
-Call the helper inside the `execute` function:
+Call the helper inside the `execute` function. 
 
 ```typescript
+// If no auth needed
 const response = await this.helpers.httpRequest(options);
+
+// If auth needed
+const response = await this.helpers.httpRequestWithAuthentication.call(
+	this, 
+	'credentialTypeName', // For example: pipedriveApi
+	options,
+);
 ```
 
-Where `options` is an object in this format:
+`options` is an object:
 
 ```typescript
 {
@@ -63,36 +71,32 @@ Some notes about the possible fields:
 	* `brackets`: `{ a: ['b', 'c'] }` as `a[]=b&a[]=c`  
 	* `repeat`: `{ a: ['b', 'c'] }` as `a=b&a=c`  
 	* `comma`: `{ a: ['b', 'c'] }` as `a=b,c`
-- **auth**: Used for Basic auth. Provide `username` and `password`.
-- **disableFollowRedirect**: By default, n8n follows redirects. You can set this to true to prevent this from happening.
-- **skipSslCertificateValidation**: Used for calling HTTPS services without proper certificate
-- **returnFullResponse**: Instead of returning just the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
-- **encoding**: n8n can detect the content type, but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
+- `auth`: Used for Basic auth. Provide `username` and `password`. n8n recommends omitting this, and using `helpers.httpRequestWithAuthentication(...)` instead.
+- `disableFollowRedirect`: By default, n8n follows redirects. You can set this to true to prevent this from happening.
+- `skipSslCertificateValidation`: Used for calling HTTPS services without proper certificate
+- `returnFullResponse`: Instead of returning just the body, returns an object with more data in the following format: `{body: body, headers: object, statusCode: 200, statusMessage: 'OK'}`
+- `encoding`: n8n can detect the content type, but you can specify `arrayBuffer` to receive a Buffer you can read from and interact with.
+
+## Example
+
+For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts){:target=_blank .external-link}.
 
 ## Deprecation of the previous helper
 
-The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. Now deprecated.
+The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. This was removed in version 1.
 
 To minimize incompatibility, n8n made a transparent conversion to another library called `axios`.
 
-If you are having issues, please report them in the [Community Forums](https://community.n8n.io/) or on [GitHub](https://github.com/n8n-io/n8n/issues).
-
-Also, you can temporarily enable n8n to use the deprecated library by setting the environment variable `N8N_USE_DEPRECATED_REQUEST_LIB=true`.
-
-**Please note:** This behavior is permanent. n8n will remove the `request-promise` library entirely in the future.
+If you are having issues, please report them in the [Community Forums](https://community.n8n.io/){:target=_blank .external-link} or on [GitHub](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link}.
 
 ## Migration guide to the new helper
 
 The new helper is much more robust, library agnostic, and easier to use.
 
-New nodes should all use the new helper. You should strongly consider migrating existing custom nodes to the new helper. Here are the main considerations when migrating:
+New nodes should all use the new helper. You should strongly consider migrating existing custom nodes to the new helper. These are the main considerations when migrating:
 
 - Accepts `url`. Doesn't accept `uri`.
 - `encoding: null` now must be `encoding: arrayBuffer`.
 - `rejectUnauthorized: false` is now `skipSslCertificateValidation: true`
 - Use `body` according to `content-type` headers to clarify the payload.
 - `resolveWithFullResponse` is now `returnFullResponse` and has similar behavior
-
-## Example
-
-For an example, please check the [Mattermost node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Mattermost/v1/MattermostV1.node.ts).

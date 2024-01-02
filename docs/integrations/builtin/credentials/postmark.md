@@ -1,4 +1,10 @@
-# Postmark
+---
+title: Postmark credentials
+description: Documentation for Postmark credentials. Use these credentials to authenticate Postmark in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Postmark credentials
 
 You can use these credentials to authenticate the following nodes with Postmark.
 
@@ -17,3 +23,4 @@ Create a [Postmark](https://postmarkapp.com/) account.
 5. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting Postmark credentials](/_images/integrations/builtin/credentials/postmark/using-access-token.gif)
+

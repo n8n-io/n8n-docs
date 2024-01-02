@@ -1,10 +1,14 @@
+---
+contentType: howto
+---
+
 # Data editing
 
 n8n allows you to edit [pinned data](/data/data-pinning/). This means you can check different scenarios without setting up each scenario and sending the relevant data from your external system. It makes it easier to test edge cases.
 
-!!! note "For development only"
-    Data editing isn't available for production workflow executions. It's a feature to help test workflows during development.
-
+/// note | For development only
+Data editing isn't available for production workflow executions. It's a feature to help test workflows during development.
+///
 ## Edit output data
 
 To edit output data:

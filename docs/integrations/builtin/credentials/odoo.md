@@ -1,4 +1,10 @@
-# Odoo credentials
+---
+title: Odoo credentials credentials
+description: Documentation for Odoo credentials credentials. Use these credentials to authenticate Odoo in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Odoo credentials credentials
 
 You can use these credentials to authenticate the following nodes with Odoo:
 
@@ -14,3 +20,4 @@ You can use these credentials to authenticate the following nodes with Odoo:
     * **Database name**: the name of the Odoo instance.
     * **Password or API key**: the credential you created in step one.
 4. Click **Save**. n8n tests the key to check it can connect to Odoo.
+

@@ -1,4 +1,10 @@
-# Baserow
+---
+title: Baserow credentials
+description: Documentation for Baserow credentials. Use these credentials to authenticate Baserow in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Baserow credentials
 
 You can use these credentials to authenticate the following node:
 
@@ -19,3 +25,4 @@ or a self hosted instance.
 6. Click on the **Save** button
 
 You can now use this credential in your Baserow nodes.
+

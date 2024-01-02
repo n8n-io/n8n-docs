@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Amazon Web Services
 
 This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
@@ -15,6 +19,8 @@ The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS
 While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html){:target=_blank .external-link}, and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html){:target=_blank .external-link}.
 
 --8<-- "_snippets/self-hosting/warning.md"
+
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Create a cluster
 
@@ -103,9 +109,7 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
 
-- **Start**: 320mb RAM, 10 millicore CPU burstable
-- **Pro**: 640mb RAM, 20 millicore CPU burstable
-- **Power**: 1280mb RAM, 80 millicore CPU burstable
+--8<-- "_snippets/self-hosting/installation/suggested-pod-resources.md"
 
 ### Environment variables
 
@@ -139,12 +143,14 @@ Send all the manifests to the cluster by running the following command in the `n
 kubectl apply -f .
 ```
 
-!!! note "Namespace error"
-    You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+/// note | Namespace error
+You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
 
-    ```shell
-    kubectl apply -f namespace.yaml
-    ```
+```shell
+kubectl apply -f namespace.yaml
+```
+///
+
 
 ## Set up DNS
 
@@ -157,9 +163,9 @@ To find the address of the n8n service running on the instance:
 3. Select the **Resources** tab, then **Service and networking** > **Services**.
 4. Select the **n8n** service and copy the **Load balancer URLs** value. Use this value suffixed with the n8n service port (5678) for DNS.
 
-!!! note "Use HTTP"
-		This guide uses HTTP connections for the services it defines, for example in `n8n-deployment.yaml`. However, if you click the **Load balancer URLs** value, EKS takes you to an "HTTPS" URL which results in an error. To solve this, when you open the n8n subdomain, make sure to use HTTP.
-
+/// note | Use HTTP
+This guide uses HTTP connections for the services it defines, for example in `n8n-deployment.yaml`. However, if you click the **Load balancer URLs** value, EKS takes you to an "HTTPS" URL which results in an error. To solve this, when you open the n8n subdomain, make sure to use HTTP.
+///
 ## Delete resources
 
 If you need to delete the setup, you can remove the resources created by the manifests with the following command:

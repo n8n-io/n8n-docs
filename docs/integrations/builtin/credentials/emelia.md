@@ -1,4 +1,10 @@
-# Emelia
+---
+title: Emelia credentials
+description: Documentation for Emelia credentials. Use these credentials to authenticate Emelia in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Emelia credentials
 
 You can use these credentials to authenticate the following nodes with Emelia.
 
@@ -24,3 +30,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/XZ4wP1AI9eM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

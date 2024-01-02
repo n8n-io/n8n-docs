@@ -1,14 +1,25 @@
+---
+title: HTTP Request
+description: Documentation for the HTTP Request node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # HTTP Request
 
 The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API.
 
 When using this node, you're creating a REST API call. You need some understanding of basic API terminology and concepts.
 
-## Node fields
+There are two ways to create an HTTP request: configure the [node fields](#node-fields) or [import a curl command](#import-curl-command).
+
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [HTTP Request integrations](https://n8n.io/integrations/http-request/){:target=_blank .external-link} page.
+///
+## Node parameters
 
 ### Method
 
-Select the method to be used for the request:
+Select the method to use for the request:
 
 - DELETE
 - GET
@@ -24,7 +35,7 @@ Enter the endpoint you want to use.
 
 ### Authentication
 
-There are two options for authentication. n8n recommends using the **Predefined credential type** option when it's available. It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
+n8n recommends using the **Predefined Credential Type** option when it's available. It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
 
 #### Predefined credentials
 
@@ -34,12 +45,14 @@ Select **Predefined Credential Type**. This allows you to perform custom operati
 
 Select **Generic Credential Type** to set up authentication using one of the following methods:
 
-- Basic Auth
-- Digest Auth
-- Header Auth
-- OAuth1
-- OAuth2
-- None
+* Basic Auth
+* Custom Auth
+* Digest Auth
+* Header Auth
+* OAuth1 API
+* OAuth2 API
+* Query Auth
+
 	
 Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
 
@@ -51,77 +64,59 @@ You can choose to send additional information with your request. The data you ne
 * **Send Headers**: include request headers. Headers contain metadata about your request.
 * **Send Body**: send additional information in the body of your request.
 
-
-### Options
+## Node options
 
 Select **Add Option** to view and select these options.
 
 - **Batching**: control how to batch large responses.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
-- **Redirects**: choose whether to follow redirects. Disabled by default.
+- **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.
+- **Pagination**: handle query results that are too big for the API to return in a single call.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.
 
+### Pagination
 
-## Basic example
+Use this option to paginate results.
 
-This example uses [Reqres](https://reqres.in/){:target=_blank .external-link}, a service for testing APIs with fake data. It provides a basic usage example.
+/// note | Inspect the API data first
+Some options for pagination require knowledge of the data returned by the API you're using. Before setting up pagination, either check the API documentation, or do an API call without pagination, to see the data it returns.
+///
+??? Details "What is pagination?"
+    Pagination means splitting a large set of data into multiple pages. The amount of data on each page depends on the limit you set.
+  
+    For example, you make an API call to an endpoint called `/users`. The API wants to send back information on 300 users, but this is too much data for the API to send in one response. 
+  
+    If the API supports pagination, you can incrementally fetch the data. To do this, you call `/users` with a pagination limit, and a page number or URL to tell the API which page to send. In this example, say you use a limit of 10, and start from page 0. The API sends the first 10 users in its response. You then call the API again, increasing the page number by 1, to get the next 10 results.
 
-### Setup
+Configure the pagination settings:
 
-Create a new workflow and add the HTTP Request node.
+* **Pagination Mode**:
+	* **Off**: turn off pagination.
+	* **Update a Parameter in Each Request**: use this when you need to dynamically set parameters for each request.
+	* **Response Contains Next URL**: use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
-Enter `https://reqres.in/api/users` in the **URL** field. All the examples call this endpoint.
+For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination/).
 
-### Get a list of users
+n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 
-Ensure the **Method** is set to **GET**.
+--8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-variables.md"
 
-Select **Execute node**. n8n calls the `users` endpoint of the Reqres API, and outputs the response.
+--8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-api-differences.md"
 
-### Add a user
 
-1. Select **POST** in the **Method** dropdown list.
-2. Enable **Send Body**.
-3. Enter `name` in the **Name** field.
-4. Enter `Neo` in the **Value** field.
-5. Select **Add Parameter**
-6. Enter `job` in the **Name** field.
-7. Enter `Programmer` in the **Value** field.
-8. Select **Execute node** to run the workflow. n8n calls the `users` endpoint of the Reqres API, and outputs the response.
+## Import curl command
 
-## More examples
+[curl](https://curl.se/){:target=_blank .external-link} is a command line tool and library for transferring data with URLs.
 
-### Fetch a binary file from a URL
+You can use curl to call REST APIs. If the API documentation of the service you want to use provides curl examples, you can copy them out of the documentation and into n8n to configure the HTTP Request node.
 
-1. Enter the URL of the file in the **URL** field. For example, you can enter `https://docs.n8n.io/_images/n8n-docs-icon.svg` to fetch the n8n logo.
-2. Select **Add Option > Response**.
-3. Set **Response Format** to **File**.
-4. Select **Execute node** to run the node.
+Import a curl command:
 
-### Send a binary file to an API endpoint
+1. Select **Import cURL command**.
+2. Paste in your curl command.
+3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.
 
-1. Connect the HTTP Request node with a node that has previously fetched the binary file. For example, this could be an HTTP Request node, [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node, [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) node, and so on.
-2. Select **POST** in the **Method** dropdown. Check the API documentation of your API to make sure that you have selected the correct HTTP request method.
-3. Enter the URL you want to send the binary file to in the **URL** field.
-4. Enable **Send Body**.
-5. In **Body Content Type**, select **n8n Binary Data**.
-6. In **Input Data Field Name**, enter the name of the field containing the binary data.
-9. Select **Execute node** to run the node.
 
-Refer to this [workflow template](https://n8n.io/workflows/1338-update-twitter-banner-using-http-request/){:target=_blank .external link} for a full example.
 
-### Get the HTTP status code after an execution
-
-1. Select **Add Option** > **Response**.
-2. Enable **Include Response Headers and Status**.
-
-When you execute the node, n8n includes the headers, status code, and status message in the output.
-
-### Send XML data
-
-1. Enable **Send Body**.
-2. In **Body Content Type**, select **Raw**.
-3. In **Content Type**, enter `application/xml`.
-4. Enter the XML data in the **Body** field.

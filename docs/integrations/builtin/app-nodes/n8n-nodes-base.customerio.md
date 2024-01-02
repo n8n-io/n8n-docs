@@ -1,10 +1,21 @@
+---
+title: Customer.io
+description: Documentation for the Customer.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Customer.io
 
-[Customer.io](https://customer.io/) enables users to send newsletters to selected segments of customers using their website data. You can send targeted emails, push notifications, and SMS to lower churn, create stronger relationships, and drive subscriptions.
+Use the Customer.io node to automate work in Customer.io, and integrate Customer.io with other applications. n8n has built-in support for a wide range of Customer.io features, including creating and updating customers, tracking events, and getting campaigns.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/customerio/).
+On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Customer.io integrations](https://n8n.io/integrations/customerio/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -59,3 +70,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the Customer.io node to add the customer to a segment](/_images/integrations/builtin/app-nodes/customerio/customerio1_node.png)
+

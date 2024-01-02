@@ -1,4 +1,10 @@
-# Todoist
+---
+title: Todoist credentials
+description: Documentation for Todoist credentials. Use these credentials to authenticate Todoist in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Todoist credentials
 
 You can use these credentials to authenticate the following nodes with Todoist.
 
@@ -10,9 +16,9 @@ Create a [Todoist](https://todoist.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Todoist account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Todoist account to n8n.
+///
 
 1. Access your Todoist [App Management Console](https://developer.todoist.com/appconsole.html)
 2. Enter a name in the ***App display name*** field and click on the ***Create app*** button.
@@ -33,3 +39,4 @@ Create a [Todoist](https://todoist.com/) account.
 5. Use the API token with your Todoist node credentials in n8n.
 
 ![Getting Todoist credentials](/_images/integrations/builtin/credentials/todoist/using-access-token.gif)
+

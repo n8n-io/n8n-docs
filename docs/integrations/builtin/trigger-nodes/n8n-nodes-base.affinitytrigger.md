@@ -1,10 +1,16 @@
-# Affinity Trigger
+---
+title: Affinity trigger
+description: Documentation for the Affinity trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Affinity trigger
 
 [Affinity](https://www.affinity.co/) is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/affinity/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/affinity/).
+///
 
 ## Example Usage
 
@@ -22,6 +28,7 @@ The final workflow should look like the following image.
 2. Select 'list.created' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Affinity Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Affinity Trigger node.
+///
 

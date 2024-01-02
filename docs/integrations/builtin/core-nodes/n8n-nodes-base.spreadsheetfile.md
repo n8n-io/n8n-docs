@@ -1,10 +1,16 @@
+---
+title: Spreadsheet File
+description: Documentation for the Spreadsheet File node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Spreadsheet File
 
 The Spreadsheet File node is used to access data from spreadsheet files.
 
-!!! note "Keep in mind"
-    You will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Spreadsheet File node.
-
+/// note | Keep in mind
+You will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Spreadsheet File node.
+///
 
 ## Basic Operations
 
@@ -54,6 +60,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the *Property Name* you used in the previous node in the *Binary Property* field.
 2. Click on *Execute Node* to run the workflow.
+
 
 
 

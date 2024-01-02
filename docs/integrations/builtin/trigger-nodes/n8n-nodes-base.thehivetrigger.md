@@ -1,60 +1,85 @@
-# The Hive trigger
+---
+title: TheHive trigger
+description: Documentation for the TheHive trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
 
-[TheHive](https://thehive-project.org/) is a scalable open-source and free security incident response platform.
+# TheHive trigger
 
-## Example Usage
+On this page, you'll find a list of events the TheHive trigger node can respond to, and links to more resources.
 
-This workflow allows you to receive updates when an event occurs in TheHive. You can also find the [workflow](https://n8n.io/workflows/810) on the website. This example usage workflow would use the following node.
+/// note | TheHive and TheHive 5
+n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
+///
 
-- [TheHive Trigger]()
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive/){:target="_blank" .external-link} list.
+///
+## Events
 
-The final workflow should look like the following image.
+* Alert 
+	* Created
+	* Deleted
+	* Updated
+* Case
+	* Created
+	* Deleted
+	* Updated
+* Log
+	* Created
+	* Deleted
+	* Updated
+* Observable
+	* Created
+	* Deleted
+	* Updated
+* Task
+	* Created
+	* Deleted
+	* Updated
 
-![A workflow with the TheHive Trigger node](/_images/integrations/builtin/trigger-nodes/thehivetrigger/workflow.png)
+## Related resources
 
-### 1. TheHive Trigger node
+n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/).
 
-This node will trigger the workflow whenever a new event occurs in TheHive. To trigger the workflow for a specific event, select that event instead.
+View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} on n8n's website.
 
-1. First of all, you'll have to add the webhook URL in TheHive instance configuration. Refer to the [FAQs](#how-to-configure-a-webhook-in-thehive) to learn how to configure a webhook in TheHive.
-2. Select the `*` from the **Events** dropdown list. This will trigger the workflow for all the events.
-3. Click on **Execute Node** to run the node.
+Refer to TheHive's documentation for more information about the service:
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the TheHive Trigger node.
+* [Version 3](http://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
+* [Version 4](http://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}
 
 
-## FAQs
+## Configure a webhook in TheHive
 
-### How to configure a Webhook in TheHive?
+To configure the webhook for your TheHive instance:
 
-To configure the webhook for your TheHive instance follow the steps mentioned below.
 1. Copy the webhook URL from TheHive Trigger node.
 2. Add the following lines to the application.conf file. This is TheHive configuration file.
-```
-notification.webhook.endpoints = [
-    {
-        name: WEBHOOK_NAME
-        url: WEBHOOK_URL
-        version: 0
-        wsConfig: {}
-        includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
-        excludedTheHiveOrganisations: []
-    }
-]
-```
+	```
+	notification.webhook.endpoints = [
+		{
+			name: WEBHOOK_NAME
+			url: WEBHOOK_URL
+			version: 0
+			wsConfig: {}
+			includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
+			excludedTheHiveOrganisations: []
+		}
+	]
+	```
 3. Replace `WEBHOOK_URL` with the URL you copied in the previous step.
 4. Replace `ORGANIZATION_NAME` with your organization name.
-5. Execute the following cURL command to enable notifications.
-```sh
-curl -XPUT -uTHEHIVE_USERNAME:THEHIVE_PASSWORD -H 'Content-type: application/json' THEHIVE_URL/api/config/organisation/notification -d '
-{
-    "value": [
-        {
-        "delegate": false,
-        "trigger": { "name": "AnyEvent"},
-        "notifier": { "name": "webhook", "endpoint": "WEBHOOK_NAME" }
-        }
-    ]
-}'
-```
+5. Execute the following cURL command to enable notifications:
+	```sh
+	curl -XPUT -uTHEHIVE_USERNAME:THEHIVE_PASSWORD -H 'Content-type: application/json' THEHIVE_URL/api/config/organisation/notification -d '
+	{
+		"value": [
+			{
+			"delegate": false,
+			"trigger": { "name": "AnyEvent"},
+			"notifier": { "name": "webhook", "endpoint": "WEBHOOK_NAME" }
+			}
+		]
+	}'
+	```

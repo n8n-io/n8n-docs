@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Node base file
 
 The node base file contains the core code of your node. All nodes must have a base file. The contents of this file are different depending on whether you're building a declarative-style or programmatic-style node. For guidance on which style to use, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/).
@@ -108,17 +112,30 @@ The object can include:
 * `name`: String. Used as the node name on the canvas if the `displayName` is too long.
 * `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
 
+### forceInputNodeExecution
+
+_Boolean_ | _Optional_
+
+When building a multi-input node, you can choose to force all preceding nodes on all branches to execute before the node runs. The default is `false` (requiring only one input branch to run).
+
 ### inputs
 
 _Array of strings_ | _Required_
 
-Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, us `input: ['main']`.
+Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, use `input: ['main']`.
+
 
 ### outputs
 
 _Array of strings_ | _Required_  
 
-Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, us `output: ['main']`.
+Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, use `output: ['main']`.
+
+### requiredInputs
+
+_Integer_ or _Array_ | _Optional_
+
+Used for multi-input nodes. Specify inputs by number that must have data (their branches must run) before the node can execute.
 
 ### credentials
 
@@ -310,7 +327,7 @@ include postReceive actions, including ability to dynamically disable - see DOC-
 
 ### version
 
-_Number_ or _array_ | Optional
+_Number_ or _Array_ | Optional
 
 If you have one version of your node, this can be a number. If you want to support more than one version, turn this into an array, containing numbers for each node version.
 
@@ -365,7 +382,7 @@ For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packag
 
 ### version
 
-_Number_ or _array_ | _Optional_
+_Number_ or _Array_ | _Optional_
 
 Use `version` when using the light versioning approach.
 
@@ -379,6 +396,6 @@ The main difference between the declarative and programmatic styles is how they 
 
 The `execute()` method creates and returns an instance of `INodeExecutionData`.
 
-!!! warning "Paired items"
-    You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/build/reference/paired-items/).
-
+/// warning | Paired items
+You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/build/reference/paired-items/).
+///

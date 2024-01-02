@@ -1,10 +1,21 @@
+---
+title: WhatsApp Business Platform
+description: Documentation for the WhatsApp Business Platform node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # WhatsApp Business Platform
 
-[WhatsApp Business Platform](https://developers.facebook.com/docs/whatsapp/){:target=_blank .external-link} gives medium to large businesses the ability to connect with customers at scale. You can start conversations with customers in minutes, send customer care notifications or purchase updates, offer your customers a level of personalized service and provide support in the channel that your customers prefer to be reached on.
+Use the WhatsApp Business node to automate work in WhatsApp Business, and integrate WhatsApp Business with other applications. n8n has built-in support for a wide range of WhatsApp Business features, including sending messages, and uploading, downloading, and deleting media. 
 
-!!! note "Credentials"
-		You can find authentication information for this node [here](/integrations/builtin/credentials/whatsapp/).
+On this page, you'll find a list of operations the WhatsApp Business node supports and links to more resources.
 
+/// note | Credentials
+Refer to [WhatsApp Business credentials](/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [WhatsApp Business integrations](https://n8n.io/integrations/whatsapp-business-cloud/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 * Message
@@ -20,3 +31,4 @@
 Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
 
 View [example workflows and related content](https://n8n.io/integrations/whatsapp-business-cloud/){:target=_blank .external-link} on n8n's website.
+

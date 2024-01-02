@@ -1,4 +1,10 @@
-# Form.io Trigger
+---
+title: Form.io Trigger credentials
+description: Documentation for Form.io Trigger credentials. Use these credentials to authenticate Form.io Trigger in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Form.io Trigger credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -17,3 +23,4 @@ After creating your Form.io account, from n8n:
 3. Enter your Form.io account ***Email***.
 4. Enter your Form.io account ***Password***.
 5. Click **Create** to save your new credentials.
+

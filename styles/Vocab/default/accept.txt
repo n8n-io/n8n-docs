@@ -1,6 +1,11 @@
 Adalo
+Agent
+agent
+Airtable
 Asana
+Authentik
 Axios
+Backblaze
 backend
 Beeminder
 Boolean
@@ -9,6 +14,7 @@ Caddy
 Citrix
 Clockify
 Cron
+Datastore
 Dockerfile
 eksctl
 Enum
@@ -18,6 +24,8 @@ Firestore
 GIMP
 Hetzner
 invalid
+Infisical
+Keycloak
 kubectl
 Kafka
 Lemlist
@@ -30,15 +38,23 @@ n8n
 namespace
 Nodelinter
 npm
+npx
+Okta
+Ollama
 onboarding
 Pipedrive
+Pinecone
+Pluralsight
 Postbin
 Postgres
+PostHog
 Realtime
 Serverless
 serverless
 Shopify
 shopify
+Strapi
+Supabase
 There are
 Tooltip
 tooltip
@@ -53,3 +69,5 @@ URIs
 URL
 Venafi
 Vuex
+Xata
+Zep

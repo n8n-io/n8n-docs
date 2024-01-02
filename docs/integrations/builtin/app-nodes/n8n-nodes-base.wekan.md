@@ -1,10 +1,21 @@
+---
+title: Wekan
+description: Documentation for the Wekan node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Wekan
 
-[Wekan](https://wekan.github.io/) is an open-source kanban board that allows a card-based task and to-do management.
+Use the Wekan node to automate work in Wekan, and integrate Wekan with other applications. n8n has built-in support for a wide range of Wekan features, including creating, updating, deleting, and getting boards and cards. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/wekan/).
+On this page, you'll find a list of operations the Wekan node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Wekan credentials](/integrations/builtin/credentials/wekan/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Wekan integrations](https://n8n.io/integrations/wekan/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -154,3 +165,4 @@ In the screenshot below, you will notice that the node updates the list id of th
 ### How to load all the parameters for the node?
 
 To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn how to change permissions.
+

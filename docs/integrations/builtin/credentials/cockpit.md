@@ -1,4 +1,10 @@
-# Cockpit
+---
+title: Cockpit credentials
+description: Documentation for Cockpit credentials. Use these credentials to authenticate Cockpit in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Cockpit credentials
 
 You can use these credentials to authenticate the following nodes with Cockpit.
 
@@ -18,3 +24,4 @@ Create a [Cockpit](https://www.getcockpit.com/) account.
 
 
 ![Getting Cockpit credentials](/_images/integrations/builtin/credentials/cockpit/using-access-token.gif)
+

@@ -1,13 +1,19 @@
+---
+title: HTML
+description: Documentation for the HTML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # HTML
 
 The HTML node provides operations to help you work with HTML in n8n.
 
-!!! note "HTML Extract node"
-	The HTML node replaces the HTML Extract node from version 0.213.0 onwards. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md){:target=_blank .external-link}.
-
-!!! warning "Cross-site scripting"
-		When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link}. This is a security risk. Be careful with untrusted inputs.
-
+/// note | HTML Extract node
+The HTML node replaces the HTML Extract node from version 0.213.0 onwards. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md){:target=_blank .external-link}.
+///
+/// warning | Cross-site scripting
+When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link}. This is a security risk. Be careful with untrusted inputs.
+///
 ## Operations
 
 * Generate HTML template
@@ -19,7 +25,7 @@ View [example workflows and related content](https://n8n.io/integrations/html/){
 
 ## Generate HTML template
 
-Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code-examples/) in the template, including n8n's [Built-in methods and variables](/code-examples/methods-variables-reference/)
+Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/)
 
 You can include:
 
@@ -46,6 +52,7 @@ Extract contents from an HTML-formatted source. The source can be in JSON, or a 
 	- **Return Array**: returns the values as an array so that if n8n finds multiple values, it returns them as individual items in an array. If you don't set this, n8n returns all values as a single string.
 - **Options**:
 	- **Trim Values**: removes all spaces and newlines from the beginning and end of the values.
+
 
 
 

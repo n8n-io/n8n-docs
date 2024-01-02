@@ -1,16 +1,16 @@
+---
+contentType: howto
+---
+
 # Configuration
 
 --8<-- "_snippets/embed-license.md"
 
 ## Authentication
 
-You can secure n8n using Basic Authentication by setting the following environment variables:
+You can secure n8n by setting up [User management](/user-management/), n8n's built-in authentication feature.
 
-```sh
-export N8N_BASIC_AUTH_ACTIVE=true
-export N8N_BASIC_AUTH_USER=<USER>
-export N8N_BASIC_AUTH_PASSWORD=<PASSWORD>
-``` 
+n8n supports [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/).
 
 ### Credential overwrites
 
@@ -24,17 +24,17 @@ n8n offers two ways to apply credential overwrites: using Environment Variable a
 
 Credential overwrites can be set using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
-!!! warning
-    Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
-
+/// warning
+Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
+///
 
 #### Using REST APIs
 
 The recommended way is to load the data using a custom REST endpoint. Set the `CREDENTIALS_OVERWRITE_ENDPOINT` to a path under which this endpoint should be made available.
 
-!!! note
-    The endpoints can be called just one at a time for security reasons.
-
+/// note
+The endpoints can be called just one at a time for security reasons.
+///
 
 For example:
 
@@ -65,25 +65,26 @@ For example:
     curl -H "Content-Type: application/json" --data @oauth-credentials.json http://localhost:5678/send-credentials
     ```
 
-!!! note
-    There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`. 
-    In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) which will be used by all child-credentials (`googleSheetsOAuth2Api`).
-
+/// note
+There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`. 
+In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) which will be used by all child-credentials (`googleSheetsOAuth2Api`).
+///
 
 ## Environment variables
 
 There are many [environment variables configurable in n8n](https://docs.n8n.io/reference/environment-variables.html). The following are most relevant for your hosted solution:
 
-| Variable | Values | Description |
-| :------- | :----- | :---------- |
-| `EXECUTIONS_TIMEOUT` | `number` | The maximum amount of time (in seconds) a workflow is allowed to run. |
-| `EXECUTIONS_PROCESS` | `'main', 'own'` | If workflow executions should run in the main process or in their own process. The `main` setting requires fewer resources. |
-| `EXECUTIONS_DATA_PRUNE` | `boolean` | If data of past executions should be deleted automatically. |
-| `EXECUTIONS_DATA_MAX_AGE` | `number` | Number of hours after which old executions are deleted. |
-| `NODES_EXCLUDE` | `Array<string>` | Specific nodes that should not be made available. |
-| `NODES_INCLUDE` | `Array<string>` | Specific nodes that should be included. |
-| `N8N_TEMPLATES_ENABLED` | `boolean` | Whether workflow templates should be enabled (true) or disabled (false) |
-| `N8N_TEMPLATES_HOST` | `string` | Defaults to https://api.n8n.io. Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](workflow-templates.md) for more information. |
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
+| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `main` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
+| `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
+| `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
+| `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
+| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readBinaryFile\", \"n8n-nodes-base.readBinaryFiles\", \"n8n-nodes-base.writeBinaryFile\"]"` |
+| `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
+| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
+| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates/) for more information. |
 
 ## Backend hooks
 

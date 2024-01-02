@@ -1,4 +1,10 @@
-# Mattermost
+---
+title: Mattermost credentials
+description: Documentation for Mattermost credentials. Use these credentials to authenticate Mattermost in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Mattermost credentials
 
 You can use these credentials to authenticate the following nodes with Mattermost.
 
@@ -48,3 +54,4 @@ The user can now generate a personal access token by going to  their account set
 
 
 - [Personal Access Tokens](https://docs.mattermost.com/developer/personal-access-tokens.html)
+

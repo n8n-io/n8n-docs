@@ -1,4 +1,10 @@
-# Pushcut
+---
+title: Pushcut credentials
+description: Documentation for Pushcut credentials. Use these credentials to authenticate Pushcut in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Pushcut credentials
 
 You can use these credentials to authenticate the following nodes with Pushcut.
 
@@ -18,3 +24,4 @@ Download the [Pushcut](https://www.pushcut.io) app.
 5. Use the ***API Key*** with your Pushcut node credentials in n8n.
 
 ![Getting Pushcut credentials](/_images/integrations/builtin/credentials/pushcut/using-api-key.gif)
+

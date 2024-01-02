@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # White labelling
 
 --8<-- "_snippets/embed-license.md"
@@ -57,8 +61,6 @@ In the following example the primary color changes to <span style="color:#0099ff
 
 ![Example Theme Color Customization](/_images/embed/white-label/color-transition.gif)
 
-!!! note
-    Similar CSS variables in `_tokens.dark.scss` for dark mode are an upcoming feature that you can't toggle using n8n's UI yet.
 
 ## Theme logos
 

@@ -1,4 +1,10 @@
-# Contentful
+---
+title: Contentful credentials
+description: Documentation for Contentful credentials. Use these credentials to authenticate Contentful in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Contentful credentials
 
 You can use these credentials to authenticate the following nodes with Contentful.
 
@@ -19,3 +25,4 @@ Create a [Contentful](https://www.contentful.com/) account.
 7. Click on the ***Save*** button to save your credentials.
 
 ![Getting Contentful credentials](/_images/integrations/builtin/credentials/contentful/using-api-key.gif)
+

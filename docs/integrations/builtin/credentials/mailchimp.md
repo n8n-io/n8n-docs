@@ -1,4 +1,10 @@
-# Mailchimp
+---
+title: Mailchimp credentials
+description: Documentation for Mailchimp credentials. Use these credentials to authenticate Mailchimp in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Mailchimp credentials
 
 You can use these credentials to authenticate the following nodes with Mailchimp.
 
@@ -11,9 +17,9 @@ Create a [Mailchimp](https://www.mailchimp.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Mailchimp account to n8n.
+///
 
 1. Access your Mailchimp dashboard.
 2. Click on your user icon on the top right.
@@ -38,3 +44,4 @@ Create a [Mailchimp](https://www.mailchimp.com/) account.
 6. Use the API key with your Mailchimp node credentials in n8n.
 
 ![Getting Mailchimp credentials](/_images/integrations/builtin/credentials/mailchimp/using-access-token.gif)
+

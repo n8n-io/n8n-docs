@@ -1,4 +1,10 @@
-# GetResponse
+---
+title: GetResponse credentials
+description: Documentation for GetResponse credentials. Use these credentials to authenticate GetResponse in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# GetResponse credentials
 
 You can use these credentials to authenticate the following nodes with GetResponse.
 
@@ -11,9 +17,9 @@ Create a [GetResponse](https://www.getresponse.com/) account.
 
 ## Using OAuth
 
-!!! note "Callback URL with GetResponse"
-    **Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept the localhost callback URL. Refer to the [FAQs](#_1-how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
-
+/// note | Callback URL with GetResponse
+**Note:** The Redirect URL should be a URL in your domain. For example, `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept the localhost callback URL. Refer to the [FAQs](#_1-how-to-configure-the-oauth-credentials-for-the-local-environment) to learn to configure the credentials for the local environment.
+///
 
 1. Open your [GetResponse dashboard](https://app.getresponse.com/dashboard).
 2. Click on ***Menu*** and select 'Integrations and API'.
@@ -75,3 +81,4 @@ export WEBHOOK_URL=<YOUR-NGROK-URL>
 
 - [OAuth 2.0 - Authorization Code](https://apidocs.getresponse.com/v3/case-study/oauth2-authorization-code)
 - [Authentication - API key](https://apireference.getresponse.com/#section/Authentication)
+

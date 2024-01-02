@@ -1,4 +1,10 @@
-# Trello
+---
+title: Trello credentials
+description: Documentation for Trello credentials. Use these credentials to authenticate Trello in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Trello credentials
 
 You can use these credentials to authenticate the following nodes with Trello:
 
@@ -17,3 +23,4 @@ Create a [Trello](https://trello.com/) account.
 --8<-- "_snippets/integrations/builtin/credentials/open-credential-modal-list.md"
 1. Enter the API key and API token.
 1. Select **Save**. n8n tests the connection.
+

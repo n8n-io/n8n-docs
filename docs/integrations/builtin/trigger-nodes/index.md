@@ -1,3 +1,8 @@
-# Trigger nodes library
+---
+contentType: overview
+---
 
-This section provides information about n8n's trigger nodes.
+# Triggers library
+
+This section provides information about n8n's Triggers.
+

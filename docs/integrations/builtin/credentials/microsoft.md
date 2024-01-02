@@ -1,4 +1,10 @@
-# Microsoft
+---
+title: Microsoft credentials
+description: Documentation for Microsoft credentials. Use these credentials to authenticate Microsoft in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Microsoft credentials
 
 You can use these credentials to authenticate the following nodes with Microsoft.
 
@@ -10,15 +16,16 @@ You can use these credentials to authenticate the following nodes with Microsoft
 - [Microsoft Teams](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/)
 - [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/)
 
+
 ## Prerequisites
 
 Create a [Microsoft Azure](https://azure.microsoft.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to click on the **Connect my account** button to connect your Microsoft account with n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to click on the **Connect my account** button to connect your Microsoft account with n8n.
+///
 
 1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations){:target=_blank .external-link}.
 2. Click on the **Register an application** button.
@@ -45,3 +52,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/aqr_PwR1Sgc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

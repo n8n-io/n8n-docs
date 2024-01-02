@@ -1,4 +1,10 @@
-# NASA
+---
+title: NASA credentials
+description: Documentation for NASA credentials. Use these credentials to authenticate NASA in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# NASA credentials
 
 You can use these credentials to authenticate the following nodes with NASA.
 
@@ -13,3 +19,4 @@ You can use these credentials to authenticate the following nodes with NASA.
 4. Use this **API Key** with your NASA node credentials in n8n.
 
 ![Getting NASA credentials](/_images/integrations/builtin/credentials/nasa/using-api.gif)
+

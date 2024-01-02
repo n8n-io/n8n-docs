@@ -1,10 +1,21 @@
+---
+title: Google Cloud Natural Language
+description: Documentation for the Google Cloud Natural Language node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Google Cloud Natural Language
 
-[Google Cloud Natural Language](https://cloud.google.com/natural-language/) uses machine learning to reveal the structure and meaning of text. You can extract information about people, places, and events, and better understand social media sentiment and customer conversations.
+Use the Google Cloud Natural Language node to automate work in Google Cloud Natural Language, and integrate Google Cloud Natural Language with other applications. n8n has built-in support for a wide range of Google Cloud Natural Language features, including analyzing documents.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+On this page, you'll find a list of operations the Google Cloud Natural Language node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Natural Language integrations](https://n8n.io/integrations/google-cloud-natural-language/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -90,6 +101,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/googlecloudnaturallanguage/noop_node.png)
 
-!!! note "Activate workflow for production"
-    This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+/// note | Activate workflow for production
+This example workflow uses the Typeform Trigger node. You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered when a new form is submitted.
+///
 

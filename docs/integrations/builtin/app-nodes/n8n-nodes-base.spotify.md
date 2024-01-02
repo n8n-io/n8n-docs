@@ -1,10 +1,21 @@
+---
+title: Spotify
+description: Documentation for the Spotify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Spotify
 
-[Spotify](https://www.spotify.com/) is a music streaming service containing millions of music tracks and podcasts. Spotify allows users to create and manage their own playlists, explore new music through recommendation services, and listen to songs on demand.
+Use the Spotify node to automate work in Spotify, and integrate Spotify with other applications. n8n has built-in support for a wide range of Spotify features, including getting album and artist information. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/spotify/).
+On this page, you'll find a list of operations the Spotify node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Spotify credentials](/integrations/builtin/credentials/spotify/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Spotify integrations](https://n8n.io/integrations/spotify/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -67,3 +78,4 @@ The start node exists by default when you create a new workflow.
 3. Click on *Execute Node* to run the workflow.
 
 ![Spotify URI](/_images/integrations/builtin/app-nodes/spotify/spotifyuri.gif)
+

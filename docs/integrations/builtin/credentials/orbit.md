@@ -1,4 +1,10 @@
-# Orbit
+---
+title: Orbit credentials
+description: Documentation for Orbit credentials. Use these credentials to authenticate Orbit in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Orbit credentials
 
 You can use these credentials to authenticate the following nodes with Orbit.
 
@@ -20,3 +26,4 @@ Create an [Orbit](https://app.orbit.love/) account.
 ## Further Reference
 
 - [Orbit API Documentation](https://www.notion.so/Orbit-API-Documentation-41ed7911e070400b99cfebb296813670#cb4111e0436e420c8c05af078496ff30)
+

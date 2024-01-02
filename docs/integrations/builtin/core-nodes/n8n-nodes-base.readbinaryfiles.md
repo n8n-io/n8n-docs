@@ -1,38 +1,26 @@
+---
+title: Read Binary Files
+description: Documentation for the Read Binary Files node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Read Binary Files
 
-The Read Binary Files node is used to read multiple files from the host machine that runs n8n.
+The Read Binary Files node reads files from the host machine that runs n8n.
 
-!!! note "Keep in mind"
-    1. If you are running n8n in Docker, your command will run on the n8n container and not the Docker host.
-2. This node will look for files relative to the n8n install path. It is recommended to use absolute file paths to prevent any errors.
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Read Binary Files integrations](https://n8n.io/integrations/read-binary-files/){:target=_blank .external-link} list.
+///
 
+## Related resources
 
-## Node Reference
+View [example workflows and related content](https://n8n.io/integrations/read-binary-files/){:target=_blank .external-link} on n8n's website.
 
-1. *File Selector* field: This is a field that is used to specify the type of files to be read. For example, `*.jpg`.
-2. *Property Name* field: Name of the binary property to which to write the data of the read files.
+## File locations
 
-It is also possible to select files from a certain directory, by specifying the path in the *File Selector* field. For example, `/data/folder/*.jpg`.
+If you run n8n in Docker, your command runs in the n8n container and not the Docker host.
 
-## Example Usage
-
-This workflow allows you to read multiple files from the host machine using the Read Binary Files node. You can also find the [workflow](https://n8n.io/workflows/578) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Read Binary Files]()
-
-
-The final workflow should look like the following image.
-
-![A workflow with the Read Binary Files node](/_images/integrations/builtin/core-nodes/readbinaryfiles/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Read Binary Files node
-
-1. Enter the type of files you want to read in the *File Selector* field.
-2. Click on *Execute Node* to run the workflow.
+This node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
 
 
 

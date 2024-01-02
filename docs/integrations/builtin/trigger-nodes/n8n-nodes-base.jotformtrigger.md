@@ -1,10 +1,16 @@
-# JotForm Trigger
+---
+title: JotForm trigger
+description: Documentation for the JotForm trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# JotForm trigger
 
 [JotForm](https://www.jotform.com/) is an online form building service. JotForm's software creates forms with a drag and drop creation tool and an option to encrypt user data.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/jotform/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/jotform/).
+///
 
 
 ## Example Usage
@@ -24,6 +30,7 @@ The final workflow should look like the following image.
 2. Select the form you want to receive updates for from the *Form* dropdown list.
 3. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the JotForm Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the JotForm Trigger node.
+///
 

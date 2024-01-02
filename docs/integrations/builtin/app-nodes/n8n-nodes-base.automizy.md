@@ -1,9 +1,21 @@
+---
+title: Automizy
+description: Documentation for the Automizy node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Automizy
 
-[Automizy](https://automizy.com/) is an email marketing automation software that offers AI-powered Subject Line Tester, AB testing, and email automation.
+Use the Automizy node to automate work in Automizy, and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, including creating, reading, listing, updating, deleting contacts, and lists.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/automizy/).
+On this page, you'll find a list of operations the Automizy node supports and links to more resources.
+
+/// note | Credentials
+Refer to [Automizy credentials](/integrations/builtin/credentials/automizy/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [Automizy integrations](https://n8n.io/integrations/automizy/){:target=_blank .external-link} list.
+///
 
 
 ## Basic Operations
@@ -96,3 +108,4 @@ This node returns all the contacts of the `n8n-docs` list that we created using 
 In the screenshot below, you will notice that the node returns all the contacts that are present in the list `n8n-docs`.
 
 ![Using the Automizy node to get all the contacts in a list](/_images/integrations/builtin/app-nodes/automizy/automizy3_node.png)
+

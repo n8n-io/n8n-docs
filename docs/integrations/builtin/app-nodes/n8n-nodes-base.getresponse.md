@@ -1,10 +1,21 @@
+---
+title: GetResponse
+description: Documentation for the GetResponse node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # GetResponse
 
-[GetResponse](https://www.getresponse.com/) is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
+Use the GetResponse node to automate work in GetResponse, and integrate GetResponse with other applications. n8n has built-in support for a wide range of GetResponse features, including creating, updating, deleting, and getting contacts. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
+On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
 
+/// note | Credentials
+Refer to [GetResponse credentials](/integrations/builtin/credentials/getresponse/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [GetResponse integrations](https://n8n.io/integrations/getresponse/){:target="_blank" .external-link} list.
+///
 
 
 ## Basic Operations
@@ -85,3 +96,4 @@ Adding this node here is optional, as the absence of this node won't make a diff
 2. Click on ***Execute Node*** to run the node.
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/getresponse/noop_node.png)
+

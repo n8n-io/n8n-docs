@@ -1,5 +1,6 @@
 ---
 description: A quick example to try out n8n.
+contentType: tutorial
 ---
 
 # The very quick quickstart
@@ -12,9 +13,7 @@ You will:
 * Add a node and configure it using expressions.
 * Run your first workflow
 
-## Step one: Install and run n8n
-
-!!! note "Skip this section if you've already installed n8n or signed up for a Cloud account"
+## Step one: Sign up for n8n
 
 --8<-- "_snippets/try-it-out/install-run-n8n.md"
 
@@ -40,14 +39,14 @@ Select **Execute workflow** to run the workflow to check it's working, and load 
 
 ## Step four: Add a node
 
-Add a third node to message each customer and tell them their description. The Customer Messenger node allows you to send a message to fake recipients.
+Add a third node to message each customer and tell them their description. Use the Customer Messenger node to send a message to fake recipients.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Set node.
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
 3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
-4. You're going to use [expressions](/code-examples/expressions/) to map in the **Customer ID** and create the **Message**:
+4. You're going to use [expressions](/code/expressions/) to map in the **Customer ID** and create the **Message**:
 	1. Drag **customer_ID** from the **INPUT** panel into the **Customer ID** field in the node settings.
-    2. Hover over **Message**. Select the **Expression** tab. n8n opens the expressions editor for this field.
+    2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
     3. Copy this expression into the editor:
         ```
         Hi {{$json.customer_name}},  Your description is {{$json.customer_description}}

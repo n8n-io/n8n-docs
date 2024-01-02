@@ -1,4 +1,10 @@
-# Eventbrite
+---
+title: Eventbrite credentials
+description: Documentation for Eventbrite credentials. Use these credentials to authenticate Eventbrite in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Eventbrite credentials
 
 You can use these credentials to authenticate the following nodes with Eventbrite.
 
@@ -10,9 +16,9 @@ Create a [Eventbrite](https://www.eventbrite.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Eventbrite account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Eventbrite account to n8n.
+///
 
 1. Log in to your Eventbrite account.
 2. Click on the user icon in the top right.
@@ -36,3 +42,4 @@ Create a [Eventbrite](https://www.eventbrite.com/) account.
 4. Use provided key with your Eventbrite node credentials in n8n.
 
 ![Getting Eventbrite credentials](/_images/integrations/builtin/credentials/eventbrite/using-access-token.gif)
+

@@ -1,10 +1,14 @@
 ---
 description: The n8n faircode license.
+contentType: explanation
 ---
 
 # Faircode license
 
-n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
+/// note | Proprietary licenses for Enterprise
+Proprietary licenses are available for enterprise customers. [Get in touch](mailto:license@n8n.io)
+///
+n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link}.
 
 ## License FAQs
 
@@ -42,7 +46,6 @@ Our license restricts use to "internal business purposes". In practice that mean
 All of the following examples are allowed under our license: 
 
 * Using n8n to sync the data you control as a company, for example from a CRM to an internal database .
-* Using n8n workflows to create backend logic for a product.
 * Creating an n8n node for your product, or any other integration between your product and n8n.
 * Providing consulting services related to n8n, for example building workflows, custom features closely connect to n8n, or code that gets executed by n8n.
 * Supporting n8n, for example by setting it up or maintaining it on an internal company server.

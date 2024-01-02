@@ -12,13 +12,22 @@ You can find more info on working with the docs project in the README: https://g
 
 -->
 
+<!--
+Set the meta title and meta description in the frontmatter
+-->
+
+---
+title: _Name_ credentials
+description: Documentation for the _Name_ credentials. Use these credentials to authenticate _Name_ in n8n, a workflow automation platform.
+---
+
 <!-- 
 The title should be the name of the integration.
 Match the brand name exactly. For example, GitHub NOT Github
 -->
-# _Name_
+# _Name_ credentials
 
-You can use these credentials to authenticate the following nodes with:
+You can use these credentials to authenticate the following nodes:
 
 * _List of apps_
 * _That use these credentials_
@@ -27,6 +36,15 @@ You can use these credentials to authenticate the following nodes with:
 
 _Include info on services they need to sign up for_
 
+## Related resources
+
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
+Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+
+
+<!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
+View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
+
 
 ## Using _Auth method_
 	
@@ -34,7 +52,7 @@ _Link to product's docs for this auth method._
 	
 _STOP AND THINK: does this node require a step by step? If authentication is easy to set up, or if this node isn't heavily used, consider leaving out the step by step to minimise maintenance._
 
-_IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (https://docs.n8n.io/integrations/builtin/credentials/asana/)_
+_IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (/integrations/builtin/credentials/asana/)_
 
 <!-- 
 Add any other sections here. 

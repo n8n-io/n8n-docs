@@ -1,10 +1,16 @@
-# ClickUp Trigger
+---
+title: ClickUp trigger
+description: Documentation for the ClickUp trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# ClickUp trigger
 
 [ClickUp](https://clickup.com/) is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/clickup/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/clickup/).
+///
 
 
 ## Example Usage
@@ -25,6 +31,7 @@ The final workflow should look like the following image.
 3. Select the `*` option in the *Events* field to receive updates for all the events.
 4. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ClickUp Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the ClickUp Trigger node.
+///
 

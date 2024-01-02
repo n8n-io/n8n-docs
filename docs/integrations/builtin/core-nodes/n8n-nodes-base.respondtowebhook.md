@@ -1,65 +1,69 @@
+---
+title: Respond to Webhook
+description: Documentation for the Respond to Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Respond to Webhook
 
-The *Respond to Webhook* node can be used in workflows with a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node. It allows controlling the response to incoming webhooks. In the Webhook node, the **Using 'Respond to Webhook' node** option would need to be selected in the **Response** dropdown for the *Respond to Webhook* node to work.
+Use the Respond to Webhook node to control the response to incoming webhooks. This node works with the [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node.
 
-!!! note "Expressions"
-    When using [expressions](/code-examples/expressions/), the *Respond to Webhook* node will only run for the first item in the input data
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Respond to Webhook integrations](https://n8n.io/integrations/respond-to-webhook/){:target=_blank .external-link} list.
+///
+/// note | Runs once for the first data item
+The Respond to Webhook node runs once, using the first incoming data item. Refer to [Return more than one data item](#return-more-than-one-data-item) for more information.
+///
+## How to use Respond to Webhook
 
+To use the Respond to Webhook node:
 
-## Node reference
+1. Add a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node as the trigger node for the workflow.
+1. In the Webhook node, set **Respond** to **Using 'Respond to Webhook' node**.
+1. Add the Respond to Webhook node anywhere in your workflow. If you want it to return data from other nodes, place it after those nodes.
 
-The node supports the following modes through the **Respond With** field:
+## Node parameters
 
-- **First Incoming Item**: Respond with the first incoming item's JSON.
-- **Text**: Respond with a text defined in the **Response Body** field.
-- **JSON**: Respond with a JSON object defined in the **Response Body** field.
-- **Binary**: Respond with a binary file defined in the **Response Data Source** field.
-- **No Data**: No response payload is sent.
+Configure the node behavior using these parameters.
 
-Available options:
+### Respond With
 
-- **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to be used.
-- **Response Headers**: Define response headers to be sent.
+Choose what data to send in the webhook response.
 
-## Workflow behaviour
+- **All Incoming Items**: respond with all the JSON items from the input.
+- **Binary**: respond with a binary file defined in **Response Data Source**.
+- **First Incoming Item**: respond with the first incoming item's JSON.
+- **JSON**: respond with a JSON object defined in **Response Body**.
+- **No Data**: no response payload.
+- **Redirect**: redirect to a URL set in **Redirect URL**.
+- **Text**: respond with text set in **Response Body**.
 
-When using the *Respond to Webhook* node, workflows will behave as follows:
+## Node options
 
-- When the workflow finishes without executing the *Respond to Webhook* node, a standard message is returned with a 200 status.
-- If a second *Respond to Webhook* node is executed after the first one, it is ignored.
-- If the workflow errors before the first *Respond to Webhook* node is executed, an error message is returned with a 500 status.
-- If a *Respond to Webhook* node is executed but there was no webhook, the *Respond to Webhook* node is ignored.
+Select **Add Option** to view and set the options.
 
-## Example Usage
+- **Response Code**: set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} to use.
+- **Response Headers**: define response headers to send.
+- **Put Response in Field**: available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
 
-This workflow allows serves an HTML page when receiving a GET requests. You can find the complete workflow [here on n8n.io](https://n8n.io/workflows/1306). The example workflow uses the following nodes:
+## Return more than one data item
 
-- [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
-- [Respond to Webhook]()
+/// note | Deprecated in 1.22.0
+n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
+///
 
-![The workflow using the Respond to Webhook node](/_images/integrations/builtin/core-nodes/respondtowebhook/workflow.png)
+The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions/). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
 
-### 1. Webhook node
+If you need to return more than one data item, you can either:
 
-This node will receive incoming requests (for example, when the webhook URL is opened with a browser).
+- Instead of using the Respond to Webhook node, use the **When Last Node Finishes** option in **Respond** in the Webhook node. Use this when you want to return the final data that the workflow outputs.
+- Use the [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Set **Aggregate** to **All Item Data (Into a Single List)**.
 
-1. Enter a human-readable value in the **path** field, for example `my-form`.
-2. Choose the **Using 'Respond to Webhook' node** option **Response** dropdown.
-3. Click on **Execute Node** to run the node.
-4. Open the URL shown in the **Test URL** field under **Webhook URLs** in a new browser tab.
+## Workflow behavior
 
-![The Webhook node](/_images/integrations/builtin/core-nodes/respondtowebhook/webhook_node.png)
+When using the Respond to Webhook node, workflows behave as follows:
 
-### 2. Respond to Webhook node
-
-This node will define the response to the request received in the previous step.
-
-1. Connect the *Webhook* node from the previous step to the new *Respond to Webhook* node.
-2. Choose the **Text** option in the **Respond With** dropdown.
-3. Enter some basic HTML into the **Response Body** field (for example the [Bootstrap Starter template](https://getbootstrap.com/docs/5.1/getting-started/introduction/#starter-template)).
-4. Click **Add Option** > **Response Headers** > **Add Response Header** to add a header to the response.
-5. Enter `Content-Type` in the **Name** field and `text/html; charset=UTF-8` in the value field of the new header.
-6. Close the *Respond to Webhook* modal and click the **Execute Workflow** button.
-7. Open the **Test URL** from the *Webhook* node in a new browser tab. The browser should now show the page added defined in the **Response Body** field of the *Respond to Webhook* node.
-
-![The Respond to Webhook node](/_images/integrations/builtin/core-nodes/respondtowebhook/respond_to_webhook_node.png)
+- The workflow finishes without executing the Respond to Webhook node: it returns a standard message with a 200 status.
+- The workflow errors before the first Respond to Webhook node executes: the workflow returns an error message with a 500 status.
+- A second Respond to Webhook node executes after the first one: the workflow ignores it.
+- A Respond to Webhook node executes but there was no webhook: the workflow ignores the Respond to Webhook node.

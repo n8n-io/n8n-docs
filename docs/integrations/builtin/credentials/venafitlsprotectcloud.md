@@ -1,4 +1,10 @@
-# Venafi TLS Protect Cloud
+---
+title: Venafi TLS Protect Cloud credentials
+description: Documentation for Venafi TLS Protect Cloud credentials. Use these credentials to authenticate Venafi TLS Protect Cloud in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Venafi TLS Protect Cloud credentials
 
 You can use these credentials to authenticate the following nodes with Venafi TLS Protect Cloud:
 
@@ -9,3 +15,4 @@ You can use these credentials to authenticate the following nodes with Venafi TL
 Follow the Venafi REST API documentation on [Obtaining an API Key](https://docs.venafi.cloud/api/obtaining-api-key/){:target=_blank .external-link}.
 
 Enter the API key in the **Venafi TLS Protect Cloud account** credentials modal. Refer to [Add and edit credentials](/credentials/add-edit-credentials/) for more information on working with credentials in n8n.
+

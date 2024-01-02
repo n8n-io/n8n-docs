@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Build a declarative-style node
 
 This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
@@ -18,9 +22,9 @@ You need some understanding of:
 
 In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
 
-!!! note "Existing node"
-    n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
-
+/// note | Existing node
+n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
+///
 ### Step 1: Set up the project
 
 
@@ -71,7 +75,7 @@ Every node must have a base file. Refer to [Node base file](/integrations/creati
 
 In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
 
-#### Step 5.1: Imports
+#### Step 3.1: Imports
 
 Start by adding the import statements:
 
@@ -83,9 +87,9 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 
 The node must export an interface that implements INodeType. This interface must include a `description` interface, which in turn contains the `properties` array.
 
-!!! note "Class names and file names"
-		Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
-
+/// note | Class names and file names
+Make sure the class name and the file name match. For example, given a class `NasaPics`, the filename must be `NasaPics.node.ts`.
+///
 ```typescript
 export class NasaPics implements INodeType {
 	description: INodeTypeDescription = {
@@ -219,7 +223,6 @@ Add the following to the `properties` array, after the `resource` object:
 			routing: {
 				request: {
 					method: 'GET',
-					url: '=/mars-photos/api/v1/rovers/{{$parameter.roverName}}/photos',
 				},
 			},
 		},
@@ -238,6 +241,11 @@ Add the following to the `properties` array, after the `resource` object:
 		{name: 'Perseverance', value: 'perseverance'},
 		{name: 'Spirit', value: 'spirit'},
 	],
+	routing: {
+		request: {
+			url: '=/mars-photos/api/v1/rovers/{{$value}}/photos',
+		},
+	},
 	default: 'curiosity',
 	displayOptions: {
 		show: {
@@ -453,6 +461,6 @@ You need to update the `package.json` to include your own information, such as y
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a declarative node: n8n's [SendInBlue node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/SendInBlue){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
 

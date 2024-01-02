@@ -1,4 +1,10 @@
-# Help Scout
+---
+title: Help Scout credentials
+description: Documentation for Help Scout credentials. Use these credentials to authenticate Help Scout in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Help Scout credentials
 
 You can use these credentials to authenticate the following nodes with Help Scout.
 
@@ -11,9 +17,9 @@ Create a [Help Scout](https://www.helpscout.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Help Scout account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Help Scout account to n8n.
+///
 
 1. Log in to your Help Scout account.
 2. Click on the user icon in the top right.
@@ -27,3 +33,4 @@ Create a [Help Scout](https://www.helpscout.com/) account.
 10. Click the *Save* button to save your credentials.
 
 ![Getting Help Scout OAuth credentials](/_images/integrations/builtin/credentials/helpscout/using-oauth.gif)
+

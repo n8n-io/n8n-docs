@@ -1,4 +1,10 @@
-# Copper
+---
+title: Copper credentials
+description: Documentation for Copper credentials. Use these credentials to authenticate Copper in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Copper credentials
 
 You can use these credentials to authenticate the following nodes with Copper.
 
@@ -26,3 +32,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
     <iframe width="840" height="472.5" src="https://www.youtube.com/embed/4yV9GI3UF_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

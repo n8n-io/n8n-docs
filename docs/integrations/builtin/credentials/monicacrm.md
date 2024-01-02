@@ -1,4 +1,10 @@
-# Monica CRM
+---
+title: Monica CRM credentials
+description: Documentation for Monica CRM credentials. Use these credentials to authenticate Monica CRM in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Monica CRM credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -24,3 +30,4 @@ From n8n:
 7. (Self-hosted Only) Enter the domain of your Monica CRM instance.
 8. In the ***API Token** field enter the token created above.
 9. Click **Create** to save your new credentials.
+

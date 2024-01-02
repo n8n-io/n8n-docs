@@ -1,3 +1,9 @@
+---
+title: Google Service Account
+description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+contentType: integration
+---
+
 # Google: Service Account
 
 Using service accounts is more complex than OAuth2. Before you begin:
@@ -18,11 +24,14 @@ Using service accounts is more complex than OAuth2. Before you begin:
 
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
 
-	!!! note "Generic and specific credentials"
-		If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+    /// note | Generic and specific credentials
+    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
 
-		* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
-		* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
+	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
+	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
+    ///
+
+
 
 2. Note the **Private Key** from the node credential modal. You'll need this in the next section.
 
@@ -80,3 +89,4 @@ A Service Account can't access Google Drive files and folders that weren't share
 3. Right-click on the file or folder and select **Share**.
 4. Paste your Service Account email into **Add People and groups**.
 5. Select **Editor** for read-write access or **Viewer** for read-only access.
+

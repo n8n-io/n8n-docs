@@ -1,3 +1,7 @@
+---
+contentType: explanation
+---
+
 # Risks when using community nodes
 
 Using community nodes means you are installing unverified code from a public source into your n8n instance. This has some risks.
@@ -16,3 +20,6 @@ You can report bad community nodes to [security@n8n.io](mailto: security@n8n.io)
 
 <!-- vale on -->
 
+## Disable community nodes
+
+You can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`.

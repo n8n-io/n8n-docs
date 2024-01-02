@@ -1,5 +1,10 @@
+---
+contentType: overview
+---
+
 # Self-hosting n8n
 
+This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions.
 
 <div class="grid-cards-vertical cards" markdown>
 
@@ -19,7 +24,7 @@
 
 	Choose and set up user authentication for your n8n instance.
 
-	[:octicons-arrow-right-24: Authentication](/hosting/authentication/)
+	[:octicons-arrow-right-24: Authentication](/hosting/user-management/)
 
 - __Scaling__
 

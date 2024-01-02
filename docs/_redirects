@@ -1,3 +1,85 @@
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentjsoninputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
+
+
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezepinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemoryinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemory/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/
+
+
+
+/variables/   /code/variables/
+/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/
+
+/flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/
+/flow-logic/error-handling/memory-errors/   /hosting/scaling/memory-errors/
+
+# Code into own tab
+
+/code-examples/ /code/
+/code-examples/methods-variables-reference/   /code/builtin/
+/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat
+/code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/
+/code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/
+/code-examples/javascript-functions/get-binary-data-buffer/   /code/cookbook/code-node/get-binary-data-buffer/
+/code-examples/javascript-functions/console-log/   /code/cookbook/code-node/console-log/
+/code-examples/ai-code/   /code/ai-code/
+/code-examples/expressions/check-incoming-data/   /code/cookbook/expressions/check-incoming-data/
+/code-examples/expressions/   /code/expressions/
+/code-examples/expressions/expressions/   /code/expressions/
+/code-examples/javascript-functions/   /code/code-node/
+/code-examples/javascript-functions/code-node/   /code/code-node/
+/code-examples/expressions/luxon/   /code/luxon/
+/code-examples/javascript-functions/luxon/   /code/luxon/
+/code-examples/expressions/jmespath/   /code/jmespath/
+/code-examples/javascript-functions/jmespath/   /code/jmespath/
+/code-examples/methods-variables-examples/all/   /code/cookbook/builtin/all/
+/code-examples/methods-variables-examples/execution/   /code/cookbook/builtin/execution/
+/code-examples/methods-variables-examples/get-workflow-static-data/   /code/cookbook/builtin/get-workflow-static-data/
+/code-examples/methods-variables-examples/vars/   /code/cookbook/builtin/vars/
+/code-examples/methods-variables-examples/evaluate-expression/   /code/builtin/advanced/
+/code-examples/methods-variables-examples/node/   /code/builtin/output-other-nodes/
+/code-examples/methods-variables-examples/run-index/   /code/builtin/n8n-metadata/
+/code-examples/methods-variables-examples/workflow/   /code/builtin/n8n-metadata/
+
+
+
+
+/hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
+/hosting/authentication/jwt/   /hosting/user-management-self-hosted/
+/hosting/authentication/basic-auth/   /hosting/user-management-self-hosted/
+
+/environments/variables/   /variables/
+
+/1-0-preview/   /1-0-migration-checklist/
+
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/integrations/builtin/credentials/sendinblue/   /integrations/builtin/credentials/brevo/
+
+
+/hosting/logging/   /hosting/logging-monitoring/logging/
+/code-examples/console-log/   /code/cookbook/code-node/console-log/
+
+/reference/   /
+/reference/keyboard-shortcuts/   /keyboard-shortcuts/
+/reference/cli-commands/   /hosting/cli-commands/
+/reference/update/   /release-notes/
+/security-audit/   /hosting/security-audit/
+/reference/data-collection/   /privacy-security/privacy/
+
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/
 
 /reference/release-notes/   /release-notes/
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
@@ -19,24 +101,24 @@
 
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /choose-n8n/cloud/
-/hosting/installation/desktop-app/   /choose-n8n/desktop-app/
+/hosting/installation/desktop-app/   /choose-n8n/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/environment-variables/   /hosting/environment-variables/environment-variables/
 /hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /choose-n8n/cloud/
-/hosting/updating/desktop/   /choose-n8n/desktop/
+/hosting/updating/desktop/   /choose-n8n/
 /hosting/updating/npm/   /choose-n8n/npm/
 /hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
-/hosting/security/   /hosting/authentication/
+/hosting/security/   /hosting/user-management/
 /hosting/user-management/   /user-management/
 /hosting/configuration/   /hosting/environment-variables/configuration-methods/
 
 
 # 2022 SEO audit
 
-/nodes/expressions/expressions.html   /code-examples/expressions/
-/nodes/expressions.html   /code-examples/expressions/
+/nodes/expressions/expressions.html   /code/expressions/
+/nodes/expressions.html   /code/expressions/
 /reference/configuration.html  /hosting/environment-variables/configuration-methods/
 /getting-started/installation/index.html   /hosting/options/
 /getting-started/create-your-first-workflow/    /try-it-out/
@@ -68,10 +150,10 @@
 
 # methods / vars / paired items
 
-/code-examples/expressions/methods/   /code-examples/methods-variables-reference/
-/code-examples/expressions/variables/   /code-examples/methods-variables-reference/
-/code-examples/javascript-functions/methods/   /code-examples/methods-variables-reference/
-/code-examples/javascript-functions/variables/   /code-examples/methods-variables-reference/
+/code-examples/expressions/methods/   /code/builtin/
+/code-examples/expressions/variables/   /code/builtin/
+/code-examples/javascript-functions/methods/   /code/builtin/
+/code-examples/javascript-functions/variables/  /code/builtin/
 /data/data-mapping/   /data/data-mapping/data-mapping-ui/
 
 # Editor UI
@@ -97,7 +179,6 @@
 /integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/
 /integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/
 
-# TODO: figure out where to redirect node cli
 
 # Quickstart overhaul
 
@@ -125,12 +206,12 @@
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /user-management/
 /reference/environment-variables.html                /hosting/environment-variables/
-/reference/start-workflows-via-cli.html              /reference/cli-commands/
+/reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
 /reference/data/understanding-database.html          /hosting/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
-/reference/telemetry.html                            /reference/data-collection/
+/reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /contributing/
 /reference/release-notes.html                        /reference/release-notes/	
@@ -154,9 +235,6 @@
 /nodes/creating-nodes/node-linter.html      /integrations/creating-nodes/code/node-linter/
 /nodes/creating-nodes/node-review-checklist.html     /integrations/creating-nodes/code/review-checklist/
 /nodes/creating-nodes/troubleshooting.html     /integrations/creating-nodes/code/troubleshooting-node-development/
-
-
-/nodes/expressions/* /code-examples/expressions/:splat
 
 /nodes/node-basics/ /integrations/
 /nodes/creating-nodes/		/integrations/creating-nodes/
@@ -608,10 +686,10 @@
 /nodes/n8n-nodes-base.segment/		/integrations/builtin/app-nodes/n8n-nodes-base.segment/
 /nodes/n8n-nodes-base.sendGrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/
 /nodes/n8n-nodes-base.sendgrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/
-/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
-/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/
-/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
-/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/
+/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
 /nodes/n8n-nodes-base.sendy/		/integrations/builtin/app-nodes/n8n-nodes-base.sendy/
 /nodes/n8n-nodes-base.sentryIo/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/
 /nodes/n8n-nodes-base.sentryio/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/
@@ -732,3 +810,8 @@
 # Old redirects
 
 /reference/changelog.html   /reference/release-notes/
+
+# Send in Blue Rebrand
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/ /integrations/builtin/app-nodes/n8n-nodes-base.brevo/
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/ /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/
+/integrations/builtin/credentials/sendinblue/ /integrations/builtin/credentials/brevo/

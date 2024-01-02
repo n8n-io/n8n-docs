@@ -1,4 +1,10 @@
-# Twake
+---
+title: Twake credentials
+description: Documentation for Twake credentials. Use these credentials to authenticate Twake in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Twake credentials
 
 You can use these credentials to authenticate the following nodes with Twake.
 
@@ -21,3 +27,4 @@ Create a [Twake](https://twake.app/) account.
 9. Use the Workspace Key with your Twake node credentials in n8n.
 
 ![Getting Twake workspace key](/_images/integrations/builtin/credentials/twake/using-workspace-key.gif)
+

@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Designing the Workflow
 
 Now that we have an idea of what Nathan wants to automate, let's enumerate the steps he needs to take to achieve this:
@@ -13,7 +17,7 @@ Nathan's workflow involves sending data from the company's data warehouse to two
 
 n8n provides integrations for all these steps, so Nathan's workflow in n8n would look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-two/Finished-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-four/l1-c4-nathans-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
 
 You will build this workflow in 8 steps:
 

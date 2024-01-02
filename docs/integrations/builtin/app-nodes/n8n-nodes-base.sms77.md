@@ -1,10 +1,21 @@
+---
+title: sms77
+description: Documentation for the sms77 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # sms77
 
-[sms77](https://www.sms77.io/) is a full service messaging provider that helps improve communication with a powerful API and comprehensive products like Voice, SMS, and Text2Speech.
+Use the sms77 node to automate work in sms77, and integrate sms77 with other applications. n8n has built-in support for a wide range of sms77 features, including sending SMS, and converting text to voice. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/sms77/).
+On this page, you'll find a list of operations the sms77 node supports and links to more resources.
 
+/// note | Credentials
+Refer to [sms77 credentials](/integrations/builtin/credentials/sms77/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [sms77 integrations](https://n8n.io/integrations/sms77/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -34,3 +45,4 @@ The start node exists by default when you create a new workflow.
 3. Enter the phone number to which you'll be sending the message in the *To* field.
 4. Enter you message in the *Message* field.
 5. Click on *Execute Node* to run the workflow.
+

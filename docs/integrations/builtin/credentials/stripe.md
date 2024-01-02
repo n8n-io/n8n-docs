@@ -1,4 +1,10 @@
-# Stripe
+---
+title: Stripe credentials
+description: Documentation for Stripe credentials. Use these credentials to authenticate Stripe in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Stripe credentials
 
 You can use these credentials to authenticate the following nodes with Stripe.
 
@@ -17,3 +23,4 @@ Create a [Stripe](https://stripe.com/) account.
 4. Use the secret key with your Stripe node credentials in n8n.
 
 ![Getting Stripe credentials](/_images/integrations/builtin/credentials/stripe/using-access-token.gif)
+

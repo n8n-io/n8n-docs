@@ -1,10 +1,21 @@
+---
+title: YouTube
+description: Documentation for the YouTube node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # YouTube
 
-[YouTube](https://www.youtube.com) is an online video-sharing platform. YouTube allows users to upload, view, rate, share, add to playlists, report, comment on videos, and subscribe to other users.
+Use the YouTube node to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving and updating channels, as well as creating and deleting playlists. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+On this page, you'll find a list of operations the YouTube node supports and links to more resources.
 
+/// note | Credentials
+Refer to [YouTube credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [YouTube integrations](https://n8n.io/integrations/youtube/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -97,6 +108,7 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the YouTube node to add the video to the playlist](/_images/integrations/builtin/app-nodes/youtube/youtube2_node.png)
+
 
 
 

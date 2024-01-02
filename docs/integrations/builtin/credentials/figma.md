@@ -1,4 +1,10 @@
-# Figma
+---
+title: Figma credentials
+description: Documentation for Figma credentials. Use these credentials to authenticate Figma in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Figma credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -16,3 +22,4 @@ Create a [Figma](https://www.figma.com/){:target=_blank .external-link} account.
 4. Click on **Copy this token**.
 6. Paste the API key in the **Access Token** field of the **Figma API** credentials screen in n8n.
 7. Click the **Save** button to save your credentials in n8n.
+

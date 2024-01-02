@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Google Cloud
 
 This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
@@ -8,6 +12,8 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 - The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (install the gcloud CLI first)
 
 --8<-- "_snippets/self-hosting/warning.md"
+
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Hosting options
 
@@ -113,10 +119,7 @@ resources:
 
 This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
 
-- **Start**: 320mb RAM, 10 millicore CPU burstable
-- **Pro**: 640mb RAM, 20 millicore CPU burstable
-- **Power**: 1280mb RAM, 80 millicore CPU burstable
-
+--8<-- "_snippets/self-hosting/installation/suggested-pod-resources.md"
 
 ### Environment variables
 
@@ -150,21 +153,22 @@ Send all the manifests to the cluster with the following command:
 kubectl apply -f .
 ```
 
-!!! note "Namespace error"
-    You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
+/// note | Namespace error
+You may see an error message about not finding an "n8n" namespace as that resources isn't ready yet. You can run the same command again, or apply the namespace manifest first with the following command:
 
-    ```shell
-    kubectl apply -f namespace.yaml
-    ```
+```shell
+kubectl apply -f namespace.yaml
+```
+///
+
 
 ## Set up DNS
 
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
 
-!!! note "GKE and IP addresses"
-
-  [Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
-
+/// note | GKE and IP addresses
+[Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
+///
 ## Delete resources
 
 Remove the resources created by the manifests with the following command:

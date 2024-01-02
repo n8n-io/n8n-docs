@@ -1,4 +1,10 @@
-# SSH
+---
+title: SSH credentials
+description: Documentation for SSH credentials. Use these credentials to authenticate SSH in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# SSH credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -32,3 +38,4 @@ See [Connecting to GitHub with SSH](https://docs.github.com/en/github/authentica
     - ***Passphrase***: Enter your passphrase used to secure this key.
 
 ![SSH Private Key credentials](/_images/integrations/builtin/credentials/ssh/private_key_credential.png)
+

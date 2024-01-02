@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on Hetzner cloud
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
@@ -7,6 +11,8 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Create a server
 
 1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} to the Hetzner Cloud Console.
@@ -15,12 +21,12 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 You can change most of the settings to suit your needs, but as this guide uses Docker to run the application, under the **Image** section, select "Docker CE" from the **APPS** tab.
 
-!!! note "Type"
-		When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
-
-!!! note "SSH keys"
-		Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
-
+/// note | Type
+When creating the server, Hetzner asks you to choose a plan. For most usage levels, the CPX11 type is enough.
+///
+/// note | SSH keys
+Hetzner lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+///
 ## Log in to your server
 
 The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg){:target="_blank" .external-link} for more information. You can find the public IP in the listing of the servers in your project.
@@ -30,7 +36,7 @@ The rest of this guide requires you to log in to the server using a terminal wit
 The Hetzner Docker app image doesn't have Docker compose installed. Install it with the following commands:
 
 ```shell
-apt get update
+apt update && apt -y upgrade
 apt install docker-compose-plugin
 ```
 
@@ -52,10 +58,9 @@ cd n8n-docker-caddy
 
 ## Default folders and files
 
-The host operating system (the server) copies the three folders you created to Docker containers to make them available to Docker. The three folders are:
+The host operating system (the server) copies the two folders you created to Docker containers to make them available to Docker. The two folders are:
 
 - `caddy_config`: Holds the Caddy configuration files.
-- `caddy_data`: A cache folder for Caddy.
 - `local_files`: A folder for files you upload or add using n8n.
 
 ### Create Docker volume
@@ -64,6 +69,12 @@ To persist the Caddy cache between restarts and speed up start times, create [a 
 
 ```shell
 docker volume create caddy_data
+```
+
+Create a Docker volume for the n8n data:
+
+```shell
+sudo docker volume create n8n_data
 ```
 
 ## Set up DNS
@@ -147,6 +158,10 @@ You can stop n8n and Caddy with the following command:
 ```shell
 sudo docker compose stop
 ```
+
+## Updating
+
+--8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"
 
 ## Next steps
 

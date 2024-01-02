@@ -1,4 +1,10 @@
-# ClickUp
+---
+title: ClickUp credentials
+description: Documentation for ClickUp credentials. Use these credentials to authenticate ClickUp in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# ClickUp credentials
 
 You can use these credentials to authenticate the following nodes with ClickUp.
 
@@ -11,9 +17,9 @@ Create a [ClickUp](https://www.clickup.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your ClickUp account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your ClickUp account to n8n.
+///
 
 1. Open your ClickUp [dashboard](https://app.clickup.com).
 2. Click on your profile icon in the bottom left.
@@ -58,3 +64,4 @@ The following video demonstrates the steps to authenticate the ClickUp node on [
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/FMc8uiFT-Eo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

@@ -1,5 +1,6 @@
 ---
 description: How to set environment variables for n8n.
+contentType: howto
 ---
 
 # Configuration
@@ -24,10 +25,8 @@ In Docker you can use the `-e` flag from the command line:
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
- -e N8N_BASIC_AUTH_ACTIVE="true" \
- -e N8N_BASIC_AUTH_USER="<user>" \
- -e N8N_BASIC_AUTH_PASSWORD="<password>" \
- n8nio/n8n
+ -e N8N_TEMPLATES_ENABLED="false" \
+ docker.n8n.io/n8nio/n8n
 ```
 
 ## Set environment variables using a file
@@ -38,17 +37,20 @@ Only define the values that need to be different from the default in your config
 
 ### npm
 
-Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`.
+Set the path to the JSON configuration file using the environment variable `N8N_CONFIG_FILES`:
 
-```bash
-# Single file
-export N8N_CONFIG_FILES=/folder/my-config.json
+```shell
+# Bash - Single file
+export N8N_CONFIG_FILES=/<path-to-config>/my-config.json
+# Bash - Multiple files are comma-separated
+export N8N_CONFIG_FILES=/<path-to-config>/my-config.json,/<path-to-config>/production.json
 
-# Multiple files are comma-separated
-export N8N_CONFIG_FILES=/folder/my-config.json,/folder/production.json
+# PowerShell - Single file, persist for current user
+# Note that setting scope (Process, User, Machine) has no effect on Unix systems
+[Environment]::SetEnvironmentVariable('N8N_CONFIG_FILES', '<path-to-config>\config.json', 'User')
 ```
 
-For example:
+Example file:
 
 ```json
 {
@@ -59,18 +61,28 @@ For example:
  "generic": {
   "timezone": "Europe/Berlin"
  },
- "security": {
-  "basicAuth": {
-   "active": true,
-   "user": "frank",
-   "password": "some-secure-password"
-  }
- },
  "nodes": {
   "exclude": "[\"n8n-nodes-base.executeCommand\",\"n8n-nodes-base.writeBinaryFile\"]"
  }
 }
 ```
+
+/// note | Formatting as JSON
+You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
+
+```json
+{
+	"endpoints": {
+		"metrics": {
+			"enable": true
+		}
+	}
+}
+```
+
+Refer to the [Schema file in the source code](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/config/schema.ts){:target=_blank .external-link} for full details of the expected settings.
+///
+
 
 ### Docker
 
@@ -81,9 +93,7 @@ For example:
 ```yaml
 n8n:
     environment:
-      - N8N_BASIC_AUTH_ACTIVE=true
-      - N8N_BASIC_AUTH_USER=<user>
-      - N8N_BASIC_AUTH_PASSWORD=<password>
+      - N8N_TEMPLATES_ENABLED=false
 ```
 
 ### Keeping sensitive data in separate files
@@ -94,11 +104,6 @@ The following environment variables support file input:
 
 - `CREDENTIALS_OVERWRITE_DATA_FILE`
 - `DB_TYPE_FILE`
-- `DB_MYSQLDB_DATABASE_FILE`
-- `DB_MYSQLDB_HOST_FILE`
-- `DB_MYSQLDB_PORT_FILE`
-- `DB_MYSQLDB_USER_FILE`
-- `DB_MYSQLDB_PASSWORD_FILE`
 - `DB_POSTGRESDB_DATABASE_FILE`
 - `DB_POSTGRESDB_HOST_FILE`
 - `DB_POSTGRESDB_PASSWORD_FILE`
@@ -109,24 +114,15 @@ The following environment variables support file input:
 - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
 - `DB_POSTGRESDB_USER_FILE`
 - `DB_POSTGRESDB_SCHEMA_FILE`
-- `N8N_BASIC_AUTH_PASSWORD_FILE`
-- `N8N_BASIC_AUTH_USER_FILE`
-- `N8N_BASIC_AUTH_HASH_FILE`
-- `N8N_JWT_AUTH_HEADER_FILE`
-- `N8N_JWKS_URI_FILE`
-- `N8N_JWT_AUTH_HEADER_VALUE_PREFIX_FILE`
-- `N8N_JWT_ISSUER_FILE`
-- `N8N_JWT_NAMESPACE_FILE`
-- `N8N_JWT_ALLOWED_TENANT_FILE`
-- `N8N_JWT_ALLOWED_TENANT_KEY_FILE`
+
 
 ## Examples
 
 ### Base URL
 
-!!! warning "Requires manual UI build"
-    This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image. The default is `/`, meaning that it uses the root-domain.
-
+/// warning | Requires manual UI build
+This variable requires a manual build of the `n8n-editor-ui` package. You can't use it with the default n8n Docker image. The default is `/`, meaning that it uses the root-domain.
+///
 Tells the front end how to reach the REST API of the back end:
 
 ```bash
@@ -146,8 +142,14 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 
 ### Execute all workflows in the same process
 
-All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your
-workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
+/// warning | Deprecated
+n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
+
+Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
+///
+
+All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
+
 
 ```bash
 export EXECUTIONS_PROCESS=main
@@ -203,7 +205,7 @@ export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
 ### Timezone
 
-The default timezone is "America/New_York". For instance, the Cron node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+The default timezone is "America/New_York". For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
 
 ```bash
 export GENERIC_TIMEZONE=Europe/Berlin
@@ -222,19 +224,18 @@ export N8N_USER_FOLDER=/home/jim/n8n
 
 ### Webhook URL
 
-n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally
-on port 5678 but is exposed to the web using the reverse proxy on port 443. In
-that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
+n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally on port 5678 but is exposed to the web using the reverse proxy on port 443. In that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
 
 ```bash
 export WEBHOOK_URL=https://n8n.example.com/
 ```
 
+
 ### Prometheus
 
-!!! note "Experimental"
-    Prometheus metrics are an experimental feature.
-
+/// note | Experimental
+Prometheus metrics are an experimental feature.
+///
 To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 
 The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.

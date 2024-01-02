@@ -1,10 +1,21 @@
+---
+title: ConvertKit
+description: Documentation for the ConvertKit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # ConvertKit
 
-[ConvertKit](https://www.convertkit.com/) is a fully-featured email marketing platform. ConvertKit can be used to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
+Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit with other applications. n8n has built-in support for a wide range of ConvertKit features, including creating and deleting custom fields, getting tags, and adding subscribers.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit/).
+On this page, you'll find a list of operations the ConvertKit node supports and links to more resources.
 
+/// note | Credentials
+Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [ConvertKit integrations](https://n8n.io/integrations/convertkit/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -78,3 +89,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the ConvertKit node to add the subscriber to the tag](/_images/integrations/builtin/app-nodes/convertkit/convertkit2_node.png)
+

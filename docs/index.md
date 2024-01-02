@@ -1,4 +1,5 @@
 ---
+contentType: overview
 hide:
   - path
 ---
@@ -21,7 +22,7 @@ It covers everything from setup to usage and development. It is a work in progre
 
 -   __Choose the right n8n for you__
 
-	Cloud, Desktop, npm, self-host . . . 
+	Cloud, npm, self-host . . . 
 
     [:octicons-arrow-right-24: Options](/choose-n8n/)
 
@@ -32,11 +33,11 @@ It covers everything from setup to usage and development. It is a work in progre
 
     [:octicons-arrow-right-24: Find your apps](/integrations/)
 
--   __Take a course__
+-   __Put the code in low-code__
 
-    n8n's courses provide in-depth examples and walkthroughs.
+    See an overview of n8n's developer resources.
 
-    [:octicons-arrow-right-24: Start learning](/courses/)    
+    [:octicons-arrow-right-24: Code in n8n](/code/)    
 </div>
 
 ## About n8n
@@ -44,5 +45,5 @@ It covers everything from setup to usage and development. It is a work in progre
 n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
 
 * Customizable: highly flexible workflows and the option to build custom nodes.
-* Convenient: use the Desktop app or npm to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
+* Convenient: use the npm or Docker to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
 * Privacy-focused: self-host n8n for privacy and security.

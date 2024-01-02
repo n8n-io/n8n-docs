@@ -1,81 +1,37 @@
+---
+title: Date & Time
+description: Documentation for the Date & Time node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Date & Time
 
-The Date & Time node is used to manipulate date and time data and convert it to different formats.
+The Date & Time node manipulates date and time data and convert it to different formats.
 
-!!! note "Keep in mind"
-    Make sure that the timezone is set correctly for the n8n instance (or the workflow).
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Date & Time integrations](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} list.
+///
+--8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
+/// note | Date and time in other nodes
+You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/luxon/) for more information.
+///
+## Operations
 
-## Node Reference
+* Add to a Date
+* Extract Part of a Date
+* Format a Date
+* Get Current Date
+* Get Time Between Dates
+* Round a Date
+* Subtract From a Date
 
-- Action
-	- Convert a date to a different format
+## Related resources
 
-You can specify the format that the date has to be converted to from the *To Format* dropdown list.
+View [example workflows and related content](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} on n8n's website.
 
-- To Format
-	- MM/DD/YYYY
-	- YYYY/MM/DD
-	- MMMM DD YYYY
-	- MM-DD-YYYY
-	- YYYY-MM-DD
-	- Unix Timestamp
-	- Unix Ms Timestamp
+The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. You can also use Luxon in the Code node and expressions. Refer to [Date and time with Luxon](/code/luxon/) for more information.
 
-You can also specify a custom format by setting the *Custom Format* toggle to 'On'.
+### Supported date formats
 
-- Options
-	- *From Format* field: Allows you to specify the format of the input values. Refer to the [FAQs](#what-values-can-i-use-in-the-from-format-field) to learn about the possible vaules.
-	- *From Timezone* field: Allows you to specify the timezone of the input values, for input timezones that are different from n8n's system clock.
-	- *To Timezone* field: Allows you to specify the timezone that the input values have to be converted to.
-
-
-## Example Usage
-
-This workflow allows you to convert a date from one format to another using the Date & Time node. You can also find the [workflow](https://n8n.io/workflows/575) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Date & Time]()
-
-
-The final workflow should look like the following image.
-
-![A workflow with the Date & Time node](/_images/integrations/builtin/core-nodes/datetime/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Date & Time node
-
-1. Enter the date that you want to convert in the *Value* field.
-2. Click on the *Add Option* dropdown.
-3. Click on the *From Format* option, and enter the format of the input date.
-4. Select the format you want to convert it to from the *To Format* dropdown list.
-5. Click on *Execute Node* to run the workflow.
-
-## FAQs
-
-### What values can I use in the From Format field?
-
-You can use the following values in the ***From Format*** field:
-
-| Input | Example | Description |
-|-------|---------|-------------|
-|X | 1616108400 | Unix timestamp |
-|x | 1616108400000 | Unix ms timestamp |
-| DD-MM-YYYY | 19-03-2021 | Date, month, and year separated by `-` |
-| DD/MM/YYYY | 19/03/2021 | Date, month, and year separated by `/` |
-| DD.MM.YYYY | 19.03.2021 | Date, month, and year separated by `.` |
-| DD.MM.YYYY HH\:mm\:ss | 19.03.2021 08:00:00 | Date, month, year, hours, minutes, and seconds|
-| MM/DD/YYYY | 03/19/2021 | Month, date, and year separated by `/` |
-| MM-DD-YYYY | 03-19-2021 | Month, date, and year separated by `-` |
-| MM.DD.YYYY | 03.19.2021 | Month, date, and year separated by `.` |
-| MM/DD/YYYY HH\:mm\:ss | 03/19/2021 08:00:00 | Month, date, year, hours, minutes, and seconds |
-| YYYY/MM/DD | 2021/03/19 | Year, month, and date separated by `/` |
-| YYYY-MM-DD | 2021-03-19 | Year, month, and date separated by `-` |
-| YYYY.MM.DD | 2021.03.19 | Year, month, and date separated by `.` |
-| YYYY/MM/DD HH\:mm\:ss | 2021/03/19 08:00:00 | Year, month, date, hours, minutes, and seconds |
-| MMMM DD YYYY | March 03 2021 | Month, date, and year |
-| MMMM DD YYYY HH\:mm\:ss | March 03 2021 08:00:00 | Month, date, year, hours, minutes, and seconds |
-| DD MMMM YYYY | 03 March 2021 | Date, month, and year |
-| DD MMMM YYYY HH\:mm\:ss | 03 March 2021 08:00:00 | Date, month, year, hours, minutes, and seconds |
+n8n supports all date formats [supported by Luxon](https://moment.github.io/luxon/#/formatting?id=table-of-tokens){:target=_blank .external-link}.

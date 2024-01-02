@@ -1,4 +1,10 @@
-# GitLab
+---
+title: GitLab credentials
+description: Documentation for GitLab credentials. Use these credentials to authenticate GitLab in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# GitLab credentials
 
 You can use these credentials to authenticate the following nodes with GitLab.
 
@@ -11,9 +17,9 @@ Create a [GitLab](https://gitlab.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitLab account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitLab account to n8n.
+///
 
 1. Access your GitLab dashboard.
 2. Click on your user icon in the top right.
@@ -42,3 +48,4 @@ Create a [GitLab](https://gitlab.com/) account.
 9. Click on the ***Save*** button to save your credentials.
 
 ![Getting GitLab access token](/_images/integrations/builtin/credentials/gitlab/using-access-token.gif)
+

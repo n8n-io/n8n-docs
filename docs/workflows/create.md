@@ -1,5 +1,6 @@
 ---
 description: Create, run, and activate workflows.
+contentType: howto
 ---
 
 # Create a workflow
@@ -8,9 +9,8 @@ A workflow is a collection of nodes connected together to automate a process. Yo
 
 ## Create a workflow
 
-1. Open n8n. You'll see the **Workflows** list.
-2. Select **Add Workflow**.
-3. Get started by adding a trigger node: select **Add first step...**
+1. On the **Workflows** list, select **Add Workflow**.
+2. Get started by adding a trigger node: select **Add first step...**
 
 If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/) to quickly try out n8n features.
 

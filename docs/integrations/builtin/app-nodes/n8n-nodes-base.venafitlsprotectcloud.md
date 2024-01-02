@@ -1,12 +1,21 @@
+---
+title: Venafi TLS Protect Cloud
+description: Documentation for the Venafi TLS Protect Cloud node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Venafi TLS Protect Cloud
 
-[Venafi](https://www.venafi.com/){:target=_blank .external-link} is a cybersecurity company providing services for machine identity management. They offer solutions to manage and protect identities for a wide range of machine types, delivering global visibility, lifecycle automation, and actionable intelligence.
+Use the Venafi TLS Protect Cloud node to automate work in Venafi TLS Protect Cloud, and integrate Venafi TLS Protect Cloud with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Cloud features, including deleting and downloading certificates, as well as creating certificates requests. 
 
-The n8n Venafi TLS Protect Cloud node allows you to integrate with the [cloud-based Venafi TLS Protect](https://vaas.venafi.com/){:target=_blank} service.
+On this page, you'll find a list of operations the Venafi TLS Protect Cloud node supports and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/venafitlsprotectcloud/).
-
+/// note | Credentials
+Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Cloud integrations](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target="_blank" .external-link} list.
+///
 ## Operations
 
 * Certificate
@@ -30,3 +39,4 @@ n8n also provides:
 
 * A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) for Venafi TLS Protect Cloud.
 * A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/) for Venafi TLS Protect Datacenter.
+

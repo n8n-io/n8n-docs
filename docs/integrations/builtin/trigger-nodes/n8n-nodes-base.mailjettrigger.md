@@ -1,10 +1,16 @@
-# Mailjet Trigger
+---
+title: Mailjet trigger
+description: Documentation for the Mailjet trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Mailjet trigger
 
 [Mailjet](https://www.mailjet.com/) is a cloud-based email sending and tracking system. The platform allows professionals to send both marketing emails and transactional emails. It includes tools for designing emails, sending massive volumes and tracking these messages.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mailjet/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/mailjet/).
+///
 
 
 ## Example Usage
@@ -24,6 +30,7 @@ The final workflow should look like the following image.
 2. Select the `email.sent` option from the *Event* dropdown list to receive updates when an email is sent.
 3. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Mailjet Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Mailjet Trigger node.
+///
 

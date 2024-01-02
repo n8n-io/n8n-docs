@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Workflow management in Embed
 
 --8<-- "_snippets/embed-license.md"
@@ -11,9 +15,9 @@ When managing an embedded n8n deployment, spanning across teams or organizations
 
 
 
-!!! warning
-    The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
-
+/// warning
+The APIs referenced in this document are subject to change at any time. Be sure the check for continued functionality with each version upgrade.
+///
 
 ## Workflow per user
 
@@ -382,7 +386,7 @@ The details and scope of this workflow will vary greatly according to the indivi
 
 * This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node.
 * The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
-* Each node where the user’s credentials are needed should use an [expression](/code-examples/expressions/) so that the node’s credential field reads the credential provided in the webhook call.
+* Each node where the user’s credentials are needed should use an [expression](/code/expressions/) so that the node’s credential field reads the credential provided in the webhook call.
 * Save and activate the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) for more information.
 
 ### Call the workflow

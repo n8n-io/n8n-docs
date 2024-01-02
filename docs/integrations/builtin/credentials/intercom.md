@@ -1,4 +1,10 @@
-# Intercom
+---
+title: Intercom credentials
+description: Documentation for Intercom credentials. Use these credentials to authenticate Intercom in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Intercom credentials
 
 You can use these credentials to authenticate the following nodes with Intercom.
 
@@ -21,3 +27,4 @@ Create a [Intercom](https://www.intercom.com/) account.
 1. Create an app in your workspace.
 2. Click on Configure, then Authentication within the Developer hub.
 3. Use the Access Token with the Intercom node credentials in n8n.
+

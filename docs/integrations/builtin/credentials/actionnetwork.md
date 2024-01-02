@@ -1,4 +1,10 @@
-# Action Network
+---
+title: Action Network credentials
+description: Documentation for Action Network credentials. Use these credentials to authenticate Action Network in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Action Network credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -21,3 +27,4 @@ After becoming an Action Network partner:
 ![API & Sync Page](/_images/integrations/builtin/credentials/actionnetwork/action_network_api_key.png)
 
 5. Copy your new key and use it with your Action Network node credentials in n8n.
+

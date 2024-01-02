@@ -1,10 +1,21 @@
+---
+title: Mailgun
+description: Documentation for the Mailgun node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Mailgun
 
-[Mailgun](https://www.mailgun.com/) is a developer-friendly email sending platform that provides API-based email services that are easy to use.
+Use the Mailgun node to automate work in Mailgun, and integrate Mailgun with other applications. n8n has built-in support for sending emails with Mailgun. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mailgun/).
+On this page, you'll find a list of operations the Mailgun node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Mailgun credentials](/integrations/builtin/credentials/mailgun/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Mailgun integrations](https://n8n.io/integrations/mailgun/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -33,3 +44,4 @@ The start node exists by default when you create a new workflow.
 4. Enter the subject for the email in the *Subject* field.
 5. Enter the content of the email in the *Text* field.
 6. Click on *Execute Node* to run the workflow.
+

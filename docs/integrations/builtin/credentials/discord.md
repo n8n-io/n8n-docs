@@ -1,4 +1,10 @@
-# Discord
+---
+title: Discord credentials
+description: Documentation for Discord credentials. Use these credentials to authenticate Discord in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Discord credentials
 You can follow these instructions to create a webhook in Discord to use with the following nodes.
 
 - [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/)
@@ -28,3 +34,4 @@ Create a [Discord](https://www.discord.com/) account.
 
 
 ![Getting Discord credentials](/_images/integrations/builtin/credentials/discord/using-oauth.gif) -->
+

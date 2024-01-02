@@ -1,10 +1,16 @@
-# Help Scout Trigger
+---
+title: Help Scout trigger
+description: Documentation for the Help Scout trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Help Scout trigger
 
 [Help Scout](https://www.helpscout.com/) is a help desk software that provides an email-based customer support platform, knowledge base tool, and an embeddable search/contact widget for customer service professionals.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/helpscout/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/helpscout/).
+///
 
 ## Example Usage
 
@@ -22,6 +28,7 @@ The final workflow should look like the following image.
 2. Select 'Customer - Created' from the ***Events*** dropdown list.
 3. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Help Scout Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Help Scout Trigger node.
+///
 

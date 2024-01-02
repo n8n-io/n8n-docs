@@ -1,3 +1,7 @@
+---
+contentType: tutorial
+---
+
 # Hosting n8n on DigitalOcean
 
 This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses:
@@ -7,6 +11,8 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 --8<-- "_snippets/self-hosting/warning.md"
 
+--8<-- "_snippets/self-hosting/installation/latest-next-version.md"
+
 ## Create a Droplet
 
 1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 
@@ -14,15 +20,32 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 3. In your project, select **Droplets** from the **Manage** menu. 
 4. [Create a new Droplet](https://docs.digitalocean.com/products/droplets/how-to/create/){:target=_blank .external-link} using the [Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" .external-link} available on the **Marketplace** tab.
 
-!!! note "Droplet resources"
-		When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
-
-!!! note "SSH or Password"
-		DigitalOcean lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
-
-## Log in to your Droplet
+/// note | Droplet resources
+When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
+///
+/// note | SSH or Password
+DigitalOcean lets you choose between SSH and password-based authentication. SSH is more secure. The rest of this guide assumes you are using SSH.
+///
+## Log in to your Droplet and create new user
 
 The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.
+
+You should create a new user, to avoid working as the root user:
+
+1. Log in as root.
+2. Create a new user:
+	```shell
+	adduser <username>
+	```
+3. Follow the prompts in the CLI to finish creating the user.
+4. Grant the new user administrative privileges:
+	```shell
+	usermod -aG sudo <username>
+	```
+	You can now run commands with superuser privileges by using `sudo` before the command.
+5. Follow the steps to set up SSH for the new user: [Add Public Key Authentication](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04#step-four-add-public-key-authentication-recommended){:target=_blank .external-link}.
+5. Log out of the droplet.
+6. Log in using SSH as the new user.
 
 ## Clone configuration repository
 
@@ -42,18 +65,23 @@ cd n8n-docker-caddy
 
 ## Default folders and files
 
-The host operating system (the DigitalOcean Droplet) copies the three folders you created to Docker containers to make them available to Docker. The three folders are:
+The host operating system (the DigitalOcean Droplet) copies the two folders you created to Docker containers to make them available to Docker. The two folders are:
 
 - `caddy_config`: Holds the Caddy configuration files.
-- `caddy_data`: A cache folder for Caddy.
 - `local_files`: A folder for files you upload or add using n8n.
 
-### Create Docker volume
+### Create Docker volumes
 
 To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
 
 ```shell
-docker volume create caddy_data
+sudo docker volume create caddy_data
+```
+
+Create a Docker volume for the n8n data:
+
+```shell
+sudo docker volume create n8n_data
 ```
 
 ## Set up DNS
@@ -121,7 +149,7 @@ n8n.<domain>.<suffix> {
 Start n8n and Caddy with the following command:
 
 ```shell
-docker compose up -d
+sudo docker compose up -d
 ```
 
 This may take a few minutes.
@@ -137,6 +165,9 @@ You can stop n8n and Caddy with the following command:
 ```shell
 sudo docker compose stop
 ```
+## Updating
+
+--8<-- "_snippets/self-hosting/installation/docker-compose-updating.md"
 
 ## Next steps
 

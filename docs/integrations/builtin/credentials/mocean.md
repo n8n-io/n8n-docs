@@ -1,4 +1,10 @@
-# Mocean
+---
+title: Mocean credentials
+description: Documentation for Mocean credentials. Use these credentials to authenticate Mocean in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Mocean credentials
 
 You can use these credentials to authenticate the following nodes with Mocean.
 
@@ -15,3 +21,4 @@ Create a [Mocean](https://dashboard.moceanapi.com/register?fr=n8n) account.
 3. Use the API key and secret in your Mocean node credentials in n8n.
 
 ![Getting Mocean credentials](/_images/integrations/builtin/credentials/mocean/using-access-token.gif)
+

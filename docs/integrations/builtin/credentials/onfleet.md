@@ -1,4 +1,10 @@
-# Onfleet credentials
+---
+title: Onfleet credentials credentials
+description: Documentation for Onfleet credentials credentials. Use these credentials to authenticate Onfleet in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Onfleet credentials credentials
 
 You can use these credentials to authenticate the following nodes with Onfleet:
 
@@ -14,3 +20,4 @@ You can use these credentials to authenticate the following nodes with Onfleet:
 3. In the **Onfleet account** modal, paste your Onfleet API key into **API key**. 
 4. By default, this credential is available to both the Onfleet and Onfleet Trigger nodes. You can change this using the settings on the **Details** tab.
 5. After entering the key and editing the credential details, click **Save**. n8n tests the key to check it can connect to Onfleet.
+

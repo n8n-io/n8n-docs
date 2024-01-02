@@ -1,9 +1,22 @@
+---
+title: AWS S3
+description: Documentation for the AWS S3 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # AWS S3
 
-[AWS S3](https://aws.amazon.com/s3/) is a service offered by Amazon Web Services that provides object storage through a web service interface.
+Use the AWS S3 node to automate work in AWS S3, and integrate AWS S3 with other applications. n8n has built-in support for a wide range of AWS S3 features, including creating and deleting buckets, copying and downloading files, as well as getting folders.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+On this page, you'll find a list of operations the AWS S3 node supports and links to more resources.
+
+/// note | Credentials
+Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+///
+
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [AWS S3 integrations](https://n8n.io/integrations/aws-s3/){:target=_blank .external-link} list.
+///
 
 
 ## Basic Operations
@@ -44,6 +57,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Bucket' from the *Resource* dropdown list.
 3. Enter a name for your bucket in the *Name* field.
 4. Click on *Execute Node* to run the workflow.
+
 
 
 

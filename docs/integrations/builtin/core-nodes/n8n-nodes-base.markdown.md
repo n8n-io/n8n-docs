@@ -1,3 +1,9 @@
+---
+title: Markdown
+description: Documentation for the Markdown node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Markdown
 
 The Markdown node converts between Markdown and HTML formats.
@@ -6,9 +12,9 @@ The Markdown node converts between Markdown and HTML formats.
 
 You can configure the node's output using **Options**. Click **Add Option** to view and select your options.
 
-!!! note "Test out the options"
-    Some of the options depend on each other, or can interact. We recommend testing out options to check the effects are what you want.
-
+/// note | Test out the options
+Some of the options depend on each other, or can interact. We recommend testing out options to check the effects are what you want.
+///
 ### Markdown to HTML
 
 | Option | Description | Default |
@@ -67,4 +73,5 @@ n8n uses the following parsers:
 
 * To convert from HTML to Markdown: [node-html-markdown](https://www.npmjs.com/package/node-html-markdown)
 * To convert from Markdown to HTML: [Showdown](https://www.npmjs.com/package/showdown). Some options allow you to extend your Markdown with [GitHub Flavored Markdown](https://github.github.com/gfm/).
+
 

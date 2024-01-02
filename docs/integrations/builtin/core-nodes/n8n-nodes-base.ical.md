@@ -1,6 +1,12 @@
+---
+title: iCalendar
+description: Documentation for the iCalendar node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # iCalendar
 
-The iCalendar node allows you to create event files that can be shared as an attachment.
+Use the iCalendar node to create event files that can be shared as an attachment.
 
 ## Basic Operations
 
@@ -49,3 +55,4 @@ This node will send the event file as an attachment.
 In the screenshot below, you will notice that the node sends an email with the event file as an attachment.
 
 ![Using the Send Email node to send an email with an attachemnt](/_images/integrations/builtin/core-nodes/icalendar/sendemail_node.png)
+

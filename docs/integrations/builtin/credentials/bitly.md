@@ -1,4 +1,10 @@
-# Bitly
+---
+title: Bitly credentials
+description: Documentation for Bitly credentials. Use these credentials to authenticate Bitly in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Bitly credentials
 
 You can use these credentials to authenticate the following nodes with Bitly.
 
@@ -10,9 +16,9 @@ Create a [Bitly](https://www.bitly.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Bitly account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Bitly account to n8n.
+///
 
 1. Open your Bitly dashboard.
 2. Click on your account button in the top right.
@@ -36,3 +42,4 @@ Create a [Bitly](https://www.bitly.com/) account.
 
 
 ![Getting Bitly credentials](/_images/integrations/builtin/credentials/bitly/using-access-token.gif)
+

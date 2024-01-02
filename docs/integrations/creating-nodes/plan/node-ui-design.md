@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Design your node's user interface
 
 Most nodes are a GUI (graphical user interface) representation of an API. Designing the interface means finding a user-friendly way to represent API endpoints and parameters. Directly translating an entire API into form fields in a node may not result in a good user experience.
@@ -136,7 +140,7 @@ When performing an operation on a specific record, such as "update a task commen
 * Wherever possible, provide two ways to specify a record:
     * By choosing from a pre-populated list. You can generate this list using the `loadOptions` parameter. Refer to [Base files](/integrations/creating-nodes/build/reference/node-base-files/) for more information.
     * By entering an ID.
-* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/code-examples/expressions/) documentation.
+* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/code/expressions/) documentation.
 * Build your node so that it can handle users providing more information than required. For example:
     * If you need a relative path, handle the user pasting in the absolute path.
     * If the user needs to get an ID from a URL, handle the user pasting in the entire URL.

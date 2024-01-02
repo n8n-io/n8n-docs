@@ -1,11 +1,17 @@
+---
+title: Edit Image
+description: Documentation for the Edit Image node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Edit Image
 
-The Edit Image node allows you to manipulate and edit images.
+Use the Edit Image node to manipulate and edit images.
 
-!!! note "Dependencies"
-    1. If you aren't running n8n on Docker, you need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html){:target=_blank .external-link}.  
-    2. You need to use a node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Edit Image node.
-
+/// note | Dependencies
+1. If you aren't running n8n on Docker, you need to install [GraphicsMagick](http://www.graphicsmagick.org/README.html){:target=_blank .external-link}.  
+2. You need to use a node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Edit Image node.
+///
 
 ## Operations
 
@@ -38,3 +44,4 @@ The Edit Image node allows you to manipulate and edit images.
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/edit-image/){:target=_blank .external-link} on n8n's website.
+

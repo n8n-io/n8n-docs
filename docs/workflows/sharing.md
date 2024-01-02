@@ -1,14 +1,13 @@
 ---
 description: Share workflows between users.
+contentType: howto
 ---
 
 # Workflow sharing
 
-!!! info "Feature availability"
-		* Workflow sharing is available on paid Cloud and self-hosted plans.
-		* It requires [user management](/user-management/) enabled.
-
 Workflow sharing allows you to share workflows between users of the same n8n instance.
+
+Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
 
 ## Share a workflow
 
@@ -29,17 +28,17 @@ You can browse and search workflows on the **Workflows** list.
 
 ## Workflow roles and permissions
 
-There are two workflow roles: owner and editor. The owner is the user who created the workflow. Editors are other users with access to the workflow.
+There are two workflow roles: creator and editor. The creator is the user who created the workflow. Editors are other users with access to the workflow.
 
 You can't change the workflow owner, except when deleting the user.
 
-!!! note "Credentials"
-		Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
-
+/// note | Credentials
+Workflow sharing allows editors to use all credentials used in the workflow. This includes credentials that aren't explicitly shared with them using [credential sharing](/credentials/credential-sharing/).
+///
 ### Permissions
 
-| Permissions | Owner | Editor | 
-| ----------- | ----- | ------ | 
+| Permissions | Creator | Editor | 
+| ----------- | ------- | ------ | 
 | View workflow (read-only) | :white_check_mark: | :white_check_mark: |
 | View executions | :white_check_mark: | :white_check_mark: |
 | Update (including tags) | :white_check_mark: | :white_check_mark: |
@@ -47,3 +46,9 @@ You can't change the workflow owner, except when deleting the user.
 | Share | :white_check_mark: | :x: |
 | Export | :white_check_mark: | :white_check_mark: |
 | Delete | :white_check_mark: | :x: |
+
+## Node editing restrictions with unshared credentials
+
+Sharing in n8n works on the principle of least privilege. This means that if a user shares a workflow with you, but they don't share their credentials, you can't edit the nodes within the workflow that use those credentials. You can view and run the workflow, and edit nodes that don't use unshared credentials.
+
+Refer to [Credential sharing](/credentials/credential-sharing/) for guidance on sharing credentials.

@@ -1,4 +1,10 @@
-# Gumroad
+---
+title: Gumroad credentials
+description: Documentation for Gumroad credentials. Use these credentials to authenticate Gumroad in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Gumroad credentials
 
 You can use these credentials to authenticate the following nodes with Gumroad.
 
@@ -19,3 +25,4 @@ Create a [Gumroad](https://gumroad.com/) account.
 7. Use provided access token with your Gumroad node credentials in n8n.
 
 ![Getting Gumroad credentials](/_images/integrations/builtin/credentials/gumroad/using-access-token.gif)
+

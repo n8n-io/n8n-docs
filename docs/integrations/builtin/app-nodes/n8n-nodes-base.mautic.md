@@ -1,10 +1,21 @@
+---
+title: Mautic
+description: Documentation for the Mautic node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Mautic
 
-[Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
+Use the Mautic node to automate work in Mautic, and integrate Mautic with other applications. n8n has built-in support for a wide range of Mautic features, including creating, updating, deleting, and getting companies, and contacts, as well as adding and removing campagin contacts. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/mautic/).
+On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Mautic credentials](/integrations/builtin/credentials/mautic/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Mautic integrations](https://n8n.io/integrations/mautic/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -55,6 +66,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Mautic node. You can find out how to do that [here](/integrations/builtin/credentials/mautic/).
 2. Select 'Get All' from the *Operation* dropdown list.
 3. Click on *Execute Node* to run the workflow.
+
 
 
 

@@ -1,4 +1,10 @@
-# Automizy
+---
+title: Automizy credentials
+description: Documentation for Automizy credentials. Use these credentials to authenticate Automizy in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Automizy credentials
 
 You can use these credentials to authenticate the following nodes with Automizy.
 
@@ -15,3 +21,4 @@ Create an [Automizy](https://automizy.com/) account.
 3. Click on the ***CREATE TOKEN*** button.
 4. Click on the ***COPY & CLOSE*** button to copy the API token.
 5. Use this API token with your Auotmizy node credentials in n8n.
+

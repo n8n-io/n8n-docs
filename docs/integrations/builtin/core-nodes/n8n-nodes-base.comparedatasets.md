@@ -1,3 +1,9 @@
+---
+title: Compare Datasets
+description: Documentation for the Compare Datasets node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Compare Datasets
 
 The Compare Datasets node helps you compare data from two input streams.
@@ -159,3 +165,4 @@ There are four output options:
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/compare-datasets/){:target=_blank .external-link} on n8n's website.
+

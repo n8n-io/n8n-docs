@@ -1,10 +1,21 @@
+---
+title: One Simple API
+description: Documentation for the One Simple API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # One Simple API
 
-[One Simple API](https://onesimpleapi.com/) is an API toolbox offering PDF generation, Currency Exchange, QR codes, Screenshots, and more.
+Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/onesimpleapi/).
+On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
 
+/// note | Credentials
+Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [One Simple API integrations](https://n8n.io/integrations/one-simple-api/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -22,3 +33,4 @@
     * Generate a PDF from a webpage
     * Get SEO information from website
     * Create a screenshot from a webpage
+

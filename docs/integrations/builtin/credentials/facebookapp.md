@@ -1,4 +1,10 @@
-# Facebook App
+---
+title: Facebook App credentials
+description: Documentation for Facebook App credentials. Use these credentials to authenticate Facebook App in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Facebook App credentials
 
 You can use these credentials to authenticate the following nodes with Facebook.
 
@@ -25,3 +31,4 @@ Create a [Facebook](https://www.facebook.com/) account.
 11. Use the app secret and the generated access token with your Facebook node credentials in n8n.
 
 ![Getting Facebook App credentials](/_images/integrations/builtin/credentials/facebookapp/using-app-access-token.gif)
+

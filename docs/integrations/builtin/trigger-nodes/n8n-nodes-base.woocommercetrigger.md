@@ -1,10 +1,16 @@
-# WooCommerce Trigger
+---
+title: WooCommerce trigger
+description: Documentation for the WooCommerce trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# WooCommerce trigger
 
 [WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce/).
+///
 
 ## Events
 
@@ -61,6 +67,7 @@ In the screenshot below, you will notice that the node sends a message to the `S
 
 ![Using the Mattermost node to send the information of the order to a channel](/_images/integrations/builtin/trigger-nodes/woocommercetrigger/mattermost_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the WooCommerce Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the WooCommerce Trigger node.
+///
 

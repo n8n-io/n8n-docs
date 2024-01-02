@@ -1,4 +1,10 @@
-# Chargebee
+---
+title: Chargebee credentials
+description: Documentation for Chargebee credentials. Use these credentials to authenticate Chargebee in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Chargebee credentials
 
 You can use these credentials to authenticate the following nodes with Chargebee.
 
@@ -19,3 +25,4 @@ Create a [Chargebee](https://www.chargebee.com/) account.
 
 
 ![Getting Chargebee credentials](/_images/integrations/builtin/credentials/chargebee/using-access-token.gif)
+

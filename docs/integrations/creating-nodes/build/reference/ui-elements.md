@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Node user interface elements
 
 n8n provides a set of predefined UI components (based on a JSON file) that allows users to input all sorts of data types. The following UI elements are available in n8n.
@@ -360,6 +364,54 @@ The `multiOptions` type adds an options list. Users can select more than one val
 ![Multioptions](/_images/integrations/creating-nodes/multioptions.png)
 
 
+## Filter
+
+Use this component to evaluate, match, or filter incoming data.
+
+This is the code from n8n's own If node. It shows a filter component working with a [collection](#collection) component where users can configure the filter's behavior.
+
+```typescript
+{
+	displayName: 'Conditions',
+	name: 'conditions',
+	placeholder: 'Add Condition',
+	type: 'filter',
+	default: {},
+	typeOptions: {
+		filter: {
+			// Use the user options (below) to determine filter behavior
+			caseSensitive: '={{!$parameter.options.ignoreCase}}',
+			typeValidation: '={{$parameter.options.looseTypeValidation ? "loose" : "strict"}}',
+		},
+	},
+},
+{
+displayName: 'Options',
+name: 'options',
+type: 'collection',
+placeholder: 'Add option',
+default: {},
+options: [
+	{
+		displayName: 'Ignore Case',
+		description: 'Whether to ignore letter case when evaluating conditions',
+		name: 'ignoreCase',
+		type: 'boolean',
+		default: true,
+	},
+	{
+		displayName: 'Less Strict Type Validation',
+		description: 'Whether to try casting value types based on the selected operator',
+		name: 'looseTypeValidation',
+		type: 'boolean',
+		default: true,
+	},
+],
+},
+```
+
+![Filter](/_images/integrations/creating-nodes/filter.png)
+
 ## Fixed collection
 
 Use the `fixedCollection` type to group fields that are semantically related.
@@ -411,6 +463,228 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![Fixed collection](/_images/integrations/creating-nodes/fixed-collection.png)
 
+
+
+## Resource locator
+
+![Resource locator](/_images/integrations/creating-nodes/resource-locator.png)
+
+The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello. 
+
+The following options are available:
+
+* ID
+* URL
+* List: allows users to select or search from a prepopulated list. This option requires more coding, as you must populate the list, and handle searching if you choose to support it.
+
+You can choose which types to include.
+
+Example:
+
+```typescript
+{
+	displayName: 'Card',
+	name: 'cardID',
+	type: 'resourceLocator',
+	default: '',
+	description: 'Get a card',
+	modes: [
+		{
+			displayName: 'ID',
+			name: 'id',
+			type: 'string',
+			hint: 'Enter an ID',
+			validation: [
+				{
+					type: 'regex',
+					properties: {
+						regex: '^[0-9]',
+						errorMessage: 'The ID must start with a number',
+					},
+				},
+			],
+			placeholder: '12example',
+			// How to use the ID in API call
+			url: '=http://api-base-url.com/?id={{$value}}',
+		},
+		{
+			displayName: 'URL',
+			name: 'url',
+			type: 'string',
+			hint: 'Enter a URL',
+			validation: [
+				{
+					type: 'regex',
+					properties: {
+						regex: '^http',
+						errorMessage: 'Invalid URL',
+					},
+				},
+			],
+			placeholder: 'https://example.com/card/12example/',
+			// How to get the ID from the URL
+			extractValue: {
+				type: 'regex',
+				regex: 'example.com/card/([0-9]*.*)/',
+			},
+		},
+		{
+			displayName: 'List',
+			name: 'list',
+			type: 'list',
+			typeOptions: {
+				// You must always provide a search method
+				// Write this method within the methods object in your base file
+				// The method must populate the list, and handle searching if searchable: true
+				searchListMethod: 'searchMethod',
+				// If you want users to be able to search the list
+				searchable: true,
+				// Set to true if you want to force users to search
+				// When true, users can't browse the list
+				// Or false if users can browse a list
+				searchFilterRequired: true,
+			},
+		},
+	],
+	displayOptions: {
+		// the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			],
+		},
+	},
+},
+```
+
+Refer to the following for live examples:
+
+* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
+* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
+
+## Resource mapper
+
+If your node performs insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. A common pattern is to use a Set node before the node that sends data, to convert the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node, rather than using a Set node. The resource mapper component can also validate input data against the schema provided in the node, and cast input data into the expected type.
+
+/// note | Mapping and matching
+Matching is the process of using column names to identify the row(s) to update.
+///	Mapping is the process of setting the input data to use as values when updating row(s).
+
+
+```js
+{
+	displayName: 'Columns',
+	name: 'columns', // The name used to reference the element UI within the code
+	type: 'resourceMapper', // The UI element type
+	default: {
+		// mappingMode can be defined in the component (mappingMode: 'defineBelow')
+		// or you can attempt automatic mapping (mappingMode: 'autoMapInputData')
+		mappingMode: 'defineBelow',
+		// Important: always set default value to null
+		value: null,
+	},
+	required: true,
+	// See "Resource mapper type options interface" below for the full typeOptions specification
+	typeOptions: {
+		resourceMapper: {
+			resourceMapperMethod: 'getMappingColumns',
+			mode: 'update',
+			fieldWords: {
+				singular: 'column',
+				plural: 'columns',
+			},
+			addAllFields: true, 
+			multiKeyMatch: true,
+			supportAutoMap: true,
+			matchingFieldsLabels: {
+				title: 'Custom matching columns title',
+				description: 'Help text for custom matching columns',
+				hint: 'Below-field hint for custom matching columns',
+			},
+		},
+	},
+},
+```
+
+Refer to the [Postgres node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postgres/v2){:target=_blank .external-link} for a live example using a database schema.
+
+Refer to the [Google Sheets node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google/Sheet/v2){:target=_blank .external-link} for a live example using a schema-less service.
+
+### Resource mapper type options interface
+
+The `typeOptions` section must implement the following interface:
+
+```js
+export interface ResourceMapperTypeOptions {
+	// The name of the method where you fetch the schema
+	// Refer to the Resource mapper method section for more detail
+	resourceMapperMethod: string;
+	// Choose the mode for your operation
+	// Supported modes: add, update, upsert
+	mode: 'add' | 'update' | 'upsert';
+	// Specify labels for fields in the UI
+	fieldWords?: { singular: string; plural: string };
+	// Whether n8n should display a UI input for every field when node first added to workflow
+	// Default is true
+	addAllFields?: boolean;
+	// Specify a message to show if no fields are fetched from the service 
+	// (the call is successful but the response is empty)
+	noFieldsError?: string;
+	// Whether to support multi-key column matching
+	// multiKeyMatch is for update and upsert only
+	// Default is false
+	// If true, the node displays a multi-select dropdown for the matching column selector
+	multiKeyMatch?: boolean;
+	// Whether to support automatic mapping
+	// If false, n8n hides the mapping mode selector field and sets mappingMode to defineBelow
+	supportAutoMap?: boolean;
+	// Custom labels for the matching columns selector
+	matchingFieldsLabels?: {
+		title?: string;
+		description?: string;
+		hint?: string;
+	};
+}
+```
+
+### Resource mapper method
+
+This method contains your node-specific logic for fetching the data schema. Every node must implement its own logic for fetching the schema, and setting up each UI field according to the schema.
+
+It must return a value that implements the `ResourceMapperFields` interface:
+
+```js
+interface ResourceMapperField {
+	// Field ID as in the service
+	id: string;
+	// Field label
+	displayName: string;
+	// Whether n8n should pre-select the field as a matching field
+	// A matching field is a column used to identify the rows to modify
+	defaultMatch: boolean;
+	// Whether the field can be used as a matching field
+	canBeUsedToMatch?: boolean;
+	// Whether the field is required by the schema
+	required: boolean;
+	// Whether to display the field in the UI
+	// If false, can't be used for matching or mapping
+	display: boolean;
+	// The data type for the field
+	// These correspond to UI element types
+	// Supported types: string, number, dateTime, boolean, time, array, object, options
+	type?: FieldType;
+	// Added at runtime if the field is removed from mapping by the user
+	removed?: boolean;
+	// Specify options for enumerated types
+	options?: INodePropertyOptions[];
+}
+```
+
+Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Postgres/v2/methods/resourceMapping.ts){:target=_blank .external-link} and [Google Sheets resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Sheet/v2/methods/resourceMapping.ts){:target=_blank .external-link} for live examples.
+
 ## JSON
 
 ```typescript
@@ -435,114 +709,6 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![JSON](/_images/integrations/creating-nodes/json.png)
 
-## Notice
-
-Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/) for guidance on writing good hints and info text.
-
-```js
-{
-  displayName: 'Your text here',
-  name: 'notice',
-  type: 'notice',
-  default: '',
-},
-```
-
-## Resource locator
-
-![Resource locator](/_images/integrations/creating-nodes/resource-locator.png)
-
-The resource locator element helps users find a specific resource in an external service, such as a card or label in Trello. 
-
-The following options are available:
-
-* ID
-* URL
-* List: allows users to select or search from a prepopulated list. This option requires more coding, as you must populate the list, and handle searching if you choose to support it.
-
-You can choose which types to include.
-
-Example:
-
-```typescript
-{
-	displayName: 'Card',
-	name: 'cardID',
-	type: 'resourceLocator',
-	default: '',
-	description: 'Get a card'
-	modes: [
-		{
-			displayName: 'ID',
-			name: 'id',
-			type: 'string',
-			hint: 'Enter an ID',
-			validation: [
-				{
-					type: 'regex',
-					properties: {
-						regex: '^[0-9]'
-						errorMessage: 'The ID must start with a number'
-					},	
-				},
-			],
-			placeholder: '12example',
-			// How to use the ID in API call
-			url: '=http://api-base-url.com/?id={{$value}}'
-		},
-		displayName: 'URL',
-		name: 'url',
-		type: 'string',
-		hint: 'Enter a URL',
-		validation: [
-			{
-				type: 'regex',
-					properties: {
-						regex: '^http'
-						errorMessage: 'Invalid URL'
-					},	
-			},
-		],
-		placeholder: 'https://example.com/card/12example/',
-		// How to get the ID from the URL
-		extractValue: {
-			type: 'regex',
-			regex: 'example\.com\/card\/([0-9]*.*)\/'
-		},
-		displayName: 'List',
-		name: 'list',
-		type: 'list',
-		typeOptions: {
-			// You must always provide a search method
-			// Write this method within the methods object in your base file
-			// The method must populate the list, and handle searching if searchable: true
-			searchListMethod: 'searchMethod'
-			// If you want users to be able to search the list
-			searchable: true,
-			// Set to true if you want to force users to search
-			// When true, users can't browse the list
-			// Or false if users can browse a list
-			searchFilterRequired: true
-		}
-	],
-	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
-	},
-}
-```
-
-Refer to the following for live examples:
-
-* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
-* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
-
 
 ## HTML
 
@@ -565,3 +731,15 @@ The HTML editor allows users to create HTML templates in their workflows. The ed
 Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link} for a live example.
 
 
+## Notice
+
+Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/) for guidance on writing good hints and info text.
+
+```js
+{
+  displayName: 'Your text here',
+  name: 'notice',
+  type: 'notice',
+  default: '',
+},
+```

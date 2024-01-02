@@ -1,10 +1,21 @@
+---
+title: Freshworks CRM
+description: Documentation for the Freshworks CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Freshworks CRM
 
-[Freshworks CRM](https://www.freshworks.com/freshsales-crm/) is a cloud-based customer relationship management (CRM) solution that helps businesses manage their interactions with existing and potential customers.
+Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/freshworkscrm/).
+On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Freshworks CRM integrations](https://n8n.io/integrations/freshworks-crm/){:target="_blank" .external-link} list.
+///
 
 ## Basic operations
 
@@ -70,3 +81,4 @@ The start node exists by default when you create a new workflow.
 5. Click on **Execute Node** to run the workflow.
 
 ![The Freshworks CRM node](/_images/integrations/builtin/app-nodes/freshworkscrm/freshworkscrm_node.png)
+

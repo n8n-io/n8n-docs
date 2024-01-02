@@ -1,10 +1,16 @@
+---
+title: SSH
+description: Documentation for the SSH node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # SSH
 
 The SSH node is useful for executing commands via the Secure Shell Protocol.
 
-!!! note "Credential"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/ssh/).
-
+/// note | Credential
+You can find authentication information for this node [here](/integrations/builtin/credentials/ssh/).
+///
 
 ## Basic Operations
 
@@ -51,3 +57,4 @@ The start node exists by default when you create a new workflow.
 7. Click on ***Execute Node*** to run the node.
 
 ![SSH Node](/_images/integrations/builtin/core-nodes/ssh/ssh_node.png)
+

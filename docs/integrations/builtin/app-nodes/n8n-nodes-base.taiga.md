@@ -1,10 +1,21 @@
+---
+title: Taiga
+description: Documentation for the Taiga node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Taiga
 
-[Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.
+Use the Taiga node to automate work in Taiga, and integrate Taiga with other applications. n8n has built-in support for a wide range of Taiga features, including creating, updating, deleting, and getting issues. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/taiga/).
+On this page, you'll find a list of operations the Taiga node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Taiga credentials](/integrations/builtin/credentials/taiga/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Taiga integrations](https://n8n.io/integrations/taiga/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -70,3 +81,4 @@ The start node exists by default when you create a new workflow.
 
 
 ![Using the Taiga node to get an issue](/_images/integrations/builtin/app-nodes/taiga/taiga2_node.png)
+

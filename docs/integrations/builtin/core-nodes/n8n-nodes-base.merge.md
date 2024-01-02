@@ -1,10 +1,16 @@
+---
+title: Merge
+description: Documentation for the Merge node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Merge
 
 Use the Merge node to combine data from two streams, once data of both streams is available.
 
-!!! note "Major changes in 0.194.0"
-		This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
-
+/// note | Major changes in 0.194.0
+This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
+///
 ## Merge mode
 
 You can specify how the Merge node should combine data from different branches. The following options are available:
@@ -69,6 +75,24 @@ Output all possible item combinations, while merging fields with the same name.
 
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/field-value-clash.md"
 
+#### Options
+
+When combining branches, you can set **Options**:
+
+For all modes:
+
+* **Clash handling**: choose how to merge when branches clash, or when there are sub-fields.
+* **Fuzzy compare**: whether to tolerate type differences when comparing fields (enabled), or not (disabled, default). For example, when you enable this, n8n treats `"3"` and `3` as the same.
+
+When merging by field:
+
+* **Disable dot notation**: this prevents accessing child fields using `parent.child` in the field name.
+* **Multiple matches**: choose how n8n handles multiple matches when comparing branches.
+
+When merging by position:
+
+**Include Any Unpaired Items**: choose whether to keep or discard unpaired items.
+
 ### Choose branch
 
 Choose which input to keep. This option always waits until the data from both inputs is available. You can keep the data from Input 1 or Input 2, or you can output a single empty item. The node outputs the data from the chosen input, without changing it.
@@ -82,9 +106,9 @@ The items passed into Input 1 of the Merge node will take precedence. For exampl
 --8<-- "_snippets/integrations/builtin/core-nodes/merge/if-merge-branch-execution.md"
 
 
-## Try it out: a step by step example
+## Try it out: A step by step example
 
-Create a simple workflow with some example input data to try out the Merge node.
+Create a workflow with some example input data to try out the Merge node.
 
 ### Set up sample data using the Code nodes
 
@@ -137,7 +161,7 @@ Add the Merge node. Connect the first Code node to **Input 1**, and the second C
 
 The final workflow should look like the following image.
 
-![Simple merge workflow with two Code nodes](/_images/integrations/builtin/core-nodes/merge/workflow.png)
+![Merge workflow with two Code nodes](/_images/integrations/builtin/core-nodes/merge/workflow.png)
 
 Now try different options in **Mode** to see how it affects the output data.
 
@@ -190,8 +214,9 @@ Output in table view:
 ![Merge by Multiplex mode output](/_images/integrations/builtin/core-nodes/merge/multiplex-mode.png)
 
 
-## Try it out: load a workflow
+## Try it out: Load a workflow
 
 n8n provides an example workflow that demonstrates key Merge node concepts.
 
 Go to [Joining different datasets](https://n8n.io/workflows/1747-joining-different-datasets/){:target=_blank .external-link} and select **Use workflow** to copy the example workflow. You can then paste it into your n8n instance.
+

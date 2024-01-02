@@ -1,15 +1,17 @@
 ---
 description: Share credentials within an organization.
+contentType: howto
 ---
 
 # Credential sharing
 
-!!! info "Feature availability"
-		* Available on some Cloud plans, and paid self-hosted plans.
-		* Not available on Desktop.
-		* Requires [User management](/user-management/).
+/// info | Feature availability
+Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
+///
 
 Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
+
+Users can share credentials they created. Instance owners, and users with the admin role, can view and share all credentials in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
 
 To use credential sharing, you must enable [user management](/user-management/).
 

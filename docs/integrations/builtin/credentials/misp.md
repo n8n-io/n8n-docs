@@ -1,4 +1,10 @@
-# MISP
+---
+title: MISP credentials
+description: Documentation for MISP credentials. Use these credentials to authenticate MISP in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# MISP credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -19,3 +25,4 @@ From n8n:
 3. Enter your API key and application Base URL.
 4. Use the toggle to select if you want to **Allow Unauthorized Certificates**.
 5. Click **Save** to create your credentials.
+

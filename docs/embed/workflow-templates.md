@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Workflow templates
 
 --8<-- "_snippets/embed-license.md"
@@ -29,4 +33,11 @@ The endpoints are:
 | GET | /templates/categories |
 | GET | /health |
 
-To learn about the data structure, try out the endpoints. You can also [contact us](mailto:support@n8n.io) for more support.
+To learn about the data structure, try out n8n's API endpoints:
+
+[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories){:target=_blank .external-link}  
+[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections){:target=_blank .external-link}  
+[https://api.n8n.io/templates/workflows](https://api.n8n.io/templates/workflows){:target=_blank .external-link}  
+[https://api.n8n.io/health](https://api.n8n.io/health){:target=_blank .external-link}  
+
+You can also [contact us](mailto:support@n8n.io) for more support.

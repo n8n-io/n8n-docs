@@ -1,4 +1,10 @@
-# Dropbox
+---
+title: Dropbox credentials
+description: Documentation for Dropbox credentials. Use these credentials to authenticate Dropbox in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Dropbox credentials
 
 You can use these credentials to authenticate the following nodes with Dropbox.
 
@@ -10,9 +16,9 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Dropbox account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Dropbox account to n8n.
+///
 
 1. Access the [Dropbox app creation](https://www.dropbox.com/developers/apps/create) page.
 2. Select 'Scoped access' under the ***Choose an API*** section.
@@ -45,3 +51,4 @@ Create a [Dropbox](https://www.dropbox.com/) account.
 11. Use the displayed ***Generated access token*** with your Dropbox credentials in n8n.
 
 ![Getting Dropbox credentials](/_images/integrations/builtin/credentials/dropbox/using-access-token.gif)
+

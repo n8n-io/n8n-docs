@@ -1,4 +1,10 @@
-# Zammad
+---
+title: Zammad credentials
+description: Documentation for Zammad credentials. Use these credentials to authenticate Zammad in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Zammad credentials
 
 You can use these credentials to authenticate the following nodes with Zammad.
 
@@ -21,3 +27,4 @@ You can use these credentials to authenticate the following nodes with Zammad.
 3. Select **Token Access** and click **Create**
 4. Enter a name for your new token and pick all required permissions. Click **Create** once done.
 5. Copy the token shown into the **Access Token** field in n8n. Enter the URL of your Zammad instance in the **Base URL** field.
+

@@ -1,12 +1,13 @@
 ---
 description: Stream events from n8n to your logging tools.
+contentType: howto
 ---
 
 # Log streaming
 
-!!! info "Feature availability"
-	Log streaming is available on Enterprise Self-hosted and custom Cloud plans.
-
+/// info | Feature availability
+Log streaming is available on Enterprise Self-hosted and Cloud plans.
+///
 
 Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
 
@@ -21,9 +22,9 @@ To use log streaming, you have to add a streaming destination.
 5. Select **Events** to choose which events to stream.
 6. Select **Save**.
 
-!!! note "Self-hosted users"
-	If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/environment-variables/environment-variables/#log-streaming).
-
+/// note | Self-hosted users
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/environment-variables/environment-variables/#log-streaming).
+///
 ## Events
 
 The following events are available. You can choose which events to stream in **Settings** > **Log Streaming** > **Events**.

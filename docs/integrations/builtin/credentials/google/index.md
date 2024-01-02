@@ -1,10 +1,18 @@
-# Google
+---
+title: Google credentials
+description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
+contentType: overview
+---
+
+# Google credentials
 
 This section contains:
 
 * [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service/): create an OAuth2 credential for a specific service node, such as the Gmail node.
 * [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic/): create an OAuth2 credential for use with [custom operations](/integrations/custom-operations/).
 * [Service Account](/integrations/builtin/credentials/google/service-account/): create a Service Account credential.
+* [Google PaLM](/integrations/builtin/credentials/google/googlepalm/): get your API key to work with Google PaLM nodes.
+
 
 ## OAuth2 and Service Account
 
@@ -21,7 +29,7 @@ Once configured, you can use your credentials to authenticate the following node
 	| [Google Ads](/integrations/builtin/app-nodes/n8n-nodes-base.googleads/) | :white_check_mark: | :x: |
 	| [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
 	| [Google Analytics](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) | :white_check_mark: | :x: |
-	| [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/) | :white_check_mark: | :x: |
+	| [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/) | :white_check_mark: | :white_check_mark: |
 	| [Google Books](/integrations/builtin/app-nodes/n8n-nodes-base.googlebooks/) | :white_check_mark: | :white_check_mark: |
 	| [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/) | :white_check_mark: | :x: |
 	| [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googlechat/) | :x: | :white_check_mark: |
@@ -40,13 +48,16 @@ Once configured, you can use your credentials to authenticate the following node
 	| [Google Translate](/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/) | :white_check_mark: | :white_check_mark: |
 	| [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youtube/) | :white_check_mark: | :x: |
 
-!!! note "Note for n8n Cloud users"
-    For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
+/// note | Note for n8n Cloud users
+For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
 
-    * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
-    * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
-    * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
-    * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+* [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
+* [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
+* [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
+* [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+///
+
+
 
 
 

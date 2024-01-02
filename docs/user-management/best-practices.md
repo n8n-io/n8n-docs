@@ -1,5 +1,6 @@
 ---
 description: User management best practices.
+contentType: explanation
 ---
 
 # Best practices for user management
@@ -17,10 +18,10 @@ This page contains advice on best practices relating to user management in n8n.
 
 ## Self-hosted
 
-* If you run n8n behind a reverse proxy, set the following environment variables so that emails are generated with the correct URL:
+If you run n8n behind a reverse proxy, set the following environment variables so that emails are generated with the correct URL:
 	* `N8N_HOST`
 	* `N8N_PORT`
 	* `N8N_PROTOCOL`
 	* `N8N_EDITOR_BASE_URL`  
   More information on these variables is available in [Environment variables](/hosting/environment-variables/environment-variables/).
-* You can't use n8n's user management with basic auth. If your n8n instance currently uses basic auth to authenticate the user, you must remove this before setting up user management.
+

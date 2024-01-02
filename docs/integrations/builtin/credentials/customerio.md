@@ -1,4 +1,10 @@
-# Customer.io
+---
+title: Customer.io credentials
+description: Documentation for Customer.io credentials. Use these credentials to authenticate Customer.io in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Customer.io credentials
 
 You can use these credentials to authenticate the following nodes with Customer.io.
 
@@ -43,3 +49,4 @@ The following video demonstrates the steps mentioned above.
 ### Why do I need the Tracking API Key and the App API Key?
 
 Customer.io uses different API Keys for different endpoints. Based on the operation you want to perform, n8n uses the correct API key to connect to your Customer.io account.
+

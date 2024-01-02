@@ -1,4 +1,10 @@
-# Asana
+---
+title: Asana credentials
+description: Documentation for Asana credentials. Use these credentials to authenticate Asana in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Asana credentials
 
 You can use these credentials to authenticate the following nodes with Asana.
 
@@ -12,9 +18,9 @@ Create an [Asana](https://www.Asana.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Asana account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Asana account to n8n.
+///
 
 1. Open your Asana dashboard.
 2. Click on your user icon in the top right.
@@ -43,3 +49,4 @@ Create an [Asana](https://www.Asana.com/) account.
 9. Copy the token and use it with your Asana node credentials in n8n.
 
 ![Getting Asana credentials](/_images/integrations/builtin/credentials/asana/using-access-token.gif)
+

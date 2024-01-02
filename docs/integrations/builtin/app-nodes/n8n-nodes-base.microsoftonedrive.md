@@ -1,9 +1,21 @@
+---
+title: Microsoft OneDrive
+description: Documentation for the Microsoft OneDrive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Microsoft OneDrive
 
-[Microsoft OneDrive](https://onedrive.live.com/) is a file hosting service and synchronization service operated by Microsoft.
+Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and integrate Microsoft OneDrive with other applications. n8n has built-in support for a wide range of Microsoft OneDrive features, including creating, updating, deleting, and getting files, and folders.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/microsoft/).
+On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
+
+/// note | Credentials
+Refer to [Microsoft OneDrive credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Microsoft OneDrive integrations](https://n8n.io/integrations/microsoft-onedrive/){:target="_blank" .external-link} list.
+///
 
 
 ## Operations
@@ -42,3 +54,4 @@ To perform operations on folders, you need to supply the ID. You can find this:
 	2. Select **Operation** > **Search**.
 	3. In **Query**, enter the folder name.
 	4. Select **Execute node**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
+

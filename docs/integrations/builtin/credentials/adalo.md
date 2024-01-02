@@ -1,4 +1,10 @@
-# Adalo
+---
+title: Adalo credentials
+description: Documentation for Adalo credentials. Use these credentials to authenticate Adalo in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Adalo credentials
 
 You can use these credentials to authenticate the following nodes with Adalo:
 
@@ -17,3 +23,4 @@ You can use these credentials to authenticate the following nodes with Adalo:
 1. Copy the API key from Adalo into **API Key**.
 1. Copy the App ID for your Adalo app into **App ID**.
 1. Select **Save**. n8n tests your credentials and confirms that they work.
+

@@ -1,10 +1,21 @@
+---
+title: Copper
+description: Documentation for the Copper node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Copper
 
-[Copper](https://www.copper.com/) is a CRM that focuses on strong integration with Google's G Suite, targeted towards small and medium-sized businesses.
+Use the Copper node to automate work in Copper, and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, including getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/copper/).
+On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Copper integrations](https://n8n.io/integrations/copper/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -116,3 +127,4 @@ This node will retrieve the information of the person that we created earlier.
 In the screenshot below, you will notice that the node retrieves the information of the person that we created earlier.
 
 ![Using the Copper node to retrieve the information of a person](/_images/integrations/builtin/app-nodes/copper/copper2_node.png)
+

@@ -1,4 +1,10 @@
-# HTTP Request
+---
+title: HTTP Request credentials
+description: Documentation for HTTP Request credentials. Use these credentials to authenticate HTTP Request in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# HTTP Request credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -19,11 +25,12 @@ You can use [Predefined credential types](/integrations/custom-operations/#prede
 The following generic authentication methods are available:
 
 * Basic Auth
+* Custom Auth
 * Digest Auth
 * Header Auth
-* OAuth1
-* OAuth2
-* None
+* OAuth1 API
+* OAuth2 API
+* Query Auth
 
 You can learn more about HTTP authentication [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#see_also){:target=_blank .external-link}.
 
@@ -74,4 +81,5 @@ Read more about [OAuth1](https://oauth.net/1/){:target=_blank .external-link}.
 3. Select **Save** to save your credentials.
 
 Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
+
 

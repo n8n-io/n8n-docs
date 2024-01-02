@@ -1,9 +1,21 @@
+---
+title: Beeminder
+description: Documentation for the Beeminder node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Beeminder
 
-[Beeminder](https://www.beeminder.com/) is a service that helps you to self-track and stick to your goals.
+Use the Beeminder node to automate work in Beeminder, and integrate Beeminder with other applications. n8n has built-in support for a wide range of Beeminder features, including creating, deleting, and updating datapoints.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/beeminder/).
+On this page, you'll find a list of operations the Beeminder node supports and links to more resources.
+
+/// note | Credentials
+Refer to [Beeminder credentials](/integrations/builtin/credentials/beeminder/) for guidance on setting up authentication. 
+///
+/// note | Examples and Templates
+For usage examples and templates to help you get started, take a look at n8n's [Beeminder integrations](https://n8n.io/integrations/beeminder/){:target=_blank .external-link} list.
+///
 
 
 
@@ -55,6 +67,7 @@ In the screenshot below, you will notice that the node creates a datapoint in Be
 
 ![Using the Beeminder node to create a datapoint for a goal](/_images/integrations/builtin/app-nodes/beeminder/beeminder_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Strava Trigger node.
+///
 

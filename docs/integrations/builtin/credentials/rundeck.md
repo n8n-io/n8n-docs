@@ -1,4 +1,10 @@
-# Rundeck
+---
+title: Rundeck credentials
+description: Documentation for Rundeck credentials. Use these credentials to authenticate Rundeck in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Rundeck credentials
 
 You can use these credentials to authenticate the following nodes with Rundeck.
 
@@ -18,3 +24,4 @@ Create a [Rundeck](https://www.rundeck.com/) account.
 5. Use the API token with your Rundeck node credentials in n8n.
 
 ![Getting Rundeck credentials](/_images/integrations/builtin/credentials/rundeck/using-access-token.gif)
+

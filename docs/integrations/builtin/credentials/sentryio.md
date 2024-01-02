@@ -1,4 +1,10 @@
-# Sentry.io
+---
+title: Sentry.io credentials
+description: Documentation for Sentry.io credentials. Use these credentials to authenticate Sentry.io in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Sentry.io credentials
 
 You can use these credentials to authenticate the following nodes with Sentry.io.
 
@@ -10,9 +16,9 @@ Create a [Sentry.io](https://sentry.io/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Sentry.io account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Sentry.io account to n8n.
+///
 
 1. Access your [Sentry.io Applications Page](https://sentry.io/settings/account/api/applications/).
 2. Click on the ***Create New Application*** button in the top right.
@@ -34,3 +40,4 @@ Create a [Sentry.io](https://sentry.io/) account.
 5. Click on the ***Save*** button to save your credentials.
 
 ![Getting Sentry.io access token](/_images/integrations/builtin/credentials/sentryio/using-access-token.gif)
+

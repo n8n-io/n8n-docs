@@ -1,4 +1,10 @@
-# Yourls
+---
+title: Yourls credentials
+description: Documentation for Yourls credentials. Use these credentials to authenticate Yourls in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Yourls credentials
 
 You can use these credentials to authenticate the following nodes with Yourls.
 
@@ -17,3 +23,4 @@ Install [Yourls](https://github.com/YOURLS/YOURLS) on your server.
 5. Use this ***Signature*** and the URL of your Yourls instance with your Yourls node credentials in n8n.
 
 ![Getting Yourls credentials](/_images/integrations/builtin/credentials/yourls/using-api.gif)
+

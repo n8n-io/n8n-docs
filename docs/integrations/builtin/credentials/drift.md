@@ -1,4 +1,10 @@
-# Drift
+---
+title: Drift credentials
+description: Documentation for Drift credentials. Use these credentials to authenticate Drift in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Drift credentials
 
 You can use these credentials to authenticate the following nodes with Drift.
 
@@ -10,9 +16,9 @@ Create a [Drift](https://www.drift.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Drift account to n8n.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Drift account to n8n.
+///
 
 1. Access your [Drift apps](https://dev.drift.com/apps) page.
 2. Click on the ***Build Your App*** button. You can also select an existing app if you already have one.
@@ -36,3 +42,4 @@ Create a [Drift](https://www.drift.com/) account.
 5. Use token with your Drift Node credentials in n8n.
 
 ![Getting Drift credentials](/_images/integrations/builtin/credentials/drift/using-access-token.gif)
+

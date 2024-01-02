@@ -1,10 +1,21 @@
+---
+title: QuickBooks
+description: Documentation for the QuickBooks node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # QuickBooks
 
-[QuickBooks](https://quickbooks.intuit.com) is an accounting software package developed by Intuit.
+Use the QuickBooks node to automate work in QuickBooks, and integrate QuickBooks with other applications. n8n has built-in support for a wide range of QuickBooks features, including creating, updating, deleting, and getting bills, customers, employees, estimates, and invoices. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/quickbooks/).
+On this page, you'll find a list of operations the QuickBooks node supports and links to more resources.
 
+/// note | Credentials
+Refer to [QuickBooks credentials](/integrations/builtin/credentials/quickbooks/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [QuickBooks integrations](https://n8n.io/integrations/quickbooks-online/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -131,3 +142,4 @@ This node will send the invoice that we created in the previous node.
 In the screenshot below, you will notice that the node sends the invoice to the customer.
 
 ![Using the QuickBooks node to send an invoice to a customer](/_images/integrations/builtin/app-nodes/quickbooks/quickbooks2_node.png)
+

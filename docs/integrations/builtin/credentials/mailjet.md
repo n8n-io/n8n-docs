@@ -1,4 +1,10 @@
-# Mailjet
+---
+title: Mailjet credentials
+description: Documentation for Mailjet credentials. Use these credentials to authenticate Mailjet in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Mailjet credentials
 
 You can use these credentials to authenticate the following nodes with Mailjet.
 
@@ -18,3 +24,4 @@ Create a [Mailjet](https://www.mailjet.com/) account.
 5. Use the API key and Secret Key with Mailjet node credentials in n8n.
 
 ![Getting Mailjet credentials](/_images/integrations/builtin/credentials/mailjet/using-access-token.gif)
+

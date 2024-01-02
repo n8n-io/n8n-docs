@@ -1,29 +1,41 @@
+---
+title: Execute Workflow
+description: Documentation for the Execute Workflow node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Execute Workflow
 
 Use the Execute Workflow node to run a different workflow on the host machine that runs n8n.
 
-## Node reference
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Execute Workflow integrations](https://n8n.io/integrations/execute-workflow/){:target=_blank .external-link} page.
+///
+
+## Properties
 
 The Execute Workflow node has two properties:
 
-- **Source**: This field specifies from where to get the workflow's information.
+- **Source**: this field specifies from where to get the workflow's information.
 	- Database
 	- Local File
 	- Parameter
 	- URL
-- **Workflow**: This field contains information about the workflow, such as the workflow ID, URL, or a file.
+- **Workflow**: this field contains information about the workflow, such as the workflow ID, URL, or a file.
+- **Mode**: choose whether to **Run once with all items** or **Run once for each item**. Selecting **Run once for each item** makes the node execute for every input item in turn.
 
+## Set up and use a sub-workflow
 
-## FAQs
+This section walks through setting up both the parent workflow and sub-workflow.
 
-### How to find the workflow ID
+--8<-- "_snippets/flow-logic/subworkflow-usage.md"
+
+## Find a workflow ID
 
 1. Open the workflow for which you want to get the workflow ID.
 2. Copy the number after `workflow/` in your URL and paste that in the **Workflow ID** field.
 
 
-### How does data get passed from one workflow to another?
+## How data passes between workflows
 
-Let's say that there's a Execute Workflow node in **Workflow A**. The Execute Workflow node calls another workflow, **Workflow B**.
-- The Execute Workflow node passes the data to the Start node of **Workflow B**.
-- The last node of **Workflow B** sends the data back to the Execute Workflow node in **Workflow A**.
+--8<-- "_snippets/flow-logic/subworkflow-data-flow.md"

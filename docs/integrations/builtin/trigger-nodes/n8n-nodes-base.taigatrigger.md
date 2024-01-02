@@ -1,10 +1,16 @@
-# Taiga Trigger
+---
+title: Taiga trigger
+description: Documentation for the Taiga trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Taiga trigger
 
 [Taiga](https://www.taiga.io/) is a free and open-source project management platform for startups, agile developers, and designers.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/taiga/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/taiga/).
+///
 
 ## Example Usage
 
@@ -22,6 +28,7 @@ The final workflow should look like the following image.
 2. Select the project ID from the ***Project ID*** dropdown list.
 2. Click on ***Execute Node*** to run the node.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Taiga Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Taiga Trigger node.
+///
 

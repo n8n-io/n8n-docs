@@ -1,4 +1,10 @@
-# Cal
+---
+title: Cal credentials
+description: Documentation for Cal credentials. Use these credentials to authenticate Cal in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Cal credentials
 
 You can use these credentials to authenticate the following nodes with Cal.
 
@@ -19,3 +25,4 @@ Your API requests are authenticated using API keys. Any request that doesn't inc
 
 
 ![Getting Cal credentials](/_images/integrations/builtin/credentials/cal/getting-api-key.gif)
+

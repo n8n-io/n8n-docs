@@ -1,10 +1,16 @@
-# Pushcut Trigger
+---
+title: Pushcut trigger
+description: Documentation for the Pushcut trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Pushcut trigger
 
 [Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pushcut/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/pushcut/).
+///
 
 ## Example Usage
 
@@ -64,6 +70,7 @@ Follow the steps mentioned below to configure your Pushcut Trigger node with you
 8. Select this action under the ***Select Integration Trigger*** screen in your Pushcut app.
 9. Click on ***Done*** on the top right to save the action.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Pushcut Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Pushcut Trigger node.
+///
 

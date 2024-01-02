@@ -1,10 +1,16 @@
-# Facebook Trigger
+---
+title: Facebook trigger
+description: Documentation for the Facebook trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Facebook trigger
 
 [Facebook](https://www.facebook.com/) is a social networking site that makes it easy to connect and share with family and friends online.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).
+///
 
 ## Object
 
@@ -59,5 +65,6 @@ In the screenshot below, you will notice that the node sends a message about the
 
 ![Using the Mattermost node to send a message of the updated information](/_images/integrations/builtin/trigger-nodes/facebooktrigger/mattermost_node.png)
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Facebook Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Facebook Trigger node.
+///

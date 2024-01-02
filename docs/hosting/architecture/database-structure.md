@@ -1,5 +1,6 @@
 ---
 description: Understand the n8n database structure
+contentType: explanation
 ---
 
 # Database structure
@@ -18,19 +19,33 @@ To inspect the n8n database, you can use [DBeaver](https://dbeaver.io){:target=_
 
 These are the tables n8n creates during setup.
 
+### auth_identity
+
+Stores details of external authentication providers when using [SAML](/user-management/saml/).
+
+### auth_provider_sync_history
+
+Stores the history of a SAML connection.
+
 ### credentials_entity
 
 Stores the credentials used to authenticate with integrations.
 
-### eventdestinations_entity
-
-Enterprise only.
+### event_destinations
 
 Contains the destination configurations for [Log streaming](/log-streaming/).
+
+### execution_data
+
+Contains the workflow at time of running, and the execution data.
 
 ### execution_entity
 
 Stores all saved workflow executions. Workflow settings can affect which executions n8n saves.
+
+### execution_metadata
+
+Stores [Custom executions data](/workflows/executions/custom-executions-data/).
 
 ### installed_nodes
 
@@ -72,6 +87,10 @@ All workflow tags created in the n8n instance. This table lists the tags. [workf
 
 Contains user data.
 
+### variables
+
+Store [variables](/code/variables/).
+
 ### webhook_entity
 
 Records the active webhooks in your n8n instance's workflows. This isn't just webhooks uses in the Webhook node. It includes all active webhooks used by any trigger node.
@@ -79,6 +98,14 @@ Records the active webhooks in your n8n instance's workflows. This isn't just we
 ### workflow_entity
 
 Your n8n instance's saved workflows.
+
+### workflow_history
+
+Store previous versions of workflows.
+
+### workflow_statistics
+
+Counts workflow IDs and their status.
 
 ### workflows_tags
 

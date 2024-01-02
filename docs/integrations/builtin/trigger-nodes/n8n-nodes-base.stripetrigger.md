@@ -1,10 +1,16 @@
-# Stripe Trigger
+---
+title: Stripe trigger
+description: Documentation for the Stripe trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Stripe trigger
 
 Stripe is a suite of payment APIs that powers commerce for online businesses.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/stripe/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/stripe/).
+///
 
 
 ## Example Usage
@@ -23,8 +29,9 @@ The final workflow should look like the following image.
 2. Select the `*` option in the *Events* field to receive updates when any event is triggered.
 3. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Stripe Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Stripe Trigger node.
+///
 
 
 

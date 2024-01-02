@@ -1,3 +1,9 @@
+---
+title: Compression
+description: Documentation for the Compression node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # Compression
 
 The Compression node is useful to compress and decompress files. You can either use the `gzip` or `zip` file format.
@@ -87,3 +93,4 @@ This node will upload the compressed file to your Dropbox account.
 In the screenshot below, you will notice that the node uploads the compressed file that we generated in the previous node.
 
 ![Using the Dropbox node to upload a file](/_images/integrations/builtin/core-nodes/compression/dropbox_node.png)
+

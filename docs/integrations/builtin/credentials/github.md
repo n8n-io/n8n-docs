@@ -1,10 +1,16 @@
-# GitHub
+---
+title: GitHub credentials
+description: Documentation for GitHub credentials. Use these credentials to authenticate GitHub in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# GitHub credentials
 
 You can use these credentials to authenticate the following nodes with GitHub.
 
 - [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/)
 - [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/)
-
+- [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader): this node doesn't support OAuth.
 
 ## Prerequisites
 
@@ -12,9 +18,9 @@ Create a [GitHub](https://github.com/){:target=_blank .external-link} account.
 
 ## Using OAuth
 
-!!! note "n8n Cloud users"
-    You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
-
+/// note | n8n Cloud users
+You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your GitHub account to n8n.
+///
 
 1. Open your GitHub [dashboard](https://github.com){:target=_blank .external-link}.
 2. Select your user icon in the top right.
@@ -65,3 +71,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/zookYdMldt4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

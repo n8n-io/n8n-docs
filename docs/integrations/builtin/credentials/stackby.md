@@ -1,4 +1,10 @@
-# Stackby
+---
+title: Stackby credentials
+description: Documentation for Stackby credentials. Use these credentials to authenticate Stackby in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Stackby credentials
 
 You can use these credentials to authenticate the following nodes with Stackby.
 
@@ -24,3 +30,4 @@ The following video demonstrates the steps mentioned above.
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/xc_upy6H5r4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+

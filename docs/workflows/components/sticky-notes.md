@@ -1,5 +1,6 @@
 ---
 description: Annotate your workflows using sticky notes.
+contentType: howto
 ---
 
 # Sticky Notes
@@ -31,6 +32,7 @@ You can:
 * Drag a Sticky Note anywhere on the canvas.
 * Drag Sticky Notes behind nodes. You can use this to visually group nodes.
 * Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
+* Change the color: select **Options** <span class="inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png)</span> to open the color selector.
 
 ## Writing in Markdown
 
@@ -61,3 +63,11 @@ Or created ordered lists with numbers:
 ```
 
 For a more detailed guide, refer to [CommonMark's help](https://commonmark.org/help/). n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification.
+
+## Make images full width
+
+You can force images to be 100% width of the sticky note by appending `#full-width` to the filename:
+
+```markdown
+![Source example](https://<IMAGE-URL>/<IMAGE-NAME>.png#full-width)
+```

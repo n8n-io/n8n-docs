@@ -1,10 +1,21 @@
+---
+title: Pipedrive
+description: Documentation for the Pipedrive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Pipedrive
 
-[Pipedrive](https://www.pipedrive.com/) is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
+Use the Pipedrive node to automate work in Pipedrive, and integrate Pipedrive with other applications. n8n has built-in support for a wide range of Pipedrive features, including creating, updating, deleting, and getting activity, files, notes, organizations, and leads. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/pipedrive/).
+On this page, you'll find a list of operations the Pipedrive node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Pipedrive integrations](https://n8n.io/integrations/pipedrive/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -82,3 +93,4 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Pipedrive node. You can find out how to do that [here](/integrations/builtin/credentials/pipedrive/).
 2. Enter the title of the deal in the *Title* field.
 3. Click on *Execute Node* to run the workflow.
+

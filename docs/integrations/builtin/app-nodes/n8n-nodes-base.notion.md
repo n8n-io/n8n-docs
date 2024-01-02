@@ -1,10 +1,21 @@
+---
+title: Notion
+description: Documentation for the Notion node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Notion
 
-[Notion](https://notion.so){:target=_blank .external-link} is an all-in-one workspace for your notes, tasks, wikis, and databases.
+Use the Notion node to automate work in Notion, and integrate Notion with other applications. n8n has built-in support for a wide range of Notion features, including getting and searching databases, creating pages, and getting users.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/notion/).
+On this page, you'll find a list of operations the Notion node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Notion credentials](/integrations/builtin/credentials/notion/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Notion integrations](https://n8n.io/integrations/notion/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 
@@ -35,6 +46,7 @@ n8n provides an app node for Notion. You can find the trigger node docs [here](/
 View [example workflows and related content](https://n8n.io/integrations/notion-beta/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
+
 
 
 

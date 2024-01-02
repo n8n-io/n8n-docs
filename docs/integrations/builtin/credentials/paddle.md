@@ -1,4 +1,10 @@
-# Paddle
+---
+title: Paddle credentials
+description: Documentation for Paddle credentials. Use these credentials to authenticate Paddle in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Paddle credentials
 
 You can use these credentials to authenticate the following nodes with Paddle.
 
@@ -18,3 +24,4 @@ Create a [Paddle](https://paddle.com/) account.
 6. Click on the ***Save*** button to save your credentials.
 
 ![Getting Paddle credentials](/_images/integrations/builtin/credentials/paddle/using-access-token.gif)
+

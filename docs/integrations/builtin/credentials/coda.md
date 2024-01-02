@@ -1,4 +1,10 @@
-# Coda
+---
+title: Coda credentials
+description: Documentation for Coda credentials. Use these credentials to authenticate Coda in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Coda credentials
 
 You can use these credentials to authenticate the following nodes with Coda.
 
@@ -18,3 +24,4 @@ Create a [Coda](https://www.coda.com/) account.
 
 
 ![Getting Coda credentials](/_images/integrations/builtin/credentials/coda/using-access-token.gif)
+

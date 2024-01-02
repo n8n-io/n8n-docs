@@ -1,4 +1,10 @@
-# Line
+---
+title: Line credentials
+description: Documentation for Line credentials. Use these credentials to authenticate Line in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Line credentials
 
 You can use these credentials to authenticate the following nodes with Line.
 
@@ -26,3 +32,4 @@ Create a [Line](https://line.me/en/) account.
 14. Click the ***Save*** button to save your credentials in n8n.
 
 ![Getting Line credentials](/_images/integrations/builtin/credentials/line/using-oauth.gif)
+

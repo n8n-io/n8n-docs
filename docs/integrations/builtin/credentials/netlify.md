@@ -1,4 +1,10 @@
-# Netlify
+---
+title: Netlify credentials
+description: Documentation for Netlify credentials. Use these credentials to authenticate Netlify in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Netlify credentials
 
 You can use these credentials to authenticate the following nodes:
 
@@ -21,3 +27,4 @@ From n8n:
 
 4. Enter the access token obtained above.
 5. Click **Save** to create your credentials.
+

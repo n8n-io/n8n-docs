@@ -1,10 +1,16 @@
+---
+title: FTP
+description: Documentation for the FTP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
+---
+
 # FTP
 
 The FTP node is useful to access and upload files to an FTP server.
 
-!!! note "Credential"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
-
+/// note | Credential
+You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
+///
 
 ## Basic Operations
 
@@ -62,3 +68,4 @@ The start node exists by default when you create a new workflow.
 4. Click on ***Execute Node*** to run the node.
 
 ![Getting a list of files with the FTP node](/_images/integrations/builtin/core-nodes/ftp/ftp1_node.png)
+

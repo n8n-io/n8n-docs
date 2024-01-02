@@ -1,4 +1,10 @@
-# Pushbullet
+---
+title: Pushbullet credentials
+description: Documentation for Pushbullet credentials. Use these credentials to authenticate Pushbullet in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Pushbullet credentials
 
 You can use these credentials to authenticate the following nodes with Pushbullet.
 
@@ -17,8 +23,9 @@ Create a [Pushbullet](https://www.pushbullet.com/) account.
 5. Use the provided ***client_id*** and ***client_secret*** with your Pushbullet OAuth2 API credentials in n8n.
 6. Click the ***Connect my account*** button to connect to Pushbullet and save your credentials in n8n.
 
-!!! note "Pushbullet OAuth Test Link"
-    Pushbullet does offer a test link during the client creation process described above. This link is not compatible with n8n. In order to verify the authentication works, simply use the ***Connect my account*** button in n8n.
-
+/// note | Pushbullet OAuth Test Link
+Pushbullet does offer a test link during the client creation process described above. This link is not compatible with n8n. In order to verify the authentication works, simply use the ***Connect my account*** button in n8n.
+///
 
 ![Getting Pushbullet credentials](/_images/integrations/builtin/credentials/pushbullet/using-oauth.gif)
+

@@ -1,4 +1,10 @@
-# Mandrill
+---
+title: Mandrill credentials
+description: Documentation for Mandrill credentials. Use these credentials to authenticate Mandrill in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Mandrill credentials
 
 You can use these credentials to authenticate the following nodes with Mandrill.
 
@@ -16,3 +22,4 @@ Create a [Mandrill](https://mandrillapp.com/login/) account.
 4. Use the key with your Mandrill API credentials in n8n.
 
 ![Getting Mandrill credentials](/_images/integrations/builtin/credentials/mandrill/using-api-key.gif)
+

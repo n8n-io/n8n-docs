@@ -29,6 +29,12 @@ df_string:
           - md5
           - base64
           - sha1
+          - sha224
+          - sha256
+          - sha384
+          - sha512
+          - sha3
+          - ripemd160
     returns: String
     description: Returns a string hashed with the given algorithm.
   - funcName: isDomain
@@ -89,7 +95,7 @@ df_string:
     description: Formats a string to snake case.
   - funcName: toTitleCase
     returns: String
-    description: Formats a string to title case.
+    description: Formats a string to title case. Will not change already uppercase letters to prevent losing information from acronyms and trademarks such as iPhone or FAANG.
   - funcName: toWholeNumber
     returns: Number
     description: Converts a string to a whole number.
@@ -205,7 +211,7 @@ df_number:
         default: "0"
         description: How many decimal places to round to.
     returns: Number
-    description: Returns the value of a number rounded to the nearest whole number.
+    description: Returns the value of a number rounded to the nearest whole number, unless a decimal place is specified.
 df_date:
   - funcName: beginningOf
     args:
@@ -217,7 +223,7 @@ df_date:
         default: week
         options:  *df_durationUnit
     returns: Date
-    description: Transform a Date to the start of the given time period.
+    description: Transforms a Date to the start of the given time period. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: endOfMonth
     returns: Date
     description: Transforms a Date to the end of the month.
@@ -231,7 +237,7 @@ df_date:
         default: week
         options:  *df_durationUnit
     returns: Number
-    description: Extracts the part defined in datePart from a Date.
+    description: Extracts the part defined in datePart from a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: format
     args:
       - argName: fmt
@@ -293,7 +299,7 @@ df_date:
         default: minute
         options:  *df_durationUnit
     returns: Date
-    description: Subtracts a given time period from a Date.
+    description: Subtracts a given time period from a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
   - funcName: plus
     args:
       - argName: n
@@ -309,7 +315,7 @@ df_date:
         default: minute
         options:  *df_durationUnit
     returns: Date
-    description: Adds a given time period from a Date.
+    description: Adds a given time period to a Date. Returns either a JavaScript Date or Luxon Date, depending on input.
 df_array:
   - funcName: average
     returns: Number

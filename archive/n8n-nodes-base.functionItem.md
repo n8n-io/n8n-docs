@@ -1,13 +1,13 @@
 # Function Item
 
-!!! warning "Deprecated in 0.198.0"
-	n8n deprecated this node in version 0.198.0. Older workflows continue to work, and the node is still available in older versions n8n. From 0.198.0, n8n replaces the Function node with the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
-
+/// warning | Deprecated in 0.198.0
+n8n deprecated this node in version 0.198.0. Older workflows continue to work, and the node is still available in older versions n8n. From 0.198.0, n8n replaces the Function node with the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
+///
 The Function Item node is used to add custom snippets to JavaScript code that should be executed once for every item that it receives as the input.
 
-!!! note "Keep in mind"
-    Please note that the Function Item node is different from the [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/) node. Check out [this](/data/code/) page to learn about the difference between the two.
-
+///  note  | Keep in mind
+Please note that the Function Item node is different from the [Function](/integrations/builtin/core-nodes/n8n-nodes-base.function/) node. Check out [this](/data/code/) page to learn about the difference between the two.
+///
 
 The Function Item node supports promises. So instead of returning the items directly, it is also possible to return a promise which resolves accordingly.
 

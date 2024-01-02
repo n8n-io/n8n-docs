@@ -1,10 +1,21 @@
+---
+title: Trello
+description: Documentation for the Trello node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Trello
 
-[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
+Use the Trello node to automate work in Trello, and integrate Trello with other applications. n8n has built-in support for a wide range of Trello features, including creating and updating cards, and adding and removing members. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/trello/).
+On this page, you'll find a list of operations the Trello node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Trello integrations](https://n8n.io/integrations/trello/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -90,6 +101,7 @@ The start node exists by default when you create a new workflow.
 3. Open the card, add '.json' at the end of the URL, and press enter.
 4. In the JSON file, you will see a field called `idList`.
 5. Copy `idList`and paste it in the *List ID* field in n8n.
+
 
 
 

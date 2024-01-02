@@ -1,3 +1,7 @@
+---
+contentType: reference
+---
+
 # Node codex files
 
 The codex file contains metadata about your node. This file is the JSON file at the root of your node. For example, the [`HttpBin.node.json`](https://github.com/n8n-io/n8n-nodes-starter/blob/master/nodes/HttpBin/HttpBin.node.json){:target=_blank .external-class} file in the n8n starter. 

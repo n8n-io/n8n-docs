@@ -1,10 +1,21 @@
+---
+title: Iterable
+description: Documentation for the Iterable node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Iterable
 
-[Iterable](https://iterable.com/) is a cross-channel platform that allows marketers to create, optimize, and measure every interaction throughout the customer journey.
+Use the Iterable node to automate work in Iterable, and integrate Iterable with other applications. n8n has built-in support for a wide range of Iterable features, including creating users, recording the actions performed by the users, and adding and removing users from the list. 
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/iterable/).
+On this page, you'll find a list of operations the Iterable node supports and links to more resources.
 
+/// note | Credentials
+Refer to [Iterable credentials](/integrations/builtin/credentials/iterable/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Iterable integrations](https://n8n.io/integrations/iterable/){:target="_blank" .external-link} list.
+///
 
 ## Basic Operations
 
@@ -81,3 +92,4 @@ This node will get the information of the user that we created using the Iterabl
 In the screenshot below, you will notice that the node gets the information of the user that we created using the Iterable node.
 
 ![Using the Iterable node to get the user's information](/_images/integrations/builtin/app-nodes/iterable/iterable2_node.png)
+

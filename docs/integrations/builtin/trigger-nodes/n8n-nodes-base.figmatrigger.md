@@ -1,14 +1,20 @@
-# Figma Trigger (Beta)
+---
+title: Figma trigger (Beta) node
+description: Documentation for the Figma trigger (Beta) node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Figma trigger (Beta)
 
 [Figma](https://www.figma.com/) is a prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/figma/).
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/figma/).
+///
 
-
-!!! warning "Supported Figma Plans"
-    Figma does not support webhooks on the free "Starter" plan. Your team would need to be on the "Professional" plan to use this node.
-
+/// warning | Supported Figma Plans
+Figma does not support webhooks on the free "Starter" plan. Your team would need to be on the "Professional" plan to use this node.
+///
 
 ## Trigger Events
 
@@ -17,3 +23,4 @@
 - **File Updated**: Triggers when a file is saved or deleted. A save occurs when a file is closed or within 30 seconds after changes have been made.
 - **File Version Updated**: Triggers when a named version is created in the version history of a file.
 - **Library Publish**: Triggers when a library file is published.
+

@@ -1,10 +1,16 @@
-# SurveyMonkey Trigger
+---
+title: SurveyMonkey trigger
+description: Documentation for the SurveyMonkey trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# SurveyMonkey trigger
 
 [SurveyMonkey](https://www.surveymonkey.com/) is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey/).
+///
 
 
 ## Example Usage
@@ -26,6 +32,7 @@ The final workflow should look like the following image.
 4. Select the surveys you want to receive updates for from the *Survey IDs* dropdown list.
 5. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the SurveyMonkey Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the SurveyMonkey Trigger node.
+///
 

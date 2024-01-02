@@ -1,4 +1,10 @@
-# Unleashed Software
+---
+title: Unleashed Software credentials
+description: Documentation for Unleashed Software credentials. Use these credentials to authenticate Unleashed Software in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Unleashed Software credentials
 
 You can use these credentials to authenticate the following nodes with Unleashed Software.
 
@@ -16,3 +22,4 @@ Create an [Unleashed Software](https://www.unleashedsoftware.com/) account.
 4. Click on the ***Save*** button to save your credentials.
 
 ![Getting Unleashed Software credentials](/_images/integrations/builtin/credentials/unleashedsoftware/using-access-token.gif)
+

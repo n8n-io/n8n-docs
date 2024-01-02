@@ -1,4 +1,10 @@
-# ProfitWell
+---
+title: ProfitWell credentials
+description: Documentation for ProfitWell credentials. Use these credentials to authenticate ProfitWell in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# ProfitWell credentials
 
 You can use these credentials to authenticate the following nodes with ProfitWell.
 
@@ -17,3 +23,4 @@ Create a [ProfitWell](https://www.profitwell.com/) account.
 5. Use this ***Private Key*** with your ProfitWell node credentials in n8n.
 
 ![Getting ProfitWell credentials](/_images/integrations/builtin/credentials/profitwell/using-api.gif)
+

@@ -1,4 +1,10 @@
-# Brandfetch
+---
+title: Brandfetch credentials
+description: Documentation for Brandfetch credentials. Use these credentials to authenticate Brandfetch in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Brandfetch credentials
 
 You can use these credentials to authenticate the following nodes with Brandfetch.
 
@@ -16,3 +22,4 @@ Create a [Brandfetch](https://brandfetch.io/account) account.
 4. Use the ***App Key*** with your Brandfetch API credentials in n8n.
 
 ![Getting Brandfetch credentials](/_images/integrations/builtin/credentials/brandfetch/using-api.gif)
+

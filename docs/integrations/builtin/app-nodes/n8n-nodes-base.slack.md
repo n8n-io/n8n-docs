@@ -1,10 +1,20 @@
+---
+title: Slack
+description: Documentation for the Slack node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
 # Slack
 
-[Slack](https://slack.com) is a business communication platform offering many IRC-style features, including persistent chat rooms (channels), private groups, and direct messaging.
+Use the Slack node to automate work in Slack, and integrate Slack with other applications. n8n has built-in support for a wide range of Slack features, including creating, archiving, and closing channels, getting users and files, as well as deleting messages.
+On this page, you'll find a list of operations the Slack node supports and links to more resources.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/slack/).
-
+/// note | Credentials
+Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guidance on setting up authentication. 
+///
+/// note | Examples and templates
+For usage examples and templates to help you get started, take a look at n8n's [Slack integrations](https://n8n.io/integrations/slack/){:target="_blank" .external-link} list.
+///
 
 ## Operations
 
@@ -61,3 +71,4 @@
 Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .external-link} for more information about the service.
 	
 View [example workflows and related content](https://n8n.io/integrations/slack/){:target=_blank .external-link} on n8n's website.
+

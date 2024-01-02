@@ -1,3 +1,7 @@
+---
+contentType: howto
+---
+
 # Troubleshooting
 
 ## Credentials

@@ -1,0 +1,12 @@
+<!-- this exists as a workaround for If not showing up in search
+	We may be able to remove it when Martin releases the new search
+	https://github.com/squidfunk/mkdocs-material/issues/5363#issuecomment-1518557438 -->
+{% import "partials/languages/en.html" as language %} 
+<!-- Mind the whitespace, won't be necessary in the future -->
+{% macro override(key) %}{{ {
+  "search.config.pipeline": " ", 
+}[key] }}{% endmacro %}
+
+{% macro t(key) %}{{
+  override(key) or language.t(key)
+}}{% endmacro %}

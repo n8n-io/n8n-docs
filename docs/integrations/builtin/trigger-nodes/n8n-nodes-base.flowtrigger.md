@@ -1,10 +1,16 @@
-# Flow Trigger
+---
+title: Flow trigger
+description: Documentation for the Flow trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
+---
+
+# Flow trigger
 
 [Flow](https://www.getflow.com/) is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
 
-!!! note "Credentials"
-    You can find authentication information for this node [here](/integrations/builtin/credentials/flow/).
-
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/flow/).
+///
 
 
 ## Example Usage
@@ -25,6 +31,7 @@ The final workflow should look like the following image.
 3. Enter one or more task IDs separated by commas in the *Task ID* field. You can find the task ID by clicking on the task in Flow and copying the number after `tasks/` in the URL.
 4. Click on *Execute Node* to run the workflow.
 
-!!! note "Activate workflow for production"
-    You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Flow Trigger node.
+/// note | Activate workflow for production
+You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Flow Trigger node.
+///
 

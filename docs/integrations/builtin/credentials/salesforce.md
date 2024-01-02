@@ -1,4 +1,10 @@
-# Salesforce
+---
+title: Salesforce credentials
+description: Documentation for Salesforce credentials. Use these credentials to authenticate Salesforce in n8n, a workflow automation platform.
+contentType: integration
+---
+
+# Salesforce credentials
 
 You can use these credentials to authenticate the following nodes with Salesforce.
 
@@ -10,9 +16,9 @@ Create a [Salesforce](https://www.salesforce.com/) account.
 
 ## Using OAuth
 
-!!! note "Note for n8n Cloud users"
-    You'll only need to enter the Credentials Name, Access Token URL, and click on the circle button in the OAuth section to connect your Salesforce account to n8n. You can find details on how to obtain the Access Token URL in the instructions below.
-
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name, Access Token URL, and click on the circle button in the OAuth section to connect your Salesforce account to n8n. You can find details on how to obtain the Access Token URL in the instructions below.
+///
 
 1. Access your Salesforce Dashboard.
 2. Click on the gear icon in the top right and select ***Setup*** from the dropdown list.
@@ -54,3 +60,4 @@ To use the OAuth JWT authentication method with the Salesforce node you need to 
 15. Use your Salesforce username in the ***Username*** field.
 16. Copy the private key that you created earlier and paste it in the ***Private Key*** field in your Salesforce JWT API credentials in n8n.
 17. Click on the ***Save*** button to save your credentials.
+

@@ -90,7 +90,7 @@ Click on the *Execute Node* button in the top right corner of the node window. Y
 A node execution represents a run of that node to retrieve the specified data.
 ///
 
-If a node is executed successfully a small green circle with a number inside will appear on top of the node.
+If a node is executed successfully a small green checkmark appear on top of the node.
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-successfully-executed-workflow.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
 
@@ -104,9 +104,9 @@ The *Table* view is the default. It displays the requested data in a table, wher
 
 The node window displays more information about the node execution:
 
-- In the top left corner of the results window, you'll notice another piece of information: ***Items**: 10*.
+- In the top left corner of the output window, you'll notice another piece of information: ***10 items***.
 This field displays the number of items (records) that are returned by the node request. In our case, it's expected to be 10, since this is the limit we set in the node. But if you don't set a limit, it's useful to see how many records are actually returned.
-- Next to the *Items* information, notice a small orange *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
+- Next to the *Items* information, notice a small grey *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.
 - Under the node name beside the **Parameters** tab, there is a link to the node's **Docs**. Check it out if you run into trouble or are not sure how to configure the node's parameters.
 

@@ -658,7 +658,7 @@ paths:
         content:
           application/json:
             schema:
-                $ref: '#/components/schemas/Tag'
+                $ref: '#/components/schemas/UpdateTag'
         required: true
       responses:
         '200':
@@ -751,7 +751,7 @@ components:
           format: date-time
         workflowId:
           type: number
-          example: '100'
+          example: '1000'
         waitTill:
           type: string
           nullable: true
@@ -1220,6 +1220,12 @@ components:
           description: Paginate through tags by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
           nullable: true
           example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    UpdateTag:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Production
   responses:
     NotFound:
       description: The specified resource was not found.

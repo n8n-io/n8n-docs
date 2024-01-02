@@ -76,7 +76,7 @@ By default, your workflow is automatically saved as “My workflow”.
 There are two ways in which you can save a workflow:
 
 - From the Canvas in Editor UI, click **Ctrl + S** or **Cmd + S** on your keyboard
-- Click the **Save** button in the top right corner of the Editor UI
+- Click the **Save** button in the top right corner of the Editor UI. You may need to leave the node editor first by clicking outside the dialog.
 
 ## 4. Execute the node
 

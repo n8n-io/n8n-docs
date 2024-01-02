@@ -104,7 +104,7 @@ The *Table* view is the default. It displays the requested data in a table, wher
 
 The node window displays more information about the node execution:
 
-- In the top left corner of the output window, you'll notice another piece of information: ***10 items***.
+- In the top left corner of the output window, you'll notice another piece of information: **10 items**.
 This field displays the number of items (records) that are returned by the node request. In our case, it's expected to be 10, since this is the limit we set in the node. But if you don't set a limit, it's useful to see how many records are actually returned.
 - Next to the *Items* information, notice a small grey *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.

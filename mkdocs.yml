@@ -680,6 +680,7 @@ nav:
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.openaiassistant.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
+          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
         - Sub-nodes:
@@ -913,6 +914,7 @@ nav:
         - integrations/builtin/credentials/pushcut.md
         - integrations/builtin/credentials/pushover.md
         - integrations/builtin/credentials/qradar.md
+        - integrations/builtin/credentials/qdrant.md
         - integrations/builtin/credentials/qualys.md
         - integrations/builtin/credentials/questdb.md
         - integrations/builtin/credentials/quickbase.md

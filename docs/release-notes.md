@@ -33,6 +33,10 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.23.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-03
 
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
 This release contains new nodes, node enhancements, new features, and bug fixes.
 
 <div class="n8n-new-features" markdown>
@@ -76,9 +80,7 @@ Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluste
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.3...n8n@1.22.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-03
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This is a bug fix release.
 
@@ -145,6 +147,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.20.0...n8n@1.21.1
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+
 
 
 

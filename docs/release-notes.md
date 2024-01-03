@@ -28,6 +28,49 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.23.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.23.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-03
+
+This release contains new nodes, node enhancements, new features, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New nodes and improved experience for working with files
+
+This release includes a major overhaul of nodes relating to files (binary data).
+
+There are now three key nodes dedicated to handling binary data files:
+
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
+
+n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nodes, and removed the iCalendar, Read PDF, and Spreadsheet File nodes. There are still standalone nodes for [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html/) and [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Qdrant vector store
+
+This release adds support for [Qdrant](https://qdrant.tech/){:target=_blank .external-link} with the Qdrant vector store node.
+
+Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant/)
+
+</div>
+
+### Contributors
+
+[Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}  
+[Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}  
+[Anush](https://github.com/Anush008){:target=_blank .external-link}  
+[Bin](https://github.com/soulhat){:target=_blank .external-link}  
+[Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}  
+
+
+
 ## n8n@1.22.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.3...n8n@1.22.4){:target=_blank .external-link} for this version.<br />

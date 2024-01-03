@@ -20,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 - Rename/move content from old path to new path
 - Upload a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 
 ## Node Reference
 

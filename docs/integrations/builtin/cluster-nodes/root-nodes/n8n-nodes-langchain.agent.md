@@ -142,7 +142,7 @@ Options:
 * Postgres
 
 /// note | SQLite
-To use SQLite you will need to use a [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node before the Agent to read your SQLite file. 
+To use SQLite you will need to use a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node before the Agent to read your SQLite file. 
 ///
 
 ### Prompt

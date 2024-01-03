@@ -29,7 +29,7 @@ Match the brand name exactly. For example, GitHub NOT Github
 
 <!-- Briefly summarize the node. For example:
 
-The _Name_ node allows you to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
+Use the _Name_ node to automate work in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ features, which includes creating, updating, and deleting events, people, tags, and signatures. -->
 
 On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
 

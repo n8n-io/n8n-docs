@@ -23,18 +23,18 @@ For usage examples and templates to help you get started, refer to n8n's [Qdrant
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
-### Parameters for **Get Many**
+### Parameters for Get Many
 
 * Qdrant collection name
 * Prompt: search query.
 * Limit: how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-### Parameters for **Insert Documents**
+### Parameters for Insert Documents
 
 * Qdrant collection name
 * Qdrant collection creation configuration - Optional
 
-### Parameters for **Retrieve Documents (For Agent/Chain)**
+### Parameters for Retrieve Documents (For Agent/Chain)
 
 * Qdrant collection name
 

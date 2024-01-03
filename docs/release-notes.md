@@ -28,10 +28,23 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.22.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.3...n8n@1.22.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-03
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.22.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.2...n8n@1.22.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-12-27
+
+/// note | Upgrade directly to 1.22.4
+Due to issues with this release, upgrade directly to 1.22.4.
+///
 
 This is a bug fix release.
 
@@ -42,8 +55,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.1...n8n@1.22.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-12-27
 
-/// note | Upgrade directly to 1.22.3
-Due to issues with this release, upgrade directly to 1.22.3.
+/// note | Upgrade directly to 1.22.4
+Due to issues with this release, upgrade directly to 1.22.4.
 ///
 
 This is a bug fix release.

@@ -10,6 +10,7 @@ hide:
 contentType: explanation
 ---
 
+<!-- vale off -->
 
 # Privacy
 
@@ -155,3 +156,5 @@ Self-hosted users should have their own PID policy and data deletion processes. 
 ## Payment processor
 
 n8n uses Paddle.com to process payments. When you sign up for a paid plan, Paddle transmits and stores the details of your payment method according to their security policy. n8n stores no information about your payment method.
+
+<!-- vale on -->

@@ -48,10 +48,10 @@ The Query Submission operation supports query options:
 
 * In the main section of the **Parameters** panel:
     * **Start** controls the index offset to start the query from (to use the API pagination logic).
-    * **Limit** sets the maximum number of records to return. Note that the API always has a limit of 30,000 returned records, whatver value you provide.
+    * **Limit** sets the maximum number of records to return. Note that the API always has a limit of 30,000 returned records, whatever value you provide.
 * In the **Query Options** section, you can activate the following parameters:
     * **Query** lets you specify filter predicates in MongoDB's JSON query format. For example: `{"status": "success", "_submission_time": {"$lt": "2021-11-01T01:02:03"}}` queries for all submissions with the value `success` for the field `status`, and submitted before November 1st, 2021, 01:02:03.
-    * **Fields** lets you specifiy the list of fields you want to fetch, to make the response lighter.
+    * **Fields** lets you specify the list of fields you want to fetch, to make the response lighter.
     * **Sort** lets you provide a list of sorting criteria in MongoDB JSON format. For example, `{"status": 1, "_submission_time": -1}` specifies a sort order by ascending status, and then descending submission time.
 
 More details about these options can be found in the [Formhub API docs](https://github.com/SEL-Columbia/formhub/wiki/Formhub-Access-Points-(API)#api-parameters)
@@ -74,7 +74,7 @@ When enabled, the reformatting:
 - Reorganizes the JSON into a multi-level hierarchy following the form's groups. By default, question grouping hierarchy is materialized by a `/` character in the field names, for example `Group1/Question1`. With reformatting enabled, n8n reorganizes these into `Group1.Question1`, as nested JSON objects.
 - Renames fields to trim `_` (not supported by many downstream systems).
 - Parses all geospatial fields (Point, Line, and Area question types) into their standard GeoJSON equivalent.
-- Splits all fields matching any of the the **Multiselect Mask** wildcard masks into an array. Since the multi-select fields appear as space-separated strings, they can't be guessed algorithmically, so you must provide a field naming mask. Format the masks as a comma-separated list. Lists support the `*` wildcard.
+- Splits all fields matching any of the **Multiselect Mask** wildcard masks into an array. Since the multi-select fields appear as space-separated strings, they can't be guessed algorithmically, so you must provide a field naming mask. Format the masks as a comma-separated list. Lists support the `*` wildcard.
 - Converts all fields matching any of the **Number Mask** wildcard masks into a JSON float.
 
 Here's a detailed example in JSON:
@@ -108,7 +108,7 @@ Here's a detailed example in JSON:
 }
 ```
 
-With reformatting enabled, and the appropriate masks for multi-select and number formatting (for example, `Crops_*` and `*_sqm` respecitvely), n8n parses it into:
+With reformatting enabled, and the appropriate masks for multi-select and number formatting (for example, `Crops_*` and `*_sqm` respectively), n8n parses it into:
 
 ```json
 {

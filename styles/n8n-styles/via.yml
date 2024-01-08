@@ -1,9 +1,6 @@
 extends: existence
 message: Consider replacing '%s' with 'using'
 level: warning
-scope:
-  - ~comment.line
-  - ~comment.block
 ignorecase: true
 tokens:
   - '\bvia\b'

@@ -77,13 +77,13 @@ In a previous exercise, you used an HTTP Request node to make a request to an AP
 ## Date, time, and interval data
 
 Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `YEAR`. The dates and times can be passed in different formats, for example:
-
-- `DATE`: March 29 2022, 29-03-2022, 2022/03/29
+<!-- vale off -->
+- `DATE`: March 29 2022, 29-03-2022, 2022/03/29 
 - `TIME`: 08:30:00, 8:30, 20:30
 - `DATETIME`: 2022/03/29 08:30:00
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
-
+<!-- vale on -->
 If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/).
 
 You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.

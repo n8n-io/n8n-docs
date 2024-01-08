@@ -2,9 +2,6 @@ extends: existence
 message: Don't use '%s'. Instead, be specific. When space is limited, use such as or like followed by an example or two.
 link: https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/a/and-so-on
 level: warning
-scope:
-  - ~comment.line
-  - ~comment.block
 ignorecase: true
 tokens:
   - '\betc\.\b'

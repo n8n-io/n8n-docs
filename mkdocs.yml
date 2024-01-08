@@ -157,7 +157,6 @@ nav:
       - choose-n8n/index.md
       - Cloud: choose-n8n/cloud.md
       - Faircode license: choose-n8n/faircode-license.md
-      - Desktop (removed): choose-n8n/desktop-app.md
     - Understand workflows:
       - workflows/index.md
       - Create and run: workflows/create.md

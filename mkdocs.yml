@@ -312,7 +312,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
         - integrations/builtin/core-nodes/n8n-nodes-base.start.md

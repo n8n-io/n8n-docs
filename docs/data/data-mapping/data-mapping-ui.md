@@ -62,7 +62,7 @@ Given the following data:
 
 n8n displays it in table form like this:
 
-!["Screenshot of a table in the INPUT panel. It includes a top level field named "nested". This field contains nested data, which is indicated in bold."](/_images/data/data-mapping/nested-data.png)
+!["Screenshot of a table in the INPUT panel. It includes a top level field named "nested." This field contains nested data, which is indicated in bold."](/_images/data/data-mapping/nested-data.png)
 
 ## Map data in the expressions editor
 

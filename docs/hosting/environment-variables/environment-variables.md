@@ -96,7 +96,7 @@ By default, n8n uses memory to store binary data. Enterprise users can choose to
 ## User management SMTP, and two-factor authentication
 
 Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
-
+<!-- vale off -->
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
@@ -112,7 +112,7 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
 | `N8N_MFA_ENABLED` | Boolean | `true` | Whether to enable two-factor authentication (true) or disable (false). n8n ignores this if existing users have 2FA enabled. |
-
+<!-- vale on -->
 
 ## Endpoints
 

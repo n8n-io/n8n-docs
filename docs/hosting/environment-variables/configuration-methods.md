@@ -205,7 +205,7 @@ export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
 ### Timezone
 
-The default timezone is "America/New_York". For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+The default timezone is America/New_York. For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
 
 ```bash
 export GENERIC_TIMEZONE=Europe/Berlin

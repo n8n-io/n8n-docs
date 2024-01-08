@@ -72,7 +72,7 @@ docker run --rm -it --user root -v ~/.n8n:/home/node/.n8n --entrypoint chown n8n
 
 #### Image removal
 
-We have removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images.
+We've removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images.
 
 #### Entrypoint change
 

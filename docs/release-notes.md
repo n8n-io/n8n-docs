@@ -24,10 +24,12 @@ You can also view the [Releases](https://github.com/n8n-io/n8n/releases){:target
 
 n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-link}. All version numbers are in the format `MAJOR.MINOR.PATCH`. Version numbers increment as follows:
 
-* MAJOR version when making incompatible changes which potentially require user action.
+* MAJOR version when making incompatible changes which can require user action.
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+
+<!-- vale off -->
 ## n8n@1.23.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.23.0){:target=_blank .external-link} for this version.<br />
@@ -66,6 +68,8 @@ Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluste
 </div>
 
 ### Contributors
+
+
 
 [Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}  
 [Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}  
@@ -148,10 +152,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.20.0...n8n@1.21.1
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
-
-
 This is a bug fix release.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -219,7 +219,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
+
 [Andrey Starostin](https://github.com/mayorandrew){:target=_blank .external-link}
+
+
 
 ## n8n@1.19.5
 
@@ -249,7 +252,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.0...n8n@1.19.4
 **Release date:** 2023-12-01
 
 /// warning | Missing ARM v7 support
-This version doesn't support ARM v7. We're working on fixing this in future releases.
+This version doesn't support ARM v7. n8n is working on fixing this in future releases.
 ///
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -294,14 +297,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.17.1...n8n@1.18.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-22
-
-
-
-
-
-
-
-
 
 This release contains new features and bug fixes.
 
@@ -361,6 +356,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
+
 [antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}  
 [teomane](https://github.com/teomane){:target=_blank .external-link}  
 
@@ -368,17 +364,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.15.2...n8n@1.16.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-11-08
-
-
-
-
-
-
-
-
-
-
-
 
 This release contains node enhancements and bug fixes.
 
@@ -452,8 +437,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.14.1...n8n@1.14.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-26
-
-
 
 This release contains bug fixes.
 
@@ -584,8 +567,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.11.0...n8n@1.11.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-13
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -632,10 +613,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.9.2...n8n@1.9.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-10-10
 
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -672,11 +649,11 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ## LangChain in n8n (beta)  
 
-**Release date**: 2023-10-04
+**Release date:** 2023-10-04
 
 This release introduces support for building with LangChain in n8n. 
 
-With n8n's LangChain nodes you can build AI-powered functionality within your workflows. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and so on. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
+With n8n's LangChain nodes you can build AI-powered functionality within your workflows. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and other components. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
 
 Read more:
 
@@ -708,7 +685,7 @@ This releases replaces RiotTmpl, the templating language used in expressions, wi
 
 #### `N8N_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` removed
 
-The env vars `N8N_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` no longer have any effect and can be safely removed. Instead of relying on a TTL system for binary data, n8n currently cleans up binary data together with executions during pruning.
+The environment variables `N8N_BINARY_DATA_TTL` and `EXECUTIONS_DATA_PRUNE_TIMEOUT` no longer have any effect and can be removed. Instead of relying on a TTL system for binary data, n8n cleans up binary data together with executions during pruning.
 
 </div>
 
@@ -801,7 +778,7 @@ This release introduces support for TheHive API version 5. This uses a new node 
 
 #### `N8N_PERSISTED_BINARY_DATA_TTL` removed
 
-The env var `N8N_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be removed. This legacy flag was originally introduced to support ephemeral executions (see [details](https://github.com/n8n-io/n8n/pull/7046)), which are no longer supported.
+The environment variables `N8N_PERSISTED_BINARY_DATA_TTL` no longer has any effect and can be removed. This legacy flag was originally introduced to support ephemeral executions (see [details](https://github.com/n8n-io/n8n/pull/7046)), which are no longer supported.
 
 </div>
 
@@ -843,7 +820,7 @@ Refer to [External secrets](/external-secrets/) for guidance on enabling and usi
 
 #### Two-factor authentication
 
-n8n now supports two-factor authentication (2FA) for self-hosted instances. We're working on bringing support to Cloud. Refer to [Two-factor authentication](/user-management/two-factor-auth/) for guidance on enabling and using it.
+n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n is working on bringing support to Cloud. Refer to [Two-factor authentication](/user-management/two-factor-auth/) for guidance on enabling and using it.
 
 </div>
 
@@ -1215,7 +1192,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.234.0...n8n@0.235
 This release contains new features, new nodes, node enhancements, and bug fixes.
 
 /// warning | Unstable version
-This version is currently (4th July 2023) considered unstable. n8n recommends against upgrading.
+This version is (as of 4th July 2023) considered unstable. n8n recommends against upgrading.
 ///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -1232,7 +1209,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.233.1...n8n@0.234
 This release contains new features, new nodes, node enhancements, and bug fixes.	
 
 /// warning | Unstable version
-This version is currently (4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
+This version is (as of 4th July 2023) considered unstable. n8n recommends upgrading directly to 0.234.1.	
 ///
 /// warning | Irreversible database migration
 This version contains a database migration that changes credential and workflow IDs to use nanoId strings, This migration may take a while to complete in some environments. This change doesn't break anything using the older numeric IDs.
@@ -1649,6 +1626,7 @@ This is a bug fix release.
 
 ### Contributors
 
+
 [Filipe Dobreira](https://github.com/filp){:target=_blank .external-link}
 
 
@@ -1686,6 +1664,7 @@ This release introduces the [TOTP](/integrations/builtin/core-nodes/n8n-nodes-ba
 * HTTP Request Node: Restore detailed error message.
 
 ### Contributors
+
 
 [Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
 
@@ -1782,6 +1761,7 @@ This is a bug fix release.
 
 ### Contributors
 
+
 [Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
 
 ## n8n@0.222.1
@@ -1875,6 +1855,7 @@ This release introduces the [Filter](/integrations/builtin/core-nodes/n8n-nodes-
 
 ### Contributors
 
+
 [Manish Dhanwal](https://github.com/ManishDhanwal07){:target=_blank .external-link}
 
 
@@ -1891,6 +1872,7 @@ This is a bug fix release.
 * Core: Update xml2js to address CVE-2023-0842.
 
 ### Contributors
+
 
 [Loganaden Velvindron](https://github.com/loganaden){:target=_blank .external-link}
 
@@ -2027,6 +2009,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.218.0...n8n@0.219
 * OpenAI Node: simplify code.
 
 ### Contributors
+
 
 [Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
 
@@ -2274,6 +2257,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 ### Contributors
 
+
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
 
 
@@ -2339,9 +2323,8 @@ This release contains new features, node enhancements, and bug fixes.
 
 ### Contributors
 
+
 [Kirill](https://github.com/chrtkv){:target=_blank .external-link}
-
-
 
 
 
@@ -2518,11 +2501,9 @@ n8n has a new [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/)
 
 ### Contributors
 
+
 * [Devin Buhl](https://github.com/onedr0p){:target=_blank .external-link} 
 * [Sven Ziegler](https://github.com/svzi){:target=_blank .external-link} 
-
-
-
 
 
 ## n8n@0.212.1
@@ -2583,10 +2564,8 @@ The [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/
 
 ### Contributors
 
+
 [Sven Ziegler](https://github.com/svzi){:target=_blank .external-link}
-
-
-
 
 
 ## n8n@0.211.2
@@ -2788,6 +2767,7 @@ This release adds a [security audit](/hosting/security-audit/) feature. You can 
 
 ### Contributors
 
+
 [Thomas S.](https://github.com/intel44){:target=_blank .external-link}
 
 ## n8n@0.209.4
@@ -2866,6 +2846,7 @@ This is a bug fix release.
 * Restore missing tags when retrieving a workflow.
 
 ### Contributors
+
 
 [Nathan Apter](https://github.com/napter){:target=_blank .external-link}
 
@@ -2968,6 +2949,7 @@ Send Email node: add support for a "Reply to" email address.
 * Update pnpm-lock to fix build.
 
 ### Contributors
+
 
 [Daemonxiao](https://github.com/Daemonxiao){:target=_blank .external-link}  
 [Kirill](https://github.com/kirill-chertkov){:target=_blank .external-link}  
@@ -3092,6 +3074,7 @@ KoBo Toolbox node: add support for the media file API.
 
 
 ### Contributors
+
 
 [Marcel](https://github.com/marzn){:target=_blank .external-link}  
 [Yann Jouanique](https://github.com/Yann-J){:target=_blank .external-link}  
@@ -3261,6 +3244,7 @@ This release contains core product improvements and bug fixes.
 
 ### Contributors
 
+
 [feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
 [Ugo Bataillard](https://github.com/knshiro){:target=_blank .external-link}
 
@@ -3351,6 +3335,7 @@ This release contains improvements to the editor, node enhancements and bug fixe
 
 ### Contributors
 
+
 [Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
 [Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
 
@@ -3432,6 +3417,7 @@ This release introduces the Schedule Trigger node, replacing the Cron node. You 
 * n8n node: fix a bug that was preventing the resource locator component from returning all items.
 
 ### Contributors
+
 
 [AndLLA](https://github.com/AndLLA){:target=_blank .external-link}  
 [Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}  
@@ -3518,6 +3504,7 @@ Start a workflow in response to events in your Venafi Cloud service.
 
 ### Contributors
 
+
 [Jakob Backlund](https://github.com/jbacklund){:target=_blank .external-link}  
 [Yan Jouanique](https://github.com/Yann-J){:target=_blank .external-link}
 
@@ -3598,6 +3585,7 @@ Crypto node: add SHA3 support.
 * Microsoft ToDo node: fix pagination issue.
 
 ### Contributors
+
 
 [Stratos Theodorou](https://github.com/eeVoskos){:target=_blank .external-link}
 
@@ -3699,6 +3687,7 @@ The [WhatsApp Business Platform](/integrations/builtin/app-nodes/n8n-nodes-base.
 
 ### Contributors
 
+
 [Cristobal Schlaubitz Garcia](https://github.com/CxGarcia){:target=_blank .external-link}
 
 ## n8n@0.195.5
@@ -3777,6 +3766,7 @@ Also in this release:
 
 ### Contributors
 
+
 [Ikko Ashimine](https://github.com/eltociear){:target=_blank .external-link}
 
 
@@ -3845,6 +3835,7 @@ n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes
 
 ### Contributors
 
+
 [Rhys Williams](https://github.com/rhyswilliamsza){:target=_blank .external-link}
 
 ## n8n@0.193.5
@@ -3894,6 +3885,7 @@ This release contains new features that lay the groundwork for upcoming releases
 * Shopify node: fix pagination when empty fields are sent.
 
 ### Contributors
+
 
 [Aaron Delasy](https://github.com/delasy){:target=_blank .external-link}  
 [ruanjiefeng](https://github.com/ruanjf){:target=_blank .external-link}
@@ -3955,6 +3947,7 @@ This release adds an integration for [HighLevel](/integrations/builtin/app-nodes
 * Improve `.npmignore` to reduce the size of the published packages.
 
 ### Contributors
+
 
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}  
 [Tzachi Shirazi](https://github.com/TzachiSh){:target=_blank .external-link}
@@ -4058,6 +4051,7 @@ This is a bug fix release.
 
 ### Contributors
 
+
 [Nathan Poirier](https://github.com/nathan818fr){:target=_blank .external-link}
 
 
@@ -4094,6 +4088,7 @@ This release includes a new node, Sendinblue, as well as bug fixes.
 * Ensure support for community nodes on Windows.
 
 ### Contributors
+
 
 [mertmit](https://github.com/mertmit){:target=_blank .external-link}  
 [Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}
@@ -4138,6 +4133,7 @@ This release includes improvements to n8n's core pairedItems functionality.
 * Rocketchat node: fix an authentication issue.
 
 ### Contributors
+
 
 [Nicholas Penree](https://github.com/drudge){:target=_blank .external-link}
 
@@ -4265,6 +4261,7 @@ export class AsanaApi implements ICredentialType {
 
 ### Contributors
 
+
 [Florian Bachmann](https://github.com/baflo){:target=_blank .external-link}
 [Olivier Aygalenq](https://github.com/oaygalenq){:target=_blank .external-link}
 
@@ -4312,6 +4309,7 @@ This release contains bug fixes and node enhancements.
 
 ### Contributors
 
+
 [Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}
 [h4ux](https://github.com/h4ux){:target=_blank .external-link}
 [miguel-mconf](https://github.com/miguel-mconf){:target=_blank .external-link}
@@ -4351,6 +4349,7 @@ Core: add the `action` parameter to INodePropertyOptions. This parameter is now 
 * [Todoist node](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/): Improve multi-item support.
 
 ### Contributors
+
 
 [cgobrech](https://github.com/cgobrech){:target=_blank .external-link}
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}
@@ -4394,6 +4393,7 @@ This release includes:
 
 ### Contributors
 
+
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 ## n8n@0.183.0
@@ -4422,6 +4422,7 @@ Enhancements to the **Trigger** inputs panel: When using a trigger node, you wil
 * Core: updates to the expressions allow-list and deny-list.
 
 ### Contributors
+
 
 [Bryce Sheehan](https://github.com/ctrl-freak){:target=_blank .external-link}
 [Rahimli Rahim](https://github.com/rahimlis){:target=_blank .external-link}
@@ -4460,6 +4461,7 @@ Added support for the client_credentials grant type for OAuth2.
 * [Postbin node](/integrations/builtin/app-nodes/n8n-nodes-base.postbin/){:target=_blank}: remove a false error.
 
 ### Contributors
+
 
 [Albrecht Schmidt](https://github.com/IamDrowsy){:target=_blank .external-link}
 [Erick Friis](https://github.com/efriis){:target=_blank .external-link}
@@ -4557,6 +4559,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * [HubSpot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
+
 
 [Mark Steve Samson](https://github.com/marksteve){:target=_blank .external-link}
 [Syed Ali Shahbaz](https://github.com/alishaz-polymath){:target=_blank .external-link}
@@ -4689,6 +4692,7 @@ n8n now automatically converts Luxon DateTime objects to strings.
 
 ### Contributors
 
+
 [Cristobal Schlaubitz Garcia](https://github.com/CxGarcia){:target="_blank" .external-link}
 [Yann Jouanique](https://github.com/Yann-J){:target="_blank" .external-link}
 
@@ -4712,6 +4716,7 @@ This release contains bug fixes and node enhancements.
 * [Edit Image node](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/): node now works correctly with the binary-data-mode 'filesystem'.
 
 ### Contributors
+
 
 [Albert Kiskorov](https://github.com/Albatrosicks)
 [Miquel Colomer](https://github.com/mcolomer)
@@ -4763,6 +4768,7 @@ This release adds support for node versioning, along with node enhancements and 
 
 ### Contributors
 
+
 [Jack Rudenko](https://github.com/erudenko)
 [MC Naveen](https://github.com/mcnaveen)
 [vcrwr](https://github.com/vcrwr)
@@ -4802,6 +4808,7 @@ This release adds Sticky Notes, a new feature that allows you to annotate and co
 * [QuickBooks node](/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks/): fixed a pagination issue.
 
 ### Contributors
+
 
 [Basit Ali](https://github.com/BasitAli)
 [Cody Stamps](https://github.com/crstamps2)
@@ -4857,6 +4864,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.172.0...n8n@0.173
 
 ### Contributors
 
+
 [Florian Metz](https://github.com/Timeraa)
 [Francesco Pongiluppi](https://github.com/willywongi)
 [Mark Steve Samson](https://github.com/marksteve)
@@ -4884,6 +4892,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 [Action Network Node:](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/) Fix a pagination issue and add credentials test.
 
 ### Contributors
+
 
 [Paolo Rechia](https://github.com/paolo-rechia)
 
@@ -4943,6 +4952,7 @@ You can now download binary data from individual nodes in your workflow.
 
 ### Contributors
 
+
 * [Charles Lecalier](https://github.com/chlec)
 * [d3no](https://github.com/d3no)
 * [Ketan Somvanshi](https://github.com/KetanSomvanshi)
@@ -4969,11 +4979,12 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 
 * **core:** Add logs and error catches for possible failures in queue mode.<br>
 * [AWS Lambda Node:](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda/) Fix Invocation Type > Continue Workflow.
-* [Supabase Node:](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/) Send token also via Authorization Bearer; fix Row > Get operation.
+* [Supabase Node:](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/) Send token also using Authorization Bearer; fix Row > Get operation.
 * [Xero Node:](/integrations/builtin/app-nodes/n8n-nodes-base.xero/) Fix some operations and add support for setting address and phone number.
 * [Wise Node:](/integrations/builtin/app-nodes/n8n-nodes-base.wise/) Fix issue when executing a transfer.
 
 ### Contributors
+
 
 * [FFTDB](https://github.com/FFTDB)
 * [Fred](https://github.com/choudat)
@@ -4983,7 +4994,6 @@ This release focuses on bug fixes and adding functionality to existing nodes.
 * [TheFSilver](https://github.com/TheFSilver)
 * [Valentin Mocanu](https://github.com/rontav)
 * [Yassine Fathi](https://github.com/m4tt72)
-
 
 
 ## n8n@0.169.0
@@ -5027,6 +5037,7 @@ Read more about the new license in [License](/reference/license/).
 * [Telegram node:](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) Fix sending binary data when disable notification is set.
 
 ### Contributors
+
 
 * [Manuel](https://github.com/tennox)
 * [Marcin Kozey](https://github.com/marcinkoziej)
@@ -5135,6 +5146,7 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 
 ### Contributors
 
+
 * [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof)
 * [Vitaliy Fratkin](https://github.com/viiy)
 * [sol](https://github.com/5pecia1)
@@ -5172,6 +5184,7 @@ For a comprehensive list of changes, view the [commits](https://github.com/n8n-i
 * [Wise:](/integrations/builtin/app-nodes/n8n-nodes-base.wise/) Fixed a bug causing API requests requiring Strong Customer Authentication (SCA) to fail.
 
 ### Contributors
+
 
 [pemontto](https://github.com/pemontto)
 
@@ -5216,6 +5229,7 @@ Please note that this version contains breaking changes. You can read more about
 
 ### Contributors
 
+
 [alexwitkowski](https://github.com/awitkowski0), [Iñaki Breinbauer](https://github.com/quansenB), [lsemaj](https://github.com/jamesliupenn), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [Rodrigo Correia](https://github.com/rodrigoscdc), [Santiago Botero Ruiz](https://github.com/yoky-devsavant), [Saurabh Kashyap](https://github.com/saurabharch), [Ugo Bataillard](https://github.com/knshiro)
 
 ## n8n@0.164.1
@@ -5251,6 +5265,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed a bug cuasing expressions to resolve incorrectly when referencing non-existent nodes or parameters.
 
 ### Contributors
+
 
 [Jhalter5Stones](https://github.com/Jhalter5Stones), [Valentina Lilova](https://github.com/valentina98), [thorstenfreitag](https://github.com/thorstenfreitag)
 
@@ -5300,6 +5315,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Iñaki Breinbauer](https://github.com/quansenB), [Manuel](https://github.com/tennox), [pemontto](https://github.com/pemontto)
 
 ## n8n@0.162.0
@@ -5330,6 +5346,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [XML:](/integrations/builtin/core-nodes/n8n-nodes-base.xml/) Fixed a bug causing the node to alter incoming data.
 
 ### Contributors
+
 
 [pemontto](https://github.com/pemontto)
 
@@ -5366,6 +5383,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [fabian wohlgemuth](https://github.com/wohfab)
 
 ## n8n@0.160.0
@@ -5394,6 +5412,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Fixed a bug causing the execution to fail if there are more than 1000 search results, also fixed a bug preventing the Get New Releases operation of the Album resource from working as expected.
 
 ### Contributors
+
 
 [fabian wohlgemuth](https://github.com/wohfab)
 
@@ -5438,6 +5457,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Phil Clifford](https://github.com/philclifford)
 
 ## n8n@0.158.0
@@ -5476,6 +5496,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Ricardo Georgel](https://github.com/rgeorgel), [Pierre](https://github.com/hnb2), [Vahid Sebto](https://github.com/sebto)
 
 ## n8n@0.157.1
@@ -5513,6 +5534,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [pemontto](https://github.com/pemontto)
 
 ## n8n@0.156.0
@@ -5533,12 +5555,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added execution ID to workflow.postExecute hook
 - Added response body to UI for failed Axios requests
 - Added support for automatically removing new lines from Google Service Account credentials
-- Added support for disabling the UI via environment variable
+- Added support for disabling the UI using environment variable
 - Fixed a bug causing the wrong expression result to be shown for items from an output other than the first
 - Improved binary data management
 - Introduced Monaco as new UI code editor
 
 ### Contributors
+
 
 [Arpad Gabor](https://github.com/arpadgabor), [Leo Lou](https://github.com/l4u), [Manuel](https://github.com/tennox)
 
@@ -5573,6 +5596,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Todoist:](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/) Fixed a bug where using the additional field Due Date Time on the Task resource would cause the Create operation to fail.
 
 ### Contributors
+
 
 [Mohammed Huzaif](https://github.com/huzaif-plivo), [Лебедев Иван](https://github.com/X-pech)
 
@@ -5620,6 +5644,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [pemontto](https://github.com/pemontto), [Jascha Lülsdorf](https://github.com/buelsenfrucht), [Jonathan Bennetts](https://github.com/Joffcom)
 
 ## n8n@0.152.0
@@ -5659,6 +5684,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Zvonimir Erdelja](https://github.com/zvonimir-ebot7), [m2scared](https://github.com/m2scared)
 
 ## n8n@0.151.0
@@ -5685,6 +5711,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Edit Image:](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/) Fixed an issue preventing the Composite operation from working correctly in some cases.
 
 ### Contributors
+
 
 [Jonathan Bennetts](https://github.com/Joffcom)
 
@@ -5749,6 +5776,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [GeylaniBerk](https://github.com/GeylaniBerk), [Jonathan Bennetts](https://github.com/Joffcom)
 
 ## n8n@0.148.0
@@ -5785,6 +5813,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Zendesk:](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/) Fixed an issue preventing the additional field External ID from being evaulated correctly.
 
 ### Contributors
+
 
 [mizzimizzi](https://github.com/mizzimizzi), [nikozila](https://github.com/nikozila), [Pauline](https://github.com/PaulineDropcontact)
 
@@ -5844,6 +5873,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Valentina Lilova](https://github.com/valentina98), [Oliver Trajceski](https://github.com/SchnapsterDog)
 
 ## n8n@0.145.0
@@ -5873,7 +5903,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Changed `vm2` library version from `3.9.3` to `3.9.5`.
 - Fixed an issue with ignoring the response code.
-- Fixed an issue with overwriting credentials via environment variables.
+- Fixed an issue with overwriting credentials using environment variables.
 - Fixed an issue with using query strings combined with the `x-www-form-urlencoded` content type.
 - Introduced telemetry.
 
@@ -5886,6 +5916,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [WooCommerce:](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/) Fixed an issue where a wrong postcode field name was used for the Order resource.
 
 ### Contributors
+
 
 [pemontto](https://github.com/pemontto), [rdd2](https://github.com/rdd2), [robertodamiani](https://github.com/robertodamiani), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
@@ -5907,6 +5938,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Cron:](/integrations/builtin/core-nodes/n8n-nodes-base.cron/) Set the version of the cron library to 1.7.2.
 
 ### Contributors
+
 [Jonathan Bennetts](https://github.com/Joffcom)
 
 ## n8n@0.143.0
@@ -5927,6 +5959,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [ FTP:](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/) Fixed error when opening FTP/SFTP credentials.
 
 ### Contributors
+
 [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 ## n8n@0.142.0
@@ -5954,6 +5987,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SeaTable:](/integrations/builtin/app-nodes/n8n-nodes-base.seatable/) Fixed issue when entering a Baser URI with a trailing slash.
 
 ### Contributors
+
 [Günther](https://github.com/erbg), [Tom Klingenberg](https://github.com/ktomk)
 
 ## n8n@0.141.1
@@ -5979,6 +6013,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Improved error reporting
 
 ### Contributors
+
 [Alex Hall](https://github.com/alexmojaki), [Tom Klingenberg](https://github.com/ktomk)
 
 ## n8n@0.140.0
@@ -5999,6 +6034,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue with handling of refresh tokens.
 
 ### Contributors
+
 [pemontto](https://github.com/pemontto)
 
 ## n8n@0.139.1
@@ -6032,6 +6068,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/) Fixed issue with adding contacts to lists.
 
 ### Contributors
+
 [Matías Aguirre](https://github.com/omab)
 
 ## n8n@0.138.0
@@ -6061,6 +6098,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Fixed issue listed unnamed databases.
 
 ### Contributors
+
 [bramknuever](https://github.com/bramknuever), [Chris Magnuson](https://github.com/ChrisMagnuson)
 
 ## n8n@0.137.0
@@ -6095,6 +6133,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [WordPress:](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
 
 ### Contributors
+
 [André Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
 
 ## n8n@0.136.0
@@ -6127,6 +6166,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - General improvements to parameter labels and tooltips.
 
 ### Contributors
+
 [Kyle Mohr](https://github.com/kylefmohr)
 
 
@@ -6174,6 +6214,7 @@ The features that introduced the breaking changes have been flagged below.
 * [Interval:](/integrations/builtin/core-nodes/n8n-nodes-base.interval/) Fixed issue where entering too large a value (> 2147483647ms) resulted in an interval of 1sec being used rather than an error.
 
 ### Contributors
+
 [Aniruddha Adhikary](https://github.com/aniruddha-adhikary), [lublak](https://github.com/lublak), [parthibanbalaji](https://github.com/parthibanbalaji)
 
 
@@ -6201,6 +6242,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed issue when sending context parameter.
 
 ### Contributors
+
 [calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1)
 
 ## n8n@0.133.0
@@ -6225,6 +6267,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Spotify:](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/) Fixed issues with pagination and infinite executions.
 
 ### Contributors
+
 [Jacob Burrell](https://github.com/jacobburrell), [Лебедев Иван](https://github.com/X-pech)
 
 ## n8n@0.132.2
@@ -6236,6 +6279,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Interval:](/integrations/builtin/core-nodes/n8n-nodes-base.interval/) Fixed issue with infinite executions.
 
 ### Contributors
+
 [Лебедев Иван](https://github.com/X-pech)
 
 ## n8n@0.132.1
@@ -6271,6 +6315,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue for large internal values.
 
 ### Contributors
+
 [Ed Linklater](https://github.com/edlinklater), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 ## n8n@0.131.0
@@ -6306,6 +6351,7 @@ The features that introduced the breaking changes have been flagged below.
 * [Spreadsheet File:](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) Fixed issue when saving dates.
 
 ### Contributors
+
 [Anthr@x](https://github.com/AnthraX1), [Felipe Cecagno](https://github.com/fcecagno)
 
 ## n8n@0.130.0
@@ -6341,6 +6387,7 @@ The features that introduced the breaking changes have been flagged below.
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Fixed issue when filtering field data type.
 
 ### Contributors
+
 [Michael Hirschler](https://github.com/mvhirsch), [Mika Luhta](https://github.com/mluhta), [Pierre Lanvin](https://github.com/planvin)
 
 ## n8n@0.129.0
@@ -6356,6 +6403,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SSH:](/integrations/builtin/core-nodes/n8n-nodes-base.ssh/) Fixed issue with access rights when downloading files.
 
 ### Contributors
+
 [Jérémie Pardou-Piquemal](https://github.com/jrmi)
 
 ## n8n@0.128.0
@@ -6383,6 +6431,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Microsoft SQL:](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) Fixed an issue with sending the connectionTimeout parameter, and creating and updating data using columns with spaces.
 
 ### Contributors
+
 [Kaito Udagawa](https://github.com/umireon), [Rodrigo Correia](https://github.com/rodrigoscdc)
 
 
@@ -6404,7 +6453,7 @@ The features that introduced the breaking changes have been flagged below.
 * [Zoho CRM:](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/) Added Account, Contact, Deal, Invoice, Product, Purchase, Quote, Sales Order, and Vendor resources.
 
 ### Core Functionality
-- Added a workflow testing framework via a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.
+- Added a workflow testing framework using a new CLI command to execute all desired workflows. Run `n8n executeBatch --help` for details.
 - Added support to display binary video content in Editor UI.
 
 ### Bug fixes
@@ -6413,6 +6462,7 @@ The features that introduced the breaking changes have been flagged below.
 * [SSH:](/integrations/builtin/core-nodes/n8n-nodes-base.ssh/) Fixed an issue with setting passphrases.
 
 ### Contributors
+
 [flybluewolf](https://github.com/flybluewolf), [Kaito Udagawa](https://github.com/umireon)
 
 ## n8n@0.126.1
@@ -6458,6 +6508,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Fixed an issue with pagination of databases and users.
 
 ### Contributors
+
 [calvintwr](https://github.com/calvintwr), [Jan Baykara](https://github.com/janbaykara)
 
 ## n8n@0.125.0
@@ -6476,6 +6527,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [MySQL:](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/) Fixed an issue where n8n was unable to save data due to collation, resulting in workflows ending with Unknown status.
 
 ### Contributors
+
 [Amudhan Manivasagam](https://github.com/smamudhan), [Carlos Alexandro Becker](https://github.com/caarlos0), [Kaito Udagawa](https://github.com/umireon)
 
 ## n8n@0.124.1
@@ -6494,7 +6546,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 * [Google Drive:](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) Added APP Properties and Properties options to the Upload operation of the File resource
-* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added the functionlaity to log the request to the browser console for testing
+* [HTTP Request:](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) Added the functionality to log the request to the browser console for testing
 * [Notion:](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) Added the Include Time parameter date field types
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Added Upsert operation to Account, Contact, Custom Object, Lead, and Opportunity resources
 * [Todoist:](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/) Added the Description option to the Task resource
@@ -6508,6 +6560,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Jira:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Fixed an issues with the API version and fixed an issue with fetching the custom fields for the Issue resource
 
 ### Contributors
+
 
 [Jean M](https://github.com/jemos), [romaincolombo-daily](https://github.com/romaincolombo-daily), [Thomas Jost](https://github.com/Schnouki), [Vincent](https://github.com/vbouchet31)
 
@@ -6542,6 +6595,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Rodrigo Correia](https://github.com/rodrigoscdc), [Sam Roquitte](https://github.com/samr28)
 
 ## n8n@0.122.3
@@ -6549,9 +6603,9 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2021-06-04
 
 ### Core Functionality
-- Fixed error messages for the Textarea field
-- Added the missing winston dependency
-- Fixed an issue with adding values via the Variable selector. The deleted values don't reappear
+- Fixed error messages for the text area field
+- Added the missing `winston` dependency
+- Fixed an issue with adding values using the Variable selector. The deleted values don't reappear
 - Fixed an issue with the Error Workflows not getting executed in the queue mode
 
 ### Bug fixes
@@ -6610,6 +6664,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Alexander Mustafin](https://github.com/sashker)
 
 ## n8n@0.121.1
@@ -6645,6 +6700,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Jacob Spizziri](https://github.com/jspizziri)
 
 ## n8n@0.120.0
@@ -6677,6 +6733,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [DeskYT](https://github.com/DeskYT), [Daniel Lazaro](https://github.com/1izardo), [DerEnderKeks](https://github.com/DerEnderKeks), [mdasmendel](https://github.com/mdasmendel)
 
 ## n8n@0.119.0
@@ -6704,6 +6761,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/) Fixed an issue with the authentication
 
 ### Contributors
+
 
 [Nikita](https://github.com/Rirush)
 
@@ -6762,6 +6820,7 @@ The features that introduced the breaking changes have been flagged below.
 
 ### Contributors
 
+
 [Gustavo Arjones](https://github.com/arjones), [lublak](https://github.com/lublak), [Colton Anglin](https://github.com/Colton), [Mika Luhta](https://github.com/mluhta)
 
 
@@ -6803,6 +6862,7 @@ The features that introduced the breaking changes have been flagged below.
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Fixed an issue with sending the lastActive parameter
 
 ### Contributors
+
 
 [Bart Vollebregt](https://github.com/bartvollebregt), [Ivan Timoshenko](https://github.com/bugagashenkj), [Konstantin Nosov](https://github.com/nosovk), [lublak](https://github.com/lublak), [Umair Kamran](https://github.com/UmairKamran),
 
@@ -6848,6 +6908,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Contributors
 
+
 [Allan Daemon](https://github.com/AllanDaemon), [Anton Romanov](https://github.com/theone74), [Bart Vollebregt](https://github.com/bartvollebregt), [Cassiano Vailati](https://github.com/cassvail), [entrailz](https://github.com/entrailz), [Konstantin Nosov](https://github.com/nosovk), [LongYinan](https://github.com/Brooooooklyn)
 
 ## n8n@0.115.0
@@ -6878,6 +6939,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [SendGrid:](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/) Fixed an issue with the dynamic field generation
 
 ### Contributors
+
 
 [Mika Luhta](https://github.com/mluhta), [Loran](https://github.com/loranmutafov), [stwonary](https://github.com/stwonary)
 
@@ -6912,6 +6974,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed an issue with the Get All operation of the Custom Object resource
 
 ### Contributors
+
 
 [Agata M](https://github.com/curryy), [Allan Daemon](https://github.com/AllanDaemon), [Craig McElroy](https://github.com/camcelroy), [mjysci](https://github.com/mjysci)
 
@@ -7036,7 +7099,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Telegram: Added the Send Location operation
 - Bug fixes
 - RocketChat: Fixed error responses
-- Fixed the issue which caused the execution history of subworkflows (workflows started via the Execute Workflow node) not to be saved
+- Fixed the issue which caused the execution history of subworkflows (workflows started using the Execute Workflow node) not to be saved
 - Added an option to export the credential data in plain text format using the CLI
 
 ## n8n@0.108.0
@@ -7881,3 +7944,5 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Monday.com
 - MongoDB
 - Fixed the issue with multiuser-setup
+
+<!-- vale on -->

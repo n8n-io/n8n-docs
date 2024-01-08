@@ -25,7 +25,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 ## Example Usage
 
-This workflow allows you to send an email using a template via Mandrill. You can also find the [workflow](https://n8n.io/workflows/571) on this website. This example usage workflow uses the following two nodes.
+This workflow allows you to send an email using a template using Mandrill. You can also find the [workflow](https://n8n.io/workflows/571) on this website. This example usage workflow uses the following two nodes.
 
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [Mandrill]()

@@ -66,14 +66,14 @@ docker run --name some-redis -p 6379:6379  -d redis
 
 By default, Redis runs on `localhost` on port `6379` with no password. Based on your Redis configuration, set the following configurations for the main n8n process. These will allow n8n to interact with Redis.
 
-| Via configuration file | Via environment variables | Description |
+| using configuration file | using environment variables | Description |
 | ------ | ------ | ----- |
 | `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | By default, Redis runs on `localhost`. |
 | `queue.bull.redis.port:6379` | `QUEUE_BULL_REDIS_PORT=6379` | The default port is `6379`. If Redis is running on a different port, configure the value. |
 
 You can also set the following optional configurations:
 
-| Via configuration file | Via environment variables | Description |
+| using configuration file | using environment variables | Description |
 | ------ | ------ | ----- |
 | `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | By default, Redis doesn't require a username. If you're using a specific user, configure it variable. |
 | `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
@@ -164,7 +164,7 @@ When using multiple webhook processes you will need a load balancer to route req
 
 **Note:** Manual workflow executions still occur on the main process and the default URL for these is `/webhook-test/*`. Make sure that these URLs route to your main process.
 
-You can change this path in the configuration file `endpoints.webhook` or via the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
+You can change this path in the configuration file `endpoints.webhook` or using the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
 
 ### Disable webhook processing in the main process (optional)
 

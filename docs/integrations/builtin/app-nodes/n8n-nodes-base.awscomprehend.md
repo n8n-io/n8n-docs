@@ -27,7 +27,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 ## Example Usage
 
-This workflow allows you to analyze the sentiment of feedback received via a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/965) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to analyze the sentiment of feedback received using a Typeform submission and send a message on Mattermost if that feedback is negative. You can also find the [workflow](https://n8n.io/workflows/965) on n8n.io. This example usage workflow uses the following nodes.
 - [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [AWS Comprehend]()
 - [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/)

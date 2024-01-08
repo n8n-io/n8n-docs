@@ -6,7 +6,7 @@ contentType: integration
 
 # SSH
 
-The SSH node is useful for executing commands via the Secure Shell Protocol.
+The SSH node is useful for executing commands using the Secure Shell Protocol.
 
 /// note | Credential
 You can find authentication information for this node [here](/integrations/builtin/credentials/ssh/).
@@ -34,7 +34,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Example Usage
 
-This workflow allows you to remotely connect to your computer via SSH. This example usage workflow would use the following nodes.
+This workflow allows you to remotely connect to your computer using SSH. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [SSH]()
 

@@ -142,5 +142,5 @@ If you want to run the curl command in the Execute Command node, you will have t
     ```
 
 4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
-5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.
+5. Run the newly created Docker image, and you will now be able to execute ssh using the Execute Command-Node.
 

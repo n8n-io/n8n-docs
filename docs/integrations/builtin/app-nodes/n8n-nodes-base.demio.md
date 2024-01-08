@@ -28,7 +28,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 ## Example Usage
 
-This workflow allows you to register your audience to an event on Demio via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/947) on n8n.io. This example usage workflow uses the following nodes.
+This workflow allows you to register your audience to an event on Demio using a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/947) on n8n.io. This example usage workflow uses the following nodes.
 - [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [Demio]()
 

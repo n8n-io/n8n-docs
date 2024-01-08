@@ -65,7 +65,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Allows you to fix the email domain of those misspelled emails
 - Fix the international prefix of a phone based on the ISO code of a country
 - Get GDPR compliant emails list by domain for your Email Marketing campaigns in Europe
-- Discover if mobile exist via real-time HLR query
+- Discover if mobile exist using real-time HLR query
 - Get personal email by social network profile
 - Get portability data about a landline or mobile number, only for Spain
 - Extract results from a LinkedIn search (employees in a company)
@@ -78,8 +78,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Extract a LinkedIn profile
 - Extract results from a LinkedIn search (profiles)
 - Extract fastly last profiles that have published content on LinkedIn by specific keywords
-- Discover if mobile exist via real-time HLR query, as well as portability and roaming data
-- Get existence, portability, and roaming of a mobile phone via MNP query
+- Discover if mobile exist using real-time HLR query, as well as portability and roaming data
+- Get existence, portability, and roaming of a mobile phone using MNP query
 - Discover if mobile or landline prefix exists in Spain
 - Allows normalizing email address, removing non allowed characters
 - Allows normalizing a mobile phone, removing non-allowed characters

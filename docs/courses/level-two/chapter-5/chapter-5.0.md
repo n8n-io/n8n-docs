@@ -19,7 +19,7 @@ Now that we have an idea of what Nathan wants to automate, let's list the steps 
 1. Get and combine data from all necessary sources.
 2. Sort the data and format the dates.
 3. Write binary files.
-4. Send notifications via email and Discord.
+4. Send notifications using email and Discord.
 
 n8n provides core nodes for all these steps. This use case is somewhat complex and it will be made up of three separate workflows:
 
@@ -33,6 +33,6 @@ To build the workflows, you will need the following:
 
 * An [Airtable](https://airtable.com/){:target="_blank" .external} account and [credentials](/integrations/builtin/credentials/airtable/){:target="_blank" .external}.
 * A [Google](https://www.google.com/account/about/){:target="_blank" .external} account and [credentials](/integrations/builtin/credentials/google/){:target="_blank" .external} to access Gmail.
-* A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this via email when you sign up for this course).
+* A [Discord](https://discord.com/){:target="_blank" .external-link} account and webhook URL (you receive this using email when you sign up for this course).
 
 Next, you will build these three workflows with step-by-step instructions.

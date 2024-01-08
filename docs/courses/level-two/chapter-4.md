@@ -26,7 +26,7 @@ This will open the workflow in read-only mode, where you can see the execution o
 
 To catch failed workflows, create a separate [Error Workflow](/flow-logic/error-handling/error-workflows/) with the [Error Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/), which gets executed if the main execution fails.
 
-Then, you can take further actions by connecting other nodes, for example sending notifications via email or Slack about the failed workflow and its errors. To receive error messages for a failed workflow, you need to select the option `Error Workflow` in the [Workflow Settings](/courses/level-one/chapter-5/chapter-5.8/) of the respective workflow.
+Then, you can take further actions by connecting other nodes, for example sending notifications using email or Slack about the failed workflow and its errors. To receive error messages for a failed workflow, you need to select the option `Error Workflow` in the [Workflow Settings](/courses/level-one/chapter-5/chapter-5.8/) of the respective workflow.
 
 The only difference between a regular workflow and an Error Workflow is that the latter contains an Error Trigger node. Make sure to create this node before you set a workflow as Error Workflow.
 

@@ -77,7 +77,7 @@ export class AutofriendTrigger implements INodeType {
 	   group: ['trigger'],
 	   version: 1,
 	   subtitle: '={{$parameter["event"]}}',
-	   description: 'Handle Autofriend events via webhooks',
+	   description: 'Handle Autofriend events using webhooks',
 	   defaults: {
 		   name: 'Autofriend Trigger',
 		   color: '#6ad7b9',

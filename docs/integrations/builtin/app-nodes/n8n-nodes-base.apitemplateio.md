@@ -29,7 +29,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 ## Example Usage
 
-This workflow allows you to create an invoice with the information received via a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to create an invoice with the information received using a Typeform submission. You can also find the [workflow](https://n8n.io/workflows/989) on n8n.io. This example usage workflow would use the following nodes.
 - [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 - [APITemplate.io]()
 

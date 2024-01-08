@@ -1,6 +1,8 @@
 Adalo
 Agent
 agent
+Aggregate
+aggregate
 Airtable
 Asana
 Authentik
@@ -28,12 +30,14 @@ Demio
 Dockerfile
 eksctl
 Emelia
+Entra
 Enum
 enum
 Eventbrite
 Fargate
 FileMaker
 Firestore
+Fortinet
 Freshdesk
 GIMP
 Gotify
@@ -41,12 +45,14 @@ Hetzner
 Homeserver
 HubSpot
 Humantic
+Imperva
 invalid
 Infisical
 Iterable
 iterable
 Jira
 Keycloak
+Kibana
 kubectl
 Kafka
 Lemlist
@@ -54,6 +60,7 @@ Luxon
 Mailchimp
 Mattermost
 Mautic
+Meraki
 Metabase
 Middleware
 middleware
@@ -83,8 +90,10 @@ prefilled
 Pushbullet
 Pushcut
 Qdrant
+Qualys
 Realtime
 Rekognition
+Sekoia
 Sendy
 Serverless
 serverless
@@ -104,6 +113,7 @@ There are
 Todoist
 Tooltip
 tooltip
+Trellix
 Trello
 Twake
 Twilio
@@ -113,6 +123,8 @@ Typeform
 Unformatted
 unformatted
 UpLead
+Upsert
+upsert
 URI
 URIs
 URL
@@ -127,3 +139,4 @@ Xata
 Xero
 Zendesk
 Zep
+Zscaler

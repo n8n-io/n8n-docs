@@ -45,10 +45,10 @@ The second part of the workflow consists of five nodes:
 1. Use the [IF node](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external} to filter order from the region Americas.
 2. Use the [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/){:target="_blank" .external} to transform the incoming data from JSON to binary format. Note that you need to convert all data.
 3. Use the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/){:target="_blank" .external} to create and store files with the orders information. In the File Name field, use an expression to include the order id in the file name, like this: `report_orderID{order_id}.json` (you need to replace the `{order id}` with the reference the Move Binary Data node).
-4. Use the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/){:target="_blank" .external} (or another email node) to send the files via email to an address you have access to. Note that you need to add an attachment with the data property.
+4. Use the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/){:target="_blank" .external} (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
 5. Use the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/){:target="_blank" .external} to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * Webhook URL: The webhook URL you received in the email when you signed up for this course.
-    * Text: "I sent the file via email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
+    * Text: "I sent the file using email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
 
 /// question | Quiz questions
 * How many orders are assigned to the region Americas?

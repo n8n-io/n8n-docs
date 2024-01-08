@@ -9,9 +9,14 @@ Asana
 Atlassian
 Authentik
 Automizy
+Autorenew
+autorenew
 Axios
 Backblaze
+Backend
 backend
+Basename
+basename
 bcrypt
 Beeminder
 Bing
@@ -81,6 +86,7 @@ Kibana
 kubectl
 Kafka
 Lemlist
+Lenovo
 Luhn
 Luxon
 Mailchimp
@@ -168,6 +174,8 @@ typeahead
 Typeform
 Unformatted
 unformatted
+Unshare
+unshare
 UpLead
 uProc
 Upsert

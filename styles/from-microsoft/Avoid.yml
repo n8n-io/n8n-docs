@@ -9,5 +9,4 @@ tokens:
   - app(?:lication)?s? (?:developer|program)
   - app(?:lication)? file
   - backbone
-  - backend
   - contiguous selection

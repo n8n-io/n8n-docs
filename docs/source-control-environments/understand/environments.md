@@ -11,11 +11,11 @@ n8n has built its environments feature on top of Git, a version control software
 * The purpose of environments.
 * How environments work in n8n.
 
-## Environments: What and why?
+## Environments: What and why
 
 In software development, the environment is all the infrastructure and tooling around the code, including the tools that run the software, and the specific configuration of those tools. For a more detailed introduction to environments in software development, refer to [Codecademy | Environments](https://www.codecademy.com/article/environments){:target=_blank .external-link}.
 
-Low-code development in n8n is similar. n8n is where you build and run your workflows. Your instance may have particular configurations: on Cloud, the configuration is determined by n8n. On self-hosted instances, there are extensive [configuration options](/hosting/environment-variables/). You may also have made changes to the settings of your instance. This combination of n8n and your instance's specific configuration and settings is the environment your workflows run in.
+Low-code development in n8n is similar. n8n is where you build and run your workflows. Your instance may have particular configurations: on Cloud, n8n determines the configuration. On self-hosted instances, there are extensive [configuration options](/hosting/environment-variables/). You may also have made changes to the settings of your instance. This combination of n8n and your instance's specific configuration and settings is the environment your workflows run in.
 
 There are advantages to having more than one environment. A common pattern is to have different environments for development and production:
 

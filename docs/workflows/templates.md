@@ -9,7 +9,7 @@ When creating a new workflow, you can choose whether to start with an empty work
 
 Templates provide:
 
-* A way to get started quickly: n8n might already have a template that does what you need.
+* Help getting started: n8n might already have a template that does what you need.
 * Examples of what you can build
 * Best practices for creating your own workflows
 

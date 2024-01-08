@@ -9,7 +9,7 @@ This section contains information on n8n's range of platforms, pricing plans, an
 
 ## Platforms
 
-There are a few different ways to set up n8n depending on how you intend to use it:
+There are different ways to set up n8n depending on how you intend to use it:
 
 * [n8n Cloud](/choose-n8n/cloud/): hosted solution, no need to install anything.
 * [Self-host](/hosting/): recommended method for production or customized use cases.

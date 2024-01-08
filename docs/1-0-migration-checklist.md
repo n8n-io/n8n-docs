@@ -16,7 +16,7 @@ The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available 
 
 This release introduces [semantic versioning](https://semver.org/){:target=_blank .external link}. This allows n8n to signal backwards-incompatible changes directly in the version number, making it easier to update n8n safely.
 
-From n8n 1.0 onwards, releases will follow the pattern MAJOR.MINOR.PATCH. Version numbers increment as follows:
+From n8n 1.0 on, releases will follow the pattern MAJOR.MINOR.PATCH. Version numbers increment as follows:
 
 - MAJOR version when making incompatible changes which potentially require user action
 - MINOR version when adding functionality in a backward-compatible manner

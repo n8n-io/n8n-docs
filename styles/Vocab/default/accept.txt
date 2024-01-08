@@ -35,6 +35,8 @@ Emelia
 Entra
 Enum
 enum
+Erroring
+erroring
 Eventbrite
 Fargate
 FileMaker
@@ -118,6 +120,8 @@ There are
 Todoist
 Tooltip
 tooltip
+Touchpad
+touchpad
 Trellix
 Trello
 Twake

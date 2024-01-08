@@ -2,7 +2,7 @@
 contentType: tutorial
 ---
 
-# Workflow 2 – Generating reports
+# Workflow 2: Generating reports
 
 In this workflow, you will merge data from different sources, transform binary data, generate files, and send notifications about them. The final workflow should look like this:
 
@@ -10,7 +10,7 @@ In this workflow, you will merge data from different sources, transform binary d
 
 To make things easier, let's split the workflow into three parts.
 
-## Part 1 – Getting data from different sources
+## Part 1: Getting data from different sources
 
 The first part of the workflow consists of five nodes:
 

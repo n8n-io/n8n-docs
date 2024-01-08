@@ -27,7 +27,7 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 - exists
 - doesn'texist
 - is equal to
-- is not equal to
+- isn't equal to
 - contains
 - doesn'tcontain
 - starts with
@@ -42,7 +42,7 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 - exists
 - doesn'texist
 - is equal to
-- is not equal to
+- isn't equal to
 - is greater than
 - is less than
 - is greater than or equal
@@ -53,7 +53,7 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 - exists
 - doesn'texist
 - is equal to
-- is not equal to
+- isn't equal to
 - is after
 - is before
 - is after or equal
@@ -66,14 +66,14 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 - is true
 - is false
 - is equal to
-- is not equal to
+- isn't equal to
 
 **Array**:
 
 - exists
 - doesn'texist
 - is equal to
-- is not equal to
+- isn't equal to
 - contains
 - doesn'tcontain
 - length equal to
@@ -88,7 +88,7 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 - exists
 - doesn'texist
 - is empty
-- is not empty
+- isn't empty
 
 
 

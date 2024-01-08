@@ -8,8 +8,8 @@ Remember [our friend Nathan](/courses/level-one/chapter-3){:target="_blank" .ext
 
 **Nathan 🙋:** Hello, it's me again. My manager was so impressed with my first workflow automation solution, that she entrusted me with more responsibility.<br/>
 **You 👩‍🔧:** More work and responsibility. Congratulations, I guess. What do you need to do now?<br/>
-**Nathan 🙋:** I got access to all sales data and am responsible for creating two reports: one for regional sales and one for orders prices. They are based on data from different sources and come in different formats.<br/>
-**You 👩‍🔧:** Sounds like a lot of manual work–but the kind that can be automated. So let's do it!
+**Nathan 🙋:** I got access to all sales data and am responsible for creating two reports: one for regional sales and one for orders prices. They're based on data from different sources and come in different formats.<br/>
+**You 👩‍🔧:** Sounds like a lot of manual work–but the kind that can be automated. Let's do it!
 
 
 ## Workflow design

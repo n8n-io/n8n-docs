@@ -83,7 +83,7 @@ When reusing the internal name, you must ensure that only one field is visible t
 
 ## Detailed guidelines for writing a programmatic-style node
 
-These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/).
+These guidelines apply when building nodes using the programmatic node-building style. They'ren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/).
 
 ### Don't change incoming data
 

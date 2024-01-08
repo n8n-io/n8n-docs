@@ -14,7 +14,7 @@ n8n Cloud is n8n's hosted solution. In addition to all the features of n8n, it p
 [Sign up for n8n Cloud](https://www.n8n.cloud/){:target=_blank .external-link}
 
 /// note | Russia and Belarus
-n8n Cloud is not available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
+n8n Cloud isn't available in Russia and Belarus. Refer to our blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/) for more information.
 ///
 ## Cloud configuration
 

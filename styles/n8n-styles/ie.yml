@@ -1,7 +1,9 @@
 extends: existence
 message: Consider replacing '%s' with 'in other words'
 level: warning
-code: false
+scope:
+  - ~comment.line
+  - ~comment.block
 ignorecase: true
 tokens:
   - '\bi\.e\b'

@@ -52,7 +52,7 @@ The start node exists by default when you create a new workflow.
 
 1. First of all, you'll have to enter credentials for the Jenkins node. You can find out how to do that [here](/integrations/builtin/credentials/jenkins/).
 2. Select the *Build*  from the dropdown in the *Resources* field.
-3. *Get All Builds* is not selected in *Operations* dropdown.
+3. *Get All Builds* isn't selected in *Operations* dropdown.
 4. Adjust the *depth* or add optional parameter by clickin *Add Field* button
 5. Click on *Execute Node* to run the workflow.
 

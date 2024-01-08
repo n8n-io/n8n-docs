@@ -44,7 +44,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * **Graph API Version**: The version of the [Facebook Graph API](https://developers.facebook.com/docs/graph-api/changelog) to be used for this request.
 * **Node**: The node on which to operate, for example `/<page-id>/feed`. Read more about it in the [official Facebook Developer documentation](https://developers.facebook.com/docs/graph-api/using-graph-api).
 * **Edge**: Edge of the node on which to operate. Edges represent collections of objects which are attached to the node.
-* **Ignore SSL Issues**: Toggle to still download the response even if SSL certificate validation is not possible.
+* **Ignore SSL Issues**: Toggle to still download the response even if SSL certificate validation isn't possible.
 * **Send Binary File**: Available for `POST` operations. If enabled binary data is sent as the body. Requires setting the following:
     * **Input Binary Field**: Name of the binary property which contains the data for the file to be uploaded.
 

@@ -16,7 +16,7 @@ The data that moves along from node to node in your workflow must be in a format
 /// note | What is an array of objects?
 An array is a list of values. The array can be empty or contain several elements. Each element is stored at a position (index) in the list, starting at 0, and can be referenced by the index number. For example, in the array `["Leonardo", "Michelangelo", "Donatello", "Raphael"];` the element `Donatello` is stored at index 2.
 
-An object stores key-value pairs, instead of values at numbered indexes as in arrays. The order of the pairs is not important, as the values can be accessed by referencing the key name. For example, the object below contains two properties (`name` and `color`):
+An object stores key-value pairs, instead of values at numbered indexes as in arrays. The order of the pairs isn't important, as the values can be accessed by referencing the key name. For example, the object below contains two properties (`name` and `color`):
 
 ```json
 {

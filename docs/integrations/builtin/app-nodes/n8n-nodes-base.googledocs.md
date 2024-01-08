@@ -38,7 +38,7 @@ The final workflow should look like the following image.
 
 The Start node exists by default when you create a new workflow.
 
-### 2. Google Docs node - create
+### 2. Google Docs node: create
 
 The **Document** resource is selected by default. Configure the remaining parameters as follows:
 
@@ -50,7 +50,7 @@ The **Document** resource is selected by default. Configure the remaining parame
 
 ![Creating a file with the Google Docs node](/_images/integrations/builtin/app-nodes/googledocs/googledocs_node.png)
 
-### 3. Google Docs node - update
+### 3. Google Docs node: update
 
 The **Document** resource is selected by default. Configure the remaining parameters as follows:
 

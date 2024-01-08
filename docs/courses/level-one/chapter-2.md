@@ -36,7 +36,7 @@ This operation fetches all the selected articles.
 - *Limit:* 10 <br/>
 This parameter sets a limit to how many results are returned by the Get Many operation.
 - *Additional fields > Add Field > Keyword:* automation <br/>
-Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation”. <br/>
+Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation.” <br/>
 
 The configuration of the parameters for the *Hacker News node* should now look like this:
 
@@ -71,7 +71,7 @@ You can rename the node with a name that's more descriptive for your use case. T
 ## 3. Save the workflow
 
 Save the workflow under the name “Hacker News workflow”
-By default, your workflow is automatically saved as “My workflow”.
+By default, your workflow is automatically saved as “My workflow.”
 
 There are two ways in which you can save a workflow:
 

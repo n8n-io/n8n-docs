@@ -3,6 +3,8 @@ description: The n8n faircode license.
 contentType: explanation
 ---
 
+<!-- vale off -->
+
 # Faircode license
 
 /// note | Proprietary licenses for Enterprise
@@ -119,3 +121,5 @@ We're always excited to talk about software licenses, fair-code and other princi
 ### Can I use n8n's Sustainable Use License for my own project?
 
 Yes! We're excited to see more software use the Sustainable Use License. We'd love to hear about your project if you're using our license: license@n8n.io.
+
+<!-- vale on -->

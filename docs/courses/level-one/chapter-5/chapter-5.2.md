@@ -10,7 +10,7 @@ At this point, your workflow should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-workflow-with-airtable-node.png" alt="Workflow with the Airtable node" style="width:100%"><figcaption align = "center"><i>Workflow with the Airtable node</i></figcaption></figure>
 
-If we are going to insert data into Airtable, we first need to set up a table there. To do this:
+If we're going to insert data into Airtable, we first need to set up a table there. To do this:
 
 1. [Create an Airtable account](https://airtable.com/signup){:target="_blank" .external}.
 2. In your Airtable workspace add a new base from scratch and name it, for example, *beginner course*.
@@ -38,7 +38,7 @@ You can replace the *Airtable* node with another spreadsheet app/service. For ex
 In the *Airtable node* window, configure the following parameters:
 
 - *Airtable API:*
-	- *Name:* The name of your credentials (e.g. airtable_api)
+	- *Name:* The name of your credentials (for example, `airtable_api`)
 	- *API Key:* Your [API key](/integrations/builtin/credentials/airtable/){:target="_blank" .external}.
 Adding credentials for Airtable is similar to the HTTP Request node you configured in the previous chapter. However, the process of obtaining an API key for Airtable (and other apps/services) is different.
 - *Operation:* Create

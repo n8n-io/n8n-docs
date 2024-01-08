@@ -6,7 +6,7 @@ contentType: tutorial
 
 In this step of the workflow you will learn how to filter data using conditional logic and how to use expressions in nodes using the *IF* node.
 
-To insert only processing orders into Airtable we need to filter our data by *orderStatus*. Basically, we want to tell the program that _if_ the *orderStatus* is processing, _then_ insert all records with this status into Airtable; _else_, i.e. if the *orderStatus* is not *processing*, calculate the sum of all orders with the other *orderStatus (booked)*.
+To insert only processing orders into Airtable we need to filter our data by *orderStatus*. Basically, we want to tell the program that _if_ the *orderStatus* is processing, _then_ insert all records with this status into Airtable; _else_, i.e. if the *orderStatus* isn't *processing*, calculate the sum of all orders with the other *orderStatus (booked)*.
 
 This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**IF node**](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external}, which splits a workflow conditionally based on comparison operations.
 

@@ -5625,7 +5625,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added frontend for value surveys
 - Fixed an issue preventing the recommendation logic from working as expected after selecting a work area
 - Fixed an issue where a wrong exit code was sent when running n8n on an unsupported version of Node.js
-- Fixed an issue where node options would disappear on hovering when a node is not selected
+- Fixed an issue where node options would disappear on hovering when a node isn't selected
 - Fixed an issue where the execution id was missing when running n8n in queue mode
 - Fixed an issue where execution data was missing when waiting for a webhook in queue mode
 - Improved error handling when the n8n port is already in use
@@ -5636,7 +5636,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Bug fixes
 
 
-* [APITemplate.io:](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/) Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled.
+* [APITemplate.io:](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/) Fixed a bug where the Create operation on the Image resource would fail when the Download option isn't enabled.
 * [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot OAuth2 API.
 * [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot Developer API.
 * [Jira Software:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.

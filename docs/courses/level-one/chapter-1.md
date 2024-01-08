@@ -10,7 +10,7 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 The first step is setting up n8n. There are two ways you can do this:
 
-- [n8n Cloud](https://app.n8n.cloud/register){:target="_blank" .external} - Hosted solution, no installation needed. Great for all levels of expereince
+- [n8n Cloud](https://app.n8n.cloud/register){:target="_blank" .external} - Hosted solution, no installation needed. Great for all levels of experience.
 - [Self-host](/hosting/){:target="_blank" .external} - Recommended for advanced users with technical knowledge
 
 For more details on the different ways to set up n8n, see our [platforms documentation](/choose-n8n/#platforms){:target="_blank" .external}
@@ -24,7 +24,7 @@ Once you have n8n running, open the Editor UI in a browser window. It should loo
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/) represents the web interface where you build [workflows](/workflows/workflows/). Think of it as a canvas on which the artist in you designs automations. From the Editor UI you can access all your workflows and credentials, as well as support pages.
+The [Editor UI](/editor-ui/) represents the web interface where you build [workflows](/workflows/workflows/). Think of it as a canvas on which the artist in you designs workflows. From the Editor UI you can access all your workflows and credentials, as well as support pages.
 
 ### Left-side panel
 
@@ -48,7 +48,7 @@ The panel contains the following sections:
 
 The top bar of the Editor UI contains the following information:
 
-- *Workflow Name:* By default, a new workflow is named “My Workflow”, but can be edited at any time as required.
+- *Workflow Name:* By default, a new workflow is named “My Workflow,” but can be edited at any time as required.
 - *+Add Tag:* Tags help you organise your workflows by category, use case or whatever is relevant for you. Tags are also optional
 - *Inactive/active toggle:* This button activates or deactivates the current workflow. By default, workflows are deactivated.
 - *Share:* You can share and collaborate with others on workflows on the Starter, Pro & Enterprise plans
@@ -64,7 +64,7 @@ The *canvas* is the gray grid background in the Editor UI. On the canvas, there 
 - A button to *Execute Workflow*. When you click on it, all nodes on the canvas are executed.
 - A button with a *+* sign inside. This button opens the nodes panel.
 - A button with a note icon inside. This button adds a [sticky note](/workflows/sticky-notes){:target="_blank" .external} to the canvas. (Visible when hovering on the top right + icon)
-- A dotted square with the text "add first step". This is where you would add your first node.
+- A dotted square with the text "add first step." This is where you would add your first node.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 

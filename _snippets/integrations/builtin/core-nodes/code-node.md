@@ -49,7 +49,7 @@ The syntax to use the built-in methods and variables is `$variableName` or `$met
 n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/){:target=_blank .external-link}, which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external-link}. n8n downloads the package automatically the first time you use it.
 
 /// note | Slower than JavaScript
-The Code node takes longer to process Python than JavaScript. This is due to the additional compilation steps.
+The Code node takes longer to process Python than JavaScript. This is due to the extra compilation steps.
 ///
 ### Built-in methods and variables
 

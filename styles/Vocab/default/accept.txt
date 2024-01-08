@@ -10,13 +10,15 @@ Automizy
 Axios
 Backblaze
 backend
+bcrypt
 Beeminder
 Bitly
 Bitwarden
 Boolean
 boolean
 Brandfetch
-bcrypt
+Burstable
+burstable
 Caddy
 Citrix
 Clearbit
@@ -64,6 +66,8 @@ Meraki
 Metabase
 Middleware
 middleware
+Millicore
+millicore
 Mindee
 n8n
 namespace
@@ -89,6 +93,7 @@ Prefilled
 prefilled
 Pushbullet
 Pushcut
+Pyodide
 Qdrant
 Qualys
 Realtime

@@ -26,7 +26,7 @@ The Execute Command node has two properties:
 
 ## Example Usage
 
-This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow triggers twice a day, and if the memory usage exceeds 80%, it sends an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to execute a command that returns the percentage of the hard disk that's full using the Execute Command node. The workflow triggers twice a day, and if the memory usage exceeds 80%, it sends an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
 
 - [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [Execute Command]()
@@ -59,7 +59,7 @@ The Execute Command node executes the command and return the percentage of hard 
 1. Enter `df -k / | tail -1 | awk '{print $5}'` in the **Command** field.
 2. Click on **Execute Node** to run the node.
 
-In the screenshot below, note that the node executes the command and returns the percentage of the hard disk that is full.
+In the screenshot below, note that the node executes the command and returns the percentage of the hard disk that's full.
 
 ![Using the Execute Command node to get the percentage of hard disk used on the host machine](/_images/integrations/builtin/core-nodes/executecommand/executecommand_node.png)
 

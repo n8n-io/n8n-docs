@@ -21,7 +21,7 @@ The **Code node** has two operational *Modes* that change the way it processes d
 - Use the Code node.
 - Get the most out of n8n.
 
-In n8n, the data that is passed between nodes is an array of objects with the following structure:
+In n8n, the data that's passed between nodes is an array of objects with the following structure:
 
 ```json
 [

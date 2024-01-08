@@ -26,7 +26,7 @@ You'll only need to enter the Credentials Name and click on the circle button in
 4. Click on Developer links > API keys in the sidebar.
 5. Click on the *Create API Key* button.
 6. Copy the 'OAuth Callback URL' provided in the Eventbrite OAuth API credentials in n8n and paste it in the 'OAuth Redirect URI' field in the Eventbrite API creation page.
-7. Fill out any other information that is necessary and click 'Create Key'.
+7. Fill out any other information that's necessary and click 'Create Key'.
 8. Find your API key in the 'API Keys' page and click on 'Show API key, client secret and tokens'.
 9. Click on 'Show API key, client secret and tokens' and use the 'API key' and the 'Client secret' with your Eventbrite OAuth API credentials in n8n.
 10. Click on the circle button in the OAuth section to connect an Eventbrite account to n8n.

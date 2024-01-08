@@ -26,8 +26,8 @@ The XML node is useful to convert data from and to XML.
     - ***Normalize:*** Trim whitespaces inside the text nodes. This field is displayed when 'XML to JSON' is selected from the ***Mode*** dropdown list.
     - ***Normalize Tags:*** Normalize all tag names to lowercase. This field is displayed when 'XML to JSON' is selected from the ***Mode*** dropdown list.
     - ***Trim:*** Trim the whitespace at the beginning and end of text nodes. This field is displayed when 'XML to JSON' is selected from the ***Mode*** dropdown list.
-    - ***Attribute Key:*** Prefix that is used to access the attributes.
-    - ***Character Key:*** Prefix that is used to access the character content.
+    - ***Attribute Key:*** Prefix that's used to access the attributes.
+    - ***Character Key:*** Prefix that's used to access the character content.
 
 
 ## Example Usage

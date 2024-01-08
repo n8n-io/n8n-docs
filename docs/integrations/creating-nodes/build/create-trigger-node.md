@@ -41,7 +41,7 @@ Since n8n's repository already has a Autopilot Trigger node, we will name this n
 3. Within the Autofriend folder, create a file called `AutofriendTrigger.node.ts` (YourNodeNameTrigger.node.ts).
 4. Download and add the Autofriend [icon](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Autopilot/autopilot.svg) to the folder. Name it `autopilot.svg`.
 	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node's folder.
-	- An SVG is preferable. In case you have to use a PNG, make sure that it's compressed. A good tool for that is [tinypng](https://tinypng.com).
+	- An SVG is preferable. In case you have to use a PNG, make sure that it's compressed. A good tool for that's [tinypng](https://tinypng.com).
 	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/logos/tree/master/logos).
 5. Paste the following code in the `AutofriendTrigger.node.ts` file.
 
@@ -218,7 +218,7 @@ The node should now look like in the following image.
 
 Most REST APIs use some sort of authentication mechanism. Autofriend's REST API uses API Keys. The API Key informs them about who is making the request to their system and gives you access to all the functionality that the API provides. Given all the things it can do, this has to be treated as a sensitive piece of information and should be kept private.
 
-n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that is stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
+n8n gives you the ability to ask for sensitive information using credentials. In the credentials, you can use all the generally available UI elements. Additionally, the data that's stored using the credentials would be encrypted before being saved to the database. In order to do that, n8n uses an encryption key.
 
 With that in mind, let's create the UI to ask for the user's Autofriend API Key. The process of creating and registering credentials is similar to that of creating and registering the node:
 

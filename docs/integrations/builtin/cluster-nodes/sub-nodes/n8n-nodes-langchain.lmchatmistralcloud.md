@@ -5,7 +5,7 @@ description: Documentation for the Mistral Cloud Chat Model node in n8n, a workf
 
 # Mistral Cloud Chat Model
 
-Use the Mistral Cloud Chat Model node to use Mistral Cloud's chat models with conversational agents.
+Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models with conversational agents.
 
 On this page, you'll find the node parameters for the Mistral Cloud Chat Model node, and links to more resources.
 

@@ -9,7 +9,7 @@ There are two API endpoints you can call to check the status of your instance: `
 
 ## healthz
 
-The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It is available for both self-hosted and Cloud users.
+The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It's available for both self-hosted and Cloud users.
 
 Access the endpoint:
 

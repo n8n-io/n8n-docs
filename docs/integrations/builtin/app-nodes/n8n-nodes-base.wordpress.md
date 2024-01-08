@@ -44,7 +44,7 @@ The final workflow should look like the following image.
 
 The start node exists by default when you create a new workflow.
 
-### 2. Wordpress node (create: post)
+### 2. WordPress node (create: post)
 
 1. First of all, you'll have to enter credentials for the WordPress node. You can find out how to do that [here](/integrations/builtin/credentials/wordpress/).
 2. Enter the title in the ***Title*** field.
@@ -53,12 +53,12 @@ The start node exists by default when you create a new workflow.
 ![Using the WordPress node to create a new post](/_images/integrations/builtin/app-nodes/wordpress/wordpress_node.png)
 
 
-### 3. Wordpress1 node (update: post)
+### 3. WordPress1 node (update: post)
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'Update' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Post ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Wordpress > Output Data > JSON > id. You can also add the following expression: `{{$node["Wordpress"].json["id"]}}`.
+4. Select the following in the ***Variable Selector*** section: Nodes > WordPress > Output Data > JSON > id. You can also add the following expression: `{{$node["Wordpress"].json["id"]}}`.
 5. Click on the ***Add Field*** button and select 'Content' from the dropdown list.
 6. Enter the content in the ***Content*** filed.
 7. Click on ***Execute Node*** to run the workflow.

@@ -58,7 +58,7 @@ In the screenshot below, you will notice that the node retrieves all the contact
 
 ### 3. IF node
 
-This node will check if a contact belongs to the `n8n` campaign or not. If a contact does not belong to the `n8n` campaign, it will return true otherwise false. Create a campaign in GetResponse if you don't already have one.
+This node will check if a contact belongs to the `n8n` campaign or not. If a contact doesn'tbelong to the `n8n` campaign, it will return true otherwise false. Create a campaign in GetResponse if you don't already have one.
 
 1. Click on ***Add Condition*** and select 'String'.
 2. Click on the gears icon next to the ***Value 1*** field and click on ***Add Expression***.

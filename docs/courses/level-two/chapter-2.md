@@ -89,7 +89,7 @@ If you need to convert date and time data to different formats, and calculate da
 You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.
 
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
+In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it's generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
 
 ### Exercise
@@ -268,7 +268,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 ## Binary data
 
-So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
+So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 

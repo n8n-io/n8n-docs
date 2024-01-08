@@ -16,7 +16,7 @@ The first step is setting up n8n. There are two ways you can do this:
 For more details on the different ways to set up n8n, see our [platforms documentation](/choose-n8n/#platforms){:target="_blank" .external}
 
 /// warning | n8n version
-This course was developed on n8n version 1.15.0. In other versions, some of the user interface might look different, but the core functionality should not be impacted.
+This course was developed on n8n version 1.15.0. In other versions, some of the user interface might look different, but the core functionality shouldn't be impacted.
 ///
 Once you have n8n running, open the Editor UI in a browser window. It should look like this:
 

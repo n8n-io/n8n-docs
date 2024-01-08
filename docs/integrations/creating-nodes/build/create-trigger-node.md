@@ -41,7 +41,7 @@ Since n8n's repository already has a Autopilot Trigger node, we will name this n
 3. Within the Autofriend folder, create a file called `AutofriendTrigger.node.ts` (YourNodeNameTrigger.node.ts).
 4. Download and add the Autofriend [icon](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Autopilot/autopilot.svg) to the folder. Name it `autopilot.svg`.
 	- The icon property has to be either a 60x60 pixels PNG or an SVG and must exist in the node's folder.
-	- An SVG is preferable. In case you have to use a PNG, make sure that it is compressed. A good tool for that is [tinypng](https://tinypng.com).
+	- An SVG is preferable. In case you have to use a PNG, make sure that it's compressed. A good tool for that is [tinypng](https://tinypng.com).
 	- A good place to find company icons is [gilbarbara/logos](https://github.com/gilbarbara/logos/tree/master/logos).
 5. Paste the following code in the `AutofriendTrigger.node.ts` file.
 
@@ -140,7 +140,7 @@ npm run dev
 
 - On startup, n8n will load all the nodes and credentials (more about credentials later) that are registered in `/packages/nodes-base/package.json`.
 - The property `description.name` uses camelCase.
-- The property `description.color` is the company's branding color in hexadecimal. In case the website does not include this information, there are other websites that help you get a company's branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
+- The property `description.color` is the company's branding color in hexadecimal. In case the website doesn'tinclude this information, there are other websites that help you get a company's branding colors. For example, [brandpalettes.com](https://brandpalettes.com/).
 
 
 ## Creating the UI for the node
@@ -320,7 +320,7 @@ The life cycle methods allow us to create, delete, and check if the webhook exis
 **Methods**
 
 - `checkExist`: This is the first method that gets called. It checks if the webhook with the current path is already registered in the external system or not. If the webhook is already registered, n8n persists the webhook ID. If the webhook is not registered with the external system, the `create` method gets executed.
-- `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path does not exist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
+- `create`: This method gets called if the `checkExist` method returns false (if the webhook with the current path doesn'texist in the external system). This method registers the webhook in the external system and stores the webhook ID in n8n.
 - `delete`: This method gets called when the trigger is either stopped manually or when the workflow is deactivated. It uses the ID previously persisted by either the create or the checkExist method to delete the webhook from the external system.
 
 ![Lifecycle flowchart](/_images/integrations/creating-nodes/lifecycle.png)
@@ -459,7 +459,7 @@ The trigger node is now receiving events. Sometimes it might take a bit longer f
 
 You probably noticed that this time we did not run the project using `npm run dev`, but instead using `./packages/cli/bin/n8n start --tunnel`.
 
-Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that n8n receives and handles the events from the external service (Autopilot). This gets achieved using a tunnel. The details on how a tunnel works are out of the scope of this tutorial. If you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and should not be used in production.
+Since our server is running locally, we need a tool that lets us proxy all requests to our local machine so that n8n receives and handles the events from the external service (Autopilot). This gets achieved using a tunnel. The details on how a tunnel works are out of the scope of this tutorial. If you want to know about it, you can check this [link](http://localtunnel.github.io/www/). Keep in mind that the tunnel is meant for development purposes only and shouldn't be used in production.
 
 
 ## Test your node

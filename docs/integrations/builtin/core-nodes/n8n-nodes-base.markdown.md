@@ -33,7 +33,7 @@ Some of the options depend on each other, or can interact. We recommend testing 
 | **GitHub Mentions** | Whether to support tagging GitHub users with `@` (enabled) or not (disabled). When enabled, n8n replaces `@name` with `https://github.com/name`. | Disabled |
 | **GitHub Task Lists** | Whether to support GitHub Flavored Markdown task lists (enabled) or not (disabled). | Disabled |
 | **Header Level Start** | Number. Set the start level for headers. For example, changing this field to `2` causes n8n to treat `#` as `<h2>`, `##` as `<h3>`, and so on. | 1 |
-| **Mandatory Space Before Header** | Whether to make a space between `#` and heading text required (enabled) or not (disabled). When enabled, n8n renders a heading written as `##Some header text` literally (it does not turn it into a heading element) | Disabled |
+| **Mandatory Space Before Header** | Whether to make a space between `#` and heading text required (enabled) or not (disabled). When enabled, n8n renders a heading written as `##Some header text` literally (it doesn'tturn it into a heading element) | Disabled |
 | **Middle Word Asterisks** | Whether n8n should treat asterisks in words as Markdown (disabled) or render them as literal asterisks (enabled). | Disabled |
 | **Middle Word Underscores** | Whether n8n should treat underscores in words as Markdown (disabled) or render them as literal underscores (enabled). | Disabled |
 | **No Header ID** | Disable automatic generation of header IDs (enabled). | Disabled |

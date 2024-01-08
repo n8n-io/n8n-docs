@@ -1678,7 +1678,7 @@ This release introduces the [TOTP](/integrations/builtin/core-nodes/n8n-nodes-ba
 ### Bug fixes
 
 * Code Node: Update vm2 to address CVE-2023-29017.
-* Core: App should not crash with a custom REST endpoint.
+* Core: App shouldn't crash with a custom REST endpoint.
 * Core: Do not execute workflowExecuteBefore hook when resuming executions from a waiting state.
 * Core: Fix issue where sub workflows would display as running forever after failure to start.
 * Core: Update xml2js to address CVE-2023-0842.
@@ -1722,7 +1722,7 @@ Please note that this version contains a breaking change. The minimum Node.js ve
 ### Bug fixes
 
 * Add droppable state for booleans when mapping.
-* Compare Datasets Node: Fuzzy compare not comparing keys missing in one of the inputs.
+* Compare Datasets Node: Fuzzy comparen't comparing keys missing in one of the inputs.
 * Compare Datasets Node: Fix support for dot notation in skip fields.
 * Core: Deactivate active workflows during import.
 * Core: Stop marking duplicates as circular references in `jsonStringify`.
@@ -2631,7 +2631,7 @@ Editor: suppress validation errors for freshly added nodes.
 
 * Build CLI to fix Postgres and MySQL test runs.
 * Extend date functions clobbering plus/minus.
-* Extension deep compare not quite working for some primitives.
+* Extension deep comparen't quite working for some primitives.
 * Upgrade jsonwebtoken to address CVE-2022-23540.
 
 
@@ -3083,7 +3083,7 @@ KoBo Toolbox node: add support for the media file API.
 * Core: fix partial execution with pinned data on child node run.
 * Core: OAuth2 scopes now save.
 * Enable source-maps on WorkflowRunnerProcess in own mode.
-* Handle error when workflow does not exist or is inaccessible.
+* Handle error when workflow doesn'texist or is inaccessible.
 * Make nodes.exclude and nodes.include work with lazy-loaded nodes.
 * Code Node: restore `pairedItem` to required n8n item keys.
 * Execute Workflow Node: update Execute Workflow node info notice text.
@@ -3415,7 +3415,7 @@ This release introduces the Schedule Trigger node, replacing the Cron node. You 
 
 ### Node enhancements
 
-* Hubspot node: you can now use your Hubspot credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
+* HubSpot node: you can now use your HubSpot credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
 * Rundeck node: you can now use your Rundeck credentials in the HTTP Request node to make a [custom API call](/integrations/custom-operations/).
 
 ### Bug fixes
@@ -3694,7 +3694,7 @@ The [WhatsApp Business Platform](/integrations/builtin/app-nodes/n8n-nodes-base.
 * Editor: resolve slow loading times for node types, node creators, and push connections in the settings view.
 * Nodes: update descriptions in the Merge node
 * Nodes: ensure the card ID property displays for completed checklists in the Trello node.
-* Nodes: fix authentication for the new verions of Wekan.
+* Nodes: fix authentication for the new verions of WeKan.
 * Nodes: ensure form names list correctly in the Wufoo trigger node.
 
 ### Contributors
@@ -3748,7 +3748,7 @@ This is a bug fix release. It resolves an issue with Postgres migrations.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.194.0...n8n@0.195.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2022-09-21
 
-This release introduces user management and credential sharing for our Cloud platform. It also contains other enhancements and bug fixes.
+This release introduces user management and credential sharing for n8n's Cloud platform. It also contains other enhancements and bug fixes.
 
 ### New features
 
@@ -3756,13 +3756,13 @@ This release introduces user management and credential sharing for our Cloud pla
 
 #### User management and credential sharing for Cloud
 
-This release adds support for our existing [user management](/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
+This release adds support for n8n's existing [user management](/user-management/) functionality to Cloud, and introduces a new feature: [credential sharing](/credentials/credential-sharing/). Credential sharing is currently only available on Cloud.
 
 </div>
 
 Also in this release:
 
-* Added a `resourceLocator` parameter type for nodes, and started upgrading our built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in our [UI elements](/integrations/creating-nodes/build/reference/ui-elements/) documentation.
+* Added a `resourceLocator` parameter type for nodes, and started upgrading n8n's built-in nodes to use it. This new option helps users who need to specify the ID of a record or item in an external service. For example, when using the Trello node, you can now search for a specific card by ID, URL, or do a free text search for card titles. Node builders can learn more about working with this new UI element in n8n's [UI elements](/integrations/creating-nodes/build/reference/ui-elements/) documentation.
 * Cache npm dependencies to improve performance on self-hosted n8n
 
 ### Bug fixes
@@ -3800,7 +3800,7 @@ This release includes new nodes: a Gmail trigger, Google Cloud Storage, and Adal
 
 #### Adalo
 
-Adalo is a low code app builder. Refer to our [Adalo node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/) for more information.
+Adalo is a low code app builder. Refer to n8n's [Adalo node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/) for more information.
 
 </div>
 
@@ -3841,7 +3841,7 @@ n8n now has a [Gmail trigger node](/integrations/builtin/trigger-nodes/n8n-nodes
 * Public API: better error handling for bad requests.
 * AWS nodes: fixed an issue with credentials testing.
 * GoogleBigQuery node: fix for empty responses when creating records.
-* Hubspot node: correct the node name on the canvas.
+* HubSpot node: correct the node name on the canvas.
 
 ### Contributors
 
@@ -4012,7 +4012,7 @@ n8n@0.187.0 saw the first release of [data mapping](/data/data-mapping/), allowi
 * CLI: fix the excessive instantiation type error for flattened executions.
 * CLI: initiate the nodes directory to ensure `npm install` succeeds.
 * CLI: ensure tsc build errors also cause Turbeorepo builds to fail.
-* NextCloud node: fix an issue with credential verification.
+* Nextcloud node: fix an issue with credential verification.
 * Freshdesk node: fix an issue where the getAll operation required non-existant options.
 
 ## n8n@0.191.1
@@ -4081,7 +4081,7 @@ This release includes a new node, Sendinblue, as well as bug fixes.
 
 ### New nodes
 
-[Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/) and Sendinblue trigger node: introducing our [Sendinblue](https://www.sendinblue.com/){:target=_blank .external-link} integration.
+[Sendinblue node](/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/) and Sendinblue trigger node: introducing n8n's [Sendinblue](https://www.sendinblue.com/){:target=_blank .external-link} integration.
 
 ### Node enhancements
 
@@ -4554,7 +4554,7 @@ This release adds a new trigger node for Cal.com. Refer to the [Cal trigger docu
 * Correct delete button hover spacing.
 * Resolve a bug causing stuck loading states.
 * [EmailReadImap node](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/){:target=_blank}: improve error handling.
-* [Hubspot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
+* [HubSpot node](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/){:target=_blank}: fix contact loading.
 
 ### Contributors
 
@@ -5002,7 +5002,7 @@ This release includes:
 
 This release changes n8n's license, from [Apache 2.0 with Commons Clause](https://github.com/n8n-io/n8n/blob/181ba3c4e236279b65d102a8a33ae6896f160487/LICENSE.md) to [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md).
 
-This change aims to clarify our license terms, and our position as a fair-code project.
+This change aims to clarify n8n's license terms, and n8n's position as a fair-code project.
 
 Read more about the new license in [License](/reference/license/).
 
@@ -5119,7 +5119,7 @@ Added a Redis Trigger node, so you can now start workflows based on a Redis even
 
 
 * [Facebook Graph API:](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) Added suport for Facebook Graph API 13.
-* [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added suport for private app token authentication.
+* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added suport for private app token authentication.
 * [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) Added the aggregate operation.
 * [Redis Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger/) Added a Redis Trigger node.
 * [Redis:](/integrations/builtin/app-nodes/n8n-nodes-base.redis/) Added support for publish operations.
@@ -5404,7 +5404,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Core Functionality
 
-- Temporarily removed debug logging for axios requests.
+- Temporarily removed debug logging for Axios requests.
 
 ## n8n@0.159.0
 
@@ -5613,8 +5613,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 
 * [APITemplate.io:](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/) Fixed a bug where the Create operation on the Image resource would fail when the Download option is not enabled.
-* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot OAuth2 API.
-* [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) Fixed authentication for new Hubspot applications by using granular scopes when authenticating against the Hubspot Developer API.
+* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot OAuth2 API.
+* [HubSpot Trigger:](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) Fixed authentication for new HubSpot applications by using granular scopes when authenticating against the HubSpot Developer API.
 * [Jira Software:](/integrations/builtin/app-nodes/n8n-nodes-base.jira/) Fixed an issue where the Reporter field would not work as expected on Jira Server instances.
 * [Salesforce:](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/) Fixed a typo preventing the value in the amount field of from being saved.
 
@@ -5704,7 +5704,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Fixed an issue preventing the `n8n import:workflow --separate` CLI command from finding workflows on Windows.
 - Further improved the expression security.
 - Moved all nodes into separate directories in preparation for internationalization.
-- Removing default headers for PUT and PATCH operations when using axios.
+- Removing default headers for PUT and PATCH operations when using Axios.
 - Revamped the workflow canvas.
 
 ### Bug fixes
@@ -5776,7 +5776,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added a hook after workflow creation.
 - Fixed a build issue with npm v7 by overriding unwanted behaviour through the .npmrc file.
 - Fixed an issue preventing unknown node types from being imported.
-- Fixed an issue with the UI falsely indicating a credential cannot be selected when using SQLite and multiple credentials with the same name exist.
+- Fixed an issue with the UI falsely indicating a credential can't be selected when using SQLite and multiple credentials with the same name exist.
 
 ### Bug fixes
 
@@ -5833,7 +5833,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - Added name and ID of a workflow to its settings.
 - Added parameter inputs to be multi-line.
-- Fixed an issue with declaring proxies when axios is used.
+- Fixed an issue with declaring proxies when Axios is used.
 - Fixed an issue with serializing arrays and special characters.
 - Fixed an issue with updating expressions after renaming a node.
 
@@ -6047,7 +6047,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [Baserow:](/integrations/builtin/app-nodes/n8n-nodes-base.baserow/) Added the following filter options: Contains, Contains Not, Date Before Date, Date After Date, Filename Contains, Is Empty, Is Not Empty, Link Row Has, Link Row Does Not Have, Single Select Equal, and Single Select Not Equal.
 * [Pipedrive:](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) Added support for Notes on Leads.
-* [Wekan:](/integrations/builtin/app-nodes/n8n-nodes-base.wekan/) Added Sort field to the Card resource.
+* [WeKan:](/integrations/builtin/app-nodes/n8n-nodes-base.wekan/) Added Sort field to the Card resource.
 
 
 ### Core Functionality
@@ -6074,7 +6074,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 ### Enhanced nodes
 
 * [Clockify:](/integrations/builtin/app-nodes/n8n-nodes-base.clockify/) Added Task resource.
-* [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
+* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Added dropdown selection for Properties and Properties with History filters for Get All Deals operations.
 * [Mautic:](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/) Added Campaign Contact resource.
 * [MongoDB:](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) Added ability to query documents by '_id'.
 * [MQTT:](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/) Added SSL/TLS support to authentication.
@@ -6091,8 +6091,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 ### Bug fixes
 
-* [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed issue with 'RequestAllItems' API.
-* [Wordpress:](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
+* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed issue with 'RequestAllItems' API.
+* [WordPress:](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/) Fixed issue with 'RequestAllItems' API only returning the first 10 items.
 
 ### Contributors
 [André Matthies](https://github.com/matthiez), [DeskYT](https://github.com/DeskYT), [Frederic Alix](https://github.com/fredericalix), [Jonathan Bennetts](https://github.com/Joffcom), [Ketan Somvanshi](https://github.com/KetanSomvanshi), [Luiz Eduardo de Oliveira Fonseca](https://github.com/luizeof), [TheFSilver](https://github.com/TheFSilver)
@@ -6198,7 +6198,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 * [AWS SES:](/integrations/builtin/app-nodes/n8n-nodes-base.awsses/) Fixed issue where special characters in the message were not encoded.
 * [Baserow:](/integrations/builtin/app-nodes/n8n-nodes-base.baserow/) Fixed issue where Create operation inserted null values.
-* [Hubspot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed issue when sending context parameter.
+* [HubSpot:](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) Fixed issue when sending context parameter.
 
 ### Contributors
 [calvintwr](https://github.com/calvintwr), [CFarcy](https://github.com/CFarcy), [Jeremie Dokime](https://github.com/dokime7), [Michael Hirschler](https://github.com/mvhirsch), [Rodrigo Correia](https://github.com/rodrigoscdc), [sol](https://github.com/5pecia1)
@@ -6930,7 +6930,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - SendGrid: Added Mail resource
 - Spotify: Added Library resource
 - Telegram: Added Answer Inline Query operation to the Callback resource
-- uProc: Added Get ASIN code by EAN code, Get EAN code by ASIN code, Get Email by Social Profile, Get Email by Fullname and Company's domain, and Get Email by Fullname and Company's name operations
+- uProc: Added Get ASIN code by EAN code, Get EAN code by ASIN code, Get Email by Social Profile, Get Email by Full name and Company's domain, and Get Email by Full name and Company's name operations
 - Bug fixes
 - Clearbit: Fixed an issue with the autocomplete URI
 - Dropbox: Fixed an issue with the Dropbox credentials by adding the APP Access Type parameter in the credentials. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01130) page
@@ -6982,7 +6982,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Added the functionality to expose metrics to Prometheus. Read more about that [here](/hosting/configuration/#prometheus)
 - Updated fallback values to match the value type
 - Added the functionality to display debugging information for pending workflows on exit
-- Fixed an issue with queue mode for the executions that should not be saved
+- Fixed an issue with queue mode for the executions that shouldn't be saved
 - Fixed an issue with workflows crashing and displaying `Unknown` status in the execution list
 - Fixed an issue to prevent crashing while saving execution data when the `data` field has over 64KB in MySQL
 - Updated `jws-rsa` to version `1.12.1`
@@ -7029,7 +7029,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - GoToWebinar
 - Raindrop
 - Enhanced nodes
-- AWS Rekognition: Added the Detect Text type to the Ananlyze operation for the Image resource
+- AWS Rekognition: Added the Detect Text type to the Analyze operation for the Image resource
 - Google Calendar: Added RRULE parameter to the Get All operation for the Event resource
 - Jira: Added User resource and operations
 - Reddit: Added the Search operation for the Post resource
@@ -7077,7 +7077,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Twitter: Added Delete operation to the Tweet resource
 - Bug fixes
 - Google Drive: Fixed an issue with the Delete and Share operations
-- Filemaker: Fixed an issue with the script list parsing
+- FileMaker: Fixed an issue with the script list parsing
 - Updated Node.js version of Docker images to `14.15`
 - Added a shortcut `CTRL + scroll` to zoom
 
@@ -7108,7 +7108,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
 - Affinity: Added List and List Entry resource
 - Asana: Added Project IDs option to the Create operation of the Task resource
-- Hubspot Trigger: Added support for multiple subscriptions
+- HubSpot Trigger: Added support for multiple subscriptions
 - Jira: Added Issue Attachment resource and added custom fields to Create and Update operations of the Issue resource
 - Todoist: Added Section option
 - Bug fixes
@@ -7169,7 +7169,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - AWS Lambda: Fixed an issue with signature
 - AWS SNS: Fixed an issue with signature
 - Fixed an issue with nodes not executing if two input gets passed and one of them didn't return any data
-- The code editor does not get closed when clicked anywhere outside the editor
+- The code editor doesn'tget closed when clicked anywhere outside the editor
 - Added CLI commands to [export](/hosting/cli-commands/#export-workflows-and-credentials) and [import](/hosting/cli-commands/#import-workflows-and-credentials) credentials and workflows
 - The title in the browser tab now resets for new workflows
 
@@ -7182,10 +7182,10 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Beeminder
 - Enhanced nodes
 - Crypto: Added hash type `SHA384`
-- Google Books: Added support for user impersonification
-- Google Drive: Added support for user impersonification
-- Google Sheets: Added support for user impersonification
-- Gmail: Added support for user impersonification
+- Google Books: Added support for user impersonation
+- Google Drive: Added support for user impersonation
+- Google Sheets: Added support for user impersonation
+- Gmail: Added support for user impersonation
 - Microsoft Outlook: Added support for a shared mailbox
 - RabbitMQ: Added Exchange mode
 - Salesforce: Added filters to all Get All operations
@@ -7201,7 +7201,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - New nodes
 - Google Analytics
-- Phantombuster
+- PhantomBuster
 - Enhanced nodes
 - AWS: Added support for custom endpoints
 - Gmail: Added an option to send messages formatted as HTML
@@ -7216,7 +7216,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Split In Batches: Fixed a typo in the description
 - Telegram: Fixed an issue with the Send Audio operation
 - Based on your settings, vacuum runs on SQLite on startup
-- Updated axios to version `0.21.1`
+- Updated Axios to version `0.21.1`
 
 ## n8n@0.100.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.99.1...n8n@0.100.0) for this version.<br />
@@ -7267,7 +7267,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Bug fixes
 - Dropbox: Fixed an issue with the OAuth credentials
 - Google Sheets: Fixed an issue with the parameters getting hidden for other operations
-- Added functionality to easily copy the data and the path from the output
+- Added functionality to copy the data and the path from the output
 - Fixed an issue with the node getting selected after it was duplicated
 
 ## n8n@0.98.0
@@ -7295,7 +7295,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - New nodes
 - Ghost
-- Nasa
+- NASA
 - Snowflake
 - Twist
 - Enhanced nodes
@@ -7317,7 +7317,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - TheHive Trigger
 - Yourls
 - Enhanced nodes
-- Hubspot: Added Contact List resource and Search operation for the Deal resource
+- HubSpot: Added Contact List resource and Search operation for the Deal resource
 - Google Calendar: You can now add multiple attendees in the Attendees field
 - Slack: The node now loads both private and public channels
 - Bug Fixes
@@ -7344,7 +7344,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Quick Base
 - Spontit
 - Enhanced nodes
-- Airable: The Application ID field has been renamed to Base ID, and the Table ID field has been renamed to Table. The List operation now downloads attachments automatically
+- Airtable: The Application ID field has been renamed to Base ID, and the Table ID field has been renamed to Table. The List operation now downloads attachments automatically
 - Harvest: Moved the account field from the credentials to the node parameters. For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#0950) page
 - Bug Fixes
 - Slack: Fixed an issue with creating channels and inviting users to a channel
@@ -7391,7 +7391,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
 - AMQP: Connection is now closed after a message is sent
 - AMQP Trigger: Added Message per Cycle option to retrieve the specified number of messages from the bus for every cycle
-- Hubspot: Added Custom Properties for the Deal resource as Additional Fields
+- HubSpot: Added Custom Properties for the Deal resource as Additional Fields
 - Jira: The node retrieves all the projects for the Project field instead of just 50
 - Mattermost: Improved the channel selection
 - Microsoft SQL: Added TLS parameter for the credentials
@@ -7487,7 +7487,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 **Release date:** 2020-10-16
 
 - Bug Fixes
-- HTTP Request: Fixed an issue with the Form-Data Mutipart and the RAW/Custom Body Content Types
+- HTTP Request: Fixed an issue with the Form-Data Multipart and the RAW/Custom Body Content Types
 
 ## n8n@0.88.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.87.2...n8n@0.88.0) for this version.<br />
@@ -7527,7 +7527,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Matrix
 - Sendy
 - Vonage
-- Wekan
+- WeKan
 - Enhanced nodes
 - AWS SES: Added Send Template operation for the Email resource and added the Template resource
 - ClickUp: Added Time Entry and Time Entry Tag resources
@@ -7719,8 +7719,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Postgres
 - Webhook
 - Removed Test-Webhook also in case checkExists fails
-- HTTP Request node does not overwrite accept header if it's already set
-- Add rawBody to every request so that n8n does not give an error if body is missing
+- HTTP Request node doesn'toverwrite accept header if it's already set
+- Add rawBody to every request so that n8n doesn'tgive an error if body is missing
 
 ## n8n@0.79.0
 For a comprehensive list of changes, check out the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.79.2...n8n@0.79.3) for this version.<br />
@@ -7728,8 +7728,8 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 
 - New nodes
 - Contentful
-- Convertkit
-- Convertkit Trigger
+- ConvertKit
+- ConvertKit Trigger
 - Paddle
 - Enhanced nodes
 - Airtable
@@ -7794,7 +7794,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Jira Trigger
 - Enhanced nodes
 - GitLab
-- NextCloud
+- Nextcloud
 - Pipedrive
 - QuestDB
 - Webhooks now support OPTIONS request
@@ -7814,7 +7814,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - MongoDB
 - Pipedrive
 - Postgres
-- Uplead
+- UpLead
 - Webhook
 - Webhook URLs are now handled independently of the workflow ID by `https://{hostname}/webhook/{path}` instead of the older `https://{hostname}/webhook/{workflow_id}/{node_name}/{path}`.
 
@@ -7838,7 +7838,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Enhanced nodes
 - Postmark Trigger
 - Salesforce
-- It is now possible to set default values for credentials that get prefilled, and the user cannot change.
+- It's now possible to set default values for credentials that get prefilled, and the user can't change.
 
 
 ## n8n@0.72.0
@@ -7862,13 +7862,13 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - SIGNL4
 - Spotify
 - Enhanced nodes
-- Hubspot
+- HubSpot
 - Mailchimp
 - Typeform
 - Webflow
 - Zendesk
 - Added Postgres SSL support
-- It is now possible to deploy n8n under a subfolder
+- It's now possible to deploy n8n under a subfolder
 
 
 ## n8n@0.70.0

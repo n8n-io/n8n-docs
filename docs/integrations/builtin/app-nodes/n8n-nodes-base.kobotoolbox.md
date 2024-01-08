@@ -65,7 +65,7 @@ All operations that return form submission data offer options to tweak the respo
 
 #### About reformatting
 
-The default JSON format for KoBoToolbox submission data is sometimes hard to deal with, because it is not schema-aware, and all fields are therefore returned as strings.
+The default JSON format for KoBoToolbox submission data is sometimes hard to deal with, because it's not schema-aware, and all fields are therefore returned as strings.
 
 This node provides a lightweight opinionated reformatting logic, enabled with the **Reformat?** parameter, available on all operations that return form submissions: the submission query, get, and the attachment download operations.
 

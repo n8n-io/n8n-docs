@@ -17,7 +17,7 @@ Merging data can involve:
 - Synchronizing data between multiple systems. For example, removing duplicate data, or updating data in one system when it changes in another.
 
 /// note | One-way vs. two-way sync
-In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes are not reflected in the main system.
+In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes aren't reflected in the main system.
 
 In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
 
@@ -83,7 +83,7 @@ To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:
 If you need to process large incoming data, execute the Code node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Loop Over Items node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 /// warning | Execution of Loop Over Items node
-The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it is not necessary to add an IF node to stop the loop.
+The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it's not necessary to add an IF node to stop the loop.
 ///
 
 ### Exercise

@@ -87,7 +87,7 @@ However, the first example isn't a valid n8n expression:
 
 ```js
 // This example is split over multiple lines for readability
-// It is still invalid when formatted as a single line
+// It's still invalid when formatted as a single line
 {{
   function example() {
     let end = DateTime.fromISO('2017-03-13');

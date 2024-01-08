@@ -24,7 +24,7 @@ The Activation trigger node gets triggered for the workflow that it gets added t
 - Events
     - ***Activation:*** Run when the workflow gets activated
     - ***Start:*** Run when n8n starts or restarts
-    - ***Update:*** Run when the workflow gets saved while it is active
+    - ***Update:*** Run when the workflow gets saved while it's active
 
 ## Example Usage
 

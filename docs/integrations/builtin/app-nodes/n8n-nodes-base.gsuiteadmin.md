@@ -103,7 +103,7 @@ In the screenshot below, you will notice that the node returns the information o
 
 There are three different ways to project a user's information:
 
-- ***Basic:*** Does not include any custom fields.
+- ***Basic:*** Doesn'tinclude any custom fields.
 - ***Custom:*** Includes the custom fields from schemas in customField.
 - ***Full:*** Include all the fields associated with the user.
 

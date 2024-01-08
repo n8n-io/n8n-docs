@@ -24,8 +24,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Instance
     * Cancel quiet down state
     * Put Jenkins in quiet mode, no builds can be started, Jenkins is ready for shutdown
-    * Restart Jenkins immediately on environments where it is possible
-    * Restart Jenkins once no jobs are running on environments where it is possible
+    * Restart Jenkins immediately on environments where it's possible
+    * Restart Jenkins once no jobs are running on environments where it's possible
     * Shutdown once no jobs are running
     * Shutdown Jenkins immediately
 * Job

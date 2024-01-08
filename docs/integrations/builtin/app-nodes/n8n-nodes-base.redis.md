@@ -22,7 +22,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Delete a key from Redis.
 * Get the value of a key from Redis.
 * Returns generic information about the Redis instance.
-* Atomically increments a key by 1. Creates the key if it does not exist.
+* Atomically increments a key by 1. Creates the key if it doesn'texist.
 * Returns all the keys matching a pattern.
 * Set the value of a key in redis.
 * Publish message to redis channel.

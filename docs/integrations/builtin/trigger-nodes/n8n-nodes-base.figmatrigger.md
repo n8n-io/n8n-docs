@@ -13,7 +13,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// warning | Supported Figma Plans
-Figma does not support webhooks on the free "Starter" plan. Your team would need to be on the "Professional" plan to use this node.
+Figma doesn'tsupport webhooks on the free "Starter" plan. Your team would need to be on the "Professional" plan to use this node.
 ///
 
 ## Trigger Events

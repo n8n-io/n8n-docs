@@ -50,5 +50,5 @@ For this specific example, the List ID would be the Model ID.
 
 ### What is the Model ID?
 
-It is the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.
+It's the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.
 

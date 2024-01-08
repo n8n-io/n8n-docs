@@ -18,7 +18,7 @@ If we are going to insert data into Airtable, we first need to set up a table th
 	<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>
 
 3. In the beginner course base you have by default a *Table 1* with four fields: *Name, Notes, Assignee, and Status*.
-These fields are not relevant for us since they are not in our orders data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result.
+These fields aren't relevant for us since they aren't in our orders data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result.
 	- Replace the four default table fields with the five column names from the data set, selecting `Number` field type for orderID, customerID, and orderPrice, and `Single line text` for employeeName and orderStatus.
 	- Delete the 3 blank rows created by default.
 	- Also, rename the table from *Table 1* to *orders* to make it easier to identify.

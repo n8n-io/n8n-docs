@@ -29,7 +29,7 @@ You can find authentication information for this node [here](/integrations/built
 - ***Working Directory:*** Only visible for **Command** resources. The directory where the command should be executed.
 - ***Path:*** Only visible for **Download** operation on file resources. The path where the desired file is found.
 - ***Binary Property:*** Only visible for file resources. The name of the binary property which contains the data for the file to be uploaded.
-- ***Target Directory:*** Only visible for **Upload** operations on file resources. The directory to upload the file to. The name of the file does not need to be specified, it's taken from the binary data file name. To override this behavior, set the parameter **File Name** under options.
+- ***Target Directory:*** Only visible for **Upload** operations on file resources. The directory to upload the file to. The name of the file doesn'tneed to be specified, it's taken from the binary data file name. To override this behavior, set the parameter **File Name** under options.
 
 
 ## Example Usage

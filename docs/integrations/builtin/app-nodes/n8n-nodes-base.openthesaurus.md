@@ -11,7 +11,7 @@ Use the OpenThesaurus node to automate work in OpenThesaurus, and integrate Open
 On this page, you'll find a list of operations the OpenThesaurus node supports and links to more resources.
 
 /// note | Credentials
-OpenThesaurus node does not require authentication. 
+OpenThesaurus node doesn'trequire authentication. 
 ///
 /// note | Examples and templates
 For usage examples and templates to help you get started, take a look at n8n's [OpenThesaurus integrations](https://n8n.io/integrations/openthesaurus/){:target="_blank" .external-link} list.

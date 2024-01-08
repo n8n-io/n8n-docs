@@ -99,7 +99,7 @@ In the screenshot below, you will notice that the node returns the information o
 
 ### 4. IF node
 
-This node will compare your user ID with the user ID of other members. If the user IDs are not equal, the output will be true.
+This node will compare your user ID with the user ID of other members. If the user IDs aren't equal, the output will be true.
 
 
 1. Click on ***Add Condition*** and select 'String'.

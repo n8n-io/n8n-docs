@@ -15,7 +15,7 @@ Name this new workflow “Nathan's workflow.”
 
 The first thing you need to do is get data from ABCorp's old data warehouse.
 
-In the previous chapter, you used a specific action in the app (YCombinator). However, not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
+In the previous chapter, you used a specific action in the app (Y Combinator). However, not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
 
 Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data using the [***HTTP Request node***](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank" .external} in n8n.
 

@@ -71,6 +71,8 @@ Disqus
 Dockerfile
 Dropcontact
 eksctl
+Embeddable
+embeddable
 Emelia
 Entra
 Enum
@@ -228,6 +230,8 @@ syslog
 Tapfiliate
 Textract
 There are
+Timesheet
+timesheet
 Todoist
 Toggl
 Tooltip

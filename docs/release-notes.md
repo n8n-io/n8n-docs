@@ -29,6 +29,16 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * PATCH version when making backward-compatible bug fixes.
 
 
+## n8n@1.22.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.22.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-09
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
 <!-- vale off -->
 ## n8n@1.23.0
 

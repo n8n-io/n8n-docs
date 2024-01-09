@@ -39,7 +39,7 @@ The Emelia Trigger node will trigger the workflow when a lead sends a reply to t
 1. First of all, you'll have to enter credentials for the Emelia Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/emelia/).
 2. Select a campaign from the ***Campaign*** dropdown list.
 3. Select 'Email Replied' from the ***Events*** dropdown list.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when a lead sends a reply. This output is passed on to the next node in the workflow.
 
@@ -54,7 +54,7 @@ This node will send a message to the `Leads` channel in Mattermost. If you have 
 3. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 
 4. Enter the following message in the ***Expression*** field. `{{$json["contact"]["firstName"]}} from {{$json["contact"]["company"]}} has replied back to your campaign.`
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node sends a message with a reply to the `Leads` channel in Mattermost.
 

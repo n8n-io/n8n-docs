@@ -43,7 +43,7 @@ This node will trigger the workflow when a user sends a new message.
 
 1. First of all, you'll have to enter credentials for the Telegram Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/telegram/).
 2. Select 'message' from the ***Updates*** dropdown list. This will trigger the workflow when a user sends a message.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when a user sends a new message.
 
@@ -54,7 +54,7 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 This node will make a GET request to the API `https://www.thecocktaildb.com/api/json/v1/1/random.php` to fetch a random cocktail. This information gets passed on to the next node in the workflow.
 
 1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the ***URL*** field.
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node makes a GET request to the API and returns information about a random cocktail.
 
@@ -76,7 +76,7 @@ This node will send a reply to the message with the name and image of the cockta
 10. Click on ***Add Field*** and select 'Reply To Message ID' from the dropdown list.
 11. Click on the gears icon next to the ***Reply To Message ID*** field and click on ***Add Expression***.
 12. Select the following in the ***Variable Selector*** section: Nodes > Telegram Trigger > Output Data > JSON > message > message_id. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["message_id"]}}`.
-13. Click on ***Execute Node*** to run the node.
+13. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node sends a reply to the message with the name and image of the cocktail that we got from the previous node.
 

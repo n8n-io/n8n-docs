@@ -54,7 +54,7 @@ This node will create a new record in a table.
 5. Under ***Fields to Send*** click the **Add Field** button twice.
 6. For the first field, choose **Name** from the ***Field ID*** dropdown, and type a name in the ***Field Value***.
 7. For the second field, choose `Link` from the ***Field ID*** dropdown, and enter a URL in the ***Field Value***.
-8. Click on **Execute Node** to run the node.
+8. Click on **Test step** to run the node.
 
 Here is an example of how the configuration should look:
 
@@ -78,7 +78,7 @@ This node will list all the records with a particular `Name` value.
 8. Click the ***Add Filter*** button.
 9. Select `Name` from the **Column** dropdown.
 10. Type a name in the ***Values*** field.
-11. Click on ***Execute Node*** to run the node.
+11. Click on ***Test step*** to run the node.
 
 In the screenshot below, the node only returned the record with the name 'Grist':
 
@@ -95,7 +95,7 @@ This node will update the Name field of the record that we received from the pre
 5. Select the following in the ***Variable Selector*** section: **Nodes** > **Grist1** > **Output Data** > **JSON** > **id**.
 6. Under ***Fields to Send*** click the ***Add Field*** button.
 7. Choose `Name` from the ***Field ID*** dropdown, and type a name in the ***Field Value***.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 Here is an example of how the configuration should look:
 

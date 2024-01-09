@@ -50,7 +50,7 @@ This node will retrieve all the contacts from GetResponse.
 1. First of all, you'll have to enter credentials for the GetResponse node. You can find out how to do that [here](/integrations/builtin/credentials/getresponse/).
 2. Select 'GetAll' from the ***Operation*** dropdown list.
 3. Toggle ***Return All*** to true.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node retrieves all the contacts from GetResponse.
 
@@ -65,7 +65,7 @@ This node will check if a contact belongs to the `n8n` campaign or not. If a con
 3. Select the following in the ***Variable Selector*** section: Nodes > GetResponse > Output Data > JSON > campaign > name. You can also add the following expression: `{{$node["GetResponse"].json["campaign"]["name"]}}`.
 4. Select 'Not Equal' from the ***Operation*** dropdown list.
 5. Enter `n8n` in the ***Value 2*** field. If you have a campaign with a different name, use that name instead.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns all the contacts that do not belong to the `n8n` campaign.
 
@@ -82,7 +82,7 @@ This node will update the campaign ID of all the contacts that we get from the t
 5. Select the following in the ***Variable Selector*** section: Nodes > IF > Output Data > JSON > contactId. You can also add the following expression: `{{$node["IF"].json["contactId"]}}`.
 6. Click on ***Add Field*** and select 'Campaign ID' from the dropdown list.
 7. Select `n8n` from the ***Campaign ID*** dropdown list. If you have a campaign with a different name, select that instead.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you notice that the node updates the campaign ID of all the contacts that do not belong to the `n8n` campaign.
 
@@ -93,7 +93,7 @@ In the screenshot below, you notice that the node updates the campaign ID of all
 Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
 
 1. Create a ***NoOp*** node connected to the 'false' output of the IF node.
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/getresponse/noop_node.png)
 

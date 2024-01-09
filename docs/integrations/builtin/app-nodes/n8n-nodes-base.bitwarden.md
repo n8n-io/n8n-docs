@@ -67,7 +67,7 @@ This node will create a new group called `documentation` in Bitwarden.
 2. Select 'Group' from the ***Resource*** dropdown list.
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter `documentation` in the ***Name*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new group in Bitwarden.
 
@@ -81,7 +81,7 @@ This node will get all the members from Bitwarden.
 2. Select 'Member' from the ***Resource*** dropdown list.
 3. Select 'Get All' from the ***Operation*** dropdown list.
 4. Toggle ***Return All*** to `true`.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node retrieves all the members from Bitwarden.
 
@@ -98,7 +98,7 @@ This node will update all the members in the group that we created earlier.
 5. Select the following in the ***Variable Selector*** section: Nodes > Bitwarden > Output Data > JSON > id. You can also add the following expression: `{{$node["Bitwarden"].json["id"]}}`.
 6. Click on the gears icon next to the ***Member IDs*** field and click on ***Add Expression***.
 7. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the members of the group.
@@ -114,7 +114,7 @@ This node will get all the members in the group that we created earlier.
 3. Select 'Get Members' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Group ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > Bitwarden > Output Data > JSON > id. You can also add the following expression: `{{$node["Bitwarden"].json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node retrieves the members in the group.

@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Google Contacts node. You can find out how to do that [here](/integrations/builtin/credentials/google/).
 2. Enter the family name in the ***Family Name*** field.
 3. Enter the given name in the ***Given Name*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Using the Google Contacts node to create a contact](/_images/integrations/builtin/app-nodes/googlecontacts/googlecontacts_node.png)
 
@@ -66,7 +66,7 @@ The start node exists by default when you create a new workflow.
 9. Enter the company's domain in the ***Domain*** field.
 10. Enter the company's name in the ***Name*** field.
 11. Enter the title in the ***Title*** field.
-12. Click on ***Execute Node*** to run the node.
+12. Click on ***Test step*** to run the node.
 
 
 ![Using the Google Contact node to update the contact](/_images/integrations/builtin/app-nodes/googlecontacts/googlecontacts1_node.png)
@@ -80,7 +80,7 @@ The start node exists by default when you create a new workflow.
 3. Click on the gears icon next to the ***Contact ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > Google Contacts > Output Data > JSON > contactId. You can also add the following expression: `{{$node["Google Contacts"].json["contactId"]}}`.
 5. Select 'Organizations' from the ***Fields*** dropdown list.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 ![Using the Google Contacts node to get the contact](/_images/integrations/builtin/app-nodes/googlecontacts/googlecontacts2_node.png)

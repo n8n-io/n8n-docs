@@ -71,7 +71,7 @@ This node will create a channel `n8n-docs` and add a user to the channel.
 4. Enter `n8n-docs` in the ***Name*** field. If you want to create a channel with a different name, enter that name instead.
 5. Click on ***Add Field*** and select 'User IDs' from the dropdown list.
 6. Select the users from the ***User IDs*** dropdown list. The users you select will be added to the channel.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new channel named `n8n-docs`, and adds a user to the channel.
 
@@ -88,7 +88,7 @@ This node will update the description of the channel that we created in the prev
 5. Select the following in the ***Variable Selector*** section: Nodes > Twist > Output Data > JSON > id. You can also add the following expression: `{{$node["Twist"].json["id"]}}`.
 6. Click on ***Add Field*** and select 'Description' from the dropdown list.
 7. Enter a description in the ***Description*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds a description to the channel that we created in the previous node.
 
@@ -116,7 +116,7 @@ The above message mentions the user `Harshil`. To mention a user in your workspa
 9. Enter `Documentation site` in the ***Button Text*** field.
 10. Select 'Action' from the ***Type*** dropdown list.
 11. Enter `https://docs.n8n.io` in the ***URL*** field.
-12. Click on ***Execute Node*** to run the node.
+12. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node sends a message to the General conversation and mentions the user.
 

@@ -85,7 +85,7 @@ This node will create a new person in Copper.
 5. Click on the ***Add Email*** button.
 6. Enter the email in the ***Email*** field.
 7. Enter the category of the email in the ***Category*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new person in Copper.
 
@@ -105,7 +105,7 @@ This node will update the information of the person that we created using the pr
 7. Click on the ***Add Phone Number*** field.
 8. Enter the phone number in the ***Phone Number*** field.
 9. Enter the category in the ***Category*** field.
-10. Click on ***Execute Node*** to run the node.
+10. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the information of the person that got created previously.
@@ -122,7 +122,7 @@ This node will retrieve the information of the person that we created earlier.
 3. Select 'Update' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Person ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node retrieves the information of the person that we created earlier.
 

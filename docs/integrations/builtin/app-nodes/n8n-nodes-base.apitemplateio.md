@@ -52,7 +52,7 @@ This node will trigger the workflow when a form is submitted. Make sure to creat
 2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/typeform/).
 3. Select the invoice form from the ***Form*** dropdown list.
 4. Toggle ***Simplify Answers*** to `false`. By setting this option to false, the node returns the values for the fields with duplicate names.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when the form is submitted. We will pass this information to the next nodes in the workflow.
 
@@ -94,7 +94,7 @@ This node will generate an invoice using the information from the previous node.
 ```
 8. Click on the ***Add Field*** button.
 9. Enter a file name in the ***File Name*** field.
-10. Click on ***Execute Node*** to run the node.
+10. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates an invoice using the data from the previous node.
 

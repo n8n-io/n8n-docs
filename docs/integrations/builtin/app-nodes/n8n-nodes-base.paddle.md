@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 2. Enter the discount amount in the ***Discount Amount*** field.
 3. Click on the ***Add Field*** button and select 'Coupon Code' from the dropdown list.
 4. Enter the coupon code in the ***Coupon Code*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 ![Using the Paddle node to create a coupon](/_images/integrations/builtin/app-nodes/paddle/paddle_node.png)
 

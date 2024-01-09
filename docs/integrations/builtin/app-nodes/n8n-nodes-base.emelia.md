@@ -51,7 +51,7 @@ This node will create a new campaign in Emelia.
 1. First of all, you'll have to enter credentials for the Emelia node. You can find out how to do that [here](/integrations/builtin/credentials/emelia/).
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter the campaign name in the ***Campaign Name*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new campaign.
 
@@ -67,7 +67,7 @@ This node will add a contact to the campaign that we created in the previous nod
 4. Enter the contact's email address in the ***Contact Email*** field.
 5. Click on the ***Add Field*** button and select 'First Name'.
 6. Enter the first name in the ***First Name*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds the contact to the campaign that we created in the previous node.
 
@@ -81,7 +81,7 @@ This node will get the information about the campaign that we created earlier.
 2. Select 'Get' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Campaign ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > Emelia > Output Data > JSON > _id. You can also add the following expression: `{{$node["Emelia"].json["_id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the campaign.

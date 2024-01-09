@@ -49,7 +49,7 @@ The start node exists by default when you create a new workflow.
 4. Enter your desired ticker symbol, `AI` in our example.
 5. Click the **Add Filter** button and select **Timeframe Start Date > A Week Ago**.
 6. Click the **Add Filter** button and select **Timeframe End Date > Today**.
-3. Click on **Execute Node** to run the workflow.
+3. Click on **Test step** to run the workflow.
 
 ![The Marketstack node](/_images/integrations/builtin/app-nodes/marketstack/marketstack_node.png)
 

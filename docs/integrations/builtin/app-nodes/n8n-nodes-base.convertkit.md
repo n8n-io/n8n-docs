@@ -59,7 +59,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the ConvertKit node. You can find out how to do that [here](/integrations/builtin/credentials/convertkit/).
 2. Select the form from the ***Form ID*** dropdown list.
 3. Enter the email address in the ***Email*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Using the ConvertKit node to add a subscriber to a form](/_images/integrations/builtin/app-nodes/convertkit/convertkit_node.png)
 
@@ -70,7 +70,7 @@ The start node exists by default when you create a new workflow.
 1. Select the credentials that you entered in the previous ConvertKit node.
 2. Select 'Tag' from the ***Resource*** dropdown list.
 3. Enter the tag name in the ***Name*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 
 ![Using the ConvertKit node to create a tag](/_images/integrations/builtin/app-nodes/convertkit/convertkit1_node.png)
@@ -85,7 +85,7 @@ The start node exists by default when you create a new workflow.
 4. Select the tag from the ***Tag ID*** dropdown list.
 5. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > ConvertKit > Output Data > JSON > subscriber > email_address. You can also add the following expression: `{{$node["ConvertKit"].json["subscriber"]["email_address"]}}`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 ![Using the ConvertKit node to add the subscriber to the tag](/_images/integrations/builtin/app-nodes/convertkit/convertkit2_node.png)

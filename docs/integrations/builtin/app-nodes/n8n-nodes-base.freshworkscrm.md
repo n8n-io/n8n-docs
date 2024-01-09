@@ -78,7 +78,7 @@ The start node exists by default when you create a new workflow.
 2. Select **Contact** from the *Resource* dropdown.
 3. Select **Get All** from the *Operation* dropdown.
 4. Select **Never Contacted** from the *View* dropdown.
-5. Click on **Execute Node** to run the workflow.
+5. Click on **Test step** to run the workflow.
 
 ![The Freshworks CRM node](/_images/integrations/builtin/app-nodes/freshworkscrm/freshworkscrm_node.png)
 

@@ -66,7 +66,7 @@ This node will create a new quote in Wise.
 6. Enter an amount in the ***Amount*** field.
 7. Enter the source currency in the ***Source Currency*** field.
 8. Enter the target currency in the ***Target Currency*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new quote.
 
@@ -84,7 +84,7 @@ This node will create a new transfer for the quote that we created in the previo
 6. Select the target account from the ***Target Account ID*** dropdown list.
 7. Click on the ***Add Field*** button.
 8. Enter a description in the ***Reference*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new transfer for the quote that we created in the previous node.
 
@@ -100,7 +100,7 @@ This node will execute the transfer that we created in the previous node.
 4. Select a profile from the ***Profile ID*** dropdown list.
 5. Click on the gears icon next to the ***Transfer ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the executes the transfer that we created in the previous node.
 
@@ -115,7 +115,7 @@ This node will return the information of the transfer that we executed in the pr
 3. Select 'Get' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Transfer ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > Wise1 > Output Data > JSON > id. You can also add the following expression: `{{$node["Wise1"].json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the information about the transfer that we executed in the previous node.
 

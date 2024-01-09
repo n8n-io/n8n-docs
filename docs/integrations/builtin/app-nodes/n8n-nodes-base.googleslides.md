@@ -59,7 +59,7 @@ This Google Slides node will get all the slides from a presentation.
 3. Select 'Get Slides' from the ***Operation*** dropdown list.
 4. Paste the Presentation ID you copied in the previous step, in the ***Presentation ID*** field.
 5. Toggle ***Return All*** to `true`.
-6. Click on ***Execute Node*** to run the workflow.
+6. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node returns all the slides from the presentation.
 
@@ -78,7 +78,7 @@ This node will return thumbnails of the pages that were returned by the previous
 7. Click on the gears icon next to the ***Page Object ID*** field and click on ***Add Expression***.
 8. Select the following in the ***Variable Selector*** section: Nodes > Google Slides > Output Data > JSON > objectId. You can also add the following expression: `{{$json["objectId"]}}`.
 9. Toggle ***Download*** to `true`.
-10. Click on ***Execute Node*** to run the workflow.
+10. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node returns thumbnails of the pages that were returned by the previous node.
 

@@ -72,7 +72,7 @@ The start node exists by default when you create a new workflow.
 3. Select **Get All** from the ***Operation*** dropdown.
 4. Click ***Add Option*** and select **Fields**.
 5. Use the dropdown to select the fields you want to view, here we used `Close code`, `Severity`, `Sys ID`, and `Resolve time`.
-6. Click on ***Execute Node*** to run the workflow.
+6. Click on ***Test step*** to run the workflow.
 
 ![The ServiceNow node](/_images/integrations/builtin/app-nodes/servicenow/servicenow_node.png)
 

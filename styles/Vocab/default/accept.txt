@@ -35,6 +35,7 @@ blockquote
 Boolean
 boolean
 Brandfetch
+Brevo
 buildpack
 Burstable
 burstable
@@ -44,6 +45,7 @@ Callout
 callout
 Capterra
 cartesian
+Chargebee
 Chatbot
 chatbot
 Citrix
@@ -220,6 +222,7 @@ Venafi
 VM
 Vonage
 Vuex
+Webex
 Webflow
 WeKan
 Wireframe

@@ -76,9 +76,9 @@ This node will compare the percentage of the hard disk space used we got from th
 
 In the screenshot below, you will notice that the node returns an output when the percentage of hard disk space used exceeds 80%.
 
-![Using the IF node to check if the percentage of hard disk space used is greater than eighty percent](/_images/integrations/builtin/core-nodes/executecommand/if_node.png)
+![Using the IF node to check if the percentage of hard disk space used is greater than 80%](/_images/integrations/builtin/core-nodes/executecommand/if_node.png)
 
-### 4. Twilio node (send: sms)
+### 4. Twilio node (send: SMS)
 
 This node sends an SMS to the specified phone number when the usage of hard disk space  exceeds 80%.
 

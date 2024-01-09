@@ -8,6 +8,7 @@ aggregate
 Airtable
 Allowlist
 allowlist
+Anthropic
 APIs
 Asana
 Atlassian
@@ -54,6 +55,7 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+Cohere
 Contentful
 ConvertKit
 CPU

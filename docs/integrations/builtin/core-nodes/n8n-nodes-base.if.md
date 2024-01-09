@@ -25,22 +25,22 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 **String**:
 
 - exists
-- doesn'texist
+- doesn't exist
 - is equal to
 - isn't equal to
 - contains
-- doesn'tcontain
+- doesn't contain
 - starts with
-- doesn'tstart with
+- doesn't start with
 - ends with
-- doesn'tend with
+- doesn't end with
 - matches regex
-- doesn'tmatch regex
+- doesn't match regex
 
 **Number**:
 
 - exists
-- doesn'texist
+- doesn't exist
 - is equal to
 - isn't equal to
 - is greater than
@@ -51,7 +51,7 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 **Date & Time**:
 
 - exists
-- doesn'texist
+- doesn't exist
 - is equal to
 - isn't equal to
 - is after
@@ -62,7 +62,7 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 **Boolean**:
 
 - exists
-- doesn'texist
+- doesn't exist
 - is true
 - is false
 - is equal to
@@ -71,11 +71,11 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 **Array**:
 
 - exists
-- doesn'texist
+- doesn't exist
 - is equal to
 - isn't equal to
 - contains
-- doesn'tcontain
+- doesn't contain
 - length equal to
 - length not equal to
 - length greater than
@@ -86,16 +86,9 @@ Add comparison conditions using the **Add Condition** filter. The available comp
 **Object**:
 
 - exists
-- doesn'texist
+- doesn't exist
 - is empty
 - isn't empty
-
-
-
-
-
-
-
 
 ## AND / OR
 

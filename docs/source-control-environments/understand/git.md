@@ -18,8 +18,8 @@ If you're familiar with Git, don't rely on behaviors matching exactly. In partic
 
 This page introduces the Git concepts and terminology used in n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control-environments/setup/) should have some familiarity with Git and with their Git hosting provider.
 
-/// note | This is a very brief introduction
-Git is a complex topic. This section provides a very brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}.
+/// note | This is a brief introduction
+Git is a complex topic. This section provides a brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}.
 ///
 ## Git overview
 

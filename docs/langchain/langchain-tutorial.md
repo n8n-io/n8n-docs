@@ -78,7 +78,7 @@ One unique feature of AI in n8n is the ability to pull in data from other n8n wo
 * Load your own custom data
 * Create custom functionality in another workflow
 
-Because n8n can connect to any service with a public API, this is a very powerful tool.
+Because n8n can connect to any service with a public API, this is a powerful tool.
 
 This example generates some fake data in a workflow, and loads it in to the AI workflow. The AI workflow passes a parameter to the workflow generating the data, to ensure it only returns data that's intended to be public.
 

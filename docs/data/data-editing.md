@@ -36,8 +36,8 @@ You can copy data from nodes in previous workflow executions:
     2. Select **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png)</span>.
     3. You can choose what to copy:
         * **Copy Item Path** and **Copy Parameter Path** gives you expressions that access parts of the JSON.
-        * **Copy Value**: copies the entire selected JSON. This is usually what you want when copying data from past executions.
-8. Return to the workflow you're currently working on:  
+        * **Copy Value**: copies the entire selected JSON.
+8. Return to the workflow you're working on:  
     1. Open the left menu.
     2. Select **Workflows**.
     3. Select **Open**.

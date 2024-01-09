@@ -9,9 +9,9 @@ n8n displays errors related to data mapping when there are problems tracing an i
 ## Errors when pinning data
 
 If you see this error message:
-
+<!-- vale off -->
 > ERROR: '`<node-name>`' must be unpinned to execute
-
+<!-- vale on -->
 Unpin the data in the named node, and execute the node to get fresh data.
 
 This error has two possible causes:

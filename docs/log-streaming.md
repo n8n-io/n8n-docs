@@ -42,7 +42,7 @@ The following events are available. You can choose which events to stream in **S
 	* User deleted
 	* User invited
 	* User invitation accepted
-	* User reinvited
+	* User re-invited
 	* User email failed
 	* User reset requested
 	* User reset

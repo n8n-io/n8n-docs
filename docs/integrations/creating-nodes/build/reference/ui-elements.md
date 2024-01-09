@@ -327,7 +327,7 @@ The `options` type adds an options list. Users can select a single value.
 
 ![Options](/_images/integrations/creating-nodes/options.png)
 
-## Multi options
+## Multi-options
 
 The `multiOptions` type adds an options list. Users can select more than one value.
 
@@ -361,7 +361,7 @@ The `multiOptions` type adds an options list. Users can select more than one val
 }
 ```
 
-![Multioptions](/_images/integrations/creating-nodes/multioptions.png)
+![Multi-options](/_images/integrations/creating-nodes/multioptions.png)
 
 
 ## Filter

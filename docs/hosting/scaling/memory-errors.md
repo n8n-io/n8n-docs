@@ -48,7 +48,7 @@ This approach is more complex and means re-building the workflows causing the is
 
 Splitting the workflow might seem counter-intuitive at first as it usually requires adding at least two additional nodes: the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to split up the items into smaller batches and the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node to start the sub-workflow.
 
-However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a very small result set to the main workflow, the memory consumption is significantly reduced. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is freed again.
+However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, the memory consumption is reduced. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is freed again.
 
 ### Increase old memory
 

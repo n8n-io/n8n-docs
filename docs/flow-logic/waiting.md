@@ -6,7 +6,7 @@ contentType: howto
 
 # Waiting
 
-Waiting allows you to pause a workflow mid-execution, then resume where the workflow left off, with the same data. This is useful if you need to rate limit your calls to a service, or wait for an external event to complete. You can wait for a specified time period, or until a webhook is called.
+Waiting allows you to pause a workflow mid-execution, then resume where the workflow left off, with the same data. This is useful if you need to rate limit your calls to a service, or wait for an external event to complete. You can wait for a specified duration, or until a webhook fires.
 
 Making a workflow wait uses the [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) node. Refer to the node documentation for usage details.
 

@@ -49,6 +49,6 @@ The start node exists by default when you create a new workflow.
 
 ### How do I find my Sender ID?
 
-1. Log in to your MSG91 dasboard and click on 'Sender Id' in the left panel.
+1. Log in to your MSG91 dashboard and click on 'Sender Id' in the left panel.
 2. If you don't already have one, click on *Add Sender Id +*, fill in the details, and click on the *Save Sender Id* button.
 

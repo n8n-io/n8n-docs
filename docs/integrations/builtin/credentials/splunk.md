@@ -24,7 +24,7 @@ From your Splunk UI:
 
 From n8n:
 
-4. Enter your API key and application Base URL (e.g. `https://localhost:8089`).
+4. Enter your API key and application Base URL (for example, `https://localhost:8089`).
 5. Use the toggle to select if you want to **Allow Unauthorized Certificates**.
 6. Click **Save** to create your credentials.
 

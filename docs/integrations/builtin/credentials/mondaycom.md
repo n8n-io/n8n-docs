@@ -19,7 +19,7 @@ Create a [monday.com](https://monday.com/){:target=_blank .external-link} accoun
 You can authenticate using an access token or OAuth:
 
 * Refer to [Monday Developers | Authentication](https://developer.monday.com/api-reference/docs/authentication){:target=_blank .external-link} for information on getting your access token.
-* Refer to [Monday Developers | OAuth ](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for more information on setting up OAuth. You need to register a monday app, and get the client ID and client secret. Give it the scopes boards:write and boards:read.
+* Refer to [Monday Developers | OAuth ](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for more information on setting up OAuth. You need to register a Monday app, and get the client ID and client secret. Give it the scopes boards:write and boards:read.
 
 
 

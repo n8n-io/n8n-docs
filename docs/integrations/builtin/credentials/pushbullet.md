@@ -24,7 +24,7 @@ Create a [Pushbullet](https://www.pushbullet.com/) account.
 6. Click the ***Connect my account*** button to connect to Pushbullet and save your credentials in n8n.
 
 /// note | Pushbullet OAuth Test Link
-Pushbullet does offer a test link during the client creation process described above. This link isn't compatible with n8n. In order to verify the authentication works, simply use the ***Connect my account*** button in n8n.
+Pushbullet does offer a test link during the client creation process described above. This link isn't compatible with n8n. To verify the authentication works, use the ***Connect my account*** button in n8n.
 ///
 
 ![Getting Pushbullet credentials](/_images/integrations/builtin/credentials/pushbullet/using-oauth.gif)

@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes with Home Assi
 
 - [Install](https://www.home-assistant.io/installation/) Home Assistant
 - Create a [Home Assistant](https://www.home-assistant.io/getting-started/onboarding) account.
-- Review the Home Assistant [Autentication API](https://developers.home-assistant.io/docs/auth_api) documentation
+- Review the Home Assistant [Authentication API](https://developers.home-assistant.io/docs/auth_api) documentation
 
 ## Using access token
 

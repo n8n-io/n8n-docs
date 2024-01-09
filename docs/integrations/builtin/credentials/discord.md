@@ -27,8 +27,8 @@ Create a [Discord](https://www.discord.com/) account.
 <!-- ## Using OAuth
 
 1. Access this [Discord Developer Portal](https://discord.com/developers/applications).
-2. Click on "New Application".
-3. Enter the name and click "Create".
+2. Click on **New Application**.
+3. Enter the name and click **Create**.
 4. Use Client Secret and Client ID in your Discord node credentials in n8n.
 5. Enter n8n provided redirect URL in the configuration. ![Redirect URL Explanation here](/).
 

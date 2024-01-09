@@ -37,6 +37,7 @@ Boolean
 boolean
 Borderless
 borderless
+bot
 Brandfetch
 Brevo
 buildpack
@@ -63,6 +64,7 @@ Cron
 Crypto
 crypto
 Datastore
+DeepL
 Demio
 disabled
 Disqus
@@ -87,6 +89,7 @@ Figma
 FileMaker
 Firestore
 Formhub
+Formstack
 Fortinet
 Freshdesk
 Freshservice
@@ -99,13 +102,18 @@ geospatial
 GIMP
 Gotify
 Grafana
+GSuite
+Gumroad
 Hetzner
 Homeserver
+Hostname
+hostname
 HubSpot
 Humantic
 Imperva
 invalid
 Infisical
+Intuit
 IP
 Iterable
 iterable
@@ -153,6 +161,7 @@ namespace
 NASA
 Netlify
 Nextcloud
+ngrok
 Nodelinter
 npm
 npx
@@ -181,6 +190,7 @@ Pushbullet
 Pushcut
 Pyodide
 Qdrant
+QRadar
 Qualys
 Quickstarts
 quickstarts
@@ -191,6 +201,7 @@ Rundeck
 Salesmate
 Sekoia
 Sendy
+Serp
 Serverless
 serverless
 Shopify
@@ -252,6 +263,7 @@ URIs
 URL
 Venafi
 VERO
+Vhost
 VM
 Vonage
 Vuex

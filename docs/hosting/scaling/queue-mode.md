@@ -212,5 +212,5 @@ If needed, you can adjust the leader check options:
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
 /// note | Keep in mind
-n8n recommends running the multiple main processes behind a load balancer that supports session persistence, also known as sticky sessions.
+n8n requires running the multiple main processes behind a load balancer that supports session persistence, also known as sticky sessions.
 ///

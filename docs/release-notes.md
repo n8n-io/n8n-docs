@@ -28,6 +28,38 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.24.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.23.0...n8n@1.24.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-10
+
+This release contains new nodes for advanced AI, node enhancements, new features, performance enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Chat trigger
+
+n8n has created a new [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Mistral Cloud Chat and Embeddings
+
+This release introduces two new nodes to support [Mistral AI](https://mistral.ai/){:target=_blank .external-link}:
+
+* [Mistral Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud/)
+* [Embeddings Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud/)
+
+</div>
+
+### Contributors
+
+[Anush](https://github.com/Anush008){:target=_blank .external-link}  
+[Eric Koleda](https://github.com/ekoleda-codaio){:target=_blank .external-link}  
+[Mason Geloso](https://github.com/MasonGeloso){:target=_blank .external-link}  
+[vacitbaydarman](https://github.com/vacitbaydarman){:target=_blank .external-link}
 
 ## n8n@1.22.5
 

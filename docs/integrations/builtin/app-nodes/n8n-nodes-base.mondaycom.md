@@ -10,6 +10,10 @@ Use the monday.com node to automate work in monday.com, and integrate monday.com
 
 On this page, you'll find a list of operations the monday.com node supports and links to more resources.
 
+/// warning | Minimum required version
+This node requires n8n version 1.22.6 or above.
+///
+
 /// note | Credentials
 Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom/) for guidance on setting up authentication. 
 ///

@@ -31,7 +31,7 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 ## n8n@1.22.6
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.5...n8n@1.22.6){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-01-09
+**Release date:** 2024-01-10
 
 This is a bug fix release. It includes important fixes for the HTTP Request and monday.com nodes.
 

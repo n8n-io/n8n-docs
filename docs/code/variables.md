@@ -12,11 +12,12 @@ contentType: howto
 Available in version 0.225.0 and above.
 ///	
 
-Custom variables allow you to store and reuse values in n8n workflows. 
+Custom variables are read-only variables that you can use to store and reuse values in n8n workflows. 
 
 /// warning | Variables are shared
 When you create a variable, it's available to everyone on your n8n instance.
 ///
+
 ## Create variables
 
 To create a new variable:
@@ -34,13 +35,13 @@ To edit or delete a variable:
 
 ## Use variables in workflows
 
-You can use variables in the Code node and in expressions:
+You can access variables in the Code node and in expressions:
 
 ```javascript
 // Access a variable
 $vars.<variable-name>
 ```
 
-All variables are strings.
+All variables are strings, and all are read-only. You must use the UI to change the values.
 
 During workflow execution, n8n replaces the variables with the variable value. If the variable has no value, n8n treats its value as `undefined`. Workflows don't automatically fail in this case.

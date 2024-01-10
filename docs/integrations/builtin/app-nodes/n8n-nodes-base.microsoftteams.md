@@ -54,7 +54,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Microsoft Teams node. You can find out how to do that [here](/integrations/builtin/credentials/microsoft/).
 2. Select the team that you want to use from the ***Team ID*** dropdown list.
 3. Enter a name for the channel in the ***Name*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Create a channel with the Microsoft Teams node](/_images/integrations/builtin/app-nodes/microsoftteams/microsoftteams_node.png)
 
@@ -69,7 +69,7 @@ The start node exists by default when you create a new workflow.
 6. Select the following in the ***Variable Selector*** section: Nodes > Microsoft Teams > Output > JSON > id. You can also add the following expression: `{{$node["Microsoft Teams"].json["id"]}}`
 7. Click on the ***Add Field*** button and select 'Name' from the dropdown list.
 8. Enter a new channel name in the ***Name*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 ![Update a Channel with the Microsoft Teams node](/_images/integrations/builtin/app-nodes/microsoftteams/microsoftteams1_node.png)
 
@@ -85,7 +85,7 @@ The start node exists by default when you create a new workflow.
 6. Select the following in the ***Variable Selector*** section: Nodes > Microsoft Teams > Output > JSON > id. You can also add the following expression: `{{$node["Microsoft Teams"].json["id"]}}`
 7. Select 'Text' from the ***Message Type*** dropdown list.
 8. Enter a message in the ***Message*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 ![Send a message with the Microsoft Teams node](/_images/integrations/builtin/app-nodes/microsoftteams/microsoftteams2_node.png)
 

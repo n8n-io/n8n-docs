@@ -52,7 +52,7 @@ This node will trigger the workflow when a new activity gets created in Strava.
 1. First of all, you'll have to enter credentials for the Strava Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/strava/).
 2. Select 'Activity' from the ***Object*** dropdown list.
 3. Select 'created' from the ***Event*** dropdown list.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when a new activity gets created in Strava.
 
@@ -66,7 +66,7 @@ This node will tweet about the activity that gets created in Strava.
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 
 3. Enter the following text in the ***Expression*** field: `I ran {{$node["Strava Trigger"].json["object_data"]["distance"]}} meters and completed my {{$node["Strava Trigger"].json["object_data"]["name"]}}!`
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that this node gets the information of the activity in Strava from the previous node and tweets about it.
 

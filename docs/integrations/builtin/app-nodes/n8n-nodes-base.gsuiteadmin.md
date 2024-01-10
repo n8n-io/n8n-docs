@@ -57,7 +57,7 @@ This node will create a user in G Suite with the following information:  first n
 5. Enter a password for the user in the ***Password*** field.
 6. Select the domain from the ***Domain*** dropdown list.
 7. Enter the username for the user in the ***Username*** field.
-8. Click on ***Execute Node*** to run the workflow.
+8. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will observe that the node has created a new user with the first name `Nathan`, last name `Nat`, domain `n8n.io`, username `nat`, and a password, in G Suite.
 
@@ -74,7 +74,7 @@ This node will get the User ID from the previous node and update the user's last
 4. Select the following in the ***Variable Selector*** section: Nodes > G Suite Admin > Output Data > JSON > id. You can also add the following expression: `{{$node["G Suite Admin"].json["id"]}}`.
 5. Click on the ***Add Field*** button and select 'Last Name' from the dropdown list.
 6. Enter the last name in the ***Last Name*** field.
-7. Click on ***Execute Node*** to run the workflow.
+7. Click on ***Test step*** to run the workflow.
 
 
 In the screenshot below, you will notice that the node has updated the last name of the user that we created in the previous node.
@@ -90,7 +90,7 @@ This node will get the information of the user we created in the G Suite Admin n
 2. Select 'Get' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***User ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > G Suite Admin > Output Data > JSON > id. You can also add the following expression: `{{$node["G Suite Admin"].json["id"]}}`.
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Test step*** to run the workflow.
 
 
 In the screenshot below, you will notice that the node returns the information of the user we created in the G Suite Admin node.

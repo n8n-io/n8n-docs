@@ -52,7 +52,7 @@ This node will create a new object of the type `Doc` in Bubble. If you want to c
 4. Click on the ***Add Property*** button.
 5. Enter `Name` in the ***Key*** field. If you're using a different type, enter the field name present in the type.
 6. Enter `Bubble` in the ***Value*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new object of the type `Doc` in Bubble.
 
@@ -72,7 +72,7 @@ This node will update the object that we created using the previous node.
 6. Click on the ***Add Property*** button.
 7. Enter `Name` in the ***Key*** field. If you're using a different type, enter the field name present in the type.
 8. Enter `Bubble node` in the ***Value*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the information of the object that got created previously.
@@ -89,7 +89,7 @@ This node will retrieve the information of the object that we created earlier.
 3. Select the following in the ***Variable Selector*** section: Nodes > Bubble > Parameters > typeName. You can also add the following expression: `{{$node["Bubble"].parameter["typeName"]}}`.
 4. Click on the gears icon next to the ***Object ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > Bubble > Output Data > JSON > id. You can also add the following expression: `{{$node["Bubble"].json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node retrieves the information of the object that we created earlier.
 

@@ -60,7 +60,7 @@ This node will create a new collection of the type `Team Members` in Webflow. If
 14. Click on the ***Add Field*** button.
 15. Select 'Draft (Bool) (required)' from the ***Field ID*** dropdown list. If you're using a different collection type, select the field present in that collection.
 16. Enter `false` in the ***Field Value*** field.
-17. Click on ***Execute Node*** to run the node.
+17. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new item for the collection type `Team Members` in Webflow.
 
@@ -97,7 +97,7 @@ Click on the ***Add Field*** button.
 23. Click on the ***Add Field*** button.
 24. Select 'Avatar (ImageRef)' from the ***Field ID*** dropdown list. If you're using a different collection type, select the field present in that collection.
 25. Enter `https://n8n.io/n8n-logo.png` in the ***Value*** field.
-26. Click on ***Execute Node*** to run the node.
+26. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the item that got created previously.
@@ -114,7 +114,7 @@ This node will retrieve the information about the item that we created earlier.
 3. Select 'Team Members' from the ***Collection ID*** dropdown list.
 4. Click on the gears icon next to the ***Item ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > _id. You can also add the following expression: `{{$json["_id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node retrieves the information of the item that we created earlier.
 

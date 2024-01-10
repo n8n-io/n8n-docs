@@ -183,7 +183,12 @@
   }
   
   .md-typeset :is(.emojione,.twemoji,.gemoji) svg {
-  border: none;
+  border: 0;
+  }
+
+  button:nth-child(1) > svg, button:nth-child(2) > svg
+  {
+	border: 0;
   }
 
   /* remove lightbox controls so users can't slideshow */

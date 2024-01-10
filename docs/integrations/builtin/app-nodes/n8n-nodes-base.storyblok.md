@@ -58,7 +58,7 @@ This node will get all the stories that have a slug starting with `release`.
 4. Select a space from the ***Space ID*** dropdown list.
 5. Click on the ***Add Filter*** button.
 6. Enter `release` in the ***Starts With*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns all the stories that have a slug starting with `release`.
 
@@ -77,7 +77,7 @@ This node will publish the stories that were returned by the previous node.
 5. Select the following in the ***Variable Selector*** section: Nodes > Storyblok > Parameters > space. You can also add the following expression: `{{$node["Storyblok"].parameter["space"]}}`.
 6. Click on the gears icon next to the ***Story ID*** field and click on ***Add Expression***.
 7. Select the following in the ***Variable Selector*** section: Nodes > Storyblok > Output Data > JSON > id. You can also add the following expression: `{{$node["Storyblok"].json["id"]}}`.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node publishes the stories that were returned by the previous node.

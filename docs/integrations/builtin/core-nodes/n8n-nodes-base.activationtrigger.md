@@ -57,7 +57,7 @@ This node will send a message in the `workflow` channel on Mattermost.
 3. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 
 4. Enter the following message in the ***Expression*** field: `The workflow {{$workflow.name}}, was updated.`. `$workflow.name` returns the name of the workflow.
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node sends a message to Mattermost.
 

@@ -25,5 +25,5 @@ The final workflow should look like the following image.
 ### 1. SSE trigger node
 
 1. Enter the URL in the ***URL*** field. 
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 

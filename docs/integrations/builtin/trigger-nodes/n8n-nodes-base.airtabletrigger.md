@@ -31,7 +31,7 @@ The Airtable Trigger node will trigger the workflow when new data gets added to 
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the table name in the ***Table*** field.
 5. Enter a trigger field name in the ***Trigger Field*** field. If you don't have a 'Created Time' or 'Last modified time' field in your table, please create one.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the new data from Airtable. This output gets passed on to the next node in the workflow.
 
@@ -51,7 +51,7 @@ New Data was added to Airtable.
 ID:{{$node["Airtable Trigger"].json["fields"]["id"]}}
 Name: {{$node["Airtable Trigger"].json["fields"]["name"]}}
 ```
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node sends a message in Mattermost about the new data that got added to Airtable.
 

@@ -44,7 +44,7 @@ This node will trigger the workflow whenever a new activity gets added to your S
 
 1. First of all, you'll have to enter credentials for the Strava Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/strava/).
 2. Select 'created' from the ***Event*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when a new activity gets added to Strava.
 
@@ -61,7 +61,7 @@ This node will create a datapoint for the goal `testing`. If you have created a 
 
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > object_data > name. You can also add the following expression: `{{$json["object_data"]["name"]}}`.
 
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a datapoint in Beeminder.
 

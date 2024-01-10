@@ -55,7 +55,7 @@ This node will create a new list called `n8n-docs` in Automizy.
 1. First of all, you'll have to enter credentials for the Automizy node. You can find out how to do that [here](/integrations/builtin/credentials/automizy/).
 2. Select 'List' from the ***Resource*** dropdown list.
 3. Enter `n8n-docs` in the ***Name*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new list with the name `n8n-docs`.
 
@@ -71,7 +71,7 @@ This node creates a new contact and adds it to the list created in the previous 
 4. Select the following in the ***Variable Selector*** section: Nodes > Automizy > Output Data > JSON > id. You can also add the following expression: `{{$node["Automizy"].json["id"]}}`.
 5. Click on ***Add Field*** and select 'Status' from the dropdown list.
 6. Select 'Active' from the ***Status*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new contact with the email address `example@n8n.io` and status `Active` and adds it to the list `n8n-docs` created in the previous node.
 
@@ -88,7 +88,7 @@ This node updates the contact that we created in the previous node by adding the
 4. Select the following in the ***Variable Selector*** section: Nodes > Automizy1 > Output Data > JSON > email. You can also add the following expression: `{{$node["Automizy1"].json["email"]}}`.
 5. Click on ***Add Field*** and select 'Tags' from the dropdown list.
 6. Select a tag from the ***Tags*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node updates the contact created in the previous node by adding the tag `reviewer` to it.
 
@@ -103,7 +103,7 @@ This node returns all the contacts of the `n8n-docs` list that we created using 
 3. Click on the gears icon next to the ***List ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > Automizy > Output Data > JSON > id. You can also add the following expression: `{{$node["Automizy"].json["id"]}}`.
 5. Toggle ***Return All*** to true.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns all the contacts that are present in the list `n8n-docs`.
 

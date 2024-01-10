@@ -57,7 +57,7 @@ This node will create a contact in SendGrid.
 4. Enter an email address in the ***Email*** field.
 5. Click on the ***Add Field*** button and select 'First Name'.
 6. Enter the name of the contact in the ***First Name*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates contact with their first name.
 
@@ -75,7 +75,7 @@ This node will update the contact that we created in the previous node.
 5. Select the following in the ***Variable Selector*** section: Nodes > SendGrid > Parameters > email. You can also add the following expression: `{{$node["SendGrid"].parameter["email"]}}`.
 6. Click on the ***Add Field*** button and select 'Last Name'.
 7. Enter the last name of the contact in the ***Last Name*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node updates the contact that we created in the previous node.
 
@@ -91,7 +91,7 @@ This node will return the information of the contact that we created using the S
 4. Select 'Email' from the ***By*** dropdown list.
 5. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > SendGrid > Parameters > email. You can also add the following expression: `{{$node["SendGrid"].parameter["email"]}}`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the contact that we created using the SendGrid node.

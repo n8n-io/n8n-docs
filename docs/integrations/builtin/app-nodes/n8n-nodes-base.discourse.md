@@ -65,7 +65,7 @@ This node will create a post under the `Lounge` category. If you want to create 
 3. Enter the content of the post in the ***Content*** field.
 4. Click on ***Add Field*** and select 'Category ID' from the dropdown list.
 5. Select 'Lounge' from the ***Category ID*** dropdown list.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new topic under the category `Lounge`.
 
@@ -80,7 +80,7 @@ This node will update the content of the post that we created in the previous no
 3. Click on the gears icon next to the ***Post ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 5. Enter the updated content in the ***Content*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node updates the content of the post that we created in the previous node.
 
@@ -94,7 +94,7 @@ This node will retrieve the post that we updated previously.
 2. Select 'Get' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Post ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you notice that the node retrieves the post that we created earlier.
 

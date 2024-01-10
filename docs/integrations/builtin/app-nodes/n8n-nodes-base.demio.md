@@ -49,7 +49,7 @@ This example workflow uses a Typeform to collect name and email address. Create 
 
 1. First of all, you'll have to enter credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/typeform/).
 2. Select your form from the ***Form*** dropdown list.
-3. Click on ***Execute Node*** to run the workflow.
+3. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the Typeform Trigger node triggers the workflow and returns the response submitted by a user.
 
@@ -67,7 +67,7 @@ This node will use the information from the previous node to register the user f
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > Let's start with your name. You can also add the following expression: `{{$json["Let's start with your name."]}}`.
 6. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
 7. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > What's your email address? You can also add the following expression: `{{$json["What's your email address?"]}}`.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node registers the user for an event on Demio.
 

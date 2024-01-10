@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 2. Enter the sender ID in the ***From*** field.
 3. Enter the receivers' number in the ***To*** field.
 4. Enter the message in the ***Message*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 ![Using the Mocean node to send an SMS](/_images/integrations/builtin/app-nodes/mocean/mocean_node.png)
 

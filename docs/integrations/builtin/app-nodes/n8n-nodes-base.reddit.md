@@ -60,7 +60,7 @@ This node will create a post under the subreddit `n8n`. If you want to create a 
 2. Enter `n8n` in the ***Subreddit*** field.
 3. Enter a title in the ***Title*** field.
 4. Enter the content of the post in the ***Text*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new post under the subreddit `n8n`.
 
@@ -76,7 +76,7 @@ This node will retrieve the post that we created using the previous node.
 4. Select the following in the ***Variable Selector*** section: Nodes > Reddit > Parameters > subreddit. You can also add the following expression: `{{$node["Reddit"].parameter["subreddit"]}}`.
 5. Click on the gears icon next to the ***Post ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the information of the post that we created in the previous node.
 
@@ -91,7 +91,7 @@ This node will add a comment to the post that we created earlier.
 3. Click on the gears icon next to the ***Post ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 5. Enter your comment in the ***Comment Text*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node comments on the post that we created earlier.
 

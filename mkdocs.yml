@@ -282,6 +282,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata.md
+        - integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
@@ -307,7 +309,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
-        - integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md

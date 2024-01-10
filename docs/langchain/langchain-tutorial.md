@@ -29,11 +29,11 @@ This tutorial requires n8n version 1.21.0 or above.
 
 ## Step three: Add a trigger node
 
-A trigger node starts a workflow. For this tutorial, use the [Manual Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/). This provides a chat interface that you can use to test the workflow.
+A trigger node starts a workflow. For this tutorial, use the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/). This provides a chat interface that you can use to test the workflow.
 
 1. Select **Add first step**.
-1. Search for **Manual Chat Trigger**. n8n shows a list of nodes that match the search.
-1. Select **Manual Chat Trigger** to add the node to the canvas. n8n opens the node.
+1. Search for **Chat Trigger**. n8n shows a list of nodes that match the search.
+1. Select **Chat Trigger** to add the node to the canvas. n8n opens the node.
 1. Close the node details view to return to the canvas.
 
 ## Step four: Add an agent

@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Trigger' from the ***Operation*** dropdown list.
 3. Enter the repository name in the ***Slug*** field in the `ownerName/repositoryName` format.
 4. Enter the branch name in the ***Branch*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 ![Using the Travis CI node to trigger a build](/_images/integrations/builtin/app-nodes/travisci/travisci_node.png)
 

@@ -70,7 +70,7 @@ This node will create a new monitor of the type `HTTP(S)`.
 4. Enter `n8n` in the ***Friendly Name*** field.
 5. Select 'HTTP(S)' from the ***Type*** dropdown list.
 6. Enter `https://n8n.io` in the ***URL*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns data about the current weather in Berlin.
 
@@ -87,7 +87,7 @@ This node will update the monitor that we created in the previous node.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 6. Click on ***Add Field*** and select 'Friendly Name' from the dropdown list.
 7. Enter `n8n website` in the ***Friendly Name*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the friendly name of the monitor that we created in the previous node.
@@ -103,7 +103,7 @@ This node will get the information of the monitor that we created in the previou
 3. Select 'Update' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the monitor that we created earlier.

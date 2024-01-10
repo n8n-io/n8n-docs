@@ -28,7 +28,7 @@ The final workflow should look like the following image.
 
 1. First of all, you'll have to enter credentials for the Cal Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/cal/).
 2. Select the events you want to receive updates for from the **Events** dropdown list.
-3. Click on **Execute Node** to run the node.
+3. Click on **Test step** to run the node.
 
 (Optional Advanced Settings)
 

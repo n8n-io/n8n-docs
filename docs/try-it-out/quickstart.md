@@ -35,7 +35,7 @@ Double click a node to explore its settings and how it processes data.
 
 ## Step three: Run the workflow
 
-Select **Execute workflow** to run the workflow to check it's working, and load in data for the next steps.
+Select **Test Workflow** to run the workflow to check it's working, and load in data for the next steps.
 
 ## Step four: Add a node
 
@@ -52,7 +52,7 @@ Add a third node to message each customer and tell them their description. Use t
         Hi {{$json.customer_name}},  Your description is {{$json.customer_description}}
         ```
 5. Close the expressions editor, then close the **Customer Messenger** node by clicking outside the node or selecting **Back to canvas**.
-6. Select **Execute workflow**. n8n runs the workflow.
+6. Select **Test Workflow**. n8n runs the workflow.
 
 The complete workflow should look like this:
 

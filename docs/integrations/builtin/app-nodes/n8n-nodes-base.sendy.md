@@ -52,7 +52,7 @@ This node will add a subscriber to a list in Sendy. If you don't already have a 
 3. In your Sendy dashboard, click on 'View all lists' and copy the ID of the list to which you want to add the subscriber. Paste this list ID in the List ID field in n8n.
 4. Click on the ***Add Field*** button and select 'Name'.
 5. Enter the name of the subscriber in the ***Name*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds a subscriber with their name to the list that we specify.
 
@@ -74,7 +74,7 @@ This node will create a campaign with the title 'Welcome to n8n' and send it to 
 10. Click on the ***Add Field*** button and select 'List IDs'.
 11. Click on the gears icon next to the ***List IDs*** field and click on ***Add Expression***.
 12. Select the following in the ***Variable Selector*** section: Nodes > Sendy > Parameters > listId. You can also add the following expression: `{{$node["Sendy"].parameter["listId"]}}`.
-13. Click on ***Execute Node*** to run the node.
+13. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates the campaign with the title `Welcome to n8n` and sends it to the list that we specify.
 

@@ -51,7 +51,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Contentful node. You can find out how to do that [here](/integrations/builtin/credentials/contentful/).
 2. Select 'Get All' from the ***Operation*** dropdown list.
 3. Toggle ***Return All*** to true.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Using the Contentful node to get all entries](/_images/integrations/builtin/app-nodes/contentful/contentful_node.png)
 

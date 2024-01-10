@@ -57,7 +57,7 @@ This node will create a new document in ERPNext.
 10. Select 'Item Group' from the ***Field*** dropdown list.
 11. Enter `Products` in the ***Value*** field.
 **Note:** Make sure that the item group exists in your ERPNext account.
-12. Click on ***Execute Node*** to run the node.
+12. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new item with the name `item 1`.
 
@@ -75,7 +75,7 @@ This node will add the `Item Tax` property to the item that we created in the pr
 6. Click on the ***Add Property*** button.
 7. Select 'Item Tax' from the ***Field*** dropdown list.
 8. Enter `5` in the ***Value*** field.
-10. Click on ***Execute Node*** to run the node.
+10. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds the Item Tax property to the item that we created in the previous node.
 
@@ -90,7 +90,7 @@ This node will get the information about the item that we created earlier.
 3. Select 'Item' from the ***DocType*** dropdown list.
 4. Click on the gears icon next to the ***Item Name*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > name. You can also add the following expression: `{{$json["name"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the item.

@@ -41,7 +41,7 @@ The Lemlist Trigger node will trigger the workflow when a lead sends a reply to 
 2. Select 'Email Replied' from the ***Events*** dropdown list.
 3. Click on ***Add Field*** and select 'Campaign ID'.
 4. Select 'Docs campaign' from the ***Campaign ID*** dropdown list.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the information of the reply that was sent by a lead. This output is passed on to the next node in the workflow.
 
@@ -60,7 +60,7 @@ This node will send a message to the `Leads` channel in Mattermost. If you have 
 {{$json["firstName"]}} has replied back to your {{$json["campaignName"]}}. Below is the reply:
 > {{$json["text"]}}
 ```
-5. Click on ***Execute Node*** to run the workflow.
+5. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node sends a message with a reply to the `Leads` channel in Mattermost.
 

@@ -29,7 +29,7 @@ The Mautic Trigger node will trigger the workflow when a Mautic form is submitte
 
 1. First of all, you'll have to enter credentials for the Mautic Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/mautic/).
 2. Select 'Form Submit Event' from the ***Events*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the data that was submitted to the Mautic form. This output is passed on to the next nodes in the workflow.
 
@@ -51,7 +51,7 @@ Hey, {{$node["Mautic Trigger"].json["mautic.form_on_submit"][0]["submission"]["r
 Thank you for signing up for the Webinar - Getting Started with n8n. The webinar will start at 1800 CEST on 31st October 2020.
 See you there!
 ```
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node sends an SMS to the submitter whose name and phone number are returned by the Mautic Trigger node.

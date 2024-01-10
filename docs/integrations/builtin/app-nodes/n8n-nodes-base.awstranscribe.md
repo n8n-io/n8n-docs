@@ -51,7 +51,7 @@ This node will retrieve all the files from an S3 bucket you specify.
 2. Select 'Get All' from the ***Operation*** dropdown list.
 3. Enter the bucket name in the ***Bucket Name*** field.
 4. Toggle ***Return All*** to `true`. This option will return information on all the files stored in the S3 bucket.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns information of all the files stored in the bucket you specified.
 
@@ -67,7 +67,7 @@ This node will create a transcription job for the files that get returned by the
 4. Click on the gears icon next to the ***Media File URI*** field and click on ***Add Expression***.
 5. Enter `s3://{{$node["AWS S3"].parameter["bucketName"]}}/{{$json["Key"]}}` in the ***Expression*** field.
 6. Toggle ***Detect Language*** to `true`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a transcription job for the files stored in an S3 bucket.
 

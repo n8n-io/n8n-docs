@@ -49,7 +49,7 @@ This example workflow uses the HTTP Request node to make a GET request to downlo
 
 1. Enter the URL of the image in the ***URL*** field. For example, `https://miro.medium.com/max/1400/0*1T9GkAb93w5NSMsf`.
 2. Select 'File' from the ***Response Format*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the HTTP Request node downloads the image from the URL. This image (binary data) can now be used by the other nodes in the workflow.
@@ -62,7 +62,7 @@ In the screenshot below, you will notice that the HTTP Request node downloads th
 This node will get the image of the receipt (binary data) from the HTTP Request node and extract the information from it.
 1. Select 'Receipt' from the ***Resource*** dropdown list.
 2. You'll have to enter credentials for the Mindee node. You can find out how to do that  [here](/integrations/builtin/credentials/mindee/).
-3. Click on ***Execute Node*** to run the workflow.
+3. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node extracts the information from the image that it got from the HTTP Request node.
 

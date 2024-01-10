@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to create a webhook for the Discord node. You can find out how to do that [here](/integrations/builtin/credentials/discord/).
 2. Paste your webhook into the **Webhook URL** field.
 5. Enter your message in the **Text** field.
-6. Click on **Execute Node** to run the workflow.
+6. Click on **Test step** to run the workflow.
 
 ![Sending a message to a Discord channel using the Discord node](/_images/integrations/builtin/app-nodes/discord/discord_node.png)
 

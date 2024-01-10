@@ -81,7 +81,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
 | `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (false) or not (true). |
 | `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
-
+| `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | Number | `30` | How long should the n8n process wait (in seconds) for components to shut down before exiting the process. |
 
 ## Binary data
 
@@ -208,7 +208,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readBinaryFile\", \"n8n-nodes-base.readBinaryFiles\", \"n8n-nodes-base.writeBinaryFile\"]"` |
+| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"` |
 | `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
 | `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |
@@ -229,7 +229,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `QUEUE_BULL_REDIS_CLUSTER_NODES` | String | - | Expects a comma-separated list of Redis Cluster nodes in the format `host:port`, for the Redis client to initially connect to. If running in queue mode (`EXECUTIONS_MODE = queue`), setting this variable will create a Redis Cluster client instead of a Redis client, and n8n will ignore `QUEUE_BULL_REDIS_HOST` and `QUEUE_BULL_REDIS_PORT`. |
 | `QUEUE_BULL_REDIS_TLS` | Boolean | `false` | Enable TLS on Redis connections. |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |
-| `QUEUE_WORKER_TIMEOUT` | Number | `30` | How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
+| `QUEUE_WORKER_TIMEOUT` (**deprecated**) | Number | `30` | **Deprecated** Use `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` instead.<br/><br/>How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `30000` | How long (in ms) is the lease period for a worker to work on a message. |

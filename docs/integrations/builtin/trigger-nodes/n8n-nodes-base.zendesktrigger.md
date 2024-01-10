@@ -27,7 +27,7 @@ The final workflow should look like the following image.
 1. First of all, you'll have to enter credentials for the Zendesk Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/zendesk/).
 2. Click on the ***Add Condition*** button and select 'All' from the dropdown list.
 3. Select 'Open' from the ***Value*** dropdown list.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 /// note | Activate workflow for production
 You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Zendesk Trigger node.

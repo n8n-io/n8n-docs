@@ -40,7 +40,7 @@ The start node exists by default when you create a new workflow.
 This node will return synonyms of the word `Hallo` in German. If you want to get synonyms of another German word, use that word instead.
 
 1. Enter `Hallo` in the ***Text*** field.
-2. Click on ***Execute Node*** to run the workflow.
+2. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node returns the synonyms of the word `Hallo`.
 

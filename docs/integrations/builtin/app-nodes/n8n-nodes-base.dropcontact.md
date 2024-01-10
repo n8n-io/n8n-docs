@@ -50,7 +50,7 @@ This node will list all the records from Google Sheet. Create a sheet like [this
 3. Select the 'Read' option from the ***Operation*** dropdown list.
 4. Enter the Sheet ID in the ***Sheet ID*** field. Your Google Sheet ID is available in the URL `https://docs.google.com/spreadsheets/d/{spreadsheetId}/edit`
 5. In the ***Range*** field, enter `A:K`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the leads.
@@ -77,7 +77,7 @@ This node will find the verified email address and enrich the contact.
 13. Click on ***Add Field*** and select 'Last Name'.
 14. Click on the gears icon next to the ***Last Name*** field and click on ***Add Expression***.
 15. Select the following in the ***Variable Selector*** section: Node > Input Data > JSON > fields > lastName . You can also add the following expression: `{{$json["fields"]["lastName"]}}`.
-16. Click on ***Execute Node*** to run the node.
+16. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the Dropcontact node has enriched your data.
 
@@ -104,7 +104,7 @@ This node will create new leads for a campaign in Lemlist.
 14. Select the following in the ***Variable Selector*** section: Node > Input Data > JSON > fields > company_name . You can also add the following expression: `{{$json["fields"]["company_name"]}}`.
 15. Click on the ***Add Field*** button and select 'Deduplicate'.
 16. Toggle ***Deduplicate*** to `true`.
-17. Click on ***Execute Node*** to run the node.
+17. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates new enriched leads in Lemlist.
 

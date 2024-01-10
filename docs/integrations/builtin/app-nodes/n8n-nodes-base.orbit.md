@@ -64,7 +64,7 @@ This node will create a new member in a workspace in Orbit. We will use the GitH
 5. Select 'GitHub' from the ***Source*** dropdown list.
 6. Select 'Username' from the ***Search By*** dropdown list.
 7. Enter the GitHub username of the member in the ***Username*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new member in a workspace in Orbit using the GitHub identity.
 
@@ -82,7 +82,7 @@ This node will update the tags of the member that we created in the previous nod
 6. Select the following in the ***Variable Selector*** section: Nodes > Orbit > Output Data > JSON > id. You can also add the following expression: `{{$node["Orbit"].json["id"]}}`.
 7. Click on the ***Add Field*** button and select 'Tags to Add'.
 8. Enter the tags in the ***Tags to Add*** field. You can add multiple tags by separating them with a comma.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node updates the information of the new member that we created in the previous node. The node adds the tags `n8nConf` and `MLH` to the new member.
 
@@ -99,7 +99,7 @@ This node will create a note for the member that we created using the Orbit node
 5. Click on the gears icon next to the ***Member ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Orbit > Output Data > JSON > id. You can also add the following expression: `{{$node["Orbit"].json["id"]}}`.
 7. Enter a note in the ***Note*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a note for the member that we created using the Orbit node.
 
@@ -117,7 +117,7 @@ This node will create a post for the member that we created using the Orbit node
 5. Click on the gears icon next to the ***Member ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Orbit > Output Data > JSON > id. You can also add the following expression: `{{$node["Orbit"].json["id"]}}`.
 7. Enter a URL for the post in the ***URL*** field.
-8. Click on ***Execute Node*** to run the node.
+8. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a post for the member that we created using the Orbit node.
 

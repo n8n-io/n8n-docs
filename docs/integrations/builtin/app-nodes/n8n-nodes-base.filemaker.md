@@ -55,7 +55,7 @@ This node will create a new record in FileMaker.
 7. Click on the ***Add field*** button.
 8. Select a field from the ***Field*** dropdown list.
 9. Enter a value in the ***Value*** field.
-10. Click on ***Execute Node*** to run the node.
+10. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new record in FileMaker.
 
@@ -75,7 +75,7 @@ This node will add a new field to the record that we created in the previous nod
 8. Click on the ***Add field*** button.
 9. Select a field from the ***Field*** dropdown list.
 10. Enter a value in the ***Value*** field.
-11. Click on ***Execute Node*** to run the node.
+11. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds the `address_country` field to the record that we created in the previous node.
 
@@ -90,7 +90,7 @@ This node will get the information about the record that we created earlier.
 3. Select a layout from the ***Layout*** dropdown list.
 4. Click on the gears icon next to the ***Record Id*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > FileMaker > Output Data > JSON > response > recordId. You can also add the following expression: `{{$node["FileMaker"].json["response"]["recordId"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the record.

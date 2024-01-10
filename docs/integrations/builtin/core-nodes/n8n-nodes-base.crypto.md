@@ -6,11 +6,15 @@ contentType: integration
 
 # Crypto
 
-The Crypto node is used to encrypt data in workflows.
+Use the Crypto node to encrypt data in workflows.
 
-## Node Reference
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Crypto integrations](https://n8n.io/integrations/crypto/){:target=_blank .external-link} page.
+///
 
-You can configure further options for each action by selecting the type of encryption and encoding to be used, in the *Type* and *Encoding* fields respectively.
+## Parameters
+
+You can configure further options for each action by selecting the type of encryption and encoding to be used, in the **Type** and **Encoding** fields.
 
 - Action
 	- Hash a text in a specified format
@@ -28,23 +32,5 @@ You can configure further options for each action by selecting the type of encry
 	- BASE64
 	- HEX
 
-## Example Usage
 
-This workflow allows you to encrypt data using the Crypto node. You can also find the [workflow](https://n8n.io/workflows/574) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Crypto]()
-
-
-The final workflow should look like the following image.
-
-![A workflow with the Crypto node](/_images/integrations/builtin/core-nodes/crypto/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Crypto node
-
-1. Enter the data that you want to encrypt in the *Value* field.
-2. Click on *Execute Node* to run the workflow.
 

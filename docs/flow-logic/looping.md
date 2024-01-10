@@ -70,7 +70,7 @@ Nodes and operations where you need to design a loop into your workflow:
 * [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) executes `Find` once, regardless of the number of incoming items.
 * [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
 * [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).
-* [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) node will fetch the files from the specified path only once. This node doesn't execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
+* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node will fetch the files from the specified path only once. This node doesn't execute multiple times based on the incoming data. However, if the path is referenced from the incoming data, the node will fetch the files for all the valid paths.
 * [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/):
 	* Info: this operation executes only once, regardless of the number of items in the incoming data.
 * [RSS](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/) nodes executes only once regardless of the number of items in the incoming data.

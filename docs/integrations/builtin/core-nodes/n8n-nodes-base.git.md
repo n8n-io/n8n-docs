@@ -50,7 +50,7 @@ This node will add the `README.md` file to the staging area. If you want to add 
 1. Select 'Add' from the ***Operation*** dropdown list.
 2. Enter the repository path in the ***Repository Path*** field.
 3. Enter the file path in the ***Paths to Add*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds the `README.md` file to the staging area.
 
@@ -64,7 +64,7 @@ This node will commit all the changes that were added to the staging area by the
 2. Click on the gears icon next to the ***Repository Path*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Git > Parameters > repositoryPath. You can also add the following expression: `{{$node["Git"].parameter["repositoryPath"]}}`.
 4. Enter a commit message in the ***Message*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new commit.
 
@@ -77,7 +77,7 @@ This node will return the commit logs of your repository.
 1. Click on the gears icon next to the ***Repository Path*** field and click on ***Add Expression***.
 2. Select the following in the ***Variable Selector*** section: Nodes > Git > Parameters > repositoryPath. You can also add the following expression: `{{$node["Git"].parameter["repositoryPath"]}}`.
 3. Toggle ***Return All*** to `true`. This option will return all the logs.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new commit.
 
@@ -90,7 +90,7 @@ This node will push the changes to a cloud repository.
 1. Select 'Push' from the ***Operation*** dropdown list.
 2. Click on the gears icon next to the ***Repository Path*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Git > Parameters > repositoryPath. You can also add the following expression: `{{$node["Git"].parameter["repositoryPath"]}}`.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 **Note:** If you're not using SSH, you will have to create credentials to authenticate yourself. You also need to set an upstream branch to push the changes. This is required only once. You can set up an upstream branch by executing the command `git push -u origin master` from a terminal.
 

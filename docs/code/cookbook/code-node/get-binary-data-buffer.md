@@ -20,7 +20,7 @@ You can access the buffer using n8n's `getBinaryDataBuffer()` function:
 /* 
 * itemIndex: number. The index of the item in the input data.
 * binaryPropertyName: string. The name of the binary property. 
-* The default in the Read Binary Files node is 'data'. 
+* The default in the Read/Write File From Disk node is 'data'. 
 */
 let binaryDataBufferItem = await this.helpers.getBinaryDataBuffer(itemIndex, binaryPropertyName);
 ```

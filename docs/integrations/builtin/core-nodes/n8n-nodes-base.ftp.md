@@ -20,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 - Rename/move content from old path to new path
 - Upload a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 
 ## Node Reference
 
@@ -47,7 +47,7 @@ The start node exists by default when you create a new workflow.
 
 1. Enter the URL of the file you want to download in the ***URL*** field.
 2. Select ***File*** from the ***Response Format*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 ![Downloading a file with the HTTP Request node](/_images/integrations/builtin/core-nodes/ftp/httprequest_node.png)
 
@@ -56,7 +56,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the FTP node. You can find out how to do that [here](/integrations/builtin/credentials/ftp/).
 2. Select ***Upload*** from the ***Operation*** dropdown list.
 3. Enter the path where you would like to upload the file in the ***Path*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Uploading a file with the FTP node](/_images/integrations/builtin/core-nodes/ftp/ftp_node.png)
 
@@ -65,7 +65,7 @@ The start node exists by default when you create a new workflow.
 1. Select the credentials that you entered in the previous node.
 2. Select ***List*** from the ***Operation*** dropdown list.
 3. Enter the path to the folder where you uploaded the file in the previous step in the ***Path*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Getting a list of files with the FTP node](/_images/integrations/builtin/core-nodes/ftp/ftp1_node.png)
 

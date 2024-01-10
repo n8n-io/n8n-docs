@@ -68,7 +68,7 @@ This node will generate a full scorecard report for a company that we specify.
 3. Select 'Generate' from the ***Operation*** dropdown list.
 4. Select 'Full Scorecard' from the ***Report*** dropdown list.
 5. Enter the domain of the company in the ***Scorecard Identifier*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node generates a full scorecard report of `n8n.io`.
 
@@ -82,7 +82,7 @@ This node will return a report from SecurityScorecard.
 2. Select 'Report' from the ***Resource*** dropdown list.
 3. Select 'Get All' from the ***Operation*** dropdown list.
 4. Enter `1` in the ***Limit*** field. By setting it to one, the node will return a single report.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns a report from SecurityScroecard.
 
@@ -97,7 +97,7 @@ This node will download the report that got returned by the previous node.
 3. Select 'Download' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Report URL*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > download_url. You can also add the following expression: `{{$json["download_url"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node downloads the report that was returned by the previous node.

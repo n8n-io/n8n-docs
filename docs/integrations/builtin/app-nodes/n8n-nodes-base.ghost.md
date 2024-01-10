@@ -59,7 +59,7 @@ This node will create a new post with the title `Running ghost with n8n!`. If yo
 3. Select 'Create' from the ***Operation*** dropdown list.
 4. Enter `Running ghost with n8n!` in the ***Title*** field.
 5. Enter the HTML content in the ***Content*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new post.
 
@@ -76,7 +76,7 @@ This node will update the status of the post that we created in the previous nod
 4. Select the following in the ***Variable Selector*** section: Nodes > Ghost > Output Data > JSON > id. You can also add the following expression: `{{$node["Ghost"].json["id"]}}`.
 5. Click on ***Add Field*** and select 'Status'.
 6. Select 'Published' from the ***Status*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the status of the post that we created in the previous node.
@@ -92,7 +92,7 @@ This node returns information about the post that we created using the Ghost nod
 3. Select 'ID' from the ***By*** dropdown list.
 4. Click on the gears icon next to the ***Identifier*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > Ghost > Output Data > JSON > id. You can also add the following expression: `{{$node["Ghost"].json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns information about the post that we specified.

@@ -18,9 +18,9 @@ The Sort operation uses the default JavaScript operation where the elements to b
 ## Node parameters
 
 * **Type**: use the dropdown to select how you want to input the sorting. The following options are available:
-  * **Simple**: when you selected, you can use the **Add Field To Sort By** button to input the fields, and select whether to use **Ascending** or **Descending** order.
-  * **Random**: select to create a random order in the list.
-  * **Code**: when selected, displays a code input field where you can enter custom JavaScript code to perform the sort operation.
+	* **Simple**: when selected, you can use the **Add Field To Sort By** button to input the fields, and select whether to use **Ascending** or **Descending** order.
+	* **Random**: select to create a random order in the list.
+	* **Code**: when selected, displays a code input field where you can enter custom JavaScript code to perform the sort operation.
 * **Options** > **Add Field**: use this to add more optional settings, including:
 	* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
 

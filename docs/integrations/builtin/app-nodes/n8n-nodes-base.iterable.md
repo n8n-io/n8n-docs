@@ -51,7 +51,7 @@ This node will create a new user in Iterable.
 1. First of all, you'll have to enter credentials for the Iterable node. You can find out how to do that [here](/integrations/builtin/credentials/iterable/).
 2. Select 'Email' in the ***Identifier*** field.
 3. Enter the email address in the ***Value*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new user in Iterable.
 
@@ -70,7 +70,7 @@ This node will update the information of the user that we created in the previou
 6. Click on the ***Add Data Field*** button.
 7. Enter `Name` in the ***Key*** field.
 8. Enter the name of the user in the ***Value*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node updates the information of the user that we created in the previous node.
 
@@ -87,7 +87,7 @@ This node will get the information of the user that we created using the Iterabl
 2. Select 'Get' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Value*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > Iterable > Parameters > value. You can also add the following expression: `{{$node["Iterable"].parameter["value"]}}`.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node gets the information of the user that we created using the Iterable node.
 

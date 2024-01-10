@@ -91,8 +91,6 @@ Never change the incoming data a node receives (data accessible with `this.getIn
 
 It's not necessary to always clone all the data. For example, if a node changes the binary data but not the JSON data, you can create a new item that reuses the reference to the JSON item.
 
-You can see an example in the code of the [ReadBinaryFile-Node](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/ReadBinaryFile.node.ts#L69-L83){:target=_blank .external-link}.
-
 
 ### Use the built in request library
 

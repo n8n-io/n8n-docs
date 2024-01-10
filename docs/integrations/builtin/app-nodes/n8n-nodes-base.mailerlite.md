@@ -48,7 +48,7 @@ This node will create a new subscriber in MailerLite. We will add the name of th
 2. Enter the email address in the ***Email*** field.
 3. Click on the ***Add Field*** button and select 'Name' from the dropdown list.
 4. Enter the name of the subscriber in the ***Name*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new subscriber with their name and email.
 
@@ -67,7 +67,7 @@ This node will update the information of the subscriber that we created in the p
 6. Click on the ***Add Custom Field*** button.
 7. Select 'city' from the ***Field ID*** dropdown list.
 8. Enter the name of the city in the ***Value*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the information of the subscriber that we created in the previous node. Here, the node has added information about the city of the subscriber.
@@ -83,7 +83,7 @@ This node will return the information of the subscriber that we created using th
 2. Select 'Get' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Subscriber Email*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > MailerLite > Output Data > JSON > email. You can also add the following expression: `{{$node["MailerLite"].json["email"]}}`.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of the subscriber that we created using the MailerLite node.

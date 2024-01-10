@@ -31,7 +31,7 @@ To create an action in the Pushcut app, follow the instructions mentioned in [FA
 
 1. First of all, you'll have to enter credentials for the Pushcut Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/pushcut/).
 2. Enter an action name in the ***Action Name*** field.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow whenever the `Leaving Home` action is selected.
 
@@ -47,7 +47,7 @@ This node will send an SMS to a specified phone number notifying the recipient t
 5. Click on the gears icon next to the ***Message*** field and click on ***Add Expression***.
 
 6. Enter `I'm {{$node["Pushcut Trigger"].json["input"]}}` in the ***Expression*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node sends an SMS with the input that we received from the Pushcut Trigger node.
@@ -66,7 +66,7 @@ Follow the steps mentioned below to configure your Pushcut Trigger node with you
 4. Select the ***Server*** tab.
 5. Select the ***Integration*** tab.
 6. Click on ***Integration Trigger***.
-7. In n8n, enter a name for the action and click on ***Execute Node***.
+7. In n8n, enter a name for the action and click on ***Test step***.
 8. Select this action under the ***Select Integration Trigger*** screen in your Pushcut app.
 9. Click on ***Done*** on the top right to save the action.
 

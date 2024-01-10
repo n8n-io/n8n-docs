@@ -55,7 +55,7 @@ The start node exists by default when you create a new workflow.
 4. Click on the ***Choose Option To Add*** button.
 5. Enter `name` in the ***Key*** field.
 6. Enter the name of the customer in the ***Value*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 ![Using the Customer.io node to create a new customer](/_images/integrations/builtin/app-nodes/customerio/customerio_node.png)
 
@@ -66,7 +66,7 @@ The start node exists by default when you create a new workflow.
 2. Select 'Segment' from the ***Resource*** field.
 3. Click on the gears icon next to the ***Customer IDs*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > CustomerIo > Output Data > JSON > id. You can also add the following expression: `{{$node["CustomerIo"].json["id"]}}`.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 
 ![Using the Customer.io node to add the customer to a segment](/_images/integrations/builtin/app-nodes/customerio/customerio1_node.png)

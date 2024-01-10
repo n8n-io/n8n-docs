@@ -42,7 +42,7 @@ This node will trigger the workflow when a feedback form is submitted. Make sure
 1. Select 'Access Token' from the ***Authentication*** dropdown list.
 2. Enter the credentials for the Typeform Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/typeform/).
 3. Select the event feedback form from the ***Form*** dropdown list.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when feedback is submitted. We will pass this feedback to the next nodes in the workflow.
 ![Using the Typeform Trigger node to trigger the workflow when a feedback form is submitted](/_images/integrations/builtin/app-nodes/googlecloudnaturallanguage/typeformtrigger_node.png)
@@ -55,7 +55,7 @@ This node will analyze the sentiment of the feedback that we got from the previo
 2. Click on the gears icon next to the ***Content*** field and click on ***Add Expression***.
 
 3. Select the following in the ***Variable Selector*** section: Nodes > Typeform Trigger > Output Data > JSON > What did you think about the event? You can also add the following expression: `{{$node["Typeform Trigger"].json["What did you think about the event?"]}}`. If you want to analyze the sentiment for a different question, select that question instead.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node analyzes the sentiment of the feedback and gives a score based on that.
 
@@ -70,7 +70,7 @@ This node will check if the score we got from the previous node is smaller than 
 2. Click on the gears icon next to the ***Value 1*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Google Cloud Natural Language > Output Data > JSON > documentSentiment > score. You can also add the following expression: `{{$node["Google Cloud Natural Language"].json["documentSentiment"]["score"]}}`.
 4. Select 'Smaller' from the ***Operation*** dropdown list.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node checks if the score that we received from the previous node is smaller than `0`.
 
@@ -86,7 +86,7 @@ This node will send the feedback and the analysis score to the `Feedback` channe
 4. Click on the gears icon next to the ***Message*** field click on ***Add Expression***.
 
 5. Enter the following message in the ***Expression*** field: `You got a new feedback with a score of {{$node["Google Cloud Natural Language"].json["documentSentiment"]["score"]}}. Here is what it says:{{$node["Typeform Trigger"].json["What did you think about the event?"]}}`.
-6. Click on ***Execute Node*** to run the workflow.
+6. Click on ***Test step*** to run the workflow.
 
 In the screenshot below, you will notice that the node sends the feedback and the analysis score to the `Feedback` channel in Mattermost.
 
@@ -97,7 +97,7 @@ In the screenshot below, you will notice that the node sends the feedback and th
 Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
 
 1. Create a ***NoOp*** node connected to the 'false' output of the IF node.
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/googlecloudnaturallanguage/noop_node.png)
 

@@ -44,7 +44,7 @@ This node will trigger the workflow when an order is created in your WooCommerce
 
 1. First of all, you'll have to enter credentials for the WooCommerce Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/woocommerce/).
 2. Select 'order.created' from the ***Event*** dropdown list. This will trigger the workflow when a user sends a message.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when a new order gets created.
 
@@ -61,7 +61,7 @@ This node will send a message to a Mattermost channel sharing the details of the
 ```
 {{$node["WooCommerce Trigger"].json["billing"]["first_name"]}} bought {{$node["WooCommerce Trigger"].json["line_items"][0]["name"]}}!
 ```
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node sends a message to the `Sales` channel on Mattermost about the order that was created in WooCommerce.
 

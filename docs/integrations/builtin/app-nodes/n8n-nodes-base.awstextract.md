@@ -46,7 +46,7 @@ This node will retrieve an image file with a receipt from an S3 bucket.
 1. Choose your credentials for the AWS S3 node. See [here](/integrations/builtin/credentials/aws/) for information on how to create these credentials.
 2. Enter the bucket name in the ***Bucket Name*** field.
 3. Enter the file key in the ***File Key*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below you can see the file returned by the node.
 
@@ -57,7 +57,7 @@ In the screenshot below you can see the file returned by the node.
 This node will extract data from the receipt returned by the previous node.
 
 1. Choose your AWS credentials.
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 
 In the screenshot below, you can see the receipt data extracted by AWS Textract and returned by the node.
 

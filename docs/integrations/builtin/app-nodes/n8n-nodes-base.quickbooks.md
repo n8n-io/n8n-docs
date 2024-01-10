@@ -95,7 +95,7 @@ This node will create a new customer in QuickBooks.
 3. Enter a display name in the ***Display Name*** field.
 4. Click on the ***Add Field*** button and select 'Primary Email Address'.
 5. Enter the email address of the customer in the ***Primary Email Address*** field.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new customer.
 
@@ -120,7 +120,7 @@ This node will create an invoice for the customer that we created in the previou
 12. Select a type from the ***Detail Type*** dropdown list.
 13. Select 'Description' from the ***Add Line Item Property*** dropdown list.
 14. Enter a description in the ***Description*** field.
-15. Click on ***Execute Node*** to run the node.
+15. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates an invoice for the customer that we created in the previous node.
 
@@ -136,7 +136,7 @@ This node will send the invoice that we created in the previous node.
 4. Click on the gears icon next to the ***Invoice ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > Id. You can also add the following expression: `{{$json["Id"]}}`.
 6. Enter the email address of the customer in the ***Email*** field.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node sends the invoice to the customer.

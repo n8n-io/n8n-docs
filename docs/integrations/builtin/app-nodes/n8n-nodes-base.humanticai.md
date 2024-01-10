@@ -45,7 +45,7 @@ This node will create a new profile for a candidate in Humantic AI. We will crea
 
 1. First of all, you'll have to enter credentials for the Humantic AI node. You can find out how to do that [here](/integrations/builtin/credentials/humanticai/).
 2. Enter the LinkedIn URL of the candidate in the ***User ID*** field.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new profile using the LinkedIn URL of the candidate.
 
@@ -57,7 +57,7 @@ This node will fetch the resume of the candidate from a URL that we specify. We 
 
 1. Enter the URL of the candidate's resume in the ***URL*** field.
 2. Select 'File' from the ***Response Format*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node fetches the resume of the candidate from the URL we specified.
 
@@ -73,7 +73,7 @@ This node will update the information of the candidate that we created using the
 3. Click on the gears icon next to the ***User ID*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > Humantic AI > Output Data > JSON > results > userid. You can also add the following expression: `{{$node["Humantic AI"].json["results"]["userid"]}}`.
 5. Toggle ***Send Resume*** to `true`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the information of the candidate that we created using the Humantic AI node. Here, the node has added the resume of the candidate.
@@ -89,7 +89,7 @@ This node will return the `Hiring` persona for the candidate that we created usi
 3. Select the following in the ***Variable Selector*** section: Nodes > Humantic AI > Output Data > JSON > results > userid. You can also add the following expression: `{{$node["Humantic AI"].json["results"]["userid"]}}`.
 4. Click on the ***Add Option*** button.
 5. Select 'Hiring' from the ***Persona*** dropdown list.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the `Hiring` persona for the candidate that we created using the Humantic AI node (column headers are not visible in the screenshot since we've scrolled down to show the data).
 

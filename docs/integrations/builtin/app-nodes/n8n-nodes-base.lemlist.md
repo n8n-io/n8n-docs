@@ -59,7 +59,7 @@ This node will list all the records from Airtable. Create a table like [this](ht
 3. Enter the Base ID in the ***Base ID*** field. For obtaining the Base ID, head over to their [API page](https://airtable.com/api) and select the correct base. You'll find the Base ID there.
 4. Enter the name of your table in the ***Table*** field.
 5. Click on the gears icon next to the ***Table*** field and click on ***Add Expression***.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the information of the leads.
 
@@ -78,7 +78,7 @@ This node will create new leads for a campaign in Lemlist.
 6. Click on the ***Add Field*** button and select 'First Name'.
 7. Click on the gears icon next to the ***First Name*** field and click on ***Add Expression***.
 8. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > fields > Name. You can also add the following expression: `{{$json["fields"]["Name"]}}`.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates new leads in Lemlist.
 
@@ -93,7 +93,7 @@ This node will return the information of the leads that we created in the previo
 3. Select 'Get' from the ***Operation*** dropdown list.
 4. Click on the gears icon next to the ***Email*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Nodes > Airtable > Output Data > JSON > fields > Email. You can also add the following expression: `{{$node["Airtable"].json["fields"]["Email"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node returns the information about the leads we created in the previous node.
 

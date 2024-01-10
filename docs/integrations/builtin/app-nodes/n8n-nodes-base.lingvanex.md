@@ -41,7 +41,7 @@ The Start node exists by default when you create a new workflow.
 This node will make a GET request to the API `https://www.thecocktaildb.com/api/json/v1/1/random.php` to fetch a random cocktail. This information gets passed on to the next node in the workflow.
 
 1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the ***URL*** field.
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node makes a GET request to the API and returns information about a random cocktail.
 
@@ -56,7 +56,7 @@ This node will translate the cocktail instructions that we got from the previous
 2. Click on the gears icon next to the ***Text*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strInstructions. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strInstructions"]}}`.
 4. Select 'Italian' from the ***Translate To*** dropdown list.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node translates the instructions of the cocktail to Italian.
 

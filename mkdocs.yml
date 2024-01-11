@@ -282,7 +282,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata.md
         - integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md

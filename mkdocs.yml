@@ -45,7 +45,7 @@ copyright: >
 extra:
   analytics:
     provider: google
-    property: GTM-K86VCV3
+    property: G-352705152
     feedback:
       title: Was this page helpful?
       ratings:

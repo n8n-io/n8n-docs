@@ -4,6 +4,9 @@ description: Documentation for the Chat Messages Retriever node in n8n, a workfl
 ---
 
 # Chat Messages Retriever
+/// warning | Deprecated
+The Chat Messages Retriever node was removed from n8n in 1.26.0. It is still available in legacy workflows. Please use [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager) instead.
+///
 
 Use the Chat Messages Retriever node to retrieve data from an in-memory vector store.
 

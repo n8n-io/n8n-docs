@@ -14,6 +14,10 @@ You must connect either an agent or chain [root node](/integrations/builtin/clus
 For usage examples and templates to help you get started, refer to n8n's [Chat Trigger integrations](https://n8n.io/integrations/chat-trigger/){:target=_blank .external-link} page.
 ///
 
+/// note | Manual Chat Trigger
+This node replaces the Manual Chat Trigger node from version 1.24.0.
+///
+
 ## Node parameters
 
 * **Make Chat Publicly Available**: enable this when you're ready to activate the workflow and allow users to access the chat. Leave it disabled when building the workflow.

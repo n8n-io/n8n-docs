@@ -15,7 +15,7 @@ For usage examples and templates to help you get started, refer to n8n's [Chat M
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
-## Node Parameters
+## Node parameters
 
 **Operation Mode**: Choose between `Get Many Messages`, `Insert Messages`, and `Delete Messages` operations.
 

@@ -65,6 +65,7 @@ Choose when n8n sends a response to the form submission. You can respond when:
 
 * **Form Is Submitted**: send a response to the user as soon as they submit the form.
 * **Workflow Finishes**: use this if you want the workflow to complete its execution before you send a response to the user. If the workflow errors, it sends a response to the user telling them there was a problem submitting the form.
+* **Using 'Respond to Webhook' Node**: the Form Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 
 ## Node options
 

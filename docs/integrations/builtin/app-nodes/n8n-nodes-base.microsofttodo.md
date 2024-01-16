@@ -63,7 +63,7 @@ This node will create a task with the importance level `High` in the Tasks list.
 4. Enter a subject in the ***Subject*** field.
 5. Click on ***Add Field*** and select 'Importance' from the dropdown list.
 6. Select 'High' from the ***Importance*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new task in Microsoft To Do.
 
@@ -82,7 +82,7 @@ This node will update the status of the task that we created in the previous nod
 6. Select the following in the ***Variable Selector*** section: Current Node > Input > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 7. Click on the ***Add Field*** button and select 'Status' from the dropdown list.
 8. Select 'In progress' from the ***Status*** dropdown list.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the status of the task that we created in the previous node.
@@ -99,7 +99,7 @@ This node will get the task that we created earlier.
 3. Select the following in the ***Variable Selector*** section: Nodes > Microsoft To Do > Parameters > taskListId. You can also add the following expression: `{{$node["Microsoft To Do"].parameter["taskListId"]}}`.
 4. Click on the gears icon next to the ***Task ID*** field and click on ***Add Expression***.
 5. Select the following in the ***Variable Selector*** section: Current Node > Input > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node fetches the information of the task that we created earlier.

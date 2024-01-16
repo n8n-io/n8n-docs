@@ -29,7 +29,7 @@ The final workflow should look like the following image.
 2. Select the project you want to receive updates for using the *Project Name/ID* dropdown list.
 3. Select the form you want to receive updates for using the *Form Name/ID* dropdown list.
 4. Select **Submission Created** from the *Trigger Events* dropdown list.
-5. Click on **Execute Node** to run the workflow.
+5. Click on **Test step** to run the workflow.
 
 /// note | Activate workflow for production
 You'll need to save the workflow and then click on the Activate toggle on the top right of the screen to activate the workflow. Your workflow will then be triggered as specified by the settings in the Form.io Trigger node.

@@ -53,7 +53,7 @@ This node will create a work item in Kitemaker.
 2. Select 'Create' from the ***Operation*** dropdown list.
 3. Enter a title in the ***Title*** field.
 4. Select 'In progress' from the ***Status ID*** dropdown list.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new work item in Kitemaker.
 
@@ -70,7 +70,7 @@ This node will update the status of the item that we created using the previous 
 4. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
 5. Click on the ***Add Field*** button and select 'Status ID' from the dropdown list.
 6. Select 'Done' from the ***Status ID*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node updates the status of the item that got created previously.
@@ -85,7 +85,7 @@ This node will retrieve the information about the item that we created earlier.
 1. Select the credentials that you entered in the previous Kitemaker node.
 2. Click on the gears icon next to the ***Work Item ID*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > id. You can also add the following expression: `{{$json["id"]}}`.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node retrieves the information of the work item that we created earlier.
 

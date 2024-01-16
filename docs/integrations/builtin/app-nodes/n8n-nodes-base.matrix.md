@@ -62,7 +62,7 @@ This node will create a new room called `n8n` on the Matrix server.
 2. Select 'Room' from the ***Resource*** dropdown list.
 3. Enter `n8n` in the ***Room Name*** field. You can also enter a different name for the room.
 4. Enter an alias for the room in the ***Room Alias*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a room `n8n` with an alias `#discussion-n8n:matrix.org`.
 
@@ -75,7 +75,7 @@ This node will get your account information from the Matrix server. We are doing
 
 1. Select the credentials that you entered in the previous node.
 2. Select 'Account' from the ***Resource*** dropdown list.
-3. Click on ***Execute Node*** to run the node.
+3. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns your user ID.
@@ -90,7 +90,7 @@ This node will return the information of all the members in a room.
 1. Select the credentials that you entered in the previous node.
 2. Select 'Room Member' from the ***Resource*** dropdown list.
 3. Select a room from the ***Room ID*** dropdown list. We will invite the members of this room later on in the workflow.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of all the members in the room that we specified. The output of this node will be passed on to the next nodes in the workflow.
@@ -108,7 +108,7 @@ This node will compare your user ID with the user ID of other members. If the us
 4. Select 'Not Equal' from the ***Operation*** dropdown list.
 5. Click on the gears icon next to the ***Value 2*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Matrix2 > Output Data > JSON > user_id. You can also add the following expression: `{{$node["Matrix2"].json["user_id"]}}`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns the information of all the members of the room except your own.
@@ -128,7 +128,7 @@ This node will send an invitation to the members returned by the previous node t
 6. Select the following in the ***Variable Selector*** section: Nodes > Matrix > Output Data > JSON > room_id. You can also add the following expression: `{{$node["Matrix"].json["room_id"]}}`.
 7. Click on the gears icon next to the ***User ID*** field and click on ***Add Expression***.
 8. Select the following in the ***Variable Selector*** section: Nodes > IF > Output Data > JSON > user_id. You can also add the following expression: `{{$node["IF"].json["user_id"]}}`.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node sends an invite to join the `n8n` room to the members of the other room.
@@ -144,7 +144,7 @@ This node will send a message to the new room that we created using the Matrix n
 2. Click on the gears icon next to the ***Room ID*** field and click on ***Add Expression***.
 3. Select the following in the ***Variable Selector*** section: Nodes > Matrix > Output Data > JSON > room_id. You can also add the following expression: `{{$node["Matrix"].json["room_id"]}}`.
 4. Enter a message in the ***Text*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node sends a message to the room that we created with the Matrix node.
@@ -156,7 +156,7 @@ Adding this node here is optional, as the absence of this node won't make a diff
 
 
 1. Create a ***NoOp*** node connected to the 'false' output of the IF node.
-2. Click on ***Execute Node*** to run the node.
+2. Click on ***Test step*** to run the node.
 
 
 ![Using the NoOp node](/_images/integrations/builtin/app-nodes/matrix/noop_node.png)

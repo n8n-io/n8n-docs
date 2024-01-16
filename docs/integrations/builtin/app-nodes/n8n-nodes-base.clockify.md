@@ -70,7 +70,7 @@ This node will create a private project with a custom color. It will also add a 
 7. Toggle ***Is Public*** to false.
 8. Click on ***Add Field*** and select 'Note' from the dropdown list.
 9. Enter the note in the ***Note*** field.
-10. Click on ***Execute Node*** to run the node.
+10. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new private project called `n8n-docs`. This project has a custom color `#0000FF` and a note `For n8n-docs`.
 
@@ -86,7 +86,7 @@ This node will create a new tag in Clockify.
 2. Select 'Tag' from the ***Resource*** dropdown list.
 3. Select the ***Workspace ID*** from the dropdown list.
 4. Enter the name of the tag in the ***Name*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node creates a new tag called `docs` in the n8n workspace in Clockify.
@@ -109,7 +109,7 @@ This node creates a new time entry in Clockify with a description. It also adds 
 8. Select a end date and time for the ***End*** field.
 9. Click on ***Add Field*** and select 'Tag IDs' from the dropdown list.
 10. Select the tag that you created in the previous step from the ***Tag IDs*** dropdown list.
-11. Click on ***Execute Node*** to run the node.
+11. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node creates a new time entry with a description and adds the tag that was created in the previous node.
@@ -130,7 +130,7 @@ This node will add the project to the time entry that was created by the Clockif
 7. Click on ***Add Field*** and select 'Project ID' from the dropdown list.
 8. Click on the gears icon next to the ***Project ID*** field and click on ***Add Expression***.
 9. Select the following in the ***Variable Selector*** section: Nodes > Clockify > Output Data > JSON > id. You can also add the following expression: `{{$node["Clockify"].json["id"]}}`.
-10. Click on ***Execute Node*** to run the node.
+10. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node has updated the time entry by adding the project ID we created in the Clockify node.

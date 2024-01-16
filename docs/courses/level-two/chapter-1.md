@@ -195,7 +195,7 @@ There are several ways to transform data for the purposes mentioned above:
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the Poetry DB API `https://poetrydb.org/linecount/3`. Transform the incoming data with the Item Lists node and with the Code node.
+Use the HTTP Request node to make a GET request to the Poetry DB API `https://poetrydb.org/linecount/3`. Transform the incoming data with the Split Out node and with the Code node.
 
 
 ??? note "Show me the solution"
@@ -217,8 +217,7 @@ Use the HTTP Request node to make a GET request to the Poetry DB API `https://po
 		});
 	```
 
-	To transform the data with the Item Lists node, connect this node to the *HTTP Request node* and set the following parameters:
+	To transform the data with the Split Out node, connect this node to the *HTTP Request node* and set the following parameters:
 	
-	- Operation: Split Out Items
 	- Field To Split Out: body
 	- Include: No Other Fields

@@ -48,6 +48,7 @@ Pluralsight
 Postbin
 Postgres
 PostHog
+Qdrant
 Realtime
 Serverless
 serverless

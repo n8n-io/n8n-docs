@@ -530,7 +530,7 @@ This node will return the screenshot of the n8n website. If you want to get the 
 4. Enter `https://n8n.io` in the ***URL*** field.
 5. Select '1024' from the ***Width*** dropdown list.
 6. Select 'Yes' from the ***Fullpage*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node returns a URL of the screenshot of the website.
@@ -547,7 +547,7 @@ This node will send the screenshot that we received from the previous node.
 4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
 
 5. Select the following in the ***Variable Selector*** section: Nodes > uProc > Output Data > JSON > message > result. You can also add the following expression: `{{$node["uProc"].json["message"]["result"]}}`.
-6. Click on ***Execute Node*** to run the node.
+6. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node sends the screenshot image to the channel that we specify.

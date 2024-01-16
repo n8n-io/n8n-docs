@@ -46,7 +46,7 @@ This node will trigger the workflow. We will make a GET request to the test webh
 1. Click on ***Webhook URLs*** and select the 'Test' tab.
 2. Copy the displayed URL. We will make a GET request to this URL later on.
 3. Save the workflow to register the webhook.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 5. In a new browser tab, paste the URL that you copied in the previous step and append `?event=login` to it. Your URL should look similar to the following URL:`https://your-n8n.url/webhook/path?event=login`. Here, we are passing a query parameter called `event` and assigning the value `login` to it.
 6. Press Enter (or Return) to make a request to the test webhook URL.
 
@@ -64,7 +64,7 @@ This node will create a new event in PostHog.
 3. Select the following in the ***Variable Selector*** section: Current Node > Input Data > JSON > query > event. You can also add the following expression: `{{$json["query"]["event"]}}`.
 
 4. Enter a distinct id in the ***Distinct ID*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a new event in PostHog.
 

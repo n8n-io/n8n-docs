@@ -42,7 +42,7 @@ The Start node exists by default when you create a new workflow.
 4. From the ***Properties*** section click **Add Attribute**.
     * For ***Attribute Name*** select **Profanity**.
     * For ***Score Threshold*** leave the **0.00** default setting to return all scores.
-5. Click on **Execute Node** to run the workflow.
+5. Click on **Test step** to run the workflow.
 
 ![The Google Perspective node](/_images/integrations/builtin/app-nodes/googleperspective/googleperspective_node.png)
 

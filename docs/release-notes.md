@@ -28,7 +28,179 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## 1.18.4
+## n8n@1.24.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.0...n8n@1.24.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-16
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.22.6
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.5...n8n@1.22.6){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-10
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+This is a bug fix release. It includes important fixes for the HTTP Request and monday.com nodes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.24.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.23.0...n8n@1.24.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-10
+
+
+
+
+
+This release contains new nodes for advanced AI, node enhancements, new features, performance enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Chat trigger
+
+n8n has created a new [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Mistral Cloud Chat and Embeddings
+
+This release introduces two new nodes to support [Mistral AI](https://mistral.ai/){:target=_blank .external-link}:
+
+* [Mistral Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud/)
+* [Embeddings Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud/)
+
+</div>
+
+### Contributors
+
+[Anush](https://github.com/Anush008){:target=_blank .external-link}  
+[Eric Koleda](https://github.com/ekoleda-codaio){:target=_blank .external-link}  
+[Mason Geloso](https://github.com/MasonGeloso){:target=_blank .external-link}  
+[vacitbaydarman](https://github.com/vacitbaydarman){:target=_blank .external-link}
+
+## n8n@1.22.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.22.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-09
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.23.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.23.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-03
+
+This release contains new nodes, node enhancements, new features, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New nodes and improved experience for working with files
+
+This release includes a major overhaul of nodes relating to files (binary data).
+
+There are now three key nodes dedicated to handling binary data files:
+
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
+
+n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nodes, and removed the iCalendar, Read PDF, and Spreadsheet File nodes. There are still standalone nodes for [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html/) and [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Qdrant vector store
+
+This release adds support for [Qdrant](https://qdrant.tech/){:target=_blank .external-link} with the Qdrant vector store node.
+
+Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant/)
+
+</div>
+
+### Contributors
+
+[Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}  
+[Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}  
+[Anush](https://github.com/Anush008){:target=_blank .external-link}  
+[Bin](https://github.com/soulhat){:target=_blank .external-link}  
+[Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}  
+
+
+
+## n8n@1.22.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.3...n8n@1.22.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-03
+
+
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.22.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.2...n8n@1.22.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-27
+
+/// note | Upgrade directly to 1.22.4
+Due to issues with this release, upgrade directly to 1.22.4.
+///
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.22.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.1...n8n@1.22.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-27
+
+/// note | Upgrade directly to 1.22.4
+Due to issues with this release, upgrade directly to 1.22.4.
+///
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.22.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.0...n8n@1.22.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-21
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.22.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.21.1...n8n@1.22.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2023-12-21
+
+This release contains node enhancements, new features, performance improvements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.18.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.18.3...n8n@1.18.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-12-19
@@ -42,9 +214,11 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.20.0...n8n@1.21.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-12-15
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
+
+
+
+
 
 This is a bug fix release.
 
@@ -106,14 +280,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.19.5...n8n@1.20.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2023-12-06
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
-
-
 
 This release contains bug fixes, node enhancements, and ongoing new feature work.
 
@@ -2732,7 +2898,7 @@ Editor: Improve UX for brace completion in the inline expressions editor.
 
 ### Node enhancements
 
-Webhook node: when test the node by selecting **Listen For Test Event** then dispatching a call to the webhook, n8n now only runs the Webhook node. Previously, n8n ran the entire workflow. You can still test the full workflow by selecting **Execute Workflow**, then dispatching a test call. 
+Webhook node: when test the node by selecting **Listen For Test Event** then dispatching a call to the webhook, n8n now only runs the Webhook node. Previously, n8n ran the entire workflow. You can still test the full workflow by selecting **Test Workflow**, then dispatching a test call. 
 
 ## n8n@0.209.2
 
@@ -3303,7 +3469,7 @@ The Execute Workflow Trigger starts a workflow in response to another workflow. 
 
 #### Manual Trigger node
 
-The Manual Trigger allows you to start a workflow by clicking **Execute Workflow**, without any option to run it automatically. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/).
+The Manual Trigger allows you to start a workflow by clicking **Test Workflow**, without any option to run it automatically. You can find documentation for the new node [here](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/).
 
 </div>
 

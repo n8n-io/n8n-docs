@@ -46,5 +46,5 @@ The start node exists by default when you create a new workflow.
 2. Enter the light id in the ***Light ID*** field.
 3. Click on ***Add Field*** and select 'Brightness' from the dropdown list.
 4. Enter a value between 1 and 254 for the brightness in the ***Brightness*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 

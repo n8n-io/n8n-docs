@@ -46,7 +46,7 @@ This node will create  a short URL for the link we specify.
 2. Enter the URL that you want to shorten in the ***URL*** field.
 3. Click on ***Add Field*** and select 'Title'.
 4. Enter a title in the ***Title*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates a short URL for the URL you specified.
 
@@ -60,7 +60,7 @@ This node will give us the statistics of the short URL that we specify. We will 
 2. Select 'Stats' from the ***Operation*** dropdown list.
 3. Click on the gears icon next to the ***Short URL*** field and click on ***Add Expression***.
 4. Select the following in the ***Variable Selector*** section: Nodes > Yourls > Output Data > JSON > shorturl. You can also add the following expression: `{{$node["Yourls"].json["shorturl"]}}`.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node gives us the statistics of the short URL that we created in the previous node.
 

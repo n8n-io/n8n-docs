@@ -57,7 +57,7 @@ This process simplifies the addition of your Bot to the Discord server.
 
 1. Go to the [Applications](https://discord.com/developers/applications){:target=_blank .external-link} page on the Discord developers portal
 2. Select or create an application
-3. ? In the application page, go to **Bot**, and in **Privileged Gateway Intents**, activate **Required for your bot to receive events listed under GUILD_MEMBERS**
+3. In the application page, go to **Bot**, and in **Privileged Gateway Intents**, activate **Required for your bot to receive events listed under GUILD_MEMBERS**
 4. Copy the CLIENT ID in the **OAuth2** page and paste it into the Client ID parameter in the n8n's Discord OAuth2 API credential modal
 5. Generate a CLIENT SECRET in the **OAuth2** page and paste it into the Client Secret parameter in the n8n's Discord OAuth2 API credential modal
 6. Copy the OAuth Redirect URL in n8n and add it to the **Redirects** list in your Discord app and save

@@ -28,7 +28,7 @@ Use this method if you want to add the bot to your Discord server manually (with
 2. Select or create an application
 3. In the application page, go to **Bot**, and in **Privileged Gateway Intents**, activate **Required for your bot to receive events listed under GUILD_MEMBERS**
 4. Generate a bot token by clicking on **Reset Token**
-5. Copy the token and paste it in the **Bot Token** parameter in the n8n's Discord Bot credentials modal
+5. Copy the token and paste it in the **Bot Token** parameter in the n8n's Discord Bot credentials modal, and Save
 6. Go to **Oauth2** > **URL Generator**
 7. In the **Scopes** list, select **bot**
 8. In the **Bot permissions** list below activate:

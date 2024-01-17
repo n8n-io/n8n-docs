@@ -28,6 +28,23 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.25.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.1...n8n@1.25.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-17
+
+This release contains a new node, feature improvements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Chat Memory Manager
+
+The [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/) node replaces the Chat Messages Retriever node. It manages chat message memories within your AI workflows.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.24.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.0...n8n@1.24.1){:target=_blank .external-link} for this version.<br />
@@ -51,7 +68,6 @@ This is the `latest` version. n8n recommends using the `latest` version. The `ne
 ///
 
 
-
 This is a bug fix release. It includes important fixes for the HTTP Request and monday.com nodes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -60,9 +76,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.23.0...n8n@1.24.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-10
-
-
-
 
 
 This release contains new nodes for advanced AI, node enhancements, new features, performance enhancements, and bug fixes.

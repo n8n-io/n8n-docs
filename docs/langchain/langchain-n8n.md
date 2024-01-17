@@ -178,7 +178,7 @@ Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/mo
 
 #### Miscellaneous
 
-* [Chat Messages Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/)
+* [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/)
 
 
 

@@ -39,6 +39,10 @@ The Form Trigger node has two URLs: test URL and production URL. n8n displays th
 * **Test**: n8n registers a test webhook when you select **Test Step** or **Test Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
+### Form Path
+
+Set a custom slug for the form.
+
 ### Form Title
 
 n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
@@ -71,4 +75,4 @@ Choose when n8n sends a response to the form submission. You can respond when:
 
 Select **Add Option** to view more configuration options.
 
-**Form Submitted Text**: the text to show to the user when they successfully submit the form.
+**Form Response**: choose how to respond when the user submits the form. Select **Respond With** > **Form Submitted Text** to show a message to the user, or **Respond With** > **Redirect URL** to send the user to a new page.

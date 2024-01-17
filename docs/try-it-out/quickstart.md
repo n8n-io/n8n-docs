@@ -26,7 +26,7 @@ n8n provides a quickstart template using training nodes. This allows you to work
 3. Select the **Very quick quickstart** template to preview it.
 4. Select **Use this workflow** to open the template in your own editor.
 
-This is a basic workflow. It:
+This workflow:
 
 1. Gets example data from the Customer Datastore node.
 2. Uses the Set node to extract just the data you want, and assign that data to variables. In this example, you use the customer name, ID, and description.
@@ -35,13 +35,13 @@ Double click a node to explore its settings and how it processes data.
 
 ## Step three: Run the workflow
 
-Select **Test Workflow** to run the workflow to check it's working, and load in data for the next steps.
+Select **Test Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with . You need this data available in the workflow so that you can work with it in the next step.
 
 ## Step four: Add a node
 
 Add a third node to message each customer and tell them their description. Use the Customer Messenger node to send a message to fake recipients.
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Set node.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Edit Fields node.
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
 3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. You're going to use [expressions](/code/expressions/) to map in the **Customer ID** and create the **Message**:

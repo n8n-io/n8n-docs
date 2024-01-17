@@ -133,8 +133,11 @@ export VUE_APP_URL_BASE_API=https://n8n.example.com/
 
 n8n creates a random encryption key automatically on the first launch and saves
 it in the `~/.n8n` folder. n8n uses that key to encrypt the credentials before
-they get saved to the database. It's possible to overwrite the key and
-set it using an environment variable.
+they get saved to the database. If the key is not yet in the settings file,
+you can set it using an environment variable, so that n8n 
+uses your custom key instead of generating a new one.
+
+In queue mode, it is required to specify the encryption key environment variable for all workers.
 
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>

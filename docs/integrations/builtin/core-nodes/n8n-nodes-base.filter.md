@@ -11,41 +11,24 @@ Filter items based on a condition. If the item meets the condition, the Filter n
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Filter integrations](https://n8n.io/integrations/filter/){:target=_blank .external-link} list.
 ///
-## Add conditions
 
-Add comparison conditions using the **Add Condition** dropdown. The available comparison operations vary for each data type.
+## Node parameters
 
-**Boolean**
+**Conditions**: create comparison conditions using the fields in **Conditions**. The available comparison operations vary for each data type. Select **Add condition** to create another condition.
 
-- Equal
-- Not Equal
-
-**Number**
-
-- Smaller
-- Smaller Equal
-- Equal
-- Not Equal
-- Larger
-- Larger Equal
-- Is Empty
-
-**String**
-
-- Contains
-- Equal
-- Not Contains
-- Not Equal
-- Regex
-- Is Empty
-
-
-## Combine conditions
+### Combining conditions
 
 You can choose to keep items:
 
-* When they meet all conditions: select **Combine Conditions** > **AND**.
-* When they meet any of the conditions: select **Combine Conditions** > **OR**.
+* When they meet all conditions: create two or more conditions, then select **AND** in the dropdown between the first two conditions.
+* When they meet any of the conditions: create two or more conditions, then select **OR** in the dropdown between the first two conditions.
+
+You can't create a mix of AND and OR rules.
+
+## Node options
+
+- **Ignore Case**: whether to ignore letter case.
+- **Less Strict Type Validation**: enable this if you want n8n to attempt to convert value types based on the operator you choose.
 
 ## Related resources
 

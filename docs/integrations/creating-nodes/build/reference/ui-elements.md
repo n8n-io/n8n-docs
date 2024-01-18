@@ -415,7 +415,7 @@ options: [
 
 ## Assignment collection (drag and drop)
 
-Use the drag and drop component when you want users to pre-fill multiple parameters with a single drag interaction.
+Use the drag and drop component when you want users to pre-fill name and value parameters with a single drag interaction.
 
 ```typescript
 {

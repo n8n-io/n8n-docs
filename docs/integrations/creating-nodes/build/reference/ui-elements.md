@@ -412,6 +412,22 @@ options: [
 
 ![Filter](/_images/integrations/creating-nodes/filter.png)
 
+
+## Assignment collection (drag and drop)
+
+Use the drag and drop component when you want users to pre-fill multiple parameters with a single drag interaction.
+
+```typescript
+{
+	displayName: 'Fields to Set',
+	name: 'assignments',
+	type: 'assignmentCollection',
+	default: {},
+},
+```
+
+You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2){:target=_blank .external-link}.
+
 ## Fixed collection
 
 Use the `fixedCollection` type to group fields that are semantically related.

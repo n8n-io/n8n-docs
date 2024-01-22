@@ -59,6 +59,8 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 | `N8N_SMTP_SSL` | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`. | Optional | 
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | string | Full path to your HTML email template. This overrides the default template for password reset emails. | Optional |
+| `N8N_UM_EMAIL_TEMPLATES_WORKFLOW_SHARED` | String | Overrides default HTML template for notifying that a workflow was shared (use full path). | Optional |
+| `N8N_UM_EMAIL_TEMPLATES_CREDENTIALS_SHARED` | String | Overrides default HTML template for notifying that credentials were shared (use full path). | Optional |
 
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 

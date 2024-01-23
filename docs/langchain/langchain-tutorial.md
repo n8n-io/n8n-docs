@@ -9,7 +9,7 @@ This tutorial introduces LangChain functionality in n8n. You can work through it
 
 In this tutorial you will:
 
-* Create a workflow from scratch. It uses the Manual Chat Trigger to simulate and test chat interactions, ChatGPT to power the chat functionality, and a custom tool to connect to other n8n workflows.
+* Create a workflow from scratch. It uses the Chat Trigger to simulate and test chat interactions, ChatGPT to power the chat functionality, and a custom tool to connect to other n8n workflows.
 * Understand key concepts, including:
 	* The role of agents, models, and tools when building AI functionality.
 	* Cluster nodes in n8n: groups of root and sub-node.

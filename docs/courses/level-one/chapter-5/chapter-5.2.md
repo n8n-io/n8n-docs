@@ -6,6 +6,10 @@ contentType: tutorial
 
 In this step of the workflow you will learn how to insert the data received via the HTTP Request node into Airtable using the *Airtable* node.
 
+/// note | Spreadsheet nodes
+You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank" .external} and [*Spreadsheet File*](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external}.
+///
+
 At this point, your workflow should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-workflow-with-airtable-node.png" alt="Workflow with the Airtable node" style="width:100%"><figcaption align = "center"><i>Workflow with the Airtable node</i></figcaption></figure>
@@ -31,18 +35,16 @@ Now that the table is prepared let's return to the workflow in the Editor UI.
 
 Add an ***Airtable node*** connected to the HTTP Request node.
 
-/// note | Spreadsheet nodes
-You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank" .external} and [*Spreadsheet File*](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external}.
-///
 
 In the *Airtable node* window, configure the following parameters:
 
-- *Airtable API:*
-	- *Name:* The name of your credentials (e.g. airtable_api)
-	- *API Key:* Your [API key](/integrations/builtin/credentials/airtable/){:target="_blank" .external}.
+- *Credential to connect with:*
+	- Select 'Create new credential'
+	- Keep the default option 'Connect using: Access Token' selected
+	- *Access token:* Follow the instructions [here](/integrations/builtin/credentials/airtable/){:target="_blank" .external} to create your token.
 Adding credentials for Airtable is similar to the HTTP Request node you configured in the previous chapter. However, the process of obtaining an API key for Airtable (and other apps/services) is different.
-- *Operation:* Create
-This operation will create the new record in the table.
+- *Resource:* Record
+- *Operation:* Create. This operation will create the new record in the table.
 - *Base:* You can pick your base from a list(e.g beginner course), URL or ID after authenticating. If you wish to use the Base ID, go to [Airtable's API page](https://airtable.com/developers/web/api/introduction){:target="_blank" .external} and find the relevant base (located at the bottom of the page). Then click the base title and you'll find the ID on that page.
 - *Table:* orders
 - *Mapping Column Mode:* Map automatically. In this mode, the incoming data fields are named the same as the columns in Airtable

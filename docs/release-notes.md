@@ -28,6 +28,20 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.26.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.25.1...n8n@1.26.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-01-24
+
+This release contains new features, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}  
+[Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}
+
 ## n8n@1.25.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.25.0...n8n@1.25.1){:target=_blank .external-link} for this version.<br />
@@ -50,8 +64,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.1...n8n@1.25.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-17
 
-
-
 This release contains a new node, feature improvements, and bug fixes.
 
 <div class="n8n-new-features" markdown>
@@ -73,8 +85,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.0...n8n@1.24.1
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This is a bug fix release.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -83,9 +93,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.5...n8n@1.22.6){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-10
-
-
-
 
 This is a bug fix release. It includes important fixes for the HTTP Request and monday.com nodes.
 

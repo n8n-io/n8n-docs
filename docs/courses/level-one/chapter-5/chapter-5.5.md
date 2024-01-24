@@ -77,6 +77,10 @@ Now execute the node and you should see the following results:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node" style="width:100%"><figcaption align = "center"><i>Code node</i></figcaption></figure>
 
+/// note | Using Python in code nodes
+The Code node also allows you to use Python. Learn more about how to this, see the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/){:target="_blank" .external} documentation.
+///
+
 ## What's next?
 
 **Nathan 🙋**: Wow, the Code node is really powerful! So if I have some basic JavaScript skills I can power up my workflows.

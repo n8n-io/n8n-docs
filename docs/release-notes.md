@@ -39,7 +39,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}
+[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}  
 [Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}
 
 ## n8n@1.25.1

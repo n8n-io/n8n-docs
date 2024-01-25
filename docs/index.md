@@ -8,6 +8,12 @@ hide:
 
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](http://faircode.io) licensed node-based workflow automation tool.
 
+One small change.
+
+We don't like this.
+
+Check `code`. And a mspelling.
+
 It covers everything from setup to usage and development. It's a work in progress and all [contributions](/contributing/) are welcome.
 
 ## Where to start

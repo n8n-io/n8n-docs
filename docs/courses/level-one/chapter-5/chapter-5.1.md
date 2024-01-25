@@ -62,11 +62,11 @@ In the *HTTP Request node* window, click the *Execute Node* button. The result o
 
 This view should be familiar to you from the [Hacker News mini-workflow](/courses/level-one/chapter-2/). This is the data from ABCorp's data warehouse that Nathan needs to work with. This data set includes sales information of 30 customers with 5 features:
 
-- *orderID:* The unique id of each order.
-- *customerID:* The unique id of each customer.
-- *employeeName:* The name of Nathan's colleagues who are responsible for each client.
-- *orderPrice:* The total price of the customer's order.
-- *orderStatus:* Whether the customer's order is booked or still in processing.
+- `orderID`: The unique id of each order.
+- `customerID`: The unique id of each customer.
+- `employeeName`: The name of Nathan's colleagues who are responsible for each client.
+- `orderPrice`: The total price of the customer's order.
+- `orderStatus`: Whether the customer's order is booked or still in processing.
 
 ## What's next?
 

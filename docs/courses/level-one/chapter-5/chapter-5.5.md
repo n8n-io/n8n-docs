@@ -81,7 +81,7 @@ Now execute the node and you should see the following results:
 
 **Nathan 🙋**: Wow, the Code node is really powerful! This means that if I have some basic JavaScript skills I can power up my workflows.
 
-**You 👩‍🔧**: Exactly – you can progress from no-code to low-code!
+**You 👩‍🔧**: Yes! You can progress from no-code to low-code!
 
 **Nathan 🙋**: Now, how do I send the calculations for the booked orders to my team's Discord channel?
 

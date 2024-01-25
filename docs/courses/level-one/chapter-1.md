@@ -81,10 +81,10 @@ Don't worry about workflow execution and activation for now, we will explain the
 
 ## Nodes
 
-You can think of nodes as building blocks that serve different functions but, when put together, they make up a functioning machine – an automated workflow.
+You can think of nodes as building blocks that serve different functions but, when put together, they make up a functioning machine: an automated workflow.
 
 /// note | Node
-A node is an individual step in your workflow — one that either (a) loads, (b) processes or (c) sends data.
+A node is an individual step in your workflow: one that either (a) loads, (b) processes or (c) sends data.
 ///
 
 Based on their function, nodes can be classified into two types:
@@ -93,7 +93,7 @@ Based on their function, nodes can be classified into two types:
 - **Trigger Nodes** start a workflow and supply the initial data.
 
 /// note | Keep in mind
-Among the Regular and Trigger nodes there are some nodes that do not represent any app or service, instead they serve general functions like scheduling workflows (e.g. Schedule Trigger) or adding JavaScript functions (e.g. Code Node). We refer to these as *Core Nodes*.
+Among the Regular and Trigger nodes there are some nodes that don't represent any app or service, instead they serve general functions like scheduling workflows (for example, Schedule Trigger) or adding JavaScript functions (for example, Code Node). We refer to these as *Core Nodes*.
 ///
 
 ### Finding nodes

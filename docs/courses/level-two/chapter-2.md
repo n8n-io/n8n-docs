@@ -20,7 +20,7 @@ Use the HTML node to extract HTML content of a webpage, by referencing CSS selec
 
 ### Exercise
 
-Let's get the title of the latest n8n blogpost. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
+Let's get the title of the latest n8n blog post. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
 
 ??? note "Show me the solution"
 
@@ -268,7 +268,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 ## Binary data
 
-So far, you have mainly worked with text data. But what if you want to process data that's not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
+Up to now, you have mainly worked with text data. But what if you want to process data that's not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 

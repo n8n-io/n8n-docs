@@ -44,7 +44,7 @@ You will build two workflows:
 
 ## How long does the course take?
 
-Completing the course should take around **two hours**. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
+Completing the course should take around **two hours**. You don't have to complete it in one go, feel free to take breaks and resume whenever you are ready.
 
 ## How do I complete the course?
 

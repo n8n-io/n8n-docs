@@ -23,20 +23,20 @@ The first part of the workflow consists of five nodes:
       * **URL**: The Dataset URL you received in the email when you signed up for this course.
       * **Options > Add Option > Split Into Items**: toggle to true.
       * **Headers > Add Header**:
-          * **Name**: unique_id
+          * **Name**: `unique_id`
           * **Value**: The unique ID you received in the email when you signed up for this course.
 
 2. Use the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/){:target="_blank" .external} to list data from the `customers` table (where you updated the fields `region` and `subregion`).
 3. Use the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external} to merge data from the Airtable and HTTP Request node, based on the common key `customer ID`.
-4. Use the [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/) node to sort data by orderPrice in descending order.
+4. Use the [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/) node to sort data by `orderPrice` in descending order.
 
 /// question | Quiz questions
-* What is the name of the employee assigned to customer 1?
-* What is the order status of customer 6?
-* What is the highest order price?
+* What's the name of the employee assigned to customer 1?
+* What's the order status of customer 6?
+* What's the highest order price?
 ///
 
-## Part 2 – Generating file for regional sales
+## Part 2: Generating file for regional sales
 
 The second part of the workflow consists of five nodes:
 
@@ -52,11 +52,11 @@ The second part of the workflow consists of five nodes:
 
 /// question | Quiz questions
 * How many orders are assigned to the region Americas?
-* What is the total price of the orders in the region Americas?
+* What's the total price of the orders in the region Americas?
 * How many items are returned by the *Write Binary File node*?
 ///
 
-## Part 3 – Generating files for total sales
+## Part 3: Generating files for total sales
 
 The third part of the workflow consists of seven nodes:
 
@@ -71,7 +71,7 @@ The third part of the workflow consists of seven nodes:
     * Text: "I created the spreadsheet `{file name}`. My ID:" followed by your ID. <br/> The `{file name}` should be an expression that references data from the Spreadsheet File node.<br/>
 
 /// question | Quiz questions
-* What is the lowest order price in the first batch of items?
-* What is the formatted date of customer 7?
+* What's the lowest order price in the first batch of items?
+* What's the formatted date of customer 7?
 * How many items are returned by the *Spreadsheet File node*?
 ///

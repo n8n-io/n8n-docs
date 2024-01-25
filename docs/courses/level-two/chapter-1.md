@@ -13,7 +13,7 @@ In a basic sense, n8n nodes function as an Extract, Transform, Load (ETL) tool. 
 
 The data that moves along from node to node in your workflow must be in a format (structure) that can be recognized and interpreted by each node. In n8n, this required structure is an array of objects.
 
-/// note | What is an array of objects?
+/// note | About array of objects
 An array is a list of values. The array can be empty or contain several elements. Each element is stored at a position (index) in the list, starting at 0, and can be referenced by the index number. For example, in the array `["Leonardo", "Michelangelo", "Donatello", "Raphael"];` the element `Donatello` is stored at index 2.
 
 An object stores key-value pairs, instead of values at numbered indexes as in arrays. The order of the pairs isn't important, as the values can be accessed by referencing the key name. For example, the object below contains two properties (`name` and `color`):
@@ -168,7 +168,7 @@ The two most common operations for data transformation are:
 
 There are several ways to transform data for the purposes mentioned above:
 
-- Using n8n's [data transformation nodes](/data/#data-transformation-nodes). This the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node. Use [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) to separate a single data item containing a list into multiple items, and [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) to take separate items, or portions of them, and group them together into individual items.
+- Using n8n's [data transformation nodes](/data/#data-transformation-nodes). This is the way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node. Use [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) to separate a single data item containing a list into multiple items, and [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) to take separate items, or portions of them, and group them together into individual items.
 - With the Code node, you can write JavaScript functions to modify the data structure of incoming data using the *Run Once for All Items* mode:
 
     To create multiple items from a single item, you can use this JavaScript code:

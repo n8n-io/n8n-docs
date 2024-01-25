@@ -8,6 +8,8 @@ hide:
 
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](http://faircode.io) licensed node-based workflow automation tool.
 
+I am changing this file to test readability. Do not merge. Fwibble. A superlatively evil and complex confabilation of confusing vocabulary, potentially with implications for further complexity.
+
 It covers everything from setup to usage and development. It's a work in progress and all [contributions](/contributing/) are welcome.
 
 ## Where to start

@@ -9,7 +9,7 @@ hide:
   - tags
 contentType: reference
 ---
-
+<!-- vale off -->
 # Release notes
 
 New features and bug fixes for n8n.
@@ -150,7 +150,7 @@ This is a bug fix release.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 
-<!-- vale off -->
+
 ## n8n@1.23.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.22.4...n8n@1.23.0){:target=_blank .external-link} for this version.<br />

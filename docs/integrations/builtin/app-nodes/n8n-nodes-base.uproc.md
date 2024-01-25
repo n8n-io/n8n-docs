@@ -506,38 +506,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 
 
-<<<<<<< HEAD
-=======
-This node will return the screenshot of the n8n website. If you want to get the screenshot of a different website, enter the domain of that website instead.
-
-1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/builtin/credentials/uproc/).
-2. Select 'Image' from the ***Resource*** dropdown list.
-3. Select 'Get Screenshot by URL' from the ***Operation*** dropdown list.
-4. Enter `https://n8n.io` in the ***URL*** field.
-5. Select '1024' from the ***Width*** dropdown list.
-6. Select 'Yes' from the ***Fullpage*** dropdown list.
-7. Click on ***Test step*** to run the node.
-
-
-In the screenshot below, you will notice that the node returns a URL of the screenshot of the website.
-
-![Using the uProc node to get a screenshot of a website](/_images/integrations/builtin/app-nodes/uproc/uproc_node.png)
-
-### 3. Telegram node (sendPhoto: message)
-
-This node will send the screenshot that we received from the previous node.
-
-1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/integrations/builtin/credentials/telegram/).
-2. Select 'Send Photo' from the ***Operation*** dropdown list.
-3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
-4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
-
-5. Select the following in the ***Variable Selector*** section: Nodes > uProc > Output Data > JSON > message > result. You can also add the following expression: `{{$node["uProc"].json["message"]["result"]}}`.
-6. Click on ***Test step*** to run the node.
-
-
-In the screenshot below, you will notice that the node sends the screenshot image to the channel that we specify.
-
-![Using the Telegram node to send the image of the screenshot](/_images/integrations/builtin/app-nodes/uproc/telegram_node.png)
-
->>>>>>> main

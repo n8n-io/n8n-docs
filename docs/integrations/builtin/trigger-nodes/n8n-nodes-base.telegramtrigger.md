@@ -42,13 +42,8 @@ The final workflow should look like the following image.
 This node will trigger the workflow when a user sends a new message.
 
 1. First of all, you'll have to enter credentials for the Telegram Trigger node. You can find out how to do that [here](/integrations/builtin/credentials/telegram/).
-<<<<<<< HEAD
 2. Select 'message' from the **Updates** dropdown list. This will trigger the workflow when a user sends a message.
-3. Click on **Execute Node** to run the node.
-=======
-2. Select 'message' from the ***Updates*** dropdown list. This will trigger the workflow when a user sends a message.
-3. Click on ***Test step*** to run the node.
->>>>>>> main
+3. Click on **Test Step** to run the node.
 
 In the screenshot below, you will notice that the node triggers the workflow when a user sends a new message.
 
@@ -58,13 +53,8 @@ In the screenshot below, you will notice that the node triggers the workflow whe
 
 This node will make a GET request to the API `https://www.thecocktaildb.com/api/json/v1/1/random.php` to fetch a random cocktail. This information gets passed on to the next node in the workflow.
 
-<<<<<<< HEAD
 1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the **URL** field.
-2. Click on **Execute Node** to run the node.
-=======
-1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the ***URL*** field.
-2. Click on ***Test step*** to run the node.
->>>>>>> main
+2. Click on **Test Step** to run the node.
 
 In the screenshot below, you will notice that the node makes a GET request to the API and returns information about a random cocktail.
 
@@ -75,7 +65,6 @@ In the screenshot below, you will notice that the node makes a GET request to th
 This node will send a reply to the message with the name and image of the cocktail that we got from the previous node.
 
 1. Select the credentials that you entered in the Telegram Trigger node.
-<<<<<<< HEAD
 2. Select 'Send Photo' from the **Operation** dropdown list.
 3. Click on the gears icon next to the **Chat ID** field and click on **Add Expression**.
 4. Select the following in the **Variable Selector** section: Nodes > Telegram Trigger > Output Data > JSON > message > chat > id. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["chat"]["id"]}}`.
@@ -88,20 +77,6 @@ This node will send a reply to the message with the name and image of the cockta
 11. Click on the gears icon next to the **Reply To Message ID** field and click on **Add Expression**.
 12. Select the following in the **Variable Selector** section: **Nodes > Telegram Trigger > Output Data > JSON > message > message_id**. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["message_id"]}}`.
 13. Click on **Execute Node** to run the node.
-=======
-2. Select 'Send Photo' from the ***Operation*** dropdown list.
-3. Click on the gears icon next to the ***Chat ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Telegram Trigger > Output Data > JSON > message > chat > id. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["chat"]["id"]}}`.
-5. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
-6. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strDrinkThumb. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strDrinkThumb"]}}`.
-7. Click on ***Add Field*** and select 'Caption' from the dropdown list.
-8. Click on the gears icon next to the ***Caption*** field and click on ***Add Expression***.
-9. Select the following in the ***Variable Selector*** section: Nodes > HTTP Request > Output Data > JSON > drinks > [item: 0] > strDrink. You can also add the following expression: `{{$node["HTTP Request"].json["drinks"][0]["strDrink"]}}`.
-10. Click on ***Add Field*** and select 'Reply To Message ID' from the dropdown list.
-11. Click on the gears icon next to the ***Reply To Message ID*** field and click on ***Add Expression***.
-12. Select the following in the ***Variable Selector*** section: Nodes > Telegram Trigger > Output Data > JSON > message > message_id. You can also add the following expression: `{{$node["Telegram Trigger"].json["message"]["message_id"]}}`.
-13. Click on ***Test step*** to run the node.
->>>>>>> main
 
 In the screenshot below, you will notice that the node sends a reply to the message with the name and image of the cocktail that we got from the previous node.
 

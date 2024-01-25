@@ -23,9 +23,9 @@ If we're going to insert data into Airtable, we first need to set up a table the
 
 3. In the beginner course base you have by default a *Table 1* with four fields: *Name, Notes, Assignee, and Status*.
 These fields aren't relevant for us since they aren't in our orders data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result.
-	- Replace the four default table fields with the five column names from the data set, selecting **Number** field type for `orderID`, `customerID`, and `orderPrice`, and **Single line text** for `employeeName` and `orderStatus`.
-	- Delete the 3 blank rows created by default.
-	- Also, rename the table from *Table 1* to *orders* to make it easier to identify.
+  - Replace the four default table fields with the five column names from the data set, selecting **Number** field type for `orderID`, `customerID`, and `orderPrice`, and **Single line text** for `employeeName` and `orderStatus`.
+  - Delete the 3 blank rows created by default.
+  - Also, rename the table from *Table 1* to *orders* to make it easier to identify.
 
 Now your table should look like this:
 

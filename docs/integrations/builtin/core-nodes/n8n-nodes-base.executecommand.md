@@ -48,7 +48,7 @@ The Cron node will trigger the workflow twice a day, at 9 AM and 4 PM.
 4. Click on **Add Cron Time**.
 5. Select 'Every Day' from the **Mode** dropdown list.
 6. Enter `16` in the **Hour** field.
-7. Click on **Execute Node** to run the node.
+7. Click on **Test step** to run the node.
 
 ![Using the Cron node to trigger the workflow twice a day](/_images/integrations/builtin/core-nodes/executecommand/cron_node.png)
 
@@ -57,7 +57,7 @@ The Cron node will trigger the workflow twice a day, at 9 AM and 4 PM.
 The Execute Command node executes the command and return the percentage of hard disk space used on the host machine.
 
 1. Enter `df -k / | tail -1 | awk '{print $5}'` in the **Command** field.
-2. Click on **Execute Node** to run the node.
+2. Click on **Test step** to run the node.
 
 In the screenshot below, note that the node executes the command and returns the percentage of the hard disk that's full.
 
@@ -72,7 +72,7 @@ This node will compare the percentage of the hard disk space used we got from th
 3. Enter `{{parseInt($node["Execute Command"].json["stdout"])}}` in the **Expression** field. The output from the Execute Command node is a string. The `parseInt()` method converts the string into an integer.
 4. Select 'Larger' from the **Operation** dropdown list.
 5. Set **Value 2** to 80.
-5. Click on **Execute Node** to run the node.
+5. Click on **Test step** to run the node.
 
 In the screenshot below, you will notice that the node returns an output when the percentage of hard disk space used exceeds 80%.
 
@@ -89,7 +89,7 @@ This node sends an SMS to the specified phone number when the usage of hard disk
 5. Click on the gears icon next to the **Message** field and click on **Add Expression**.
 
 6. Enter `Your hard disk space is filling up fast! Your hard disk is {{$node["Execute Command"].json["stdout"]}} full.` in the **Expression** field.
-7. Click on **Execute Node** to run the node.
+7. Click on **Test step** to run the node.
 
 In the screenshot below, note that the node sends an SMS with the percentage of the hard disk space used that you got from the Execute Command node.
 
@@ -100,7 +100,7 @@ In the screenshot below, note that the node sends an SMS with the percentage of 
 Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
 
 1. Create a **NoOp** node connected to the 'false' output of the IF node.
-2. Click on **Execute Node** to run the node.
+2. Click on **Test step** to run the node.
 
 ![Using the NoOp node](/_images/integrations/builtin/core-nodes/executecommand/noop_node.png)
 

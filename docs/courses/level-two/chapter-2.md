@@ -20,7 +20,7 @@ Use the HTML node to extract HTML content of a webpage, by referencing CSS selec
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the URL `https://www.daysoftheyear.com/days/mar/2022/`. Then, connect an HTML node and configure it to extract the date of the returned events.
+Let's get the title of the latest n8n blogpost. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
 
 ??? note "Show me the solution"
 
@@ -28,7 +28,7 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 
 	- Authentication: None
 	- Request Method: GET
-	- URL: https://www.daysoftheyear.com/days/mar/2022/
+	- URL: https://blog.n8n.io/
 
 	The result should look like this:
 
@@ -40,8 +40,8 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 	* Source Data: JSON
 	* JSON Property: data
 	* Extraction Values:  
-		* Key: event
-		* CSS Selector: .js-link-target
+		* Key: title
+		* CSS Selector: .item-title  a
 		* Return Value: HTML
 
 	You can add more values to extract more data.

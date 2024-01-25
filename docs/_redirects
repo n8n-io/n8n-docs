@@ -1,3 +1,4 @@
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/
 /choose-n8n/desktop-app/   /choose-n8n/
 
 /integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
@@ -30,7 +31,8 @@
 
 
 /variables/   /code/variables/
-/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/
+/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/
+/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/
 
 /flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/
 /flow-logic/error-handling/memory-errors/   /hosting/scaling/memory-errors/

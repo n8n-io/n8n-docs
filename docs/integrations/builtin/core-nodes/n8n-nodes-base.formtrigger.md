@@ -18,7 +18,7 @@ While building or testing a workflow, use the test URL. Using a test URL ensures
 There are two ways to test:
 
 * Select **Test Step**. n8n opens the form. When you submit the form, n8n runs the node, but not the rest of the workflow.
-* Select **Execute Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
+* Select **Test Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
 
 ## Production workflows
 
@@ -36,8 +36,12 @@ The Form Trigger node has two URLs: test URL and production URL. n8n displays th
 
 ![Screenshot of the form URLs](/_images/integrations/builtin/core-nodes/form-trigger/form-urls.png)
 
-* **Test**: n8n registers a test webhook when you select **Test Step** or **Execute workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
+* **Test**: n8n registers a test webhook when you select **Test Step** or **Test Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
+
+### Form Path
+
+Set a custom slug for the form.
 
 ### Form Title
 
@@ -65,9 +69,10 @@ Choose when n8n sends a response to the form submission. You can respond when:
 
 * **Form Is Submitted**: send a response to the user as soon as they submit the form.
 * **Workflow Finishes**: use this if you want the workflow to complete its execution before you send a response to the user. If the workflow errors, it sends a response to the user telling them there was a problem submitting the form.
+* **Using 'Respond to Webhook' Node**: the Form Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 
 ## Node options
 
 Select **Add Option** to view more configuration options.
 
-**Form Submitted Text**: the text to show to the user when they successfully submit the form.
+**Form Response**: choose how to respond when the user submits the form. Select **Respond With** > **Form Submitted Text** to show a message to the user, or **Respond With** > **Redirect URL** to send the user to a new page.

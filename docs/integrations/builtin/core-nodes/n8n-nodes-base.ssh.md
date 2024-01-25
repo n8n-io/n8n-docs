@@ -54,7 +54,7 @@ The start node exists by default when you create a new workflow.
 4. The ***Execute*** option is automatically selected as the ***Operation***.
 5. In the ***Command*** field enter the command to execute. Here we used `ls` just to see the local directory contents.
 6. In the ***Working Directory*** field you can enter where the command should be executed. Here we ran it in the root directory.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 ![SSH Node](/_images/integrations/builtin/core-nodes/ssh/ssh_node.png)
 

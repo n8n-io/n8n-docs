@@ -2,7 +2,7 @@
 description: n8n's security policies
 contentType: explanation
 ---
-
+<!-- vale off -->
 # Security
 
 This page describes n8n's security practices.
@@ -107,3 +107,4 @@ n8n grants employees access to systems on a least-privilege basis. This means th
 ### Security training
 
 Employees receive privacy and security training during onboarding as well as on an ongoing basis. n8n requires all employees to read and sign n8n's comprehensive information security policy covering the security, availability, and confidentiality of n8n services.
+<!-- vale on -->

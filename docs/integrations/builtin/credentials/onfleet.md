@@ -1,10 +1,10 @@
 ---
-title: Onfleet credentials credentials
-description: Documentation for Onfleet credentials credentials. Use these credentials to authenticate Onfleet in n8n, a workflow automation platform.
+title: Onfleet credentials
+description: Documentation for Onfleet credentials. Use these credentials to authenticate Onfleet in n8n, a workflow automation platform.
 contentType: integration
 ---
 
-# Onfleet credentials credentials
+# Onfleet credentials
 
 You can use these credentials to authenticate the following nodes with Onfleet:
 

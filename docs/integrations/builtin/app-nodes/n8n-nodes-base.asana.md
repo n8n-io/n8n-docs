@@ -32,7 +32,7 @@ Due to changes in Asana's API, some operations in this node stopped working on 1
     * Update a project
 * Subtask
     * Create a subtask
-    * Get all substasks
+    * Get all subtasks
 * Task
     * Create a task
     * Delete a task

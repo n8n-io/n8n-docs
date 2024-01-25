@@ -29,7 +29,7 @@ All information is always present, except:
 - `execution.url`: requires the execution to be saved in the database. Not present if the error is in the trigger node of the main workflow, as the workflow doesn't execute.
 - `execution.retryOf`: only present when the execution is a retry of a failed execution.
 
-If the error is caused by the trigger node of the main workflow, rather than a later stage, the data sent to the error workflow is different. There is less information in `execution{}` and more in `trigger{}`:
+If the error is caused by the trigger node of the main workflow, rather than a later stage, the data sent to the error workflow is different. There's less information in `execution{}` and more in `trigger{}`:
 
 ```json
 {

@@ -3,7 +3,7 @@ title: Privacy and security
 description: Privacy and security at n8n
 contentType: overview
 ---
-
+<!-- vale off -->
 # Privacy and security
 
 n8n is committed to the privacy and security of your data. This section outlines how n8n handles and secures data. This isn't an exhaustive list of practices, but an overview of key policies and procedures.
@@ -18,4 +18,4 @@ If you have any security-related questions, or if you want to report a suspected
 
 [[ sectionToc.sectionToc(page) ]]
 
-
+<!-- vale on -->

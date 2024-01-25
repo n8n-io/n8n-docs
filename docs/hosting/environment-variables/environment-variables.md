@@ -96,7 +96,7 @@ By default, n8n uses memory to store binary data. Enterprise users can choose to
 ## User management SMTP, and two-factor authentication
 
 Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
-
+<!-- vale off -->
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
@@ -116,7 +116,7 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS` | Number | 168 | Set an expiration date for the JWTs in hours. |
 | `N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS` | Number | 0 | How many hours before the JWT expires to automatically refresh it. 0 means 25% of `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. -1 means it will never refresh, which forces users to log in again after the period defined in `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. |
 | `N8N_MFA_ENABLED` | Boolean | `true` | Whether to enable two-factor authentication (true) or disable (false). n8n ignores this if existing users have 2FA enabled. |
-
+<!-- vale on -->
 
 ## Endpoints
 

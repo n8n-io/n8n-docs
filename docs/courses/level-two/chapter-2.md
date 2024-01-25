@@ -20,7 +20,7 @@ Use the HTML node to extract HTML content of a webpage, by referencing CSS selec
 
 ### Exercise
 
-Let's get the title of the latest n8n blogpost. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
+Let's get the title of the latest n8n blog post. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
 
 ??? note "Show me the solution"
 
@@ -77,19 +77,19 @@ In a previous exercise, you used an HTTP Request node to make a request to an AP
 ## Date, time, and interval data
 
 Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `YEAR`. The dates and times can be passed in different formats, for example:
-
-- `DATE`: March 29 2022, 29-03-2022, 2022/03/29
+<!-- vale off -->
+- `DATE`: March 29 2022, 29-03-2022, 2022/03/29 
 - `TIME`: 08:30:00, 8:30, 20:30
 - `DATETIME`: 2022/03/29 08:30:00
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
-
+<!-- vale on -->
 If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/).
 
 You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.
 
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
+In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it's generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
 
 ### Exercise
@@ -268,7 +268,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 ## Binary data
 
-So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
+Up to now, you have mainly worked with text data. But what if you want to process data that's not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 

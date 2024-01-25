@@ -13,7 +13,7 @@ n8n supports CrowdStrike authentication using OAuth2.
 
 ## Related resources
 
-Refer to CrowdStrike's documentation for more information about the service. Their documentation is behind a log in, so you must log in to your account on thier website to access the API documentation.
+Refer to CrowdStrike's documentation for more information about the service. Their documentation is behind a log in, so you must log in to your account on their website to access the API documentation.
 
 
 <!-- 

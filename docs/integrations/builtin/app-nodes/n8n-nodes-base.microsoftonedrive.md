@@ -49,7 +49,7 @@ View [example workflows and related content](https://n8n.io/integrations/microso
 To perform operations on folders, you need to supply the ID. You can find this:
 
 * In the URL of the folder
-* By searching for it using the node. You need to do this if using MS 365 (where OneDrive uses Sharepoint behind the scenes):
+* By searching for it using the node. You need to do this if using MS 365 (where OneDrive uses SharePoint behind the scenes):
 	1. Select **Resource** > **Folder**.
 	2. Select **Operation** > **Search**.
 	3. In **Query**, enter the folder name.

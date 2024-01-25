@@ -85,7 +85,7 @@ For an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/blo
 
 The previous helper implementation using `this.helpers.request(options)` used and exposed the `request-promise` library. This was removed in version 1.
 
-To minimize incompatibility, n8n made a transparent conversion to another library called `axios`.
+To minimize incompatibility, n8n made a transparent conversion to another library called `Axios`.
 
 If you are having issues, please report them in the [Community Forums](https://community.n8n.io/){:target=_blank .external-link} or on [GitHub](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link}.
 

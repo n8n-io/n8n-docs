@@ -2,7 +2,7 @@
 contentType: tutorial
 ---
 
-# Workflow 1 – Merging data
+# Workflow 1: Merging data
 
 The company's customer data is stored in Airtable. It contains information about the customers' ID, country, email, and join date, but lacks data about their respective region and subregion. You need to fill in these last two fields in order to create the reports for regional sales.
 
@@ -26,5 +26,5 @@ The workflow should look like this:
 * How many items does the HTTP Request node return?
 * How many items does the Merge node return?
 * How many unique regions are assigned in the customers table?
-* What is the subregion assigned to the customerID 10?
+* What's the subregion assigned to the customerID 10?
 ///

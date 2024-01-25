@@ -4,7 +4,7 @@ contentType: tutorial
 
 # 2. Inserting Data into Airtable
 
-In this step of the workflow you will learn how to insert the data received via the HTTP Request node into Airtable using the *Airtable* node.
+In this step of the workflow you will learn how to insert the data received using the HTTP Request node into Airtable using the *Airtable* node.
 
 /// note | Spreadsheet nodes
 You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank" .external} and [*Spreadsheet File*](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external}.
@@ -14,7 +14,7 @@ At this point, your workflow should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-workflow-with-airtable-node.png" alt="Workflow with the Airtable node" style="width:100%"><figcaption align = "center"><i>Workflow with the Airtable node</i></figcaption></figure>
 
-If we are going to insert data into Airtable, we first need to set up a table there. To do this:
+If we're going to insert data into Airtable, we first need to set up a table there. To do this:
 
 1. [Create an Airtable account](https://airtable.com/signup){:target="_blank" .external}.
 2. In your Airtable workspace add a new base from scratch and name it, for example, *beginner course*.
@@ -22,10 +22,10 @@ If we are going to insert data into Airtable, we first need to set up a table th
 	<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>
 
 3. In the beginner course base you have by default a *Table 1* with four fields: *Name, Notes, Assignee, and Status*.
-These fields are not relevant for us since they are not in our orders data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result.
-	- Replace the four default table fields with the five column names from the data set, selecting `Number` field type for orderID, customerID, and orderPrice, and `Single line text` for employeeName and orderStatus.
-	- Delete the 3 blank rows created by default.
-	- Also, rename the table from *Table 1* to *orders* to make it easier to identify.
+These fields aren't relevant for us since they aren't in our orders data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result.
+  - Replace the four default table fields with the five column names from the data set, selecting **Number** field type for `orderID`, `customerID`, and `orderPrice`, and **Single line text** for `employeeName` and `orderStatus`.
+  - Delete the 3 blank rows created by default.
+  - Also, rename the table from *Table 1* to *orders* to make it easier to identify.
 
 Now your table should look like this:
 

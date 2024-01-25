@@ -9,7 +9,7 @@ description: Use n8n's LangChain integrations to build AI-powered functionality 
 Use n8n's LangChain nodes to build AI-powered functionality within your workflows. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and so on. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
 
 /// info | Feature availability
-This feature is available on Cloud and self-hosted n8n. In version 1.19.4 and above, LangChain functionality is included with n8n, and you don't need to do any special signup or installation steps.
+This feature is available on Cloud and self-hosted n8n. Version 1.19.4 and above includes LangChain functionality with n8n, and you don't need to do any extra sign-up or installation steps.
 
 If you want to test the latest AI functionality, the beta version is available. This may be unstable. Refer to [Access LangChain in n8n](/langchain/access-langchain/) for more information.
 ///

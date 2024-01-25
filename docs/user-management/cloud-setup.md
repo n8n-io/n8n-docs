@@ -15,10 +15,10 @@ To access user management, upgrade to version 0.195.0 or newer.
 Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
 ///
 
-## Step one: in-app setup
+## Step one: In-app setup
 
 --8<-- "_snippets/user-management/in-app-setup.md"
 
-## Step two: invite users
+## Step two: Invite users
 
 --8<-- "_snippets/user-management/invite-users.md"

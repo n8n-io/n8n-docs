@@ -87,7 +87,7 @@ Add the If node:
 3. Select **If** to add the node to the canvas. n8n opens the node.
 4. Select **Add condition** > **String**.
 5. You need to check the value of the `classType` property in the NASA data. To do this:
-	1. Drag and drop **classType** into **Value 1**.
+	1. Drag **classType** into **Value 1**.
 
 		/// note | Make sure you ran the NASA node in the previous section
 		If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
@@ -98,7 +98,7 @@ Add the If node:
 6. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
 /// note | Weeks without large solar flares
-In this tutorial, you are working with live date. If you find there are no X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
+In this tutorial, you are working with live date. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
 ///
 
 ## Step six: Output data from your workflow

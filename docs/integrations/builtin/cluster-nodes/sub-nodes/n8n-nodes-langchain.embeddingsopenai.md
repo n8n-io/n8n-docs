@@ -25,7 +25,7 @@ For usage examples and templates to help you get started, refer to n8n's [OpenAI
 * **Base URL**: the URL to send the request to. Use this if you are using a self-hosted OpenAI-like model. 
 * **Batch Size**: maximum number of documents to send in each request.
 * **Strip New Lines**: whether to remove new line characters from input text. n8n enables this by default.
-* **Timeout**: maximum amount of time a request can take in seconds. Set to -1 for no timeout.
+* **Timeout**: maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
 	
 ## Related resources
 

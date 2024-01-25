@@ -22,8 +22,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 * Table
     * Adds rows to the end of the table
-    * Retrieve a list of tablecolumns
-    * Retrieve a list of tablerows
+    * Retrieve a list of table columns
+    * Retrieve a list of table rows
     * Looks for a specific column value and then returns the matching row
 * Workbook
     * Adds a new worksheet to the workbook.

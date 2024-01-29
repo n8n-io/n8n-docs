@@ -19,6 +19,8 @@ When you create an account on n8n.cloud with a username and password, n8n implem
 
 n8n salts and hashes the passwords of self-hosted users on account creation. However, encrypting other data at rest is the responsibility of the user. Refer to [Data encryption | Self-hosted n8n](#self-hosted-n8n) for more information.
 
+n8n supports custom session timeouts on self-hosted.
+
 ## Third-party accounts
 
 A key part of n8n's functionality is to link third-party services. When you link an account from a third party application, you may need to either authorize n8n OAuth application access to your account, or provide an API key or other credentials. This section describes how n8n handles these grants and keys.

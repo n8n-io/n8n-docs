@@ -17,14 +17,6 @@ You can use CLI commands with self-hosted n8n. Depending on how you choose to in
     docker exec -u node -it <n8n-container-name> <n8n-cli-command>
     ```
 
-## View the CLI help
-
-You can see a list of available commands and descriptions in your CLI:
-
-```bash
-n8n --help
-```
-
 ## Start a workflow
 
 You can start workflows directly using the CLI.

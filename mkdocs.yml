@@ -256,7 +256,6 @@ nav:
     - Log streaming: log-streaming.md
     - AI with LangChain:
         - langchain/index.md
-        - Access LangChain in n8n: langchain/access-langchain.md
         - "Tutorial: Build an AI workflow in n8n": langchain/langchain-tutorial.md
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain concepts in n8n: langchain/langchain-n8n.md

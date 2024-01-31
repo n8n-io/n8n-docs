@@ -1,3 +1,5 @@
+/langchain/access-langchain/   /langchain/
+
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/
 /choose-n8n/desktop-app/   /choose-n8n/
 

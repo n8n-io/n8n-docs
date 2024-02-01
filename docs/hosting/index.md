@@ -2,8 +2,6 @@
 contentType: overview
 ---
 
-Testing depth with very complex and extremely excessive prose.
-
 # Self-hosting n8n
 
 This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions.

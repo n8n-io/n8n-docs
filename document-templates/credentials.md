@@ -36,6 +36,8 @@ You can use these credentials to authenticate the following nodes:
 
 _Include info on services they need to sign up for_
 
+## Supported authentication methods
+
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->

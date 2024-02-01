@@ -4,6 +4,8 @@ contentType: overview
 
 # Self-hosting n8n
 
+can I increase complexity superlatively?
+
 This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions.
 
 <div class="grid-cards-vertical cards" markdown>

@@ -1,6 +1,14 @@
 ---
-description: How to access the Cloud admin dashboard.
 contentType: howto
+description: Manage your n8n Cloud instance. Access the dashboard, set the timezone, and upgrade your n8n version.
+tags:
+  - upgrade cloud
+  - update cloud
+  - cloud version
+hide:
+  - tags
+search:
+  boost: 2
 ---
 
 # Cloud admin dashboard

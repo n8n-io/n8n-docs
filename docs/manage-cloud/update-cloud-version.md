@@ -17,6 +17,12 @@ n8n recommends regularly updating your Cloud version. Check the [Release notes](
 
 ## Best practices for updating
 
-* Update frequently: this avoids having to jump multiple versions at once, reducing the risk of a disruptive update.
+* Update frequently: this avoids having to jump multiple versions at once, reducing the risk of a disruptive update. Try to update at least once a month.
 * Check the [Release notes](/release-notes/) for breaking changes.
 * Use [Environments](/source-control-environments/) to create a test version of your instance. Test the update there first.
+
+## Automatic update
+
+n8n automatically updates outdated Cloud instances. 
+
+If you don't update you instance for 120 days, n8n emails you to warn you to update. After a further 30 days, n8n automatically updates your instance.

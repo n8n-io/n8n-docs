@@ -7,6 +7,8 @@ contentType: howto
 
 n8n recommends regularly updating your Cloud version. Check the [Release notes](/release-notes/) to learn more about changes.
 
+1. [Log in to n8n](https://app.n8n.cloud/magic-link){:target=_blank .external-link}
+1. Select **Admin Dashboard**. n8n opens the dashboard.
 1. On your dashboard, select **Manage**.
 1. Use the **n8n version** dropdown to select your preferred release version: 
 	* Latest Stable: recommended for most users.

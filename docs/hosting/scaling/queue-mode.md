@@ -181,30 +181,34 @@ n8n worker --concurrency=5
 
 In queue mode you can run more than one `main` process for high availability.
 
-In a single-mode setup, the `main` process is responsible for:
+Normally, in a single-mode setup, the `main` process is responsible for two sets of tasks: 
 
-- Running the API
-- Serving the UI
-- Listening for webhooks
-- Handling manual executions
-- Running non-HTTP related triggers, such as timers, persistent connections like RabbitMQ and IMAP
-- Handling specific licensing tasks
-- Pruning executions and binary data
+- **regular tasks**, such as running the API, serving the UI, listening for webhooks, and handling manual executions, and 
+- **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
 
-In a multi-main setup, every `main` process runs the API, serves the UI, listens for webhooks, and handles manual executions. n8n automatically designates a leader `main` process, which is the process in charge of running any non-HTTP triggers, handling specific licensing tasks, pruning executions and binary data. All non-leader `main` processes are known as followers.
+In a multi-main setup, there are two kinds of `main` processes:
 
-The leader `main` process reports to Redis, setting a short-lived key. If the leader ever fails to renew the key, for example because it crashed or because its event loop became overly busy, n8n designates one of the follower `main` processes as the new leader to take over the former leader's responsibilities. If the previous leader becomes responsive again, it becomes a follower.
+- **followers**, which run **regular tasks**, and
+- the **leader**, which runs **both regular and at-most-once tasks**.
+
+### Leader designation
+
+In a multi-main setup, all `main` processes attempt to set a short-lived key on Redis - the `main` process that first sets the key becomes the leader and will keep renewing the key to remain the leader. If the leader ever fails to renew the key, e.g. because it crashed or its event loop became too busy, the follower that first sets the key on Redis becomes the new leader, taking over the former leader's tasks. If the previous leader becomes responsive again, it becomes a follower.
 
 ### Configuring multi-main setup
 
-To deploy n8n in multi-main setup, ensure you have a valid license and are running in queue mode.
+#### Pre-requisites
 
-Then, for each main process:
+To deploy n8n in multi-main setup, ensure: 
 
-- Set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`
-- Set a unique `N8N_PORT`.
+- All `main` processes are running in queue mode and are connected to Postgres and Redis.
+- All `main` and `worker` processes are running the same version of n8n.
+- All `main` and `worker` processes have a valid tenant ID and license key.
+- All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
+- All `main` processes have set a unique `N8N_PORT`.
+- All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
 
-If needed, you can adjust the leader check options:
+If needed, you can adjust the leader key options:
 
 | Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
@@ -212,5 +216,5 @@ If needed, you can adjust the leader check options:
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
 /// note | Keep in mind
-n8n requires running the multiple main processes behind a load balancer that supports session persistence, also known as sticky sessions.
+In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Therefore, running `webhook` processes is neither needed nor allowed in multi-main setup.
 ///

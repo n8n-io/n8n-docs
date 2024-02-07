@@ -697,6 +697,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
@@ -704,6 +705,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
@@ -753,6 +755,7 @@ nav:
         - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
+        - integrations/builtin/credentials/azureopenai.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
         - integrations/builtin/credentials/baserow.md

@@ -1153,6 +1153,7 @@ nav:
       - advanced-ai/examples/index.md
       - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
       - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md

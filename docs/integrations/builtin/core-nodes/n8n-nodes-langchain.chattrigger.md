@@ -14,6 +14,10 @@ You must connect either an agent or chain [root node](/integrations/builtin/clus
 For usage examples and templates to help you get started, refer to n8n's [Chat Trigger integrations](https://n8n.io/integrations/chat-trigger/){:target=_blank .external-link} page.
 ///
 
+/// warning | Workflow execution usage
+Every message to the Chat Trigger executes your workflow. This means that one conversation where a user sends 10 messages uses 10 executions from your execution allowance. Check your payment plan for details of your allowance.
+///
+
 /// note | Manual Chat Trigger
 This node replaces the Manual Chat Trigger node from version 1.24.0.
 ///

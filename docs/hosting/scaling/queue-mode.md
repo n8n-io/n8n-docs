@@ -193,26 +193,22 @@ In a multi-main setup, there are two kinds of `main` processes:
 
 ### Leader designation
 
-In a multi-main setup, all `main` processes attempt to set a short-lived key on Redis - the `main` process that first sets the key becomes the leader and will keep renewing the key to remain the leader. If the leader ever fails to renew the key, e.g. because it crashed or its event loop became too busy, the follower that first sets the key on Redis becomes the new leader, taking over the former leader's tasks. If the previous leader becomes responsive again, it becomes a follower.
+In a multi-main setup, all `main` handle the leadership process transparently to users. In case the current leader becomes unavailable, e.g. because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
 
 ### Configuring multi-main setup
-
-#### Pre-requisites
 
 To deploy n8n in multi-main setup, ensure: 
 
 - All `main` processes are running in queue mode and are connected to Postgres and Redis.
 - All `main` and `worker` processes are running the same version of n8n.
-- All `main` and `worker` processes have a valid tenant ID and license key.
 - All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
-- All `main` processes have set a unique `N8N_PORT`.
 - All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
 
 If needed, you can adjust the leader key options:
 
 | Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
-| `multiMainSetup.multiMainSetup:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
+| `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
 /// note | Keep in mind

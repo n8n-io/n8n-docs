@@ -2,7 +2,7 @@ You can test your node as you build it by running it in a local n8n instance.
 
 1. Install n8n using npm:
   ```shell
-  npm install n8n -g
+  npx n8n
   ```
 2. When you are ready to test your node, publish it locally:
   ```shell

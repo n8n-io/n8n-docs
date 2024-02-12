@@ -45,7 +45,7 @@ Refer to [_Name_'s documentation](){:target=_blank .external-link} for more info
 
 
 <!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-This is a credential-only node. Refer to [Custom API operations](https://docs.n8n.io/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
 
 
 ## Using _Auth method_

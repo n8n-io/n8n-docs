@@ -1147,8 +1147,10 @@ nav:
   - Advanced AI:
     - advanced-ai/index.md
     - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
-    - LangChain learning resources: advanced-ai/langchain-learning-resources.md
-    - Langchain concepts in n8n: advanced-ai/langchain-n8n.md
+    - LangChain in n8n:
+      - advanced-ai/langchain/index.md
+      - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+      - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
     - Examples: 
       - advanced-ai/examples/index.md
       - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md

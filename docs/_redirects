@@ -1,7 +1,7 @@
 /langchain/   /advanced/ai/
 /langchain/langchain-tutorial/   /advanced-ai/intro-tutorial/
-/langchain/learning-resources/   /advanced-ai/langchain-learning-resources/
-/langchain/langchain-n8n/   /advanced-ai/langchain-n8n/
+/langchain/learning-resources/   /advanced-ai/langchain/langchain-learning-resources/
+/langchain/langchain-n8n/   /advanced-ai/langchain/langchain-n8n/
 /langchain/access-langchain/   /advanced-ai/
 
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/

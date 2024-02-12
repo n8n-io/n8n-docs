@@ -12,13 +12,33 @@ Build AI functionality using n8n: from creating your own chat bot, to using AI t
 This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and above.
 ///
 
-## LangChain in n8n
+<div class="grid cards" markdown>
 
-n8n provides a collection of nodes that implement LangChain's functionality. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and so on. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
+-   __Get started__
 
-* [Tutorial: Build an AI workflow in n8n](/langchain/langchain-tutorial/): learn how to build AI workflows using n8n's LangChain implementation.
-* [Learning resources](/langchain/learning-resources/): n8n's documentation for LangChain assumes you're familiar with AI and LangChain concepts. This page provides links to learning resources.
-* [LangChain concepts and features in n8n](/langchain/langchain-n8n/): how n8n represents LangChain concepts and features.
+    Work through the short tutorial to learn the basics of building AI workflows in n8n.
+
+    [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial//)
+
+-   __Explore examples__
+
+	Browse examples and workflow templates to help you build.
+
+    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/)
+
+
+-   __How n8n uses LangChain__
+
+    Learn more about how n8n builds on LangChain.
+
+    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/)
+
+-   __Put the code in low-code__
+
+    See an overview of n8n's developer resources.
+
+    [:octicons-arrow-right-24: Code in n8n](/code/)    
+</div>
 
 ## Related resources
 

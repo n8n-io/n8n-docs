@@ -33,11 +33,7 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/)
 
--   __Put the code in low-code__
-
-    See an overview of n8n's developer resources.
-
-    [:octicons-arrow-right-24: Code in n8n](/code/)    
+   
 </div>
 
 ## Related resources

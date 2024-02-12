@@ -10,6 +10,10 @@ n8n can be run in different modes depending on your needs. The queue mode provid
 n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
 ///
 
+/// note | Own mode removed
+n8n removed `own` in version 1.27.0.
+///
+
 ## How it works
 
 When running in `queue` mode you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions.

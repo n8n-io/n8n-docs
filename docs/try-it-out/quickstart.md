@@ -29,13 +29,13 @@ n8n provides a quickstart template using training nodes. This allows you to work
 This workflow:
 
 1. Gets example data from the Customer Datastore node.
-2. Uses the Set node to extract just the data you want, and assign that data to variables. In this example, you use the customer name, ID, and description.
+2. Uses the Edit Fields node to extract just the data you want, and assign that data to variables. In this example, you use the customer name, ID, and description.
 
 Double click a node to explore its settings and how it processes data.
 
 ## Step three: Run the workflow
 
-Select **Test Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with . You need this data available in the workflow so that you can work with it in the next step.
+Select **Test Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with Edit Fields. You need this data available in the workflow so that you can work with it in the next step.
 
 ## Step four: Add a node
 
@@ -45,7 +45,7 @@ Add a third node to message each customer and tell them their description. Use t
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
 3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. Use [expressions](/code/expressions/) to map in the **Customer ID** and create the **Message**:
-	1. Drag **customer_ID** from the **INPUT** panel into the **Customer ID** field in the node settings.
+	1. Drag **id** from the **INPUT** panel into the **Customer ID** field in the node settings.
     2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
     3. Copy this expression into the editor:
         ```

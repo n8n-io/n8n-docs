@@ -17,6 +17,10 @@ The Activation trigger node has been deprecated. It has been replaced by two new
 If you want to use the Activation trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
 ///
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Activation trigger integrations](https://n8n.io/integrations/activation-trigger/){:target=_blank .external-link} page.
+///
+
 The Activation trigger node gets triggered for the workflow that it gets added to. The Activation trigger node can be used to trigger a workflow to notify the state of the workflow.
 
 ## Node Reference

@@ -23,8 +23,5 @@ After becoming an Action Network partner:
 2. From the **Start Organizing** menu navigate to **Details** > **API & Sync**.
 3. Use the dropdown to select the list you want to generate a key for, your personal list or that of any groups you are an administrator of.
 4. From the **Your API Key** section, generate a new API key:
-
 ![API & Sync Page](/_images/integrations/builtin/credentials/actionnetwork/action_network_api_key.png)
-
 5. Copy your new key and use it with your Action Network node credentials in n8n.
-

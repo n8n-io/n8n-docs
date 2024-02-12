@@ -104,79 +104,110 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 
 	```json
 	{
-		"nodes": [
-			{
-				"parameters": {
-					"functionCode": "return [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io',\n    }\n  },\n  {\n    json: {\n      url: 'https://dev.to/feed/n8n',\n    }\n  }\n];"
-				},
-				"name": "Code",
-				"type": "n8n-nodes-base.code",
-				"position": [
-					480,
-					1880
-				],
-				"typeVersion": 1
-			},
-			{
-				"parameters": {
-					"url": "={{$node[\"SplitInBatches\"].json[\"url\"]}}"
-				},
-				"name": "RSS Feed Read",
-				"type": "n8n-nodes-base.rssFeedRead",
-				"position": [
-					880,
-					1880
-				],
-				"typeVersion": 1
-			},
-			{
-				"parameters": {
-					"batchSize": 1,
-					"options": {}
-				},
-				"name": "SplitInBatches",
-				"type": "n8n-nodes-base.splitInBatches",
-				"position": [
-					680,
-					1880
-				],
-				"typeVersion": 1
-			}
-		],
-		"connections": {
-			"Code": {
-				"main": [
-					[
-						{
-							"node": "SplitInBatches",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"RSS Feed Read": {
-				"main": [
-					[
-						{
-							"node": "SplitInBatches",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"SplitInBatches": {
-				"main": [
-					[
-						{
-							"node": "RSS Feed Read",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			}
+	"meta": {
+		"templateCredsSetupCompleted": true,
+		"instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+	},
+	"nodes": [
+		{
+		"parameters": {},
+		"id": "c2c4509b-c4d4-4e95-bd7d-039734954b68",
+		"name": "When clicking \"Test workflow\"",
+		"type": "n8n-nodes-base.manualTrigger",
+		"typeVersion": 1,
+		"position": [
+			700,
+			720
+		]
+		},
+		{
+		"parameters": {
+			"jsCode": "let urls = [\n  {\n    json: {\n      url: 'https://medium.com/feed/n8n-io'\n    }\n  },\n  {\n   json: {\n     url: 'https://dev.to/feed/n8n'\n   } \n  }\n]\n\nreturn urls;"
+		},
+		"id": "82d6eb1d-fb06-49da-b312-6e9be51e9621",
+		"name": "Code",
+		"type": "n8n-nodes-base.code",
+		"typeVersion": 2,
+		"position": [
+			920,
+			720
+		]
+		},
+		{
+		"parameters": {
+			"options": {}
+		},
+		"id": "395b0103-a706-4ee3-b1ea-cb5455cf5dcc",
+		"name": "Loop Over Items",
+		"type": "n8n-nodes-base.splitInBatches",
+		"typeVersion": 3,
+		"position": [
+			1140,
+			720
+		]
+		},
+		{
+		"parameters": {
+			"url": "={{ $json.url }}",
+			"options": {}
+		},
+		"id": "2dd34543-82e6-4be1-bb63-d81095dddabc",
+		"name": "RSS Read",
+		"type": "n8n-nodes-base.rssFeedRead",
+		"typeVersion": 1,
+		"position": [
+			1360,
+			720
+		]
 		}
+	],
+	"connections": {
+		"When clicking \"Test workflow\"": {
+		"main": [
+			[
+			{
+				"node": "Code",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Code": {
+		"main": [
+			[
+			{
+				"node": "Loop Over Items",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Loop Over Items": {
+		"main": [
+			null,
+			[
+			{
+				"node": "RSS Read",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"RSS Read": {
+		"main": [
+			[
+			{
+				"node": "Loop Over Items",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		}
+	},
+	"pinData": {}
 	}
 	```

@@ -44,6 +44,8 @@ Related documentation and tools.
 
 This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/): groups of [root](/integrations/builtin/cluster-nodes/root-nodes/) and [sub](/integrations/builtin/cluster-nodes/sub-nodes/) nodes that work together.
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"
+
 ### Workflow templates
 
 You can browse workflow templates in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.

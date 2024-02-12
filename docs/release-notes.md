@@ -28,6 +28,14 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## 1.30.0
+
+[TODO]
+
+/// warning | Breaking change
+This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](/hosting/scaling/queue-mode/) for information on configuring queue mode.
+///
+
 ## n8n@1.28.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.2...n8n@1.28.0){:target=_blank .external-link} for this version.<br />
@@ -75,10 +83,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.1
 **Release date:** 2024-01-31
 
 This release contains new features, node enhancements, and bug fixes.
-
-/// warning | Breaking change
-This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](/hosting/scaling/queue-mode/) for information on configuring queue mode.
-///
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

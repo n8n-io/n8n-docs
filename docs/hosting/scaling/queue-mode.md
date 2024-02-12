@@ -11,7 +11,7 @@ n8n doesn't support queue mode with binary data storage. If your workflows need 
 ///
 
 /// note | Own mode removed
-n8n removed `own` in version 1.27.0.
+n8n removed `own` in version 1.30.0.
 ///
 
 ## How it works

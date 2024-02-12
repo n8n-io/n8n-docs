@@ -56,7 +56,7 @@ The following events are available. You can choose which events to stream in **S
 	* Workflow created
 	* Workflow deleted
 	* Workflow updated
-* AI Node logs
+* AI node logs
 	* Memory get messages
 	* Memory added message
 	* Output parser get instructions

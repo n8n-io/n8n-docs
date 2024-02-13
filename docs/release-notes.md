@@ -37,8 +37,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.2...n8n@1.28.0
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains new features, new nodes, node enhancements and bug fixes.
 
 <div class="n8n-new-features" markdown>
@@ -67,8 +65,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.1...n8n@1.27.2
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -78,7 +74,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-31
 
-This release contains node enhancements and bug fixes.
+This release contains new features, node enhancements, and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -86,6 +82,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-31
+
+/// warning | Breaking change
+This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](/hosting/scaling/queue-mode/) for information on configuring queue mode.
+///
 
 /// note | Skip this release
 Please upgrade directly to 1.27.1.
@@ -99,10 +99,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.25.1...n8n@1.26.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-24
-
-
-
-
 
 This release contains new features, node enhancements, and bug fixes.
 
@@ -147,10 +143,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.0...n8n@1.24.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-16
-
-
-
-
 
 This is a bug fix release.
 

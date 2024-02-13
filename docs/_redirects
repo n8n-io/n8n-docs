@@ -1,3 +1,5 @@
+/hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/
+
 /langchain/access-langchain/   /langchain/
 
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/

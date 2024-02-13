@@ -83,19 +83,18 @@ n8n supports complex logic in workflows. In this tutorial, use the [If node](/in
 Add the If node:
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the NASA node.
-2. Search for **If**. n8n shows a list of nodes that match the search.
-3. Select **If** to add the node to the canvas. n8n opens the node.
-4. Select **Add condition** > **String**.
-5. You need to check the value of the `classType` property in the NASA data. To do this:
+1. Search for **If**. n8n shows a list of nodes that match the search.
+1. Select **If** to add the node to the canvas. n8n opens the node.
+1. You need to check the value of the `classType` property in the NASA data. To do this:
 	1. Drag **classType** into **Value 1**.
 
 		/// note | Make sure you ran the NASA node in the previous section
 		If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
 		///
 
-    2. In **Operation**, select **Contains**.
+    2. Change the comparison operation to **Contains**.
     3. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
-6. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
+1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
 /// note | Weeks without large solar flares
 In this tutorial, you are working with live date. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
@@ -106,21 +105,21 @@ In this tutorial, you are working with live date. If you find there aren't any X
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link}. Postbin is a service that receives data and displays it on a temporary web page. 
 
 1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector labeled **true**.
-2. Search for **PostBin**. n8n shows a list of nodes that match the search.
-3. Select **Postbin**.
-4. Select **Send a request**. n8n adds the node to the canvas and opens it.
-6. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**.
-7. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
-8. In n8n, paste your Postbin ID into **Bin ID**.
-9. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
-10. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
-11. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
+1. Search for **PostBin**. n8n shows a list of nodes that match the search.
+1. Select **PostBin**.
+1. Select **Send a request**. n8n adds the node to the canvas and opens it.
+1. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
+1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
+1. In n8n, paste your Postbin ID into **Bin ID**.
+1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
+1. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
+1. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js
     There was a solar flare of class {{$json["classType"]}}
     ```
-13. Close the expressions editor to return to the node.
-14. Close the Postbin node to return to the canvas.
-15. Add another Postbin node, to handle the **false** output path from the If node:
+1. Close the expressions editor to return to the node.
+1. Close the Postbin node to return to the canvas.
+1. Add another Postbin node, to handle the **false** output path from the If node:
     1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png)</span> > **Duplicate node** to duplicate the first Postbin node.
     2. Drag the **false** connector from the If node to the left side of the new Postbin node.
 

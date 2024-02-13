@@ -22,6 +22,28 @@ The are the settings and options available in the Edit Fields node.
 
 You can either use **Manual Mapping** to edit fields using the GUI, or **JSON Output** to write JSON that n8n adds to the input data.
 
+### Fields to Set
+
+If you select **Mode** > **Manual Mapping**, you can configure the fields by dragging and dropping values from **INPUT**.
+
+The default behavior when you drag a value is:
+
+* n8n sets the value's name as the field name.
+* The field value contains an expression which accesses the value.
+
+If you don't want to use expressions:
+
+1. Hover over a field. n8n displays the **Fixed | Expressions** toggle. 
+1. Select **Fixed**.
+
+You can do this for both the name and value of the field.
+
+![A gif showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
+
+### Keep Only Set Fields
+
+Enable this to discard any input data that you don't use in **Fields to Set**.
+
 ### Include in Output
 
 Choose which input data to include in the node's output data.

@@ -4,6 +4,9 @@
 /langchain/langchain-n8n/   /advanced-ai/langchain/langchain-n8n/
 /langchain/access-langchain/   /advanced-ai/
 
+/hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/
+
+
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/
 /choose-n8n/desktop-app/   /choose-n8n/
 
@@ -172,7 +175,7 @@
 /code-examples/expressions/variables/   /code/builtin/
 /code-examples/javascript-functions/methods/   /code/builtin/
 /code-examples/javascript-functions/variables/  /code/builtin/
-/data/data-mapping/   /data/data-mapping/data-mapping-ui/
+/data/data-mapping/   /data/data-mapping/
 
 # Editor UI
 

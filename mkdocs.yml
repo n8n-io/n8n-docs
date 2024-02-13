@@ -214,7 +214,7 @@ nav:
       - Data mapping: 
         - data/data-mapping/index.md
         - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
-        - Data mapping in the expressions editor: data/data-mapping/data-mapping-ui.md
+        - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
         - Data item linking: 
           - data/data-mapping/data-item-linking/index.md
           - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md

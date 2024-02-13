@@ -48,9 +48,9 @@ Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linki
 
 ## Errors when using expressions
 
-When using expressions, you can reference data from any previous node. This doesn't have to be the node immediately before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`. Refer to [Mapping in the UI](/data/data-mapping/data-mapping-ui/) for more information on using this expression.
+When using expressions, you can reference data from any previous node. This doesn't have to be the node just before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`. Refer to [Mapping in the UI](/data/data-mapping/data-mapping-ui/) for more information on using this expression.
 
-Since the previous node can have many items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes.
+Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes.
 
 `.item` fails if information is missing. To figure out which item to use, n8n maintains a thread back through the workflow's nodes for each item. For a given item, this thread tells n8n which items in previous nodes generated it. To find the matching item in a given previous node, n8n follows this thread back until it reaches the node in question.
 
@@ -71,10 +71,10 @@ If you see this error message:
 
 > ERROR: Info for expression missing from previous node
 
-There is a node in the chain that doesn't return pairing information properly. The solution here depends on the type of the previous node:
+There's a node in the chain that doesn't return pairing information. The solution here depends on the type of the previous node:
 
-- Code nodes: make sure you return which input items were used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for more information.
-- Custom or community nodes: the node creator needs to be modify the node to return which input items are used to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/) for more information.
+- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for more information.
+- Custom or community nodes: the node creator needs to be update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/) for more information.
 
 ### Fix for 'Multiple matching items for expression'
 
@@ -82,7 +82,7 @@ This is the error message:
 
 > ERROR: Multiple matching items for expression
 
-Sometimes n8n uses multiple items to create a single item. Examples include the Summarize, Aggregate, and Merge nodes, all of which can combine information from multiple items.
+Sometimes n8n uses multiple items to create a single item. Examples include the Summarize, Aggregate, and Merge nodes. These nodes can combine information from multiple items.
 
 When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
 

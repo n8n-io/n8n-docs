@@ -55,7 +55,6 @@ Example file:
 ```json
 {
  "executions": {
-  "process": "main",
   "saveDataOnSuccess": "none"
  },
  "generic": {

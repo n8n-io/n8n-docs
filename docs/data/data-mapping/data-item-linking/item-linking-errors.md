@@ -48,9 +48,9 @@ Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linki
 
 ## Errors when using expressions
 
-When using expressions, you can reference data from any previous node. This doesn't have to be the node just before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`. Refer to [Mapping in the UI](/data/data-mapping/data-mapping-ui/) for more information on using this expression.
+When using expressions, you can reference data from any previous node. This doesn't have to be the node just before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`. Refer to [Mapping in expressions](/data/data-mapping/data-mapping-expressions/) for more information on using this expression.
 
-Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes.
+Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for detailed information on how this works.
 
 `.item` fails if information is missing. To figure out which item to use, n8n maintains a thread back through the workflow's nodes for each item. For a given item, this thread tells n8n which items in previous nodes generated it. To find the matching item in a given previous node, n8n follows this thread back until it reaches the node in question.
 

@@ -168,7 +168,6 @@ nav:
       - try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
-      - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md
       - Create and run: workflows/create.md

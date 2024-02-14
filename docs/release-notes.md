@@ -28,13 +28,41 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.28.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.2...n8n@1.28.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-02-07
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains new features, new nodes, node enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New nodes: Azure OpenAI chat model and embeddings 
+
+This release adds two new nodes to work with [Azure OpenAI](https://azure.microsoft.com/en-gb/products/ai-services/openai-service/){:target=_blank .external-link} in your advanced AI workflows:
+
+* [Embeddings Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai/)
+* [Azure OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai/)
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Andrea Ascari](https://github.com/ascariandrea){:target=_blank .external-link}
+
 ## n8n@1.27.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.1...n8n@1.27.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-02-02
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
 This release contains bug fixes.
@@ -46,7 +74,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-31
 
-This release contains node enhancements and bug fixes.
+This release contains new features, node enhancements, and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -54,6 +82,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-31
+
+/// warning | Breaking change
+This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](/hosting/scaling/queue-mode/) for information on configuring queue mode.
+///
 
 /// note | Skip this release
 Please upgrade directly to 1.27.1.
@@ -68,16 +100,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.25.1...n8n@1.26.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-24
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
-
-
-
-
-
 This release contains new features, node enhancements, and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -91,10 +113,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.25.0...n8n@1.25.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-22
-
-
-
-
 
 This is a bug fix release.
 
@@ -125,10 +143,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.24.0...n8n@1.24.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-01-16
-
-
-
-
 
 This is a bug fix release.
 

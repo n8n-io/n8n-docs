@@ -4,6 +4,9 @@
 /langchain/langchain-n8n/   /advanced-ai/langchain/langchain-n8n/
 /langchain/access-langchain/   /advanced-ai/
 
+
+/choose-n8n/cloud/   /manage-cloud/
+/cloud-admin-dashboard/   /manage-cloud/cloud-admin-dashboard/
 /hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/
 
 
@@ -121,14 +124,14 @@
 # Hosting user paths 2022
 
 /hosting/options/   /choose-n8n/
-/hosting/installation/cloud/   /choose-n8n/cloud/
+/hosting/installation/cloud/   /manage-cloud/
 /hosting/installation/desktop-app/   /choose-n8n/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/environment-variables/   /hosting/environment-variables/environment-variables/
 /hosting/updating/   /reference/update/
-/hosting/updating/cloud/   /choose-n8n/cloud/
+/hosting/updating/cloud/   /manage-cloud/update-cloud-version/
 /hosting/updating/desktop/   /choose-n8n/
-/hosting/updating/npm/   /choose-n8n/npm/
+/hosting/updating/npm/   /hosting/installation/npm/
 /hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
 /hosting/security/   /hosting/user-management/

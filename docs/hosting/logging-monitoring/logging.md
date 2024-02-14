@@ -47,7 +47,7 @@ n8n uses standard log levels to report:
 - `error`: outputs only errors and nothing else
 - `warn`: outputs errors and warning messages
 - `info`: contains useful information about progress
-- `verbose`: make n8n output additional information about progress that allows you to further understand what is happening
+- `verbose`: make n8n output additional information about progress that allows you to further understand what's happening
 - `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
 
 
@@ -91,11 +91,11 @@ Logger.verbose(`Executing hook (workflowExecuteBefore, hookFunctionsPush)`, {exe
 
 When creating new loggers, some useful standards to keep in mind are:
 
-- Craft log messages to be as easily human-readable as possible. For example, always wrap names in quotes.
+- Craft log messages to be as human-readable as possible. For example, always wrap names in quotes.
 - Duplicating information in the log message and metadata, like workflow name in the above example, can be useful as messages are easier to search and metadata enables easier filtering.
-- Include multiple IDs (e.g. executionId, workflowId, and sessionId) throughout all logs.
+- Include multiple IDs (for example, `executionId`, `workflowId`, and `sessionId`) throughout all logs.
 - Use node types instead of node names (or both) as this is more consistent, and so easier to search.
 
 ## Front-end logs
 
-As of now, front-end logs are not available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.
+As of now, front-end logs aren't available. Using `Logger` or `LoggerProxy` would yield errors in the `editor-ui` package. This functionality will get implemented in the future versions.

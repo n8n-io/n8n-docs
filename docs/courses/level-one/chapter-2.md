@@ -36,7 +36,7 @@ This operation fetches all the selected articles.
 - *Limit:* 10 <br/>
 This parameter sets a limit to how many results are returned by the Get Many operation.
 - *Additional fields > Add Field > Keyword:* automation <br/>
-Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation”. <br/>
+Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword “automation.” <br/>
 
 The configuration of the parameters for the *Hacker News node* should now look like this:
 
@@ -48,7 +48,7 @@ The *Settings* section includes several options for node design and executions. 
 
 - *Notes:* Get the 10 latest articles
 /// note | Node notes
-It is often helpful, especially for complex or shared workflows, to add a short description in the node about what it does.
+It's often helpful, especially for complex or shared workflows, to add a short description in the node about what it does.
 ///
 - *Display note in flow?:* toggle to true<br/>
 This option will display the description note under the node in the Editor UI.
@@ -71,12 +71,12 @@ You can rename the node with a name that's more descriptive for your use case. T
 ## 3. Save the workflow
 
 Save the workflow under the name “Hacker News workflow”
-By default, your workflow is automatically saved as “My workflow”.
+By default, your workflow is automatically saved as “My workflow.”
 
 There are two ways in which you can save a workflow:
 
 - From the Canvas in Editor UI, click **Ctrl + S** or **Cmd + S** on your keyboard
-- Click the **Save** button in the top right corner of the Editor UI
+- Click the **Save** button in the top right corner of the Editor UI. You may need to leave the node editor first by clicking outside the dialog.
 
 ## 4. Execute the node
 
@@ -90,7 +90,7 @@ Click on the *Execute Node* button in the top right corner of the node window. Y
 A node execution represents a run of that node to retrieve the specified data.
 ///
 
-If a node is executed successfully a small green circle with a number inside will appear on top of the node.
+If a node is executed successfully a small green checkmark appear on top of the node.
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-successfully-executed-workflow.png" alt="Successfully executed workflow" style="width:100%"><figcaption align = "center"><i>Successfully executed workflow</i></figcaption></figure>
 
@@ -104,15 +104,15 @@ The *Table* view is the default. It displays the requested data in a table, wher
 
 The node window displays more information about the node execution:
 
-- In the top left corner of the results window, you'll notice another piece of information: ***Items**: 10*.
+- In the top left corner of the output window, you'll notice another piece of information: **10 items**.
 This field displays the number of items (records) that are returned by the node request. In our case, it's expected to be 10, since this is the limit we set in the node. But if you don't set a limit, it's useful to see how many records are actually returned.
-- Next to the *Items* information, notice a small orange *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
+- Next to the *Items* information, notice a small grey *i* icon. If you hover on it, you'll get two more pieces of information: ***Start Time*** (when the node execution started) and ***Execution Time*** (how long it took for the node to return the results from the moment it started executing).
 *Start Time* and *Execution Time* can provide insights into the performance of each individual node.
-- Under the node name beside the **Parameters** tab, there is a link to the node's **Docs**. Check it out if you run into trouble or are not sure how to configure the node's parameters.
+- Under the node name beside the **Parameters** tab, there is a link to the node's **Docs**. Check it out if you run into trouble or aren't sure how to configure the node's parameters.
 
 
 /// warning | Error in nodes
-A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters are not configured correctly.
+A red warning icon on a node means that the node has errors. This might happen if the node credentials are missing or incorrect, or the node parameters aren't configured correctly.
 ///
 <figure style="text-align:center;"><img src="/_images/courses/level-one/chapter-one/error-node.png" alt="Error in nodes" style="width:30%" align="center"><figcaption align = "center"><i>Error in nodes</i></figcaption></figure>
 

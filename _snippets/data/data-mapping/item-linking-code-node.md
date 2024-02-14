@@ -25,7 +25,7 @@ To control item linking, set `pairedItem` when returning data. For example, to l
 ```
 
 
-### pairedItem usage example
+### `pairedItem` usage example
 
 Take this input data:
 

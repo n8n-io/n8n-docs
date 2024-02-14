@@ -63,7 +63,7 @@ _Description of new feature. Link to new node doc._
 
 ### Contributors
 
-_List external contributors. Do not use a bulleted list here._
+_List external contributors. Don't use a bulleted list here._
 
 
 

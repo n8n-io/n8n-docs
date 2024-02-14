@@ -64,8 +64,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get data of all tasks
     * Update a task
 * Time Entries
-    * Create a time entry via duration
-    * Create a time entry via start and end time
+    * Create a time entry using duration
+    * Create a time entry using start and end time
     * Delete a time entry
     * Delete a time entry's external reference.
     * Get data of a time entry

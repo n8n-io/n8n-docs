@@ -36,7 +36,7 @@ Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-re
 View [example workflows and related content](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target=_blank .external-link} on n8n's website.
 
 n8n also provides:
-
+<!-- vale off -->
 * A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) for Venafi TLS Protect Cloud.
 * A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/) for Venafi TLS Protect Datacenter.
-
+<!-- vale on -->

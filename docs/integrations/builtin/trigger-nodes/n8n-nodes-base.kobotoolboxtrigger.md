@@ -6,7 +6,7 @@ contentType: integration
 
 # KoBo Toolbox trigger
 
-[KoBo toolbox](https://www.kobotoolbox.org/) is a field survey and data collection tool that makes it easy to design interactive forms to be completed offline from mobile devices. It is available both as a free cloud solution or as a self-hosted version.
+[KoBo toolbox](https://www.kobotoolbox.org/) is a field survey and data collection tool to design interactive forms to be completed offline from mobile devices. It's available both as a free cloud solution or as a self-hosted version.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/kobotoolbox/).

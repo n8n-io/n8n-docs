@@ -22,5 +22,5 @@ View [example workflows and related content](https://n8n.io/integrations/send-em
 
 ## Attach a file
 
-To attach a file, use the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to upload the file to your workflow.
+To attach a file, use the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to upload the file to your workflow.
 

@@ -24,7 +24,7 @@ For usage examples and templates to help you get started, refer to n8n's [Webhoo
 
 ## Build and test workflows
 
-While building or testing a workflow, use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Execute Node** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
+While building or testing a workflow, use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Test step** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
 When using the Webhook node on the localhost, run n8n in tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
 
@@ -48,7 +48,7 @@ The Webhook node has two URLs: test URL and production URL. n8n displays the URL
 
 ![Screenshot of the webhook URLs](/_images/integrations/builtin/core-nodes/webhook/webhook-urls.png)
 
-* **Test**: n8n registers a test webhook when you select **Listen for event** or **Execute workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
+* **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
 
@@ -101,7 +101,7 @@ Choose what data to include in the response body.
 Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
 
 
-* **Binary Data**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
+* **Binary Property**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
 * **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
 * **No Response Body**: enable this to prevent n8n sending a body with the response.
 * **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
@@ -109,6 +109,7 @@ Select **Add Option** to view more configuration options. The available options 
 * **Response Data**: send custom data with the response.
 * **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
+* **Allowed Origins (CORS)**: set the permitted cross-origin domains.
 
 
 | Option | Required node configuration |
@@ -121,6 +122,7 @@ Select **Add Option** to view more configuration options. The available options 
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
 | Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
+| Allowed Origins (CORS) | Any |
 
 ## Use the HTTP Request node to trigger the Webhook node
 

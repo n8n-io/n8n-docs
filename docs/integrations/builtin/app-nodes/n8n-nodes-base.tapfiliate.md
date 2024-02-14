@@ -57,7 +57,7 @@ This node will create an affiliate in Tapfiliate.
 2. Enter an email address in the ***Email*** field.
 3. Enter the first name of the affiliate in the ***First Name*** field.
 4. Enter the last name of the affiliate in the ***Last Name*** field.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node creates an affiliate in Tapfiliate.
 
@@ -76,7 +76,7 @@ This node will add metadata to the affiliate that we created with the previous n
 6. Click on the ***Add Metadata*** button.
 7. Enter `tag` in the ***Key*** field.
 8. Enter `n8n` in the ***Value*** field.
-9. Click on ***Execute Node*** to run the node.
+9. Click on ***Test step*** to run the node.
 
 In the screenshot below, you will notice that the node adds the metadata to the affiliate that we created with the previous node.
 
@@ -92,7 +92,7 @@ This node will add the affiliate that we created with the Tapfiliate node to an 
 4. Select a program from the ***Program ID*** dropdown list.
 5. Click on the gears icon next to the ***Affiliate ID*** field and click on ***Add Expression***.
 6. Select the following in the ***Variable Selector*** section: Nodes > Tapfiliate > Output Data > JSON > id. You can also add the following expression: `{{$node["Tapfiliate"].json["id"]}}`.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 
 In the screenshot below, you will notice that the node adds the affiliate to a program.

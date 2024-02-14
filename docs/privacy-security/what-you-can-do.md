@@ -3,7 +3,7 @@ title: What you can do
 description: What you can do to improve privacy and data security when using n8n.
 contentType: howto
 ---
-
+<!-- vale off -->
 # What you can do
 
 It's also your responsibility as a customer to ensure you are securing your code and data. This document lists some steps you can take.
@@ -30,3 +30,4 @@ If you self-host n8n, there are additional steps you can take:
 
 --8<-- "_snippets/privacy-security/gdpr-self-hosted.md"
 
+<!-- vale on -->

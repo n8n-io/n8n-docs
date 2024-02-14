@@ -51,7 +51,7 @@ The Start node exists by default when you create a new workflow.
 2. Select **Document** from the ***Resource*** dropdown.
 3. Select **Get All** from the ***Operation*** dropdown.
 3. Enter the ID of your desired index in the ***Index ID*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Using the Elasticsearch node ](/_images/integrations/builtin/app-nodes/elasticsearch/elasticsearch_node.png)
 

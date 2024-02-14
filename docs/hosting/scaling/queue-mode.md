@@ -10,6 +10,10 @@ n8n can be run in different modes depending on your needs. The queue mode provid
 n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
 ///
 
+/// note | Own mode removed
+n8n removed `own` mode in version 1.27.0.
+///
+
 ## How it works
 
 When running in `queue` mode you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions.
@@ -66,20 +70,20 @@ docker run --name some-redis -p 6379:6379  -d redis
 
 By default, Redis runs on `localhost` on port `6379` with no password. Based on your Redis configuration, set the following configurations for the main n8n process. These will allow n8n to interact with Redis.
 
-| Via configuration file | Via environment variables | Description |
+| using configuration file | using environment variables | Description |
 | ------ | ------ | ----- |
 | `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | By default, Redis runs on `localhost`. |
 | `queue.bull.redis.port:6379` | `QUEUE_BULL_REDIS_PORT=6379` | The default port is `6379`. If Redis is running on a different port, configure the value. |
 
 You can also set the following optional configurations:
 
-| Via configuration file | Via environment variables | Description |
+| using configuration file | using environment variables | Description |
 | ------ | ------ | ----- |
 | `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | By default, Redis doesn't require a username. If you're using a specific user, configure it variable. |
 | `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
 | `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
 | `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`. |
-| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. |
+| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and isn't notified about finished jobs. The default value is `60` seconds. |
 | `queue.bull.gracefulShutdownTimeout:30` | `QUEUE_WORKER_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
 
 Now you can start your n8n instance and it will connect to your Redis instance.
@@ -164,7 +168,7 @@ When using multiple webhook processes you will need a load balancer to route req
 
 **Note:** Manual workflow executions still occur on the main process and the default URL for these is `/webhook-test/*`. Make sure that these URLs route to your main process.
 
-You can change this path in the configuration file `endpoints.webhook` or via the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
+You can change this path in the configuration file `endpoints.webhook` or using the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
 
 ### Disable webhook processing in the main process (optional)
 

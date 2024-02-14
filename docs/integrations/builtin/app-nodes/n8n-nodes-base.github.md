@@ -37,7 +37,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Returns issues of a repository.
     * Get the community profile of a repository with metrics, health score, description, license, etc.
     * Get the top 10 popular content paths over the last 14 days.
-    * Get the top 10 referrering domains over the last 14 days.
+    * Get the top 10 referring domains over the last 14 days.
 * Release
     * Creates a new release.
     * Get a release.

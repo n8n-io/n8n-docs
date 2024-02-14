@@ -6,7 +6,7 @@ contentType: integration
 
 # Salesforce
 
-Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachements, cases, and leads, as well as uploading documents. 
+Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachments, cases, and leads, as well as uploading documents. 
 
 On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 
@@ -106,53 +106,6 @@ To add custom fields to your request:
 
 You can then find and add your custom fields.
 
-## Example Usage
 
-This workflow allows you to create, update, and add a note to a lead in Salesforce. You can also find the [workflow](https://n8n.io/workflows/664) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Salesforce]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Salesforce node](/_images/integrations/builtin/app-nodes/salesforce/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Salesforce node (create: lead)
-
-1. First of all, you'll have to enter credentials for the Salesforce node. You can find out how to do that [here](/integrations/builtin/credentials/salesforce/).
-2. Enter the name of the company in the ***Company*** field.
-3. Enter the last name of the contact person in the ***Last Name*** field.
-4. Click on ***Execute Node*** to run the node.
-
-![Create a lead with the Salesforce node](/_images/integrations/builtin/app-nodes/salesforce/salesforce_node.png)
-
-
-### 3. Salesforce1 node (update: lead)
-
-1. Select the credentials that you entered in the previous node.
-2. Select 'Update' from the ***Operation*** dropdown list.
-3. Click on the gears icon next to the ***Lead ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Salesforce > Output Data > JSON > id. You can also add the following expression: `{{$node["Salesforce"].json["id"]}}`
-5. Click on the ***Add Field*** button and select 'City' from the dropdown list.
-6. Enter a city name in the ***City*** field.
-7. Click on ***Execute Node*** to run the node.
-
-![Update a lead with the Salesforce node](/_images/integrations/builtin/app-nodes/salesforce/salesforce1_node.png)
-
-
-
-### 4. Salesforce2 node (addNote: lead)
-
-1. Select the credentials that you entered in the previous node.
-2. Select ***Add Note*** from the ***Operation*** dropdown list.
-3. Click on the gears icon next to the ***Lead ID*** field and click on ***Add Expression***.
-4. Select the following in the ***Variable Selector*** section: Nodes > Salesforce > Output Data > JSON > id. You can also add the following expression: `{{$node["Salesforce"].json["id"]}}`
-5. Enter the note in the ***Title*** field.
-6. Click on ***Execute Node*** to run the node.
-
-![Add a note to a lead with the Salesforce node](/_images/integrations/builtin/app-nodes/salesforce/salesforce2_node.png)
 
 

@@ -45,7 +45,21 @@ copyright: >
 extra:
   analytics:
     provider: google
-    property: GTM-5B8KCRR
+    property: G-0SC4FF2FH9
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            submitting an issue or a fix in our <a href="https://github.com/n8n-io/n8n-docs" target="_blank" rel="noopener">GitHub repo</a>.
   consent:
     title: Cookie consent
     description: >- 
@@ -122,6 +136,18 @@ plugins:
   # - info
   # Search is built in, but must be enabled when you add other plugins
   - search
+  # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
+  - glightbox:
+      touchNavigation: false
+      loop: false
+      effect: zoom
+      slide_effect: none
+      width: auto
+      height: auto
+      zoomable: false
+      draggable: false
+      auto_caption: false
+      caption_position: bottom
   # https://mkdocs-macros-plugin.readthedocs.io/en/latest/
   - macros:
       # https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files
@@ -145,7 +171,6 @@ nav:
       - choose-n8n/index.md
       - Cloud: choose-n8n/cloud.md
       - Faircode license: choose-n8n/faircode-license.md
-      - Desktop (removed): choose-n8n/desktop-app.md
     - Understand workflows:
       - workflows/index.md
       - Create and run: workflows/create.md
@@ -189,6 +214,7 @@ nav:
       - Data mapping: 
         - data/data-mapping/index.md
         - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
+        - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
         - Data item linking: 
           - data/data-mapping/data-item-linking/index.md
           - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
@@ -231,7 +257,6 @@ nav:
     - Log streaming: log-streaming.md
     - AI with LangChain:
         - langchain/index.md
-        - Access LangChain in n8n: langchain/access-langchain.md
         - "Tutorial: Build an AI workflow in n8n": langchain/langchain-tutorial.md
         - LangChain learning resources: langchain/learning-resources.md
         - Langchain concepts in n8n: langchain/langchain-n8n.md
@@ -257,7 +282,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata.md
+        - integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
@@ -269,20 +295,19 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executionData.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.ical.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
-        - integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
@@ -290,8 +315,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.readpdf.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite.md
         - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
@@ -301,7 +325,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
         - integrations/builtin/core-nodes/n8n-nodes-base.start.md
@@ -312,7 +335,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
         - integrations/builtin/core-nodes/n8n-nodes-base.webhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
       - Actions:
         - integrations/builtin/app-nodes/index.md
@@ -668,6 +690,7 @@ nav:
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.openaiassistant.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
+          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
         - Sub-nodes:
@@ -675,13 +698,17 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
@@ -690,7 +717,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
@@ -729,6 +756,7 @@ nav:
         - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
+        - integrations/builtin/credentials/azureopenai.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
         - integrations/builtin/credentials/baserow.md
@@ -860,6 +888,7 @@ nav:
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/misp.md
         - integrations/builtin/credentials/mist.md
+        - integrations/builtin/credentials/mistral.md
         - integrations/builtin/credentials/mocean.md
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
@@ -901,6 +930,7 @@ nav:
         - integrations/builtin/credentials/pushcut.md
         - integrations/builtin/credentials/pushover.md
         - integrations/builtin/credentials/qradar.md
+        - integrations/builtin/credentials/qdrant.md
         - integrations/builtin/credentials/qualys.md
         - integrations/builtin/credentials/questdb.md
         - integrations/builtin/credentials/quickbase.md

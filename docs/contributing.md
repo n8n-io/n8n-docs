@@ -7,7 +7,7 @@ contentType: howto
 
 There are a several ways in which you can contribute to n8n, depending on your skills and interests. Each form of contribution is valuable to us!
 
-## Share some love: review us
+## Share some love: Review us
 
 - Star n8n on [GitHub](https://github.com/n8n-io/n8n){:target=_blank class=.external-link} and [Docker Hub](https://hub.docker.com/r/n8nio/n8n){:target=_blank class=.external-link}.
 - Follow us on [Twitter](https://twitter.com/n8n_io){:target=_blank class=.external-link}, [LinkedIn](https://www.linkedin.com/company/28491094), and [Facebook](https://www.facebook.com/n8nio/){:target=_blank class=.external-link}.
@@ -91,7 +91,7 @@ Someone from n8n reviews your draft. They'll check the following:
 * Is the information accurate and up to date?
 * Do the workflows or other examples function?
 * Is the product information relevant?
-* Gramma and structure
+* Grammar and structure
 
 After the review, you'll have a chance to review any suggested changes and implement them. You can then notify the reviewer that your final draft is ready.
 

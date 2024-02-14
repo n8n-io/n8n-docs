@@ -45,7 +45,7 @@ The start node exists by default when you create a new workflow.
 2. Toggle ***Return All*** to true.
 3. Click on the ***Add Filter*** button and select 'Order Status' from the dropdown list.
 4. Select 'Completed' from the ***Order Status*** dropdown list.
-5. Click on ***Execute Node*** to run the node.
+5. Click on ***Test step*** to run the node.
 
 ![Using the Unleashed Software node to get the list of completed sales order](/_images/integrations/builtin/app-nodes/unleashedsoftware/unleashedsoftware_node.png)
 

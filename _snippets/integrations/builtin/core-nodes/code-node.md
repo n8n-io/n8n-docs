@@ -9,7 +9,7 @@ This page gives usage information about the Code node. For more guidance on codi
 /// 
 
 /// note | Function and Function Item nodes
-The Code node replaces the Function and Function Item nodes from version 0.198.0 onwards. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md){:target=_blank .external-link} and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md){:target=_blank .external-link}.
+The Code node replaces the Function and Function Item nodes from version 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md){:target=_blank .external-link} and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md){:target=_blank .external-link}.
 ///
 ## Usage
 
@@ -49,7 +49,7 @@ The syntax to use the built-in methods and variables is `$variableName` or `$met
 n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/){:target=_blank .external-link}, which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external-link}. n8n downloads the package automatically the first time you use it.
 
 /// note | Slower than JavaScript
-The Code node takes longer to process Python than JavaScript. This is due to the additional compilation steps.
+The Code node takes longer to process Python than JavaScript. This is due to the extra compilation steps.
 ///
 ### Built-in methods and variables
 
@@ -61,8 +61,7 @@ The syntax to use the built-in methods and variables is `_variableName` or `_met
 
 You can't access the file system or make HTTP requests. Use the following nodes instead:
 
-* [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) 
-* [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/)
+* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) 
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 ## Coding in n8n

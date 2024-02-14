@@ -17,7 +17,8 @@
 {% endblock %}
 
 {% block libs %}
-	<!-- Google Tag Manager -->
+
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -25,10 +26,6 @@
 	})(window,document,'script','dataLayer','GTM-K86VCV3');</script>
 	<!-- End Google Tag Manager -->
 
-	<script>
-
-
-	</script>
 
 	<!-- Plausible analytics -->
 	<script defer {% if page.meta and page.meta.contentType %}event-content_type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.pageview-props.js"></script>
@@ -49,9 +46,6 @@
 
 {% endblock %}
 
-{% block announce %}
-  LangChain is now available in n8n. Build AI functionality using <a href="https://docs.n8n.io/langchain/langchain-n8n/">n8n's LangChain nodes</a>.
-{% endblock %}
 
 {% block container %}
 
@@ -60,7 +54,8 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+
 {{ super() }}
 
-
 {% endblock %}
+

@@ -25,10 +25,19 @@ If a node doesn't control how to link input items to output items, n8n tries to 
 
 If n8n can't link items automatically, and the node doesn't handle the item linking, n8n displays an error. Refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/) for more information.
 
-## An item linking example
+## Item linking example
 
-![A diagram showing how you can track back from an item in your current node, to one in a previous node, even when items have been re-ordered](/_images/data/data-mapping/data-item-linking/item-linking.png)
+![A diagram showing the threads linking multiple items back through a workflow](/_images/data/data-mapping/data-item-linking/item-linking-multiple-lines.png)
 
-In this example, it's possible for n8n to link an item in the current node back several steps, despite the item order changing. This means the current node can access information about the linked item in the first node.
+In this example, it's possible for n8n to link an item in one node back several steps, despite the item order changing. This means the node that sorts movies alphabetically can access information about the linked item in the node that gets famous movie actors.
+
+The methods for accessing linked items are different depending on whether you're using the UI, expressions, or the code node. Explore the following resources:
+
+* [Mapping in the UI](/data/data-mapping/data-mapping-ui/)
+* [Mapping in the expressions editor](/data/data-mapping/data-mapping-expressions/)
+* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node/)
+* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/)
+
+
 
 

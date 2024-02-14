@@ -6,7 +6,7 @@ contentType: integration
 
 # SSH
 
-The SSH node is useful for executing commands via the Secure Shell Protocol.
+The SSH node is useful for executing commands using the Secure Shell Protocol.
 
 /// note | Credential
 You can find authentication information for this node [here](/integrations/builtin/credentials/ssh/).
@@ -18,7 +18,7 @@ You can find authentication information for this node [here](/integrations/built
 - Download a file
 - Upload a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+**Note:** To attach a file for upload, you will need to use an additional node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 
 ## Node Reference
 
@@ -29,12 +29,12 @@ You can find authentication information for this node [here](/integrations/built
 - ***Working Directory:*** Only visible for **Command** resources. The directory where the command should be executed.
 - ***Path:*** Only visible for **Download** operation on file resources. The path where the desired file is found.
 - ***Binary Property:*** Only visible for file resources. The name of the binary property which contains the data for the file to be uploaded.
-- ***Target Directory:*** Only visible for **Upload** operations on file resources. The directory to upload the file to. The name of the file does not need to be specified, it's taken from the binary data file name. To override this behavior, set the parameter **File Name** under options.
+- ***Target Directory:*** Only visible for **Upload** operations on file resources. The directory to upload the file to. The name of the file doesn'tneed to be specified, it's taken from the binary data file name. To override this behavior, set the parameter **File Name** under options.
 
 
 ## Example Usage
 
-This workflow allows you to remotely connect to your computer via SSH. This example usage workflow would use the following nodes.
+This workflow allows you to remotely connect to your computer using SSH. This example usage workflow would use the following nodes.
 - [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
 - [SSH]()
 
@@ -54,7 +54,7 @@ The start node exists by default when you create a new workflow.
 4. The ***Execute*** option is automatically selected as the ***Operation***.
 5. In the ***Command*** field enter the command to execute. Here we used `ls` just to see the local directory contents.
 6. In the ***Working Directory*** field you can enter where the command should be executed. Here we ran it in the root directory.
-7. Click on ***Execute Node*** to run the node.
+7. Click on ***Test step*** to run the node.
 
 ![SSH Node](/_images/integrations/builtin/core-nodes/ssh/ssh_node.png)
 

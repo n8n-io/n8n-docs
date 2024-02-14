@@ -7,7 +7,7 @@ contentType: howto
 ## Credentials
 
 <!-- vale off -->
-### Error message: 'Credentials of type "*" are not known'
+### Error message: 'Credentials of type "*" aren't known'
 <!-- vale on -->
 
 Check that the name in the credentials array matches the name used in the property name of the credentials' class.
@@ -19,7 +19,7 @@ Check that the name in the credentials array matches the name used in the proper
 <!-- vale on -->
 
 <!-- vale off -->
-### Error message: 'There was a problem loading init data: API-Server can not be reached. It is probably down'
+### Error message: 'There was a problem loading init data: API-Server can not be reached. It's probably down'
 <!-- vale on -->
 
 - Check that the names of the node file, node folder, and class match the path added to `packages/nodes-base/package.json`.

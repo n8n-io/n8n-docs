@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes with Bitbucket
 
 ## Prerequisites
 
-Create a [Bitbucket](https://www.Bitbucket.com/){:target=_blank .external-link} account.
+Create a [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} account.
 
 ## Using Username and App Password
 

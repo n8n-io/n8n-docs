@@ -17,7 +17,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guida
 For usage examples and templates to help you get started, take a look at n8n's [uProc integrations](https://n8n.io/integrations/uproc/){:target="_blank" .external-link} list.
 ///
 
-## Basic Operations
+## Operations
 
 **Audio**
 
@@ -34,7 +34,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Discover if the email has a social network presence
 - Check if an email has a valid format
 - Check if an email domain belongs to a disposable email service
-- Check if email belongs to free service provider like Gmail, Hotmail
+- Check if email belongs to free service provider like Gmail
 - Check if email is catchall
 - Discover if an email exists in the Robinson list (only Spain)
 - Check if email belongs to a system or role-based account
@@ -65,7 +65,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Allows you to fix the email domain of those misspelled emails
 - Fix the international prefix of a phone based on the ISO code of a country
 - Get GDPR compliant emails list by domain for your Email Marketing campaigns in Europe
-- Discover if mobile exist via real-time HLR query
+- Discover if mobile exist using real-time HLR query
 - Get personal email by social network profile
 - Get portability data about a landline or mobile number, only for Spain
 - Extract results from a LinkedIn search (employees in a company)
@@ -77,9 +77,9 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get users who like a post on LinkedIn
 - Extract a LinkedIn profile
 - Extract results from a LinkedIn search (profiles)
-- Extract fastly last profiles that have published content on LinkedIn by specific keywords
-- Discover if mobile exist via real-time HLR query, as well as portability and roaming data
-- Get existence, portability, and roaming of a mobile phone via MNP query
+- Extract last profiles that have published content on LinkedIn by specific keywords
+- Discover if mobile exist using real-time HLR query, as well as portability and roaming data
+- Get existence, portability, and roaming of a mobile phone using MNP query
 - Discover if mobile or landline prefix exists in Spain
 - Allows normalizing email address, removing non allowed characters
 - Allows normalizing a mobile phone, removing non-allowed characters
@@ -87,7 +87,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Allows getting country prefix number by country code
 - Discover an email by company website or domain and prospect's first-name and last-name
 - This tool parses a social URI address and extracts any available indicators
-- Search all social networks by domain, parses all found URLs, and returns social networks KPIs
+- Search all social networks by domain, parses all found URLs, and returns social networks data
 - Discover if a domain or a website has social activity and returns all social network profiles found
 - Discover if an email has social activity, and get all social network profiles found
 - Discover if a mobile phone has social activity, and get all social network profiles found
@@ -101,7 +101,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get an email by contact's LinkedIn profile URI
 - Discover an email by company's name and prospect's full name
 - Discover an email by company's website or domain and prospect's full name
-- Get email by firstname, lastname, and company
+- Get email by first name, last name, and company
 - Get parsed and validated phone
 
 
@@ -177,21 +177,21 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get VAT by IP address
 - Get VAT value by country ISO code
 - Get VAT by phone number, with worldwide coverage
-- Get VAT by zipcode
+- Get VAT by zip code
 
 
 **Geographical**
 
 - Check if a country's ISO code exists
 - Discover if the distance between two coordinates is equal to another
-- Discover if the distance(in kilometers) between two coordinates is greater than the given input
-- Discover if the distance(in kilometers) between two coordinates is greater or equal to the given input
-- Discover if the distance(in kilometers) between two coordinates is lower than the given input
+- Discover if the distance (kilometers) between two coordinates is greater than the given input
+- Discover if the distance (kilometers) between two coordinates is greater or equal to the given input
+- Discover if the distance(kilometers) between two coordinates is lower than the given input
 - Check if an address exists by a partial address search
 - Check if a house number exists by a partial address search
 - Check if coordinates have a valid format
-- Discover if a zipcode number prefix exists (only for Spain)
-- Discover if a zipcode number has a valid format (only for Spain)
+- Discover if a zip code number prefix exists (only for Spain)
+- Discover if a zip code number has a valid format (only for Spain)
 - Get cartesian coordinates(X, Y, Z/WGS84) by Latitude and Longitude
 - Get location by parameters
 - Get multiple cities by phone prefix (only for Spain)
@@ -201,7 +201,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - City search by partial name (only for Spain)
 - Discover the city name by a local phone number (only for Spain)
 - Discover the city name by the zip code (only for Spain)
-- Discover the community name from a zipcode (only for Spain)
+- Discover the community name from a zip code (only for Spain)
 - Discover latitude and longitude coordinates of an IP address
 - Discover latitude and longitude coordinates of a postal address
 - Get multiple country names by currency ISO code
@@ -214,11 +214,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get country name by phone number, with worldwide coverage
 - Get Aplha2 code by a country prefix or a name
 - Get decimal coordinates (degrees, minutes, and seconds) by latitude and longitude
-- Returns straight-line distance(in kilometers) between two addresses
-- Returns straight-line distance(in kilometers) between two GPS coordinates (latitude and longitude)
-- Returns straight-line distance(in kilometers) between two IP addresses
-- Returns straight-line distance(in kilometers) between two landline phones, using city and province of every phone
-- Returns straight-line distance(in kilometers) between two zip codes, using city and province of every zip code
+- Returns straight-line distance (kilometers) between two addresses
+- Returns straight-line distance (kilometers) between two GPS coordinates (latitude and longitude)
+- Returns straight-line distance (kilometers) between two IP addresses
+- Returns straight-line distance (kilometers) between two landline phones, using city and province of every phone
+- Returns straight-line distance (kilometers) between two zip codes, using city and province of every zip code
 - Get an exact address by a partial address search
 - Discover geographical, company, timezone, and reputation data by IPv4 address
 - Discover the city name, zip code, province, country, latitude, and longitude from an IPv4 or IPv6 address and geocodes it
@@ -228,7 +228,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Discover the city name, zip code, province, country, latitude, and longitude from an IPv4 or IPv6 address
 - Discover the city and the province from a landline phone number (only Spain)
 - Discover location data by name
-- Discover the city and the province from a zipcode number (only Spain)
+- Discover the city and the province from a zip code number (only Spain)
 - Get the most relevant locations by name
 - Get the most relevant locations by name, category, location, and radius
 - Get multiple personal names by a prefix
@@ -237,16 +237,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Allow normalizing a city by removing non allowed characters
 - Allow normalizing a country by removing non allowed characters
 - Allow normalizing a province by removing non allowed characters
-- Allow normalizing a zipcode by removing non allowed characters
+- Allow normalizing a zip code by removing non allowed characters
 - Get normalized country
 - Parse postal address into separated fields, getting a basic resolution
 - Discover the province name from an IP address
 - Get the first province by a name prefix (only for Spain)
 - Discover the province name from a landline phone number (only for Spain)
-- Discover the province name from a zipcode number (only for Spain)
+- Discover the province name from a zip code number (only for Spain)
 - Get a province list by a name prefix (only for Spain)
 - Get a province list by a phone prefix (only for Spain)
-- Get a province list by a zipcode prefix (only for Spain)
+- Get a province list by a zip code prefix (only for Spain)
 - Discover reputation by IPv4 or IPv6 address
 - Returns driving routing time, distance, fuel consumption, and cost between two addresses
 - Returns driving routing time, distance, fuel consumption, and cost between two GPS coordinates
@@ -257,7 +257,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get USNG coordinates by latitude and longitude
 - Get UTM coordinates by latitude and longitude
 - Discover the zip code if you have an IP address
-- Get the first zipcode by prefix, only for Spain
+- Get the first zip code by prefix, only for Spain
 - Get multiple zip codes by prefix, with worldwide coverage
 - Get time data by coordinates
 - Get time data by postal address
@@ -294,7 +294,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get full SSL certificate data by a domain (or website) and monitor your certificate status
 - Get feed entries by domain
 - Get last feed entry by domain
-- Get text data from web, pdf or image allowing to filter some elements by regular expressions or field names
+- Get text data from web, PDF or image allowing to filter some elements by regular expressions or field names
 - Decode URL to recover original
 - Get valid, existing, and default URL when accessing a domain using a web browser
 - Get long version of shortened URL
@@ -320,8 +320,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Discover client and server technologies used in web pages
 - Analyze URL's health status about SSL, broken links, conflictive HTTP links with SSL, and more
 - Get website visits and rank of any domain
-- Get a domain's Whois data by fields
-- Get Whois data fields by IP address provided
+- Get a domain's WHOIS data by fields
+- Get WHOIS data fields by IP address provided
 
 
 **Personal**
@@ -347,11 +347,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Discover if a NIF card number is valid
 - Check if a personal name exists in the INE data source (only for Spain)
 - Check if a name contains accepted characters
-- Discover if a NIF exists in the Robison list (only for Spain)
+- Discover if a NIF exists in the Robinson list (only for Spain)
 - Check if surname contains accepted characters
 - Check if a personal surname appears in INE data source (only for Spain)
 - Discover if a DNI card number is valid
-- Discover the age of a birt date
+- Discover the age of a birth date
 - Discover the age range of a person by birth date
 - Get the difference between two dates
 - Discover the gender of a person by the email
@@ -379,7 +379,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get first personal surname matching by prefix from INE data source (only for Spain)
 - Get personal surname matching by prefix from INE data source (only for Spain)
 - Get Twitter profile by first name, last name, and company
-- Get Xing profile by first name, last name, and company
+- Get XING profile by first name, last name, and company
 - Add a contact email to a person list
 
 
@@ -504,53 +504,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Count total words in a text
 
 
-## Example Usage
 
-This workflow allows you to take a screenshot of a website and send it to a Telegram channel. You can also find the [workflow](https://n8n.io/workflows/858) on n8n.io. This example usage workflow uses the following nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [uProc]()
-- [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/)
-
-The final workflow should look like the following image.
-
-![A workflow with the uProc node](/_images/integrations/builtin/app-nodes/uproc/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. uProc node (getUrlScreenshot)
-
-
-This node will return the screenshot of the n8n website. If you want to get the screenshot of a different website, enter the domain of that website instead.
-
-1. First of all, you'll have to enter credentials for the uProc node. You can find out how to do that [here](/integrations/builtin/credentials/uproc/).
-2. Select 'Image' from the ***Resource*** dropdown list.
-3. Select 'Get Screenshot by URL' from the ***Operation*** dropdown list.
-4. Enter `https://n8n.io` in the ***URL*** field.
-5. Select '1024' from the ***Width*** dropdown list.
-6. Select 'Yes' from the ***Fullpage*** dropdown list.
-7. Click on ***Execute Node*** to run the node.
-
-
-In the screenshot below, you will notice that the node returns a URL of the screenshot of the website.
-
-![Using the uProc node to get a screenshot of a website](/_images/integrations/builtin/app-nodes/uproc/uproc_node.png)
-
-### 3. Telegram node (sendPhoto: message)
-
-This node will send the screenshot that we received from the previous node.
-
-1. First of all, you'll have to enter credentials for the Telegram node. You can find out how to do that [here](/integrations/builtin/credentials/telegram/).
-2. Select 'Send Photo' from the ***Operation*** dropdown list.
-3. Enter a chat ID in the ***Chat ID*** field. Refer to the [FAQs](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/#how-do-i-get-the-chat-id) of the Telegram node to learn how to get the chat ID.
-4. Click on the gears icon next to the ***Photo*** field and click on ***Add Expression***.
-
-5. Select the following in the ***Variable Selector*** section: Nodes > uProc > Output Data > JSON > message > result. You can also add the following expression: `{{$node["uProc"].json["message"]["result"]}}`.
-6. Click on ***Execute Node*** to run the node.
-
-
-In the screenshot below, you will notice that the node sends the screenshot image to the channel that we specify.
-
-![Using the Telegram node to send the image of the screenshot](/_images/integrations/builtin/app-nodes/uproc/telegram_node.png)
 

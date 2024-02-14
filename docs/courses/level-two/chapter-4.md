@@ -4,7 +4,7 @@ contentType: tutorial
 
 # Dealing with errors in workflows
 
-Sometimes it can happen that you're building a nice workflow, but when you try to execute it, it fails. There are many reasons why workflows executions may fail (some more or less mysterious), for example when a node is not configured correctly or a third-party service that you're trying to connect to is not working properly.
+Sometimes it can happen that you're building a nice workflow, but when you try to execute it, it fails. There are many reasons why workflows executions may fail (some more or less mysterious), for example when a node isn't configured correctly or a third-party service that you're trying to connect to isn't working properly.
 
 But don't panic. We will show you some ways in which you can troubleshoot the issue, so you can get your workflow up and running as soon as possible.
 
@@ -26,7 +26,7 @@ This will open the workflow in read-only mode, where you can see the execution o
 
 To catch failed workflows, create a separate [Error Workflow](/flow-logic/error-handling/error-workflows/) with the [Error Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/), which gets executed if the main execution fails.
 
-Then, you can take further actions by connecting other nodes, for example sending notifications via email or Slack about the failed workflow and its errors. To receive error messages for a failed workflow, you need to select the option `Error Workflow` in the [Workflow Settings](/courses/level-one/chapter-5/chapter-5.8/) of the respective workflow.
+Then, you can take further actions by connecting other nodes, for example sending notifications using email or Slack about the failed workflow and its errors. To receive error messages for a failed workflow, you need to select the option `Error Workflow` in the [Workflow Settings](/courses/level-one/chapter-5/chapter-5.8/) of the respective workflow.
 
 The only difference between a regular workflow and an Error Workflow is that the latter contains an Error Trigger node. Make sure to create this node before you set a workflow as Error Workflow.
 
@@ -113,7 +113,7 @@ Throwing exceptions with the Stop and Error node is useful for verifying the dat
 
 If you are working with data from a third-party service, you may come across problems such as: wrongly formatted JSON output, data with the wrong type (for example, numeric data that has a non-numeric value), missing values, or errors from remote servers.
 
-Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it is better to throw an error at the time you know there might be a problem.
+Though this kind of invalid data might not cause the workflow to fail right away, it could cause problems later on, and then it can become difficult to track the source error. This is why it's better to throw an error at the time you know there might be a problem.
 
 <figure><img src="/_images/courses/level-two/chapter-four/exercise_errors_stopanderror.png" alt="" style="width:100%"><figcaption align = "center"><i>Stop and Error node with error message</i></figcaption></figure>
 ///

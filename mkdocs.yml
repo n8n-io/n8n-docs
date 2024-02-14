@@ -274,6 +274,7 @@ nav:
     - Release notes: release-notes.md
     - v1.0 migration guide: 1-0-migration-checklist.md
     - Keyboard shortcuts: keyboard-shortcuts.md
+    - Faircode license: faircode-license.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -1102,7 +1103,6 @@ nav:
       - hosting/scaling/index.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Execution data: hosting/scaling/execution-data.md
-      - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
       - Binary data filesystem mode: hosting/scaling/binary-data.md
       - Memory-related errors: hosting/scaling/memory-errors.md

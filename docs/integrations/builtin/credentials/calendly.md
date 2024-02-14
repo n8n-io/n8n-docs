@@ -17,7 +17,7 @@ Create a [Calendly](https://www.calendly.com/) premium account.
 ## Using Access Token
 
 1. Open your Calendly dashboard.
-2. Click on "Integrations".
+2. Click on **Integrations**.
 3. Use API key in your Calendly node credentials in n8n.
 
 

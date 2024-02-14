@@ -6,7 +6,7 @@ contentType: integration
 
 # Calendly trigger
 
-[Calendly](https://calendly.com/) is an automated scheduling software that is designed to make the process of finding meeting times easy.
+[Calendly](https://calendly.com/) is an automated scheduling software that's designed to help find meeting times.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/calendly/).

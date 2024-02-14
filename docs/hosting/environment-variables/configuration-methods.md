@@ -55,7 +55,6 @@ Example file:
 ```json
 {
  "executions": {
-  "process": "main",
   "saveDataOnSuccess": "none"
  },
  "generic": {
@@ -98,7 +97,7 @@ n8n:
 
 ### Keeping sensitive data in separate files
 
-You can append `_FILE` to some individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from Docker- and Kubernetes-Secrets.
+You can append `_FILE` to some individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from Docker-Secrets and Kubernetes-Secrets.
 
 The following environment variables support file input:
 
@@ -133,27 +132,16 @@ export VUE_APP_URL_BASE_API=https://n8n.example.com/
 
 n8n creates a random encryption key automatically on the first launch and saves
 it in the `~/.n8n` folder. n8n uses that key to encrypt the credentials before
-they get saved to the database. It's possible to overwrite the key and
-set it using an environment variable.
+they get saved to the database. If the key isn't yet in the settings file,
+you can set it using an environment variable, so that n8n 
+uses your custom key instead of generating a new one.
+
+In queue mode, you must specify the encryption key environment variable for all workers.
 
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 
-### Execute all workflows in the same process
-
-/// warning | Deprecated
-n8n deprecated `own` mode and the `EXECUTIONS_PROCESS` flag in version 1.0. They will be removed in a future release. Main mode is now the default, so this step isn't needed for version 1.0 and above.
-
-Use [Queue mode](/hosting/scaling/queue-mode/) if you need full execution isolation.
-///
-
-All workflows run in their own separate process. This ensures that all CPU cores get used and that they don't block each other on CPU intensive tasks. It also makes sure that one execution crashing doesn't take down the whole application. The disadvantage is that it slows down the start-time considerably and uses much more memory. If your workflows aren't CPU intensive, and they have to start very fast, it's possible to run them all directly in the main-process with this setting.
-
-
-```bash
-export EXECUTIONS_PROCESS=main
-```
 
 ### Execution timeout
 
@@ -176,7 +164,7 @@ export EXECUTIONS_TIMEOUT_MAX=7200
 Every user can add custom nodes that get loaded by n8n on startup. The default
 location is in the subfolder `.n8n/custom` of the user who started n8n.
 
-You can define additional folders with an environment variable:
+You can define more folders with an environment variable:
 
 ```bash
 export N8N_CUSTOM_EXTENSIONS="/home/jim/n8n/custom-nodes;/data/n8n/nodes"
@@ -205,7 +193,7 @@ export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 
 ### Timezone
 
-The default timezone is "America/New_York". For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+The default timezone is America/New_York. For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
 
 ```bash
 export GENERIC_TIMEZONE=Europe/Berlin
@@ -224,7 +212,7 @@ export N8N_USER_FOLDER=/home/jim/n8n
 
 ### Webhook URL
 
-n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally on port 5678 but is exposed to the web using the reverse proxy on port 443. In that case, it's important to set the webhook URL manually so that n8n can display it correctly in the Editor UI and register the correct webhook URLs with external services.
+n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_PORT`. If n8n runs behind a reverse proxy, that won't work. That's because n8n runs internally on port 5678 but is exposed to the web using the reverse proxy on port 443. In that case, it's important to set the webhook URL manually so that n8n can display it in the Editor UI and register the correct webhook URLs with external services.
 
 ```bash
 export WEBHOOK_URL=https://n8n.example.com/

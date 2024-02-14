@@ -16,21 +16,19 @@ This page collects resources relating to binary data in n8n.
 
 ## Working with binary data in your workflows
 
-You can process binary data in n8n workflows. n8n provides nodes to support many tasks. You can also use code to work with binary data. 
+You can process binary data in n8n workflows. n8n provides nodes to help you work with binary data. You can also use code. 
 
 ### Nodes
 
-There are three key nodes dedicated to handling binary data:
+There are three key nodes dedicated to handling binary data files:
 
-* [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/): load a file from the host machine running n8n.
-* [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/): write a file to the host machine running n8n.
-* [Convert to/from binary data](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/): transform data between JSON and binary formats.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
 
-There are nodes for working with specific file types:
+There are separate nodes for working with XML and HTML data:
 
-* [iCalendar](/integrations/builtin/core-nodes/n8n-nodes-base.ical/)
-* [Read PDF](/integrations/builtin/core-nodes/n8n-nodes-base.readpdf/)
-* [Spreadsheet File](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/)
+* [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html/)
 * [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml/)
 
 And nodes for performing common tasks:

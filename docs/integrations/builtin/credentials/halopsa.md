@@ -32,5 +32,5 @@ Create a [HaloPSA](https://halopsa.com/) account.
 ![A workflow with the HaloPSA node](/_images/integrations/builtin/credentials/halopsa/halopsa-n8n-credentials.jpg)
 
 !['Resource Server', 'Authorisation Server', 'and Tenant'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-1.jpg)
-!['Cliend ID' and 'Client Secret'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-2.jpg)
+!['Client ID' and 'Client Secret'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-2.jpg)
 

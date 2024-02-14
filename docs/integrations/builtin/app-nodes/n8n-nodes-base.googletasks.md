@@ -20,10 +20,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 ## Basic Operations
 
 * Task
-    * Add a task to tasklist
+    * Add a task to task list
     * Delete a task
     * Retrieve a task
-    * Retrieve all tasks from a tasklist
+    * Retrieve all tasks from a task list
     * Update a task
 
 ## Example Usage

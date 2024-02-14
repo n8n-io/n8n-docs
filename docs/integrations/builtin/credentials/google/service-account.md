@@ -80,7 +80,7 @@ The following video demonstrates the steps described above.
 
 ## Troubleshooting
 
-### Service Account cannot access Google Drive files
+### Service Account can't access Google Drive files
 
 A Service Account can't access Google Drive files and folders that weren't shared with its associated user email.
 

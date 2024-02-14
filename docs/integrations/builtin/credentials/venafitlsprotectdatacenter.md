@@ -3,7 +3,7 @@ title: Venafi TLS Protect Datacenter credentials
 description: Documentation for Venafi TLS Protect Datacenter credentials. Use these credentials to authenticate Venafi TLS Protect Datacenter in n8n, a workflow automation platform.
 contentType: integration
 ---
-
+<!-- vale off -->
 # Venafi TLS Protect Datacenter credentials
 
 You can use these credentials to authenticate the following nodes with Venafi TLS Protect Datacenter:
@@ -15,3 +15,4 @@ Venafi provide a [PDF guide](/_downloads/venafi-tpp.pdf) to getting credentials.
 
 Enter the client ID, your username and password, and your Venafi domain, in the n8n **Venafi TLS Protect Datacenter account** modal. Refer to [Add and edit credentials](/credentials/add-edit-credentials/) for more information on working with credentials in n8n.
 
+<!-- vale on -->

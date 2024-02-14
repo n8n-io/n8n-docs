@@ -130,5 +130,5 @@ The start node exists by default when you create a new workflow.
 4. Enable the **Return All** toggle.
 5. From the *Add Filter* dropdown select **Priority**.
 6. From the new *Priority* dropdown select **Urgent**.
-5. Click on **Execute Node** to run the workflow.
+5. Click on **Test step** to run the workflow.
 

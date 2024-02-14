@@ -39,7 +39,7 @@ You'll only need to enter the Credentials Name and click on the circle button in
 1. Open your Acuity Scheduling dashboard.
 2. Click on 'Integrations' in the left sidebar.
 3. Scroll down and click on 'view credentials' under the API section.
-4. Copy the ***User ID*** and ***API Key*** from the pop-up that is displayed.
+4. Copy the ***User ID*** and ***API Key*** from the pop-up that's displayed.
 5. Use these credentials with your Acuity Scheduling node credentials in n8n.
 
 ![Getting Acuity Scheduling credentials](/_images/integrations/builtin/credentials/acuityscheduling/using-access-token.gif)

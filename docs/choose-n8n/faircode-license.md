@@ -3,6 +3,8 @@ description: The n8n faircode license.
 contentType: explanation
 ---
 
+<!-- vale off -->
+
 # Faircode license
 
 /// note | Proprietary licenses for Enterprise
@@ -78,7 +80,7 @@ Provided you are using n8n for internal business purposes, and not making n8n av
 
 Any code you contribute on GitHub is subject to GitHub's [terms of use](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#d-user-generated-content). In simple terms, this means you own, and are responsible for, anything you contribute, but that you grant other GitHub users certain rights to use this code. When you contribute code to a repository containing notice of a license, you license the code under the same terms.
 
-n8n asks every contributor to sign our [Contributor License Agreement](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md). In addition to the above, this gives n8n the ability to change its license without seeking additional permission. It also means you are not liable for your contributions (e.g. in case they cause damage to someone else's business).
+n8n asks every contributor to sign our [Contributor License Agreement](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md). In addition to the above, this gives n8n the ability to change its license without seeking additional permission. It also means you aren't liable for your contributions (e.g. in case they cause damage to someone else's business).
 
 It's easy to get started contributing code to n8n [here](https://github.com/n8n-io), and we've listed broader ways of participating in our community [here](https://docs.n8n.io/reference/contributing.html).
 
@@ -87,7 +89,7 @@ It's easy to get started contributing code to n8n [here](https://github.com/n8n-
 
 n8n was until 17 March 2022 licensed under Apache 2.0 with Commons Clause. Commons Clause was initiated by various software companies wanting to protect their rights against cloud providers. The concept involved adding a commercial restriction on top of an existing open source license.
 
-However, the use of the Commons Clause as an additional condition to an open source license, as well as the use of wording that is open to interpretation, created some confusion and uncertainty regarding the terms of use. The Commons Clause also restricted people's ability to offer consulting and support services: we realized these services are critical in enabling people to get value from n8n, so we wanted to remove this restriction.
+However, the use of the Commons Clause as an additional condition to an open source license, as well as the use of wording that's open to interpretation, created some confusion and uncertainty regarding the terms of use. The Commons Clause also restricted people's ability to offer consulting and support services: we realized these services are critical in enabling people to get value from n8n, so we wanted to remove this restriction.
 
 We created the Sustainable Use License to be more permissive and more clear about what use is allowed, while continuing to ensure n8n gets the funding needed to build and improve our product.
 
@@ -99,7 +101,7 @@ That means you are now free to offer commercial consulting or support services (
 
 ### Is n8n open source?
 
-Although n8n's source code is available under the Sustainable Use License, according to the [Open Source Initiative](https://opensource.org/) (OSI), open source licenses cannot include limitations on use, so we do not call ourselves open source. In practice, n8n offers most users many of the same benefits as OSI-approved open source.
+Although n8n's source code is available under the Sustainable Use License, according to the [Open Source Initiative](https://opensource.org/) (OSI), open source licenses can't include limitations on use, so we do not call ourselves open source. In practice, n8n offers most users many of the same benefits as OSI-approved open source.
 
 We coined the term ['fair-code'](https://faircode.io/) as a way of describing our licensing model, and the model of other companies who are source-available, but restrict commercial use of their source code.
 
@@ -119,3 +121,5 @@ We're always excited to talk about software licenses, fair-code and other princi
 ### Can I use n8n's Sustainable Use License for my own project?
 
 Yes! We're excited to see more software use the Sustainable Use License. We'd love to hear about your project if you're using our license: license@n8n.io.
+
+<!-- vale on -->

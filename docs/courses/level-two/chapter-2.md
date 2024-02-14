@@ -20,7 +20,7 @@ Use the HTML node to extract HTML content of a webpage, by referencing CSS selec
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the URL `https://www.daysoftheyear.com/days/mar/2022/`. Then, connect an HTML node and configure it to extract the date of the returned events.
+Let's get the title of the latest n8n blog post. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
 
 ??? note "Show me the solution"
 
@@ -28,7 +28,7 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 
 	- Authentication: None
 	- Request Method: GET
-	- URL: https://www.daysoftheyear.com/days/mar/2022/
+	- URL: https://blog.n8n.io/
 
 	The result should look like this:
 
@@ -40,8 +40,8 @@ Use the HTTP Request node to make a GET request to the URL `https://www.daysofth
 	* Source Data: JSON
 	* JSON Property: data
 	* Extraction Values:  
-		* Key: event
-		* CSS Selector: .js-link-target
+		* Key: title
+		* CSS Selector: .item-title  a
 		* Return Value: HTML
 
 	You can add more values to extract more data.
@@ -77,19 +77,19 @@ In a previous exercise, you used an HTTP Request node to make a request to an AP
 ## Date, time, and interval data
 
 Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `YEAR`. The dates and times can be passed in different formats, for example:
-
-- `DATE`: March 29 2022, 29-03-2022, 2022/03/29
+<!-- vale off -->
+- `DATE`: March 29 2022, 29-03-2022, 2022/03/29 
 - `TIME`: 08:30:00, 8:30, 20:30
 - `DATETIME`: 2022/03/29 08:30:00
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
-
+<!-- vale on -->
 If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/).
 
 You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.
 
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it is generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
+In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it's generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
 
 ### Exercise
@@ -268,16 +268,19 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 ## Binary data
 
-So far, you have mainly worked with text data. But what if you want to process data that is not text? For example, images or PDF files. This is binary data, as it is represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
+Up to now, you have mainly worked with text data. But what if you want to process data that's not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 
-- [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/) to move data between binary and JSON properties.
-- [Read Binary Files](/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/) to read multiple files from the host machine that runs n8n.
-- [Write Binary File](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/) to write a file to the host machine that runs n8n.
-- [Spreadsheet File node](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) to read from or write to spreadsheet files of different formats (for example, CSV, XLSX).
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
 
-To read or write a binary file, you need to write the path (location) of the file in the node's `File Name` parameter.
+/// note | Reading and writing files is only available on self-hosted n8n
+Reading and writing files to disk isn't available on n8n Cloud. You'll read and write to the machine where you installed n8n. If you run n8n in Docker, your command runs in the n8n container and not the Docker host. The Read/Write Files From Disk node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
+///
+
+To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation), or in the node's `File Path and Name` parameter (for the Write operation).
 
 /// warning | Naming the right path
 The file path looks slightly different depending on how you are running n8n:
@@ -290,64 +293,87 @@ The file path looks slightly different depending on how you are running n8n:
 
 ### Exercise
 
-Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Move Binary Data node to convert the file from binary to JSON, with [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64){:target="_blank" .external-link} encoding.
+Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Extract From File node to convert the file from binary to JSON.
 
 ??? note "Show me the solution"
 
-	In the HTTP Request node, you should see the PDF file in JSON, Table, and Binary view, like this:
+	In the HTTP Request node, you should see the PDF file, like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
 
-	When you convert the PDF from binary to JSON with base64 encoding using the *Move Binary Data node*, the result should look like this:
+	When you convert the PDF from binary to JSON Extract From File node, the result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="" style="width:100%"><figcaption align = "center"><i>Move Binary Data node (Binary to JSON) with base64 encoding</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 
 	```json
 	{
+		"name": "Binary to JSON",
 		"nodes": [
 			{
-				"parameters": {
-					"url": "https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf",
-					"responseFormat": "file",
-					"options": {}
-				},
-				"name": "HTTP Request",
-				"type": "n8n-nodes-base.httpRequest",
-				"typeVersion": 4,
-				"position": [
-					1340,
-					1080
-				]
+			"parameters": {},
+			"id": "78639a25-b69a-4b9c-84e0-69e045bed1a3",
+			"name": "When clicking \"Execute Workflow\"",
+			"type": "n8n-nodes-base.manualTrigger",
+			"typeVersion": 1,
+			"position": [
+				480,
+				520
+			]
 			},
 			{
-				"parameters": {
-					"setAllData": false,
-					"options": {
-						"encoding": "base64"
-					}
-				},
-				"name": "Move Binary Data",
-				"type": "n8n-nodes-base.moveBinaryData",
-				"typeVersion": 1,
-				"position": [
-					1600,
-					1080
-				]
+			"parameters": {
+				"url": "https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf",
+				"options": {}
+			},
+			"id": "a11310df-1287-4e9a-b993-baa6bd4265a6",
+			"name": "HTTP Request",
+			"type": "n8n-nodes-base.httpRequest",
+			"typeVersion": 4.1,
+			"position": [
+				700,
+				520
+			]
+			},
+			{
+			"parameters": {
+				"operation": "pdf",
+				"options": {}
+			},
+			"id": "88697b6b-fb02-4c3d-a715-750d60413e9f",
+			"name": "Extract From File",
+			"type": "n8n-nodes-base.extractFromFile",
+			"typeVersion": 1,
+			"position": [
+				920,
+				520
+			]
 			}
 		],
+		"pinData": {},
 		"connections": {
-			"HTTP Request": {
-				"main": [
-					[
-						{
-							"node": "Move Binary Data",
-							"type": "main",
-							"index": 0
-						}
-					]
+			"When clicking \"Execute Workflow\"": {
+			"main": [
+				[
+				{
+					"node": "HTTP Request",
+					"type": "main",
+					"index": 0
+				}
 				]
+			]
+			},
+			"HTTP Request": {
+			"main": [
+				[
+				{
+					"node": "Extract From File",
+					"type": "main",
+					"index": 0
+				}
+				]
+			]
 			}
 		}
 	}
@@ -357,7 +383,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 ### Exercise
 
-Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and move the returned data from JSON to binary. Then, write the new binary data to a file. Finally, to check that it worked out, read the generated binary file referencing it with an expression in the node.
+Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and convert the returned data from JSON to binary using the Convert to File node. Then, write the new binary file data to the machine where n8n is running. Finally, to check that it worked out, read the generated binary file from the machine referencing it with an expression in the node.
 
 ??? note "Show me the solution"
 
@@ -369,91 +395,122 @@ Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and mo
 
 	```json
 	{
+		"name": "JSON to file and Read-Write",
 		"nodes": [
 			{
-				"parameters": {
-					"filePath": "={{$json[\"fileName\"]}}"
-				},
-				"name": "Read Binary File",
-				"type": "n8n-nodes-base.readBinaryFile",
-				"typeVersion": 1,
-				"position": [
-					1060,
-					500
-				]
+			"parameters": {},
+			"id": "78639a25-b69a-4b9c-84e0-69e045bed1a3",
+			"name": "When clicking \"Execute Workflow\"",
+			"type": "n8n-nodes-base.manualTrigger",
+			"typeVersion": 1,
+			"position": [
+				480,
+				520
+			]
 			},
 			{
-				"parameters": {
-					"url": "https://poetrydb.org/random/1",
-					"options": {}
-				},
-				"name": "HTTP Request",
-				"type": "n8n-nodes-base.httpRequest",
-				"typeVersion": 4,
-				"position": [
-					520,
-					500
-				]
+			"parameters": {
+				"url": "https://poetrydb.org/random/1",
+				"options": {}
+			},
+			"id": "a11310df-1287-4e9a-b993-baa6bd4265a6",
+			"name": "HTTP Request",
+			"type": "n8n-nodes-base.httpRequest",
+			"typeVersion": 4.1,
+			"position": [
+				680,
+				520
+			]
 			},
 			{
-				"parameters": {
-					"fileName": "/tmp/poetrydb.json"
-				},
-				"name": "Write Binary File",
-				"type": "n8n-nodes-base.writeBinaryFile",
-				"position": [
-					880,
-					500
-				],
-				"typeVersion": 1
+			"parameters": {
+				"operation": "toJson",
+				"options": {}
+			},
+			"id": "06be18f6-f193-48e2-a8d9-35f4779d8324",
+			"name": "Convert to File",
+			"type": "n8n-nodes-base.convertToFile",
+			"typeVersion": 1,
+			"position": [
+				880,
+				520
+			]
 			},
 			{
-				"parameters": {
-					"mode": "jsonToBinary",
-					"options": {}
-				},
-				"name": "Move Binary Data",
-				"type": "n8n-nodes-base.moveBinaryData",
-				"position": [
-					700,
-					500
-				],
-				"typeVersion": 1
+			"parameters": {
+				"operation": "write",
+				"fileName": "/tmp/poetrydb.json",
+				"options": {}
+			},
+			"id": "f2048e5d-fa8f-4708-b15a-d07de359f2e5",
+			"name": "Read/Write Files from Disk",
+			"type": "n8n-nodes-base.readWriteFile",
+			"typeVersion": 1,
+			"position": [
+				1080,
+				520
+			]
+			},
+			{
+			"parameters": {
+				"fileSelector": "={{ $json.fileName }}",
+				"options": {}
+			},
+			"id": "d630906c-09d4-49f4-ba14-416c0f4de1c8",
+			"name": "Read/Write Files from Disk1",
+			"type": "n8n-nodes-base.readWriteFile",
+			"typeVersion": 1,
+			"position": [
+				1280,
+				520
+			]
 			}
 		],
+		"pinData": {},
 		"connections": {
+			"When clicking \"Execute Workflow\"": {
+			"main": [
+				[
+				{
+					"node": "HTTP Request",
+					"type": "main",
+					"index": 0
+				}
+				]
+			]
+			},
 			"HTTP Request": {
-				"main": [
-					[
-						{
-							"node": "Move Binary Data",
-							"type": "main",
-							"index": 0
-						}
-					]
+			"main": [
+				[
+				{
+					"node": "Convert to File",
+					"type": "main",
+					"index": 0
+				}
 				]
+			]
 			},
-			"Write Binary File": {
-				"main": [
-					[
-						{
-							"node": "Read Binary File",
-							"type": "main",
-							"index": 0
-						}
-					]
+			"Convert to File": {
+			"main": [
+				[
+				{
+					"node": "Read/Write Files from Disk",
+					"type": "main",
+					"index": 0
+				}
 				]
+			]
 			},
-			"Move Binary Data": {
-				"main": [
-					[
-						{
-							"node": "Write Binary File",
-							"type": "main",
-							"index": 0
-						}
-					]
+			"Read/Write Files from Disk": {
+			"main": [
+				[
+				{
+					"node": "Read/Write Files from Disk1",
+					"type": "main",
+					"index": 0
+				}
 				]
+			]
 			}
 		}
 	}

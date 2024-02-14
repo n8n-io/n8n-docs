@@ -39,12 +39,12 @@ You will build two workflows:
 
 1. **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, or [n8n Cloud](/choose-n8n/cloud/){:target="_blank" .external}.
 2. **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
-3. Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but is not necessary.
+3. Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but isn't necessary.
 4. An [account on the n8n community forum](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external} if you wish to receive a profile badge and avatar upon successful completion
 
 ## How long does the course take?
 
-Completing the course should take around **two hours**. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
+Completing the course should take around **two hours**. You don't have to complete it in one go, feel free to take breaks and resume whenever you are ready.
 
 ## How do I complete the course?
 

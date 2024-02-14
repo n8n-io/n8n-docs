@@ -13,9 +13,9 @@ You can use these credentials to authenticate the following nodes with Pipedrive
 
 ## Prerequisites
 
-Create a [Pipedrive](https://pipedrive.com/) account.
+Create a [Pipedrive](https://pipedrive.com/){:target=_blank .external-link} account.
 
-n8n supports authentication using OAuth or API token.
+n8n supports authentication using OAuth or API token. For OAuth, follow the steps in Pipedrive's [OAuth 2.0 overview](https://pipedrive.readme.io/docs/marketplace-oauth-api){:target=_blank .external-link}. For API token, refer to [How to find the API token](https://pipedrive.readme.io/docs/how-to-find-the-api-token){:target=_blank .external-link}.
 
 ## Related resources
 

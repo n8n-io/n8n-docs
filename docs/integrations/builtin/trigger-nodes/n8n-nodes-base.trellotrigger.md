@@ -37,7 +37,9 @@ You'll need to save the workflow and then click on the Activate toggle on the to
 
 ## FAQs
 
-### How do I find the Model ID?
+### Find the Model ID
+
+The model ID is the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.
 
 For this specific example, the List ID would be the Model ID.
 
@@ -46,9 +48,4 @@ For this specific example, the List ID would be the Model ID.
 3. Open the card, add '.json' at the end of the URL, and press enter.
 4. In the JSON file, you will see a field called `idList`.
 5. Copy `idList`and paste it in the *Model ID* field in n8n.
-
-
-### What is the Model ID?
-
-It is the ID of any model in Trello. Depending on the use-case, it could be the User ID, List ID, and so on.
 

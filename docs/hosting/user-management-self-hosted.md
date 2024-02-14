@@ -45,10 +45,10 @@ Get the following information from your SMTP provider:
 * SMTP sender name
 
 To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/)
-
+<!-- vale off -->
 | Variable | Type | Description | Required? |
 | -------- | ---- | ----------- | --------- |
-| `N8N_EMAIL_MODE` | string | smtp | Required |
+| `N8N_EMAIL_MODE` | string | `smtp` | Required |
 | `N8N_SMTP_HOST` | string | _your_SMTP_server_name_ | Required |
 | `N8N_SMTP_PORT` | number | _your_SMTP_server_port_ Default is `465`.| Optional |
 | `N8N_SMTP_USER` | string | _your_SMTP_username_ | Optional |
@@ -59,7 +59,13 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 | `N8N_SMTP_SSL` | boolean | Whether to use SSL for SMTP (true) or not (false). Defaults to `true`. | Optional | 
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | string | Full path to your HTML email template. This overrides the default template for invite emails. | Optional |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | string | Full path to your HTML email template. This overrides the default template for password reset emails. | Optional |
+<<<<<<< HEAD
+<!-- vale on-->
+=======
+| `N8N_UM_EMAIL_TEMPLATES_WORKFLOW_SHARED` | String | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template. | Optional |
+| `N8N_UM_EMAIL_TEMPLATES_CREDENTIALS_SHARED` | String | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template. | Optional |
 
+>>>>>>> main
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 
 /// note | More configuration options

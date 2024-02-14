@@ -13,9 +13,15 @@ On this page, you'll find a list of operations the Asana node supports and links
 /// note | Credentials
 Refer to [Asana credentials](/integrations/builtin/credentials/asana/) for guidance on setting up authentication. 
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, take a look at n8n's [Asana integrations](https://n8n.io/integrations/asana/){:target="_blank" .external-link} list.
 ///
+
+/// note | Update to 1.22.2 or above
+Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
+///
+
 ## Basic Operations
 
 * Project
@@ -26,7 +32,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Update a project
 * Subtask
     * Create a subtask
-    * Get all substasks
+    * Get all subtasks
 * Task
     * Create a task
     * Delete a task

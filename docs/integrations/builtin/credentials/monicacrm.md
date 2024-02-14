@@ -21,7 +21,7 @@ From Monica CRM:
 1. Access your dashboard and navigate to the ***Settings** menu.
 2. From the ***API*** tab select **Create New Token**.
 3. Enter a name for your new token and click **Create**.
-4. Copy the access token that is displayed in the popup window.
+4. Copy the access token that's displayed in the popup window.
 
 From n8n:
 

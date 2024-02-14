@@ -15,7 +15,7 @@ You can replace the Discord node with another communication app. For example, n8
 In your workflow, add a Discord node connected to the Code node. In the Discord node window, configure the parameters:
 
 - *Webhook URL:* Enter the URL that you received in the email from n8n when you signed up for this course.
-- *Content (Expression):* This week we have `{{$json["totalBooked"]}}` booked orders with a total value of `{{$json["bookedSum"]}}`. My Unique ID: `{{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
+- *Content (Expression):* This week we've `{{$json["totalBooked"]}}` booked orders with a total value of `{{$json["bookedSum"]}}`. My Unique ID: `{{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
 
 
 Now execute the Discord node. If all works well, your message should appear in the Discord channel #course-level-1.
@@ -24,6 +24,6 @@ Now execute the Discord node. If all works well, your message should appear in t
 
 ## What's next?
 
-**Nathan 🙋**: Incredible, you've saved me so many hours of tedious work already! Now I can simply execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 am...
+**Nathan 🙋**: Incredible, you've saved me so many hours of tedious work already! Now I can execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 AM...
 
 **You 👩‍🔧**: Don't worry about that, you can actually schedule the workflow to run on a specific day, time, or interval. I'll set this up in the next step.

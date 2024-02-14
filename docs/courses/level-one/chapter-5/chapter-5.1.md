@@ -11,13 +11,13 @@ First, let's set up the scene for building Nathan's workflow. Open your Editor U
 - Click **Ctrl + Alt + N** or **Cmd + Option + N** on your keyboard
 - Open the left menu and click on *New* under the Workflow section
 
-Name this new workflow “Nathan's workflow”.
+Name this new workflow “Nathan's workflow.”
 
 The first thing you need to do is get data from ABCorp's old data warehouse.
 
-In the previous chapter, you used a specific action in the app (YCombinator). However, not all apps or services have dedicated nodes – like the legacy data warehouse from Nathan's company.
+In the previous chapter, you used a specific action in the app (Y Combinator). However, not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
 
-Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data via the [***HTTP Request node***](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank" .external} in n8n.
+Though it's not possible to directly export the data, the data warehouse has a couple of API endpoints. That's all we need to access the data using the [***HTTP Request node***](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank" .external} in n8n.
 
 /// note | No node for that service?
 The *HTTP Request node* is one of the most versatile nodes, allowing you to make HTTP requests which can be used to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
@@ -62,11 +62,11 @@ In the *HTTP Request node* window, click the *Execute Node* button. The result o
 
 This view should be familiar to you from the [Hacker News mini-workflow](/courses/level-one/chapter-2/). This is the data from ABCorp's data warehouse that Nathan needs to work with. This data set includes sales information of 30 customers with 5 features:
 
-- *orderID:* The unique id of each order.
-- *customerID:* The unique id of each customer.
-- *employeeName:* The name of Nathan's colleagues who are responsible for each client.
-- *orderPrice:* The total price of the customer's order.
-- *orderStatus:* Whether the customer's order is booked or still in processing.
+- `orderID`: The unique id of each order.
+- `customerID`: The unique id of each customer.
+- `employeeName`: The name of Nathan's colleagues who are responsible for each client.
+- `orderPrice`: The total price of the customer's order.
+- `orderStatus`: Whether the customer's order is booked or still in processing.
 
 ## What's next?
 

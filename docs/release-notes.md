@@ -28,6 +28,15 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.27.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.2...n8n@1.27.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-02-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.28.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.27.2...n8n@1.28.0){:target=_blank .external-link} for this version.<br />

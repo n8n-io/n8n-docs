@@ -82,9 +82,10 @@ Each object contains:
 * `type`: the data type expected, such as `string`.
 * `default`: the URL that n8n should use to test credentials.
 
-### `authenticate`
+### `authenticate` or `auth`
 
-Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. 
+* `authenticate`: Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. 
+* `auth`: Object. Used for Basic Auth. Requires `username` and `password` as the key names.
 
 #### `type`
 

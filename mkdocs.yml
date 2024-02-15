@@ -1083,6 +1083,7 @@ nav:
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
+      - Updating: hosting/installation/updating.md
     - Environment variables: 
       - hosting/environment-variables/index.md
       - Configuration methods: hosting/environment-variables/configuration-methods.md    

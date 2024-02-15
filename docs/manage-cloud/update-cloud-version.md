@@ -19,9 +19,7 @@ n8n recommends regularly updating your Cloud version. Check the [Release notes](
 
 ## Best practices for updating
 
-* Update frequently: this avoids having to jump multiple versions at once, reducing the risk of a disruptive update. Try to update at least once a month.
-* Check the [Release notes](/release-notes/) for breaking changes.
-* Use [Environments](/source-control-environments/) to create a test version of your instance. Test the update there first.
+--8<-- "_snippets/manage-cloud/updating-best-practices.md"
 
 ## Automatic update
 

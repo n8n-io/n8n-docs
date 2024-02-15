@@ -141,99 +141,6 @@
     },
     {
       "parameters": {
-        "fields": {
-          "values": [
-            {
-              "name": "={{ $('Execute Workflow Trigger').item.json.query }}",
-              "stringValue": "={{ $json[$('Execute Workflow Trigger').item.json.query] }}"
-            },
-            {
-              "name": "row_number",
-              "stringValue": "={{ $json.row_number }}"
-            }
-          ]
-        },
-        "include": "none",
-        "options": {}
-      },
-      "id": "f2ebcae6-3cfb-4862-a927-dc66bd24f197",
-      "name": "Edit Fields",
-      "type": "n8n-nodes-base.set",
-      "position": [
-        1440,
-        1240
-      ],
-      "typeVersion": 3.2
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "leftValue": "",
-            "caseSensitive": true,
-            "typeValidation": "strict"
-          },
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "016923b0-58a1-46a6-b05a-3451584025d2",
-              "operator": {
-                "name": "filter.operator.equals",
-                "type": "string",
-                "operation": "equals"
-              },
-              "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
-              "rightValue": "row"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "43230cde-1800-4b50-93b1-ba827ce70f06",
-      "name": "Query is row",
-      "type": "n8n-nodes-base.filter",
-      "position": [
-        1220,
-        1420
-      ],
-      "typeVersion": 2
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "leftValue": "",
-            "caseSensitive": true,
-            "typeValidation": "loose"
-          },
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "bf712098-97e4-42cb-8e08-2ee32d19d3e7",
-              "operator": {
-                "type": "number",
-                "operation": "equals"
-              },
-              "leftValue": "={{ $json.row_number }}",
-              "rightValue": "={{ $('Execute Workflow Trigger').item.json.query }}"
-            }
-          ]
-        },
-        "options": {
-          "looseTypeValidation": true
-        }
-      },
-      "id": "f40acb04-ef06-4670-b8b1-86b04f066af8",
-      "name": "Filter",
-      "type": "n8n-nodes-base.filter",
-      "position": [
-        1440,
-        1420
-      ],
-      "typeVersion": 2
-    },
-    {
-      "parameters": {
         "jsCode": "return {\n  'response': JSON.stringify($input.all().map(x => x.json))\n}"
       },
       "id": "37ceba7a-1f0b-4de7-ae4a-d29a18dabaf6",
@@ -327,72 +234,6 @@
     },
     {
       "parameters": {
-        "conditions": {
-          "options": {
-            "leftValue": "",
-            "caseSensitive": true,
-            "typeValidation": "strict"
-          },
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "016923b0-58a1-46a6-b05a-3451584025d2",
-              "operator": {
-                "name": "filter.operator.equals",
-                "type": "string",
-                "operation": "equals"
-              },
-              "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
-              "rightValue": "column_names"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "a59f243b-f053-4ace-ba2b-cb5f5b494987",
-      "name": "Operation is column_names?",
-      "type": "n8n-nodes-base.filter",
-      "position": [
-        1220,
-        1060
-      ],
-      "typeVersion": 2
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "leftValue": "",
-            "caseSensitive": true,
-            "typeValidation": "strict"
-          },
-          "combinator": "and",
-          "conditions": [
-            {
-              "id": "016923b0-58a1-46a6-b05a-3451584025d2",
-              "operator": {
-                "name": "filter.operator.equals",
-                "type": "string",
-                "operation": "equals"
-              },
-              "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
-              "rightValue": "column_values"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "4c99d3fa-6bcd-4d2e-9d53-21b02e77a9f9",
-      "name": "Operation is column_values",
-      "type": "n8n-nodes-base.filter",
-      "position": [
-        1220,
-        1240
-      ],
-      "typeVersion": 2
-    },
-    {
-      "parameters": {
         "text": "={{ $json.chatInput }}",
         "options": {
           "maxIterations": 10
@@ -442,7 +283,9 @@
     {
       "parameters": {
         "model": "gpt-4",
-        "options": {}
+        "options": {
+          "temperature": 0
+        }
       },
       "id": "2b8c8a67-a4df-4f5c-8c13-3cb2d25d2c5f",
       "name": "GPT4 Model",
@@ -499,21 +342,157 @@
         1740,
         1540
       ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "column_names",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "col names"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "9fe58592-72e2-4379-9bdb-10da19c8218b",
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "column_values",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "col values"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "c1836f93-7874-43a4-98ff-cc487b276600",
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "row",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "rows"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "907deea9-26cc-427e-93fc-52ce6b67e5e1",
+      "name": "Check operations",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        1220,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "={{ $('Execute Workflow Trigger').item.json.query }}",
+              "stringValue": "={{ $json[$('Execute Workflow Trigger').item.json.query] }}"
+            },
+            {
+              "name": "row_number",
+              "stringValue": "={{ $json.row_number }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "f2ebcae6-3cfb-4862-a927-dc66bd24f197",
+      "name": "Prepare column data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1440,
+        1240
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "bf712098-97e4-42cb-8e08-2ee32d19d3e7",
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "={{ $('Execute Workflow Trigger').item.json.query }}"
+            }
+          ]
+        },
+        "options": {
+          "looseTypeValidation": true
+        }
+      },
+      "id": "f40acb04-ef06-4670-b8b1-86b04f066af8",
+      "name": "Filter out other rows",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        1440,
+        1420
+      ],
+      "typeVersion": 2
     }
   ],
   "pinData": {},
   "connections": {
-    "Filter": {
-      "main": [
-        [
-          {
-            "node": "Prepare output",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "GPT4 Model": {
       "ai_languageModel": [
         [
@@ -525,33 +504,11 @@
         ]
       ]
     },
-    "Edit Fields": {
-      "main": [
-        [
-          {
-            "node": "Prepare output",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Chat Trigger": {
       "main": [
         [
           {
             "node": "AI Agent",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Query is row": {
-      "main": [
-        [
-          {
-            "node": "Filter",
             "type": "main",
             "index": 0
           }
@@ -639,24 +596,14 @@
       "main": [
         [
           {
-            "node": "Operation is column_names?",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Operation is column_values",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Query is row",
+            "node": "Check operations",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Operation is column_names?": {
+    "Check operations": {
       "main": [
         [
           {
@@ -664,14 +611,39 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [
+          {
+            "node": "Prepare column data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Filter out other rows",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
-    "Operation is column_values": {
+    "Prepare column data": {
       "main": [
         [
           {
-            "node": "Edit Fields",
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter out other rows": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
             "type": "main",
             "index": 0
           }

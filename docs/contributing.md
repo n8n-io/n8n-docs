@@ -31,7 +31,7 @@ The following video demonstrates the steps of sharing workflows on the community
 
 ## Contribute a workflow template
 
---8<-- "_snippets/workflows/submit-templates.md"
+--8<-- "_snippets/workflows/templates/submit-templates.md"
 
 ## Build a node
 

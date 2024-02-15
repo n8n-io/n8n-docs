@@ -1,12 +1,12 @@
 ---
-title: What are tools in AI?
+title: What is a tool in AI?
 description: Understand tools in the context of AI. Learn what's special about tools in n8n.
 contentType: explanation
 ---
 
-# What are tools in AI?
+# What is a tool in AI?
 
-In AI, 'Tools' has a specific meaning. Tools act like addons that your AI can use to access extra context or resources.
+In AI, 'tools' has a specific meaning. Tools act like addons that your AI can use to access extra context or resources.
 
 Here are a couple of other ways of expressing it:
 

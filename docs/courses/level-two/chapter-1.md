@@ -139,6 +139,8 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 
 Just like you can use [expressions](/code/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/) in the Code node.
 
+Please make sure you read these pages before continuing to the next exercise.
+
 ### Exercise
 
 Let's build on the previous exercise, in which you used the Code node to create a data set of two contacts with their names and emails. Now, connect a second Code node to the first one. In the new node, write code to create a new column named `workEmail` that references the work email of the first contact.
@@ -195,22 +197,21 @@ There are several ways to transform data for the purposes mentioned above:
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the Poetry DB API `https://poetrydb.org/linecount/3`. Transform the incoming data with the Split Out node and with the Code node.
+Use the HTTP Request node to make a GET request to the Quotable API `https://api.quotable.io/quotes`. Transform the data in the `results` field with the Split Out node and also with the Code node.
 
 
 ??? note "Show me the solution"
 
-	To get the poems from the Poetry DB API, execute the *HTTP Request node* with the following parameters:
+	To get the quotes from the Quotable API, execute the *HTTP Request node* with the following parameters:
 
 	- Authentication: None
 	- Request Method: GET
-	- URL: https://poetrydb.org/linecount/3
-	- Options > Response: Include Response Headers and Status
+	- URL: https://api.quotable.io/quotes
 
 	To transform the data with the Code node, connect this node to the *HTTP Request node* and write the following code in the JavaScript Code field:
 
 	```js
-		return items[0].json.body.map(item => {
+		return items[0].json.results.map(item => {
 			return {
 				json: item
 			}
@@ -219,5 +220,6 @@ Use the HTTP Request node to make a GET request to the Poetry DB API `https://po
 
 	To transform the data with the Split Out node, connect this node to the *HTTP Request node* and set the following parameters:
 	
-	- Field To Split Out: body
+	- Operation: Split Out Items
+	- Field To Split Out: results
 	- Include: No Other Fields

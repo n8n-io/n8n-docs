@@ -16,7 +16,7 @@ This feature is n8n's implementation of [LangChain's JavaScript framework](https
 ///
 ## Trigger nodes
 
-[On new chat message](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/)
+[Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/)
 
 ## Cluster nodes
 

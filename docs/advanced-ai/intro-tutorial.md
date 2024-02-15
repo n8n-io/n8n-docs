@@ -208,5 +208,7 @@ You can now try out the workflow: close any open nodes, then select **Chat** to 
 
 ## Next steps
 
-* Explore n8n using the [Quickstarts](/try-it-out/) and [Workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.
+* Explore n8n using the [Quickstarts](/try-it-out/).
+* Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/).
+* Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}.
 * Read [What product people need to know about LangChain](https://www.commandbar.com/blog/langchain-guide){:target=_blank .external-link} to learn more about AI concepts and terminology.

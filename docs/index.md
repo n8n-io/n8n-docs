@@ -33,11 +33,11 @@ It covers everything from setup to usage and development. It's a work in progres
 
     [:octicons-arrow-right-24: Find your apps](/integrations/)
 
--   __Put the code in low-code__
+-   __Build AI functionality__
 
-    See an overview of n8n's developer resources.
+    n8n supports building AI functionality and tools.
 
-    [:octicons-arrow-right-24: Code in n8n](/code/)    
+    [:octicons-arrow-right-24: Advanced AI](/advanced-ai/)    
 </div>
 
 ## About n8n

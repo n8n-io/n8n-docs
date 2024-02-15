@@ -48,26 +48,16 @@ The start node exists by default when you create a new workflow.
 
 ### 2. HTTP Request node (GET)
 
-<<<<<<< HEAD
 1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the **URL** field.
-2. Click on **Execute Node** to run the node.
-=======
-1. Enter `https://www.thecocktaildb.com/api/json/v1/1/random.php` in the ***URL*** field.
-2. Click on ***Test step*** to run the node.
->>>>>>> main
+2. Click on **Test Step** to run the node.
 
 ![Get random cocktail data from CocktailDB API using the HTTP Request node](/_images/integrations/builtin/core-nodes/xml/httprequest_node.png)
 
 
 ### 3. XML node (JSON to XML)
 
-<<<<<<< HEAD
 1. Select 'JSON to XML' from the **Mode** dropdown list.
-2. Click on **Execute Node** to run the node.
-=======
-1. Select 'JSON to XML' from the ***Mode*** dropdown list.
-2. Click on ***Test step*** to run the node.
->>>>>>> main
+2. Click on **Test Step** to run the node.
 
 ![Convert JSON to XML using the XML node](/_images/integrations/builtin/core-nodes/xml/xml_node.png)
 

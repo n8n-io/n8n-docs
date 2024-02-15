@@ -1,0 +1,67 @@
+---
+contentType: overview
+title: Advanced AI
+description: Use n8n's LangChain integrations to build AI-powered functionality within your workflows. Connect your LangChain functionality to other data sources and services.
+---
+
+# Advanced AI
+
+Build AI functionality using n8n: from creating your own chat bot, to using AI to process documents and data from other sources.
+
+/// info | Feature availability
+This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and above.
+///
+
+<div class="grid cards" markdown>
+
+-   __Get started__
+
+    Work through the short tutorial to learn the basics of building AI workflows in n8n.
+
+    [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial//)
+
+-   __Explore examples and concepts__
+
+	Browse examples and workflow templates to help you build. Includes explanations of important AI concepts.
+
+    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/)
+
+
+-   __How n8n uses LangChain__
+
+    Learn more about how n8n builds on LangChain.
+
+    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/)
+
+-   __Browse AI templates__
+
+    Explore a wide range of AI workflow templates on the n8n website.
+
+    [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
+
+   
+</div>
+
+## Related resources
+
+Related documentation and tools.
+
+### Node types
+
+This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/): groups of [root](/integrations/builtin/cluster-nodes/root-nodes/) and [sub](/integrations/builtin/cluster-nodes/sub-nodes/) nodes that work together.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"
+
+### Workflow templates
+
+You can browse workflow templates in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
+
+Refer to [Templates](/workflows/templates/) for information on accessing templates in-app.
+
+### Chat trigger
+
+Use the [n8n Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/) to trigger a workflow based on chat interactions.
+
+### Chatbot widget
+
+n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} for usage information.

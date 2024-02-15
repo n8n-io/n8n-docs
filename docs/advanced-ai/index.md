@@ -20,9 +20,9 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial//)
 
--   __Explore examples__
+-   __Explore examples and concepts__
 
-	Browse examples and workflow templates to help you build.
+	Browse examples and workflow templates to help you build. Includes explanations of important AI concepts.
 
     [:octicons-arrow-right-24: Examples](/advanced-ai/examples/)
 

@@ -2,7 +2,7 @@
 contentType: overview
 title: Call an API to fetch data
 description: Use the n8n workflow tool to load data from an API using the HTTP Request node into your AI workflow.
-workflowURL:
+workflowFile: let_your_ai_call_an_api.json
 ---
 
 # Call an API to fetch data
@@ -11,7 +11,7 @@ Use n8n to bring data from any API to your AI. This workflow uses the [Chat Trig
 
 <figure markdown>
 !["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/call-api-from-chat.png)
-<figcaption markdown>[View and use the workflow](https://[[ page.meta.workflowURL ]]){:target=_blank .external-link}</figcaption>
+<figcaption markdown>[Download the example workflow](/_workflows/advanced-ai/examples/[[ page.meta.workflowFile ]])</figcaption>
 </figure>
 
 ## Key features

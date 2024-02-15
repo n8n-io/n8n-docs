@@ -2,7 +2,7 @@
 contentType: overview
 title: Set a human fallback for AI workflows
 description: Have a workflow that triggers a human answer when the AI can't help.
-workflowURL:
+workflowFile: ask_a_human.json
 ---
 
 # Have a human fallback for AI workflows
@@ -13,7 +13,7 @@ This workflow uses the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes
 
 <figure markdown>
 !["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/ask-a-human.png)
-<figcaption markdown>[View and use the workflow](https://[[ page.meta.workflowURL ]]){:target=_blank .external-link}</figcaption>
+<figcaption markdown>[Download the example workflow](/_workflows/advanced-ai/examples/[[ page.meta.workflowFile ]])</figcaption>
 </figure>
 
 ## Key features

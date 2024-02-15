@@ -2,7 +2,7 @@
 contentType: howto
 title: Chat with a Google Sheet using AI
 description: Use the n8n workflow tool to load data from Google Sheets into your AI workflow.
-workflowURL: n8n.io/workflows/2085-chat-with-a-google-sheet-using-ai/
+workflowFile: chat_with_google_sheets_docs_version.json
 ---
 
 # Chat with a Google Sheet using AI
@@ -11,7 +11,7 @@ Use n8n to bring your own data to AI. This workflow uses the [Chat Trigger](/int
 
 <figure markdown>
 !["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/chat-with-google-sheets.png)
-<figcaption markdown>[View and use the workflow](https://[[ page.meta.workflowURL ]]){:target=_blank .external-link}</figcaption>
+<figcaption markdown>[Download the example workflow](/_workflows/advanced-ai/examples/[[ page.meta.workflowFile ]])</figcaption>
 </figure>
 
 ## Key features

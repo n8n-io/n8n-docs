@@ -33,6 +33,12 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/)
 
+-   __Browse AI templates__
+
+    Explore a wide range of AI workflow templates on the n8n website.
+
+    [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
+
    
 </div>
 

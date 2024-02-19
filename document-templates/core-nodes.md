@@ -2,7 +2,7 @@
 # How to use this template
 
 1. Make a new branch. If working on an internal ticket, include it at the start of the name. For example, DOC-123-feature-summary.
-2. Create a new file, or find the file you want to edit, in integrations/builtin/core-nodes/. If creating a new file, pay attention to the naming conventions: it should match the node name in the codex file. For example, in the Item Lists node, the codex file (https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/ItemLists/ItemLists.node.json) reads: `"node": "n8n-nodes-base.itemList"`. So the app node file name is n8n-nodes-base.itemList.
+2. Create a new file, or find the file you want to edit, in integrations/builtin/core-nodes/. If creating a new file, pay attention to the naming conventions: it should match the node name in the codex file. 
 3. Copy the template into the file (don't copy this comment).
 4. Placeholder text is in _italic_ or between <>. Make sure to replace it! 
 5. Before publishing, delete any comments.
@@ -26,10 +26,11 @@ Local File trigger
 
 _Briefly summarize the functionality._
 
-///  note  | Credentials
+/// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
 ///
-///  note  | Examples and templates
+
+/// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
 ///
 

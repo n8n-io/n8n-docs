@@ -21,7 +21,7 @@ The **Code node** has two operational *Modes* that change the way it processes d
 - Use the Code node.
 - Get the most out of n8n.
 
-In n8n, the data that is passed between nodes is an array of objects with the following structure:
+In n8n, the data that's passed between nodes is an array of objects with the following structure:
 
 ```json
 [
@@ -77,12 +77,16 @@ Now execute the node and you should see the following results:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node" style="width:100%"><figcaption align = "center"><i>Code node</i></figcaption></figure>
 
+/// note | Using Python in code nodes
+You can also use Python in the Code node. To learn more about this, refer to the [Code](/code/code-node/) documentation.
+///
+
 ## What's next?
 
-**Nathan 🙋**: Wow, the Code node is really powerful! So if I have some basic JavaScript skills I can power up my workflows.
+**Nathan 🙋**: Wow, the Code node is really powerful! This means that if I have some basic JavaScript skills I can power up my workflows.
 
-**You 👩‍🔧**: Exactly – you can progress from no-code to low-code!
+**You 👩‍🔧**: Yes! You can progress from no-code to low-code!
 
 **Nathan 🙋**: Now, how do I send the calculations for the booked orders to my team's Discord channel?
 
-**You 👩‍🔧**: There's an n8n node for that – I'll set it up in the next step.
+**You 👩‍🔧**: There's an n8n node for that: I'll set it up in the next step.

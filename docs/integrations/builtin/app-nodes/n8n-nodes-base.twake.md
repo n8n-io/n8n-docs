@@ -43,7 +43,7 @@ The start node exists by default when you create a new workflow.
 1. First of all, you'll have to enter credentials for the Twake node. You can find out how to do that [here](/integrations/builtin/credentials/twake/).
 2. Select the channel from the ***Channel ID*** dropdown list.
 3. Enter the content of the message in the ***Content*** field.
-4. Click on ***Execute Node*** to run the node.
+4. Click on ***Test step*** to run the node.
 
 ![Using the Twake node to send a message](/_images/integrations/builtin/app-nodes/twake/twake_node.png)
 

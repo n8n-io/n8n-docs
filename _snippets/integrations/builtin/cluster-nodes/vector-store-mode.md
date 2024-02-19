@@ -2,10 +2,11 @@
 
 Vector Store nodes in n8n have three modes: **Get Many**, **Insert Documents** and **Retrieve Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
 
+<!-- vale off -->
 #### Get Many
 
 In this mode, you can retrieve multiple documents from your vector database by providing a prompt. The prompt will be embedded and used for similarity search. The node will return the documents that are most similar to the prompt with their similarity score. This is useful if you want to retrieve a list of similar documents and pass them to a chain as additional context. 
-
+<!-- vale on -->
 #### Insert Documents
 
 Use insert documents mode to insert new documents into your vector database.

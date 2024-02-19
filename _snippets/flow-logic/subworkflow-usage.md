@@ -14,10 +14,10 @@ If there are errors in the sub-workflow, the parent workflow can't trigger it.
 /// note | Load data into sub-workflow before building
 This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
 
-If you want to load data into your subworkflow to use while building it:
+If you want to load data into your sub-workflow to use while building it:
 
-1. Create the subworkflow and add the **Execute Workflow Trigger**. 
-1. In the subworkflow [settings](/workflows/settings/), set **Save successful production executions** to **Save**. 
+1. Create the sub-workflow and add the **Execute Workflow Trigger**. 
+1. In the sub-workflow [settings](/workflows/settings/), set **Save successful production executions** to **Save**. 
 1. Skip ahead to setting up the parent workflow, and run it.
 1. Follow the steps to [load data from previous executions](/workflows/executions/debug/).
 You'll now have example data pinned in the trigger node, which allows you to work with real data when configuring the rest of the workflow.

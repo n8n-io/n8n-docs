@@ -39,7 +39,7 @@ If the API you're using allows you to target a particular page by number:
 1. Hover over **Value** and toggle **Expression** on.
 1. Enter `{{ $pageCount + 1 }}`
 
-`$pageCount` is the number of pages the HTTP Request node has fetched. It starts at zero. Most API pagination counts from one (the first page is page one). So adding `+1` to `$pageCount` means the node fetches page one on its first loop, page two on its second, and so on.
+`$pageCount` is the number of pages the HTTP Request node has fetched. It starts at zero. Most API pagination counts from one (the first page is page one). This means that adding `+1` to `$pageCount` means the node fetches page one on its first loop, page two on its second, and so on.
 
 ## Set the page size in the query
 

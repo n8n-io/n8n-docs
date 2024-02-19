@@ -2,7 +2,7 @@
 contentType: tutorial
 ---
 
-# Workflow 2 – Generating reports
+# Workflow 2: Generating reports
 
 In this workflow, you will merge data from different sources, transform binary data, generate files, and send notifications about them. The final workflow should look like this:
 
@@ -10,7 +10,7 @@ In this workflow, you will merge data from different sources, transform binary d
 
 To make things easier, let's split the workflow into three parts.
 
-## Part 1 – Getting data from different sources
+## Part 1: Getting data from different sources
 
 The first part of the workflow consists of five nodes:
 
@@ -23,20 +23,20 @@ The first part of the workflow consists of five nodes:
       * **URL**: The Dataset URL you received in the email when you signed up for this course.
       * **Options > Add Option > Split Into Items**: toggle to true.
       * **Headers > Add Header**:
-          * **Name**: unique_id
+          * **Name**: `unique_id`
           * **Value**: The unique ID you received in the email when you signed up for this course.
 
 2. Use the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/){:target="_blank" .external} to list data from the `customers` table (where you updated the fields `region` and `subregion`).
 3. Use the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external} to merge data from the Airtable and HTTP Request node, based on the common key `customer ID`.
-4. Use the [Item Lists node](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/){:target="_blank" .external} to sort data by orderPrice in descending order.
+4. Use the [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/) node to sort data by `orderPrice` in descending order.
 
 /// question | Quiz questions
-* What is the name of the employee assigned to customer 1?
-* What is the order status of customer 6?
-* What is the highest order price?
+* What's the name of the employee assigned to customer 1?
+* What's the order status of customer 6?
+* What's the highest order price?
 ///
 
-## Part 2 – Generating file for regional sales
+## Part 2: Generating file for regional sales
 
 The second part of the workflow consists of five nodes:
 
@@ -45,18 +45,18 @@ The second part of the workflow consists of five nodes:
 1. Use the [IF node](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external} to filter order from the region Americas.
 2. Use the [Move Binary Data node](/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/){:target="_blank" .external} to transform the incoming data from JSON to binary format. Note that you need to convert all data.
 3. Use the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/){:target="_blank" .external} to create and store files with the orders information. In the File Name field, use an expression to include the order id in the file name, like this: `report_orderID{order_id}.json` (you need to replace the `{order id}` with the reference the Move Binary Data node).
-4. Use the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/){:target="_blank" .external} (or another email node) to send the files via email to an address you have access to. Note that you need to add an attachment with the data property.
+4. Use the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/){:target="_blank" .external} (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
 5. Use the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/){:target="_blank" .external} to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * Webhook URL: The webhook URL you received in the email when you signed up for this course.
-    * Text: "I sent the file via email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
+    * Text: "I sent the file using email with the label ID `{label ID}` and wrote the binary file `{file name}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
 
 /// question | Quiz questions
 * How many orders are assigned to the region Americas?
-* What is the total price of the orders in the region Americas?
+* What's the total price of the orders in the region Americas?
 * How many items are returned by the *Write Binary File node*?
 ///
 
-## Part 3 – Generating files for total sales
+## Part 3: Generating files for total sales
 
 The third part of the workflow consists of seven nodes:
 
@@ -71,7 +71,7 @@ The third part of the workflow consists of seven nodes:
     * Text: "I created the spreadsheet `{file name}`. My ID:" followed by your ID. <br/> The `{file name}` should be an expression that references data from the Spreadsheet File node.<br/>
 
 /// question | Quiz questions
-* What is the lowest order price in the first batch of items?
-* What is the formatted date of customer 7?
+* What's the lowest order price in the first batch of items?
+* What's the formatted date of customer 7?
 * How many items are returned by the *Spreadsheet File node*?
 ///

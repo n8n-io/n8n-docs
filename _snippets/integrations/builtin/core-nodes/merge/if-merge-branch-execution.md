@@ -7,6 +7,6 @@ The Merge node is triggered by one branch, then goes and executes the other bran
 
 For example, in the screenshot below there's a workflow containing a Edit Fields node, If node, and Merge node. The standard If node behavior is to execute one branch (in the screenshot, this is the **true** output). However, due to the Merge node, both branches execute, despite the If node not sending any data down the **false** branch.
 
-![Screenshot of a simple workflow. The workflow has an Edit Fields node, followed by an If node. It ends with a Merge node.](/_images/integrations/builtin/core-nodes/merge/if-merge-node.png)
+![Screenshot of a workflow. The workflow has an Edit Fields node, followed by an If node. It ends with a Merge node.](/_images/integrations/builtin/core-nodes/merge/if-merge-node.png)
 
 <!-- TODO: remove once v1 is mature -->

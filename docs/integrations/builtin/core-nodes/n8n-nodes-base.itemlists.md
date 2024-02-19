@@ -6,6 +6,17 @@ contentType: integration
 
 # Item Lists
 
+/// warning | Removed in 1.21.0
+n8n removed the Item Lists node in version 1.21.0. Use the following nodes instead:
+
+* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): take separate items, or portions of them, and group them together into individual items.
+* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): remove items beyond a defined maximum number.
+* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/): identify items that are identical across all fields or a subset of fields.
+* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/): organize lists of in a desired ordering, or generate a random selection.
+* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/): separate a single data item containing a list into multiple items.
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables. 
+///
+
 The Item Lists node simplifies working with returned data that contain lists (arrays), enabling you to change the structure for further processing without the need to use [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) nodes or write custom JavaScript.
 
 ## Operations
@@ -28,7 +39,7 @@ This operation is useful if your data contains a list of items, for example a li
 When using the Split Out Items operation, configure the following parameters and options:
 
 * **Field to Split Out**: the field containing the list you want to separate out into individual items.
-	* If working with binary data inputs, use `$binary` in an expression to set the field to split out.
+	* If working with file inputs, use `$binary` in an expression to set the field to split out.
 * **Include**: select if  you want n8n to keep any other fields from the input data with each new individual item. You can select:
     * **No Other Fields**
     * **All Other Fields**
@@ -36,7 +47,7 @@ When using the Split Out Items operation, configure the following parameters and
 	* **Options** > **Add Field**: use this to add more optional settings, including:
 		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).	
 		* **Destination Field Name**: optionally set the field name under which to put the new split contents.
-		* **Include Binary**: include binary data from the input in the new output.
+		* **Include Binary**: include binary data (files) from the input in the new output.
 
 ### Concatenate Items
 
@@ -51,7 +62,7 @@ When using the Concatenate Items operation, configure the following parameters a
 	* **Output Field Name**: displayed when you enable **Rename Field**. The field name for the aggregated output data.
 	* **Options** > **Add Field**: use this to add more optional settings, including:
 		* **Disable Dot Notation**: when disabled, you can't reference child fields (in the format `parent.child`).
-		* **Include Binaries**: include binary data from the input in the new output.
+		* **Include Binaries**: include binary data (files) from the input in the new output.
 * If you choose **All Item Data**, you can then set:
 	* **Put Output in Field**: the name of the output field.
 	* **Include**: choose from **All fields**, **Specified Fields**, or **All Fields Except**.

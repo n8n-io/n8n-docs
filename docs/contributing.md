@@ -7,7 +7,7 @@ contentType: howto
 
 There are a several ways in which you can contribute to n8n, depending on your skills and interests. Each form of contribution is valuable to us!
 
-## Share some love: review us
+## Share some love: Review us
 
 - Star n8n on [GitHub](https://github.com/n8n-io/n8n){:target=_blank class=.external-link} and [Docker Hub](https://hub.docker.com/r/n8nio/n8n){:target=_blank class=.external-link}.
 - Follow us on [Twitter](https://twitter.com/n8n_io){:target=_blank class=.external-link}, [LinkedIn](https://www.linkedin.com/company/28491094), and [Facebook](https://www.facebook.com/n8nio/){:target=_blank class=.external-link}.
@@ -29,32 +29,9 @@ The following video demonstrates the steps of sharing workflows on the community
 
 </div>
 
-<!--
+## Contribute a workflow template
 
-## Contribute a workflow
-
-You can publish workflows on [n8n.io](https://n8n.io/workflows){:target=_blank class=.external-link} to help other users to get started.
-
-To share a workflow, follow these steps:
-
-1. Sign in to [n8n.io](https://n8n.io/login){:target=_blank class=.external-link}.
-2. Open the [workflows](https://n8n.io/workflows){:target=_blank class=.external-link} page.
-3. Select **+ Share New Workflow**.
-4. Enter the name of your workflow in the **Name** field. The name should be short and descriptive, so that other users can understand the purpose of the workflow at a glance.
-5. Enter a detailed description of the workflow in the **Description** field. Add a screenshot of the workflow and briefly explain what the nodes used in the workflow do.
-6. In your n8n instance, select all the nodes in your workflow (Ctrl + A or Cmd + A) and copy them (Ctrl + C or Cmd + C).
-7. Back on the workflows page, delete the existing code in the **Workflow Code** field and paste your workflow in it (Ctrl + V or Cmd + V).
-8. Select **Publish Workflow to Share** to share your workflow.
-
-See the above steps in action in this video:
-
-<div class="video-container">
-
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/wcoirYBEgYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-</div>
-
--->
+--8<-- "_snippets/workflows/templates/submit-templates.md"
 
 ## Build a node
 
@@ -114,7 +91,7 @@ Someone from n8n reviews your draft. They'll check the following:
 * Is the information accurate and up to date?
 * Do the workflows or other examples function?
 * Is the product information relevant?
-* Gramma and structure
+* Grammar and structure
 
 After the review, you'll have a chance to review any suggested changes and implement them. You can then notify the reviewer that your final draft is ready.
 

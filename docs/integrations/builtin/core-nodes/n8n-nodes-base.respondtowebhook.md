@@ -30,11 +30,13 @@ Configure the node behavior using these parameters.
 
 Choose what data to send in the webhook response.
 
+- **All Incoming Items**: respond with all the JSON items from the input.
+- **Binary**: respond with a binary file defined in **Response Data Source**.
 - **First Incoming Item**: respond with the first incoming item's JSON.
-- **Text**: respond with a text defined in the **Response Body** field.
-- **JSON**: respond with a JSON object defined in the **Response Body** field.
-- **Binary**: respond with a binary file defined in the **Response Data Source** field.
+- **JSON**: respond with a JSON object defined in **Response Body**.
 - **No Data**: no response payload.
+- **Redirect**: redirect to a URL set in **Redirect URL**.
+- **Text**: respond with text set in **Response Body**.
 
 ## Node options
 
@@ -42,17 +44,20 @@ Select **Add Option** to view and set the options.
 
 - **Response Code**: set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} to use.
 - **Response Headers**: define response headers to send.
+- **Put Response in Field**: available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
 
 ## Return more than one data item
+
+/// note | Deprecated in 1.22.0
+n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
+///
 
 The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions/). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
 
 If you need to return more than one data item, you can either:
 
 - Instead of using the Respond to Webhook node, use the **When Last Node Finishes** option in **Respond** in the Webhook node. Use this when you want to return the final data that the workflow outputs.
-- Use the [Item Lists](/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Use the following parameter settings in the Item Lists node:
-	- **Operation** > **Concatenate Items**
-	- **Aggregate** > **All Item Data (Into a Single List)**
+- Use the [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Set **Aggregate** to **All Item Data (Into a Single List)**.
 
 ## Workflow behavior
 

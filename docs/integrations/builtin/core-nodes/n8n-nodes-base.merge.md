@@ -167,7 +167,7 @@ Now try different options in **Mode** to see how it affects the output data.
 
 #### Append
 
-Select **Mode** > **Append**, then select **Execute node**.
+Select **Mode** > **Append**, then select **Test step**.
 
 Output data in table view:
 
@@ -180,7 +180,7 @@ You can merge these two data inputs so that each person gets the correct greetin
 
 1. Select **Mode** > **Merge By Fields**.
 2. In both **Input 1 Field** and **Input 2 Field**, enter `language`. This tells n8n to combine the data by matching the values in the `language` field in each data set.
-3. Select **Execute node**.
+3. Select **Test step**.
 
 Output in table view:
 
@@ -189,7 +189,7 @@ Output in table view:
 
 #### Merge by position
 
-Select **Mode** > **Merge By Position**, then select **Execute node**.
+Select **Mode** > **Merge By Position**, then select **Test step**.
 
 Default output in table view:
 
@@ -207,7 +207,7 @@ Output with unpaired items in table view:
 
 #### Multiplex
 
-Select **Mode** > **Multiplex**, then select **Execute node**.
+Select **Mode** > **Multiplex**, then select **Test step**.
 
 Output in table view:
 

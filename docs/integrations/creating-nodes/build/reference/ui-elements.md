@@ -327,7 +327,7 @@ The `options` type adds an options list. Users can select a single value.
 
 ![Options](/_images/integrations/creating-nodes/options.png)
 
-## Multi options
+## Multi-options
 
 The `multiOptions` type adds an options list. Users can select more than one value.
 
@@ -361,8 +361,74 @@ The `multiOptions` type adds an options list. Users can select more than one val
 }
 ```
 
-![Multioptions](/_images/integrations/creating-nodes/multioptions.png)
+![Multi-options](/_images/integrations/creating-nodes/multioptions.png)
 
+
+## Filter
+
+Use this component to evaluate, match, or filter incoming data.
+
+This is the code from n8n's own If node. It shows a filter component working with a [collection](#collection) component where users can configure the filter's behavior.
+
+```typescript
+{
+	displayName: 'Conditions',
+	name: 'conditions',
+	placeholder: 'Add Condition',
+	type: 'filter',
+	default: {},
+	typeOptions: {
+		filter: {
+			// Use the user options (below) to determine filter behavior
+			caseSensitive: '={{!$parameter.options.ignoreCase}}',
+			typeValidation: '={{$parameter.options.looseTypeValidation ? "loose" : "strict"}}',
+		},
+	},
+},
+{
+displayName: 'Options',
+name: 'options',
+type: 'collection',
+placeholder: 'Add option',
+default: {},
+options: [
+	{
+		displayName: 'Ignore Case',
+		description: 'Whether to ignore letter case when evaluating conditions',
+		name: 'ignoreCase',
+		type: 'boolean',
+		default: true,
+	},
+	{
+		displayName: 'Less Strict Type Validation',
+		description: 'Whether to try casting value types based on the selected operator',
+		name: 'looseTypeValidation',
+		type: 'boolean',
+		default: true,
+	},
+],
+},
+```
+
+![Filter](/_images/integrations/creating-nodes/filter.png)
+
+
+## Assignment collection (drag and drop)
+
+Use the drag and drop component when you want users to pre-fill name and value parameters with a single drag interaction.
+
+```typescript
+{
+	displayName: 'Fields to Set',
+	name: 'assignments',
+	type: 'assignmentCollection',
+	default: {},
+},
+```
+
+You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2){:target=_blank .external-link}:
+
+![A gif showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
 
 ## Fixed collection
 
@@ -415,42 +481,7 @@ Use the `fixedCollection` type to group fields that are semantically related.
 
 ![Fixed collection](/_images/integrations/creating-nodes/fixed-collection.png)
 
-## JSON
 
-```typescript
-{
-	displayName: 'Content (JSON)',
-	name: 'content',
-	type: 'json',
-	default: '',
-	description: '',
-	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
-	},
-}
-```
-
-![JSON](/_images/integrations/creating-nodes/json.png)
-
-## Notice
-
-Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/) for guidance on writing good hints and info text.
-
-```js
-{
-  displayName: 'Your text here',
-  name: 'notice',
-  type: 'notice',
-  default: '',
-},
-```
 
 ## Resource locator
 
@@ -474,7 +505,7 @@ Example:
 	name: 'cardID',
 	type: 'resourceLocator',
 	default: '',
-	description: 'Get a card'
+	description: 'Get a card',
 	modes: [
 		{
 			displayName: 'ID',
@@ -485,88 +516,72 @@ Example:
 				{
 					type: 'regex',
 					properties: {
-						regex: '^[0-9]'
-						errorMessage: 'The ID must start with a number'
-					},	
+						regex: '^[0-9]',
+						errorMessage: 'The ID must start with a number',
+					},
 				},
 			],
 			placeholder: '12example',
 			// How to use the ID in API call
-			url: '=http://api-base-url.com/?id={{$value}}'
+			url: '=http://api-base-url.com/?id={{$value}}',
 		},
-		displayName: 'URL',
-		name: 'url',
-		type: 'string',
-		hint: 'Enter a URL',
-		validation: [
-			{
-				type: 'regex',
+		{
+			displayName: 'URL',
+			name: 'url',
+			type: 'string',
+			hint: 'Enter a URL',
+			validation: [
+				{
+					type: 'regex',
 					properties: {
-						regex: '^http'
-						errorMessage: 'Invalid URL'
-					},	
+						regex: '^http',
+						errorMessage: 'Invalid URL',
+					},
+				},
+			],
+			placeholder: 'https://example.com/card/12example/',
+			// How to get the ID from the URL
+			extractValue: {
+				type: 'regex',
+				regex: 'example.com/card/([0-9]*.*)/',
 			},
-		],
-		placeholder: 'https://example.com/card/12example/',
-		// How to get the ID from the URL
-		extractValue: {
-			type: 'regex',
-			regex: 'example\.com\/card\/([0-9]*.*)\/'
 		},
-		displayName: 'List',
-		name: 'list',
-		type: 'list',
-		typeOptions: {
-			// You must always provide a search method
-			// Write this method within the methods object in your base file
-			// The method must populate the list, and handle searching if searchable: true
-			searchListMethod: 'searchMethod'
-			// If you want users to be able to search the list
-			searchable: true,
-			// Set to true if you want to force users to search
-			// When true, users can't browse the list
-			// Or false if users can browse a list
-			searchFilterRequired: true
-		}
+		{
+			displayName: 'List',
+			name: 'list',
+			type: 'list',
+			typeOptions: {
+				// You must always provide a search method
+				// Write this method within the methods object in your base file
+				// The method must populate the list, and handle searching if searchable: true
+				searchListMethod: 'searchMethod',
+				// If you want users to be able to search the list
+				searchable: true,
+				// Set to true if you want to force users to search
+				// When true, users can't browse the list
+				// Or false if users can browse a list
+				searchFilterRequired: true,
+			},
+		},
 	],
-	displayOptions: { // the resources and operations to display this element with
+	displayOptions: {
+		// the resources and operations to display this element with
 		show: {
 			resource: [
 				// comma-separated list of resource names
 			],
 			operation: [
 				// comma-separated list of operation names
-			]
-		}
+			],
+		},
 	},
-}
+},
 ```
 
 Refer to the following for live examples:
 
 * Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
 * Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
-
-
-## HTML
-
-The HTML editor allows users to create HTML templates in their workflows. The editor supports standard HTML, CSS in `<style>` tags, and expressions wrapped in `{{}}`. Users can add `<script>` tags to pull in additional JavaScript. n8n doesn't run this JavaScript during workflow execution.
-
-```js
-{
-	displayName: 'HTML Template', // The value the user sees in the UI
-	name: 'html', // The name used to reference the element UI within the code
-	type: 'string',
-	typeOptions: {
-		editor: 'htmlEditor',
-	},
-	default: placeholder, // Loads n8n's placeholder HTML template
-	noDataExpression: true, // Prevent using an expression for the field
-	description: 'HTML template to render',
-},
-```
-
-Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link} for a live example.
 
 ## Resource mapper
 
@@ -687,3 +702,62 @@ interface ResourceMapperField {
 ```
 
 Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Postgres/v2/methods/resourceMapping.ts){:target=_blank .external-link} and [Google Sheets resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Sheet/v2/methods/resourceMapping.ts){:target=_blank .external-link} for live examples.
+
+## JSON
+
+```typescript
+{
+	displayName: 'Content (JSON)',
+	name: 'content',
+	type: 'json',
+	default: '',
+	description: '',
+	displayOptions: { // the resources and operations to display this element with
+		show: {
+			resource: [
+				// comma-separated list of resource names
+			],
+			operation: [
+				// comma-separated list of operation names
+			]
+		}
+	},
+}
+```
+
+![JSON](/_images/integrations/creating-nodes/json.png)
+
+
+## HTML
+
+The HTML editor allows users to create HTML templates in their workflows. The editor supports standard HTML, CSS in `<style>` tags, and expressions wrapped in `{{}}`. Users can add `<script>` tags to pull in additional JavaScript. n8n doesn't run this JavaScript during workflow execution.
+
+```js
+{
+	displayName: 'HTML Template', // The value the user sees in the UI
+	name: 'html', // The name used to reference the element UI within the code
+	type: 'string',
+	typeOptions: {
+		editor: 'htmlEditor',
+	},
+	default: placeholder, // Loads n8n's placeholder HTML template
+	noDataExpression: true, // Prevent using an expression for the field
+	description: 'HTML template to render',
+},
+```
+
+Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link} for a live example.
+
+
+## Notice
+
+Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/) for guidance on writing good hints and info text.
+
+```js
+{
+  displayName: 'Your text here',
+  name: 'notice',
+  type: 'notice',
+  default: '',
+},
+```

@@ -42,7 +42,7 @@ The following events are available. You can choose which events to stream in **S
 	* User deleted
 	* User invited
 	* User invitation accepted
-	* User reinvited
+	* User re-invited
 	* User email failed
 	* User reset requested
 	* User reset
@@ -56,6 +56,20 @@ The following events are available. You can choose which events to stream in **S
 	* Workflow created
 	* Workflow deleted
 	* Workflow updated
+* AI node logs
+	* Memory get messages
+	* Memory added message
+	* Output parser get instructions
+	* Output parser parsed
+	* Retriever get relevant documents
+	* Embeddings embedded document
+	* Embeddings embedded query
+	* Document processed
+	* Text splitter split
+	* Tool called
+	* Vector store searched
+	* LLM generated
+	* Vector store populated
 
 ## Destinations
 

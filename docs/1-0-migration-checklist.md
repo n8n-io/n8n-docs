@@ -16,7 +16,7 @@ The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available 
 
 This release introduces [semantic versioning](https://semver.org/){:target=_blank .external link}. This allows n8n to signal backwards-incompatible changes directly in the version number, making it easier to update n8n safely.
 
-From n8n 1.0 onwards, releases will follow the pattern MAJOR.MINOR.PATCH. Version numbers increment as follows:
+From n8n 1.0 on, releases will follow the pattern MAJOR.MINOR.PATCH. Version numbers increment as follows:
 
 - MAJOR version when making incompatible changes which potentially require user action
 - MINOR version when adding functionality in a backward-compatible manner
@@ -44,7 +44,7 @@ Your existing workflows will use the legacy order, while new workflows will exec
 
 ### MySQL and MariaDB
 
-n8n will remove support for MySQL and MariaDB as storage backends in a future version of n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
+n8n has removed support for MySQL and MariaDB as storage backends for n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
 
 [PR #6189](https://github.com/n8n-io/n8n/pull/6189){:target=_blank .external link}
 
@@ -62,7 +62,7 @@ Note that executions start much faster in `main` mode than in `own` mode. Howeve
 
 #### Permissions change
 
-When using Docker-based deployments, the n8n process is now run by the user `node` instead of `root`. This change increases security. 
+When using Docker-based deployments, the n8n process is now run by the user `node` instead of `root`. This change increases security.
 
 If permission errors appear in your n8n container logs when starting n8n, you may need to update the permissions by executing the following command on the Docker host:
 
@@ -72,7 +72,7 @@ docker run --rm -it --user root -v ~/.n8n:/home/node/.n8n --entrypoint chown n8n
 
 #### Image removal
 
-We have removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images. 
+We've removed the Debian and RHEL images. If you were using these you need to change the image you use. This shouldn't result in any errors unless you were making a custom image based on one of those images.
 
 #### Entrypoint change
 

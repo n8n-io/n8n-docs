@@ -30,7 +30,7 @@ You'll only need to click on the **Connect my account** button to connect your M
 1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations){:target=_blank .external-link}.
 2. Click on the **Register an application** button.
 3. Enter a name for your app in the **Name** field.
-4. Select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (e.g. Skype, Xbox)** under the **Supported account types** section.
+4. Select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)** under the **Supported account types** section.
 5. Copy the 'OAuth Callback URL' provided in the Microsoft node credentials in n8n.
 6. Paste it in the **Redirect URI (optional)** field on the **Register an application** page. In the same section, select **Select a platform** > **Web**.
 7. Click on the **Register** button.

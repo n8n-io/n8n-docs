@@ -43,10 +43,18 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png)</span> : remove the node from the workflow.
-* **Pause** <span class="inline-image">![Pause node icon](/_images/common-icons/pause-node.png)</span> : deactivate the node. This is useful when creating and debugging workflows, as it allows you to avoid executing a specific node, without disconnecting it. When you pause a node, the data passes through the node without changing.
-* **Duplicate node** <span class="inline-image">![Duplicate node icon](/_images/common-icons/duplicate-node.png)</span> : copy the node. n8n adds the copy to the canvas.
 * **Play** <span class="inline-image">![Run node icon](/_images/common-icons/play-node.png)</span> : run the node.
+* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png)</span>: select node actions. Available actions:
+	* Open node
+	* Execute node
+	* Rename node
+	* Deactivate node
+	* Pin node
+	* Copy node
+	* Duplicate node
+	* Select all
+	* Clear selection
+	* Delete node
 
 ## Node settings
 

@@ -8,7 +8,7 @@ hide:
 
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](http://faircode.io) licensed node-based workflow automation tool.
 
-It covers everything from setup to usage and development. It is a work in progress and all [contributions](/contributing/) are welcome.
+It covers everything from setup to usage and development. It's a work in progress and all [contributions](/contributing/) are welcome.
 
 ## Where to start
 
@@ -33,11 +33,11 @@ It covers everything from setup to usage and development. It is a work in progre
 
     [:octicons-arrow-right-24: Find your apps](/integrations/)
 
--   __Put the code in low-code__
+-   __Build AI functionality__
 
-    See an overview of n8n's developer resources.
+    n8n supports building AI functionality and tools.
 
-    [:octicons-arrow-right-24: Code in n8n](/code/)    
+    [:octicons-arrow-right-24: Advanced AI](/advanced-ai/)    
 </div>
 
 ## About n8n

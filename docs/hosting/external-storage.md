@@ -1,6 +1,6 @@
 ---
 description: External storage of binary data for your n8n instance.
-contentType: howTo
+contentType: howto
 ---
 
 # External storage

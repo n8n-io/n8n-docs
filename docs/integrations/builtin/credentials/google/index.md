@@ -29,7 +29,7 @@ Once configured, you can use your credentials to authenticate the following node
 	| [Google Ads](/integrations/builtin/app-nodes/n8n-nodes-base.googleads/) | :white_check_mark: | :x: |
 	| [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
 	| [Google Analytics](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) | :white_check_mark: | :x: |
-	| [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/) | :white_check_mark: | :x: |
+	| [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/) | :white_check_mark: | :white_check_mark: |
 	| [Google Books](/integrations/builtin/app-nodes/n8n-nodes-base.googlebooks/) | :white_check_mark: | :white_check_mark: |
 	| [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/) | :white_check_mark: | :x: |
 	| [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googlechat/) | :x: | :white_check_mark: |

@@ -8,12 +8,14 @@ Welcome to the **n8n Course Level 1**!
 
 ## Is this course right for me?
 
-This course teaches you how to automate processes with no code using n8n and is meant to jumpstart your qualification as an automation expert.
+This course introduces you to the fundamental concepts within n8n and develops your low-code automation expertise.
 
 This course is for you if you:
 
-- Want to automate things in your personal life
-- Are looking for quick ways to automate common business processes
+- Are starting to use n8n for the first time 
+- Are looking for some extra help creating your first workflow
+- Want to automate processes in your personal or working life
+
 
 ## What will I learn in this course?
 
@@ -33,16 +35,16 @@ You will build two workflows:
 - A two-node workflow to get articles from Hacker News
 - A seven-node workflow to help your client get records from a data warehouse, filter them, make calculations, and notify team members about the results
 
-
 ## What do I need to get started?
 
-- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, or [n8n Cloud](/choose-n8n/cloud/){:target="_blank" .external}.
-- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
-- Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but is not necessary.
+1. **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, or [n8n Cloud](/choose-n8n/cloud/){:target="_blank" .external}.
+2. **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
+3. Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but isn't necessary.
+4. An [account on the n8n community forum](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external} if you wish to receive a profile badge and avatar upon successful completion
 
 ## How long does the course take?
 
-Completing the course should take around **two hours**. You do not have to complete it in one go, feel free to take breaks and resume whenever you are ready.
+Completing the course should take around **two hours**. You don't have to complete it in one go, feel free to take breaks and resume whenever you are ready.
 
 ## How do I complete the course?
 
@@ -51,7 +53,9 @@ There are two milestones in this course that test your knowledge of what you hav
 - [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external}
 - [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA){:target="_blank" .external-link} at the end of the course
 
+/// note | Check your progress
 You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-1/verify){:target="_blank" .external}.
+///
 
 If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/104/completed-n8n-course-level-1){:target="_blank" .external-link} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 

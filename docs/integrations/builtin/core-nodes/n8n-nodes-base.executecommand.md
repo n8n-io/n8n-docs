@@ -9,7 +9,7 @@ contentType: integration
 The Execute Command node runs shell commands on the host machine that runs n8n.
 
 /// note | Which shell runs the command?
-This node executes the command in the default shell of the host machine. For example, cmd on Windows and zsh on macOS.
+This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
 
 If you run n8n with Docker, your command will run in the n8n container and not the Docker host.
 ///
@@ -22,11 +22,11 @@ This node isn't available on n8n Cloud.
 The Execute Command node has two properties:
 
 1. **Execute Once** toggle: This is a boolean field that specifies whether you want the node to execute only once, or once for every item it receives an input.
-2. **Command** field: This is a text field that specifies the command tto execute on the host machine.
+2. **Command** field: This is a text field that specifies the command to execute on the host machine.
 
 ## Example Usage
 
-This workflow allows you to execute a command that returns the percentage of the hard disk that is full using the Execute Command node. The workflow triggers twice a day, and if the memory usage exceeds 80%, it sends an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
+This workflow allows you to execute a command that returns the percentage of the hard disk that's full using the Execute Command node. The workflow triggers twice a day, and if the memory usage exceeds 80%, it sends an SMS using the Twilio node. You can also find the [workflow](https://n8n.io/workflows/716) on n8n.io. This example usage workflow would use the following nodes.
 
 - [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/)
 - [Execute Command]()
@@ -48,7 +48,7 @@ The Cron node will trigger the workflow twice a day, at 9 AM and 4 PM.
 4. Click on **Add Cron Time**.
 5. Select 'Every Day' from the **Mode** dropdown list.
 6. Enter `16` in the **Hour** field.
-7. Click on **Execute Node** to run the node.
+7. Click on **Test step** to run the node.
 
 ![Using the Cron node to trigger the workflow twice a day](/_images/integrations/builtin/core-nodes/executecommand/cron_node.png)
 
@@ -57,9 +57,9 @@ The Cron node will trigger the workflow twice a day, at 9 AM and 4 PM.
 The Execute Command node executes the command and return the percentage of hard disk space used on the host machine.
 
 1. Enter `df -k / | tail -1 | awk '{print $5}'` in the **Command** field.
-2. Click on **Execute Node** to run the node.
+2. Click on **Test step** to run the node.
 
-In the screenshot below, note that the node executes the command and returns the percentage of the hard disk that is full.
+In the screenshot below, note that the node executes the command and returns the percentage of the hard disk that's full.
 
 ![Using the Execute Command node to get the percentage of hard disk used on the host machine](/_images/integrations/builtin/core-nodes/executecommand/executecommand_node.png)
 
@@ -72,13 +72,13 @@ This node will compare the percentage of the hard disk space used we got from th
 3. Enter `{{parseInt($node["Execute Command"].json["stdout"])}}` in the **Expression** field. The output from the Execute Command node is a string. The `parseInt()` method converts the string into an integer.
 4. Select 'Larger' from the **Operation** dropdown list.
 5. Set **Value 2** to 80.
-5. Click on **Execute Node** to run the node.
+5. Click on **Test step** to run the node.
 
 In the screenshot below, you will notice that the node returns an output when the percentage of hard disk space used exceeds 80%.
 
-![Using the IF node to check if the percentage of hard disk space used is greater than eighty percent](/_images/integrations/builtin/core-nodes/executecommand/if_node.png)
+![Using the IF node to check if the percentage of hard disk space used is greater than 80%](/_images/integrations/builtin/core-nodes/executecommand/if_node.png)
 
-### 4. Twilio node (send: sms)
+### 4. Twilio node (send: SMS)
 
 This node sends an SMS to the specified phone number when the usage of hard disk space  exceeds 80%.
 
@@ -89,7 +89,7 @@ This node sends an SMS to the specified phone number when the usage of hard disk
 5. Click on the gears icon next to the **Message** field and click on **Add Expression**.
 
 6. Enter `Your hard disk space is filling up fast! Your hard disk is {{$node["Execute Command"].json["stdout"]}} full.` in the **Expression** field.
-7. Click on **Execute Node** to run the node.
+7. Click on **Test step** to run the node.
 
 In the screenshot below, note that the node sends an SMS with the percentage of the hard disk space used that you got from the Execute Command node.
 
@@ -100,7 +100,7 @@ In the screenshot below, note that the node sends an SMS with the percentage of 
 Adding this node here is optional, as the absence of this node won't make a difference to the functioning of the workflow.
 
 1. Create a **NoOp** node connected to the 'false' output of the IF node.
-2. Click on **Execute Node** to run the node.
+2. Click on **Test step** to run the node.
 
 ![Using the NoOp node](/_images/integrations/builtin/core-nodes/executecommand/noop_node.png)
 
@@ -142,5 +142,5 @@ If you want to run the curl command in the Execute Command node, you will have t
     ```
 
 4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
-5. Run the newly created Docker image, and you will now be able to execute ssh via the Execute Command-Node.
+5. Run the newly created Docker image, and you will now be able to execute ssh using the Execute Command-Node.
 

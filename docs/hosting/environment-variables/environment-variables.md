@@ -26,27 +26,8 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `mariadb` (deprecated), `mysqldb` (deprecated), `postgresdb` | `sqlite` | The database to use. |
+| `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
-
-### MySQL
-
-/// warning | Deprecated
-n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
-n8n recommends using PostgreSQL. 
-
-Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
-///
-
-
-| Variable | Type  | Default  | Description |
-| :------- | :---- | :------- | :---------- |
-| `DB_MYSQLDB_DATABASE`<br>/`_FILE` | String | `n8n` | The name of the MySQL database. Default value is `n8n`. |
-| `DB_MYSQLDB_HOST`<br>/`_FILE` | String | `localhost` | The MySQL host. Default value is `localhost`. |
-| `DB_MYSQLDB_PORT`<br>/`_FILE` | Number | `3306` | The MySQL port. Default value is `3306`. |
-| `DB_MYSQLDB_USER`<br>/`_FILE` | String | `root` | The MySQL user. Default value is `root`. |
-| `DB_MYSQLDB_PASSWORD`<br>/`_FILE` | String | - | The MySQL password. |
 
 ### PostgreSQL
 
@@ -98,6 +79,9 @@ Refer to [how to export and import workflows and credentials](/hosting/cli-comma
 | `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
+| `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (false) or not (true). |
+| `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
+| `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | Number | `30` | How long should the n8n process wait (in seconds) for components to shut down before exiting the process. |
 
 ## Binary data
 
@@ -112,7 +96,7 @@ By default, n8n uses memory to store binary data. Enterprise users can choose to
 ## User management SMTP, and two-factor authentication
 
 Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
-
+<!-- vale off -->
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
@@ -126,9 +110,13 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
+| `N8N_UM_EMAIL_TEMPLATES_WORKFLOW_SHARED` | String | - | Overrides the default HTML template for notifying users that a workflow was shared. Provide the full path to the template. |
+| `N8N_UM_EMAIL_TEMPLATES_CREDENTIALS_SHARED` | String | - | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template.  |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
+| `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS` | Number | 168 | Set an expiration date for the JWTs in hours. |
+| `N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS` | Number | 0 | How many hours before the JWT expires to automatically refresh it. 0 means 25% of `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. -1 means it will never refresh, which forces users to log in again after the period defined in `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. |
 | `N8N_MFA_ENABLED` | Boolean | `true` | Whether to enable two-factor authentication (true) or disable (false). n8n ignores this if existing users have 2FA enabled. |
-
+<!-- vale on -->
 
 ## Endpoints
 
@@ -164,7 +152,6 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `main` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) that users can set for an individual workflow. |
@@ -224,7 +211,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readBinaryFile\", \"n8n-nodes-base.readBinaryFiles\", \"n8n-nodes-base.writeBinaryFile\"]"` |
+| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"` |
 | `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
 | `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |
@@ -245,7 +232,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `QUEUE_BULL_REDIS_CLUSTER_NODES` | String | - | Expects a comma-separated list of Redis Cluster nodes in the format `host:port`, for the Redis client to initially connect to. If running in queue mode (`EXECUTIONS_MODE = queue`), setting this variable will create a Redis Cluster client instead of a Redis client, and n8n will ignore `QUEUE_BULL_REDIS_HOST` and `QUEUE_BULL_REDIS_PORT`. |
 | `QUEUE_BULL_REDIS_TLS` | Boolean | `false` | Enable TLS on Redis connections. |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic significantly. |
-| `QUEUE_WORKER_TIMEOUT` | Number | `30` | How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
+| `QUEUE_WORKER_TIMEOUT` (**deprecated**) | Number | `30` | **Deprecated** Use `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` instead.<br/><br/>How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `30000` | How long (in ms) is the lease period for a worker to work on a message. |
@@ -274,6 +261,11 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | :------- | :---- | :------- | :---------- |
 | `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](/source-control-environments/setup/). |
 
+## External secrets
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` | Number | `300` (5 minutes) | How often (in seconds) to check for secret updates. |
 
 ## Timezone and localization
 

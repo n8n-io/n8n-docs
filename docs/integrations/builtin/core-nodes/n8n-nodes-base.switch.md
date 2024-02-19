@@ -11,30 +11,20 @@ Use the Switch node to route a workflow conditionally based on comparison operat
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Switch integrations](https://n8n.io/integrations/switch/){:target=_blank .external-link} page.
 ///
-## Node reference
 
-**Mode**: select whether to define the conditions as rules in the node, or as an expression, programmatically.
+## Node parameters
 
-**Add Routing Rule**: add comparison conditions using the  dropdown. The available comparison operations vary for each data type:
+- **Mode**: select whether to define the conditions as rules in the node, or as an expression, programmatically.
+- **Routing Rules**: appears when you select **Mode** > **Rules**. Add comparison conditions using the  dropdown. The available comparison operations vary for each data type.
+- **Number of Outputs**: appears when you select **Mode** > **Expression**. Set how many outputs the node should have.
+- **Output Index**: create an expression to determine which node output to send data to.
 
-- Boolean
-	- Equal
-	- Not Equal
-- Number
-	- Smaller
-	- Smaller Equal
-	- Equal
-	- Not Equal
-	- Larger
-	- Larger Equal
-- String
-	- Contains
-	- Equal
-	- Not Contains
-	- Not Equal
-	- Regex
+## Node options
 
-**Fallback Output**: choose how to route the workflow when none of the conditions match.
+- **Fallback Output**: choose how to route the workflow when none of the conditions match.
+- **Ignore Case**: whether to ignore letter case.
+- **Less Strict Type Validation**: enable this if you want n8n to attempt to convert value types based on the operator you choose.
+- **Send data to all matching outputs**: enable this to send data to all outputs matching the conditions. When disabled, n8n sends data to the first output matching the conditions.
 
 
 ## Related resources

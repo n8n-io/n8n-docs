@@ -4,7 +4,7 @@ contentType: tutorial
 
 # Designing the Workflow
 
-Now that we have an idea of what Nathan wants to automate, let's enumerate the steps he needs to take to achieve this:
+Now that we know what Nathan wants to automate, let's enumerate the steps he needs to take to achieve this:
 
 1. Get the relevant data (order id, order status, order value, employee name) from the data warehouse
 2. Filter the orders by their status (processing or booked)

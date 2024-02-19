@@ -21,6 +21,7 @@ n8n provides keyboard shortcuts for some actions.
  - **Ctrl** + **s**: save the current workflow 
  - **Ctrl** + **z**: undo
  - **Ctrl** + **shift** + **z**: redo
+ - **Ctrl** + **Enter**: execute workflow
 
 ## Canvas
 
@@ -44,18 +45,21 @@ n8n provides keyboard shortcuts for some actions.
 
 - **Ctrl** + **a**: select all nodes
 - **Ctrl** + **v**: paste nodes
+- **Shift** + **s**: add sticky note
 
-### With nodes selected in canvas
+### With one or more nodes selected in canvas
 
  - **ArrowDown**: select sibling node below the current one
  - **ArrowLeft**: select node left of the current one
  - **ArrowRight**: select node right of the current one
  - **ArrowUp**: select sibling node above the current one
- - **Ctrl** + **c**: copy nodes
- - **Ctrl** + **x**: cut nodes
- - **d**: deactivate nodes
- - **Delete**: delete nodes
- - **F2**: rename node
+ - **Ctrl** + **c**: copy
+ - **Ctrl** + **x**: cut
+ - **D**: deactivate
+ - **Delete**: delete
+ - **Enter**: open
+ - **F2**: rename
+ - **P**: pin data in node. Refer to [Data pinning](/data/data-pinning/) for more information.
  - **Shift** + **ArrowLeft**: select all nodes left of the current one
  - **Shift** + **ArrowRight**: select all nodes right of the current one
 

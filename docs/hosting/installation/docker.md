@@ -47,7 +47,7 @@ If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
 /// note | Keep in mind
-Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided via the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
+Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
 ///
 ### PostgresDB
 
@@ -72,41 +72,12 @@ docker run -it --rm \
 
 A complete `docker-compose` file for Postgres can be found [here](https://github.com/n8n-io/n8n/blob/master/docker/compose/withPostgres/).
 
-### MySQL
-
-/// warning | Deprecated
-n8n deprecated MySQL and MariaDB as backend databases in version 0.227.0.
-
-n8n recommends using PostgreSQL. 
-
-Refer to [how to export and import workflows and credentials](/hosting/cli-commands/) for instructions.
-///
-
-
-To use n8n with MySQL, provide the corresponding [configuration](/hosting/configuration/):
-
-```sh
-docker volume create n8n_data
-
-docker run -it --rm \
- --name n8n \
- -p 5678:5678 \
- -e DB_TYPE=mysqldb \
- -e DB_MYSQLDB_DATABASE=<MYSQLDB_DATABASE> \
- -e DB_MYSQLDB_HOST=<MYSQLDB_HOST> \
- -e DB_MYSQLDB_PORT=<MYSQLDB_PORT> \
- -e DB_MYSQLDB_USER=<MYSQLDB_USER> \
- -e DB_MYSQLDB_PASSWORD=<MYSQLDB_PASSWORD> \
- -v n8n_data:/home/node/.n8n \
- docker.n8n.io/n8nio/n8n
-```
-
 ## Setting timezone
 
 To define the timezone n8n should use, the environment variable `GENERIC_TIMEZONE` can be set. This gets used by schedule based nodes such as the Cron node.
 
 The timezone of the system can also be set separately. This controls what
-some scripts and commands return like `$ date`. The system timezone can be set via the environment variable `TZ`.
+some scripts and commands return like `$ date`. The system timezone can be set using the environment variable `TZ`.
 
 Example using the same timezone for both:
 

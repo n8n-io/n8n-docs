@@ -8,6 +8,10 @@ contentType: integration
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/) in your workflows.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [n8n integrations](https://n8n.io/integrations/n8n/){:target=_blank .external-link} page.
+///
+
 ## Related resources
 
 ### Credentials

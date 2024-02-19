@@ -8,6 +8,10 @@ contentType: integration
 
 The Interval node is used to trigger the workflow to run in regular intervals of time. This node is a trigger node.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Interval integrations](https://n8n.io/integrations/interval/){:target=_blank .external-link} page.
+///
+
 /// note | Keep in mind
 If a workflow is using the Interval node as a trigger, make sure that you save and activate the workflow.
 ///

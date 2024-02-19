@@ -15,9 +15,4 @@ n8n supports CrowdStrike authentication using OAuth2.
 
 Refer to CrowdStrike's documentation for more information about the service. Their documentation is behind a log in, so you must log in to your account on their website to access the API documentation.
 
-
-<!-- 
-TODO
-If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
--->
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/crowdstrike/){:target=_blank .external-link} on n8n's website.

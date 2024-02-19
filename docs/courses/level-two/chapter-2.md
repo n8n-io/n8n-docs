@@ -60,14 +60,12 @@ In a previous exercise, you used an HTTP Request node to make a request to an AP
 
 ??? note "Show me the solution"
 
-	Get data from the Poetry DB API using the HTTP Request node and connect an XML node to it with the following parameters:
+	Get data from the Quotable API using the HTTP Request node and connect an XML node to it with the following parameters:
 
 	- Mode: **JSON to XML**
 	- Property name: **data**
 
 	The result should look like this:
-
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_json.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – JSON View</i></figcaption></figure>
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
 
@@ -94,11 +92,11 @@ In some cases, you might need to pause the workflow execution. This might be nec
 
 ### Exercise
 
-Build a workflow that adds five days to an input date. Then, if the calculated date occurred after today, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
+Build a workflow that adds five days to an input date. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
 
 ??? note "Show me the solution"
 
-	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. The workflow looks like this:
+	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. You can add a [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) too for easy testing during development. The workflow looks like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
@@ -106,162 +104,198 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 	```json
 	{
-		"nodes": [
-			{
-				"parameters": {
-					"action": "calculate",
-					"value": "={{$json[\"created\"]}}",
-					"duration": 5,
-					"options": {}
-				},
-				"name": "Date & Time",
-				"type": "n8n-nodes-base.dateTime",
-				"typeVersion": 1,
-				"position": [
-					880,
-					1500
-				]
-			},
-			{
-				"parameters": {
-					"rule": {
-						"interval": [
-							{
-								"field": "hours"
-							}
-						]
-					}
-				},
-				"name": "Schedule Trigger",
-				"type": "n8n-nodes-base.scheduleTrigger",
-				"typeVersion": 1,
-				"position": [
-					520,
-					1500
-				]
-			},
-			{
-				"parameters": {
-					"unit": "minutes"
-				},
-				"name": "Wait",
-				"type": "n8n-nodes-base.wait",
-				"typeVersion": 1,
-				"position": [
-					1240,
-					1500
-				],
-				"webhookId": "d17effb8-ad90-4a74-bb88-daa3d3d18583"
-			},
-			{
-				"parameters": {
-					"conditions": {
-						"dateTime": [
-							{
-								"value1": "={{$json[\"data\"]}}",
-								"value2": "2022-02-03T11:45:38.932Z"
-							}
-						]
-					}
-				},
-				"name": "IF",
-				"type": "n8n-nodes-base.if",
-				"typeVersion": 1,
-				"position": [
-					1060,
-					1500
-				]
-			},
-			{
-				"parameters": {
-					"values": {
-						"string": [
-							{
-								"value": "={{$node[\"IF\"].json[\"data\"]}}"
-							}
-						]
-					},
-					"options": {}
-				},
-				"name": "Set",
-				"type": "n8n-nodes-base.set",
-				"typeVersion": 1,
-				"position": [
-					1420,
-					1500
-				]
-			},
-			{
-				"parameters": {
-					"operation": "getAllPeople",
-					"returnAll": true
-				},
-				"name": "Customer Datastore",
-				"type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
-				"typeVersion": 1,
-				"position": [
-					700,
-					1500
-				]
-			}
+	"meta": {
+		"templateCredsSetupCompleted": true,
+		"instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+	},
+	"nodes": [
+		{
+		"parameters": {},
+		"id": "c2c4509b-c4d4-4e95-bd7d-039734954b68",
+		"name": "When clicking \"Test workflow\"",
+		"type": "n8n-nodes-base.manualTrigger",
+		"typeVersion": 1,
+		"position": [
+			260,
+			2080
+		]
+		},
+		{
+		"parameters": {
+			"action": "calculate",
+			"value": "={{$json[\"created\"]}}",
+			"duration": 5,
+			"dataPropertyName": "new-date",
+			"options": {}
+		},
+		"name": "Date & Time",
+		"type": "n8n-nodes-base.dateTime",
+		"typeVersion": 1,
+		"position": [
+			660,
+			2160
 		],
-		"connections": {
-			"Date & Time": {
-				"main": [
-					[
-						{
-							"node": "IF",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"Schedule Trigger": {
-				"main": [
-					[
-						{
-							"node": "Customer Datastore",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"Wait": {
-				"main": [
-					[
-						{
-							"node": "Set",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"IF": {
-				"main": [
-					[
-						{
-							"node": "Wait",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
-			},
-			"Customer Datastore": {
-				"main": [
-					[
-						{
-							"node": "Date & Time",
-							"type": "main",
-							"index": 0
-						}
-					]
-				]
+		"id": "61b56e39-021f-4ad0-b72c-697978c4f384"
+		},
+		{
+		"parameters": {
+			"unit": "minutes"
+		},
+		"name": "Wait",
+		"type": "n8n-nodes-base.wait",
+		"typeVersion": 1,
+		"position": [
+			1040,
+			2160
+		],
+		"webhookId": "d17effb8-ad90-4a74-bb88-daa3d3d18583",
+		"id": "842b788f-c236-4c67-bad0-155de7ef1be4"
+		},
+		{
+		"parameters": {
+			"conditions": {
+			"dateTime": [
+				{
+				"value1": "={{$json[\"new-date\"]}}",
+				"value2": "1960-01-01T00:00:00"
+				}
+			]
 			}
+		},
+		"name": "IF",
+		"type": "n8n-nodes-base.if",
+		"typeVersion": 1,
+		"position": [
+			840,
+			2160
+		],
+		"id": "ce788b41-ba4c-41cd-85da-6bf23baa76aa"
+		},
+		{
+		"parameters": {
+			"values": {
+			"string": [
+				{
+				"name": "outputValue",
+				"value": "={{ $('IF').item.json['new-date'] }}"
+				}
+			]
+			},
+			"options": {}
+		},
+		"name": "Set",
+		"type": "n8n-nodes-base.set",
+		"typeVersion": 1,
+		"position": [
+			1220,
+			2160
+		],
+		"id": "df3e455c-5c5e-42af-ad5c-a9bb6869a921"
+		},
+		{
+		"parameters": {
+			"operation": "getAllPeople",
+			"returnAll": true
+		},
+		"name": "Customer Datastore",
+		"type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+		"typeVersion": 1,
+		"position": [
+			480,
+			2160
+		],
+		"id": "1f3573f7-1586-4e9a-9cbf-9eb7c7475b27"
+		},
+		{
+		"parameters": {
+			"rule": {
+			"interval": [
+				{
+				"field": "minutes",
+				"minutesInterval": 30
+				}
+			]
+			}
+		},
+		"id": "c3ce4d5e-524b-4806-9c25-43892113b5eb",
+		"name": "Schedule Trigger",
+		"type": "n8n-nodes-base.scheduleTrigger",
+		"typeVersion": 1.1,
+		"position": [
+			260,
+			2260
+		]
 		}
+	],
+	"connections": {
+		"When clicking \"Test workflow\"": {
+		"main": [
+			[
+			{
+				"node": "Customer Datastore",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Date & Time": {
+		"main": [
+			[
+			{
+				"node": "IF",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Wait": {
+		"main": [
+			[
+			{
+				"node": "Set",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"IF": {
+		"main": [
+			[
+			{
+				"node": "Wait",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Customer Datastore": {
+		"main": [
+			[
+			{
+				"node": "Date & Time",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Schedule Trigger": {
+		"main": [
+			[
+			{
+				"node": "Customer Datastore",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		}
+	},
+	"pinData": {}
 	}
 	```
 
@@ -272,6 +306,7 @@ Up to now, you have mainly worked with text data. But what if you want to proces
 
 In n8n, you can process binary data with the following nodes:
 
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to request and send files from/to web resources and APIs.
 - [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
 - [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
 - [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.

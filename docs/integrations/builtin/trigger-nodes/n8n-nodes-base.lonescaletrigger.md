@@ -13,8 +13,9 @@ On this page, you'll find a list of operations the LoneScale node supports, and 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LoneScale integrations](https://n8n.io/integrations/lonescale-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [LoneScale Trigger integrations](https://n8n.io/integrations/lonescale-trigger/){:target=_blank .external-link} page.
 ///
 
 ## Related resources

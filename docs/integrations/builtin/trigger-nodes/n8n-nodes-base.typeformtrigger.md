@@ -11,6 +11,7 @@ contentType: integration
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/typeform/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Typeform trigger integrations](https://n8n.io/integrations/typeform-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Typeform Trigger integrations](https://n8n.io/integrations/typeform-trigger/){:target=_blank .external-link} page.
 ///

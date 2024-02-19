@@ -11,9 +11,11 @@ contentType: integration
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/wise/).
 ///
+
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Wise trigger integrations](https://n8n.io/integrations/wise-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Wise Trigger integrations](https://n8n.io/integrations/wise-trigger/){:target=_blank .external-link} page.
 ///
+
 ## Events
 
 - Triggered every time a balance account is credited

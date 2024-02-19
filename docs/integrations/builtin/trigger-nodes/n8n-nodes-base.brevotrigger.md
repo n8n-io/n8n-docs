@@ -12,3 +12,7 @@ Brevo is a digital marketing platform to help users grow their business.
 You can find authentication information for this node [here](/integrations/builtin/credentials/brevo/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Brevo Trigger integrations](https://n8n.io/integrations/brevo-trigger/){:target=_blank .external-link} page.
+///
+

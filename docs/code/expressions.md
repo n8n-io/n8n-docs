@@ -34,7 +34,7 @@ To use an expression to set a parameter value:
 
 1. Hover over the parameter where you want to use an expression.
 2. Select **Expressions** in the **Fixed/Expression** toggle.
-3. Write your expression in the parameter, or select **Open expression editor** <span class="inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png)</span> to open the expressions editor. If you use the expressions editor, you can browse some of the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
+3. Write your expression in the parameter, or select **Open expression editor** <span class="inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png)</span> to open the expressions editor. If you use the expressions editor, you can browse the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
 
 
 ### Example: Get data from webhook body
@@ -78,7 +78,7 @@ This expression:
 
 ### Example: Writing longer JavaScript
 
-An expression contains one line of JavaScript. This means you can'd do things like variable assignments or multiple standalone operations.
+An expression contains one line of JavaScript. This means you can do things like variable assignments or multiple standalone operations.
 
 To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression. 
 
@@ -87,7 +87,7 @@ However, the first example isn't a valid n8n expression:
 
 ```js
 // This example is split over multiple lines for readability
-// It is still invalid when formatted as a single line
+// It's still invalid when formatted as a single line
 {{
   function example() {
     let end = DateTime.fromISO('2017-03-13');

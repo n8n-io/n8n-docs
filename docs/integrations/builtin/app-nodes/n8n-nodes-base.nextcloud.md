@@ -34,7 +34,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Move a folder
     * Share a folder
 * User
-    * Invite a user to a NextCloud organization
+    * Invite a user to a Nextcloud organization
     * Delete a user.
     * Retrieve information about a single user.
     * Retrieve a list of users.

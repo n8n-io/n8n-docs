@@ -26,18 +26,18 @@ Some of the options depend on each other, or can interact. We recommend testing 
 | **Customized Header ID** | Whether to support custom heading IDs (enabled) or not (disabled). When enabled, you can add custom heading IDs using `{header ID here}` after the heading text. | Disabled |
 | **Emoji Support** | Whether to support emojis (enabled) or not (disabled). | Disabled. |
 | **Encode Emails** | Whether to transform ASCII character emails into their equivalent decimal entities (enabled) or not (disabled). | Enabled | 
-| **Exclude Trailing Punctuation From URLs** | Whether to exclude trailing punctuation from auto-linked URLs (enabled) or not (disabled). For use with **Automatic Linking To URLs**. | Disabled |
+| **Exclude Trailing Punctuation From URLs** | Whether to exclude trailing punctuation from automatically linked URLs (enabled) or not (disabled). For use with **Automatic Linking To URLs**. | Disabled |
 | **GitHub Code Blocks** | Whether to enable GitHub Flavored Markdown code blocks (enabled) or not (disabled). | Enabled |
 | **GitHub Compatible Header IDs** | Whether to generate GitHub Flavored Markdown heading IDs (enabled) or not (disabled). GitHub Flavored Markdown generates heading IDs with `-` in place of spaces and removes non-alphanumeric characters. | Disabled |
 | **GitHub Mention Link** | Change the link used with **GitHub Mentions**.  | Disabled |
 | **GitHub Mentions** | Whether to support tagging GitHub users with `@` (enabled) or not (disabled). When enabled, n8n replaces `@name` with `https://github.com/name`. | Disabled |
 | **GitHub Task Lists** | Whether to support GitHub Flavored Markdown task lists (enabled) or not (disabled). | Disabled |
 | **Header Level Start** | Number. Set the start level for headers. For example, changing this field to `2` causes n8n to treat `#` as `<h2>`, `##` as `<h3>`, and so on. | 1 |
-| **Mandatory Space Before Header** | Whether to make a space between `#` and heading text required (enabled) or not (disabled). When enabled, n8n renders a heading written as `##Some header text` literally (it does not turn it into a heading element) | Disabled |
+| **Mandatory Space Before Header** | Whether to make a space between `#` and heading text required (enabled) or not (disabled). When enabled, n8n renders a heading written as `##Some header text` literally (it doesn't turn it into a heading element) | Disabled |
 | **Middle Word Asterisks** | Whether n8n should treat asterisks in words as Markdown (disabled) or render them as literal asterisks (enabled). | Disabled |
 | **Middle Word Underscores** | Whether n8n should treat underscores in words as Markdown (disabled) or render them as literal underscores (enabled). | Disabled |
 | **No Header ID** | Disable automatic generation of header IDs (enabled). | Disabled |
-| **Parse Image Dimensions** | Support setting maximum image dimensions in Markdown syntaxt (enabled). | Disabled |
+| **Parse Image Dimensions** | Support setting maximum image dimensions in Markdown syntax (enabled). | Disabled |
 | **Prefix Header ID** | Define a prefix to add to header IDs. | None |
 | **Raw Header ID** | Whether to remove spaces, `'`, and `"` from header IDs, including prefixes, replacing them with `-` (enabled) or not (disabled). | Disabled |
 | **Raw Prefix Header ID** | Whether to prevent n8n from modifying header prefixes (enabled) or not (disabled) | Disabled |

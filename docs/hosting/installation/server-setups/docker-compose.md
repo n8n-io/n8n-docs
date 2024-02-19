@@ -160,7 +160,7 @@ SSL_EMAIL=user@example.com
 
 ### 7. Create data folder
 
-Create the Docker volume that is defined as `n8n_data`. n8n will save the database file from SQLite and the encryption key in this volume.
+Create the Docker volume that's defined as `n8n_data`. n8n will save the database file from SQLite and the encryption key in this volume.
 
 ```sh
 sudo docker volume create n8n_data

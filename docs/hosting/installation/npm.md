@@ -18,7 +18,7 @@ From the terminal, run:
 npx n8n
 ```
 
-This command will download everything that is needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}.
+This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}.
 
 ## Install globally with npm
 

@@ -823,7 +823,7 @@ components:
             risk: credentials
             sections:
               - title: Credentials not used in any workflow
-                description: These credentials are not used in any workflow. Keeping unused credentials in your instance is an unneeded security risk.
+                description: These credentials aren't used in any workflow. Keeping unused credentials in your instance is an unneeded security risk.
                 recommendation: Consider deleting these credentials if you no longer need them.
                 location:
                   - kind: credential
@@ -853,7 +853,7 @@ components:
               - title: Nodes that interact with the filesystem
                 description: This node reads from and writes to any accessible file in the host filesystem. Sensitive file content may be manipulated through a node operation.
                 recommendation: Consider protecting any sensitive files in the host filesystem
-                or refactoring the workflow so that it does not require host filesystem interaction.: null
+                or refactoring the workflow so that it doesn'trequire host filesystem interaction.: null
                 location:
                   - kind: node
                     workflowId: '1'
@@ -867,7 +867,7 @@ components:
             risk: nodes
             sections:
               - title: Community nodes
-                description: This node is sourced from the community. Community nodes are not vetted by the n8n team and have full access to the host system.
+                description: This node is sourced from the community. Community nodes aren't vetted by the n8n team and have full access to the host system.
                 recommendation: Consider reviewing the source code in any community nodes installed in this n8n instance
                 and uninstalling any community nodes no longer used.: null
                 location:
@@ -880,7 +880,7 @@ components:
             risk: execution
             sections:
               - title: Unprotected webhooks in instance
-                description: These webhook nodes have the "Authentication" field set to "None" and are not directly connected to a node to validate the payload. Every unprotected webhook allows your workflow to be called by any third party who knows the webhook URL.
+                description: These webhook nodes have the "Authentication" field set to "None" and aren't directly connected to a node to validate the payload. Every unprotected webhook allows your workflow to be called by any third party who knows the webhook URL.
                 recommendation: Consider setting the "Authentication" field to an option other than "None"
                 or validating the payload with one of the following nodes.: null
                 location:

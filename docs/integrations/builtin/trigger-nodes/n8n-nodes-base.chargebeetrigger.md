@@ -38,9 +38,9 @@ You'll need to save the workflow and then click on the Activate toggle on the to
 
 ### How do I add my webhook URL in Chargebee?
 1. Open your Chargebee dashboard.
-2. Click on "Settings".
-3. Click on "Configure Chargebee".
-4. Scroll down and click on "Webhooks".
+2. Click on **Settings**.
+3. Click on **Configure Chargebee**.
+4. Scroll down and click on **Webhooks**.
 5. Click on the *Add Webhook* button.
 6. Enter the Webhook Name and the Webhook URL.
 7. Click on the *Create* button.

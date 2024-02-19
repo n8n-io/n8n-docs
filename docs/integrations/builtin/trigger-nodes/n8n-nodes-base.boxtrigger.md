@@ -40,6 +40,6 @@ You'll need to save the workflow and then click on the Activate toggle on the to
 
 ### How do I find my Target ID in Box?
 1. Open the file/folder that you would like to monitor.
-2. Copy the string of charatcters after `folder/` in your URL. This is the target ID. For example, if the URL is `https://app.box.com/folder/12345`, then `12345` is the target ID.
+2. Copy the string of characters after `folder/` in your URL. This is the target ID. For example, if the URL is `https://app.box.com/folder/12345`, then `12345` is the target ID.
 3. Paste it in the *Target ID* field in n8n.
 

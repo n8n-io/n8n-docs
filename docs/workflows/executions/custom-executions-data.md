@@ -48,6 +48,7 @@ There are limitations:
 
 You can retrieve the custom data object, or a specific value in it, during an execution:
 
+<!-- vale off -->
 === "JavaScript"
 	```js
 	// Access the current state of the object during the execution
@@ -64,3 +65,4 @@ You can retrieve the custom data object, or a specific value in it, during an ex
 	# Access a specific value set during this execution
 	customData = _execution.customData.get("key");
 	```
+<!-- vale on -->

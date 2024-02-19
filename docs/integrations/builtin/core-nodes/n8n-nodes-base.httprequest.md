@@ -83,7 +83,7 @@ Use this option to paginate results.
 /// note | Inspect the API data first
 Some options for pagination require knowledge of the data returned by the API you're using. Before setting up pagination, either check the API documentation, or do an API call without pagination, to see the data it returns.
 ///
-??? Details "What is pagination?"
+??? Details "Understand pagination"
     Pagination means splitting a large set of data into multiple pages. The amount of data on each page depends on the limit you set.
   
     For example, you make an API call to an endpoint called `/users`. The API wants to send back information on 300 users, but this is too much data for the API to send in one response. 

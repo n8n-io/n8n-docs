@@ -3,7 +3,8 @@ title: One Simple API credentials
 description: Documentation for One Simple API credentials. Use these credentials to authenticate One Simple API in n8n, a workflow automation platform.
 contentType: integration
 ---
-
+<!-- vale off -->
+<!-- Not adding 'Simple' to accept.txt but can't really get away from it here -->
 # One Simple API credentials
 
 You can use these credentials to authenticate the following nodes with Nextcloud.
@@ -26,3 +27,4 @@ Create a [One Simple API](https://onesimpleapi.com/register) account.
 ![The API token field in n8n](/_images/integrations/builtin/credentials/onesimpleapi/one_simple_api_n8n_credentials.png)
 7. Click the **Save** button.
 
+<!-- vale on -->

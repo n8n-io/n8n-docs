@@ -37,7 +37,7 @@ All node's use n8n's [node UI elements](/integrations/creating-nodes/build/refer
 * Use the same terminology as the service the node connects to. For example, a Notion node should refer to Notion blocks, not Notion paragraphs, because Notion calls these elements blocks. There are exceptions to this rule, usually to avoid technical terms (for example, refer to the guidance on [name and description for upsert operations](#upsert-operations)).
 * Sometimes a service has different terms for something in its API and in its GUI. Use the GUI language in your node, as this is what most users are familiar with. If you think some users may need to refer to the service's API docs, consider including this information in a hint.
 * Don't use technical jargon when there are simpler alternatives.
-* Be consistent when naming things. For example, choose one of "directory" or "folder", then stick to it. 
+* Be consistent when naming things. For example, choose one of `directory` or `folder` then stick to it. 
 
 ### Node naming conventions
 
@@ -50,7 +50,7 @@ All node's use n8n's [node UI elements](/integrations/creating-nodes/build/refer
 
 Fields can either be:
 
-* Displayed immediately when the node opens: use this for resources and operations, and required fields.
+* Displayed when the node opens: use this for resources and operations, and required fields.
 * Hidden in the **Optional fields** section until a user clicks on that section: use this for optional fields.
 
 Progressively disclose complexity: hide a field until any earlier fields it depends on have values. For example, if you have a **Filter by date** toggle, and a **Date to filter by** datepicker, don't display **Date to filter by** until the user enables **Filter by date**.
@@ -64,7 +64,7 @@ n8n automatically displays credential fields as the top fields in the node.
 
 #### Resources and operations
 
-APIs usually involve doing something to data. For example, "get all tasks". In this example, "task" is the resource, and "get all" is the operation.
+APIs usually involve doing something to data. For example, "get all tasks." In this example, "task" is the resource, and "get all" is the operation.
 
 When your node has this resource and operation pattern, your first field should be **Resource**, and your second field should be **Operation**.
 
@@ -79,7 +79,7 @@ Order fields by:
 
 * Order fields alphabetically. To group similar things together, you can rename them. For example, rename **Email** and **Secondary Email** to **Email (primary)** and **Email (secondary)**.
 * If an optional field has a default value that the node uses when the value isn't set, load the field with that value. Explain this in the field description. For example, **Defaults to false**.
-* Connected fields: if one optional fiels is dependent on another, bundle them together. They should both be under a single option that shows both fields when selected.
+* Connected fields: if one optional fields is dependent on another, bundle them together. They should both be under a single option that shows both fields when selected.
 * If you have a lot of optional fields, consider grouping them by theme.
 
 #### Help
@@ -135,7 +135,7 @@ subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 
 #### IDs
 
-When performing an operation on a specific record, such as "update a task comment", you need a way to specify which record you want to change.
+When performing an operation on a specific record, such as "update a task comment" you need a way to specify which record you want to change.
 
 * Wherever possible, provide two ways to specify a record:
     * By choosing from a pre-populated list. You can generate this list using the `loadOptions` parameter. Refer to [Base files](/integrations/creating-nodes/build/reference/node-base-files/) for more information.
@@ -147,7 +147,7 @@ When performing an operation on a specific record, such as "update a task commen
 
 #### Dates and timestamps
 
-n8n uses [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank class=.external-link} for dates and times. Make sure that any date or timestamp field you implement supports all ISO 8601 formats.
+n8n uses [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank class=.external-link} for dates and times. Make sure that any date or timestamp field you add supports all ISO 8601 formats.
 
 #### JSON
 
@@ -182,8 +182,9 @@ This should always be a separate operation with:
   * Description: **Create a new record, or update the current one if it already exists (upsert)**
 
 #### Boolean operators
-
-n8n doesn't have good support for combining boolean operators in, such as AND and OR, in the GUI. Whenever possible, provide options for all ANDs or all ORs.
+<!-- vale off -->
+n8n doesn't have good support for combining boolean operators, such as AND and OR, in the GUI. Whenever possible, provide options for all ANDs or all ORs.
+<!-- vale on -->
 
 For example, you have a field called **Must match** to test if values match. Include options to test for **Any** and **All**, as separate options.
 

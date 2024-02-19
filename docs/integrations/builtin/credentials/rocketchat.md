@@ -24,6 +24,6 @@ You can use these credentials to authenticate the following nodes with Rocket.Ch
 5. Enter a name for your Personal access token and click on the *Add* button.
 6. Copy the *Token* and enter that in the *Auth Key* field in n8n.
 7. Copy the *User Id* and enter that in the *User Id* field in n8n.
-
+<!-- vale off -->
 ![Getting Rocket.Chat credentials](/_images/integrations/builtin/credentials/rocketchat/using-access-token.gif)
-
+<!-- vale on -->

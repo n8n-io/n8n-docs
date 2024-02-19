@@ -4,46 +4,48 @@ contentType: reference
 
 # Item linking errors
 
-n8n displays errors related to data mapping when there are problems tracing an item's linked parent items back through the workflow.
+In n8n you can reference data from any previous node. This doesn't have to be the node just before: it can be any previous node in the chain. When referencing nodes further back, you use the expression syntax `$(node_name).item`. 
 
-## Errors when pinning data
+<figure markdown>
+![A diagram showing the threads linking multiple items back through a workflow](/_images/data/data-mapping/data-item-linking/item-linking-multiple-lines.png)
+<figcaption markdown>Diagram of threads for different items. Due to the item linking, you can get the actor for each movie using `$('Get famous movie actors).item`.</figcaption>
+</figure>
+
+Since the previous node can have multiple items in it, n8n needs to know which one to use. When using `.item`, n8n figures this out for you behind the scenes. Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for detailed information on how this works.
+
+`.item` fails if information is missing. To figure out which item to use, n8n maintains a thread back through the workflow's nodes for each item. For a given item, this thread tells n8n which items in previous nodes generated it. To find the matching item in a given previous node, n8n follows this thread back until it reaches the node in question.
+
+When using `.item`, n8n displays an error when:
+
+- The thread is broken
+- The thread points to more than one item in the previous node (as it's unclear which one to use)
+
+To solve these errors, you can either avoid using `.item`, or fix the root cause.
+
+You can avoid `.item` by using `.first()`, `.last()` or `.all()[index]` instead. They require you to know the position of the item that you’re targeting within the target node's output items. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes/) for more detail on these methods.
+
+The fix for the root cause depends on the exact error.
+
+### Fix for 'Info for expressions missing from previous node'
 
 If you see this error message:
 
-> ERROR: '`<node-name>`' must be unpinned to execute
+> ERROR: Info for expression missing from previous node
 
-Unpin the data in the named node, and execute the node to get fresh data.
+There's a node in the chain that doesn't return pairing information. The solution here depends on the type of the previous node:
 
-This error has two possible causes:
+- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for more information.
+- Custom or community nodes: the node creator needs to be update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/) for more information.
 
-* The number of inputs into the pinned node has changed since you pinned it.
-* You've edited the pinned data and changed the number of items.
+### Fix for 'Multiple matching items for expression'
 
+This is the error message:
 
-## Errors when using the Code node
+> ERROR: Multiple matching items for expression
 
-If you see this error message:
+Sometimes n8n uses multiple items to create a single item. Examples include the Summarize, Aggregate, and Merge nodes. These nodes can combine information from multiple items.
 
-> ERROR: Can't get data for expression under '`<field-name>`' field
+When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
 
-You need to supply item linking information yourself, because you have an item linking scenario that n8n can't automatically handle.
-
-To control item linking, set `pairedItem` when returning data. For example, to link to the item at index 0:
-
-```js
-[
-	{
-		"json": {
-			. . . 
-		},
-		// The index of the input item that generated this output item
-		"pairedItem": 0
-	}
-]
-```
-
-
-Refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts/) for a conceptual understanding of item linking, and [Manage item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for detailed guidance on handling item linking.
-
-
-
+- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes/) for more detail on these methods.
+- Reference a different node that contains the same information, but doesn't have multiple matching items.

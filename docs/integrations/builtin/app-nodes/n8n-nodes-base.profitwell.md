@@ -20,6 +20,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
 ## Operations
 
 * Company
-    * Get your companys ProfitWell account settings
+    * Get your company's ProfitWell account settings
 * Metric
     * Retrieve financial metric broken down by day for either the current month or the last

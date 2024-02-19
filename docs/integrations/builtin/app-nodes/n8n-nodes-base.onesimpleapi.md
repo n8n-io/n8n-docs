@@ -3,7 +3,8 @@ title: One Simple API
 description: Documentation for the One Simple API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
-
+<!-- vale off -->
+<!-- linting off because 'simple' isn't something I want to add to accept.txt -->
 # One Simple API
 
 Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
@@ -34,3 +35,4 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get SEO information from website
     * Create a screenshot from a webpage
 
+<!-- vale on -->

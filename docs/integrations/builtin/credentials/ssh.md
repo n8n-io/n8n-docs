@@ -19,7 +19,7 @@ See [Connecting to GitHub with SSH](https://docs.github.com/en/github/authentica
 
 1. From the SSH Credentials dropdown, select ***Create New*** and complete the following fields:
     - ***Credentials Name***: Enter a descriptive name, here we used `ssh_demo`.
-    - ***Host***: Enter the IP address of the server you are connecting to. Here we are using `192.168.1.8` for a local Mac set up for SSH access.
+    - ***Host***: Enter the IP address of the server you are connecting to. Here we're using `192.168.1.8` for a local Mac set up for SSH access.
     - ***Port***: Enter the port to use for this connection. SSH used port 22 by default.
     - ***User***: Enter the your username for this server.
     - ***Password***: Enter your password for the provided username.

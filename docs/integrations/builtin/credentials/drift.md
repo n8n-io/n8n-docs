@@ -37,8 +37,8 @@ You'll only need to enter the Credentials Name and click on the circle button in
 
 1. Access [your Drift apps](https://dev.drift.com/apps).
 2. Select your App (or create a new one).
-3. Click on "Manage".
-4. Click on "Installing to Drift".
+3. Click on **Manage**.
+4. Click on **Installing to Drift**.
 5. Use token with your Drift Node credentials in n8n.
 
 ![Getting Drift credentials](/_images/integrations/builtin/credentials/drift/using-access-token.gif)

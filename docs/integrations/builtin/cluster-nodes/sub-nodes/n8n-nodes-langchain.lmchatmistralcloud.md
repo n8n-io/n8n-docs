@@ -14,7 +14,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Mistral Cloud Chat Model integrations](https://n8n.io/integrations/mistral-chat-model/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Mistral Cloud Chat Model integrations](https://n8n.io/integrations/mistral-cloud-chat-model/){:target=_blank .external-link} page.
 ///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -36,7 +36,7 @@ For usage examples and templates to help you get started, refer to n8n's [Mistra
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/mistral-chat-model/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/mistral-cloud-chat-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChains's Mistral documentation](https://js.langchain.com/docs/integrations/chat/mistral){:target=_blank .external-link} for more information about the service.
 

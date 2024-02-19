@@ -1,13 +1,13 @@
 ---
-title: Retrieval Q&A Chain
-description: Documentation for the Retrieval Q&A Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Question and Answer Chain
+description: Documentation for the Question and Answer Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Retrieval Q&A Chain
+# Question and Answer Chain
 
-Use the Retrieval Q&A Chain node to use a vector store as a retriever.
+Use the Question and Answer Chain node to use a vector store as a retriever.
 
-On this page, you'll find the node parameters for the Retrieval Q&A Chain node, and links to more resources.
+On this page, you'll find the node parameters for the Question and Answer Chain node, and links to more resources.
 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Retrivel Q&A Chain integrations](https://n8n.io/integrations/retrieval-qanda-chain/){:target=_blank .external-link} page.

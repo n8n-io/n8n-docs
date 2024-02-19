@@ -36,6 +36,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Create a product
     * Delete a product
     * Get a product
-    * Get all producs
+    * Get all products
     * Update a product
 

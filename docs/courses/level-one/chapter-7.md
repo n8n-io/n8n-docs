@@ -12,7 +12,7 @@ You can test your knowledge by taking a **quiz**, which consists of questions ab
 
 - You need to have at least 80% correct answers in each part to pass the quiz.
 - You can take the quiz as many times as you want.
-- There is no time limit on answering the quiz questions.
+- There's no time limit on answering the quiz questions.
 
 <br/>
 <div style="text-align:center;">

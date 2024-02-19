@@ -19,7 +19,7 @@ n8n stores all credentials encrypted in its database, and restricts access to th
 ## Connect n8n to your secrets store
 
 /// note | Secret names
-Your secret names can't contain spaces, hyphens, or other special characters. n8n supports secret names containing alphanumeric characters (a-z, A-Z, and 0-9), and underscores.
+Your secret names can't contain spaces, hyphens, or other special characters. n8n supports secret names containing alphanumeric characters (`a-z`, `A-Z`, and `0-9`), and underscores.
 ///
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Select **Set Up** for your store provider.

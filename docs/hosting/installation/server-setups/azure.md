@@ -109,13 +109,11 @@ This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kube
 
 --8<-- "_snippets/self-hosting/installation/suggested-pod-resources.md"
 
-### Environment variables
+### Optional: Environment variables
 
-n8n needs some environment variables set to pass to the application running in the containers.
+You can configure n8n settings and behaviors using environment variables.
 
-The example `n8n-secret.yaml` file contains placeholders you need to replace with values of your own for authentication details.
-
-Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for n8n environment variables details.
+Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/environment-variables/environment-variables/) for n8n environment variables details.
 
 ## Deployments
 

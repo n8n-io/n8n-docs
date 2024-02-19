@@ -8,7 +8,7 @@ contentType: overview
 * Available on Enterprise plans.
 * You need access to the n8n instance owner account to enable and configure SAML
 
-Available from version 0.225.0 onwards.
+Available from version 0.225.0.
 ///	
 
 

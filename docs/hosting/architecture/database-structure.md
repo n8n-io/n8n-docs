@@ -18,7 +18,7 @@ To inspect the n8n database, you can use [DBeaver](https://dbeaver.io){:target=_
 ## Tables
 
 These are the tables n8n creates during setup.
-
+<!-- vale off -->
 ### auth_identity
 
 Stores details of external authentication providers when using [SAML](/user-management/saml/).
@@ -114,3 +114,5 @@ Maps tags to workflows. [tag_entity](#tag_entity) contains tag details.
 ## Entity Relationship Diagram (ERD)
 
 !["n8n ERD"](/_images/hosting/architecture/n8n-database-diagram.png)
+
+<!-- vale on -->

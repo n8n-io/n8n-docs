@@ -16,7 +16,7 @@ Due to this, you don't need to use backups except in case of a catastrophic fail
 
 ## Backups
 
-n8n recommends creating nightly backups by attaching another container, and copying all data to this second container. In this manner, RAM usage is negligible, and so does'nt impact the amount of users you can place on the server.
+n8n recommends creating nightly backups by attaching another container, and copying all data to this second container. In this manner, RAM usage is negligible, and so doesn't impact the amount of users you can place on the server.
 
 ## Restarting
 

@@ -10,6 +10,7 @@ hide:
 contentType: explanation
 ---
 
+<!-- vale off -->
 
 # Privacy
 
@@ -142,11 +143,11 @@ n8n only retains data for as long as necessary to provide the core service.
 
 For n8n Cloud, n8n stores your workflow code, credentials, and other data indefinitely, until you choose to delete it or close your account. The platform stores execution data according to the retention rules on your account.
 
-n8n deletes most internal application logs and logs tied to subprocessors within 30 days. The company retains a subset of logs for longer periods where required for security investigations.
+n8n deletes most internal application logs and logs tied to subprocessors within 90 days. The company retains a subset of logs for longer periods where required for security investigations.
 
 #### PID deletion
 
-If you choose to delete your n8n account, n8n deletes all customer data and event data associated with your account. n8n deletes customer data in backups within 30 days.
+If you choose to delete your n8n account, n8n deletes all customer data and event data associated with your account. n8n deletes customer data in backups within 90 days.
 
 ### Self-hosted
 
@@ -155,3 +156,5 @@ Self-hosted users should have their own PID policy and data deletion processes. 
 ## Payment processor
 
 n8n uses Paddle.com to process payments. When you sign up for a paid plan, Paddle transmits and stores the details of your payment method according to their security policy. n8n stores no information about your payment method.
+
+<!-- vale on -->

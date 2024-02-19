@@ -16,9 +16,9 @@ You can find authentication information for this node [here](/integrations/built
 
 - Campaign Sent
 - Subscriber Added to Group
-- Subscriber Added through Webform
-- Subscriber Autonomation Completed
-- Subscriber Autonomation Triggered
+- Subscriber Added through web form
+- Subscriber Automation Completed
+- Subscriber Automation Triggered
 - Subscriber Bounced
 - Subscriber Created
 - Subscriber Complained

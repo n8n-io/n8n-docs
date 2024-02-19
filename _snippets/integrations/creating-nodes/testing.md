@@ -36,7 +36,7 @@ You can test your node as you build it by running it in a local n8n instance.
 
 ### Troubleshooting
 
-- There is no `custom` directory in `~/.n8n` local installation.
+- There's no `custom` directory in `~/.n8n` local installation.
 
 You have to create `custom` directory manually and run `npm init`
 ```shell

@@ -19,7 +19,7 @@ Create a [Linear](https://linear.app/){:target=_blank .external-link} account.
 1. Open the [Linear API settings](https://linear.app/settings/api){:target=_blank .external-link}.
 2. Click on the **Create new** button under **OAuth Applications**.
 3. Fill out the fields as required.
-4. Copy the **Client ID** and **Client Secret** into the the credentials screen in n8n. 
+4. Copy the **Client ID** and **Client Secret** into the credentials screen in n8n. 
  
 ## Using an API Key
 

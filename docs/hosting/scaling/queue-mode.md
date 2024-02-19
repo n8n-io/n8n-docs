@@ -10,6 +10,10 @@ n8n can be run in different modes depending on your needs. The queue mode provid
 n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
 ///
 
+/// note | Own mode removed
+n8n removed `own` mode in version 1.27.0.
+///
+
 ## How it works
 
 When running in `queue` mode you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions.
@@ -48,7 +52,7 @@ Set the environment variable `EXECUTIONS_MODE` to `queue` using the following co
 export EXECUTIONS_MODE=queue
 ```
 
-Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/#configuration-via-file).
+Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/#configuration-Using-file).
 
 ### Start Redis
 
@@ -66,20 +70,20 @@ docker run --name some-redis -p 6379:6379  -d redis
 
 By default, Redis runs on `localhost` on port `6379` with no password. Based on your Redis configuration, set the following configurations for the main n8n process. These will allow n8n to interact with Redis.
 
-| Via configuration file | Via environment variables | Description |
+| Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
 | `queue.bull.redis.host:localhost` | `QUEUE_BULL_REDIS_HOST=localhost` | By default, Redis runs on `localhost`. |
 | `queue.bull.redis.port:6379` | `QUEUE_BULL_REDIS_PORT=6379` | The default port is `6379`. If Redis is running on a different port, configure the value. |
 
 You can also set the following optional configurations:
 
-| Via configuration file | Via environment variables | Description |
+| Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
 | `queue.bull.redis.username:USERNAME` | `QUEUE_BULL_REDIS_USERNAME` | By default, Redis doesn't require a username. If you're using a specific user, configure it variable. |
 | `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
 | `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
 | `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`. |
-| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and is not notified about finished jobs. The default value is `60` seconds. |
+| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and isn't notified about finished jobs. The default value is `60` seconds. |
 | `queue.bull.gracefulShutdownTimeout:30` | `QUEUE_WORKER_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
 
 Now you can start your n8n instance and it will connect to your Redis instance.
@@ -164,7 +168,7 @@ When using multiple webhook processes you will need a load balancer to route req
 
 **Note:** Manual workflow executions still occur on the main process and the default URL for these is `/webhook-test/*`. Make sure that these URLs route to your main process.
 
-You can change this path in the configuration file `endpoints.webhook` or via the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
+You can change this path in the configuration file `endpoints.webhook` or using the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
 
 ### Disable webhook processing in the main process (optional)
 
@@ -185,3 +189,46 @@ You can define the number of jobs a worker can run in parallel by using the `con
 ```bash
 n8n worker --concurrency=5
 ```
+
+## Multi-main setup
+
+/// info | Feature availability
+* Available on Self-hosted Enterprise plans.
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+///
+
+In queue mode you can run more than one `main` process for high availability.
+
+Normally, in a single-mode setup, the `main` process is responsible for two sets of tasks: 
+
+- **regular tasks**, such as running the API, serving the UI, listening for webhooks, and handling manual executions, and 
+- **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
+
+In a multi-main setup, there are two kinds of `main` processes:
+
+- **followers**, which run **regular tasks**, and
+- the **leader**, which runs **both regular and at-most-once tasks**.
+
+### Leader designation
+
+In a multi-main setup, all `main` handle the leadership process transparently to users. In case the current leader becomes unavailable, e.g. because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
+
+### Configuring multi-main setup
+
+To deploy n8n in multi-main setup, ensure: 
+
+- All `main` processes are running in queue mode and are connected to Postgres and Redis.
+- All `main` and `worker` processes are running the same version of n8n.
+- All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
+- All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
+
+If needed, you can adjust the leader key options:
+
+| Using configuration file | Using environment variables | Description |
+| ------ | ------ | ----- |
+| `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
+| `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
+
+/// note | Keep in mind
+In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Therefore, running `webhook` processes is neither needed nor allowed in multi-main setup.
+///

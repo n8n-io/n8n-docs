@@ -25,6 +25,13 @@ Sticky Notes are a core node. To add a new Sticky Note:
 2. Write your note. [This guide](https://commonmark.org/help/) explains how to format your text with Markdown. n8n uses [markdown-it](https://github.com/markdown-it/markdown-it), which implements the CommonMark specification. 
 3. Click away from the note, or press `Esc`, to stop editing.
 
+## Change the color
+
+To change the Sticky Note color:
+
+1. Hover over the Sticky Note
+1. Select **Change color** <span class="inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png)</span>
+
 ## Sticky Note positioning
 
 You can:

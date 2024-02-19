@@ -27,12 +27,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Create
     * Delete
     * Get All
-    * Reinvite
+    * Re-invite
 * Panelist
     * Create
     * Delete
     * Get All
-    * Reinvite
+    * Re-invite
 * Registrant
     * Create
     * Delete

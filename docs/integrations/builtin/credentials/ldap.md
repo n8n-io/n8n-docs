@@ -17,7 +17,7 @@ You will need your LDAP server address, Bind DN for the user to authenticate wit
 
 1. Enter your LDAP server address
 2. Enter your port
-3. Enter your binding dn, If you are using Active Directory this may look something like `cn=administrator, cn=Users, dc=n8n, dc=io`
+3. Enter your binding DN, If you are using Active Directory this may look something like `cn=administrator, cn=Users, dc=n8n, dc=io`
 4. Enter the password for the binding user
 
 You can find more information below for specific LDAP providers

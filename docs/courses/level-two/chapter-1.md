@@ -13,10 +13,10 @@ In a basic sense, n8n nodes function as an Extract, Transform, Load (ETL) tool. 
 
 The data that moves along from node to node in your workflow must be in a format (structure) that can be recognized and interpreted by each node. In n8n, this required structure is an array of objects.
 
-/// note | What is an array of objects?
+/// note | About array of objects
 An array is a list of values. The array can be empty or contain several elements. Each element is stored at a position (index) in the list, starting at 0, and can be referenced by the index number. For example, in the array `["Leonardo", "Michelangelo", "Donatello", "Raphael"];` the element `Donatello` is stored at index 2.
 
-An object stores key-value pairs, instead of values at numbered indexes as in arrays. The order of the pairs is not important, as the values can be accessed by referencing the key name. For example, the object below contains two properties (`name` and `color`):
+An object stores key-value pairs, instead of values at numbered indexes as in arrays. The order of the pairs isn't important, as the values can be accessed by referencing the key name. For example, the object below contains two properties (`name` and `color`):
 
 ```json
 {
@@ -139,6 +139,8 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 
 Just like you can use [expressions](/code/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/) in the Code node.
 
+Please make sure you read these pages before continuing to the next exercise.
+
 ### Exercise
 
 Let's build on the previous exercise, in which you used the Code node to create a data set of two contacts with their names and emails. Now, connect a second Code node to the first one. In the new node, write code to create a new column named `workEmail` that references the work email of the first contact.
@@ -168,7 +170,7 @@ The two most common operations for data transformation are:
 
 There are several ways to transform data for the purposes mentioned above:
 
-- Using n8n's [data transformation nodes](/data/#data-transformation-nodes). This the easy way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node. Use [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) to separate a single data item containing a list into multiple items, and [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) to take separate items, or portions of them, and group them together into individual items.
+- Using n8n's [data transformation nodes](/data/#data-transformation-nodes). This is the way to modify the structure of incoming data that contain lists (arrays), without needing to use JavaScript code in the Code node. Use [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) to separate a single data item containing a list into multiple items, and [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) to take separate items, or portions of them, and group them together into individual items.
 - With the Code node, you can write JavaScript functions to modify the data structure of incoming data using the *Run Once for All Items* mode:
 
     To create multiple items from a single item, you can use this JavaScript code:
@@ -195,22 +197,21 @@ There are several ways to transform data for the purposes mentioned above:
 
 ### Exercise
 
-Use the HTTP Request node to make a GET request to the Poetry DB API `https://poetrydb.org/linecount/3`. Transform the incoming data with the Split Out node and with the Code node.
+Use the HTTP Request node to make a GET request to the Quotable API `https://api.quotable.io/quotes`. Transform the data in the `results` field with the Split Out node and also with the Code node.
 
 
 ??? note "Show me the solution"
 
-	To get the poems from the Poetry DB API, execute the *HTTP Request node* with the following parameters:
+	To get the quotes from the Quotable API, execute the *HTTP Request node* with the following parameters:
 
 	- Authentication: None
 	- Request Method: GET
-	- URL: https://poetrydb.org/linecount/3
-	- Options > Response: Include Response Headers and Status
+	- URL: https://api.quotable.io/quotes
 
 	To transform the data with the Code node, connect this node to the *HTTP Request node* and write the following code in the JavaScript Code field:
 
 	```js
-		return items[0].json.body.map(item => {
+		return items[0].json.results.map(item => {
 			return {
 				json: item
 			}
@@ -219,5 +220,6 @@ Use the HTTP Request node to make a GET request to the Poetry DB API `https://po
 
 	To transform the data with the Split Out node, connect this node to the *HTTP Request node* and set the following parameters:
 	
-	- Field To Split Out: body
+	- Operation: Split Out Items
+	- Field To Split Out: results
 	- Include: No Other Fields

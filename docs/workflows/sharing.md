@@ -5,6 +5,10 @@ contentType: howto
 
 # Workflow sharing
 
+/// info | Feature availability
+Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
+///
+
 Workflow sharing allows you to share workflows between users of the same n8n instance.
 
 Users can share workflows they created. Instance owners, and users with the admin role, can view and share all workflows in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.

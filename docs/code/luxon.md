@@ -108,7 +108,7 @@ Luxon provides functions to handle conversions for a range of formats. Refer to 
 
 Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing){:target="_blank" .external-link}. To do this, use the `fromFormat()` function, providing the string and a set of [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens){:target="_blank" .external-link} that describe the format.
 
-For example, you have n8n's founding date, 23rd June 2019, formatted as '23-06-2019'. You want to turn this into a Luxon object:
+For example, you have n8n's founding date, 23rd June 2019, formatted as `23-06-2019`. You want to turn this into a Luxon object:
 
 === "Expressions (JavaScript)"
 
@@ -166,7 +166,7 @@ For more detailed information and examples, refer to:
 
 In [Get n days from today](#get-n-days-from-today), the example gets the date seven days before the current date, and returns it as `[Object: "yyyy-mm-dd-T00:00:00.000+00:00"]` (for expressions) or `yyyy-mm-dd-T00:00:00.000+00:00` (in the Code node). To make this more readable, you can use Luxon's formatting functions.
 
-For example, you want the field containing the date to be formatted as DD/MM/YYYY, so that on the 23rd June 2019, it returns 23/06/2019.
+For example, you want the field containing the date to be formatted as DD/MM/YYYY, so that on the 23rd June 2019, it returns `23/06/2019`.
 
 This expression gets the date seven days before today, and converts it to the DD/MM/YYYY format.
 

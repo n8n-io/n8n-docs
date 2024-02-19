@@ -33,7 +33,7 @@ Here you need to capture all credentials for any node/service this user must aut
 
 ### 2. Create user credentials
 
-After all relevant credential details have been obtained, you can proceed to create the relevant service credentials in n8n. This can be done via the Editor UI or API call.
+After all relevant credential details have been obtained, you can proceed to create the relevant service credentials in n8n. This can be done using the Editor UI or API call.
 
 
 #### Using the Editor UI

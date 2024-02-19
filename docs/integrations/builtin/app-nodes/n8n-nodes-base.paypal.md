@@ -6,7 +6,7 @@ contentType: integration
 
 # PayPal
 
-Use the PayPal node to automate work in PayPal, and integrate PayPal with other applications. n8n has built-in support for a wide range of PayPal features, including including creating a batch payout and canceling unclaimed payout items. 
+Use the PayPal node to automate work in PayPal, and integrate PayPal with other applications. n8n has built-in support for a wide range of PayPal features, including creating a batch payout and canceling unclaimed payout items. 
 
 On this page, you'll find a list of operations the PayPal node supports and links to more resources.
 

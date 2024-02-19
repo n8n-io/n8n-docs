@@ -15,7 +15,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Example Usage
 
-This workflow allows you to receive messages for an [ActiveMQ](https://activemq.apache.org/) queue via AMQP Trigger. You can also find the [workflow](https://n8n.io/workflows/513) on the website. This example usage workflow would use the following node.
+This workflow allows you to receive messages for an [ActiveMQ](https://activemq.apache.org/) queue using AMQP Trigger. You can also find the [workflow](https://n8n.io/workflows/513) on the website. This example usage workflow would use the following node.
 
 - [AMQP Trigger]()
 

@@ -14,7 +14,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Mistral Embeddings integrations](https://n8n.io/integrations/embeddings-mistral/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Mistral Embeddings integrations](https://n8n.io/integrations/embeddings-mistral-cloud/){:target=_blank .external-link} page.
 ///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -31,7 +31,7 @@ For usage examples and templates to help you get started, refer to n8n's [Mistra
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/embeddings-mistral/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/embeddings-mistral-cloud/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Langchain's Mistral embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/mistralai){:target=_blank .external-link} for more information about the service.
 

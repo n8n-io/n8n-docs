@@ -16,7 +16,7 @@ This page collects resources relating to binary data in n8n.
 
 ## Working with binary data in your workflows
 
-You can process binary data in n8n workflows. n8n provides nodes to support many tasks. You can also use code to work with binary data. 
+You can process binary data in n8n workflows. n8n provides nodes to help you work with binary data. You can also use code. 
 
 ### Nodes
 

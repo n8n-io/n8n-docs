@@ -2,7 +2,7 @@
 description: n8n's security policies
 contentType: explanation
 ---
-
+<!-- vale off -->
 # Security
 
 This page describes n8n's security practices.
@@ -18,6 +18,8 @@ When you create an account on n8n.cloud with a username and password, n8n implem
 ### Self-hosted
 
 n8n salts and hashes the passwords of self-hosted users on account creation. However, encrypting other data at rest is the responsibility of the user. Refer to [Data encryption | Self-hosted n8n](#self-hosted-n8n) for more information.
+
+n8n supports custom session timeouts on self-hosted.
 
 ## Third-party accounts
 
@@ -107,3 +109,4 @@ n8n grants employees access to systems on a least-privilege basis. This means th
 ### Security training
 
 Employees receive privacy and security training during onboarding as well as on an ongoing basis. n8n requires all employees to read and sign n8n's comprehensive information security policy covering the security, availability, and confidentiality of n8n services.
+<!-- vale on -->

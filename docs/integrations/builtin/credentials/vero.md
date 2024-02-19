@@ -1,25 +1,25 @@
 ---
-title: Vero credentials
-description: Documentation for Vero credentials. Use these credentials to authenticate Vero in n8n, a workflow automation platform.
+title: VERO credentials
+description: Documentation for VERO credentials. Use these credentials to authenticate VERO in n8n, a workflow automation platform.
 contentType: integration
 ---
 
-# Vero credentials
+# VERO credentials
 
 You can use these credentials to authenticate the following nodes with Vero.
 
-- [Vero](/integrations/builtin/app-nodes/n8n-nodes-base.vero/)
+- [VERO](/integrations/builtin/app-nodes/n8n-nodes-base.vero/)
 
 ## Prerequisites
 
-Create a [Vero](https://getvero.com/) account.
+Create a [VERO](https://getvero.com/) account.
 
 ## Using Access Token
 
-1. Access your Vero dashboard.
+1. Access your VERO dashboard.
 2. Click on the cog icon in the bottom left.
 3. Scroll down to see your Auth token.
-4. Use the auth token with your Vero node credentials in n8n.
+4. Use the auth token with your VERO node credentials in n8n.
 
-![Getting Vero credentials](/_images/integrations/builtin/credentials/vero/using-access-token.gif)
+![Getting VERO credentials](/_images/integrations/builtin/credentials/vero/using-access-token.gif)
 

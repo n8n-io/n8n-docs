@@ -6,7 +6,7 @@ contentType: tutorial
 
 In this step of the workflow you will learn how to filter data using conditional logic and how to use expressions in nodes using the *IF* node.
 
-To insert only processing orders into Airtable we need to filter our data by *orderStatus*. Basically, we want to tell the program that _if_ the *orderStatus* is processing, _then_ insert all records with this status into Airtable; _else_, i.e. if the *orderStatus* is not *processing*, calculate the sum of all orders with the other *orderStatus (booked)*.
+To insert only processing orders into Airtable we need to filter our data by `orderStatus`. Basically, we want to tell the program that _if_ the `orderStatus` is processing, _then_ insert all records with this status into Airtable; _else_, for example, if the `orderStatus` isn't *processing*, calculate the sum of all orders with the other `orderStatus (booked)`.
 
 This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**IF node**](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external}, which splits a workflow conditionally based on comparison operations.
 
@@ -18,7 +18,7 @@ Back to your workflow, remove the connection between the *HTTP Request* node and
 
 In the *IF* node window click on *Add Condition* > *string* and configure the parameters:
 
-- *Value 1*: Current Node > Input Data > JSON > orderStatus → `{{$json["orderStatus"]}}` <br>
+- *Value 1*: **Current Node** > **Input Data** > **JSON** > **orderStatus** → `{{$json["orderStatus"]}}` <br>
 To select this value, click the **Expression** tab on the right side of the Value 1 field.
 
     /// note | Expressions
@@ -47,10 +47,10 @@ At this stage, your workflow should look like this:
 
 ## What's next?
 
-**Nathan 🙋**: This IF node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the employeeName and orderId, but I guess I can keep all the other fields just in case.
+**Nathan 🙋**: This IF node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the `employeeName` and `orderId`, but I guess I can keep all the other fields just in case.
 
 **You 👩‍🔧**: Actually, I wouldn't recommend doing that. Inserting more data requires more computational power, the data transfer is slower and takes longer, and takes up more storage resources in your table. In this particular case, 14 records with 5 features might not seem like a lot to make a significant difference, but if your business grows to thousands of records and tens of features, things add up and even one extra column can affect performance.
 
-**Nathan 🙋**: Oh, that's good to know. So, can you select only two fields from the processing orders?
+**Nathan 🙋**: Oh, that's good to know. Can you select only two fields from the processing orders?
 
 **You 👩‍🔧**: Sure, I'll do that in the next step.

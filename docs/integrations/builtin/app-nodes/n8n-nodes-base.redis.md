@@ -6,7 +6,7 @@ contentType: integration
 
 # Redis
 
-Use the Redis node to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including deleting keys, getting key values, setting key value, and publishing messages to the redis channel.  
+Use the Redis node to automate work in Redis, and integrate Redis with other applications. n8n has built-in support for a wide range of Redis features, including deleting keys, getting key values, setting key value, and publishing messages to the Redis channel.  
 
 On this page, you'll find a list of operations the Redis node supports and links to more resources.
 
@@ -22,8 +22,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Delete a key from Redis.
 * Get the value of a key from Redis.
 * Returns generic information about the Redis instance.
-* Atomically increments a key by 1. Creates the key if it does not exist.
+* Atomically increments a key by 1. Creates the key if it doesn't exist.
 * Returns all the keys matching a pattern.
-* Set the value of a key in redis.
-* Publish message to redis channel.
+* Set the value of a key in Redis.
+* Publish message to Redis channel.
 

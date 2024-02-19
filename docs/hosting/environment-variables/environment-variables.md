@@ -96,7 +96,7 @@ By default, n8n uses memory to store binary data. Enterprise users can choose to
 ## User management SMTP, and two-factor authentication
 
 Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
-
+<!-- vale off -->
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_EMAIL_MODE` | String | `smtp` | Enable emails. |
@@ -110,9 +110,13 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_SMTP_SSL` | Boolean | `true` | Whether to use SSL for SMTP (true) or not (false). |
 | `N8N_UM_EMAIL_TEMPLATES_INVITE` | String | - | Full path to your HTML email template. This overrides the default template for invite emails. |
 | `N8N_UM_EMAIL_TEMPLATES_PWRESET` | String | - | Full path to your HTML email template. This overrides the default template for password reset emails. |
+| `N8N_UM_EMAIL_TEMPLATES_WORKFLOW_SHARED` | String | - | Overrides the default HTML template for notifying users that a workflow was shared. Provide the full path to the template. |
+| `N8N_UM_EMAIL_TEMPLATES_CREDENTIALS_SHARED` | String | - | Overrides the default HTML template for notifying users that a credential was shared. Provide the full path to the template.  |
 | `N8N_USER_MANAGEMENT_JWT_SECRET` | String | - | Set a specific JWT secret. By default, n8n generates one on start. |
+| `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS` | Number | 168 | Set an expiration date for the JWTs in hours. |
+| `N8N_USER_MANAGEMENT_JWT_REFRESH_TIMEOUT_HOURS` | Number | 0 | How many hours before the JWT expires to automatically refresh it. 0 means 25% of `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. -1 means it will never refresh, which forces users to log in again after the period defined in `N8N_USER_MANAGEMENT_JWT_DURATION_HOURS`. |
 | `N8N_MFA_ENABLED` | Boolean | `true` | Whether to enable two-factor authentication (true) or disable (false). n8n ignores this if existing users have 2FA enabled. |
-
+<!-- vale on -->
 
 ## Endpoints
 
@@ -148,7 +152,6 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `EXECUTIONS_PROCESS` (**deprecated**) | Enum string: `main`, `own` | `main` | **Deprecated**. Whether n8n executions run in their own process or the main process. <br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
 | `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) that users can set for an individual workflow. |
@@ -215,7 +218,7 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `N8N_CUSTOM_EXTENSIONS` | String | - | Specify the path to additional directories containing your custom nodes. |
 | `N8N_COMMUNITY_PACKAGES_ENABLED` | Boolean | `true` | Whether community nodes are enabled (true) or not (false). |
 
-## Queues
+## Queue mode
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -236,6 +239,14 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `15000` | How frequently (in ms) should a worker renew the lease time. |
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |
 | `QUEUE_WORKER_MAX_STALLED_COUNT` | Number | `1` | Maximum amount of times a stalled job will be re-processed. |
+
+### Multi-main setup
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_MULTI_MAIN_SETUP_ENABLED` | Boolean | `false` | Whether to enable multi-main setup for queue mode (license required). |
+| `N8N_MULTI_MAIN_SETUP_KEY_TTL` | Number | `10` | Time to live (in seconds) for leader key in multi-main setup. |
+| `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL` | Number | `3` | Interval (in seconds) for leader check in multi-main setup. |
 
 ## Security
 
@@ -281,3 +292,5 @@ Refer to [External storage](/hosting/external-storage/) for more information on 
 | `N8N_LICENSE_AUTO_RENEW_ENABLED` | Boolean | `true` | Whether autorenew for licenses is enabled (true) or not (false). |
 | `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | How many seconds before expiry a license should automatically renew. |
 | `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |
+
+

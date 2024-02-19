@@ -9,7 +9,7 @@ You can use these credentials to authenticate when using the HTTP Request node t
 
 ## Authentication methods
 
-n8n supports QRada authentication with an API key.
+n8n supports QRadar authentication with an API key.
 
 ## Related resources
 

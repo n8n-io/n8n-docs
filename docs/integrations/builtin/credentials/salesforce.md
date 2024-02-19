@@ -27,7 +27,7 @@ You'll only need to enter the Credentials Name, Access Token URL, and click on t
 5. Enter any necessary information and click on the ***Enable OAuth Settings*** checkbox.
 6. Copy the ***OAuth Callback URL*** provided in the 'Salesforce OAuth2 API' credentials in n8n.
 7. On the Salesforce app creation page, paste the URL in the ***Callback URL*** field.
-8. Add the "Perform requests on your behalf at any time (refresh_token, offline_access)" scope in the ***Selected OAuth Scopes*** section.
+8. Add the **Perform requests on your behalf at any time (refresh_token, offline_access)** scope in the ***Selected OAuth Scopes*** section.
 9. Add any other scopes you plan to use in the  ***Selected OAuth Scopes*** section.
 10. Click on the ***Save*** button at the bottom of the page.
 11. On the ***New Connected App*** page, click on the ***Continue*** button.
@@ -52,7 +52,7 @@ To use the OAuth JWT authentication method with the Salesforce node you need to 
 7. On the Salesforce app creation page, paste the URL in the ***Callback URL*** field.
 8. Click on the ***Use digital signatures*** checkbox.
 9. Upload the private key that you created earlier.
-10. Add the "Perform requests on your behalf at any time (refresh_token, offline_access)" scope in the ***Selected OAuth Scopes*** section.
+10. Add the **Perform requests on your behalf at any time (refresh_token, offline_access)** scope in the ***Selected OAuth Scopes*** section.
 11. Add any other scopes you plan to use in the  ***Selected OAuth Scopes*** section.
 12. Click on the ***Save*** button at the bottom of the page.
 13. On the ***New Connected App*** page, click on the ***Continue*** button.

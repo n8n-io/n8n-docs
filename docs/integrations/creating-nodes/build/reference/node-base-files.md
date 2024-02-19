@@ -64,19 +64,19 @@ export class ExampleNode implements INodeType {
 
 These parameters are the same for all node types.
 
-### displayName
+### `displayName`
 
 _String_ | _Required_
 
 This is the name users see in the n8n GUI.
 
-### name
+### `name`
 
 _String_ | _Required_
 
 The internal name of the object. Used to reference it from other places in the node.
 
-### icon
+### `icon`
 
 _String_ | _Required_
 
@@ -84,7 +84,7 @@ Starts with `file`. For example, `icon: 'file:exampleNodeIcon.svg'`.
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-### group
+### `group`
 
 _Array of strings_ | _Required_
 
@@ -95,13 +95,13 @@ Tells n8n how the node behaves when the workflow runs. Options are:
 * `input`, `output`, `transform`: these currently have no effect.
 * An empty array, `[]`. Use this as the default option if you don't need `trigger` or `schedule`.
 
-### description
+### `description`
 
 _String_ | _Required_
 
 A short description of the node. n8n uses this in the GUI.
 
-### defaults
+### `defaults`
 
 _Object_ | _Required_
 
@@ -112,32 +112,32 @@ The object can include:
 * `name`: String. Used as the node name on the canvas if the `displayName` is too long.
 * `color`: String. Hex color code. Provide the brand color of the integration for use in n8n.
 
-### forceInputNodeExecution
+### `forceInputNodeExecution`
 
 _Boolean_ | _Optional_
 
 When building a multi-input node, you can choose to force all preceding nodes on all branches to execute before the node runs. The default is `false` (requiring only one input branch to run).
 
-### inputs
+### `inputs`
 
 _Array of strings_ | _Required_
 
 Names the input connectors. Controls the number of connectors the node has on the input side. If you need only one connector, use `input: ['main']`.
 
 
-### outputs
+### `outputs`
 
 _Array of strings_ | _Required_  
 
 Names the output connectors. Controls the number of connectors the node has on the output side. If you need only one connector, use `output: ['main']`.
 
-### requiredInputs
+### `requiredInputs`
 
 _Integer_ or _Array_ | _Optional_
 
 Used for multi-input nodes. Specify inputs by number that must have data (their branches must run) before the node can execute.
 
-### credentials
+### `credentials`
 
 _Array of objects_ | _Required_  
 
@@ -148,7 +148,7 @@ The object must include:
 * `name`: the credential name. Must match the `name` property in the credential file. For example, `name: 'asanaApi'`  in [`Asana.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Asana/Asana.node.ts){:target=_blank .external-class} links to `name = 'asanaApi'` in [`AsanaApi.credential.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/credentials/AsanaApi.credentials.ts){:target=_blank .external-class}.
 * `required`: Boolean. Specify whether authentication is required to use this node.
 
-### requestDefaults
+### `requestDefaults`
 
 _Object_ | _Required_  
 
@@ -163,7 +163,7 @@ You can also add:
 * `headers`: an object describing the API call headers, such as content type.
 * `url`: string. Appended to the `baseURL`. You can usually leave this out. It's more common to provide this in the `operations`.
 
-### properties
+### `properties`
 
 _Array of objects_ | _Required_  
 
@@ -175,7 +175,7 @@ A resource object includes the following parameters:
 
 * `displayName`: String. This should always be `Resource`.
 * `name`: String. This should always be `resource`.
-* `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
+* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `resource`. 
 
 #### Operations objects
@@ -184,7 +184,7 @@ The operations object defines the available operations on a resource.
 
 * `displayName`: String. This should always be `Options`.
 * `name`: String. This should always be `option`.
-* `type`: String. Tells n8n which UI element to use, and what type of input to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
+* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
 * `options`: Array of objects. Each objects describes an operation's behavior, such as its routing, the REST verb it uses, and so on. An `options` object includes:
 	* `name`. String.
@@ -225,7 +225,7 @@ For more information about UI element types, refer to [UI elements](/integration
 
 ## Declarative-style parameters
 
-### methods and loadOptions
+### `methods` and `loadOptions`
 
 _Object_ | _Optional_
 
@@ -270,7 +270,7 @@ methods : {
 },
 ```
 
-### routing
+### `routing`
 
 _Object_ | _Required_
 
@@ -325,7 +325,7 @@ include postReceive actions, including ability to dynamically disable - see DOC-
 
 -->
 
-### version
+### `version`
 
 _Number_ or _Array_ | Optional
 
@@ -336,7 +336,7 @@ n8n supports two methods of node versioning, but declarative-style nodes must us
 ## Programmatic-style parameters
 
 
-### defaultVersion
+### `defaultVersion`
 
 _Number_ | _Optional_
 
@@ -344,7 +344,7 @@ Use `defaultVersion` when using the full versioning approach.
 
 n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
 
-### methods and loadOptions
+### `methods` and `loadOptions`
 
 _Object_ | _Optional_
 
@@ -380,7 +380,7 @@ For example, n8n's [Gmail node](https://github.com/n8n-io/n8n/blob/master/packag
 	};
 ```
 
-### version
+### `version`
 
 _Number_ or _Array_ | _Optional_
 

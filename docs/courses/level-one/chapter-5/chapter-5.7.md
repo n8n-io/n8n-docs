@@ -10,11 +10,11 @@ The workflow you've built so far executes only when you click on _Execute Workfl
 
 In your workflow, add the Schedule trigger node, and configure its parameters:
 
-* _Trigger Interval:_ Every Week
-* _Weeks Between Triggers:_ 1
-* _Trigger on weekdays:_ Monday
-* _Trigger at Hour:_ 9am
-* _Trigger at Minute:_ 0
+* _Trigger Interval:_ `Every Week`
+* _Weeks Between Triggers:_ `1`
+* _Trigger on weekdays:_ `Monday`
+* _Trigger at Hour:_ `9am`
+* _Trigger at Minute:_ `0`
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-7-schedule-trigger-node.png" alt="Schedule Trigger Node" style="width:100%"><figcaption align = "center"><i>Schedule Trigger Node</i></figcaption></figure>
 
@@ -26,6 +26,6 @@ To ensure accurate scheduling with the Schedule Trigger Node, be sure the timezo
 
 **You 👩‍🔧**: That was it for the workflow! I've added and configured all necessary nodes. Now every time you click on Execute Workflow, all nodes will be executed: getting, filtering, calculating, and transferring the sales data.
 
-**Nathan 🙋**: This is just what I needed! So now my workflow will run automatically every Monday morning?
+**Nathan 🙋**: This is just what I needed! My workflow will run automatically every Monday morning, correct?
 
 **You 👩‍🔧**: Not so fast. To do that, you need to activate your workflow. I'll do this in the next step and show you how to interpret the execution log.

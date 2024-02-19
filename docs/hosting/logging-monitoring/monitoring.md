@@ -7,9 +7,10 @@ contentType: howto
 
 There are two API endpoints you can call to check the status of your instance: `/healthz` and `/metrics`.
 
+<!-- vale off -->
 ## healthz
-
-The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It is available for both self-hosted and Cloud users.
+<!-- vale on -->
+The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It's available for both self-hosted and Cloud users.
 
 Access the endpoint:
 
@@ -31,9 +32,9 @@ Access the endpoint:
 /// info | Feature availability
 The `/metrics` endpoint isn't available on n8n Cloud.
 ///
-
+<!-- vale off -->
 ## Enable metrics and healthz for self-hosted n8n
-
+<!-- vale on -->
 The `/metrics` and `/healthz` endpoints are disabled by default. To enable them, configure your n8n instance:
 
 ```shell

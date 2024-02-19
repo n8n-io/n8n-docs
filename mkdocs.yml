@@ -163,14 +163,11 @@ plugins:
 nav:
   - Using n8n:
     - Welcome: index.md
+    - Choose your n8n: choose-n8n.md
     - Try it out: 
       - try-it-out/index.md
       - A very quick quickstart: try-it-out/quickstart.md
       - A longer introduction: try-it-out/longer-introduction.md
-    - Choose your n8n:
-      - choose-n8n/index.md
-      - Cloud: choose-n8n/cloud.md
-      - Faircode license: choose-n8n/faircode-license.md
     - Understand workflows:
       - workflows/index.md
       - Create and run: workflows/create.md
@@ -214,6 +211,7 @@ nav:
       - Data mapping: 
         - data/data-mapping/index.md
         - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
+        - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
         - Data item linking: 
           - data/data-mapping/data-item-linking/index.md
           - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
@@ -238,6 +236,12 @@ nav:
         - Okta Workforce Identity SAML setup: user-management/saml/okta.md
         - Troubleshooting: user-management/saml/troubleshooting.md
         - Manage users with SAML: user-management/saml/managing.md
+    - Manage n8n Cloud:
+      - manage-cloud/index.md
+      - Acces the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
+      - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
+      - Set the timezone: manage-cloud/set-cloud-timezone.md
+      - Cloud IP addresses: manage-cloud/cloud-ip.md
     - Source control and environments:
       - source-control-environments/index.md
       - Understand:
@@ -254,13 +258,6 @@ nav:
       - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
     - External secrets: external-secrets.md
     - Log streaming: log-streaming.md
-    - AI with LangChain:
-        - langchain/index.md
-        - Access LangChain in n8n: langchain/access-langchain.md
-        - "Tutorial: Build an AI workflow in n8n": langchain/langchain-tutorial.md
-        - LangChain learning resources: langchain/learning-resources.md
-        - Langchain concepts in n8n: langchain/langchain-n8n.md
-    - Cloud admin dashboard: cloud-admin-dashboard.md
     - Privacy and security:
         - privacy-security/index.md
         - Privacy: privacy-security/privacy.md
@@ -271,6 +268,8 @@ nav:
     - Release notes: release-notes.md
     - v1.0 migration guide: 1-0-migration-checklist.md
     - Keyboard shortcuts: keyboard-shortcuts.md
+    - Contributing: contributing.md
+    - Faircode license: faircode-license.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -698,6 +697,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
@@ -705,6 +705,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
@@ -754,6 +755,7 @@ nav:
         - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
+        - integrations/builtin/credentials/azureopenai.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
         - integrations/builtin/credentials/baserow.md
@@ -1077,6 +1079,7 @@ nav:
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
+      - Updating: hosting/installation/updating.md
     - Environment variables: 
       - hosting/environment-variables/index.md
       - Configuration methods: hosting/environment-variables/configuration-methods.md    
@@ -1096,7 +1099,6 @@ nav:
       - hosting/scaling/index.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Execution data: hosting/scaling/execution-data.md
-      - Execution modes and processes: hosting/scaling/execution-modes-processes.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
       - Binary data filesystem mode: hosting/scaling/binary-data.md
       - Memory-related errors: hosting/scaling/memory-errors.md
@@ -1149,6 +1151,19 @@ nav:
       - HTTP Request node:
         - code/cookbook/http-node/index.md
         - Pagination: code/cookbook/http-node/pagination.md
+  - Advanced AI:
+    - advanced-ai/index.md
+    - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+    - LangChain in n8n:
+      - advanced-ai/langchain/index.md
+      - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+      - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+    - Examples and concepts: 
+      - advanced-ai/examples/index.md
+      - What is a tool? : advanced-ai/examples/understand-tools.md
+      - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
+      - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
   - API:
     - api/index.md
     - Authentication: api/authentication.md
@@ -1194,4 +1209,4 @@ nav:
           - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
           - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
         - Test your knowledge: courses/level-two/chapter-6.md
-  - Contributing: contributing.md
+

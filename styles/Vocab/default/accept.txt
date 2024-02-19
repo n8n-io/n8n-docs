@@ -40,15 +40,15 @@ Nodelinter
 npm
 npx
 Okta
-Ollama
 onboarding
 Pipedrive
 Pinecone
 Pluralsight
+Pollers
+pollers
 Postbin
 Postgres
 PostHog
-Qdrant
 Realtime
 Serverless
 serverless
@@ -70,5 +70,4 @@ URIs
 URL
 Venafi
 Vuex
-Xata
 Zep

@@ -149,7 +149,7 @@ For example, given these two datasets:
 
 n8n returns three items, in the **Same Branch** tab. The data is the same in both branches.
 
-If you select **Include First Match Only**, n8n returns two items, in the **Same Branch** tab. The data is the same in both branches, but n8n only returns the first occurence of the matching "apple" items.
+If you select **Include First Match Only**, n8n returns two items, in the **Same Branch** tab. The data is the same in both branches, but n8n only returns the first occurrence of the matching "apple" items.
 
 
 

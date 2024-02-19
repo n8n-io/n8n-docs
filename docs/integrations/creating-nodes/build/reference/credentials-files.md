@@ -61,19 +61,19 @@ export class ExampleNode implements ICredentialType {
 
 ## Parameters
 
-### name
+### `name`
 
 String. The internal name of the object. Used to reference it from other places in the node.
 
-### displayName
+### `displayName`
 
 String. The name n8n uses in the GUI.
 
-### documentationUrl
+### `documentationUrl`
 
 String. URL to your credentials documentation.
 
-### properties
+### `properties`
 
 Each object contains:
 
@@ -82,15 +82,15 @@ Each object contains:
 * `type`: the data type expected, such as `string`.
 * `default`: the URL that n8n should use to test credentials.
 
-### authenticate
+### `authenticate`
 
 Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. 
 
-#### type
+#### `type`
 
 String. If you're using an authentication method that sends data in the header, body, or query string, set this to `'generic'`. 
 
-#### properties
+#### `properties`
 
 Object. Defines the authentication methods. Options are:
 
@@ -98,6 +98,6 @@ Object. Defines the authentication methods. Options are:
 * `header`: object. Send authentication data in the request header.
 * `qs`: object. Stands for "query string." Send authentication data in the request query string.
 
-### test
+### `test`
 
 Provide a `request` object containing a URL and authentication type that n8n can use to test the credential.

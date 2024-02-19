@@ -281,9 +281,9 @@ Given this JSON from a webhook node:
 
 ```
 
-
+<!-- vale off -->
 Use multiselect list to get the first and last names and create new lists containing both names:
-
+<!-- vale on -->
 === "Expressions (JavaScript)"
 
 	[[% raw %]]

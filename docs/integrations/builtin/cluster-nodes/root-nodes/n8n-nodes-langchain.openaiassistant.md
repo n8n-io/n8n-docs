@@ -19,13 +19,16 @@ For usage examples and templates to help you get started, refer to n8n's [OpenAI
 
 ## Node parameters
 
-### Create New Assistant
+### Operation
 
-Define the **Name**, **Instructions**, and the **Model** you want to use.
+You can choose **Use New Assistant** or **Use Existing Assistant**.
 
-### Use Existing Assistant
+* To use a new assistant: define the **Name**, **Instructions**, and the **Model** you want to use.
+* To use an existing assistant: select your **Assistant**.
 
-Select your **Assistant**.
+/// note | Use New Assistant
+The **Use New Assistant** option creates a new assistant on every run.
+///
 
 ### Text
 

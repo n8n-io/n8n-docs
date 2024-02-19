@@ -18,7 +18,7 @@ You can configure further options for each action by selecting the type of encry
 
 - Action
 	- Hash a text in a specified format
-	- Hmac a text in a specified format
+	- HMAC a text in a specified format
 	- Sign a string using a private key
 - Type
     - MD5

@@ -21,7 +21,7 @@ an RSS feed or database. It will always return an object. Properties can then re
 set on that object. When the workflow execution succeeds, n8n checks automatically if the data
 has changed and saves it, if necessary.
 
-There are two types of static data, "global" and "node". Global static data is the
+There are two types of static data, global and node. Global static data is the
 same in the whole workflow. Every node in the workflow can access it. The node static data is unique to the node. Only the node that set it can retrieve it again.
 
 Example with global data:

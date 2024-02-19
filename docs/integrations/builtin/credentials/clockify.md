@@ -19,7 +19,7 @@ Create a [Clockify](https://www.clockify.com/) account.
 
 1. Open your Clockify dashboard.
 2. Click on your profile.
-3. Click on "Profile Settings".
+3. Click on **Profile Settings**.
 4. Scroll down and click on "Generate" under API.
 5. Use selected API key in your Clockify node credentials in n8n.
 

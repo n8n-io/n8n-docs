@@ -20,7 +20,7 @@ To investigate a specific failed execution from the list, click on the name or '
 
 This will open the workflow in read-only mode, where you can see the execution of each node. This representation can help you identify at what point the workflow ran into issues.
 
-To toggle between viewing the execution and the editor, click the ```Editor | Executions``` button at the top of the page.
+To toggle between viewing the execution and the editor, click the **Editor | Executions** button at the top of the page.
 
 <figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions_readonly.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow execution view</i></figcaption></figure>
 

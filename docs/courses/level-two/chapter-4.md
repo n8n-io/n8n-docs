@@ -13,12 +13,14 @@ But don't panic. We will show you some ways in which you can troubleshoot the is
 
 When one of your workflows fails, it's helpful to check the execution log by clicking on [**Executions**](/editor-ui/#executions){:target="_blank" .external} in the left-side panel. The executions log shows you a list of the latest execution time, status, mode, and running time of your saved workflows.
 
-To investigate a specific workflow from the list, click on the folder icon on the row of the respective workflow.
+To investigate a specific failed execution from the list, click on the name or 'view' button on the row of the respective execution.
 
 <figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow Executions window</i></figcaption></figure>
 
 
 This will open the workflow in read-only mode, where you can see the execution of each node. This representation can help you identify at what point the workflow ran into issues.
+
+To toggle between viewing the execution and the editor, click the **Editor | Executions** button at the top of the page.
 
 <figure><img src="/_images/courses/level-two/chapter-four/explanation_workflowexecutions_readonly.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow execution view</i></figcaption></figure>
 

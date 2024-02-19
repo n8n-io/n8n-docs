@@ -96,7 +96,7 @@ Build a workflow that adds five days to an input date. Then, if the calculated d
 
 ??? note "Show me the solution"
 
-	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. You can add a [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) to for easy testing during development. The workflow looks like this:
+	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. You can add a [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) too for easy testing during development. The workflow looks like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 

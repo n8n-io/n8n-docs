@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Formstack Trigger integrations](https://n8n.io/integrations/formstack-trigger/){:target=_blank .external-link} page.
+///
+
 ## Example Usage
 
 This workflow allows you to receive updates for newly created submissions in Formstack forms. This example workflow uses the following node:

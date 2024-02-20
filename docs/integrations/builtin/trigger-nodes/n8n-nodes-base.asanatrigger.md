@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/asana/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Asana Trigger integrations](https://n8n.io/integrations/asana-trigger/){:target=_blank .external-link} page.
+///
+
 ## Example Usage
 
 This workflow allows you to receive updates when an event occurs in Asana. You can also find the [workflow](https://n8n.io/workflows/654) on n8n.io. This example usage workflow would use the following node.

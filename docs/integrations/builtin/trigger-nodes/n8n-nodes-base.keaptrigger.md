@@ -12,6 +12,9 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/keap/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Keap Trigger integrations](https://n8n.io/integrations/keap-trigger/){:target=_blank .external-link} page.
+///
 
 ## Example Usage
 

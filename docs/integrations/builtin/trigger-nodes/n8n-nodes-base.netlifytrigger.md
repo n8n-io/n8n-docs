@@ -11,3 +11,14 @@ contentType: integration
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/netlify/).
 ///
+
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Netlify Trigger integrations](https://n8n.io/integrations/netlify-trigger/){:target=_blank .external-link} page.
+///
+
+## Related resources
+
+n8n provides an app node for _Name_. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.netlify/).
+
+View [example workflows and related content](https://n8n.io/integrations/netlify/){:target=_blank .external-link} on n8n's website.
+

@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Lemlist Trigger integrations](https://n8n.io/integrations/lemlist-trigger/){:target=_blank .external-link} page.
+///
+
 ## Events
 
 - Email Bounced

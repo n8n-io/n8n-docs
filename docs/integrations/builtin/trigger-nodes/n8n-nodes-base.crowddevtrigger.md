@@ -15,7 +15,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [crowd.dev integrations](https://n8n.io/integrations/crowddev/){:target="_blank" .external-link} list.
+For usage examples and templates to help you get started, refer to n8n's [crowd.dev Trigger integrations](https://n8n.io/integrations/crowddev-trigger/){:target="_blank" .external-link} list.
 ///	
 
 ## Events

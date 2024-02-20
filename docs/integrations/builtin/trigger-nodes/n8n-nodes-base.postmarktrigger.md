@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/postmark/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Postmark Trigger integrations](https://n8n.io/integrations/postmark-trigger/){:target=_blank .external-link} page.
+///
+
 ## Example Usage
 
 This workflow allows you to receive updates when an email is bounced or opened using the Postmark Trigger Node. You can also find the [workflow](https://n8n.io/workflows/660) on n8n.io. This example usage workflow would use the following node.

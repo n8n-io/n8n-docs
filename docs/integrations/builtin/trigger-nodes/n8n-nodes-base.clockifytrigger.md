@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/clockify/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Clockify Trigger integrations](https://n8n.io/integrations/clockify-trigger/){:target=_blank .external-link} page.
+///
+
 **Note:** This node uses the workflow timezone setting to specify the range of time entries starting time. You have to configure the workflow timezone setting if you want this Trigger node to retrieve the right time entries.
 
 ## Example Usage

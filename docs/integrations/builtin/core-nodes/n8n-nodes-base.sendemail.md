@@ -11,6 +11,11 @@ The Send Email node sends emails using an SMTP email server.
 /// note | Credential
 You can find authentication information for this node [here](/integrations/builtin/credentials/sendemail/).
 ///
+
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Send Email integrations](https://n8n.io/integrations/send-email/){:target=_blank .external-link} page.
+///
+
 ## Operations
 
 - Send an email

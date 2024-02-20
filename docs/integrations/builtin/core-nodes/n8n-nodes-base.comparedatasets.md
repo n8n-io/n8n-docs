@@ -8,6 +8,10 @@ contentType: integration
 
 The Compare Datasets node helps you compare data from two input streams.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Compare Datasets integrations](https://n8n.io/integrations/compare-datasets/){:target=_blank .external-link} page.
+///
+
 ## Usage
 
 1. Decide which fields to compare. In **Input A Field**, enter the name of the field you want to use from input stream A. In **Input B Field**, enter the name of the field you want to use from input stream B. 

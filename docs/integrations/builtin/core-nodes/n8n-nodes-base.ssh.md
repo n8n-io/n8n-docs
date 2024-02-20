@@ -8,8 +8,12 @@ contentType: integration
 
 The SSH node is useful for executing commands using the Secure Shell Protocol.
 
-/// note | Credential
+/// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/ssh/).
+///
+
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [SSH integrations](https://n8n.io/integrations/ssh/){:target=_blank .external-link} page.
 ///
 
 ## Basic Operations

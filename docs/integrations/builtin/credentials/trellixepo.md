@@ -15,9 +15,4 @@ n8n supports username and password authentication for Trellix ePO.
 
 Refer to [Trellix ePO's documentation](https://docs.trellix.com/bundle/epolicy-orchestrator-web-api-reference-guide/page/GUID-D87A6839-AED2-47B0-BE93-5BF83F710278.html){:target=_blank .external-link} for more information about the service.
 
-
-<!-- 
-TODO
-If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
--->
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/trellix-epo/){:target=_blank .external-link} on n8n's website.

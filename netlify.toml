@@ -9,5 +9,6 @@
 
 [[plugins]]
 package = "netlify-plugin-checklinks"
-	[[plugins.inputs]]
+
+	[plugins.inputs]
 	checkExternal = true

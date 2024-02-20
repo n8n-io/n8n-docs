@@ -6,3 +6,8 @@
   [headers.values]
     X-Frame-Options = "DENY"
 		Content-Security-Policy = "frame-ancestors 'none'"
+
+[[plugins]]
+package = "netlify-plugin-checklinks"
+	[[plugins.inputs]]
+	checkExternal = true

@@ -13,16 +13,14 @@ You can use these credentials to authenticate the following nodes with Clearbit.
 
 ## Prerequisites
 
-Create a [Clearbit](https://www.clearbit.com/) account.
+Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} account.
 
+## Supported authentication methods
 
-## Using Access Token
+n8n supports authenticating Clearbit with an API key.
 
-1. Open your Clearbit dashboard.
-2. Click on **API**.
-3. Click on **Configure Chargebee**.
-4. Use selected API key in your Clearbit node credentials in n8n.
+## Related resources
 
+Refer to [Clearbit's API documentation](https://dashboard.clearbit.com/docs){:target=_blank .external-link} for more information about authenticating with the service.
 
-![Getting Clearbit credentials](/_images/integrations/builtin/credentials/clearbit/using-access-token.gif)
 

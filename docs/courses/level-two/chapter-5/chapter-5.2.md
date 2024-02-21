@@ -32,7 +32,7 @@ The first part of the workflow consists of five nodes:
 
 /// question | Quiz questions
 * What's the name of the employee assigned to customer 1?
-* What's the order status of customer 6?
+* What's the order status of customer 2?
 * What's the highest order price?
 ///
 

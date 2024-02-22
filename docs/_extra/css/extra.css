@@ -231,7 +231,7 @@
 
 /* ensure headings don't disappear below top nav after adding extra top nav */
 .md-header--lifted~.md-container .md-typeset :target {
-    --md-scroll-margin: 8rem;
+    --md-scroll-margin: 9rem;
 }
 
   /* dark mode */  

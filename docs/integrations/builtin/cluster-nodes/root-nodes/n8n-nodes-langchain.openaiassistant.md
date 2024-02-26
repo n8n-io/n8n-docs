@@ -9,10 +9,6 @@ Use the OpenAI Assistant node to work with OpenAI's [Assistants API](https://pla
 
 On this page, you'll find a list of operations the OpenAI Assistant node supports, and links to more resources.
 
-/// warning | Deprecated in 1.29.0
-n8n deprecated this node in version 1.29.0. Older workflows continue to work, and the node is still available in older versions of n8n. From 1.29.0, n8n replaces the OpenAI assistant node with the [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) node.
-///
-
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
 ///

@@ -97,22 +97,19 @@ Object. Defines the authentication methods. Options are:
 * `body`: object. Sends authentication data in the request body. Can contain nested objects. 
 * `header`: object. Send authentication data in the request header.
 * `qs`: object. Stands for "query string." Send authentication data in the request query string.
+* `auth`: Object. Used for Basic Auth. Requires `username` and `password` as the key names.
 
-### `auth`
-
-`auth`: Object. Used for Basic Auth. Requires `username` and `password` as the key names.
-
-```typescript
-authenticate: IAuthenticateGeneric = {
-  type: 'generic',
-  properties: {
-    auth: {
-      username: '={{$credentials.username}}',
-      password: '={{$credentials.password}}',
-    },
-  },
-};
-```
+	```typescript
+	authenticate: IAuthenticateGeneric = {
+	type: 'generic',
+	properties: {
+		auth: {
+		username: '={{$credentials.username}}',
+		password: '={{$credentials.password}}',
+		},
+	},
+	};
+	```
 
 ### `test`
 

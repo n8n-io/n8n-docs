@@ -3144,7 +3144,7 @@ You can now quickly write expressions inline in a node parameter. You can still 
 
 #### Open AI node
 
-This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for details.
+This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) for details.
 
 </div>
 

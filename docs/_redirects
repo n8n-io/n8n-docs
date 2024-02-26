@@ -1,3 +1,5 @@
+/n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/
+/n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/
 /contributing/   /help-community/contributing/
 /manage-cloud/   /manage-cloud/overview/
 /hosting/environment-variables/*   /hosting/configuration/:splat

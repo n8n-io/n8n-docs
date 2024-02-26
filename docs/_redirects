@@ -260,7 +260,7 @@
 /reference/logging.html                              /hosting/logging/
 /reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
-/reference/contributing.html                         /help-support/contributing/
+/reference/contributing.html                         /help-community/contributing/
 /reference/release-notes.html                        /reference/release-notes/	
 /reference/server-setup.html                         /hosting/installation/server-setups/  
 
@@ -856,7 +856,7 @@
 
 # Old redirects
 
-/reference/changelog.html   /reference/release-notes/
+/reference/changelog.html   /release-notes/
 
 # Send in Blue Rebrand
 /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/ /integrations/builtin/app-nodes/n8n-nodes-base.brevo/

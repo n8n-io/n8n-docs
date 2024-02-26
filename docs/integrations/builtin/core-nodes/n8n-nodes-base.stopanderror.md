@@ -21,5 +21,5 @@ For usage examples and templates to help you get started, refer to n8n's [Stop a
 
 You can use the Stop And Error node with the [Error trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/) node.
 
-Read more about [Error workflows](/flow-logic/error-handling/error-workflows/) in n8n workflows.
+Read more about [Error workflows](/flow-logic/error-handling/) in n8n workflows.
 

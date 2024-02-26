@@ -122,7 +122,7 @@ volumes:
     external: true
 ```
 
-If you are planning on reading/writing local files with n8n (for example, by using the [Write Binary File node](/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
+If you are planning on reading/writing local files with n8n (for example, by using the [Read/Write Files from Disk node](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
 - /local-files:/files

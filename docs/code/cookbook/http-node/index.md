@@ -15,5 +15,5 @@ Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequ
 ## Related resources
 
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-* [Built-in methods and variables reference](/code/builtin/)
+* [Built-in methods and variables reference](/code/builtin/overview/)
 * [Expressions](/code/expressions/)

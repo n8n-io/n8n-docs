@@ -23,5 +23,5 @@ If you run n8n behind a reverse proxy, set the following environment variables s
 	* `N8N_PORT`
 	* `N8N_PROTOCOL`
 	* `N8N_EDITOR_BASE_URL`  
-  More information on these variables is available in [Environment variables](/hosting/environment-variables/environment-variables/).
+  More information on these variables is available in [Environment variables](/hosting/configuration/environment-variables/).
 

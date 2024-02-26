@@ -52,7 +52,7 @@ You can access the properties of an object using dot notation with the syntax `o
 ///
 
 
-Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called [Items](/workflows/items/){:target="_blank"}.
+Data sent from one node to another is sent as an array of JSON objects. The elements in this collection are called items.
 
 <figure><img src="/_images/courses/level-two/chapter-one/explanation_items.png" alt="" style="width:100%"><figcaption align = "center"><i>Items</i></figcaption></figure>
 
@@ -137,7 +137,7 @@ In a Code node, create an array of objects named `myContacts` that contains the 
 
 ## Referencing node data with the Code node
 
-Just like you can use [expressions](/code/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/) in the Code node.
+Just like you can use [expressions](/code/expressions/) to reference data from other nodes, you can also use some [methods and variables](/code/builtin/overview/) in the Code node.
 
 Please make sure you read these pages before continuing to the next exercise.
 

@@ -1,3 +1,25 @@
+/contributing/   /help-community/contributing/
+/manage-cloud/   /manage-cloud/overview/
+/hosting/environment-variables/*   /hosting/configuration/:splat
+/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
+/hosting/security-audit/   /hosting/logging-monitoring/security-audit/
+/hosting/installation/   /hosting/
+/hosting/logging-monitoring/   /hosting/
+/hosting/configuration/   /hosting/
+/hosting/architecture/   /hosting/architecture/overview/
+/hosting/scaling/   /hosting/scaling/overview/
+/hosting/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/
+/hosting/external-storage/   /hosting/scaling/external-storage/
+/integrations/builtin/   /integrations/builtin/node-types/
+/integrations/community-nodes/   /integrations/
+/integrations/creating-nodes/   /integrations/creating-nodes/overview/
+/code/builtin/   /code/
+/code/cookbook/   /code/
+/code/luxon/  /code/cookbook/luxon/
+/code/jmespath/   /code/cookbook/jmespath/
+/advanced-ai/examples/   /advanced-ai/examples/introduction/
+/advanced-ai/langchain/   /advanced-ai/langchain/overview/
+
 /langchain/   /advanced/ai/
 /langchain/langchain-tutorial/   /advanced-ai/intro-tutorial/
 /langchain/learning-resources/   /advanced-ai/langchain/langchain-learning-resources/
@@ -81,9 +103,9 @@
 
 
 
-/hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
-/hosting/authentication/jwt/   /hosting/user-management-self-hosted/
-/hosting/authentication/basic-auth/   /hosting/user-management-self-hosted/
+/hosting/authentication/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/
+/hosting/authentication/jwt/   /hosting/configuration/user-management-self-hosted/
+/hosting/authentication/basic-auth/   /hosting/configuration/user-management-self-hosted/
 
 /environments/variables/   /variables/
 
@@ -101,7 +123,7 @@
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/
 /reference/cli-commands/   /hosting/cli-commands/
 /reference/update/   /release-notes/
-/security-audit/   /hosting/security-audit/
+/security-audit/   /hosting/logging-monitoring/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
@@ -133,7 +155,7 @@
 /hosting/updating/cloud/   /manage-cloud/update-cloud-version/
 /hosting/updating/desktop/   /choose-n8n/
 /hosting/updating/npm/   /hosting/installation/npm/
-/hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
+/hosting/databases/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
 /hosting/security/   /hosting/user-management/
 /hosting/user-management/   /user-management/
@@ -234,11 +256,11 @@
 /reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
-/reference/data/understanding-database.html          /hosting/supported-databases-settings/
+/reference/data/understanding-database.html          /hosting/configuration/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
 /reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
-/reference/contributing.html                         /contributing/
+/reference/contributing.html                         /help-support/contributing/
 /reference/release-notes.html                        /reference/release-notes/	
 /reference/server-setup.html                         /hosting/installation/server-setups/  
 

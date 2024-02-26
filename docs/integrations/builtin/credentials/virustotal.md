@@ -16,8 +16,4 @@ VirusTotal uses an API key to authenticate.
 Refer to [VirusTotal's documentation](https://developers.virustotal.com/reference/authentication){:target=_blank .external-link} for more information about the service.
 
 
-<!-- 
-TODO
-If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
--->
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/virustotal/){:target=_blank .external-link} on n8n's website.

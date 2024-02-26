@@ -8,6 +8,9 @@ contentType: integration
 
 The Rename Keys node is used to rename the keys of a key-value pair in n8n.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Rename Keys integrations](https://n8n.io/integrations/rename-keys/){:target=_blank .external-link} page.
+///
 
 ## Node Reference
 

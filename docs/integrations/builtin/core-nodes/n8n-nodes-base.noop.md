@@ -8,8 +8,6 @@ contentType: integration
 
 The No Operation, do nothing node is used when you don't want to perform any operations. The purpose of this node is to make the workflow easier to read and understand where the flow of data stops. This can sometimes help others with a better understanding of the workflow, visually.
 
-
-
-
-
-
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [No Operation, do nothing integrations](https://n8n.io/integrations/no-operation-do-nothing/){:target=_blank .external-link} page.
+///

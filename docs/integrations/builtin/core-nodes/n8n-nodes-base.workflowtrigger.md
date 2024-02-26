@@ -14,6 +14,10 @@ If you want to use the Workflow trigger node for a workflow, add the node to the
 
 The Workflow trigger node gets triggered for the workflow that it gets added to. The Workflow trigger node can be used to trigger a workflow to notify the state of the workflow.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Workflow Trigger integrations](https://n8n.io/integrations/workflow-trigger/){:target=_blank .external-link} page.
+///
+
 ## Node Reference
 
 - Events

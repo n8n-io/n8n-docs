@@ -28,3 +28,8 @@ Create a [Twake](https://twake.app/) account.
 
 ![Getting Twake workspace key](/_images/integrations/builtin/credentials/twake/using-workspace-key.gif)
 
+## Related resources
+
+Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference){:target=_blank .external-link} for more information about the service.
+
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/twake/){:target=_blank .external-link} on n8n's website.

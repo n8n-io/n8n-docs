@@ -8,6 +8,10 @@ contentType: integration
 
 The RSS Read node is used to read data from RSS feeds published on the internet.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [RSS Read integrations](https://n8n.io/integrations/rss-read/){:target=_blank .external-link} page.
+///
+
 ## Node Reference
 
 The RSS Read node has only one property:

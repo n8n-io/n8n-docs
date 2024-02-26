@@ -218,6 +218,24 @@
 	.md-status:hover:after {
     background-color: var(--color-text-base);
   } 
+
+/* extra top nav */
+
+.n8n-top-nav {
+	margin-bottom:1em;
+}
+
+.n8n-top-nav-list {
+	border-bottom: 1px solid hsl(170, 69%, 35%, 0.5);
+}
+
+/* ensure headings don't disappear below top nav after adding extra top nav */
+@media screen and (min-width: 76.25em) {
+	.md-header--lifted~.md-container .md-typeset :target {
+		--md-scroll-margin: 9rem;
+	}
+}
+
   /* dark mode */  
   /* [data-md-color-scheme="dark"] .md-header{
 	box-shadow: none;

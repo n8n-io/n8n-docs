@@ -6,7 +6,7 @@ description: External resources to learn more about LangChain and AI.
 
 # LangChain learning resources
 
-You need good knowledge of LangChain and AI to use LangChain in n8n. This pages lists some learning resources that people at n8n have found helpful.
+You don't need to know details about LangChain to use n8n, but it can be helpful to learn a few concepts. This pages lists some learning resources that people at n8n have found helpful.
 
 The [LangChain documentation](https://docs.langchain.com/docs/){:target=_blank .external-link} includes introductions to key concepts and possible use cases. Choose the [LangChain | Python](https://python.langchain.com/docs/get_started/introduction){:target=_blank .external-link} or [LangChain | JavaScript](https://js.langchain.com/docs/get_started/introduction/){:target=_blank .external-link} documentation for quickstarts, code examples, and API documentation. LangChain also provide [code templates](https://github.com/langchain-ai/langchain/tree/master/templates){:target=_blank .external-link} (Python only), offering ideas for potential use cases and common patterns.
 

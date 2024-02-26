@@ -13,18 +13,34 @@ On this page, you'll find a list of operations the OpenAI node supports and link
 /// note | Credentials
 Refer to [OpenAI credentials](/integrations/builtin/credentials/openai/) for guidance on setting up authentication. 
 ///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, take a look at n8n's [OpenAI integrations](https://n8n.io/integrations/openai/){:target="_blank" .external-link} list.
 ///
+
 ## Operations
-* Chat
+
+* Assistant
 	* Create
-* Image
-	* Create
+	* Delete
+	* List
+	* Message
+	* Update
 * Text
-	* Complete
-	* Edit
-	* Moderate
+	* Message a Model
+	* Classify Text for Violations
+* Image
+	* Analyze
+	* Generate
+* Audio
+	* Generate
+	* Transcribe
+	* Translate
+* File
+	* Delete
+	* List
+	* Upload
+
 
 ## Related resources
 

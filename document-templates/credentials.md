@@ -40,8 +40,8 @@ _Include info on services they need to sign up for_
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs -->
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
+Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
 
 
 <!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->

@@ -8,6 +8,10 @@ contentType: integration
 
 You can use the Error trigger node to create error workflows. When another linked workflow fails, this node gets details about the failed workflow and the errors, and runs the error workflow.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Error trigger integrations](https://n8n.io/integrations/error-trigger/){:target=_blank .external-link} page.
+///
+
 ## Usage
 
 --8<-- "_snippets/flow-logic/create-set-error-workflow.md"

@@ -2,18 +2,17 @@ openapi: 3.0.0
 info:
   title: n8n Public API
   description: n8n Public API
-  termsOfService: 'https://n8n.io/legal/terms'
+  termsOfService: https://n8n.io/legal/terms
   contact:
     email: hello@n8n.io
   license:
     name: Sustainable Use License
-    url: 'https://github.com/n8n-io/n8n/blob/master/packages/cli/LICENSE.md'
+    url: https://github.com/n8n-io/n8n/blob/master/packages/cli/LICENSE.md
   version: 1.1.1
-externalDocs:
-  description: n8n API documentation
-  url: 'https://docs.n8n.io/api/'
 servers:
   - url: /api/v1
+security:
+  - ApiKeyAuth: []
 tags:
   - name: User
     description: Operations about users
@@ -25,8 +24,13 @@ tags:
     description: Operations about workflows
   - name: Credential
     description: Operations about credentials
+  - name: Tags
+    description: Operations about tags
   - name: SourceControl
     description: Operations about source control
+externalDocs:
+  description: n8n API documentation
+  url: https://docs.n8n.io/api/
 paths:
   /audit:
     post:
@@ -65,9 +69,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Audit'
+                $ref: '#/components/schemas/audit'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '500':
           description: Internal server error.
   /credentials:
@@ -84,19 +88,19 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Credential'
+              $ref: '#/components/schemas/credential'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Credential'
+                $ref: '#/components/schemas/credential'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '415':
           description: Unsupported media type.
-  '/credentials/{id}':
+  /credentials/{id}:
     delete:
       x-eov-operation-id: deleteCredential
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
@@ -118,12 +122,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Credential'
+                $ref: '#/components/schemas/credential'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
-  '/credentials/schema/{credentialTypeName}':
+          $ref: '#/components/responses/notFound'
+  /credentials/schema/{credentialTypeName}:
     get:
       x-eov-operation-id: getCredentialType
       x-eov-operation-handler: v1/handlers/credentials/credentials.handler
@@ -170,9 +174,9 @@ paths:
                       - clientId
                       - clientSecret
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
+          $ref: '#/components/responses/notFound'
   /executions:
     get:
       x-eov-operation-id: getExecutions
@@ -182,7 +186,7 @@ paths:
       summary: Retrieve all executions
       description: Retrieve all executions from your instance.
       parameters:
-        - $ref: '#/components/parameters/IncludeData'
+        - $ref: '#/components/parameters/includeData'
         - name: status
           in: query
           description: Status to filter the executions by.
@@ -200,20 +204,20 @@ paths:
           schema:
             type: string
             example: '1000'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ExecutionList'
+                $ref: '#/components/schemas/executionList'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
-  '/executions/{id}':
+          $ref: '#/components/responses/notFound'
+  /executions/{id}:
     get:
       x-eov-operation-id: getExecution
       x-eov-operation-handler: v1/handlers/executions/executions.handler
@@ -222,19 +226,19 @@ paths:
       summary: Retrieve an execution
       description: Retrieve an execution from you instance.
       parameters:
-        - $ref: '#/components/parameters/ExecutionId'
-        - $ref: '#/components/parameters/IncludeData'
+        - $ref: '#/components/parameters/executionId'
+        - $ref: '#/components/parameters/includeData'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Execution'
+                $ref: '#/components/schemas/execution'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
+          $ref: '#/components/responses/notFound'
     delete:
       x-eov-operation-id: deleteExecution
       x-eov-operation-handler: v1/handlers/executions/executions.handler
@@ -243,18 +247,139 @@ paths:
       summary: Delete an execution
       description: Deletes an execution from your instance.
       parameters:
-        - $ref: '#/components/parameters/ExecutionId'
+        - $ref: '#/components/parameters/executionId'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Execution'
+                $ref: '#/components/schemas/execution'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
+          $ref: '#/components/responses/notFound'
+  /tags:
+    post:
+      x-eov-operation-id: createTag
+      x-eov-operation-handler: v1/handlers/tags/tags.handler
+      tags:
+        - Tags
+      summary: Create a tag
+      description: Create a tag in your instance.
+      requestBody:
+        description: Created tag object.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/tag'
+        required: true
+      responses:
+        '201':
+          description: A tag object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tag'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '409':
+          $ref: '#/components/responses/conflict'
+    get:
+      x-eov-operation-id: getTags
+      x-eov-operation-handler: v1/handlers/tags/tags.handler
+      tags:
+        - Tags
+      summary: Retrieve all tags
+      description: Retrieve all tags from your instance.
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tagList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+  /tags/{id}:
+    get:
+      x-eov-operation-id: getTag
+      x-eov-operation-handler: v1/handlers/tags/tags.handler
+      tags:
+        - Tags
+      summary: Retrieves a tag
+      description: Retrieves a tag.
+      parameters:
+        - $ref: '#/components/parameters/tagId'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tag'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+    delete:
+      x-eov-operation-id: deleteTag
+      x-eov-operation-handler: v1/handlers/tags/tags.handler
+      tags:
+        - Tags
+      summary: Delete a tag
+      description: Deletes a tag.
+      parameters:
+        - $ref: '#/components/parameters/tagId'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tag'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateTag
+      x-eov-operation-handler: v1/handlers/tags/tags.handler
+      tags:
+        - Tags
+      summary: Update a tag
+      description: Update a tag.
+      parameters:
+        - $ref: '#/components/parameters/tagId'
+      requestBody:
+        description: Updated tag object.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/tag'
+        required: true
+      responses:
+        '200':
+          description: Tag object
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tag'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+        '409':
+          $ref: '#/components/responses/conflict'
   /workflows:
     post:
       x-eov-operation-id: createWorkflow
@@ -268,7 +393,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Workflow'
+              $ref: '#/components/schemas/workflow'
         required: true
       responses:
         '200':
@@ -276,11 +401,11 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Workflow'
+                $ref: '#/components/schemas/workflow'
         '400':
-          $ref: '#/components/responses/BadRequest'
+          $ref: '#/components/responses/badRequest'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
     get:
       x-eov-operation-id: getWorkflows
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
@@ -301,19 +426,27 @@ paths:
           allowReserved: true
           schema:
             type: string
-            example: 'test,production'
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
+            example: test,production
+        - name: name
+          in: query
+          required: false
+          explode: false
+          allowReserved: true
+          schema:
+            type: string
+            example: My Workflow
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WorkflowList'
+                $ref: '#/components/schemas/workflowList'
         '401':
-          $ref: '#/components/responses/Unauthorized'
-  '/workflows/{id}':
+          $ref: '#/components/responses/unauthorized'
+  /workflows/{id}:
     get:
       x-eov-operation-id: getWorkflow
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
@@ -322,18 +455,18 @@ paths:
       summary: Retrieves a workflow
       description: Retrieves a workflow.
       parameters:
-        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/workflowId'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Workflow'
+                $ref: '#/components/schemas/workflow'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
+          $ref: '#/components/responses/notFound'
     delete:
       x-eov-operation-id: deleteWorkflow
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
@@ -342,18 +475,18 @@ paths:
       summary: Delete a workflow
       description: Deletes a workflow.
       parameters:
-        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/workflowId'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Workflow'
+                $ref: '#/components/schemas/workflow'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
+          $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateWorkflow
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
@@ -362,13 +495,13 @@ paths:
       summary: Update a workflow
       description: Update a workflow.
       parameters:
-        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/workflowId'
       requestBody:
         description: Updated workflow object.
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Workflow'
+              $ref: '#/components/schemas/workflow'
         required: true
       responses:
         '200':
@@ -376,14 +509,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Workflow'
+                $ref: '#/components/schemas/workflow'
         '400':
-          $ref: '#/components/responses/BadRequest'
+          $ref: '#/components/responses/badRequest'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
-  '/workflows/{id}/activate':
+          $ref: '#/components/responses/notFound'
+  /workflows/{id}/activate:
     post:
       x-eov-operation-id: activateWorkflow
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
@@ -392,19 +525,19 @@ paths:
       summary: Activate a workflow
       description: Active a workflow.
       parameters:
-        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/workflowId'
       responses:
         '200':
           description: Workflow object
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Workflow'
+                $ref: '#/components/schemas/workflow'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
-  '/workflows/{id}/deactivate':
+          $ref: '#/components/responses/notFound'
+  /workflows/{id}/deactivate:
     post:
       x-eov-operation-id: deactivateWorkflow
       x-eov-operation-handler: v1/handlers/workflows/workflows.handler
@@ -413,18 +546,70 @@ paths:
       summary: Deactivate a workflow
       description: Deactivate a workflow.
       parameters:
-        - $ref: '#/components/parameters/WorkflowId'
+        - $ref: '#/components/parameters/workflowId'
       responses:
         '200':
           description: Workflow object
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Workflow'
+                $ref: '#/components/schemas/workflow'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
         '404':
-          $ref: '#/components/responses/NotFound'
+          $ref: '#/components/responses/notFound'
+  /workflows/{id}/tags:
+    get:
+      x-eov-operation-id: getWorkflowTags
+      x-eov-operation-handler: v1/handlers/workflows/workflows.handler
+      tags:
+        - Workflow
+      summary: Get workflow tags
+      description: Get workflow tags.
+      parameters:
+        - $ref: '#/components/parameters/workflowId'
+      responses:
+        '200':
+          description: List of tags
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/workflowTags'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateWorkflowTags
+      x-eov-operation-handler: v1/handlers/workflows/workflows.handler
+      tags:
+        - Workflow
+      summary: Update tags of a workflow
+      description: Update tags of a workflow.
+      parameters:
+        - $ref: '#/components/parameters/workflowId'
+      requestBody:
+        description: List of tags
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/tagIds'
+        required: true
+      responses:
+        '200':
+          description: List of tags after add the tag
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/workflowTags'
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
   /users:
     get:
       x-eov-operation-id: getUsers
@@ -434,19 +619,19 @@ paths:
       summary: Retrieve all users
       description: Retrieve all users from your instance. Only available for the instance owner.
       parameters:
-        - $ref: '#/components/parameters/Limit'
-        - $ref: '#/components/parameters/Cursor'
-        - $ref: '#/components/parameters/IncludeRole'
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+        - $ref: '#/components/parameters/includeRole'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UserList'
+                $ref: '#/components/schemas/userList'
         '401':
-          $ref: '#/components/responses/Unauthorized'
-  '/users/{id}':
+          $ref: '#/components/responses/unauthorized'
+  /users/{id}:
     get:
       x-eov-operation-id: getUser
       x-eov-operation-handler: v1/handlers/users/users.handler.ee
@@ -455,17 +640,17 @@ paths:
       summary: Get user by ID/Email
       description: Retrieve a user from your instance. Only available for the instance owner.
       parameters:
-        - $ref: '#/components/parameters/UserIdentifier'
-        - $ref: '#/components/parameters/IncludeRole'
+        - $ref: '#/components/parameters/userIdentifier'
+        - $ref: '#/components/parameters/includeRole'
       responses:
         '200':
           description: Operation successful.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/user'
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/unauthorized'
   /source-control/pull:
     post:
       x-eov-operation-id: pull
@@ -480,58 +665,126 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Pull'
+              $ref: '#/components/schemas/pull'
       responses:
         '200':
           description: Import result
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ImportResult'
+                $ref: '#/components/schemas/importResult'
         '400':
-          $ref: '#/components/responses/BadRequest'
+          $ref: '#/components/responses/badRequest'
         '409':
-          $ref: '#/components/responses/Conflict'
+          $ref: '#/components/responses/conflict'
 components:
   schemas:
-    Error:
-      required:
-        - message
+    audit:
       type: object
       properties:
-        code:
-          type: string
-        message:
-          type: string
-        description:
-          type: string
-    Role:
-      readOnly: true
+        Credentials Risk Report:
+          type: object
+          example:
+            risk: credentials
+            sections:
+              - title: Credentials not used in any workflow
+                description: These credentials are not used in any workflow. Keeping unused credentials in your instance is an unneeded security risk.
+                recommendation: Consider deleting these credentials if you no longer need them.
+                location:
+                  - kind: credential
+                    id: '1'
+                    name: My Test Account
+        Database Risk Report:
+          type: object
+          example:
+            risk: database
+            sections:
+              - title: Expressions in "Execute Query" fields in SQL nodes
+                description: This SQL node has an expression in the "Query" field of an "Execute Query" operation. Building a SQL query with an expression may lead to a SQL injection attack.
+                recommendation: Consider using the "Query Parameters" field to pass parameters to the query
+                or validating the input of the expression in the "Query" field.: null
+                location:
+                  - kind: node
+                    workflowId: '1'
+                    workflowName: My Workflow
+                    nodeId: 51eb5852-ce0b-4806-b4ff-e41322a4041a
+                    nodeName: MySQL
+                    nodeType: n8n-nodes-base.mySql
+        Filesystem Risk Report:
+          type: object
+          example:
+            risk: filesystem
+            sections:
+              - title: Nodes that interact with the filesystem
+                description: This node reads from and writes to any accessible file in the host filesystem. Sensitive file content may be manipulated through a node operation.
+                recommendation: Consider protecting any sensitive files in the host filesystem
+                or refactoring the workflow so that it does not require host filesystem interaction.: null
+                location:
+                  - kind: node
+                    workflowId: '1'
+                    workflowName: My Workflow
+                    nodeId: 51eb5852-ce0b-4806-b4ff-e41322a4041a
+                    nodeName: Ready Binary file
+                    nodeType: n8n-nodes-base.readBinaryFile
+        Nodes Risk Report:
+          type: object
+          example:
+            risk: nodes
+            sections:
+              - title: Community nodes
+                description: This node is sourced from the community. Community nodes are not vetted by the n8n team and have full access to the host system.
+                recommendation: Consider reviewing the source code in any community nodes installed in this n8n instance
+                and uninstalling any community nodes no longer used.: null
+                location:
+                  - kind: community
+                    nodeType: n8n-nodes-test.test
+                    packageUrl: https://www.npmjs.com/package/n8n-nodes-test
+        Instance Risk Report:
+          type: object
+          example:
+            risk: execution
+            sections:
+              - title: Unprotected webhooks in instance
+                description: These webhook nodes have the "Authentication" field set to "None" and are not directly connected to a node to validate the payload. Every unprotected webhook allows your workflow to be called by any third party who knows the webhook URL.
+                recommendation: Consider setting the "Authentication" field to an option other than "None"
+                or validating the payload with one of the following nodes.: null
+                location:
+                  - kind: community
+                    nodeType: n8n-nodes-test.test
+                    packageUrl: https://www.npmjs.com/package/n8n-nodes-test
+    credential:
+      required:
+        - name
+        - type
+        - data
       type: object
       properties:
         id:
-          type: number
+          type: string
           readOnly: true
-          example: 1
+          example: R2DjclaysHbqn778
         name:
           type: string
-          example: owner
-          readOnly: true
-        scope:
+          example: Joe's Github Credentials
+        type:
           type: string
-          readOnly: true
-          example: global
+          example: github
+        data:
+          type: object
+          writeOnly: true
+          example:
+            token: ada612vad6fa5df4adf5a5dsf4389adsf76da7s
         createdAt:
           type: string
-          description: Time the role was created.
           format: date-time
           readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
         updatedAt:
           type: string
-          description: Last time the role was updated.
           format: date-time
           readOnly: true
-    Execution:
+          example: '2022-04-29T11:02:29.842Z'
+    execution:
       type: object
       properties:
         id:
@@ -573,7 +826,52 @@ components:
           type: string
           nullable: true
           format: date-time
-    Node:
+    executionList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/execution'
+        nextCursor:
+          type: string
+          description: Paginate through executions by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    tag:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          readOnly: true
+          example: 2tUt1wbLX592XDdX
+        name:
+          type: string
+          example: Production
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+    tagList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/tag'
+        nextCursor:
+          type: string
+          description: Paginate through tags by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    node:
       type: object
       additionalProperties: false
       properties:
@@ -610,6 +908,11 @@ components:
           type: number
         waitBetweenTries:
           type: number
+        continueOnFail:
+          type: boolean
+          example: false
+          description: use onError instead
+          deprecated: true
         onError:
           type: string
           example: stopWorkflow
@@ -638,24 +941,36 @@ components:
           type: string
           format: date-time
           readOnly: true
-    Tag:
+    workflowSettings:
       type: object
+      additionalProperties: false
       properties:
-        id:
+        saveExecutionProgress:
+          type: boolean
+        saveManualExecutions:
+          type: boolean
+        saveDataErrorExecution:
+          type: string
+          enum:
+            - all
+            - none
+        saveDataSuccessExecution:
+          type: string
+          enum:
+            - all
+            - none
+        executionTimeout:
           type: number
-          example: 12
-        name:
+          example: 3600
+          maxLength: 3600
+        errorWorkflow:
           type: string
-          example: Production
-        createdAt:
+          example: VzqKEW0ShTXA5vPj
+          description: The ID of the workflow that contains the error trigger node.
+        timezone:
           type: string
-          format: date-time
-          readOnly: true
-        updatedAt:
-          type: string
-          format: date-time
-          readOnly: true
-    Workflow:
+          example: America/New_York
+    workflow:
       type: object
       additionalProperties: false
       required:
@@ -685,7 +1000,7 @@ components:
         nodes:
           type: array
           items:
-            $ref: '#/components/schemas/Node'
+            $ref: '#/components/schemas/node'
         connections:
           type: object
           example:
@@ -694,7 +1009,7 @@ components:
                 type: main
                 index: 0
         settings:
-          $ref: '#/components/schemas/WorkflowSettings'
+          $ref: '#/components/schemas/workflowSettings'
         staticData:
           example:
             lastId: 1
@@ -708,186 +1023,91 @@ components:
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/Tag'
+            $ref: '#/components/schemas/tag'
           readOnly: true
-    WorkflowSettings:
-      type: object
-      additionalProperties: false
-      properties:
-        saveExecutionProgress:
-          type: boolean
-        saveManualExecutions:
-          type: boolean
-        saveDataErrorExecution:
-          type: string
-          enum:
-            - all
-            - none
-        saveDataSuccessExecution:
-          type: string
-          enum:
-            - all
-            - none
-        executionTimeout:
-          type: number
-          example: 3600
-          maxLength: 3600
-        errorWorkflow:
-          type: string
-          example: VzqKEW0ShTXA5vPj
-          description: The ID of the workflow that contains the error trigger node.
-        timezone:
-          type: string
-          example: America/New_York
-    ExecutionList:
+    workflowList:
       type: object
       properties:
         data:
           type: array
           items:
-            $ref: '#/components/schemas/Execution'
-        nextCursor:
-          type: string
-          description: Paginate through executions by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
-          nullable: true
-          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
-    WorkflowList:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/Workflow'
+            $ref: '#/components/schemas/workflow'
         nextCursor:
           type: string
           description: Paginate through workflows by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
           nullable: true
           example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
-    Credential:
+    workflowTags:
+      type: array
+      items:
+        $ref: '#/components/schemas/tag'
+    tagIds:
+      type: array
+      items:
+        type: object
+        additionalProperties: false
+        required:
+          - id
+        properties:
+          id:
+            type: string
+            example: 2tUt1wbLX592XDdX
+    user:
       required:
-        - name
-        - type
-        - data
+        - email
       type: object
       properties:
         id:
           type: string
           readOnly: true
-          example: R2DjclaysHbqn778
-        name:
+          example: 123e4567-e89b-12d3-a456-426614174000
+        email:
           type: string
-          example: Joe's Github Credentials
-        type:
+          format: email
+          example: john.doe@company.com
+        firstName:
+          maxLength: 32
           type: string
-          example: github
-        data:
-          type: object
-          writeOnly: true
-          example:
-            token: ada612vad6fa5df4adf5a5dsf4389adsf76da7s
+          description: User's first name
+          readOnly: true
+          example: john
+        lastName:
+          maxLength: 32
+          type: string
+          description: User's last name
+          readOnly: true
+          example: Doe
+        isPending:
+          type: boolean
+          description: Whether the user finished setting up their account in response to the invitation (true) or not (false).
+          readOnly: true
         createdAt:
           type: string
+          description: Time the user was created.
           format: date-time
           readOnly: true
-          example: '2022-04-29T11:02:29.842Z'
         updatedAt:
           type: string
+          description: Last time the user was updated.
           format: date-time
           readOnly: true
-          example: '2022-04-29T11:02:29.842Z'
-    CredentialType:
+        role:
+          type: string
+          example: owner
+          readOnly: true
+    userList:
       type: object
       properties:
-        displayName:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/user'
+        nextCursor:
           type: string
-          readOnly: true
-          example: Email
-        name:
-          type: string
-          readOnly: true
-          example: email
-        type:
-          type: string
-          readOnly: true
-          example: string
-        default:
-          type: string
-          readOnly: true
-          example: string
-    Audit:
-      type: object
-      properties:
-        Credentials Risk Report:
-          type: object
-          example:
-            risk: credentials
-            sections:
-              - title: Credentials not used in any workflow
-                description: These credentials aren't used in any workflow. Keeping unused credentials in your instance is an unneeded security risk.
-                recommendation: Consider deleting these credentials if you no longer need them.
-                location:
-                  - kind: credential
-                    id: '1'
-                    name: My Test Account
-        Database Risk Report:
-          type: object
-          example:
-            risk: database
-            sections:
-              - title: Expressions in "Execute Query" fields in SQL nodes
-                description: This SQL node has an expression in the "Query" field of an "Execute Query" operation. Building a SQL query with an expression may lead to a SQL injection attack.
-                recommendation: Consider using the "Query Parameters" field to pass parameters to the query
-                or validating the input of the expression in the "Query" field.: null
-                location:
-                  - kind: node
-                    workflowId: '1'
-                    workflowName: My Workflow
-                    nodeId: 51eb5852-ce0b-4806-b4ff-e41322a4041a
-                    nodeName: MySQL
-                    nodeType: n8n-nodes-base.mySql
-        Filesystem Risk Report:
-          type: object
-          example:
-            risk: filesystem
-            sections:
-              - title: Nodes that interact with the filesystem
-                description: This node reads from and writes to any accessible file in the host filesystem. Sensitive file content may be manipulated through a node operation.
-                recommendation: Consider protecting any sensitive files in the host filesystem
-                or refactoring the workflow so that it doesn'trequire host filesystem interaction.: null
-                location:
-                  - kind: node
-                    workflowId: '1'
-                    workflowName: My Workflow
-                    nodeId: 51eb5852-ce0b-4806-b4ff-e41322a4041a
-                    nodeName: Ready Binary file
-                    nodeType: n8n-nodes-base.readBinaryFile
-        Nodes Risk Report:
-          type: object
-          example:
-            risk: nodes
-            sections:
-              - title: Community nodes
-                description: This node is sourced from the community. Community nodes aren't vetted by the n8n team and have full access to the host system.
-                recommendation: Consider reviewing the source code in any community nodes installed in this n8n instance
-                and uninstalling any community nodes no longer used.: null
-                location:
-                  - kind: community
-                    nodeType: n8n-nodes-test.test
-                    packageUrl: 'https://www.npmjs.com/package/n8n-nodes-test'
-        Instance Risk Report:
-          type: object
-          example:
-            risk: execution
-            sections:
-              - title: Unprotected webhooks in instance
-                description: These webhook nodes have the "Authentication" field set to "None" and aren't directly connected to a node to validate the payload. Every unprotected webhook allows your workflow to be called by any third party who knows the webhook URL.
-                recommendation: Consider setting the "Authentication" field to an option other than "None"
-                or validating the payload with one of the following nodes.: null
-                location:
-                  - kind: community
-                    nodeType: n8n-nodes-test.test
-                    packageUrl: 'https://www.npmjs.com/package/n8n-nodes-test'
-    Pull:
+          description: Paginate through users by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    pull:
       type: object
       properties:
         force:
@@ -897,7 +1117,7 @@ components:
           type: object
           example:
             foo: bar
-    ImportResult:
+    importResult:
       type: object
       additionalProperties: true
       properties:
@@ -953,78 +1173,124 @@ components:
                     type: string
                   tagId:
                     type: string
-    UserList:
+    error:
+      required:
+        - message
       type: object
       properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/User'
-        nextCursor:
+        code:
           type: string
-          description: Paginate through users by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
-          nullable: true
-          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
-    User:
-      required:
-        - email
+        message:
+          type: string
+        description:
+          type: string
+    role:
+      readOnly: true
       type: object
       properties:
         id:
+          type: number
+          readOnly: true
+          example: 1
+        name:
+          type: string
+          example: owner
+          readOnly: true
+        scope:
           type: string
           readOnly: true
-          example: 123e4567-e89b-12d3-a456-426614174000
-        email:
-          type: string
-          format: email
-          example: john.doe@company.com
-        firstName:
-          maxLength: 32
-          type: string
-          description: User's first name
-          readOnly: true
-          example: john
-        lastName:
-          maxLength: 32
-          type: string
-          description: User's last name
-          readOnly: true
-          example: Doe
-        isPending:
-          type: boolean
-          description: Whether the user finished setting up their account in response to the invitation (true) or not (false).
-          readOnly: true
+          example: global
         createdAt:
           type: string
-          description: Time the user was created.
+          description: Time the role was created.
           format: date-time
           readOnly: true
         updatedAt:
           type: string
-          description: Last time the user was updated.
+          description: Last time the role was updated.
           format: date-time
           readOnly: true
-        globalRole:
-          $ref: '#/components/schemas/Role'
+    credentialType:
+      type: object
+      properties:
+        displayName:
+          type: string
+          readOnly: true
+          example: Email
+        name:
+          type: string
+          readOnly: true
+          example: email
+        type:
+          type: string
+          readOnly: true
+          example: string
+        default:
+          type: string
+          readOnly: true
+          example: string
+    Error:
+      $ref: '#/components/schemas/error'
+    Role:
+      $ref: '#/components/schemas/role'
+    Execution:
+      $ref: '#/components/schemas/execution'
+    Node:
+      $ref: '#/components/schemas/node'
+    Tag:
+      $ref: '#/components/schemas/tag'
+    Workflow:
+      $ref: '#/components/schemas/workflow'
+    WorkflowSettings:
+      $ref: '#/components/schemas/workflowSettings'
+    ExecutionList:
+      $ref: '#/components/schemas/executionList'
+    WorkflowList:
+      $ref: '#/components/schemas/workflowList'
+    Credential:
+      $ref: '#/components/schemas/credential'
+    CredentialType:
+      $ref: '#/components/schemas/credentialType'
+    Audit:
+      $ref: '#/components/schemas/audit'
+    Pull:
+      $ref: '#/components/schemas/pull'
+    ImportResult:
+      $ref: '#/components/schemas/importResult'
+    UserList:
+      $ref: '#/components/schemas/userList'
+    User:
+      $ref: '#/components/schemas/user'
   responses:
-    NotFound:
-      description: The specified resource was not found.
-    Unauthorized:
+    unauthorized:
       description: Unauthorized
-    BadRequest:
+    notFound:
+      description: The specified resource was not found.
+    badRequest:
       description: The request is invalid or provides malformed data.
-    Conflict:
+    conflict:
       description: Conflict
+    forbidden:
+      description: Forbidden
+    NotFound:
+      $ref: '#/components/responses/notFound'
+    Unauthorized:
+      $ref: '#/components/responses/unauthorized'
+    BadRequest:
+      $ref: '#/components/responses/badRequest'
+    Conflict:
+      $ref: '#/components/responses/conflict'
+    Forbidden:
+      $ref: '#/components/responses/forbidden'
   parameters:
-    Cursor:
-      name: cursor
+    includeData:
+      name: includeData
       in: query
-      description: Paginate through users by setting the cursor parameter to a nextCursor attribute returned by a previous request's response. Default value fetches the first "page" of the collection. See pagination for more detail.
+      description: Whether or not to include the execution's detailed data.
       required: false
-      style: form
       schema:
-        type: string
-    Limit:
+        type: boolean
+    limit:
       name: limit
       in: query
       description: The maximum number of items to return.
@@ -1034,36 +1300,36 @@ components:
         example: 100
         default: 100
         maximum: 250
-    ExecutionId:
+    cursor:
+      name: cursor
+      in: query
+      description: Paginate by setting the cursor parameter to the nextCursor attribute returned by the previous request's response. Default value fetches the first "page" of the collection. See pagination for more detail.
+      required: false
+      style: form
+      schema:
+        type: string
+    executionId:
       name: id
       in: path
       description: The ID of the execution.
       required: true
       schema:
         type: number
-    WorkflowId:
+    tagId:
+      name: id
+      in: path
+      description: The ID of the tag.
+      required: true
+      schema:
+        type: string
+    workflowId:
       name: id
       in: path
       description: The ID of the workflow.
       required: true
       schema:
         type: string
-    IncludeData:
-      name: includeData
-      in: query
-      description: Whether or not to include the execution's detailed data.
-      required: false
-      schema:
-        type: boolean
-    UserIdentifier:
-      name: id
-      in: path
-      description: The ID or email of the user.
-      required: true
-      schema:
-        type: string
-        format: identifier
-    IncludeRole:
+    includeRole:
       name: includeRole
       in: query
       description: Whether to include the user's role or not.
@@ -1072,10 +1338,32 @@ components:
         type: boolean
         example: true
         default: false
+    userIdentifier:
+      name: id
+      in: path
+      description: The ID or email of the user.
+      required: true
+      schema:
+        type: string
+        format: identifier
+    Cursor:
+      $ref: '#/components/parameters/cursor'
+    Limit:
+      $ref: '#/components/parameters/limit'
+    ExecutionId:
+      $ref: '#/components/parameters/executionId'
+    WorkflowId:
+      $ref: '#/components/parameters/workflowId'
+    TagId:
+      $ref: '#/components/parameters/tagId'
+    IncludeData:
+      $ref: '#/components/parameters/includeData'
+    UserIdentifier:
+      $ref: '#/components/parameters/userIdentifier'
+    IncludeRole:
+      $ref: '#/components/parameters/includeRole'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
       in: header
       name: X-N8N-API-KEY
-security:
-  - ApiKeyAuth: []

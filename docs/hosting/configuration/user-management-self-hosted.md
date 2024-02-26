@@ -44,7 +44,7 @@ Get the following information from your SMTP provider:
 * SMTP password
 * SMTP sender name
 
-To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/)
+To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/configuration-methods/)
 <!-- vale off -->
 | Variable | Type | Description | Required? |
 | -------- | ---- | ----------- | --------- |

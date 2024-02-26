@@ -21,7 +21,7 @@ In your n8n instance:
 
 In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key.
 
-Refer to [Environment variables](https://docs.n8n.io/hosting/configuration/) to learn more about configuring n8n.
+Refer to [Environment variables](/hosting/configuration/configuration-methods/) to learn more about configuring n8n.
 
 ## Allowlist the license server IP addresses
 

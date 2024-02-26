@@ -51,7 +51,7 @@ Persisting the `/home/node/.n8n` directory even when using alternate databases i
 ///
 ### PostgresDB
 
-To use n8n with Postgres, provide the corresponding [configuration](/hosting/configuration/):
+To use n8n with Postgres, provide the corresponding:
 
 ```sh
 docker volume create n8n_data

@@ -1,6 +1,6 @@
 /contributing/   /help-community/contributing/
 /manage-cloud/   /manage-cloud/overview/
-/hosting/configuration/*   /hosting/configuration/:splat
+/hosting/environment-variables/*   /hosting/configuration/:splat
 /hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
 /hosting/logging-monitoring/security-audit/   /hosting/logging-monitoring/security-audit/
 /hosting/installation/   /hosting/

@@ -12,14 +12,15 @@ You can use these credentials to authenticate the following nodes with Calendly.
 
 ## Prerequisites
 
-Create a [Calendly](https://www.calendly.com/) premium account.
+Create a [Calendly](https://www.calendly.com/){:target=_blank .external-link} premium account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Calendly dashboard.
-2. Click on **Integrations**.
-3. Use API key in your Calendly node credentials in n8n.
+n8n supports authenticating Calendly with a personal access token.
+
+## Related resources
+
+Refer to [Calendly's API documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens){:target=_blank .external-link} for more information about authenticating with the service.
 
 
-![Getting Calendly credentials](/_images/integrations/builtin/credentials/calendly/using-access-token.gif)
 

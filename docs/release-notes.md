@@ -56,7 +56,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 #### OpenAI node overhaul
 
-This release includes a new version of the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-base.openai/), adding more operations, including support for working with assistants.
+This release includes a new version of the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/), adding more operations, including support for working with assistants.
 
 </div>
 

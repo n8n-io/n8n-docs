@@ -28,7 +28,7 @@ Unlike the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/), t
 * **Execute**: use the LangChain Code node like n8n's own Code node. This takes input data from the workflow, processes it, and returns it as the node output. This mode requires a main input and output. You must create these connections in **Inputs** and **Outputs**.
 * **Supply Data**: use the LangChain Code node as a sub-node, sending data to a root node. This uses an output other than main.
 
-By default, you can't load built-in or external modules in this node. Self-hosted users can [enable built-in and external modules](/hosting/environment-variables/configuration-methods/).
+By default, you can't load built-in or external modules in this node. Self-hosted users can [enable built-in and external modules](/hosting/configuration/configuration-methods/).
 
 ### Inputs
 

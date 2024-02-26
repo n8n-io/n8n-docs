@@ -74,5 +74,4 @@ Nodes and operations where you need to design a loop into your workflow:
 * [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/):
 	* Info: this operation executes only once, regardless of the number of items in the incoming data.
 * [RSS](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/) nodes executes only once regardless of the number of items in the incoming data.
-* [Spreadsheet](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/) node processes all the incoming data and creates a single file with all the incoming data. If you want to create individual files for each incoming item, you have to create a loop.
 * [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/) node will execute and iterate over all incoming items only for Postgres related functions (for example, `pgInsert`, `pgUpdate`, `pqQuery`).

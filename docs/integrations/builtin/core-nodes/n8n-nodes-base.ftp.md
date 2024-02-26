@@ -8,8 +8,12 @@ contentType: integration
 
 The FTP node is useful to access and upload files to an FTP server.
 
-/// note | Credential
+/// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
+///
+
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [FTP integrations](https://n8n.io/integrations/ftp/){:target=_blank .external-link} page.
 ///
 
 ## Basic Operations

@@ -8,6 +8,10 @@ contentType: integration
 
 The Execute Command node runs shell commands on the host machine that runs n8n.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Execute Command integrations](https://n8n.io/integrations/execute-command/){:target=_blank .external-link} page.
+///
+
 /// note | Which shell runs the command?
 This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
 
@@ -17,6 +21,7 @@ If you run n8n with Docker, your command will run in the n8n container and not t
 /// note | Not available on Cloud
 This node isn't available on n8n Cloud.
 ///
+
 ## Node Reference
 
 The Execute Command node has two properties:

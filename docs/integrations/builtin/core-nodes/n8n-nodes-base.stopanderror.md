@@ -8,6 +8,10 @@ contentType: integration
 
 Use the Stop And Error node to display custom error messages, cause executions to fail under certain conditions, and send custom error information to error workflows.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Stop and Error integrations](https://n8n.io/integrations/stop-and-error/){:target=_blank .external-link} page.
+///
+
 ## Operations
 
 * Error Message

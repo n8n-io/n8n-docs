@@ -14,6 +14,7 @@ You can replace the Discord node with another communication app. For example, n8
 
 In your workflow, add a Discord node connected to the Code node. In the Discord node window, configure the parameters:
 
+- *Connection Type:* Select 'Webhook'.
 - *Webhook URL:* Enter the URL that you received in the email from n8n when you signed up for this course.
 - *Content (Expression):* This week we've `{{$json["totalBooked"]}}` booked orders with a total value of `{{$json["bookedSum"]}}`. My Unique ID: `{{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
 

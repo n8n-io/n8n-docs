@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/zendesk/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Zendesk Trigger integrations](https://n8n.io/integrations/zendesk-trigger/){:target=_blank .external-link} page.
+///
+
 ## Example Usage
 
 This workflow allows you to receive updates for support in Zendesk. You can also find the [workflow](https://n8n.io/workflows/648) on n8n.io. This example usage workflow would use the following node.

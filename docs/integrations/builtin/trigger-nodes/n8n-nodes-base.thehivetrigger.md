@@ -12,9 +12,10 @@ On this page, you'll find a list of events the TheHive trigger node can respond 
 n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive/){:target="_blank" .external-link} list.
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [TheHive Trigger integrations](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} page.
 ///
+
 ## Events
 
 * Alert 

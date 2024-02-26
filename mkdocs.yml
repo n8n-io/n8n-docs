@@ -12,7 +12,7 @@ validation:
     unrecognized_links: info
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: _overrides
   favicon: _images/favicon.ico
   font: false
   language: custom
@@ -84,9 +84,10 @@ watch:
 markdown_extensions:
   # used for https://squidfunk.github.io/mkdocs-material/reference/tooltips/
   - abbr
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists attr_list is required for several other features. Always enable.
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists 
+  # attr_list is required for several other features. Always enable.
   - attr_list
-  # https://squidfunk.github.io/mkdocs-material/reference/images/
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - md_in_html
   - meta
   - pymdownx.blocks.admonition:

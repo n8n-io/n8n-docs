@@ -8,6 +8,10 @@ contentType: integration
 
 The XML node is useful to convert data from and to XML.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [XML integrations](https://n8n.io/integrations/xml/){:target=_blank .external-link} page.
+///
+
 ## Node Reference
 
 - **Mode:** The format the data should be converted from and to.

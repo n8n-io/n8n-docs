@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/ciscowebex/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Webex by Cisco Trigger integrations](https://n8n.io/integrations/webex-by-cisco-trigger/){:target=_blank .external-link} page.
+///
+
 ## Example usage
 
 This workflow allows you to receive updates when meeting events occur in your Webex account. This example usage workflow uses the following node:

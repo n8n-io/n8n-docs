@@ -11,6 +11,11 @@ Use the Merge node to combine data from two streams, once data of both streams i
 /// note | Major changes in 0.194.0
 This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
 ///
+
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Merge integrations](https://n8n.io/integrations/merge/){:target=_blank .external-link} page.
+///
+
 ## Merge mode
 
 You can specify how the Merge node should combine data from different branches. The following options are available:

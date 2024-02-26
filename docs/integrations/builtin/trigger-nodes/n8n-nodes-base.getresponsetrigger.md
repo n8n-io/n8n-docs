@@ -12,6 +12,10 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
 ///
 
+///  note  | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [GetResponse Trigger integrations](https://n8n.io/integrations/getresponse-trigger/){:target=_blank .external-link} page.
+///
+
 ## Events
 
 - Receive notifications when a customer is subscribed to a list

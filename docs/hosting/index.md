@@ -12,7 +12,7 @@ This section provides guidance on setting up n8n for both the Enterprise and Com
 
 	Install n8n on any platform using npm or Docker. Or follow our guides to popular hosting platforms.
 
-	[:octicons-arrow-right-24: Docker installation guide](/hosting/docker/)
+	[:octicons-arrow-right-24: Docker installation guide](/hosting/installation/docker/)
 
 - __Configuration__
 
@@ -24,7 +24,7 @@ This section provides guidance on setting up n8n for both the Enterprise and Com
 
 	Choose and set up user authentication for your n8n instance.
 
-	[:octicons-arrow-right-24: Authentication](/hosting/configuration/user-management/)
+	[:octicons-arrow-right-24: Authentication](/hosting/configuration/user-management-self-hosted/)
 
 - __Scaling__
 

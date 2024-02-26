@@ -18,7 +18,7 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     Work through the short tutorial to learn the basics of building AI workflows in n8n.
 
-    [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial//)
+    [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial/)
 
 -   __Explore examples and concepts__
 

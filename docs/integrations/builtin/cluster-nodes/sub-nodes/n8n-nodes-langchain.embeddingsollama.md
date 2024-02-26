@@ -22,7 +22,7 @@ For usage examples and templates to help you get started, refer to n8n's [Ollama
 ## Node parameters
 
 **Model**: the model to use to generate the embedding. Learn more about available models in [Ollama's models documentation](https://ollama.ai/library){:target=_blank .external-link}
-	Choose from:
+	Choose from:  
 	* [all-minilm](https://ollama.com/library/all-minilm) (384 Dimensions)
 	* [nomic-embed-text](https://ollama.com/library/nomic-embed-text) (768 Dimensions)
 

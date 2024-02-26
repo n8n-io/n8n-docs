@@ -252,7 +252,7 @@
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /user-management/
-/reference/environment-variables.html                /hosting/configuration/
+/reference/environment-variables.html                /hosting/configuration/configuration-methods/
 /reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/

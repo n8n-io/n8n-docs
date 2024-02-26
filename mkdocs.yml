@@ -1151,6 +1151,7 @@ nav:
     - Code node: code/code-node.md
     - AI coding: code/ai-code.md
     - Built in methods and variables:
+      - Overview: code/builtin/overview.md
       - Current node input: code/builtin/current-node-input.md
       - Output of other nodes: code/builtin/output-other-nodes.md
       - Date and time: code/builtin/date-time.md

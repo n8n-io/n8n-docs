@@ -69,7 +69,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
     This generates a date in the correct format, seven days before the current date.
 
     /// note | Date and time in n8n
-    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/luxon/). 
+    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon/). 
     ///
 
 7. Close the **Edit Expression** modal to return to the NASA node.

@@ -16,6 +16,6 @@ The user management feature doesn't send personal information, such as email or 
 ///
 ## Setup guides
 <!-- vale off -->
-This section contains most usage information for user management, and the [Cloud setup guide](/user-management/cloud-setup/). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](/hosting/user-management-self-hosted/).
+This section contains most usage information for user management, and the [Cloud setup guide](/user-management/cloud-setup/). If you self-host n8n, there are extra steps to configure your n8n instance. Refer to the [Self-hosted guide](/hosting/configuration/user-management-self-hosted/).
 <!-- vale on -->
 This section includes guides to configuring [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/) in n8n.

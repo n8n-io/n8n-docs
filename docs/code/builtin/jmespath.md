@@ -7,7 +7,7 @@ hide:
 
 # JMESPath method
 
-This is an n8n-provided method for working with the [JMESPath](/code/jmespath/) library.
+This is an n8n-provided method for working with the [JMESPath](/code/cookbook/jmespath/) library.
 
 /// note | Python support
 You can use Python in the Code node. It isn't available in expressions.

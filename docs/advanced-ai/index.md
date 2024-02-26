@@ -24,14 +24,14 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
 	Browse examples and workflow templates to help you build. Includes explanations of important AI concepts.
 
-    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/)
+    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/introduction/)
 
 
 -   __How n8n uses LangChain__
 
     Learn more about how n8n builds on LangChain.
 
-    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/)
+    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/overview/)
 
 -   __Browse AI templates__
 

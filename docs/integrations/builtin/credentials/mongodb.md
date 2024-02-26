@@ -31,7 +31,6 @@ You need to configure your MongoDB database, then configure your n8n credential.
 2. Inside the cluster, you need to have a database to connect to. If you don't have a database yet, you can go to **Collections** and select **Add My Own Data**. A dialog will show up: enter the name of the database in the **Database name** field and the name of the collection in the **Collection name** field.
 ![The dialog to create a new database in MongoDB Atlas](/_images/integrations/builtin/app-nodes/mongodb/database_create.png)
 3. Once ready, you'll see the database in **Organization > Project > Databases > Collections**.
-![A database and collection in MongoDB Atlas](/_images/integrations/builtin/app-nodes/mongodb/collections.png)
 4. In the **Network Access** section of your project you need to allow list the n8n IPs. Select **Add IP Address** button and add all the IPs listed [here](/choose-n8n/cloud/#cloud-ip-addresses). The allow list IPs will be visible in the **IP Access List** table.
 ![The list of IPs allowed to connect to the cluster in MongoDB Atlas](/_images/integrations/builtin/app-nodes/mongodb/network_access.png)
 

@@ -12,6 +12,10 @@ Use the IMAP Email node to receive emails using an IMAP email server. This node 
 You can find authentication information for this node [here](/integrations/builtin/credentials/imap/).
 ///
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Email Trigger (IMAP) integrations](https://n8n.io/integrations/email-trigger-imap/){:target=_blank .external-link} page.
+///
+
 ## Basic Operations
 
 - Receive an email

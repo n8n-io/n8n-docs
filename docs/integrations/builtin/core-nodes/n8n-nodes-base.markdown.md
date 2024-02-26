@@ -8,6 +8,10 @@ contentType: integration
 
 The Markdown node converts between Markdown and HTML formats.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Markdown integrations](https://n8n.io/integrations/markdown/){:target=_blank .external-link} page.
+///
+
 ## Options
 
 You can configure the node's output using **Options**. Click **Add Option** to view and select your options.

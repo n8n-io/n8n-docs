@@ -8,10 +8,10 @@ contentType: integration
 
 The Debug Helper node can be used to trigger different error types or generate random datasets to help test n8n workflows.
 
-
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Debug Helper integrations](https://n8n.io/integrations/debughelper/){:target=_blank .external-link} list.
 ///
+
 ## Operations
 
 * Do Nothing

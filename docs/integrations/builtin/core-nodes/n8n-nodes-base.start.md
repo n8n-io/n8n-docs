@@ -15,6 +15,9 @@ The start node is the first node in a workflow. It exists by default when you cr
 
 In case there is no trigger node in the workflow, the workflow always starts from the Start node. The Start node can't be deleted. Even if a workflow contains a trigger node, there would still be a Start node.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Start integrations](https://n8n.io/integrations/start/){:target=_blank .external-link} page.
+///
 
 ## FAQs
 

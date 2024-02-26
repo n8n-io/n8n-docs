@@ -8,6 +8,10 @@ contentType: integration
 
 The RSS Read node is used to read data from RSS feeds published on the internet.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [RSS Read integrations](https://n8n.io/integrations/rss-read/){:target=_blank .external-link} page.
+///
+
 ## Node Reference
 
 The RSS Read node has only one property:
@@ -36,7 +40,7 @@ The start node exists by default when you create a new workflow.
 
 ## Related resources
 
-n8n provides a trigger node for RSS Read. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.rssfeedreadtrigger/).
+n8n provides a trigger node for RSS Read. You can find the trigger node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger/).
 
 View [example workflows and related content](https://n8n.io/integrations/rss-read/){:target=_blank .external-link} on n8n's website.
 

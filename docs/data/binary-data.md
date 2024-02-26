@@ -48,8 +48,8 @@ You can use the [Code node](/code/code-node/) to manipulate binary data in your 
 
 ## Configure binary data mode when self-hosting
 
-You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/environment-variables/environment-variables/#binary-data). This includes tasks such as setting the storage path and choosing how to store binary data.
+You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables/#binary-data). This includes tasks such as setting the storage path and choosing how to store binary data.
 
 Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data/).
 
-Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/environment-variables/environment-variables/#nodes) for more information.
+Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/configuration/environment-variables/#nodes) for more information.

@@ -14,6 +14,10 @@ The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're 
 /// warning | Cross-site scripting
 When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link}. This is a security risk. Be careful with un-trusted inputs.
 ///
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [HTML integrations](https://n8n.io/integrations/html/){:target=_blank .external-link} page.
+///
+
 ## Operations
 
 * Generate HTML template
@@ -25,7 +29,7 @@ View [example workflows and related content](https://n8n.io/integrations/html/){
 
 ## Generate HTML template
 
-Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/)
+Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview/)
 
 You can include:
 

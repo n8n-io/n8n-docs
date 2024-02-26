@@ -49,7 +49,7 @@ Stores [Custom executions data](/workflows/executions/custom-executions-data/).
 
 ### installed_nodes
 
-Lists the [community nodes](/integrations/community-nodes/) installed in your n8n instance.
+Lists the [community nodes](/integrations/community-nodes/installation/) installed in your n8n instance.
 
 ### installed_packages
 

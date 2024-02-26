@@ -45,7 +45,7 @@ For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n
 
 ## Step four: Add the NASA node and set up credentials
 
-The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/). The API gives you data to work with in this tutorial.
+The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link}. The API gives you data to work with in this tutorial.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Schedule Trigger node.
 2. Search for **NASA**. n8n shows a list of nodes that match the search.
@@ -69,7 +69,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
     This generates a date in the correct format, seven days before the current date.
 
     /// note | Date and time in n8n
-    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/luxon/). 
+    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon/). 
     ///
 
 7. Close the **Edit Expression** modal to return to the NASA node.

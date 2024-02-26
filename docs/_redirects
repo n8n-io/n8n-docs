@@ -1,6 +1,26 @@
-/n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/
-/n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/
-/langchain/   /advanced/ai/
+/contributing/   /help-community/contributing/
+/manage-cloud/   /manage-cloud/overview/
+/hosting/environment-variables/*   /hosting/configuration/:splat
+/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
+/hosting/logging-monitoring/security-audit/   /hosting/logging-monitoring/security-audit/
+/hosting/installation/   /hosting/
+/hosting/logging-monitoring/   /hosting/
+/hosting/environment-variables/   /hosting/
+/hosting/architecture/   /hosting/architecture/overview/
+/hosting/scaling/   /hosting/scaling/overview/
+/hosting/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/
+/hosting/external-storage/   /hosting/scaling/external-storage/
+/integrations/builtin/   /integrations/builtin/node-types/
+/integrations/community-nodes/   /integrations/
+/integrations/creating-nodes/   /integrations/creating-nodes/overview/
+/code/builtin/   /code/builtin/overview/
+/code/cookbook/   /code/
+/code/luxon/  /code/cookbook/luxon/
+/code/jmespath/   /code/cookbook/jmespath/
+/advanced-ai/examples/   /advanced-ai/examples/introduction/
+/advanced-ai/langchain/   /advanced-ai/langchain/overview/
+
+/langchain/   /advanced-ai/
 /langchain/langchain-tutorial/   /advanced-ai/intro-tutorial/
 /langchain/learning-resources/   /advanced-ai/langchain/langchain-learning-resources/
 /langchain/langchain-n8n/   /advanced-ai/langchain/langchain-n8n/
@@ -83,9 +103,9 @@
 
 
 
-/hosting/authentication/user-management-self-hosted/   /hosting/user-management-self-hosted/
-/hosting/authentication/jwt/   /hosting/user-management-self-hosted/
-/hosting/authentication/basic-auth/   /hosting/user-management-self-hosted/
+/hosting/authentication/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/
+/hosting/authentication/jwt/   /hosting/configuration/user-management-self-hosted/
+/hosting/authentication/basic-auth/   /hosting/configuration/user-management-self-hosted/
 
 /environments/variables/   /variables/
 
@@ -103,7 +123,7 @@
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/
 /reference/cli-commands/   /hosting/cli-commands/
 /reference/update/   /release-notes/
-/security-audit/   /hosting/security-audit/
+/security-audit/   /hosting/logging-monitoring/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
@@ -130,23 +150,23 @@
 /hosting/installation/cloud/   /manage-cloud/
 /hosting/installation/desktop-app/   /choose-n8n/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
-/hosting/environment-variables/   /hosting/environment-variables/environment-variables/
+/hosting/configuration/   /hosting/configuration/environment-variables/
 /hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /manage-cloud/update-cloud-version/
 /hosting/updating/desktop/   /choose-n8n/
 /hosting/updating/npm/   /hosting/installation/npm/
-/hosting/databases/supported-databases-settings/   /hosting/supported-databases-settings/
+/hosting/databases/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
 /hosting/databases/structure/   /hosting/architecture/database-structure/
 /hosting/security/   /hosting/user-management/
 /hosting/user-management/   /user-management/
-/hosting/configuration/   /hosting/environment-variables/configuration-methods/
+/hosting/configuration/   /hosting/configuration/configuration-methods/
 
 
 # 2022 SEO audit
 
 /nodes/expressions/expressions.html   /code/expressions/
 /nodes/expressions.html   /code/expressions/
-/reference/configuration.html  /hosting/environment-variables/configuration-methods/
+/reference/configuration.html  /hosting/configuration/configuration-methods/
 /getting-started/installation/index.html   /hosting/options/
 /getting-started/create-your-first-workflow/    /try-it-out/
 /reference/scaling-n8n.html   /hosting/scaling/
@@ -227,20 +247,20 @@
 /getting-started/installation/                       /hosting/options/
 /getting-started/installation/docker-quickstart.html /hosting/installation/docker/
 /getting-started/installation/updating.html          /hosting/updating/
-/getting-started/installation/advanced/configuration.html /hosting/environment-variables/configuration-methods/
+/getting-started/installation/advanced/configuration.html /hosting/configuration/configuration-methods/
 /getting-started/installation/advanced/maintenance.html /hosting/scaling/execution-data/
 /getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/
 /getting-started/tutorials.html                      https://n8n.io/blog/
 /reference/user-management.html                      /user-management/
-/reference/environment-variables.html                /hosting/environment-variables/
+/reference/environment-variables.html                /hosting/configuration/configuration-methods/
 /reference/start-workflows-via-cli.html              /hosting/cli-commands/
 /reference/javascript-code-snippets.html             /code-examples/javascript-functions/
 /reference/data/database.html                        /hosting/databases/
-/reference/data/understanding-database.html          /hosting/supported-databases-settings/
+/reference/data/understanding-database.html          /hosting/configuration/supported-databases-settings/
 /reference/logging.html                              /hosting/logging/
 /reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
-/reference/contributing.html                         /contributing/
+/reference/contributing.html                         /help-community/contributing/
 /reference/release-notes.html                        /reference/release-notes/	
 /reference/server-setup.html                         /hosting/installation/server-setups/  
 
@@ -836,7 +856,7 @@
 
 # Old redirects
 
-/reference/changelog.html   /reference/release-notes/
+/reference/changelog.html   /release-notes/
 
 # Send in Blue Rebrand
 /integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/ /integrations/builtin/app-nodes/n8n-nodes-base.brevo/

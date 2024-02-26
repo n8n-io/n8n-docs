@@ -15,9 +15,4 @@ n8n supports Imperva WAF authentication with an API key.
 
 Refer to [Imperva WAF's documentation](https://docs.imperva.com/bundle/api-docs/page/api/authentication.htm){:target=_blank .external-link} for more information about the service.
 
-
-<!-- 
-TODO
-If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
--->
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/imperva-waf/){:target=_blank .external-link} on n8n's website.

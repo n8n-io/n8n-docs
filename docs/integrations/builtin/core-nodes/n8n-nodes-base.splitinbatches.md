@@ -12,6 +12,10 @@ The node saves the original incoming data, and with each iteration, returns a pr
 
 When the node execution completes, it combines all the data and returns it through the **done** output.
 
+/// note | Examples and templates
+For usage examples and templates to help you get started, refer to n8n's [Loop Over Items (Split in Batches) integrations](https://n8n.io/integrations/split-in-batches/){:target=_blank .external-link} page.
+///
+
 ## Node reference
 
 - **Batch Size**: the number of items to return with each call.

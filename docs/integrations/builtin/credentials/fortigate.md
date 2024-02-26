@@ -15,9 +15,4 @@ n8n supports Fortinet FortiGate authentication with an access token.
 
 Refer to [Fortinet FortiGate's documentation](https://docs.fortinet.com/document/fortigate/7.4.0/administration-guide/940602/using-apis){:target=_blank .external-link} for more information about the service.
 
-
-<!-- 
-TODO
-If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
--->
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/fortinet-fortigate/){:target=_blank .external-link} on n8n's website.

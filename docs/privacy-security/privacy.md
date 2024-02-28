@@ -81,7 +81,7 @@ n8n takes care to keep self-hosted data anonymous and avoids collecting sensitiv
         - DB_TYPE
         - N8N_VERSION_NOTIFICATIONS_ENABLED
         - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
-        - [Execution variables](/hosting/environment-variables/environment-variables/#executions)
+        - [Execution variables](/hosting/configuration/environment-variables/#executions)
     - OS, RAM, and CPUs
     - Anonymous instance ID
  - IP address
@@ -117,7 +117,7 @@ To opt out of checking for new versions of n8n:
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
-See [configuration](/hosting/configuration/) for more info on how to set environment variables.
+See [configuration](/hosting/configuration/configuration-methods/) for more info on how to set environment variables.
 
 ### Data collection in n8n Cloud
 

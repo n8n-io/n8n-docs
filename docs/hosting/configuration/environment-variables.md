@@ -10,7 +10,7 @@ hide:
 # Configuration environment variables
 
 /// note | File-based configuration
-You can provide a [configuration file](/hosting/environment-variables/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+You can provide a [configuration file](/hosting/configuration/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
 ///
 ## Credentials
 
@@ -55,7 +55,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n. |
-| `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/environment-variables/configuration-methods/). |
+| `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/configuration/configuration-methods/). |
 | `N8N_DISABLE_UI` | Boolean | `false` | Disable the UI (true) or not (false). |
 | `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
 | `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates/) for more information. |
@@ -85,7 +85,7 @@ Enabling overwrites for credentials allows you to set default values for credent
 
 ## Binary data
 
-By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/external-storage/) for more information on using external storage for binary data.
+By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -95,7 +95,7 @@ By default, n8n uses memory to store binary data. Enterprise users can choose to
 
 ## User management SMTP, and two-factor authentication
 
-Refer to [User management](/hosting/user-management-self-hosted/) for more information on setting up user management and emails.
+Refer to [User management](/hosting/configuration/user-management-self-hosted/) for more information on setting up user management and emails.
 <!-- vale off -->
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
@@ -139,7 +139,7 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 | `N8N_ENDPOINT_WEBHOOK` | String | `webhook` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | String | `webhook-test` | The path used for test-webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_WAIT` | String | `webhook-waiting` | The path used for waiting-webhook endpoint. |
-| `WEBHOOK_URL` | String | - | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](/hosting/environment-variables/configuration-methods/#webhook-url) for more details. |
+| `WEBHOOK_URL` | String | - | Used to manually provide the Webhook URL when running n8n behind a reverse proxy. See [here](/hosting/configuration/configuration-methods/#webhook-url) for more details. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | Boolean | `false` | Disable production webhooks from main process. This helps ensure no HTTP traffic load to main process when using webhook-specific processes. |
 
 ## External hooks
@@ -152,7 +152,7 @@ Refer to [User management](/hosting/user-management-self-hosted/) for more infor
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Execution modes and processes](/hosting/scaling/execution-modes-processes/) for more details. |
+| `EXECUTIONS_MODE` | Enum string: `regular`, `queue` | `regular` | Whether executions should run directly or using queue.<br><br>Refer to [Queue mode](/hosting/scaling/queue-mode/) for more details. |
 | `EXECUTIONS_TIMEOUT` | Number | `-1` | Sets a default timeout (in seconds) to all workflows after which n8n stops their execution. Users can override this for individual workflows up to the duration set in `EXECUTIONS_TIMEOUT_MAX`. Set `EXECUTIONS_TIMEOUT` to `-1` to disable. |
 | `EXECUTIONS_TIMEOUT_MAX` | Number | `3600` | The maximum execution time (in seconds) that users can set for an individual workflow. |
 | `EXECUTIONS_DATA_SAVE_ON_ERROR` | Enum string: `all`, `none` | `all` | Whether n8n saves execution data on error. |
@@ -195,7 +195,7 @@ Refer to [Log streaming](/log-streaming/) for more information on this feature.
 
 ## External data storage
 
-Refer to [External storage](/hosting/external-storage/) for more information on using external storage for binary data.
+Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

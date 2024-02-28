@@ -5,7 +5,7 @@ contentType: howto
 
 # Configuration
 
-You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/environment-variables/environment-variables/).
+You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/configuration/environment-variables/).
 
 ## Set environment variables by command line
 
@@ -67,7 +67,7 @@ Example file:
 ```
 
 /// note | Formatting as JSON
-You can't always work out the correct JSON from the [Environment variables reference](/hosting/environment-variables/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
+You can't always work out the correct JSON from the [Environment variables reference](/hosting/configuration/environment-variables/). For example, to set `N8N_METRICS` to `true`, you need to do:
 
 ```json
 {
@@ -232,4 +232,4 @@ The `/metrics` endpoint is disabled by default, but it's possible to enable it u
 export N8N_METRICS=true
 ```
 
-Refer to the respective [Environment Variables](/hosting/environment-variables/environment-variables/#endpoints) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.
+Refer to the respective [Environment Variables](/hosting/configuration/environment-variables/#endpoints) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.

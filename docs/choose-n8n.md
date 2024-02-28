@@ -11,7 +11,7 @@ This section contains information on n8n's range of platforms, pricing plans, an
 
 There are different ways to set up n8n depending on how you intend to use it:
 
-* [n8n Cloud](/choose-n8n/cloud/): hosted solution, no need to install anything.
+* [n8n Cloud](/manage-cloud/overview/): hosted solution, no need to install anything.
 * [Self-host](/hosting/): recommended method for production or customized use cases.
 	* [npm](/hosting/installation/npm/)
 	* [Docker](/hosting/installation/docker/)
@@ -23,9 +23,9 @@ There are different ways to set up n8n depending on how you intend to use it:
 
 ## Licenses
 
-n8n is [fair-code](http://faircode.io) licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
+n8n is [fair-code](http://faircode.io){:target=_blank .external-link} licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
 
-For a detailed explanation of the license, refer to [Faircode license](/choose-n8n/faircode-license/).
+For a detailed explanation of the license, refer to [Faircode license](/faircode-license/).
 
 ## Free versions
 

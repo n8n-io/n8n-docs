@@ -14,7 +14,7 @@ For usage examples and templates to help you get started, refer to n8n's [Date &
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
 /// note | Date and time in other nodes
-You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/luxon/) for more information.
+You can work with data and time in the Code node, and in expressions in any node. n8n supports Luxon to help work with date and time in JavaScript. Refer to [Date and time with Luxon](/code/cookbook/luxon/) for more information.
 ///
 ## Operations
 
@@ -30,7 +30,7 @@ You can work with data and time in the Code node, and in expressions in any node
 
 View [example workflows and related content](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} on n8n's website.
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. You can also use Luxon in the Code node and expressions. Refer to [Date and time with Luxon](/code/luxon/) for more information.
+The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. You can also use Luxon in the Code node and expressions. Refer to [Date and time with Luxon](/code/cookbook/luxon/) for more information.
 
 ### Supported date formats
 

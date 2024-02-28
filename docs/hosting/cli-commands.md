@@ -244,7 +244,7 @@ n8n ldap:reset
 
 ## Security audit
 
-You can run a [security audit](/hosting/security-audit/) on your n8n instance, to detect common security issues.
+You can run a [security audit](/hosting/logging-monitoring/security-audit/) on your n8n instance, to detect common security issues.
 
 ```sh
 n8n audit

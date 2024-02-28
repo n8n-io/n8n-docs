@@ -830,7 +830,7 @@ This release contains new features and bug fixes.
 
 #### External storage for binary files
 
-Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/external-storage/).
+Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/external-storage/).
 
 If you're using n8n Cloud and are interested in this feature, please [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 
@@ -2790,7 +2790,7 @@ This release contains enhancements to the Item Lists node, and bug fixes.
 
 ### New features
 
-This release adds experimental support for more Prometheus metrics. Self-hosting users can configure Prometheus using [environment variables](/hosting/environment-variables/environment-variables/).
+This release adds experimental support for more Prometheus metrics. Self-hosting users can configure Prometheus using [environment variables](/hosting/configuration/environment-variables/).
 
 ### Node enhancements
 
@@ -2981,7 +2981,7 @@ This release introduces [log streaming](/log-streaming/) for users on Enterprise
 
 #### Security audit
 
-This release adds a [security audit](/hosting/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
+This release adds a [security audit](/hosting/logging-monitoring/security-audit/) feature. You can now run a security audit on your n8n instance, to detect common security issues.
 
 </div>
 
@@ -3864,7 +3864,7 @@ Introducing improved support for item linking (paired items). Item linking is a 
 
 #### Overhauled built-in variables
 
-n8n's [built-in methods and variables](/code/builtin/) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
+n8n's [built-in methods and variables](/code/) have been overhauled, introducing new variables, and providing greater consistency in behavior and naming.
 
 </div>
 
@@ -4419,7 +4419,7 @@ This release includes several major new features, including:
 
 #### Community nodes repository
 
-This release introduces the [community node repository](/integrations/community-nodes/). This allows developers to build and share nodes as npm packages. Users can install community-built nodes directly in n8n.
+This release introduces the [community node repository](/integrations/community-nodes/installation/). This allows developers to build and share nodes as npm packages. Users can install community-built nodes directly in n8n.
 
 </div>
 
@@ -5134,7 +5134,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@0.171.1...n8n@0.172
 
 ### Bug fixes
 
-**core**: Luxon now applies the correct timezone. Refer to [Luxon](/code/luxon/) for more information.<br>
+**core**: Luxon now applies the correct timezone. Refer to [Luxon](/code/cookbook/luxon/) for more information.<br>
 **core**: fixed an issue with localization that was preventing i18n files from loading.<br>
 [Action Network Node:](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/) Fix a pagination issue and add credentials test.
 

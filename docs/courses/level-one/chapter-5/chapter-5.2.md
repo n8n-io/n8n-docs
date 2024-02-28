@@ -7,7 +7,7 @@ contentType: tutorial
 In this step of the workflow you will learn how to insert the data received using the HTTP Request node into Airtable using the *Airtable* node.
 
 /// note | Spreadsheet nodes
-You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has nodes for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank" .external} and [*Spreadsheet File*](/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/){:target="_blank" .external}.
+You can replace the *Airtable* node with another spreadsheet app/service. For example, n8n also has a node for [*Google Sheets*](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank" .external}.
 ///
 
 At this point, your workflow should look like this:

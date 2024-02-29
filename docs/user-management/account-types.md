@@ -16,7 +16,7 @@ To use admin accounts, you need a pro or enterprise plan.
     * Add and remove users, including admin users
 	* Upgrade members to admin, and downgrade admins to member
     * See and share all workflows    
-	* See and share all credentials (but not see the sensitive information)
+	* See, edit and share all credentials (but not see the sensitive information)
 	* Delete tags
 	* Set up and use [Source control](/source-control-environments/)
 * Admin: elevated permissions within the app.

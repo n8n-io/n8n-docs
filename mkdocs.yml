@@ -276,7 +276,7 @@ nav:
         - Binary data: data/binary-data.md
     - Manage n8n Cloud:
       - Overview: manage-cloud/overview.md
-      - Acces the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
+      - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
       - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
       - Set the timezone: manage-cloud/set-cloud-timezone.md
       - Cloud IP addresses: manage-cloud/cloud-ip.md

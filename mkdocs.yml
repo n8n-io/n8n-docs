@@ -544,7 +544,7 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.openai.md
+        - integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - integrations/builtin/app-nodes/n8n-nodes-base.orbit.md

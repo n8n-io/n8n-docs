@@ -10,7 +10,7 @@ Use the OpenAI node to automate work in OpenAI, and integrate OpenAI with other 
 
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
 
-/// note | OpenAI assistant node
+/// note | OpenAI Assistant node
 The OpenAI node replaces the OpenAI assistant node from version 1.29.0 on.
 ///
 

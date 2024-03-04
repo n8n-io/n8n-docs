@@ -688,6 +688,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
@@ -744,6 +745,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md

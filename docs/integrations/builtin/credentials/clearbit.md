@@ -17,7 +17,7 @@ Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} ac
 
 ## Supported authentication methods
 
-n8n supports authenticating Clearbit with an API key.
+n8n supports authenticating Clearbit with an API key. To get your API key, log in to the [Clearbit dashboard](https://dashboard.clearbit.com/api){:target=_blank .external-link}.
 
 ## Related resources
 

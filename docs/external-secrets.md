@@ -70,3 +70,9 @@ For example, you have two n8n instances, one for development and one for product
 ### Infisical version changes
 
 Infisical version upgrades can introduce problems connecting to n8n. If your Infisical connection stops working, check if there was a recent version change. If so, report the issue to help@n8n.io.
+
+### Only set external secrets on credentials owned by an instance owner or admin
+
+Due to the permissions that instance owners and admins have, it's possible for owners and admins to update credentials owned by another user with a secrets expression. This will appear to work in preview for an instance owner or admin, but the secret won't resolve when the workflow runs in production. 
+
+Only use external secrets for credentials that are owned by an instance admin or owner. This ensures they resolve correctly in production.

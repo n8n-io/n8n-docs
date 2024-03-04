@@ -49,6 +49,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 ## Related resources
 
 Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction){:target=_blank .external-link} for more information about the service.
+
+Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.
 	
 View [example workflows and related content](https://n8n.io/integrations/openai/){:target=_blank .external-link} on n8n's website.
 
@@ -56,7 +58,7 @@ View [example workflows and related content](https://n8n.io/integrations/openai/
 
 Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced-ai/examples/understand-tools/) act like addons that your AI can use to access extra context or resources.
 
-Clicking the Tools connector for these operations will let you browse the available n8n tools to add tools sub-nodes.
+Select the **Tools** connector to browse the available tools and add them.
 
 Once you add a tool connection, the OpenAI node becomes a root node, allowing it to form a cluster node with the tools sub-nodes. See [Node types](/integrations/builtin/node-types/#cluster-nodes) for more information on cluster nodes and root nodes.
 
@@ -66,7 +68,3 @@ Once you add a tool connection, the OpenAI node becomes a root node, allowing it
 	* Message Assistant
 * Text
 	* Message Model
-
-### Related resources
-
-Refer to [OpenAI's documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.

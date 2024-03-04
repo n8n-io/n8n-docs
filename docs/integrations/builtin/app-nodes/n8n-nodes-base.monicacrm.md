@@ -84,30 +84,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Retrieve a task
     * Retrieve all tasks
     * Update a task
-
-
-## Example usage
-
-This workflow allows you to create a new contact in Monica CRM. This example usage workflow would use the following three nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Monica CRM]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Monica CRM node](/_images/integrations/builtin/app-nodes/monicacrm/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Monica CRM node
-
-1. First enter your credentials for the Monica CRM node. You can find out how to do that [here](/integrations/builtin/credentials/monicacrm/).
-2. Select *Contact* from the *Resource* dropdown list.
-3. Select *Create* from the *Operation* dropdown list.
-3. Enter the *First Name* of your new contact.
-4. Enter the *Gender* of your new contact using the dropdown list.
-5. Click on *Execute Node* to run the workflow.
-
-![The Monica CRM node](/_images/integrations/builtin/app-nodes/monicacrm/monicacrm_node.png)
-

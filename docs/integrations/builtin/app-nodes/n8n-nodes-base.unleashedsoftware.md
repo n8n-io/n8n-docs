@@ -24,28 +24,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Stock On Hand
     * Get a stock on hand
     * Get all stocks on hand
-
-## Example Usage
-
-This workflow allows you to get a list of all the orders from Unleashed Software based on the order status. You can also find the [workflow](https://n8n.io/workflows/641) on n8n.io. This example usage workflow would use the following nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Unleashed Software]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Unleashed Software node](/_images/integrations/builtin/app-nodes/unleashedsoftware/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Unleashed Software node
-
-1. First of all, you'll have to enter credentials for the Unleashed Software node. You can find out how to do that [here](/integrations/builtin/credentials/unleashedsoftware/).
-2. Toggle ***Return All*** to true.
-3. Click on the ***Add Filter*** button and select 'Order Status' from the dropdown list.
-4. Select 'Completed' from the ***Order Status*** dropdown list.
-5. Click on ***Test step*** to run the node.
-
-![Using the Unleashed Software node to get the list of completed sales order](/_images/integrations/builtin/app-nodes/unleashedsoftware/unleashedsoftware_node.png)
-

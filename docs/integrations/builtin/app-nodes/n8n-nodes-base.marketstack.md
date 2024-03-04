@@ -25,31 +25,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get
 * Ticker
     * Get
-
-## Example usage
-
-This workflow allows you to get the past week's end of day data for a desired stock symbol. This example usage workflow uses the following two nodes.
-
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [marketstack]()
-
-The final workflow should look like the following image.
-
-![A workflow with the marketstack node](/_images/integrations/builtin/app-nodes/marketstack/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. marketstack node
-
-1. First enter your credentials for the marketstack node. You can find out how to do that [here](/integrations/builtin/credentials/marketstack/).
-2. Select **End-of-Day Data** from the *Resource* dropdown.
-3. The **Get All** *Operation* is selected by default.
-4. Enter your desired ticker symbol, `AI` in our example.
-5. Click the **Add Filter** button and select **Timeframe Start Date > A Week Ago**.
-6. Click the **Add Filter** button and select **Timeframe End Date > Today**.
-3. Click on **Test step** to run the workflow.
-
-![The marketstack node](/_images/integrations/builtin/app-nodes/marketstack/marketstack_node.png)
-

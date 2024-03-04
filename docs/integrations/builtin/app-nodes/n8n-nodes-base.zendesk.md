@@ -46,24 +46,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all organizations
     * Get data related to the organization
     * Update a organization
-
-## Example Usage
-
-This workflow allows you to create a ticket in Zendesk. You can also find the [workflow](https://n8n.io/workflows/496) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Zendesk]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Zendesk node](/_images/integrations/builtin/app-nodes/zendesk/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Zendesk node
-
-1. First of all, you'll have to enter credentials for the Zendesk node. You can find out how to do that [here](/integrations/builtin/credentials/zendesk/).
-2. Enter the description of the ticket in the *Description* field.
-3. Click on *Execute Node* to run the workflow.
-

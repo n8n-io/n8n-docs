@@ -219,6 +219,12 @@
     background-color: var(--color-text-base);
   } 
 
+/* better left nav spacing */
+
+.md-nav__item--section {
+	margin-top: 1.75em;
+}
+
 /* extra top nav */
 
 .n8n-top-nav {

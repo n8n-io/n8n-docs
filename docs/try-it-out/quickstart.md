@@ -24,7 +24,8 @@ n8n provides a quickstart template using training nodes. This allows you to work
 1. Select **Templates**. n8n opens the templates library on the website.
 2. Search for `Very quick quickstart`.
 3. Select the **Very quick quickstart** template to preview it.
-4. Select **Use workflow** to open the template in your own editor.
+4. Select **Use template** to view the options for using the template.
+5. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
 
 This workflow:
 

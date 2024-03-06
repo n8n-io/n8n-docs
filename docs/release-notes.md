@@ -34,6 +34,10 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.0...n8n@1.31.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-03-06
 
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
 This is a bug fix release.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -43,9 +47,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.30.0...n8n@1.31.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-02-28
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains new features, new nodes, node enhancements and bug fixes.
 
@@ -95,6 +97,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.29.0...n8n@1.29.1
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+
 
 
 

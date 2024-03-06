@@ -51,25 +51,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Delete a task
     * Get data of a task
     * Get data of all tasks
-
-## Example Usage
-
-This workflow allows you to get multiple clients' data from Invoice Ninja. You can also find the [workflow](https://n8n.io/workflows/534) on this website. This example usage workflow uses the following two nodes.
-
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Invoice Ninja]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Invoice Ninja node](/_images/integrations/builtin/app-nodes/invoiceninja/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Invoice Ninja node
-
-1. First of all, you'll have to enter credentials for the Invoice Ninja node. You can find out how to do that [here](/integrations/builtin/credentials/invoiceninja/).
-2. Select the 'Get All' option from the *Operation* dropdown list.
-3. Click on *Execute Node* to run the workflow.
-

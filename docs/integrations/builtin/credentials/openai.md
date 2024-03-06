@@ -8,7 +8,7 @@ contentType: integration
 
 You can use these credentials to authenticate the following nodes with OpenAI.
 
-- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/)
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/)
 - [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai)
 - [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai)
 - [LM OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai)

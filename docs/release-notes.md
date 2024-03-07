@@ -55,8 +55,8 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 This release adds two new nodes.
 
-* [Microsoft Outlook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger)
-* [Ollama Embeddings](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama)
+* [Microsoft Outlook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger/)
+* [Ollama Embeddings](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama/)
 
 </div>
 

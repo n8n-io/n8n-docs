@@ -87,6 +87,14 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists 
   # attr_list is required for several other features. Always enable.
   - attr_list
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#automatic-previews
+  - material.extensions.preview:
+      sources:
+        include:
+          - release-notes.md
+      targets:
+        include:
+          - log-streaming.md
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - md_in_html
   - meta

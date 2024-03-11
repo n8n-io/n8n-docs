@@ -52,9 +52,9 @@ This resource selects all data records (articles).
 - **Operation**: Get Many <br/>
 This operation fetches all the selected articles.
 - **Limit**: 10 <br/>
-This parameter sets a limit to how many results are returned by the Get Many operation.
+This parameter sets a limit to how many results the Get Many operation resturns.
 - **Additional Fields > Add Field > Keyword**: automation <br/>
-Additional fields are options that you can add to certain nodes to make your request more specific or filter the results. In our case, we want to get only articles that include the keyword "automation." <br/>
+**Additional fields** are options that you can add to certain nodes to make your request more specific or filter the results. For this example, we want to get only articles that include the keyword "automation." <br/>
 
 The configuration of the parameters for the **Hacker News node** should now look like this:
 
@@ -62,13 +62,13 @@ The configuration of the parameters for the **Hacker News node** should now look
 
 ### Settings
 
-The **Settings** section includes several options for node design and executions. In this case, we'll configure only the final two settings, which set the node's appearance in the Editor UI's canvas.
+The **Settings** section includes several options for node design and executions. In this case, we'll configure only the final two settings, which set the node's appearance in the Editor UI canvas.
 
 In the **Hacker News node** Settings, edit:
 
 - **Notes**: Get the 10 latest articles.
 /// note | Node notes
-It's often helpful, especially for complex or shared workflows, to add a short description in the node about what it does.
+It's often helpful to add a short description in the node about what it does. This is especially helpful for complex or shared workflows!
 ///
 - **Display note in flow?**: toggle to true<br/>
 This option will display the Note under the node in the canvas.
@@ -118,7 +118,7 @@ The node window displays more information about the node execution:
     - **Start Time**: When the node execution started
     - **Execution Time**: How long it took for the node to return the results from the moment it started executing
 - Just below the **Output** title, you'll notice another piece of information: **10 items**.
-This field displays the number of items (records) that the node request returned. In our case, it's expected to be 10, since this is the limit we set in step 2. But if you don't set a limit, it's useful to see how many records are actually returned.
+This field displays the number of items (records) that the node request returned. In this example, it's expected to be 10, since this is the limit we set in step 2. But if you don't set a limit, it's useful to see how many records are actually returned.
 
 
 /// warning | Error in nodes
@@ -132,7 +132,7 @@ Once you're finished editing the node, select **Back to canvas** to return to th
 
 By default, your workflow is automatically saved as "My workflow."
 
-For this lesson, let's rename the workflow to be "Hacker News workflow."
+For this lesson, rename the workflow to be "Hacker News workflow."
 
 /// note | Reminder
 You can rename a workflow by clicking on the workflow's name at the top of the Editor UI.
@@ -149,4 +149,4 @@ There are two ways in which you can save a workflow:
 
 Congratulations, you just built your first workflow! In this lesson, you learned how to use actions in app nodes, configure their parameters and settings, and save and execute your workflow.
 
-In the next lesson, we'll introduce you to your client, Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.
+In the next lesson, you'll meet your new client, Nathan, who needs to automate his sales reporting work. You will build a more complex workflow for his use case, helping him become more productive at work.

@@ -34,6 +34,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Message
     * Delete Chat Message
     * Edit Chat Message
+    * Edit Message Caption
     * Pin Chat Message
     * Send Animation
     * Send Audio

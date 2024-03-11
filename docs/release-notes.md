@@ -28,14 +28,60 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.31.0
+## n8n@1.32.1
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.30.0...n8n@1.31.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-02-28
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.32.0...n8n@1.32.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-07
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.31.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.1...n8n@1.31.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-07
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.32.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.1...n8n@1.32.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-06
+
+This release contains new features, node enhancements, performance improvements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.31.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.0...n8n@1.31.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-06
+
+
+
+
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.31.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.30.0...n8n@1.31.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-02-28
 
 This release contains new features, new nodes, node enhancements and bug fixes.
 
@@ -82,9 +128,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.29.0...n8n@1.29.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-02-16
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
+
+
 
 
 
@@ -111,7 +157,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 #### OpenAI node overhaul
 
-This release includes a new version of the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-base.openai/), adding more operations, including support for working with assistants.
+This release includes a new version of the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/), adding more operations, including support for working with assistants.
 
 </div>
 
@@ -3199,7 +3245,7 @@ You can now quickly write expressions inline in a node parameter. You can still 
 
 #### Open AI node
 
-This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for details.
+This release adds an integration with OpenAI. Refer to the [OpenAI node documentation](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) for details.
 
 </div>
 

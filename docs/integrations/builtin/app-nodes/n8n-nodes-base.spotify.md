@@ -56,26 +56,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a track by its URI or ID.
     * Get audio features for a track by URI or ID.
     * Search tracks by keyword
-
-## Example Usage
-
-This workflow allows you to add a song to your queue in Spotify. You can also find the [workflow](https://n8n.io/workflows/440) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Spotify]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Spotify node](/_images/integrations/builtin/app-nodes/spotify/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Spotify node
-
-1. First of all, you'll have to enter credentials for the Spotify node. You can find out how to do that [here](/integrations/builtin/credentials/spotify/).
-2. Enter the song's URI (or ID) to the *Track ID* field. The following GIF shows you how to find the Track ID on Spotify's UI.
-3. Click on *Execute Node* to run the workflow.
-
-![Spotify URI](/_images/integrations/builtin/app-nodes/spotify/spotifyuri.gif)
-

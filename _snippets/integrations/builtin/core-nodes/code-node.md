@@ -43,8 +43,8 @@ If you self-host n8n, you can import and use built-in and external npm modules i
 
 If you use n8n Cloud, you can't import external npm modules. n8n makes two modules available for you:
 
-* [crypto-js](https://www.npmjs.com/package/crypto-js){:target=_blank .external-link}
-* [moment](https://www.npmjs.com/package/moment){:target=_blank .external-link}
+* [crypto Node.js module](https://nodejs.org/docs/latest-v18.x/api/crypto.html){:target=_blank .external-link}
+* [moment npm package](https://www.npmjs.com/package/moment){:target=_blank .external-link}
 
 ### Built-in methods and variables
 

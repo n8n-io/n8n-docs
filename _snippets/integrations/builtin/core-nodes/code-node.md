@@ -41,6 +41,11 @@ The Code node supports:
 
 If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer the [Configuration](/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node) guide.
 
+If you use n8n Cloud, you can't import external npm modules. n8n makes two modules available for you:
+
+* [crypto-js](https://www.npmjs.com/package/crypto-js){:target=_blank .external-link}
+* [moment](https://www.npmjs.com/package/moment){:target=_blank .external-link}
+
 ### Built-in methods and variables
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview/) for more information.

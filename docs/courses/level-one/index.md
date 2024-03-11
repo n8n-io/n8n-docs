@@ -12,9 +12,9 @@ This course introduces you to the fundamental concepts within n8n and develops y
 
 This course is for you if you:
 
-- Are starting to use n8n for the first time 
-- Are looking for some extra help creating your first workflow
-- Want to automate processes in your personal or working life
+- Are starting to use n8n for the first time.
+- Are looking for some extra help creating your first workflow.
+- Want to automate processes in your personal or working life.
 
 
 ## What will I learn in this course?
@@ -23,12 +23,12 @@ We believe in learning by doing. You can expect some theoretical information abo
 
 By the end of this course you will know:
 
-- How to set up n8n and navigate the Editor UI
-- How data is structured in n8n
-- How to configure different node parameters and add credentials
-- When and how to use conditional logic in workflows
-- How to schedule and control workflows
-- How to import, download, and share workflows with others
+- How to set up n8n and navigate the Editor UI.
+- How n8n structures data.
+- How to configure different node parameters and add credentials.
+- When and how to use conditional logic in workflows.
+- How to schedule and control workflows.
+- How to import, download, and share workflows with others.
 
 You will build two workflows:
 

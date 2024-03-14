@@ -19,8 +19,6 @@ For usage examples and templates to help you get started, refer to n8n's [In Mem
 The in-memory storage described here is different to the AI memory nodes such as [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/).
 
 This node creates a vector database within the app memory.
-
-AI memory nodes provide storage for chat history. They don't use embeddings and don't create a database.
 ///
 
 ## Node parameters

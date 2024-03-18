@@ -18,7 +18,7 @@ If n8n received error 429 (too many requests) from the service, the error messag
 
 To check the rate limits for the service you're using, refer to the API documentation for the service.
 
-## Handle rate limits for app nodes
+## Handle rate limits for integrations
 
 There are two ways to handle rate limits in n8n's integrations: using the Retry On Fail setting, or using a combination of the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) and [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) nodes: 
 

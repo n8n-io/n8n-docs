@@ -4,7 +4,7 @@ contentType: tutorial
 
 # 1. Getting data from the data warehouse
 
-In this part of the workflow you will learn how to get data by making HTTP requests using the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank"} node.
+In this part of the workflow you will learn how to get data by making HTTP requests using the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node.
 
 First, let's set up the scene for building Nathan's workflow.
 
@@ -12,16 +12,16 @@ First, let's set up the scene for building Nathan's workflow.
 
 Open your Editor UI and create a new workflow with one of the two possible commands:
 
-- Click **Ctrl + Alt + N** or **Cmd + Option + N** on your keyboard.
-- Open the left menu, navigate to **Workflows** and select **Add workflow**.
+- Select **Ctrl + Alt + N** or **Cmd + Option + N** on your keyboard.
+- Open the left menu, navigate to **Workflows**, and select **Add workflow**.
 
 Name this new workflow "Nathan's workflow."
 
 The first thing you need to do is get data from ABCorp's old data warehouse.
 
-In the previous chapter, you used a specific action in the app (Hacker News). But not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
+In the previous chapter, you used an action node connected to a specific app (Hacker News). But not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
 
-Though we can't directly export the data, Nathan told us that the data warehouse has a couple of API endpoints. That's all we need to access the data using the [**HTTP Request node**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank"} in n8n.
+Though we can't directly export the data, Nathan told us that the data warehouse has a couple of API endpoints. That's all we need to access the data using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) in n8n.
 
 /// note | No node for that service?
 The **HTTP Request node** is one of the most versatile nodes, allowing you to make HTTP requests to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
@@ -44,7 +44,7 @@ In this case, we'll need to provide credentials to access the ABCorp data wareho
 
 In the Parameters of the **HTTP Request node**, make the following adjustments:
 
-- **Method**: This should default to GET. Make sure it is set to GET.
+- **Method**: This should default to GET. Make sure it's set to GET.
 - **URL**: Add the Dataset URL you received in the email when you signed up for this course.
 - **Send Headers**: Toggle this control to true. In **Specify Headers**, ensure **Using Fields Below** is selected.
     - **Header Parameters > Name**: Enter `unique_id`.
@@ -65,7 +65,7 @@ New credentials are named "*node name* account" by default. You can rename the c
 
 Select the **Test step** button in the **HTTP Request node** window. The result of the HTTP request should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node window" style="width:100%"><figcaption align = "center"><i>HTTP Request node window</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node output" style="width:100%"><figcaption align = "center"><i>HTTP Request node output</i></figcaption></figure>
 
 This view should be familiar to you from the [Building a mini-workflow](/courses/level-one/chapter-2/).
 

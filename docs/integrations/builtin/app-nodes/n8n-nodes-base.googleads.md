@@ -28,3 +28,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
 View [example workflows and related content](https://n8n.io/integrations/google-ads/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

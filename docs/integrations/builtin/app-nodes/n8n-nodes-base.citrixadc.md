@@ -33,3 +33,5 @@ Refer to [Citrix ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/c
 
 View [example workflows and related content](https://n8n.io/integrations/citrix-adc/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

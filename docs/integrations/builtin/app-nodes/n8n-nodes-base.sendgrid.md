@@ -32,3 +32,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Update a list
 * Mail
     * Send an email.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

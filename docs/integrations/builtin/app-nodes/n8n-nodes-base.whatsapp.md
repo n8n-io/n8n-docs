@@ -32,3 +32,4 @@ Refer to [WhatsApp Business Platform's Cloud API documentation](https://develope
 
 View [example workflows and related content](https://n8n.io/integrations/whatsapp-business-cloud/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

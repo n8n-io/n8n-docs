@@ -64,7 +64,7 @@ Note that the orders with `orderStatus` equal to `processing` should show for th
 
 ## Insert data into Airtable
 
-Next, we want to insert this data into Airtable. Remember what Nathan said at the end of the previous lesson?
+Next, we want to insert this data into Airtable. Remember what Nathan said at the end of the [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/) lesson?
 
 > I actually need to insert only processing orders in the table...
 

@@ -8,7 +8,7 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 
 ## Getting started
 
-The first step is setting up n8n. There are two ways you can do this:
+Begin by setting up n8n. There are two ways you can do this:
 
 - [n8n Cloud](https://app.n8n.cloud/register){:target="_blank" .external} - Hosted solution, no installation needed. Great for all levels of experience.
 - [Self-host](/hosting/){:target="_blank" .external} - Recommended for advanced users with technical knowledge
@@ -24,11 +24,11 @@ Once you have n8n running, open the Editor UI in a browser window. It should loo
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/) represents the web interface where you build [workflows](/workflows/workflows/). Think of it as a canvas on which the artist in you designs workflows. You can access all your workflows and credentials, as well as support pages, from the Editor UI.
+The [Editor UI](/editor-ui/) is the web interface where you build [workflows](/workflows/workflows/). You can access all your workflows and credentials, as well as support pages, from the Editor UI.
 
 ### Left-side panel
 
-On the left side of the **Editor UI**, there is a panel which contains the core functionalities and settings for managing your workflows. Expand and collapse it by clicking on the small arrow icon.
+On the left side of the **Editor UI**, there is a panel which contains the core functionalities and settings for managing your workflows. Expand and collapse it by selecting the small arrow icon.
 
 The panel contains the following sections:
 
@@ -48,7 +48,7 @@ The panel contains the following sections:
 
 The top bar of the **Editor UI** contains the following information:
 
-- **Workflow Name**: By default, a new workflow is named “My Workflow,” but you can edit the name at any time.
+- **Workflow Name**: By default, n8n names a new workflow as “My Workflow,” but you can edit the name at any time.
 - **+Add Tag**: Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
 - **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
@@ -71,8 +71,8 @@ The **canvas** is the gray dotted grid background in the Editor UI. It displays 
 /// note | Moving the canvas
 You can move the workflow canvas around in three ways:
 
-- Click **Ctrl + Left Mouse Button** on the canvas and move it around.
-- Click **Middle Mouse Button** on the canvas and move it around.
+- Select **Ctrl + Left Mouse Button** on the canvas and move it around.
+- Select **Middle Mouse Button** on the canvas and move it around.
 - Place two fingers on your touchpad and slide.
 ///
 
@@ -87,13 +87,15 @@ You can think of nodes as building blocks that serve different functions that, w
 A node is an individual step in your workflow: one that either (a) loads, (b) processes, or (c) sends data.
 ///
 
-Based on their function, nodes can be classified into two types:
+Based on their function, n8n classifies nodes into four types:
 
-- **Regular Nodes** add, remove, and edit data, as well as request and send external data.
-- **Trigger Nodes** start a workflow and supply the initial data.
+- **Core Nodes** provide general or "core" functions like scheduling workflows (for example, Schedule Trigger) or adding JavaScript functions (for example, Code Node). Refer to the [Core Nodes library](https://docs.n8n.io/integrations/builtin/core-nodes/) for more information.
+- **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. [Refer to the Action nodes library](/integrations/builtin/app-nodes/).
+- **Trigger Nodes** start a workflow and supply the initial data. Refer to the [Trigger nodes library](/integrations/builtin/trigger-nodes/) for a full list of trigger nodes.
+- **Cluster Nodes** are node groups that work together to provide functionality in a workflow. Refer to [Cluster nodes](/integrations/builtin/cluster-nodes/) for more information.
 
-/// note | Keep in mind
-Among the Regular and Trigger nodes there are some nodes that don't represent any app or service, instead they serve general functions like scheduling workflows (for example, Schedule Trigger) or adding JavaScript functions (for example, Code Node). We refer to these as **Core Nodes**.
+/// note | Learn more
+Refer to [Node types](/builtin/node-types/) for a more detailed explanation of all node types.
 ///
 
 ### Finding nodes
@@ -108,14 +110,14 @@ You can find all available nodes in the **nodes panel** on the right side of the
 
 In the nodes panel, notice that when adding your first node, you will see the different trigger node categories. After you have added your trigger node, you'll see that the nodes panel changes to show Action, Data transformation, Helper, Flow and File nodes.
 
-If you want to find a specific node, you can use the search input at the top of the nodes panel.
+If you want to find a specific node, use the search input at the top of the nodes panel.
 
 
 ### Adding nodes
 
 There are two ways to add nodes to your canvas:
 
-- Click on the node you want in the nodes panel. The new node will automatically connect to the selected node on the canvas.
+- Select the node you want in the nodes panel. The new node will automatically connect to the selected node on the canvas.
 - Drag and drop the node from the nodes panel to the canvas.
 
 ### Node buttons
@@ -128,7 +130,7 @@ If you hover on a node, you'll notice that four icons appear on top:
 - Execute the node (Play icon)
 
 /// note | Moving a workflow
-To move a workflow around the canvas, select all nodes with your mouse or by clicking **Ctrl + A**, click and hold on a node, then drag it to any point you want on the canvas.
+To move a workflow around the canvas, select all nodes with your mouse or by selecting **Ctrl + A**, select and hold on a node, then drag it to any point you want on the canvas.
 ///
 
 ## Summary

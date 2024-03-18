@@ -12,7 +12,9 @@ APIs can also limits how much data you can send in one request, or how much data
 
 ## Identify rate limit issues
 
-When an n8n node hits a rate limit, it errors. n8n displays the error message in the node output panel.
+When an n8n node hits a rate limit, it errors. n8n displays the error message in the node output panel. This includes the error message from the service.
+
+If n8n received error 429 (too many requests) from the service, the error message is **The service is receiving too many requests from you**.
 
 To check the rate limits for the service you're using, refer to the API documentation for the service.
 

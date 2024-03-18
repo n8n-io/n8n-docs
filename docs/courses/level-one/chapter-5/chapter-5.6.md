@@ -24,10 +24,10 @@ In the **Discord node** window, configure these parameters:
 - **Credential for Discord Webhook**: Select **- Create New Credential -**.
     - Copy the **Webhook URL** from the email you received when you signed up for this course and paste it into the **Webhook URL** field of the credentials.
     - Select **Save** and then close the credentials dialog.
-- **Operation**: Select **Send a Message**
+- **Operation**: Select **Send a Message**.
 - **Message**:
     - Select the **Expression** tab on the right side of the Message field.
-    - Copy the text below and paste it into the **Expression** window, or construct it manually using the **Expression Editor**
+    - Copy the text below and paste it into the **Expression** window, or construct it manually using the **Expression Editor**.
         - `This week we've {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
 
         /// note | Constructing your own message

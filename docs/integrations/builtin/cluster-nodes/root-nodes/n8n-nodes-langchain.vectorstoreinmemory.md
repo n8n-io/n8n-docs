@@ -5,7 +5,7 @@ description: Documentation for the In Memory Vector Store node in n8n, a workflo
 
 # In Memory Vector Store
 
-Use the In Memory Vector Store node to store and retrieve embeddings in-memory.
+Use the In Memory Vector Store node to store and retrieve embeddings in n8n's in-app memory. 
 
 On this page, you'll find the node parameters for the In Memory Vector Store node, and links to more resources.
 
@@ -14,6 +14,12 @@ For usage examples and templates to help you get started, refer to n8n's [In Mem
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
+/// note | This node is different to AI memory nodes
+The in-memory storage described here is different to the AI memory nodes such as [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/).
+
+This node creates a vector database in the app memory.
+///
 
 ## Node parameters
 

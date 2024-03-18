@@ -89,9 +89,9 @@ A node is an individual step in your workflow: one that either (a) loads, (b) pr
 
 Based on their function, n8n classifies nodes into four types:
 
-- **Core Nodes** provide general or "core" functions like scheduling workflows (for example, Schedule Trigger) or adding JavaScript functions (for example, Code Node). Refer to the [Core Nodes library](https://docs.n8n.io/integrations/builtin/core-nodes/) for more information.
-- **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. [Refer to the Action nodes library](/integrations/builtin/app-nodes/).
+- **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. Refer to the [Action nodes library](/integrations/builtin/app-nodes/) for a full list of these nodes.
 - **Trigger Nodes** start a workflow and supply the initial data. Refer to the [Trigger nodes library](/integrations/builtin/trigger-nodes/) for a full list of trigger nodes.
+- **Core Nodes** can be core or app nodes. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls. Refer to the [Core Nodes library](https://docs.n8n.io/integrations/builtin/core-nodes/) for a full list of core nodes.
 - **Cluster Nodes** are node groups that work together to provide functionality in a workflow. Refer to [Cluster nodes](/integrations/builtin/cluster-nodes/) for more information.
 
 /// note | Learn more

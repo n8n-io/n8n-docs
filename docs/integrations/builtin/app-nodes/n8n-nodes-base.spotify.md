@@ -56,3 +56,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a track by its URI or ID.
     * Get audio features for a track by URI or ID.
     * Search tracks by keyword
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

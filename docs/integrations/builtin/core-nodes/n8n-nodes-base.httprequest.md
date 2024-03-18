@@ -68,7 +68,7 @@ You can choose to send additional information with your request. The data you ne
 
 Select **Add Option** to view and select these options.
 
-- **Batching**: control how to batch large responses.
+- **Batching**: control how to batch large numbers of input items.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
 - **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.

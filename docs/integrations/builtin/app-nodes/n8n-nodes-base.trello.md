@@ -69,6 +69,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all the cards in a list
     * Update a list
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
 ## FAQs
 
 ### How do I find the List ID?

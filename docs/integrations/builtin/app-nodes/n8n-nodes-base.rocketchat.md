@@ -23,7 +23,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Post a message to a channel or a direct message
 
 
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 
 

@@ -38,3 +38,5 @@ n8n also provides:
 * A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud/) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) node for Venafi TLS Protect Cloud.
 
 <!-- vale on -->
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -30,3 +30,5 @@ Refer to [LoneScales documentation](https://help-center.lonescale.com/en/article
 n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger/).
 	
 View [example workflows and related content](https://n8n.io/integrations/lonescaletrigger/){:target=_blank .external-link} on n8n's website.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

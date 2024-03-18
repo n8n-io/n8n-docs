@@ -31,3 +31,5 @@ Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api){:target
 	
 
 View [example workflows and related content](https://n8n.io/integrations/twilio/){:target=_blank .external-link} on n8n's website.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

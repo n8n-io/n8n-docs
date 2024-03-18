@@ -29,3 +29,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 Refer to [Adalo's documentation](https://help.adalo.com/){:target=_blank .external-link} for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis){:target=_blank .external-link} page gives more detail about what you can do with Adalo collections.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+

@@ -36,3 +36,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a template
     * Get all templates
     * Update a template
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

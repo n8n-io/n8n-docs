@@ -33,3 +33,4 @@ Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .exte
 View [example workflows and related content](https://n8n.io/integrations/nocodb/){:target=_blank .external-link} on n8n's website.
 
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

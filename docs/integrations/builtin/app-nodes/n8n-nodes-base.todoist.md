@@ -27,3 +27,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all tasks
     * Reopen a task
     * Update a task
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -1063,6 +1063,7 @@ nav:
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
       - Custom API actions for existing nodes: integrations/custom-operations.md
+      - Handle rate limits: integrations/builtin/rate-limits.md
     - Community nodes:
       - Installation and management: 
         - integrations/community-nodes/installation/index.md

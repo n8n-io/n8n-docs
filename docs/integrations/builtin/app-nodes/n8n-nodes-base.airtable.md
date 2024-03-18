@@ -35,6 +35,8 @@ View [example workflows and related content](https://n8n.io/integrations/airtabl
 
 Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction){:target=_blank .external-link} for more information about the service.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
 
 ## Node reference
 

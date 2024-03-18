@@ -4,43 +4,58 @@ contentType: tutorial
 
 # 4. Setting Values for Processing Orders
 
-In this step of the workflow you will learn how to select and set data before transferring it to Airtable using the *Set* node.
+In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the **Edit Fields (Set) node**.
 
-The next step in Nathan's workflow is to insert the `employeeName` and `orderId` of all *processing* orders into Airtable.
+The next step in Nathan's workflow is to insert the `employeeName` and `orderId` of all `processing` orders into Airtable.
 
-For this, you need to use the [**Set node**](/integrations/builtin/core-nodes/n8n-nodes-base.set/){:target="_blank" .external}, which allows you to select and set the data you want to be transferred from one app/service to another.
+For this, you need to use the [**Edit Fields (Set) node**](/integrations/builtin/core-nodes/n8n-nodes-base.set/), which allows you to select and set the data you want to transfer from one app/service to another.
 
-/// note | Set node
-The *Set* node can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
+/// note | Edit Fields node
+The **Edit Fields node** can set completely new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values into spreadsheets or databases.
 ///
 
-In your workflow, add a new *Set* node between the *IF* node and the *Airtable* node. In the Set node window you need to toggle *Keep Only Set* to true and then add two values:
+## Disconnect the Airtable node
 
+In your workflow, disconnect the **Airtable node** from the **If node** in the same way we disconnected it in the [Filtering Orders](/courses/level-one/chapter-5/chapter-5.3/) lesson.
 
-- *Add Value > Number:*
-  - *Name:* `orderId`
-  - *Value:* `{{$json["orderID"]}}`
-    *Current Node > Input Data > JSON > orderID*
-- *Add Value > String:*
-  - *Name:* `employeeName`
-  - *Value:* `{{$json["employeeName"]}}`
-    *Current Node > Input Data > JSON > employeeName*
+## Configure the Edit Fields node
 
-After setting the two values, also make sure you set the option "Include in output" to "No input fields" to only include the fields specified above. 
+Now add a new **Edit Fields (Set) node** attached to the **If node**'s `true` connector by selecting the **+** icon with that connector and searching for **Edit Fields**.
 
-Then click on *Execute Node* and you should see the following results:
+With the **Edit Fields node** window open, configure these parameters:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-set-node.png" alt="Set node" style="width:100%"><figcaption align = "center"><i>Set node</i></figcaption></figure>
+- Ensure **Mode** is set to **Manual Mapping**.
+- While you can use the **Expression editor** we used in the [Filtering Orders](/courses/level-one/chapter-5/chapter-5.3/) lesson, this time, let's drag the fields from the **Input** into the **Fields to Set**:
+    - Drag **orderID** as the first field.
+    - Drag **employeeName** as the second field.
+- Ensure that **Include Other Input Fields** is set to false.
 
-Next, we need to insert these values into Airtable. Go to your Airtable account and add a new table called `processingOrders` with two columns, `orderId` and `employeeName`, just like you learned in the lesson [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/).
+Select **Test step**. You should see the following results:
 
-Remember to update the Airtable node configuration to point to this new table.
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-set-node.png" alt="Edit Fields (Set) node" style="width:100%"><figcaption align = "center"><i>Edit Fields (Set) node</i></figcaption></figure>
 
-Once that's done, execute the *Airtable* node in the workflow and you should see the records inserted in the table.
+## Add data to Airtable
 
-At this stage, it looks like this:
+Next, let's insert these values into Airtable:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-workflow-with-set-node.png" alt="Workflow with the Set node" style="width:100%"><figcaption align = "center"><i>Workflow with the Set node</i></figcaption></figure>
+1. Go to your Airtable account.
+2. Add a new table called `processingOrders`. You can add this table to your existing workspace/table if you choose.
+3. Add two columns to this table:
+    - `orderId`: Number
+    - `employeeName`: Single line text
+    
+    ///note | Reminder
+    If you get stuck, refer back to the [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/) lesson.
+    ///
+  
+4. Be sure to delete the three empty rows in the new table!
+5. With the new table created, update the **Airtable node** configuration to point to this new `processingOrders` table instead of the `orders` table.
+6. Connect the **Edit Fields node** connector to the **Airtable node**.
+7. Test your **Airtable node** to be sure it inserts records into the new `processingOrders` table.
+
+At this stage, your workflow should now look like this:
+
+<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-workflow-with-set-node.png" alt="Workflow with the Edit Fields node" style="width:100%"><figcaption align = "center"><i>Workflow with the Edit Fields node</i></figcaption></figure>
 
 ## What's next?
 

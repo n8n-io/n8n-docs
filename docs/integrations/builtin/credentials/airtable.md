@@ -19,11 +19,15 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 
 1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
 2. Under the **Personal access tokens** section, click on the **Create new token** button.
-3. Create a new Access Token by selecting the following scopes: *data.records:read*, *data.records:write*, *schema.bases:read* and adding the base you want to work on (or all the bases).
-4. Copy the token displayed in the dialog.
-5. In the n8n Airtable credentials dialog select the **Access Token** connection.
-6. Paste the token in the **Access Token** field.
-7. Click on the **Save** button to create the credentials.
+3. Select the following **Scopes**:
+    - *data.records:read*
+    - *data.records:write*
+    - *schema.bases:read* 
+4. Be sure to select the bases this token can **Access** (or all the bases in the workspace).
+5. Copy the token displayed in the dialog.
+6. In the n8n Airtable credentials dialog select the **Access Token** connection.
+7. Paste the token in the **Access Token** field.
+8. Click on the **Save** button to create the credentials.
 
 ## Using OAuth 2
 

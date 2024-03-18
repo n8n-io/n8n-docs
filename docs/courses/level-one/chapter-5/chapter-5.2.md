@@ -4,13 +4,13 @@ contentType: tutorial
 
 # 2. Inserting data into Airtable
 
-In this step of the workflow, you will learn how to insert the data received using the HTTP Request node into Airtable using the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/){:target="_blank"}.
+In this step of the workflow, you will learn how to insert the data received from the HTTP Request node into Airtable using the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/).
 
 /// note | Spreadsheet nodes
-You can replace the **Airtable node** with another spreadsheet app/service. For example, n8n also has a node for [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/){:target="_blank"}.
+You can replace the **Airtable node** with another spreadsheet app/service. For example, n8n also has a node for [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/).
 ///
 
-At this point, your workflow should look like this:
+After this step, your workflow should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-workflow-with-airtable-node.png" alt="Workflow with the Airtable node" style="width:100%"><figcaption align = "center"><i>Workflow with the Airtable node</i></figcaption></figure>
 
@@ -33,12 +33,22 @@ Now your table should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-orders-table.png" alt="Orders table in Airtable" style="width:100%"><figcaption align = "center"><i>Orders table in Airtable</i></figcaption></figure>
 
-Now that the table is ready, let's return to the workflow in the Editor UI.
+Now that the table is ready, let's return to the workflow in the n8n Editor UI.
 
 ## Add an Airtable node to the HTTP Request node
 
 Add an **Airtable node** connected to the HTTP Request node.
 
+///note | Remember
+You can add a ndoe connected to an existing node by selecting the **+** icon next to the existing node.
+///
+
+In the node panel:
+
+1. Search for Airtable.
+2. Select **Create a record** from the **Record Actions** search results.
+
+This will add the Airtable node to your canvas and open the node details window.
 
 In the **Airtable node** window, configure the following parameters:
 
@@ -55,11 +65,13 @@ Adding credentials for Airtable is similar to the HTTP Request node you configur
 
 ## Test the Airtable node
 
-Now execute the **Airtable node** and you should get the following result:
+Once you've finished configuring the Airtable node, execute it by selecting **Test step**.
+
+Your results should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-airtable-node.png" alt="Airtable node results" style="width:100%"><figcaption align = "center"><i>Airtable node results</i></figcaption></figure>
 
-All 30 data records will now appear in the orders table:
+All 30 data records will now appear in the orders table in Airtable:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-airtable-records.png" alt="Imported records in the orders table" style="width:100%"><figcaption align = "center"><i>Imported records in the orders table</i></figcaption></figure>
 

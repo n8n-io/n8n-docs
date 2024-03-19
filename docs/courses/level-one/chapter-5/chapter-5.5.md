@@ -4,19 +4,19 @@ contentType: tutorial
 
 # 5. Calculating Booked Orders
 
-In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the **Code node**.
+In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the Code node.
 
 The next step in Nathan's workflow is to calculate two values from the booked orders:
 
 - The total number of booked orders
 - The total value of all booked orders
 
-To calculate data and add more functionality to your workflows you can use the **Code node**, which lets you write custom JavaScript code.
+To calculate data and add more functionality to your workflows you can use the Code node, which lets you write custom JavaScript code.
 
 ## About the Code node
 
 /// warning | Code node modes
-The **Code node** has two operational **Modes** that change the way it processes data. The **Run Once for All Items** mode allows you to accumulate data from all items on the input list. The **Run Once for Each Item** is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+The Code node has two operational **Modes** that change the way it processes data. The **Run Once for All Items** mode allows you to accumulate data from all items on the input list. The **Run Once for Each Item** is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 ///
 - Create your own node.
 - Write custom expressions.
@@ -55,9 +55,9 @@ In n8n, the data that's passed between nodes is an array of objects with the fol
 
 Now let's see how to implement this.
 
-In your workflow, add a **Code node** connected to the `false` branch of the **If node**. 
+In your workflow, add a Code node** connected to the `false` branch of the **If node. 
 
-With the **Code node** window open, configure these parameters:
+With the Code node window open, configure these parameters:
 
 - **Mode**: Select **Run Once for All Items**
 - **Language**: Select **JavaScript**
@@ -85,7 +85,7 @@ Now select **Test step** and you should see the following results:
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node output" style="width:100%"><figcaption align = "center"><i>Code node output</i></figcaption></figure>
 
 /// note | Using Python in code nodes
-You can also use Python in the **Code node**. To learn more about this, refer to the [Code node](/code/code-node/) documentation.
+You can also use Python in the Code node. To learn more about this, refer to the [Code node](/code/code-node/) documentation.
 ///
 
 ## What's next?

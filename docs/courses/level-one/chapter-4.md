@@ -23,7 +23,7 @@ n8n provides integrations for all these steps, so Nathan's workflow in n8n would
 
 <figure><img src="/_images/courses/level-one/chapter-four/l1-c4-nathans-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
 
-You will build this workflow in 8 steps:
+You will build this workflow in eight steps:
 
 1. [Getting data from the data warehouse](/courses/level-one/chapter-5/chapter-5.1/)
 2. [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/)

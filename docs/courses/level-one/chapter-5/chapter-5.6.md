@@ -14,11 +14,11 @@ Before you begin the steps below, use the link above to connect to the n8n serve
 You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/){:target="_blank" .external} and [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/){:target="_blank" .external}.
 ///
 
-In your workflow, add a **Discord node** connected to the **Code node**.
+In your workflow, add a Discord node connected to the Code node.
 
-When you search for the **Discord node**, look for **Message Actions** and select **Send a message** to add the node.
+When you search for the Discord node, look for **Message Actions** and select **Send a message** to add the node.
 
-In the **Discord node** window, configure these parameters:
+In the Discord node window, configure these parameters:
 
 - **Connection Type**: Select **Webhook**.
 - **Credential for Discord Webhook**: Select **- Create New Credential -**.
@@ -31,10 +31,10 @@ In the **Discord node** window, configure these parameters:
         - `This week we've {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
 
         /// note | Constructing your own message
-        To add the Unique ID portion of the statement, you'll need to expand **Nodes > HTTP Request > Parameters > headerParameters > parameters > [Item: 0]** and select the **value**.
+        To add the Unique ID portion of the statement, you'll need to expand **Nodes** > **HTTP Request** > **Parameters** > **headerParameters** > **parameters** > **[Item: 0]** and select the **value**.
         ///
 
-Now select **Test step** in the **Discord node**. If all works well, you should see this output in n8n:
+Now select **Test step** in the Discord node. If all works well, you should see this output in n8n:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-6-discord-output.png" alt="Discord node output" style="width:100%"><figcaption align = "center"><i>Discord node output</i></figcaption></figure>
 

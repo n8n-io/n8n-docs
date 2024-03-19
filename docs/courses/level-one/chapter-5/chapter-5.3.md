@@ -4,38 +4,38 @@ contentType: tutorial
 
 # 3. Filtering Orders
 
-In this step of the workflow you will learn how to filter data using conditional logic and how to use expressions in nodes using the **If node**.
+In this step of the workflow you will learn how to filter data using conditional logic and how to use expressions in nodes using the If node.
 
 To insert only processing orders into Airtable we need to filter our data by `orderStatus`. Basically, we want to tell the program that _if_ the `orderStatus` is processing, _then_ insert all records with this status into Airtable; _else_, for example, if the `orderStatus` isn't *processing*, calculate the sum of all orders with the other `orderStatus (booked)`.
 
-This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [**If node**](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external}, which splits a workflow conditionally based on comparison operations.
+This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external}, which splits a workflow conditionally based on comparison operations.
 
 /// note | If vs. Switch
-If you need to filter data on more than two conditional routes that are possible with the **If node** (true and false), use the [**Switch node**](/integrations/builtin/core-nodes/n8n-nodes-base.switch/){:target="_blank" .external}. The **Switch node** is similar to the **If node**, but supports multiple output routes.
+If you need to filter data on more than two conditional routes that are possible with the If node (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/){:target="_blank" .external}. The Switch node is similar to the If node, but supports multiple output routes.
 ///
 
 ## Remove the connection to the Airtable node
 
-First, let's remove the connection between the **HTTP Request node** and the **Airtable node**:
+First, let's remove the connection between the HTTP Request node and the Airtable node:
 
 1. Hover over the arrow connection the **HTTP Request** node and the **Airtable** node.
 2. Select the trash icon to remove the connection.
 
 ## Configure the If node
 
-With the connection to the **Airtable node** removed, add an **If node** connected to the **HTTP Request node**:
+With the connection to the Airtable node removed, add an If node connected to the HTTP Request node:
 
-1. Select the **+** sign coming off the **HTTP Request node**.
-2. Search for the **If** node.
+1. Select the **+** sign coming off the HTTP Request node.
+2. Search for the If node.
 3. Select it when it appears in the search.
 
-For the **If node**, we'll use an expression.
+For the If node, we'll use an expression.
 
 /// note | Expressions
-An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the **If node** references the data output by the **HTTP Request node**.
+An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
 ///
 
-In the **If node** window, configure the parameters:
+In the If node window, configure the parameters:
 
 - **Value 1**: `{{$json["orderStatus"]}}`
     1. To select this value, first hover over the value1 field.
@@ -54,7 +54,7 @@ In the **If node** window, configure the parameters:
 Make sure to select the correct data type (boolean, date & time, number, or string) when you select the **Operation**.
 ///
 
-Select **Test step** to test the **If node**.
+Select **Test step** to test the If node.
 
 Your results should look like this:
 
@@ -68,11 +68,11 @@ Next, we want to insert this data into Airtable. Remember what Nathan said at th
 
 > I actually need to insert only processing orders in the table...
 
-Since Nathan only needs the `processing` orders in the table, we'll connect the Airtable node to the **If node**'s `true` connector. 
+Since Nathan only needs the `processing` orders in the table, we'll connect the Airtable node to the If node's `true` connector. 
 
-In this case, since the Airtable node is already on our canvas, select the **HTTP Request** `true` connector and drag it to the **Airtable node**.
+In this case, since the Airtable node is already on our canvas, select the **HTTP Request** `true` connector and drag it to the Airtable node.
 
-It's a good idea at this point to retest the **Airtable node**. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Test step**.
+It's a good idea at this point to retest the Airtable node. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Test step**.
 
 Review your data in Airtable to be sure your workflow only added the correct orders (those with orderStatus of `processing`).
 

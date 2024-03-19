@@ -57,7 +57,7 @@ When you add a new node to the Editor UI, the node is automatically activated. T
 
 ### Parameters
 
-We need to configure several parameters for the **Hacker News node** to make it work:
+We need to configure several parameters for the Hacker News node to make it work:
 
 - **Resource**: All <br/>
 This resource selects all data records (articles).
@@ -65,10 +65,10 @@ This resource selects all data records (articles).
 This operation fetches all the selected articles.
 - **Limit**: 10 <br/>
 This parameter sets a limit to how many results the Get Many operation returns.
-- **Additional Fields > Add Field > Keyword**: automation <br/>
+- **Additional Fields** > **Add Field** > **Keyword**: automation <br/>
 **Additional fields** are options that you can add to certain nodes to make your request more specific or filter the results. For this example, we want to get only articles that include the keyword "automation." <br/>
 
-The configuration of the parameters for the **Hacker News node** should now look like this:
+The configuration of the parameters for the Hacker News node should now look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c-2-hacker-news-node-parameters.png" alt="Hacker News node parameters" style="width:100%"><figcaption align = "center"><i>Hacker News node parameters</i></figcaption></figure>
 
@@ -76,7 +76,7 @@ The configuration of the parameters for the **Hacker News node** should now look
 
 The **Settings** section includes several options for node design and executions. In this case, we'll configure only the final two settings, which set the node's appearance in the Editor UI canvas.
 
-In the **Hacker News node** Settings, edit:
+In the Hacker News node Settings, edit:
 
 - **Notes**: Get the 10 latest articles.
 
@@ -87,7 +87,7 @@ In the **Hacker News node** Settings, edit:
 - **Display note in flow?**: toggle to true<br/>
 This option will display the Note under the node in the canvas.
 
-The configuration of the settings for the **Hacker News node** should now look like this:
+The configuration of the settings for the Hacker News node should now look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-hacker-news-node-setting-configuration.png" alt="Hacker News node settings" style="width:100%"><figcaption align = "center"><i>Hacker News node settings</i></figcaption></figure>
 

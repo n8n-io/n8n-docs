@@ -4,10 +4,10 @@ contentType: tutorial
 
 # 2. Inserting data into Airtable
 
-In this step of the workflow, you will learn how to insert the data received from the HTTP Request node into Airtable using the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/).
+In this step of the workflow, you will learn how to insert the data received from the HTTP Request node into Airtable using the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/).
 
 /// note | Spreadsheet nodes
-You can replace the **Airtable node** with another spreadsheet app/service. For example, n8n also has a node for [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/).
+You can replace the Airtable node with another spreadsheet app/service. For example, n8n also has a node for [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/).
 ///
 
 After this step, your workflow should look like this:
@@ -37,7 +37,7 @@ Now that the table is ready, let's return to the workflow in the n8n Editor UI.
 
 ## Add an Airtable node to the HTTP Request node
 
-Add an **Airtable node** connected to the HTTP Request node.
+Add an Airtable node connected to the HTTP Request node.
 
 ///note | Remember
 You can add a ndoe connected to an existing node by selecting the **+** icon next to the existing node.
@@ -50,7 +50,7 @@ In the node panel:
 
 This will add the Airtable node to your canvas and open the node details window.
 
-In the **Airtable node** window, configure the following parameters:
+In the Airtable node window, configure the following parameters:
 
 - **Credential to connect with**:
 	- Select 'Create new credential'

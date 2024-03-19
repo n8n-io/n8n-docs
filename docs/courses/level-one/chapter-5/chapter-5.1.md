@@ -24,12 +24,12 @@ In the previous chapter, you used an action node connected to a specific app (Ha
 Though we can't directly export the data, Nathan told us that the data warehouse has a couple of API endpoints. That's all we need to access the data using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) in n8n.
 
 /// note | No node for that service?
-The **HTTP Request node** is one of the most versatile nodes, allowing you to make HTTP requests to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
+The HTTP Request node is one of the most versatile nodes, allowing you to make HTTP requests to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
 ///
 
 ## Add an HTTP Request node
 
-Now, in your Editor UI, add an **HTTP Request node** like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.
+Now, in your Editor UI, add an HTTP Request node like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
 
@@ -42,13 +42,13 @@ Credentials are unique pieces of information that identify a user or a service a
 In this case, we'll need to provide credentials to access the ABCorp data warehouse API.
 
 
-In the Parameters of the **HTTP Request node**, make the following adjustments:
+In the Parameters of the HTTP Request node, make the following adjustments:
 
 - **Method**: This should default to GET. Make sure it's set to GET.
 - **URL**: Add the Dataset URL you received in the email when you signed up for this course.
 - **Send Headers**: Toggle this control to true. In **Specify Headers**, ensure **Using Fields Below** is selected.
-    - **Header Parameters > Name**: Enter `unique_id`.
-    - **Header Parameters > Value**: The Unique ID you received in the email when you signed up for this course.
+    - **Header Parameters** > **Name**: Enter `unique_id`.
+    - **Header Parameters** > **Value**: The Unique ID you received in the email when you signed up for this course.
 - **Authentication**: Select **Generic Credential Type**. This option requires credentials to allow you to access the data.
     - **Generic Auth Type**: Select **Header Auth**. (This field will appear after you select the Generic Credential Type for the Authentication.)
     - **Credential for Header Auth**: To add your credentials, select **Create New Credential**. This will open the Credentials window.
@@ -63,7 +63,7 @@ New credentials are named "*node name* account" by default. You can rename the c
 
 ## Get the data
 
-Select the **Test step** button in the **HTTP Request node** window. The result of the HTTP request should look like this:
+Select the **Test step** button in the HTTP Request node window. The result of the HTTP request should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node output" style="width:100%"><figcaption align = "center"><i>HTTP Request node output</i></figcaption></figure>
 

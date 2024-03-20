@@ -688,6 +688,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md

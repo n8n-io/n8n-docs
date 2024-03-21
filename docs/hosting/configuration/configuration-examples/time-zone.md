@@ -1,6 +1,6 @@
 ---
 title: Timezone
-description: Change default timezone.
+description: Change the default timezone for your self-hosted n8n instance.
 contentType: howto
 ---
 

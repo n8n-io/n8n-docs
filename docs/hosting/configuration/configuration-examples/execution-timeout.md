@@ -6,7 +6,7 @@ contentType: howto
 
 # Setting execution timeouts
 
-A workflow times out and gets canceled after this time (in seconds). If the workflow runs in the main process, a soft timeout happens (takes effect after the current node finishes). If a workflow runs in its own process, n8n attempts a soft timeout first, then kills the process after waiting for an additional fifth of the given timeout duration.
+A workflow times out and gets canceled after this time (in seconds). If the workflow runs in the main process, a soft timeout happens (takes effect after the current node finishes). If a workflow runs in its own process, n8n attempts a soft timeout first, then kills the process after waiting for a fifth of the given timeout duration.
 
 `EXECUTIONS_TIMEOUT` default is `-1`. For example, if you want to set the timeout to one hour:
 

@@ -118,4 +118,4 @@ The following environment variables support file input:
 
 ## Examples
 
-Refer to [Configuration Examples](/configuration/configuration-examples/index.md) for examples on how to configure n8n for specific use cases. 
+Refer to [Configuration Examples](/hosting/configuration/configuration-examples) for examples on how to configure n8n for specific use cases. 

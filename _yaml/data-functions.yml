@@ -346,6 +346,9 @@ df_date:
   - funcName: toDateTime
     returns: Date
     description: Converts a JavaScript date to a <a href="https://docs.n8n.io/code/cookbook/luxon/">Luxon date object</a>.
+  - funcName: toFloat
+    returns: Number
+    description: See <a href="#date-toInt">toInt</a>.
   - funcName: toInt
     returns: Number
     description: Gets the milliseconds for the current DateTime and returns it as a number. For example, <code>DateTime.fromISO('2024-01-01T00:00:00.000Z').toInt()</code> returns <code>1704067200000</code>

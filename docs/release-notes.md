@@ -47,6 +47,57 @@ This release adds the [Microsoft OneDrive trigger node](/integrations/builtin/tr
 
 </div>
 
+<div class="n8n-new-features" markdown>
+
+#### New data transformation functions
+
+This release introduces new [data transformation functions](/code/builtin/data-transformation-functions/):
+
+**String**
+
+```js
+toDateTime() //replaces toDate(). toDate() is retained for backwards compatability.
+parseJson()
+extractUrlPath()
+toBoolean()
+base64Encode()
+base64Decode()
+```
+
+**Number**
+
+```js
+toDateTime()
+toBoolean()
+```
+
+**Object**
+
+```js
+toJsonString()
+```
+
+**Array**
+
+```js
+toJsonString()
+```
+
+**Date & DateTime**
+
+```js
+toDateTime()
+toInt()
+```
+
+**Boolean**
+
+```js
+toInt()
+```
+
+</div>
+
 ### Contributors
 
 [Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  

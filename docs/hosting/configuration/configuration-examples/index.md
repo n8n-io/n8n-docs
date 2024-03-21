@@ -1,4 +1,6 @@
 ---
+title: Configuration examples index
+description: Index for configuration examples.
 contentType: overview
 ---
 

@@ -1,4 +1,6 @@
 ---
+title: Isolating n8n
+description: Prevent n8n instance from connecting with n8n's servers. 
 contentType: howto
 ---
 

@@ -1,0 +1,15 @@
+---
+title: Timezone
+description: Change default timezone.
+contentType: howto
+---
+
+# Timezone
+
+The default timezone is America/New_York. For instance, the Schedule node uses it to know at what time the workflow should start. To set a different default timezone, set `GENERIC_TIMEZONE` to the appropriate value. For example, if you want to set the timezone to Berlin (Germany):
+
+```bash
+export GENERIC_TIMEZONE=Europe/Berlin
+```
+
+You can find the name of your timezone [here](https://momentjs.com/timezone/).

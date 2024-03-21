@@ -24,3 +24,4 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 # Allow usage of external npm modules.
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.

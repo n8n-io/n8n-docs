@@ -17,3 +17,4 @@ In queue mode, you must specify the encryption key environment variable for all 
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.

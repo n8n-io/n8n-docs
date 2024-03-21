@@ -14,3 +14,4 @@ Tells the front end how to reach the REST API of the back end:
 ```bash
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.

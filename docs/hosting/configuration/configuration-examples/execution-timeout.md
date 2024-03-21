@@ -19,3 +19,4 @@ You can also set maximum execution time (in seconds) for each workflow individua
 ```bash
 export EXECUTIONS_TIMEOUT_MAX=7200
 ```
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.

@@ -11,3 +11,4 @@ n8n creates the webhook URL by combining `N8N_PROTOCOL`, `N8N_HOST` and `N8N_POR
 ```bash
 export WEBHOOK_URL=https://n8n.example.com/
 ```
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.

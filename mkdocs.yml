@@ -1166,6 +1166,7 @@ nav:
       - Data transformation functions: 
         - code/builtin/data-transformation-functions/index.md
         - Arrays: code/builtin/data-transformation-functions/arrays.md
+        - Booleans: code/builtin/data-transformation-functions/booleans.md
         - Dates: code/builtin/data-transformation-functions/dates.md
         - Numbers: code/builtin/data-transformation-functions/numbers.md
         - Objects: code/builtin/data-transformation-functions/objects.md

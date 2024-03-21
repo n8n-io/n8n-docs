@@ -1131,6 +1131,15 @@ nav:
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md
         - Isolating n8n: hosting/configuration/configuration-examples/isolation.md
+        - Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Encryption Key: hosting/configuration/configuration-examples/encryption-key.md
+        - Execution timeout: hosting/configuration/configuration-examples/execution-timeout.md
+        - Custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
+        - Use built-in and external modules in the Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
+        - Timezone: hosting/configuration/configuration-examples/time-zone.md
+        - Use folder: hosting/configuration/configuration-examples/user-folder.md
+        - Webhook URL: hosting/configuration/configuration-examples/webhook-url.md
+        - Prometheus: hosting/configuration/configuration-examples/prometheus.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md

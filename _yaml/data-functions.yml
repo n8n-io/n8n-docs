@@ -234,11 +234,14 @@ df_number:
     returns: Boolean
     description: Converts a number to a boolean. <code>0</code> converts to <code>false</code>. All other values convert to <code>true</code>.
   - funcName: toDateTime
+    args:
+      - argName: fmt
+        optional: true
+        longName: Format
+        type: String enum
+        description: Can be <code>ms</code> (milliseconds), <code>s</code> (seconds), or <code>excel</code> (Excel 1900). Defaults to milliseconds.
     returns: Date
     description: Converts a number to a <a href="https://docs.n8n.io/code/cookbook/luxon/">Luxon date object</a>.
-  - funcName: toInt
-    returns: Integer
-    description: Convert a number to an integer by rounding up or down. <code>.5</code> and above rounds up.
 df_date:
   - funcName: beginningOf
     args:
@@ -346,12 +349,6 @@ df_date:
   - funcName: toDateTime
     returns: Date
     description: Converts a JavaScript date to a <a href="https://docs.n8n.io/code/cookbook/luxon/">Luxon date object</a>.
-  - funcName: toFloat
-    returns: Number
-    description: See <a href="#date-toInt">toInt</a>.
-  - funcName: toInt
-    returns: Number
-    description: Gets the milliseconds for the current DateTime and returns it as a number. For example, <code>DateTime.fromISO('2024-01-01T00:00:00.000Z').toInt()</code> returns <code>1704067200000</code>
 df_array:
   - funcName: average
     returns: Number

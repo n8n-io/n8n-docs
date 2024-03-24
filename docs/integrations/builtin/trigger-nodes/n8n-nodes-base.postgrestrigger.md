@@ -33,7 +33,6 @@ n8n provides an app node for Postgres. You can find the node docs [here](/integr
 
 View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} on n8n's website.
 
-
-
-
-
+/// note | Permissions
+Make sure your database user has the `TRIGGER` privilege, You can find more information on this in the Postgres documentation [here](https://www.postgresql.org/docs/current/ddl-priv.html#DDL-PRIV-TRIGGER){:target=_blank .external-link}.
+///

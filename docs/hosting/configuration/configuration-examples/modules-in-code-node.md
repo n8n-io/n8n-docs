@@ -1,10 +1,10 @@
 ---
-title: Use built-in and external modules in the Code node
-description: Lift restrictions to use built-in and external modules in the Code node.
+title: Enable modules in Code node
+description: Allow the use of both built-in and external modules within the Code node.
 contentType: howto
 ---
 
-# Use built-in and external modules in the Code node
+# Enable modules in Code node
 
 For security reasons, the Code node restricts importing modules. It's possible to lift that restriction for built-in and external modules by setting the following environment variables:
 
@@ -24,4 +24,4 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 # Allow usage of external npm modules.
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/#nodes) for more information on these variables.

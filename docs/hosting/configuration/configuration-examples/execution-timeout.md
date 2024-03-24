@@ -1,10 +1,10 @@
 ---
-title: Execution timeout
-description: Set execution timeout to determine how long workflows can run.  
+title: Configure workflow timeout settings
+description: Set execution timeouts to determine how long workflows can run.  
 contentType: howto
 ---
 
-# Setting execution timeouts
+# Configure workflow timeout settings
 
 A workflow times out and gets canceled after this time (in seconds). If the workflow runs in the main process, a soft timeout happens (takes effect after the current node finishes). If a workflow runs in its own process, n8n attempts a soft timeout first, then kills the process after waiting for a fifth of the given timeout duration.
 
@@ -19,4 +19,4 @@ You can also set maximum execution time (in seconds) for each workflow individua
 ```bash
 export EXECUTIONS_TIMEOUT_MAX=7200
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/) for more information on each variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/#executions) for more information on these variables.

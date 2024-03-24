@@ -114,8 +114,3 @@ The following environment variables support file input:
 - `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
 - `DB_POSTGRESDB_USER_FILE`
 - `DB_POSTGRESDB_SCHEMA_FILE`
-
-
-## Examples
-
-Refer to [Configuration Examples](/hosting/configuration/configuration-examples) for examples on how to configure n8n for specific use cases. 

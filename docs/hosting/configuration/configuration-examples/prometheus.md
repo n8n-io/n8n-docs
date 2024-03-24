@@ -1,10 +1,10 @@
 ---
-title: Prometheus
+title: Enable Prometheus metrics 
 description: Enable Prometheus metrics endpoint.
 contentType: howto
 ---
 
-# Prometheus
+# Enable Prometheus metrics 
 
 /// note | Experimental
 Prometheus metrics are an experimental feature.

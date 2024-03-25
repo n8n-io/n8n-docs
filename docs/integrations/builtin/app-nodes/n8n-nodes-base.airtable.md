@@ -46,7 +46,7 @@ To fetch data for a particular record, you need the Record ID. There are two way
 
 ### Create a Record ID column in Airtable
 
-To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/hc/en-us/articles/360051564873-Record-ID). You can then use this Record ID in your Airtable node.
+To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/docs/finding-airtable-ids){:target=_blank .external-link}. You can then use this Record ID in your Airtable node.
 
 ### Use the List operation
 

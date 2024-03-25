@@ -143,9 +143,15 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.32.1...n8n@1.33.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-03-13
 
-
-
 This release contains new features, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Support for Claude 3
+
+This release adds support for Claude 3 to the [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/) node.
+
+</div>
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

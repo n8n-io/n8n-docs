@@ -10,7 +10,7 @@ To accomplish this task, you have to create an Error workflow that monitors the 
 2. To the Error Trigger node, connect a Discord node and configure the fields:<br/>
 
 	* Webhook URL: The URL that you received in the email from n8n when you signed up for this course.
-	* Text: The workflow `{workflow name}` failed, with the error message: `{execution error message}`. Last node executed: `{name of the last executed node}`. Check this workflow execution here: `{execution URL}`.
+	* Text: The workflow `{workflow name}` failed, with the error message: `{execution error message}`. Last node executed: `{name of the last executed node}`. Check this workflow execution here: `{execution URL}` My Unique ID: `{your ID from the course signup email}`
 
 		Note that you need to replace the text in curly brackets `{}` with expressions that take the respective information from the Error Trigger node.<br/>
 

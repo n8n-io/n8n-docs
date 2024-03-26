@@ -90,3 +90,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Add tag to time entry
     * Get all time entry tags
     * Remove tag from time entry
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

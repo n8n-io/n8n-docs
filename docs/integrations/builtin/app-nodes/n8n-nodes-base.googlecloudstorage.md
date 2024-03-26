@@ -35,3 +35,4 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis){:target=_blank .external-link} for detailed information about the API that this node integrates with.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

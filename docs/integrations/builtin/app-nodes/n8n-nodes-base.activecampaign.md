@@ -17,7 +17,7 @@ Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activeca
 For usage examples and templates to help you get started, take a look at n8n's [ActiveCampaign integrations](https://n8n.io/integrations/activecampaign/){:target="_blank" .external-link} list.
 ///
 
-## Basic Operations
+## Operations
 
 * Account
     * Create an account
@@ -79,3 +79,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get data of a tag
     * Get data of all tags
     * Update a tag
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

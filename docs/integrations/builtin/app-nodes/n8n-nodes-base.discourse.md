@@ -42,3 +42,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Create a user to group
     * Remove user from group
 
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

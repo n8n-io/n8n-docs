@@ -48,5 +48,5 @@ View [example workflows and related content](https://n8n.io/integrations/notion-
 Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
 
 
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

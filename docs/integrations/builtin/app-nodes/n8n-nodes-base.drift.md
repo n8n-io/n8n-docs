@@ -25,3 +25,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Delete a contact
     * Get a contact
     * Update a contact
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

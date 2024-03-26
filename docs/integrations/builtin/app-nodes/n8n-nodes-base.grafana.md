@@ -40,3 +40,4 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Retrieve all users in the current organization
     * Update a user in the current organization
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

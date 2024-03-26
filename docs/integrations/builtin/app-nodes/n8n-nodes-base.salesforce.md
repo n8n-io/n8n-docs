@@ -97,6 +97,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a user
     * Get all users
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
 ## Working with Salesforce custom fields
 
 To add custom fields to your request:

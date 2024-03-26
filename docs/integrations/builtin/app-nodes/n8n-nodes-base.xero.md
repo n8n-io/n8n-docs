@@ -36,3 +36,4 @@ View [example workflows and related content](https://n8n.io/integrations/xero/){
 
 Refer to [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link} for more information about the service.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

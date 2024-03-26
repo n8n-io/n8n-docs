@@ -42,6 +42,8 @@ theme:
     - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
+      #https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.instant
 copyright: >
   <a href="#__consent">Change cookie settings</a>
 extra:
@@ -688,6 +690,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
@@ -1063,6 +1066,7 @@ nav:
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
       - Custom API actions for existing nodes: integrations/custom-operations.md
+      - Handle rate limits: integrations/builtin/rate-limits.md
     - Community nodes:
       - Installation and management: 
         - integrations/community-nodes/installation/index.md
@@ -1128,7 +1132,16 @@ nav:
       - User management: hosting/configuration/user-management-self-hosted.md
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md
-        - Isolating n8n: hosting/configuration/configuration-examples/isolation.md
+        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
+        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
+        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
+        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
+        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
+        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
+        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
+        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
+        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
@@ -1164,6 +1177,7 @@ nav:
       - Data transformation functions: 
         - code/builtin/data-transformation-functions/index.md
         - Arrays: code/builtin/data-transformation-functions/arrays.md
+        - Booleans: code/builtin/data-transformation-functions/booleans.md
         - Dates: code/builtin/data-transformation-functions/dates.md
         - Numbers: code/builtin/data-transformation-functions/numbers.md
         - Objects: code/builtin/data-transformation-functions/objects.md

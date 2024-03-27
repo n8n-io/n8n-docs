@@ -11,7 +11,7 @@ RBAC is available on all plans except the Community edition. Different plans hav
 
 * Starter: one project, with admin and editor roles.
 * Pro: three projects, with admin and editor roles.
-* Enterpriese: unlimited projects, with admin, editor, and viewer roles.
+* Enterprise: unlimited projects, with admin, editor, and viewer roles.
 ///
 
 RBAC is a way of managing access to workflows and credentials based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.

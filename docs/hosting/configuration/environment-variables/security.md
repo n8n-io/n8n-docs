@@ -1,12 +1,15 @@
 ---
-title: Security
+title: Security environment variables
 description: Configure authentication and environment variable access in self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Security
+# Security environment variables
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

@@ -1,14 +1,18 @@
 ---
-title: Managing credentials
+title: Credentials environment variables
 description: Manage default credentials and override them through environment variables your self-hosted n8n instance.
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Managing credentials
+# Credentials environment variables
 
-Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
+Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. 
+The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

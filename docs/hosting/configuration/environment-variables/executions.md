@@ -1,12 +1,15 @@
 ---
-title: Workflow Executions
+title: Executions environment variables
 description: Environment variables to configure settings related to workflow executions. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Executions
+# Executions environment variables
 
 This section outlines environment variables to configure settings related to workflow executions. 
 

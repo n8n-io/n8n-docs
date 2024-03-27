@@ -1,12 +1,15 @@
 ---
-title: User management SMTP, and two-factor authentication
+title: User management SMTP, and two-factor authentication environment variables
 description: Environment variables to set up user management and emails.
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# User management SMTP, and two-factor authentication
+# User management SMTP, and two-factor authentication environment variables
 
 Refer to [User management](/hosting/configuration/user-management-self-hosted/) for more information on setting up user management and emails.
 <!-- vale off -->

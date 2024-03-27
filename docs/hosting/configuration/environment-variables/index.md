@@ -1,12 +1,15 @@
 ---
-title: Environment Variables
+title: Environment Variables Overview
 description: An overview of configuration environment variables for self-hosted n8n. 
 contentType: overview
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Environment Variables
+# Environment Variables Overview
 
 This section contains lists of environment variables that you can use to change n8n's configuration settings. 
 

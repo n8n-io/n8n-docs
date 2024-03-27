@@ -1,12 +1,15 @@
 ---
-title: Managing binary data
-description: Environment variables to customize binary data storage modes and paths.
+title: Binary data environment variables
+description: Customize binary data storage modes and paths with environment variables for your self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Managing binary data
+# Binary data environment variables
 
 By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data.
 

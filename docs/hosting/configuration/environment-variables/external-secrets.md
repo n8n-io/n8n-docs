@@ -1,12 +1,15 @@
 ---
-title: External secrets
+title: External secrets environment variables
 description: Configure the interval for checking updates to external secrets in self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# External secrets
+# External secrets environment variables
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

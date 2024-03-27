@@ -1,12 +1,15 @@
 ---
-title: Queue mode
+title: Queue mode environment variables
 description: Environment variables to configure queue mode on your self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Queue mode
+# Queue mode environment variables
 
 You can run n8n in different modes depending on your needs, and the queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for its configuration details.
 

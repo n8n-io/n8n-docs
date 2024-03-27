@@ -1,12 +1,15 @@
 ---
-title: Managing Nodes
+title: Nodes environment variables
 description: Environment variable to configure nodes management in self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Nodes
+# Nodes environment variables
 
 This section outlines the environment variables configuration options for managing nodes in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node and enabling community nodes. 
 

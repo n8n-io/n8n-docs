@@ -1,12 +1,15 @@
 ---
-title: Source control
+title: Source control environment variables
 description: Environment variable to set the default SSH key type for source control setup.
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Source control
+# Source control environment variables
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

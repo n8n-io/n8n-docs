@@ -1,12 +1,15 @@
 ---
-title: API and Endpoint Configuration
-description: Customize the application's API and webhook endpoints.
+title: Endpoints environment variables
+description: Customize the application's API and webhook endpoints with environment variables for your self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Endpoints
+# Endpoints environment variables
 
 This section outlines environment variable configurations for setting payload size limits, enabling and customizing metrics, managing REST and webhook endpoints, and providing options for proxy compatibility.
 

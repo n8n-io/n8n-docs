@@ -1,12 +1,15 @@
 ---
-title: External data storage
-description: 
+title: External data storage environment variables
+description: Environment variables to configure external data storage for your self-hosted n8n instance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# External data storage
+# External data storage environment variables
 
 Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data.
 

@@ -1,14 +1,17 @@
 ---
-title: Database configuration
-description: Set up and configure databases for your self-hosted n8n instance.
+title: Database environment variables
+description: Set up and configure databases with environment variables for your self-hosted n8n instance.
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Database configuration
+# Database environment variables
 
-By default, n8n uses SQLite to save credentials, past executions, and workflows. n8n also supports PostgresDB but has [removed support for MySQL and MariaDB](docs/1-0-migration-checklist). This section outlines environment variables to configure your chosen database for self-hosted n8n instance. 
+By default, n8n uses **SQLite** to save credentials, past executions, and workflows. n8n also supports **PostgresDB** but has [removed support for MySQL and MariaDB](/docs/1-0-migration-checklist). This section outlines environment variables to configure your chosen database for self-hosted n8n instance. 
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

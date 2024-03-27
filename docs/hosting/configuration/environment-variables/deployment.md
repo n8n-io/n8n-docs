@@ -1,12 +1,15 @@
 ---
-title: Deployment configuration
-description: Configure deployment options and application accessibility for self-hosted n8n.
+title: Deployment environment variables
+description: Configure deployment options and application accessibility with environment variables for your self-hosted n8n intance. 
 contentType: reference
+tags:
+  - environment variables
 hide:
   - toc
+  - tags
 ---
 
-# Deployment
+# Deployment environment variables
 
 This section outlines the deployment configurations for self-hosted n8n instance, including setting up access URLs, enabling templates, customizing encryption, and configuring server details. 
 

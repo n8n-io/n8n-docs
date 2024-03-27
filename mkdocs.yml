@@ -1127,7 +1127,26 @@ nav:
       - Updating: hosting/installation/updating.md
     - Configuration: 
       - Configuration methods: hosting/configuration/configuration-methods.md    
-      - Environment variables reference: hosting/configuration/environment-variables.md
+      - Environment variables:
+        - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - Credentials: hosting/configuration/environment-variables/credentials.md
+        - Database: hosting/configuration/environment-variables/database.md
+        - Deployment: hosting/configuration/environment-variables/deployment.md
+        - Binary data: hosting/configuration/environment-variables/binary-data.md
+        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-and-2fa.md
+        - Endpoints: hosting/configuration/environment-variables/endpoints.md
+        - External hooks: hosting/configuration/environment-variables/external-hooks.md
+        - Executions: hosting/configuration/environment-variables/executions.md
+        - Logs: hosting/configuration/environment-variables/logs.md
+        - External data storage: hosting/configuration/environment-variables/external-data-storage.md
+        - Nodes: hosting/configuration/environment-variables/nodes.md
+        - Queue mode: hosting/configuration/environment-variables/queue-mode.md
+        - Security: hosting/configuration/environment-variables/security.md
+        - Source control: hosting/configuration/environment-variables/source-control.md
+        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Timezone and localization: hosting/configuration/environment-variables/timezone-and-localization.md
+        - Workflows: hosting/configuration/environment-variables/workflows.md
+        - License: hosting/configuration/environment-variables/licenses.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
       - User management: hosting/configuration/user-management-self-hosted.md
       - Configuration examples:

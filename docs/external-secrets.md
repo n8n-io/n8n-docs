@@ -26,23 +26,23 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 1. Enter the credentials for your provider:
 	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions.
 
-	Example policy:
-	```json
-	{
-		"Version": "2012-10-17",
-		"Statement": [
-			{
-				"Sid": "VisualEditor0",
-				"Effect": "Allow",
-				"Action": [
-					"secretsmanager:ListSecrets",
-					"secretsmanager:BatchGetSecretValue"
-				],
-				"Resource": "*"
-			}
-		]
-	}
-	```
+		Example policy:
+		```json
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "VisualEditor0",
+					"Effect": "Allow",
+					"Action": [
+						"secretsmanager:ListSecrets",
+						"secretsmanager:BatchGetSecretValue"
+					],
+					"Resource": "*"
+				}
+			]
+		}
+		```
 
 	* HashiCorp Vault: provide the **Vault URL** for your vault instance, and select your **Authentication Method**.  Enter your authentication details. Optionally provide a namespace.
 		- Refer to the HashiCorp documentation for your authentication method:

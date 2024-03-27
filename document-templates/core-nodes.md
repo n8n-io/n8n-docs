@@ -36,9 +36,13 @@ For usage examples and templates to help you get started, refer to n8n's [_Name_
 
 ## Node parameters
 
+## Node options
+
 
 <!-- 
 Add any other sections here. 
 You should include: quirks, pain points, complex topics that trip people up
 You should not include: basic usage examples
 -->
+
+

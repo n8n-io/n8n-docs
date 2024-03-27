@@ -8,7 +8,7 @@ contentType: howto
 
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports Infisical and HashiCorp Vault. 
+* n8n supports AWS Secrets Manager, Infisical and HashiCorp Vault. 
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link}.
 ///
 
@@ -24,6 +24,26 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Select **Set Up** for your store provider.
 1. Enter the credentials for your provider:
+	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions.
+
+		Example policy:
+		```json
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "VisualEditor0",
+					"Effect": "Allow",
+					"Action": [
+						"secretsmanager:ListSecrets",
+						"secretsmanager:BatchGetSecretValue"
+					],
+					"Resource": "*"
+				}
+			]
+		}
+		```
+
 	* HashiCorp Vault: provide the **Vault URL** for your vault instance, and select your **Authentication Method**.  Enter your authentication details. Optionally provide a namespace.
 		- Refer to the HashiCorp documentation for your authentication method:
 				[Token auth method](https://developer.hashicorp.com/vault/docs/auth/token){:target=_blank .external-link}  
@@ -57,7 +77,7 @@ To use a secret from your store in an n8n credential:
 	```js
 	{{ $secrets.<vault-name>.<secret-name> }}
 	```
-	`<vault-name>` is either `vault` (for HashiCorp) or `infisical`. Replace `<secret-name>` with the name as it appears in your vault.
+	`<vault-name>` is either `vault` (for HashiCorp) or `infisical` or `awsSecretsManager`. Replace `<secret-name>` with the name as it appears in your vault.
 
 ## Use external secrets with n8n environments
 

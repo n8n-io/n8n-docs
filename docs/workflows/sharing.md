@@ -5,6 +5,8 @@ contentType: howto
 
 # Workflow sharing
 
+[TODO: workflow sharing was broken as of 28/03. Return to this page and check details carefully once working.]
+
 /// info | Feature availability
 Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
 ///
@@ -22,13 +24,14 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 ## View shared workflows
 
-You can browse and search workflows on the **Workflows** list.
+You can browse and search workflows on the **Workflows** list. The workflows in the list depend on the project:
 
-* **All workflows** lists all workflows you can access. This includes:
+* **Home** lists all workflows you can access. This includes:
 	* Your own workflows.
 	* Workflows shared with you.
-	* If you are logged in as instance owner: all workflows in the instance.
-* **My workflows**: workflows you created.
+	* If you log in as the instance owner: all workflows in the instance.
+* Your personal project: workflows you created. [TODO: and maybe ones shared with you? Can't currently test as broken]
+* Other projects: all workflows in the project.
 
 ## Workflow roles and permissions
 

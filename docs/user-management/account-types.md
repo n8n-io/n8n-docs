@@ -32,6 +32,7 @@ n8n recommends that owners create a member-level account for themselves. Owners 
 | View, edit, and share all credentials | :white_check_mark: | :white_check_mark: | :x: |
 | Set up and use [Source control](/source-control-environments/) | :white_check_mark: | :white_check_mark: | :x: |
 | Create [projects](/user-management/rbac/projects/) | :white_check_mark: | :white_check_mark: | :x: |
+| View all projects | :white_check_mark: | :white_check_mark: | :x: |
 | Add and remove users | :white_check_mark: | :white_check_mark: | :x: |
 | Modify the owner or change the owner role | :white_check_mark: | :x: | :x: |
 | Access the Cloud dashboard | :white_check_mark: | :x: | :x: |

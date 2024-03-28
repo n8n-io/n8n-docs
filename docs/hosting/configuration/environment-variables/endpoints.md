@@ -11,7 +11,7 @@ hide:
 
 # Endpoints environment variables
 
-This section outlines environment variable configurations for setting payload size limits, enabling and customizing metrics, managing REST and webhook endpoints, and providing options for proxy compatibility.
+This page lists environment variable configurations for setting payload size limits, enabling and customizing metrics, managing REST and webhook endpoints, and providing options for proxy compatibility.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

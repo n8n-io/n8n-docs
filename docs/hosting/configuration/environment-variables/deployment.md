@@ -11,7 +11,7 @@ hide:
 
 # Deployment environment variables
 
-This section outlines the deployment configurations for self-hosted n8n instance, including setting up access URLs, enabling templates, customizing encryption, and configuring server details. 
+This page lists the deployment configurations for self-hosted n8n instance, including setting up access URLs, enabling templates, customizing encryption, and configuring server details. 
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

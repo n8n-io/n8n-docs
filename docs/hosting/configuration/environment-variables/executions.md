@@ -11,7 +11,7 @@ hide:
 
 # Executions environment variables
 
-This section outlines environment variables to configure settings related to workflow executions. 
+This page lists environment variables to configure workflow execution settings.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

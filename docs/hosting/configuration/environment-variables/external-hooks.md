@@ -11,7 +11,7 @@ hide:
 
 # External hooks environment variables
 
-You can define external hooks that n8n executes whenever a specific operation runs. Refer to [Backend hooks](/embed/configuration/#backend-hooks) for examples of available hooks and [Hook files](/embed/configuration/#hook-files_1) on file formatting. 
+You can define external hooks that n8n executes whenever a specific operation runs. Refer to [Backend hooks](/embed/configuration/#backend-hooks) for examples of available hooks and [Hook files](/embed/configuration/#hook-files_1) for information on file formatting. 
 
 | Variable | Type  | Description |
 | :------- | :---- | :---------- |

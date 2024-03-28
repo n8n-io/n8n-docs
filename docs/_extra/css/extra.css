@@ -175,6 +175,7 @@
   font-size: 0.75rem
   }
 
+  /* display tables at full width */
   .md-typeset__table {
     width: 100%;
   }

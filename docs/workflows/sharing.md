@@ -30,7 +30,6 @@ You can browse and search workflows on the **Workflows** list. The workflows in 
 	* Your own workflows.
 	* Workflows shared with you.
 	* If you log in as the instance owner: all workflows in the instance.
-* Your personal project: workflows you created. [TODO: and maybe ones shared with you? Can't currently test as broken]
 * Other projects: all workflows in the project.
 
 ## Workflow roles and permissions

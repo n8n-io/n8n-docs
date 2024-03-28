@@ -5,6 +5,8 @@ contentType: howto
 
 # Credential sharing
 
+[TODO: probably affected by RBAC]
+
 /// info | Feature availability
 Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
 ///

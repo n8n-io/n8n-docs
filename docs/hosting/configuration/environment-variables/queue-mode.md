@@ -11,7 +11,7 @@ hide:
 
 # Queue mode environment variables
 
-You can run n8n in different modes depending on your needs, and the queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for its configuration details.
+You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for more information.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

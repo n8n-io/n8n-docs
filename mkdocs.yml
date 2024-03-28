@@ -1133,7 +1133,7 @@ nav:
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md
         - Binary data: hosting/configuration/environment-variables/binary-data.md
-        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-and-2fa.md
+        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
         - Endpoints: hosting/configuration/environment-variables/endpoints.md
         - External hooks: hosting/configuration/environment-variables/external-hooks.md
         - Executions: hosting/configuration/environment-variables/executions.md
@@ -1144,7 +1144,7 @@ nav:
         - Security: hosting/configuration/environment-variables/security.md
         - Source control: hosting/configuration/environment-variables/source-control.md
         - External secrets: hosting/configuration/environment-variables/external-secrets.md
-        - Timezone and localization: hosting/configuration/environment-variables/timezone-and-localization.md
+        - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
         - Workflows: hosting/configuration/environment-variables/workflows.md
         - License: hosting/configuration/environment-variables/licenses.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md

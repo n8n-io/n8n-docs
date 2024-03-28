@@ -11,7 +11,7 @@ hide:
 
 # Database environment variables
 
-By default, n8n uses SQLite by but also supports PostgreSQL. n8n has [removed support for MySQL and MariaDB](/docs/1-0-migration-checklist) as storage backends for n8n in [May 2023](https://github.com/n8n-io/n8n/pull/6189){:target="_blank" .external-link}. 
+By default, n8n uses SQLite by but also supports PostgreSQL. n8n has [removed support for MySQL and MariaDB](/docs/1-0-migration-checklist/) as storage backends for n8n in [May 2023](https://github.com/n8n-io/n8n/pull/6189){:target="_blank" .external-link}. 
 
 This page outlines environment variables to configure your chosen database for self-hosted n8n instance. 
 

@@ -11,6 +11,8 @@ hide:
 
 # Logs environment variables
 
+This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](/hosting/logging-monitoring/logging/)for details. 
+
 ## n8n logs
 
 

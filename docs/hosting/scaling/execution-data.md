@@ -8,7 +8,7 @@ Depending on your executions settings and volume, your n8n database can quickly 
 
 To avoid this, n8n recommends that you don't save unnecessary data, and enable pruning of old executions data.
 
-To do this, configure the corresponding [environment variables](/hosting/configuration/environment-variables/#executions).
+To do this, configure the corresponding [environment variables](/hosting/configuration/environment-variables/executions).
 
 ## Reduce saved data
 
@@ -93,5 +93,5 @@ n8n:
 ```
 
 /// note | SQLite
-If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
+If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
 ///

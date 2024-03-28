@@ -13,7 +13,6 @@ hide:
 
 ## n8n logs
 
-Logs related to n8n: 
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

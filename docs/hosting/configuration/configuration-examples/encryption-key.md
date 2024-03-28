@@ -17,4 +17,4 @@ In [queue mode](https://docs.n8n.io/hosting/scaling/queue-mode/), you must speci
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment/) for more information on this variable.

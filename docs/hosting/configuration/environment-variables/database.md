@@ -11,7 +11,9 @@ hide:
 
 # Database environment variables
 
-By default, n8n uses **SQLite** to save credentials, past executions, and workflows. n8n also supports **PostgresDB** but has [removed support for MySQL and MariaDB](/docs/1-0-migration-checklist). This section outlines environment variables to configure your chosen database for self-hosted n8n instance. 
+By default, n8n uses SQLite by but also supports PostgreSQL. n8n has [removed support for MySQL and MariaDB](/docs/1-0-migration-checklist) as storage backends for n8n in [May 2023](https://github.com/n8n-io/n8n/pull/6189){:target="_blank" .external-link}. 
+
+This page outlines environment variables to configure your chosen database for self-hosted n8n instance. 
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

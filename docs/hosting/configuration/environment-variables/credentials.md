@@ -11,8 +11,7 @@ hide:
 
 # Credentials environment variables
 
-Enabling overwrites for credentials allows you to set default values for credentials which get automatically populated. The user can't see or change these credentials. 
-The format is `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
+Enable credential overwrites using the following environment variables. Refer to [Credential overwrites](/embed/configuration/#credential-overwrites/) for details.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

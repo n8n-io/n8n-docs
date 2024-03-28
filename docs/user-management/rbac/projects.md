@@ -12,8 +12,6 @@ RBAC is available on all plans except the Community edition. Different plans hav
 * Starter: one project, with admin and editor roles.
 * Pro: three projects, with admin and editor roles.
 * Enterprise: unlimited projects, with admin, editor, and viewer roles.
-
-On all plans, every user has their own personal project. [TODO: confirm]
 ///
 
 ## Create a project

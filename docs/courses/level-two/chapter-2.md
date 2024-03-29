@@ -14,60 +14,66 @@ You're most likely familiar with HTML and XML.
 /// note | HTML vs. XML
 HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 ///
-If you need to process HTML or XML data in your n8n workflows, use the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+If you need to process HTML or XML data in your n8n workflows, use the [**HTML node**](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or the [**XML node**](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
 
-Use the HTML node to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
+Use the **HTML node** to extract HTML content of a webpage by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
-### Exercise
+### HTML Exercise
 
-Let's get the title of the latest n8n blog post. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
+Let's get the title of the latest n8n blog post:
+
+1. Use the **HTTP Request node** to make a GET request to the URL `https://blog.n8n.io/` (this endpoint requires no authentication).
+2. Connect an **HTML node** and configure it to extract the title of the first blog post on the page.
+	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.item-title  a` should help!
 
 ??? note "Show me the solution"
 
-	Configure the HTTP Request node with the following parameters:
-
-	- Authentication: None
-	- Request Method: GET
-	- URL: https://blog.n8n.io/
-
+	1. Configure the HTTP Request node with the following parameters:
+		- **Authentication**: None
+		- **Request Method**: GET
+		- **URL**: https://blog.n8n.io/
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png" alt="Result of HTTP Request node" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
 
-	Connect an HTML node to the HTTP Request node and configure the former's parameters:
-
-	* Operation: Extract HTML Content
-	* Source Data: JSON
-	* JSON Property: data
-	* Extraction Values:  
-		* Key: title
-		* CSS Selector: .item-title  a
-		* Return Value: HTML
+	2. Connect an **HTML node** to the **HTTP Request node** and configure the former's parameters:
+		- **Operation**: Extract HTML Content
+		- **Source Data**: JSON
+		- **JSON Property**: data
+		- **Extraction Values**:  
+			- **Key**: title
+			- **CSS Selector**: `.item-title  a`
+			- **Return Value**: HTML
 
 	You can add more values to extract more data.
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
-	</details>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="Result of HTML Extract node" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
 
 
-Use the XML node to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON, and need to get and submit data between them in the two formats.
+Use the **XML node** to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON and need to get and submit data between them in the two formats.
 
-### Exercise
+### XML Exercise
 
-In a previous exercise, you used an HTTP Request node to make a request to an API. Now, use the XML node to convert the JSON output to XML.
+In the [final exercise of Chapter 1](/courses/level-two/chapter-1/#exercise_2), you used an **HTTP Request node** to make a request to the Quotable API. In this exercise, we'll return to that same API but we'll convert the output to XML:
+
+1. Add an **HTTP Request node** that makes the same request to the Quotable API at `https://api.quotable.io/quotes`.
+2. Use the XML node to convert the JSON output to XML.
 
 ??? note "Show me the solution"
 
-	Get data from the Quotable API using the HTTP Request node and connect an XML node to it with the following parameters:
-
-	- Mode: **JSON to XML**
-	- Property name: **data**
+	1. To get the quotes from the Quotable API, execute the **HTTP Request node** with the following parameters:
+		- **Authentication**: None
+		- **Request Method**: GET
+		- **URL**: https://api.quotable.io/quotes
+	2. Connect an **XML node** to it with the following parameters:
+		- **Mode**: JSON to XML
+		- **Property name**: data
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="Table view of XML Node (JSON to XML)" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
 
 	To transform data the other way around, select the mode **XML to JSON**.
 
@@ -82,23 +88,37 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
 <!-- vale on -->
-If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/).
+There are a few ways you can work with dates and times:
 
-You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.
+- Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/) to convert date and time data to different formats and calculate dates.
+- Use [**Schedule Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) to schedule workflows to run at a specific time, interval, or duration.
+
+Sometimes, you might need to pause the workflow execution. This might be necessary if you know that a service doesn't process the data instantly or it's slow to return all the results. In these cases, you don't want n8n to pass incomplete data to the next node.
+
+If you run into situations like this, use the [**Wait node**](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The **Wait node** pauses the workflow execution and will resume execution:
+
+- At a specific time.
+- After a specified time interval.
+- On a webhook call.
 
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it's generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
+### Date Exercise
 
+In this exercise, we'll build a workflow that adds five days to an input date. Then, we'll check the calculated date: if it occurred after 1959, the workflow should wait 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. Finally, we'll set up the workflow to trigger every 30 minutes.
 
-### Exercise
-
-Build a workflow that adds five days to an input date. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
+To begin:
+<!-- To do: need to figure out what the actual desired output is here since Date & Time options have changed and I'm unclear what the Set node should be doing-->
+1. Add the **Customer Datastore (n8n training)** node with the **Get All People** action selected.
+2. Add the **Date & Time** node to...? (Round a Date down to the nearest month? the instructions say calculate but calculate is no longer an option in this node).
+3. Add the **IF node** to check if that new rounded date is after or equal to `1960-01-01 00:00:00`.
+4. Add the **Wait node** to the True output of that node and set it to wait for one minute.
+5. Add the **Set node** to set the value of ... to 
 
 ??? note "Show me the solution"
 
 	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. You can add a [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) too for easy testing during development. The workflow looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="Workflow for transforming dates" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
 	To check the configuration of each node, you can copy the JSON code of this workflow and paste it in your Editor UI.
 
@@ -326,7 +346,7 @@ The file path looks slightly different depending on how you are running n8n:
 
 
 
-### Exercise
+### Binary Exercise 1
 
 Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Extract From File node to convert the file from binary to JSON.
 
@@ -334,11 +354,11 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 	In the HTTP Request node, you should see the PDF file, like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="HTTP Request node to get PDF" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
 
 	When you convert the PDF from binary to JSON Extract From File node, the result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="Extract From File node" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 
@@ -416,7 +436,7 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 
 
-### Exercise
+### Binary Exercise 2
 
 Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and convert the returned data from JSON to binary using the Convert to File node. Then, write the new binary file data to the machine where n8n is running. Finally, to check that it worked out, read the generated binary file from the machine referencing it with an expression in the node.
 
@@ -424,7 +444,7 @@ Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and co
 
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="Workflow for moving JSON to binary data" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
 

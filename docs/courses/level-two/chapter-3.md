@@ -14,7 +14,7 @@ In some cases, you might need to merge (combine) and process data from different
 Merging data can involve:
 
 - Creating one data set from multiple sources.
-- Synchronizing data between multiple systems. For example, removing duplicate data, or updating data in one system when it changes in another.
+- Synchronizing data between multiple systems. This could include removing duplicate data or updating data in one system when it changes in another.
 
 /// note | One-way vs. two-way sync
 In a one-way sync, data is synchronized in one direction. One system serves as the single source of truth. When information changes in that main system, it automatically changes in the secondary system; but if information changes in the secondary system, the changes aren't reflected in the main system.
@@ -25,44 +25,49 @@ In a two-way sync, data is synchronized in both directions (between both systems
 ///
 
 
-In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external}, which provides several merging modes:
+In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank"}, which provides several merging options:
 
-- Combine (Merge by Fields, Merge by Position and Multiplex)
-- Append
-- Choose Branch
+- [Append](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#append){:target="_blank"}
+- [Combine](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#combine){:target="_blank"}
+	- [Merge by Fields](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#merge-by-fields){:target="_blank"}: requires input fields to match on
+	- [Merge by Position](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#merge-by-position){:target="_blank"}
+	- [Multiplex](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#multiplex){:target="_blank"}
+- [Choose Branch](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#choose-branch){:target="_blank"}
 
-Notice that Combine/Merge by Fields mode requires a key. This key represents a common property between the two data sources, based on which the data can be merged. In the Merge node, they're called `Input 1 Field` and `Input 2 Field`.
+Notice that Combine > Merge by Fields requires you enter input fields to match on. These fields should contain identical values between the data sources so n8n can properly match data together. In the **Merge node**, they're called `Input 1 Field` and `Input 2 Field`.
 
-<figure><img src="/_images/courses/level-two/chapter-three/explanation_mergepropertyinput.png" alt="" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-three/explanation_mergepropertyinput.png" alt="Property Input fields in the Merge node" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
 
 /// warning | Property Input in dot notation
-If you want to reference nested values in the *Merge node* parameters `Input 1 Field` and `Input 2 Field`, you need to enter the property key in dot-notation format (as text, not as an expression).
+If you want to reference nested values in the **Merge node** parameters `Input 1 Field` and `Input 2 Field`, you need to enter the property key in dot-notation format (as text, not as an expression).
 ///
 
 /// note
-You can also find the Merge node under the alias Join. This might be more intuitive if you're familiar with SQL joins.
+You can also find the **Merge node** under the alias Join. This might be more intuitive if you're familiar with SQL joins.
 ///
 
-### Exercise
+### Merge Exercise
 
 Build a workflow that merges data from the Customer Datastore node and Code node.
 
-* Add a Merge node that takes Input 1 from a Customer Datastore node and Input 2 from a Code node.
-* In the Customer Datastore node, run the operation Get All People.
-* In the Code node, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`. Fill out the values of these properties with the information of two characters from the Customer Database. For example, Jay Gatsby's language would be English and country name would be United States.
-* In the Merge node, try out different merge modes.
+1. Add a **Merge node** that takes `Input 1` from a **Customer Datastore node** and `Input 2` from a **Code node**.
+2. In the **Customer Datastore node**, run the operation **Get All People**.
+3. In the **Code node**, create an array of two objects with three properties: `name`, `language`, and `country`, where the property `country` has two sub-properties `code` and `name`.
+	- Fill out the values of these properties with the information of two characters from the Customer Database.
+	- For example, Jay Gatsby's language is English and country name is United States.
+4. In the **Merge node**, try out different merge options.
 
 ??? note "Show me the solution"
 
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow exercise for merging data</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge.png" alt="Workflow exercise for merging data" style="width:100%"><figcaption align = "center"><i>Workflow exercise for merging data</i></figcaption></figure>
 
-	If you merge data with the option *Keep Key Matches* using the country code as the common key, the result should look like this:
+	If you merge data with the option **Keep Matches** using the name as the input fields to match, the result should look like this (note this example only contains Jay Gatsby; yours might look different depending on which characters you selected):
 
-	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_kkm.png" alt="" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep key matches</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_kkm.png" alt="Output of Merge node with option to keep matches" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep matches</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
+	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 
 	```json
 	{
@@ -178,36 +183,64 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 
 ## Looping
 
-In some cases, you might need to perform the same operation on each element of an array / each data item (for example sending a message to every contact in your address book). In technical terms, you need to iterate through the data (with loops).
+In some cases, you might need to perform the same operation on each element of an array or each data item (for example sending a message to every contact in your address book). In technical terms, you need to iterate through the data (with loops).
 
+n8n generally handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows.
 
-n8n handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows. However, there are some [exceptions of nodes and operations](/flow-logic/looping/#node-exceptions){:target="_blank" .external} for which you need to build a loop into your workflow.
+However, there are some [exceptions of nodes and operations](/flow-logic/looping/#node-exceptions){:target="_blank"} that will require you to build a loop into your workflow.
 
-To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:target="_blank" .external}, you need to connect the output of one node to the input of a previous node, and add an IF node to check when to stop the loop.
+To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:target="_blank"}, you need to connect the output of one node to the input of a previous node, and add an **If node** to check when to stop the loop.
 
 ## Splitting data in batches
 
-If you need to process large incoming data, execute the Code node multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches. You can do this with the [Loop Over Items node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+If you need to process large volumes of incoming data, execute the **Code node** multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches.
+
+For these processes, use the [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank"}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 /// warning | Execution of Loop Over Items node
-The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it's not necessary to add an IF node to stop the loop.
+The **Loop Over Items node** stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it's not necessary to add an **If node** to stop the loop.
 ///
 
-### Exercise
+### Loop/Batch Exercise
 
 Build a workflow that reads the RSS feed from Medium and dev.to. The workflow should consist of three nodes:
 
-- A Code node that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`)
-- A Loop Over Items node with `Batch Size: 1`, that takes in the inputs from the Code node and RSS node and iterates over the items.
-- An RSS Read node that gets the URL of the Medium RSS feed, passed as an expression: `{{$node["SplitInBatches"].json["url"]}}`. The RSS Read node is one of the exception nodes which processes only the first item it receives, so the Loop Over Items node is necessary for iterating over multiple items.
+1. A **Code node** that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`).
+2. A **Loop Over Items node** with `Batch Size: 1`, that takes in the inputs from the **Code node** and **RSS Read node** and iterates over the items.
+3. An **RSS Read node** that gets the URL of the Medium RSS feed, passed as an expression: `{{ $json.url }}`.
+	- The **RSS Read node** is one of the [exception nodes](/flow-logic/looping/#node-exceptions){:target="_blank"} which processes only the first item it receives, so the **Loop Over Items node** is necessary for iterating over multiple items.
 
 ??? note "Show me the solution"
 
+	1. Add a **Code Node**. You can format the code in several ways, one way is:
+		- Set **Mode** to `Run Once for All Items`.
+		- Set **Language** to `JavaScript`.
+		- Copy the code below and paste it into the JavaScript Code editor:
+			```javascript
+			let urls = [
+				{
+					json: {
+					url: 'https://medium.com/feed/n8n-io'
+					}
+				},
+				{
+				json: {
+					url: 'https://dev.to/feed/n8n'
+					} 
+				}
+			]
+			return urls;
+			```
+	2. Add a **Loop Over Items node** connected to the **Code node**.
+		- Set **Batch Size** to `1`.
+	3. The **Loop Over Items node** automatically adds a node called "Replace Me". Replace that node with an **RSS Read node**.
+		- Set the **URL** to use the url from the Code Node: `{{ $json.url }}`.
+	
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-three/exercise_splitinbatches.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for getting RSS feeds from two blogs</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_splitinbatches.png" alt="Workflow for getting RSS feeds from two blogs" style="width:100%"><figcaption align = "center"><i>Workflow for getting RSS feeds from two blogs</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
+	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 
 	```json
 	{

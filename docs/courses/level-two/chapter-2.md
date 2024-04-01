@@ -104,127 +104,168 @@ If you run into situations like this, use the [**Wait node**](/integrations/buil
 
 ### Date Exercise
 
-In this exercise, we'll build a workflow that adds five days to an input date. Then, we'll check the calculated date: if it occurred after 1959, the workflow should wait 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. Finally, we'll set up the workflow to trigger every 30 minutes.
+In this exercise, we'll build a workflow that rounds up an input date to the end of the month. Then, we'll check the calculated date: if it occurred after 1959, the workflow should wait 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. Finally, we'll set up the workflow to trigger every 30 minutes.
 
 To begin:
 <!-- To do: need to figure out what the actual desired output is here since Date & Time options have changed and I'm unclear what the Set node should be doing-->
-1. Add the **Customer Datastore (n8n training)** node with the **Get All People** action selected.
-2. Add the **Date & Time** node to...? (Round a Date down to the nearest month? the instructions say calculate but calculate is no longer an option in this node).
-3. Add the **IF node** to check if that new rounded date is after or equal to `1960-01-01 00:00:00`.
+1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected. Return All.
+2. Add the **Date & Time node** to Round Up the created Date from the datastore to End of Month. Output this to field new-date. Include all input fields.
+3. Add the **If node** to check if that new rounded date is after `1960-01-01 00:00:00`.
 4. Add the **Wait node** to the True output of that node and set it to wait for one minute.
-5. Add the **Set node** to set the value of ... to 
+5. Add the **Edit Fields (Set) node** to set a new field called outputValue to a String containing new-date. Include all input fields.
+6. Add the **Schedule Trigger node** at the beginning of the workflow to trigger it every 30 minutes. (You can keep the [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) for testing!)
 
 ??? note "Show me the solution"
 
-	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. You can add a [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) too for easy testing during development. The workflow looks like this:
+	1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected.
+		- Select the option to **Return All**.
+	2. Add a **Date & Time node** connected to the Customer Datastore node. Select the option to **Round a Date**.
+		- Add the `created` date as the **Date** to round.
+		- Select `Round Up` as the **Mode** and `End of Month` as the **To**.
+		- Set the **Output Field Name** as `new-date`.
+		- In **Options**, select **Add Option** and use the control to **Include Input Fields**
+	3. Add an **If node** connected to the **Date & Time node**.
+		- Add the new-date field as the first part of the condition.
+		- Set the comparison to **Date &Time > is after**
+		- Add `1960-01-01 00:00:00` as the second part of the expression. (This should produce 3 items in the True Branch and 2 items in the False Branch)
+	4. Add a **Wait node** to the True output of the **If node**.
+		- Set **Resume** to `After Time interval`.
+		- Set **Wait Amount** to `1.00`.
+		- Set **Wait Unit** to `Minutes`.
+	5. Add an **Edit Fields (Set) node** to the **Wait node**.
+		- Use either JSON or Manual Mapping **Mode**.
+		- Set a new field called `outputValue` to be the value of the new-date field.
+		- Select the option to **Include Other Input Fields** and include **All** fields.
+	6. Add a **Schedule Trigger node** at the beginning of the workflow.
+		- Set the **Trigger Interval** to use `Minutes`.
+		- Set the **Minutes Between Triggers** to 30.
+		- To test your schedule, be sure to activate the workflow.
+		- Be sure to connect this node to the **Customer Datastore (n8n training) node** you began with!
+	
+	The workflow should look like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="Workflow for transforming dates" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
-	To check the configuration of each node, you can copy the JSON code of this workflow and paste it in your Editor UI.
+	To check the configuration of each node, you can copy the JSON code of this workflow and either paste it into the Editor UI or save it as a file and import from file into a new workflow. See [Export and import workflows](/workflows/export-import/) for more information.
 
 	```json
 	{
-	"meta": {
-		"templateCredsSetupCompleted": true,
-		"instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
-	},
+	"name": "Course 2, Ch 2, Date exercise",
 	"nodes": [
 		{
 		"parameters": {},
-		"id": "c2c4509b-c4d4-4e95-bd7d-039734954b68",
+		"id": "6bf64d5c-4b00-43cf-8439-3cbf5e5f203b",
 		"name": "When clicking \"Test workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
-			260,
-			2080
+			620,
+			280
 		]
-		},
-		{
-		"parameters": {
-			"action": "calculate",
-			"value": "={{$json[\"created\"]}}",
-			"duration": 5,
-			"dataPropertyName": "new-date",
-			"options": {}
-		},
-		"name": "Date & Time",
-		"type": "n8n-nodes-base.dateTime",
-		"typeVersion": 1,
-		"position": [
-			660,
-			2160
-		],
-		"id": "61b56e39-021f-4ad0-b72c-697978c4f384"
-		},
-		{
-		"parameters": {
-			"unit": "minutes"
-		},
-		"name": "Wait",
-		"type": "n8n-nodes-base.wait",
-		"typeVersion": 1,
-		"position": [
-			1040,
-			2160
-		],
-		"webhookId": "d17effb8-ad90-4a74-bb88-daa3d3d18583",
-		"id": "842b788f-c236-4c67-bad0-155de7ef1be4"
-		},
-		{
-		"parameters": {
-			"conditions": {
-			"dateTime": [
-				{
-				"value1": "={{$json[\"new-date\"]}}",
-				"value2": "1960-01-01T00:00:00"
-				}
-			]
-			}
-		},
-		"name": "IF",
-		"type": "n8n-nodes-base.if",
-		"typeVersion": 1,
-		"position": [
-			840,
-			2160
-		],
-		"id": "ce788b41-ba4c-41cd-85da-6bf23baa76aa"
-		},
-		{
-		"parameters": {
-			"values": {
-			"string": [
-				{
-				"name": "outputValue",
-				"value": "={{ $('IF').item.json['new-date'] }}"
-				}
-			]
-			},
-			"options": {}
-		},
-		"name": "Set",
-		"type": "n8n-nodes-base.set",
-		"typeVersion": 1,
-		"position": [
-			1220,
-			2160
-		],
-		"id": "df3e455c-5c5e-42af-ad5c-a9bb6869a921"
 		},
 		{
 		"parameters": {
 			"operation": "getAllPeople",
 			"returnAll": true
 		},
-		"name": "Customer Datastore",
+		"id": "a08a8157-99ee-4d50-8fe4-b6d7e16e858e",
+		"name": "Customer Datastore (n8n training)",
 		"type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
 		"typeVersion": 1,
 		"position": [
-			480,
-			2160
+			840,
+			360
+		]
+		},
+		{
+		"parameters": {
+			"operation": "roundDate",
+			"date": "={{ $json.created }}",
+			"mode": "roundUp",
+			"outputFieldName": "new-date",
+			"options": {
+			"includeInputFields": true
+			}
+		},
+		"id": "f66a4356-2584-44b6-a4e9-1e3b5de53e71",
+		"name": "Date & Time",
+		"type": "n8n-nodes-base.dateTime",
+		"typeVersion": 2,
+		"position": [
+			1080,
+			360
+		]
+		},
+		{
+		"parameters": {
+			"conditions": {
+			"options": {
+				"caseSensitive": true,
+				"leftValue": "",
+				"typeValidation": "strict"
+			},
+			"conditions": [
+				{
+				"id": "7c82823a-e603-4166-8866-493f643ba354",
+				"leftValue": "={{ $json['new-date'] }}",
+				"rightValue": "1960-01-01T00:00:00",
+				"operator": {
+					"type": "dateTime",
+					"operation": "after"
+				}
+				}
+			],
+			"combinator": "and"
+			},
+			"options": {}
+		},
+		"id": "cea39877-6183-4ea0-9400-e80523636912",
+		"name": "If",
+		"type": "n8n-nodes-base.if",
+		"typeVersion": 2,
+		"position": [
+			1280,
+			360
+		]
+		},
+		{
+		"parameters": {
+			"amount": 1,
+			"unit": "minutes"
+		},
+		"id": "5aa860b7-c73c-4df0-ad63-215850166f13",
+		"name": "Wait",
+		"type": "n8n-nodes-base.wait",
+		"typeVersion": 1.1,
+		"position": [
+			1480,
+			260
 		],
-		"id": "1f3573f7-1586-4e9a-9cbf-9eb7c7475b27"
+		"webhookId": "be78732e-787d-463e-9210-2c7e8239761e"
+		},
+		{
+		"parameters": {
+			"assignments": {
+			"assignments": [
+				{
+				"id": "e058832a-2461-4c6d-b584-043ecc036427",
+				"name": "outputValue",
+				"value": "={{ $json['new-date'] }}",
+				"type": "string"
+				}
+			]
+			},
+			"includeOtherFields": true,
+			"options": {}
+		},
+		"id": "be034e9e-3cf1-4264-9d15-b6760ce28f91",
+		"name": "Edit Fields",
+		"type": "n8n-nodes-base.set",
+		"typeVersion": 3.3,
+		"position": [
+			1700,
+			260
+		]
 		},
 		{
 		"parameters": {
@@ -237,62 +278,30 @@ To begin:
 			]
 			}
 		},
-		"id": "c3ce4d5e-524b-4806-9c25-43892113b5eb",
+		"id": "6e8e4308-d0e0-4d0d-bc29-5131b57cf061",
 		"name": "Schedule Trigger",
 		"type": "n8n-nodes-base.scheduleTrigger",
 		"typeVersion": 1.1,
 		"position": [
-			260,
-			2260
+			620,
+			480
 		]
 		}
 	],
+	"pinData": {},
 	"connections": {
 		"When clicking \"Test workflow\"": {
 		"main": [
 			[
 			{
-				"node": "Customer Datastore",
+				"node": "Customer Datastore (n8n training)",
 				"type": "main",
 				"index": 0
 			}
 			]
 		]
 		},
-		"Date & Time": {
-		"main": [
-			[
-			{
-				"node": "IF",
-				"type": "main",
-				"index": 0
-			}
-			]
-		]
-		},
-		"Wait": {
-		"main": [
-			[
-			{
-				"node": "Set",
-				"type": "main",
-				"index": 0
-			}
-			]
-		]
-		},
-		"IF": {
-		"main": [
-			[
-			{
-				"node": "Wait",
-				"type": "main",
-				"index": 0
-			}
-			]
-		]
-		},
-		"Customer Datastore": {
+		"Customer Datastore (n8n training)": {
 		"main": [
 			[
 			{
@@ -303,19 +312,51 @@ To begin:
 			]
 		]
 		},
+		"Date & Time": {
+		"main": [
+			[
+			{
+				"node": "If",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"If": {
+		"main": [
+			[
+			{
+				"node": "Wait",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Wait": {
+		"main": [
+			[
+			{
+				"node": "Edit Fields",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
 		"Schedule Trigger": {
 		"main": [
 			[
 			{
-				"node": "Customer Datastore",
+				"node": "Customer Datastore (n8n training)",
 				"type": "main",
 				"index": 0
 			}
 			]
 		]
 		}
-	},
-	"pinData": {}
+	}
 	}
 	```
 

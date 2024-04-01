@@ -363,7 +363,7 @@ To begin:
 
 ## Binary data
 
-Up to now, you have mainly worked with text data. But what if you want to process data that's not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
+Up to now, you have mainly worked with text data. But what if you want to process data that's not text, like images or PDF files? These types of files are represented in the binary numeral system, so they're considered binary data. In this form, binary data doesn't offer you useful information, so you'll need to convert it into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 
@@ -376,7 +376,7 @@ In n8n, you can process binary data with the following nodes:
 Reading and writing files to disk isn't available on n8n Cloud. You'll read and write to the machine where you installed n8n. If you run n8n in Docker, your command runs in the n8n container and not the Docker host. The Read/Write Files From Disk node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
 ///
 
-To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation), or in the node's `File Path and Name` parameter (for the Write operation).
+To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation) or in the node's `File Path and Name` parameter (for the Write operation).
 
 /// warning | Naming the right path
 The file path looks slightly different depending on how you are running n8n:
@@ -389,19 +389,22 @@ The file path looks slightly different depending on how you are running n8n:
 
 ### Binary Exercise 1
 
-Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Extract From File node to convert the file from binary to JSON.
+For our first binary exercise, let's convert a PDF file to JSON:
+
+1. Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.`
+2. Use the **Extract From File node** to convert the file from binary to JSON.
 
 ??? note "Show me the solution"
 
-	In the HTTP Request node, you should see the PDF file, like this:
+	In the **HTTP Request node**, you should see the PDF file, like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="HTTP Request node to get PDF" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
 
-	When you convert the PDF from binary to JSON Extract From File node, the result should look like this:
+	When you convert the PDF from binary to JSON using the **Extract From File node**, the result should look like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="Extract From File node" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
+	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 
 	```json
 	{
@@ -479,7 +482,12 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 ### Binary Exercise 2
 
-Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and convert the returned data from JSON to binary using the Convert to File node. Then, write the new binary file data to the machine where n8n is running. Finally, to check that it worked out, read the generated binary file from the machine referencing it with an expression in the node.
+For our second binary exercise, let's convert some JSON data to binary:
+
+1. Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1`.
+2. Convert the returned data from JSON to binary using the **Convert to File node**.
+3. Write the new binary file data to the machine where n8n is running using the **Read/Write Files From Disk node**.
+4. To check that it worked out, use the **Read/Write Files From Disk node** to read the generated binary file.
 
 ??? note "Show me the solution"
 
@@ -487,7 +495,7 @@ Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and co
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="Workflow for moving JSON to binary data" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
+	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 
 	```json
 	{

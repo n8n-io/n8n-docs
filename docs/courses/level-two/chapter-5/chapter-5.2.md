@@ -6,7 +6,7 @@ contentType: tutorial
 
 In this workflow, you will merge data from different sources, transform binary data, generate files, and send notifications about them. The final workflow should look like this:
 
-<figure><img src="/_images/courses/level-two/chapter-five/workflow2.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 2 for aggregating data and generating files</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-five/workflow2.png" alt="Workflow 2 for aggregating data and generating files" style="width:100%"><figcaption align = "center"><i>Workflow 2 for aggregating data and generating files</i></figcaption></figure>
 
 To make things easier, let's split the workflow into three parts.
 
@@ -14,21 +14,23 @@ To make things easier, let's split the workflow into three parts.
 
 The first part of the workflow consists of five nodes:
 
-<figure><img src="/_images/courses/level-two/chapter-five/workflow2_1.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 1 – Getting data from different sources</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-five/workflow2_1.png" alt="Workflow 1 – Getting data from different sources" style="width:100%"><figcaption align = "center"><i>Workflow 1 – Getting data from different sources</i></figcaption></figure>
 
-1. Use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/){:target="_blank" .external} to get data from the API endpoint that stores company data. Configure the following node parameters:
+1. Use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to get data from the API endpoint that stores company data. Configure the following node parameters:
 
-      * **Authentication**: Header Auth
-      * **Credentials for Header Auth**: The Header Auth name and Header Auth value you received in the email when you signed up for this course.
-      * **URL**: The Dataset URL you received in the email when you signed up for this course.
-      * **Options** > **Add Option** > **Split Into Items**: toggle to true.
-      * **Headers** > **Add Header**:
-          * **Name**: `unique_id`
-          * **Value**: The unique ID you received in the email when you signed up for this course.
+    - **Method**: Get
+    - **URL**: The **Dataset URL** you received in the email when you signed up for this course.
+    - **Authentication**: Generic Credential Type
+        - **Generic Auth Type**: Header Auth
+        - **Credentials for Header Auth**: The Header Auth name and Header Auth value you received in the email when you signed up for this course.
+    - **Send Headers**: Toggle to true
+        - **Specify Headers**: Select `Using Fields Below`
+        - **Name**: `unique_id`
+        - **Value**: The unique ID you received in the email when you signed up for this course.
 
-2. Use the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/){:target="_blank" .external} to list data from the `customers` table (where you updated the fields `region` and `subregion`).
-3. Use the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank" .external} to merge data from the Airtable and HTTP Request node, based on the common key `customer ID`.
-4. Use the [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/) node to sort data by `orderPrice` in descending order.
+2. Use the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/) to list data from the `customers` table (where you updated the fields `region` and `subregion`).
+3. Use the [**Merge node**](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) to merge data from the Airtable and HTTP Request node, based on matching the input fields for `customerID`.
+4. Use the [**Sort node**](/integrations/builtin/core-nodes/n8n-nodes-base.sort/) to sort data by `orderPrice` in descending order.
 
 /// question | Quiz questions
 * What's the name of the employee assigned to customer 1?
@@ -40,12 +42,12 @@ The first part of the workflow consists of five nodes:
 
 The second part of the workflow consists of five nodes:
 
-<figure><img src="/_images/courses/level-two/chapter-five/workflow2_2.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 2 – Generating file for regional sales</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-five/workflow2_2.png" alt="Workflow 2 – Generating file for regional sales" style="width:100%"><figcaption align = "center"><i>Workflow 2 – Generating file for regional sales</i></figcaption></figure>
 
-1. Use the [IF node](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external} to filter order from the region Americas.
-2. Use the [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/){:target="_blank" .external} to transform the incoming data from JSON to binary format. Convert each item to a file.
-3. Use the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/){:target="_blank" .external} (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
-4. Use the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/){:target="_blank" .external} to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
+1. Use the [**If node**](/integrations/builtin/core-nodes/n8n-nodes-base.if/) to filter to only display orders from the region `Americas`.
+2. Use the [**Convert to File**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to transform the incoming data from JSON to binary format. Convert each item to a separate file. (Bonus points if you can figure out how to name each report based on the orderID!)
+3. Use the [**Gmail node**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
+4. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * Webhook URL: The webhook URL you received in the email when you signed up for this course.
     * Text: "I sent the file using email with the label ID `{label ID}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
 
@@ -59,13 +61,13 @@ The second part of the workflow consists of five nodes:
 
 The third part of the workflow consists of seven nodes:
 
-<figure><img src="/_images/courses/level-two/chapter-five/workflow2_3.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow 3 – Generating files for total sales</i></figcaption></figure>
+<figure><img src="/_images/courses/level-two/chapter-five/workflow2_3.png" alt="Workflow 3 – Generating files for total sales" style="width:100%"><figcaption align = "center"><i>Workflow 3 – Generating files for total sales</i></figcaption></figure>
 
-1. Use the [Loop Over Items node](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank" .external} to split data from the Item Lists node into batches of 5.
-2. Use the [Set node](/integrations/builtin/core-nodes/n8n-nodes-base.set/){:target="_blank" .external} to set four values, referenced with expressions from the previous node: `customerEmail`, `customerRegion`, `customerSince`, and `orderPrice`.
-3. Use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/){:target="_blank" .external} to change the date format of the field `customerSince` to the format MM/DD/YYYY. Set the 'Include Input Fields' option to keep all the data together.
-4. Use the [Convert to File node](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/){:target="_blank" .external} to create a CSV spreadsheet with the file name set as the expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`.
-5. Use the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/){:target="_blank" .external} to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
+1. Use the [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) to split data from the Item Lists node into batches of 5.
+2. Use the [**Set node**](/integrations/builtin/core-nodes/n8n-nodes-base.set/) to set four values, referenced with expressions from the previous node: `customerEmail`, `customerRegion`, `customerSince`, and `orderPrice`.
+3. Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/) to change the date format of the field `customerSince` to the format MM/DD/YYYY. Set the 'Include Input Fields' option to keep all the data together.
+4. Use the [**Convert to File node**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to create a CSV spreadsheet with the file name set as the expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`.
+5. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * Webhook URL: The webhook URL you received in the email when you signed up for this course.
     * Text: "I created the spreadsheet `{file name}`. My ID:" followed by your ID. <br/> The `{file name}` should be an expression that references data from the Spreadsheet File node.<br/>
 

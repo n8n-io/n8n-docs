@@ -714,6 +714,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md

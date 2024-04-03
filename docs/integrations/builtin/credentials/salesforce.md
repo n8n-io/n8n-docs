@@ -9,6 +9,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes with Salesforce.
 
 - [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/)
+- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/)
 
 ## Prerequisites
 

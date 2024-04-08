@@ -31,4 +31,4 @@ n8n provides an app node for Twilio. You can find the node docs [here](/integrat
 
 View [example workflows and related content](https://n8n.io/integrations/twilio/){:target=_blank .external-link} on n8n's website.
 
-Refer to [Twilio's documentation](){:target=_blank .external-link} for details about their API.
+Refer to [Twilio's documentation](https://www.twilio.com/docs){:target=_blank .external-link} for details about their API.

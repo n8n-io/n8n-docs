@@ -92,6 +92,7 @@
   [data-md-color-scheme="light"] .md-search__input {
 	border: 1px solid var(--color-foreground-base);
 	background-color: white;
+  color: var(--color-text-dark);
   } 
   
   [data-md-color-scheme="light"] .md-search__input::placeholder {

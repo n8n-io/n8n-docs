@@ -14,7 +14,7 @@ Remember [our friend Nathan](/courses/level-one/chapter-3){:target="_blank" .ext
 
 ## Workflow design
 
-Now that know what Nathan wants to automate, let's list the steps he needs to take to achieve this:
+Now that we know what Nathan wants to automate, let's list the steps he needs to take to achieve this:
 
 1. Get and combine data from all necessary sources.
 2. Sort the data and format the dates.

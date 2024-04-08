@@ -243,6 +243,19 @@
 	}
 }
 
+/* feedback widget in TOC */
+
+.md-feedback {
+	margin-top: 3em;
+}
+
+.md-feedback__title {
+	border-top: 1px solid var(--color-background-dark);
+    padding-top: 0.5rem;
+	font-size: 0.8rem;
+	font-weight: normal;
+}
+
   /* dark mode */  
   /* [data-md-color-scheme="dark"] .md-header{
 	box-shadow: none;

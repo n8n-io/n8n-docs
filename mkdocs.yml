@@ -18,7 +18,7 @@ theme:
   language: custom
   logo: _images/n8n-docs-icon.svg
   palette:
-      scheme: light
+    scheme: light
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
     - announce.dismiss
@@ -61,12 +61,12 @@ extra:
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
             submitting an issue or a fix in our <a href="https://github.com/n8n-io/n8n-docs" target="_blank" rel="noopener">GitHub repo</a>.
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       We use cookies and other tracking technologies to improve your browsing experience, 
       to analyze our website traffic, assist our marketing efforts and to understand where 
       our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
@@ -86,7 +86,7 @@ watch:
 markdown_extensions:
   # used for https://squidfunk.github.io/mkdocs-material/reference/tooltips/
   - abbr
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists 
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists
   # attr_list is required for several other features. Always enable.
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
@@ -106,8 +106,9 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+
   - pymdownx.highlight:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -122,8 +123,9 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-      # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
+
       preserve_tabs: true
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -158,162 +160,162 @@ plugins:
       # https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files
       include_yaml:
         - _yaml/data-functions.yml
-      j2_block_start_string: '[[%'
-      j2_block_end_string: '%]]'
-      j2_variable_start_string: '[['
-      j2_variable_end_string: ']]'
+      j2_block_start_string: "[[%"
+      j2_block_end_string: "%]]"
+      j2_variable_start_string: "[["
+      j2_variable_end_string: "]]"
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   - tags:
       enabled: true
 nav:
   - Using n8n:
-    - Welcome: index.md
-    - Getting started:
-      - Choose your n8n: choose-n8n.md
-      - Try it out: 
-        - try-it-out/index.md
-        - A very quick quickstart: try-it-out/quickstart.md
-        - A longer introduction: try-it-out/longer-introduction.md
-      - Courses:
-        - courses/index.md
-        - Level one:
-          - courses/level-one/index.md
-          - Navigating the editor UI: courses/level-one/chapter-1.md
-          - Building a mini-workflow: courses/level-one/chapter-2.md
-          - Automating a (real-world) use case: courses/level-one/chapter-3.md
-          - Designing the workflow: courses/level-one/chapter-4.md
-          - Building the workflow:
-            - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
-            - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
-            - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
-            - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
-            - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
-            - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
-            - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
-            - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
-          - Exporting and importing workflows: courses/level-one/chapter-6.md
-          - Test your knowledge: courses/level-one/chapter-7.md
-        - Level two:
-          - courses/level-two/index.md
-          - Understanding the data structure: courses/level-two/chapter-1.md
-          - Processing different data types: courses/level-two/chapter-2.md
-          - Merging and splitting data: courses/level-two/chapter-3.md
-          - Dealing with errors in workflows: courses/level-two/chapter-4.md
-          - Automating a business workflow:
-            - Use case: courses/level-two/chapter-5/chapter-5.0.md
-            - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
-            - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
-            - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
-          - Test your knowledge: courses/level-two/chapter-6.md
-    - Using the app:
-      - Understand workflows:
-        - workflows/index.md
-        - Create and run: workflows/create.md
-        - Components: 
-          - workflows/components/index.md
-          - Nodes: workflows/components/nodes.md
-          - Connections: workflows/components/connections.md
-          - Sticky Notes: workflows/components/sticky-notes.md
-        - Executions: 
-          - workflows/executions/index.md
-          - Workflow-level executions: workflows/executions/single-workflow-executions.md
-          - All executions: workflows/executions/all-executions.md
-          - Custom executions data: workflows/executions/custom-executions-data.md
-          - Debug executions: workflows/executions/debug.md
-        - Tags: workflows/tags.md
-        - Export and import: workflows/export-import.md
-        - Templates: workflows/templates.md
-        - Sharing: workflows/sharing.md
-        - Settings: workflows/settings.md
-        - Workflow history: workflows/history.md
-        - Workflow ID: workflows/workflow-id.md
-      - Manage credentials:
-        - credentials/index.md
-        - Create and edit: credentials/add-edit-credentials.md
-        - Credential sharing: credentials/credential-sharing.md
-      - Manage users:
-        - user-management/index.md
-        - Cloud setup: user-management/cloud-setup.md
-        - Manage users: user-management/manage-users.md
-        - Account types: user-management/account-types.md
-        - Best practices: user-management/best-practices.md
-        - 2FA: user-management/two-factor-auth.md
-        - LDAP: user-management/ldap.md
-        - SAML: 
-          - user-management/saml/index.md
-          - Set up SAML: user-management/saml/setup.md
-          - Okta Workforce Identity SAML setup: user-management/saml/okta.md
-          - Troubleshooting: user-management/saml/troubleshooting.md
-          - Manage users with SAML: user-management/saml/managing.md
-      - Keyboard shortcuts: keyboard-shortcuts.md
-    - Key concepts:
-      - Flow logic:
-        - flow-logic/index.md
-        - Splitting with conditionals: flow-logic/splitting.md
-        - Merging data: flow-logic/merging.md
-        - Looping: flow-logic/looping.md
-        - Waiting: flow-logic/waiting.md
-        - Sub-workflows: flow-logic/subworkflows.md
-        - Error handling: flow-logic/error-handling.md    
-        - Execution order in multi-branch workflows: flow-logic/execution-order.md    
-      - Data:
-        - data/index.md
-        - Data structure: data/data-structure.md
-        - Data flow within nodes: data/data-flow-nodes.md
-        - Transforming data: data/transforming-data.md
-        - Process data using code: data/code.md
-        - Data mapping: 
-          - data/data-mapping/index.md
-          - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
-          - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
-          - Data item linking: 
-            - data/data-mapping/data-item-linking/index.md
-            - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
-            - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
-            - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
-            - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
-        - Data pinning: data/data-pinning.md
-        - Data editing: data/data-editing.md
-        - Data filtering: data/data-filtering.md
-        - Binary data: data/binary-data.md
-    - Manage n8n Cloud:
-      - Overview: manage-cloud/overview.md
-      - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
-      - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
-      - Set the timezone: manage-cloud/set-cloud-timezone.md
-      - Cloud IP addresses: manage-cloud/cloud-ip.md
-    - Enterprise features:
-      - Source control and environments:
-        - source-control-environments/index.md
-        - Understand:
-          - source-control-environments/understand/index.md
-          - Environments: source-control-environments/understand/environments.md
-          - Git in n8n: source-control-environments/understand/git.md
-          - Branch patterns: source-control-environments/understand/patterns.md
-        - Set up: source-control-environments/setup.md
-        - Using:
-          - source-control-environments/using/index.md
-          - Push and pull: source-control-environments/using/push-pull.md
-          - Copy work between environments: source-control-environments/using/copy-work.md
-          - Manage variables: source-control-environments/using/manage-variables.md
-        - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
-      - External secrets: external-secrets.md
-      - Log streaming: log-streaming.md
-      - Enterprise license key: enterprise-key.md
-    - Releases:
-      - Release notes: release-notes.md
-      - v1.0 migration guide: 1-0-migration-checklist.md
-    - Help and community:
-      - Where to get help: help-community/help.md
-      - Contributing: help-community/contributing.md
-    - Licenses and privacy:
-      - Privacy and security:
-          - privacy-security/index.md
-          - Privacy: privacy-security/privacy.md
-          - Security: privacy-security/security.md
-          - Incident response: privacy-security/incident-response.md
-          - What you can do: privacy-security/what-you-can-do.md
-      - Faircode license: faircode-license.md    
+      - Welcome: index.md
+      - Getting started:
+          - Choose your n8n: choose-n8n.md
+          - Try it out:
+              - try-it-out/index.md
+              - A very quick quickstart: try-it-out/quickstart.md
+              - A longer introduction: try-it-out/longer-introduction.md
+          - Courses:
+              - courses/index.md
+              - Level one:
+                  - courses/level-one/index.md
+                  - Navigating the editor UI: courses/level-one/chapter-1.md
+                  - Building a mini-workflow: courses/level-one/chapter-2.md
+                  - Automating a (real-world) use case: courses/level-one/chapter-3.md
+                  - Designing the workflow: courses/level-one/chapter-4.md
+                  - Building the workflow:
+                      - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
+                      - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
+                      - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
+                      - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
+                      - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
+                      - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
+                      - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
+                      - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
+                  - Exporting and importing workflows: courses/level-one/chapter-6.md
+                  - Test your knowledge: courses/level-one/chapter-7.md
+              - Level two:
+                  - courses/level-two/index.md
+                  - Understanding the data structure: courses/level-two/chapter-1.md
+                  - Processing different data types: courses/level-two/chapter-2.md
+                  - Merging and splitting data: courses/level-two/chapter-3.md
+                  - Dealing with errors in workflows: courses/level-two/chapter-4.md
+                  - Automating a business workflow:
+                      - Use case: courses/level-two/chapter-5/chapter-5.0.md
+                      - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
+                      - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
+                      - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
+                  - Test your knowledge: courses/level-two/chapter-6.md
+      - Using the app:
+          - Understand workflows:
+              - workflows/index.md
+              - Create and run: workflows/create.md
+              - Components:
+                  - workflows/components/index.md
+                  - Nodes: workflows/components/nodes.md
+                  - Connections: workflows/components/connections.md
+                  - Sticky Notes: workflows/components/sticky-notes.md
+              - Executions:
+                  - workflows/executions/index.md
+                  - Workflow-level executions: workflows/executions/single-workflow-executions.md
+                  - All executions: workflows/executions/all-executions.md
+                  - Custom executions data: workflows/executions/custom-executions-data.md
+                  - Debug executions: workflows/executions/debug.md
+              - Tags: workflows/tags.md
+              - Export and import: workflows/export-import.md
+              - Templates: workflows/templates.md
+              - Sharing: workflows/sharing.md
+              - Settings: workflows/settings.md
+              - Workflow history: workflows/history.md
+              - Workflow ID: workflows/workflow-id.md
+          - Manage credentials:
+              - credentials/index.md
+              - Create and edit: credentials/add-edit-credentials.md
+              - Credential sharing: credentials/credential-sharing.md
+          - Manage users:
+              - user-management/index.md
+              - Cloud setup: user-management/cloud-setup.md
+              - Manage users: user-management/manage-users.md
+              - Account types: user-management/account-types.md
+              - Best practices: user-management/best-practices.md
+              - 2FA: user-management/two-factor-auth.md
+              - LDAP: user-management/ldap.md
+              - SAML:
+                  - user-management/saml/index.md
+                  - Set up SAML: user-management/saml/setup.md
+                  - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+                  - Troubleshooting: user-management/saml/troubleshooting.md
+                  - Manage users with SAML: user-management/saml/managing.md
+          - Keyboard shortcuts: keyboard-shortcuts.md
+      - Key concepts:
+          - Flow logic:
+              - flow-logic/index.md
+              - Splitting with conditionals: flow-logic/splitting.md
+              - Merging data: flow-logic/merging.md
+              - Looping: flow-logic/looping.md
+              - Waiting: flow-logic/waiting.md
+              - Sub-workflows: flow-logic/subworkflows.md
+              - Error handling: flow-logic/error-handling.md
+              - Execution order in multi-branch workflows: flow-logic/execution-order.md
+          - Data:
+              - data/index.md
+              - Data structure: data/data-structure.md
+              - Data flow within nodes: data/data-flow-nodes.md
+              - Transforming data: data/transforming-data.md
+              - Process data using code: data/code.md
+              - Data mapping:
+                  - data/data-mapping/index.md
+                  - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
+                  - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
+                  - Data item linking:
+                      - data/data-mapping/data-item-linking/index.md
+                      - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
+                      - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
+                      - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
+                      - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
+              - Data pinning: data/data-pinning.md
+              - Data editing: data/data-editing.md
+              - Data filtering: data/data-filtering.md
+              - Binary data: data/binary-data.md
+      - Manage n8n Cloud:
+          - Overview: manage-cloud/overview.md
+          - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
+          - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
+          - Set the timezone: manage-cloud/set-cloud-timezone.md
+          - Cloud IP addresses: manage-cloud/cloud-ip.md
+      - Enterprise features:
+          - Source control and environments:
+              - source-control-environments/index.md
+              - Understand:
+                  - source-control-environments/understand/index.md
+                  - Environments: source-control-environments/understand/environments.md
+                  - Git in n8n: source-control-environments/understand/git.md
+                  - Branch patterns: source-control-environments/understand/patterns.md
+              - Set up: source-control-environments/setup.md
+              - Using:
+                  - source-control-environments/using/index.md
+                  - Push and pull: source-control-environments/using/push-pull.md
+                  - Copy work between environments: source-control-environments/using/copy-work.md
+                  - Manage variables: source-control-environments/using/manage-variables.md
+              - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
+          - External secrets: external-secrets.md
+          - Log streaming: log-streaming.md
+          - Enterprise license key: enterprise-key.md
+      - Releases:
+          - Release notes: release-notes.md
+          - v1.0 migration guide: 1-0-migration-checklist.md
+      - Help and community:
+          - Where to get help: help-community/help.md
+          - Contributing: help-community/contributing.md
+      - Licenses and privacy:
+          - Privacy and security:
+              - privacy-security/index.md
+              - Privacy: privacy-security/privacy.md
+              - Security: privacy-security/security.md
+              - Incident response: privacy-security/incident-response.md
+              - What you can do: privacy-security/what-you-can-do.md
+          - Faircode license: faircode-license.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -1112,126 +1114,124 @@ nav:
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
-    - hosting/index.md
-    - Installation:
-      - npm: hosting/installation/npm.md
-      - Docker: hosting/installation/docker.md
-      - Server setups:
-        - hosting/installation/server-setups/index.md
-        - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
-        - Heroku: hosting/installation/server-setups/heroku.md
-        - Hetzner: hosting/installation/server-setups/hetzner.md
-        - Amazon Web Services: hosting/installation/server-setups/aws.md
-        - Azure: hosting/installation/server-setups/azure.md
-        - Google Cloud: hosting/installation/server-setups/google-cloud.md
-        - Docker Compose: hosting/installation/server-setups/docker-compose.md
-      - Updating: hosting/installation/updating.md
-    - Configuration: 
-      - Configuration methods: hosting/configuration/configuration-methods.md    
-      - Environment variables reference: hosting/configuration/environment-variables.md
-      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-      - User management: hosting/configuration/user-management-self-hosted.md
-      - Configuration examples:
-        - hosting/configuration/configuration-examples/index.md
-        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
-        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
-        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
-        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
-        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
-        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
-        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
-        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
-        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
-        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
-    - Logging and monitoring:
-      - Logging: hosting/logging-monitoring/logging.md
-      - Monitoring: hosting/logging-monitoring/monitoring.md
-      - Security audit: hosting/logging-monitoring/security-audit.md
-    - Scaling and performance:
-      - Overview: hosting/scaling/overview.md
-      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-      - Execution data: hosting/scaling/execution-data.md
-      - Configuring queue mode: hosting/scaling/queue-mode.md
-      - Binary data filesystem mode: hosting/scaling/binary-data.md
-      - External storage for binary data: hosting/scaling/external-storage.md
-      - Memory-related errors: hosting/scaling/memory-errors.md
-    - Architecture:
-      - Overview: hosting/architecture/overview.md
-      - Database structure: hosting/architecture/database-structure.md
-    - Using the CLI: 
-      - CLI commands: hosting/cli-commands.md
+      - hosting/index.md
+      - Installation:
+          - npm: hosting/installation/npm.md
+          - Docker: hosting/installation/docker.md
+          - Server setups:
+              - hosting/installation/server-setups/index.md
+              - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
+              - Heroku: hosting/installation/server-setups/heroku.md
+              - Hetzner: hosting/installation/server-setups/hetzner.md
+              - Amazon Web Services: hosting/installation/server-setups/aws.md
+              - Azure: hosting/installation/server-setups/azure.md
+              - Google Cloud: hosting/installation/server-setups/google-cloud.md
+              - Docker Compose: hosting/installation/server-setups/docker-compose.md
+          - Updating: hosting/installation/updating.md
+      - Configuration:
+          - Configuration methods: hosting/configuration/configuration-methods.md
+          - Environment variables reference: hosting/configuration/environment-variables.md
+          - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+          - User management: hosting/configuration/user-management-self-hosted.md
+          - Configuration examples:
+              - hosting/configuration/configuration-examples/index.md
+              - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
+              - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+              - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
+              - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
+              - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
+              - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
+              - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
+              - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
+              - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
+              - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
+      - Logging and monitoring:
+          - Logging: hosting/logging-monitoring/logging.md
+          - Monitoring: hosting/logging-monitoring/monitoring.md
+          - Security audit: hosting/logging-monitoring/security-audit.md
+      - Scaling and performance:
+          - Overview: hosting/scaling/overview.md
+          - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
+          - Execution data: hosting/scaling/execution-data.md
+          - Configuring queue mode: hosting/scaling/queue-mode.md
+          - Binary data filesystem mode: hosting/scaling/binary-data.md
+          - External storage for binary data: hosting/scaling/external-storage.md
+          - Memory-related errors: hosting/scaling/memory-errors.md
+      - Architecture:
+          - Overview: hosting/architecture/overview.md
+          - Database structure: hosting/architecture/database-structure.md
+      - Using the CLI:
+          - CLI commands: hosting/cli-commands.md
   - Code in n8n:
-    - code/index.md
-    - Expressions: code/expressions.md
-    - Code node: code/code-node.md
-    - AI coding: code/ai-code.md
-    - Built in methods and variables:
-      - Overview: code/builtin/overview.md
-      - Current node input: code/builtin/current-node-input.md
-      - Output of other nodes: code/builtin/output-other-nodes.md
-      - Date and time: code/builtin/date-time.md
-      - JMESPath: code/builtin/jmespath.md
-      - HTTP node: code/builtin/http-node-variables.md
-      - LangChain Code node: code/builtin/langchain-methods.md
-      - n8n metadata: code/builtin/n8n-metadata.md
-      - Convenience methods: code/builtin/convenience.md
-      - Data transformation functions: 
-        - code/builtin/data-transformation-functions/index.md
-        - Arrays: code/builtin/data-transformation-functions/arrays.md
-        - Booleans: code/builtin/data-transformation-functions/booleans.md
-        - Dates: code/builtin/data-transformation-functions/dates.md
-        - Numbers: code/builtin/data-transformation-functions/numbers.md
-        - Objects: code/builtin/data-transformation-functions/objects.md
-        - Strings: code/builtin/data-transformation-functions/strings.md
-    - Custom variables: 
-      - Create custom variables: code/variables.md
-    - Cookbook:
-      - Handling dates: code/cookbook/luxon.md  
-      - Query JSON with JMESPath: code/cookbook/jmespath.md
-      - Built-in methods and variables examples:
-        - code/cookbook/builtin/index.md
-        - execution: code/cookbook/builtin/execution.md
-        - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-        - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
-        - (node-name).all: code/cookbook/builtin/all.md
-        - vars: code/cookbook/builtin/vars.md
-      - Expressions:
-        - code/cookbook/expressions/index.md
-        - Check incoming data: code/cookbook/expressions/check-incoming-data.md
-      - Code node:
-        - code/cookbook/code-node/index.md
-        - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
-        - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
-        - Output to the browser console: code/cookbook/code-node/console-log.md
-      - HTTP Request node:
-        - code/cookbook/http-node/index.md
-        - Pagination: code/cookbook/http-node/pagination.md
+      - code/index.md
+      - Expressions: code/expressions.md
+      - Code node: code/code-node.md
+      - AI coding: code/ai-code.md
+      - Built in methods and variables:
+          - Overview: code/builtin/overview.md
+          - Current node input: code/builtin/current-node-input.md
+          - Output of other nodes: code/builtin/output-other-nodes.md
+          - Date and time: code/builtin/date-time.md
+          - JMESPath: code/builtin/jmespath.md
+          - HTTP node: code/builtin/http-node-variables.md
+          - LangChain Code node: code/builtin/langchain-methods.md
+          - n8n metadata: code/builtin/n8n-metadata.md
+          - Convenience methods: code/builtin/convenience.md
+          - Data transformation functions:
+              - code/builtin/data-transformation-functions/index.md
+              - Arrays: code/builtin/data-transformation-functions/arrays.md
+              - Booleans: code/builtin/data-transformation-functions/booleans.md
+              - Dates: code/builtin/data-transformation-functions/dates.md
+              - Numbers: code/builtin/data-transformation-functions/numbers.md
+              - Objects: code/builtin/data-transformation-functions/objects.md
+              - Strings: code/builtin/data-transformation-functions/strings.md
+      - Custom variables:
+          - Create custom variables: code/variables.md
+      - Cookbook:
+          - Handling dates: code/cookbook/luxon.md
+          - Query JSON with JMESPath: code/cookbook/jmespath.md
+          - Built-in methods and variables examples:
+              - code/cookbook/builtin/index.md
+              - execution: code/cookbook/builtin/execution.md
+              - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+              - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
+              - (node-name).all: code/cookbook/builtin/all.md
+              - vars: code/cookbook/builtin/vars.md
+          - Expressions:
+              - code/cookbook/expressions/index.md
+              - Check incoming data: code/cookbook/expressions/check-incoming-data.md
+          - Code node:
+              - code/cookbook/code-node/index.md
+              - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
+              - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
+              - Output to the browser console: code/cookbook/code-node/console-log.md
+          - HTTP Request node:
+              - code/cookbook/http-node/index.md
+              - Pagination: code/cookbook/http-node/pagination.md
   - Advanced AI:
-    - advanced-ai/index.md
-    - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
-    - LangChain in n8n:
-      - Overview: advanced-ai/langchain/overview.md
-      - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
-      - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
-    - Examples and concepts: 
-      - Introduction: advanced-ai/examples/introduction.md
-      - What is a tool? : advanced-ai/examples/understand-tools.md
-      - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
-      - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
-      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+      - advanced-ai/index.md
+      - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+      - LangChain in n8n:
+          - Overview: advanced-ai/langchain/overview.md
+          - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+          - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+      - Examples and concepts:
+          - Introduction: advanced-ai/examples/introduction.md
+          - What is a tool?: advanced-ai/examples/understand-tools.md
+          - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
+          - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+          - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
   - API:
-    - api/index.md
-    - Authentication: api/authentication.md
-    - Pagination: api/pagination.md
-    - Using the API playground: api/using-api-playground.md
-    - API reference: api/api-reference.md
+      - api/index.md
+      - Authentication: api/authentication.md
+      - Pagination: api/pagination.md
+      - Using the API playground: api/using-api-playground.md
+      - API reference: api/api-reference.md
   - Embed:
-    - embed/index.md
-    - Prerequisites: embed/prerequisites.md
-    - Deployment: embed/deployment.md
-    - Configuration: embed/configuration.md
-    - Workflow management: embed/managing-workflows.md
-    - Workflows templates: embed/workflow-templates.md
-    - White labelling: embed/white-labelling.md
-  
-
+      - embed/index.md
+      - Prerequisites: embed/prerequisites.md
+      - Deployment: embed/deployment.md
+      - Configuration: embed/configuration.md
+      - Workflow management: embed/managing-workflows.md
+      - Workflows templates: embed/workflow-templates.md
+      - White labelling: embed/white-labelling.md

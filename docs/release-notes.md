@@ -28,6 +28,31 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.37.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.37.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-10
+
+/// warning | Breaking change
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+///
+
+This release contains a new node, improvements to error handling and messaging, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: JWT
+
+This release adds the [JWT core node](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link}
+
 ## n8n@1.36.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.0...n8n@1.36.1){:target=_blank .external-link} for this version.<br />

@@ -48,6 +48,8 @@ The following events are available. You can choose which events to stream in **S
 	* User reset
 	* User credentials created
 	* User credentials shared
+	* User credentials updated
+	* User credentials deleted
 	* User API created
 	* User API deleted
 	* Package installed

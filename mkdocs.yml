@@ -1114,54 +1114,73 @@ nav:
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
-      - hosting/index.md
-      - Installation:
-          - npm: hosting/installation/npm.md
-          - Docker: hosting/installation/docker.md
-          - Server setups:
-              - hosting/installation/server-setups/index.md
-              - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
-              - Heroku: hosting/installation/server-setups/heroku.md
-              - Hetzner: hosting/installation/server-setups/hetzner.md
-              - Amazon Web Services: hosting/installation/server-setups/aws.md
-              - Azure: hosting/installation/server-setups/azure.md
-              - Google Cloud: hosting/installation/server-setups/google-cloud.md
-              - Docker Compose: hosting/installation/server-setups/docker-compose.md
-          - Updating: hosting/installation/updating.md
-      - Configuration:
-          - Configuration methods: hosting/configuration/configuration-methods.md
-          - Environment variables reference: hosting/configuration/environment-variables.md
-          - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-          - User management: hosting/configuration/user-management-self-hosted.md
-          - Configuration examples:
-              - hosting/configuration/configuration-examples/index.md
-              - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
-              - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
-              - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
-              - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
-              - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
-              - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
-              - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
-              - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
-              - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
-              - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
-      - Logging and monitoring:
-          - Logging: hosting/logging-monitoring/logging.md
-          - Monitoring: hosting/logging-monitoring/monitoring.md
-          - Security audit: hosting/logging-monitoring/security-audit.md
-      - Scaling and performance:
-          - Overview: hosting/scaling/overview.md
-          - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-          - Execution data: hosting/scaling/execution-data.md
-          - Configuring queue mode: hosting/scaling/queue-mode.md
-          - Binary data filesystem mode: hosting/scaling/binary-data.md
-          - External storage for binary data: hosting/scaling/external-storage.md
-          - Memory-related errors: hosting/scaling/memory-errors.md
-      - Architecture:
-          - Overview: hosting/architecture/overview.md
-          - Database structure: hosting/architecture/database-structure.md
-      - Using the CLI:
-          - CLI commands: hosting/cli-commands.md
+    - hosting/index.md
+    - Installation:
+      - npm: hosting/installation/npm.md
+      - Docker: hosting/installation/docker.md
+      - Server setups:
+        - hosting/installation/server-setups/index.md
+        - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
+        - Heroku: hosting/installation/server-setups/heroku.md
+        - Hetzner: hosting/installation/server-setups/hetzner.md
+        - Amazon Web Services: hosting/installation/server-setups/aws.md
+        - Azure: hosting/installation/server-setups/azure.md
+        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Docker Compose: hosting/installation/server-setups/docker-compose.md
+      - Updating: hosting/installation/updating.md
+    - Configuration: 
+      - Environment variables:
+        - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - Credentials: hosting/configuration/environment-variables/credentials.md
+        - Database: hosting/configuration/environment-variables/database.md
+        - Deployment: hosting/configuration/environment-variables/deployment.md
+        - Binary data: hosting/configuration/environment-variables/binary-data.md
+        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
+        - Endpoints: hosting/configuration/environment-variables/endpoints.md
+        - External hooks: hosting/configuration/environment-variables/external-hooks.md
+        - Executions: hosting/configuration/environment-variables/executions.md
+        - Logs: hosting/configuration/environment-variables/logs.md
+        - External data storage: hosting/configuration/environment-variables/external-data-storage.md
+        - Nodes: hosting/configuration/environment-variables/nodes.md
+        - Queue mode: hosting/configuration/environment-variables/queue-mode.md
+        - Security: hosting/configuration/environment-variables/security.md
+        - Source control: hosting/configuration/environment-variables/source-control.md
+        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
+        - Workflows: hosting/configuration/environment-variables/workflows.md
+        - License: hosting/configuration/environment-variables/licenses.md
+      - Configuration methods: hosting/configuration/configuration-methods.md   
+      - Configuration examples:
+        - hosting/configuration/configuration-examples/index.md
+        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
+        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
+        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
+        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
+        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
+        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
+        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
+        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
+        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md 
+      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - User management: hosting/configuration/user-management-self-hosted.md      
+    - Logging and monitoring:
+      - Logging: hosting/logging-monitoring/logging.md
+      - Monitoring: hosting/logging-monitoring/monitoring.md
+      - Security audit: hosting/logging-monitoring/security-audit.md
+    - Scaling and performance:
+      - Overview: hosting/scaling/overview.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
+      - Execution data: hosting/scaling/execution-data.md
+      - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Binary data filesystem mode: hosting/scaling/binary-data.md
+      - External storage for binary data: hosting/scaling/external-storage.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
+    - Architecture:
+      - Overview: hosting/architecture/overview.md
+      - Database structure: hosting/architecture/database-structure.md
+    - Using the CLI: 
+      - CLI commands: hosting/cli-commands.md
   - Code in n8n:
       - code/index.md
       - Expressions: code/expressions.md

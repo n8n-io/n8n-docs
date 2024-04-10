@@ -12,6 +12,6 @@ The default timezone is America/New_York. For instance, the Schedule node uses i
 export GENERIC_TIMEZONE=Europe/Berlin
 ```
 
-You can find the name of your timezone [here](https://momentjs.com/timezone/).
+You can find the name of your timezone [here](https://momentjs.com/timezone/){:target="_blank" .external-link}.
 
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/#timezone-and-localization) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables/timezone-localization/) for more information on this variable.

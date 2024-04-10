@@ -175,6 +175,15 @@
   .md-typeset table:not([class]) {
   font-size: 0.75rem
   }
+
+  /* display tables at full width */
+  .md-typeset__table {
+    width: 100%;
+  }
+  
+  .md-typeset__table table:not([class]) {
+    display: table
+  }
   
   /* img borders */
   

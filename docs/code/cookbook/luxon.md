@@ -56,6 +56,8 @@ Note that these variables can return different time formats when cast as a strin
 	# For example "Today's date is 1646834498755"
 	```
 
+n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates/) for more information.
+
 ## Date and time behavior in n8n
 
 Be aware of the following:

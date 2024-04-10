@@ -20,7 +20,7 @@
 	--color-text-base: #58585F; 
 	--color-text-dark: #555555;
 	--color-background-base: #f2f4f8;
-	--color-background-dark: #101330;
+	--color-background-dark: #40425E;
 	--color-background-darker: hsl( 240, 4.2%, 14% );
 	--color-background-light: #f2f4f8;
 	--color-foreground-base: #dbdfe7;
@@ -92,6 +92,7 @@
   [data-md-color-scheme="light"] .md-search__input {
 	border: 1px solid var(--color-foreground-base);
 	background-color: white;
+  color: var(--color-text-dark);
   } 
   
   [data-md-color-scheme="light"] .md-search__input::placeholder {
@@ -174,6 +175,15 @@
   .md-typeset table:not([class]) {
   font-size: 0.75rem
   }
+
+  /* display tables at full width */
+  .md-typeset__table {
+    width: 100%;
+  }
+  
+  .md-typeset__table table:not([class]) {
+    display: table
+  }
   
   /* img borders */
   
@@ -219,6 +229,12 @@
     background-color: var(--color-text-base);
   } 
 
+/* better left nav spacing */
+
+.md-nav__item--section {
+	margin-top: 1.75em;
+}
+
 /* extra top nav */
 
 .n8n-top-nav {
@@ -226,7 +242,7 @@
 }
 
 .n8n-top-nav-list {
-	border-bottom: 1px solid hsl(170, 69%, 35%, 0.5);
+	border-bottom: 1px solid #707183;
 }
 
 /* ensure headings don't disappear below top nav after adding extra top nav */

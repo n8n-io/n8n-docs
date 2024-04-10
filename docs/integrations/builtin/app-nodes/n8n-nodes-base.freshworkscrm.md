@@ -57,28 +57,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Retrieve all tasks
     * Update a task
 
-## Example usage
 
-This workflow allows you to fetch all Contacts in Freshworks CRM that you have yet to contact. This example usage workflow would use the following two nodes:
-
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Freshworks CRM]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Freshworks CRM node](/_images/integrations/builtin/app-nodes/freshworkscrm/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Freshworks CRM node
-
-1. First enter your credentials for the Freshworks CRM node. You can find out how to do that [here](/integrations/builtin/credentials/freshworkscrm/).
-2. Select **Contact** from the *Resource* dropdown.
-3. Select **Get All** from the *Operation* dropdown.
-4. Select **Never Contacted** from the *View* dropdown.
-5. Click on **Test step** to run the workflow.
-
-![The Freshworks CRM node](/_images/integrations/builtin/app-nodes/freshworkscrm/freshworkscrm_node.png)
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

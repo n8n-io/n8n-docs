@@ -51,6 +51,8 @@ Refer to [Mattermost's documentation](https://api.mattermost.com/){:target=_blan
 	
 View [example workflows and related content](https://n8n.io/integrations/mattermost/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
 ## Channel ID field error
 
 If you're not the System Administrator, you might get an error: **there was a problem loading the parameter options from server: "Mattermost error response: You do not have the appropriate permissions.** next to the **Channel ID** field.

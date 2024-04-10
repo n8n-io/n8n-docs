@@ -31,27 +31,6 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get
     * Get All
 
-## Example usage
 
-This workflow allows you to get all documents for a selected index. This example usage workflow uses the following nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Elasticsearch]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Elasticsearch node](/_images/integrations/builtin/app-nodes/elasticsearch/workflow.png)
-
-### 1. Start node
-
-The Start node exists by default when you create a new workflow.
-
-### 2. Elasticsearch node
-
-1. First enter credentials for the Elasticsearch node. You can find out how to do that [here](/integrations/builtin/credentials/elasticsearch/).
-2. Select **Document** from the ***Resource*** dropdown.
-3. Select **Get All** from the ***Operation*** dropdown.
-3. Enter the ID of your desired index in the ***Index ID*** field.
-4. Click on ***Test step*** to run the node.
-
-![Using the Elasticsearch node ](/_images/integrations/builtin/app-nodes/elasticsearch/elasticsearch_node.png)
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

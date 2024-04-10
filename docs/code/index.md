@@ -15,7 +15,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use expressions to transform [data](/data/) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/) and [Data transformation functions](/code/builtin/data-transformation-functions/).
+	Use expressions to transform [data](/data/) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/overview/) and [Data transformation functions](/code/builtin/data-transformation-functions/).
 
 	[:octicons-arrow-right-24: Expressions](/code/expressions/)
 
@@ -74,6 +74,6 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 	You can build custom nodes, install them on your n8n instance, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}.
 
-	[:octicons-arrow-right-24: Creating nodes](/integrations/creating-nodes/)
+	[:octicons-arrow-right-24: Creating nodes](/integrations/creating-nodes/overview/)
 
 </div>

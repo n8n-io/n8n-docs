@@ -24,11 +24,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a post
     * Get all posts
     * Update a post
+* Pages
+    * Create a page
+    * Get a page
+    * Get all pages
+    * Update a page
 * User
     * Create a user
     * Get a user
     * Get all users
     * Update a user
 
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -23,7 +23,7 @@ To use log streaming, you have to add a streaming destination.
 6. Select **Save**.
 
 /// note | Self-hosted users
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/environment-variables/environment-variables/#log-streaming).
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs/#log-streaming).
 ///
 ## Events
 
@@ -48,6 +48,8 @@ The following events are available. You can choose which events to stream in **S
 	* User reset
 	* User credentials created
 	* User credentials shared
+	* User credentials updated
+	* User credentials deleted
 	* User API created
 	* User API deleted
 	* Package installed

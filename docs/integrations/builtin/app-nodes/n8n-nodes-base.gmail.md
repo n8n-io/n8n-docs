@@ -58,4 +58,5 @@ n8n provides a trigger node for Gmail. You can find the trigger node docs [here]
 View [example workflows and related content](https://n8n.io/integrations/gmail/){:target=_blank .external-link} on our website.
 
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

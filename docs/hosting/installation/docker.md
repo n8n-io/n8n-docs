@@ -47,11 +47,11 @@ If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
 /// note | Keep in mind
-Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/environment-variables/environment-variables/#deployment).
+Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/configuration/environment-variables/deployment).
 ///
 ### PostgresDB
 
-To use n8n with Postgres, provide the corresponding [configuration](/hosting/configuration/):
+To use n8n with Postgres, provide the corresponding:
 
 ```sh
 docker volume create n8n_data

@@ -27,12 +27,6 @@ Execute a saved workflow by its ID:
 n8n execute --id <ID>
 ```
 
-Execute a workflow from a workflow file:
-
-```bash
-n8n execute --file <WORKFLOW_FILE>
-```
-
 ## Change the active status of a workflow
 
 You can change the active status of a workflow using the CLI.
@@ -244,7 +238,7 @@ n8n ldap:reset
 
 ## Security audit
 
-You can run a [security audit](/hosting/security-audit/) on your n8n instance, to detect common security issues.
+You can run a [security audit](/hosting/logging-monitoring/security-audit/) on your n8n instance, to detect common security issues.
 
 ```sh
 n8n audit

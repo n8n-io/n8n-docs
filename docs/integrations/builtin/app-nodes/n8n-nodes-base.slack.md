@@ -72,3 +72,4 @@ Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .externa
 	
 View [example workflows and related content](https://n8n.io/integrations/slack/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

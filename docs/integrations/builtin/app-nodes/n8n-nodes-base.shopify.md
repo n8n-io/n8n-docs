@@ -32,24 +32,4 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all products
     * Update a product
 
-## Example Usage
-
-This workflow allows you to get all orders from Shopify. You can also find the [workflow](https://n8n.io/workflows/548) on the website. This example usage workflow uses the following two nodes.
-
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Shopify]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Shopify node](/_images/integrations/builtin/app-nodes/shopify/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Shopify node
-
-1. First of all, you'll have to enter credentials for the Shopify node. You can find out how to do that [here](/integrations/builtin/credentials/shopify/).
-2. Select 'Get All' from the *Operation* dropdown list.
-3. Click on *Execute Node* to run the workflow.
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -69,28 +69,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all the cards in a list
     * Update a list
 
-## Example Usage
-
-This workflow allows you to create a new card in Trello. You can also find the [workflow](https://n8n.io/workflows/461) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Trello]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Trello node](/_images/integrations/builtin/app-nodes/trello/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Trello node
-
-1. First of all, you'll have to enter credentials for the Trello node. You can find out how to do that [here](/integrations/builtin/credentials/trello/).
-2. Enter the ID of the list in which you want to create a new card in the *List ID* field. You can find instructions on how to obtain the ID of the list in the FAQs below.
-3. Enter the name of the card in the *Name* field.
-4. Enter the description of the card in the *Description* field.
-5. Click on *Execute Node* to run the workflow.
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## FAQs
 

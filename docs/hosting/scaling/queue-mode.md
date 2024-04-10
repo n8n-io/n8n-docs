@@ -30,11 +30,11 @@ Workers are n8n instances that do the actual work. They receive information from
 
 ### Set encryption key
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/environment-variables/environment-variables/#deployment) if desired.
+n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/deployment) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
-Set the encryption key for each worker node in a [configuration file](/hosting/environment-variables/configuration-methods/) or by setting the corresponding environment variable:
+Set the encryption key for each worker node in a [configuration file](/hosting/configuration/configuration-methods/) or by setting the corresponding environment variable:
 
 ```bash
 export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>

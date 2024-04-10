@@ -131,7 +131,7 @@ If you build custom nodes, refer to [HTTP request helpers](/integrations/creatin
 
 ### Removed WEBHOOK_TUNNEL_URL
 
-As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](/hosting/environment-variables/configuration-methods/#webhook-url).
+As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](/hosting/configuration/configuration-methods/#webhook-url).
 
 [PR #1408](https://github.com/n8n-io/n8n/pull/1408){:target=_blank .external link}
 

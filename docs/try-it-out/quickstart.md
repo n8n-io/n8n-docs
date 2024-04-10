@@ -24,7 +24,8 @@ n8n provides a quickstart template using training nodes. This allows you to work
 1. Select **Templates**. n8n opens the templates library on the website.
 2. Search for `Very quick quickstart`.
 3. Select the **Very quick quickstart** template to preview it.
-4. Select **Use workflow** to open the template in your own editor.
+4. Select **Use template** to view the options for using the template.
+5. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
 
 This workflow:
 
@@ -45,7 +46,7 @@ Add a third node to message each customer and tell them their description. Use t
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
 3. Select **Customer Messenger (n8n training)** to add the node to the canvas. n8n opens the node automatically.
 4. Use [expressions](/code/expressions/) to map in the **Customer ID** and create the **Message**:
-	1. Drag **id** from the **INPUT** panel into the **Customer ID** field in the node settings.
+	1. Drag **customer_id** from the **INPUT** panel into the **Customer ID** field in the node settings.
     2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
     3. Copy this expression into the editor:
         ```

@@ -37,3 +37,5 @@ Refer to [AWS ELB's documentation](https://docs.aws.amazon.com/elasticloadbalanc
 
 View [example workflows and related content](https://n8n.io/integrations/aws-elb/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

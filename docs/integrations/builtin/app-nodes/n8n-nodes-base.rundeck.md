@@ -23,27 +23,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Execute a job
 - Get metadata of a job
 
-
-## Example Usage
-
-This workflow allows you to execute a job on Rundeck. You can also find the [workflow](https://n8n.io/workflows/539) on this website. This example usage workflow uses the following two nodes.
-
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Rundeck]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Rundeck node](/_images/integrations/builtin/app-nodes/rundeck/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Rundeck node
-
-1. First of all, you'll have to enter credentials for the Rundeck node. You can find out how to do that [here](/integrations/builtin/credentials/rundeck/).
-2. Enter your Rundeck job ID in the *Job Id* field. You can find instructions on how to obtain the job ID in the FAQs below.
-3. Click on *Execute Node* to run the workflow.
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## FAQs
 

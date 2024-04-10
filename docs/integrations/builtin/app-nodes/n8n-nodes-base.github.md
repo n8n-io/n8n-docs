@@ -53,30 +53,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Returns the repositories of a user.
     * Invites a user to an organization.
 
-## Example Usage
-
-This workflow allows you to get the community profile of a GitHub repository. You can also find the [workflow](https://n8n.io/workflows/450) on the website. This example usage workflow uses the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [GitHub]()
-
-The final workflow should look like the following image.
-
-![A workflow with the GitHub node](/_images/integrations/builtin/app-nodes/github/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. GitHub node
-
-1. First of all, you'll have to enter credentials for the GitHub node. You can find out how to do that [here](/integrations/builtin/credentials/github/).
-2. Select the 'Repository' option under the *Resource* field.
-3. Select the 'Get Profile' option under the *Operation* field.
-4. Enter the repository owner in the *Repository Owner* field.
-5. Enter the repository name in the *Repository Name* field.
-6. Click on *Execute Node* to run the workflow.
-
-
-
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

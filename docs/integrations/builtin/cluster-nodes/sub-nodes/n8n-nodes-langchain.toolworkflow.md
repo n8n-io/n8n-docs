@@ -19,7 +19,7 @@ For usage examples and templates to help you get started, refer to n8n's [Custom
 
 ### Name
 
-Give your custom code a name. It can't contain whitespace.
+Give your custom code a name. It can't contain whitespace or special characters.
 
 ### Description
 

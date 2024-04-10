@@ -91,23 +91,4 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all vendors
     * Update a vendor
 
-## Example Usage
-
-This workflow allows you to get the data of all leads from Zoho CRM. You can also find the [workflow](https://n8n.io/workflows/552) on the website. This example usage workflow would use the following two nodes.
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Zoho CRM]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Zoho CRM node](/_images/integrations/builtin/app-nodes/zohocrm/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Zoho CRM node
-
-1. First of all, you'll have to enter credentials for the Zoho CRM node. You can find out how to do that [here](/integrations/builtin/credentials/zoho/).
-2. Select the 'Get All' option from the *Operation* dropdown list.
-3. Click on *Execute Node* to run the workflow.
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

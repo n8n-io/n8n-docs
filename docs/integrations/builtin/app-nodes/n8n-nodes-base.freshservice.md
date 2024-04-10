@@ -106,29 +106,3 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Retrieve a ticket
     * Retrieve all tickets
     * Update a ticket
-
-## Example usage
-
-This workflow allows you to fetch all Tickets with an Urgent status in Freshservice. This example usage workflow would use the following two nodes:
-
-- [Start](/integrations/builtin/core-nodes/n8n-nodes-base.start/)
-- [Freshservice]()
-
-The final workflow should look like the following image.
-
-![A workflow with the Freshservice node](/_images/integrations/builtin/app-nodes/freshservice/workflow.png)
-
-### 1. Start node
-
-The start node exists by default when you create a new workflow.
-
-### 2. Freshservice node
-
-1. First enter your credentials for the Freshservice node. You can find out how to do that [here](/integrations/builtin/credentials/freshservice/).
-2. Select **Ticket** from the *Resource* dropdown.
-3. Select **Get All** from the *Operation* dropdown.
-4. Enable the **Return All** toggle.
-5. From the *Add Filter* dropdown select **Priority**.
-6. From the new *Priority* dropdown select **Urgent**.
-5. Click on **Test step** to run the workflow.
-

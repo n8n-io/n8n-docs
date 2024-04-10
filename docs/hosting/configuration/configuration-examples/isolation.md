@@ -8,7 +8,7 @@ contentType: howto
 
 By default, a self-hosted n8n instance sends data to n8n's servers. It notifies users about available updates, workflow templates, and diagnostics. 
 
-To prevent your n8n instance from connecting with n8n's servers, disable them using these environment variables: 
+To prevent your n8n instance from connecting to n8n's servers, set these environment variables to false: 
 
 ```
 N8N_DIAGNOSTICS_ENABLED=false

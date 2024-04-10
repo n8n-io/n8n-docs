@@ -9,9 +9,6 @@ You can use these credentials to authenticate the following nodes:
 
 [JWT](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/)
 
-## Prerequisites
-
-_Include info on services they need to sign up for_
 
 ## Supported authentication methods
 
@@ -19,8 +16,7 @@ You can use a passphrase or a PEM key.
 
 ## Related resources
 
-
-Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to the [JWT website](https://jwt.io/introduction){:target=_blank .external-link} for more information about working with JWTs.
 
 
 

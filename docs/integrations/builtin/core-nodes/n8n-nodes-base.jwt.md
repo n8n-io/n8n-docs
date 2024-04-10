@@ -8,7 +8,7 @@ description: Documentation for the JWT node in n8n, a workflow automation platfo
 Work with JSON web tokens in your n8n workflows.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/jwt/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [JWT integrations](https://n8n.io/integrations/jwt/){:target=_blank .external-link} page.
 ///
 
 ## Operations

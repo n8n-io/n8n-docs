@@ -11,6 +11,8 @@ hide:
 
 # External secrets environment variables
 
+You can use an external secrets store to manage credentials for n8n. Refer to [External secrets](/external-secrets/) for details.
+
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` | Number | `300` (5 minutes) | How often (in seconds) to check for secret updates. |

@@ -26,3 +26,5 @@ Self-hosted n8n only.
 	Set the variables so that they're available globally in the environment where you host your n8n instance. You can do this in the same way as the rest of your general configuration: for example, using the CLI, or in your Docker Compose file. These aren't n8n environment variables, so don't try to set them using the [n8n configuration file](/hosting/configuration/configuration-methods/#set-environment-variables-using-a-file).
 
 1. Restart n8n.
+
+For information on using LangSmith, refer to [LangSmith's documentation](https://docs.smith.langchain.com/){:target=_blank .external-link}.

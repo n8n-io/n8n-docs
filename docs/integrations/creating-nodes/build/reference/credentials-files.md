@@ -21,7 +21,7 @@ The credentials file follows this basic structure:
 ```js
 import {
 	IAuthenticateGeneric,
-  ICredentialTestRequest,
+	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -38,23 +38,23 @@ export class ExampleNode implements ICredentialType {
 			default: '',
 		},
 	];
-	authenticate = {
+	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
 		properties: {
-      // Can be body, header, or qs
+    		// Can be body, header, qs or auth
 			qs: {
-        // Use the value from `apiKey` above
+        		// Use the value from `apiKey` above
 				'api_key': '={{$credentials.apiKey}}'
 			}
 
 		},
-	} as IAuthenticateGeneric;
-  test: ICredentialTestRequest = {
-    request: {
-      baseURL: '={{$credentials?.domain}}',
-      url: '/bearer',
-    },
-  };
+	};
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: '={{$credentials?.domain}}',
+			url: '/bearer',
+		},
+	};
 }
 ```
 
@@ -84,7 +84,7 @@ Each object contains:
 
 ### `authenticate`
 
-Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. 
+* `authenticate`: Object. Contains objects that tell n8n how to inject the authentication data as part of the API request. 
 
 #### `type`
 
@@ -94,10 +94,65 @@ String. If you're using an authentication method that sends data in the header, 
 
 Object. Defines the authentication methods. Options are:
 
-* `body`: object. Sends authentication data in the request body. Can contain nested objects. 
-* `header`: object. Send authentication data in the request header.
-* `qs`: object. Stands for "query string." Send authentication data in the request query string.
+* `body`: Object. Sends authentication data in the request body. Can contain nested objects.
+```typescript
+authenticate: IAuthenticateGeneric = {
+	type: 'generic',
+	properties: {
+		body: {
+			username: '={{$credentials.username}}',
+			password: '={{$credentials.password}}',
+		},
+	},
+};
+``` 
+
+* `header`: Object. Send authentication data in the request header.
+```typescript
+authenticate: IAuthenticateGeneric = {
+	type: 'generic',
+	properties: {
+		header: {
+			Authorization: '=Bearer {{$credentials.authToken}}',
+		},
+	},
+};
+``` 
+
+* `qs`: Object. Stands for "query string." Send authentication data in the request query string.
+```typescript
+authenticate: IAuthenticateGeneric = {
+	type: 'generic',
+	properties: {
+		qs: {
+			token: '={{$credentials.token}}',
+		},
+	},
+};
+``` 
+
+* `auth`: Object. Used for Basic Auth. Requires `username` and `password` as the key names.
+```typescript
+authenticate: IAuthenticateGeneric = {
+	type: 'generic',
+	properties: {
+		auth: {
+			username: '={{$credentials.username}}',
+			password: '={{$credentials.password}}',
+		},
+	},
+};
+```
 
 ### `test`
 
 Provide a `request` object containing a URL and authentication type that n8n can use to test the credential.
+
+```typescript
+test: ICredentialTestRequest = {
+		request: {
+			baseURL: '={{$credentials?.domain}}',
+			url: '/bearer',
+		},
+	};
+```

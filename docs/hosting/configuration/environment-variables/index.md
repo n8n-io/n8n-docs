@@ -9,7 +9,7 @@ hide:
   - tags
 ---
 
-# Environment Variables Overview
+# Environment variables overview
 
 This section lists of environment variables that you can use to change n8n's configuration settings when self-hosting n8n.
 

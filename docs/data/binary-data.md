@@ -52,4 +52,4 @@ You can configure how your self-hosted n8n instance handles binary data using th
 
 Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data/).
 
-Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/configuration/environment-variables/nodes) for more information.
+Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables/nodes/) for more information.

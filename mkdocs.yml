@@ -906,6 +906,7 @@ nav:
         - integrations/builtin/credentials/jenkins.md
         - integrations/builtin/credentials/jira.md
         - integrations/builtin/credentials/jotform.md
+        - integrations/builtin/credentials/jwt.md
         - integrations/builtin/credentials/kafka.md
         - integrations/builtin/credentials/keap.md
         - integrations/builtin/credentials/kibana.md

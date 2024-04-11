@@ -28,14 +28,81 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.37.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.37.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-10
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+/// warning | Breaking change
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+///
+
+This release contains a new node, improvements to error handling and messaging, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: JWT
+
+This release adds the [JWT core node](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link}
+
+## n8n@1.36.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.0...n8n@1.36.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-04
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.36.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.35.0...n8n@1.36.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-03
+
+This release contains new nodes, enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Salesforce Trigger node
+
+This release adds the [Salesforce trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Twilio Trigger node
+
+This release adds the [Twilio trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/). 
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.35.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.34.2...n8n@1.35.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-03-28
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains enhancements and bug fixes.
 
@@ -45,6 +112,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.34.1...n8n@1.34.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-03-26
+
+
 
 This release contains bug fixes.
 
@@ -137,9 +206,7 @@ toInt()
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.33.0...n8n@1.33.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-03-15
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains bug fixes.
 

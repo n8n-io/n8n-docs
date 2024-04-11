@@ -18,7 +18,7 @@ theme:
   language: custom
   logo: _images/n8n-docs-icon.svg
   palette:
-      scheme: light
+    scheme: light
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
     - announce.dismiss
@@ -61,12 +61,12 @@ extra:
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
             submitting an issue or a fix in our <a href="https://github.com/n8n-io/n8n-docs" target="_blank" rel="noopener">GitHub repo</a>.
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       We use cookies and other tracking technologies to improve your browsing experience, 
       to analyze our website traffic, assist our marketing efforts and to understand where 
       our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
@@ -86,7 +86,7 @@ watch:
 markdown_extensions:
   # used for https://squidfunk.github.io/mkdocs-material/reference/tooltips/
   - abbr
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists 
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists
   # attr_list is required for several other features. Always enable.
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
@@ -106,8 +106,9 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+
   - pymdownx.highlight:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -122,8 +123,9 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-      # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
+
       preserve_tabs: true
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -158,10 +160,10 @@ plugins:
       # https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files
       include_yaml:
         - _yaml/data-functions.yml
-      j2_block_start_string: '[[%'
-      j2_block_end_string: '%]]'
-      j2_variable_start_string: '[['
-      j2_variable_end_string: ']]'
+      j2_block_start_string: "[[%"
+      j2_block_end_string: "%]]"
+      j2_variable_start_string: "[["
+      j2_variable_end_string: "]]"
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   - tags:
       enabled: true
@@ -351,6 +353,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
@@ -707,6 +710,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
@@ -718,6 +722,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
@@ -905,6 +910,7 @@ nav:
         - integrations/builtin/credentials/jenkins.md
         - integrations/builtin/credentials/jira.md
         - integrations/builtin/credentials/jotform.md
+        - integrations/builtin/credentials/jwt.md
         - integrations/builtin/credentials/kafka.md
         - integrations/builtin/credentials/keap.md
         - integrations/builtin/credentials/kibana.md
@@ -1130,10 +1136,27 @@ nav:
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
     - Configuration: 
-      - Configuration methods: hosting/configuration/configuration-methods.md    
-      - Environment variables reference: hosting/configuration/environment-variables.md
-      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-      - User management: hosting/configuration/user-management-self-hosted.md
+      - Environment variables:
+        - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - Credentials: hosting/configuration/environment-variables/credentials.md
+        - Database: hosting/configuration/environment-variables/database.md
+        - Deployment: hosting/configuration/environment-variables/deployment.md
+        - Binary data: hosting/configuration/environment-variables/binary-data.md
+        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
+        - Endpoints: hosting/configuration/environment-variables/endpoints.md
+        - External hooks: hosting/configuration/environment-variables/external-hooks.md
+        - Executions: hosting/configuration/environment-variables/executions.md
+        - Logs: hosting/configuration/environment-variables/logs.md
+        - External data storage: hosting/configuration/environment-variables/external-data-storage.md
+        - Nodes: hosting/configuration/environment-variables/nodes.md
+        - Queue mode: hosting/configuration/environment-variables/queue-mode.md
+        - Security: hosting/configuration/environment-variables/security.md
+        - Source control: hosting/configuration/environment-variables/source-control.md
+        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
+        - Workflows: hosting/configuration/environment-variables/workflows.md
+        - License: hosting/configuration/environment-variables/licenses.md
+      - Configuration methods: hosting/configuration/configuration-methods.md   
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md
         - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
@@ -1145,7 +1168,9 @@ nav:
         - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
         - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
         - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
-        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
+        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md 
+      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - User management: hosting/configuration/user-management-self-hosted.md      
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
@@ -1164,77 +1189,76 @@ nav:
     - Using the CLI: 
       - CLI commands: hosting/cli-commands.md
   - Code in n8n:
-    - code/index.md
-    - Expressions: code/expressions.md
-    - Code node: code/code-node.md
-    - AI coding: code/ai-code.md
-    - Built in methods and variables:
-      - Overview: code/builtin/overview.md
-      - Current node input: code/builtin/current-node-input.md
-      - Output of other nodes: code/builtin/output-other-nodes.md
-      - Date and time: code/builtin/date-time.md
-      - JMESPath: code/builtin/jmespath.md
-      - HTTP node: code/builtin/http-node-variables.md
-      - LangChain Code node: code/builtin/langchain-methods.md
-      - n8n metadata: code/builtin/n8n-metadata.md
-      - Convenience methods: code/builtin/convenience.md
-      - Data transformation functions: 
-        - code/builtin/data-transformation-functions/index.md
-        - Arrays: code/builtin/data-transformation-functions/arrays.md
-        - Booleans: code/builtin/data-transformation-functions/booleans.md
-        - Dates: code/builtin/data-transformation-functions/dates.md
-        - Numbers: code/builtin/data-transformation-functions/numbers.md
-        - Objects: code/builtin/data-transformation-functions/objects.md
-        - Strings: code/builtin/data-transformation-functions/strings.md
-    - Custom variables: 
-      - Create custom variables: code/variables.md
-    - Cookbook:
-      - Handling dates: code/cookbook/luxon.md  
-      - Query JSON with JMESPath: code/cookbook/jmespath.md
-      - Built-in methods and variables examples:
-        - code/cookbook/builtin/index.md
-        - execution: code/cookbook/builtin/execution.md
-        - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-        - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
-        - (node-name).all: code/cookbook/builtin/all.md
-        - vars: code/cookbook/builtin/vars.md
-      - Expressions:
-        - code/cookbook/expressions/index.md
-        - Check incoming data: code/cookbook/expressions/check-incoming-data.md
-      - Code node:
-        - code/cookbook/code-node/index.md
-        - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
-        - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
-        - Output to the browser console: code/cookbook/code-node/console-log.md
-      - HTTP Request node:
-        - code/cookbook/http-node/index.md
-        - Pagination: code/cookbook/http-node/pagination.md
+      - code/index.md
+      - Expressions: code/expressions.md
+      - Code node: code/code-node.md
+      - AI coding: code/ai-code.md
+      - Built in methods and variables:
+          - Overview: code/builtin/overview.md
+          - Current node input: code/builtin/current-node-input.md
+          - Output of other nodes: code/builtin/output-other-nodes.md
+          - Date and time: code/builtin/date-time.md
+          - JMESPath: code/builtin/jmespath.md
+          - HTTP node: code/builtin/http-node-variables.md
+          - LangChain Code node: code/builtin/langchain-methods.md
+          - n8n metadata: code/builtin/n8n-metadata.md
+          - Convenience methods: code/builtin/convenience.md
+          - Data transformation functions:
+              - code/builtin/data-transformation-functions/index.md
+              - Arrays: code/builtin/data-transformation-functions/arrays.md
+              - Booleans: code/builtin/data-transformation-functions/booleans.md
+              - Dates: code/builtin/data-transformation-functions/dates.md
+              - Numbers: code/builtin/data-transformation-functions/numbers.md
+              - Objects: code/builtin/data-transformation-functions/objects.md
+              - Strings: code/builtin/data-transformation-functions/strings.md
+      - Custom variables:
+          - Create custom variables: code/variables.md
+      - Cookbook:
+          - Handling dates: code/cookbook/luxon.md
+          - Query JSON with JMESPath: code/cookbook/jmespath.md
+          - Built-in methods and variables examples:
+              - code/cookbook/builtin/index.md
+              - execution: code/cookbook/builtin/execution.md
+              - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+              - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
+              - (node-name).all: code/cookbook/builtin/all.md
+              - vars: code/cookbook/builtin/vars.md
+          - Expressions:
+              - code/cookbook/expressions/index.md
+              - Check incoming data: code/cookbook/expressions/check-incoming-data.md
+          - Code node:
+              - code/cookbook/code-node/index.md
+              - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
+              - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
+              - Output to the browser console: code/cookbook/code-node/console-log.md
+          - HTTP Request node:
+              - code/cookbook/http-node/index.md
+              - Pagination: code/cookbook/http-node/pagination.md
   - Advanced AI:
-    - advanced-ai/index.md
-    - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
-    - LangChain in n8n:
-      - Overview: advanced-ai/langchain/overview.md
-      - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
-      - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
-    - Examples and concepts: 
-      - Introduction: advanced-ai/examples/introduction.md
-      - What is a tool? : advanced-ai/examples/understand-tools.md
-      - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
-      - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
-      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+      - advanced-ai/index.md
+      - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+      - LangChain in n8n:
+          - Overview: advanced-ai/langchain/overview.md
+          - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+          - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+          - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
+      - Examples and concepts:
+          - Introduction: advanced-ai/examples/introduction.md
+          - What is a tool?: advanced-ai/examples/understand-tools.md
+          - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
+          - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+          - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
   - API:
-    - api/index.md
-    - Authentication: api/authentication.md
-    - Pagination: api/pagination.md
-    - Using the API playground: api/using-api-playground.md
-    - API reference: api/api-reference.md
+      - api/index.md
+      - Authentication: api/authentication.md
+      - Pagination: api/pagination.md
+      - Using the API playground: api/using-api-playground.md
+      - API reference: api/api-reference.md
   - Embed:
-    - embed/index.md
-    - Prerequisites: embed/prerequisites.md
-    - Deployment: embed/deployment.md
-    - Configuration: embed/configuration.md
-    - Workflow management: embed/managing-workflows.md
-    - Workflows templates: embed/workflow-templates.md
-    - White labelling: embed/white-labelling.md
-  
-
+      - embed/index.md
+      - Prerequisites: embed/prerequisites.md
+      - Deployment: embed/deployment.md
+      - Configuration: embed/configuration.md
+      - Workflow management: embed/managing-workflows.md
+      - Workflows templates: embed/workflow-templates.md
+      - White labelling: embed/white-labelling.md

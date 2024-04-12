@@ -11,6 +11,10 @@ hide:
 
 # User management SMTP, and two-factor authentication environment variables
 
+/// note | File-based configuration
+You can provide a [configuration file](/hosting/configuration/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+///
+
 Refer to [User management](/hosting/configuration/user-management-self-hosted/) for more information on setting up user management and emails.
 <!-- vale off -->
 | Variable | Type | Default | Description |

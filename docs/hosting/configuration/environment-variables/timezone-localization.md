@@ -11,6 +11,10 @@ hide:
 
 # Timezone and localization environment variables
 
+/// note | File-based configuration
+You can provide a [configuration file](/hosting/configuration/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+///
+
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `GENERIC_TIMEZONE` | * | `America/New_York` |The n8n instance timezone. Important for schedule nodes (such as Cron). |

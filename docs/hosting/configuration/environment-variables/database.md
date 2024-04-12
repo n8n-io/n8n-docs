@@ -11,6 +11,10 @@ hide:
 
 # Database environment variables
 
+/// note | File-based configuration
+You can provide a [configuration file](/hosting/configuration/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+///
+
 By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [removed support for MySQL and MariaDB](/1-0-migration-checklist/#mysql-and-mariadb) in v1.0. 
 
 This page outlines environment variables to configure your chosen database for your self-hosted n8n instance. 

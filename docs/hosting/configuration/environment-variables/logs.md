@@ -11,6 +11,10 @@ hide:
 
 # Logs environment variables
 
+/// note | File-based configuration
+You can provide a [configuration file](/hosting/configuration/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+///
+
 This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](/hosting/logging-monitoring/logging/) for details. 
 
 ## n8n logs

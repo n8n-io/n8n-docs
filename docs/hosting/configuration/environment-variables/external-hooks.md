@@ -12,7 +12,7 @@ hide:
 # External hooks environment variables
 
 /// note | File-based configuration
-You can provide a [configuration file](/hosting/configuration/configuration-methods/) for n8n. You can also append `_FILE` to certain variables to provide their configuration in a separate file. Variables that support this have the "/`_FILE`" option listed below.
+You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
 ///
 
 You can define external hooks that n8n executes whenever a specific operation runs. Refer to [Backend hooks](/embed/configuration/#backend-hooks) for examples of available hooks and [Hook files](/embed/configuration/#hook-files_1) for information on file formatting. 

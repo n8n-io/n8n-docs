@@ -98,19 +98,23 @@ n8n:
 
 ### Keeping sensitive data in separate files
 
-You can append `_FILE` to some individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from Docker-Secrets and Kubernetes-Secrets.
+You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/){:target=_blank .external-link} and [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/){:target=_blank .external-link}. 
 
-The following environment variables support file input:
+Refer to [Environment variables](/hosting/configuration/environment-variables/) for details on each variable.
 
-- `CREDENTIALS_OVERWRITE_DATA_FILE`
-- `DB_TYPE_FILE`
-- `DB_POSTGRESDB_DATABASE_FILE`
-- `DB_POSTGRESDB_HOST_FILE`
-- `DB_POSTGRESDB_PASSWORD_FILE`
-- `DB_POSTGRESDB_PORT_FILE`
-- `DB_POSTGRESDB_SSL_CA_FILE`
-- `DB_POSTGRESDB_SSL_CERT_FILE`
-- `DB_POSTGRESDB_SSL_KEY_FILE`
-- `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE`
-- `DB_POSTGRESDB_USER_FILE`
-- `DB_POSTGRESDB_SCHEMA_FILE`
+While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as credentials and database configuration. Here are some examples: 
+
+```yaml
+CREDENTIALS_OVERWRITE_DATA_FILE=/path/to/credentials_data
+DB_TYPE_FILE=/path/to/db_type
+DB_POSTGRESDB_DATABASE_FILE=/path/to/database_name
+DB_POSTGRESDB_HOST_FILE=/path/to/database_host
+DB_POSTGRESDB_PORT_FILE=/path/to/database_port
+DB_POSTGRESDB_USER_FILE=/path/to/database_user
+DB_POSTGRESDB_PASSWORD_FILE=/path/to/database_password
+DB_POSTGRESDB_SCHEMA_FILE=/path/to/database_schema
+DB_POSTGRESDB_SSL_CA_FILE=/path/to/ssl_ca
+DB_POSTGRESDB_SSL_CERT_FILE=/path/to/ssl_cert
+DB_POSTGRESDB_SSL_KEY_FILE=/path/to/ssl_key
+DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED_FILE=/path/to/ssl_reject_unauth
+```

@@ -46,3 +46,9 @@ Other images like this should expand on click:
 [This link should open in a new tab](https://example.com/){:target=_blank .external-link}
 
 [This link should open in the same tab](/try-it-out/quickstart/)
+
+## Instant previews
+
+[This link should show a preview of the quickstart on hover](/try-it-out/quickstart/){ data-preview }
+
+[This link should NOT show a preview on hover](/try-it-out/quickstart/)

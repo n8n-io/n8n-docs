@@ -49,7 +49,7 @@ You should create a new user, to avoid working as the root user:
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the root user folder of the Droplet. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the home folder of the logged-in user on your Droplet. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 

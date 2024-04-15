@@ -4,25 +4,33 @@ contentType: howto
 
 # Queue mode
 
-n8n can be run in different modes depending on your needs. The queue mode provides the best scalability, and its configuration is detailed here.
+You can run n8n in different modes in different modes depending on your needs. The queue mode provides the best scalability.
 
 /// note | Binary data storage
 n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
 ///
 
-/// note | Own mode removed
-n8n removed `own` mode in version 1.27.0.
-///
-
 ## How it works
 
-When running in `queue` mode you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions.
+When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions. 
 
-n8n passes the workflow information from the main instance to a message broker, [Redis](#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
-
-Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second).
+Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second). 
 
 By using worker instances and running in queue mode, you can scale n8n up (by adding workers) and down (by removing workers) as needed to handle the workload.
+
+This is the process flow:
+
+1. The main n8n instance handles timers and webhook calls, generating (but not running) a workflow execution. 
+1. It passes the execution ID to a message broker, [Redis](#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
+1. A worker in the pool picks up message from Redis.
+1. The worker uses the execution ID to get workflow information from the database.
+1. After completing the workflow execution, the worker:
+	- Writes the results to the database.
+	- Posts to Redis, saying that the execution has finished.
+1. Redis notifies the main instance.
+
+
+!["Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database"](/_images/hosting/scaling/queue-mode-flow.png)
 
 ## Configuring workers
 
@@ -30,7 +38,7 @@ Workers are n8n instances that do the actual work. They receive information from
 
 ### Set encryption key
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/#deployment) if desired.
+n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/deployment) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
@@ -83,7 +91,7 @@ You can also set the following optional configurations:
 | `queue.bull.redis.password:PASSWORD` | `QUEUE_BULL_REDIS_PASSWORD` | By default, Redis doesn't require a password. If you're using a password, configure it variable. |
 | `queue.bull.redis.db:0` | `QUEUE_BULL_REDIS_DB` | The default value is `0`. If you change this value, update the configuration. |
 | `queue.bull.redis.timeoutThreshold:10000ms` | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Tells n8n how long it should wait if Redis is unavailable before exiting. The default value is `10000ms`. |
-| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. This is used to recover when n8n's main process loses connection temporarily to Redis and isn't notified about finished jobs. The default value is `60` seconds. |
+| `queue.bull.queueRecoveryInterval:60` | `QUEUE_RECOVERY_INTERVAL` | Adds an active watchdog to n8n that checks Redis for finished executions. n8n uses this to recover when the main process loses connection temporarily to Redis and isn't notified about finished jobs. The default value is `60` seconds. |
 | `queue.bull.gracefulShutdownTimeout:30` | `QUEUE_WORKER_TIMEOUT` | A graceful shutdown timeout for workers to finish executing jobs before terminating the process. The default value is `30` seconds. |
 
 Now you can start your n8n instance and it will connect to your Redis instance.
@@ -119,7 +127,7 @@ You can view running workers and their performance metrics in n8n by select **Se
 
 When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency. However, the manual workflow executions still use the main process.
 
-Redis is used as the message broker, and the database is used to persist data, so access to both is required. Running a distributed system with this setup over SQLite isn't recommended.
+Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 
 /// note | Migrate data
 If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
@@ -135,7 +143,7 @@ Webhook processors are another layer of scaling in n8n. Configuring the webhook 
 
 This method allows n8n to process a huge number of parallel requests. All you have to do is add more webhook processes and workers accordingly. The webhook process will listen to requests on the same port (default: `5678`). Run these processes in containers or separate machines, and have a load balancing system to route requests accordingly.
 
-n8n doesn't recommend adding the main process to the load balancer pool. If the main process is added to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
+n8n doesn't recommend adding the main process to the load balancer pool. If you add the main process to the pool, it will receive requests and possibly a heavy load. This will result in degraded performance for editing, viewing, and interacting with the n8n UI.
 
 You can start the webhook processor by executing the following command from the root directory:
 
@@ -184,7 +192,7 @@ When disabling the webhook process in the main process, run the main process and
 
 ## Configure worker concurrency
 
-You can define the number of jobs a worker can run in parallel by using the `concurrency` flag. It defaults to `10` but can be changed:
+You can define the number of jobs a worker can run in parallel by using the `concurrency` flag. It defaults to `10`. To change it:
 
 ```bash
 n8n worker --concurrency=5
@@ -199,7 +207,7 @@ n8n worker --concurrency=5
 
 In queue mode you can run more than one `main` process for high availability.
 
-Normally, in a single-mode setup, the `main` process is responsible for two sets of tasks: 
+In a single-mode setup, the `main` process does two sets of tasks: 
 
 - **regular tasks**, such as running the API, serving the UI, listening for webhooks, and handling manual executions, and 
 - **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
@@ -211,7 +219,7 @@ In a multi-main setup, there are two kinds of `main` processes:
 
 ### Leader designation
 
-In a multi-main setup, all `main` handle the leadership process transparently to users. In case the current leader becomes unavailable, e.g. because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
+In a multi-main setup, all main instances handle the leadership process transparently to users. In case the current leader becomes unavailable, for example because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
 
 ### Configuring multi-main setup
 
@@ -230,5 +238,5 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
 /// note | Keep in mind
-In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Therefore, running `webhook` processes is neither needed nor allowed in multi-main setup.
+In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Running `webhook` processes is neither needed nor allowed in multi-main setup.
 ///

@@ -190,7 +190,7 @@ sudo docker compose stop
 ### 9. Done
 
 n8n will now be reachable using the above defined subdomain + domain combination.
-The above example would result in: <https://n8n.example.com>
+The above example would result in: `https://n8n.example.com`
 
 n8n will only be reachable using `https` and not using `http`.
 

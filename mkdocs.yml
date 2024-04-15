@@ -107,8 +107,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
-
+        !!python/name:material.extensions.emoji.to_svg 
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -124,8 +124,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format:
-            !!python/name:pymdownx.superfences.fence_code_format # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
-
+            !!python/name:pymdownx.superfences.fence_code_format 
+      # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -1258,3 +1258,5 @@ nav:
       - Workflow management: embed/managing-workflows.md
       - Workflows templates: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
+#  - Feature tests:
+#      - Main features: docs-site-feature-tests/index.md

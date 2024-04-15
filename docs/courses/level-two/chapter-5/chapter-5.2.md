@@ -49,7 +49,7 @@ The second part of the workflow consists of four nodes:
 3. Use the [**Gmail node**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
 4. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * **Webhook URL**: The Discord URL you received in the email when you signed up for this course.
-    * **Text**: "I sent the file using email with the label ID `{label ID}`. My ID: " followed by your ID. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
+    * **Text**: "I sent the file using email with the label ID `{label ID}`. My ID: " followed by the unique ID emailed to you when you registered for this course. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
 
 /// question | Quiz questions
 * How many orders are assigned to the `Americas` region?
@@ -70,7 +70,7 @@ The third part of the workflow consists of five nodes:
 4. Use the [**Convert to File node**](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to create a CSV spreadsheet with the file name set as the expression: `{{$runIndex > 0 ? 'file_low_orders':'file_high_orders'}}`.
 5. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * **Webhook URL**: The Discord URL you received in the email when you signed up for this course.
-    * **Text**: "I created the spreadsheet `{file name}`. My ID:" followed by your ID. <br/> Note that you need to replace `{file name}` with an expression that references data from the previous **Convert to File node**.<br/>
+    * **Text**: "I created the spreadsheet `{file name}`. My ID:" followed by the unique ID emailed to you when you registered for this course. <br/> Note that you need to replace `{file name}` with an expression that references data from the previous **Convert to File node**.<br/>
 
 /// question | Quiz questions
 * What's the lowest order price in the first batch of items?

@@ -12,13 +12,23 @@ n8n doesn't support queue mode with binary data storage. If your workflows need 
 
 ## How it works
 
-When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions.
+When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions. 
 
-n8n passes the workflow information from the main instance to a message broker, [Redis](#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
-
-Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second).
+Each worker is its own Node.js instance, running in `main` mode, but able to handle multiple simultaneous workflow executions due to their high IOPS (input-output operations per second). 
 
 By using worker instances and running in queue mode, you can scale n8n up (by adding workers) and down (by removing workers) as needed to handle the workload.
+
+This is the process flow:
+
+1. The main n8n instance handles timers and webhook calls, generating (but not running) a workflow execution. 
+1. It passes the execution ID to a message broker, [Redis](#start-redis), which maintains the queue of pending executions and allows the next available worker to pick them up.
+1. A worker in the pool picks up message from Redis.
+1. The worker uses the execution ID to get workflow information from the database.
+1. After completing the workflow execution, the worker:
+	- Writes the results to the database.
+	- Posts to Redis, saying that the execution has finished.
+1. Redis notifies the main instance.
+
 
 !["Diagram showing the flow of data between the main n8n instance, Redis, the n8n workers, and the n8n database"](/_images/hosting/scaling/queue-mode-flow.png)
 

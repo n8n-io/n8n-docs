@@ -33,6 +33,8 @@ theme:
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
+    #https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.instant
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
     - navigation.path
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
@@ -42,8 +44,6 @@ theme:
     - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
-      #https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
-    - navigation.instant
 copyright: >
   <a href="#__consent">Change cookie settings</a>
 extra:
@@ -94,9 +94,6 @@ markdown_extensions:
       sources:
         include:
           - release-notes.md
-      targets:
-        include:
-          - log-streaming.md
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - md_in_html
   - meta

@@ -28,7 +28,7 @@ This page lists environment variables to set up logging for debugging. Refer to 
 | `N8N_LOG_FILE_SIZE_MAX` | Number | `16` | Max size of each log file in MB. |
 | `N8N_LOG_FILE_LOCATION` | String | `<n8nFolderPath>/logs/n8n.log` | Log file location. Requires N8N_LOG_OUTPUT set to `file`. |
 | `DB_LOGGING_ENABLED` | Boolean | `false` | Whether to enable database-specific logging. |
-| `DB_LOGGING_OPTIONS` | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log`  | `error` | Database log output level. To enable all logging, specify `all`. Refer to [typeorm logging options](https://orkhan.gitbook.io/typeorm/docs/logging#logging-options){:target=_blank .external-link} |
+| `DB_LOGGING_OPTIONS` | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log`  | `error` | Database log output level. To enable all logging, specify `all`. Refer to [TypeORM logging options](https://orkhan.gitbook.io/typeorm/docs/logging#logging-options){:target=_blank .external-link} |
 | `DB_LOGGING_MAX_EXECUTION_TIME` | Number | `1000` | Maximum execution time (in milliseconds) before n8n logs a warning. Set to `0` to disable long running query warning. |
 
 ## Log streaming

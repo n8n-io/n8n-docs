@@ -201,6 +201,10 @@
 	border: 0;
   }
 
+  .md-content__button > svg {
+	border: 0;
+  }
+
   /* remove lightbox controls so users can't slideshow */
   .gnext, .gprev {
 	display: none !important;
@@ -250,6 +254,10 @@
 	.md-header--lifted~.md-container .md-typeset :target {
 		--md-scroll-margin: 9rem;
 	}
+}
+
+.md-header__source {
+	display:none;
 }
 
   /* dark mode */  

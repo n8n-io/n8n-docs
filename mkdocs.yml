@@ -1,6 +1,9 @@
 site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
+# Must be the docs repo for the edit page buttons to work
+repo_url: https://github.com/n8n-io/n8n-docs 
+edit_uri: edit/main/docs/
 validation:
   nav:
     omitted_files: info
@@ -22,6 +25,8 @@ theme:
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
     - announce.dismiss
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    - content.action.edit
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs

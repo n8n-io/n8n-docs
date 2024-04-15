@@ -127,7 +127,7 @@ You can view running workers and their performance metrics in n8n by select **Se
 
 When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency. However, the manual workflow executions still use the main process.
 
-Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't recommended.
+Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 
 /// note | Migrate data
 If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
@@ -219,7 +219,7 @@ In a multi-main setup, there are two kinds of `main` processes:
 
 ### Leader designation
 
-In a multi-main setup, all `main` handle the leadership process transparently to users. In case the current leader becomes unavailable, for example because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
+In a multi-main setup, all main instances handle the leadership process transparently to users. In case the current leader becomes unavailable, for example because it crashed or its event loop became too busy, other followers can take over. If the previous leader becomes responsive again, it becomes a follower.
 
 ### Configuring multi-main setup
 

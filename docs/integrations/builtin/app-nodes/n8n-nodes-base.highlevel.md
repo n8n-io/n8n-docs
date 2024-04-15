@@ -47,3 +47,4 @@ HighLevel has [API documentation and support forums](https://help.gohighlevel.co
 	* Get All
 	* Update
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

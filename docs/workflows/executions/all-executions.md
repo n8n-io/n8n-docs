@@ -12,7 +12,7 @@ When you delete a workflow, n8n deletes its execution history as well. This mean
 ///
 ## Browse executions
 
-Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png)</span> to open the list. 
+Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png){.off-glb}</span> to open the list. 
 
 
 ## Filter executions
@@ -20,7 +20,7 @@ Select **All executions** <span class="inline-image">![All executions menu icon]
 You can filter the executions list.
 
 
-1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png)</span> to open the list.
+1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png){.off-glb}</span> to open the list.
 2. Select **Filters**.
 3. Enter your filters. You can filter by:
 	* **Workflows**: choose all workflows, or a specific workflow name.
@@ -34,8 +34,8 @@ You can filter the executions list.
 
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
-1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png)</span> to open the list. 
-2. On the execution you want to retry, select **Retry execution** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png)</span>.
+1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png){.off-glb}</span> to open the list. 
+2. On the execution you want to retry, select **Retry execution** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"
 
 ## Load data from previous executions into your current workflow

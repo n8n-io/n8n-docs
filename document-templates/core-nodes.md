@@ -15,6 +15,7 @@ You can find more info on working with the docs project in the README: https://g
 ---
 title: _Name_
 description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: integration
 ---
 
 <!-- 
@@ -36,9 +37,13 @@ For usage examples and templates to help you get started, refer to n8n's [_Name_
 
 ## Node parameters
 
+## Node options
+
 
 <!-- 
 Add any other sections here. 
 You should include: quirks, pain points, complex topics that trip people up
 You should not include: basic usage examples
 -->
+
+

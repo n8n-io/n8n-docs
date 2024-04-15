@@ -2,7 +2,7 @@
 contentType: overview
 title: Set a human fallback for AI workflows
 description: Have a workflow that triggers a human answer when the AI can't help.
-workflowFile: ask_a_human.json
+workflowFile: advanced-ai/examples/ask_a_human.json
 ---
 
 # Have a human fallback for AI workflows
@@ -13,7 +13,7 @@ This workflow uses the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes
 
 <figure markdown>
 !["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/ask-a-human.png)
-<figcaption markdown>[Download the example workflow](/_workflows/advanced-ai/examples/[[ page.meta.workflowFile ]])</figcaption>
+<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
 </figure>
 
 ## Key features
@@ -24,4 +24,6 @@ This workflow uses:
 * [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): the key piece of the AI workflow. The Agent interacts with other components of the workflow and makes decisions about what tools to use.
 * [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/): plug in n8n workflows as custom tools. In AI, a tool is an interface the AI can use to interact with the world (in this case, the data provided by your workflow). It allows the AI model to access information beyond its built-in dataset.
 
-[[% include "_includes/advanced-ai/examples-color-key.html" %]]
+## Using the example
+
+[[% include "_includes/examples-color-key.html" %]]

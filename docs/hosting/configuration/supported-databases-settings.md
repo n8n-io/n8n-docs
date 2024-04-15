@@ -70,17 +70,3 @@ This is the default database that gets used if nothing is defined.
 
 The database file is located at:
 `~/.n8n/database.sqlite`
-
-
-## Other databases
-
-n8n officially supports SQLite and PostgresDB.
-
-n8n internally uses [TypeORM](https://typeorm.io){:target=_blank .external-link}, so adding support for the following databases
-should be possible:
-
- - CockroachDB
- - Microsoft SQL
- - Oracle
-
-If you can't use any of the supported databases for some reason and you can code, consider submitting a [pull request](https://github.com/n8n-io/n8n){:target=_blank .external-link}. You can also request support [here](https://community.n8n.io/c/feature-requests/cli){:target=_blank .external-link}.

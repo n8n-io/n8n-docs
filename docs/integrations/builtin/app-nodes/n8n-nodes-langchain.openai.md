@@ -6,7 +6,7 @@ contentType: integration
 
 # OpenAI
 
-Use the OpenAI node to automate work in OpenAI, and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and chats, as well as moderating, and editing texts. 
+Use the OpenAI node to automate work in OpenAI, and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
 
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
 
@@ -53,6 +53,11 @@ Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction){:ta
 Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.
 	
 View [example workflows and related content](https://n8n.io/integrations/openai/){:target=_blank .external-link} on n8n's website.
+
+For help dealing with rate limits, refer to [Handling rate limits](/integrations/builtin/rate-limits/).
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
 
 ## Using tools with OpenAI assistants
 

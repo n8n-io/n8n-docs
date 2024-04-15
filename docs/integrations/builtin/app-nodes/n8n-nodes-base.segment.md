@@ -26,3 +26,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Track
     * Record the actions your users perform. Every action triggers an event, which can also have associated properties.
     * Record page views on your website, along with optional extra information about the page being viewed.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

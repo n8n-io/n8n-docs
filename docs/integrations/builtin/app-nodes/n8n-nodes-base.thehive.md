@@ -11,7 +11,7 @@ Use the TheHive node to automate work in TheHive, and integrate TheHive with oth
 On this page, you'll find a list of operations the TheHive node supports and links to more resources.
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
+n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/).
 ///
 /// note | Credentials
 Refer to [TheHive credentials](/integrations/builtin/credentials/thehive/) for guidance on setting up authentication. 
@@ -30,6 +30,7 @@ The available operations depend on your API version. To see the operations list,
 * Observable
 * Task
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Related resources
 

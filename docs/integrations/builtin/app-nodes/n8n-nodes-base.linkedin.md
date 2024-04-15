@@ -42,6 +42,6 @@ View [example workflows and related content](https://n8n.io/integrations/linkedi
 Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linkedin/){:target=_blank .external-link} for more information about the service.
 
 
-
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 

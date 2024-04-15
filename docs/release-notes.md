@@ -28,17 +28,310 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.36.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.3...n8n@1.36.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-15
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.36.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.2...n8n@1.36.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-12
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.37.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.0...n8n@1.37.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-11
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+/// warning | Breaking change
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.36.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.36.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-11
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.37.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.37.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-10
+
+
+/// warning | Breaking change
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+///
+
+This release contains a new node, improvements to error handling and messaging, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: JWT
+
+This release adds the [JWT core node](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link}
+
+## n8n@1.36.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.0...n8n@1.36.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-04
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.36.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.35.0...n8n@1.36.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-03
+
+This release contains new nodes, enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Salesforce Trigger node
+
+This release adds the [Salesforce trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Twilio Trigger node
+
+This release adds the [Twilio trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/). 
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.35.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.34.2...n8n@1.35.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-28
+
+
+
+This release contains enhancements and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.34.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.34.1...n8n@1.34.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-26
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.34.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.34.0...n8n@1.34.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-25
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.34.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.33.1...n8n@1.34.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-20
+
+This release contains new features, new nodes, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Microsoft OneDrive Trigger node
+
+This release adds the [Microsoft OneDrive trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger/). You can now trigger workflows on file and folder creation and update events.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New data transformation functions
+
+This release introduces new [data transformation functions](/code/builtin/data-transformation-functions/):
+
+**String**
+
+```js
+toDateTime() //replaces toDate(). toDate() is retained for backwards compatability.
+parseJson()
+extractUrlPath()
+toBoolean()
+base64Encode()
+base64Decode()
+```
+
+**Number**
+
+```js
+toDateTime()
+toBoolean()
+```
+
+**Object**
+
+```js
+toJsonString()
+```
+
+**Array**
+
+```js
+toJsonString()
+```
+
+**Date & DateTime**
+
+```js
+toDateTime()
+toInt()
+```
+
+**Boolean**
+
+```js
+toInt()
+```
+
+</div>
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+
+## n8n@1.33.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.33.0...n8n@1.33.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-15
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.32.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.32.1...n8n@1.32.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-15
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.33.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.32.1...n8n@1.33.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-13
+
+This release contains new features, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Support for Claude 3
+
+This release adds support for Claude 3 to the [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/) node.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[gumida](https://github.com/gumida){:target=_blank .external-link}  
+[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}  
+[Jordan](https://github.com/jordanburke){:target=_blank .external-link}  
+[MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link}
+
+## n8n@1.32.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.32.0...n8n@1.32.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-07
+
+
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.31.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.1...n8n@1.31.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-07
+
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.32.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.1...n8n@1.32.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-03-06
+
+This release contains new features, node enhancements, performance improvements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.31.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.31.0...n8n@1.31.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-03-06
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+/// warning | Breaking changes
+Please note that this version contains a breaking change. HTTP connections to the editor will fail on domains other than localhost. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1320){:target=_blank .external-link}.
 ///
 
-This is a bug fix release.
+This is a bug fix release and it contains a breaking change.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

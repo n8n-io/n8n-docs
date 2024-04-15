@@ -8,6 +8,10 @@ This section contains the node library: reference documentation for every built-
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 
+## Core nodes
+
+Core nodes can be actions or triggers. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.
+
 ## Cluster nodes
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"

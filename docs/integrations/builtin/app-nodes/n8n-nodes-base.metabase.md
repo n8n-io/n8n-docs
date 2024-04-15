@@ -17,7 +17,7 @@ Refer to [Metabase credentials](/integrations/builtin/credentials/metabase/) for
 For usage examples and templates to help you get started, take a look at n8n's [Metabase integrations](https://n8n.io/integrations/metabase/){:target="_blank" .external-link} list.
 ///	
 
-## Resources and operations
+## operations
 
 * Alert
     * Get
@@ -34,3 +34,4 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get All
     * Result Data
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -28,3 +28,5 @@ For usage examples and templates to help you get started, take a look at n8n's [
 Refer to [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest){:target=_blank .external-link} for more information about the service.
 	
 View [example workflows and related content](https://n8n.io/integrations/google-bigquery/){:target=_blank .external-link} on n8n's website.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

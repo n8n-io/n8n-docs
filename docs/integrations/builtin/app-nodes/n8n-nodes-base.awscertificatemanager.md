@@ -31,3 +31,5 @@ Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/a
 
 View [example workflows and related content](https://n8n.io/integrations/aws-certificate-manager/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+

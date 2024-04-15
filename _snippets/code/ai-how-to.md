@@ -1,3 +1,7 @@
+/// info | Feature availability
+AI assistance in the Code node is available to Cloud users. It isn't available in self-hosted n8n.
+///
+
 /// note | AI generated code overwrites your code
 If you've already written some code on the **Code** tab, the AI generated code will replace it. n8n recommends using AI as a starting point to create your initial code, then editing it as needed.
 ///

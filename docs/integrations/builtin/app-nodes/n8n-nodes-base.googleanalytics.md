@@ -31,3 +31,4 @@ Refer to [Google Analytics' documentation](https://developers.google.com/analyti
 
 View [example workflows and related content](https://n8n.io/integrations/google-analytics/){:target=_blank .external-link} on n8n's website.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -21,8 +21,8 @@ The first part of the workflow consists of five nodes:
       * **Authentication**: Header Auth
       * **Credentials for Header Auth**: The Header Auth name and Header Auth value you received in the email when you signed up for this course.
       * **URL**: The Dataset URL you received in the email when you signed up for this course.
-      * **Options > Add Option > Split Into Items**: toggle to true.
-      * **Headers > Add Header**:
+      * **Options** > **Add Option** > **Split Into Items**: toggle to true.
+      * **Headers** > **Add Header**:
           * **Name**: `unique_id`
           * **Value**: The unique ID you received in the email when you signed up for this course.
 

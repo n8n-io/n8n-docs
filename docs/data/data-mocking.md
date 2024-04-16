@@ -22,7 +22,7 @@ Use this approach when you need to configure your workflow to handle the exact d
 --8<-- "_snippets/data/how-to-pin-data.md"
 
 
-## Mock data using the Code or Edit Fields nodes
+## Generate custom data using the Code or Edit Fields nodes
 
 You can create a custom dataset in your workflow using either the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) or the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set/).
 

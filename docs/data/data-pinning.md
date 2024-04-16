@@ -4,7 +4,7 @@ contentType: howto
 
 # Data pinning
 
-n8n allows you to 'pin' data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. 
+You can 'pin' data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. 
 
 
 You can use this when working with data from external sources, to avoid having to repeatedly use the external system. This can save time and resources:

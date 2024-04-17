@@ -21,7 +21,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}
+**Model**: the model to use to generate the embedding. Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}.
 
 
 ## Related resources

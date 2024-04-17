@@ -11,9 +11,7 @@ hide:
 
 # External data storage environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 
 Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data.
 

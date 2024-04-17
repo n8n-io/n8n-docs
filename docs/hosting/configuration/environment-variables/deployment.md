@@ -11,9 +11,7 @@ hide:
 
 # Deployment environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 
 This page lists the deployment configuration options for your self-hosted n8n instance, including setting up access URLs, enabling templates, customizing encryption, and configuring server details. 
 

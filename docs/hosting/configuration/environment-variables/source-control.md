@@ -11,9 +11,7 @@ hide:
 
 # Source control environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 
 n8n uses Git-based source control to support environments. Refer to [Source control and environments](/source-control-environments/setup/) for more information on how to link a Git repository to an n8n instance and configure your source control.
 

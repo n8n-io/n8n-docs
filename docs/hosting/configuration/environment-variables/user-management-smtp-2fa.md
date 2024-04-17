@@ -11,9 +11,7 @@ hide:
 
 # User management SMTP, and two-factor authentication environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 
 Refer to [User management](/hosting/configuration/user-management-self-hosted/) for more information on setting up user management and emails.
 <!-- vale off -->

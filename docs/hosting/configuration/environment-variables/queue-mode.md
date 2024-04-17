@@ -11,9 +11,7 @@ hide:
 
 # Queue mode environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 
 You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for more information.
 

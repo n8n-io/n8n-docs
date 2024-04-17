@@ -11,9 +11,7 @@ hide:
 
 # Nodes environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 This page lists the environment variables configuration options for managing nodes in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes. 
 
 | Variable | Type  | Default  | Description |

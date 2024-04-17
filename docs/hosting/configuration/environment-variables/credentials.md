@@ -11,9 +11,7 @@ hide:
 
 # Credentials environment variables
 
-/// note | File-based configuration
-You can add `_FILE` to individual variables to provide their configuration in a separate file. Refer to [Keeping sensitive data in separate files](/hosting/configuration/configuration-methods/#keeping-sensitive-data-in-separate-files) for more details.
-///
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"
 
 Enable credential overwrites using the following environment variables. Refer to [Credential overwrites](/embed/configuration/#credential-overwrites/) for details.
 

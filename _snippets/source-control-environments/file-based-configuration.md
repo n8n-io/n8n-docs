@@ -1,0 +1,1 @@
+--8<-- "_snippets/source-control-environments/file-based-configuration.md"

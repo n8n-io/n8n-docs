@@ -13,7 +13,7 @@ On this page, you'll find a list of operations the Window Buffer Memory node sup
 For usage examples and templates to help you get started, refer to n8n's [Window Buffer Memory integrations](https://n8n.io/integrations/window-buffer-memory/){:target=_blank .external-link} page.
 ///
 
---8<-- "\_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 

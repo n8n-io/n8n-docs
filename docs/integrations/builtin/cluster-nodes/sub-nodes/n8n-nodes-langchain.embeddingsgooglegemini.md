@@ -10,7 +10,7 @@ Use the Embeddings Google Gemini node to generate embeddings for a given text.
 On this page, you'll find the node parameters for the Embeddings Google Gemini node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
 ///
 
 /// note | Examples and templates

@@ -2,7 +2,7 @@
 
 1. Create a new workflow.
 1. **Optional**: configure which workflows can call the sub-workflow:
-	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png)</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
+	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
 	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
 1. Add the **Execute Workflow Trigger** node.
 1. Add other nodes as needed to build your sub-workflow functionality.		

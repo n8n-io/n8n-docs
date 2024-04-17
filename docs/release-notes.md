@@ -28,14 +28,101 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.38.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.2...n8n@1.38.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-17
+
+This release contains new nodes, bug fixes, and node enhancements.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Google Gemini Chat Model
+
+This release adds the [Google Gemini Chat Model sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Embeddings Google Gemini
+
+This release adds the [Google Gemini Embeddings sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Chengyou Liu](https://github.com/cyliu0){:target=_blank .external-link}  
+[Francesco Mannino](https://github.com/manninofrancesco){:target=_blank .external-link}  
+
+## n8n@1.37.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.1...n8n@1.37.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-17
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.36.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.3...n8n@1.36.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-15
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.36.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.2...n8n@1.36.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-12
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.37.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.0...n8n@1.37.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-11
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+/// warning | Breaking change
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.36.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.36.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-11
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.37.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.37.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-04-10
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 /// warning | Breaking change
 Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
@@ -61,11 +148,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.0...n8n@1.36.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-04-04
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
 
 
 This release contains bug fixes.
@@ -305,8 +387,8 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 This release adds two new nodes.
 
-* [Microsoft Outlook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger)
-* [Ollama Embeddings](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama)
+* [Microsoft Outlook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger/)
+* [Ollama Embeddings](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama/)
 
 </div>
 

@@ -30,5 +30,5 @@ To unshare a credential:
 1. Open the left menu and select **Credentials**. n8n shows a list of your credentials.
 2. Select the credential you want to share. n8n opens the credential modal.
 3. Select **Sharing**.
-4. Select **Options** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png)</span> on the user you want to remove.
+4. Select **Options** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> on the user you want to remove.
 5. Select **Remove**.

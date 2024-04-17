@@ -2,7 +2,7 @@
 contentType: overview
 title: Call an API to fetch data
 description: Use the n8n workflow tool to load data from an API using the HTTP Request node into your AI workflow.
-workflowFile: let_your_ai_call_an_api.json
+workflowFile: advanced-ai/examples/let_your_ai_call_an_api.json
 ---
 
 # Call an API to fetch data
@@ -11,7 +11,7 @@ Use n8n to bring data from any API to your AI. This workflow uses the [Chat Trig
 
 <figure markdown>
 !["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/call-api-from-chat.png)
-<figcaption markdown>[Download the example workflow](/_workflows/advanced-ai/examples/[[ page.meta.workflowFile ]])</figcaption>
+<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
 </figure>
 
 ## Key features
@@ -23,4 +23,6 @@ This workflow uses:
 * [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/): plug in n8n workflows as custom tools. In AI, a tool is an interface the AI can use to interact with the world (in this case, the data provided by your workflow). It allows the AI model to access information beyond its built-in dataset.
 * A [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/) with an [Auto-fixing Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing/) and [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/) to read the user's query and set parameters for the API call based on the user input.
 
-[[% include "_includes/advanced-ai/examples-color-key.html" %]]
+## Using the example
+
+[[% include "_includes/examples-color-key.html" %]]

@@ -11,7 +11,7 @@ hide:
 
 # Security environment variables
 
---8<-- "_snippets/source-control-environments/file-based-configuration.md"
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

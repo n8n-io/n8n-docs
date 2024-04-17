@@ -11,7 +11,7 @@ hide:
 
 # Credentials environment variables
 
---8<-- "_snippets/source-control-environments/file-based-configuration.md"
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
 
 Enable credential overwrites using the following environment variables. Refer to [Credential overwrites](/embed/configuration/#credential-overwrites/) for details.
 

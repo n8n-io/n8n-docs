@@ -11,7 +11,7 @@ hide:
 
 # Database environment variables
 
---8<-- "_snippets/source-control-environments/file-based-configuration.md"
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
 
 By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [removed support for MySQL and MariaDB](/1-0-migration-checklist/#mysql-and-mariadb) in v1.0. 
 

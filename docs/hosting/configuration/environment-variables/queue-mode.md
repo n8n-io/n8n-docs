@@ -11,7 +11,7 @@ hide:
 
 # Queue mode environment variables
 
---8<-- "_snippets/source-control-environments/file-based-configuration.md"
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
 
 You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for more information.
 

@@ -11,7 +11,7 @@ hide:
 
 # Deployment environment variables
 
---8<-- "_snippets/source-control-environments/file-based-configuration.md"
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
 
 This page lists the deployment configuration options for your self-hosted n8n instance, including setting up access URLs, enabling templates, customizing encryption, and configuring server details. 
 

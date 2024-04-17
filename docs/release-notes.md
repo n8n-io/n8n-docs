@@ -35,7 +35,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.2...n8n@1.38.0
 
 This release contains new nodes, bug fixes, and node enhancements.
 
-<div class="new features" markdown>
+<div class="n8n-new-features" markdown>
 
 #### New node: Google Gemini Chat Model
 
@@ -43,7 +43,7 @@ This release adds the [Google Gemini Chat Model sub-node](/integrations/builtin/
 
 </div>
 
-<div class="new features" markdown>
+<div class="n8n-new-features" markdown>
 
 #### New node: Embeddings Google Gemini
 

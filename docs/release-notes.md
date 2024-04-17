@@ -28,6 +28,36 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.38.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.2...n8n@1.38.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-17
+
+This release contains new nodes, bug fixes, and node enhancements.
+
+<div class="new features" markdown>
+
+#### New node: Google Gemini Chat Model
+
+This release adds the [Google Gemini Chat Model sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/).
+
+</div>
+
+<div class="new features" markdown>
+
+#### New node: Embeddings Google Gemini
+
+This release adds the [Google Gemini Embeddings sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Chengyou Liu](https://github.com/cyliu0){:target=_blank .external-link}  
+[Francesco Mannino](https://github.com/manninofrancesco){:target=_blank .external-link}  
+
 ## n8n@1.37.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.1...n8n@1.37.2){:target=_blank .external-link} for this version.<br />

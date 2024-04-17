@@ -10,7 +10,7 @@ Use the Google PaLM Chat Model node to use Google's PaLM chat models with conver
 On this page, you'll find the node parameters for the Google PaLM Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/googlepalm/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
 ///
 
 /// note | Examples and templates

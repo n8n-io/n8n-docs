@@ -12,3 +12,5 @@ To use ChatGPT to generate code in the Code node:
 1. Select the **Ask AI** tab.
 1. Write your query.
 1. Select **Generate Code**. n8n sends your query to ChatGPT, then displays the result in the **Code** tab.
+
+hello - Mariana learning

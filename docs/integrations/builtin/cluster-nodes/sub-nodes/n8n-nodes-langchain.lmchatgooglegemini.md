@@ -25,9 +25,11 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 ## Node options
 
+* **Maximum Number of Tokens**: change the maximum possible length of the completion.
 * **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options. 
+* **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini){:target=_blank .external-link} for information on the available filters and levels.
 
 
 ## Related resources

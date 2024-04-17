@@ -322,7 +322,11 @@ nav:
           - Privacy and security:
               - privacy-security/index.md
               - Privacy: privacy-security/privacy.md
-              - Security: privacy-security/security.md
+              - Security: 
+                - Overview: privacy-security/security/index.md
+                - Product and development practices: privacy-security/security/product-development-security-practices.md
+                - Corporate security: privacy-security/security/corporate-security.md
+                - Security policies: privacy-security/security/security-policies.md
               - Incident response: privacy-security/incident-response.md
               - What you can do: privacy-security/what-you-can-do.md
           - Faircode license: faircode-license.md

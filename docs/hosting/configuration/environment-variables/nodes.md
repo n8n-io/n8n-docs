@@ -11,6 +11,8 @@ hide:
 
 # Nodes environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 This page lists the environment variables configuration options for managing nodes in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes. 
 
 | Variable | Type  | Default  | Description |

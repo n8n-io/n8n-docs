@@ -16,7 +16,7 @@ Here are a couple of other ways of expressing it:
 
 > We can think of these tools as being almost like functions that your AI model can call ([source](https://www.udemy.com/course/chatgpt-and-langchain-the-complete-developers-masterclass/){:target=_blank .external-link})
 
-## Tools in n8n
+## AI tools in n8n
 
 n8n provides tool sub-nodes that you can connect to your AI agent. As well as providing some popular tools, such as [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia/) and [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi/), n8n provides two especially powerful tools:
 

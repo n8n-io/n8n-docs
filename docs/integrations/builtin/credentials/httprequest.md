@@ -82,4 +82,48 @@ Read more about [OAuth1](https://oauth.net/1/){:target=_blank .external-link}.
 
 Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
 
+## Using Custom Auth
 
+The custom auth option expects json data to define your credential, You can use `headers`, `qs`, `body` or a mix depending on what you need to use. See the examples below to get started.
+
+### Sending 2 Headers
+```
+{
+	"headers": {
+		"X-AUTH-USERNAME": "username",
+		"X-AUTH-PASSWORD": "password"
+	}
+}
+```
+
+### Body
+```
+{
+	 "body" : {
+		"user": "username",
+		"pass": "password"
+	}
+}
+```
+
+### Query String
+```
+{
+	"qs": { 
+		"appid": "123456",
+		"apikey": "my-api-key"
+	}
+}
+```
+
+### Sending Header and Query String
+```
+{
+	"headers": {
+		"api-version": "202404"
+	},
+	"qs": {
+		"apikey": "my-api-key"
+	}
+}
+```

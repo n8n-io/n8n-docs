@@ -6,6 +6,10 @@ contentType: overview
 
 Welcome to the **n8n Course Level 1**!
 
+/// warning | Issues with course sign-up
+There's currently an issue with emails from n8n, including course sign-up. This should be resolved soon. Follow [the forum thread](https://community.n8n.io/t/n8n-sharing-and-inviting-users-performance-issues/44687/1){:target=_blank .external-link} for updates.
+///
+
 ## Is this course right for me?
 
 This course introduces you to the fundamental concepts within n8n and develops your low-code automation expertise.

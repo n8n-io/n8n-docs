@@ -21,7 +21,6 @@ Create an [Affinity](https://www.affinity.co/){:target=_blank .external-link} ac
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
 Refer to [Affinity's API documentation](https://support.affinity.co/hc/en-us/sections/360010294532-External-API){:target=_blank .external-link} for more information about working with the service.
 
 ## Using API key

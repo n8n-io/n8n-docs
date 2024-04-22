@@ -21,6 +21,10 @@ Create an [Asana](https://asana.com/) account.
 - OAuth2 API
 - API (Access token)
 
+## Related resources
+
+Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview){:target=_blank .external-link} for more information about working with the service.
+
 ## Using OAuth2 API
 
 /// note | Note for n8n Cloud users

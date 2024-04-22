@@ -19,6 +19,10 @@ Create an [Acuity Scheduling](https://acuityscheduling.com/){:target=_blank .ext
 - API 
 - OAuth2
 
+## Related resources
+
+Refer to [Acuity's API documentation](https://developers.acuityscheduling.com/reference/quick-start){:target=_blank .external-link} for more information about working with the service.
+
 ## Using API
 
 To use the Acuity API credentials, follow the [Acuity API Quick Start authentication instructions](https://developers.acuityscheduling.com/reference/quick-start#authentication){:target=_blank .external-link}. You'll need the numeric **User ID** and **API Key**.

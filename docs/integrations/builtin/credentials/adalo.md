@@ -8,19 +8,16 @@ contentType: integration
 
 You can use these credentials to authenticate the following nodes with Adalo:
 
-* [Adalo node](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/)
+- [Adalo node](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/)
 
 ## Prerequisites
 
-* An Adalo account
-* An API key. Follow [Adalo's API documentation](https://help.adalo.com/integrations/the-adalo-api/collections){:target=_blank .external-link} to get your key.
-* Your Adalo app ID.
+- Create an [Adalo](https://www.adalo.com/){:target=_blank .external-link} account on the Team or Business plan.
 
-## API key
+## Supported authentication methods
 
---8<-- "_snippets/integrations/builtin/credentials/open-credential-modal-list.md"
+- API key
 
-1. Copy the API key from Adalo into **API Key**.
-1. Copy the App ID for your Adalo app into **App ID**.
-1. Select **Save**. n8n tests your credentials and confirms that they work.
+## Using API key
 
+Follow [Adalo's API documentation](https://help.adalo.com/integrations/the-adalo-api){:target=_blank .external-link} to get your API key and your [App ID](https://forum.adalo.com/t/i-dont-find-app-id/10788/2){:target=_blank .external-link}.

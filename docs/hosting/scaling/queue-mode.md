@@ -4,7 +4,7 @@ contentType: howto
 
 # Queue mode
 
-You can run n8n in different modes in different modes depending on your needs. The queue mode provides the best scalability.
+You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
 /// note | Binary data storage
 n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.

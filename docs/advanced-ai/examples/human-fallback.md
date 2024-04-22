@@ -1,5 +1,5 @@
 ---
-contentType: overview
+contentType: howto
 title: Set a human fallback for AI workflows
 description: Have a workflow that triggers a human answer when the AI can't help.
 workflowFile: advanced-ai/examples/ask_a_human.json

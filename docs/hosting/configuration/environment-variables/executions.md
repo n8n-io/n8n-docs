@@ -11,6 +11,8 @@ hide:
 
 # Executions environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 This page lists environment variables to configure workflow execution settings.
 
 | Variable | Type  | Default  | Description |

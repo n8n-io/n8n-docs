@@ -11,6 +11,8 @@ hide:
 
 # Endpoints environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 This page lists environment variables for customizing endpoints in n8n.
 
 | Variable | Type  | Default  | Description |

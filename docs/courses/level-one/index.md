@@ -6,6 +6,7 @@ contentType: overview
 
 Welcome to the **n8n Course Level 1**!
 
+
 ## Is this course right for me?
 
 This course introduces you to the fundamental concepts within n8n and develops your low-code automation expertise.

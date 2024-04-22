@@ -38,7 +38,7 @@ theme:
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
-    #https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
     - navigation.instant
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
     - navigation.path
@@ -287,6 +287,7 @@ nav:
               - Data pinning: data/data-pinning.md
               - Data editing: data/data-editing.md
               - Data filtering: data/data-filtering.md
+              - Data mocking: data/data-mocking.md
               - Binary data: data/binary-data.md
       - Manage n8n Cloud:
           - Overview: manage-cloud/overview.md
@@ -759,6 +760,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
@@ -767,6 +769,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
@@ -891,7 +894,7 @@ nav:
           - integrations/builtin/credentials/google/oauth-single-service.md
           - integrations/builtin/credentials/google/oauth-generic.md
           - integrations/builtin/credentials/google/service-account.md
-          - integrations/builtin/credentials/google/googlepalm.md
+          - integrations/builtin/credentials/google/googleai.md
         - integrations/builtin/credentials/gotify.md
         - integrations/builtin/credentials/gotowebinar.md
         - integrations/builtin/credentials/grafana.md

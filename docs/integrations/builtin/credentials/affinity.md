@@ -1,6 +1,6 @@
 ---
 title: Affinity credentials
-description: Documentation for Affinity credentials. Use these credentials to authenticate Affinity in n8n, a workflow automation platform.
+description: Documentation for the Affinity credentials. Use these credentials to authenticate Affinity in n8n, a workflow automation platform.
 contentType: integration
 ---
 
@@ -11,21 +11,19 @@ You can use these credentials to authenticate the following nodes with Affinity.
 - [Affinity](/integrations/builtin/app-nodes/n8n-nodes-base.affinity/)
 - [Affinity Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger/)
 
-
-
 ## Prerequisites
 
-Create an [Affinity](https://www.affinity.co/) account.
+Create an [Affinity](https://www.affinity.co/){:target=_blank .external-link} account at the Scale, Advanced, or Enterprise subscription tiers.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Affinity dashboard.
-2. Open hamburger menu on the top left.
-3. Click on Settings.
-4. Click on API.
-5. Click on 'Generate an API Key' button.
-6. Use the API key with your Affinity node credentials in n8n.
+- API key
 
+## Related resources
 
-![Getting Affinity credentials](/_images/integrations/builtin/credentials/affinity/using-access-token.gif)
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
+Refer to [Affinity's API documentation](https://support.affinity.co/hc/en-us/sections/360010294532-External-API){:target=_blank .external-link} for more information about working with the service.
 
+## Using API key
+
+Follow [How to obtain your Affinity API key documentation](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-Affinity-API-key){:target=_blank .external-link} to obtain your API key.

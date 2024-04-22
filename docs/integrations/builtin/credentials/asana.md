@@ -19,7 +19,7 @@ Create an [Asana](https://asana.com/) account.
 ## Supported authentication methods
 
 - OAuth2 API
-- API
+- API (Access token)
 
 ## Using OAuth2 API
 
@@ -34,7 +34,7 @@ To work with OAuth, follow the instructions in the [Asana Oauth register an appl
 1. Use the n8n **OAuth Callback URL** as the Asana **Redirect URLs**.
 2. Use the Asana **Client ID** and **Client secret** in the corresponding fields within n8n.
 
-## Using API
+## Using API Access token
 
 The Asana API credentials use a personal access token (PAT) from Asana.
 

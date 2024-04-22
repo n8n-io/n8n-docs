@@ -12,35 +12,21 @@ You can use these credentials to authenticate the following nodes with Acuity Sc
 
 ## Prerequisites
 
-Create an [Acuity Scheduling](https://acuityscheduling.com/) account.
+Create an [Acuity Scheduling](https://acuityscheduling.com/){:target=_blank .external-link} account.
 
-## Using OAuth
+## Supported authentication methods
+
+- API 
+- OAuth2
+
+## Using API
+
+To use the Acuity API credentials, follow the [Acuity API Quick Start authentication instructions](https://developers.acuityscheduling.com/reference/quick-start#authentication){:target=_blank .external-link}. You'll need the numeric **User ID** and **API Key**.
+
+## Using OAuth2
 
 /// note | Note for n8n Cloud users
 You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Acuity Scheduling account to n8n.
 ///
 
-1. Visit the [Acuity OAuth2 Account Registration page](https://acuityscheduling.com/oauth2/register).
-2. Enter a name in the ***Account Name*** field.
-3. Enter your email address in the ***Email Address*** field.
-4. Enter your URL in the ***Website*** field.
-5. Enter a description in the ***Application Description*** field.
-6. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the ***Callback URIs*** section.
-7. Click on the ***Register*** button.
-8. Use the provided ***Client ID*** and the ***Client Secret*** with your Acuity Scheduling OAuth2 API credentials in n8n.
-9. Click on the circle button in the OAuth section to connect your Acuity Scheduling account to n8n.
-10. Click the ***Save*** button to save your credentials.
-
-![Getting Acuity Scheduling OAuth2 credentials](/_images/integrations/builtin/credentials/acuityscheduling/using-oauth.gif)
-
-
-## Using Access Token
-
-1. Open your Acuity Scheduling dashboard.
-2. Click on 'Integrations' in the left sidebar.
-3. Scroll down and click on 'view credentials' under the API section.
-4. Copy the ***User ID*** and ***API Key*** from the pop-up that's displayed.
-5. Use these credentials with your Acuity Scheduling node credentials in n8n.
-
-![Getting Acuity Scheduling credentials](/_images/integrations/builtin/credentials/acuityscheduling/using-access-token.gif)
-
+Should you need to set this up from scratch, you'll need to complete the [Acuity OAuth2 Account Registration page](https://acuityscheduling.com/oauth2/register){:target=_blank .external-link}, and then use the **Client ID** and **Client Secret** provided from that registration.

@@ -6,7 +6,7 @@ contentType: integration
 
 # Asana credentials
 
-You can use these credentials to authenticate the following nodes with Asana.
+You can use these credentials to authenticate the following nodes:
 
 - [Asana](/integrations/builtin/app-nodes/n8n-nodes-base.asana/)
 - [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger/)
@@ -14,39 +14,29 @@ You can use these credentials to authenticate the following nodes with Asana.
 
 ## Prerequisites
 
-Create an [Asana](https://www.Asana.com/) account.
+Create an [Asana](https://asana.com/) account.
 
-## Using OAuth
+## Supported authentication methods
+
+- OAuth2 API
+- API
+
+## Using OAuth2 API
 
 /// note | Note for n8n Cloud users
 You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Asana account to n8n.
 ///
 
-1. Open your Asana dashboard.
-2. Click on your user icon in the top right.
-3. Click on ***My Profile Settings...***
-4. Click on the ***Apps*** tab.
-5. Click on ***Manage Developer Apps***.
-6. Click on ***New App***.
-7. Enter a name, accept the *API terms and conditions*, and click on ***Create app***.
-8. Copy the ***OAuth Callback URL*** from n8n and paste it in the ***Redirect URLs*** field and click ***Add***.
-9. Use the provided ***Client ID*** and ***Client secret*** with your Asana OAuth2 API credentials in n8n.
-10. Click on the circle button in the OAuth section to connect an Asana account to n8n.
-11. Click the ***Save*** button to save your credentials in n8n.
+For non-Cloud users:
 
-![Getting Asana credentials](/_images/integrations/builtin/credentials/asana/using-oauth.gif)
+To work with OAuth, follow the instructions in the [Asana Oauth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up Oauth. Use the following adjustments:
 
-## Using Access Token
+1. Use the n8n **OAuth Callback URL** as the Asana **Redirect URLs**.
+2. Use the Asana **Client ID** and **Client secret** in the corresponding fields within n8n.
 
-1. Open your Asana dashboard.
-2. Click on your user icon in the top right of the window.
-3. Click on ***My Profile Settings***.
-4. Click on the ***Apps*** tab.
-5. Click on ***Manage Developer Apps***.
-6. Click on ***New access token*** under the ***Personal access tokens*** section.
-7. Enter a name for the access token and agree to the API terms and conditions.
-8. Click on the ***Create token*** button.
-9. Copy the token and use it with your Asana node credentials in n8n.
+## Using API
 
-![Getting Asana credentials](/_images/integrations/builtin/credentials/asana/using-access-token.gif)
+The Asana API credentials use a personal access token (PAT) from Asana.
+
+See the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for the steps to generate a personal access token (PAT) to add as the **Access Token** in n8n.
 

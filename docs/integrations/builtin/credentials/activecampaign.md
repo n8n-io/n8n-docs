@@ -6,7 +6,7 @@ contentType: integration
 
 # ActiveCampaign credentials
 
-You can use these credentials to authenticate the following nodes with ActiveCampaign.
+You can use these credentials to authenticate the following nodes:
 
 - [ActiveCampaign](/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign/)
 - [Active Campaign Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger/)
@@ -16,14 +16,10 @@ You can use these credentials to authenticate the following nodes with ActiveCam
 
 Create an [ActiveCampaign](https://www.activecampaign.com/) account.
 
+## Supported authentication methods
+
+* Access Token
+
 ## Using Access Token
 
-1. Open your ActiveCampaign dashboard.
-2. Click on the gears icon on the bottom left to open the Settings.
-3. Click on the Developer option under the Settings panel.
-4. In the Developer Settings, copy the 'Key' and 'URL' under the ‘API Access' panel.
-5. Use these credentials with your ActiveCampaign node credentials in n8n.
-
-
-![Getting ActiveCampaign credentials](/_images/integrations/builtin/credentials/activecampaign/using-access-token.gif)
-
+See the [ActiveCampaign API documentation](https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with-the-API#h_01HJ6REM2YQW19KYPB189726ST){:target=_blank .external-link} for full details on obtaining your API URL and Key.

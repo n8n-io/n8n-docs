@@ -15,14 +15,15 @@ You can use these credentials to authenticate the following nodes with Agile CRM
 
 Create an [Agile CRM](https://www.agilecrm.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Agile CRM dashboard.
-2. Click on your user icon in the top right of the window.
-3. Click on the Admin Settings button.
-4. Click on the **Developers & Api** button in the bottom left.
-5. Use the REST API key, your registered email and your Agile CRM subdomain (for instance, n8n) with your Agile CRM node credentials in n8n.
+- API key
 
+## Related resources
 
-![Getting AgileCrm credentials](/_images/integrations/builtin/credentials/agilecrm/using-access-token.gif)
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
+Refer to [Agile CRM's API documentation](https://www.agilecrm.com/api){:target=_blank .external-link} for more information about working with the service.
 
+## Using API key
+
+In Agile CRM, you can access your API key through **Admin Settings > Developers & API >** [**REST API key**](https://github.com/agilecrm/rest-api?tab=readme-ov-file#api-key){:target=_blank .external-link}. Use the REST API key, your registered email, and your Agile CRM subdomain (for instance, n8n) with your Agile CRM node credentials in n8n.

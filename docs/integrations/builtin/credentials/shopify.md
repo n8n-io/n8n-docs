@@ -36,10 +36,7 @@ Then [create a custom app](https://help.shopify.com/en/manual/apps/app-types/cus
 
 Refer to [Shopify's authentication documentation](https://shopify.dev/docs/apps/auth){:target=_blank .external-link} for more information about the service.
 
-<!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-This is a credential-only node. Refer to [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/) and [Shopify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger/) to learn more. View [example Shopify workflows and related content](https://n8n.io/integrations/shopify/){:target=_blank .external-link} and [example Shopify Trigger workflows and related content](https://n8n.io/integrations/shopify-trigger/){:target=_blank .external-link} on n8n's website.
-
-## Quirks
+## Forbidden credentials error
 
 <!-- This issue was noted by someone in the forums and we also ran into it while testing auth setup -->
 If you get a "Couldn't connect with these settings / Forbidden - perhaps check your credentials" warning when you test the credentials, this may have to do with [access scope](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} dependencies (for example, `read_orders` scope also requires `read_products` scope to function).

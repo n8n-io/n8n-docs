@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes with Adalo:
 
 ## Prerequisites
 
-- Create an [Adalo](https://www.adalo.com/){:target=_blank .external-link} account on the Team or Business plan.
+Create an [Adalo](https://www.adalo.com/){:target=_blank .external-link} account on the Team or Business plan.
 
 ## Supported authentication methods
 

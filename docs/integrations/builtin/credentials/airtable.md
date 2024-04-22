@@ -15,37 +15,41 @@ You can use these credentials to authenticate the following nodes with Airtable.
 
 Create an [Airtable](https://airtable.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
-2. Under the **Personal access tokens** section, click on the **Create new token** button.
-3. Select the following **Scopes**:
-    - *data.records:read*
-    - *data.records:write*
-    - *schema.bases:read* 
-4. Be sure to select the bases this token can **Access** (or all the bases in the workspace).
-5. Copy the token displayed in the dialog.
-6. In the n8n Airtable credentials dialog select the **Access Token** connection.
-7. Paste the token in the **Access Token** field.
-8. Click on the **Save** button to create the credentials.
-
-## Using OAuth 2
-
-1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
-2. Under the **OAuth integrations** section, click on the **Register new OAuth integration** button.
-3. Provide a name for your OAuth integration.
-4. In the n8n Airtable credentials dialog select the **OAuth 2** connection, copy the **OAuth Redirect URL** and paste it in the **OAuth redirect URL** field in the Airtable Developer Hub.
-5. In Airtable, click on **Register integration**.
-6. In the following page copy the **Client ID** and paste it into the **Client ID** parameter in the n8n Airtable credentials dialog.
-7. Click on **Generate client secret** and paste the secret into the **Client Secret** parameter in the n8n Airtable credentials dialog.
-8. Select the following scopes: *data.records:read*, *data.records:write*, *schema.bases:read* and click on **Save changes** at the bottom.
-9. In the n8n Airtable credentials dialog click on **Connect my account**.
-10. Follow the instruction in the dialog and select the base you want to work on (or to all the bases).
-11. Click ok **Grant access** in the dialog to complete the connection.
-
-
-## Using API Key
+- Personal Access Token (PAT)
+- Oauth2
 
 /// note | API Key deprecation
-API Keys will be deprecated by the end of January 2024, see [this article](https://support.airtable.com/docs/airtable-api-key-deprecation-notice){:target=_blank .external-link} for more details. n8n recommends using Personal Access Token instead.
+n8n previously supported an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/docs/airtable-api-key-deprecation-notice){:target=_blank .external-link} as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable Oauth2 credential. n8n recommends using Personal Access Token instead.
 ///
+
+## Using Personal Access Token
+
+Follow the instructions to **Find/create PATs** in the [Airtable documentation](https://support.airtable.com/docs/creating-personal-access-tokens#understanding-the-basics-of-personal-access-tokens){:target=_blank .external-link}.
+
+n8n recommends using the following **Scopes** for your PAT:
+
+- `data.records:read`
+- `data.records:write`
+- `schema.bases:read`
+
+## Using OAuth2
+
+1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
+2. Under the **OAuth integrations** section, select the **Register new OAuth integration** button.
+3. Provide a name for your OAuth integration.
+4. In the n8n Airtable Oauth2 credentials dialog, copy the **OAuth Redirect URL**.
+5. In Airtable, paste that redirect URL into the **OAuth redirect URL**.
+6. Then select the **Register integration** button in Airtable.
+7. On the following page, copy the **Client ID** from Airtable and paste it into the **Client ID** parameter in the n8n Airtable Oauth2 credentials dialog.
+8. In Airtable, select the **Generate client secret** button.
+9. Copy the client secret and paste it into the **Client Secret** parameter in the n8n Airtable OAuth2 credentials dialog.
+10. Select the following scopes in Airtable:
+    - `data.records:read`
+    - `data.records:write`
+    - `schema.bases:read`
+11. Select **Save changes** at the bottom of the page in Airtable.
+12. In the n8n Airtable Oauth2 credentials dialog, select the **Connect my account** button.
+13. This will open a Grant access dialog. Follow the instructions in the dialog and select the base you want to work on (or all bases).
+14. Select the **Grant access** button in the dialog to complete the connection.

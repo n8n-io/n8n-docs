@@ -116,7 +116,7 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 }
 ```
 
-### Sending H=header and query string
+### Sending header and query string
 ```
 {
 	"headers": {

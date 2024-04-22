@@ -116,7 +116,7 @@ The custom auth option expects json data to define your credential, You can use 
 }
 ```
 
-### Sending Header and Query String
+### Sending H=header and query string
 ```
 {
 	"headers": {

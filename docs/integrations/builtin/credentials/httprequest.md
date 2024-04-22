@@ -106,7 +106,7 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 }
 ```
 
-### Query String
+### Query string
 ```
 {
 	"qs": { 

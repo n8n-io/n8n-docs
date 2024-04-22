@@ -6,6 +6,7 @@ contentType: overview
 
 Welcome to the **n8n Course Level 2**!
 
+
 ## Is this course right for me?
 
 This course is for you if you:

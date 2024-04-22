@@ -11,6 +11,8 @@ hide:
 
 # Timezone and localization environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `GENERIC_TIMEZONE` | * | `America/New_York` |The n8n instance timezone. Important for schedule nodes (such as Cron). |

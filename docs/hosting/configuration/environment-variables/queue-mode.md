@@ -11,6 +11,8 @@ hide:
 
 # Queue mode environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for more information.
 
 | Variable | Type  | Default  | Description |
@@ -21,7 +23,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_BULL_REDIS_PORT` | Number | `6379` | The Redis port used. |
 | `QUEUE_BULL_REDIS_USERNAME` | String | - | The Redis username (needs Redis version 6 or above). Don't define it for Redis < 6 compatibility |
 | `QUEUE_BULL_REDIS_PASSWORD` | String | - | The Redis password. |
-| `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in seconds). |
+| `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in ms). |
 | `QUEUE_BULL_REDIS_CLUSTER_NODES` | String | - | Expects a comma-separated list of Redis Cluster nodes in the format `host:port`, for the Redis client to initially connect to. If running in queue mode (`EXECUTIONS_MODE = queue`), setting this variable will create a Redis Cluster client instead of a Redis client, and n8n will ignore `QUEUE_BULL_REDIS_HOST` and `QUEUE_BULL_REDIS_PORT`. |
 | `QUEUE_BULL_REDIS_TLS` | Boolean | `false` | Enable TLS on Redis connections. |
 | `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic. |

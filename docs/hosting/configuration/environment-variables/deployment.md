@@ -11,6 +11,8 @@ hide:
 
 # Deployment environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 This page lists the deployment configuration options for your self-hosted n8n instance, including setting up access URLs, enabling templates, customizing encryption, and configuring server details. 
 
 | Variable | Type  | Default  | Description |
@@ -37,9 +39,10 @@ This page lists the deployment configuration options for your self-hosted n8n in
 | `N8N_DIAGNOSTICS_CONFIG_FRONTEND` | String | `1zPn9bgWPzlQc0p8Gj1uiK6DOTn;https://telemetry.n8n.io` | Telemetry configuration for the frontend. |
 | `N8N_DIAGNOSTICS_CONFIG_BACKEND` | String | `1zPn7YoGC3ZXE9zLeTKLuQCB4F6;https://telemetry.n8n.io/v1/batch` | Telemetry configuration for the backend. |
 | `N8N_PUSH_BACKEND` | String | `websocket` | Choose whether the n8n backend uses server-sent events (`sse`) or WebSockets (`websocket`) to send changes to the UI. |
-| `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. |
+| `VUE_APP_URL_BASE_API` | String | `http://localhost:5678/` | Used when building the `n8n-editor-ui` package manually to set how the frontend can reach the backend API. Refer to [Configure the Base URL](/hosting/configuration/configuration-examples/base-url/).
+ |
 | `N8N_HIRING_BANNER_ENABLED` | Boolean | `true` | Whether to show the n8n hiring banner in the console (true) or not (false). |
 | `N8N_PUBLIC_API_SWAGGERUI_DISABLED` | Boolean | `false` | Whether the Swagger UI (API playground) is disabled (true) or not (false). |
-| `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (false) or not (true). |
+| `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (true) or not (false). |
 | `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
 | `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | Number | `30` | How long should the n8n process wait (in seconds) for components to shut down before exiting the process. |

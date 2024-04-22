@@ -10,7 +10,7 @@ The Chat Memory Manager node manages chat message memories within your workflows
 On this page, you'll find a list of operations that the Chat Memory Manager node supports, along with links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Chat Memory Manager integrations](https://n8n.io/integrations/chat-messages-manager/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Chat Memory Manager integrations](https://n8n.io/integrations/chat-memory-manager/){:target=_blank .external-link} page.
 ///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -18,16 +18,11 @@ For usage examples and templates to help you get started, refer to n8n's [Chat M
 ## Node parameters
 
 * **Operation Mode**: choose between **Get Many Messages**, **Insert Messages**, and **Delete Messages** operations.
-
 * **Insert Mode**: available in **Insert Messages** mode. Choose between **Insert Messages** to add alongside existing messages or **Override All Messages** to replace current memory.
-
-**Delete Mode**: available in **Delete Messages** mode. Select either **Last N** to delete the last N messages or **All Messages** to clear all messages from memory.
-
-**Chat Messages**: available in **Insert Messages** mode. Define the chat messages to insert into the memory, including message type (AI, System, User), message content, and visibility in UI.
-
-**Messages Count**: available in **Delete Messages** mode and when **Last N** is selected. Specify the number of latest messages to delete.
-
-**Simplify Output**: available in **Get Many Messages** mode. Toggle to simplify the output to include only the sender (AI, user, or system) and the text.
+* **Delete Mode**: available in **Delete Messages** mode. Select either **Last N** to delete the last N messages or **All Messages** to clear all messages from memory.
+* **Chat Messages**: available in **Insert Messages** mode. Define the chat messages to insert into the memory, including message type (AI, System, User), message content, and visibility in UI.
+* **Messages Count**: available in **Delete Messages** mode and when **Last N** is selected. Specify the number of latest messages to delete.
+* **Simplify Output**: available in **Get Many Messages** mode. Toggle to simplify the output to include only the sender (AI, user, or system) and the text.
 
 ## Related resources
 

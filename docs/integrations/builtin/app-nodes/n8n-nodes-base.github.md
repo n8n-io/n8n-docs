@@ -17,41 +17,44 @@ Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for gui
 For usage examples and templates to help you get started, take a look at n8n's [GitHub integrations](https://n8n.io/integrations/github/){:target="_blank" .external-link} list.
 ///
 
-## Basic Operations
+## Operations
 
 * File
-    * Create a new file in repository.
-    * Delete a file in repository.
-    * Edit a file in repository.
-    * Get the data of a single file.
-    * List contents of a folder.
+	* Create
+	* Delete
+	* Edit
+	* Get
+	* List
 * Issue
-    * Create a new issue.
-    * Create a new comment on an issue.
-    * Edit an issue.
-    * Get the data of a single issue.
-    * Lock an issue.
-* Repository
-    * Get the data of a single repository.
-    * Returns the contents of the repository's license file, if one is detected.
-    * Returns issues of a repository.
-    * Get the community profile of a repository with metrics, health score, description, license, etc.
-    * Get the top 10 popular content paths over the last 14 days.
-    * Get the top 10 referring domains over the last 14 days.
+	* Create
+	* Create Comment
+	* Edit
+	* Get
+	* Lock
+* Organization
+	* Get Repositories
 * Release
-    * Creates a new release.
-    * Get a release.
-    * Get all repository releases.
-    * Delete a release.
-    * Update a release.
+	* Create
+	* Delete
+	* Get
+	* Get Many
+	* Update
+* Repository
+    * Get
+	* Get Issues
+	* Get License
+	* Get Profile
+	* Get Pull Requests
+	* List Popular Paths
+	* List Referrers
 * Review
-    * Creates a new review.
-    * Get a review for a pull request.
-    * Get all reviews for a pull request.
-    * Update a review.
+	* Create
+	* Get
+	* Get Many
+	* Update
 * User
-    * Returns the repositories of a user.
-    * Invites a user to an organization.
+    * Get Repositories
+    * Invite
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

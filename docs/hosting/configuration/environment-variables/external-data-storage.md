@@ -11,6 +11,8 @@ hide:
 
 # External data storage environment variables
 
+--8<-- "_snippets/self-hosting/file-based-configuration.md"
+
 Refer to [External storage](/hosting/scaling/external-storage/) for more information on using external storage for binary data.
 
 | Variable | Type  | Default  | Description |

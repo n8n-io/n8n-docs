@@ -12,6 +12,10 @@ When using this node, you're creating a REST API call. You need some understandi
 
 There are two ways to create an HTTP request: configure the [node fields](#node-fields) or [import a curl command](#import-curl-command).
 
+/// note | Credentials
+Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest/) for guidance on setting up authentication. 
+///
+
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [HTTP Request integrations](https://n8n.io/integrations/http-request/){:target=_blank .external-link} page.
 ///

@@ -17,7 +17,7 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 /// note | Restricted to instance owners
 Ordinary users can't fetch work from Git.
 ///
-To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png)</span> in the main menu.
+To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 

@@ -4,7 +4,7 @@ contentType: howto
 
 # Data pinning
 
-n8n allows you to 'pin' data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. 
+You can 'pin' data during workflow development. Data pinning means saving the output data of a node, and using the saved data instead of fetching fresh data in future workflow executions. 
 
 
 You can use this when working with data from external sources, to avoid having to repeatedly use the external system. This can save time and resources:
@@ -19,18 +19,11 @@ Data pinning isn't available for production workflow executions. It's a feature 
 
 ## Pin data
 
-To pin data in a node:
-
-1. Run the node to load data.
-2. In the **OUTPUT** view, select **Pin data** <span class="inline-image">![Pin data icon](/_images/data/data-pinning/data-pinning-button.png)</span>. When data pinning is active, the button changes to show this <span class="inline-image">![Active pin data icon](/_images/data/data-pinning/data-pinning-button-active.png)</span>.
-
-/// note | Nodes that output binary data
-You can't pin data if the output data includes binary data.
-///
+--8<-- "_snippets/data/how-to-pin-data.md"
 
 ## Unpin data
 
-When data pinning is active, the button changes to show this <span class="inline-image">![Active pin data icon](/_images/data/data-pinning/data-pinning-button-active.png)</span>. To unpin data and fetch fresh data on the next execution, select the active **Pin data** <span class="inline-image">![Active pin data icon](/_images/data/data-pinning/data-pinning-button-active.png)</span> icon.
+When data pinning is active, the button changes to show this <span class="inline-image">![Active pin data icon](/_images/data/data-pinning/data-pinning-button-active.png){.off-glb}</span>. To unpin data and fetch fresh data on the next execution, select the active **Pin data** <span class="inline-image">![Active pin data icon](/_images/data/data-pinning/data-pinning-button-active.png){.off-glb}</span> icon.
 
 
 

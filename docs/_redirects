@@ -1,3 +1,5 @@
+/integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/google/googleai/
+
 /n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/
 /n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/
 /contributing/   /help-community/contributing/

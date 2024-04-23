@@ -35,7 +35,7 @@ If you see this error message:
 There's a node in the chain that doesn't return pairing information. The solution here depends on the type of the previous node:
 
 - Code nodes: make sure you return which input items the node used to produce each output item. Refer to [Item linking in the code node](/data/data-mapping/data-item-linking/item-linking-code-node/) for more information.
-- Custom or community nodes: the node creator needs to be update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/) for more information.
+- Custom or community nodes: the node creator needs to update the node to return which input items it uses to produce each output item. Refer to [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/) for more information.
 
 ### Fix for 'Multiple matching items for expression'
 

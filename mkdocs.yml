@@ -720,6 +720,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md

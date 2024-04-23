@@ -6,27 +6,23 @@ contentType: integration
 
 # APITemplate.io credentials
 
-You can use these credentials to authenticate the following nodes with APITemplate.io.
+You can use these credentials to authenticate the following nodes:
 
 - [APITemplate.io](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/)
 
 ## Prerequisites
 
-Create an [APITemplate.io](https://apitemplate.io/) account.
+Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your APITemplate.io [dashboard](https://app.apitemplate.io).
-2. Click on ***API Integration*** on the left sidebar.
-3. Click on the ***Copy text*** button to copy the API key.
-4. Enter a name for your credentials in the ***Credentials Name*** field in the 'APITemplate.io API' credentials in n8n.
-5. Paste the API key in the ***API Key*** field in the 'APITemplate.io API' credentials in n8n.
-6. Click on the ***Create*** button to create the credentials.
+- API Key
 
+## Related resources
 
-The following video demonstrates the steps mentioned above.
+Refer to [APITemplate.io's API documentation](https://apitemplate.io/apiv2/){:target=_blank .external-link} for more information about the service.
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/NUAkybjCGa8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+## Using API key
+
+Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**. Paste this key into the **API Key** field in the n8n APITemplate.io API credentials.
 

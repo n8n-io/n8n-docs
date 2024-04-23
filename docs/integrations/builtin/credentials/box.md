@@ -6,7 +6,7 @@ contentType: integration
 
 # Box credentials
 
-You can use these credentials to authenticate the following nodes with Box.
+You can use these credentials to authenticate the following nodes:
 
 - [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box/)
 - [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger/)
@@ -15,10 +15,19 @@ You can use these credentials to authenticate the following nodes with Box.
 
 Create a [Box](https://www.box.com/) account.
 
-## Using OAuth
+## Supported authentication methods
+
+- OAuth2
+
+## Related resources
+
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
+Refer to [Box's API documentation](https://developer.box.com/reference/){:target=_blank .external-link} for more information about the service.
+
+## Using OAuth2
 
 /// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Box account to n8n.
+You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Box account to n8n.
 ///
 
 1. Access the [Box Developers Console](https://app.box.com/developers/console).

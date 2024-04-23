@@ -6,34 +6,31 @@ contentType: integration
 
 # Bitwarden credentials
 
-You can use these credentials to authenticate the following nodes with Bitwarden.
+You can use these credentials to authenticate the following node:
 
 - [Bitwarden](/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden/)
 
 ## Prerequisites
 
-Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams) organisation account.
+Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams){:target=_blank .external-link} Teams organization or Enterprise organization account. (Bitwarden only makes the Bitwarden Public API available for these [organization](https://bitwarden.com/help/about-organizations/){:target=_blank .external-link} plans.)
+
+## Supported authentication methods
+
+- API Key
+
+## Related resources
+
+Refer to [Bitwarden's Public API documentation](https://bitwarden.com/help/public-api/){:target=_blank .external-link} for more information about the service.
 
 ## Using API Key
 
-1. Open your Bitwarden [vault](https://vault.bitwarden.com/).
-2. Click on your organisation under the ***ORGANISATIONS*** section.
-3. Click on the ***Settings*** tab.
-4. Click on the ***View API key*** button under the ***API key*** section.
-5. Enter your master password in the ***Master password*** field.
-6. Click on the ***View API key*** button.
-7. Copy the displayed client id.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Bitwarden API' credentials in n8n.
-9. Paste the client id in the ***Client ID*** field in the 'Bitwarden API' credentials in n8n.
-10. Copy the client secret from Bitwarden.
-11. Paste the client secret in the ***Client Secret*** field in the 'Bitwarden API' credentials in n8n.
-12. Click on the ***Create*** button to create your credentials.
+To configure the Bitwarden credential, you'll need:
 
-**Note:** If you're hosting Bitwarden on your server, select 'Self-hosted' from the ***Environment*** dropdown list. You also need to enter the domain of your hosted instance in the ***Self-hosted domain*** field.
+- A **Client ID**
+- A **Client Secret**
+- The **Environment**:
+    - Choose **Cloud-hosted** if you don't self-host Bitwarden. No further configuration is needed.
+    - Choose **Self-hosted** if you self-host Bitwarden on your own server. Enter your **Self-hosted domain** in the appropriate field.
 
-The following video demonstrates the steps mentioned above.
-
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/lK-XdhKDSkk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+The Client ID and Client Secret must be for an **Organization API Key**, not a Personal API Key. Refer to the [Bitwarden Public API Authentication documentation](https://bitwarden.com/help/public-api/#authentication){:target=_blank .external-link} for instructions on generating an Organization API Key.
 

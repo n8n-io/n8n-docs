@@ -21,7 +21,6 @@ Create a [Box](https://www.box.com/) account.
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
 Refer to [Box's API documentation](https://developer.box.com/reference/){:target=_blank .external-link} for more information about the service.
 
 ## Using OAuth2

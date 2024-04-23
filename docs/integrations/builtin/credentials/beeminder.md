@@ -6,29 +6,28 @@ contentType: integration
 
 # Beeminder credentials
 
-You can use these credentials to authenticate the following nodes with Beeminder.
+You can use these credentials to authenticate the following node:
 
 - [Beeminder](/integrations/builtin/app-nodes/n8n-nodes-base.beeminder/)
 
 ## Prerequisites
 
-Create a [Beeminder](https://Beeminder.io/account) account.
+Create a [Beeminder](https://www.beeminder.com/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your [Beeminder dashboard](https://beeminder.com/home).
-2. Click on your avatar at the top-right corner.
-3. Select 'ACCOUNT SETTINGS' from the dropdown list.
-4. Scroll up and click on the ***APPS & API*** tab.
-5. Copy the ***Auth Token*** displayed in the ***API*** section.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Beeminder API' credentials in n8n.
-7. Enter your username in the ***User*** field.
-8. Paste the Auth Token in the ***Auth Token*** field.
-9. Click on the ***Save*** button to save your credentials.
+- API User Token
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/nBrZAyBx9mA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Beeminder's API documentation](http://api.beeminder.com/#beeminder-api-reference){:target=_blank .external-link} for more information about the service.
+
+## Using API User Token
+
+To configure the Beeminder credential, you'll need:
+
+- A **User** name
+- A personal **Auth Token** for that user. Generate this using either method below:
+    - In the GUI: From the [Apps & API](https://help.beeminder.com/article/110-apps-and-api#API-token){:target=_blank .external-link} option within **Account Settings**
+    - In the API: Hit the [`auth_token` API endpoint](http://api.beeminder.com/#auth){:target=_blank .external-link}
 

@@ -6,40 +6,34 @@ contentType: integration
 
 # Bitly credentials
 
-You can use these credentials to authenticate the following nodes with Bitly.
+You can use these credentials to authenticate the following node:
 
 - [Bitly](/integrations/builtin/app-nodes/n8n-nodes-base.bitly/)
 
 ## Prerequisites
 
-Create a [Bitly](https://www.bitly.com/) account.
+Create a [Bitly](https://www.bitly.com/){:target=_blank .external-link} account.
 
-## Using OAuth
+## Supported authentication methods
+
+- API Token
+- Oauth2
+
+## Related resources
+
+Refer to [Bitly's API documentation](https://dev.bitly.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API Token
+
+Once logged in, visit [Settings > Developer Settings > API](https://app.bitly.com/settings/api/){:target=_blank .external-link} to generate an Access Token.
+
+Use this token in the n8n credential.
+
+## Using OAuth2
 
 /// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Bitly account to n8n.
+You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
 ///
 
-1. Open your Bitly dashboard.
-2. Click on your account button in the top right.
-3. Click on **Profile Settings**.
-4. Click on **Registered OAuth Applications**.
-5. Click on **GET REGISTRATION CODE**.
-6. Use Client Secret and Client ID in your Bitly node credentials in n8n.
-7. Enter n8n provided redirect URL. Redirect URL Explanation [here](/).
-
-
-![Getting Bitly credentials](/_images/integrations/builtin/credentials/bitly/using-oauth.gif)
-
-## Using Access Token
-
-1. Open your Bitly dashboard.
-2. Click on your account button in the top right.
-3. Click on **Profile Settings**.
-4. Click on **Generate Access Token**.
-5. Enter password.
-6. Use the access token in your Bitly node credentials in n8n.
-
-
-![Getting Bitly credentials](/_images/integrations/builtin/credentials/bitly/using-access-token.gif)
+Should you need to configure Oauth2 from scratch or need more detail on what's happening in the Oauth web flow, refer to the [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link} for more information.
 

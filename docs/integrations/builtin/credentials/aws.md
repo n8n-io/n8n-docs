@@ -6,7 +6,7 @@ contentType: integration
 
 # AWS credentials
 
-You can use these credentials to authenticate the following nodes with AWS.
+You can use these credentials to authenticate the following nodes:
 
 - [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock)
 - [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager/)
@@ -27,24 +27,42 @@ You can use these credentials to authenticate the following nodes with AWS.
 
 Create an [AWS](https://aws.amazon.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your [AWS Management Console](https://console.aws.amazon.com){:target=_blank .external-link}.
-2. Click on your name on the top right and select 'My Security Credentials' from the dropdown.
-3. Click on the **Create New Access Key** button, under the **Access keys (access key ID and secret access key)** section
-4. Click on the **Show Access Key** button.
-5. Copy the displayed Access Key ID.
-6. Enter the name for your credentials in the **Credentials Name** field in the 'AWS' credentials in n8n.
-7. Paste the Access Key ID in the **Access Key ID** field in the 'AWS' credentials in n8n.
-8. Copy the secret access key from your AWS console.
-9. Paste the secret access key in the **Secret Access Key** field in the 'AWS' credentials in n8n.
-10. Click the **Create** button to save your credentials in n8n.
+- Access key
 
-**Note:** If you're running your AWS instance in a different region, please update the **Region** field accordingly.
+## Using Access key
 
-The following video demonstrates the steps mentioned above.
+Refer to the [AWS Managing Access Keys documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html){:target=_blank .external-link} for instructions on generating and updating access keys.
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/zJgHOSSwC4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+To configure your AWS credential in n8n, you'll need:
+
+- The AWS **Region**: be sure to adjust this if you aren't using the default region
+- The **Access Key ID**: provided when you generate an access key
+- The **Secret Access Key**: provided when you generate an access key
+
+## Using a temporary security credential
+
+You can configure the access key as a temporary security credential by toggling the slider on.
+
+If you select this option, you must add a **Session token** to the credential.
+
+Refer to the [AWS Temporary security credential documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html){:target=_blank .external-link} for more information on working with temporary security credentials.
+
+## Virtual Private Cloud usage (custom endpoint)
+
+If you use [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/){:target=_blank .external-link} to host n8n, you can establish a connection between your VPC and these apps:
+
+- Rekognition
+- Lambda
+- SNS
+- SES
+- SQS
+- S3
+
+To use these apps with a custom endpoint, toggle the **Custom endpoint** slider on and add the relevant custom endpoint(s).
+
+If you don't add a custom endpoint, the n8n credential will use the default endpoint.
+
+
 

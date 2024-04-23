@@ -18,6 +18,10 @@ Create a [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} 
 
 - API Username and App Password
 
+## Related resources
+
+Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication){:target=_blank .external-link} for more information about the service.
+
 ## Using API Username/App Password
 
 Follow the Bitbucket instructions to [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/){:target=_blank .external-link}.

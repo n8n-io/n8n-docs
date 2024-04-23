@@ -28,8 +28,12 @@ Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/az
 
 To get an API key, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource){:target=_blank .external-link}.
 
-As you work through that process, pay attention for the following information and enter it into the n8n Azure OpenAI credentials:
+As you work through that process, locate the following information and enter it into the n8n Azure OpenAI credentials:
 
 - The **Resource Name**: the **Name** you gave the resource
 - The **API key**: **Key 1** works well, can be accessed before deployment in **Keys and Endpoint**
 - The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation){:target=_blank .external-link} for more information about API versioning in Azure OpenAI.
+
+/// note | Model name for Azure OpenAI nodes
+Once you deploy the resource, use the **Deployment name** as the model name for the Azure OpenAI nodes where you're using this credential.
+///

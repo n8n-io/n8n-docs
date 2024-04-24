@@ -13,6 +13,18 @@ You can use these credentials to authenticate the following nodes:
 
 Refer to the [WhatsApp documentation](https://developers.facebook.com/docs/whatsapp/){:target=_blank .external-link} to get your access token and business account ID.
 
+## Configuring a new app in Meta for Developers
 
+You need an app in Meta for Developers to authenticate with WhatsApp.
+
+1. Create a new app in [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link}.
+1. For **What do you want your app to do?** select **Other**.    
+1. For **App type** seelct **Business**.    
+1. Give the app a name.
+1. Select **Create app**.    
+1. In **App settings** > **Basic** set the **Privacy Policy URL** and **Terms of Service URL** for the app.    
+1. Change the **App Mode** to **Live**.    
+1. In **Add product**, add WhatsApp by selecting **Set up** in the corresponding WhatsApp box.
+1. In **WhatsApp** >  **Quickstart** select a business portfolio, then selecting **Continue**.
 
 

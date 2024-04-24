@@ -734,6 +734,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md

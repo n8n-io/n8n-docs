@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes with Coda.
 
 ## Prerequisites
 
-Create a [Coda](https://www.coda.io/) account.
+Create a [Coda](https://www.coda.io/){:target=_blank .external-link} account.
 
 ## Using Access Token
 

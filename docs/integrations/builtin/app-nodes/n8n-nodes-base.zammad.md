@@ -17,30 +17,30 @@ Refer to [Zammad credentials](/integrations/builtin/credentials/zammad/) for gui
 For usage examples and templates to help you get started, take a look at n8n's [Zammad integrations](https://n8n.io/integrations/zammad/){:target="_blank" .external-link} list.
 ///
 
-## Basic Operations
+## Operations
 
 * Group
-    * Create a group
-    * Delete a group
-    * Retrieve a group
-    * Get all groups
-    * Update a group
+    * Create
+    * Delete
+    * Get
+    * Get many
+    * Update
 * Organization
-    * Create an organization
-    * Delete an organization
-    * Retrieve an organization
-    * Retrieve all organizations
-    * Update an organization
+    * Create
+    * Delete
+    * Get
+    * Get many
+    * Update
 * Ticket
-    * Create a ticket
-    * Delete a ticket
-    * Retrieve a ticket
-    * Retrieve all tickets
+    * Create
+    * Delete
+    * Get
+    * Get many
 * User
-    * Create a user
-    * Delete a user
-    * Retrieve a user
-    * Retrieve all users
-    * Retrieve currently logged-in user
-    * Update a user
+    * Create
+    * Delete
+    * Get
+    * Get many
+	* Get self
+    * Update
 

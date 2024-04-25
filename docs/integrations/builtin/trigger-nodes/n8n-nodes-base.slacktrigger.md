@@ -34,13 +34,13 @@ View [example workflows and related content](https://n8n.io/integrations/slack-t
 
 Refer to [Slack's documentation](https://api.slack.com/apis/connections/events-api){:target=_blank .external-link} for details about their API.
 
-## Slack Configuration
+## Slack configuration
 
-To use this node you first need to create an application in Slack and enable Event Subscriptions, For the Request URL input the production or test url displayed in the webhooks section of the node.
+To use this node you first need to create an application in Slack and enable event subscriptions. For the **Request URL** input the production or test URL displayed in the webhooks section of the node.
 
 ///  note  | Request URL
-Slack only allows one Request URL per app, This means if you want to test your workflow you will need to either use the production url with execution logging or change the url in Slack to the test url.
+Slack only allows one request URL per app, This means if you want to test your workflow you will need to either use the production URL with execution logging or change the URL in Slack to the test URL.
 ///
 
-Once verified you can select the bot events to subscribe to, You can use the `Events` option in the node to filter these requests and if you want to use an event not in the list you can add it as a bot event and select `Any Event` in the node.
+Once verified you can select the bot events to subscribe to. You can use the **Events** option in the node to filter these requests. If you want to use an event not in the list you can add it as a bot event and select **Any Event** in the node.
 

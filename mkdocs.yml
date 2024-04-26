@@ -217,6 +217,7 @@ nav:
                       - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
                       - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
                   - Test your knowledge: courses/level-two/chapter-6.md
+          - Learning path: learning-path.md
       - Using the app:
           - Understand workflows:
               - workflows/index.md

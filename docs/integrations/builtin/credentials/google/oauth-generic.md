@@ -49,6 +49,8 @@ This document contains instructions for creating a generic OAuth2 Google credent
 		
 5. Select **CREATE**.
 6. Enable each Google service API that you want to use:
+
+	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.  
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
 ### Create and test your connection
@@ -60,6 +62,8 @@ In n8n:
 3. **Save** your new credentials.
 
 The following video demonstrates the steps described above:
+
+## Video
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -100,3 +104,6 @@ n8n doesn't support all scopes. When creating a generic Google OAuth2 API creden
 
 --8<-- "_snippets/integrations/builtin/credentials/google/unverified-app.md"
 
+### Google Cloud app becoming unauthorized
+
+For Google Cloud apps with **Publishing status** set to **Testing** and **User type** set to **External**, consent and tokens expire after seven days. Refer to [Google Cloud Platform Console Help | Setting up your OAuth consent screen](https://support.google.com/cloud/answer/10311615?hl=en#zippy=%2Ctesting){:target=_blank .external-link} for more information. To resolve this, reconnect the app in the n8n credentials modal.

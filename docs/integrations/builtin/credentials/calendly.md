@@ -16,11 +16,17 @@ Create a [Calendly](https://www.calendly.com/){:target=_blank .external-link} pr
 
 ## Supported authentication methods
 
-n8n supports authenticating Calendly with a personal access token.
+- API Access Token
 
 ## Related resources
 
-Refer to [Calendly's API documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Calendly's API documentation](https://developer.calendly.com/getting-started){:target=_blank .external-link} for more information about the service.
 
+## Using API Access Token
 
+To configure this credential, you'll need:
+
+- An API Key or **Personal Access Token**
+
+Refer to [Calendly's API authentication documentation](https://developer.calendly.com/how-to-authenticate-with-personal-access-tokens){:target=_blank .external-link} for information on generating a personal access token (PAT).
 

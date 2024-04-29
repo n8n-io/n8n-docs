@@ -7,6 +7,11 @@ description: Documentation for the Cisco Meraki credentials. Use these credentia
 
 You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
 
+## Prerequisites
+
+- Create a [Cisco DevNet developer account](https://developer.cisco.com){:target=_blank .external-link}.
+- Access to a [Cisco Meraki account](https://meraki.cisco.com/){:target=_blank .external-link}.
+
 ## Authentication methods
 
 - API Key

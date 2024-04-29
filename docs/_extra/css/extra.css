@@ -201,6 +201,10 @@
 	border: 0;
   }
 
+  .md-content__button > svg {
+	border: 0;
+  }
+
   /* remove lightbox controls so users can't slideshow */
   .gnext, .gprev {
 	display: none !important;
@@ -251,6 +255,28 @@
 		--md-scroll-margin: 9rem;
 	}
 }
+
+/* feedback widget in TOC */
+
+.md-feedback {
+	margin-top: 1em;
+}
+
+.md-feedback__title {
+	
+	border-top: 1px solid var(--color-foreground-base);
+	font-size: 0.8rem;
+	font-weight: normal;
+	margin-left: 0.6rem;
+	padding-top: 0.5rem;
+	text-align: left;
+}
+
+.md-feedback__inner {
+	width: 80%;
+}
+
+
 
   /* dark mode */  
   /* [data-md-color-scheme="dark"] .md-header{

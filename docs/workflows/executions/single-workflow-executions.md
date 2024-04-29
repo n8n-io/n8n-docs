@@ -43,5 +43,5 @@ You can filter the executions list.
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
 1. Open the **Executions** list.
-2. For the workflow execution you want to retry, select **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png)</span>.
+2. For the workflow execution you want to retry, select **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"

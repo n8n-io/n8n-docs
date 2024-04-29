@@ -1,6 +1,9 @@
 site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
+# Must be the docs repo for the edit page buttons to work
+repo_url: https://github.com/n8n-io/n8n-docs 
+edit_uri: edit/main/docs/
 validation:
   nav:
     omitted_files: info
@@ -22,6 +25,8 @@ theme:
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
     - announce.dismiss
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    - content.action.edit
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
     - content.code.annotate
     # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs
@@ -33,6 +38,8 @@ theme:
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.instant
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
     - navigation.path
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
@@ -42,8 +49,6 @@ theme:
     - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
-      #https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
-    - navigation.instant
 copyright: >
   <a href="#__consent">Change cookie settings</a>
 extra:
@@ -89,6 +94,11 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists
   # attr_list is required for several other features. Always enable.
   - attr_list
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#automatic-previews
+  - material.extensions.preview:
+      sources:
+        include:
+          - release-notes.md
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - md_in_html
   - meta
@@ -107,8 +117,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
-
+        !!python/name:material.extensions.emoji.to_svg 
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
@@ -124,8 +134,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format:
-            !!python/name:pymdownx.superfences.fence_code_format # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
-
+            !!python/name:pymdownx.superfences.fence_code_format 
+      # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -727,6 +737,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
@@ -753,6 +764,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
@@ -761,6 +773,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
@@ -885,7 +898,7 @@ nav:
           - integrations/builtin/credentials/google/oauth-single-service.md
           - integrations/builtin/credentials/google/oauth-generic.md
           - integrations/builtin/credentials/google/service-account.md
-          - integrations/builtin/credentials/google/googlepalm.md
+          - integrations/builtin/credentials/google/googleai.md
         - integrations/builtin/credentials/gotify.md
         - integrations/builtin/credentials/gotowebinar.md
         - integrations/builtin/credentials/grafana.md
@@ -1262,3 +1275,5 @@ nav:
       - Workflow management: embed/managing-workflows.md
       - Workflows templates: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
+#  - Feature tests:
+#      - Main features: docs-site-feature-tests/index.md

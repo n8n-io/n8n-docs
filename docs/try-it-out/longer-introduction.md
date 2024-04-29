@@ -47,7 +47,7 @@ For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n
 
 The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link}. The API gives you data to work with in this tutorial.
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the Schedule Trigger node.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Schedule Trigger node.
 2. Search for **NASA**. n8n shows a list of nodes that match the search.
 3. Select **NASA** to view a list of operations.
 4. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
@@ -61,7 +61,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
 6. By default, DONKI Solar Flare provides data for the past 30 days. To limit it to just the last week, use **Additional Fields**:
     1. Select **Add field**.
     2. Select **Start date**.
-    3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
+    3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
     4. In the **Expression** field, enter the following expression:
     ```js
     {{$today.minus({days: 7}).toFormat('yyyy-MM-dd')}}
@@ -82,7 +82,7 @@ n8n supports complex logic in workflows. In this tutorial, use the [If node](/in
 
 Add the If node:
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png)</span> connector on the NASA node.
+1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the NASA node.
 1. Search for **If**. n8n shows a list of nodes that match the search.
 1. Select **If** to add the node to the canvas. n8n opens the node.
 1. You need to check the value of the `classType` property in the NASA data. To do this:
@@ -104,14 +104,14 @@ In this tutorial, you are working with live date. If you find there aren't any X
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link}. Postbin is a service that receives data and displays it on a temporary web page. 
 
-1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png)</span> connector labeled **true**.
+1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png){.off-glb}</span> connector labeled **true**.
 1. Search for **PostBin**. n8n shows a list of nodes that match the search.
 1. Select **PostBin**.
 1. Select **Send a request**. n8n adds the node to the canvas and opens it.
 1. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
 1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 1. In n8n, paste your Postbin ID into **Bin ID**.
-1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png)</span> to open the full expressions editor.
+1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
 1. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
 1. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js
@@ -120,7 +120,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 1. Close the expressions editor to return to the node.
 1. Close the Postbin node to return to the canvas.
 1. Add another Postbin node, to handle the **false** output path from the If node:
-    1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png)</span> > **Duplicate node** to duplicate the first Postbin node.
+    1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** to duplicate the first Postbin node.
     2. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
 ## Step seven: Test the workflow

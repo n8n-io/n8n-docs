@@ -17,13 +17,13 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API Key
+- API Access Token
 
 ## Related resources
 
 Refer to [Cockpit's API documentation](https://getcockpit.com/documentation/core/api/introduction){:target=_blank .external-link} for more information about the service.
 
-## Using Access Token
+## Using API Access Token
 
 To configure this credential, you'll need:
 

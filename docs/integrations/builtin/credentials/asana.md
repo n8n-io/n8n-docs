@@ -19,7 +19,7 @@ Create an [Asana](https://asana.com/) account.
 ## Supported authentication methods
 
 - OAuth2 API
-- API (Access token)
+- API Access Token
 
 ## Related resources
 
@@ -31,7 +31,7 @@ Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview){
 You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
 ///
 
-Should you need to configure Oauth2 from scratch or need more detail on what's happening in the Oauth web flow, refer to the instructions in the [Asana Oauth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up Oauth.
+Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Asana OAuth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up OAuth.
 
 Use the following adjustments:
 
@@ -42,7 +42,7 @@ Use the following adjustments:
 
 To configure this credential, you'll need:
 
-- A personal **Access Token**
+- A Personal **Access Token** (PAT)
 
 Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for the steps to generate a Personal Access Token (PAT).
 

@@ -28,5 +28,5 @@ To configure this credential, you'll need:
 
 - An **API Key**
 
-Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**. Paste this key into the **API Key** field in the n8n APITemplate.io API credentials.
+Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**.
 

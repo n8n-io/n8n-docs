@@ -6,7 +6,7 @@ contentType: integration
 
 # ClickUp credentials
 
-You can use these credentials to authenticate the following nodes with ClickUp.
+You can use these credentials to authenticate the following nodes:
 
 - [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickup/)
 - [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger/)
@@ -17,6 +17,27 @@ Create a [ClickUp](https://www.clickup.com/){:target=_blank .external-link} acco
 
 You can use an API key or OAuth. Refer to [ClickUp's documentation](https://clickup.com/api/developer-portal/authentication/){:target=_blank .external-link} for more information on getting your credentials.
 
+## Supported authentication methods
+
+- API Access Token
+- OAuth2
+
 ## Related resources
 
 Refer to [ClickUp's documentation](https://clickup.com/api/){:target=_blank .external-link} for more information about the service.
+
+## Using API Access Token
+
+To configure this credential, you'll need:
+
+- A Personal API **Access Token**
+
+Refer to [ClickUp's Personal Token documentation](https://clickup.com/api/developer-portal/authentication#personal-token){:target=_blank .external-link} for instructions on getting a personal token. Add that personal token as the **Access Token** in the n8n credential.
+
+## Using OAuth2
+
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your ClickUp account to n8n.
+///
+
+Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [ClickUp Oauth flow documentation](https://clickup.com/api/developer-portal/authentication#oauth-flow){:target=_blank .external-link} to create an OAuth app and get the necessary information.

@@ -1,5 +1,5 @@
 ---
-description: A collection of quick starts, courses and tutorials for n8n biginners to get started with n8n. 
+description: A suggested learning path to get started with n8n through tutorials, courses, and step-by-step guides.
 contentType: overview
 ---
 Welcome to the n8n Learning Path! 

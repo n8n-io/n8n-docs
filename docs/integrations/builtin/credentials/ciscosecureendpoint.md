@@ -33,5 +33,5 @@ To configure this credential, you'll need:
 - A **Client ID**
 - A **Client Secret**
 
-In order to obtain the Client ID and Client Secret, you'll need to Register a SecureX API Client. Refer to [Cisco Secure Endpoint's authentication documentation](https://developer.cisco.com/docs/secure-endpoint/authentication/#authentication){:target=_blank .external-link} for detailed instructions. Use the SecureX **Client Password** as the **Client Secret** within the n8n credential.
+To get a Client ID and Client Secret, you'll need to Register a SecureX API Client. Refer to [Cisco Secure Endpoint's authentication documentation](https://developer.cisco.com/docs/secure-endpoint/authentication/#authentication){:target=_blank .external-link} for detailed instructions. Use the SecureX **Client Password** as the **Client Secret** within the n8n credential.
 

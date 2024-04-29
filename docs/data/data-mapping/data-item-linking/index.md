@@ -6,11 +6,11 @@ contentType: overview
 
 An item is a single piece of data. Nodes receive one or more items, operate on them, and output new items. Each item links back to previous items. 
 
-You need to be understand this behavior if you're:
+You need to understand this behavior if you're:
 
-* Building a programmatic-style node that implements complex behaviors with its input and output data. Refer
+* Building a programmatic-style node that implements complex behaviors with its input and output data.
 * Using the Code node or expressions editor to access data from earlier items in the workflow. 
-* Using the Code node to implement complex behaviors with input and output data.
+* Using the Code node for complex behaviors with input and output data.
 
 This section provides:
 

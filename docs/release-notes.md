@@ -29,16 +29,76 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * PATCH version when making backward-compatible bug fixes.
 
 
+## n8n@1.39.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.0...n8n@1.39.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-25
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.38.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.38.1...n8n@1.38.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-25
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.37.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.3...n8n@1.37.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-25
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.39.0
+
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.38.1...n8n@1.39.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-24
+
+This release contains new nodes, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: WhatsApp Trigger
+
+This release adds the [WhatsApp trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### Node enhancement: Multiple methods, one Webhook node
+
+The Webhook trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#listen-for-multiple-http-methods) for information on enabling this.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
 
 ## n8n@1.38.1
 
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.38.0...n8n@1.38.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-04-18
-
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains bug fixes.
 
@@ -49,9 +109,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.2...n8n@1.37.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-04-18
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains bug fixes.
 

@@ -34,7 +34,7 @@ Tell n8n which workflow to call. You can choose either:
 * **Database**, then enter a workflow ID.
 * **Parameter**, then copy in a complete [workflow JSON](/workflows/export-import/).
 
-### Response Property Name
+### Field to Return
 
 This must match the name of the output property in the workflow you're calling.
 

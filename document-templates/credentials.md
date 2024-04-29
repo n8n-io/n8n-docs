@@ -40,7 +40,7 @@ _Include info on services they need to sign up for_
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if necessary. -->
 Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
 
 
@@ -65,7 +65,7 @@ _IF NEEDED: Include a step by step guide to how to set up a particular type of a
 You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your _Name_ account to n8n.
 ///
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [_Name_ Oauth documentation](){:target=_blank .external-link} to set up OAuth._
+Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [_Name_ Oauth documentation](){:target=_blank .external-link} to set up OAuth.
 
 <!-- 
 Add any other sections here. 

@@ -6,22 +6,29 @@ contentType: integration
 
 # Cockpit credentials
 
-You can use these credentials to authenticate the following nodes with Cockpit.
+You can use these credentials to authenticate the following nodes:
 
 - [Cockpit](/integrations/builtin/app-nodes/n8n-nodes-base.cockpit/)
 
 ## Prerequisites
 
-Create a [Cockpit](https://www.getcockpit.com/) account.
+- Create a [Cockpit](https://getcockpit.com/){:target=_blank .external-link} account.
+- Set up a [self-hosted instance of Cockpit](https://getcockpit.com/documentation/core/quickstart/installation){:target=_blank .external-link}.
+
+## Supported authentication methods
+
+- API Key
+
+## Related resources
+
+Refer to [Cockpit's API documentation](https://getcockpit.com/documentation/core/api/introduction){:target=_blank .external-link} for more information about the service.
 
 ## Using Access Token
 
-1. Open your Cockpit dashboard.
-2. Click on your profile in the top right.
-3. Click on **Account**.
-4. Scroll down and copy API key.
-5. Use selected API key and your Cockpit URL in your Cockpit node credentials in n8n.
+To configure this credential, you'll need:
 
+- Your **Cockpit URL**: The URL you use to access your Cockpit instance
+- An **Access Token**
 
-![Getting Cockpit credentials](/_images/integrations/builtin/credentials/cockpit/using-access-token.gif)
+Refer to the [Cockpit Managing tokens documentation](https://getcockpit.com/documentation/core/api/authentication/#managing-tokens){:target=_blank .external-link} for instructions on creating an API token. Use this token in your credential **Access Token**.
 

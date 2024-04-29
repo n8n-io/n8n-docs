@@ -66,7 +66,7 @@ This document contains instructions for creating a Google credential for a singl
 6. Select **CREATE**.
 7. Enable each Google service API that you want to use:
 
-	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.  
+	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}.  
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
 ### Create and test your connection

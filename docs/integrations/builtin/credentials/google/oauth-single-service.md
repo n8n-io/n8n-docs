@@ -39,7 +39,7 @@ This document contains instructions for creating a Google credential for a singl
 
 	??? Details "View detailed steps"
 		1. Select **OAuth consent screen**.
-		2. As **User Type**, select **Internal** for user access within your organisation's Google workspace or **External** for any user with a Google account.
+		2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account.
 		3. Select **Create**.
 		4. Enter the essential information: **App name**, **User support email**, and the **Email addresses** field in **Developer contact information**.
 		5. Add an authorized domain: select **+ ADD DOMAIN**. Enter `n8n.cloud` if using n8n's Cloud service, or the domain of your n8n instance if you're self-hosting.

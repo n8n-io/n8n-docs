@@ -16,12 +16,17 @@ Create an [Adalo](https://www.adalo.com/){:target=_blank .external-link} account
 
 ## Supported authentication methods
 
-- API key
+- API Key
 
 ## Related resources
 
 Refer to [Adalo's API collections documentation](https://help.adalo.com/integrations/the-adalo-api/collections){:target=_blank .external-link} for more information about working with the service.
 
-## Using API key
+## Using API Key
+
+To configure this credential, you'll need:
+
+- An **API Key**
+- An **App ID**
 
 Follow [Adalo's API documentation](https://help.adalo.com/integrations/the-adalo-api){:target=_blank .external-link} to get your API key and your [App ID](https://forum.adalo.com/t/i-dont-find-app-id/10788/2){:target=_blank .external-link}.

@@ -26,4 +26,9 @@ Refer to [ActiveCampaign's API documentation](https://help.activecampaign.com/hc
 
 ## Using API Access Token
 
-See the [ActiveCampaign API documentation](https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with-the-API#h_01HJ6REM2YQW19KYPB189726ST){:target=_blank .external-link} for full details on obtaining your API URL and Key.
+To configure this credential, you'll need:
+
+- An **API URL**
+- An **API Key**
+
+Refer to the [ActiveCampaign API documentation](https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with-the-API#h_01HJ6REM2YQW19KYPB189726ST){:target=_blank .external-link} for full details on obtaining your API URL and Key.

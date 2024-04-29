@@ -24,7 +24,7 @@ Refer to [Bitwarden's Public API documentation](https://bitwarden.com/help/publi
 
 ## Using API Key
 
-To configure the Bitwarden credential, you'll need:
+To configure this credential, you'll need:
 
 - A **Client ID**
 - A **Client Secret**

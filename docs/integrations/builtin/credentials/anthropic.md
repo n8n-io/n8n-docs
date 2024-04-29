@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API key
+- API Key
 
 ## Related resources
 
@@ -23,7 +23,11 @@ Refer to [Anthropic's documentation](https://docs.anthropic.com/claude/reference
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
-## Using API key
+## Using API Key
 
-[Generate an API key](https://docs.anthropic.com/claude/docs/getting-access-to-claude#step-3-generate-an-api-key){:target=_blank .external-link} in Claude and add it to an n8n Anthropic credential.
+To configure this credential, you'll need:
+
+- An **API Key**
+
+Refer to the Anthropic documentation to [generate an API key](https://docs.anthropic.com/claude/docs/getting-access-to-claude#step-3-generate-an-api-key){:target=_blank .external-link}.
 

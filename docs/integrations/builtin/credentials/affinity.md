@@ -17,12 +17,16 @@ Create an [Affinity](https://www.affinity.co/){:target=_blank .external-link} ac
 
 ## Supported authentication methods
 
-- API key
+- API Key
 
 ## Related resources
 
 Refer to [Affinity's API documentation](https://support.affinity.co/hc/en-us/sections/360010294532-External-API){:target=_blank .external-link} for more information about working with the service.
 
-## Using API key
+## Using API Key
 
-Follow [How to obtain your Affinity API key documentation](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-Affinity-API-key){:target=_blank .external-link} to obtain your API key.
+To configure this credential, you'll need:
+
+- An **API Key**
+
+Follow [How to obtain your Affinity API key documentation](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-Affinity-API-key){:target=_blank .external-link} to get your API key.

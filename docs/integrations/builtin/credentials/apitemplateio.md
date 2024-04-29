@@ -22,7 +22,11 @@ Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-lin
 
 Refer to [APITemplate.io's API documentation](https://apitemplate.io/apiv2/){:target=_blank .external-link} for more information about the service.
 
-## Using API key
+## Using API Key
+
+To configure this credential, you'll need:
+
+- An **API Key**
 
 Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**. Paste this key into the **API Key** field in the n8n APITemplate.io API credentials.
 

@@ -29,7 +29,7 @@ Refer to [Bubble's API documentation](https://manual.bubble.io/help-guides/integ
 
 ## Using API Key
 
-To configure the Bubble credential, you will need:
+To configure this credential, you'll need:
 
 - An **API Token**: Refer to the [Bubble Authentication documentation](https://manual.bubble.io/core-resources/api/the-bubble-api/the-data-api/authentication){:target=_blank .external-link} for instructions on creating a new API token.
 - An **App Name**: The name of the app you created the API token for.

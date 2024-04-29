@@ -23,7 +23,11 @@ Create a [Brevo](https://www.brevo.com/){:target=_blank .external-link} develope
 
 Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1){:target=_blank .external-link} for more information about authenticating with the service.
 
-## API key
+## API Key
+
+To configure this credential, you'll need:
+
+- An **API Key**
 
 Refer to the [Brevo API Quick Start documentation](https://developers.brevo.com/docs/getting-started#quick-start){:target=_blank .external-class} for instructions on creating a new API key.
 

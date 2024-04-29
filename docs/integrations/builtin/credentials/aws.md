@@ -29,17 +29,17 @@ Create an [AWS](https://aws.amazon.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
-- Access key
+- Access Key
 
-## Using Access key
+## Using Access Key
 
-Refer to the [AWS Managing Access Keys documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html){:target=_blank .external-link} for instructions on generating and updating access keys.
-
-To configure your AWS credential in n8n, you'll need:
+To configure this credential, you'll need:
 
 - The AWS **Region**: be sure to adjust this if you aren't using the default region
 - The **Access Key ID**: provided when you generate an access key
 - The **Secret Access Key**: provided when you generate an access key
+
+Refer to the [AWS Managing Access Keys documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html){:target=_blank .external-link} for instructions on generating and updating access keys.
 
 ## Using a temporary security credential
 

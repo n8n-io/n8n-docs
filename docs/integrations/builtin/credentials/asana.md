@@ -28,19 +28,21 @@ Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview){
 ## Using OAuth2 API
 
 /// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Asana account to n8n.
+You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
 ///
 
-For non-Cloud users:
+Should you need to configure Oauth2 from scratch or need more detail on what's happening in the Oauth web flow, refer to the instructions in the [Asana Oauth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up Oauth.
 
-To work with OAuth, follow the instructions in the [Asana Oauth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up Oauth. Use the following adjustments:
+Use the following adjustments:
 
 1. Use the n8n **OAuth Callback URL** as the Asana **Redirect URLs**.
 2. Use the Asana **Client ID** and **Client secret** in the corresponding fields within n8n.
 
 ## Using API Access token
 
-The Asana API credentials use a personal access token (PAT) from Asana.
+To configure this credential, you'll need:
 
-See the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for the steps to generate a personal access token (PAT) to add as the **Access Token** in n8n.
+- A personal **Access Token**
+
+Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for the steps to generate a Personal Access Token (PAT).
 

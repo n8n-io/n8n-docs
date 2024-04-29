@@ -24,7 +24,7 @@ Refer to [Beeminder's API documentation](http://api.beeminder.com/#beeminder-api
 
 ## Using API User Token
 
-To configure the Beeminder credential, you'll need:
+To configure this credential, you'll need:
 
 - A **User** name
 - A personal **Auth Token** for that user. Generate this using either method below:

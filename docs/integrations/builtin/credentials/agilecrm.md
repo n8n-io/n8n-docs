@@ -17,13 +17,18 @@ Create an [Agile CRM](https://www.agilecrm.com/) account.
 
 ## Supported authentication methods
 
-- API key
+- API Key
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
 Refer to [Agile CRM's API documentation](https://www.agilecrm.com/api){:target=_blank .external-link} for more information about working with the service.
 
-## Using API key
+## Using API Key
 
-In Agile CRM, you can access your API key through **Admin Settings > Developers & API >** [**REST API key**](https://github.com/agilecrm/rest-api?tab=readme-ov-file#api-key){:target=_blank .external-link}. Use the REST API key, your registered email, and your Agile CRM subdomain (for instance, n8n) with your Agile CRM node credentials in n8n.
+To configure this credential, you'll need:
+
+- An **Email Address** registered with AgileCRM
+- A REST **API Key**
+- An Agile CRM **Subdomain** (for instance, n8n)
+
+Access your Agile CRM API key through **Admin Settings > Developers & API >** [**REST API key**](https://github.com/agilecrm/rest-api?tab=readme-ov-file#api-key){:target=_blank .external-link}.

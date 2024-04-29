@@ -24,9 +24,10 @@ Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/b
 
 ## Using API Username/App Password
 
-Follow the Bitbucket instructions to [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/){:target=_blank .external-link}.
+To configure this credential, you'll need:
 
-The **username** is visible in your Bitbucket profile settings in **Personal settings > Account settings**.
+- A **Username**: Visible in your Bitbucket profile settings **Personal settings > Account settings**.
+- An **App Password**: Refer to the Bitbucket instructions to [Create an app password](https://support.atlassian.com/bitbucket-cloud/docs/create-an-app-password/){:target=_blank .external-link}.
 
 ## App password permissions
 

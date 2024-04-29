@@ -24,4 +24,8 @@ Refer to [Brandfetch's API documentation](https://docs.brandfetch.com/docs/apis)
 
 ## Using API Key
 
-Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} to generate an API key that can be used in your credential.
+To configure this credential, you'll need:
+
+- An **API Key**
+
+Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} to generate an API key.

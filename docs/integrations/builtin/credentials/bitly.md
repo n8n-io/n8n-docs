@@ -25,9 +25,12 @@ Refer to [Bitly's API documentation](https://dev.bitly.com/){:target=_blank .ext
 
 ## Using API Token
 
+To configure this credential, you'll need:
+
+- An **Access Token**
+
 Once logged in, visit [Settings > Developer Settings > API](https://app.bitly.com/settings/api/){:target=_blank .external-link} to generate an Access Token.
 
-Use this token in the n8n credential.
 
 ## Using OAuth2
 
@@ -35,5 +38,5 @@ Use this token in the n8n credential.
 You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
 ///
 
-Should you need to configure Oauth2 from scratch or need more detail on what's happening in the Oauth web flow, refer to the [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link} for more information.
+Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link} for more information.
 

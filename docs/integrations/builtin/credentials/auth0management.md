@@ -23,10 +23,10 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 ## Using API (Client Secret)
 
-To set up this credential, you'll need:
+To configure this credential, you'll need:
 
 - An Auth0 domain
 - A Client ID
 - A Client Secret
 
-Refer to the [Auth0 Management API Get Access Tokens documentation](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens){:target=_blank .external-link} for instructions on obtaining the Client ID and Client Secret from the application's settings tab.
+Refer to the [Auth0 Management API Get Access Tokens documentation](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens){:target=_blank .external-link} for instructions on obtaining the Client ID and Client Secret from the application's **Settings** tab.

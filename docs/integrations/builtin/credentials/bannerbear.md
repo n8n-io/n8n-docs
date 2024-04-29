@@ -24,7 +24,11 @@ Refer to [Bannerbear's API documentation](https://developers.bannerbear.com/){:t
 
 ## Using API Key
 
-To generate an API key, you need to create a Bannerbear project. The API Key is located in **Settings / API Key**. Enter this key as the **Project API Key** in the n8n Bannerbear credential.
+To configure this credential, you'll need:
+
+- A **Project API Key**
+
+To generate an API key, first create a Bannerbear project. The API Key is located in **Settings / API Key**.
 
 Refer to the [Bannerbear API Authentication documentation](https://developers.bannerbear.com/#authentication){:target=_blank .external-link} for more detailed steps.
 

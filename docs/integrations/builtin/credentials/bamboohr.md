@@ -25,7 +25,7 @@ Refer to [BambooHR's API documentation](https://documentation.bamboohr.com/docs/
 
 ## Using API Key
 
-To set up this credential, you will need:
+To configure this credential, you'll need:
 
 - Your BambooHR **Subdomain**: the part between `https://` and `.bamboohr.com`
 - A BambooHR **API Key**

@@ -13,7 +13,7 @@ Create an [AlienVault](https://otx.alienvault.com){:target=_blank .external-link
 
 ## Supported authentication methods
 
-- API key
+- API Key
 
 ## Related resources
 
@@ -21,6 +21,10 @@ Refer to [AlienVault's documentation](https://otx.alienvault.com/api){:target=_b
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/alienvault/){:target=_blank .external-link} on n8n's website.
 
-## Using API key
+## Using API Key
 
-Once you have an AlienVault account, the **OTX Key** displays in your Settings.
+To configure this credential, you'll need:
+
+- An **OTX Key**
+
+Once you have an AlienVault account, the **OTX Key** displays in your **Settings**.

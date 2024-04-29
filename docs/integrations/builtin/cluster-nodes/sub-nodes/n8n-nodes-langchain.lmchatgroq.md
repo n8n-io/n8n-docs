@@ -21,13 +21,12 @@ For usage examples and templates to help you get started, refer to n8n's [Groq C
 
 ## Node parameters
 
-* **Model**: The model which will generate the completion. Learn more in the [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}. 
-	Available models are loaded dynamically from the Groq API.
+* **Model**: The model which will generate the completion. Learn more in the [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}. Available models are loaded dynamically from the Groq API.
 
 ## Node options
 
-* **Maximum Number of Tokens**: The maximum number of tokens to generate in the completion.
-* **Sampling Temperature**: Controls randomness. Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive. Range is 0 to 1.
+* **Maximum Number of Tokens**: the maximum number of tokens to generate in the completion.
+* **Sampling Temperature**: controls randomness. Lowering the value results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive. Valid range is 0 to 1.
 
 ## Related resources
 

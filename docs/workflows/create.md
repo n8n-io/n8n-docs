@@ -9,16 +9,7 @@ A workflow is a collection of nodes connected together to automate a process. Yo
 
 ## Create a workflow
 
-1. Make sure you're in the correct project. This affects where you can find the workflow later, and who it's automatically shared with.
-
-    ??? Details "Workflow creation and projects"
-		You can create workflows in:
-		
-		* <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home**: you can view the workflow in <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** or in your personal project. It isn't shared.
-		* In a different project where you are an admin or member: you can view the workflow in the project, or in **Home**, but not in your personal project. The workflow is shared with everyone in the project.
-
-		Refer to [Projects](/user-management/rbac/projects/) for more information about RBAC and projects.
- 
+1. If your n8n instance has [RBAC and projects](/user-management/rbac/) enabled: select either <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** to create a workflow in your own space, or a project to create a workflow and automatically share it with other project members 
 1. On the **Workflows** list, select **Add Workflow**.
 1. Get started by adding a trigger node: select **Add first step...**
 

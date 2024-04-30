@@ -29,7 +29,7 @@ Refer to [Dropbox's Developer documentation](https://www.dropbox.com/developers/
 To configure this credential, you'll need:
 
 - An **Access Token**
-- An **App Access Type**: Choose between **App Folder** and **Full Dropbox**. Your selection should match the **Type of access** you created your app with
+- An **App Access Type**: Choose between **App Folder** and **Full Dropbox**. Your selection should match the **Type of access** you created your app with.
 
 Once you've created your app, access **Settings > OAuth 2** and select the option to **Generate** an access token. Refer to the [Dropbox App Console Settings documentation](https://www.dropbox.com/developers/reference/getting-started?_tk=guides_lp&_ad=guides2&_camp=get_started#app%20console){:target=_blank .external-link} for more information.
 

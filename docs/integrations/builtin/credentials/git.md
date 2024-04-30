@@ -21,9 +21,13 @@ Create an account on [GitHub](https://github.com), [GitLab](https://about.gitlab
 3. Enter your GitHub, GitLab (or similar platforms) password in the ***Password*** field in the 'Git' credentials in n8n.
 4. Click the ***Create*** button to create your credentials in n8n.
 
+/// note | GitHub Password
+GitHub removed the password authentication support on August 13, 2021.
+Instead, you can use [personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+///
+
 The following video demonstrates the steps mentioned above.
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/RHyW--ZLstE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-

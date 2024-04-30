@@ -5,33 +5,43 @@ contentType: integration
 ---
 
 # Discord credentials
-You can follow these instructions to connect the following nodes with Discord:
+
+You can use these credentials to authenticate the following nodes:
 
 - [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/)
 
-
 ## Prerequisites
 
-Create a [Discord](https://www.discord.com/) account
+- Create a [Discord](https://www.discord.com/){:target=_blank .external-link} account.
+- For Bot and OAuth2 credentials, [create an application and a bot user](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link}.
+- For webhook credentials, [create a webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link}.
 
-## Which type of credentials to use
+## Supported authentication methods
 
-- **Bot Token:** bots are added to a Discord server and can interact with users on all the server’s channels. They can manage channels, send and retrieve messages, retrieve the list of all users, and change their roles. If you need to build an interactive, complex, or multi-step workflow use a bot.
-- **OAuth2:** OAuth credentials offer the same functionalities as the Bot Token. The difference is that it simplifies the installation of the bot on your server.
-- **Webhook:** webhooks are added to a single channel in a server. They're a way to post messages to a channel. They don't require a bot user or authentication. However, they can't listen or respond to user requests or commands. If you need a straightforward way to send messages to a channel, without the need for interaction or feedback, a webhook is sufficient.
+- Bot
+- OAuth2
+- Webhook
 
-## Bot Token manual installation
+Not sure which method to use? See [Which method do I use?](#which-method-should-i-use) for more guidance.
 
-Use this method if you want to add the bot to your Discord server manually (without using OAuth2).
+## Related resources
 
-1. Go to the [Applications](https://discord.com/developers/applications){:target=_blank .external-link} page on the Discord developers portal
-2. Select or create an application
-3. In the application page, go to **Bot**, and in **Privileged Gateway Intents**, activate **Required for your bot to receive events listed under GUILD_MEMBERS**
-4. Generate a bot token by clicking on **Reset Token**
-5. Copy the token and paste it in the **Bot Token** parameter in the n8n's Discord Bot credentials modal, and Save
-6. Go to **OAuth2** > **URL Generator**
-7. In the **Scopes** list, select **bot**
-8. In the **Bot permissions** list below activate:
+Refer to [Discord's Developer documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
+
+## Using Bot
+
+Use this method if you want to add the bot to your Discord server using a bot token rather than OAuth2.
+
+To configure this credential, you'll need:
+
+- A **Bot Token**
+
+For details on creating an application with a bot and generating the token, see the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide. Follow the instructions to configure your bot, add scopes and bot permissions (do not forget the `bot` scope!), and install the application. Copy the **Bot Token** you generate and add it into the n8n credential.
+
+n8n recommends using these settings when you create your application:
+
+- In **Bot > Privileged Gateway Intents**, activate **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**
+- In **Bot > Bot Permissions**, select:
     - Manage Roles
     - Manage Channels
     - Read Messages/View Channels
@@ -45,45 +55,42 @@ Use this method if you want to add the bot to your Discord server manually (with
     - Embed Links
     - Attach Files
     - Read Message History
-    - Add Reactions    
-9. Copy the URL clicking on **Copy** In **Generated URL** at the bottom
-10. Open the copied URL in a new browser tab and follow the instructions to add the Bot to a server
-    - In **Add to Server** select the server you want to add the Bot to, and click **Continue**
-    - In the following page, click on **Authorize**
+    - Add Reactions
 
-## Bot Token OAuth2 installation
+## Using OAuth2
 
-This process simplifies the addition of your Bot to the Discord server.
+Use this method if you want to add the bot to Discord servers using the OAuth2 flow, which simplifies the process for those installing your app.
 
-1. Go to the [Applications](https://discord.com/developers/applications){:target=_blank .external-link} page on the Discord developers portal
-2. Select or create an application
-3. In the application page, go to **Bot**, and in **Privileged Gateway Intents**, activate **Required for your bot to receive events listed under GUILD_MEMBERS**
-4. Copy the CLIENT ID in the **OAuth2** page and paste it into the Client ID parameter in the n8n's Discord OAuth2 API credential modal
-5. Generate a CLIENT SECRET in the **OAuth2** page and paste it into the Client Secret parameter in the n8n's Discord OAuth2 API credential modal
-6. Copy the OAuth Redirect URL in n8n and add it to the **Redirects** list in your Discord app and save
-7. In the Discord developer portal, go to the Bot page  of your app and copy the Bot Token (Generate one if you don’t have it yet)
-8. Paste the Bot Token in n8n
-9. Select **Connect my account** in the n8n Discord OAuth2 API credential modal
-10. n8n displays a window where must select the Discord server and the permission you want to set for your bot
+To configure this credential, you'll need:
 
-## Creating a webhook
+- A **Client ID**
+- A **Client Secret**
+- Choose whether to send **Authentication** in the **Header** or **Body**
+- A **Bot Token**
 
-1. To create a webhook in Discord that sends content to your channel, go to the settings of your channel.
-2. Select **Integrations** from the sidebar.
-3. Select **Create Webhook**.
-4. Name your bot, and select **Copy Webhook URL** to copy the webhook URL.
-5. Back in n8n, paste the copied webhook URL in the **Webhook URL** parameter of the Discord credentials.
+For details on creating an application with a bot and generating the token, follow the same steps as in [Using Bot](#using-bot) above.
 
-![How to create a webhook in Discord](/_images/integrations/builtin/credentials/discord/create-webhook.gif)
+Then:
 
-<!-- ## Using OAuth
+1. Copy the **Bot Token** you generate and add it into the n8n credential.
+2. Open the **OAuth2** page in your Discord application to access your **Client ID** and generate a **Client Secret**. Add these to your n8n credential.
+3. From n8n, copy the **OAuth Redirect URL** and add it into the Discord application in **OAuth2 > Redirects**. Be sure you save these changes.
 
-1. Access this [Discord Developer Portal](https://discord.com/developers/applications).
-2. Click on **New Application**.
-3. Enter the name and click **Create**.
-4. Use Client Secret and Client ID in your Discord node credentials in n8n.
-5. Enter n8n provided redirect URL in the configuration. ![Redirect URL Explanation here](/).
+## Using Webhook
 
+To configure this credential, you'll need:
 
-![Getting Discord credentials](/_images/integrations/builtin/credentials/discord/using-oauth.gif) -->
+- A **Webhook URL**
+
+Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link} to create a webhook. Copy the **Webhook URL** that gets generated and add this to your n8n credential.
+
+## FAQs
+
+### Which method should I use?
+
+The simplest installation is a **webhook**. You create and add webhooks to a single channel on a Discord server. Webhooks can post messages to a channel. They don't require a bot user or authentication. But they can't listen or respond to user requests or commands. If you need a straightforward way to send messaged to a channel without the need for interaction or feedback, use a webhook.
+
+A **bot** is an interactive step up from a webhook. You add bots to the Discord server (referred to as a `guild` in the Discord API documentation). Bots can interact with users on all the server's channels. They can manage channels, send and retrieve messages, retrieve the list of all users, and change their roles. If you need to build an interactive, complex, or multi-step workflow, use a bot.
+
+**OAuth2** is basically a **bot** that uses an OAuth2 flow rather than just the bot token. As with bots, these are added to the Discord server. These credentials offer the same functionalities as bots, but they can simplify the installation of the bot on your server.
 

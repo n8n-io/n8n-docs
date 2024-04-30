@@ -1,24 +1,33 @@
 ---
-title:  - n8n Documentation
-description: Documentation for . Use these credentials to authenticate Copper in n8n, a workflow automation platform.
+title:  Cortex credentials
+description: Documentation for the Cortex credentials. Use these credentials to authenticate Cortex in n8n, a workflow automation platform.
 contentType: integration
 ---
 
+# Cortex credentials
 
-You can use these credentials to authenticate the following nodes with Cortex.
+You can use these credentials to authenticate the following nodes:
 
 - [Cortex](/integrations/builtin/app-nodes/n8n-nodes-base.cortex/)
 
 ## Prerequisites
 
-Install [Cortex](https://github.com/TheHive-Project/CortexDocs/blob/master/installation/install-guide.md) on your server.
+Install [Cortex](https://docs.strangebee.com/cortex/installation-and-configuration/){:target=_blank .external-link} on your server.
+
+## Supported authentication methods
+
+- API Key
+
+## Related resources
+
+Refer to [Cortex's API documentation](https://docs.strangebee.com/cortex/api/api-guide/){:target=_blank .external-link} for more information about the service.
 
 ## Using API Key
 
-1. Access your Cortex dashboard.
-2. Click on your user icon on the top right corner and select 'Settings'.
-3. Scroll down to the ***API Key*** section and click on the ***Reveal*** button.
-4. Use the ***API Key*** and your ***Cortex instance URL*** with your Cortex node credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting Cortex credentials](/_images/integrations/builtin/credentials/cortex/using-api.gif)
+- An **API Key**
+- The URL/Server Address for your **Cortex Instance** (defaults to `http://<your_server_address>:9001/`)
+
+Refer to the [Cortex API Authentication documentation](https://docs.strangebee.com/cortex/api/api-guide/#authentication){:target=_blank .external-link} for detailed instructions on generating API keys.
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # CrateDB credentials
 
-You can use these credentials to authenticate the following nodes with CrateDB.
+You can use these credentials to authenticate the following nodes:
 
 - [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/)
 
@@ -14,8 +14,27 @@ You can use these credentials to authenticate the following nodes with CrateDB.
 
 An available instance of CrateDB. 
 
-## Using Database Connection
+## Supported authentication methods
 
-1. Retrieve your CrateDB credentials and connection parameters.
-2. Use the credentials and connection parameters with your CrateDB node credentials in n8n.
+- Account Connection
+
+## Related resources
+
+Refer to [CrateDB's documentation](https://cratedb.com/docs/crate/reference/en/latest/){:target=_blank .external-link} for more information about the service.
+
+## Using Account Connection
+
+To configure this credential, you'll need:
+
+- Your **Host** name
+- Your **Database** name
+- A **User** name
+- A user **Password**
+- To set the **SSL** parameter. Refer to the [CrateDB Secured Communications (SSL/TLS) documentation](https://cratedb.com/docs/crate/reference/en/5.7/admin/ssl.html#admin-ssl){:target=_blank .external-link} for more information. The options n8n supports are:
+    - Allow 
+    - Disable
+    - Require
+- A **Port** number
+
+Refer to the [Connect to a CrateDB cluster documentation](https://cratedb.com/docs/crate/clients-tools/en/latest/connect/){:target=_blank .external-link} for detailed instructions on these fields and their default values.
 

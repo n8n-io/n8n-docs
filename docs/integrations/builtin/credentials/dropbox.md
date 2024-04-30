@@ -6,49 +6,40 @@ contentType: integration
 
 # Dropbox credentials
 
-You can use these credentials to authenticate the following nodes with Dropbox.
+You can use these credentials to authenticate the following nodes:
 
 - [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox/)
 
 ## Prerequisites
 
-Create a [Dropbox](https://www.dropbox.com/) account.
+- Create a [Dropbox](https://www.dropbox.com/developers){:target=_blank .external-link} developer account.
+- [Create a Dropbox app](https://www.dropbox.com/developers/reference/getting-started?_tk=guides_lp&_ad=guides2&_camp=get_started#app%20console){:target=_blank .external-link}.
 
-## Using OAuth
+## Supported authentication methods
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Dropbox account to n8n.
-///
+- API Access Token: For use only with your user account
+- OAuth2: For distribution to other users
 
-1. Access the [Dropbox app creation](https://www.dropbox.com/developers/apps/create) page.
-2. Select 'Scoped access' under the ***Choose an API*** section.
-3. Select an access type under the ***Choose the type of access you need***. You can read more about the access type [here](https://www.dropbox.com/developers/reference/developer-guide).
-4. In the ***Name your app*** section, enter a name for your app.
-5. Click on the ***Create app*** button.
-6. Click on the ***Permissions*** tab and give all the permissions under the ***Files and folders*** section.
-7. Click on the ***Submit*** button.
-8. Click on the ***Settings*** tab.
-9. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste in the ***Redirect URIs*** field under the ***OAuth 2*** section.
-10. Click on the ***Add*** button.
-11. Enter the provided ***App key*** and the ***App secret*** in the ***Client ID*** and ***Client Secret*** field, respectively, in your Dropbox OAuth2 API credentials in n8n.
-12. Click on the circle button in the OAuth section to connect your Dropbox account to n8n.
-13. Click on the ***Save*** button to save your credentials.
+## Related resources
 
-![Getting Dropbox credentials](/_images/integrations/builtin/credentials/dropbox/using-oauth.gif)
+Refer to [Dropbox's Developer documentation](https://www.dropbox.com/developers/documentation){:target=_blank .external-link} for more information about the service.
 
 ## Using Access Token
 
-1. Access the [Dropbox app creation](https://www.dropbox.com/developers/apps/create) page.
-2. Select 'Scoped access' under the ***Choose an API*** section.
-3. Select an access type under the ***Choose the type of access you need***. You can read more about the access type [here](https://www.dropbox.com/developers/reference/developer-guide).
-4. In the ***Name your app*** section, enter a name for your app.
-5. Click on the ***Create app*** button.
-6. Click on the ***Permissions*** tab and give all the permissions under the ***Files and folders*** section.
-7. Click on the ***Submit*** button.
-8. Click on the ***Settings*** tab.
-9. Scroll down to the ***OAuth 2*** section and select 'No expiration' from the ***Access token expiration*** dropdown list.
-10. Click on the ***Generate*** button.
-11. Use the displayed ***Generated access token*** with your Dropbox credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting Dropbox credentials](/_images/integrations/builtin/credentials/dropbox/using-access-token.gif)
+- An **Access Token**
+- An **App Access Type**: Choose between **App Folder** and **Full Dropbox**. Your selection should match the **Type of access** you created your app with
+
+Once you've created your app, access **Settings > OAuth 2** and select the option to **Generate** an access token. Refer to the [Dropbox App Console Settings documentation](https://www.dropbox.com/developers/reference/getting-started?_tk=guides_lp&_ad=guides2&_camp=get_started#app%20console){:target=_blank .external-link} for more information.
+
+Use that access token in your n8n credential.
+
+## Using OAuth2
+
+/// note | Note for n8n Cloud users
+You'll only need to enter the Credentials Name, select the **App Access Type**, and select the **Connect my account** button in the OAuth credential to connect your Dropbox account to n8n.
+///
+
+Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Dropbox Implementing OAuth documentation](https://developers.dropbox.com/oauth-guide#implementing-oauth){:target=_blank .external-link} to set up OAuth.
 

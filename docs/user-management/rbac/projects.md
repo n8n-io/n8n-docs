@@ -12,7 +12,7 @@ RBAC is available on all plans except the Community edition. Different plans hav
 * Enterprise: unlimited projects, with admin and editor roles.
 ///
 
-n8n uses projects to group workflows, and assigns [roles](/user-management/rbac/role-types/) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
+n8n uses projects to group workflows and credentials, and assigns [roles](/user-management/rbac/role-types/) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
 
 ## Create a project
 
@@ -52,3 +52,7 @@ To delete a project:
 1. Choose what to do with the workflows and credentials. You can select:
 	* **Transfer its workflows and credentials to another project**: n8n prompts you to choose a project to move the data to.
 	* **Delete its workflows and credentials**: n8n prompts you to confirm that you want to delete all the data in the project.
+
+## Using external secrets in projects
+
+To use [external secrets](/external-secrets/) in a project, you must have an [instance owner or instance admin](/user-management/account-types/) as a member of the project.

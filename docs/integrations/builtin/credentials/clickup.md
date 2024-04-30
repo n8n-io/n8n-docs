@@ -15,8 +15,6 @@ You can use these credentials to authenticate the following nodes:
 
 Create a [ClickUp](https://www.clickup.com/){:target=_blank .external-link} account.
 
-You can use an API key or OAuth. Refer to [ClickUp's documentation](https://clickup.com/api/developer-portal/authentication/){:target=_blank .external-link} for more information on getting your credentials.
-
 ## Supported authentication methods
 
 - API Access Token

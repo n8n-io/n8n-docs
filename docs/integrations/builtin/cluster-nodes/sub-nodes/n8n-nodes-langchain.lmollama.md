@@ -20,12 +20,18 @@ For usage examples and templates to help you get started, refer to n8n's [Ollama
 
 ## Node parameters
 
-* **Model**: the model that generates the completion. The models options are fetched from the Ollama API running on the provided credential URL.
+* **Model**: the model that generates the completion. Choose from:
+	* Llama2
+	* Llama2 13B
+	* Llama2 70B
+	* Llama2 Uncensored
 
 ## Node options
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/ollama-options-1.md"
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/ollama-options-2.md"
+* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: the number of token choices the model uses to generate the next token.
+* **Top P**: use a lower value to ignore less probable options. 
+
 
 ## Related resources
 

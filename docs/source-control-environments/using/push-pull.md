@@ -33,6 +33,8 @@ If the same owner is available on both instances (matching email), the owner rem
 
 If the original owner is a [project](/user-management/rbac/):
 
+[TODO: confim - this is what it says in Notion, but for me it just added it to home]
+
 n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
 
 ### Pulling may cause brief service interruption

@@ -15,38 +15,39 @@ You can use these credentials to authenticate the following nodes with Customer.
 
 Create a [Customer.io](https://customer.io/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Customer.io [dashboard](https://fly.customer.io).
-2. Click on the user icon in the top right and select ***Account settings***.
-3. Click on ***API Credentials***.
-4. Click on the ***Create Tracking API Key*** button.
-5. Enter a name for the Tracking API Key in the ***Name***.
-6. Select a workspace from the ***Workspace*** dropdown list.
-7. Click on the ***Create Tracking API Key*** button.
-8. Copy the displayed 'Site ID'.
-9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Customer.io API' credentials in n8n.
-10. Paste the Site ID in the ***Tracking Site ID*** field in the 'Customer.io API' credentials in n8n.
-11. Copy the 'API Key' from the Manage API Credentials page.
-12. Paste the API key in the ***Tracking API Key*** field in the 'Customer.io API' credentials in n8n.
-13. Click on the ***App API Keys*** tab on the Manage API Credentials page.
-14. Click on the ***Create App API Key*** button.
-15. Enter a name for the App API Key in the ***Name*** field.
-16. Select a workspace from the ***Workspace*** dropdown list.
-17. Click on the ***Create App API Key*** button.
-18. Copy the displayed API key.
-19. Paste the API key in the ***App API Key*** field in the 'Customer.io API' credentials in n8n.
-20. Click on the ***Create*** button to create your credentials.
+- API Key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/LAFExR62-VA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Customer.io's summary API documentation](https://customer.io/docs/api/?api=journeys){:target=_blank .external-link} for more information about the service.
+
+For detailed API reference documentation for each API, refer to the [Track API documentation](https://customer.io/docs/api/track/){:target=_blank .external-link} and the [App API documentation](https://customer.io/docs/api/app/){:target=_blank .external-link}.
+
+## Using API Key
+
+To configure this credential, you'll need:
+
+- A **Tracking API Key**: For use with the [Track API](https://customer.io/docs/api/track/){:target=_blank .external-link} at `https://track.customer.io/api/v1/`. See the FAQs below for more details.
+- Your **Region**: Customer.io uses different API subdomains depending on the region you select. Options include:
+    - **Global region**: Keeps the default URLs for both APIs; for use in all non-EU countries/regions.
+    - **EU region**: Adjusts the Track API subdomain to `track-eu` and the App API subdomain to `api-eu`; only use this if you are in the EU.
+- A **Tracking Site ID**: Required with your **Tracking API Key**
+- An **App API Key**: For use with the [App API](https://customer.io/docs/api/app/){:target=_blank .external-link} at `https://api.customer.io/v1/api/`. See the FAQs below for more details.
+
+Refer to the [Customer.io Finding and managing your API credentials documentation](https://customer.io/docs/accounts-and-workspaces/managing-credentials/){:target=_blank .external-link} for instructions on creating both Tracking API and App API keys.
 
 ## FAQs
 
-### Why do I need the Tracking API Key and the App API Key?
+### Why do I need a Tracking API Key and an App API Key?
 
-Customer.io uses different API Keys for different endpoints. Based on the operation you want to perform, n8n uses the correct API key to connect to your Customer.io account.
+Customer.io has two different API endpoints and generates and stores the keys for each slightly differently:
+
+- The [Track API](https://customer.io/docs/api/track/){:target=_blank .external-link} at `https://track.customer.io/api/v1/`
+- The [App API](https://customer.io/docs/api/app/){:target=_blank .external-link} at `https://api.customer.io/v1/api/`
+
+The Track API requires a Tracking Site ID; the App API doesn't.
+
+Based on the operation you want to perform, n8n uses the correct API key and its corresponding endpoint.
 

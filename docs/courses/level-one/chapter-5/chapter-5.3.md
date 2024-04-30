@@ -82,7 +82,7 @@ At this stage, your workflow should look like this:
 
 ## What's next?
 
-**Nathan 🙋**: This If node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the `employeeName` and `orderId`, but I guess I can keep all the other fields just in case.
+**Nathan 🙋**: This If node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the `employeeName` and `orderID`, but I guess I can keep all the other fields just in case.
 
 **You 👩‍🔧**: Actually, I wouldn't recommend doing that. Inserting more data requires more computational power, the data transfer is slower and takes longer, and takes up more storage resources in your table. In this particular case, 14 records with 5 features might not seem like a lot to make a significant difference, but if your business grows to thousands of records and tens of features, things add up and even one extra column can affect performance.
 

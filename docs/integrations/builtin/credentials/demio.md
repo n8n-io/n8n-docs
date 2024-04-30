@@ -6,7 +6,7 @@ contentType: integration
 
 # Demio credentials
 
-You can use these credentials to authenticate the following nodes with Demio.
+You can use these credentials to authenticate the following nodes:
 
 - [Demio](/integrations/builtin/app-nodes/n8n-nodes-base.demio/)
 
@@ -15,22 +15,20 @@ You can use these credentials to authenticate the following nodes with Demio.
 
 Create a [Demio](https://demio.com/) account.
 
+## Supported authentication methods
+
+- API Key
+
+## Related resources
+
+Refer to [Demio's API documentation](https://publicdemioapi.docs.apiary.io/#){:target=_blank .external-link} for more information about the service.
+
 ## Using API Key
 
-1. Open your Demio [dashboard](https://my.demio.com/manage/dashboard).
-2. Click on your user icon in the top right.
-3. Click on ***Settings***.
-4. Click on the ***API*** tab.
-5. Copy the displayed 'API Key'.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Demio API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Demio API' credentials in n8n.
-8. Copy the 'API Secret' from Demio.
-9. Paste the API secret in the ***API Secret*** field in the 'Demio API' credentials in n8n.
-10. Click the ***Create*** button to save your credentials in n8n.
+To configure this credential, you'll need:
 
-The following video demonstrates the steps mentioned above.
+- An **API Key**
+- An **API Secret**
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/qcl8mZAmK2I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+You must have Owner status in Demio to generate API keys. To view and generate API keys, go to **Account Settings > API**. Refer to the [Demio Account Owner Settings documentation](https://help.demio.com/en/articles/6456716-account-owner-settings){:target=_blank .external-link} for more detailed steps.
 

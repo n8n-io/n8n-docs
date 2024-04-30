@@ -39,7 +39,7 @@ This document contains instructions for creating a Google credential for a singl
 
 	??? Details "View detailed steps"
 		1. Select **OAuth consent screen**.
-		2. As **User Type**, select **Internal** for user access within your organisation's Google workspace or **External** for any user with a Google account.
+		2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account.
 		3. Select **Create**.
 		4. Enter the essential information: **App name**, **User support email**, and the **Email addresses** field in **Developer contact information**.
 		5. Add an authorized domain: select **+ ADD DOMAIN**. Enter `n8n.cloud` if using n8n's Cloud service, or the domain of your n8n instance if you're self-hosting.
@@ -66,7 +66,7 @@ This document contains instructions for creating a Google credential for a singl
 6. Select **CREATE**.
 7. Enable each Google service API that you want to use:
 
-	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.  
+	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}.  
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
 ### Create and test your connection

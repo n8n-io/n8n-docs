@@ -5,14 +5,31 @@ description: Documentation for the CrowdStrike credentials. Use these credential
 
 # CrowdStrike credentials
 
-You can use these credentials to authenticate when using the HTTP Request node to make a [Custom API call](/integrations/custom-operations/).
+You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+
+## Prerequisites
+
+Create a [CrowdStrike](https://www.crowdstrike.com/en-us/){:target=_blank .external-link} account.
 
 ## Authentication methods 
 
-n8n supports CrowdStrike authentication using OAuth2.
+- OAuth2
 
 ## Related resources
 
 Refer to CrowdStrike's documentation for more information about the service. Their documentation is behind a log in, so you must log in to your account on their website to access the API documentation.
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/crowdstrike/){:target=_blank .external-link} on n8n's website.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- The **URL** of your CrowdStrike instance
+- A **Client ID**
+- A **Client Secret**
+
+Generate a Client ID and Secret by creating a new API Client in CrowdStrike in **Support > API Clients and Keys**.
+
+A broad outline of the appropriate steps is available publicly at the CrowdStrike blog: [Getting Access to the CrowdStrike API](https://www.crowdstrike.com/blog/tech-center/get-access-falcon-apis/){:target=_blank .external-link}. CrowdStrike's full documentation is behind a log in, so you must log in to your account to access the full API documentation.
+

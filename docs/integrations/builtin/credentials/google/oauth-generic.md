@@ -11,11 +11,11 @@ This document contains instructions for creating a generic OAuth2 Google credent
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}
+* [Google Cloud](https://cloud.google.com/){:target=_blank .external-link} account
+* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:target=_blank .external-link}
 * If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
-* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}
-* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}
+* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link}
+* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}
 
 ## Set up OAuth
 

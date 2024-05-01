@@ -84,7 +84,7 @@ Install the older version that you want to go back to.
 If the upgrade involved a database migration:
 
 1. Check the feature documentation and release notes to see if there are any manual changes you need to make.
-1. Run `n8n db:revert` on your current version to roll back the database. 
+1. Run `n8n db:revert` on your current version to roll back the database. If you want to revert more than one database migration, you need to repeat this process.
 
 ## Windows troubleshooting
 

@@ -38,8 +38,6 @@ theme:
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
-    - navigation.instant
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
     - navigation.path
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
@@ -734,6 +732,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
+        - integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md

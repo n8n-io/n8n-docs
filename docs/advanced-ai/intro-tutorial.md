@@ -194,7 +194,7 @@ This example generates some fake data in a workflow, and loads it in to the AI w
 	* **Name**: `Fruit`
 	* **Description**: `Call this tool to get a list of fruit.`
 	* **Workflow ID**: Paste in the workflow ID that you copied from the example workflow URL.
-	* **Response Property Name**: `data`. This is the name of the item created in the Aggregate node in the example workflow.
+	* **Field to Return**: `data`. This is the name of the item created in the Aggregate node in the example workflow.
 1. Select **Add Value** in **Workflow Values** to pass information to the workflow you're calling. Configure the value as follows:
 	* **Name**: `visibility`
 	* **Type**: String

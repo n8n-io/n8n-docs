@@ -79,6 +79,8 @@ n8n start --tunnel
 
 ## Reverting an upgrade
 
+[TODO: confirm order - install first or revert first]
+
 To revert an upgrade, install an older version.
 
 If the upgrade involved a database migration, run `n8n db:revert` to roll back the database.

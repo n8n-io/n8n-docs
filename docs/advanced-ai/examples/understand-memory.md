@@ -6,7 +6,7 @@ contentType: explanation
 
 # What is memory in AI?
 
-Memory is a key part of AI chat. The memory keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
+Memory is a key part of AI chat services. The memory keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
 
 ## AI memory in n8n
 

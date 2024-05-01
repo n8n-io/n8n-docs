@@ -79,11 +79,12 @@ n8n start --tunnel
 
 ## Reverting an upgrade
 
-[TODO: confirm order - install first or revert first]
+Install the older version that you want to go back to.
 
-To revert an upgrade, install an older version.
+If the upgrade involved a database migration:
 
-If the upgrade involved a database migration, run `n8n db:revert` to roll back the database.
+1. Check the feature documentation and release notes to see if there are any manual changes you need to make.
+1. Run `n8n db:revert` on your current version to roll back the database. 
 
 ## Windows troubleshooting
 

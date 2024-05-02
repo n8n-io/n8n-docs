@@ -122,5 +122,15 @@ Import a curl command:
 2. Paste in your curl command.
 3. Select **Import**. n8n loads the request configuration into the node fields. This overwrites any existing configuration.
 
+## Ask AI to configure the HTTP node
+
+From version 1.40.0, you can use AI to configure the node parameters. Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/).
+
+1. Select **Ask AI**.
+1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
+1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
+
+
+
 
 

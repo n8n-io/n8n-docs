@@ -29,14 +29,61 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * PATCH version when making backward-compatible bug fixes.
 
 
-## n8n@1.39.1
+## n8n@1.40.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.0...n8n@1.39.1){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-04-25
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.1...n8n@1.40.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-05-02
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+/// warning | Breaking change
+Please note that this version contains a breaking change for instances using a Postgres database. The default value for the DB_POSTGRESDB_USER environment variable was switched from `root` to `postgres`. Refer to the [breaking changes log](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1400){:target=_blank .external-link} for details.
+///
+
+This release contains new features, new nodes, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New feature: Ask AI in the HTTP node
+
+You can now ask AI to help create API requests in the HTTP Request node:
+
+1. In the HTTP Request node, select **Ask AI**.
+1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
+1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
+
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/)
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Groq Chat Model
+
+This release adds the [Groq Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[Nicolas-nwb](https://github.com/Nicolas-nwb){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[pengqiseven](https://github.com/pengqiseven){:target=_blank .external-link}  
+[webk](https://github.com/webkp){:target=_blank .external-link}  
+[Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}  
+
+
+## n8n@1.39.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.0...n8n@1.39.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-04-25
 
 This release contains bug fixes.
 

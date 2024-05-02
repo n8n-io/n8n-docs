@@ -15,7 +15,7 @@ n8n has an active community where you can get and offer help. Connect, share, an
 
 ## Set up your n8n
 
-If you don't have an account yet, sign-up to a [free trial on n8n Cloud](/manage-cloud/overview/) or install n8n's community edition with [Docker](/hosting/installation/docker/) (recommended) or [npm](/hosting/installation/npm/). See [Choose your n8n](/choose-n8n/) for more details.
+If you don't have an account yet, sign up to a [free trial on n8n Cloud](https://app.n8n.cloud/register){:target=_blank .external-link} or install n8n's community edition with [Docker](/hosting/installation/docker/) (recommended) or [npm](/hosting/installation/npm/). See [Choose your n8n](/choose-n8n/) for more details.
 
 ## Try it out
 

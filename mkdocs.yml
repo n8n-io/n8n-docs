@@ -1149,7 +1149,7 @@ nav:
     - Configuration: 
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
-        - License: hosting/configuration/environment-variables/ai.md
+        - AI: hosting/configuration/environment-variables/ai.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md

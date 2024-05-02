@@ -8,7 +8,7 @@ description: Understand how n8n uses project for RBAC. Learn how to create and m
 RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles:
 
 * Starter: one project, with admin role.
-* Pro: three projects, with admin role.
+* Pro: three projects, with admin and editor roles.
 * Enterprise: unlimited projects, with admin and editor roles.
 ///
 

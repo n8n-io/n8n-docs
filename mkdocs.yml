@@ -246,6 +246,10 @@ nav:
         - Cloud setup: user-management/cloud-setup.md
         - Manage users: user-management/manage-users.md
         - Account types: user-management/account-types.md
+        - Role-based access control:
+          - user-management/rbac/index.md
+          - Role types: user-management/rbac/role-types.md
+          - Projects: user-management/rbac/projects.md
         - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
@@ -255,10 +259,6 @@ nav:
           - Okta Workforce Identity SAML setup: user-management/saml/okta.md
           - Troubleshooting: user-management/saml/troubleshooting.md
           - Manage users with SAML: user-management/saml/managing.md
-        - Role-based access control:
-          - user-management/rbac/index.md
-          - Role types: user-management/rbac/role-types.md
-          - Projects: user-management/rbac/projects.md
       - Keyboard shortcuts: keyboard-shortcuts.md
     - Key concepts:
       - Flow logic:

@@ -4,11 +4,12 @@ contentType: overview
 ---
 This guide outlines a series of tutorials and resources designed to get you started with n8n. 
 
-It's not necessary to complete all items listed to start effectively using n8n. This guide isn't exhaustive; use this as a reference to navigate to the most relevant parts of the documentation and other resources according to your needs.
+It's not necessary to complete all items listed to start using n8n. Use this as a reference to navigate to the most relevant parts of the documentation and other resources according to your needs.
 
 ## Join the community
 
 n8n has an active community where you can get and offer help. Connect, share, and learn with other n8n users:
+
 - [Ask questions](https://community.n8n.io/t/readme-welcome-to-the-n8n-community/44381){:target=_blank .external-link} and [make feature requests](https://community.n8n.io/c/feature-requests){:target=_blank .external-link} in the Community Forum.
 - [Report bugs](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link} and [contribute](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md){:target=_blank .external-link} on GitHub.
 

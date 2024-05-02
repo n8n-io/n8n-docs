@@ -1252,9 +1252,9 @@ nav:
           - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
       - Examples and concepts:
           - Introduction: advanced-ai/examples/introduction.md
-          - What is an agent?: advanced-ai/examples/understand-agents.md
           - What is a chain?: advanced-ai/examples/understand-chains.md
-          - Agents vs chains: advanced-ai/examples/agent-chain-comparison.md
+          - What is an agent?: advanced-ai/examples/understand-agents.md
+          - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
           - What is a tool?: advanced-ai/examples/understand-tools.md
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md

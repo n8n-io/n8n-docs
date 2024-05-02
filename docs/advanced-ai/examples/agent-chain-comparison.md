@@ -2,12 +2,12 @@
 contentType: overview
 title: Agents vs chains
 description: A workflow example that demonstrates key differences between agents and chains.
-workflowFile: advanced-ai/examples/agents-vs-chains.json
+workflowFile: advanced-ai/examples/agents_vs_chains.json
 ---
 
 # Demonstration of key differences between agents and chains
 
-In this workflow you can choose whether your chat query goes to an agent or chain. It shows how agents benefit from access to memory and tools.
+In this workflow you can choose whether your chat query goes to an agent or chain. It shows some of the ways that agents are more powerful than chains.
 
 
 <figure markdown>

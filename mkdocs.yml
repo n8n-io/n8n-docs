@@ -179,6 +179,7 @@ nav:
   - Using n8n:
       - Welcome: index.md
       - Getting started:
+          - Learning path: learning-path.md
           - Choose your n8n: choose-n8n.md
           - Try it out:
               - try-it-out/index.md

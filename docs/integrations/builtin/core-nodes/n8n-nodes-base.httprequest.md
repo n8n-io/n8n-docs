@@ -128,7 +128,7 @@ From version 1.40.0, you can use AI to configure the node parameters:
 
 1. Select **Ask AI**.
 1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
-1. Check the parameters carefully: the AI tries to fill them out correctly, but you may still need to adjust or correct the configuration.
+1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
 
 

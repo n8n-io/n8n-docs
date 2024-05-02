@@ -771,6 +771,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai.md
@@ -899,6 +900,7 @@ nav:
         - integrations/builtin/credentials/gotowebinar.md
         - integrations/builtin/credentials/grafana.md
         - integrations/builtin/credentials/grist.md
+        - integrations/builtin/credentials/groq.md
         - integrations/builtin/credentials/gumroad.md
         - integrations/builtin/credentials/halopsa.md
         - integrations/builtin/credentials/harvest.md

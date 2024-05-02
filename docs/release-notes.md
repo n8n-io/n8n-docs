@@ -72,8 +72,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 [Nicolas-nwb](https://github.com/Nicolas-nwb){:target=_blank .external-link}  
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}  
 [pengqiseven](https://github.com/pengqiseven){:target=_blank .external-link}  
-[Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}  
 [webk](https://github.com/webkp){:target=_blank .external-link}  
+[Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}  
+
 
 ## n8n@1.39.1
 

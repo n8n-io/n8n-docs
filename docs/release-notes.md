@@ -34,6 +34,10 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.1...n8n@1.40.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-05-02
 
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
 /// warning | Breaking change
 Please note that this version contains a breaking change for instances using a Postgres database. The default value for the DB_POSTGRESDB_USER environment variable was switched from `root` to `postgres`. Refer to the [breaking changes log](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1400){:target=_blank .external-link} for details.
 ///
@@ -80,10 +84,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.0...n8n@1.39.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-04-25
-
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains bug fixes.
 

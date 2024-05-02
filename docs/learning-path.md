@@ -2,87 +2,49 @@
 description: A suggested learning path to get started with n8n through tutorials, courses, and step-by-step guides.
 contentType: overview
 ---
-Welcome to the n8n Learning Path! 
+This guide outlines a series of tutorials and resources designed to get you started with n8n. 
 
-If you're new to n8n, this guide is a suggested learning path to get started with n8n through tutorials, courses, and step-by-step guides. 
-
-/// note | Course duration and difficulty
-:material-clock-fast: : Quick tutorials
-:material-school: : Beginner friendly
-:material-school-outline: : Requries technical knowledge
-:fontawesome-solid-robot: Topics related to AI
-///
-
-## Try it out
-
-Start with the quickstart guides that will give you a fast taster of n8n and help you get up and running with building workflows. 
-
-<div class="grid cards" markdown>
-
--   :material-clock-fast: __[Very quick quickstart :material-arrow-right-thick:](/try-it-out/quickstart/)__
-
-    Duration: **10 minutes**
-
--   :material-clock-fast: __[Slightly longer introduction :material-arrow-right-thick:](/try-it-out/longer-introduction/)__
-
-    Duration: **30 minutes**
-
-</div>
-
-## Beginner courses
-
-You’ll build more complex workflows while learning key concepts along the way.
-
-<div class="grid cards" markdown>
-
--   :material-school: __[Level 1: Beginner Course* :material-arrow-right-thick:](https://blog.n8n.io/announcing-the-n8n-certification-course-for-beginners-level-1/)__
-
-    Duration: **2 hours** 
-
--   :material-school: __[Level 2: Intermediate Course* :material-arrow-right-thick:](https://blog.n8n.io/announcing-course-level-two/)__
-
-    Duration: **2 hours**
-
--   :fontawesome-solid-robot: __[Build an AI workflow in n8n :material-arrow-right-thick:](/advanced-ai/intro-tutorial/)__
-
-    Duration: **1 hour**
-    
-</div>
-*At end of the courses, you can take a quiz to test your knowledge and get a badge and an avatar in your community profile. 
-
-## Learn to self-host n8n
-
-There are various server setups for self-hosting n8n. If you’re not sure where to start, a good example is hosting on DigitalOcean with Caddy. Another popular option is AWS with Kubernetes. 
-
-<div class="grid cards" markdown>
-
--   :material-school-outline: __[Hosting n8n on DigitalOcean + Caddy :material-arrow-right-thick:](/hosting/installation/server-setups/digital-ocean/)__
-
-    Duration: **2 hours**
-    
-
--   :material-school-outline: __[Hosting n8n on Amazon Web Services :material-arrow-right-thick:](/installation/server-setups/aws/)__
-
-    Duration: **2 hours**
-    
-</div>
-
-## Build a node
-
-Can’t find a node you’re looking for? Learn to build a node yourself and share with the community. See what others have built on [npm website](https://www.npmjs.com/search?q=keywords:n8n-community-node-package).  
-
-<div class="grid cards" markdown>
-
--   :material-school-outline: __[Build a declarative-style node :material-arrow-right-thick:](/integrations/creating-nodes/build/declarative-style-node/)__
-
-    Duration: **1 hour**
-    
-</div>
+It's not necessary to complete all items listed to start effectively using n8n. This guide isn't exhaustive; use this as a reference to navigate to the most relevant parts of the documentation and other resources according to your needs.
 
 ## Join the community
 
-n8n has an active and supportive community where you can get help with your workflows, ask or answer questions, suggest improvements, and connect with other members from around the world! 
+n8n has an active community where you can get and offer help. Connect, share, and learn with other n8n users:
+- [Ask questions](https://community.n8n.io/t/readme-welcome-to-the-n8n-community/44381){:target=_blank .external-link} and [make feature requests](https://community.n8n.io/c/feature-requests){:target=_blank .external-link} in the Community Forum.
+- [Report bugs](https://github.com/n8n-io/n8n/issues){:target=_blank .external-link} and [contribute](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md){:target=_blank .external-link} on GitHub.
 
-- :simple-discourse: [Community Forum](https://community.n8n.io/)
-- :simple-discord: [Discord](https://discord.com/invite/vWwMVThRta)
-- :material-youtube: [Youtube](https://www.youtube.com/@n8n-io)
+## Set up your n8n
+
+If you don't have an account yet, sign-up to a [free trial on n8n Cloud](/manage-cloud/overview/) or install n8n's community edition with [Docker](/installation/docker/) (recommended) or [npm](/installation/npm/). See [Choose your n8n](/choose-n8n/) for more details.
+
+## Try it out
+
+Start with the quickstart guides to help you get up and running with building basic workflows. 
+
+- [A very quick quickstart](/try-it-out/quickstart/)
+- [A longer introduction](/try-it-out/longer-introduction/)
+- [Build an AI workflow in n8n](/advanced-ai/intro-tutorial/)
+
+## Structured Courses
+
+Build more complex workflows while learning key concepts along the way. Earn a badge and an avatar in your community profile. 
+
+- [Level 1: Beginner Course](https://blog.n8n.io/announcing-the-n8n-certification-course-for-beginners-level-1/){:target=_blank .external-link}
+- [Level 2: Intermediate Course](https://blog.n8n.io/announcing-course-level-two/){:target=_blank .external-link}
+
+## Self-hosting n8n
+
+Explore various [self-hosting options in n8n](/hosting/). If you’re not sure where to start, these are two popular options: 
+
+- [Hosting n8n on DigitalOcean](/hosting/installation/server-setups/digital-ocean/)
+- [Hosting n8n on Amazon Web Services](/installation/server-setups/aws/)
+
+## Build a node
+
+If you can't find a node for a specific app or a service, you can build a node yourself and share with the community. See what others have built on [npm website](https://www.npmjs.com/search?q=keywords:n8n-community-node-package){:target=_blank .external-link}. 
+
+- [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node/)
+- [Learn how to build your own n8n nodes (Youtube Video)](https://www.youtube.com/live/OI6zHJ56eW0?si=SMD7L1J5fZ2mf79W){:target=_blank .external-link}
+
+## Stay updated
+- Follow new features and bug fixes in the [Release Notes](/release-notes/)
+- Follow n8n on socials: [Twitter/X](https://twitter.com/n8n_io){:target=_blank .external-link}, [Discord](https://discord.com/invite/vWwMVThRta){:target=_blank .external-link}, [LinkedIn](https://www.linkedin.com/company/n8n/){:target=_blank .external-link}, [YouTube](https://www.youtube.com/@n8n-io){:target=_blank .external-link}

@@ -50,6 +50,8 @@ You can now ask AI to help create API requests in the HTTP Request node:
 1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
 1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/)
+
 </div>
 
 <div class="n8n-new-features" markdown>

@@ -31,7 +31,7 @@ If the API returns the URL of the next page in its response:
 
 ## Get the next page by number using `$pageCount`
 
-If the API you're using allows you to target a particular page by number:
+If the API you're using supports targeting a specific page by number:
 
 1. Set **Pagination Mode** to **Update a Parameter in Each Request**.
 1. Set **Type** to **Query**.

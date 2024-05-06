@@ -14,12 +14,18 @@ You can use these credentials to authenticate the following nodes:
 
 Create a [Figma](https://www.figma.com/){:target=_blank .external-link} account. You need an admin or owner level account.
 
+## Supported authentication methods
+
+- API Key
+
+## Related resources
+
+Refer to [Figma's API documentation](https://www.figma.com/developers/api){:target=_blank .external-link} for more information about the service.
+
 ## Using API Key
 
-1. Log in to [Figma](https://www.figma.com/){:target=_blank .external-link}.
-2. Click on the avatar on the top-right and select **Settings**.
-3. Scroll down to **Personal access tokens**, enter a name for your token in the input field and confirm by pressing Enter.
-4. Click on **Copy this token**.
-6. Paste the API key in the **Access Token** field of the **Figma API** credentials screen in n8n.
-7. Click the **Save** button to save your credentials in n8n.
+To configure this credential, you'll need:
 
+- An Personal **Access Token**
+
+Refer to the [Figma API Access Tokens documentation](https://www.figma.com/developers/api#access-tokens){:target=_blank .external-link} for instructions on generating a Personal **Access Token**

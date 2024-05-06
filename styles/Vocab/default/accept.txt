@@ -22,6 +22,7 @@ enum
 Fargate
 Firestore
 GIMP
+Groq
 Hetzner
 invalid
 Infisical

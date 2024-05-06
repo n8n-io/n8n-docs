@@ -15,18 +15,29 @@ You can use these credentials to authenticate the following nodes:
 - Create an [Elastic Security](https://www.elastic.co/security) account.
 - [Deploy](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) an application.
 
+## Supported authentication methods
+
+## Related resources
+
+Refer to [Elastic Security's documentation](https://www.elastic.co/guide/en/security/current/es-overview.html){:target=_blank .external-link} for more information about the service.
+
 ## Using Basic Auth
 
-**From Elastic Security**:
+To configure this credential, you'll need:
 
-1. Navigate to your ***Dashboard*** > ***Deployments*** section and open the dashboard for the desired deployment.
-2. From the ***Applications*** section, copy the endpoint of your application.
+- A **Username**
+- A **Password**
+- Your Elasticsearch application's **Base URL** (also known as the Elasticsearch application endpoint)
 
-**From n8n**:
+Use the **Username** and **Password** you log into Elasticsearch with.
 
-1. In the ***Credential Data*** section, enter your:
-    * Username
-    * Password
-    * Base URL: The application endpoint obtained above.
-2. Click ***Save*** to save your credentials.
+For the **Base URL**:
+
+1. In Elasticsearch, select the option to **Manage this deployment**.
+2. In the **Applications** section, copy the endpoint of the **Elasticsearch** application.
+3. Add this in n8n as the **Base URL**.
+
+/// note | Custom endpoint aliases
+If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html){:target=_blank .external-link} to a deployment, update your n8n credential **Base URL** with the new endpoint.
+///
 

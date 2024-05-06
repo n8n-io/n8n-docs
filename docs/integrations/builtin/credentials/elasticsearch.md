@@ -21,7 +21,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Elasticsearch's documentation](https://www.elastic.co/guide/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [Elasticsearch's documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html){:target=_blank .external-link} for more information about the service.
 
 ## Using Basic Auth
 

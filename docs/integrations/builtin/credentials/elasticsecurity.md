@@ -17,6 +17,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
+- Basic Auth
+
 ## Related resources
 
 Refer to [Elastic Security's documentation](https://www.elastic.co/guide/en/security/current/es-overview.html){:target=_blank .external-link} for more information about the service.

@@ -18,6 +18,15 @@ This section contains:
 
 There are two authentication methods available for Google services nodes, [OAuth2](https://developers.google.com/identity/protocols/oauth2){:target=_blank .external-link} and [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link}. n8n recommends using OAuth. It's more widely available, and easier to set up. Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link} for guidance on when you need service account.
 
+/// note | Note for n8n Cloud users
+For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
+
+* [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
+* [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
+* [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
+* [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+///
+
 ## Compatible nodes
 
 Once configured, you can use your credentials to authenticate the following nodes. Most nodes are compatible with OAuth2 authentication. Support for Service Account authentication is limited.
@@ -47,16 +56,6 @@ Once configured, you can use your credentials to authenticate the following node
 	| [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/) | :white_check_mark: | :x: |
 	| [Google Translate](/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/) | :white_check_mark: | :white_check_mark: |
 	| [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youtube/) | :white_check_mark: | :x: |
-
-/// note | Note for n8n Cloud users
-For the following nodes, you can authenticate by entering the **Credentials Name** and selecting **Sign in with Google** in the OAuth section to connect your Google account to n8n:
-
-* [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
-* [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
-* [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
-* [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
-///
-
 
 
 

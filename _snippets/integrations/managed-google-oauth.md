@@ -1,0 +1,9 @@
+/// note | Note for n8n Cloud users
+For the following nodes, you can authenticate just by connecting your Google account to n8n. You can do so by clicking on **Sign in with Google** in the OAuth section. Skip the instructions explained in this document.
+
+* [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
+* [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
+* [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/)
+* [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
+* [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
+///

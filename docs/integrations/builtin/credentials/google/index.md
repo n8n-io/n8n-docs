@@ -23,6 +23,7 @@ For the following nodes, you can authenticate by entering the **Credentials Name
 
 * [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/)
 * [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/)
+* [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/)
 * [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/)
 * [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/)
 ///

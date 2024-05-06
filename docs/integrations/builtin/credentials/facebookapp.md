@@ -10,25 +10,33 @@ You can use these credentials to authenticate the following nodes with Facebook.
 
 - [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/)
 
-**Note:** If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions mentioned in the [Facebook Graph API](/integrations/builtin/credentials/facebookgraph/) credentials documentation.
+/// note | Facebook Graph API credentials
+If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) documentation.
+///
 
 ## Prerequisites
 
-Create a [Facebook](https://www.facebook.com/) account.
+- Create a [Facebook](https://www.facebook.com/){:target=_blank .external-link} account.
+- Sign up for [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} with that account.
+- Create at least one [Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link}.
+
+## Supported authentication methods
+
+- App Access Token
+
+## Related resources
+
+Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
 
 ## Using App Access Token
 
-1. Access the [Facebook for Developers portal](https://developers.facebook.com/).
-2. Click on ***My Apps*** on the top right corner.
-3. Access your app. Create an app if you don't already have one.
-4. Add the ***Webhooks*** product from the ***Add a Product*** section on the dashboard.
-5. Click on ***Settings*** in the left sidebar and select 'Basic'.
-6. Click on the ***Show*** button and login with your Facebook account.
-7. Copy the App Secret displayed on the page.
-8. Access the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/).
-9. Select your app from the ***Facebook App*** dropdown list on the right sidebar.
-10. Select 'Get App Token' from the ***User or Page*** dropdown list on the right sidebar.
-11. Use the app secret and the generated access token with your Facebook node credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting Facebook App credentials](/_images/integrations/builtin/credentials/facebookapp/using-app-access-token.gif)
+- An app **Access Token**
+- _Optional:_ An **App Secret**
 
+Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} to generate the App **Access Token**.
+
+To add an **App Secret**, go to your App Dashboard **Settings > Basic**. Refer to the [App Dashboard Settings documentation](https://developers.facebook.com/docs/development/create-an-app/app-dashboard#settings){:target=_blank .external-link} and the [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link} for more information. You will need to re-enter your Facebook account credentials to show the **App Secret**.
+
+When the App Secret is set the node will verify this signature to validate the integrity and origin of the payload.

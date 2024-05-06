@@ -6,40 +6,35 @@ contentType: integration
 
 # Eventbrite credentials
 
-You can use these credentials to authenticate the following nodes with Eventbrite.
+You can use these credentials to authenticate the following nodes:
 
 - [Eventbrite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger/)
 
 ## Prerequisites
 
-Create a [Eventbrite](https://www.eventbrite.com/) account.
+Create an [Eventbrite](https://www.eventbrite.com/) account.
 
-## Using OAuth
+## Supported authentication methods
+
+- API Private Key
+- OAuth2
+
+## Related resources
+
+Refer to [Eventbrite's API documentation](https://www.eventbrite.com/platform/api){:target=_blank .external-link} for more information about the service.
+
+## Using API Private Key
+
+To configure this credential, you'll need:
+
+- A **Private Key**
+
+Refer to the [Eventbrite API Authentication Get a Private Token documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/1.-get-a-private-token){:target=_blank .external-link} for detailed steps to generate a Private Token. Use this private token as the **Private Key** in the n8n credential.
+
+## Using OAuth2
 
 /// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Eventbrite account to n8n.
+You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth2 credential to connect your Eventbrite account to n8n.
 ///
 
-1. Log in to your Eventbrite account.
-2. Click on the user icon in the top right.
-3. Select Account Settings in the drop down menu.
-4. Click on Developer links > API keys in the sidebar.
-5. Click on the *Create API Key* button.
-6. Copy the 'OAuth Callback URL' provided in the Eventbrite OAuth API credentials in n8n and paste it in the 'OAuth Redirect URI' field in the Eventbrite API creation page.
-7. Fill out any other information that's necessary and click 'Create Key'.
-8. Find your API key in the 'API Keys' page and click on 'Show API key, client secret and tokens'.
-9. Click on 'Show API key, client secret and tokens' and use the 'API key' and the 'Client secret' with your Eventbrite OAuth API credentials in n8n.
-10. Click on the circle button in the OAuth section to connect an Eventbrite account to n8n.
-11. Click the *Save* button to save your credentials.
-
-![Getting Eventbrite OAuth credentials](/_images/integrations/builtin/credentials/eventbrite/using-oauth.gif)
-
-## Using Access Token
-
-1. Log in to your Eventbrite account.
-2. Visit [your API keys page](https://www.eventbrite.com/platform/api-keys).
-3. Copy your private token.
-4. Use provided key with your Eventbrite node credentials in n8n.
-
-![Getting Eventbrite credentials](/_images/integrations/builtin/credentials/eventbrite/using-access-token.gif)
-
+Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Eventbrite API authentication For App Partners documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/2.-(for-app-partners)-authorize-your-users){:target=_blank .external-link} to set up OAuth.

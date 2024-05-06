@@ -6,7 +6,7 @@ contentType: integration
 
 # E-goi credentials
 
-You can use these credentials to authenticate the following nodes with E-goi.
+You can use these credentials to authenticate the following nodes:
 
 - [E-goi](/integrations/builtin/app-nodes/n8n-nodes-base.egoi/)
 
@@ -14,11 +14,19 @@ You can use these credentials to authenticate the following nodes with E-goi.
 
 Create an [E-goi](https://www.e-goi.com/) account.
 
+## Supported authentication methods
+
+- API Key
+
+## Related resources
+
+Refer to [E-goi's API documentation](https://developers.e-goi.com/api/v3/){:target=_blank .external-link} for more information about the service.
+
 ## Using API Key
 
-1. Access your E-goi dashboard.
-2. Click on your name on the top right corner and select 'Integrations'.
-3. Copy the ***API key*** that's displayed and use it with your E-goi node credentials in n8n.
+To configure this credential, you'll need:
 
-![Getting E-goi API credentials](/_images/integrations/builtin/credentials/egoi/using-api.gif)
+- An **API Key**
+
+Refer to [E-goi's API key documentation](https://helpdesk.e-goi.com/511369-Whats-E-gois-API-and-where-do-I-find-my-API-key){:target=_blank .external-link} for instructions on generating and viewing an API key.
 

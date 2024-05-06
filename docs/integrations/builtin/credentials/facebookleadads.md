@@ -11,17 +11,15 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-This integration uses OAuth. Follow the [Facebook Lead Ads's documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} to understand how Lead Ads works and how to set up your Facebook App.
+- Create a [Facebook](https://www.facebook.com/){:target=_blank .external-link} account.
+- Sign up for [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} with that account.
+- Create at least one [Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link}.
 
-## Configuration
+Follow the [Facebook Lead Ads's documentation](https://developers.facebook.com/docs/marketing-api/guides/lead-ads/){:target=_blank .external-link} to understand how Lead Ads works and how to set up your Facebook App.
 
-1. Open your Facebook app page in **Meta for Developers**
-2. Go to **Add Product** and add **Facebook Login**
-3. Navigate to **Facebook Login > Settings** and paste into **Valid OAuth Redirect URIs** the **OAuth Redirect URL** that you find in the n8n's Facebook Lead Ads credential.
-4. Switch your App Mode to **Live**
-5. In **App settings > Basic** copy the **App ID** and paste it into **Client ID** (in the n8n's Facebook Lead Ads credential), and copy the **App secret** and paste it into **Client Secret**
+## Supported authentication methods
 
-You can use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} to trigger some demo form submissions and test your workflow.
+- Oauth2
 
 ## Related resources
 
@@ -29,4 +27,20 @@ Refer to [Facebook Lead Ads' documentation](https://developers.facebook.com/docs
 
 View [example workflows and related content](https://n8n.io/integrations/facebook-lead-ads-trigger/){:target=_blank .external-link} on n8n's website.
 
+## Using OAuth2
 
+To configure this credential, you'll need:
+
+- A **Client ID**
+- A **Client Secret**
+
+In your app, be sure you have either the **Facebook Login** or **Facebook Login for Business** product added. Then:
+
+1. Within that product, go to **Settings**.
+2. From the n8n credential, copy the **OAuth Redirect URL**.
+3. Within Facebook, paste that URL into the **Valid OAuth Redirect URIs** field and Save.
+4. Set your Facebook app to **Live** App Mode.
+5. In **App settings > Basic**, copy the **App ID**. Use this as the **Client ID** within the n8n credential.
+6. In **App settings > Basic**, copy the **App Secret**. Use this as the **Client Secret** within the n8n credential.
+
+Use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} to trigger some demo form submissions and test your workflow.

@@ -6,29 +6,27 @@ contentType: integration
 
 # Gotify credentials
 
-You can use these credentials to authenticate the following nodes with Gotify.
+You can use these credentials to authenticate the following nodes:
 
 - [Gotify](/integrations/builtin/app-nodes/n8n-nodes-base.gotify/)
 
 ## Prerequisites
 
-Install [Gotify](https://gotify.net/docs/install) on your server.
+Install [Gotify](https://gotify.net/docs/install){:target=_blank .external-link} on your server.
 
-## Using API Token
+## Supported authentication methods
 
-***Note:*** To create a message, the ***App API Token*** is required. To delete or retrieve all messages, you need the ***Client API Token***.
+- API token
 
-1. Access your Gotify dashboard.
-2. Click on ***APPS*** in the navigation menu.
-3. Click on the ***CREATE APPLICATION*** button.
-4. Enter an application name in the ***Name*** field.
-5. Click on the ***CREATE*** button.
-6. Click on ***CLIENTS*** in the navigation menu.
-7. Click on the ***CREATE CLIENT*** button.
-8. Enter a name for the client in the ***Name*** field.
-9. Click on the ***CREATE*** button.
-10. Use the App Token, Client Token, and the Host URL with your Gotify API credentials in n8n.
-11. Click the ***Save*** button to save your credentials in n8n.
+## Related resources
 
-![Getting Gotify credentials](/_images/integrations/builtin/credentials/gotify/using-api.gif)
+Refer to [Gotify's API documentation](https://gotify.net/api-docs){:target=_blank .external-link} for more information about the service.
+
+## Using API token
+
+To configure this credential, you'll need:
+
+- An **App API Token**: Only required if you'll use this credential to create messages. To generate an App API token, create an application from the **Apps** menu. Refer to [Gotify's Push messages documentation](https://gotify.net/docs/pushmsg){:target=_blank .external-link} for more information.
+- A **Client API Token**: Required for all actions other than creating messages (such as deleting or retrieving messages). To generate a Client API token, create a client from the **Clients** menu.
+- The **URL** of the Gotify host
 

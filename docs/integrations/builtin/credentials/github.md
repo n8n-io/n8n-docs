@@ -6,7 +6,7 @@ contentType: integration
 
 # GitHub credentials
 
-You can use these credentials to authenticate the following nodes with GitHub.
+You can use these credentials to authenticate the following nodes:
 
 - [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/)
 - [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/)

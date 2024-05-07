@@ -6,7 +6,7 @@ contentType: integration
 
 # Git credentials
 
-You can use these credentials to authenticate the following nodes with Git.
+You can use these credentials to authenticate the following nodes:
 
 - [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git/)
 

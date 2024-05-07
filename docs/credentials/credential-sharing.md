@@ -14,7 +14,7 @@ You can share a credential you created with other users in the same n8n workspac
 
 Users can share credentials they created. Instance owners, and users with the admin role, can view and share all credentials in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
 
-In [projects](/user-management/rbac/), n8n automatically shares all credentials in a project with all project members.
+In [projects](/user-management/rbac/), all users have access to workflows and credentials belonging to projects they are part of.
 
 
 ## Share a credential

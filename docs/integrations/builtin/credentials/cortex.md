@@ -16,18 +16,16 @@ Install [Cortex](https://docs.strangebee.com/cortex/installation-and-configurati
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Cortex's API documentation](https://docs.strangebee.com/cortex/api/api-guide/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
+- An **API Key**: Refer to the [Cortex API Authentication documentation](https://docs.strangebee.com/cortex/api/api-guide/#authentication){:target=_blank .external-link} for detailed instructions on generating API keys.
 - The URL/Server Address for your **Cortex Instance** (defaults to `http://<your_server_address>:9001/`)
-
-Refer to the [Cortex API Authentication documentation](https://docs.strangebee.com/cortex/api/api-guide/#authentication){:target=_blank .external-link} for detailed instructions on generating API keys.
 

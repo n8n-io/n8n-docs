@@ -17,20 +17,18 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API Personal Access Token
+- API personal access token
 - OAuth2
 
 ## Related resources
 
 Refer to [Drift's API documentation](https://devdocs.drift.com/docs/using-drift-apis){:target=_blank .external-link} for more information about the service.
 
-## Using API Personal Access Token
+## Using API personal access token
 
 To configure this credential, you'll need:
 
-- A **Personal Access Token**
-
-To get a token, [create a Drift app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link}. [Install the app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link} to generate an OAuth Access token. Add this to the n8n credential as your **Personal Access Token**.
+- A **Personal Access Token**: To get a token, [create a Drift app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link}. [Install the app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link} to generate an OAuth Access token. Add this to the n8n credential as your **Personal Access Token**.
 
 ## Using OAuth2
 

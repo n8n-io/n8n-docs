@@ -16,19 +16,15 @@ Create a [Bannerbear](https://www.BannerBear.com/){:target=_blank .external-link
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Bannerbear's API documentation](https://developers.bannerbear.com/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- A **Project API Key**
-
-To generate an API key, first create a Bannerbear project. The API Key is located in **Settings / API Key**.
-
-Refer to the [Bannerbear API Authentication documentation](https://developers.bannerbear.com/#authentication){:target=_blank .external-link} for more detailed steps.
+- A **Project API Key**: To generate an API key, first create a Bannerbear project. Go to **Settings > API Key** to view the API key. Refer to the [Bannerbear API Authentication documentation](https://developers.bannerbear.com/#authentication){:target=_blank .external-link} for more detailed steps.
 

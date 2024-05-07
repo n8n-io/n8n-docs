@@ -14,7 +14,7 @@ You can use these credentials to authenticate when using the [HTTP Request node]
 
 ## Authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
@@ -22,9 +22,9 @@ Refer to [Carbon Black's documentation](https://developer.carbonblack.com/refere
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/carbon-black/){:target=_blank .external-link} on n8n's website.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- A **URL**: This URL is determined by the environment/product URL you use. You can find this by looking at the web address of your Carbon Black Cloud console. Refer to [Carbon Black's URL Parts documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#the-url-parts){:target=_blank .external-link} for more information.
+- A **URL**: This URL is determined by the environment/product URL you use. You can find it by looking at the web address of your Carbon Black Cloud console. Refer to [Carbon Black's URL Parts documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#the-url-parts){:target=_blank .external-link} for more information.
 - An **Access Token**: Refer to the [Carbon Black Create an API key documentation](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication#carbon-black-cloud-manages-identities-and-roles){:target=_blank .external-link} to create an API key. Add the **API Secret Key** as the **Access Token** in n8n.

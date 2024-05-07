@@ -17,20 +17,18 @@ Create a [DeepL developer](https://www.deepl.com/pro-api){:target=_blank .extern
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [DeepL's API documentation](https://developers.deepl.com/docs){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
+- An **API Key**: Refer to [DeepL's Authentication documentation](https://developers.deepl.com/docs/getting-started/auth#authentication){:target=_blank .external-link} for more information on getting your API key.
 - To identify which **API Plan** you're on. DeepL has different API endpoints for each plan, so be sure you select the correct one:
     - Pro Plan
     - Free Plan
-
-Refer to [DeepL's Authentication documentation](https://developers.deepl.com/docs/getting-started/auth#authentication){:target=_blank .external-link} for more information on getting your API key.
 

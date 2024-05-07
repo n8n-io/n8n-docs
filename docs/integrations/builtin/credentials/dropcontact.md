@@ -16,17 +16,15 @@ Create a developer account in [Dropcontact](https://app.dropcontact.com/signup){
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Dropcontact's API documentation](https://developer.dropcontact.com/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-To view your API key in Dropcontact, go to [**API**](https://app.dropcontact.com/api){:target=_blank .external-link}. Refer to the [Dropcontact API key documentation](https://support.dropcontact.com/article/237-how-to-use-the-dropcontact-api-key){:target=_blank .external-link} for more information.
+- An **API Key**: To view your API key in Dropcontact, go to [**API**](https://app.dropcontact.com/api){:target=_blank .external-link}. Refer to the [Dropcontact API key documentation](https://support.dropcontact.com/article/237-how-to-use-the-dropcontact-api-key){:target=_blank .external-link} for more information.
 

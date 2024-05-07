@@ -17,23 +17,19 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API Access Token: For use only with your user account
+- API access token: For use only with your user account
 - OAuth2: For distribution to other users
 
 ## Related resources
 
 Refer to [Dropbox's Developer documentation](https://www.dropbox.com/developers/documentation){:target=_blank .external-link} for more information about the service.
 
-## Using Access Token
+## Using access token
 
 To configure this credential, you'll need:
 
-- An **Access Token**
+- An **Access Token**: Once you've created your app, access **Settings > OAuth 2** and select the option to **Generate** an access token. Use that access token in your n8n credential. Refer to the [Dropbox App Console Settings documentation](https://www.dropbox.com/developers/reference/getting-started?_tk=guides_lp&_ad=guides2&_camp=get_started#app%20console){:target=_blank .external-link} for more information.
 - An **App Access Type**: Choose between **App Folder** and **Full Dropbox**. Your selection should match the **Type of access** you created your app with.
-
-Once you've created your app, access **Settings > OAuth 2** and select the option to **Generate** an access token. Refer to the [Dropbox App Console Settings documentation](https://www.dropbox.com/developers/reference/getting-started?_tk=guides_lp&_ad=guides2&_camp=get_started#app%20console){:target=_blank .external-link} for more information.
-
-Use that access token in your n8n credential.
 
 ## Using OAuth2
 

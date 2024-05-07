@@ -16,21 +16,21 @@ Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams){:target=_
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Bitwarden's Public API documentation](https://bitwarden.com/help/public-api/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- A **Client ID**
-- A **Client Secret**
+- A **Client ID**: Provided when you generate an API key
+- A **Client Secret**: Provided when you generate an API key
 - The **Environment**:
-    - Choose **Cloud-hosted** if you don't self-host Bitwarden. No further configuration is needed.
-    - Choose **Self-hosted** if you self-host Bitwarden on your own server. Enter your **Self-hosted domain** in the appropriate field.
+    - Choose **Cloud-hosted** if you don't self-host Bitwarden. No further configuration required.
+    - Choose **Self-hosted** if you host Bitwarden on your own server. Enter your **Self-hosted domain** in the appropriate field.
 
 The Client ID and Client Secret must be for an **Organization API Key**, not a Personal API Key. Refer to the [Bitwarden Public API Authentication documentation](https://bitwarden.com/help/public-api/#authentication){:target=_blank .external-link} for instructions on generating an Organization API Key.
 

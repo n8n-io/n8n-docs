@@ -14,7 +14,7 @@ You can use these credentials to authenticate when using the [HTTP Request node]
 
 ## Authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
@@ -22,10 +22,8 @@ Refer to [Cisco Meraki's API documentation](https://developer.cisco.com/meraki/a
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-meraki/){:target=_blank .external-link} on n8n's website.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-Refer to the [Cisco Meraki Obtaining your Meraki API Key documentation](https://developer.cisco.com/meraki/api-v1/authorization/#obtaining-your-meraki-api-key){:target=_blank .external-link} for instructions on getting your API Key.
+- An **API Key**: Refer to the [Cisco Meraki Obtaining your Meraki API Key documentation](https://developer.cisco.com/meraki/api-v1/authorization/#obtaining-your-meraki-api-key){:target=_blank .external-link} for instructions on getting your API Key.

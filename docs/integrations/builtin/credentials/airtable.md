@@ -28,13 +28,11 @@ n8n previously supported an API key authentication method with Airtable. Airtabl
 
 Refer to [Airtable's API documentation](https://airtable.com/developers/web/api/authentication){:target=_blank .external-link} for more information about the service.
 
-## Using Personal Access Token
+## Using personal access token
 
 To configure this credential, you'll need:
 
-- A Personal **Access Token**
-
-Follow the instructions to **Find/create PATs** in the [Airtable documentation](https://support.airtable.com/docs/creating-personal-access-tokens#understanding-the-basics-of-personal-access-tokens){:target=_blank .external-link} to get a Personal Access Token (PAT).
+- A Personal **Access Token**: Follow the instructions to **Find/create PATs** in the [Airtable documentation](https://support.airtable.com/docs/creating-personal-access-tokens#understanding-the-basics-of-personal-access-tokens){:target=_blank .external-link} to get a Personal Access Token (PAT).
 
 n8n recommends using the following **Scopes** for your PAT:
 

@@ -21,13 +21,13 @@ You need a Starter plan or higher to access the Bubble API.
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Bubble's API documentation](https://manual.bubble.io/help-guides/integrations/api){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
@@ -35,6 +35,6 @@ To configure this credential, you'll need:
 - An **App Name**: The name of the app you created the API token for.
 - The **Environment**: Choose between **Live** or **Development**. Select the environment that makes sense for your app.
 - The **Hosting**:
-    - Bubble Hosting: Choose this option if you haven't set up a custom domain
-    - Self Hosting: Choose this option if you've set up a [custom domain](https://manual.bubble.io/help-guides/design/elements/the-page#custom-domain-1){:target=_blank .external-link} in Bubble. Add the **Domain**.
+    - **Bubble Hosting**: Choose this option if you haven't set up a custom domain
+    - **Self Hosting**: Choose this option if you've set up a [custom domain](https://manual.bubble.io/help-guides/design/elements/the-page#custom-domain-1){:target=_blank .external-link} in Bubble. Add the **Domain**.
 

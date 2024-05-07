@@ -16,17 +16,15 @@ Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-lin
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [APITemplate.io's API documentation](https://apitemplate.io/apiv2/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**.
+- An **API Key**: Once you've created an APITemplate.io account, go to **API Integration** to copy the **API Key**.
 

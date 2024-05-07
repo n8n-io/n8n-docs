@@ -23,7 +23,7 @@ Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/referenc
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
@@ -31,10 +31,8 @@ Refer to [Cohere's documentation](https://docs.cohere.com/reference/about){:targ
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-To generate a Cohere API key, go to the [API Keys section of your Cohere dashboard](https://dashboard.cohere.com/api-keys){:target=_blank .external-link}.
+- An **API Key**: To generate a Cohere API key, go to the [API Keys section of your Cohere dashboard](https://dashboard.cohere.com/api-keys){:target=_blank .external-link}.

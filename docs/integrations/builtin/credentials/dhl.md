@@ -21,17 +21,15 @@ DHL offers a [variety of APIs](https://developer.dhl.com/api-catalog){:target=_b
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [DHL's Developer documentation](https://support-developer.dhl.com/support/home){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-Once you've created an app, view your app details and **Show key** to view and copy the API key.
+- An **API Key**: Once you've created an app, view your app details and **Show key** to view and copy the API key.
 

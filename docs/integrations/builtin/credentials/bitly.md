@@ -16,20 +16,18 @@ Create a [Bitly](https://www.bitly.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
-- API Token
-- Oauth2
+- API token
+- OAuth2
 
 ## Related resources
 
 Refer to [Bitly's API documentation](https://dev.bitly.com/){:target=_blank .external-link} for more information about the service.
 
-## Using API Token
+## Using API token
 
 To configure this credential, you'll need:
 
-- An **Access Token**
-
-Once logged in, visit [Settings > Developer Settings > API](https://app.bitly.com/settings/api/){:target=_blank .external-link} to generate an Access Token.
+- An **Access Token**: Once logged in, visit [Settings > Developer Settings > API](https://app.bitly.com/settings/api/){:target=_blank .external-link} to generate an Access Token.
 
 
 ## Using OAuth2

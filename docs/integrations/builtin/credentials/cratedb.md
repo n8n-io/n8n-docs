@@ -16,13 +16,13 @@ An available instance of CrateDB.
 
 ## Supported authentication methods
 
-- Account Connection
+- account connection
 
 ## Related resources
 
 Refer to [CrateDB's documentation](https://cratedb.com/docs/crate/reference/en/latest/){:target=_blank .external-link} for more information about the service.
 
-## Using Account Connection
+## Using account connection
 
 To configure this credential, you'll need:
 

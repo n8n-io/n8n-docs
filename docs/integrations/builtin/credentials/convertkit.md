@@ -17,16 +17,14 @@ Create a [ConvertKit](https://convertkit.com/) account.
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [ConvertKit's API documentation](https://developers.convertkit.com/#overview){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Secret**
-
-Access your API Key in ConvertKit in [**Account Settings > Advanced**](https://app.convertkit.com/account_settings/advanced_settings){:target=_blank .external-link}.
+- An **API Secret**: Access your ConvertKit API key in [**Account Settings > Advanced**](https://app.convertkit.com/account_settings/advanced_settings){:target=_blank .external-link}. Add this key as the **API Secret** in n8n.

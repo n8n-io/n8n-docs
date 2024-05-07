@@ -17,20 +17,20 @@ You can use these credentials to authenticate the following nodes:
 
  ## Supported authentication methods
 
- - API Key
+ - API key
 
 ## Related resources
 
 Refer to [Discourse's API documentation](https://docs.discourse.org/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
 - The **URL** of your Discourse instance, for example `https://community.n8n.io`
-- An **API Key**
-- A **Username**
+- An **API Key**: Create an API key through the Discourse admin panel. Refer to the [Discourse create and configure an API key documentation](https://meta.discourse.org/t/create-and-configure-an-api-key/230124){:target=_blank .external-link} for instructions on creating an API key and specifying a username.
+- A **Username**: Use your own name, `system`, or another user.
 
-Create an API key through the Discourse admin panel. Refer to the [Discourse create and configure an API key documentation](https://meta.discourse.org/t/create-and-configure-an-api-key/230124){:target=_blank .external-link} for instructions on creating an API key and specifying a username. Refer to the Authentication section of the [Discourse API documentation](https://docs.discourse.org/){:target=_blank .external-link} for examples.
+Refer to the Authentication section of the [Discourse API documentation](https://docs.discourse.org/){:target=_blank .external-link} for examples.
 
-For the **Username**, you can use your own name, `system`, or another user.
+

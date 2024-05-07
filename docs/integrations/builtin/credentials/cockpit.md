@@ -17,18 +17,16 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API Access Token
+- API access token
 
 ## Related resources
 
 Refer to [Cockpit's API documentation](https://getcockpit.com/documentation/core/api/introduction){:target=_blank .external-link} for more information about the service.
 
-## Using API Access Token
+## Using API access token
 
 To configure this credential, you'll need:
 
 - Your **Cockpit URL**: The URL you use to access your Cockpit instance
-- An **Access Token**
-
-Refer to the [Cockpit Managing tokens documentation](https://getcockpit.com/documentation/core/api/authentication/#managing-tokens){:target=_blank .external-link} for instructions on creating an API token. Use this token in your credential **Access Token**.
+- An **Access Token**: Refer to the [Cockpit Managing tokens documentation](https://getcockpit.com/documentation/core/api/authentication/#managing-tokens){:target=_blank .external-link} for instructions on creating an API token. Use the **API token** as the n8n **Access Token**.
 

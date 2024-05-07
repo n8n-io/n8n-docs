@@ -18,16 +18,14 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Action Network's API documentation](https://actionnetwork.org/docs/){:target=_blank .external-link} for more information about working with the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-After becoming an Action Network partner, follow the [Action Network API Authentication instructions](https://actionnetwork.org/docs/v2/#auth){:target=_blank .external-link} to generate an API key.
+- An **API Key**: After becoming an Action Network partner, follow the [Action Network API Authentication instructions](https://actionnetwork.org/docs/v2/#auth){:target=_blank .external-link} to generate an API key.

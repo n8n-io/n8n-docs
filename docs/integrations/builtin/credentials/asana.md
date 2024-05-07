@@ -14,18 +14,18 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an [Asana](https://asana.com/) account.
+Create an [Asana](https://asana.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
-- OAuth2 API
-- API Access Token
+- OAuth2
+- API access token
 
 ## Related resources
 
 Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview){:target=_blank .external-link} for more information about working with the service.
 
-## Using OAuth2 API
+## Using OAuth2
 
 /// note | Note for n8n Cloud users
 You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
@@ -38,11 +38,9 @@ Use the following adjustments:
 1. Use the n8n **OAuth Callback URL** as the Asana **Redirect URLs**.
 2. Use the Asana **Client ID** and **Client secret** in the corresponding fields within n8n.
 
-## Using API Access token
+## Using API access token
 
 To configure this credential, you'll need:
 
-- A Personal **Access Token** (PAT)
-
-Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for the steps to generate a Personal Access Token (PAT).
+- A Personal **Access Token** (PAT): Refer to the [Asana Quick start guide](https://developers.asana.com/docs/quick-start#setup){:target=_blank .external-link} for the steps to generate a Personal Access Token (PAT).
 

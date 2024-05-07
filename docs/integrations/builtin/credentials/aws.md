@@ -29,9 +29,13 @@ Create an [AWS](https://aws.amazon.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
-- Access Key
+- API access key
 
-## Using Access Key
+## Related resources
+
+Refer to [AWS's Identity and Access Management documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html){:target=_blank .external-link} for more information about the service.
+
+## Using API access key
 
 To configure this credential, you'll need:
 

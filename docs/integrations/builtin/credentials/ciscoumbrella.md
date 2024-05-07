@@ -14,7 +14,7 @@ You can use these credentials to authenticate when using the [HTTP Request node]
 
 ## Authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
@@ -22,11 +22,11 @@ Refer to [Cisco Umbrella's API documentation](https://developer.cisco.com/docs/c
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-umbrella/){:target=_blank .external-link} on n8n's website.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
 - An **API Key**
-- A **Secret**
+- A **Secret**: Provided when you generate an API key
 
-Refer to the [Cisco Umbrella Manage API Keys documentation](https://developer.cisco.com/docs/cloud-security/authentication/#manage-api-keys){:target=_blank .external-link} for instructions on creating an Umbrella API Key.
+Refer to the [Cisco Umbrella Manage API Keys documentation](https://developer.cisco.com/docs/cloud-security/authentication/#manage-api-keys){:target=_blank .external-link} for instructions on creating an Umbrella API key.

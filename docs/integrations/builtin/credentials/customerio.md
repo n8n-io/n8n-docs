@@ -25,7 +25,7 @@ Refer to [Customer.io's summary API documentation](https://customer.io/docs/api/
 
 For detailed API reference documentation for each API, refer to the [Track API documentation](https://customer.io/docs/api/track/){:target=_blank .external-link} and the [App API documentation](https://customer.io/docs/api/app/){:target=_blank .external-link}.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 

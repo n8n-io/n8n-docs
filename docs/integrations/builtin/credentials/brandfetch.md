@@ -16,16 +16,14 @@ Create a [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Brandfetch's API documentation](https://docs.brandfetch.com/docs/apis){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} to generate an API key.
+- An **API Key**: Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} to generate an API key.

@@ -16,7 +16,7 @@ Create a [Baserow](https://baserow.io/){:target=_blank .external-link} account o
 
 ## Supported authentication methods
 
-- API User Account
+- Basic auth
 
 ## Related resources
 
@@ -24,12 +24,12 @@ Refer to [Baserow's documentation](https://baserow.io/docs/index){:target=_blank
 
 Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs){:target=_blank .external-link} for more information about the API specifically.
 
-## Using API User Account
+## Using basic auth
 
 To configure this credential, you'll need:
 
 - The **Host**
-    - For a hosted Baserow instance: leave as `https://api.baserow.io`
+    - For a Baserow-hosted instance: leave as `https://api.baserow.io`
     - For a self-hosted instance: set to your self-hosted instance API URL
 - A **Username** for the user account
 - A **Password** for the user account

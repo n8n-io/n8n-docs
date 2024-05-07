@@ -17,17 +17,15 @@ Create a [Clockify](https://www.clockify.com/) account.
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Clockify's API documentation](https://docs.developer.clockify.me/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-Access your API key from your [Clockify Profile Settings](https://clockify.me/help/users/profile-settings){:target=_blank .external-link}.
+- An **API Key**: Access your API key from your [Clockify Profile Settings](https://clockify.me/help/users/profile-settings){:target=_blank .external-link}.
 

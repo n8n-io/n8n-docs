@@ -28,15 +28,13 @@ Not sure which method to use? See [Which method do I use?](#which-method-should-
 
 Refer to [Discord's Developer documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
 
-## Using Bot
+## Using bot
 
 Use this method if you want to add the bot to your Discord server using a bot token rather than OAuth2.
 
 To configure this credential, you'll need:
 
-- A **Bot Token**
-
-For details on creating an application with a bot and generating the token, see the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide. Follow the instructions to configure your bot, add scopes and bot permissions (do not forget the `bot` scope!), and install the application. Copy the **Bot Token** you generate and add it into the n8n credential.
+- A **Bot Token**: For details on creating an application with a bot and generating the token, see the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide. Follow the instructions to configure your bot, add scopes and bot permissions (do not forget the `bot` scope!), and install the application. Copy the **Bot Token** you generate and add it into the n8n credential.
 
 n8n recommends using these settings when you create your application:
 
@@ -76,13 +74,11 @@ Then:
 2. Open the **OAuth2** page in your Discord application to access your **Client ID** and generate a **Client Secret**. Add these to your n8n credential.
 3. From n8n, copy the **OAuth Redirect URL** and add it into the Discord application in **OAuth2 > Redirects**. Be sure you save these changes.
 
-## Using Webhook
+## Using webhook
 
 To configure this credential, you'll need:
 
-- A **Webhook URL**
-
-Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link} to create a webhook. Copy the **Webhook URL** that gets generated and add this to your n8n credential.
+- A **Webhook URL**: Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link} to create a webhook. Copy the **Webhook URL** that gets generated and add this to your n8n credential.
 
 ## FAQs
 

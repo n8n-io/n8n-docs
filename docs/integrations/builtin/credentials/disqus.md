@@ -17,15 +17,14 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
+- API access token
+
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if necessary. -->
-Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Disqus's API documentation](https://disqus.com/api/docs/){:target=_blank .external-link} for more information about the service.
 
-## Using Access Token
+## Using API access token
 
 To configure this credential, you'll need:
 
-- An **Access Token**
-
-Once you've registered an API application, copy the **API Key** and add it to n8n as the **Access Token**
+- An **Access Token**: Once you've registered an API application, copy the **API Key** and add it to n8n as the **Access Token**.

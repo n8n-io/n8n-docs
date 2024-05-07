@@ -16,13 +16,13 @@ Create a [Bitbucket](https://www.bitbucket.com/){:target=_blank .external-link} 
 
 ## Supported authentication methods
 
-- API Username and App Password
+- API username and app password
 
 ## Related resources
 
 Refer to [Bitbucket's API documentation](https://developer.atlassian.com/cloud/bitbucket/rest/intro/#authentication){:target=_blank .external-link} for more information about the service.
 
-## Using API Username/App Password
+## Using API username/app password
 
 To configure this credential, you'll need:
 

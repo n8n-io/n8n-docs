@@ -19,7 +19,7 @@ Follow the [Facebook Lead Ads's documentation](https://developers.facebook.com/d
 
 ## Supported authentication methods
 
-- Oauth2
+- OAuth2
 
 ## Related resources
 

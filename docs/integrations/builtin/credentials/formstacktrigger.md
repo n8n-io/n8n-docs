@@ -48,9 +48,10 @@ To configure this credential, you'll need:
 - A **Client Secret**
 
 To generate both of these, [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} in Formstack using the following details:
-    * **Redirect URI**: Copy the **OAuth Redirect URL** from the n8n credential to enter here.
-        - For self-hosted n8n instances, enter the OAuth callback URL for your n8n instance in the format `https://<n8n_url>/rest/oauth2-credential/callback`. For example `https://localhost:5678/rest/oauth2-credential/callback`.
-    * **Platform**: Select **Website**.
+
+- **Redirect URI**: Copy the **OAuth Redirect URL** from the n8n credential to enter here.
+    - For self-hosted n8n instances, enter the OAuth callback URL for your n8n instance in the format `https://<n8n_url>/rest/oauth2-credential/callback`. For example `https://localhost:5678/rest/oauth2-credential/callback`.
+- **Platform**: Select **Website**.
 
 Once you've created the application, select it from the applications list to view the **Application Details**. Copy the **Client ID** and **Client Secret** and add them to n8n. Once you've added both, select the **Connect my account** button to initiate the OAuth2 flow and authorization process.
 

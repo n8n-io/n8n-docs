@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a Groq account
+Create a [Groq](https://groq.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 

@@ -18,7 +18,7 @@ Every account has one type. The account can have different [role types](/user-ma
 ///
 
 /// note | Create a member-level account for the owner
-n8n recommends that owners create a member-level account for themselves. Owners can see all workflows, but there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
+n8n recommends that owners create a member-level account for themselves. Owners can see and edit all workflows, credentials, and projects. However, there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.
 ///
 
 

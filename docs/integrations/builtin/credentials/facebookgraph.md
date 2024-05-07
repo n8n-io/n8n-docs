@@ -22,17 +22,15 @@ If you want to create credentials for the [Facebook Trigger](/integrations/built
 
 ## Supported authentication methods
 
-- App Access Token
+- App access token
 
 ## Related resources
 
 Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
 
-## Using App Access Token
+## Using app access token
 
 To configure this credential, you'll need:
 
-- An app **Access Token**
-
-Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} to generate the App **Access Token**.
+- An app **Access Token**: Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} to generate the App **Access Token**.
 

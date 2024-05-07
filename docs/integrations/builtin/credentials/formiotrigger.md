@@ -16,18 +16,18 @@ Create a [Form.io](https://www.form.io/) account.
 
 ## Supported authentication methods
 
-- Basic Auth
+- Basic auth
 
 ## Related resources
 
 Refer to [Form.io's API documentation](https://apidocs.form.io/){:target=_blank .external-link} for more information about the service.
 
-## Using Basic Auth
+## Using basic auth
 
 To configure this credential, you'll need:
 
 - Select your **Environment**: 
     - Choose **Cloud hosted** if you are not hosting Form.io yourself.
-    - Choose **Self-hosted** if you're hosting Form.io yourself and add your **Self-Hosted Domain**. Use only the domain itself. For example, if you view a form at `https://yourserver.com/yourproject/manage/view`, the Self-Hosted Domain is `https://yourserver.com`.
+    - Choose **Self-hosted** if you're hosting Form.io yourself. Add your **Self-Hosted Domain**. Use only the domain itself. For example, if you view a form at `https://yourserver.com/yourproject/manage/view`, the Self-Hosted Domain is `https://yourserver.com`.
 - The **Email address** you use to log in to Form.io
 - The **Password** you use to log in to Form.io

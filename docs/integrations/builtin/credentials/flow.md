@@ -17,13 +17,13 @@ Create a [Flow](https://www.getflow.com/) account.
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Flow's API documentation](https://developer.getflow.com/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 

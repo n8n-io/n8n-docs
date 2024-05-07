@@ -21,9 +21,9 @@ Refer to [F5 Big-IP's API documentation](https://clouddocs.f5.com/products/big-i
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/f5-big-ip/){:target=_blank .external-link} on n8n's website.
 
-## Using Account login
+## Using account login
 
 To configure this credential, you'll need:
 
-- A **Username**
-- A **Password**
+- A **Username**: Use the username you use to log in to F5 Big-IP.
+- A **Password**: Use the user password you use to log in to F5 Big-IP.

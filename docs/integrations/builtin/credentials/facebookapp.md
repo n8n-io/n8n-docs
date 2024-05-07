@@ -22,21 +22,17 @@ If you want to create credentials for the [Facebook Graph API](/integrations/bui
 
 ## Supported authentication methods
 
-- App Access Token
+- App access token
 
 ## Related resources
 
 Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
 
-## Using App Access Token
+## Using app access token
 
 To configure this credential, you'll need:
 
-- An app **Access Token**
-- _Optional:_ An **App Secret**
+- An app **Access Token**: Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} to generate the App **Access Token**.
+- _Optional:_ An **App Secret**: To add an **App Secret**, go to your App Dashboard **Settings > Basic**. Refer to the [App Dashboard Settings documentation](https://developers.facebook.com/docs/development/create-an-app/app-dashboard#settings){:target=_blank .external-link} and the [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link} for more information. You will need to re-enter your Facebook account credentials to show the **App Secret**.
 
-Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} to generate the App **Access Token**.
-
-To add an **App Secret**, go to your App Dashboard **Settings > Basic**. Refer to the [App Dashboard Settings documentation](https://developers.facebook.com/docs/development/create-an-app/app-dashboard#settings){:target=_blank .external-link} and the [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link} for more information. You will need to re-enter your Facebook account credentials to show the **App Secret**.
-
-When you add an App Secret, the node will verify this signature to validate the integrity and origin of the payload.
+When you add an App Secret, n8n will verify this signature to validate the integrity and origin of the payload.

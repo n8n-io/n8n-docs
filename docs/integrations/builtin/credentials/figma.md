@@ -16,16 +16,14 @@ Create a [Figma](https://www.figma.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Figma's API documentation](https://www.figma.com/developers/api){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An Personal **Access Token**
-
-Refer to the [Figma API Access Tokens documentation](https://www.figma.com/developers/api#access-tokens){:target=_blank .external-link} for instructions on generating a Personal **Access Token**
+- A Personal **Access Token** (PAT): Refer to the [Figma API Access Tokens documentation](https://www.figma.com/developers/api#access-tokens){:target=_blank .external-link} for instructions on generating a Personal **Access Token**.

@@ -17,17 +17,15 @@ Create an [Emelia](https://emelia.io) account.
 
 ## Supported authentication methods
 
-- API Key
+- API key
 
 ## Related resources
 
 Refer to [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information about the service.
 
-## Using API Key
+## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**
-
-To generate an API Key in Emelia, access your **API Keys** by selecting the avatar in the top right (your **Settings**) See the Authentication section of [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information.
+- An **API Key**: To generate an API Key in Emelia, access your **API Keys** by selecting the avatar in the top right (your **Settings**). Refer to the Authentication section of [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information.
 

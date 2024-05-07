@@ -9,17 +9,22 @@ You can use these credentials to authenticate the following nodes:
 
 * [Groq Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq/)
 
-## Using API Key
+## Prerequisites
 
-1. Go to [Groq console](https://console.groq.com/){:target=_blank .external-link} and log in.
-2. Select **API Keys** in the left sidebar.
-3. Select **Create API Key**.
-4. Enter a name for your API key.
-5. Select **Submit**.
-6. Copy the displayed API key.
+Create a Groq account
+
+## Supported authentication methods
+
+- API key
 
 ## Related resources
 
 Refer to [Groq's documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to [Groq's API Keys documentation](https://console.groq.com/docs/api-keys){:target=_blank .external-link} for instructions on generating an API key.

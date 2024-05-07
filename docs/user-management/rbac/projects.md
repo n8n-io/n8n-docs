@@ -5,11 +5,7 @@ description: Understand how n8n uses project for RBAC. Learn how to create and m
 ---
 
 /// info | Feature availability
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles:
-
-* Starter: one project, with admin role.
-* Pro: three projects, with admin and editor roles.
-* Enterprise: unlimited projects, with admin and editor roles.
+RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
 ///
 
 n8n uses projects to group workflows and credentials, and assigns [roles](/user-management/rbac/role-types/) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
@@ -25,6 +21,8 @@ To create a project:
 1. Select **Save**.
 
 ## Add and remove users in a project
+
+Project admins can add and remove users.
 
 To add a user to a project:
 

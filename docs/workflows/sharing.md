@@ -27,6 +27,7 @@ You can browse and search workflows on the **Workflows** list. The workflows in 
 * **Home** lists all workflows you can access. This includes:
 	* Your own workflows.
 	* Workflows shared with you.
+	* Workflows in projects you're a member of.
 	* If you log in as the instance owner or admin: all workflows in the instance.
 * Other projects: all workflows in the project.
 

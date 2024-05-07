@@ -25,7 +25,7 @@ n8n may display a warning about overriding local changes. Select **Pull and over
 
 ### Workflow and credential owner may change on pull
 
-When you pull from Git to an n8n instance, the workflow or credential owner may change. 
+When you pull from Git to an n8n instance, n8n tries to assign workflows and credentials to a matching user or project.
 
 If the original owner is a user:
 

@@ -39,4 +39,4 @@ Refer to [Shopify's authentication documentation](https://shopify.dev/docs/apps/
 ## Forbidden credentials error
 
 <!-- This issue was noted by someone in the forums and we also ran into it while testing auth setup -->
-If you get a "Couldn't connect with these settings / Forbidden - perhaps check your credentials" warning when you test the credentials, this may have to do with [access scope](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} dependencies (for example, `read_orders` scope also requires `read_products` scope to function).
+If you get a **Couldn't connect with these settings / Forbidden - perhaps check your credentials** warning when you test the credentials, this may be due to [access scope](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} dependencies. For example, `read_orders` scope also requires `read_products` scope.

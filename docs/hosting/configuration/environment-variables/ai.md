@@ -9,7 +9,7 @@ hide:
   - tags
 ---
 
-# Credentials environment variables
+# AI environment variables
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 

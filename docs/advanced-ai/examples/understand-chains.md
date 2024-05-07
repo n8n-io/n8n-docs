@@ -6,7 +6,7 @@ contentType: explanation
 
 # What is a chain in AI?
 
-Chains bring together different components of AI (such as models and memory) to create a cohesive system. They set up a sequence of calls between the components.
+Chains bring together different components of AI to create a cohesive system. They set up a sequence of calls between the components. These components can include models and memory (though note that in n8n chains can't use memory).
 
 
 ## Chains in n8n

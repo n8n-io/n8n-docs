@@ -16,20 +16,18 @@ Create an [Eventbrite](https://www.eventbrite.com/) account.
 
 ## Supported authentication methods
 
-- API Private Key
+- API private key
 - OAuth2
 
 ## Related resources
 
 Refer to [Eventbrite's API documentation](https://www.eventbrite.com/platform/api){:target=_blank .external-link} for more information about the service.
 
-## Using API Private Key
+## Using API private key
 
 To configure this credential, you'll need:
 
-- A **Private Key**
-
-Refer to the [Eventbrite API Authentication Get a Private Token documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/1.-get-a-private-token){:target=_blank .external-link} for detailed steps to generate a Private Token. Use this private token as the **Private Key** in the n8n credential.
+- A **Private Key**: Refer to the [Eventbrite API Authentication Get a Private Token documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/1.-get-a-private-token){:target=_blank .external-link} for detailed steps to generate a Private Token. Use this private token as the **Private Key** in the n8n credential.
 
 ## Using OAuth2
 

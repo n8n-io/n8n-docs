@@ -12,18 +12,20 @@ You can use these credentials to authenticate the following nodes with Git.
 
 ## Prerequisites
 
-Create an account on [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or similar platforms.
+Create an account on [GitHub](https://github.com){:target=_blank .external-link}, [GitLab](https://about.gitlab.com/){:target=_blank .external-link}, or similar platforms for use with [Git](https://git-scm.com){:target=_blank .external-link}.
 
-## Using Username and Password
+## Supported authentication methods
 
-1. Enter a name for your credentials in the ***Credentials Name*** field in the 'Git' credentials in n8n.
-2. Enter your GitHub, GitLab (or similar platforms) username in the ***Username*** field in the 'Git' credentials in n8n.
-3. Enter your GitHub, GitLab (or similar platforms) password in the ***Password*** field in the 'Git' credentials in n8n.
-4. Click the ***Create*** button to create your credentials in n8n.
+- Basic auth
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/RHyW--ZLstE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Git's documentation](https://git-scm.com/doc){:target=_blank .external-link} for more information about the service.
+
+## Using basic auth
+
+To configure this credential, you'll need:
+
+- A **Username** for GitHub, GitLab, or a similar platform
+- A **Password** for GitHub, GitLab, or a similar platform
 

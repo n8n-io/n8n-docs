@@ -6,21 +6,26 @@ contentType: integration
 
 # Freshdesk credentials
 
-You can use these credentials to authenticate the following nodes with Freshdesk.
+You can use these credentials to authenticate the following nodes:
 
 - [Freshdesk](/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk/)
 
 ## Prerequisites
 
-Create a [Freshdesk](https://freshdesk.com/) account.
+Create a [Freshdesk](https://freshdesk.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Freshdesk dashboard.
-2. Click on your Organisation icon in the top right.
-3. Click on Profile Settings.
-4. Find your API key on the right panel.
-5. Use provided API key and your subdomain (i.e n8n) with your Freshdesk node credentials in n8n.
+- API key
 
-![Getting Freshdesk credentials](/_images/integrations/builtin/credentials/freshdesk/using-access-token.gif)
+## Related resources
+
+Refer to [Freshdesk's API documentation](https://developers.freshdesk.com/api/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Freshdesk API authenticaton documentation](https://developers.freshdesk.com/api/#authentication){:target=_blank .external-link} for detailed instructions on getting your API key.
+- A Freshdesk **Domain**: Use the subdomain of your Freshdesk account. So if you access Freshdesk through `https://n8n.freshdesk.com`, enter `n8n` as your **Domain**.
 

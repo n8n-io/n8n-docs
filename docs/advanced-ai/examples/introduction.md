@@ -10,6 +10,14 @@ This section provides explanations of important AI concepts, and workflow templa
 
 <div class="grid cards" markdown>
 
+-   __Agents and chains__
+
+	Learn about agents and chains in AI, including exploring key differences using the example workflow.
+
+	[:octicons-arrow-right-24: What is a chain in AI?](/advanced-ai/examples/understand-chains/)  
+    [:octicons-arrow-right-24: What is an agent in AI?](/advanced-ai/examples/understand-agents/)  
+	[:octicons-arrow-right-24: Demonstration of key differences between agents and chains](/advanced-ai/examples/agents-vs-chains/) 
+
 -   __Custom n8n Workflow Tool__
 
     Learn about tools in AI, then explore examples that use n8n workflows as custom tools to give your AI workflow access to more data.

@@ -8,6 +8,8 @@ contentType: integration
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
+--8<-- "_snippets/integrations/managed-google-oauth.md"
+
 ## Prerequisites
 
 * [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account

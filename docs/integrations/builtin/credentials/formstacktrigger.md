@@ -34,6 +34,8 @@ To configure this credential, you'll need:
 
 Once you've created the application, copy the access token either from the applications list or by selecting the application to view its details.
 
+Refer to [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token){:target=_blank .external-link} for more detailed instructions.
+
 /// note | Access token permissions
 Access tokens are tied to a Formstack user and follow Formstack (in-app) user permissions.
 ///
@@ -51,6 +53,8 @@ To generate both of these, [create a new application](https://www.formstack.com/
     * **Platform**: Select **Website**.
 
 Once you've created the application, select it from the applications list to view the **Application Details**. Copy the **Client ID** and **Client Secret** and add them to n8n. Once you've added both, select the **Connect my account** button to initiate the OAuth2 flow and authorization process.
+
+Refer to [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token){:target=_blank .external-link} for more detailed instructions.
 
 /// note | Access token permissions
 Access tokens are tied to a Formstack user and follow Formstack (in-app) user permissions.

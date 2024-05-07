@@ -12,49 +12,47 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Formstack](https://www.formstack.com/) account.
+Create a [Formstack](https://www.formstack.com/){:target=_blank .external-link} account.
 
-## Using Access token
+## Supported authentication methods
 
-After creating your Formstack account: 
+- API access token
+- OAuth2
 
-1. From the user menu select **API**.
-2. Select **New Application**.
-3. In the *Create Application* window enter the following:
-    * *Application Name*: Provide a descriptive name.
-    * *Redirect URI*: Enter the OAuth callback URL for your n8n instance in the format `http://<n8n_url>/rest/oauth2-credential/callback`. For example `http://localhost:5678/rest/oauth2-credential/callback`.
-    * *Description*: Enter a brief description.
-    * *Platform*: Select **Website**.
-4. Click **Create Application**.
-5. Copy the *Access Token* for your new application.
+## Related resources
 
-From n8n:
+Refer to [Formstack's API documentation](https://developers.formstack.com/reference/api-overview){:target=_blank .external-link} for more information about the service.
 
-6. Enter a descriptive ***Credentials Name***.
-7. Enter your Formstack ***Access Token***.
-8. Click **Create** to save your new credentials.
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An API **Access Token**: To generate an Access Token, [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} in Formstack using the following details:
+    * **Redirect URI**: For cloud n8n instances, enter `https://oauth.n8n.cloud/oauth2/callback`.
+        - For self-hosted n8n instances, enter the OAuth callback URL for your n8n instance in the format `https://<n8n_url>/rest/oauth2-credential/callback`. For example `https://localhost:5678/rest/oauth2-credential/callback`.
+    * **Platform**: Select **Website**.
+
+Once you've created the application, copy the access token either from the applications list or by selecting the application to view its details.
+
+/// note | Access token permissions
+Access tokens are tied to a Formstack user and follow Formstack (in-app) user permissions.
+///
 
 ## Using OAuth2
 
-After creating your Formstack account: 
+To configure this credential, you'll need:
 
-1. From the user menu select **API**.
-2. Select **New Application**.
-3. In the *Create Application* window enter the following:
-    * *Application Name*: Provide a descriptive name.
-    * *Redirect URI*: Enter the OAuth callback URL for your n8n instance in the format `http://<n8n_url>/rest/oauth2-credential/callback`. For example `http://localhost:5678/rest/oauth2-credential/callback`.
-    * *Description*: Enter a brief description.
-    * *Platform*: Select **Website**.
-4. Click **Create Application**.
-5. Select your new application to view the *Application Details*.
-6. Copy the *Client ID* and *Client Secret*.
+- A **Client ID**
+- A **Client Secret**
 
-From n8n:
+To generate both of these, [create a new application](https://www.formstack.com/admin/apiKey/main){:target=_blank .external-link} in Formstack using the following details:
+    * **Redirect URI**: Copy the **OAuth Redirect URL** from the n8n credential to enter here.
+        - For self-hosted n8n instances, enter the OAuth callback URL for your n8n instance in the format `https://<n8n_url>/rest/oauth2-credential/callback`. For example `https://localhost:5678/rest/oauth2-credential/callback`.
+    * **Platform**: Select **Website**.
 
-7. Enter a descriptive ***Credentials Name***.
-8. Enter your Formstack ***Client ID***.
-9. Enter your Formstack ***Client Secret***.
-10. Click the circle button to initiate the OAuth2 flow.
-11. In the modal window select **Authorize**.
-12. Click **Create** to save your new credentials.
+Once you've created the application, select it from the applications list to view the **Application Details**. Copy the **Client ID** and **Client Secret** and add them to n8n. Once you've added both, select the **Connect my account** button to initiate the OAuth2 flow and authorization process.
+
+/// note | Access token permissions
+Access tokens are tied to a Formstack user and follow Formstack (in-app) user permissions.
+///
 

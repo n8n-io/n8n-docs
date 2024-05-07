@@ -179,6 +179,7 @@ nav:
   - Using n8n:
       - Welcome: index.md
       - Getting started:
+          - Learning path: learning-path.md
           - Choose your n8n: choose-n8n.md
           - Try it out:
               - try-it-out/index.md
@@ -770,6 +771,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai.md
@@ -898,6 +900,7 @@ nav:
         - integrations/builtin/credentials/gotowebinar.md
         - integrations/builtin/credentials/grafana.md
         - integrations/builtin/credentials/grist.md
+        - integrations/builtin/credentials/groq.md
         - integrations/builtin/credentials/gumroad.md
         - integrations/builtin/credentials/halopsa.md
         - integrations/builtin/credentials/harvest.md
@@ -1146,6 +1149,7 @@ nav:
     - Configuration: 
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - AI: hosting/configuration/environment-variables/ai.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md

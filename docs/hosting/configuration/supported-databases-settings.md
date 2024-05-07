@@ -20,7 +20,7 @@ To use PostgresDB as the database, you can provide the following environment var
  - `DB_POSTGRESDB_DATABASE` (default: 'n8n')
  - `DB_POSTGRESDB_HOST` (default: 'localhost')
  - `DB_POSTGRESDB_PORT` (default: 5432)
- - `DB_POSTGRESDB_USER` (default: 'root')
+ - `DB_POSTGRESDB_USER` (default: 'postgres')
  - `DB_POSTGRESDB_PASSWORD` (default: empty)
  - `DB_POSTGRESDB_SCHEMA` (default: 'public')
  - `DB_POSTGRESDB_SSL_CA` (default: undefined): Path to the server's CA certificate used to validate the connection (opportunistic encryption isn't supported)

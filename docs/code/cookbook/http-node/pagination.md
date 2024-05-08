@@ -40,7 +40,7 @@ If the API you're using allows you to target a particular page by number:
 
 ## Navigate pagination through body parameters
 
-If the API you're using allows you to paginate throught the body parameters:
+If the API you're using allows you to paginate through the body parameters:
 
 1. Set the HTTP Request Method to **POST**
 1. Set **Pagination Mode** to **Update a Parameter in Each Request**.

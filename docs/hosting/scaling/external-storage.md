@@ -75,6 +75,4 @@ n8n continues to read older binary data stored in the filesystem from the filesy
 
 If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
 
-/// note | Binary data pruning
-Binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. This may change in future.
-///
+--8<-- "_snippets/binary-data-pruning.md"

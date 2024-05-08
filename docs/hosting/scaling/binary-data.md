@@ -14,7 +14,7 @@ When handling binary data, n8n keeps the data in memory by default. This can cau
 
 To avoid this, change the `N8N_DEFAULT_BINARY_DATA_MODE` [environment variable](/hosting/configuration/environment-variables/binary-data) to `filesystem`. This causes n8n to save data to disk, instead of using memory.
 
-If you're using queue mode, keep this to `default`. n8n doesn't support filesystem mode with queue mode. Queue mode typically involves a distributed setup across multiple machines, each with its own storage. And a worker won't be able to access binary data from another worker.
+If you're using queue mode, keep this to `default`. n8n doesn't support filesystem mode with queue mode.
 
 ## Binary data pruning
 

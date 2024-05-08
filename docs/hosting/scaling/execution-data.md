@@ -4,7 +4,7 @@ contentType: howto
 
 # Execution data
 
-Depending on your executions settings and volume, your n8n database can quickly grow in size and eventually run out of storage.
+Depending on your executions settings and volume, your n8n database can grow in size and run out of storage.
 
 To avoid this, n8n recommends that you don't save unnecessary data, and enable pruning of old executions data.
 
@@ -57,7 +57,7 @@ n8n:
 
 ## Enable data pruning
 
-You can enable data pruning to automatically delete finished executions after a given time period. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
+You can enable data pruning to automatically delete finished executions after a given time. If you don't set `EXECUTIONS_DATA_MAX_AGE`, 336 hours (14 days) is the default.
 
 You can choose to prune finished executions data before the time set in `EXECUTIONS_DATA_MAX_AGE`, using `EXECUTIONS_DATA_PRUNE_MAX_COUNT`. This sets a maximum number of executions to store in the database. Once you reach the limit, n8n starts to delete the oldest execution records. This can help with database performance issues, especially if you use SQLite. The database size can still exceed the limit you set: old executions that haven't finished running don't get deleted, even if they would otherwise be subject to deletion.
 

@@ -45,7 +45,7 @@ If the API you're using allows you to paginate through the body parameters:
 1. Set the HTTP Request Method to **POST**
 1. Set **Pagination Mode** to **Update a Parameter in Each Request**.
 1. Select **Body** in the **Type** parameter.
-1. Enter the **Name** of the body parameter. This depends on the API you are using. `page` is a common key name.
+1. Enter the **Name** of the body parameter. This depends on the API you're using. `page` is a common key name.
 1. Hover over **Value** and toggle **Expression** on.
 1. Enter `{{ $pageCount + 1 }}`
 
@@ -53,7 +53,7 @@ If the API you're using allows you to paginate through the body parameters:
 
 If the API you're using supports choosing the page size in the query:
 
-1. Select **Send Query Parameters** in node parameters, not in the option settings.
+1. Select **Send Query Parameters** in main node parameters (this is the parameters you see when you first open the node, not the settings within options).
 1. Enter the **Name** of the query parameter. This depends on your API. For example, a lot of APIs use a query parameter named `limit` to set page size. So **Name** would be `limit`.
 1. In **Value**, enter your page size.
 

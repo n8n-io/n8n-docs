@@ -1190,8 +1190,8 @@ nav:
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-      - Execution data: hosting/scaling/execution-data.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Execution data: hosting/scaling/execution-data.md
       - Binary data filesystem mode: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md
       - Memory-related errors: hosting/scaling/memory-errors.md

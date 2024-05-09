@@ -1193,9 +1193,9 @@ nav:
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-      - Execution data: hosting/scaling/execution-data.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
-      - Binary data filesystem mode: hosting/scaling/binary-data.md
+      - Execution data: hosting/scaling/execution-data.md
+      - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md
       - Memory-related errors: hosting/scaling/memory-errors.md
     - Architecture:
@@ -1259,6 +1259,9 @@ nav:
           - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
       - Examples and concepts:
           - Introduction: advanced-ai/examples/introduction.md
+          - What is a chain?: advanced-ai/examples/understand-chains.md
+          - What is an agent?: advanced-ai/examples/understand-agents.md
+          - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
           - What is a tool?: advanced-ai/examples/understand-tools.md
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md

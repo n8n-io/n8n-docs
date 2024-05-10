@@ -22,6 +22,17 @@ Refer to the [API authentication](/api/authentication/) documentation for guidan
 
 Refer to the [n8n node on the website](https://n8n.io/integrations/n8n/) for a list of examples.
 
+### SSL
+
+Currently, this node don't have support to SSL, if your server have a SSL connection it can be used a combination of the [HTTP Request node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest) with the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code).
+The HTTP Request node have Options to ignore SSL Issues or input the SSL credentials.
+At the Code node, this python code retrives the json:
+```
+# example for retrive the "Workflow Get Many" endpoint data to json
+data_list = _input.item.json["data"]
+return data_list
+```
+
 ## Operations
 
 * Audit

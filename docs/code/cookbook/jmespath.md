@@ -6,12 +6,12 @@ contentType: howto
 
 # Query JSON with JMESPath
 
-[JMESPath](https://jmespath.org/){:target=_blank .external-link} is a query language for JSON, allowing you to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html){:target=_blank .external-link}.
+[JMESPath](https://jmespath.org/){:target=_blank .external-link} is a query language for JSON that you can use to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html){:target=_blank .external-link}.
 
 
 ## The `jmespath()` method
 
-n8n provides a custom method, `jmespath()`. It allows you to perform a search on a JSON object using the JMESPath query language.
+n8n provides a custom method, `jmespath()`. Use this method to perform a search on a JSON object using the JMESPath query language.
 
 The basic syntax is: 
 
@@ -53,7 +53,7 @@ When trying out these examples, you need to set the Code node **Mode** to **Run 
 
 From the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections){:target=_blank .external-link}:
 
-> Projections are one of the key features of JMESPath. It allows you to apply an expression to a collection of elements. JMESPath supports five kinds of projections:
+> Projections are one of the key features of JMESPath. Use it to apply an expression to a collection of elements. JMESPath supports five kinds of projections:
 > 
 > * List Projections
 > * Slice Projections
@@ -236,7 +236,7 @@ Get a list of the dogs' ages using [object projections](https://jmespath.org/tut
 
 ### Select multiple elements and create a new list or object
 
-[Multiselect](https://jmespath.org/tutorial.html#multiselect){:target=_blank .external-link} allows you to select elements from a JSON object and combine them into a new list or object.
+Use [Multiselect](https://jmespath.org/tutorial.html#multiselect){:target=_blank .external-link} to select elements from a JSON object and combine them into a new list or object.
 
 Given this JSON from a webhook node:
 

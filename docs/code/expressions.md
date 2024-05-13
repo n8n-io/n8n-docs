@@ -6,7 +6,7 @@ contentType: howto
 
 --8<-- "_snippets/code/tournament-notes.md"
 
-Expressions allow you to set node parameters dynamically based on data from:
+Use expressions to set node parameters dynamically based on data from:
 
 - Previous nodes
 - The workflow

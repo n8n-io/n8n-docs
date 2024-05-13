@@ -75,3 +75,14 @@ Available options depend on the chat mode.
 ## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Set the chat response manually
+
+You need to manually set the chat response when you don't want to directly send the output of an Agent or Chain node to the user. Instead, you want to take the output of an Agent or Chain node and modify it or do something else with it before sending it back to the user.
+
+In a basic workflow, the Agent and Chain nodes output a parameter named either `output` or `text`, and the Chat Trigger sends the value of this parameter to the user as the chat response. 
+
+If you need to manually create the response sent to the user, you must create a parameter named either `text` or `output`. If you use a different parameter name, the Chat Trigger sends the entire object as its response, not just the value.
+
+
+

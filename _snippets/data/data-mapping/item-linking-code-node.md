@@ -1,11 +1,11 @@
-n8n's item linking allows you to access data from items that precede the current item. It also has implications when using the Code node. Most nodes link every output item to an input item. This creates a chain of items that you can work back along to access previous items. For a deeper conceptual overview of this topic, refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts). This document focuses on practical usage examples.
+Use n8n's item linking to access data from items that precede the current item. It also has implications when using the Code node. Most nodes link every output item to an input item. This creates a chain of items that you can work back along to access previous items. For a deeper conceptual overview of this topic, refer to [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts). This document focuses on practical usage examples.
 
 When using the Code node, there are some scenarios where you need to manually supply item linking information if you want to be able to use `$("<node-name>").item` later in the workflow. All these scenarios only apply if you have more than one incoming item. n8n automatically handles item linking for single items.
 
 These scenarios are when you:
 
 * Add new items: the new items aren't linked to any input.
-* Return completely new items.
+* Return new items.
 * Want to manually control the item linking.
 
 [n8n's automatic item linking](/data/data-mapping/data-item-linking/item-linking-concepts/) handles the other scenarios.

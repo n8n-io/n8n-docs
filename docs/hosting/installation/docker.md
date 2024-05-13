@@ -70,7 +70,7 @@ docker run -it --rm \
  docker.n8n.io/n8nio/n8n
 ```
 
-A complete `docker-compose` file for Postgres can be found [here](https://github.com/n8n-io/n8n/blob/master/docker/compose/withPostgres/).
+A complete `docker-compose` file for Postgres can be found [here](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres).
 
 ## Setting timezone
 

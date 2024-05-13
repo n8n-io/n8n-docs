@@ -9,7 +9,7 @@ contentType: howto
 The API playground isn't available on Cloud. It's available for all self-hosted pricing tiers.
 ///
 
-The n8n API comes with a built-in Swagger UI playground in self-hosted versions. This provides interactive documentation, allowing you to try out requests. The path to access the playground depends on your hosting.
+The n8n API comes with a built-in Swagger UI playground in self-hosted versions. This provides interactive documentation, where you can try out requests. The path to access the playground depends on your hosting.
 
 n8n constructs the path from values set in your environment variables:
 

@@ -22,3 +22,5 @@ To enable enterprise features, you need to add your enterprise license key. You 
 | `N8N_LICENSE_AUTO_RENEW_ENABLED` | Boolean | `true` | Enables (true) or disables (false) autorenewal for licenses. |
 | `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | Time in seconds before expiry a license should automatically renew. |
 | `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |
+| `HTTP_PROXY_LICENSE_SERVER` | String | `http://use:pass@proxy:port`| Proxy server URL for HTTP requests to retrieve license. |
+| `HTTPS_PROXY_LICENSE_SERVER` | String | `https://use:pass@proxy:port` | Proxy server URL for HTTPS requests to retrieve license. |

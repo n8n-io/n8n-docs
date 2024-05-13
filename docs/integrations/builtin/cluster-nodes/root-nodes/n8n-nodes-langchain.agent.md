@@ -17,7 +17,7 @@ For usage examples and templates to help you get started, refer to n8n's [Agent 
 You must connect at least one tool sub-node.
 ///
 
-n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 
+n8n provides several agents. The tool agent is the default. n8n recommends using this for most use cases: it will handle most scenarios and provides the best experience when working with [tools](/advanced-ai/examples/understand-tools/). If your preferred AI model doesn't support tools, the conversational agent is a good general option.
 
 ## Conversational Agent
 
@@ -172,11 +172,13 @@ You can view prompt examples in the node.
 
 ## Tools Agent 
 
-Use the Tools Agent node to use [Langchain's tool calling](https://js.langchain.com/docs/modules/agents/agent_types/tool_calling){:target=_blank .external-link} interface. These are models that detect when a function should be called and respond with the inputs that should be passed to the function. Additionally, this agent has a improved output parsing capabilities since the parser will be passed as a formatting tool.
+This agent has an enhanced ability to work with tools, and can ensure a standard output format.
+
+The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/modules/agents/agent_types/tool_calling){:target=_blank .external-link} interface This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser [TODO: where does it pass it to? The model?] as a formatting tool.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
-Currently only the following chat models are supported:
+This agent supports the following chat models:
 
 * [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 * [Groq Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq/)
@@ -190,6 +192,7 @@ Currently only the following chat models are supported:
 The input from the chat. This is the user's query, also known as the prompt.
 
 ### Options
+
 #### System Message 
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"

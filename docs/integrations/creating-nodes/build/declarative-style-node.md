@@ -109,7 +109,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 displayName: 'NASA Pics',
 name: 'NasaPics',
 icon: 'file:nasapics.svg',
-group: ['transform'],
+group: [],
 version: 1,
 subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 description: 'Get data from NASAs API',
@@ -446,7 +446,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 	"devDependencies": {
 		// don't change
 	},
-	"dependencies": {
+	"peerDependencies": {
 		// don't change
 	}
 }

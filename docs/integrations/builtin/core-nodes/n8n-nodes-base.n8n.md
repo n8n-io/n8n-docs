@@ -22,6 +22,11 @@ Refer to the [API authentication](/api/authentication/) documentation for guidan
 
 Refer to the [n8n node on the website](https://n8n.io/integrations/n8n/) for a list of examples.
 
+### SSL
+
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to call the [n8n API](/api/).
+The HTTP Request node has options to [provide the SSL certificate](/integrations/builtin/credentials/httprequest/#provide-an-ssl-certificate).
+
 ## Operations
 
 * Audit

@@ -109,7 +109,7 @@ All nodes need some basic parameters, such as their display name, icon, and the 
 displayName: 'NASA Pics',
 name: 'NasaPics',
 icon: 'file:nasapics.svg',
-group: [],
+group: ['transform'],
 version: 1,
 subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 description: 'Get data from NASAs API',

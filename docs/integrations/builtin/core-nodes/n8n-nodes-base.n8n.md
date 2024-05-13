@@ -24,14 +24,8 @@ Refer to the [n8n node on the website](https://n8n.io/integrations/n8n/) for a l
 
 ### SSL
 
-Currently, this node don't have support to SSL, if your server have a SSL connection it can be used a combination of the [HTTP Request node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest) with the [Code node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code).
-The HTTP Request node have Options to ignore SSL Issues or input the SSL credentials.
-At the Code node, this python code retrives the json:
-```
-# example for retrive the "Workflow Get Many" endpoint data to json
-data_list = _input.item.json["data"]
-return data_list
-```
+This node doesn't support SSL. If your server requires an SSL connection,use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to call the [n8n API](/api/).
+The HTTP Request node has options to [provide the SSL certificate](/integrations/builtin/credentials/httprequest/#provide-an-ssl-certificate).
 
 ## Operations
 

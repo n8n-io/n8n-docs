@@ -80,9 +80,7 @@ To configure this credential, you'll need:
 
 - A **Webhook URL**: Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link} to create a webhook. Copy the **Webhook URL** that gets generated and add this to your n8n credential.
 
-## FAQs
-
-### Which method should I use?
+## How to choose an authentication method
 
 The simplest installation is a **webhook**. You create and add webhooks to a single channel on a Discord server. Webhooks can post messages to a channel. They don't require a bot user or authentication. But they can't listen or respond to user requests or commands. If you need a straightforward way to send messaged to a channel without the need for interaction or feedback, use a webhook.
 

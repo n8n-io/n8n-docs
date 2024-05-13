@@ -12,12 +12,12 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
- - Host an instance of [Discourse](https://discourse.org/)
- - Create an account on your hosted instance and make sure that you are an admin
+- Host an instance of [Discourse](https://discourse.org/)
+- Create an account on your hosted instance and make sure that you are an admin
 
- ## Supported authentication methods
+## Supported authentication methods
 
- - API key
+- API key
 
 ## Related resources
 

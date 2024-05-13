@@ -29,4 +29,4 @@ To configure this credential, you'll need:
 
 - An **Email Address** registered with AgileCRM
 - A REST **API Key**: Access your Agile CRM API key through **Admin Settings > Developers & API >** [**REST API key**](https://github.com/agilecrm/rest-api?tab=readme-ov-file#api-key){:target=_blank .external-link}.
-- An Agile CRM **Subdomain** (for instance, n8n)
+- An Agile CRM **Subdomain** (for example, `n8n`)

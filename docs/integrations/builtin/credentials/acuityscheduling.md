@@ -16,14 +16,14 @@ Create an [Acuity Scheduling](https://acuityscheduling.com/){:target=_blank .ext
 
 ## Supported authentication methods
 
-- API 
+- API key
 - OAuth2
 
 ## Related resources
 
 Refer to [Acuity's API documentation](https://developers.acuityscheduling.com/reference/quick-start){:target=_blank .external-link} for more information about working with the service.
 
-## Using API
+## Using API key
 
 To configure this credential, you'll need:
 
@@ -34,8 +34,6 @@ Refer to the [Acuity API Quick Start authentication instructions](https://develo
 
 ## Using OAuth2
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
-///
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
 Should you need to set this up from scratch, complete the [Acuity OAuth2 Account Registration page](https://acuityscheduling.com/oauth2/register){:target=_blank .external-link}. Use the **Client ID** and **Client Secret** provided from that registration.

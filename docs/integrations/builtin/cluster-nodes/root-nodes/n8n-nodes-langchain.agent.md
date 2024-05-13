@@ -69,6 +69,10 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/max-iterations.md"
 
+#### Return Intermediate Steps
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
+
 ## OpenAI Functions Agent 
 
 Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/gpt/function-calling){:target=_blank .external-link}. These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
@@ -125,6 +129,10 @@ The final part of the system message. Sent before the user prompt.
 
 The final part of the message. Sent before the user prompt.
 
+#### Return Intermediate Steps
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
+
 ## SQL Agent 
 
 The SQL Agent uses a SQL database as a data source. The agent builds a SQL query based on the natural language query in the prompt.
@@ -161,6 +169,38 @@ Use the options to refine the agent's behavior.
 * Top K: number of database results the agent should keep in its context.
 
 You can view prompt examples in the node.
+
+## Tools Agent 
+
+Use the Tools Agent node to use [Langchain's tool calling](https://js.langchain.com/docs/modules/agents/agent_types/tool_calling){:target=_blank .external-link} interface. These are models that detect when a function should be called and respond with the inputs that should be passed to the function. Additionally, this agent has a improved output parsing capabilities since the parser will be passed as a formatting tool.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
+
+Currently only the following chat models are supported:
+
+* [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
+* [Groq Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq/)
+* [Mistral Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud/)
+* [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
+
+### Parameters
+
+#### Text
+
+The input from the chat. This is the user's query, also known as the prompt.
+
+### Options
+#### System Message 
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"
+
+#### Max Iterations
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/max-iterations.md"
+
+#### Return Intermediate Steps
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
 ## Related resources
 

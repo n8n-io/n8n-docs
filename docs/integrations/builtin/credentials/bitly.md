@@ -32,9 +32,7 @@ To configure this credential, you'll need:
 
 ## Using OAuth2
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your Bitly account to n8n.
-///
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link} for more information.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the [Bitly API Authentication documentation](https://dev.bitly.com/docs/getting-started/authentication/){:target=_blank .external-link} for more information.
 

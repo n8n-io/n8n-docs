@@ -29,6 +29,6 @@ To configure this credential, you'll need:
 - An **API Key**: Refer to the [Cal API Quick Start documentation](https://cal.com/docs/enterprise-features/api/quick-start){:target=_blank .external-link} for information on how to generate a new API key.
 
 /// note | Hosted API
-Cal previously supported [a hosted API](https://cal.com/docs/enterprise-features/api/quick-start/hosted-api-through-cal-com){:target=_blank .external-link}, but they have since discontinued that service. You do not need to make any edits to the **Host** field within the credential.
+Cal previously supported [a hosted API](https://cal.com/docs/enterprise-features/api/quick-start/hosted-api-through-cal-com){:target=_blank .external-link}, but they have since discontinued that service. You don't need to make any edits to the **Host** field within the credential.
 ///
 

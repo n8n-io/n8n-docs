@@ -29,7 +29,7 @@ Refer to [Asana's Developer Guides](https://developers.asana.com/docs/overview){
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Asana OAuth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up OAuth.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Asana OAuth register an application documentation](https://developers.asana.com/docs/oauth#register-an-application){:target=_blank .external-link} to create an app and set up OAuth.
 
 Use the following adjustments:
 

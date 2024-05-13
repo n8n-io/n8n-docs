@@ -33,9 +33,7 @@ To configure this credential, you'll need:
 
 ## Using OAuth2
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name, select the **App Access Type**, and select the **Connect my account** button in the OAuth credential to connect your Dropbox account to n8n.
-///
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Dropbox Implementing OAuth documentation](https://developers.dropbox.com/oauth-guide#implementing-oauth){:target=_blank .external-link} to set up OAuth.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Dropbox Implementing OAuth documentation](https://developers.dropbox.com/oauth-guide#implementing-oauth){:target=_blank .external-link} to set up OAuth.
 

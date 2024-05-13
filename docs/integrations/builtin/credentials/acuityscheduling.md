@@ -36,4 +36,4 @@ Refer to the [Acuity API Quick Start authentication instructions](https://develo
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to set this up from scratch, complete the [Acuity OAuth2 Account Registration page](https://acuityscheduling.com/oauth2/register){:target=_blank .external-link}. Use the **Client ID** and **Client Secret** provided from that registration.
+If you need to set this up from scratch, complete the [Acuity OAuth2 Account Registration page](https://acuityscheduling.com/oauth2/register){:target=_blank .external-link}. Use the **Client ID** and **Client Secret** provided from that registration.

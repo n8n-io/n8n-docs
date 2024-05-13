@@ -38,9 +38,7 @@ To configure this credential, you'll need:
 
 Refer to the [Customer.io Finding and managing your API credentials documentation](https://customer.io/docs/accounts-and-workspaces/managing-credentials/){:target=_blank .external-link} for instructions on creating both Tracking API and App API keys.
 
-## FAQs
-
-### Why do I need a Tracking API Key and an App API Key?
+## Why you need a Tracking API Key and an App API Key
 
 Customer.io has two different API endpoints and generates and stores the keys for each slightly differently:
 

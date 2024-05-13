@@ -34,4 +34,4 @@ To configure this credential, you'll need:
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Drift Authentication and Scopes documentation](https://devdocs.drift.com/docs/authentication-and-scopes){:target=_blank .external-link} to set up OAuth for your app.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Drift Authentication and Scopes documentation](https://devdocs.drift.com/docs/authentication-and-scopes){:target=_blank .external-link} to set up OAuth for your app.

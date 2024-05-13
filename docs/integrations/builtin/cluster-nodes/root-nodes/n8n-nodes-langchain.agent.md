@@ -174,7 +174,7 @@ You can view prompt examples in the node.
 
 This agent has an enhanced ability to work with tools, and can ensure a standard output format.
 
-The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/modules/agents/agent_types/tool_calling){:target=_blank .external-link} interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser [TODO: where does it pass it to? The model?] as a formatting tool.
+The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/modules/agents/agent_types/tool_calling){:target=_blank .external-link} interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 

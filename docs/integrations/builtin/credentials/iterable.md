@@ -6,23 +6,28 @@ contentType: integration
 
 # Iterable credentials
 
-You can use these credentials to authenticate the following nodes with Iterable.
+You can use these credentials to authenticate the following nodes:
 
 - [Iterable](/integrations/builtin/app-nodes/n8n-nodes-base.iterable/)
 
 ## Prerequisites
 
-Create an [Iterable](https://iterable.com) account.
+Create an [Iterable](https://iterable.com){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Access the [Iterable dashboard](https://app.iterable.com/).
-2. Click on ***Integrations*** and select 'API keys'.
-3. Click on the ***NEW API KEY*** button.
-4. Enter a name in the ***Name*** field.
-5. Click on the ***Create*** button.
-6. Click on the ***Copy*** button to copy the API key.
-7. Use this ***API key*** with your Iterable node credentials in n8n.
+- API key
 
-![Getting Iterable credentials](/_images/integrations/builtin/credentials/iterable/using-api-key.gif)
+## Related resources
+
+Refer to Iterable's API documentation for more information about the service:
+
+- [US-based Iterable projects](https://api.iterable.com/api/docs){:target=_blank .external-link}
+- [European-based Iterable projects](https://api.eu.iterable.com/api/docs){:target=_blank .external-link}
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to [Iterable's Creating API keys documentation](https://support.iterable.com/hc/en-us/articles/360043464871-API-Keys#creating-api-keys){:target=_blank .external-link} for instructions on creating API keys.
 

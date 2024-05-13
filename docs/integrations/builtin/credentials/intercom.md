@@ -6,25 +6,26 @@ contentType: integration
 
 # Intercom credentials
 
-You can use these credentials to authenticate the following nodes with Intercom.
+You can use these credentials to authenticate the following nodes:
 
 - [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom/)
 
 
 ## Prerequisites
 
-Create a [Intercom](https://www.intercom.com/) account.
+- Create an [Intercom](https://www.intercom.com/) developer account.
+- [Create an app](https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/){:target=_blank .external-link} in your developer hub.
 
-<!-- ## Using OAuth
+## Supported authentication methods
 
-1. Click "Use OAuth" in Authentication page.
-2. Fill out required information.
-3. Use Client Secret and Client ID in your Intercom node credentials in n8n.
-4. Enter n8n provided redirect URL in configuration. Redirect URL Explanation [here](/). -->
+- API key
 
-## Using Access Token
+## Related resources
 
-1. Create an app in your workspace.
-2. Click on Configure, then Authentication within the Developer hub.
-3. Use the Access Token with the Intercom node credentials in n8n.
+Refer to [Intercom's API documentation](https://developers.intercom.com/docs/references/introduction/){:target=_blank .external-link} for more information about the service.
 
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Intercom automatically generates an **Access Token** when you [create an app](https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/){:target=_blank .external-link}. Use this **Access Token** as your n8n **API Key**. Refer to [How to get your Access Token](https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/#how-to-get-your-access-token){:target=_blank .external-link} for more detailed instructions. 

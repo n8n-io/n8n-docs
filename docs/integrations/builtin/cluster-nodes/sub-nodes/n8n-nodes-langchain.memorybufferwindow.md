@@ -10,7 +10,7 @@ Use the Window Buffer Memory node to persist chat history in your workflow.
 On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
 
 /// warning | Don't use this node if running n8n in queue mode
-If your n8n instance uses [queue mode](/hosting/scaling/queue-mode/), this node doesn't work in a production (active) workflow. This is because n8n can't guarantee that every call to Window Buffer Memory [TODO: or every instance of Window Buffer Memory?] will go to the same worker.
+If your n8n instance uses [queue mode](/hosting/scaling/queue-mode/), this node doesn't work in a production (active) workflow. This is because n8n can't guarantee that every call to Window Buffer Memory will go to the same worker.
 ///
 
 /// note | Examples and templates

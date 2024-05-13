@@ -29,7 +29,7 @@ HubSpot deprecated the API key authentication method. The option still appears i
 
 Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks){:target=_blank .external-link} for more information about that service.
 
-## Using API App token
+## Using API app token
 
 To configure this credential, you'll need:
 

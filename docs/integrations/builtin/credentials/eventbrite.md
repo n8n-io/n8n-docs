@@ -31,8 +31,6 @@ To configure this credential, you'll need:
 
 ## Using OAuth2
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth2 credential to connect your Eventbrite account to n8n.
-///
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Eventbrite API authentication For App Partners documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/2.-(for-app-partners)-authorize-your-users){:target=_blank .external-link} to set up OAuth.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Eventbrite API authentication For App Partners documentation](https://www.eventbrite.com/platform/api#/introduction/authentication/2.-(for-app-partners)-authorize-your-users){:target=_blank .external-link} to set up OAuth.

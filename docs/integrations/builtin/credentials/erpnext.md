@@ -41,9 +41,7 @@ To configure this credential, you'll need:
 
 If you are an ERPNext System Manager, you can also generate API keys and secrets for other users. Refer to the [ERPNext Adding Users documentation](https://docs.erpnext.com/docs/user/manual/en/adding-users){:target=_blank .external-link} for more information.
 
-## FAQs
-
-### How do I find the subdomain of an ERPNext cloud-hosted account?
+## How to find the subdomain of an ERPNext cloud-hosted account
 
 You can find your ERPNext subdomain by reviewing the address bar of your browser. The string between `https://` and either `.erpnext.com` or `frappe.cloud` is your subdomain.
 

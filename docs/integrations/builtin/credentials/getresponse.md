@@ -43,9 +43,8 @@ When you register your application, copy the **OAuth Redirect URL** from n8n and
 The Redirect URL should be a URL in your domain, for example: `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept a localhost callback URL. Refer to the [FAQs](#how-do-i-configure-oauth2-credentials-for-a-local-environment) to configure the credentials for the local environment.
 ///
 
-## FAQs
+## Configure OAuth2 credentials for a local environment
 
-### How do I configure OAuth2 credentials for a local environment?
 GetResponse doesn't accept the localhost callback URL. Follow the steps below to configure the OAuth credentials for a local environment:
 1. Use [ngrok](https://ngrok.com/){:target=_blank .external-link} to expose the local server running on port `5678` to the internet. In your terminal, run the following command:
 ```sh

@@ -38,8 +38,6 @@ To configure this credential, you'll need:
 
 ## Using OAuth2
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and select the **Connect my account** button in the OAuth credential to connect your _Name_ account to n8n.
-///
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-Should you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to register a new [OAuth app](https://docs.github.com/en/apps/oauth-apps){:target=_blank .external-link}. Refer to that documentation for detailed instructions on creating a new app, and refer to the [GitHub Authorizing OAuth apps documentation](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps){:target=_blank .external-link} for more information on the authorization process.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to register a new [OAuth app](https://docs.github.com/en/apps/oauth-apps){:target=_blank .external-link}. Refer to that documentation for detailed instructions on creating a new app, and refer to the [GitHub Authorizing OAuth apps documentation](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps){:target=_blank .external-link} for more information on the authorization process.

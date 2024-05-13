@@ -1,4 +1,4 @@
-The Code node allows you to write custom JavaScript or Python and run it as a step in your workflow.
+Use the Code node to write custom JavaScript or Python and run it as a step in your workflow.
 
 /// note | Coding in n8n
 This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/) section. It includes:

@@ -20,7 +20,7 @@ If you want to load data into your sub-workflow to use while building it:
 1. In the sub-workflow [settings](/workflows/settings/), set **Save successful production executions** to **Save**. 
 1. Skip ahead to setting up the parent workflow, and run it.
 1. Follow the steps to [load data from previous executions](/workflows/executions/debug/).
-You'll now have example data pinned in the trigger node, which allows you to work with real data when configuring the rest of the workflow.
+You can now pin example data in the trigger node, enabling you to work with real data while configuring the rest of the workflow.
 ///
 
 

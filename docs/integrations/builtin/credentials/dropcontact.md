@@ -6,21 +6,25 @@ contentType: integration
 
 # Dropcontact credentials
 
-You can use these credentials to authenticate the following nodes with Dropcontact.
+You can use these credentials to authenticate the following nodes:
 
 - [Dropcontact](/integrations/builtin/app-nodes/n8n-nodes-base.dropcontact/)
 
 ## Prerequisites
 
-Create an account on a [Dropcontact](https://www.dropcontact.com/) app.
+Create a developer account in [Dropcontact](https://app.dropcontact.com/signup){:target=_blank .external-link}.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your Dropcontact [dashboard](https://app.dropcontact.io/app/).
-2. Select ***API*** from the left sidebar. 
-3. Click on the ***Copy*** button to copy the API key.
-4. Paste the API key in the ***API Key*** field in the 'Credential for Dropcontact API' fields in n8n.
-5. Click on the ***Save*** button to create your credentials.
+- API key
 
-![Getting Dropcontact API credentials](/_images/integrations/builtin/credentials/dropcontact/apikeydropcontact.png)
+## Related resources
+
+Refer to [Dropcontact's API documentation](https://developer.dropcontact.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To view your API key in Dropcontact, go to [**API**](https://app.dropcontact.com/api){:target=_blank .external-link}. Refer to the [Dropcontact API key documentation](https://support.dropcontact.com/article/237-how-to-use-the-dropcontact-api-key){:target=_blank .external-link} for more information.
 

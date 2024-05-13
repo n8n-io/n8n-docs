@@ -6,7 +6,7 @@ contentType: integration
 
 # ConvertKit credentials
 
-You can use these credentials to authenticate the following nodes with ConvertKit.
+You can use these credentials to authenticate the following nodes:
 
 - [ConvertKit](/integrations/builtin/app-nodes/n8n-nodes-base.convertkit/)
 - [ConvertKit Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger/)
@@ -15,13 +15,16 @@ You can use these credentials to authenticate the following nodes with ConvertKi
 
 Create a [ConvertKit](https://convertkit.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your ConvertKit dashboard.
-2. Click on the user icon in the top right and select ***Account settings***.
-3. Click on ***Show*** in the ***API Secret*** section to reveal the access token.
-4. Use the access token in the ***API Secret*** section with your ConvertKit API credentials in n8n.
-5. Click on the ***Save*** button to save your credentials.
+- API key
 
-![Getting ConvertKit access token](/_images/integrations/builtin/credentials/convertkit/using-access-token.gif)
+## Related resources
 
+Refer to [ConvertKit's API documentation](https://developers.convertkit.com/#overview){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Secret**: Access your ConvertKit API key in [**Account Settings > Advanced**](https://app.convertkit.com/account_settings/advanced_settings){:target=_blank .external-link}. Add this key as the **API Secret** in n8n.

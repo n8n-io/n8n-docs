@@ -6,24 +6,25 @@ contentType: integration
 
 # Bannerbear credentials
 
-You can use these credentials to authenticate the following nodes with Bannerbear.
+You can use these credentials to authenticate the following nodes:
 
 - [Bannerbear](/integrations/builtin/app-nodes/n8n-nodes-base.bannerbear/)
 
-
 ## Prerequisites
 
-Create a [BannerBear](https://www.BannerBear.com/) account.
+Create a [Bannerbear](https://www.BannerBear.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your BannerBear dashboard.
-2. Click on **Create New Project**.
-3. Enter Project name and save.
-4. Click on Projects tab and enter the newly created project.
-5. Click on **Settings / API Key**.
-6. Use API key in your Bannerbear node credentials in n8n.
+- API key
 
+## Related resources
 
-![Getting Bannerbear credentials](/_images/integrations/builtin/credentials/bannerbear/using-access-token.gif)
+Refer to [Bannerbear's API documentation](https://developers.bannerbear.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- A **Project API Key**: To generate an API key, first create a Bannerbear project. Go to **Settings > API Key** to view the API key. Refer to the [Bannerbear API Authentication documentation](https://developers.bannerbear.com/#authentication){:target=_blank .external-link} for more detailed steps.
 

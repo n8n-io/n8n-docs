@@ -6,7 +6,7 @@ contentType: integration
 
 # Harvest credentials
 
-You can use these credentials to authenticate the following nodes with Harvest.
+You can use these credentials to authenticate the following nodes:
 
 - [Harvest](/integrations/builtin/app-nodes/n8n-nodes-base.harvest/)
 

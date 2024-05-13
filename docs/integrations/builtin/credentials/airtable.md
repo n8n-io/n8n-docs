@@ -17,7 +17,7 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 
 ## Using Access Token
 
-1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
+1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens){:target=_blank .external-link}.
 2. Under the **Personal access tokens** section, click on the **Create new token** button.
 3. Select the following **Scopes**:
     - *data.records:read*
@@ -31,7 +31,7 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 
 ## Using OAuth 2
 
-1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens).
+1. Open your Airtable [Developer Hub](https://airtable.com/create/tokens){:target=_blank .external-link}.
 2. Under the **OAuth integrations** section, click on the **Register new OAuth integration** button.
 3. Provide a name for your OAuth integration.
 4. In the n8n Airtable credentials dialog select the **OAuth 2** connection, copy the **OAuth Redirect URL** and paste it in the **OAuth redirect URL** field in the Airtable Developer Hub.

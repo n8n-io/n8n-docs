@@ -6,30 +6,27 @@ contentType: integration
 
 # Copper credentials
 
-You can use these credentials to authenticate the following nodes with Copper.
+You can use these credentials to authenticate the following nodes:
 
 - [Copper](/integrations/builtin/app-nodes/n8n-nodes-base.copper/)
 - [Copper Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger/)
 
 ## Prerequisites
 
-Create a [Copper](https://www.copper.com/) account.
+Create a [Copper](https://www.copper.com/) account at the **Professional** or **Business** plan level.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Copper dashboard.
-2. Click on the ***Settings*** tab on the left-sidebar.
-3. Click on ***Integrations*** and select ***API Keys***.
-4. Click on the ***GENERATE API KEY*** button.
-5. Copy the displayed API key.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Copper API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Copper API' credentials in n8n.
-8. Enter the email address in the ***Email*** field in the 'Copper API' credentials in n8n.
-9. Click the ***Create*** button to create your credentials in n8n.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/4yV9GI3UF_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Copper's API documentation](https://developer.copper.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Copper Generating an API key documentation](https://support.copper.com/en/articles/8823347-generating-an-api-key){:target=_blank .external-link} for information on generating an API key.
+- An **Email** address: Use the API key creator's email address
 

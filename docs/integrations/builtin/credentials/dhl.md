@@ -6,22 +6,30 @@ contentType: integration
 
 # DHL credentials
 
-You can use these credentials to authenticate the following nodes with DHL.
+You can use these credentials to authenticate the following nodes:
 
 - [DHL](/integrations/builtin/app-nodes/n8n-nodes-base.dhl/)
 
 ## Prerequisites
 
-- Create a [DHL Developer](https://developer.dhl.com/user/register) account.
+- Create a [DHL Developer](https://developer.dhl.com/user/register){:target=_blank .external-link} account.
+- [Create an app](https://support-developer.dhl.com/support/solutions/articles/47001177011-how-to-create-an-app-){:target=_blank .external-link}.
 
-## Using Access Token
+/// note | Recommended API
+DHL offers a [variety of APIs](https://developer.dhl.com/api-catalog){:target=_blank .external-link}. If you're testing, n8n recommends creating an app for the `Shipment Tracking - Unifed` API. Other APIs may [require approval](https://support-developer.dhl.com/support/solutions/articles/47001177010-which-apis-have-the-self-service-api-onboarding-available-){:target=_blank .external-link} for access.
+///
 
-1. Navigate to the apps page of the [DHL Developer](https://developer.dhl.com/user/apps) portal.
-2. Click the ***+ Create App*** button.
-3. Enter a descriptive name in the ***App name*** field.
-4. In the ***Select APIs*** section, search for `Shipment Tracking - Unified` in the ***API's name*** field.
-5. Below ***Add API to app***, click the ***Plus (+)*** button next to the entry for `Shipment Tracking - Unified`.
-6. Click on the ***Add app*** button.
-7. Back on the apps page, click on your newly created app.
-8. Click the ***Show key*** link to reveal your access token. Use the token with your DHL credentials in n8n.
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [DHL's Developer documentation](https://support-developer.dhl.com/support/home){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Once you've created an app, view your app details and **Show key** to view and copy the API key.
 

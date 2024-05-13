@@ -10,18 +10,21 @@ You can use these credentials to authenticate the following nodes with CircleCI.
 
 - [CircleCI](/integrations/builtin/app-nodes/n8n-nodes-base.circleci/)
 
-
 ## Prerequisites
 
 Create a [CircleCI](https://circleci.com/) account. 
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your CircleCI User Settings.
-2. Visit the [Personal API Tokens](https://app.circleci.com/settings/user/tokens) section.
-3. Click on the *Create New Token* button.
-4. Type in a name for your token and click on the *Add API Token* button.
-5. Copy the generated API Token and use it with your CircleCI API node credentials in n8n.
+- Personal API token
 
-![Getting CircleCI credentials](/_images/integrations/builtin/credentials/circleci/using-access-token.gif)
+## Related resources
+
+Refer to [CircleCI's API documentation](https://circleci.com/docs/api/v2/index.html){:target=_blank .external-link} for more information about the service.
+
+## Using personal API token
+
+To configure this credential, you'll need: 
+
+- A **Personal API Token**: Refer to the [CircleCI Creating a Personal API token documentation](https://circleci.com/docs/managing-api-tokens/#creating-a-personal-api-token){:target=_blank .external-link} for instructions on creating your token.
 

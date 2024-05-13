@@ -6,19 +6,25 @@ contentType: integration
 
 # Disqus credentials
 
-You can use these credentials to authenticate the following nodes with Disqus.
+You can use these credentials to authenticate the following nodes:
 
 - [Disqus](/integrations/builtin/app-nodes/n8n-nodes-base.disqus/)
 
 ## Prerequisites
 
-Create a [Disqus](https://www.disqus.com/) account.
+- Create a [Disqus](https://www.disqus.com/){:target=_blank .external-link} account.
+- Register an [API application](https://help.disqus.com/en/articles/1717083-how-to-create-an-api-application){:target=_blank .external-link}.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access the [Disqus Application Registration Page](https://disqus.com/api/applications/register/).
-2. Fill out the application information and click on ***Register my application***.
-3. Click on ***Details*** at the top and use the provided 'API Key' with your Disqus node credentials in n8n.
+- API access token
 
-![Getting Disqus credentials](/_images/integrations/builtin/credentials/disqus/using-access-token.gif)
+## Related resources
 
+Refer to [Disqus's API documentation](https://disqus.com/api/docs/){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An **Access Token**: Once you've registered an API application, copy the **API Key** and add it to n8n as the **Access Token**.

@@ -6,15 +6,26 @@ contentType: integration
 
 # Brevo credentials
 
-You can use these credentials to authenticate the following nodes with Brevo:
+You can use these credentials to authenticate the following nodes:
 
 * [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo/)
 * [Brevo trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/)
 
+## Prerequisites
+
+Create a [Brevo](https://www.brevo.com/){:target=_blank .external-link} developer account.
+
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1){:target=_blank .external-link} for more information about authenticating with the service.
+
 ## API key
 
-Brevo uses API keys for authorization/
+To configure this credential, you'll need:
 
-1. Create a Brevo account.
-2. Create a new API key to use with n8n. Refer to the [Brevo documentation](https://developers.brevo.com/docs){:target=_blank .external-class} for detailed guidance on creating a key.
-3. In n8n's **Brevo account** page, paste your API key into the **API key** field.
+- An **API Key**: Refer to the [Brevo API Quick Start documentation](https://developers.brevo.com/docs/getting-started#quick-start){:target=_blank .external-class} for instructions on creating a new API key.
+

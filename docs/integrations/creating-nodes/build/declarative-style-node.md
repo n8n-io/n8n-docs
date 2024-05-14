@@ -446,7 +446,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 	"devDependencies": {
 		// don't change
 	},
-	"dependencies": {
+	"peerDependencies": {
 		// don't change
 	}
 }

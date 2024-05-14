@@ -8,24 +8,27 @@ contentType: integration
 
 You can use these credentials to authenticate the following nodes:
 
-* [Grist](/integrations/builtin/app-nodes/n8n-nodes-base.grist/).
+* [Grist](/integrations/builtin/app-nodes/n8n-nodes-base.grist/)
 
 ## Prerequisites
 
-Create a [Grist](https://getgrist.com/) account.
+Create a [Grist](https://getgrist.com/){:target=_blank .external-link} account.
 
-## API key
+## Supported authentication methods
 
-From Grist:
+- API key
 
-1. Navigate to your **Profile Settings**.
-2. In the **Api key** section click **Create**.
-3. Copy the generated API key for use in n8n.
+## Related resources
 
-From n8n:
+Refer to [Grist's API documentation](https://support.getgrist.com/api/){:target=_blank .external-link} for more information about the service.
 
-3. Enter the **API Key** obtained above.
-4. Use the dropdown to select if your are using a *Free* or *Paid* plan.
-5. For *Paid* plans, enter your **Custom Subdomain** (for example, `<subdomain>.getgrist.com`).
-6. Click on the ***Create*** button to create the credentials.
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Grist API authentication documentation](https://support.getgrist.com/rest-api/#authentication){:target=_blank .external-link} for instructions on creating an API key.
+- To select your Grist **Plan Type**. Options include:
+    - Free
+    - Paid: If selected, provide your Grist **Custom Subdomain**. This is the portion that comes before `.getgrist.com`. For example, if our full Grist domain was `n8n.getgrist.com`, we'd enter `n8n` here.
+    - Self-Hosted: If selected, provide your Grist **Self-Hosted URL**. This should be the full URL.
 

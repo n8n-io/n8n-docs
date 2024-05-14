@@ -6,7 +6,7 @@ contentType: integration
 
 # FTP credentials
 
-You can use these credentials to authenticate the following nodes with FTP.
+You can use these credentials to authenticate the following nodes:
 
 - [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/)
 
@@ -14,9 +14,15 @@ You can use these credentials to authenticate the following nodes with FTP.
 
 Create an account on an FTP server. 
 
-## Using FTP/SFTP
+## Supported authentication methods
 
-1. Retrieve your login credentials, FTP/SFTP host, and port parameters.
-2. Use the login credentials, FTP/SFTP host, and port parameters with your FTP node credentials in n8n.
-3. Click on the ***Save*** button to save your credentials.
+- FTP account
 
+## Using FTP account
+
+To configure this credential, you'll need:
+
+- The FTP **Host**
+- The FTP **Port**
+- FTP **Username**
+- FTP **Password**

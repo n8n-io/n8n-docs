@@ -12,17 +12,19 @@ You can use these credentials to authenticate the following nodes with Gumroad.
 
 ## Prerequisites
 
-Create a [Gumroad](https://gumroad.com/) account.
+Create a [Gumroad](https://gumroad.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Gumroad dashboard.
-2. Click on your user icon on the top right.
-3. Click on Settings.
-4. Click on the Advanced tab.
-5. Scroll down and fill out the required fields and create a new application..
-6. From here, you have access the ability to generate an access token.
-7. Use provided access token with your Gumroad node credentials in n8n.
+- API access token
 
-![Getting Gumroad credentials](/_images/integrations/builtin/credentials/gumroad/using-access-token.gif)
+## Related resources
+
+Refer to [Gumroad's API documentation](https://app.gumroad.com/api){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An API **Access Token**: Create an application to generate an access token. Refer to the [Gumroad Create an application for the API documentation](https://help.gumroad.com/article/280-create-application-api){:target=_blank .external-link} for detailed instructions on creating a new application and generating an access token.
 

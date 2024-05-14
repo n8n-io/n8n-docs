@@ -6,23 +6,29 @@ contentType: integration
 
 # JotForm credentials
 
-You can use these credentials to authenticate the following nodes with JotForm.
+You can use these credentials to authenticate the following nodes:
 
 - [JotForm Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger/)
 
 ## Prerequisites
 
-Create a [JotForm](https://www.jotform.com/) account.
+Create a [JotForm](https://www.jotform.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your [JotForm account](https://www.jotform.com/myaccount/).
-2. Click on the ***API*** tab on the left.
-3. Click on the ***Create New Key*** button.
-4. Change the Permissions to 'Full Access'.
-5. Use the key in the JotForm credentials in n8n: paste it in the ***API Key*** field.
+- API key
 
-If you have problems retrieving the list of your forms, try to select one of the other options in the ***API Domain*** parameter.
+## Related resources
 
-![Getting JotForm credentials](/_images/integrations/builtin/credentials/jotform/using-access-token.gif)
+Refer to [JotForm's API documentation](https://api.jotform.com/docs/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Get an API key from the [API section](https://www.jotform.com/myaccount/api){:target=_blank .external-link} of **My Account**. Refer to [Jotform API Getting Started](https://api.jotform.com/docs/#gettingstarted) for detailed instructions.
+- The **API Domain**: This determines which base URL is used for the API. The domain selected needs to match the forms you're working with. Options include:
+    - `api.jotform.com`: The default base URL.
+    - `eu-api.jotform.com`: Used by Jotform [EU Safe Forms](https://www.jotform.com/eu-safe-forms/){:target=_blank .external-link}.
+    - `hipaa-api.jotform.com`: Used by JotForm [HIPAA forms](https://www.jotform.com/hipaa/){:target=_blank .external-link}.
 

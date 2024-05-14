@@ -17,7 +17,7 @@ Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} acco
 
 ## Supported authentication methods
 
-- API App token: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
+- App token: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
 - Developer API key: Used with [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node
 - OAuth2: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
 
@@ -29,11 +29,13 @@ HubSpot deprecated the API key authentication method. The option still appears i
 
 Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks){:target=_blank .external-link} for more information about that service.
 
-## Using API app token
+## Using App token
 
 To configure this credential, you'll need:
 
-- An API **APP Token**: To generate an app token, create a private app in HubSpot. Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} for detailed instructions.
+- An **APP Token**: To generate an app token, create a private app in HubSpot. Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} for detailed instructions.
+
+Authenticating the credential can fail if you don't use appropriate scopes. See [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for required scopes for this app.
 
 ## Using Developer API key
 
@@ -45,7 +47,23 @@ To configure this credential, you'll need:
 - A **Developer API Key**: Generated from your Developer Applications dashboard. Refer to [HubSpot Developer API keys](https://legacydocs.hubspot.com/docs/faq/developer-api-keys){:target=_blank .external-link} for more information.
 - An **App ID**: Generated once you create a public app, displayed in the app's **Auth** settings.
 
-Authenticating the credential can fail if you don't use appropriate scopes. See [Recommended scopes for HubSpot Trigger node](#recommended-scopes-for-hubspot-trigger-node) for n8n's suggested scopes for this app.
+Authenticating the credential can fail if you don't use appropriate scopes. See [Required scopes for HubSpot Trigger node](#required-scopes-for-hubspot-trigger-node) for required scopes for this app.
+
+### Required scopes for HubSpot Trigger node
+
+If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node, n8n recommends starting with these scopes:
+
+* `oauth`
+* `crm.objects.companies.read`
+* `crm.objects.contacts.read`
+* `crm.objects.deals.read`
+* `crm.schemas.companies.read`
+* `crm.schemas.contacts.read`
+* `crm.schemas.deals.read`
+
+/// warning | HubSpot old accounts
+Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
+///
 
 ## Using OAuth2
 
@@ -53,9 +71,9 @@ Authenticating the credential can fail if you don't use appropriate scopes. See 
 
 If you need to configure OAuth2 from scratch, you'll need to create a public app. Refer to the instructions in the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app){:target=_blank .external-link}. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/api/working-with-oauth){:target=_blank .external-link}.
 
-Authenticating the credential can fail if you don't use appropriate scopes. See [Recommended scopes for HubSpot node](#recommended-scopes-for-hubspot-node) and/or [Recommended scopes for HubSpot Trigger node](#recommended-scopes-for-hubspot-trigger-node) for suggested scopes for this app.
+Authenticating the credential can fail if you don't use appropriate scopes. See [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for required scopes for this app.
 
-## Recommended scopes for HubSpot node
+## Required scopes for HubSpot node
 
 If you're creating an app for use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node, n8n recommends starting with these scopes:
 
@@ -72,22 +90,6 @@ If you're creating an app for use with the [HubSpot](/integrations/builtin/app-n
 * `crm.schemas.deals.read`
 * `forms`
 * `tickets`
-
-/// warning | HubSpot old accounts
-Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
-///
-
-## Recommended scopes for HubSpot Trigger node
-
-If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node, n8n recommends starting with these scopes:
-
-* `oauth`
-* `crm.objects.companies.read`
-* `crm.objects.contacts.read`
-* `crm.objects.deals.read`
-* `crm.schemas.companies.read`
-* `crm.schemas.contacts.read`
-* `crm.schemas.deals.read`
 
 /// warning | HubSpot old accounts
 Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.

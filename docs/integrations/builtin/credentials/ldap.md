@@ -9,19 +9,38 @@ contentType: integration
 You can use these credentials to authenticate the following nodes:
 
 * [LDAP](/integrations/builtin/core-nodes/n8n-nodes-base.ldap/)
+
 ## Prerequisites
 
-You will need your LDAP server address, Bind DN for the user to authenticate with, and the password for the user.
+Create a server directory using Lightweight Directory Access Protocol (LDAP).
 
-## Using LDAP credentials
-
-1. Enter your LDAP server address
-2. Enter your port
-3. Enter your binding DN, If you are using Active Directory this may look something like `cn=administrator, cn=Users, dc=n8n, dc=io`
-4. Enter the password for the binding user
-
-You can find more information below for specific LDAP providers
+Some common LDAP providers include:
 
 * [Jumpcloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap){:target=_blank .external-link}
 * [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps){:target=_blank .external-link}
 * [Okta](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-connection-settings.htm){:target=_blank .external-link}
+
+## Supported authentication methods
+
+- LDAP server details
+
+## Related resources
+
+Refer to your LDAP provider's own documentation for detailed information.
+
+For general LDAP information, refer to [Basic LDAP concepts](https://ldap.com/basic-ldap-concepts/){:target=_blank .external-link} for a basic overview and [The LDAP Bind Operation](https://ldap.com/the-ldap-bind-operation/){:target=_blank .external-link} for information on how the bind operation and authentication work.
+
+## Using LDAP server details
+
+To configure this credential, you'll need:
+
+- The **LDAP Server Address**: Use the IP address or domain of your LDAP server.
+- The **LDAP Server Port**: Use the number of the port used to connect to the LDAP server.
+- The **Binding DN**: Use the Binding Distinguished Name (Bind DN) for your LDAP server. This is the user account the credential should log in as. If you're using Active Directory, this may look something like `cn=administrator, cn=Users, dc=n8n, dc=io`. Refer to your LDAP provider's documentation for more information on identifying this DN and the related password.
+- The **Binding Password**: Use the password for the **Binding DN** user.
+- Select the **Connection Security**: Options include:
+    - `None`
+    - `TLS`
+    - `STARTTLS`
+- _Optional:_ Enter a numeric value in seconds to set a **Connection Timeout**.
+

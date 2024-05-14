@@ -6,28 +6,27 @@ contentType: integration
 
 # LingvaNex credentials
 
-You can use these credentials to authenticate the following nodes with LingvaNex.
+You can use these credentials to authenticate the following nodes:
 
 - [LingvaNex](/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex/)
 
 ## Prerequisites
 
-Create a [LingvaNex](https://lingvanex.com) account.
+Create a [LingvaNex](https://lingvanex.com){:target=_blank .external-link} account.
 
-## Using API
+## Supported authentication methods
 
-1. Open your LingvaNex [account](https://lingvanex.com/account/) page.
-2. Click on the ***Cloud API*** tab.
-3. Click on ***Payment / Subscription***. Note that you can use the limited Translation API without having to subscribe or add a payment method.
-4. Scroll to the ***Translation API*** section.
-5. Copy the displayed API key.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'LingvaNex API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'LingvaNex API' credentials in n8n.
-8. Click on the ***Create*** button to create your credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/u-gqbI-Ape8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Lingvanex's Cloud API documentation](https://docs.lingvanex.com/reference/overview){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Generate an API key from your **Account** page. Refer to [Where can I get the authorization key?](https://docs.lingvanex.com/reference/translator-service-faq#where-can-i-get-the-authorization-key){:target=_blank .external-link} for more detailed instructions.
+
+You'll [receive a $1 credit when you create an API key](https://docs.lingvanex.com/reference/translator-service-faq#is-there-a-free-plan){:target=_blank .external-link}.
 

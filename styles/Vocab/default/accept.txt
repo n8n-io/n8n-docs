@@ -71,4 +71,5 @@ URIs
 URL
 Venafi
 Vuex
+Zapier
 Zep

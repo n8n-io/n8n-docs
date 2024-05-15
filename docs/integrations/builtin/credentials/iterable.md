@@ -23,7 +23,7 @@ Create an [Iterable](https://iterable.com){:target=_blank .external-link} accoun
 Refer to Iterable's API documentation for more information about the service:
 
 - [US-based Iterable projects](https://api.iterable.com/api/docs){:target=_blank .external-link}
-- [European-based Iterable projects](https://api.eu.iterable.com/api/docs){:target=_blank .external-link}
+- [Europe-based Iterable projects](https://api.eu.iterable.com/api/docs){:target=_blank .external-link}
 
 ## Using API key
 

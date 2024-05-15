@@ -28,22 +28,60 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.42.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.41.0...n8n@1.42.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-05-15
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains new features, node enhancements, and bug fixes.
+
+Note that this release removes the AI error debugger. We're working on a new and improved version.
+
+<div class="n8n-new-features" markdown>
+
+#### New feature: Tools Agent
+
+This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/#tools-agent).
+
+This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
+
+</div>
+
+### Contributors
+
+[Mike Quinlan](https://github.com/mjquinlan2000){:target=_blank .external-link}  
+[guangwu](https://github.com/testwill){:target=_blank .external-link}
 
 ## n8n@1.41.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.40.0...n8n@1.41.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-05-08
 
-
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains new features, node enhancements, and bug fixes.
 
-Note that this release disables the AI error helper.
+Note that this release temporarily disables the AI error helper.
+
+<div class="n8n-new-features" markdown>
+
+#### New feature: Ask AI in the HTTP node
+
+You can now ask AI to help create API requests in the HTTP Request node:
+
+1. In the HTTP Request node, select **Ask AI**.
+1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
+1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
+
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/)
+
+</div>
 
 ### Contributors
 

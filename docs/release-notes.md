@@ -69,20 +69,6 @@ This release contains new features, node enhancements, and bug fixes.
 
 Note that this release temporarily disables the AI error helper.
 
-<div class="n8n-new-features" markdown>
-
-#### New feature: Ask AI in the HTTP node
-
-You can now ask AI to help create API requests in the HTTP Request node:
-
-1. In the HTTP Request node, select **Ask AI**.
-1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
-1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
-
-Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/)
-
-</div>
-
 ### Contributors
 
 [Florin Lungu](https://github.com/floryn90){:target=_blank .external-link}

@@ -40,7 +40,7 @@ _Include info on services they need to sign up for_
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if neccessary. -->
+<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if necessary. -->
 Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
 
 
@@ -49,12 +49,21 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 
 ## Using _Auth method_
+
+To configure this credential, you'll need:
+
+- _List of fields they'll need to fill out within n8n_
 	
 _Link to product's docs for this auth method._
 	
 _STOP AND THINK: does this node require a step by step? If authentication is easy to set up, or if this node isn't heavily used, consider leaving out the step by step to minimise maintenance._
 
 _IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (/integrations/builtin/credentials/asana/)_
+
+<!-- IF OAUTH FOR CLOUD-HOSTED DOESN'T REQUIRE ANY SETUP, use the section below. Otherwise omit -->
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [_Name_ OAuth documentation](){:target=_blank .external-link} to set up OAuth.
 
 <!-- 
 Add any other sections here. 

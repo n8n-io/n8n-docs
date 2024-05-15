@@ -12,17 +12,27 @@ You can use these credentials to authenticate the following node:
 
 ## Prerequisites
 
-Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance
-or a self hosted instance.
+Create a [Baserow](https://baserow.io/){:target=_blank .external-link} account on any hosted Baserow instance or a self-hosted instance.
 
-## Using User Account
+## Supported authentication methods
 
-1. In n8n, open the **Credentials** menu item and click on **New**
-2. In the **Add new credential** dialogue, select **Baserow API** and click on the **Continue** button
-3. If using the online version of Baserow, leave the **Host** as `https://api.baserow.io`, otherwise set it to your self-hosted instance API URL.
-4. Enter your Baserow username in the **Username** field
-5. Enter your Baserow password in the **Password** field
-6. Click on the **Save** button
+- Basic auth
 
-You can now use this credential in your Baserow nodes.
+## Related resources
+
+Refer to [Baserow's documentation](https://baserow.io/docs/index){:target=_blank .external-link} for more information about the service.
+
+Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs){:target=_blank .external-link} for more information about the API specifically.
+
+## Using basic auth
+
+To configure this credential, you'll need:
+
+- The **Host**
+    - For a Baserow-hosted instance: leave as `https://api.baserow.io`
+    - For a self-hosted instance: set to your self-hosted instance API URL
+- A **Username** for the user account
+- A **Password** for the user account
+
+Refer to [Baserow's API Authentication documentation](https://baserow.io/docs/apis/rest-api#authentication) for information on creating user accounts.
 

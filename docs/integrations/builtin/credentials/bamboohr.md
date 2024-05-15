@@ -6,7 +6,7 @@ contentType: integration
 
 # BambooHR credentials
 
-You can use these credentials to authenticate the following nodes with BambooHR.
+You can use these credentials to authenticate the following node:
 
 - [BambooHR](/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr/)
 
@@ -14,12 +14,18 @@ You can use these credentials to authenticate the following nodes with BambooHR.
 
 Create a [BambooHR](https://www.bamboohr.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Log into your BambooHR account and click on the profile image in the upper right corner.
-2. Click on *API Keys*.
-3. Click on *Add New Key*, enter any name for your new key and hit *Generate Key*.
-4. Copy the key provided by BambooHR into the *API Key* field of n8n's credentials modal.
-5. Enter your subdomain (the part between `https://` and `.bamboohr.com`) in the *Subdomain* field of n8n's credentials modal.
-6. Click on *Save*.
+- API key
+
+## Related resources
+
+Refer to [BambooHR's API documentation](https://documentation.bamboohr.com/docs/getting-started){:target=_blank .external-link} for more information about the service.
+
+## Using API Key
+
+To configure this credential, you'll need:
+
+- Your BambooHR **Subdomain**: the part between `https://` and `.bamboohr.com`
+- A BambooHR **API Key**: Refer to the [Authentication section of BambooHR's Getting Started API documentation](https://documentation.bamboohr.com/docs/getting-started#authentication){:target=_blank .external-link} for instructions on generating an API key.
 

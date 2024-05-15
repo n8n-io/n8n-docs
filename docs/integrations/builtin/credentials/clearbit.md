@@ -6,10 +6,9 @@ contentType: integration
 
 # Clearbit credentials
 
-You can use these credentials to authenticate the following nodes with Clearbit.
+You can use these credentials to authenticate the following node:
 
 - [Clearbit](/integrations/builtin/app-nodes/n8n-nodes-base.clearbit/)
-
 
 ## Prerequisites
 
@@ -17,10 +16,14 @@ Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} ac
 
 ## Supported authentication methods
 
-n8n supports authenticating Clearbit with an API key. To get your API key, log in to the [Clearbit dashboard](https://dashboard.clearbit.com/api){:target=_blank .external-link}.
+- API key
 
 ## Related resources
 
 Refer to [Clearbit's API documentation](https://dashboard.clearbit.com/docs){:target=_blank .external-link} for more information about authenticating with the service.
 
+## Using API key
 
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to [Clearbit's API Authentication documentation](https://dashboard.clearbit.com/docs#authentication) for more information on creating and viewing API keys.

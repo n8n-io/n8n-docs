@@ -6,19 +6,23 @@ contentType: integration
 
 # Automizy credentials
 
-You can use these credentials to authenticate the following nodes with Automizy.
+You can use these credentials to authenticate the following nodes:
 
 - [Automizy](/integrations/builtin/app-nodes/n8n-nodes-base.automizy/)
 
 ## Prerequisites
 
-Create an [Automizy](https://automizy.com/) account.
+Create an [Automizy](https://automizy.com/){:target=_blank .external-link} account.
 
-## Using API Token
+## Supported authentication methods
 
-1. Access the [Automizy dashboard](https://app.automizy.com/dashboard).
-2. Click on ***Settings*** in the bottom left corner and select 'API Token'.
-3. Click on the ***CREATE TOKEN*** button.
-4. Click on the ***COPY & CLOSE*** button to copy the API token.
-5. Use this API token with your Automizy node credentials in n8n.
+- API token
+
+## Related resources
+
+Refer to [Automizy's API documentation](https://developers.automizy.com/automizyrestapi/){:target=_blank .external-link} for more information about the service.
+
+## Using API token
+
+Create new or access existing API tokens from your [Automizy dashboard](https://app.automizy.com/dashboard){:target=_blank .external-link} by selecting **Settings** > **API Token**.
 

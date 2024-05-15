@@ -12,21 +12,20 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Freshservice](https://freshservice.com/) account.
+Create a [Freshservice](https://freshservice.com/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-From Freshservice:
+- API key
 
-1. Access your Freshservice dashboard.
-2. Click on your User icon in the top right and select **Settings**.
-3. Click on **API Settings**.
-4. Copy your API key.
+## Related resources
 
-From n8n:
+Refer to [Freshservice's API documentation](https://api.freshservice.com/v2/){:target=_blank .external-link} for more information about the service.
 
-5. Enter a descriptive ***Credentials Name***.
-6. Under ***Credential Data***, enter the API Key obtained above in the corresponding field.
-7. In the ***Domain*** field enter the subdomain of your Freshservice account. This is part of the URL, for example `https://<subdomain>.freshservice.com/`.
-8. Click **Save** to create your new credentials.
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Freshservice API authenticaton documentation](https://api.freshservice.com/v2/#authentication){:target=_blank .external-link} for detailed instructions on getting your API key.
+- Your Freshservice **Domain**: Use the subdomain of your Freshservice account. This is part of the URL, for example `https://<subdomain>.freshservice.com`. So if you access Freshservice through `https://n8n.freshservice.com`, enter `n8n` as your **Domain**.
 

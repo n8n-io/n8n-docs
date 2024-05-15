@@ -20,7 +20,7 @@ Suppose that in a vector store `1` represents `automation tool`, `2` represents 
 
 | Sentence | Vector |
 | -------- | ------ |
-| "n8n is a source-available automation tool that you can self-host | 123 |
+| n8n is a source-available automation tool that you can self-host | 123 |
 | Zapier is an automation tool | 1 |
 | Make is an automation tool | 1 |
 | Confluence is a wiki tool that you can self-host | 3 |

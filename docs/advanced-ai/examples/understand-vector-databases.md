@@ -12,22 +12,23 @@ Vector databases store information as numbers:
 
 This enables fast and accurate similarity searches. With a vector database, instead of using conventional database queries, you can search for relevant data based on semantic and contextual meaning.
 
-## A very simplified example
+## A simplified example
 
-A vector database could store the sentence "n8n is a source-available automation tool that you can self-host", but instead of storing it as text, the vector database stores numbers that represent its features. This doesn't mean turning each letter in the sentence into a number. Instead, the vectors in the vector database describe the sentence. 
+A vector database could store the sentence "n8n is a source-available automation tool that you can self-host", but instead of storing it as text, the vector database stores an array of dimensions (numbers between 0 and 1) that represent its features. This doesn't mean turning each letter in the sentence into a number. Instead, the vectors in the vector database describe the sentence. 
 
-Suppose that in a vector store `1` represents `automation tool`, `2` represents `source available`, and `3` represents `can be self-hosted`. You could end up with the following vectors:
+Suppose that in a vector store `0.1` represents `automation tool`, `0.2` represents `source available`, and `0.3` represents `can be self-hosted`. You could end up with the following vectors:
 
-| Sentence | Vector |
+| Sentence | Vector (array of dimensions) |
 | -------- | ------ |
-| n8n is a source-available automation tool that you can self-host | 123 |
-| Zapier is an automation tool | 1 |
-| Make is an automation tool | 1 |
-| Confluence is a wiki tool that you can self-host | 3 |
+| n8n is a source-available automation tool that you can self-host | [0.1, 0.2, 0.3] |
+| Zapier is an automation tool | [0.1] |
+| Make is an automation tool | [0.1] |
+| Confluence is a wiki tool that you can self-host | [0.3] |
 
-Now, if you are looking for automation tools, you'll find n8n, Zapier, and Make. If you're looking for a list of self-hostable tools, you'll find n8n and Confluence.
+/// note | This example is very simplified
+In practice, vectors are far more complex. A vector can range in size from tens to thousands of dimensions. The dimensions don't have a one-to-one relationship to a single feature, so you can't translate individual dimensions directly into single concepts. This example gives an approximate mental model, not a true technical understanding.
+///
 
-In practice, vectors are far more complex. A vector can range in size from tens to thousands of dimensions (features that it represents).
 
 ## Demonstrating the power of similarity search
 

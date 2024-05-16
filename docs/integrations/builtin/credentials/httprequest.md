@@ -90,8 +90,8 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 {
 	"json": {
 		"headers": {
-			"X-AUTH-USERNAME": "username",
-			"X-AUTH-PASSWORD": "password"
+			"X-AUTH-USERNAME": "<username>",
+			"X-AUTH-PASSWORD": "<password>"
 		}
 	}
 }
@@ -102,8 +102,8 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 {
 	"json": {
 		 "body" : {
-			"user": "username",
-			"pass": "password"
+			"user": "<username>",
+			"pass": "<password>"
 		}
 	}
 }
@@ -114,8 +114,8 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 {
 	"json": {
 		"qs": { 
-			"appid": "123456",
-			"apikey": "my-api-key"
+			"appid": "<123456>",
+			"apikey": "<my-api-key>"
 		}
 	}
 }
@@ -126,10 +126,10 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 {
 	"json": {
 		"headers": {
-			"api-version": "202404"
+			"api-version": "<202404>"
 		},
 		"qs": {
-			"apikey": "my-api-key"
+			"apikey": "<my-api-key>"
 		}
 	}
 }

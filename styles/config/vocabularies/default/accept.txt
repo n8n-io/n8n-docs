@@ -286,6 +286,7 @@ Wufoo
 Xata
 Xero
 Zammad
+Zapier
 Zendesk
 Zep
 Zoho

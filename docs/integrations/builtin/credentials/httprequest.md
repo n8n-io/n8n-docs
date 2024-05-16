@@ -83,7 +83,7 @@ Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
 
 ### Using Custom Auth
 
-The **Generic Auth Type** > **Custom Auth** option expects JSON data to define your credential. You can define credentials using headers, qs, body, or a combination of these within a parent `json` key. See the examples below to get started.
+The **Generic Auth Type** > **Custom Auth** option expects JSON data to define your credential. You can define credentials using `headers`, `qs`, `body`, or a combination of these within a parent `json` key. See the examples below to get started.
 
 #### Sending two headers
 ```

@@ -83,14 +83,16 @@ Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
 
 ### Using Custom Auth
 
-The **Generic Auth Type** > **Custom Auth** option expects JSON data to define your credential. You can use `headers`, `qs`, `body` or a mix. See the examples below to get started.
+The **Generic Auth Type** > **Custom Auth** option expects JSON data to define your credential. You can define credentials using headers, qs, body, or a combination of these within a parent `json` key. See the examples below to get started.
 
 #### Sending two headers
 ```
 {
-	"headers": {
-		"X-AUTH-USERNAME": "username",
-		"X-AUTH-PASSWORD": "password"
+	"json": {
+		"headers": {
+			"X-AUTH-USERNAME": "username",
+			"X-AUTH-PASSWORD": "password"
+		}
 	}
 }
 ```
@@ -98,9 +100,11 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 #### Body
 ```
 {
-	 "body" : {
-		"user": "username",
-		"pass": "password"
+	"json": {
+		 "body" : {
+			"user": "username",
+			"pass": "password"
+		}
 	}
 }
 ```
@@ -108,9 +112,11 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 #### Query string
 ```
 {
-	"qs": { 
-		"appid": "123456",
-		"apikey": "my-api-key"
+	"json": {
+		"qs": { 
+			"appid": "123456",
+			"apikey": "my-api-key"
+		}
 	}
 }
 ```
@@ -118,11 +124,13 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 #### Sending header and query string
 ```
 {
-	"headers": {
-		"api-version": "202404"
-	},
-	"qs": {
-		"apikey": "my-api-key"
+	"json": {
+		"headers": {
+			"api-version": "202404"
+		},
+		"qs": {
+			"apikey": "my-api-key"
+		}
 	}
 }
 ```

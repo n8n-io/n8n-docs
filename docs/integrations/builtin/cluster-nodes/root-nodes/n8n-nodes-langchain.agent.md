@@ -17,7 +17,7 @@ For usage examples and templates to help you get started, refer to n8n's [Agent 
 You must connect at least one tool sub-node.
 ///
 
-n8n provides several agents. The conversational agent is the default. n8n recommends using this for most use cases: it's the easiest to configure and will handle most scenarios. 
+n8n provides several agents. The tool agent is the default. n8n recommends using this for most use cases: it will handle most scenarios and provides the best experience when working with [tools](/advanced-ai/examples/understand-tools/). If your preferred AI model doesn't support tools, the conversational agent is a good general option.
 
 ## Conversational Agent
 
@@ -68,6 +68,10 @@ Here is the user's input (remember to respond with a markdown code snippet of a 
 #### Max Iterations
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/max-iterations.md"
+
+#### Return Intermediate Steps
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
 ## OpenAI Functions Agent 
 
@@ -125,6 +129,10 @@ The final part of the system message. Sent before the user prompt.
 
 The final part of the message. Sent before the user prompt.
 
+#### Return Intermediate Steps
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
+
 ## SQL Agent 
 
 The SQL Agent uses a SQL database as a data source. The agent builds a SQL query based on the natural language query in the prompt.
@@ -161,6 +169,42 @@ Use the options to refine the agent's behavior.
 * Top K: number of database results the agent should keep in its context.
 
 You can view prompt examples in the node.
+
+## Tools Agent 
+
+This agent has an enhanced ability to work with tools, and can ensure a standard output format.
+
+The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/modules/agents/agent_types/tool_calling){:target=_blank .external-link} interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
+
+This agent supports the following chat models:
+
+* [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
+* [Groq Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq/)
+* [Mistral Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud/)
+* [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
+* [Azure OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai/)
+
+### Parameters
+
+#### Text
+
+The input from the chat. This is the user's query, also known as the prompt.
+
+### Options
+
+#### System Message 
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/system-message.md"
+
+#### Max Iterations
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/max-iterations.md"
+
+#### Return Intermediate Steps
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
 ## Related resources
 

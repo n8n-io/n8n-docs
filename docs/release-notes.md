@@ -28,11 +28,10 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.42.0
 
-## n8n@1.41.0
-
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.40.0...n8n@1.41.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-05-08
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.41.0...n8n@1.42.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-05-15
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
@@ -40,7 +39,35 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains new features, node enhancements, and bug fixes.
 
-Note that this release disables the AI error helper.
+Note that this release removes the AI error debugger. We're working on a new and improved version.
+
+<div class="n8n-new-features" markdown>
+
+#### New feature: Tools Agent
+
+This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/#tools-agent).
+
+This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
+
+</div>
+
+### Contributors
+
+[Mike Quinlan](https://github.com/mjquinlan2000){:target=_blank .external-link}  
+[guangwu](https://github.com/testwill){:target=_blank .external-link}
+
+## n8n@1.41.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.40.0...n8n@1.41.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-05-08
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains new features, node enhancements, and bug fixes.
+
+Note that this release temporarily disables the AI error helper.
 
 ### Contributors
 
@@ -98,9 +125,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.39.0...n8n@1.39.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-04-25
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains bug fixes.
 

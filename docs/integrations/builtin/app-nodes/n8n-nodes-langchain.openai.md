@@ -74,6 +74,6 @@ Once you add a tool connection, the OpenAI node becomes a root node, allowing it
 * Text
 	* Message Model
 
-### Using memory with OpenAI assistants
+## Using memory with OpenAI assistants
 
 For the Assistant: Message operation, you can use the memory connector to preserve and retrieve chat history. This allows the assistant to maintain context across multiple messages. The connected memory sub-node is the source of truth for the assistant's memory. This means that we create a new thread on each run and pre-populate it with messages from the memory sub-node. After the run is completed, the memory sub-node is updated with the new messages, and the thread is deleted from OpenAI.

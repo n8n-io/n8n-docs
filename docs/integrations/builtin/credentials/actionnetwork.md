@@ -28,4 +28,4 @@ Refer to [Action Network's API documentation](https://actionnetwork.org/docs/){:
 
 To configure this credential, you'll need:
 
-- An **API Key**: After becoming an Action Network partner, follow the [Action Network API Authentication instructions](https://actionnetwork.org/docs/v2/#auth){:target=_blank .external-link} to generate an API key.
+- An **API Key**: After becoming an Action Network partner, follow the [Action Network API Authentication instructions]([[actionnetwork.api_key]]){:target=_blank .external-link} to generate an API key.

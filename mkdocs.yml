@@ -168,6 +168,7 @@ plugins:
       # https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files
       include_yaml:
         - _yaml/data-functions.yml
+        - _yaml/creds-urls.yml
       j2_block_start_string: "[[%"
       j2_block_end_string: "%]]"
       j2_variable_start_string: "[["

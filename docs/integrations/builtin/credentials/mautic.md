@@ -32,7 +32,7 @@ To configure this credential, be sure that **Enable basic auth?** in Mautic's **
 
 Then you'll need:
 
-- A **URL**: Enter hte URL of your Mautic instance.
+- A **URL**: Enter the URL of your Mautic instance.
 - A **Username**: Enter your Mautic username.
 - A **Password**: Enter your Mautic password.
 

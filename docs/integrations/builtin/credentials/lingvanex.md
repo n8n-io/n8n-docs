@@ -28,5 +28,4 @@ To configure this credential, you'll need:
 
 - An **API Key**: Generate an API key from your **Account** page. Refer to [Where can I get the authorization key?](https://docs.lingvanex.com/reference/translator-service-faq#where-can-i-get-the-authorization-key){:target=_blank .external-link} for more detailed instructions.
 
-You'll [receive a $1 credit when you create an API key](https://docs.lingvanex.com/reference/translator-service-faq#is-there-a-free-plan){:target=_blank .external-link}.
 

@@ -131,6 +131,6 @@ The **Generic Auth Type** > **Custom Auth** option expects JSON data to define y
 
 You can send an SSL certificate with your HTTP request. You can use this alongside other credential types.
 
-1. In the node **Settings** <span class="inline-image">![Settings icon](/_images/common-icons/settings.png){.off-glb}</span>, enable **SSL Certificates**.
+1. In the node **Settings**, enable **SSL Certificates**.
 1. On the **Parameters** tab, add the SSL credential to **Credential for SSL Certificates**.
 

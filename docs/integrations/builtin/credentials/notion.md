@@ -6,28 +6,48 @@ contentType: integration
 
 # Notion credentials
 
-You can use these credentials to authenticate the following nodes with Notion.
+You can use these credentials to authenticate the following nodes:
 
 - [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/)
 - [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/)
 
 ## Prerequisites
 
-Notion provides access using internal integration tokens. To get and use the token, you need:
+- Create a [Notion](https://notion.so){:target=_blank .external-link} account with admin level access.
+- Create a [Notion integration](https://developers.notion.com/docs/create-a-notion-integration){:target=_blank .external-link} with these [**Capabilities**](https://developers.notion.com/reference/capabilities){:target=_blank .external-link}:
+    - `Read content`
+    - `Update content`
+    - `Insert content`
+    - `User information without email addresses`
 
-* A [Notion](https://notion.so){:target=_blank .external-link} account, with admin level access.
-* A [Notion integration](https://developers.notion.com/docs/getting-started){:target=_blank .external-link}.
+Be sure to [Give your integration page permissions](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions){:target=_blank .external-link}.
 
-## Get your token
+## Supported authentication methods
 
-Follow Step 1 in the [Notion integration guide](https://developers.notion.com/docs/create-a-notion-integration){:target=_blank .external-link} to create your integration and get your Notion integration token.
+- API integration token: Used for internal integrations
+- OAuth2: Used for public integrations
 
-On the **Capabilities** screen, enable the following:
+## Related resources
 
-* Read content
-* Update content
-* Insert content
-* Read user information without email addresses
+Refer to [Notion's API documentation](https://developers.notion.com/reference/intro){:target=_blank .external-link} for more information about the service.
 
-You can then enter the token in n8n, in your Notion credential.
+## Using API integration token
 
+To configure this credential, you'll need:
+
+- An **Internal Integration Secret**: To generate an integration secret, [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link}. Once your integration is created, visit the **Secrets** tab to get your integration secret. Refer to [Get your API secret](https://developers.notion.com/docs/create-a-notion-integration#get-your-api-secret){:target=_blank .external-link} for more information.
+
+Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up){:target=_blank .external-link} for further explanation.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated once you configure a public integration
+- A **Client Secret**: Generated once you configure a public integration
+
+As with the API integration token, you must have [created a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link}.
+
+For the OAuth2 configuration, your integration must use the [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up){:target=_blank .external-link}. Refer to that documentation for more detailed guidance.
+
+As you set up this integration, copy the n8n **OAuth Redirect URL** and add it to as a **Redirect URI** in your Notion integration.

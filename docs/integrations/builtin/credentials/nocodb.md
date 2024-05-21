@@ -12,34 +12,38 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-* Install [NocoDB](https://www.nocodb.com/)
-* Optional: Enable [API Access](https://docs.nocodb.com/developer-resources/api-tokens)
+Install [NocoDB](https://www.nocodb.com/){:target=_blank .external-link}.
 
-## Using Auth Token
+## Supported authentication methods
 
-From NocoDB Project:
+- API token
+- User auth token
 
-1. Click the rightmost button and click **Copy auth token**.
+/// note | User auth token deprecation
+NocoDB deprecated user auth tokens in v0.205.1. Use API tokens instead.
+///
 
-![NocoDB Auth](/_images/integrations/builtin/app-nodes/nocodb/xc-auth.png)
+## Related resources
 
-From n8n:
+Refer to [NocoDB's API documentation](https://data-apis-v2.nocodb.com/){:target=_blank .external-link} for more information about the service.
 
-1. Enter a descriptive **Credentials Name**.
-2. In the **Credentials Data** section enter the following:
-    * **API Token**: The authentication token for your NocoDB project.
-    * **Host**: The host of your NocoDB instance, for example `http://localhost:8080`.
-3. Click **Create** to save your new credentials.
+## Using API token
 
-## Using API Token
+To configure this credential, you'll need:
 
-From NocoDB Project: Enable [API Access](https://docs.nocodb.com/developer-resources/api-tokens)
+- An **API Token**: Generate an API token in **Account Settings > Tokens**. Refer to the NocoDB [API Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/){:target=_blank .external-link} for more detailed instructions.
+- Your database **Host**: The host of your NocoDB instance, for example `http://localhost:8080`.
 
-From n8n:
+## Using user auth Token
 
-1. Enter a descriptive **Credentials Name**.
-2. In the ***Credentials Data*** section enter the following:
-    * ***API Token***: The authentication token for your NocoDB project, obtained when enabling API access (above).
-    * ***Host***: The host of your NocoDB instance, for example `http://localhost:8080`.
-3. Click **Create** to save your new credentials.
+User auth token is a temporary token designed for quick experiments with the API. These tokens are valid for a session until the user logs out or for 10 hours and have been deprecated by NocoDB.
+
+/// note | User auth token deprecation
+NocoDB deprecated user auth tokens in v0.205.1. Use API tokens instead.
+///
+
+To configure this credential, you'll need:
+
+- A **User Token**: Generate a user auth token from the user menu > **Copy Auth token**. Refer to the NocoDB [Auth Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/#auth-tokens){:target=_blank .external-link} for more detailed instructions. Enter that auth token as the **User Token** in n8n.
+- Your database **Host**: The host of your NocoDB instance, for example `http://localhost:8080`.
 

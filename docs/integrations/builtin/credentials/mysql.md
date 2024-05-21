@@ -25,8 +25,7 @@ Create a user account on a [MySQL](https://www.mysql.com/){:target=_blank .exter
 
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if necessary. -->
-Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/){:target=_blank .external-link} for more information about the service.
 
 ## Using Database Connection
 
@@ -48,7 +47,7 @@ To configure this credential, you'll need:
     - The **SSH Port**
     - The **SSH MySQL Port**
     - The **SSH User**
-    - If `Password` was selected, add the **SSH Password**
-    - If `Private Key` was selected, add the **Private Key** and **Passphrase**
+    - If you selected `Password` for **SSH Authenticate with**, add the **SSH Password**.
+    - If you selected `Private Key` for **SSH Authenticate with**, add the **Private Key** and **Passphrase**.
 
 Refer to [MySQL Using Encrypted Connections documentation](https://dev.mysql.com/doc/refman/8.0/en/encrypted-connections.html){:target=_blank .external-link} for more information on SSL and SSH.

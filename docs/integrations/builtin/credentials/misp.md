@@ -12,17 +12,21 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Install and run a [MISP](https://misp.github.io/MISP/) instance.
+Install and run a [MISP](https://misp.github.io/MISP/){:target=_blank .external-link} instance.
 
-## Using API Key
+## Supported authentication methods
 
-From your MISP UI:
-1. Navigate to the **Event Actions** > **Automation** menu.
-2. Copy the API Key provided there.
+- API key
 
-From n8n:
+## Related resources
 
-3. Enter your API key and application Base URL.
-4. Use the toggle to select if you want to **Allow Unauthorized Certificates**.
-5. Click **Save** to create your credentials.
+Refer to [MISP's Automation API documentation](https://www.circl.lu/doc/misp/automation){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: In MISP, these are called Automation keys. Get an automation key from **Event Actions > Automation**. Refer to [MISP's automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key){:target=_blank .external-link} for instructions on generating additional keys.
+- A **Base URL**: Your MISP URL.
+- Select whether to **Allow Unauthorized Certificates**: If turned on, the credential will connect even SSL certificate validation fails.
 

@@ -56,7 +56,7 @@ If you want to trigger your workflow every day at 04:08, enter the following in 
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
 
-| * | * | * | * | * | * |
-|---|---|---|---|---|---|
-|second|minute|hour|day|week|month|
+|  *  |  *  |  *  |  *  |  *  |  *  |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|second|minute|hour|day of month|month|day of week|
 

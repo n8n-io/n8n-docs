@@ -65,6 +65,10 @@ This release adds a trigger node for Slack. Refer to the [Slack trigger document
 
 </div>
 
+### Other highlights
+
+* Improved [memory support for OpenAI assistants](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/#using-memory-with-openai-assistants).
+
 ### Rolling back to a previous version
 
 If you update to this version, then decide you need to role back, you need to:

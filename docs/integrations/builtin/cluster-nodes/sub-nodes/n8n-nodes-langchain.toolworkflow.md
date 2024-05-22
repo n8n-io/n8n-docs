@@ -42,7 +42,7 @@ This must match the name of the output property in the workflow you're calling.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/workflow-values.md"
 
-### Specify Input Schema
+### Specify input schema
 
 /// note | Agent support
 The structured input schema requires with a Tools Agent or OpenAI Functions Agent.

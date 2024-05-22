@@ -733,3 +733,71 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](/integ
 },
 ```
 ![Notice](/_images/integrations/creating-nodes/notice.png)
+
+## Hints
+
+There are two types of hints: input hints and larger hints.
+
+Input hints are small lines of text below a user input field.
+
+Larger hints are a more powerful and flexible option than [Notice](#notice). Use them to display longer hints, in the input panel, output panel, or node details view. 
+
+### Add an input hint
+
+Add the `hint` parameter to the field:
+
+```ts
+{
+	displayName: 'URL',
+	name: 'url',
+	type: 'string',
+	hint: 'Enter a URL',
+	...
+}
+```
+
+### Add a larger hint
+
+```ts
+description: INodeTypeDescription = {
+	...
+	hints: [
+		{
+			// The hint message. [TODO: can you use HTML or markdown in the text?]
+			message: "This node has many input items. Consider enabling <b>Execute Once</b> in node\'s settings.",
+			// Options: info, warning, danger. Changes the color.
+			// [TODO: which colors? In the screenshots all is grey]
+			type: 'info',
+			// Options: inputPane, outputPane, ndv
+			location: 'outputPane',
+			// Options: always, beforeExecution, afterExecution. [TODO: Defaults to always?]
+			whenToDisplay: 'beforeExecution',
+			// Optional. An expression. If it resolves to true, n8n displays the message. Defaults to true.
+			displayCondition: '={{ $parameter["operation"] === "select" && $input.all().length > 1 }}'
+		}
+	]
+	...
+}
+```
+
+### Add a dynamic hint to a programmatic-style node
+
+In programmatic-style nodes you can create a dynamic message that includes information from the node output. [TODO: confirm you can't include dynamic data in declarative style]
+
+```ts
+if (operation === 'select' && items.length > 1 && !node.executeOnce) {
+    // Expects two parameters: NodeExecutionData and an array of hints
+	return new NodeExecutionOutput(
+		[returnData],
+		[
+			{
+				message: `This node ran ${items.length} times, once for each input item. To run for the first item only, enable <b>Execute once</b> in the node settings.`,
+				location: 'outputPane',
+			},
+		],
+	);
+}
+return [returnData];
+```
+
+For a live example of a dynamic hint in a programmatic-style node, view the [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266){:target=_blank .external-link}.

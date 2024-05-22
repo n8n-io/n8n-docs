@@ -6,7 +6,7 @@ contentType: integration
 
 # HaloPSA credentials
 
-You can use these credentials to authenticate the following nodes with HaloPSA.
+You can use these credentials to authenticate the following nodes:
 
 - [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa/)
 
@@ -14,23 +14,27 @@ You can use these credentials to authenticate the following nodes with HaloPSA.
 
 Create a [HaloPSA](https://halopsa.com/) account.
 
-## Allow your application to use the API:
+## Supported authentication methods
 
-1. Access your HaloPSA dashboard.
-2. Click on the **Configuration** link in the left panel.
-3. Under the **Integrations** menu entry, click on **HaloPSA API**.
-4. In the **API Details** section you find the values **Resource Server**, **Authorisation Server**, and **Tenant**.
-5. In the **Applications** section click on the **View Applications** button.
-6. Click on the **New** button to register a new application or click on an existing one and then the **Edit** button to edit it.
-7. Enter a name for your application (for example `n8n`).
-8. Choose `Client ID and Secret (Services)` as the **Authentication Method**.
-9. Make a note of both the **Client ID** and the **Client Secret**. The Client Secret will only be shown once and you will need to generate a new one when lost.
-10. Select `Agent` as your **Login Type** and one of your agents in the **Agent to log in as** field.
-11. On the **Permissions** tab, tick `all` and hit the **Save** button.
-12. On n8n's HaloPSA credentials screen, fill in the values obtained in the previous steps. The **Tenant** field will be accessible only when the **Hosting Type** is set to `Hosted Solution of Halo`.
+- API key
 
-![A workflow with the HaloPSA node](/_images/integrations/builtin/credentials/halopsa/halopsa-n8n-credentials.jpg)
+## Related resources
 
-!['Resource Server', 'Authorisation Server', 'and Tenant'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-1.jpg)
-!['Client ID' and 'Client Secret'](/_images/integrations/builtin/credentials/halopsa/halopsa-credentials-2.jpg)
+Refer to [HaloPSA's API documentation](https://halopsa.com/apidoc/info){:target=_blank .external-link} for more information about the service.
 
+## Using API key
+
+To configure this credential, you'll need:
+
+- To select your **Hosting Type**:
+    - **On Premise Solution**: Choose this option if you're hosting the Halo application on your own server
+    - **Hosted Solution Of Halo**: Choose this option if your application is hosted by Halo. If this option is selected, you'll need to provide your **Tenant**.
+- The **HaloPSA Authorisation Server URL**: Your Authorisation Server URL is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}.
+- The **Resource Server** URL: Your Resource Server is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}.
+- A **Client ID**: Obtained by registering the application in the Halo API settings. Refer to [HaloPSA's Authorisation documentation](https://halopsa.com/apidoc/authorisation){:target=_blank .external-link} for detailed instructions. n8n recommends using these settings:
+    - Choose `Client Credentials` as your **Authentication Method**.
+    - Use the `all` permission.
+- A **Client Secret**: Obtained by registering the application in the Halo API settings.
+- Your **Tenant** name: If **Hosted Solution of Halo** is selected as the **Hosting Type**, you must provide your tenant name. Your tenant name is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737){:target=_blank .external-link}.
+
+HaloPSA uses both the application permissions and the agent's permissions to determine API access.

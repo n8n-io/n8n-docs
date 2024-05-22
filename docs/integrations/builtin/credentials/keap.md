@@ -6,28 +6,26 @@ contentType: integration
 
 # Keap credentials
 
-You can use these credentials to authenticate the following nodes with Keap.
+You can use these credentials to authenticate the following nodes:
 
 - [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap/)
 - [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger/)
 
 ## Prerequisites
 
-Create a [Keap](https://keap.com/) account.
+Create a [Keap](https://developer.keap.com/){:target=_blank .external-link} developer account.
 
-## Using OAuth
+## Supported authentication methods
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Keap account to n8n.
-///
+- OAuth2
 
-1. Access your [Keap Developer Console](https://keys.developer.keap.com/my-apps).
-2. Click on your email address in the top right corner and select 'Apps' from the dropdown list.
-3. Click on the 'New App' button.
-4. Enter any necessary information, enable the 'Keap 150k' API and click on the *Create* button.
-6. Use the 'Key' and the 'Secret' displayed with your Keap OAuth2 API credentials in n8n.
-7. Click on the circle button in the OAuth section to connect a Keap account to n8n.
-8. Click the *Save* button to save your credentials.
+## Related resources
 
-![Getting Keap credentials](/_images/integrations/builtin/credentials/keap/getting-oauth-credentials.gif)
+Refer to Keap's [REST API documentation](https://developer.keap.com/docs/restv2/){:target=_blank .external-link} for more information about the service.
+
+## Using OAuth2
+
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Getting Started with OAuth2 documentation](https://developer.keap.com/getting-started-oauth-keys/){:target=_blank .external-link}.
 

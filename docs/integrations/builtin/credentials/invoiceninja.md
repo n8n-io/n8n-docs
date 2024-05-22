@@ -6,22 +6,28 @@ contentType: integration
 
 # Invoice Ninja credentials
 
-You can use these credentials to authenticate the following nodes with Invoice Ninja.
+You can use these credentials to authenticate the following nodes:
 
 - [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/)
 - [Invoice Ninja Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/)
 
 ## Prerequisites
 
-Create an [Invoice Ninja](https://www.invoiceninja.com/) account.
+Create an [Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .external-link} account. Only the Pro and Enterprise plans support API integrations.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Invoice Ninja dashboard.
-2. Click on Settings in the bottom left.
-3. Scroll down to API keys.
-4. Add new token.
-5. Use the key and your instance URL with Invoice Ninja node credentials in n8n.
+- API key
 
-![Getting Invoice Ninja credentials](/_images/integrations/builtin/credentials/invoiceninja/using-access-token.gif)
+## Related resources
+
+Refer to Invoice Ninja's [v4 API documentation](https://invoice-ninja.readthedocs.io/en/latest/api.html){:target=_blank .external-link} and [v5 API documentation](https://api-docs.invoicing.co/){:target=_blank .external-link} for more information about the APIs.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- A **URL**: If Invoice Ninja hosts your installation, use either of the default URLs mentioned. If you're self-hosting your installation, use the URL of your Invoice Ninja instance.
+- An **API Token**: Generate an API token in **Settings > Account Management > API Tokens**.
+- An optional **Secret**, available only for v5 API users
 

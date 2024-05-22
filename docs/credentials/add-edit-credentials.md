@@ -8,7 +8,7 @@ workflowFile: credentials/dynamic_credentials_using_expressions.json
 
 You can get to the credential modal by either: 
 
-* Opening the left menu, then selecting either <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** or a project, then **Credentials** > **Add Credential** and browsing for the service you want to connect to.
+* Opening the left menu, then selecting either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project, then **Credentials** > **Add Credential** and browsing for the service you want to connect to.
 * Selecting **Create New** in the **Credential** dropdown in a node.
 
 Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](/integrations/builtin/credentials/) for guidance.

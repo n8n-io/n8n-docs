@@ -17,7 +17,7 @@ For usage examples and templates to help you get started, refer to n8n's [Struct
 
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-nodes/schema-type-structuring-output.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/schema-type-structuring-output.md"
 
 ## Related resources
 

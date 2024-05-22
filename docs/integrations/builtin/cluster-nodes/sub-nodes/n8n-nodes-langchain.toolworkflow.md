@@ -50,7 +50,7 @@ The structured input schema requires with a Tools Agent or OpenAI Functions Agen
 
 Enable this option to define the input schema for the workflow you're calling. This is useful when you want to make sure the input data the LLM provides is in the correct format.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-nodes/schema-type-structuring-output.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/schema-type-structuring-output.md"
 
 ## Related resources
 

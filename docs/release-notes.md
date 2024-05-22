@@ -57,6 +57,14 @@ The number of projects and role types vary depending on your plan. Refer to [Pri
 
 </div>
 
+<div class="n8n-new-features" markdown>
+
+#### New node: Slack Trigger
+
+This release adds a trigger node for Slack. Refer to the [Slack trigger documentation](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) for details.
+
+</div>
+
 ### Rolling back to a previous version
 
 If you update to this version, then decide you need to role back, you need to:

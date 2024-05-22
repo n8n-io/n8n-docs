@@ -76,6 +76,14 @@ If you update to this version, then decide you need to role back, you need to:
 1. Delete any RBAC projects you created.
 2. Revert the database migrations using `n8n db:revert`.
 
+### Contributors
+
+[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}  
+[Daniil Zobov](https://github.com/ddzobov){:target=_blank .external-link}  
+[Guilherme Barile](https://github.com/GuilhermeBarile){:target=_blank .external-link}  
+[Romain MARTINEAU](https://github.com/RJiraya){:target=_blank .external-link}  
+
+
 ## n8n@1.42.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.42.0...n8n@1.42.1){:target=_blank .external-link} for this version.<br />

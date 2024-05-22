@@ -17,6 +17,13 @@ For usage examples and templates to help you get started, refer to n8n's [Struct
 
 ## Node parameters
 
+**Schema Type**: Define how the output should be structured and validated. You have two options to provide the schema:
+
+1. **Generate from JSON Example**: Input an example JSON object to automatically generate the schema.
+2. **Define Below**: Manually input the JSON schema.
+
+**JSON Example**: a sample JSON object to generate the schema. Only the object property types and names are considered. The actual values are not used
+
 **JSON Schema**: a JSON schema to structure and validate the output. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} for help creating a valid JSON schema.
 
 ## Related resources

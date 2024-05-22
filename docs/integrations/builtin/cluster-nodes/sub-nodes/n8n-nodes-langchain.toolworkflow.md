@@ -42,6 +42,20 @@ This must match the name of the output property in the workflow you're calling.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/workflow-values.md"
 
+### Specify Input Schema
+/// note | Agent support
+The structured input schema is **only supported for Tools & OpenAI Functions Agents**.
+///
+Enable this option to define the input schema for the workflow you're calling. This is useful when you want to make sure the input data LLM is providing is in the correct format.
+
+**Schema Type**: Define how the input parameters should be structured and validated. You have two options to provide the schema:
+
+1. **Generate from JSON Example**: Input an example JSON object to automatically generate the schema.
+2. **Define Below**: Manually input the JSON schema.
+
+**JSON Example**: a sample JSON object to generate the schema. Only the object property types and names are considered. The actual values are not used
+
+**Input Schema**: a JSON schema to structure and validate the input parameters. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} for help creating a valid JSON schema.
 
 ## Related resources
 

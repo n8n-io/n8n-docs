@@ -765,12 +765,12 @@ description: INodeTypeDescription = {
 		{
 			// The hint message. [TODO: can you use HTML or markdown in the text?]
 			message: "This node has many input items. Consider enabling <b>Execute Once</b> in node\'s settings.",
-			// Options: info, warning, danger. Changes the color.
+			// Choose from: info, warning, danger. Changes the color.
 			// [TODO: which colors? In the screenshots all is grey]
 			type: 'info',
-			// Options: inputPane, outputPane, ndv
+			// Choose from: inputPane, outputPane, ndv [TODO: defaults to? Or is this required?]
 			location: 'outputPane',
-			// Options: always, beforeExecution, afterExecution. [TODO: Defaults to always?]
+			// Choose from: always, beforeExecution, afterExecution. [TODO: Defaults to always?]
 			whenToDisplay: 'beforeExecution',
 			// Optional. An expression. If it resolves to true, n8n displays the message. Defaults to true.
 			displayCondition: '={{ $parameter["operation"] === "select" && $input.all().length > 1 }}'

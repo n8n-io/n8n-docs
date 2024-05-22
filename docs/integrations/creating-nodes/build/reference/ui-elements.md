@@ -769,7 +769,7 @@ description: INodeTypeDescription = {
 			// Choose from: info, warning, danger. The default is 'info'.
 			// Changes the color. info (grey), warning (yellow), danger (red)
 			type: 'info',
-			// Choose from: inputPane, outputPane, ndv [TODO: defaults to? Or is this required?]
+			// Choose from: inputPane, outputPane, ndv. By default n8n displays the hint in both the input and output panels.
 			location: 'outputPane',
 			// Choose from: always, beforeExecution, afterExecution. The default is 'always'
 			whenToDisplay: 'beforeExecution',

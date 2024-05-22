@@ -736,15 +736,14 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](/integ
 
 ## Hints
 
-There are two types of hints: input hints and larger hints.
+There are two types of hints: parameter hints and node hints:
 
-Input hints are small lines of text below a user input field.
+* Parameter hints are small lines of text below a user input field.
+* Node hints are a more powerful and flexible option than [Notice](#notice). Use them to display longer hints, in the input panel, output panel, or node details view. 
 
-Larger hints are a more powerful and flexible option than [Notice](#notice). Use them to display longer hints, in the input panel, output panel, or node details view. 
+### Add a parameter hint
 
-### Add an input hint
-
-Add the `hint` parameter to the field:
+Add the `hint` parameter to a UI element:
 
 ```ts
 {
@@ -756,21 +755,24 @@ Add the `hint` parameter to the field:
 }
 ```
 
-### Add a larger hint
+### Add a node hint
+
+Define the node's hints in the `hints` property within the node `description`:
 
 ```ts
 description: INodeTypeDescription = {
 	...
 	hints: [
 		{
-			// The hint message. [TODO: can you use HTML or markdown in the text?]
-			message: "This node has many input items. Consider enabling <b>Execute Once</b> in node\'s settings.",
-			// Choose from: info, warning, danger. Changes the color.
-			// [TODO: which colors? In the screenshots all is grey]
+			// The hint message. You can use HTML.
+			// You can include dynamic information, such as referencing node parameters.
+			message: "This node has many input items. Consider enabling <b>Execute Once</b> in the node\'s settings.",
+			// Choose from: info, warning, danger. The default is info.
+			// Changes the color. info (grey), warning (yellow), danger (red)
 			type: 'info',
 			// Choose from: inputPane, outputPane, ndv [TODO: defaults to? Or is this required?]
 			location: 'outputPane',
-			// Choose from: always, beforeExecution, afterExecution. [TODO: Defaults to always?]
+			// Choose from: always, beforeExecution, afterExecution. The default is always
 			whenToDisplay: 'beforeExecution',
 			// Optional. An expression. If it resolves to true, n8n displays the message. Defaults to true.
 			displayCondition: '={{ $parameter["operation"] === "select" && $input.all().length > 1 }}'
@@ -782,7 +784,7 @@ description: INodeTypeDescription = {
 
 ### Add a dynamic hint to a programmatic-style node
 
-In programmatic-style nodes you can create a dynamic message that includes information from the node output. [TODO: confirm you can't include dynamic data in declarative style]
+In programmatic-style nodes you can create a dynamic message that includes information from the node execution. As it relies on the node output data, you can't display this type of hint until after execution.
 
 ```ts
 if (operation === 'select' && items.length > 1 && !node.executeOnce) {

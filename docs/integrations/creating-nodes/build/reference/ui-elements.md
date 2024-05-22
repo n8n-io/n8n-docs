@@ -561,8 +561,9 @@ If your node performs insert, update, or upsert operations, you need to send dat
 
 /// note | Mapping and matching
 Matching is the process of using column names to identify the row(s) to update.
-///	Mapping is the process of setting the input data to use as values when updating row(s).
+///	
 
+Mapping is the process of setting the input data to use as values when updating row(s).
 
 ```js
 {

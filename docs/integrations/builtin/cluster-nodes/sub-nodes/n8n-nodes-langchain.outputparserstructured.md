@@ -17,7 +17,9 @@ For usage examples and templates to help you get started, refer to n8n's [Struct
 
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/schema-type-structuring-output.md"
+**Schema Type**: Define the output structure and validation. You have two options to provide the schema:
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/schema-type-structuring.md"
 
 ## Related resources
 

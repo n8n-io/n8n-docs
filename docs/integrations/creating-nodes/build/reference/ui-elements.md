@@ -105,36 +105,6 @@ The [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packa
 
 ## Number
 
-Basic configuration:
-
-```typescript
-{
-	displayName: 'Age',
-	name: 'age',
-	type: 'number',
-	required: true,
-	typeOptions: {
-		maxValue: 10,
-		minValue: 0,
-		numberStepSize: 1,
-	},
-	default: 10,
-	description: 'Your current age',
-	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
-	},
-}
-```
-
-![Number](/_images/integrations/creating-nodes/number.png)
-
 Number field with decimal points:
 
 ```typescript
@@ -144,6 +114,8 @@ Number field with decimal points:
 	type: 'number',
 	required: true,
 	typeOptions: {
+		maxValue: 10,
+		minValue: 0,
 		numberPrecision: 2,
 	},
 	default: 10.00,
@@ -761,3 +733,4 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](/integ
   default: '',
 },
 ```
+![Notice](/_images/integrations/creating-nodes/notice.png)

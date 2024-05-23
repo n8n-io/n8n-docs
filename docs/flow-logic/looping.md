@@ -52,7 +52,8 @@ The Loop Over Items node stops executing after all the incoming items get divide
 Nodes and operations where you need to design a loop into your workflow:
 
 * [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) executes once for `insert` and `update`.
-* [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node processes all the items based on the entered code snippet.
+* [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node in **Run Once for All Items** mode: processes all the items based on the entered code snippet.
+* [Execute Workflow](integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node in **Run Once for All Items** mode.
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): you must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
 * [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) executes once for `insert`, `update`, and `delete`.
 * [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) executes once for `insert` and `update`.

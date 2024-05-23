@@ -69,7 +69,7 @@ Describes the relationship between a user and a [project](/user-management/rbac/
 
 ### role
 
-The available user roles and scopes in n8n. One user may have several roles: for example, a global instance member may also be a workflow owner.
+Not currently used. Foruse in future work on custom roles. 
 
 ### settings
 

@@ -77,10 +77,14 @@ This release adds a trigger node for Slack. Refer to the [Slack trigger document
 
 ### Rolling back to a previous version
 
-If you update to this version, then decide you need to role back, you need to:
+If you update to this version, then decide you need to role back:
+
+Self-hosted n8n:
 
 1. Delete any RBAC projects you created.
 2. Revert the database migrations using `n8n db:revert`.
+
+Cloud: contact [help@n8n.io](mailto:help@n8n.io).
 
 ### Contributors
 

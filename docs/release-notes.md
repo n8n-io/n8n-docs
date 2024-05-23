@@ -37,6 +37,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.42.1...n8n@1.43.0
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
+
+
 This release contains new features, node enhancements, and bug fixes.
 
 /// note | Backup recommended
@@ -93,6 +95,10 @@ If you update to this version, then decide you need to role back, you need to:
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.42.0...n8n@1.42.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-05-20
 
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
 
 
 This is a bug fix release.
@@ -104,9 +110,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.41.0...n8n@1.41.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-05-16
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 
 

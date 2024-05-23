@@ -59,6 +59,14 @@ Details of npm community nodes packages installed in your n8n instance. [install
 
 A log of all database migrations. Read more about [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md){:target=_blank .external-link} in TypeORM's documentation.
 
+### project
+
+Lists the [projects](/user-management/rbac/projects/) in your instance.
+
+### project_relation
+
+Describes the relationship between a user and a [project](/user-management/rbac/projects/), including the user's [role type](/user-management/rbac/role-types/).
+
 ### role
 
 The available user roles and scopes in n8n. One user may have several roles: for example, a global instance member may also be a workflow owner.

@@ -224,7 +224,7 @@ paths:
       tags:
         - Execution
       summary: Retrieve an execution
-      description: Retrieve an execution from you instance.
+      description: Retrieve an execution from your instance.
       parameters:
         - $ref: '#/components/parameters/executionId'
         - $ref: '#/components/parameters/includeData'
@@ -970,6 +970,9 @@ components:
         timezone:
           type: string
           example: America/New_York
+        executionOrder:
+          type: string
+          example: v1
     workflow:
       type: object
       additionalProperties: false
@@ -1013,7 +1016,6 @@ components:
         staticData:
           example:
             lastId: 1
-          nullable: true
           anyOf:
             - type: string
               format: jsonString

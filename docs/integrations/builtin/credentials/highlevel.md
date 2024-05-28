@@ -6,17 +6,25 @@ contentType: integration
 
 # HighLevel credentials
 
-You can use these credentials to authenticate the following nodes with HighLevel:
+You can use these credentials to authenticate the following nodes:
 
 * [HighLevel node](/integrations/builtin/app-nodes/n8n-nodes-base.highlevel/)
 
 ## Prerequisites
 
-Sign up for a HighLevel account.
+Create a [HighLevel](https://www.gohighlevel.com){:target=_blank .external-link} account.
 
-## Using an API key
+## Supported authentication methods
 
-1. Follow the guidance in the [HighLevel documentation](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api){:target=_blank .external-link} to get your API key.
-2. Copy the key into the **API Key** field in your n8n HighLevel credentials.
+- API key
 
+## Related resources
+
+Refer to [HighLevel's API 1.0 documentation](https://public-api.gohighlevel.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [HighLevel API 1.0 Welcome documentation](https://public-api.gohighlevel.com/){:target=_blank .external-link} for instructions on getting your API key.
 

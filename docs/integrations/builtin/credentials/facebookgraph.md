@@ -10,21 +10,27 @@ You can use these credentials to authenticate the following nodes with Facebook.
 
 - [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/)
 
-**Note:** If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) node, follow the instructions mentioned in the [Facebook App](/integrations/builtin/credentials/facebookapp/) credentials documentation.
+/// note | Facebook Trigger credentials
+If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp/) documentation.
+///
 
 ## Prerequisites
 
-Create a [Facebook](https://www.facebook.com/) account.
+- Create a [Facebook](https://www.facebook.com/){:target=_blank .external-link} account.
+- Sign up for [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} with that account.
+- Create at least one [Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link}.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access [Facebook for Developers portal](https://developers.facebook.com/).
-2. Click on **My Apps**.
-3. Access your app. Create an app if you don't already have one.
-4. Access the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/).
-5. Select your app under the *Facebook App* dropdown list on the right sidebar.
-6. Click on the 'Generate Access Token' button and login with your Facebook account.
-6. Use generated access token with your Facebook node credentials in n8n.
+- App access token
 
-![Getting Facebook credentials](/_images/integrations/builtin/credentials/facebookgraphapi/using-access-token.gif)
+## Related resources
+
+Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
+
+## Using app access token
+
+To configure this credential, you'll need:
+
+- An app **Access Token**: Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} to generate the App **Access Token**.
 

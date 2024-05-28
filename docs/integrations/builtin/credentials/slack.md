@@ -9,6 +9,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes:
 
 - [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)
+- [Slack Trigger](/integrations/builtin/trigger-ndoes/n8n-nodes-base.slacktrigger/)
 
 
 ## Prerequisites

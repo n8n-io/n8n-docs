@@ -42,7 +42,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 	The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/), and [Code](/code/code-node/) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
 
-	This allows you to do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
+	Use this do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
 
 	[:octicons-arrow-right-24: Core nodes](/integrations/builtin/core-nodes/)
 
@@ -60,7 +60,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 - __The n8n API__
 
-	n8n provides an API, allowing you to programmatically perform many of the same tasks as you can in the GUI. There's an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) to access the API in your workflows.
+	n8n provides an API, where you can programmatically perform many of the same tasks as you can in the GUI. There's an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) to access the API in your workflows.
 
 	[:octicons-arrow-right-24: API](/api/)
 

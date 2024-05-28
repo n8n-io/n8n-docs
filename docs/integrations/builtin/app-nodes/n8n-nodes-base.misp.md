@@ -25,6 +25,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Delete
     * Get
     * Get All
+	* Search
     * Update
 * Event
     * Create
@@ -32,6 +33,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get
     * Get All
     * Publish
+	* Search
     * Unpublish
     * Update
 * Event Tag
@@ -51,6 +53,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Noticelist
     * Get
     * Get All
+* Object
+	* Search
 * Organisation
     * Create
     * Delete

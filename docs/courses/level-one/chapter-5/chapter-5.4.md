@@ -6,7 +6,7 @@ contentType: tutorial
 
 In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the Edit Fields (Set) node.
 
-The next step in Nathan's workflow is to insert the `employeeName` and `orderId` of all `processing` orders into Airtable.
+The next step in Nathan's workflow is to insert the `employeeName` and `orderID` of all `processing` orders into Airtable.
 
 For this, you need to use the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set/), which allows you to select and set the data you want to transfer from one app/service to another.
 
@@ -41,7 +41,7 @@ Next, let's insert these values into Airtable:
 1. Go to your Airtable account.
 2. Add a new table called `processingOrders`. You can add this table to your existing workspace/table if you choose.
 3. Add two columns to this table:
-    - `orderId`: Number
+    - `orderID`: Number
     - `employeeName`: Single line text
     
     ///note | Reminder

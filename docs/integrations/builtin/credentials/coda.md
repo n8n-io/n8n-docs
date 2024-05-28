@@ -6,7 +6,7 @@ contentType: integration
 
 # Coda credentials
 
-You can use these credentials to authenticate the following nodes with Coda.
+You can use these credentials to authenticate the following nodes:
 
 - [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda/)
 
@@ -14,14 +14,17 @@ You can use these credentials to authenticate the following nodes with Coda.
 
 Create a [Coda](https://www.coda.io/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Coda dashboard.
-2. Click on your profile in the top right.
-3. Click on the 3 dots and then Account settings..
-4. Scroll down and click on "Generate" under API.
-5. Use selected API access token in your Coda node credentials in n8n.
+- API access token
 
+## Related resources
 
-![Getting Coda credentials](/_images/integrations/builtin/credentials/coda/using-access-token.gif)
+Refer to [Coda's API documentation](https://coda.io/developers/apis/v1){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An API **Access Token**: Generate an API access token in your Coda [**Account settings**](https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5#_luxC4){:target=_blank .external-link}.
 

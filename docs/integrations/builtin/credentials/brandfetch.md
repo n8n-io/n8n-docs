@@ -6,20 +6,24 @@ contentType: integration
 
 # Brandfetch credentials
 
-You can use these credentials to authenticate the following nodes with Brandfetch.
+You can use these credentials to authenticate the following node:
 
 - [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/)
 
 ## Prerequisites
 
-Create a [Brandfetch](https://brandfetch.io/account) account.
+Create a [Brandfetch developer](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} developer account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Access your [Brandfetch dashboard](https://brandfetch.io/dashboard).
-2. Click on ***API*** on the left sidebar.
-3. Select a plan and click on the ***Get API Key*** button.
-4. Use the ***App Key*** with your Brandfetch API credentials in n8n.
+- API key
 
-![Getting Brandfetch credentials](/_images/integrations/builtin/credentials/brandfetch/using-api.gif)
+## Related resources
 
+Refer to [Brandfetch's API documentation](https://docs.brandfetch.com/docs/apis){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Brandfetch Create an Account documentation](https://docs.brandfetch.com/docs/apis#-create-an-account){:target=_blank .external-link} to generate an API key.

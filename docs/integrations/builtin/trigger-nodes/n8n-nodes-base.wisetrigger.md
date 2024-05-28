@@ -19,6 +19,7 @@ For usage examples and templates to help you get started, refer to n8n's [Wise T
 ## Events
 
 - Triggered every time a balance account is credited
+- Triggered every time a balance account is credited or debited
 - Triggered every time a transfer's list of active cases is updated
-- Triggered every time a transfer's status is updated
+- Triggered every time a transfer's status is updated 
 

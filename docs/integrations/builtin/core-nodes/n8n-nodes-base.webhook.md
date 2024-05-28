@@ -126,9 +126,9 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## Listen for multiple HTTP methods
 
-By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accpet calls using multiple methods:
+By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accept calls using multiple methods:
 
-1. Open the node **Settings** <span class="inline-image">![Settings icon](/_images/common-icons/settings.png){.off-glb}</span>.
+1. Open the node **Settings**.
 1. Toggle on **Allow Multiple HTTP Methods**.
 1. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
 

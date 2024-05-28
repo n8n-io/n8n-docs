@@ -6,38 +6,44 @@ contentType: integration
 
 # ERPNext credentials
 
-You can use these credentials to authenticate the following nodes with Emelia.
+You can use these credentials to authenticate the following nodes:
 
 - [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/)
 
 ## Prerequisites
 
-- Create a [ERPNext](https://erpnext.com) account.
+- Create an [ERPNext](https://erpnext.com) account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your ERPNext dashboard page.
-2. Click on ***Settings*** on the top and select 'My Settings'.
-3. Scroll down to the bottom of the page and click on ***API Access***.
-4. Click on the ***Generate Keys*** button.
-5. Copy the displayed API Secret.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'ERPNext API' credentials in n8n.
-7. Paste the API Secret in the ***API Secret*** field in the 'ERPNext API' credentials in n8n.
-8. Copy the API Key from ERPNext.
-**Note:** You might have to refresh the ERPNext window to view the API Key.
-9. Paste the API Key in the ***API Key*** field in the 'ERPNext API' credentials in n8n.
-10. Enter the subdomain of your ERPNext account in the ***Subdomain*** field in the 'ERPNext API' credentials in n8n. Refer to the [FAQs](#how-to-find-the-subdomain-of-an-erpnext-account) to learn how to get your subdomain.
-11. Click on the ***Create*** button to create your credentials in n8n.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/Q12DmHS3FL4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [ERPNext's documentation](https://docs.erpnext.com/docs/user/manual/en/introduction){:target=_blank .external-link} for more information about the service.
 
-## FAQs
+Refer to [ERPNext's developer documentation](https://frappeframework.com/docs/user/en/introduction){:target=_blank .external-link} for more information about working with the framework.
 
-### How to find the subdomain of an ERPNext account?
 
-In the address bar of your browser, you can find the subdomain. The string between `https://` and `.erpnext.com` is your subdomain. For example, if the URL in the address bar is `https://n8n.erpnext.com`, the subdomain will be `n8n`.
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Generate this from your own ERPNext user account in **Settings > My Settings > API Access**.
+- An **API Secret**: Generated with the API key.
+- Your ERPNext **Environment**:
+    - For **Cloud-hosted**:
+        - Your ERPNext **Subdomain**: Refer to the [FAQs](#how-to-find-the-subdomain-of-an-erpnext-cloud-hosted-account)
+        - Your **Domain**: Choose between `erpnext.com` and `frappe.cloud`.
+    - For **Self-hosted**:
+        - The fully qualified **Domain** where you host ERPNext
+- Choose whether to **Ignore SSL Issues**: When selected, n8n will connect even if SSL certificate validation is unavailable.
+
+If you are an ERPNext System Manager, you can also generate API keys and secrets for other users. Refer to the [ERPNext Adding Users documentation](https://docs.erpnext.com/docs/user/manual/en/adding-users){:target=_blank .external-link} for more information.
+
+## How to find the subdomain of an ERPNext cloud-hosted account
+
+You can find your ERPNext subdomain by reviewing the address bar of your browser. The string between `https://` and either `.erpnext.com` or `frappe.cloud` is your subdomain.
+
+For example, if the URL in the address bar is `https://n8n.erpnext.com`, the subdomain is `n8n`.
 

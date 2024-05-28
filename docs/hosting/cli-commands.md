@@ -149,10 +149,12 @@ When exporting workflows and credentials, n8n also exports their IDs. If you hav
 Available flags:
 
 | Flag | Description |
-|-------------|-------|
+|------|-------------|
 | --help | Help prompt. |
 | --input | Input file name or directory if you use --separate. |
+| --projectId | Import the workflow or credential to the specified project. Can't be used with `--userId`. |
 | --separate | Imports `*.json` files from directory provided by --input. |
+| --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
 
 /// note | Migrating to SQLite
 n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.

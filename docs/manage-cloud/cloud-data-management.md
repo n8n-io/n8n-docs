@@ -10,7 +10,7 @@ There are two concerns when managing data on Cloud:
 * Memory usage: complex workflows processing large amounts of data can exceed n8n's memory limits. If this happens, the instance can crash and become inaccessible.
 * Data storage: depending on your execution settings and volume, your n8n database can grow in size and run out of storage. 
 
-To avoid these issues, n8n recommends that you don't save unnecessary data, and build your workflows with memory efficiency in mind.
+To avoid these issues, n8n recommends that you build your workflows with memory efficiency in mind, and don't save unnecessary data
 
 ## Memory limits on each Cloud plan
 

@@ -29,7 +29,7 @@ Legacy plans:
 
 ## How to reduce memory consumption in your workflow
 
-The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid ex of instance memory.
+The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid exceeding instance memory.
 
 * Split the data processed into smaller chunks. For example, instead of fetching 10,000 rows with each execution, process 200 rows with each execution.
 * Avoid using the Code node where possible.

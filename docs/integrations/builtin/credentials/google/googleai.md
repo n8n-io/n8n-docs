@@ -40,4 +40,4 @@ To create an API key:
 1. Go to the API Key page in Google AI Studio: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey){:target=_blank .external-link}.
 2. Select **Create API Key**.
 3. You can choose whether to **Create API key in new project** or search for an existing Google Cloud project to **Create API key in existing project**.
-4. Copy the API key that is generated and add it to your n8n credential.
+4. Copy the generated API key and add it to your n8n credential.

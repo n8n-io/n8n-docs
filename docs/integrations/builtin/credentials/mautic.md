@@ -48,7 +48,7 @@ Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-03
 
 When you create the new API credential, use these options:
 
-- Select `OAuth 2` as the **Authorization Protocol**.
+- Select **OAuth 2** as the **Authorization Protocol**.
 - Copy the **OAuth Callback URL** from n8n and enter it as the **Redirect URI** in Mautic.
 
 Once the credential is created, copy the **Client ID** and **Client Secret** from Mautic to enter in the corresponding fields in n8n.

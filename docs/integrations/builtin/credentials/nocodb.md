@@ -34,7 +34,7 @@ To configure this credential, you'll need:
 - An **API Token**: Generate an API token in **Account Settings > Tokens**. Refer to the NocoDB [API Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/){:target=_blank .external-link} for more detailed instructions.
 - Your database **Host**: The host of your NocoDB instance, for example `http://localhost:8080`.
 
-## Using user auth Token
+## Using user auth token
 
 User auth token is a temporary token designed for quick experiments with the API. These tokens are valid for a session until the user logs out or for 10 hours and have been deprecated by NocoDB.
 

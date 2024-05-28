@@ -27,7 +27,7 @@ Refer to [Monica's API documentation](https://www.monicahq.com/api){:target=_bla
 To configure this credential, you'll need:
 
 - Your **Environment**:
-    - Select `Cloud-Hosted` if you access your Monica instance through Monica.
-    - Select `Self-Hosted` if you have self-hosted Monica on your own server. Provide your **Self-Hosted Domain**.
+    - Select **Cloud-Hosted** if you access your Monica instance through Monica.
+    - Select **Self-Hosted** if you have self-hosted Monica on your own server. Provide your **Self-Hosted Domain**.
 - An **API Token**: Generate a token in **Settings > API**.
 

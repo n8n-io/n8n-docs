@@ -41,7 +41,7 @@ To configure this credential, you'll need:
 - A **Client ID**
 - A **Client Secret**
 
-To generate both these fields, register a new monday.com application with the scopes `boards:write` and `boards:read`. Refer to [Creating a new app](https://developer.monday.com/apps/docs/manage){:target=_blank .external-link} for instructions, and refer to [OAuth and permissions](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for details on the OAuth setup.
+To generate both these fields, register a new monday.com application. Refer to [Creating a new app](https://developer.monday.com/apps/docs/manage){:target=_blank .external-link} for instructions, and refer to [OAuth and permissions](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for details on the OAuth setup.
 
 Use these settings in your app:
 

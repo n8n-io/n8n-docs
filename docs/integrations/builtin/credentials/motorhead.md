@@ -29,6 +29,6 @@ To configure this credential, you'll need:
 
 - The **Host** URL: Update this to a different URL if you are self-hosting Motorhead.
 - An **API Key**: Generated in **Settings > Organization**. Refer to [Generate an API key](https://docs.getmetal.io/guides/misc-get-keys){:target=_blank .external-link} for instructions on generating API keys.
-- A **Client ID**: Once the API Key generates, return to the API key list, which will now display the `clientID` for that key.
+- A **Client ID**: Once the API Key generates, return to the API key list, which will now display the **clientID** for that key.
 
 

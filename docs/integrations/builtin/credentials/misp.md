@@ -26,7 +26,7 @@ Refer to [MISP's Automation API documentation](https://www.circl.lu/doc/misp/aut
 
 To configure this credential, you'll need:
 
-- An **API Key**: In MISP, these are called Automation keys. Get an automation key from **Event Actions > Automation**. Refer to [MISP's automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key){:target=_blank .external-link} for instructions on generating additional keys.
+- An **API Key**: In MISP, these are called Automation keys. Get an automation key from **Event Actions > Automation**. Refer to [MISP's automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key){:target=_blank .external-link} for instructions on generating more keys.
 - A **Base URL**: Your MISP URL.
-- Select whether to **Allow Unauthorized Certificates**: If turned on, the credential will connect even SSL certificate validation fails.
+- Select whether to **Allow Unauthorized Certificates**: If turned on, the credential will connect even if SSL certificate validation fails.
 

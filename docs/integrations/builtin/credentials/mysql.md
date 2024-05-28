@@ -47,7 +47,7 @@ To configure this credential, you'll need:
     - The **SSH Port**
     - The **SSH MySQL Port**
     - The **SSH User**
-    - If you selected `Password` for **SSH Authenticate with**, add the **SSH Password**.
-    - If you selected `Private Key` for **SSH Authenticate with**, add the **Private Key** and **Passphrase**.
+    - If you selected **Password** for **SSH Authenticate with**, add the **SSH Password**.
+    - If you selected **Private Key** for **SSH Authenticate with**, add the **Private Key** and **Passphrase**.
 
 Refer to [MySQL Using Encrypted Connections documentation](https://dev.mysql.com/doc/refman/8.0/en/encrypted-connections.html){:target=_blank .external-link} for more information on SSL and SSH.

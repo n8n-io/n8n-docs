@@ -27,7 +27,7 @@ Refer to [Mailgun's API documentation](https://documentation.mailgun.com/docs/ma
 
 To configure this credential, you'll need:
 
-- An **API Domain**: If your Mailgun account is based in Europe, select `api.eu.mailgun.net`; otherwise, select `api.mailgun.net`. Refer to [Mailgun Base URLs](https://documentation.mailgun.com/docs/mailgun/api-reference/intro/#base-url){:target=_blank .external-link} for more information.
+- An **API Domain**: If your Mailgun account is based in Europe, select **api.eu.mailgun.net**; otherwise, select **api.mailgun.net**. Refer to [Mailgun Base URLs](https://documentation.mailgun.com/docs/mailgun/api-reference/intro/#base-url){:target=_blank .external-link} for more information.
 - An **Email Domain**: Enter the email sending domain you're working with. If you have multiple sending domains, refer to [Working with multiple email domains](#working-with-multiple-email-domains) for more information.
 - An **API Key**: View your API key in **Settings > API Keys**. Refer to [Mailgun's API Authentication documentation](https://documentation.mailgun.com/docs/mailgun/api-reference/authentication/){:target=_blank .external-link} for more detailed instructions.
 

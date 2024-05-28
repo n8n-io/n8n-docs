@@ -24,14 +24,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- Drive OAuth2
-- Dynamics OAuth2
-- Excel OAuth2
-- Graph Security OAuth2
 - OAuth2
-- Outlook OAuth2
-- Teams OAuth2
-- To Do OAuth2
 
 ## Related resources
 
@@ -45,73 +38,13 @@ Refer to the linked Microsoft API documentation below for more information about
 - Teams: [Graph API](https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview){:target=_blank .external-link}
 - To Do: [Graph API](https://learn.microsoft.com/en-us/graph/todo-concept-overview){:target=_blank .external-link}
 
-## Using Drive OAuth2
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
-## Using Dynamics OAuth2
-
-To configure this credential, you'll need:
-
-- Your **Domain**
-- Select the Dynamics datacenter **Region** you're within: Refer to the [Microsoft Datacenter regions documentation](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions){:target=_blank .external-link} for more information on the options and corresponding URLs.
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
-## Using Excel OAuth2
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
-## Using Graph Security OAuth2
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
 ## Using OAuth2
 
-To configure this credential, you'll need:
-
-- Your **Scope**: Provide a space-separated list of scopes for this credential. Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc){:target=_blank .external-link} for a list of possible scopes.
-
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
+Some Microsoft services require extra information for OAuth2. Refer to [Service-specific settings](#service-specific-settings) for more guidance on those services.
 
-## Using Outlook OAuth2
-
-To configure this credential, you'll need:
-
-- Select whether to **Use Shared Inbox**: The API supports accessing a user's primary email inbox or a shared inbox. Turning this on indicates that the credential should access a shared inbox. If selected, you'll also need:
-    - **User Principal Name**: Enter the target user's UPN or ID.
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
-## Using Teams OAuth2
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
-## Using To Do OAuth2
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you need to configure OAuth2 from scratch, refer to [Microsoft OAuth2 web flow](#microsoft-oauth2-web-flow) below for more information.
-
-## Microsoft OAuth2 web flow
-
-If you need more detail on what's happening in the Microsoft OAuth web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}.
-
-To configure OAuth2 from scratch, [register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link}.
+For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}. To configure OAuth2 from scratch, [register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link}.
 
 Use these settings for your application:
 
@@ -121,4 +54,26 @@ Use these settings for your application:
 - Generate a new client secret in your application. Refer to the instructions in [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link}.
 - Copy the secret's **Value** and add it as the **Client Secret** in n8n.
 
+## Service-specific settings
 
+The following services require some extra information for OAuth2:
+
+### Dynamics
+
+Dynamics OAuth2 also requires these fields:
+
+- Your **Domain**
+- Select the Dynamics datacenter **Region** you're within: Refer to the [Microsoft Datacenter regions documentation](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions){:target=_blank .external-link} for more information on the options and corresponding URLs.
+
+### Microsoft (general)
+
+The general Microsoft OAuth2 also requires these fields:
+
+- **Scope**: Provide a space-separated list of scopes for this credential. Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc){:target=_blank .external-link} for a list of possible scopes.
+
+### Outlook
+
+Outlook OAuth requires also requires these fields:
+
+- Select whether to **Use Shared Inbox**: The API supports accessing a user's primary email inbox or a shared inbox. Turning this on indicates that the credential should access a shared inbox. If selected, you'll also need:
+    - **User Principal Name**: Enter the target user's UPN or ID.

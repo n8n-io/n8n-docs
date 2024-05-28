@@ -8,7 +8,7 @@ contentType: integration
 
 You can use these credentials to authenticate the following nodes:
 
-- [Metabase node](/integrations/builtin/app-nodes/n8n-nodes-base.metabase/).
+- [Metabase node](/integrations/builtin/app-nodes/n8n-nodes-base.metabase/)
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Create a [Metabase](https://www.metabase.com/){:target=_blank .external-link} ac
 
 Refer to [Metabase's API documentation](https://www.metabase.com/docs/latest/api-documentation){:target=_blank .external-link} for more information about the service.
 
-## Using Basic auth
+## Using basic auth
 
 To configure this credential, you'll need:
 

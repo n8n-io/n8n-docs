@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes:
 - [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium/)
 
 /// warning | Medium API no longer supported
-Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you won't be able to configure new integrations using them.
+Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you can't configure new integrations using them.
 ///
 
 ## Prerequisites
@@ -47,5 +47,5 @@ To generate a **Client ID** and **Client Secret**, you'll need access to the **D
 
 Use these settings for your new application:
 
-- Select `Oauth 2` as the **Authorization Protocol**
+- Select **OAuth 2** as the **Authorization Protocol**
 - Copy the **OAuth Callback URL** from n8n and use this as the **Callback URL** in Medium.

@@ -32,15 +32,15 @@ Refer to your broker provider's documentation for more detailed configuration an
 To configure this credential, you'll need:
 
 - Select the broker's **Protocol**: This helps n8n determine the URL it should use. The Protocol is the start of the URL. Options include:
-    - `Mqtt`: Begin the URL with the standard `mqtt:` protocol
-    - `Mqtts`: Begin the URL with the secure `mqtts:` protocol
-    - `Ws`: Begin the URL with the websocket `ws:` protocol
+    - **Mqtt**: Begin the URL with the standard `mqtt:` protocol
+    - **Mqtts**: Begin the URL with the secure `mqtts:` protocol
+    - **Ws**: Begin the URL with the websocket `ws:` protocol
 - A **Host**: Enter your broker host.
 - A **Port**: Enter the port number n8n should use to connect to the broker host.
 - A **Username**: Enter the username to authenticate to the broker.
 - A **Password**: Enter that user's password.
 - Select whether to use **Clean Session**: Turn off to receive QoS 1 and 2 messages while offline.
-- A **Client ID**: If this field is left empty, n8n autogenerate a Client ID for you.
+- A **Client ID**: If this field is blank, n8n autogenerates a Client ID for you.
 - Select whether to connect using **SSL**. If turned on, also enter:
     - Whether to use **Passwordless** connection with certificates, equivalent to SASL mechanism EXTERNAL. If turned on, also enter:
         - Select whether to **Reject Unauthorized Certificate**: If turned on, n8n will connect even if the certificate validation fails.

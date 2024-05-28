@@ -30,7 +30,7 @@ Refer to the [MongoDBs Atlas documentation](https://www.mongodb.com/docs/atlas/)
 
 To configure this credential, you'll need:
 
-- Select `Connection String` as the **Configuration Type**.
+- Select **Connection String** as the **Configuration Type**.
 - A **Connection String**: To get your connection string in MongoDB, go to **Database > Connect**.
     - Select **Drivers**.
     - Copy the code you see in **Add your connection string into your application code**. It will be something like: `mongodb+srv://yourName:yourPassword@clusterName.mongodb.net/?retryWrites=true&w=majority`.
@@ -48,7 +48,7 @@ To configure this credential, you'll need:
 
 To configure this credential, you'll need:
 
-- Select `Values` as the **Configuration Type**.
+- Select **Values** as the **Configuration Type**.
 - The **Host** for the database
 - The **Database** name
 - A **User** ID

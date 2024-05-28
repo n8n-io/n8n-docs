@@ -21,7 +21,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Mistral's API documentation](https://docs.mistral.ai/){:target=_blank .external-link} for more information about the service. Refer to [Mistral's API documentation](https://docs.mistral.ai/api/){:target=_blank .external-link} for more information about the APIs.
+Refer to [Mistral's API documentation](https://docs.mistral.ai/api/){:target=_blank .external-link} for more information about the APIs.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

@@ -63,7 +63,7 @@ To configure this credential, you'll need:
 - A **Client ID**: Generated once you configure a public integration
 - A **Client Secret**: Generated once you configure a public integration
 
-As with the API integration token, you must have [created a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link}. 
+You must [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} and set it to public distribution:
 
 1. Go to your Notion [integration dashboard](https://www.notion.so/my-integrations){:target=_blank .external-link}.
 2. Select the **+ New integration** button.

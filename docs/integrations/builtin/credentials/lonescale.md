@@ -1,5 +1,5 @@
 ---
-title: LoneScale credentials - n8n Documentation
+title: LoneScale credentials
 description: Documentation for LoneScale credentials. Use these credentials to authenticate LoneScale in n8n, a workflow automation platform.
 contentType: integration
 ---
@@ -13,11 +13,18 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-* A LoneScale account
-* An API Key. Follow [LoneScales documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link} to get your key.
+Create a [LoneScale](https://www.lonescale.com/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
---8<-- "_snippets/integrations/builtin/credentials/open-credential-modal-list.md"
+- API key
 
-1. Copy the API key from LoneScale into **API Key**.
+## Related resources
+
+Refer to [LoneScale's API documentation](https://public-api.lonescale.com/api){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to [LoneScale's Generate an API key documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link} to generate your key.

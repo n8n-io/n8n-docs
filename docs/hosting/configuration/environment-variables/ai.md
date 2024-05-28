@@ -15,7 +15,7 @@ hide:
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_AI_ENABLED` | Boolean | `false` | Whether AI features are enabled (true) or not (false). Enables Ask AI for the code node and HTTP node. Note that Ask AI in the Code node doesn't work if you set `N8N_DIAGNOSTICS_ENABLED` to false. |
+| `N8N_AI_ENABLED` | Boolean | `false` | Whether AI features are enabled (true) or not (false). Enables Ask AI for the HTTP node.|
 | `N8N_AI_PROVIDER` | String | `openai` | The AI provider to use. Currently, n8n only supports OpenAI. |
 | `N8N_AI_OPENAI_API_KEY` | String | - | Your OpenAI API key. |
 

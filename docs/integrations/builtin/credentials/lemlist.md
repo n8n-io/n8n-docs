@@ -6,28 +6,26 @@ contentType: integration
 
 # Lemlist credentials
 
-You can use these credentials to authenticate the following nodes with Lemlist.
+You can use these credentials to authenticate the following nodes:
 
 - [Lemlist](/integrations/builtin/app-nodes/n8n-nodes-base.lemlist/)
 - [Lemlist Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger/)
 
 ## Prerequisites
 
-Create an account on a [Lemlist](https://www.lemlist.com/) instance.
+Create an account on a [Lemlist](https://www.lemlist.com/){:target=_blank .external-link} instance.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your Lemlist [dashboard](https://app.lemlist.com/).
-2. Click on the menu on the top left and select 'Settings' from the dropdown list.
-3. Click on ***Integrations*** under the ***Misc*** section from the left sidebar.
-4. Copy the API key displayed under the ***API*** section.
-5. Enter the name for your credentials in the ***Credentials Name*** field in the 'Lemlist API' credentials in n8n.
-6. Paste the API key in the ***API Key*** field in the 'Lemlist API' credentials in n8n.
-7. Click on the ***Create*** button to create your credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/MWjHr2qw5XA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Lemlist's API documentation](https://developer.lemlist.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Access your API key in **Settings > Integrations**. Refer to the [API Authentication documentation](https://developer.lemlist.com/#authentication){:target=_blank .external-link} for more information.
 

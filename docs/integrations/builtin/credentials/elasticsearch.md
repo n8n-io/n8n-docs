@@ -12,8 +12,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create an [Elasticsearch](https://www.elastic.co/) account.
-- [Deploy](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) an application.
+- Create an [Elasticsearch](https://www.elastic.co/){:target=_blank .external-link} account.
+- [Deploy](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html){:target=_blank .external-link} an application.
 
 ## Supported authentication methods
 

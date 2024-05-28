@@ -45,7 +45,7 @@ Note that n8n itself consumes memory to run. On average, the software alone uses
 
 ## How to manage execution data on Cloud
 
-Execution data is data about the workflow's execution, including: node data, parameters, variables, execution context, and binary data references. It's text-based.
+Execution data includes node data, parameters, variables, execution context, and binary data references. It's text-based.
 
 Binary data is non-textual data that n8n can't represent as plain text. This is files and media such as images, documents, audio files, and videos. It's much larger than textual data.
 

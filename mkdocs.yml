@@ -295,6 +295,7 @@ nav:
           - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
           - Set the timezone: manage-cloud/set-cloud-timezone.md
           - Cloud IP addresses: manage-cloud/cloud-ip.md
+          - Cloud data management: manage-cloud/cloud-data-management.md
       - Enterprise features:
           - Source control and environments:
               - source-control-environments/index.md

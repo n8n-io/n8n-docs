@@ -25,7 +25,7 @@ Refer to [Ollama's API documentation](https://github.com/ollama/ollama/blob/main
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
-## Using Instance URL
+## Using instance URL
 
 To configure this credential, you'll need:
 

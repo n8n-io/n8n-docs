@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an [OpenAI](https://openai.com/) account.
+Create an [OpenAI](https://openai.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 

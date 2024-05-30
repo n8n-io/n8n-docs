@@ -6,7 +6,7 @@ contentType: integration
 
 # Microsoft credentials
 
-You can use these credentials to authenticate the following nodes:
+You can use these credentials to authenticate the following nodes with Microsoft.
 
 - [Microsoft Dynamics CRM](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm/)
 - [Microsoft Excel](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel/)
@@ -19,61 +19,37 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a [Microsoft Azure](https://azure.microsoft.com/){:target=_blank .external-link} account.
-- Create at least one user account with access to the appropriate service.
+Create a [Microsoft Azure](https://azure.microsoft.com/) account.
 
-## Supported authentication methods
+## Using OAuth
 
-- OAuth2
+/// note | Note for n8n Cloud users
+You'll only need to click on the **Connect my account** button to connect your Microsoft account with n8n.
+///
 
-## Related resources
+1. Access the [Microsoft Application Registration Portal](https://aka.ms/appregistrations){:target=_blank .external-link}.
+2. Click on the **Register an application** button.
+3. Enter a name for your app in the **Name** field.
+4. Select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)** under the **Supported account types** section.
+5. Copy the 'OAuth Callback URL' provided in the Microsoft node credentials in n8n.
+6. Paste it in the **Redirect URI (optional)** field on the **Register an application** page. In the same section, select **Select a platform** > **Web**.
+7. Click on the **Register** button.
+8. Copy the **Application (client) ID**.
+9. Enter the name for your credentials in the **Credentials Name** field in the Microsoft node credentials in n8n.
+10. Paste the Application ID in the **Client ID** field in the Microsoft node credentials in n8n.
+11. On your Microsoft application page, click on **Certificates & secrets** in the left sidebar.
+12. Click on the **+ New client secret** button under the **Client secrets** section.
+13. Enter a description in the **Description** field.
+14. Click on the **Add** button.
+15. Copy the displayed secret under the **Value** column.
+16. Paste the secret in the **Client Secret** field in the Microsoft node credentials in n8n.
+17. Click on the circle button in the OAuth section to connect a Microsoft account to n8n.
+18. Login to your Microsoft account and allow the app to access your info.
+19. Click on the **Save** button in the Microsoft node credentials in n8n to save your credentials.
 
-Refer to the linked Microsoft API documentation below for more information about each service's API:
+The following video demonstrates the steps mentioned above.
 
-- Dynamics CRM: [Web API](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview){:target=_blank .external-link}
-- Excel: [Graph API](https://learn.microsoft.com/en-us/graph/api/resources/excel){:target=_blank .external-link}
-- Graph Security: [Graph API](https://learn.microsoft.com/en-us/graph/api/overview){:target=_blank .external-link}
-- OneDrive: [Graph API](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link}
-- Outlook: [Graph API](https://learn.microsoft.com/en-us/graph/api/resources/mail-api-overview){:target=_blank .external-link} and [Outlook API](https://learn.microsoft.com/en-us/outlook/rest/reference){:target=_blank .external-link}
-- Teams: [Graph API](https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview){:target=_blank .external-link}
-- To Do: [Graph API](https://learn.microsoft.com/en-us/graph/todo-concept-overview){:target=_blank .external-link}
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/aqr_PwR1Sgc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-## Using OAuth2
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-Some Microsoft services require extra information for OAuth2. Refer to [Service-specific settings](#service-specific-settings) for more guidance on those services.
-
-For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}. To configure OAuth2 from scratch, [register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link}.
-
-Use these settings for your application:
-
-- For **Supported account types**, select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**.
-- Copy the **OAuth Callback URL** from n8n and use that as the **Redirect URI** in your Microsoft application.
-- Copy the **Application (client) ID** from your Microsoft application and add it as the **Client ID** in n8n.
-- Generate a new client secret in your application. Refer to the instructions in [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link}.
-- Copy the secret's **Value** and add it as the **Client Secret** in n8n.
-
-## Service-specific settings
-
-The following services require some extra information for OAuth2:
-
-### Dynamics
-
-Dynamics OAuth2 also requires these fields:
-
-- Your **Domain**
-- Select the Dynamics datacenter **Region** you're within: Refer to the [Microsoft Datacenter regions documentation](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions){:target=_blank .external-link} for more information on the options and corresponding URLs.
-
-### Microsoft (general)
-
-The general Microsoft OAuth2 also requires these fields:
-
-- **Scope**: Provide a space-separated list of scopes for this credential. Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc){:target=_blank .external-link} for a list of possible scopes.
-
-### Outlook
-
-Outlook OAuth requires also requires these fields:
-
-- Select whether to **Use Shared Inbox**: The API supports accessing a user's primary email inbox or a shared inbox. Turning this on indicates that the credential should access a shared inbox. If selected, you'll also need:
-    - **User Principal Name**: Enter the target user's UPN or ID.

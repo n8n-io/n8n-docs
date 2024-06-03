@@ -30,3 +30,4 @@ This page lists environment variables to configure workflow execution settings.
 | `EXECUTIONS_DATA_HARD_DELETE_BUFFER` | Number | `1` | How old (hours) the finished execution data has to be to get hard-deleted. By default, this buffer excludes recent executions as the user may need them while building a workflow. |
 | `EXECUTIONS_DATA_PRUNE_HARD_DELETE_INTERVAL` | Number | `15` | How often (minutes) execution data should be hard-deleted. |
 | `EXECUTIONS_DATA_PRUNE_SOFT_DELETE_INTERVAL` | Number | `60` | How often (minutes) execution data should be soft-deleted. |
+| `N8N_CONCURRENCY_PRODUCTION_CAP` | Number | `-1` | Max production executions allowed to run concurrently in main mode. -1 to disable. |

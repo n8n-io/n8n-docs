@@ -4,7 +4,7 @@ hide:
   - path
 ---
 
-# Welcome
+# Welcome PLEASE IGNORE IT
 
 This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](http://faircode.io){:target=_blank .external-link} licensed node-based workflow automation tool.
 

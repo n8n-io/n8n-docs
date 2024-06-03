@@ -21,7 +21,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Simple Message Transfer Protocol (SMTP) is a standard protocol for sending and receiving email. Most email providers offer instructions on setting up their service with SMTP; refer to your provider's SMTP instructions.
+Simple Message Transfer Protocol (SMTP) is a standard protocol for sending and receiving email. Most email providers offer instructions on setting up their service with SMTP. Refer to your provider's SMTP instructions.
 
 ## Using SMTP account
 

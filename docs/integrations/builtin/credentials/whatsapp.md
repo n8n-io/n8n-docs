@@ -17,7 +17,7 @@ Refer to the [WhatsApp documentation](https://developers.facebook.com/docs/whats
 
 - Create a [Meta developer](https://developers.facebook.com/docs/development/register){:target=_blank .external-link} account.
 - Create a Meta [business app](https://developers.facebook.com/docs/development/create-an-app/){:target=_blank .external-link}.
-    - WhatsApp messaging services require a Meta business portfolio (formerly called a Business Manager account--the UI may still show either option). Refer to Meta's [Create a business portfolio documentation](https://www.facebook.com/business/help/1710077379203657?id=180505742745347){:target=_blank .external-link} for detailed instructions.
+    - WhatsApp messaging services require a Meta business portfolio (formerly called a Business Manager account. The UI may still show either option). Refer to Meta's [Create a business portfolio documentation](https://www.facebook.com/business/help/1710077379203657?id=180505742745347){:target=_blank .external-link} for detailed instructions.
 
 See each supported authentication method below for more detailed instructions on creating the app.
 

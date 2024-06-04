@@ -10,7 +10,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/)
 
-/// warning | Minimum required version
+/// info | Minimum required version
 The monday.com node requires n8n version 1.22.6 or above.
 ///
 

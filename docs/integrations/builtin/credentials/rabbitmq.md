@@ -24,7 +24,7 @@ Install a [RabbitMQ broker](https://www.rabbitmq.com/).
 Refer to [RabbitMQ's Connections documentation](https://www.rabbitmq.com/docs/connections){:target=_blank .external-link} for more information about the service.
 
 ## Using user connection
-<!--vale off, because "Passwordless"-->
+<!--vale off-->
 
 To configure this credential, you'll need:
 

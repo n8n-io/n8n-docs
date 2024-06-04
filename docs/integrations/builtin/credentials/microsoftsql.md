@@ -43,5 +43,5 @@ To configure this credential, you'll need:
     - **7_2 (SQL Server 2005)**: TDS version 7.2
     - **7_1 (SQL Server 2000)**: TDS version 7.1
 
-Refer to the **Connect to server** table in the [Connect to a SQL Server Instance documentation](https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server) for more details on these fields.
+Refer to the **Connect to server** table in the [Connect to a SQL Server Instance documentation](https://learn.microsoft.com/en-us/sql/ssms/quickstarts/ssms-connect-query-sql-server){:target=_blank .external-link} for more details on these fields.
 

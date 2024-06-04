@@ -6,31 +6,43 @@ contentType: integration
 
 # Nextcloud credentials
 
-You can use these credentials to authenticate the following nodes with Nextcloud.
+You can use these credentials to authenticate the following nodes:
 
 - [Nextcloud](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/)
 
 ## Prerequisites
 
-Create a [Nextcloud](https://nextcloud.com/) account.
+Create a [Nextcloud](https://nextcloud.com/){:target=_blank .external-link} account.
 
-## Using OAuth
+## Supported authentication methods
 
-1. Log in to your Nextcloud account.
-2. Click on the user icon in the top right.
-3. Select 'Settings' in the drop down menu.
-4. Click on 'Security' under Administration in the sidebar.
-5. Copy the 'OAuth Callback URL' provided in the Nextcloud OAuth2 API credentials in n8n and paste it in the *Redirection URI* field under the 'OAuth 2.0 clients' section in the Nextcloud page.
-6. Fill out any other information that's necessary and click on the 'Add' button.
-7. Click on the eye icon to reveal the Secret and use the 'Client Identifier' and the 'Secret' with your Nextcloud OAuth2 API credentials in n8n.
-8. Replace your domain in the samples for the *Authorization URL* and *Access Token URL* fields.
-9. Enter your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html) in the *Web DAV URL* field.
-10. Click on the circle button in the OAuth section to connect a Nextcloud account to n8n.
-11. Click the *Save* button to save your credentials.
+- Basic auth
+- OAuth2
 
-![Getting Nextcloud OAuth credentials](/_images/integrations/builtin/credentials/nextcloud/using-oauth.gif)
+## Related resources
 
-## Using Username and Password
+Refer to [Nextcloud's API documentation](https://nextcloud-server.netlify.app/){:target=_blank .external-link} for more information about the service.
 
-Use your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html) along with your Nextcloud username and password in the node credentials.
+## Using basic auth
+
+To configure this credential, you'll need:
+
+- Your **Web DAV URL**: Enter your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html){:target=_blank .external-link}.
+- Your **User** name
+- Your **Password**
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- An **Authorization URL**: Update the sample URL to use your domain.
+- An **Access Token URL**: Update the sample URL to use your domain.
+- A **Client ID**: Generated once you add an OAuth2 application in **Administrator Security Settings**.
+- A **Client Secret**: Generated once you add an OAuth2 application in **Administrator Security Settings**.
+- A **Web DAV URL**: Enter your [Web DAV URL](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html){:target=_blank .external-link}.
+
+Refer to the Nextcloud [OAuth2 Configuration documentation](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/oauth2.html){:target=_blank .external-link} for more detailed instructions on adding an OAuth2 application. As you set up your application use these settings:
+
+- Copy the **OAuth Callback URL** from n8n and enter it as the **Redirection URI** in your OAuth2 application.
+
 

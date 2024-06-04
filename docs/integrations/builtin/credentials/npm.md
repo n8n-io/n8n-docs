@@ -12,14 +12,20 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-* An npm account
-* An Access Token. Follow [npm's documentation](https://docs.npmjs.com/creating-and-viewing-access-tokens){:target=_blank .external-link} to get your token.
+Create an [npm](https://www.npmjs.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
---8<-- "_snippets/integrations/builtin/credentials/open-credential-modal-list.md"
+- API access token
 
-1. Copy the Access token from npm into **Access Token**.
-2. If you are using a custom npm registry set the **Registry Url**.
-3. Select **Save**. n8n tests your credentials and confirms that they work.
+## Related resources
+
+Refer to [npm's external integrations documentation](https://docs.npmjs.com/integrations/integrating-npm-with-external-services){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An **Access Token**: Create an access token by selecting **Access Tokens** from your profile menu. Refer to [npm's Creating and viewing access tokens documentation](https://docs.npmjs.com/creating-and-viewing-access-tokens){:target=_blank .external-link} for more detailed instructions.
+- A **Registry URL**: If you're using a custom npm registry, update the **Registry URL** to that custom registry. Otherwise, keep the public registry value.
 

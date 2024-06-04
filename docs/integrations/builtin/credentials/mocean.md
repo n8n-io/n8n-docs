@@ -6,19 +6,28 @@ contentType: integration
 
 # Mocean credentials
 
-You can use these credentials to authenticate the following nodes with Mocean.
+You can use these credentials to authenticate the following nodes:
 
 - [Mocean](/integrations/builtin/app-nodes/n8n-nodes-base.mocean/)
 
 ## Prerequisites
 
-Create a [Mocean](https://dashboard.moceanapi.com/register?fr=n8n) account.
+Create a [Mocean](https://moceanapi.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Mocean Dashboard.
-2. Your API key and secret will be visible.
-3. Use the API key and secret in your Mocean node credentials in n8n.
+- API key
 
-![Getting Mocean credentials](/_images/integrations/builtin/credentials/mocean/using-access-token.gif)
+## Related resources
+
+Refer to [Mocean's API documentation](https://moceanapi.com/docs/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**
+- An **API Secret**
+
+Both the key and secret are accessible in your Mocean [Dashboard](https://dashboard.moceanapi.com/). Refer to [API Authentication](https://moceanapi.com/docs/#authentication){:target=_blank .external-link} for more information.
 

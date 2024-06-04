@@ -24,6 +24,7 @@ Install a [RabbitMQ broker](https://www.rabbitmq.com/).
 Refer to [RabbitMQ's Connections documentation](https://www.rabbitmq.com/docs/connections){:target=_blank .external-link} for more information about the service.
 
 ## Using user connection
+<!--vale off, because "Passwordless"-->
 
 To configure this credential, you'll need:
 
@@ -38,6 +39,7 @@ To configure this credential, you'll need:
         - The **Client Key**: Paste the SSL client key to use.
         - The **Passphrase**: Paste the SSL passphrase to use.
     - **CA Certificates**: Paste the text of the SSL CA certificates to use.
+<!--vale on-->
 
 ## `guest` user issues
 

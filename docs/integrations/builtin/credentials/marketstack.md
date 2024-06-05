@@ -12,18 +12,22 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an account on [Marketstack](https://marketstack.com/).
+Create a [Marketstack](https://marketstack.com/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-From Marketstack:
+- API key
 
-1. Access your Marketstack dashboard.
-2. Copy the key provided in the ***Your API Access Key*** field.
+## Related resources
 
-From n8n:
+Refer to [Marketstack's API documentation](https://marketstack.com/documentation){:target=_blank .external-link} for more information about the service.
 
-3. Enter a descriptive ***Credentials Name***.
-4. Under ***Credential Data***, enter the key obtained above in the corresponding field.
-5. Click **Save** to create your new credentials.
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: View and generate API keys in your Marketstack [account dashboard](https://marketstack.com/dashboard){:target=_blank .external-link}.
+- Select whether to **Use HTTPS**: Make this selection based on your Marketstack account plan level:
+    - Free plan: Turn off **Use HTTPS**
+    - All other plans: Turn on **Use HTTPS**
 

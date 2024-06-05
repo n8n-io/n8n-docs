@@ -6,70 +6,91 @@ contentType: integration
 
 # HubSpot credentials
 
-You can use these credentials to authenticate the following nodes with HubSpot.
+You can use these credentials to authenticate the following nodes:
 
 - [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/)
 - [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/)
 
-/// note | API key deprecated
-HubSpot deprecated the API key authentication method. The option still appears in n8n, but you should use OAuth or APP Token.
-///
 ## Prerequisites
 
-Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} account.
+Create a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} account or [HubSpot developer](https://developers.hubspot.com/){:target=_blank .external-link} account.
 
-## Using OAuth
+## Supported authentication methods
 
-/// note | Note for n8n Cloud users
-You can skip these steps. Enter the credential name, then select **Connect my account** in the OAuth section to connect your HubSpot account to n8n.
+- App token: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
+- Developer API key: Used with [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node
+- OAuth2: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
+
+/// note | API key deprecated
+HubSpot deprecated the API key authentication method. The option still appears in n8n, but you should use the other authentication methods.
 ///
+
+## Related resources
+
+Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks){:target=_blank .external-link} for more information about that service.
+
+## Using App token
+
+To configure this credential, you'll need:
+
+- An **APP Token**: To generate an app token, create a private app in HubSpot. Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} for detailed instructions.
+
+Authenticating the credential can fail if you don't use appropriate scopes. See [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for required scopes for this app.
+
+## Using Developer API key
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated once you create a public app, displayed in the app's **Auth** settings. Refer to the instructions in the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app){:target=_blank .external-link}.
+    - Use the n8n **OAuth Redirect URL** as the **Redirect URL** in your HubSpot app.
+- A **Client Secret**: Generated once you create a public app, displayed in the app's **Auth** settings.
+- A **Developer API Key**: Generated from your Developer Applications dashboard. Refer to [HubSpot Developer API keys](https://legacydocs.hubspot.com/docs/faq/developer-api-keys){:target=_blank .external-link} for more information.
+- An **App ID**: Generated once you create a public app, displayed in the app's **Auth** settings.
+
+Authenticating the credential can fail if you don't use appropriate scopes. See [Required scopes for HubSpot Trigger node](#required-scopes-for-hubspot-trigger-node) for required scopes for this app.
+
+### Required scopes for HubSpot Trigger node
+
+If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node, n8n recommends starting with these scopes:
+
+* `oauth`
+* `crm.objects.companies.read`
+* `crm.objects.contacts.read`
+* `crm.objects.deals.read`
+* `crm.schemas.companies.read`
+* `crm.schemas.contacts.read`
+* `crm.schemas.deals.read`
 
 /// warning | HubSpot old accounts
 Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
 ///
 
-1. Access your [HubSpot Developer Home](https://developers.hubspot.com/){:target=_blank .external-link}.
-2. Select **Manage apps**.
-3. Select **Create app**.
-4. Enter an app name in **Public app name**.
-5. Select the **Auth** tab.
-6. Use the provided **Client ID** and the **Client secret** with your HubSpot OAuth2 API credentials in n8n. If you're using the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node, copy the **App ID** along with the information in the previous step.
-8. Copy your OAuth Callback URL from the **Create New Credentials** screen in n8n and paste in the **Redirect URL** section in HubSpot	
-9. In the Scopes section, select the following scopes in the **Find a scope** search box:
-    * Trigger node:
-        * oauth
-        * crm.objects.contacts (read),
-        * crm.schemas.contacts (read),
-        * crm.objects.companies (read),
-        * crm.schemas.companies (read),
-        * crm.objects.deals (read),
-        * crm.schemas.deals (read),
-    * Regular node:
-        * oauth
-        * crm.schemas.deals (read),
-        * crm.objects.owners (read),
-        * crm.objects.contacts (write),
-        * crm.objects.companies (write),
-        * crm.objects.companies (read),
-        * crm.objects.deals (read),
-        * crm.schemas.contacts (read),
-        * crm.objects.deals (write),
-        * crm.objects.contacts (read),
-        * crm.schemas.companies (read),
-        * forms,
-        * tickets,
+## Using OAuth2
 
-	    /// note | Exact scope needed
-	    If you grant access to more or less scopes than listed above, this can cause an issue with the authentication step.
-		///
-		
-10. Select **Save** to save your settings in HubSpot.
-11. In n8n, select **Connect my account** in the OAuth section to connect your HubSpot account to n8n.
-12. Click the **Save** button to save your credentials.
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
+If you need to configure OAuth2 from scratch, you'll need to create a public app. Refer to the instructions in the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app){:target=_blank .external-link}. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/api/working-with-oauth){:target=_blank .external-link}.
 
-## Using APP Token
+Authenticating the credential can fail if you don't use appropriate scopes. See [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for required scopes for this app.
 
-1. Follow the instructions in the [Private Apps Documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} to get your access token.
-2. Set the access token as the key in your HubSpot credentials in n8n.
+## Required scopes for HubSpot node
 
+If you're creating an app for use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node, n8n recommends starting with these scopes:
+
+* `oauth`
+* `crm.objects.contacts.read`
+* `crm.objects.contacts.write`
+* `crm.objects.companies.read`
+* `crm.objects.companies.write`
+* `crm.objects.deals.read`
+* `crm.objects.deals.write`
+* `crm.objects.owners.read`
+* `crm.schemas.companies.read`
+* `crm.schemas.contacts.read`
+* `crm.schemas.deals.read`
+* `forms`
+* `tickets`
+
+/// warning | HubSpot old accounts
+Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.
+///

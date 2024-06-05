@@ -6,30 +6,28 @@ contentType: integration
 
 # Line credentials
 
-You can use these credentials to authenticate the following nodes with Line.
+You can use these credentials to authenticate the following nodes:
 
 - [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line/)
 
 ## Prerequisites
 
-Create a [Line](https://line.me/en/) account.
+- Create a [Line](https://line.me/en/){:target=_blank .external-link} account.
+- Connect Line with [Line Notify](https://notify-bot.line.me/en/)
 
-## Using OAuth
+## Supported authentication methods
 
-1. Access the [LINE Notify](https://notify-bot.line.me/en/) page.
-2. Click on your name on the top right corner and select 'Manage registered services' from the dropdown list.
-3. Click on the ***Add service*** button.
-4. Enter all the necessary information.
-5. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n and paste it in the ***Callback URL*** field.
-6. Click on the ***Agree and continue*** button.
-7. Click on the ***Add*** button.
-8. Check your inbox for the verification email.
-9. Click on the link under the ***LINE Notify Registration URL*** in your email.
-10. On the LINE Notify page, click on the ***My services*** button.
-11. Click on the new service you created.
-12. Use the provided ***Client ID*** and ***Client Secret*** with your Line Notify OAuth2 API credentials in n8n.
-13. Click on the circle button in the OAuth section to connect a Line account to n8n.
-14. Click the ***Save*** button to save your credentials in n8n.
+- Notify OAuth2
 
-![Getting Line credentials](/_images/integrations/builtin/credentials/line/using-oauth.gif)
+## Related resources
 
+Refer to [Line Notify's API documentation](https://notify-bot.line.me/doc/en/){:target=_blank .external-link} for more information about the service.
+
+## Using Notify OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated once you add a new registered service.
+- A **Client Secret**: Generated once you add a new registered service.
+
+To generate a **Client ID** and **Client Secret**, [add a new registered service](https://notify-bot.line.me/my/services/new){:target=_blank .external-link}. Use the **OAuth Callback URL** from n8n as the **Callback URL** for the service. Once you've saved the new service, copy the **Client ID** and **Client Secret** from the service and paste them into the n8n credential.

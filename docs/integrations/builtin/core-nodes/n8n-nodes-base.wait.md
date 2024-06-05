@@ -39,9 +39,9 @@ For the time-based resume operations, note that:
 
 The resume **On webhook call** option enables your workflows to resume when the Wait node receives an HTTP call.
 
-The webhook URL that resumes the execution when called is generated at runtime. The Wait node provides the `$resumeWebhookUrl` variable so that you can reference and send the yet-to-be-generated URL wherever needed, for example to a third-party service or in an email. 
+The webhook URL that resumes the execution when called is generated at runtime. The Wait node provides the `$execution.resumeUrl` variable so that you can reference and send the yet-to-be-generated URL wherever needed, for example to a third-party service or in an email. 
 
-When the workflow executes, the Wait node generates the resume URL and the webhook(s) in your workflow using the `$resumeWebhookUrl` reference become functional. This generated URL is unique to each execution, meaning that your workflow can contain multiple Wait nodes and as the webhook URL is called it will resume each Wait node sequentially.
+When the workflow executes, the Wait node generates the resume URL and the webhook(s) in your workflow using the `$execution.resumeUrl` reference become functional. This generated URL is unique to each execution, meaning that your workflow can contain multiple Wait nodes and as the webhook URL is called it will resume each Wait node sequentially.
 
 ### Webhooks reference
 

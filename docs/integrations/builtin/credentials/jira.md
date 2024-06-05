@@ -6,22 +6,37 @@ contentType: integration
 
 # Jira credentials
 
-You can use these credentials to authenticate the following nodes with Jira.
+You can use these credentials to authenticate the following nodes:
 
 - [Jira](/integrations/builtin/app-nodes/n8n-nodes-base.jira/)
 - [Jira Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger/)
 
 ## Prerequisites
 
-Create a [Jira](https://www.JIRA.com/) account.
+Create a [Jira](https://www.atlassian.com/software/jira){:target=_blank .external-link} Software Cloud or Server account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Jira dashboard.
-2. Select on your user icon in the top right.
-3. Select **Manage account**.
-4. Select the**Security** tab.
-5. Select **Create and manage API tokens**.
-6. Create API token.
-7. Use the API token in the Jira node credentials in n8n, along with the email address and Jira domain.
+- SW Cloud API token: For use with Jira Software Cloud
+- SW Server account: For use with Jira Software Server
+
+## Related resources
+
+Refer to [Jira's API documentation](https://developer.atlassian.com/cloud/jira/platform/rest/v2/intro/#about){:target=_blank .external-link} for more information about the service.
+
+## Using SW Cloud API token
+
+To configure this credential, you'll need:
+
+- The **Email** address associated with your Jira account
+- An **API Token**: Refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/){:target=_blank .external-link} for instructions to create an API token.
+- The **Domain** you access Jira on
+
+## Using SW Server account
+
+To configure this credential, you'll need:
+
+- The **Email** address associated with your Jira account
+- A **Password** for that account
+- The **Domain** you access Jira on
 

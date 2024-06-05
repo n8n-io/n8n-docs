@@ -47,7 +47,7 @@ To configure this credential, you'll need:
 
 Refer to [Connection Strings](https://www.postgresql.org/docs/16/libpq-connect.html#LIBPQ-CONNSTRING){:target=_blank .external-link} for more information on finding and formatting these fields.
 
-### Using SSH tunnel
+### SSH tunnel
 
 Only turn on the **SSH Tunnel** if:
 

@@ -51,9 +51,9 @@ Refer to [Connection Strings](https://www.postgresql.org/docs/16/libpq-connect.h
 
 Only turn on the **SSH Tunnel** if:
 
-    - You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node (Agent node doesn't support SSH tunnels).
-    - You have an SSH server running on the same machine as the Postgres server.
-    - You can log in using `ssh` as some user.
+- You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node (Agent node doesn't support SSH tunnels).
+- You have an SSH server running on the same machine as the Postgres server.
+- You can log in using `ssh` as some user.
 
 Once turned on, you'll need:
 

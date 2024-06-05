@@ -46,7 +46,7 @@ Vector databases require other tools to function:
 - Embeddings: these are the tools that turn the data (text, images, and so on) into vectors, and back into raw data.
 - Retrievers: retrievers fetch documents from vector databases. You need to pair them with an embedding to translate the vectors back into data.
 
-[TODO:  When to use Get Many vs Retrieve documents? Why don't you need a retriever in some scenarios?]
+
 
 
 

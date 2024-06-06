@@ -6,7 +6,7 @@ contentType: integration
 
 # ServiceNow credentials
 
-You can use these credentials to authenticate the following nodes with ServiceNow.
+You can use these credentials to authenticate the following nodes:
 
 - [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/)
 

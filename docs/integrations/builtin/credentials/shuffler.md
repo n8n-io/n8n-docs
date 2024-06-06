@@ -5,14 +5,24 @@ description: Documentation for the Shuffler credentials. Use these credentials t
 
 # Shuffler credentials
 
-You can use these credentials to authenticate when using the HTTP Request node to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
-## Authentication methods 
+## Prerequisites
 
-n8n supports Shuffler authentication with bearer auth.
+Create a [Shuffler](https://shuffler.io){:target=_blank .external-link} account on either a cloud or self-hosted instance.
+
+## Supported authentication methods 
+
+- API key
 
 ## Related resources
 
 Refer to [Shuffler's documentation](https://shuffler.io/docs/API#authentication){:target=_blank .external-link} for more information about the service.
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/shuffler/){:target=_blank .external-link} on n8n's website.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Get your API key from the **Settings** page.

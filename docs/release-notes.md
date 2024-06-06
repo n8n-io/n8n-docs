@@ -39,7 +39,6 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains new features, node enhancements, and bug fixes.
 
-You can now move credentials and workflows into a project.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

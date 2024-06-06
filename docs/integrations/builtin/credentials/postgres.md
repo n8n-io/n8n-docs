@@ -53,7 +53,7 @@ Only turn on the **SSH Tunnel** if:
 
 - You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node (Agent node doesn't support SSH tunnels).
 - You have an SSH server running on the same machine as the Postgres server.
-- You can log in using `ssh` as some user.
+- You have a user account that can log in using `ssh`.
 
 Once turned on, you'll need:
 

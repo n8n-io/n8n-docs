@@ -41,7 +41,7 @@ To configure this credential, you'll need:
     - **CA Certificates**: Paste the text of the SSL CA certificates to use.
 <!--vale on-->
 
-## `guest` user issues
+## guest user issues
 
 If you use the `guest` user for the credential and you try to access a remote host, you may see a connection error. The RabbitMQ logs show an error like this:
 

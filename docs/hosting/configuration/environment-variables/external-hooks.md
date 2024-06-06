@@ -18,3 +18,4 @@ You can define external hooks that n8n executes whenever a specific operation ru
 | Variable | Type  | Description |
 | :------- | :---- | :---------- |
 | `EXTERNAL_HOOK_FILES` | String | Files containing external hooks. Provide multiple files as a colon-separated list ("`:`"). |
+| `EXTERNAL_FRONTEND_HOOKS_URLS` | String | URLs to external frontend hooks files. Provide multiple files as a colon-separated list ("`:`"). |

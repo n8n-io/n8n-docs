@@ -12,12 +12,21 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-You need an API key and Qdrant cluster URL to establish a connection.
+Create a [Qdrant cluster](https://qdrant.tech/documentation/cloud/create-cluster/){:target=_blank .external-link}.
 
-Refer to [Qdrant's authentication docs](https://qdrant.tech/documentation/cloud/authentication/#authentication){:target=_blank .external-link} for guidance on getting your key and URL.
+## Supported authentication methods
+
+- API key
 
 ## Related resources
 
-Refer to [Qdrant's documentation](https://qdrant.tech/documentation/){:target=_blank .external-link}
+Refer to [Qdrant's documentation](https://qdrant.tech/documentation/){:target=_blank .external-link} for more information.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Create an API key from your **Cloud Dashboard > Access Management**. Refer to [Qdrant's authentication documentation](https://qdrant.tech/documentation/cloud/authentication/){:target=_blank .external-link} for more information.
+- A **Qdrant URL**: The URL for your Qdrant cluster. Refer to [Qdrant Web UI](https://qdrant.tech/documentation/interfaces/web-ui/){:target=_blank .external-link} for more information.

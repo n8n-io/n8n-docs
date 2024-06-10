@@ -12,32 +12,32 @@ You can use these credentials to authenticate the following nodes with Storyblok
 
 ## Prerequisites
 
-Create a [Storyblok](https://www.storyblok.com/) account.
+Create a [Storyblok](https://www.storyblok.com/){:target=_blank .external-link} account.
 
-## Using API Key to access the Content API
+## Supported authentication methods
 
-1. Access the [spaces](https://app.storyblok.com/#!/me/spaces) page.
-2. Select a space you want to use from the left sidebar.
-3. Click on ***Settings*** in the left sidebar.
-4. Select the ***API-Keys*** tab.
-5. Select an access level from the ***Access Level*** dropdown list.
-6. Click on the ***Create Token*** button.
-7. Use this ***API Key*** with your Storyblok Content API credentials in n8n.
+- Content API key: For read-only access
+- Management API key: For full CRUD operations
 
-![Getting Storyblok credentials for the Content API](/_images/integrations/builtin/credentials/storyblok/using-content-api.gif)
+/// note | Content API support
+n8n supports Content API v1 only.
+///
 
-## Using API Key to access the Management API
+## Related resources
 
-1. Access the [My Account](https://app.storyblok.com/#!/me/account) page.
-2. Scroll down to the ***Personal access tokens*** section.
-3. Click on the ***Generate new Token*** button.
-4. Use this ***API Key*** with your Storyblok Management API credentials in n8n.
+Refer to Storyblok's [Content v1 API documentation](https://www.storyblok.com/docs/api/content-delivery/v1){:target=_blank .external-link} and [Management API documentation](https://www.storyblok.com/docs/api/management/getting-started/introduction){:target=_blank .external-link} for more information about the services.
 
-![Getting Storyblok credentials for the Management API](/_images/integrations/builtin/credentials/storyblok/using-management-api.gif)
+## Using Content API key
 
+To configure this credential, you'll need:
 
-## Further Reference
+- A Content **API Key**: Go to your Storyblok workspace's **Settings > Access Tokens** to get an API key. Choose an **Access Level** of either **Public** (`version=published`) or **Preview** (`version-published` and `version=draft`). Enter this access token as your **API Key**. Refer to [How to retrieve and generate access tokens](https://www.storyblok.com/faq/retrieve-and-generate-access-tokens){:target=_blank .external-link} for more detailed instructions.
 
-- [Content API Documentation](https://www.storyblok.com/docs/api/content-delivery#topics/authentication)
-- [Management API Documentation](https://www.storyblok.com/docs/api/management#topics/authentication)
+Refer to [Content v1 API Authentication](https://www.storyblok.com/docs/api/content-delivery/v1#topics/authentication){:target=_blank .external-link} for more information about supported operations with each Access Level.
+
+## Using Management API key
+
+To configure this credential, you'll need:
+
+- A **Personal Access Token**: Go to [**My Account**](https://app.storyblok.com/#!/me/account){:target=_blank .external-link} **> Personal access tokens** to generate a new access token. Enter this access token as your **Personal Access Token**.
 

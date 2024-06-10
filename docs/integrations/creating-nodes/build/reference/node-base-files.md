@@ -78,9 +78,23 @@ The internal name of the object. Used to reference it from other places in the n
 
 ### `icon`
 
-_String_ | _Required_
+_String_ or _Object_ | _Optional_
 
-Starts with `file`. For example, `icon: 'file:exampleNodeIcon.svg'`.
+Specifies an icon for a particular node. n8n recommends uploading your own image file. 
+
+You can provide the icon as a string or as an object to handle different icons for light and dark modes.
+If the icon works in both light and dark modes, use a string that starts with `file:`, indicating the path to the icon file. For example:
+
+```
+icon: 'file:exampleNodeIcon.svg'
+```
+To provide different icons for light and dark modes, use an object with `light` and `dark` properties. For example:
+```
+icon: { 
+  light: 'file:exampleNodeIcon.svg', 
+  dark: 'file:exampleNodeIcon.dark.svg' 
+}
+```
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 

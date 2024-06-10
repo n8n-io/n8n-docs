@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 - Create a remote server with SSH enabled.
 - Create one of the following:
-    - A user account that can `ssh` into server: Use with [password authentication](#using-password).
+    - A user account that can `ssh` into the server: Use with [password authentication](#using-password).
     - An SSH key for the server or service: Use with [private key authentication](#using-private-key).
 
 ## Supported authentication methods
@@ -42,7 +42,7 @@ To configure this credential, you'll need:
 
 - A **Host**: Enter the IP address of the server you are connecting to.
 - A **Port**: Enter the port to use for this connection. SSH uses port 22 by default.
-- A **Username**: Enter the username the private key was generated for.
+- A **Username**: Enter the username of the account that generated the private key.
 - An SSH **Private Key**: Enter the entire contents of your SSH private key.
-- _Optional:_ If a **Passphrase** was used for the key, enter the passphrase. If no passphrase was used, leave blank.
+- _Optional:_ If you created a **Passphrase** for the key, enter the passphrase. If you didn't create a passphrase for the key, leave blank.
 

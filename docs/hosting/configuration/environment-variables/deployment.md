@@ -46,6 +46,6 @@ This page lists the deployment configuration options for your self-hosted n8n in
 | `N8N_PUBLIC_API_DISABLED` | Boolean | `false` | Whether to disable the public API (true) or not (false). |
 | `N8N_PUBLIC_API_ENDPOINT` | String | `api` | Path for the public API endpoints. |
 | `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` | Number | `30` | How long should the n8n process wait (in seconds) for components to shut down before exiting the process. |
-| `N8N_DEV_RELOAD` | Boolean | `false` | Set to `true` to automatically reload or restart when changes occur in the source code. |
+| `N8N_DEV_RELOAD` | Boolean | `false` | When working on the n8n source code, set this to `true` to automatically reload or restart the application when changes occur in the source code files. |
 | `N8N_REINSTALL_MISSING_PACKAGES` | Boolean | `false` | If set to `true`, n8n will automatically attempt to reinstall any missing packages. |
 | `N8N_TUNNEL_SUBDOMAIN` | String | - | Specifies the subdomain for the n8n tunnel. If not set, n8n generates a random subdomain.|

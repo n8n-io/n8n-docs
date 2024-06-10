@@ -35,7 +35,7 @@ For more complex nodes, n8n recommends following a directory structure like belo
   * `actions`: a directories containing sub-directories that represent resources.
     * Each sub-directory should contain two types of files: 
       * index file with resource description (named either `<resourceName>.resource.ts` or `index.ts`) 
-      * files for operations `<operationName>.operation.ts`. This file should have two exports: `description` of the operation and an `execute` function.
+      * Files for operations `<operationName>.operation.ts`. These files should have two exports: `description` of the operation and an `execute` function.
   * `methods`: an optional directory dynamic parameters' functions.  
   * `transport`: a directory containing the communication implementation.
 

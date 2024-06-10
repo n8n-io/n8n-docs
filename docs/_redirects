@@ -1,3 +1,6 @@
+/integrations/builtin/app-nodes/n8n-nodes-base.sms77/   /integrations/builtin/app-nodes/n8n-nodes-base.seven/
+/integrations/builtin/credentials/sms77/    /integrations/builtin/credentials/seven/
+
 /integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/google/googleai/
 
 /n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/

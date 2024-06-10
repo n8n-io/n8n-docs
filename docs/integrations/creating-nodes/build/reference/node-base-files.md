@@ -78,7 +78,7 @@ The internal name of the object. Used to reference it from other places in the n
 
 ### `icon`
 
-_String_ or _Object_ | _Optional_
+_String_ or _Object_ | _Required_
 
 Specifies an icon for a particular node. n8n recommends uploading your own image file. 
 

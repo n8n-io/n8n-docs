@@ -30,7 +30,7 @@ You can choose whether to place all your node's functionality in one file, or sp
 
 A basic pattern is to separate out operations. Refer to the [HttpBin starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/HttpBin){:target=_blank .external-link} for an example of this.
 
-For more complex nodes, n8n recommends following a directory structure like below. Refer to [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable){:target=_blank .external-class} or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook){:target=_blank .external-link} as examples. 
+For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable){:target=_blank .external-class} or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook){:target=_blank .external-link} as examples. 
 
   * `actions`: a directories containing sub-directories that represent resources.
     * Each sub-directory should contain two types of files: 

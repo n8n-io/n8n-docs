@@ -127,7 +127,7 @@ As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration op
 
 ### Remove Node 16 support
 
-n8n now requires Node 18 or above.
+n8n now requires Node 18.17.0 or above.
 
 ## Updating to n8n 1.0
 

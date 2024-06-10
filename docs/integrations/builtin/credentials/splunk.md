@@ -28,7 +28,7 @@ Refer to [Splunk's Enterprise API documentation](https://docs.splunk.com/Documen
 To configure this credential, you'll need:
 
 - An **Auth Token**: Once you've enabled token authentication, create an auth token in **Settings > Tokens**. Refer to [Creating authentication tokens](https://docs.splunk.com/Documentation/Splunk/9.2.1/Security/CreateAuthTokens){:target=_blank .external-link} for more information.
-- A **Base URL**: For your Splunk instance. This should include the protocol, domain, and port. For example: `https://localhost:8089`.
+- A **Base URL**: For your Splunk instance. This should include the protocol, domain, and port, for example: `https://localhost:8089`.
 - **Allow Self-Signed Certificates**: If turned on, n8n will connect even if SSL validation fails.
 
 ## Required capabilities

@@ -32,7 +32,7 @@ To configure this credential, you'll need:
 - A **Username**
 - A **Password**
 - A **Schema**: Enter the [schema](https://docs.snowflake.com/en/sql-reference/sql/use-schema){:target=_blank .external-link} you want to use after connecting.
-- A **Role**: Enter the security [role you](https://docs.snowflake.com/en/sql-reference/sql/use-role){:target=_blank .external-link} want to use after connecting.
-- **Client Session Keep Alive**: By default, client connections typically time out three or four hours after the most recent query execution. Turning this setting on sets the `clientSessionKeepAlive` parameter to true and the server will keep the client’s connection to the server alive indefinitely, even if the connection doesn't execute any queries.
+- A **Role**: Enter the security [role](https://docs.snowflake.com/en/sql-reference/sql/use-role){:target=_blank .external-link} you want to use after connecting.
+- **Client Session Keep Alive**: By default, client connections typically time out three or four hours after the most recent query execution. Turning this setting on sets the `clientSessionKeepAlive` parameter to true: the server will keep the client's connection alive indefinitely, even if the connection doesn't execute any queries.
 
 Refer to [Session Commands](https://docs.snowflake.com/en/sql-reference/commands-session){:target=_blank .external-link} for more information on these settings.

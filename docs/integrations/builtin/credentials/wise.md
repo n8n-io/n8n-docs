@@ -51,7 +51,7 @@ If SCA is required, Wise returns an error similar to below:
 
 To enable signing a token you need to create and add a public and private key. Add the public key to Wise in user [profile settings](https://wise.com/settings/public-keys){:target=_blank .external-link}.
 
-As a first step we need to generate an RSA key pair:
+To generate an RSA key pair:
 
 ```sh
 $ openssl genrsa -out private.pem 2048 

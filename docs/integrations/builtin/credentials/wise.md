@@ -38,3 +38,29 @@ The following video demonstrates the steps mentioned above.
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/hys2lDEScUE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+
+## Personal Token SCA
+
+When making a request to an SCA protected endpoint, a 403 Forbidden HTTP status code is returned.
+SCA is required on Get Statements, and Funds transfer request. It is disabled when using test endpoints.
+
+If SCA is required an error similar ot below returnd from Wise: 
+
+> This request requires Strong Customer Authentication (SCA). Please add a key pair to your account and n8n credentials. See https://api-docs.transferwise.com/#strong-customer-authentication-personal-token
+
+
+To enable signing a token we need to create and add a public and private key  and add the public key to wise. In user [profile settings](https://wise.com/settings/public-keys).
+
+As a first step we need to generate an RSA key pair:
+
+```sh
+$ openssl genrsa -out private.pem 2048 
+$ openssl rsa -pubout -in private.pem -out public.pem
+```
+With the generated keys, we now need to add them to n8n and Wise.
+
+- Add the content of the public key `public.pem` to your Wise user [profile settings](https://wise.com/settings/public-keys).
+- Add the content of the private key `private.pem` to your n8n Wise Credential under `Private Key (Optional)`
+
+
+

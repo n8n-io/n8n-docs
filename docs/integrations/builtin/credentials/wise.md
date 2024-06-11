@@ -44,7 +44,7 @@ The following video demonstrates the steps mentioned above.
 When making a request to an SCA (strong customer authentication) protected endpoint, Wise returns a 403 Forbidden HTTP status code.
 SCA is required on Get Statements, and Funds transfer request. It is disabled when using test endpoints.
 
-If SCA is required an error similar ot below returnd from Wise: 
+If SCA is required, Wise returns an error similar to below : 
 
 > This request requires Strong Customer Authentication (SCA). Please add a key pair to your account and n8n credentials. See https://api-docs.transferwise.com/#strong-customer-authentication-personal-token
 

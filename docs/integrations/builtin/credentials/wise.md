@@ -59,7 +59,7 @@ $ openssl rsa -pubout -in private.pem -out public.pem
 ```
 With the generated keys, add them to n8n and Wise:
 
-- Add the content of the public key `public.pem` to your Wise user [profile settings](https://wise.com/settings/public-keys).
+- Add the content of the public key `public.pem` to your Wise user [profile settings](https://wise.com/settings/public-keys){:target=_blank .external-link}.
 - Add the content of the private key `private.pem` to your n8n Wise Credential under `Private Key (Optional)`
 
 

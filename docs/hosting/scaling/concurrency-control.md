@@ -4,31 +4,29 @@ contentType: explanation
 
 # Concurrency control
 
-n8n in main mode does not restrict how many executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. To protect against this, n8n supports **concurrency control** to limit the number of concurrent executions in main mode.
+In regular mode, n8n does not limit how many production executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. 
 
-## How it works
+To prevent this, you can set a **concurrency limit** for production executions in regular mode. This allows for a number of production executions to run concurrently, and queues up any concurrent production executions over the limit. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
 
-With concurrency control enabled, any executions over the limit will be throttled, i.e. queued for later processing. As active executions complete and concurrency capacity becomes available, throttled executions are picked up in FIFO order.
+Concurrency control is disabled by default. To enable it:
+
+```sh
+export N8N_CONCURRENCY_PRODUCTION_LIMIT=20
+```
 
 Keep in mind:
 
-- Concurrency control applies **to main mode only**. Scaling mode has [its own concurrency mechanism](/hosting/scaling/queue-mode/#configure-worker-concurrency).
-- Concurrency control may throttle only production executions (i.e. in `webhook` and `trigger` modes), not executions in `manual`, `retry`, `error`, `integrated`, `cli` or `internal` modes.
-- On instance startup, any previous queued executions are cancelled - this may change in future. 
-- Since they have not yet started, queued executions may not be retried and are also excluded from crash recovery.
+- Concurrency control applies only to **production executions**, those started from a webhook or trigger node. It does not apply to any other kinds, such as manual executions, subworkflow executions, error executions, started from CLI, etc.
 
-## Usage
+- Queued executions cannot retried. Cancelling or deleting a queued execution removes it also from the queue.
 
-/// note | Cloud plan limits
-Concurrency limits on n8n cloud are enabled and set according to cloud plan.
-///
+- On instance startup, queued executions are resumed up to the concurrency limit and the rest are re-enqueued.
 
-Concurrency control is disabled by default for self-hosted users. To enable it, set this environment variable to a positive value:
+- To monitor concurrency control, watch logs for executions being enqueued and released. In future, concurrency control will be reflected in the UI.
 
-```sh
-export N8N_CONCURRENCY_PRODUCTION_CAP=20
-```
+## Comparison to scaling mode
 
-When enabled, the local and global executions views will show a header with the number of active executions and the current concurrency cap. Any executions throttled by concurrency control will be displayed as `Queued`.
+In scaling mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode/#configure-worker-concurrency). 
 
-To disable concurrency control, unset the environment variable.
+Concurrency control in scaling mode is a separate mechanism from concurrency control in regular mode, but both are controlled by the environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT`. In scaling mode, n8n takes the limit from this variable if set to a value other than `-1`, else it falls back to the `--concurrency` flag or its default.
+

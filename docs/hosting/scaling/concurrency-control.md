@@ -19,7 +19,9 @@ Keep in mind:
 - Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
+<!-- vale off -->
 - To monitor concurrency control, watch logs for executions being enqueued and released. In a future version, n8n will show concurrency control in the UI.
+<!-- vale on -->
 
 ## Comparison to scaling mode
 

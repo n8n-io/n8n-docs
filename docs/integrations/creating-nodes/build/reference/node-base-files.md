@@ -82,7 +82,7 @@ _String_ or _Object_ | _Required_
 
 Specifies an icon for a particular node. n8n recommends uploading your own image file. 
 
-You can provide the icon as a string or as an object to handle different icons for light and dark modes.
+You can provide the icon file name as a string, or as an object to handle different icons for light and dark modes.
 If the icon works in both light and dark modes, use a string that starts with `file:`, indicating the path to the icon file. For example:
 
 ```

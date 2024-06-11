@@ -6,7 +6,7 @@ contentType: explanation
 
 Following best practices and standards in your node structure makes your node easier to maintain. It's helpful if other people need to work with the code.
 
-The file and directory structure of your node is affected by:
+The file and directory structure of your node depends on:
 
 * Your node's complexity.
 * Whether you use node versioning.
@@ -30,11 +30,12 @@ You can choose whether to place all your node's functionality in one file, or sp
 
 A basic pattern is to separate out operations. Refer to the [HttpBin starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/HttpBin){:target=_blank .external-link} for an example of this.
 
-For more complex nodes, n8n recommends the following structure:
+For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable){:target=_blank .external-class} or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook){:target=_blank .external-link} as examples. 
 
-  * `actions`: directory with description and implementation of each possible resource and operation.
-    * In the `actions` folder, n8n recommends using `resources` and `operations` as the names of the sub-folders. 
-    * For the implementation and description you can use separate files. Use `execute.ts` and `description.ts` as filenames. This makes browsing through the code a lot easier. You can simplify this for nodes that have a less complicated structure.
+  * `actions`: a directory containing sub-directories that represent resources.
+    * Each sub-directory should contain two types of files: 
+      * An index file with resource description (named either `<resourceName>.resource.ts` or `index.ts`) 
+      * Files for operations `<operationName>.operation.ts`. These files should have two exports: `description` of the operation and an `execute` function.
   * `methods`: an optional directory dynamic parameters' functions.  
   * `transport`: a directory containing the communication implementation.
 
@@ -52,8 +53,8 @@ There are two possible setups when building a node:
 
 n8n supports both approaches. If you include more than one node, each node should have its own directory in the `nodes` directory.
 
-## A best-practice example for programmatic nodes: The Mattermost node
+## A best-practice example for programmatic nodes
 
-n8n's built-in [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-class} implements a modular structure and versioning, following recommended patterns.
+n8n's built-in [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable){:target=_blank .external-class} implements a modular structure and versioning, following recommended patterns.
 
 

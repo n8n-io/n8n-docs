@@ -12,11 +12,21 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-You need a Mistral Cloud API key.
+- Create a [Mistral](https://mistral.ai/){:target=_blank .external-link} La Plateforme account.
+- You must add payment information in **Workspace >** [**Billing**](https://console.mistral.ai/billing/){:target=_blank .external-link} to enable API keys. Refer to [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} for more information.
+
+## Supported authentication methods
+
+- API key
 
 ## Related resources
 
-
-Refer to [Mistral's documentation](https://docs.mistral.ai/){:target=_blank .external-link} for more information about the service.
+Refer to [Mistral's API documentation](https://docs.mistral.ai/api/){:target=_blank .external-link} for more information about the APIs.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Once you've added payment information, go to **API Keys** to generate an API key. Refer to [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} for more information.

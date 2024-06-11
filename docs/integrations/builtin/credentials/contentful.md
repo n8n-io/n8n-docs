@@ -6,23 +6,30 @@ contentType: integration
 
 # Contentful credentials
 
-You can use these credentials to authenticate the following nodes with Contentful.
+You can use these credentials to authenticate the following nodes:
 
 - [Contentful](/integrations/builtin/app-nodes/n8n-nodes-base.contentful/)
 
 ## Prerequisites
 
-Create a [Contentful](https://www.contentful.com/) account.
+- Create a [Contentful](https://www.contentful.com/){:target=_blank .external-link} account.
+- Create a [Contentful space](https://www.contentful.com/help/contentful-101/#step-2-create-a-space){:target=_blank .external-link}.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Contentful dashboard.
-2. Open the 'Settings' dropdown list on the top bar.
-3. Click on ***API keys***.
-4. Click on the ***Add API key*** button in the top right.
-5. Enter a name for the API key in the ***Name*** field and click ***Save***.
-6. Use the displayed ***Space ID***, ***Content Delivery API - access token***, and ***Content Preview API - access token*** with your Contentful node API credentials in n8n.
-7. Click on the ***Save*** button to save your credentials.
+- API access token
 
-![Getting Contentful credentials](/_images/integrations/builtin/credentials/contentful/using-api-key.gif)
+## Related resources
+
+Refer to [Contentful's API documentation](https://www.contentful.com/developers/docs/references/){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- Your Contentful **Space ID**: The Space ID displays as you generate the tokens;  You can also refer to the [Contentful Find space ID documentation](https://www.contentful.com/help/find-space-id/){:target=_blank .external-link} to view the Space ID.
+- A **Content Delivery API Access Token**: Required if you want to use the [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/){:target=_blank .external-link}. Leave blank if you do not intend to use this API.
+- A **Content Preview API Access Token**: Required if you want to use the [Content Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/){:target=_blank .external-link}. Leave blank if you do not intend to use this API.
+
+View and generate access tokens in Contentful in **Settings > API keys**. Contentful generates tokens for both Content Delivery API and Content Preview API as part of a single key. Refer to [Contentful Creating and managing API keys](https://training.contentful.com/student/activity/1050378-creating-and-managing-api-keys){:target=_blank .external-link} for detailed instructions.
 

@@ -5,14 +5,24 @@ description: Documentation for the AlienVault credentials. Use these credentials
 
 # AlienVault credentials
 
-You can use these credentials to authenticate when using the HTTP Request node to make a [Custom API call](/integrations/custom-operations/).
+You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
 
-## Authentication methods
+## Prerequisites
 
-n8n supports AlienVault authentication with an access token.
+Create an [AlienVault](https://otx.alienvault.com){:target=_blank .external-link} account.
+
+## Supported authentication methods
+
+- API key
 
 ## Related resources
 
 Refer to [AlienVault's documentation](https://otx.alienvault.com/api){:target=_blank .external-link} for more information about the service.
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/alienvault/){:target=_blank .external-link} on n8n's website.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **OTX Key**: Once you have an AlienVault account, the **OTX Key** displays in your **Settings**.

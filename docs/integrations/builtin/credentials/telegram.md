@@ -6,18 +6,33 @@ contentType: integration
 
 # Telegram credentials
 
-You can use these credentials to authenticate the following nodes with Telegram.
+You can use these credentials to authenticate the following nodes:
 
 - [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/)
 - [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/)
 
 ## Prerequisites
 
-Create a [Telegram](https://telegram.org/) account.
+Create a [Telegram](https://telegram.org/){:target=_blank .external-link} account.
 
-## Using Bot Access Token
+## Supported authentication methods
 
-1. Start a chat with the [BotFather](https://telegram.me/BotFather).
+- API bot access token
+
+## Related resources
+
+Refer to [Telegram's Bot API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for more information about the service.
+
+## Using API bot access token
+
+To configure this credential, you'll need:
+
+- A bot **Access Token**
+
+To generate your access token:
+
+1. Start a chat with the [BotFather](https://telegram.me/BotFather){:target=_blank .external-link}.
 2. Enter `/newbot` and reply with your new bot's display name and username.
-3. Copy the bot token and use it in the Telegram node credentials in n8n.
+3. Copy the bot token and add it as the **Access Token** in n8n.
 
+Refer to the [BotFather Create a new bot documentation](https://core.telegram.org/bots/features#creating-a-new-bot) for more information.

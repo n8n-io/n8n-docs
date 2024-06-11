@@ -1,5 +1,6 @@
 ---
 contentType: howto
+description: Use Luxon to work with date and time in n8n.
 ---
 
 # Date and time with Luxon

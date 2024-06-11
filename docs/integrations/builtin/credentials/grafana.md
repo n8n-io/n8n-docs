@@ -6,19 +6,26 @@ contentType: integration
 
 # Grafana credentials
 
-You can use these credentials to authenticate the following nodes with Grafana.
+You can use these credentials to authenticate the following nodes:
 
 - [Grafana](/integrations/builtin/app-nodes/n8n-nodes-base.grafana/)
 
 ## Prerequisites
 
-- Create a [Grafana](https://grafana.com/) account.
+- Create a [Grafana](https://grafana.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. In Grafana, click the gears icon in the sidebar on the left and select the ***API Keys*** option.
-2. Click the "Add API key" button and enter any ***Key name***.
-3. Click ***Add*** and copy the key shown.
-4. Use the key with your Grafana credentials in n8n.
-5. Enter the base URL of your instance (for example, `https://n8n.grafana.net`) in n8n.
+- API key
+
+## Related resources
+
+Refer to [Grafana's API documentation](https://grafana.com/docs/grafana/latest/developers/http_api/){:target=_blank .external-link} for more information about authenticating with the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Create an API key documentation](https://grafana.com/docs/grafana/latest/administration/api-keys/#create-an-api-key){:target=_blank .external-link} for detailed instructions on creating an API key.
+- The **Base URL** for your Grafana instance, for example: `https://n8n.grafana.net`.
 

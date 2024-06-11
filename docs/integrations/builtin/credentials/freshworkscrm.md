@@ -12,21 +12,20 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Freshworks CRM](https://www.freshworks.com/freshsales-crm/) account.
+Create a [Freshworks CRM](https://www.freshworks.com/freshsales-crm/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-From Freshworks CRM:
+- API key
 
-1. Access your Freshworks CRM dashboard.
-2. Click on your User icon in the top right and select **Settings**.
-3. Click on **API Settings**.
-4. Copy your API key.
+## Related resources
 
-From n8n:
+Refer to [Freshworks CRM's API documentation](https://developers.freshworks.com/crm/api/){:target=_blank .external-link} for more information about the service.
 
-5. Enter a descriptive ***Credentials Name***.
-6. Under ***Credential Data***, enter the API Key obtained above in the corresponding field.
-7. In the ***Domain*** field enter the subdomain of your Freshworks CRM account. This is part of the URL, for example `https://<subdomain>.myfreshworks.com/`.
-8. Click **Save** to create your new credentials.
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Refer to the [Freshworks CRM API authenticaton documentation](https://developers.freshworks.com/crm/api/#authentication){:target=_blank .external-link} for detailed instructions on getting your API key.
+- Your Freshworks CRM **Domain**: Use the subdomain of your Freshworks CRM account. This is part of the URL, for example `https://<subdomain>.myfreshworks.com`. So if you access Freshworks CRM through `https://n8n.myfreshworks.com`, enter `n8n` as your **Domain**.
 

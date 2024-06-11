@@ -6,19 +6,27 @@ contentType: integration
 
 # Humantic AI credentials
 
-You can use these credentials to authenticate the following nodes with Humantic AI.
+You can use these credentials to authenticate the following nodes:
 
 - [Humantic AI](/integrations/builtin/app-nodes/n8n-nodes-base.humanticai/)
 
-## Using API
+## Prerequisites
 
-1. Access the [Humantic AI API](https://api.humantic.ai/) page.
-2. Enter your email address in the ***Business Email*** field.
-3. Click on the ***GET API KEY*** button.
-4. Enter all the necessary information.
-5. Click on the ***Get API Key*** button.
-6. Set a password for your account and click on the ***SET PASSWORD*** button.
-7. Use the provided ***api key*** with your Humantic AI API credentials in n8n.
+Create a [Humantic AI](https://humantic.ai/){:target=_blank .external-link} account.
 
-![Getting Humantic AI credentials](/_images/integrations/builtin/credentials/humanticai/using-api-key.gif)
+You can also try out an API key as a free trial at the [Humantic AI API](https://api.humantic.ai/) page.
+
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [Humantic AI's API documentation](https://api.humantic.ai){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Get an API key from the [Humantic AI API](https://api.humantic.ai/){:target=_blank .external-link} page.
 

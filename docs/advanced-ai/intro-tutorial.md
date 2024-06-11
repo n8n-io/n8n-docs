@@ -7,6 +7,8 @@ type: tutorial
 
 This tutorial introduces LangChain functionality in n8n. You can work through it with no prior knowledge of LangChain, AI, or n8n. However, if you've never used n8n before, you should also do the [Longer quickstart](/try-it-out/longer-introduction/), which introduces key n8n concepts.
 
+!["Screenshot of the workflow"](/_images/advanced-ai/ai-tutorial-outcome.png)
+
 In this tutorial you will:
 
 * Create a workflow from scratch. It uses the Chat Trigger to simulate and test chat interactions, ChatGPT to power the chat functionality, and a custom tool to connect to other n8n workflows.

@@ -6,40 +6,32 @@ contentType: integration
 
 # Drift credentials
 
-You can use these credentials to authenticate the following nodes with Drift.
+You can use these credentials to authenticate the following nodes:
 
 - [Drift](/integrations/builtin/app-nodes/n8n-nodes-base.drift/)
 
 ## Prerequisites
 
-Create a [Drift](https://www.drift.com/) account.
+- Create a [Drift](https://www.drift.com/){:target=_blank .external-link} account.
+- [Create a Drift app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link}.
 
-## Using OAuth
+## Supported authentication methods
 
-/// note | Note for n8n Cloud users
-You'll only need to enter the Credentials Name and click on the circle button in the OAuth section to connect your Drift account to n8n.
-///
+- API personal access token
+- OAuth2
 
-1. Access your [Drift apps](https://dev.drift.com/apps) page.
-2. Click on the ***Build Your App*** button. You can also select an existing app if you already have one.
-3. Enter a name in the ***App name*** field.
-4. Click on 'Oauth & Scopes' in the sidebar.
-5. Copy your OAuth Callback URL from the 'Create New Credentials' screen in n8n, paste in the ***Add Redirect URL*** field, and click on the ***Add*** button.
-6. Click on 'App Credentials' in the sidebar.
-7. Use the ***Client ID*** and ***Secret ID*** with your Drift OAuth2 API node credentials in n8n.
-8. Click on the circle button in the OAuth section to connect your Drift account to n8n.
-9. Click the ***Save*** button to save your credentials.
+## Related resources
 
-![Getting Drift OAuth credentials](/_images/integrations/builtin/credentials/drift/using-oauth.gif)
+Refer to [Drift's API documentation](https://devdocs.drift.com/docs/using-drift-apis){:target=_blank .external-link} for more information about the service.
 
+## Using API personal access token
 
-## Using Access Token
+To configure this credential, you'll need:
 
-1. Access [your Drift apps](https://dev.drift.com/apps).
-2. Select your App (or create a new one).
-3. Click on **Manage**.
-4. Click on **Installing to Drift**.
-5. Use token with your Drift Node credentials in n8n.
+- A **Personal Access Token**: To get a token, [create a Drift app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link}. [Install the app](https://devdocs.drift.com/docs/quick-start#3-install-it-to-your-drift-account-){:target=_blank .external-link} to generate an OAuth Access token. Add this to the n8n credential as your **Personal Access Token**.
 
-![Getting Drift credentials](/_images/integrations/builtin/credentials/drift/using-access-token.gif)
+## Using OAuth2
 
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [Drift Authentication and Scopes documentation](https://devdocs.drift.com/docs/authentication-and-scopes){:target=_blank .external-link} to set up OAuth for your app.

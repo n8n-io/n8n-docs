@@ -29,6 +29,7 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `$getWorkflowStaticData(type)` | View an [example](/code/cookbook/builtin/get-workflow-static-data/). Static data doesn't persist when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. | :white_check_mark: |
 	| `$("<node-name>").isExecuted` | Check whether a node has already executed. | :white_check_mark: |
 	| `$itemIndex` | The index of an item in a list of items. | :x: |
+	| `$nodeVersion` | Get the version of the current node. | :white_check_mark: |
 	| `$prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 	| `$prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
 	| `$prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `$prevNode` always uses the first input connector. | :white_check_mark: |
@@ -49,6 +50,7 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `_execution.resumeUrl` | The webhook URL to call to resume a workflow waiting at a [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/). |
 	| `_getWorkflowStaticData(type)` | View an [example](/code/cookbook/builtin/get-workflow-static-data/). Static data doesn't persist when testing workflows. The workflow must be active and called by a trigger or webhook to save static data. This gives access to the static workflow data. |
 	| `_("<node-name>").isExecuted` | Check whether a node has already executed. |
+	| `_nodeVersion` | Get the version of the current node. | :white_check_mark: |
 	| `_prevNode.name` | The name of the node that the current input came from. When using the Merge node, note that `_prevNode` always uses the first input connector. | 
 	| `_prevNode.outputIndex` | The index of the output connector that the current input came from. Use this when the previous node had multiple outputs (such as an If or Switch node).  When using the Merge node, note that `_prevNode` always uses the first input connector. | 
 	| `_prevNode.runIndex` | The run of the previous node that generated the current input. When using the Merge node, note that `_prevNode` always uses the first input connector. |

@@ -6,30 +6,25 @@ contentType: integration
 
 # Kitemaker credentials
 
-You can use these credentials to authenticate the following nodes with Kitemaker.
+You can use these credentials to authenticate the following nodes:
 
 - [Kitemaker](/integrations/builtin/app-nodes/n8n-nodes-base.kitemaker/)
 
 ## Prerequisites
 
-Create an account on [Kitemaker](https://www.kitemaker.co/).
+Create a [Kitemaker](https://www.kitemaker.co/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open your Kitemaker [work item board](https://toil.kitemaker.co/).
-2. Click on the settings icon next to the organization name in the left sidebar.
-3. Select 'Developer settings' from the dropdown list.
-4. Click on ***Add new personal access token*** under the ***Personal access tokens*** section.
-5. Enter a name for your token in the ***Personal access token name*** field.
-6. Click on the ***Create token*** button.
-7. Copy the displayed token.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'Kitemaker API' credentials in n8n.
-9. Paste the token in the ***Personal Access Token*** field in the 'Kitemaker API' credentials in n8n.
-10. Click on the ***Create*** button to create your credentials.
+- API access token
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/tzimtAX8OI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Kitemaker's API documentation](https://kitemakerhq.github.io/rest-docs/){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- A **Personal Access Token**: Generate a personal access token from **Manage > Developer settings**. Refer to [API Authentication](https://kitemakerhq.github.io/rest-docs/#documentationauthentication){:target=_blank .external-link} for more detailed instructions.
 

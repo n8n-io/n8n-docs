@@ -6,25 +6,24 @@ contentType: integration
 
 # Peekalink credentials
 
-You can use these credentials to authenticate the following nodes with Peekalink.
+You can use these credentials to authenticate the following nodes:
 
 - [Peekalink](/integrations/builtin/app-nodes/n8n-nodes-base.peekalink/)
 
 ## Prerequisites
 
-Create a [Peekalink](https://www.peekalink.io/) account.
+Create a [Peekalink](https://www.peekalink.io/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your [Peekalink](https://www.peekalink.io/app/overview) dashboard.
-2. Copy the API key displayed under the ***Your API Key*** section.
-3. Enter a name for your credentials in the ***Credentials Name*** field in the 'Peekalink API' credentials in n8n.
-4. Paste the API key in the ***API Key*** field in the 'Peekalink API' credentials in n8n.
-5. Click on the ***Create*** button to create your credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/JbCibwJPKqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Peekalink's API documentation](https://docs.peekalink.io/){:target=_blank .external-link} for more information about the service.
 
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview){:target=_blank .external-link} and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/setup#get-your-api-key){:target=_blank .external-link} for more information.

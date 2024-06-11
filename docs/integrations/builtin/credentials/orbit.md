@@ -6,24 +6,28 @@ contentType: integration
 
 # Orbit credentials
 
-You can use these credentials to authenticate the following nodes with Orbit.
+You can use these credentials to authenticate the following nodes:
 
 - [Orbit](/integrations/builtin/app-nodes/n8n-nodes-base.orbit/)
 
 ## Prerequisites
 
-Create an [Orbit](https://app.orbit.love/) account.
+Create an [Orbit](https://orbit.love/){:target=_blank .external-link} account.
 
-## Using API Token
+## Supported authentication methods
 
-1. Access the [Account Settings page](https://app.orbit.love/user/edit).
-2. Scroll down to the ***API Token*** section.
-3. Click on the ***Copy*** button to copy the API Token.
-4. Use this ***API Token*** in with your Orbit node credentials in n8n.
+- API token
 
-![Getting Orbit credentials](/_images/integrations/builtin/credentials/orbit/using-api.gif)
+## Related resources
 
-## Further Reference
+Refer to [Orbit's API documentation](https://orbit.love/docs/developers){:target=_blank .external-link} for more information about the service.
 
-- [Orbit API Documentation](https://www.notion.so/Orbit-API-Documentation-41ed7911e070400b99cfebb296813670#cb4111e0436e420c8c05af078496ff30)
+## Using API token
 
+To configure this credential, you'll need:
+
+- An **API Token**: Use either a user API token or a workspace API token.
+    - Get your user token in **Account Settings > API Token**. Refer to [User API tokens](https://orbit.love/docs/all/api-tokens#623e061e89cd4037bef69fe3a6af0ee5){:target=_blank .external-link} for more information.
+    - Get a workspace token from your **Workspace Settings > Workspace API Tokens**. Only workspace owners can create workspace tokens. Refer to [Workspace API tokens](https://orbit.love/docs/all/api-tokens#51526766b5394f7e83c0a1fc01543330){:target=_blank .external-link} for more information.
+
+Refer to [Which token type to use](https://orbit.love/docs/all/api-tokens#837393b02e6842a6b31865abde47511a){:target=_blank .external-link} for more information on the two token types.

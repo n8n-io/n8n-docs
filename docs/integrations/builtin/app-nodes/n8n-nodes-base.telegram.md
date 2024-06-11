@@ -81,10 +81,8 @@ You can also use this [workflow](https://n8n.io/workflows/772){:target=_blank .e
 
 ### Get the Chat ID
 
-There are two ways to get the Chat ID in Telegram.
+Use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
 
-- Using the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node: On successful execution, the Telegram Trigger node returns a Chat ID. You can use the Telegram Trigger node in your workflow to get a Chat ID.
-- Using the @RawDataBot: The @RawDataBot returns the raw data of the chat with a Chat ID. Invite the @RawDataBot to your channel/group, and upon joining, it will output a Chat ID along with other information. Be sure to remove the @RawDataBot from your group/channel afterward.
 
 
 

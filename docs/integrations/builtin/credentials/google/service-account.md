@@ -9,7 +9,7 @@ contentType: integration
 Using service accounts is more complex than OAuth2. Before you begin:
 
 * Check if your node is [compatible](/integrations/builtin/credentials/google/#compatible-nodes) with Service Account.
-* Make sure you need to use service account. For most use cases, OAuth2 is a better option.
+* Make sure you need to use Service Account. For most use cases, OAuth2 is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts){:target=_blank .external-link}.
 
 
@@ -49,7 +49,7 @@ In your [Google Cloud Console](https://console.cloud.google.com){:target=_blank 
 	??? Details "View screenshot"
 		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-create-credentials.png)
 
-3. Enter a name in **Service account name**, and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating){:target=_blank .external-link} for more information.
+3. Enter a name in **Service account name** and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating){:target=_blank .external-link} for more information.
 4. Select **CREATE AND CONTINUE**.
 5. Based on your use-case, you may want to **Select a role** and **Grant users access to this service account**  using the corresponding sections.
 6. Select **DONE**.

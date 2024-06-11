@@ -9,8 +9,9 @@ A workflow is a collection of nodes connected together to automate a process. Yo
 
 ## Create a workflow
 
+1. If your n8n instance has [RBAC and projects](/user-management/rbac/) enabled: select either <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** to create a workflow in your own space, or a project to create a workflow and automatically share it with other project members 
 1. On the **Workflows** list, select **Add Workflow**.
-2. Get started by adding a trigger node: select **Add first step...**
+1. Get started by adding a trigger node: select **Add first step...**
 
 If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/) to quickly try out n8n features.
 

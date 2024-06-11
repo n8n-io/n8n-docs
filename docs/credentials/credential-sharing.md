@@ -5,15 +5,17 @@ contentType: howto
 
 # Credential sharing
 
+
 /// info | Feature availability
-Available on Pro and Enterprise Cloud plans, and Enterprise self-hosted plans.
+Available on all Cloud plans, and Enterprise self-hosted plans.
 ///
 
-Credential sharing allows you to share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
+You can share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
 
 Users can share credentials they created. Instance owners, and users with the admin role, can view and share all credentials in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
 
-To use credential sharing, you must enable [user management](/user-management/).
+In [projects](/user-management/rbac/), all users have access to workflows and credentials belonging to projects they are part of.
+
 
 ## Share a credential
 

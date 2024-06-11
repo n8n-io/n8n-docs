@@ -23,9 +23,17 @@ To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/
 
 n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
 
-### Workflow owner may change on pull
+### Workflow and credential owner may change on pull
 
-When you pull from Git to an n8n instance, the workflow owner may change. If the same owner is available on both instances, the owner remains the same. If the original owner isn't on the new instance, n8n sets the instance owner as the workflow owner.
+When you pull from Git to an n8n instance, n8n tries to assign workflows and credentials to a matching user or project.
+
+If the original owner is a user:
+
+If the same owner is available on both instances (matching email), the owner remains the same. If the original owner isn't on the new instance, n8n sets the user performing the pull as the workflow owner.
+
+If the original owner is a [project](/user-management/rbac/):
+
+n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
 
 ### Pulling may cause brief service interruption
 
@@ -45,6 +53,7 @@ n8n commits the following to Git:
 * Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
 * Credential stubs (ID, name, type)
 * Variable stubs (ID and name)
+* Projects
 
 You can programmatically [Manage variables](/source-control-environments/using/manage-variables/) using the n8n API.
 

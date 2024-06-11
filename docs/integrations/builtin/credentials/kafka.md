@@ -6,18 +6,35 @@ contentType: integration
 
 # Kafka credentials
 
-You can use these credentials to authenticate the following nodes with Kafka.
+You can use these credentials to authenticate the following nodes:
 
 - [Kafka](/integrations/builtin/app-nodes/n8n-nodes-base.kafka/)
 - [Kafka Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/)
 
 ## Prerequisites
 
-Have Kafka up and running. You can refer to the official [documentation](https://kafka.apache.org/quickstart) to learn how to do that.
+Create a running Kafka environment. Refer to the [Apache Kafka Quickstart](https://kafka.apache.org/quickstart){:target=_blank .external-link} for initial setup.
 
-## Using Kafka
+## Supported authentication methods
 
-1. Enter a client ID in the ***Client ID*** field.
-2. Retrieve the Kafka Brokers and credentials (if any).
-3. Use the ***Client ID***, ***Brokers*** (comma separated), ***Username***, and ***Password*** with your Kafka node credentials in n8n.
+- Client ID
+
+## Related resources
+
+Refer to [Kafka's documentation](https://kafka.apache.org/documentation/){:target=_blank .external-link} for more information about using the service.
+
+## Using client ID
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Refer to [Client groups](https://kafka.apache.org/documentation/#design_quotasgroups){:target=_blank .external-link} for more information on defining client groups and [client IDs](https://kafka.apache.org/documentation/#streamsconfigs_client.id){:target=_blank .external-link}.
+- **Brokers**: Provide a comma-separated list of relevant brokers.
+- **SSL**: Turn this on if [SSL is enabled](https://kafka.apache.org/documentation/#security_ssl){:target=_blank .external-link} in your Kafka environment.
+- **Authentication**: Turn this on if you've enabled authentication in your Kafka environment. Add details for the authentication:
+    - **Username**
+    - **Password**
+    - Select the broker's configured **SASL Mechanism**: Refer to [SASL configuration](https://kafka.apache.org/documentation/#security_sasl_config){:target=_blank .external-link} for more information. Options include:
+        - `Plain`
+        - `scram-sha-256`
+        - `scram-sha-512`
 

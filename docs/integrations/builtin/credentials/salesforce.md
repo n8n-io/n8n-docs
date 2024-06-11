@@ -62,6 +62,9 @@ If you need to configure OAuth2 from scratch, follow the instructions in [Create
 Use these settings for your app:
 
 - Add the **Perform requests on your behalf at any time (refresh_token, offline_access)** scope in the **Selected OAuth Scopes** section, along with any other scopes you plan to use.
+- Make sure the following settings are unchecked:
+    - **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**
+    - **Require Secret for Web Server Flow**
+    - **Require Secret for Refresh Token Flow**
 - In the **API (Enable OAuth Settings)** section, select **Click to reveal** to reveal the consumer secret.
 - Copy the **Consumer Key** and **Consumer Secret** and add these to the appropriate fields in n8n.
-

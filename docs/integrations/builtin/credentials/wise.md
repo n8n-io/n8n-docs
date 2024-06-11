@@ -49,7 +49,7 @@ If SCA is required, Wise returns an error similar to below :
 > This request requires Strong Customer Authentication (SCA). Please add a key pair to your account and n8n credentials. See https://api-docs.transferwise.com/#strong-customer-authentication-personal-token
 
 
-To enable signing a token we need to create and add a public and private key  and add the public key to wise. In user [profile settings](https://wise.com/settings/public-keys).
+To enable signing a token you need to create and add a public and private key. Add the public key to Wise in user [profile settings](https://wise.com/settings/public-keys){:target=_blank .external-link}.
 
 As a first step we need to generate an RSA key pair:
 

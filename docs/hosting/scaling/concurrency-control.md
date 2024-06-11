@@ -20,7 +20,7 @@ Keep in mind:
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
 <!-- vale off -->
-- To monitor concurrency control, watch logs for executions being enqueued and released. In a future version, n8n will show concurrency control in the UI.
+- To monitor concurrency control, watch logs for executions being added to the queue and released. In a future version, n8n will show concurrency control in the UI.
 <!-- vale on -->
 
 ## Comparison to scaling mode

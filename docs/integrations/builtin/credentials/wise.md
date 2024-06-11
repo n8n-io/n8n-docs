@@ -41,7 +41,7 @@ The following video demonstrates the steps mentioned above.
 
 ## Personal Token SCA
 
-When making a request to an SCA protected endpoint, Wise returns a 403 Forbidden HTTP status code.
+When making a request to an SCA (strong customer authentication) protected endpoint, Wise returns a 403 Forbidden HTTP status code.
 SCA is required on Get Statements, and Funds transfer request. It is disabled when using test endpoints.
 
 If SCA is required an error similar ot below returnd from Wise: 

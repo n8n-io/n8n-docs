@@ -6,7 +6,7 @@ contentType: explanation
 
 In regular mode, n8n doesn't limit how many production executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. 
 
-To prevent this, you can set a **concurrency limit** for production executions in regular mode. This allows for a number of production executions to run concurrently, and queues up any concurrent production executions over the limit. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
+To prevent this, you can set a **concurrency limit** for production executions in regular mode. This allows for more than one production execution to run concurrently, and queues up any concurrent production executions over the limit. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
 
 Concurrency control is disabled by default. To enable it:
 
@@ -16,7 +16,7 @@ export N8N_CONCURRENCY_PRODUCTION_LIMIT=20
 
 Keep in mind:
 
-- Concurrency control applies only to **production executions**, those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, subworkflow executions, error executions, started from CLI, etc.
+- Concurrency control applies only to **production executions**, those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, started from CLI, etc.
 
 - Queued executions can't be retried. Cancelling or deleting a queued execution also removes it from the queue.
 

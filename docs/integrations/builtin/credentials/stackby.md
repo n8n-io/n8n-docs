@@ -6,28 +6,25 @@ contentType: integration
 
 # Stackby credentials
 
-You can use these credentials to authenticate the following nodes with Stackby.
+You can use these credentials to authenticate the following nodes:
 
 - [Stackby](/integrations/builtin/app-nodes/n8n-nodes-base.stackby/)
 
 ## Prerequisites
 
-Create a [Stackby](https://stackby.com/) account.
+Create a [Stackby](https://stackby.com/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your Stackby [dashboard](https://stackby.com/dashboard).
-2. Click on the user icon on the top right and select 'Account' from the dropdown list.
-3. Under the ***API*** section, click on the ***Create API key*** button.
-4. Copy the displayed API key.
-5. Enter a name for your credentials in the ***Credentials Name*** field in the 'Stackby API' credentials in n8n.
-6. Paste the API key in the ***API Key*** field in the 'Stackby API' credentials in n8n.
-7. Click on the ***Create*** button to create the credentials.
+- API key
 
+## Related resources
 
-The following video demonstrates the steps mentioned above.
+Refer to [Stackby's API documentation](https://documenter.getpostman.com/view/27762116/2s9YBxXvCa){:target=_blank .external-link} for more information about the service.
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/xc_upy6H5r4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Go to your [**Account Settings > API**](https://www.stackby.com/account){:target=_blank .external-link} to create an API Key. Refer to [API Key](https://help.stackby.com/en/article/95-api-key){:target=_blank .external-link} for more information.
 

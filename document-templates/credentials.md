@@ -32,6 +32,9 @@ You can use these credentials to authenticate the following nodes:
 * _List of apps_
 * _That use these credentials_
 
+<!--if this is a credential-only node, use this snippet instead-->
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+
 ## Prerequisites
 
 _Include info on services they need to sign up for_

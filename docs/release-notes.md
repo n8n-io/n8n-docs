@@ -127,9 +127,9 @@ Instance owners and admins: you will see changes if you try to manually execute 
 
 <div class="n8n-new-features" markdown>
 
-#### New feature: Role based access control (RBAC)
+#### New feature: Projects
 
-Role-based access control (RBAC) saves you time when managing user permissions in large systems. With projects and roles, you can give your team access to collections of workflows and credentials, rather than having to share each workflow and credential individually. Simultaneously, you tighten security by limiting access to people on the relevant team.
+With projects and roles, you can give your team access to collections of workflows and credentials, rather than having to share each workflow and credential individually. Simultaneously, you tighten security by limiting access to people on the relevant team.
 <br /><br />
 Refer to the [RBAC](/user-management/rbac/) documentation for information on creating projects and using roles.
 <br /><br />

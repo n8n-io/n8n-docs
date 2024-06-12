@@ -31,15 +31,7 @@ Legacy plans:
 
 The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid exceeding instance memory.
 
-* Split the data processed into smaller chunks. For example, instead of fetching 10,000 rows with each execution, process 200 rows with each execution.
-* Avoid using the Code node where possible.
-* Avoid manual executions when processing large amounts of data.
-* Split the workflow up into sub-workflows and ensure each sub-workflow returns a limited amount of data to its parent workflow.
-* Avoid running many workflows at the same time.
-
-Splitting the workflow might seem counter-intuitive at first as it requires adding at least two nodes: the Loop Over Items node to split up the items into smaller batches and the Execute Workflow node to start the sub-workflow.
-
-However, as long as your sub-workflow does the heavy lifting for each batch and then returns only a small result set to the main workflow, the memory consumption is reduced. This is because the sub-workflow only holds the data for the current batch in memory, after which the memory is freed again.
+--8<-- "_snippets/self-hosting/scaling/reduce-memory-consumption.md"
 
 Note that n8n itself consumes memory to run. On average, the software alone uses around 180MiB RAM.
 

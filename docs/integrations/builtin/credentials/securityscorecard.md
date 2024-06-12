@@ -28,6 +28,6 @@ Refer to [SecurityScorecard's Developer documentation](https://securityscorecard
 To configure this credential, you'll need:
 
 - An **API Key**: Generate an API key in one of two ways:
-    1. As a user in [**My Settings > API**](https://platform.securityscorecard.io/#/my-settings/api){:target=_blank .external-link}. Refer to [Get an API key](https://securityscorecard.readme.io/docs/getting-started#step-1-get-an-api-key){:target=_blank .external-link} for more information.
-    2. As a bot user: View the bot user and select **create token**. Refer to [Authenticate with a bot user](https://securityscorecard.readme.io/docs/authentication#){:target=_blank .external-link} for more information.
+    * As a user in [**My Settings > API**](https://platform.securityscorecard.io/#/my-settings/api){:target=_blank .external-link}. Refer to [Get an API key](https://securityscorecard.readme.io/docs/getting-started#step-1-get-an-api-key){:target=_blank .external-link} for more information.
+    * As a bot user: View the bot user and select **create token**. Refer to [Authenticate with a bot user](https://securityscorecard.readme.io/docs/authentication#){:target=_blank .external-link} for more information.
 

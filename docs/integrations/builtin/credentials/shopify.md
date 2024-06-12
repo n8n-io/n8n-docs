@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes with Shopify.
 ## Prerequisites
 
 - Create a [Shopify](https://shopify.com/){:target=_blank .external-link} account.
-- [Create and install a custom app][(https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link}].
+- [Create and install a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link}.
 
 ## Supported authentication methods
 

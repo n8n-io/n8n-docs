@@ -181,11 +181,12 @@ nav:
     - Getting started:
       - Learning path: learning-path.md
       - Choose your n8n: choose-n8n.md
-      - Try it out: 
+      - Quickstarts: 
         - try-it-out/index.md
         - A very quick quickstart: try-it-out/quickstart.md
         - A longer introduction: try-it-out/longer-introduction.md
-      - Courses:
+      - Video courses: video-courses.md
+      - Text courses:
         - courses/index.md
         - Level one:
           - courses/level-one/index.md

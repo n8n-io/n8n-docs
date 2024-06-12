@@ -27,6 +27,8 @@ Legacy plans:
 * Start: 320MiB RAM, 10 millicore CPU burstable
 * Power: 1280MiB RAM, 80 millicore CPU burstable
 
+n8n gives each instance up to 100GB of data storage.
+
 ## How to reduce memory consumption in your workflow
 
 The way you build workflows affects how much data they consume when executed. Although these guidelines aren't applicable to all cases, they provide a baseline of best practices to avoid exceeding instance memory.
@@ -69,11 +71,11 @@ n8n automatically prunes execution logs after a certain time or once you reach t
 
 ### Manual data pruning
 
-Heavier executions and usecases can exceed database capacity despite the automatic pruning practices. In cases like this, n8n will manually prune data to protect instance stability.
+Heavier executions and use cases can exceed database capacity despite the automatic pruning practices. In cases like this, n8n will manually prune data to protect instance stability.
 
 1. An alert system warns n8n if an instance is at 85% disk capacity.
 2. A member of the Support team contacts the instance owner to inform them and ask permission for data pruning:
- 	- If the owner grants permission, n8n deletes execution data. This is done by running a backup of the instance (workflows, users, credentials and data) and restoring it without data.
+ 	- If the owner grants permission, n8n deletes execution data. n8n does this by by running a backup of the instance (workflows, users, credentials and data) and restoring it without data.
  	- If the owner doesn't grant permission, n8n takes no action.
 
-Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are very high, there might not be time to warn the user or prune the data before the remaining disk space is filled.
+Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to warn the user or prune the data before the remaining disk space fills up.

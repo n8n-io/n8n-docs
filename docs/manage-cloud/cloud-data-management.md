@@ -65,7 +65,7 @@ In your workflow settings:
 
 n8n automatically prunes execution logs after a certain time or once you reach the max storage limit, whichever comes first. The pruning always happens from oldest to newest and the limits depend on your Could plan:
 
-* Start and Starter plans: max 2500 executions saved and seven days execution log retention;
+* Start and Starter plans: max 2500 executions saved and 7 days execution log retention;
 * Pro and Power plans: max 25000 executions saved and 30 days execution log retention;
 * Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
 
@@ -75,7 +75,7 @@ Heavier executions and use cases can exceed database capacity despite the automa
 
 1. An alert system warns n8n if an instance is at 85% disk capacity.
 2. A member of the Support team contacts the instance owner to inform them and ask permission for data pruning:
- 	- If the owner grants permission, n8n deletes execution data. n8n does this by by running a backup of the instance (workflows, users, credentials and data) and restoring it without data.
+ 	- If the owner grants permission, n8n deletes execution data. n8n does this by by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
  	- If the owner doesn't grant permission, n8n takes no action.
 
 Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to warn the user or prune the data before the remaining disk space fills up.

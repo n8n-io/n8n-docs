@@ -75,7 +75,7 @@ Heavier executions and use cases can exceed database capacity despite the automa
 
 1. An alert system warns n8n if an instance is at 85% disk capacity.
 2. A member of the Support team contacts the instance owner to inform them and ask permission for data pruning:
- 	- If the owner grants permission, n8n deletes execution data. n8n does this by by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
+ 	- If the owner grants permission, n8n deletes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
  	- If the owner doesn't grant permission, n8n takes no action.
 
 Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to warn the user or prune the data before the remaining disk space fills up.

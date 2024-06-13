@@ -27,6 +27,12 @@ This section provides explanations of important AI concepts, and workflow templa
 	[:octicons-arrow-right-24: Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)  
 	[:octicons-arrow-right-24: Set up a human fallback](/advanced-ai/examples/human-fallback/)  
 
+-   __Memory__
+
+    Learn about memory in AI.
+
+	[:octicons-arrow-right-24: What is memory in AI?](/advanced-ai/examples/understand-memory/)  
+
 -   __More concepts and examples coming soon__
 
 	n8n will add more examples in the coming months. In the mean time, you can browse AI templates, included community contributions, on the n8n website. 

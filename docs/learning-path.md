@@ -27,6 +27,17 @@ Start with the quickstart guides to help you get up and running with building ba
 
 ## Structured Courses
 
+n8n offers two sets of courses.
+
+### Video courses
+
+Learn key concepts and n8n features, while building examples as you go.
+
+- The [Beginner](https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI){:target=_blank .external-link} course covers the basics of n8n.
+- The [Advanced](https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG){:target=_blank .external-link} course covers more complex workflows, more technical nodes, and enterprise features
+
+### Text courses
+
 Build more complex workflows while learning key concepts along the way. Earn a badge and an avatar in your community profile. 
 
 - [Level 1: Beginner Course](https://blog.n8n.io/announcing-the-n8n-certification-course-for-beginners-level-1/){:target=_blank .external-link}

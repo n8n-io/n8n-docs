@@ -61,6 +61,6 @@ The complete workflow should look like this:
 ## Next steps
 
 * Read n8n's [longer try it out tutorial](/try-it-out/longer-introduction/) for a more complex workflow, and an introduction to more features and n8n concepts.
-* Take the [courses](/courses/).
+* Take the [text courses](/courses/) or [video courses](/video-courses/).
 
 

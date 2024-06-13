@@ -135,5 +135,5 @@ Postbin's bins exist for 30 minutes after creation. You may need to create a new
 
 ## Next steps
 
-* Take n8n's [courses](/courses/).
+* Take n8n's [text courses](/courses/) or [video courses](/video-courses/).
 * Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.

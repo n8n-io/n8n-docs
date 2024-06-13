@@ -325,10 +325,6 @@
       "parameters": {
         "mode": "insert",
         "pineconeIndex": {
-          "__rl": true,
-          "value": "debs-test",
-          "mode": "list",
-          "cachedResultName": "debs-test"
         },
         "options": {
           "clearNamespace": true,
@@ -718,19 +714,5 @@
         ]
       ]
     }
-  },
-  "active": false,
-  "settings": {
-    "executionOrder": "v1",
-    "saveDataSuccessExecution": "all",
-    "saveManualExecutions": true,
-    "callerPolicy": "workflowsFromSameOwner"
-  },
-  "versionId": "fd7de38c-2981-41b2-8a8f-57d07179c1e3",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
-  },
-  "id": "2ZAVQxBVYztJ1FFR",
-  "tags": []
+  }
 }

@@ -11,7 +11,7 @@ You can use these credentials to authenticate the following nodes:
 - [TheHive](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/)
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use these credentials with TheHive node for TheHive 3 or TheHive 4. If you are using TheHive5 node, use [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/).
+n8n provides two nodes for TheHive. Use these credentials with TheHive node for TheHive 3 or TheHive 4. If you're using TheHive5 node, use [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/).
 ///
 
 ## Prerequisites

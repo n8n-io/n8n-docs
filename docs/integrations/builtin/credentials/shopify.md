@@ -13,28 +13,49 @@ You can use these credentials to authenticate the following nodes with Shopify.
 
 ## Prerequisites
 
-Create a [Shopify](https://shopify.com/){:target=_blank .external-link} account.
-
-Then [create a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link} to authenticate to.
+- Create a [Shopify](https://shopify.com/){:target=_blank .external-link} account.
+- [Create and install a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link}.
 
 ## Supported authentication methods
 
-* [Access Token](https://shopify.dev/docs/apps/auth/access-token-types/admin-app-access-tokens){:target=_blank .external-link}. Requires:
-    - Shop Subdomain (remove `.myshopify.com`)
-    - Access Token: In Shopify UI, the **Admin API Access Token**
-    - APP Secret Key: In Shopify UI, the **API Secret Key**
-* [OAuth2](https://shopify.dev/docs/apps/auth/get-access-tokens/token-exchange){:target=_blank .external-link}. Requires:
-    - Client ID: In Shopify UI, the **API Key**
-    - Client Secret: In Shopify UI, the **API Secret Key**
-    - Shop Subdomain (remove `.myshopify.com`)
-* API Key. Requires:
-    - API Key
-    - Password
-    - Shop Subdomain (remove `.myshopify.com`)
+- API token
+- OAuth2
+- API key
 
 ## Related resources
 
 Refer to [Shopify's authentication documentation](https://shopify.dev/docs/apps/auth){:target=_blank .external-link} for more information about the service.
+
+## Using API token
+
+To configure this credential, you'll need:
+
+- Your **Shop Subdomain**: Your subdomain is within the URL: `https://<subdomain>.myshopify.com`. For example, if the full URL is `https://n8n.myshopify.com`, the Shop Subdomain is `n8n`.
+- An **Access Token**: Generated when you create a custom app as the **Admin API Access Token**. View it in the app's **API Credentials** section.
+- An **APP Secret Key**: Generated when you create a custom app as the **API Secret Key**. View it in the app's **API Credentials** section.
+
+[Creating a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link} generates the **Access Token** and **APP Secret Key**.
+
+Refer to [Generate access tokens for custom apps in the Shopify admin](https://shopify.dev/docs/apps/build/authentication-authorization/access-token-types/generate-app-access-tokens-admin){:target=_blank .external-link} for more information.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated when you create a custom app in the **API Access** section.
+- A **Client Secret**: Generated when you create a custom app in the **API Access** section.
+- Your **Shop Subdomain**: Your subdomain is within the URL: `https://<subdomain>.myshopify.com`. For example, if the full URL is `https://n8n.myshopify.com`, the Shop Subdomain is `n8n`.
+
+Refer to [About auth code grants](https://shopify.dev/docs/apps/build/authentication-authorization/get-access-tokens/auth-code-grant){:target=_blank .external-link} for more information on working with OAuth2.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**
+- A **Password**
+- Your **Shop Subdomain**: Your subdomain is within the URL: `https://<subdomain>.myshopify.com`. For example, if the full URL is `https://n8n.myshopify.com`, the Shop Subdomain is `n8n`.
+- _Optional:_ A **Shared Secret**
 
 ## Forbidden credentials error
 

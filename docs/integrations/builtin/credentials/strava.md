@@ -6,26 +6,35 @@ contentType: integration
 
 # Strava credentials
 
-You can use these credentials to authenticate the following nodes with Strava.
+You can use these credentials to authenticate the following nodes:
 
 - [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava/)
 - [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger/)
 
 ## Prerequisites
 
-Create a [Strava](https://Strava.com) account.
+- Create a [Strava](https://strava.com){:target=_blank .external-link} account.
+- Create a Strava application in [**Settings > API**](https://www.strava.com/settings/api){:target=_blank .external-link}. Refer to [Using OAuth2](#using-oauth2) for more information.
 
-## Using OAuth
+## Supported authentication methods
 
-1. Access the [My API Application page](https://www.strava.com/settings/api).
-2. Enter the application name in the ***Application Name*** field.
-3. Enter the website URL in the ***Website*** field.
-4. Copy the string of characters between `https://` (or `http://`) and `/oauth2/callback` (or `/rest/oauth2-credential/callback`) from 'OAuth Callback URL' in n8n. Paste it in the ***Authorization Callback Domain*** in Strava.
-5. Read 'Strava's API Agreement', and if you agree, check the checkbox.
-6. Click on the ***Create*** button.
-7. Click on ***App Icon*** and select an image from the browser window.
-8. Click on the ***Save*** button.
-9. Use this ***Client ID*** and ***Client Secret*** with your Strava node credentials in n8n.
+- OAuth2
 
-![Getting Strava credentials](/_images/integrations/builtin/credentials/strava/using-oauth.gif)
+## Related resources
 
+Refer to [Strava's API documentation](https://developers.strava.com/docs/reference/){:target=_blank .external-link} for more information about the service.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated when you [create a Strava app](https://developers.strava.com/docs/getting-started/#account){:target=_blank .external-link}.
+- A **Client Secret**: Generated when you [create a Strava app](https://developers.strava.com/docs/getting-started/#account){:target=_blank .external-link}.
+
+Use these settings for your Strava app:
+
+- In n8n, copy the **OAuth Callback URL**. Paste this URL into your Strava app's **Authorization Callback Domain**.
+- Remove the protocol (`https://` or `http://`) and the relative URL (`/oauth2/callback` or `/rest/oauth2-credential/callback`) from the **Authorization Callback Domain**. For example, if the OAuth Redirect URL was originally `https://oauth.n8n.cloud/oauth2/callback`, the **Authorization Callback Domain** would be `oauth.n8n.cloud`.
+- Copy the **Client ID** and **Client Secret** from your app and add them to your n8n credential.
+
+Refer to [Authentication](https://developers.strava.com/docs/authentication/){:target=_blank .external-link} for more information about Strava's OAuth flow.

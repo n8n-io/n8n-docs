@@ -6,7 +6,7 @@ contentType: integration
 
 # Twake credentials
 
-You can use these credentials to authenticate the following nodes with Twake.
+You can use these credentials to authenticate the following nodes:
 
 - [Twake](/integrations/builtin/app-nodes/n8n-nodes-base.twake/)
 
@@ -14,7 +14,20 @@ You can use these credentials to authenticate the following nodes with Twake.
 
 Create a [Twake](https://twake.app/) account.
 
-## Using Access Token
+## Supported authentication methods
+
+- Cloud API key
+- Server API key
+
+## Related resources
+
+Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference){:target=_blank .external-link} for more information about the service.
+
+## Using Cloud API key
+
+To configure this credential, you'll need:
+
+- A **Workspace Key**
 
 1. Access your [Twake](https://web.twake.app) workspace.
 2. Click on ***Main*** in the top left corner.
@@ -28,8 +41,10 @@ Create a [Twake](https://twake.app/) account.
 
 ![Getting Twake workspace key](/_images/integrations/builtin/credentials/twake/using-workspace-key.gif)
 
-## Related resources
+## Using Server API key
 
-Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference){:target=_blank .external-link} for more information about the service.
+To configure this credential, you'll need:
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/twake/){:target=_blank .external-link} on n8n's website.
+- A **Host URL**
+- A **Public ID**
+- A **Private API Key**

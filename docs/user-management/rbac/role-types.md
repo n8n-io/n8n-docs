@@ -7,7 +7,7 @@ pageType: reference
 # RBAC role types
 
 /// info | Feature availability
-The editor role requires an enterprise license.
+The editor and viewer roles require an enterprise license.
 ///
 
 With RBAC, there are three user roles: admin, editor, and viewer. The user's role controls what the user can do in the project. A user can have different roles on different projects.

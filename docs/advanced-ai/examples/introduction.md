@@ -27,6 +27,13 @@ This section provides explanations of important AI concepts, and workflow templa
 	[:octicons-arrow-right-24: Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)  
 	[:octicons-arrow-right-24: Set up a human fallback](/advanced-ai/examples/human-fallback/)  
 
+-   __Vector databases__
+
+    Learn about vector databases in AI, along with related concepts including embeddings and retrievers. Then try out an example that scrapes a website, loads date into a vector database, and allows you to chat with an AI that uses the data.
+
+	[:octicons-arrow-right-24: What is a tool in AI?](/advanced-ai/examples/understand-vector-databases/)  
+    [:octicons-arrow-right-24: Chat with Google Sheets](/advanced-ai/examples/vector-store-website/)  
+
 -   __More concepts and examples coming soon__
 
 	n8n will add more examples in the coming months. In the mean time, you can browse AI templates, included community contributions, on the n8n website. 

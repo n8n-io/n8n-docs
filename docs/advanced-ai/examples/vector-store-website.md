@@ -1,16 +1,16 @@
 ---
 contentType: howto
-title: Populate Pinecone vector database from a website
+title: Populate a Pinecone vector database from a website
 description: Scrape a website, load the data into Pinecone, then query it using a chat workflow.
-workflowFile: advanced-ai/examples/chat_with_google_sheets_docs_version.json
+workflowFile: advanced-ai/examples/populate_a_pinecone_vector_database_from_a_website.json
 ---
 
-# Chat with a Google Sheet using AI
+# Populate a Pinecone vector database from a website
 
 Use n8n to scrape a website, load the data into Pinecone, then query it using a chat workflow. This workflow uses the [HTTP node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to get website data, improves the data using the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/), then uses the [Pinecone Vector Store node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/) to send it to Pinecone. 
 
 <figure markdown>
-!["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/chat-with-google-sheets.png)
+!["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/vector-store-website.png)
 <figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
 </figure>
 

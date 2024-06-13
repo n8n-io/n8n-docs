@@ -1269,7 +1269,7 @@ nav:
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
           - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
           - What is a vector database?: advanced-ai/examples/understand-vector-databases.md 
-          - Populate Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
+          - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
   - API:
       - api/index.md
       - Authentication: api/authentication.md

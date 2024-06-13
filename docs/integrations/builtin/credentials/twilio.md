@@ -50,8 +50,8 @@ To create an API key, go to your **Account > Keys & credentials > API keys & tok
 When you create a Twilio API key, you must select an API key type. The options are:
 
 * **Main**: This key type gives you the same level of access as using your Account SID and Auth Token in API requests.
-* **Standard**: This key type gives you access to all of the functionality in Twilio's APIs _except_the API key resources and Account resources.
-* **Restricted**: This key type is currently in beta. The n8n credential has not been tested against this key type.
+* **Standard**: This key type gives you access to all the functionality in Twilio's APIs except the API key resources and Account resources.
+* **Restricted**: This key type is in beta. n8n hasn't tested the credential against this key type; if you try it, let us know if you run into any issues.
 
 The n8n credential works with **Main** and **Standard** key types.
 

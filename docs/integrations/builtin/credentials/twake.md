@@ -45,4 +45,4 @@ To generate your **Public ID** and **Private API Key**, [create a Twake applicat
 4. Copy the **Public identifier** and add it as the n8n **Public ID**.
 5. Copy the **Private key** and add it as the n8n **Private API Key**.
 
-Refer to [API settings](https://doc.twake.app/developers-api/get-started/create-your-first-application#id-3.-api-settings){:target=_blank .external-link} for more information
+Refer to [API settings](https://doc.twake.app/developers-api/get-started/create-your-first-application#id-3.-api-settings){:target=_blank .external-link} for more information.

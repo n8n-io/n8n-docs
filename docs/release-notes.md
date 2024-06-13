@@ -28,14 +28,62 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.44.1
+## n8n@1.46.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.44.0...n8n@1.44.1){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-06-03
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.0...n8n@1.46.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-12
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains feature enhancements, node enhancements, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Jean Khawand](https://github.com/jeankhawand){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Valentin Coppin](https://github.com/valimero){:target=_blank .external-link}  
+
+## n8n@1.44.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.44.1...n8n@1.44.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-12
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.42.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.42.1...n8n@1.42.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-10
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.45.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.44.1...n8n@1.45.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-06
+
+
+This release contains new features, node enhancements, and bug fixes.
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.44.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.44.0...n8n@1.44.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-03
 
 This is a bug fix release.
 
@@ -79,9 +127,9 @@ Instance owners and admins: you will see changes if you try to manually execute 
 
 <div class="n8n-new-features" markdown>
 
-#### New feature: Role based access control (RBAC)
+#### New feature: Projects
 
-Role-based access control (RBAC) saves you time when managing user permissions in large systems. With projects and roles, you can give your team access to collections of workflows and credentials, rather than having to share each workflow and credential individually. Simultaneously, you tighten security by limiting access to people on the relevant team.
+With projects and roles, you can give your team access to collections of workflows and credentials, rather than having to share each workflow and credential individually. Simultaneously, you tighten security by limiting access to people on the relevant team.
 <br /><br />
 Refer to the [RBAC](/user-management/rbac/) documentation for information on creating projects and using roles.
 <br /><br />
@@ -128,11 +176,6 @@ Cloud: contact [help@n8n.io](mailto:help@n8n.io).
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.42.0...n8n@1.42.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-05-20
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
 
 This is a bug fix release.
 
@@ -142,10 +185,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.41.0...n8n@1.41.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-05-16
-
-
-
-
 
 
 

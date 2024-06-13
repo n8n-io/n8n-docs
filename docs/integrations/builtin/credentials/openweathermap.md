@@ -6,20 +6,27 @@ contentType: integration
 
 # OpenWeatherMap credentials
 
-You can use these credentials to authenticate the following nodes with OpenWeatherMap.
+You can use these credentials to authenticate the following nodes:
 
 - [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/)
 
 ## Prerequisites
 
-Create a [OpenWeatherMap](https://openweathermap.org/) account. 
+Create an [OpenWeatherMap](https://openweathermap.org/){:target=_blank .external-link} account. 
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your OpenWeatherMap [account page](https://home.openweathermap.org/api_keys).
-2. In the 'Create key' section, type a name and click on the *Generate* button.
-3. Copy the API Key that you just generated.
-4. Use this API key with your OpenWeatherMap API node credentials in n8n.
+- API access token
 
-![Getting OpenWeatherMap API credentials](/_images/integrations/builtin/credentials/openweathermap/using-access-token.gif)
+## Related resources
+
+Refer to [OpenWeatherMap's API documentation](https://openweathermap.org/api){:target=_blank .external-link} for more information about the service.
+
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An **Access Token**: When you first sign up for your account, OpenWeatherMap includes an **API Key** (APP Key) in your confirmation email.
+
+To create and view API keys, go to **Account >** [**API Keys**](https://home.openweathermap.org/api_keys){:target=_blank .external-link}.
 

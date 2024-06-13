@@ -21,11 +21,9 @@ You will:
 
 n8n provides a quickstart template using training nodes. This allows you to work with fake data, and avoids setting up credentials.
 
-1. Select **Templates**. n8n opens the templates library on the website.
-2. Search for `Very quick quickstart`.
-3. Select the **Very quick quickstart** template to preview it.
-4. Select **Use template** to view the options for using the template.
-5. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
+1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/){:target=_blank .external-link}.
+1. Select **Use workflow** to view the options for using the template.
+1. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
 
 This workflow:
 

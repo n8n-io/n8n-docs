@@ -21,7 +21,7 @@ Create a [Typeform](https://typeform.com/){:target=_blank .external-link} accoun
 
 ## Related resources
 
-Refer to [Typeform's API documentation](https://www.typeform.com/developers/get-started/){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Typeform's API documentation](https://www.typeform.com/developers/get-started/){:target=_blank .external-link} for more information about the service.
 
 ## Using API token
 

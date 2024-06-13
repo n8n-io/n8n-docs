@@ -31,4 +31,4 @@ To configure this credential, you'll need:
 - An **API Key**: Generated from your Power-Up. Refer to [Managing your API key](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#managing-your-api-key){:target=_blank .external-link} for more information.
 - An **API Token**: Generated from your Power-Up. Refer to [Authentication and Authorization](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#authentication-and-authorization){:target=_blank .external-link} for more information.
 
-Once your Power-Up is created, open the **API Key** tab for your Power-Up and select the option to **Generate a new API key**. With your key generated, select the **Token** option next to it. When prompted, allow it all the permissions it asks for. Copy the Key and Token and add them to your n8n credential.
+Once you've created your Power-Up, open its **API Key** tab and select the option to **Generate a new API key**. With your key generated, select the **Token** option next to it. When prompted, allow it all the permissions it asks for. Copy the Key and Token and add them to your n8n credential.

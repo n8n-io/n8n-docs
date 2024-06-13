@@ -6,31 +6,26 @@ contentType: integration
 
 # SendGrid credentials
 
-You can use these credentials to authenticate the following nodes with SendGrid.
+You can use these credentials to authenticate the following nodes:
 
 - [SendGrid](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/)
 
 
 ## Prerequisites
 
-Create a [SendGrid](https://SendGrid.com/) account.
+Create a [SendGrid](https://sendgrid.com){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your SendGrid [dashboard](https://app.sendgrid.com/).
-2. Click on ***Settings*** on the left sidebar.
-3. Click on ***API Keys***.
-4. Click on the ***Create API Key*** button.
-5. Enter the name of the key in the ***API Key Name*** field.
-6. Click on the ***Create & View*** button.
-7. Click on the displayed API key to copy the key.
-8. Enter the name for your credentials in the ***Credentials Name*** field in the 'SendGrid API' credentials in n8n.
-9. Paste the 'API Key' in the ***API Key*** field.
-10. Click on the ***Create*** button to save your credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/jlHBMHbd_Jc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [SendGrid's API documentation](https://www.twilio.com/docs/sendgrid/api-reference){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To create an API key, go to **Settings > API Keys > Create API Key**. Refer to [Create API Keys](https://www.twilio.com/docs/sendgrid/api-reference/api-keys/create-api-keys){:target=_blank .external-link} for more information.
 

@@ -13,20 +13,25 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-You need to have a [SeaTable](https://seatable.io/en/) instance or cloud account.
+Create a [SeaTable](https://seatable.io/en/){:target=_blank .external-link} account on either a cloud or self-hosted SeaTable server.
+
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [SeaTable's API documentation](https://api.seatable.io){:target=_blank .external-link} for more information about the service.
 
 ## Using API key
 
-From your SeaTable dashboard:
+To configure this credential, you'll need:
 
-1. From the **Bases** menu select the base you want to enable access for.
-2. Navigate to the base options > **Advanced** > **API Token**.
-3. In the modal, enter a name for this token and select the **Read-Write** permission.
-4. Click **Submit** and copy the new API token.
-
-From n8n:
-
-1. Select your environment type: **Cloud-hosted** or **Self-hosted**.
-2. For **Self-hosted** environments enter the domain of your instance.
-3. Enter the API token obtained above and click **Save** to create your credential.
+- An **Environment**: Select the environment that matches your SeaTable instance:
+    - **Cloud-Hosted**
+    - **Self-Hosted**
+- An **API Token (of a Base)**: Generate a **Base-Token** in SeaTable from the base options > **Advanced > API Token**.
+    - Use **Read-Write** permission for your token.
+    - Refer to [Creating an API token](https://seatable.io/en/docs/seatable-api/erzeugen-eines-api-tokens/){:target=_blank .external-link} for more information.
+- A **Timezone**: Select the timezone of your SeaTable server.
 

@@ -6,19 +6,28 @@ contentType: integration
 
 # Vonage credentials
 
-You can use these credentials to authenticate the following nodes with Vonage.
+You can use these credentials to authenticate the following nodes:
 
 - [Vonage](/integrations/builtin/app-nodes/n8n-nodes-base.vonage/)
 
 ## Prerequisites
 
-Create a [Vonage](https://vonage.com) account.
+Create a [Vonage developer](https://developer.vonage.com){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Access the [Vonage API dashboard](https://dashboard.nexmo.com/).
-2. Copy the ***API key*** and the ***API Secret*** from the dashboard.
-3. Use this ***API Key*** and ***API Secret*** with your Vonage node credentials in n8n.
+- API key
 
-![Getting Vonage credentials](/_images/integrations/builtin/credentials/vonage/using-api.gif)
+## Related resources
+
+Refer to [Vonage's SMS API documentation](https://developer.vonage.com/en/api/sms){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**
+- An **API Secret**
+
+Get your **API Key** and **API Secret** from your [developer dashboard](https://dashboard.nexmo.com/){:target=_blank .external-link} **user account > Settings > API Settings**. Refer to [Retrieve your account information](https://developer.vonage.com/en/account/guides/dashboard-management#retrieve-your-account-information){:target=_blank .external-link} for more information.
 

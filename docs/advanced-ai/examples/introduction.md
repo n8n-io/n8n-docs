@@ -31,8 +31,8 @@ This section provides explanations of important AI concepts, and workflow templa
 
     Learn about vector databases in AI, along with related concepts including embeddings and retrievers. Then try out an example that scrapes a website, loads date into a vector database, and allows you to chat with an AI that uses the data.
 
-	[:octicons-arrow-right-24: What is a tool in AI?](/advanced-ai/examples/understand-vector-databases/)  
-    [:octicons-arrow-right-24: Chat with Google Sheets](/advanced-ai/examples/vector-store-website/)  
+	[:octicons-arrow-right-24: What is a vector database?](/advanced-ai/examples/understand-vector-databases/)  
+    [:octicons-arrow-right-24: Populate a Pinecone vector database from a website](/advanced-ai/examples/vector-store-website/)  
 
 -   __More concepts and examples coming soon__
 

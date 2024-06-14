@@ -14,7 +14,7 @@ You must have a Postgres instance in order to use n8n. You can either provide th
 
 The quickest way to get started with deploying n8n to Porter Cloud is using the **Deploy to Porter** button:
 
-[![Deploy](https://mintlify.s3-us-west-1.amazonaws.com/porter/images/deploying-applications/deploy-to-porter.svg)](https://cloud.porter.run/addons/new?addon_name=quivr)
+[![Deploy](https://mintlify.s3-us-west-1.amazonaws.com/porter/images/deploying-applications/deploy-to-porter.svg)](https://cloud.porter.run/addons/new?addon_name=n8n)
 
 After sign-up or login, you will be redirected to the n8n form, where you can specify configuration for the n8n instance you are about to deploy.
 

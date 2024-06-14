@@ -6,6 +6,7 @@ contentType: overview
 
 Self-host with Docker Compose:
 
+* [Porter Cloud](/hosting/installation/server-setups/porter/)
 * [Digital Ocean](/hosting/installation/server-setups/digital-ocean/)
 * [Heroku](/hosting/installation/server-setups/heroku/)
 * [Hetzner Cloud](/hosting/installation/server-setups/hetzner/)

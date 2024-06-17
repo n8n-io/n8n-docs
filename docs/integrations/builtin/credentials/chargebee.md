@@ -6,7 +6,7 @@ contentType: integration
 
 # Chargebee credentials
 
-You can use these credentials to authenticate the following nodes with Chargebee.
+You can use these credentials to authenticate the following nodes:
 
 - [Chargebee](/integrations/builtin/app-nodes/n8n-nodes-base.chargebee/)
 - [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger/)

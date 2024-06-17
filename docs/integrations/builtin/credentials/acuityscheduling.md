@@ -6,7 +6,7 @@ contentType: integration
 
 # Acuity Scheduling credentials
 
-You can use these credentials to authenticate the following nodes with Acuity Scheduling.
+You can use these credentials to authenticate the following nodes:
 
 - [Acuity Scheduling Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger/)
 

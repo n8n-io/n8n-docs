@@ -6,7 +6,7 @@ contentType: integration
 
 # Gumroad credentials
 
-You can use these credentials to authenticate the following nodes with Gumroad.
+You can use these credentials to authenticate the following nodes:
 
 - [Gumroad Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger/)
 

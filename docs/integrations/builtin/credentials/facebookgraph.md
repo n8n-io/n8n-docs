@@ -6,7 +6,7 @@ contentType: integration
 
 # Facebook Graph API credentials
 
-You can use these credentials to authenticate the following nodes with Facebook.
+You can use these credentials to authenticate the following nodes:
 
 - [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/)
 

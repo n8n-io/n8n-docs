@@ -5,7 +5,7 @@ description: Documentation for the Cisco Umbrella credentials. Use these credent
 
 # Cisco Umbrella credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 

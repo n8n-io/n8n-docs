@@ -6,7 +6,7 @@ contentType: integration
 
 # Cal credentials
 
-You can use these credentials to authenticate the following nodes with Cal.
+You can use these credentials to authenticate the following nodes:
 
 - [Cal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger/)
 

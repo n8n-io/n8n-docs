@@ -74,8 +74,7 @@ n8n automatically prunes execution logs after a certain time or once you reach t
 Heavier executions and use cases can exceed database capacity despite the automatic pruning practices. In cases like this, n8n will manually prune data to protect instance stability.
 
 1. An alert system warns n8n if an instance is at 85% disk capacity.
-2. A member of the Support team contacts the instance owner to inform them and ask permission for data pruning:
- 	- If the owner grants permission, n8n deletes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
- 	- If the owner doesn't grant permission, n8n takes no action.
+2. n8n prunes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
+ 	
 
-Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to warn the user or prune the data before the remaining disk space fills up.
+Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to prune the data before the remaining disk space fills up.

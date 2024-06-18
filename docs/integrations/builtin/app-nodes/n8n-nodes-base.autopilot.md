@@ -10,8 +10,8 @@ Use the Autopilot node to automate work in Autopilot, and integrate Autopilot wi
 
 On this page, you'll find a list of operations the Autopilot node supports and links to more resources.
 
-/// warning | Autopilot rebrand
-Autopilot has rebranded to Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not Ortto.
+/// warning | Autopilot branding change
+Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
 ///
 /// note | Credentials
 Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 

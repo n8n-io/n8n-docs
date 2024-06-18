@@ -11,8 +11,8 @@ You can use these credentials to authenticate the following nodes:
 - [Autopilot](/integrations/builtin/app-nodes/n8n-nodes-base.autopilot/)
 - [Autopilot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger/)
 
-/// warning | Autopilot rebrand
-Autopilot has rebranded to Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
+/// warning | Autopilot branding change
+Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
 ///
 
 ## Prerequisites

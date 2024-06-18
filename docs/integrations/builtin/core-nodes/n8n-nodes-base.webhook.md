@@ -62,10 +62,18 @@ You can require authentication for any service calling your webhook URL.
     /// note | Credential data can vary
 	The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
 	///		
+* [**JWT Auth**](https://jwt.io/introduction/){:target=_blank .external-link}: a method of authentication that uses JSON Web Tokens (JWT) to digitally sign data. This authentication method uses the [JWT credential](/integrations/builtin/credentials/jwt/) and can use either a **Passphrase** or **PEM Key** key type.
 
 ### HTTP Method
 
-The Webhook node supports standard [HTTP Requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link}.
+The Webhook node supports standard [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link}:
+
+* DELETE
+* GET
+* HEAD
+* PATCH
+* POST
+* PUT
 
 ### Path
 
@@ -83,9 +91,9 @@ The **Path** field can take the following formats:
 
 ### Respond
 
-* **Immediately**: the Webhook node returns the response code and the message **Workflow got started**.
-* **When Last Node Finishes**: the Webhook node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: the Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
+* **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
+* **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 
 ### Response Code
 
@@ -93,36 +101,44 @@ Customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/
 
 ### Response Data
 
-Choose what data to include in the response body.
+Choose what data to include in the response body:
+
+* **All Entries**: The Webhook returns all the entries of the last node in an array.
+* **First Entry JSON**: The Webhook returns the JSON data of the first entry of the last node in a JSON object.
+* **First Entry Binary**: The Webhook returns the binary data of the first entry of the last node in a binary file.
+* **No Response Body**: The Webhook returns without a body.
 
 
 ## Node options
 
 Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
 
-
-* **Binary Property**: enabling this setting allows the Webhook node to receive binary data, such as an image or audio file.
-* **Ignore Bots**: ignore requests from bots like link previewers and web crawlers.
-* **No Response Body**: enable this to prevent n8n sending a body with the response.
-* **Raw Body**:  specify that the Webhook node will receive data in a raw format, such as JSON or XML.
-* **Response Content-Type**: choose the format for the webhook body.
-* **Response Data**: send custom data with the response.
-* **Response Headers**: send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
+* **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use * (default) to allow all origins.
+* **Binary Property**: Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file. Enter the name of the binary property to write the data of the received file to.
+* **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
+* **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. If left blank, all IP addresses are allowed.
+* **No Response Body**: Enable this to prevent n8n sending a body with the response.
+* **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
+* **Response Content-Type**: Choose the format for the webhook body.
+* **Response Data**: Send custom data with the response.
+* **Response Headers**: Send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
-* **Allowed Origins (CORS)**: set the permitted cross-origin domains.
 
+<!--To do: Review these and ensure up to date; confirm IPs Whitelist is available for all-->
 
 | Option | Required node configuration |
 | ------ | --------------------------- | 
-| Binary data | Either: <br /> HTTP Method > POST <br /> HTTP Method > PATCH <br /> HTTP Method > PUT |
+| Allowed Origins (CORS) | Any |
+| Binary Property | Either: <br /> HTTP Method > POST <br /> HTTP Method > PATCH <br /> HTTP Method > PUT |
 | Ignore Bots | Any |
+| IP(s) Whitelist | Any |
 | No Response Body | Respond > Immediately |
 | Raw Body | Any |
 | Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
 | Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
-| Allowed Origins (CORS) | Any |
+
 
 ## Listen for multiple HTTP methods
 

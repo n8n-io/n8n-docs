@@ -10,6 +10,9 @@ Use the Autopilot node to automate work in Autopilot, and integrate Autopilot wi
 
 On this page, you'll find a list of operations the Autopilot node supports and links to more resources.
 
+/// warning | Autopilot rebrand
+Autopilot has rebranded to Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not Ortto.
+///
 /// note | Credentials
 Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 
 ///
@@ -28,12 +31,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Contact Journey
     * Add contact to list
 * Contact List
-    * Add contact to list.
-    * Check if contact is on list.
-    * Get all contacts on list.
-    * Remove a contact from a list.
+    * Add contact to list
+    * Check if contact is on list
+    * Get all contacts on list
+    * Remove a contact from a list
 * List
-    * Create a list.
+    * Create a list
     * Get all lists
 
 

@@ -18,8 +18,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- Community Management OAuth2: Use with the Community Management product.
-- OAuth2: Use with or without the Community Management product.
+- Community Management OAuth2: Use this method if you're a new LinkedIn user or creating a new LinkedIn app.
+- OAuth2: Use this method for older LinkedIn apps and user accounts.
 
 ## Related Resources
 
@@ -37,6 +37,7 @@ To configure this credential, you'll need:
 To enable OAuth, you need to create a [new developer app](https://www.linkedin.com/developers/apps/new){:target=_blank .external-link}.
 
 Use these settings for your app:
+
 - Enter a LinkedIn Company Page for **LinkedIn Page**. Refer to [Associate an App with a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a548360){:target=_blank .external-link} for more guidance.
 - Enable APIs for your app, including:
 	- **Share on LinkedIn**
@@ -45,6 +46,8 @@ Use these settings for your app:
 /// note | Posting from organization accounts
 To post as an organization, you need to put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} process.
 ///
+
+Refer to [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access){:target=_blank .external-link} for more information on scopes and permissions.
 
 ## Using OAuth2
 
@@ -64,3 +67,5 @@ Use these settings for your app:
 - Enable APIs for your app, including:
 	- **Share on LinkedIn**
 	- **Sign In with LinkedIn using OpenID Connect**
+
+Refer to [Getting Access to LinkedIn APIs](https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access){:target=_blank .external-link} for more information on scopes and permissions.

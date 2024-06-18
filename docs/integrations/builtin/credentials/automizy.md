@@ -24,5 +24,7 @@ Refer to [Automizy's API documentation](https://developers.automizy.com/automizy
 
 ## Using API token
 
-Create new or access existing API tokens from your [Automizy dashboard](https://app.automizy.com/dashboard){:target=_blank .external-link} by selecting **Settings** > **API Token**.
+To configure this credential, you'll need:
+
+- An **API Token**: Create new or access existing API tokens from your [**Automizy dashboard**](https://app.automizy.com/dashboard){:target=_blank .external-link} **> Settings > API Token**.
 

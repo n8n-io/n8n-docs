@@ -1197,6 +1197,7 @@ nav:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
       - Execution data: hosting/scaling/execution-data.md
       - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md

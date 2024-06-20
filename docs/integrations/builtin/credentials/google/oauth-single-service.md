@@ -23,7 +23,15 @@ This document contains instructions for creating a Google credential for a singl
 
 ### Create a new credential in n8n
 
-1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type. To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
+1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/).
+
+    /// note | Generic and specific credentials
+    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+
+	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
+	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
+    ///
+
 2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
 
 	??? Details "View screenshot"
@@ -59,7 +67,7 @@ This document contains instructions for creating a Google credential for a singl
 	??? Details "View screenshot"   
 		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
 
-5. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
+5. Under **Authorized redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
 
 	??? Details "View screenshot"  
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png) 

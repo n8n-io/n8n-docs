@@ -6,22 +6,26 @@ contentType: integration
 
 # MailerLite credentials
 
-You can use these credentials to authenticate the following nodes with MailerLite.
+You can use these credentials to authenticate the following nodes:
 
 - [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/)
 - [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger/)
 
 ## Prerequisites
 
-Create a [MailerLite](https://MailerLite.com) account.
+Create a [MailerLite](https://www.mailerlite.com/){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Access the [MailerLite](https://app.mailerlite.com/dashboard/) dashboard.
-2. Click on the profile icon on the top right corner.
-3. Select 'Integrations' from the dropdown list.
-4. Click on 'Developer API' in the ***MailerLite API*** section.
-5. Copy the ***API key*** that's displayed and use it with your MailerLite node credentials in n8n.
+- API key
 
-![Getting MailerLite credentials](/_images/integrations/builtin/credentials/mailerlite/using-api-key.gif)
+## Related resources
+
+Refer to [MailerLite's API documentation](https://developers.mailerlite.com/docs/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Generate an API key from the **Integrations** menu. Refer to the [API Authentication documentation](https://developers.mailerlite.com/docs/#authentication){:target=_blank .external-link} for more detailed instructions.
 

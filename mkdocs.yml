@@ -804,6 +804,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md

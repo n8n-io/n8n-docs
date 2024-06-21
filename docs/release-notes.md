@@ -45,7 +45,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 #### New node: HTTP request tool
 
-This release adds the HTTP request tool.
+This release adds the HTTP request tool. You can use it with an AI agent as a tool to collect information from a website or API. Refer to the [HTTP request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/) for details.
 
 </div>
 

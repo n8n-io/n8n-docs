@@ -28,10 +28,47 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.47.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.46.0...n8n@1.47.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-20
+
+/// warning | Breaking change
+Calling `$(...).last()` (or `(...).first()` or `$(...).all()`) without arguments now returns the last item (or first or all items) of the output that connects two nodes. Previously, it returned the item/items of the first output of that node. Refer to the [breaking changes log](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1470){:target=_blank .external-link} for details.
+///
+
+This release contains bug fixes, feature enhancements, a new node, node enhancements and performance improvements.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: HTTP request tool
+
+This release adds the HTTP request tool. You can use it with an AI agent as a tool to collect information from a website or API. Refer to the [HTTP request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/) for details.
+
+</div>
+
+### Contributors
+
+[Daniel](https://github.com/daniel-alba17){:target=_blank .external-link}  
+[ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}  
+[Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}  
+[Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}  
+[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}  
+[Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}  
+[n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}  
+[pebosi](https://github.com/pebosi){:target=_blank .external-link}  
+[Taylor Hoffmann](https://github.com/TaylorHo){:target=_blank .external-link}  
+
 ## n8n@1.45.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.0...n8n@1.45.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-06-12
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
 
 This is a bug fix release.
 
@@ -45,6 +82,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.0...n8n@1.46.0
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
 
 This release contains feature enhancements, node enhancements, and bug fixes.
 
@@ -61,9 +99,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.44.1...n8n@1.44.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-06-12
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This is a bug fix release.
 

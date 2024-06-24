@@ -181,11 +181,12 @@ nav:
     - Getting started:
       - Learning path: learning-path.md
       - Choose your n8n: choose-n8n.md
-      - Try it out: 
+      - Quickstarts: 
         - try-it-out/index.md
         - A very quick quickstart: try-it-out/quickstart.md
         - A longer introduction: try-it-out/longer-introduction.md
-      - Courses:
+      - Video courses: video-courses.md
+      - Text courses:
         - courses/index.md
         - Level one:
           - courses/level-one/index.md
@@ -803,6 +804,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
@@ -1196,6 +1198,7 @@ nav:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
       - Execution data: hosting/scaling/execution-data.md
       - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md

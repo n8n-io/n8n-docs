@@ -9,6 +9,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes:
 
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
+- [HTTP Request Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest)
 
 ## Prerequisites
 

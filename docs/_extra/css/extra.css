@@ -239,39 +239,11 @@
 	margin-top: 1.75em;
 }
 
-/* extra top nav */
+/* The tab links for other n8n sites */
 
-.n8n-top-nav {
-	margin-bottom:1em;
-}
-
-.n8n-top-nav-list {
-	border-bottom: 1px solid #707183;
-}
-
-.n8n-top-nav-link {
-	-webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    font-size: .8rem;
-    margin-top: .8rem;
-    opacity: .7;
-    outline-color: var(--md-accent-fg-color);
-    outline-offset: .2rem;
-}
-
-.n8n-visible {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.5s linear;
-	pointer-events: auto;
-}
-
-.n8n-hidden {
-	height: 0px;
-	visibility: hidden;
-	opacity: 0;
-	pointer-events: none;
+.n8n-other-sites {
+	display: flex;
+	justify-content: space-between;
 }
 
 

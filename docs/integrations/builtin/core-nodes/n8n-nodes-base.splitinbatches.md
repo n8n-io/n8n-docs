@@ -8,9 +8,9 @@ contentType: integration
 
 The Loop Over Items node helps you loop through data.
 
-The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
+The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **Loop** output.
 
-When the node execution completes, it combines all the data and returns it through the **done** output. The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
+The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it's not necessary to add an IF node to stop the loop. When the node execution completes, it combines all the data and returns it through the **Done** output. 
 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Loop Over Items (Split in Batches) integrations](https://n8n.io/integrations/split-in-batches/){:target=_blank .external-link} page.

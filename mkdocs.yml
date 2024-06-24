@@ -804,6 +804,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
@@ -1197,6 +1198,7 @@ nav:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
       - Execution data: hosting/scaling/execution-data.md
       - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md

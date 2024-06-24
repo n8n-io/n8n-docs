@@ -1,5 +1,5 @@
 ---
-contentType: overview
+contentType: explanation
 title: Agents vs chains
 description: A workflow example that demonstrates key differences between agents and chains.
 workflowFile: advanced-ai/examples/agents_vs_chains.json

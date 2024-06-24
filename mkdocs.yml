@@ -786,8 +786,8 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
@@ -1267,6 +1267,7 @@ nav:
           - What is a chain?: advanced-ai/examples/understand-chains.md
           - What is an agent?: advanced-ai/examples/understand-agents.md
           - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
+          - What is memory?: advanced-ai/examples/understand-memory.md
           - What is a tool?: advanced-ai/examples/understand-tools.md
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md

@@ -31,4 +31,10 @@ View [example workflows and related content](https://n8n.io/integrations/window-
 Refer to [LangChain's Buffer Window Memory documentation](https://js.langchain.com/docs/modules/memory/types/buffer_window){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Single memory instance
+
+[[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
+
+
 --8<-- "_glossary/ai-glossary.md"

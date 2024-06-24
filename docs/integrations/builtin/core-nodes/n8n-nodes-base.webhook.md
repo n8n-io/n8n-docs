@@ -89,7 +89,7 @@ You can require authentication for any service calling your webhook URL.
     /// note | Credential data can vary
 	The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
 	///		
-  
+
 * [**JWT Auth**](https://jwt.io/introduction/){:target=_blank .external-link}: a method of authentication that uses JSON Web Tokens (JWT) to digitally sign data. This authentication method uses the [JWT credential](/integrations/builtin/credentials/jwt/) and can use either a **Passphrase** or **PEM Key** key type.
 * **None**: The node won't use authentication.
 
@@ -135,13 +135,13 @@ Select **Add Option** to view more configuration options. The available options 
 | Binary Property | Either: <br />HTTP Method > POST <br /> HTTP Method > PATCH <br /> HTTP Method > PUT |
 | Ignore Bots | Any |
 | IP(s) Whitelist | Any |
+| Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | No Response Body | Respond > Immediately |
 | Raw Body | Any |
+| Response Code | Any except Respond > Using 'Respond to Webhook' Node |
 | Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
-| Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
-
 
 ## Listen for multiple HTTP methods
 

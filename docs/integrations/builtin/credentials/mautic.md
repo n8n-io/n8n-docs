@@ -6,7 +6,7 @@ contentType: integration
 
 # Mautic credentials
 
-You can use these credentials to authenticate the following nodes with Mautic.
+You can use these credentials to authenticate the following nodes:
 
 - [Mautic](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/)
 - [Mautic Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger/)

@@ -6,7 +6,7 @@ contentType: integration
 
 # Facebook App credentials
 
-You can use these credentials to authenticate the following nodes with Facebook.
+You can use these credentials to authenticate the following nodes:
 
 - [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/)
 

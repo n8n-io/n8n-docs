@@ -5,7 +5,7 @@ description: Documentation for the Microsoft Entra ID credentials. Use these cre
 
 # Microsoft Entra ID credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 

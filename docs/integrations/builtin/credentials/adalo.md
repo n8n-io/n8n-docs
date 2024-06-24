@@ -6,7 +6,7 @@ contentType: integration
 
 # Adalo credentials
 
-You can use these credentials to authenticate the following nodes with Adalo:
+You can use these credentials to authenticate the following nodes:
 
 - [Adalo node](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/)
 

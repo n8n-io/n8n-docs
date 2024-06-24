@@ -5,7 +5,7 @@ description: Documentation for the AlienVault credentials. Use these credentials
 
 # AlienVault credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 

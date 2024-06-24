@@ -5,7 +5,7 @@ description: Documentation for the Imperva WAF credentials. Use these credential
 
 # Imperva WAF credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 

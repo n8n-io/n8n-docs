@@ -35,6 +35,9 @@ theme:
     - content.code.copy
     # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#improved-tooltips
     - content.tooltips
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#automatic-hiding
+    - header.autohide
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=footer#navigation
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes

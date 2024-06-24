@@ -35,6 +35,7 @@ theme:
     - content.code.copy
     # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#improved-tooltips
     - content.tooltips
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=footer#navigation
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
     - navigation.indexes
@@ -44,7 +45,8 @@ theme:
     - navigation.sections
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
-    - navigation.tabs.sticky
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    - navigation.top
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
 copyright: >
@@ -291,6 +293,7 @@ nav:
         - Data pinning: data/data-pinning.md
         - Data editing: data/data-editing.md
         - Data filtering: data/data-filtering.md
+        - Data mocking: data/data-mocking.md
         - Binary data: data/binary-data.md
     - Manage n8n Cloud:
       - Overview: manage-cloud/overview.md
@@ -604,10 +607,10 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.sendy.md
         - integrations/builtin/app-nodes/n8n-nodes-base.sentryio.md
         - integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.sms77.md
         - integrations/builtin/app-nodes/n8n-nodes-base.shopify.md
         - integrations/builtin/app-nodes/n8n-nodes-base.signl4.md
         - integrations/builtin/app-nodes/n8n-nodes-base.slack.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.sms77.md
         - integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md
         - integrations/builtin/app-nodes/n8n-nodes-base.splunk.md
         - integrations/builtin/app-nodes/n8n-nodes-base.spontit.md
@@ -631,7 +634,6 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.twake.md
         - integrations/builtin/app-nodes/n8n-nodes-base.twilio.md
         - integrations/builtin/app-nodes/n8n-nodes-base.twist.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.twitter.md
         - integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware.md
         - integrations/builtin/app-nodes/n8n-nodes-base.uplead.md
         - integrations/builtin/app-nodes/n8n-nodes-base.uproc.md
@@ -647,6 +649,7 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.wise.md
         - integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md
         - integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.twitter.md        
         - integrations/builtin/app-nodes/n8n-nodes-base.xero.md
         - integrations/builtin/app-nodes/n8n-nodes-base.yourls.md
         - integrations/builtin/app-nodes/n8n-nodes-base.youtube.md
@@ -786,8 +789,8 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
@@ -804,6 +807,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
@@ -1027,11 +1031,11 @@ nav:
         - integrations/builtin/credentials/sentryio.md
         - integrations/builtin/credentials/serp.md
         - integrations/builtin/credentials/servicenow.md
+        - integrations/builtin/credentials/sms77.md
         - integrations/builtin/credentials/shopify.md
         - integrations/builtin/credentials/shuffler.md
         - integrations/builtin/credentials/signl4.md
         - integrations/builtin/credentials/slack.md
-        - integrations/builtin/credentials/sms77.md
         - integrations/builtin/credentials/snowflake.md
         - integrations/builtin/credentials/splunk.md
         - integrations/builtin/credentials/spontit.md
@@ -1060,7 +1064,6 @@ nav:
         - integrations/builtin/credentials/twake.md
         - integrations/builtin/credentials/twilio.md
         - integrations/builtin/credentials/twist.md
-        - integrations/builtin/credentials/twitter.md
         - integrations/builtin/credentials/typeform.md
         - integrations/builtin/credentials/unleashedsoftware.md
         - integrations/builtin/credentials/uplead.md
@@ -1082,6 +1085,7 @@ nav:
         - integrations/builtin/credentials/wordpress.md
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
+        - integrations/builtin/credentials/twitter.md
         - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md
@@ -1197,6 +1201,7 @@ nav:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
       - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
       - Execution data: hosting/scaling/execution-data.md
       - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md
@@ -1265,10 +1270,13 @@ nav:
           - What is a chain?: advanced-ai/examples/understand-chains.md
           - What is an agent?: advanced-ai/examples/understand-agents.md
           - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
+          - What is memory?: advanced-ai/examples/understand-memory.md
           - What is a tool?: advanced-ai/examples/understand-tools.md
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
           - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+          - What is a vector database?: advanced-ai/examples/understand-vector-databases.md 
+          - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
   - API:
       - api/index.md
       - Authentication: api/authentication.md

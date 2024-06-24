@@ -6,7 +6,7 @@ contentType: integration
 
 # Agile CRM credentials
 
-You can use these credentials to authenticate the following nodes with Agile CRM.
+You can use these credentials to authenticate the following nodes:
 
 - [Agile CRM](/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm/)
 

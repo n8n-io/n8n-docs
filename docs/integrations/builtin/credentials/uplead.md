@@ -6,21 +6,25 @@ contentType: integration
 
 # UpLead credentials
 
-You can use these credentials to authenticate the following nodes with UpLead.
+You can use these credentials to authenticate the following nodes:
 
 - [UpLead](/integrations/builtin/app-nodes/n8n-nodes-base.uplead/)
 
 ## Prerequisites
 
-Create an [UpLead](https://uplead.com/) account.
+Create an [UpLead](https://uplead.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your UpLead dashboard.
-2. Click on your name in the bottom left.
-3. Click on Profile.
-4. Scroll down and click on the *Generate New API Key*.
-5. Use the API Key with your UpLead node credentials in n8n.
+- API key
 
-![Getting UpLead credentials](/_images/integrations/builtin/credentials/uplead/using-access-token.gif)
+## Related resources
+
+Refer to [UpLead's API documentation](https://docs.uplead.com/#overview){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Go to your **Account > Profiles** to **Generate New API Key**. Refer to [How can I generate an API key?](https://support.uplead.com/en/articles/5621412-how-can-i-generate-an-api-key){:target=_blank .external-link} for more information.
 

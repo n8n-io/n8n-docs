@@ -1,48 +1,87 @@
 ---
-title: Twitter credentials
-description: Documentation for Twitter credentials. Use these credentials to authenticate Twitter in n8n, a workflow automation platform.
+title: X credentials
+description: Documentation for X credentials. Use these credentials to authenticate X in n8n, a workflow automation platform.
 contentType: integration
 ---
 
-# Twitter credentials
+# X credentials
 
-You can use these credentials to authenticate the following nodes with Twitter.
+You can use these credentials to authenticate the following nodes:
 
-- [Twitter](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
+- [X](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
 
 ## Prerequisites
 
-Create a [Twitter developer account](https://developer.twitter.com/).
+- Create an [X developer](https://developer.x.com/en){:target=_blank .external-link} account.
+- Create a [Twitter app](https://developer.x.com/en/docs/apps){:target=_blank .external-link} or use the default project and app created when you sign up for the developer portal. Refer to each supported authentication method below for more details on the app's configuration.
+
+## Supported authentication methods
+
+- OAuth: Listed as OAuth in n8n, this corresponds to X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method.
+- OAuth2
+
+## Related resources
+
+Refer to [X's API documentation](https://developer.x.com/en/docs/twitter-api){:target=_blank .external-link} for more information about the service. Refer to [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview){:target=_blank .external-link} for more information about authenticating with the service.
 
 ## Using OAuth
 
-1. Access the [Twitter Developer](https://developer.twitter.com/en/portal/projects-and-apps) portal.
-2. Fill out the questionnaire to gain essential access and click **Next** once done.
-![Getting essential access to the Twitter API](/_images/integrations/builtin/credentials/twitter/essential-access.png)
-3. Confirm the Developer agreement by checking the box and clicking **Submit** once done.
-![The Twitter Developer Agreement](/_images/integrations/builtin/credentials/twitter/developer-agreement.png)
-4. Twitter will now send you a confirmation email. Click the **Confirm your email** button in the email.
-![Email Validation Email](/_images/integrations/builtin/credentials/twitter/email-validation.png)
-5. After confirming your email, you are redirected to the [#Welcome to the Twitter Developer Platform](https://developer.twitter.com/en/portal/register/welcome) page. Enter a name for your Twitter application and click the **Get keys** button.
-6. Copy the **API Key**, **API Key Secret** shown on the next page.
-![API Keys provided by Twitter](/_images/integrations/builtin/credentials/twitter/api-keys.png)
-7. Click the **Skip to dashboard** link at the bottom of the page and click the **Yes, I saved them** button.
-8. Click the **Gear button** next to your newly created app to open it's **App settings**.
-![The App settings button](/_images/integrations/builtin/credentials/twitter/app-settings-button.png)
-9. In the Authentication settings sections, click **Edit**.
-10. Turn on the **Enable 3-legged OAuth** switch and paste the URL shown in the **OAuth Redirect URL** of the n8n credentials screen into the **Callback URLs** field of your Twitter apps authentication settings.
-11. Enter a valid Website URL in the respective field (for example https://n8n.io).
-![The App settings button](/_images/integrations/builtin/credentials/twitter/oauth-settings.png)
-12. Save your input by clicking the **Save** button at the bottom of the page.
-13. Under App permissions, click **Edit** and choose the appropriate permissions for your app (pick **Read and write and Direct message** if you want to use all functions of the Twitter n8n in n8n) and click **Save** to confirm.
-14. In the sidebar on the left, click on the Project your app has been created in (usually **Project 1**) and then on the **Apply for Elevated** button.
-15. Fill out the questionnaire and confirm the inputs on each questionnaire page with a click on **Next** (**Submit** on the final page).
-![Application process for elevated access to the Twitter API](/_images/integrations/builtin/credentials/twitter/elevated-access.png)
-16. Once you receive confirmation that your application has been approved, you're ready to use the n8n Twitter node.
-17. In the n8n credentials screen, paste your **API Key** from steps 6 above into the **Consumer Key** field, and your **API Key Secret** into the **Consumer Secret** field.
-18. Click **Connect my account** and confirm the connection by clicking **Authorize app**.
+--8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
+
+If you need to configure OAuth from scratch, create a [Twitter app](https://developer.x.com/en/docs/apps){:target=_blank .external-link}.
+
+Use these settings for your app:
+
+1. In the app's **Keys & tokens > Consumer Keys** section, generate or regenerate your keys.
+2. Copy the **API Key** and add it to n8n as the **Consumer Key**.
+3. Copy the **API Secret** and add it to n8n as the **Consumer Secret**.
+4. In the app's **Settings > User Authentication**, set appropriate **App permissions**. Choose **Read and write and Direct message** if you want to use all functions of the n8n X node.
+5. Select a **Type of app**.
+6. In **App Info**, copy the n8n **OAuth Redirect URL** and paste it in as the **Callback URI / Redirect URL**.
+7. Add a **Website URL**.
+
+Refer to X's [API Key and Secret documentation](https://developer.x.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for more information on API Keys and Secrets. Refer to X's [OAuth 1.0a Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} for more information on working with this authentication method.
+
+/// note | X rate limits
+This credential uses the OAuth 1.0a User Context authentication method, so you'll be subject to user rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
+///
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generated when you configure a Twitter app for OAuth2.
+- A **Client Secret**: Generated when you configure a Twitter app for OAuth2.
+
+To generate your Client ID and Client Secret, create a [Twitter app](https://developer.x.com/en/docs/apps){:target=_blank .external-link}.
+
+Use these settings for your app:
+
+1. In the app's **Settings > User Authentication**, set appropriate **App permissions**. Choose **Read and write and Direct message** if you want to use all functions of the n8n X node.
+2. Select a **Type of app**.
+3. In **App Info**, copy the n8n **OAuth Redirect URL** and paste it in as the **Callback URI / Redirect URL**.
+4. Add a **Website URL**.
+5. Copy the **Client ID** and **Client Secret** from your Twitter app and enter them into your n8n credential.
+
+Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0){:target=_blank .external-link} for more information on working with this authentication method.
+
+/// note | X rate limits
+This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
+///
 
 ## Further Reference
 
 - [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)
 
+## X rate limits
+
+X has time-based rate limits per endpoint based on your developer access plan level. X calculates app rate limits and user rate limits independently. Refer to [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits){:target=_blank .external-link} for the access plan level rate limits and guidance on avoiding hitting them.
+
+Use the guidance below for calculating rate limits:
+
+- If you're [Using OAuth](#using-oauth), user rate limits apply. You'll have one limit per time window for each set of users' access tokens.
+- If you're [Using OAuth2](#using-oauth2), app rate limits apply. You'll have a limit per time window for requests made by your app.
+
+X calculates user rate limits and app rate limits independently.
+
+Refer to [Rate limits and authentication methods](https://developer.x.com/en/docs/twitter-api/rate-limits#auth){:target=_blank .external-link} for more information about these rate limit types.

@@ -6,7 +6,7 @@ contentType: integration
 
 # Calendly credentials
 
-You can use these credentials to authenticate the following nodes with Calendly.
+You can use these credentials to authenticate the following nodes:
 
 - [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/)
 

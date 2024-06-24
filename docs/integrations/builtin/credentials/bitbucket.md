@@ -6,7 +6,7 @@ contentType: integration
 
 # Bitbucket credentials
 
-You can use these credentials to authenticate the following nodes with Bitbucket.
+You can use these credentials to authenticate the following nodes:
 
 - [Bitbucket Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger/)
 

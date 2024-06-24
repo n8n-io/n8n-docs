@@ -35,6 +35,8 @@ To configure this credential, you'll need:
     2. In the **Applications** section, copy the endpoint of the **Elasticsearch** application.
     3. Add this in n8n as the **Base URL**.
 
+- **Ignore SSL Issues**: When turned on, n8n will connect even if SSL certificate validation fails.
+
 /// note | Custom endpoint aliases
 If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html){:target=_blank .external-link} to a deployment, update your n8n credential **Base URL** with the new endpoint.
 ///

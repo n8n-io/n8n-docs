@@ -12,16 +12,6 @@ The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available 
 
 ## New features
 
-### Semantic Versioning
-
-This release introduces [semantic versioning](https://semver.org/){:target=_blank .external link}. This allows n8n to signal backwards-incompatible changes directly in the version number, making it easier to update n8n safely.
-
-From n8n 1.0 on, releases will follow the pattern MAJOR.MINOR.PATCH. Version numbers increment as follows:
-
-- MAJOR version when making incompatible changes which potentially require user action
-- MINOR version when adding functionality in a backward-compatible manner
-- PATCH version when making backward-compatible bug fixes
-
 ### Python support in the Code node
 
 Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
@@ -137,7 +127,7 @@ As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration op
 
 ### Remove Node 16 support
 
-n8n now requires Node 18 or above.
+n8n now requires Node 18.17.0 or above.
 
 ## Updating to n8n 1.0
 

@@ -6,7 +6,7 @@ contentType: integration
 
 # Flow credentials
 
-You can use these credentials to authenticate the following nodes with Flow.
+You can use these credentials to authenticate the following nodes:
 
 - [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow/)
 - [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/)
@@ -15,14 +15,19 @@ You can use these credentials to authenticate the following nodes with Flow.
 
 Create a [Flow](https://www.getflow.com/) account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Access your Flow dashboard.
-2. Click on your Organisation icon in the top left.
-3. Click on Account Preferences.
-4. Click on the *Create a Personal Access Token* button.
-5. As you generate your access token, you will also receive an organisation ID.
-6. Use provided access token and organisation ID with your Flow node credentials in n8n.
+- API key
 
-![Getting Flow credentials](/_images/integrations/builtin/credentials/flow/using-access-token.gif)
+## Related resources
 
+Refer to [Flow's API documentation](https://developer.getflow.com/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- Your numeric **Organization ID**
+- An **Access Token**
+
+Refer to the [Flow API Getting Started documentation](https://developer.getflow.com/#getting-started){:target=_blank .external-link} for instructions on generating your Access Token and viewing your Organization ID.

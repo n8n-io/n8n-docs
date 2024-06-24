@@ -1,0 +1,7 @@
+extends: existence
+message: OAuth2
+level: warning
+ignorecase: false
+tokens:
+  - '\bOauth2\b'
+  - '\boauth2\b'

@@ -6,56 +6,50 @@ contentType: integration
 
 # Mautic credentials
 
-You can use these credentials to authenticate the following nodes with Mautic.
+You can use these credentials to authenticate the following nodes:
 
 - [Mautic](/integrations/builtin/app-nodes/n8n-nodes-base.mautic/)
 - [Mautic Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger/)
 
 ## Prerequisites
 
-Create an account on a [Mautic](https://www.mautic.org/) instance.
+- Create an account on a [Mautic](https://www.mautic.org/) instance.
+- Ensure the instance has the API enabled in **Configuration > API Settings**.
+- If using basic auth as your credential authentication method, turn on **Enable basic auth?** in Mautic's **Configuration > API Settings**. Refer to the [API Settings documentation](https://docs.mautic.org/en/5.x/configuration/settings.html#api-settings){:target=_blank .external-link} for more information.
 
-## Using OAuth
+## Supported authentication methods
 
-1. Open your Mautic dashboard.
-2. Click on the gear icon on the top right and select ***API Credentials***.
-3. Click on the ***+ New*** button on the top right.
-4. Select 'OAuth 2' from the ***Authorization Protocol*** dropdown list.
-5. Enter the name of the credentials in the ***Name*** field.
-6. Copy the 'OAuth Callback URL' provided in the 'Mautic OAuth2 API' credentials in n8n.
-7. Paste it in the ***Redirect URI*** field on the Mautic credentials page.
-8. Click on the ***Apply*** button.
-9. Enter the name for your credentials in the ***Credentials Name*** field in the 'Mautic OAuth2 API' credentials in n8n.
-10. Copy the ***Client ID*** from the Mautic credentials page.
-11. Paste it in the ***Client ID*** field in the 'Mautic OAuth2 API' credentials in n8n.
-12. Copy the ***Client Secret*** from the Mautic credentials page.
-13. Paste it in the ***Client Secret*** field in the 'Mautic OAuth2 API' credentials in n8n.
-14. Enter the URL of your Mautic instance in the ***URL*** field.
-15. Click on the circle button in the OAuth section to connect a Mautic account to n8n.
-16. Click on the ***Save*** button to save your credentials.
+- Basic auth
+- OAuth2
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/vEL0wJ2_91E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Mautic's API documentation](https://developer.mautic.org/#rest-api){:target=_blank .external-link} for more information about the service.
 
-## Using Credentials
+## Using basic auth
 
-1. Open your Mautic dashboard.
-2. Click on the gear icon on the top right and select ***Configuration***.
-3. Select 'API Settings' from the left sidebar.
-4. Select 'Yes' under the ***Enable HTTP basic auth?*** section.
-5. Click on the ***Apply*** button.
-6. Enter the name for your credentials in the ***Credentials Name*** field in the 'Mautic API' credentials in n8n.
-7. Enter the URL of your Mautic instance in the ***URL*** field in the 'Mautic API' credentials in n8n.
-8. Enter your Mautic username in the ***Username*** field in the 'Mautic API' credentials in n8n.
-9. Enter your Mautic password in the ***Password*** field in the 'Mautic API' credentials in n8n.
-10. Click on the ***Create*** button to create your credentials.
+To configure this credential, be sure that **Enable basic auth?** in Mautic's **API Settings** is turned on.
 
-The following video demonstrates the steps mentioned above.
+Then you'll need:
 
-<div class="video-container">
-    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/077wqv1rPLs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+- A **URL**: Enter the URL of your Mautic instance.
+- A **Username**: Enter your Mautic username.
+- A **Password**: Enter your Mautic password.
+
+## Using OAuth2
+
+To configure this credential, you'll need:
+
+- A **Client ID**: Generate a Client ID when you create new API Credentials in **Configuration > API Credentials**. (This option won't appear if an admin hasn't enabled the API.)
+- A **Client Secret**: Generate a Client ID when you create new API Credentials in **Configuration > API Credentials**. (This option won't appear if an admin hasn't enabled the API.)
+- A **URL**: Enter the URL of your Mautic instance.
+
+Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-039%3bs-api.html){:target=_blank .external-link} for detailed instructions on creating a new API credential.
+
+When you create the new API credential, use these options:
+
+- Select **OAuth 2** as the **Authorization Protocol**.
+- Copy the **OAuth Callback URL** from n8n and enter it as the **Redirect URI** in Mautic.
+
+Once the credential is created, copy the **Client ID** and **Client Secret** from Mautic to enter in the corresponding fields in n8n.
 

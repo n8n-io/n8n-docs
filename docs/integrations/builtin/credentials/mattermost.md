@@ -6,52 +6,31 @@ contentType: integration
 
 # Mattermost credentials
 
-You can use these credentials to authenticate the following nodes with Mattermost.
+You can use these credentials to authenticate the following nodes:
 
 - [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/)
 
 ## Prerequisites
 
-- Create a [Mattermost](https://www.mattermost.com/) account.
+- Create a [Mattermost](https://www.mattermost.com/){:target=_blank .external-link} account.
+- Ensure that an admin has enabled personal access tokens in **System Console > Integrations > Integration Management**.
+- If using a non-admin user or bot account, ensure that an admin has granted that user account permission to generate personal access tokens in **System Console > User Management > Users > User account > Manage roles**.
 
-**Note:** A system administrator has to grant permission to the user to generate an access token. Refer to the [FAQs](#_1-how-to-grant-permissions-to-the-users-to-generate-access-tokens) to learn how a system administrator can grant this permission.
+Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/){:target=_blank .external-link} for more detailed instructions on enabling personal access tokens.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Click on your username on the top left corner and select 'Account Settings' from the dropdown list.
-2. Click on the ***Security*** tab.
-3. Click on ***Edit*** in the ***Personal Access Tokens*** section.
-4. Click on the ***Create Token*** button.
-5. Enter a description in the ***Token Description*** field.
-6. Click on the ***Save*** button.
-7. Click on the ***Yes, Create*** button.
-8. Use this ***Acess Token*** with your Mattermost node credentials in n8n.
+- API access token
 
-![Generating Access Token](/_images/integrations/builtin/credentials/mattermost/using-access-token.gif)
+## Related resources
 
-## FAQs
+Refer to [Mattermost's API documentation](https://api.mattermost.com/){:target=_blank .external-link} for more information about the service.
 
-### How to grant permissions to the users to generate access tokens?
+## Using API access token
 
-A system admin has to grant permissions to the users for the user to create access tokens. If you're a system admin, follow the steps mentioned below.
+To configure this credential, you'll need:
 
-1. Click on your username on the top left corner and select 'System Console' from the dropdown list.
-2. Click on ***Integration Management*** under the ***INTEGRATIONS*** section on the left sidebar.
-3. Go to Integration Management.
-4. Scroll down to the ***Enable Personal Access Tokens*** and enable personal access tokens.
-5. Click on the ***Save*** button.
-6. Click on ***Users*** under the ***USER MANAGEMENT*** section on the left sidebar.
-7. Personal access tokens are generated for individual users, so they must be enabled for each user. Click on ***Member*** next to the user you want to grant permission to, and select 'Manage Roles' from the dropdown list.
-8. Check the ***Allow this account to generate personal access tokens*** checkbox.
-9. Select any additional permissions you want to grant the user and click on the ***Save*** button.
-
-**Note:** You may also create a bot account and apply the same for it.
-
-The user can now generate a personal access token by going to  their account settings and following the steps mentioned [above](#using-access-token).
-
-![Granting permission to user](/_images/integrations/builtin/credentials/mattermost/granting-permission.gif)
-
-
-
-- [Personal Access Tokens](https://docs.mattermost.com/developer/personal-access-tokens.html)
+- An **Access Token**: Create a personal access token in Mattermost in **Profile > Security > Personal Access Tokens**. Refer to [Create a personal access token](https://developers.mattermost.com/integrate/reference/personal-access-token/#create-a-personal-access-token){:target=_blank .external-link} for more detailed instructions.
+- A **Base URL**: Enter your Mattermost URL.
+- _Optional:_ Select whether to **Ignore SSL Issues**. If turned on, the credential will connect even if SSL certificate validation fails.
 

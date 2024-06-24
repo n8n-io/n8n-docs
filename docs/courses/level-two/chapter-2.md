@@ -102,9 +102,11 @@ If you run into situations like this, use the [**Wait node**](/integrations/buil
 - On a webhook call.
 
 
+
 ### Date Exercise
 
-In this exercise, we'll build a workflow that rounds up an input date to the end of the month. Then, we'll check the calculated date: if it occurred after 1959, the workflow should wait 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. Finally, we'll set up the workflow to trigger every 30 minutes.
+Build a workflow that adds five days to an input date from the Customer Datastore node that you used before. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
+
 
 To begin:
 <!-- To do: need to figure out what the actual desired output is here since Date & Time options have changed and I'm unclear what the Set node should be doing-->

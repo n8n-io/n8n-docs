@@ -6,28 +6,26 @@ contentType: integration
 
 # Emelia credentials
 
-You can use these credentials to authenticate the following nodes with Emelia.
+You can use these credentials to authenticate the following nodes:
 
 - [Emelia](/integrations/builtin/app-nodes/n8n-nodes-base.emelia/)
 - [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger/)
 
 ## Prerequisites
 
-Create a [Emelia](https://emelia.io) account.
+Create an [Emelia](https://emelia.io) account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open the Emelia [dashboard](https://app.emelia.io/) page.
-2. Click on the avatar on the top-right and select 'API Keys'.
-3. Click on the ***Generate new API key*** button.
-4. Click on the menu icon and select 'Copy API Key' from the dropdown list.
-5. Enter a name for your credentials in the ***Credentials Name*** field in the 'Emelia API' credentials in n8n.
-6. Paste the API key in the ***API Key*** field in the 'Emelia API' credentials in n8n.
-7. Click the ***Create*** button to create your credentials in n8n.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/XZ4wP1AI9eM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To generate an API Key in Emelia, access your **API Keys** by selecting the avatar in the top right (your **Settings**). Refer to the Authentication section of [Emelia's API documentation](https://docs.emelia.io/){:target=_blank .external-link} for more information.
 

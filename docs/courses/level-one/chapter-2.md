@@ -46,8 +46,9 @@ n8n adds the node to your canvas and the node window opens to display its config
 When you add a new node to the Editor UI, the node is automatically activated. The node details will open in a window with several options:
 
 - **Parameters**: Adjust parameters to refine and control the node's functionality.
+- **Settings**: Adjust settings to control the node's design and executions.
 - **Docs**: Open the n8n documentation for this node in a new window.
-- **Settings** (gear cog icon): Adjust settings to control the node's design and executions.
+
 
 /// note | Parameters vs. Settings
 **Parameters** are different for each node, depending on its functionality.<br />

@@ -6,16 +6,25 @@ contentType: integration
 
 # SIGNL4 credentials
 
-You can use these credentials to authenticate the following nodes with SIGNL4.
+You can use these credentials to authenticate the following nodes:
 
 - [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4/)
 
 ## Prerequisites
 
-Create a [SIGNL4](https://www.signl4.com/) account.
+Create a [SIGNL4](https://www.signl4.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-1. Open the '✅ Sign up complete' email you received when you signed up for SIGNL4.
-2. Your team secret is the last part of the webhook URL. If your webhook URL is `https://connect.signl4.com/webhook/helloworld`, your team secret would be `helloworld`.
+- Webhook secret
+
+## Related resources
+
+Refer to [SIGNL4's Inbound Webhook documentation](https://connect.signl4.com/webhook/docs/index.html){:target=_blank .external-link} for more information about the service.
+
+## Using webhook secret
+
+To configure this credential, you'll need:
+
+- A **Team Secret**: SIGNL4 includes this secret in the "✅ Sign up complete" email as the last part of the webhook URL. If your webhook URL is `https://connect.signl4.com/webhook/helloworld`, your team secret would be `helloworld`.
 

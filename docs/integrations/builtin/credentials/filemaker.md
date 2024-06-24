@@ -6,17 +6,29 @@ contentType: integration
 
 # FileMaker credentials
 
-You can use these credentials to authenticate the following nodes with FileMaker.
+You can use these credentials to authenticate the following nodes:
 
 - [FileMaker](/integrations/builtin/app-nodes/n8n-nodes-base.filemaker/)
 
 ## Prerequisites
 
-Create an user account on a FileMaker server. 
+- Create a user account on a [FileMaker Server](https://www.claris.com/filemaker/){:target=_blank .external-link} with the `fmrest` extended privilege to [Access via FileMaker Data API](https://help.claris.com/en/data-api-guide/content/enable-access.html){:target=_blank .external-link}.
+- Ensure the FileMaker Server can use the [FileMaker Data API](https://help.claris.com/en/data-api-guide/content/index.html){:target=_blank .external-link}.
 
-## Using Database Connection
+## Supported authentication methods
 
-1. Retrieve your FileMaker credentials and connection parameters.
-2. Use the credentials and connection parameters with your FileMaker node credentials in n8n.
-3. Click on the ***Save*** button to save your credentials.
+- Database connection
+
+## Related resources
+
+Refer to [Filemaker's Data API Guide](https://help.claris.com/en/data-api-guide/content/index.html){:target=_blank .external-link} for more information about the service.
+
+## Using database connection
+
+To configure this credential, you'll need:
+
+- A **Host**: The IP address or host name of your FileMaker Server.
+- A **Database**: The database name as it appears in the **Databases** list within Filemaker.
+- The **Login** for the account with the `fmrest` extended privilege.
+- The **Password** for the account with the `fmrest` extended privilege.
 

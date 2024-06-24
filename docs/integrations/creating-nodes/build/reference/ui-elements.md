@@ -105,36 +105,6 @@ The [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packa
 
 ## Number
 
-Basic configuration:
-
-```typescript
-{
-	displayName: 'Age',
-	name: 'age',
-	type: 'number',
-	required: true,
-	typeOptions: {
-		maxValue: 10,
-		minValue: 0,
-		numberStepSize: 1,
-	},
-	default: 10,
-	description: 'Your current age',
-	displayOptions: { // the resources and operations to display this element with
-		show: {
-			resource: [
-				// comma-separated list of resource names
-			],
-			operation: [
-				// comma-separated list of operation names
-			]
-		}
-	},
-}
-```
-
-![Number](/_images/integrations/creating-nodes/number.png)
-
 Number field with decimal points:
 
 ```typescript
@@ -144,6 +114,8 @@ Number field with decimal points:
 	type: 'number',
 	required: true,
 	typeOptions: {
+		maxValue: 10,
+		minValue: 0,
 		numberPrecision: 2,
 	},
 	default: 10.00,
@@ -588,9 +560,8 @@ Refer to the following for live examples:
 If your node performs insert, update, or upsert operations, you need to send data from the node in a format supported by the service you're integrating with. A common pattern is to use a Set node before the node that sends data, to convert the data to match the schema of the service you're connecting to. The resource mapper UI component provides a way to get data into the required format directly within the node, rather than using a Set node. The resource mapper component can also validate input data against the schema provided in the node, and cast input data into the expected type.
 
 /// note | Mapping and matching
-Matching is the process of using column names to identify the row(s) to update.
-///	Mapping is the process of setting the input data to use as values when updating row(s).
-
+Mapping is the process of setting the input data to use as values when updating row(s). Matching is the process of using column names to identify the row(s) to update. 
+///	
 
 ```js
 {
@@ -761,3 +732,73 @@ Display a yellow box with a hint or extra info. Refer to [Node UI design](/integ
   default: '',
 },
 ```
+![Notice](/_images/integrations/creating-nodes/notice.png)
+
+## Hints
+
+There are two types of hints: parameter hints and node hints:
+
+* Parameter hints are small lines of text below a user input field.
+* Node hints are a more powerful and flexible option than [Notice](#notice). Use them to display longer hints, in the input panel, output panel, or node details view. 
+
+### Add a parameter hint
+
+Add the `hint` parameter to a UI element:
+
+```ts
+{
+	displayName: 'URL',
+	name: 'url',
+	type: 'string',
+	hint: 'Enter a URL',
+	...
+}
+```
+
+### Add a node hint
+
+Define the node's hints in the `hints` property within the node `description`:
+
+```ts
+description: INodeTypeDescription = {
+	...
+	hints: [
+		{
+			// The hint message. You can use HTML.
+			message: "This node has many input items. Consider enabling <b>Execute Once</b> in the node\'s settings.",
+			// Choose from: info, warning, danger. The default is 'info'.
+			// Changes the color. info (grey), warning (yellow), danger (red)
+			type: 'info',
+			// Choose from: inputPane, outputPane, ndv. By default n8n displays the hint in both the input and output panels.
+			location: 'outputPane',
+			// Choose from: always, beforeExecution, afterExecution. The default is 'always'
+			whenToDisplay: 'beforeExecution',
+			// Optional. An expression. If it resolves to true, n8n displays the message. Defaults to true.
+			displayCondition: '={{ $parameter["operation"] === "select" && $input.all().length > 1 }}'
+		}
+	]
+	...
+}
+```
+
+### Add a dynamic hint to a programmatic-style node
+
+In programmatic-style nodes you can create a dynamic message that includes information from the node execution. As it relies on the node output data, you can't display this type of hint until after execution.
+
+```ts
+if (operation === 'select' && items.length > 1 && !node.executeOnce) {
+    // Expects two parameters: NodeExecutionData and an array of hints
+	return new NodeExecutionOutput(
+		[returnData],
+		[
+			{
+				message: `This node ran ${items.length} times, once for each input item. To run for the first item only, enable <b>Execute once</b> in the node settings.`,
+				location: 'outputPane',
+			},
+		],
+	);
+}
+return [returnData];
+```
+
+For a live example of a dynamic hint in a programmatic-style node, view the [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266){:target=_blank .external-link}.

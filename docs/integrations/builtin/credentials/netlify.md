@@ -13,18 +13,19 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Netlify](https://netlify.com/) account.
+Create a [Netlify](https://netlify.com/){:target=_blank .external-link} account.
 
-## Using Access Token
+## Supported authentication methods
 
-From the Netlify UI:
+- API access token
 
-1. Navigate to **User Settings** > **Personal Access Tokens**.
-2. Select **New access token**.
-3. Enter a description and select **Generate token**.
+## Related resources
 
-From n8n:
+Refer to [Netlify's API documentation](https://docs.netlify.com/api/get-started/){:target=_blank .external-link} for more information about the service.
 
-4. Enter the access token obtained above.
-5. Click **Save** to create your credentials.
+## Using API access token
+
+To configure this credential, you'll need:
+
+- An **Access Token**: Generate an Access Token in **Applications > Personal Access Tokens**. Refer to [Netlify API Authentication](https://docs.netlify.com/api/get-started/#authentication){:target=_blank .external-link} for more detailed instructions.
 

@@ -30,7 +30,7 @@ There are two ways to handle rate limits in n8n's integrations: using the Retry 
 When you enable Retry On Fail, the node automatically tries the request again if it fails the first time.
 
 1. Open the node.
-1. Select **Settings** <span class="inline-image">![Settings icon](/_images/common-icons/settings.png){.off-glb}</span>.
+1. Select **Settings**.
 1. Enable the **Retry On Fail** toggle.
 1. Configure the retry settings: if using this to work around rate limits, set **Wait Between Tries (ms)** to more than the rate limit. For example, if the API you're using allows one request per second, set **Wait Between Tries (ms)** to `1000` to allow a 1 second wait.
 

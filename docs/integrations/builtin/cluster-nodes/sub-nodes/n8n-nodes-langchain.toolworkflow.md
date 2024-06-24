@@ -34,7 +34,7 @@ Tell n8n which workflow to call. You can choose either:
 * **Database**, then enter a workflow ID.
 * **Parameter**, then copy in a complete [workflow JSON](/workflows/export-import/).
 
-### Response Property Name
+### Field to Return
 
 This must match the name of the output property in the workflow you're calling.
 
@@ -42,6 +42,17 @@ This must match the name of the output property in the workflow you're calling.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/workflow-values.md"
 
+### Specify input schema
+
+/// note | Agent support
+The structured input schema requires with a Tools Agent or OpenAI Functions Agent.
+///
+
+Enable this option to define the input schema for the workflow you're calling. This is useful when you want to make sure the input data the LLM provides is in the correct format.
+
+**Schema Type**: Define the input structure and validation. You have two options to provide the schema:
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/schema-type-structuring.md"
 
 ## Related resources
 

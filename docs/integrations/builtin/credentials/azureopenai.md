@@ -6,26 +6,34 @@ contentType: integration
 
 # Azure OpenAI credentials
 
-You can use these credentials to authenticate the following nodes with OpenAI.
+You can use these credentials to authenticate the following nodes:
 
 - [Chat Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai)
 - [Embeddings Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai)
 
-
 ## Prerequisites
 
-Log-in to [Azure](https://portal.azure.com/#home/) account.
+- Create an [Azure](https://azure.microsoft.com){:target=_blank .external-link} subscription.
+- Access to Azure OpenAI within that subscription. You may need to [request access](https://aka.ms/oai/access){:target=_blank .external-link} if your organization doesn't yet have it.
 
-## Using API Key
-To get the API key, follow the steps below:
+## Supported authentication methods
 
-1. Open [Azure OpenAI service](https://portal.azure.com/#view/Microsoft_Azure_ProjectOxford/CognitiveServicesHub/~/OpenAIHome) in Azure portal
-2. Click on **Create** button
-3. Enter the name of the resource, region and select the pricing tier. Input the resource name into the **Resource name** field in the credentials in n8n
-4. Click on **Next** button until you reach the **Review + create** step
-5. Click on **Create** button
-6. Once the resource is created, open it and click on **Keys and Endpoint** tab
-7. Copy the **Key 1** value, this is your **API key**
-8. Click on **Model deployments** tab followed by **Manage Deployments** button to get to Azure OpenAI Studio
-9. Click on **Create new deployment** button, select the model, version and provide a name and click on **Create** button
-10. Once the model is deployed, use the name as **Deployment name** as the model for the Azure OpenAI nodes
+- API key
+
+## Related resources
+
+Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- A **Resource Name**: the **Name** you give the resource
+- An **API key**: **Key 1** works well. This can be accessed before deployment in **Keys and Endpoint**.
+- The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation){:target=_blank .external-link} for more information about API versioning in Azure OpenAI.
+
+To get the information above, [create and deploy an Azure OpenAI Service resource](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource){:target=_blank .external-link}.
+
+/// note | Model name for Azure OpenAI nodes
+Once you deploy the resource, use the **Deployment name** as the model name for the Azure OpenAI nodes where you're using this credential.
+///

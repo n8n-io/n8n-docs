@@ -28,6 +28,7 @@ This page lists environment variables to set up logging for debugging. Refer to 
 | `DB_LOGGING_ENABLED` | Boolean | `false` | Whether to enable database-specific logging. |
 | `DB_LOGGING_OPTIONS` | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log`  | `error` | Database log output level. To enable all logging, specify `all`. Refer to [TypeORM logging options](https://orkhan.gitbook.io/typeorm/docs/logging#logging-options){:target=_blank .external-link} |
 | `DB_LOGGING_MAX_EXECUTION_TIME` | Number | `1000` | Maximum execution time (in milliseconds) before n8n logs a warning. Set to `0` to disable long running query warning. |
+| `CODE_ENABLE_STDOUT` | Boolean | `false` | Set to`true` to send Code node logs to process's stdout for debugging, monitoring, or logging purposes. |
 
 ## Log streaming
 

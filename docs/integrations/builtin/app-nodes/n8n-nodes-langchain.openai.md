@@ -73,3 +73,5 @@ Once you add a tool connection, the OpenAI node becomes a root node, allowing it
 	* Message Assistant
 * Text
 	* Message Model
+
+

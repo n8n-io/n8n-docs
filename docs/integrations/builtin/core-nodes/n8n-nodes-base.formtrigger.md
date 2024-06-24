@@ -75,4 +75,6 @@ Choose when n8n sends a response to the form submission. You can respond when:
 
 Select **Add Option** to view more configuration options.
 
-**Form Response**: choose how to respond when the user submits the form. Select **Respond With** > **Form Submitted Text** to show a message to the user, or **Respond With** > **Redirect URL** to send the user to a new page.
+* **Form Response**: choose how to respond when the user submits the form. Select **Respond With** > **Form Submitted Text** to show a message to the user, or **Respond With** > **Redirect URL** to send the user to a new page.
+* **Append n8n Attribution**: toggle this off to hide the **Form automated with n8n** message on the form.
+

@@ -12,11 +12,27 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-You need a Cohere API key.
+Create a [Cohere account](https://cohere.com/){:target=_blank .external-link}.
+
+You'll need an account with the following access:
+
+- For the Trial API, you need User or Owner permissions.
+- For Production API, you need Owner permissions.
+
+Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/reference/teams-and-roles){:target=_blank .external-link} for more information.
+
+## Supported authentication methods
+
+- API key
 
 ## Related resources
-
 
 Refer to [Cohere's documentation](https://docs.cohere.com/reference/about){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: To generate a Cohere API key, go to the [API Keys section of your Cohere dashboard](https://dashboard.cohere.com/api-keys){:target=_blank .external-link}.

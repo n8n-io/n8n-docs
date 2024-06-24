@@ -10,6 +10,14 @@ This section provides explanations of important AI concepts, and workflow templa
 
 <div class="grid cards" markdown>
 
+-   __Agents and chains__
+
+	Learn about agents and chains in AI, including exploring key differences using the example workflow.
+
+	[:octicons-arrow-right-24: What is a chain in AI?](/advanced-ai/examples/understand-chains/)  
+    [:octicons-arrow-right-24: What is an agent in AI?](/advanced-ai/examples/understand-agents/)  
+	[:octicons-arrow-right-24: Demonstration of key differences between agents and chains](/advanced-ai/examples/agents-vs-chains/) 
+
 -   __Custom n8n Workflow Tool__
 
     Learn about tools in AI, then explore examples that use n8n workflows as custom tools to give your AI workflow access to more data.
@@ -17,7 +25,20 @@ This section provides explanations of important AI concepts, and workflow templa
 	[:octicons-arrow-right-24: What is a tool in AI?](/advanced-ai/examples/understand-tools/)  
     [:octicons-arrow-right-24: Chat with Google Sheets](/advanced-ai/examples/data-google-sheets/)  
 	[:octicons-arrow-right-24: Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)  
-	[:octicons-arrow-right-24: Set up a human fallback](/advanced-ai/examples/human-fallback/)  
+	[:octicons-arrow-right-24: Set up a human fallback](/advanced-ai/examples/human-fallback/) 
+
+-   __Vector databases__
+
+    Learn about vector databases in AI, along with related concepts including embeddings and retrievers. Then try out an example that scrapes a website, loads date into a vector database, and allows you to chat with an AI that uses the data.
+
+	[:octicons-arrow-right-24: What is a vector database?](/advanced-ai/examples/understand-vector-databases/)  
+    [:octicons-arrow-right-24: Populate a Pinecone vector database from a website](/advanced-ai/examples/vector-store-website/)   
+
+-   __Memory__
+
+    Learn about memory in AI.
+
+	[:octicons-arrow-right-24: What is memory in AI?](/advanced-ai/examples/understand-memory/)  
 
 -   __More concepts and examples coming soon__
 

@@ -177,6 +177,7 @@ Okta
 Ollama
 onboarding
 Onfleet
+Ortto
 Oura
 Peekalink
 PhantomBuster
@@ -286,6 +287,7 @@ Wufoo
 Xata
 Xero
 Zammad
+Zapier
 Zendesk
 Zep
 Zoho

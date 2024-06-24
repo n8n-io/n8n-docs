@@ -239,15 +239,13 @@
 	margin-top: 1.75em;
 }
 
-/* extra top nav */
+/* The tab links for other n8n sites */
 
-.n8n-top-nav {
-	margin-bottom:1em;
+.n8n-other-sites {
+	display: flex;
+	justify-content: space-between;
 }
 
-.n8n-top-nav-list {
-	border-bottom: 1px solid #707183;
-}
 
 /* ensure headings don't disappear below top nav after adding extra top nav */
 @media screen and (min-width: 76.25em) {

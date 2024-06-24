@@ -8,6 +8,8 @@ contentType: integration
 
 This document contains instructions for creating a Google credential for a single service. They're also available as a [video](#video).
 
+--8<-- "_snippets/integrations/managed-google-oauth.md"
+
 ## Prerequisites
 
 * [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
@@ -19,7 +21,24 @@ This document contains instructions for creating a Google credential for a singl
 
 ## Set up OAuth
 
-In Google Cloud:
+### Create a new credential in n8n
+
+1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/).
+
+    /// note | Generic and specific credentials
+    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+
+	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
+	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
+    ///
+
+2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
+
+	??? Details "View screenshot"
+		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
+
+
+### Set up OAuth in Google Cloud
 
 1. Go to [Google Cloud Console | APIs and services](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
 
@@ -30,7 +49,7 @@ In Google Cloud:
 
 	??? Details "View detailed steps"
 		1. Select **OAuth consent screen**.
-		2. For **User Type**, select **Internal**.
+		2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account.
 		3. Select **Create**.
 		4. Enter the essential information: **App name**, **User support email**, and the **Email addresses** field in **Developer contact information**.
 		5. Add an authorized domain: select **+ ADD DOMAIN**. Enter `n8n.cloud` if using n8n's Cloud service, or the domain of your n8n instance if you're self-hosting.
@@ -48,7 +67,7 @@ In Google Cloud:
 	??? Details "View screenshot"   
 		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
 
-5. Under **Authorizes redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
+5. Under **Authorized redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
 
 	??? Details "View screenshot"  
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png) 
@@ -57,8 +76,10 @@ In Google Cloud:
 6. Select **CREATE**.
 7. Enable each Google service API that you want to use:
 
-	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.  
+	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}.  
 	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
+
+### Create and test your connection
 
 In n8n:
 
@@ -72,7 +93,6 @@ In n8n:
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 ## Troubleshooting
 
 ### Google hasn't verified this app
@@ -81,5 +101,5 @@ In n8n:
 
 ### Google Cloud app becoming unauthorized
 
-For Google Cloud apps with **Publishing status** set to **Testing** and **User type** set to **External**, consent and tokens expire after seven days. Refer to [Google Cloud Platform Console Help | Setting up your OAuth consent screen](https://support.google.com/cloud/answer/10311615?hl=en#zippy=%2Ctesting){:target=_blank .external-link} for more information. To resolve this, reconnect the app in the n8n credentials modal.
+--8<-- "_snippets/integrations/builtin/credentials/google/app-becoming-unauthorized.md"
 

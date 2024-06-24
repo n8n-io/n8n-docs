@@ -12,19 +12,20 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create an [Action Network](https://actionnetwork.org/) account.
-- [Contact](https://actionnetwork.org/contact) Action Network to become a partner and enable API access.
+- Create an [Action Network](https://actionnetwork.org/){:target=_blank .external-link} account.
+- [Contact](https://actionnetwork.org/contact){:target=_blank .external-link} Action Network to become a partner and enable API access.
+- If you are a developer needing API Access for development work, you can also [Request a developer account](https://actionnetwork.org/developers){:target=_blank .external-link} to enable partner access.
+
+## Supported authentication methods
+
+- API key
+
+## Related resources
+
+Refer to [Action Network's API documentation](https://actionnetwork.org/docs/){:target=_blank .external-link} for more information about working with the service.
 
 ## Using API key
 
-After becoming an Action Network partner:
+To configure this credential, you'll need:
 
-1. Open your Action Network dashboard.
-2. From the **Start Organizing** menu navigate to **Details** > **API & Sync**.
-3. Use the dropdown to select the list you want to generate a key for, your personal list or that of any groups you are an administrator of.
-4. From the **Your API Key** section, generate a new API key:
-
-![API & Sync Page](/_images/integrations/builtin/credentials/actionnetwork/action_network_api_key.png)
-
-5. Copy your new key and use it with your Action Network node credentials in n8n.
-
+- An **API Key**: After becoming an Action Network partner, follow the [Action Network API Authentication instructions](https://actionnetwork.org/docs/v2/#auth){:target=_blank .external-link} to generate an API key.

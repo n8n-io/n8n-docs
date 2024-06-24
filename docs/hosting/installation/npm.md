@@ -77,6 +77,15 @@ Start n8n with `--tunnel` by running:
 n8n start --tunnel
 ```
 
+## Reverting an upgrade
+
+Install the older version that you want to go back to.
+
+If the upgrade involved a database migration:
+
+1. Check the feature documentation and release notes to see if there are any manual changes you need to make.
+1. Run `n8n db:revert` on your current version to roll back the database. If you want to revert more than one database migration, you need to repeat this process.
+
 ## Windows troubleshooting
 
 If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows){:target=_blank .external-link}.

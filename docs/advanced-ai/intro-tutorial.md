@@ -7,6 +7,8 @@ type: tutorial
 
 This tutorial introduces LangChain functionality in n8n. You can work through it with no prior knowledge of LangChain, AI, or n8n. However, if you've never used n8n before, you should also do the [Longer quickstart](/try-it-out/longer-introduction/), which introduces key n8n concepts.
 
+!["Screenshot of the workflow"](/_images/advanced-ai/ai-tutorial-outcome.png)
+
 In this tutorial you will:
 
 * Create a workflow from scratch. It uses the Chat Trigger to simulate and test chat interactions, ChatGPT to power the chat functionality, and a custom tool to connect to other n8n workflows.
@@ -194,7 +196,7 @@ This example generates some fake data in a workflow, and loads it in to the AI w
 	* **Name**: `Fruit`
 	* **Description**: `Call this tool to get a list of fruit.`
 	* **Workflow ID**: Paste in the workflow ID that you copied from the example workflow URL.
-	* **Response Property Name**: `data`. This is the name of the item created in the Aggregate node in the example workflow.
+	* **Field to Return**: `data`. This is the name of the item created in the Aggregate node in the example workflow.
 1. Select **Add Value** in **Workflow Values** to pass information to the workflow you're calling. Configure the value as follows:
 	* **Name**: `visibility`
 	* **Type**: String

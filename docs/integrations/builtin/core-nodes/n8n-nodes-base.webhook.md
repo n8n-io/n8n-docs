@@ -124,6 +124,17 @@ Select **Add Option** to view more configuration options. The available options 
 | Property Name | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | Allowed Origins (CORS) | Any |
 
+## Listen for multiple HTTP methods
+
+By default, the Webhook node accepts calls that use a single method. For example, it can accept GET or POST requests, but not both. If you want to accept calls using multiple methods:
+
+1. Open the node **Settings**.
+1. Toggle on **Allow Multiple HTTP Methods**.
+1. Return to **Parameters**. By default, the node now accepts GET and POST calls. You can add other methods in the **HTTP Methods** field.
+
+
+The Webhook node has an output for each method, so you can perform different actions depending on the method.
+
 ## Use the HTTP Request node to trigger the Webhook node
 
 The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node makes HTTP requests to the URL you specify.

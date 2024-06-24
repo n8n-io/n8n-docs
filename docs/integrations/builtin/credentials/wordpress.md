@@ -6,24 +6,28 @@ contentType: integration
 
 # WordPress credentials
 
-You can use these credentials to authenticate the following nodes with WordPress.
+You can use these credentials to authenticate the following nodes:
 
 - [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/)
 
 ## Prerequisites
 
 - Create a [WordPress](https://wordpress.com/){:target=_blank .external-link} account or deploy WordPress on a server.
+- [Enable two-factor authentication](https://wordpress.com/support/security/two-step-authentication/){:target=_blank .external-link} for your WordPress user account. (Required to create an app password.)
 
-## Using Username and Password
+## Supported authentication methods
 
-1. Log in to your WordPress dashboard.
-2. Select your profile image, then select **Profile**. 
-3. Scroll down to the **Application Password** section.
-4. Enter an application name in the **New Application Password Name** field.
-5. Select **Add New Application Password**.
-6. Copy the displayed application password.
-7. Enter your WordPress username in the **Username** field in the 'WordPress API' credentials in n8n.
-8. Paste the application password in the **Password** field in the 'WordPress API' credentials in n8n.
-9. Enter your WordPress website URL in the **WordPress URL** field in the 'WordPress API' credentials in n8n.
-10. Select **Save** to save the credentials.
+- Basic auth
 
+## Related resources
+
+Refer to [WordPress's API documentation](https://developer.wordpress.com/docs/api/){:target=_blank .external-link} for more information about the service.
+
+## Using basic auth
+
+To configure this credential, you'll need:
+
+- A **Username**: Enter your WordPress username.
+- A **Password**: Do not enter your WordPress password. Instead, go to your **Profile > Security > Application Passwords** and add a new application password for n8n. Copy that password and enter it in your n8n credential. Refer to [Add a New Application Password](https://wordpress.com/support/security/two-step-authentication/application-specific-passwords/#add-a-new-application-password){:target=_blank .external-link} for more information.
+- Your **WordPress URL**: Enter your WordPress site's URL.
+- **Ignore SSL Issues**: When turned on, n8n will connect even if SSL certificate validation fails.

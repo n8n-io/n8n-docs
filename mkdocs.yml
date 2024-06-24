@@ -604,10 +604,10 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.sendy.md
         - integrations/builtin/app-nodes/n8n-nodes-base.sentryio.md
         - integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.sms77.md
         - integrations/builtin/app-nodes/n8n-nodes-base.shopify.md
         - integrations/builtin/app-nodes/n8n-nodes-base.signl4.md
         - integrations/builtin/app-nodes/n8n-nodes-base.slack.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.sms77.md
         - integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md
         - integrations/builtin/app-nodes/n8n-nodes-base.splunk.md
         - integrations/builtin/app-nodes/n8n-nodes-base.spontit.md
@@ -631,7 +631,6 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.twake.md
         - integrations/builtin/app-nodes/n8n-nodes-base.twilio.md
         - integrations/builtin/app-nodes/n8n-nodes-base.twist.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.twitter.md
         - integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware.md
         - integrations/builtin/app-nodes/n8n-nodes-base.uplead.md
         - integrations/builtin/app-nodes/n8n-nodes-base.uproc.md
@@ -647,6 +646,7 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.wise.md
         - integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md
         - integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.twitter.md        
         - integrations/builtin/app-nodes/n8n-nodes-base.xero.md
         - integrations/builtin/app-nodes/n8n-nodes-base.yourls.md
         - integrations/builtin/app-nodes/n8n-nodes-base.youtube.md
@@ -1028,11 +1028,11 @@ nav:
         - integrations/builtin/credentials/sentryio.md
         - integrations/builtin/credentials/serp.md
         - integrations/builtin/credentials/servicenow.md
+        - integrations/builtin/credentials/sms77.md
         - integrations/builtin/credentials/shopify.md
         - integrations/builtin/credentials/shuffler.md
         - integrations/builtin/credentials/signl4.md
         - integrations/builtin/credentials/slack.md
-        - integrations/builtin/credentials/sms77.md
         - integrations/builtin/credentials/snowflake.md
         - integrations/builtin/credentials/splunk.md
         - integrations/builtin/credentials/spontit.md
@@ -1061,7 +1061,6 @@ nav:
         - integrations/builtin/credentials/twake.md
         - integrations/builtin/credentials/twilio.md
         - integrations/builtin/credentials/twist.md
-        - integrations/builtin/credentials/twitter.md
         - integrations/builtin/credentials/typeform.md
         - integrations/builtin/credentials/unleashedsoftware.md
         - integrations/builtin/credentials/uplead.md
@@ -1083,6 +1082,7 @@ nav:
         - integrations/builtin/credentials/wordpress.md
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
+        - integrations/builtin/credentials/twitter.md
         - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md

@@ -177,6 +177,7 @@ Okta
 Ollama
 onboarding
 Onfleet
+Ortto
 Oura
 Peekalink
 PhantomBuster

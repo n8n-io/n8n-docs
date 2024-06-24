@@ -10,11 +10,12 @@ The Loop Over Items node helps you loop through data.
 
 The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
 
-When the node execution completes, it combines all the data and returns it through the **done** output.
+When the node execution completes, it combines all the data and returns it through the **done** output. The Loop Over Items node stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow so it's not necessary to add an IF node to stop the loop.
 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Loop Over Items (Split in Batches) integrations](https://n8n.io/integrations/split-in-batches/){:target=_blank .external-link} page.
 ///
+
 
 ## Node reference
 
@@ -63,9 +64,9 @@ The final workflow looks like this:
 
 ## Check that the node has processed all items
 
-To check if the node still has items to process, use the following expression: `{{$node["Loop Over Items"].context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
+To check if the node still has items to process, use the following expression: `{{$("Loop Over Items").context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
 
 ## Get the current running index of the node
 
-To get the current running index of the node, use the following expression: `{{$node["Loop Over Items"].context["currentRunIndex"];}}`.
+To get the current running index of the node, use the following expression: `{{$("Loop Over Items").context["currentRunIndex"];}}`.
 

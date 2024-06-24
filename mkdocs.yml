@@ -35,8 +35,6 @@ theme:
     - content.code.copy
     # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#improved-tooltips
     - content.tooltips
-    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#automatic-hiding
-    - header.autohide
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=footer#navigation
     - navigation.footer
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
@@ -47,7 +45,6 @@ theme:
     - navigation.sections
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
     - navigation.tabs
-    - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
     - navigation.top
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
@@ -296,6 +293,7 @@ nav:
         - Data pinning: data/data-pinning.md
         - Data editing: data/data-editing.md
         - Data filtering: data/data-filtering.md
+        - Data mocking: data/data-mocking.md
         - Binary data: data/binary-data.md
     - Manage n8n Cloud:
       - Overview: manage-cloud/overview.md

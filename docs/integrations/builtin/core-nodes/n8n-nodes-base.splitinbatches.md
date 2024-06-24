@@ -64,9 +64,9 @@ The final workflow looks like this:
 
 ## Check that the node has processed all items
 
-To check if the node still has items to process, use the following expression: `{{$("Loop Over Items").context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
+To check if the node still has items to process, use the following expression: `$("<loop-over-items-node-name>").context["noItemsLeft"];`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
 
 ## Get the current running index of the node
 
-To get the current running index of the node, use the following expression: `{{$("Loop Over Items").context["currentRunIndex"];}}`.
+To get the current running index of the node, use the following expression: `$("<loop-over-item-node-name>").context["currentRunIndex"];`.
 

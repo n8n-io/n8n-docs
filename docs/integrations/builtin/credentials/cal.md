@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Cal](https://www.cal.com/) pro account.
+Create a [Cal](https://www.cal.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
@@ -27,8 +27,5 @@ Refer to [Cal's API documentation](https://cal.com/docs/enterprise-features/api#
 To configure this credential, you'll need:
 
 - An **API Key**: Refer to the [Cal API Quick Start documentation](https://cal.com/docs/enterprise-features/api/quick-start){:target=_blank .external-link} for information on how to generate a new API key.
-
-/// note | Hosted API
-Cal previously supported [a hosted API](https://cal.com/docs/enterprise-features/api/quick-start/hosted-api-through-cal-com){:target=_blank .external-link}, but they have since discontinued that service. You don't need to make any edits to the **Host** field within the credential.
-///
+- A **Host**: If you're using the cloud version of Cal, leave the Host as `https://api.cal.com`. If you're self-hosting Cal, enter the **Host** for your Cal instance.
 

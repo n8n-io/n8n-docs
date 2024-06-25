@@ -40,9 +40,9 @@ This section provides explanations of important AI concepts, and workflow templa
 
 	[:octicons-arrow-right-24: What is memory in AI?](/advanced-ai/examples/understand-memory/)  
 
--   __More concepts and examples coming soon__
+-   __AI workflow templates__
 
-	n8n will add more examples in the coming months. In the mean time, you can browse AI templates, included community contributions, on the n8n website. 
+	You can browse AI templates, included community contributions, on the n8n website. 
 
     [:octicons-arrow-right-24: Browse all AI templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
 

@@ -10,10 +10,10 @@ This page explains how LangChain concepts and features map to n8n nodes.
 
 This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/).
 
-
 /// note | n8n implements LangChain JS
 This feature is n8n's implementation of [LangChain's JavaScript framework](https://js.langchain.com/docs/get_started/introduction){:target=_blank .external-link}.
 ///
+
 ## Trigger nodes
 
 [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/)
@@ -98,6 +98,8 @@ Available nodes:
 * [Ollama Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
 * [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 * [OpenAI Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/)
+* [OpenRouter Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter/)
+* [OpenRouter Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenrouter/)
 
 Learn more about [Language models in LangChain](https://js.langchain.com/docs/modules/model_io/models/){:target=_blank .external-link}.
 
@@ -129,12 +131,10 @@ Learn more about [Output parsers in LangChain](https://js.langchain.com/docs/mod
 
 #### Retrievers
 
-
 * [Contextual Compression Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression/)
 * [MultiQuery Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery/)
 * [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore/)
 * [Workflow Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieverworkflow/)
-
 
 #### Text splitters
 
@@ -165,7 +165,6 @@ Utility tools.
 
 Available nodes:
 
-
 * [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock)
 * [Embeddings Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere/)
 * [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm/)
@@ -176,10 +175,6 @@ Available nodes:
 
 Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
 
-
 #### Miscellaneous
 
 * [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/)
-
-
-

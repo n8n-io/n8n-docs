@@ -30,7 +30,7 @@ For usage examples and templates to help you get started, refer to n8n's [Git in
 * **Push** to remote repository: Performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
 * **Push Tags** to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
 * Return **Status** of current repository: Performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
-* Create a new **Tag**: LPerforms a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
+* Create a new **Tag**: Performs a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
 * **User Setup**: Set the user.
 
 ## Node parameters

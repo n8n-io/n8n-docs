@@ -1,5 +1,7 @@
 ---
 contentType: overview
+hide:
+  - toc
 ---
 
 # Self-hosting n8n

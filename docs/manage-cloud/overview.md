@@ -1,5 +1,7 @@
 ---
 contentType: overview
+hide:
+  - toc
 ---
 
 # n8n Cloud

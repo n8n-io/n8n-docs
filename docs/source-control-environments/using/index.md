@@ -2,6 +2,8 @@
 title: Using source control and environments
 description: How to use source control and environments in n8n.
 contentType: overview
+hide:
+  - toc
 ---
 
 # Using source control and environments

@@ -1,19 +1,19 @@
 ---
-title: n8n Form Trigger
-description: Documentation for the n8n Form Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: n8n Form trigger
+description: Documentation for the n8n Form trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 ---
 
-# n8n Form Trigger
+# n8n Form trigger
 
-Use the n8n Form Trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
+Use the n8n Form trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [n8n Form Trigger integrations](https://n8n.io/integrations/n8n-form-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [n8n Form trigger integrations](https://n8n.io/integrations/n8n-form-trigger/){:target=_blank .external-link} page.
 ///
 
 ## Build and test workflows
 
-While building or testing a workflow, use the test URL. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
+While building or testing a workflow, use the **Test URL**. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
 
 There are two ways to test:
 
@@ -22,9 +22,9 @@ There are two ways to test:
 
 ## Production workflows
 
-When your workflow is ready, switch to using the production URL. You can then activate your workflow, and n8n runs it automatically when a user submits the form.
+When your workflow is ready, switch to using the **Production URL**. You can then activate your workflow, and n8n runs it automatically when a user submits the form.
 
-When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form Trigger isn't visible in the editor UI with the production URL.
+When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
 
 ## Node parameters
 
@@ -32,7 +32,7 @@ These are the main node configuration fields.
 
 ### Form URLs
 
-The Form Trigger node has two URLs: test URL and production URL. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
+The Form trigger node has two URLs: test URL and production URL. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ![Screenshot of the form URLs](/_images/integrations/builtin/core-nodes/form-trigger/form-urls.png)
 
@@ -69,7 +69,7 @@ Choose when n8n sends a response to the form submission. You can respond when:
 
 * **Form Is Submitted**: send a response to the user as soon as they submit the form.
 * **Workflow Finishes**: use this if you want the workflow to complete its execution before you send a response to the user. If the workflow errors, it sends a response to the user telling them there was a problem submitting the form.
-* **Using 'Respond to Webhook' Node**: the Form Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: the Form trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 
 ## Node options
 

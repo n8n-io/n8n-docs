@@ -21,3 +21,45 @@ For usage examples and templates to help you get started, refer to n8n's [JWT in
 * Decode
 * Sign
 * Verify
+
+## Node parameters
+
+* **Credential to connect with**: Select or create a [JWT credential](/integrations/builtin/credentials/jwt/) to connect with.
+* **Token**: Enter the token to **Verify** or **Decode**.
+* If you select the **Sign** operation, you'll also have this parameter:
+    * **Use JSON to Build Payload**: When turned on, the node uses JSON to build the claims. The selection here influences what appears in the Payload Claims section.
+
+## Payload Claims
+
+The node only displays payload claims if you select the **Sign** operation. What you see depends on what you select for **Use JSON to Build Payload**:
+
+* If you select **Use JSON to Build Payload**, this section displays a JSON editor where you can construct the claims.
+* If you don't select **Use JSON to Build Payload**, this section prompts you to **Add Claim**.
+
+You can add these Claims:
+
+* **Audience**: The `aud` claim identifies the intended recipients of the JWT. Refer to ["aud" (Audience) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.3){:target=_blank .external-link} for more information.
+* **Expires In**: The `exp` claim identifies the expiration time on or after which the JWT must not be accepted for processing. Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
+* **Issuer**: The `iss` claim identifies the principal that issued the JWT. Refer to ["iss" (Issuer) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.1){:target=_blank .external-link} for more information.
+* **JWT ID**: The `jti` claim provides a unique identifier for the JWT. Refer to ["jti" (JWT ID) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.7){:target=_blank .external-link} for more information.
+* **Not Before**: The `nbf` claim identifies the time before which the JWT must not be accepted for processing. Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link} for more information.
+* **Subject**: The `sub` claim identifies the principal that's the subject of the JWT. Refer to ["sub" (Subject) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.2){:target=_blank .external-link} for more information.
+
+
+## Node options
+
+### Decode node options
+
+* **Return Additional Info**: This toggle controls how much information the node returns. When turned on, the node returns the complete decoded token with information about the header and signature. When turned off, the node only returns the payload.
+
+### Sign node options
+
+* **Override Algorithm**: The algorithm to use for verifying the token. This algorithm will override the algorithm selected in the credentials.
+
+### Verify node options
+
+* **Return Additional Info**: This toggle controls how much information the node returns. When turned on, the node returns the complete decoded token with information about the header and signature. When turned off, the node only returns the payload.
+* **Ignore Expiration**: This toggle controls whether the node should ignore the token's expiration time claim (`exp`). Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
+* **Ignore Not Before Claim**: This toggle controls whether to ignore the token's not before claim (`nbf`). Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link} for more information.
+* **Clock Tolerance**: Enter the number of seconds to tolerate when checking the `nbf` and `exp` claims. This allows you to deal with small clock differences among different servers. Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
+* **Override Algorithm**: The algorithm to use for verifying the token. This algorithm will override the algorithm selected in the credentials.

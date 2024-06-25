@@ -17,7 +17,7 @@ For all nodes, refer to the:
 
 For declarative-style nodes, refer to the:
 
-* The [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters/).
+* [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters/).
 
 For programmatic-style nodes, refer to the:
 

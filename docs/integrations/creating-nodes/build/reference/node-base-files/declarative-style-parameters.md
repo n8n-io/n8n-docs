@@ -6,9 +6,11 @@ contentType: reference
 
 # Declarative-style parameters
 
-These are the declarative-style parameters for the [node base file](/integrations/creating-nodes/build/reference/node-base-files/).
+These are the parameters available for [node base file](/integrations/creating-nodes/build/reference/node-base-files/) of declarative-style nodes.
 
 This document gives short code snippets to help understand the code structure and concepts. For a full walk-through of building a node, including real-world code examples, refer to [Build a declarative-style node](/integrations/creating-nodes/build/declarative-style-node/).
+
+Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/) for parameters available to all nodes.
 
 ## `methods` and `loadOptions`
 

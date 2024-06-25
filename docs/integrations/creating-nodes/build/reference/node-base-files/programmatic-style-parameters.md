@@ -6,11 +6,13 @@ contentType: reference
 
 # Programmatic-style parameters
 
-These are the programmatic-style parameters for the [node base file](/integrations/creating-nodes/build/reference/node-base-files/).
+These are the parameters available for [node base file](/integrations/creating-nodes/build/reference/node-base-files/) of programmatic-style nodes.
 
 This document gives short code snippets to help understand the code structure and concepts. For a full walk-through of building a node, including real-world code examples, refer to [Build a programmatic-style node](/integrations/creating-nodes/build/programmatic-style-node/).
 
 Programmatic-style nodes also use the `execute()` method. Refer to [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method/) for more information.
+
+Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/) for parameters available to all nodes.
 
 ## `defaultVersion`
 

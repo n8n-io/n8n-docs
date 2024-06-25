@@ -118,7 +118,7 @@ Applies only to **Respond > When Last Node Finishes**.
 
 Select **Add Option** to view more configuration options. The available options depend on your node parameters. Refer to the table for option availability.
 
-* **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use * (default) to allow all origins.
+* **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use `*` (default) to allow all origins.
 * **Binary Property**: Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file. Enter the name of the binary property to write the data of the received file to.
 * **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
 * **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IPs outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.

@@ -12,6 +12,6 @@ Server-Sent Events (SSE) is a server push technology enabling a client to receiv
 For usage examples and templates to help you get started, refer to n8n's [SSE Trigger integrations](https://n8n.io/integrations/sse-trigger/){:target=_blank .external-link} page.
 ///
 
-## Node Reference
+## Node parameters
 
-***URL***: This field specifies the URL from which to receive the server-sent events.
+The SSE trigger node has one parameter, the **URL**. Enter the URL from which to receive the server-sent events (SSE).

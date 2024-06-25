@@ -19,19 +19,19 @@ For usage examples and templates to help you get started, refer to n8n's [Git in
 
 ## Operations
 
-* Add a file or folder to commit: Listed as **Add** in the node **Parameters**, performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
-* Add configuration property: Listed as **Add Config** in the node **Parameters**, performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} set or add.
-* Clone a repository: Listed as **Clone** in the node **Parameters**, performs a [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link}.
-* Commit files or folders to git: Listed as **Commit** in the node **Parameters**, performs a [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link}.
-* Fetch from remote repository: Listed as **Fetch** in the node **Parameters**, performs a [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link}.
-* Return current configuration: Listed as **List Config** in the node **Parameters**, performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} query.
-* Return git commit history: Listed as **Log** in the node **Parameters**, performs a [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link}.
-* Pull from remote repository: Listed as **Pull** in the node **Parameters**, performs a [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link}.
-* Push to remote repository: Listed as **Push** in the node **Parameters**, performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
-* Push Tags to remote repository: Listed as **Push Tags** in the node **Parameters**, performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
-* Return status of current repository: Listed as **Status** in the node **Parameters**, performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
-* Create a new tag: Listed as **Tag** in the node **Parameters**, performs a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
-* Set the user: Listed as **User Setup** in the node **Parameters**.
+* **Add** a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
+* **Add Config**: Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} set or add.
+* **Clone** a repository: Performs a [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link}.
+* **Commit** files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link}.
+* **Fetch** from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link}.
+* **List Config**: Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} query.
+* **Log**: Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link}.
+* **Pull** from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link}.
+* **Push** to remote repository: Performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
+* **Push Tags** to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
+* Return **Status** of current repository: Performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
+* Create a new **Tag**: LPerforms a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
+* **User Setup**: Set the user.
 
 ## Node parameters
 

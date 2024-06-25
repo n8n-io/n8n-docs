@@ -22,6 +22,10 @@ For usage examples and templates to help you get started, refer to n8n's [Execut
 
 * Save Execution Data for Search
 
+## Data to Save
+
+Add a **Saved Field** for each key/value pair of metadata you'd like to save.
+
 
 ## Related resources
 

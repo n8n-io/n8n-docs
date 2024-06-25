@@ -35,20 +35,26 @@ For usage examples and templates to help you get started, refer to n8n's [Git in
 
 ## Node parameters
 
-* **Repository Path**: Enter the local path of the git repository for the operation.
+All operations include the same parameter, the **Repository Path**. Enter the local path of the git repository for the operation in this field.
 
-The [**Add**](#add-parameters), [**Add Config**](#add-config-parameters), [**Clone**](#clone-parameters), [**Commit**](#commit-parameters), [**Log**](#log-parameters), [**Push**](#push-parameters), and [**Tag**](#tag-parameters) operations have more parameters. Refer to the section for each operation below.
+The [**Add**](#add-parameters), [**Add Config**](#add-config-parameters), [**Clone**](#clone-parameters), [**Commit**](#commit-parameters), [**Log**](#log-parameters), [**Push**](#push-parameters), and [**Tag**](#tag-parameters) operations have more parameters. Refer to the subsection for each operation.
 
 ### Add parameters
 
-* **Paths to Add**: Enter a comma-separated list of paths of files or folders to add. You can use absolute paths or relative paths from the **Repository Path**.
+The add operation adds one parameter, the **Paths to Add**. Enter a comma-separated list of paths of files or folders to add in this field.
+
+You can use absolute paths or relative paths from the **Repository Path**.
 
 ### Add Config parameters
+
+The config operation adds two parameters:
 
 * **Key**: Enter the name of the key to set.
 * **Value**: Enter the value of the key to set.
 
 ### Clone parameters
+
+The clone operation adds three parameters:
 
 * **Authentication**: Select **Authenticate** to pass credentials in. Select **None** to not use authentication.
     * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
@@ -57,31 +63,45 @@ The [**Add**](#add-parameters), [**Add Config**](#add-config-parameters), [**Clo
 
 ### Commit parameters
 
-* **Message**: Enter the commit message to use.
+The commit operation adds one parameter, the **Message**. Enter the commit message to use in this field.
 
 ### Log parameters
 
+The log operation adds two parameters:
+
 * **Return All**: When turned on, the node will return all results. When turned off, the node will return results up to the set **Limit**.
-* **Limit**: Only available when **Return All** is turned off. Enter the maximum number of results to return.
+* **Limit**: Only available when you turn off **Return All**. Enter the maximum number of results to return.
 
 ### Push parameters
 
-* **Authentication**: Select **Authenticate** to pass credentials in. Select **None** to not use authentication.
-    * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
+The push operation adds the **Authentication** parameter. Select **Authenticate** to pass credentials in or **None** to not use authentication.
+
+If you select **Authenticate**, you must select or create **Credential for Git** for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
 
 ### Tag parameters
 
-* **Name**: Enter the name of the tag to create.
+The tag operation adds the **Name** parameter. Enter the name of the tag to create in this field.
 
 ## Node options
 
-Node options depend on the operation you select:
+The node options depend on the operation you select.
 
-* **Add Config** operation:
-    * **Mode**: Choose whether to **Set** or **Append** the setting in the local config.
-* **Commit** operation:
-    * **Paths to Add**: Enter a comma-separated list of paths of files or folders to commit. If you don't set this field, all "added" files and folders will be committed. You can use absolute paths or relative paths from the **Repository Path**.
-* **Log** operation:
-    * **File**: Enter the path of a file or folder to get the history of. You can use absolute paths or relative paths from the **Repository Path**.
-* **Push** operation:
-    * **Target Repository**: Enter the URL or path of the repository to push to.
+### Add Config options
+
+The add config operation adds the **Mode** option. Choose whether to **Set** or **Append** the setting in the local config.
+
+### Commit options
+
+The commit operation adds the **Paths to Add** option. To commit all "added" files and folders, leave this field blank. To commit specific "added" files and folders, enter a comma-separated list of paths of files or folders in this field.
+
+You can use absolute paths or relative paths from the **Repository Path**.
+
+### Log options
+
+The log operation adds the **File** option. Enter the path of a file or folder to get the history of in this field.
+
+You can use absolute paths or relative paths from the **Repository Path**.
+
+### Push options
+
+The push operation adds the **Target Repository** option. Enter the URL or path of the repository to push to in this field.

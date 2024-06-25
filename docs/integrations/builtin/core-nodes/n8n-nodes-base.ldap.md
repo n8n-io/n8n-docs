@@ -35,18 +35,22 @@ Each operation also has its own parameters. Refer to the subsections below for m
 
 ### Compare node parameters
 
+The compare operation adds two parameters:
+
 * **Attribute ID**: Enter the ID of the attribute to compare.
 * **Value**: Enter the value to compare.
 
 ### Create node parameters
 
-* **Attributes**: Add **Attribute ID**/**Value** pairs to add.
+The create operation adds the **Attributes** parameter, where you can add the **Attribute ID**/**Value** pairs you'd like to create.
 
 ### Rename node parameters
 
-* **New DN**: Enter the new Distinguished Name (DN) for the entry.
+The rename operation adds the **New DN** parameter. Enter the new Distinguished Name (DN) for the entry in this field.
 
 ### Search node parameters
+
+The search operation adds several new parameters:
 
 * **Base DN**: Enter the Distinguished Name (DN) of the subtree to search in.
 * **Search For**: Select the directory object class to search for.
@@ -57,7 +61,11 @@ Each operation also has its own parameters. Refer to the subsections below for m
 
 ### Update node parameters
 
-* **Update Attributes**: Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute. Then enter the **Attribute ID**/**Value** pair you'd like to update.
+The update operation adds the **Update Attributes** parameter.
+
+Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute.
+
+Then enter the **Attribute ID**/**Value** pair you'd like to update.
 
 ## Node options
 

@@ -28,6 +28,19 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.47.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.0...n8n@1.47.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-26
+
+/// warning | Breaking change
+Calling `$(...).last()` (or `(...).first()` or `$(...).all()`) without arguments now returns the last item (or first or all items) of the output that connects two nodes. Previously, it returned the item/items of the first output of that node. Refer to the [breaking changes log](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1470){:target=_blank .external-link} for details.
+///
+
+This is a bug fix release.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.47.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.46.0...n8n@1.47.0){:target=_blank .external-link} for this version.<br />

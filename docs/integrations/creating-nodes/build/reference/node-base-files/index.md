@@ -12,14 +12,14 @@ You can also explore the [n8n-nodes-starter](https://github.com/n8n-io/n8n-nodes
 
 For all nodes, refer to the:
 
-* [Structure of the node base file](/integrations/creating-nodes/build/reference/node-base-files/structure/).
-* [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/).
+* [Structure of the node base file](/integrations/creating-nodes/build/reference/node-base-files/structure/)
+* [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/)
 
 For declarative-style nodes, refer to the:
 
-* [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters/).
+* [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters/)
 
 For programmatic-style nodes, refer to the:
 
-* [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters/).
-* [Programmatic-style execute() method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method/).
+* [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters/)
+* [Programmatic-style execute() method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method/)

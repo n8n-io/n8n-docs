@@ -1127,7 +1127,13 @@ nav:
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
           - Versioning: integrations/creating-nodes/build/reference/node-versioning.md 
           - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
-          - Base files: integrations/creating-nodes/build/reference/node-base-files.md
+          - Base files: 
+            - integrations/creating-nodes/build/reference/node-base-files/index.md
+            - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
+            - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
+            - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
+            - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
+            - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md

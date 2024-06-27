@@ -28,14 +28,28 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
+## n8n@1.48.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.1...n8n@1.48.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-27
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes and feature enhancements.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[KubeAl](https://github.com/KubeAl){:target=_blank .external-link}  
+
 ## n8n@1.47.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.0...n8n@1.47.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-06-26
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 /// warning | Breaking change
 Calling `$(...).last()` (or `(...).first()` or `$(...).all()`) without arguments now returns the last item (or first or all items) of the output that connects two nodes. Previously, it returned the item/items of the first output of that node. Refer to the [breaking changes log](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1470){:target=_blank .external-link} for details.
@@ -86,8 +100,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.0...n8n@1.45.1
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
-
-
 
 This is a bug fix release.
 

@@ -197,7 +197,7 @@ Refer to the [RBAC](/user-management/rbac/) documentation for information on cre
 <br /><br />
 The number of projects and role types vary depending on your plan. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for details.
 
-<video src="/_images/release-notes/rbac-glimpse.mp4" controls width="100%"></video>
+<video src="/_video/release-notes/rbac-glimpse.mp4" controls width="100%"></video>
 
 </div>
 

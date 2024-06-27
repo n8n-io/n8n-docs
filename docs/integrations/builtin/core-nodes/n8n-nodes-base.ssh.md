@@ -18,19 +18,41 @@ For usage examples and templates to help you get started, refer to n8n's [SSH in
 
 ## Basic Operations
 
-- Execute a command
-- Download a file
-- Upload a file
+- **Execute** a command
+- **Download** a file
+- **Upload** a file
 
-**Note:** To attach a file for upload, you will need to use an additional node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+/// note | Uploading files
+To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+///
 
-## Node Reference
+## Node parameters
 
-- ***Authentication:*** A dropdown list to choose between Password or Private Key authentication.
-- ***Resource:*** A dropdown list used to specify if you are executing a command or processing a file.
-- ***Operation:*** A dropdown list to select the action to be performed. When selecting **Command** as the ***Resource***, only **Execute** is available. For a **File** ***Resource*** you can select either **Upload** or **Download**.
-- ***Command:*** Only visible for **Command** resources. The command to execute on the remote machine.
-- ***Working Directory:*** Only visible for **Command** resources. The directory where the command should be executed.
-- ***Path:*** Only visible for **Download** operation on file resources. The path where the desired file is found.
-- ***Binary Property:*** Only visible for file resources. The name of the binary property which contains the data for the file to be uploaded.
-- ***Target Directory:*** Only visible for **Upload** operations on file resources. The directory to upload the file to. The name of the file doesn'tneed to be specified, it's taken from the binary data file name. To override this behavior, set the parameter **File Name** under options.
+All operations include these parameters:
+
+- **Credential to connect with**: Select an existing or create a new [SSH credential](/integrations/builtin/credentials/ssh/) to connect with.
+- **Resource**: Select whether you want to **Execute** a command or process a **File**.
+- **Operation**: Select the action you want to perform. If you selected **Command** as your resource, you can only select **Execute**. If you selected **File** as your resource, select either  **Upload** or **Download**.
+
+The remaining parameters depend on the **Resource** and **Operation** you select.
+
+### Execute Command parameters
+
+- **Command**: Enter the command to execute on the remote device.
+- **Working Directory**: Enter the directory where n8n should execute the command.
+
+### Upload File parameters
+
+- **Input Binary Field**: Enter the name of the input binary field that contains the file you want to upload.
+- **Target Directory**: The directory to upload the file to. The name of the file is taken from the binary data file name. To enter a different name, use the **File Name** option. Refer to [Node options](#node-options) for more information.
+
+### Download File parameters
+
+- **Path**: Enter the path for the file you want to download. This path must include the file name. The downloaded file will use this file name. To use a different name, use the **File Name** option. Refer to [Node options](#node-options) for more information.
+- **File Property**: Enter the name of the object property that holds the binary data you want to download.
+
+## Node options
+
+The **File** Resources display one node option: **File Name**.
+
+If you select this option, any file name you enter here will override the binary data file name. This allows you to rename the file you're uploading or downloading.

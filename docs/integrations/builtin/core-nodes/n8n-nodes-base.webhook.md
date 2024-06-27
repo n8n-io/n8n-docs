@@ -28,9 +28,8 @@ While building or testing a workflow, use a test webhook URL. Using a test webho
 
 When using the Webhook node on the localhost, run n8n in tunnel mode: [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel) or [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel).
 
-<video width="840" controls>
-<source src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" type="video/mp4">
-</video>
+<video src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" controls width="100%"></video>
+
 
 ## Production workflows
 

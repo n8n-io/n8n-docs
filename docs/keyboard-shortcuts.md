@@ -14,7 +14,7 @@ contentType: reference
 
 n8n provides keyboard shortcuts for some actions.
 
-## General
+## Workflow controls
  
  - **Ctrl** + **Alt** + **n**: create new workflow
  - **Ctrl** + **o**: open workflow

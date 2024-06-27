@@ -91,7 +91,7 @@ If the first row of the file contains header names, turn on the **Header Row** o
 	* **Confirmed**
 	* **Cancelled**
 	* **Tentative**
-* **UID**: Enter a universally unique ID (UID) for the event. The UID should be globally unique. The node autogenerates a UID if you don't enter one.
+* **UID**: Enter a universally unique ID (UID) for the event. The UID should be globally unique. The node automatically generates a UID if you don't enter one.
 * **URL**: Enter a URL associated with the event.
 * **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings/).
 

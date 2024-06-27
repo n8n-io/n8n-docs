@@ -79,13 +79,27 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 		return;
 	  }
 	  // Add event listeners
-	  videos.forEach((video) => {		
+	  videos.forEach((video) => {	
+		// for <video src="">
+		if (video.src) {	
         videoTrackingObj[new URL(video.src).pathname] =  {
 			"played": false,
 		    "played25": false,
 		    "played50": false,
 	        "played75": false
 		  }
+		} else if (video.getElementsByTagName('source').length > 0) {
+			videoTrackingObj[new URL(video.getElementsByTagName('source')[0].src).pathname] =  {
+			"played": false,
+		    "played25": false,
+		    "played50": false,
+	        "played75": false
+		  }
+		} else {
+			let currentPage = window.location.href;
+			fetch('https://internal.users.n8n.cloud/webhook/docs-video-not-tracking?docsPage='+currentPage);
+		}
+		
 		video.addEventListener("play", trackVideoPlayWithPlausible);
 		video.addEventListener("timeupdate", trackTimeIntervalsWithPlausible);
 		video.addEventListener("ended", trackVideoEndedWithPlausible);

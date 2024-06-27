@@ -20,13 +20,13 @@ For usage examples and templates to help you get started, refer to n8n's [Activa
 If you want to use the Activation trigger node for a workflow, add the node to the workflow. You don't have to create a separate workflow.
 ///
 
-The Activation trigger node gets triggered for the workflow that it gets added to. The Activation trigger node can be used to trigger a workflow to notify the state of the workflow.
+The Activation trigger node gets triggered for the workflow that it gets added to. You can use the Activation trigger node to trigger a workflow to notify the state of the workflow.
 
-## Node Reference
+## Node parameters
 
 - Events
-    - ***Activation:*** Run when the workflow gets activated
-    - ***Start:*** Run when n8n starts or restarts
-    - ***Update:*** Run when the workflow gets saved while it's active
+    - **Activation**: Run when the workflow gets activated
+    - **Start**: Run when n8n starts or restarts
+    - **Update**: Run when the workflow gets saved while it's active
 
 

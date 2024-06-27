@@ -14,11 +14,16 @@ For usage examples and templates to help you get started, refer to n8n's [Compre
 
 ## Node parameters
 
-- **Operation** > **Compress**:
-	- **Input Binary Field(s)**: the name of the fields in the input data that contain the binary files you want to compress. To compress more than one file, use a comma-separated list.
-	- **Output Format**: choose from  **Zip** and **Gzip**.
-	- **File Name**: the name of the zip file you create.
-	- **Put Output File in Field**: set the name of the field in the output data to contain the file.
-- **Operation** > **Decompress**:
-	- **Put Output File in Field**: set the name of the field in the output data to contain the file.
-	- **Output Prefix**: add a prefix to the output file name.
+The node parameters depend on which **Operation** you select. Choose from **Compress** and **Decompress**.
+
+### Compress parameters
+
+- **Input Binary Field(s)**: Enter the name of the fields in the input data that contain the binary files you want to compress. To compress more than one file, use a comma-separated list.
+- **Output Format**: Choose whether to format the compressed output as **Zip** or **Gzip**.
+- **File Name**: Enter the name of the zip file the node creates.
+- **Put Output File in Field**: Enter the name of the field in the output data to contain the file.
+
+### Decompress parameters
+
+- **Put Output File in Field**: Enter the name of the fields in the input data that contain the binary files you want to decompress. To decompress more than one file, use a comma-separated list.
+- **Output Prefix**: Enter a prefix to add to the output file name.

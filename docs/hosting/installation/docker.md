@@ -29,7 +29,7 @@ From your terminal, run:
 ```sh
 docker volume create n8n_data
 
-docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
+docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/root/.n8n docker.n8n.io/n8nio/n8n
 ```
 
 This command will download all required n8n images and start your container, exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n_data`, to persist your data locally.
@@ -41,13 +41,13 @@ You can then access n8n by opening:
 
 By default n8n uses SQLite to save credentials, past executions and workflows. n8n also supports PostgresDB configurable using environment variables as detailed below.
 
-It's important to still persist data in the `/home/node/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used.
+It's important to still persist data in the `/root/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used.
 
 If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
 /// note | Keep in mind
-Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/configuration/environment-variables/deployment).
+Persisting the `/root/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/configuration/environment-variables/deployment).
 ///
 ### PostgresDB
 
@@ -66,7 +66,7 @@ docker run -it --rm \
  -e DB_POSTGRESDB_USER=<POSTGRES_USER> \
  -e DB_POSTGRESDB_SCHEMA=<POSTGRES_SCHEMA> \
  -e DB_POSTGRESDB_PASSWORD=<POSTGRES_PASSWORD> \
- -v n8n_data:/home/node/.n8n \
+ -v n8n_data:/root/.n8n \
  docker.n8n.io/n8nio/n8n
 ```
 
@@ -89,7 +89,7 @@ docker run -it --rm \
  -p 5678:5678 \
  -e GENERIC_TIMEZONE="Europe/Berlin" \
  -e TZ="Europe/Berlin" \
- -v n8n_data:/home/node/.n8n \
+ -v n8n_data:/root/.n8n \
  docker.n8n.io/n8nio/n8n
 ```
 
@@ -146,7 +146,7 @@ docker volume create n8n_data
 docker run -it --rm \
  --name n8n \
  -p 5678:5678 \
- -v n8n_data:/home/node/.n8n \
+ -v n8n_data:/root/.n8n \
  docker.n8n.io/n8nio/n8n \
  start --tunnel
 ```

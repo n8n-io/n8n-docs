@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Manage variables
 description: Manage variable values in n8n using the API and source control.
 contentType: howto

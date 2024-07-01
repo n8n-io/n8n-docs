@@ -20,82 +20,86 @@ For usage examples and templates to help you get started, refer to n8n's [IF int
 
 ## Add conditions
 
-Add comparison conditions using the **Add Condition** filter. The available comparison operations vary for each data type.
+Create comparison **Conditions** for your If node.
 
-**String**:
+- Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to filter for dates after a particular date, select **Date & Time > is after**.
+- The fields and values to enter into the condition change based on the data type and comparison you select.
 
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- contains
-- doesn't contain
-- starts with
-- doesn't start with
-- ends with
-- doesn't end with
-- matches regex
-- doesn't match regex
+### Available data type comparisons
 
-**Number**:
+- **String**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is equal to**
+    - **is not equal to**
+    - **contains**
+    - **does not contain**
+    - **starts with**
+    - **does not start with**
+    - **ends with**
+    - **does not end with**
+    - **matches regex**
+    - **does not match regex**
+- **Number**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is equal to**
+    - **is not equal to**
+    - **is greater than**
+    - **is less than**
+    - **is greater than or equal to**
+    - **is less than or equal to**
+- **Date & Time**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is equal to**
+    - **is not equal to**
+    - **is after**
+    - **is before**
+    - **is after or equal to**
+    - **is before or equal to**
+- **Boolean**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is true**
+    - **is false**
+    - **is equal to**
+    - **is not equal to**
+- **Array**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **contains**
+    - **does not contain**
+    - **length equal to**
+    - **length not equal to**
+    - **length greater than**
+    - **length less than**
+    - **length greater than or equal to**
+    - **length less than or equal to**
+- **Object**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
 
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- is greater than
-- is less than
-- is greater than or equal
-- is less than or equal
+Select **Add condition** to create more conditions.
 
-**Date & Time**:
+### Combining conditions
 
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- is after
-- is before
-- is after or equal
-- is before or equal
+You can choose to keep data:
 
-**Boolean**:
-
-- exists
-- doesn't exist
-- is true
-- is false
-- is equal to
-- isn't equal to
-
-**Array**:
-
-- exists
-- doesn't exist
-- is equal to
-- isn't equal to
-- contains
-- doesn't contain
-- length equal to
-- length not equal to
-- length greater than
-- length less than
-- length greater than or equal
-- length less than or equal
-
-**Object**:
-
-- exists
-- doesn't exist
-- is empty
-- isn't empty
-
-## AND / OR
-
-If you have more than one condition, you can choose either:
-
-* **AND**: data must match all conditions to be true.
-* **OR**: data only needs to match one of the conditions to be true.
+* When it meets all conditions: Create two or more conditions and select **AND** in the dropdown between them.
+* When it meets any of the conditions: Create two or more conditions and select **OR** in the dropdown between them.
 
 
 ## Branch execution with If and Merge nodes

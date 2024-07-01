@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Learn how to build AI workflows using n8n's LangChain implementation. You'll build a chat workflow that uses ChatGPT and pulls in data from other n8n workflows.
 type: tutorial
 ---

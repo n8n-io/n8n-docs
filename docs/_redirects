@@ -7,6 +7,7 @@
 /getting-started/create-your-first-workflow/*    /try-it-out/
 /reference/security/   /privacy-security/security/
 /reference/reference.html   /
+/integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
 
 
 # Moved from 404.html

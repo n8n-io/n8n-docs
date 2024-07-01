@@ -1,17 +1,17 @@
 ---
-title: Agent
+title: AI Agent
 description: Documentation for the Agent node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Agent
+# AI Agent
+
+
 
 Use the Agent node to set which agent type you want to use.
 
 On this page, you'll find the node parameters for the Agent node, and links to more resources.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Agent integrations](https://n8n.io/integrations/agent/){:target=_blank .external-link} page.
-///
+[[ topThreeTemplates(title, page) ]]
 
 /// note | Connect a tool
 You must connect at least one tool sub-node.

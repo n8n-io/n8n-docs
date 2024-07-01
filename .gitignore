@@ -12,3 +12,4 @@ yarn.lock
 venv
 env
 site
+__pycache__/

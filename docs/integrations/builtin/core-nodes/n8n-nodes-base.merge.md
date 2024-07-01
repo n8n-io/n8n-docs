@@ -36,10 +36,11 @@ Compare items by field values. Enter the fields you want to compare in **Fields 
 
 n8n's default behavior is to keep matching items. You can change this using the **Output Type** setting:
 
-* Keep matches: merge items that match.
-* Keep non-matches: merge items that don't match.
-* Enrich Input 1: keep all data from Input 1, and add matching data from Input 2.
-* Enrich Input 2: keep all data from Input 2, and add matching data from Input 1.
+* **Keep Matches**: Merge items that match. This is like an inner join.
+* **Keep Non-Matches**: Merge items that don't match.
+* **Keep Everything**: Merge items together that do match and include items that don't match. This is like an outer join.
+* **Enrich Input 1**: keep all data from Input 1, and add matching data from Input 2. This is like a left join.
+* **Enrich Input 2**: keep all data from Input 2, and add matching data from Input 1. This is like a right join.
 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
 
@@ -52,8 +53,8 @@ n8n's default behavior is to keep matching items. You can change this using the 
 
 Matching by field can generate multiple matches if the inputs contain duplicate data. To handle this, select **Add Option > Multiple Matches**. Then choose:
 
-* **Include All Matches**: output multiple items (one for each match).
-* **Include First Match Only**: keep the first item, discard subsequent items.
+* **Include All Matches**: Output multiple items if there are multiple matches, one for each match.
+* **Include First Match Only**: Keep the first item per match and discard the remaining multiple matches.
 
 
 #### Merge by position

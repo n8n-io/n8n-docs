@@ -22,31 +22,31 @@ If you run n8n with Docker, your command will run in the n8n container and not t
 This node isn't available on n8n Cloud.
 ///
 
-## Node Reference
+## Node parameters
 
-The Execute Command node has two properties:
+* **Execute Once**: Whether you want the node to execute only once (turned on) or once for every item it receives as input (turned off).
+* **Command**: Enter the command to execute on the host machine.
+    * To execute multiple commands, refer to the guidance in [Run multiple commands](#run-multiple-commands).
+    * To execute curl commands, refer to the guidance in [Run cURL command](#run-curl-command)
 
-1. **Execute Once** toggle: This is a boolean field that specifies whether you want the node to execute only once, or once for every item it receives an input.
-2. **Command** field: This is a text field that specifies the command to execute on the host machine.
+### Run multiple commands
 
-## FAQs
+Use one of two methods to run multiple commands in one Execute Command node:
 
-### How to run multiple commands in the Execute Command node?
+* Enter each command on one line separated by `&&`. For example, you can combine the change directory (cd) command with the list (ls) command using `&&`.
 
-You can combine multiple commands using `&&`. For example, you can combine the change directory (cd) command with the list (ls) command using `&&`.
+    ```bash
+    cd bin && ls
+    ```
 
-```bash
-cd bin && ls
-```
+* Enter each command on a separate line. For example, you can write the list (ls) command on a new line after the change directory (cd) command.
 
-To run multiple commands, you can also write the commands on separate lines. For example, you can write the list (ls) command on a new line after the change directory (cd) command.
+    ```bash
+    cd bin
+    ls
+    ```
 
-```bash
-cd bin
-ls
-```
-
-### How to run the curl command in the Execute Command node?
+### Run cURL command
 
 You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to make a cURL request.
 
@@ -60,12 +60,12 @@ If you want to run the curl command in the Execute Command node, you will have t
     RUN apk --update add curl
     ```
 
-3. In the same folder, execute the command below command to build the Docker image.
+3. In the same folder, execute the command below to build the Docker image.
 
     ```shell
     docker build -t n8n-curl
     ```
 
 4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
-5. Run the newly created Docker image, and you will now be able to execute ssh using the Execute Command-Node.
+5. Run the newly created Docker image. You'll now be able to execute ssh using the Execute Command Node.
 

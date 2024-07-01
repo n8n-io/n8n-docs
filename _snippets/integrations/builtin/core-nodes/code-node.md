@@ -39,7 +39,7 @@ The Code node supports:
 
 ### External libraries
 
-If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer to the [Configuration Environment Variables](/hosting/configuration/environment-variables/) guide.
+If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer to the [Enable modules in Code node](/hosting/configuration/configuration-examples/modules-in-code-node/) guide.
 
 If you use n8n Cloud, you can't import external npm modules. n8n makes two modules available for you:
 

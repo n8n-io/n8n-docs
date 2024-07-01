@@ -14,21 +14,93 @@ For usage examples and templates to help you get started, refer to n8n's [Filter
 
 ## Node parameters
 
-**Conditions**: create comparison conditions using the fields in **Conditions**. The available comparison operations vary for each data type. Select **Add condition** to create another condition.
+Create filter comparison **Conditions** to perform your filter.
+
+- Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to filter for dates after a particular date, select **Date & Time > is after**.
+- The fields and values to enter into the condition change based on the data type and comparison you select.
+
+### Available data type comparisons
+
+- **String**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is equal to**
+    - **is not equal to**
+    - **contains**
+    - **does not contain**
+    - **starts with**
+    - **does not start with**
+    - **ends with**
+    - **does not end with**
+    - **matches regex**
+    - **does not match regex**
+- **Number**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is equal to**
+    - **is not equal to**
+    - **is greater than**
+    - **is less than**
+    - **is greater than or equal to**
+    - **is less than or equal to**
+- **Date & Time**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is equal to**
+    - **is not equal to**
+    - **is after**
+    - **is before**
+    - **is after or equal to**
+    - **is before or equal to**
+- **Boolean**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **is true**
+    - **is false**
+    - **is equal to**
+    - **is not equal to**
+- **Array**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+    - **contains**
+    - **does not contain**
+    - **length equal to**
+    - **length not equal to**
+    - **length greater than**
+    - **length less than**
+    - **length greater than or equal to**
+    - **length less than or equal to**
+- **Object**
+    - **exists**
+    - **does not exist**
+    - **is empty**
+    - **is not empty**
+
+Select **Add condition** to create more conditions.
 
 ### Combining conditions
 
 You can choose to keep items:
 
-* When they meet all conditions: create two or more conditions, then select **AND** in the dropdown between the first two conditions.
-* When they meet any of the conditions: create two or more conditions, then select **OR** in the dropdown between the first two conditions.
+* When they meet all conditions: Create two or more conditions and select **AND** in the dropdown between them.
+* When they meet any of the conditions: Create two or more conditions and select **OR** in the dropdown between them.
 
 You can't create a mix of AND and OR rules.
 
 ## Node options
 
-- **Ignore Case**: whether to ignore letter case.
-- **Less Strict Type Validation**: enable this if you want n8n to attempt to convert value types based on the operator you choose.
+- **Ignore Case**: Whether to ignore letter case (turned on) or be case sensitive (turned off).
+- **Less Strict Type Validation**: Whether you want n8n to attempt to convert value types based on the operator you choose (turned on).
 
 ## Related resources
 

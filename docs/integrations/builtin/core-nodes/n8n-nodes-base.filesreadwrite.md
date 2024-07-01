@@ -16,28 +16,45 @@ For usage examples and templates to help you get started, refer to n8n's [Read/W
 This node isn't available on n8n Cloud.
 ///
 
+## Operations
+
+- **Read File(s) From Disk**: Use this operation to retrieve one or more files from the computer that runs n8n.
+- **Write File to Disk**: Use this operation to create a binary file on the computer that runs n8n.
+
 ## Node parameters
 
-* **Operation** > **Read File(s) From Disk**:
-	* **File(s) Selector**: the path to read files from.
-* **Operation** >  **Write File to Disk**:
-	* **File Path and Name**: set the destination for the file.
-	* **Input Binary Field**: the name of the field in the node input data that contains the binary file.
+The node's parameters depend on which operation you select.
 
-## Options
+### Read File(s) From Disk parameters
 
-The node options available depend on the operation.
+* **File(s) Selector**: Enter the path of the file you want to read.
+	- To enter multiple files, enter a page path pattern. You can use these characters to define a path pattern:
+		- `*`: Matches any character zero or more times, excluding path separators.
+		- `**`: Matches any character zero or more times, include path separators.
+		- `?`: Matches any character except for path separators one time.
+		- `[]`: Matches any characters inside the brackets. For example, `[abc]` would match the characters `a`, `b`, or `c`, and nothing else.
 
-### Read File(s) From Disk
+Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing){:target=_blank .external-link} documentation for more information on these characters and their expected behavior.
 
-* **File Extension**: set the extension for the file in the node output.
-* **File Name**: set the name for the file in the node output.
-* **MIME Type**: set the file's MIME type in the node output.
-* **Put Output File in Field**: set the name of the field in the output data to contain the file.
+### Write File to Disk parameters
 
-### Write File to Disk
+* **File Path and Name**: Enter the destination for the file, the file's name, and the file's extension.
+* **Input Binary Field**: Enter the name of the field in the node input data that will contain the binary file.
 
-**Append**: enable this to append to an existing file, instead of creating a new one.
+## Node options
+
+The node options available depend on the operation you select.
+
+### Read File(s) From Disk options
+
+* **File Extension**: Enter the extension for the file in the node output.
+* **File Name**: Enter the name for the file in the node output.
+* **MIME Type**: Enter the file's MIME type in the node output. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of file extensions and their MIME types.
+* **Put Output File in Field**: Enter the name of the field in the output data to contain the file.
+
+### Write File to Disk options
+
+This operation includes a single option, whether to **Append** data to an existing file instead of creating a new one (turned on) or to create a new file instead of appending to existing (turned off).
 
 ## File locations
 

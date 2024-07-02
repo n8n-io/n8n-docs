@@ -17,11 +17,10 @@ Refer to [Mindee credentials](/integrations/builtin/credentials/mindee/) for gui
 
 ## Operations
 
-**Invoice**
-- Predict
-
-**Receipt**
-- Predict
+- **Invoice**
+    - Predict
+- **Receipt**
+    - Predict
 
 ## Templates and examples
 

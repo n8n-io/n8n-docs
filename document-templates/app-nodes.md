@@ -55,8 +55,6 @@ You can find authentication information for this node [here](/integrations/built
 <!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
 n8n provides a trigger node for _Name_. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base._Name_trigger/).
 
-<!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-View [example workflows and related content](https://n8n.io/integrations/_slug_/){:target=_blank .external-link} on n8n's website.
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.

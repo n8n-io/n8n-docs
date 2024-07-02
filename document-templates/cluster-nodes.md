@@ -29,6 +29,5 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
 
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.

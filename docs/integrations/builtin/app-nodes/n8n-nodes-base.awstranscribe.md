@@ -18,6 +18,7 @@ Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws/) fo
 ## Operations
 
 **Transcription Job**
+
 - Create a transcription job
 - Delete a transcription job
 - Get a transcription job

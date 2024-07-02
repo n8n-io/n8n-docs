@@ -14,10 +14,6 @@ On this page, you'll find the node parameters for the Embeddings OpenAI node, an
 You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [OpenAI Embeddings integrations](https://n8n.io/integrations/embeddings-openai/){:target=_blank .external-link} page.
-///
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 
@@ -28,10 +24,13 @@ For usage examples and templates to help you get started, refer to n8n's [OpenAI
 * **Batch Size**: maximum number of documents to send in each request.
 * **Strip New Lines**: whether to remove new line characters from input text. n8n enables this by default.
 * **Timeout**: maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
-	
-## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/embeddings-openai/){:target=_blank .external-link} on n8n's website.
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 Refer to [LangChains's OpenAI embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/openai){:target=_blank .external-link} for more information about the service.
 

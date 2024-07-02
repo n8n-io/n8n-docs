@@ -9,7 +9,7 @@ contentType: integration
 
 The HTTP Request tool works just like the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node but it allows you to use it with an AI agent as a tool to collect information from a website or API.
 
-On this page, you'll find a list of operations the HTTP Request node supports, and links to more resources.
+On this page, you'll find a list of operations the HTTP Request node supports and links to more resources.
 
 /// note | Credentials
 Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest/) for guidance on setting up authentication. 
@@ -17,6 +17,10 @@ Refer to [HTTP Request credentials](/integrations/builtin/credentials/httpreques
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
 

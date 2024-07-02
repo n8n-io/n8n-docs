@@ -14,10 +14,6 @@ On this page, you'll find the node parameters for the Azure OpenAI Chat Model no
 You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Azure OpenAI Chat Model integrations](https://n8n.io/integrations/azure-openai-chat-model/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -35,10 +31,12 @@ For usage examples and templates to help you get started, refer to n8n's [Azure 
 * **Max Retries**: maximum number of times to retry a request.
 * **Top P**: use a lower value to ignore less probable options. 
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/azure-openai-chat-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure){:target=_blank .external-link} for more information about the service.
 

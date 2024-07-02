@@ -8,15 +8,14 @@ description: Documentation for the Contextual Compression Retriever node in n8n,
 
 The Contextual Compression Retriever node improves the answers returned from vector store document similarity searches by taking into account the context from the query.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Contextus Compression Retriever integrations](https://n8n.io/integrations/contextual-compression-retriever/){:target=_blank .external-link} page.
-///
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/contextual-compression-retriever/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 Refer to [LangChain's contextual compression retriever documentation](https://js.langchain.com/docs/modules/data_connection/retrievers/integrations/contextual-compression-retriever){:target=_blank .external-link} for more information about the service.
 

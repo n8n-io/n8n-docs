@@ -14,10 +14,6 @@ On this page, you'll find the node parameters for the Hugging Face Inference Mod
 You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Hugging Face Inference Model integrations](https://n8n.io/integrations/hugging-face-inference-model/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -34,9 +30,12 @@ For usage examples and templates to help you get started, refer to n8n's [Huggin
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options. 
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/hugging-face-inference-model/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/modules/model_io/models/llms/integrations/huggingface_inference){:target=_blank .external-link} for more information about the service.
 

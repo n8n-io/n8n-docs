@@ -12,10 +12,6 @@ The Chat Memory Manager node manages chat message memories within your workflows
 
 On this page, you'll find a list of operations that the Chat Memory Manager node supports, along with links to more resources.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Chat Memory Manager integrations](https://n8n.io/integrations/chat-memory-manager/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -33,9 +29,12 @@ For usage examples and templates to help you get started, refer to n8n's [Chat M
 * **Messages Count**: available in **Delete Messages** mode and when you select **Last N**. Specify the number of latest messages to delete.
 * **Simplify Output**: available in **Get Many Messages** mode. Toggle to simplify the output to include only the sender (AI, user, or system) and the text.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/chat-messages-manager/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 Refer to [LangChain's Memory documentation](https://js.langchain.com/docs/modules/memory/){:target=_blank .external-link} for more information about the service.
 

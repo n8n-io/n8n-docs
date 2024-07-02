@@ -8,11 +8,7 @@ description: Documentation for the Code Tool node in n8n, a workflow automation 
 
 Use the Custom Code Tool node to write code that an agent can run.
 
-On this page, you'll find the node parameters for the Custom Code Tool node, and links to more resources.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Code Tool integrations](https://n8n.io/integrations/code-tool/){:target=_blank .external-link} page.
-///	
+On this page, you'll find the node parameters for the Custom Code Tool node and links to more resources.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -43,9 +39,12 @@ let myString = query;
 return myString.toLowerCase();
 ```
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/code-tool/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 

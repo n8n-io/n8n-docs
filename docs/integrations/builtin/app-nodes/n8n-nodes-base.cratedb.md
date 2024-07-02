@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the CrateDB node supports and lin
 /// note | Credentials
 Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [CrateDB integrations](https://n8n.io/integrations/cratedb/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -24,12 +21,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Insert rows in database
 * Update rows in database
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Node reference
 
 ### Specify a column's data type
 
-To specify the data type of a column, append the column name with `:type`, where `type` is the data type of that column. For example, if you want to specify the type `int` for the column *id* and type `text` for the column *name*, you can use the following snippet in the ***Columns*** field: `id:init,name:text`.
+To specify a column's data type, append the column name with `:type`, where `type` is the data type you want for the column. For example, if you want to specify the type `int` for the column **id** and type `text` for the column **name**, you can use the following snippet in the **Columns** field: `id:int,name:text`.
 
 
 

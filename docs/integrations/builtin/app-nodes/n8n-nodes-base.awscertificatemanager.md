@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the AWS Certificate Manager node 
 /// note | Credentials
 Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [AWS Certificate Manager](https://n8n.io/integrations/aws-certificate-manager/){:target=_blank .external-link} integrations list.
-///
+
 ## Operations
 
 * Certificate
@@ -26,11 +24,14 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get Metadata
 	* Renew
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 ## Related resources
 
 Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html){:target=_blank .external-link} for more information on this service.
-
-View [example workflows and related content](https://n8n.io/integrations/aws-certificate-manager/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -14,14 +14,15 @@ On this page, you'll find a list of operations the AWS SQS node supports and lin
 /// note | Credentials
 Refer to  [AWS SQS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [AWS SQS integrations](https://n8n.io/integrations/aws-sqs/){:target=_blank .external-link} list.
-///
-
 
 ## Operations
 
 * Send a message to a queue.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

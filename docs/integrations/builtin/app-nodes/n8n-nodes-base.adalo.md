@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the Adalo node supports and links
 /// note | Credentials
 Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
 ///	
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Adalo integrations list](https://n8n.io/integrations/adalo/){:target=_blank .external-link}.
-///
+
 ## Operations
 
 * Collection
@@ -25,6 +23,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get
 	* Get Many
 	* Update
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
 

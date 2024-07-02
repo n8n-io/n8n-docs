@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Coda node supports and links 
 /// note | Credentials
 Refer to [Coda credentials](/integrations/builtin/credentials/coda/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Coda integrations](https://n8n.io/integrations/coda/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -42,3 +39,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all views rows
     * Update row
     * Push view button
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

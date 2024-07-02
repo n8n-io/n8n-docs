@@ -14,13 +14,8 @@ On this page, you'll find a list of operations the Bannerbear node supports and 
 /// note | Credentials
 Refer to [Bannerbear credentials](/integrations/builtin/credentials/bannerbear/) for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [Bannerbear integrations](https://n8n.io/integrations/bannerbear/){:target=_blank .external-link} list.
-///
 
-
-
-## Basic Operations
+## Operations
 
 * Image
     * Create an image
@@ -28,3 +23,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Template
     * Get a template
     * Get all templates
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

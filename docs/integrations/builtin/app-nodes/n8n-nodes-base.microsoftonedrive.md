@@ -37,7 +37,7 @@ Refer to [Microsoft OneDrive credentials](/integrations/builtin/credentials/micr
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, page) ]]
+[[ templatesWidget(title, slug) ]]
 
 ## Related resources
 

@@ -207,7 +207,7 @@ The input from the chat. This is the user's query, also known as the prompt.
 
 ## Templates and examples
 
-[[ templatesWidget(title, page) ]]
+[[ templatesWidget(title, slug) ]]
 
 ## Related resources
 

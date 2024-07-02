@@ -32,9 +32,7 @@ _Briefly summarize the functionality._
 You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [_Name_ integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
-///
+
 
 ## Node parameters
 
@@ -46,5 +44,10 @@ Add any other sections here.
 You should include: quirks, pain points, complex topics that trip people up
 You should not include: basic usage examples
 -->
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 

@@ -358,7 +358,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.executecommand.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.executionData.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
         - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md

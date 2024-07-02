@@ -21,7 +21,7 @@ This section provides guidance on setting up n8n for both the Enterprise and Com
 
 	Learn how to configure n8n with environment variables.
 
-	[:octicons-arrow-right-24: Configuration](/hosting/configuration/configuration-methods/)
+	[:octicons-arrow-right-24: Environment Variables](/hosting/configuration/environment-variables/)
 
 - __Users and authentication__
 

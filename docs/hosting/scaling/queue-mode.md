@@ -39,7 +39,7 @@ Workers are n8n instances that do the actual work. They receive information from
 
 ### Set encryption key
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/deployment) if desired.
+n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
@@ -61,7 +61,7 @@ Set the environment variable `EXECUTIONS_MODE` to `queue` using the following co
 export EXECUTIONS_MODE=queue
 ```
 
-Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/#configuration-Using-file).
+Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/environment-variables/).
 
 ### Start Redis
 

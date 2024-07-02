@@ -79,7 +79,7 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 While not essential for running n8n, using persistent volumes is required for:
 
 * Using nodes that interact with files, such as the binary data node.
-* If you want too persist [manual n8n encryption keys](https://docs.n8n.io/hosting/configuration/#encryption-key) between restarts. This saves a file containing the key into file storage during startup.
+* If you want to persist [manual n8n encryption keys](/hosting/configuration/environment-variables/deployment/) between restarts. This saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 

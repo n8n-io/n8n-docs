@@ -80,4 +80,4 @@ delete staticData.lastExecution;
 
 ## External libraries
 
-You can import and use built-in and external npm modules in the Function Item node. To learn how to enable external moduels, refer the [Configuration](/hosting/configuration/) guide.
+You can import and use built-in and external npm modules in the Function Item node. To learn how to enable external modules, refer the [Configuration](/hosting/configuration/environment-variables/) guide.

@@ -43,7 +43,7 @@ n8n has removed support for MySQL and MariaDB as storage backends for n8n. These
 
 Previously, you could use the `EXECUTIONS_PROCESS` environment variable to specify whether executions should run in the `main` process or in their `own` processes. This option and `own` mode are now deprecated and will be removed in a future version of n8n. This is because it led to increased code complexity while offering marginal benefits. Starting from n8n 1.0, `main` will be the new default.
 
-Note that executions start much faster in `main` mode than in `own` mode. However, if a workflow consumes more memory than is available, it might crash the entire n8n application instead of just the worker thread. To mitigate this, make sure to allocate enough system resources or configure [queue mode](https://docs.n8n.io/hosting/scaling/queue-mode/) to distribute executions among multiple workers.
+Note that executions start much faster in `main` mode than in `own` mode. However, if a workflow consumes more memory than is available, it might crash the entire n8n application instead of just the worker thread. To mitigate this, make sure to allocate enough system resources or configure [queue mode](/hosting/scaling/queue-mode/) to distribute executions among multiple workers.
 
 [PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external link}
 
@@ -122,7 +122,7 @@ If you build custom nodes, refer to [HTTP request helpers](/integrations/creatin
 
 ### Removed WEBHOOK_TUNNEL_URL
 
-As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](/hosting/configuration/configuration-methods/#webhook-url).
+As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](/hosting/configuration/configuration-examples/webhook-url/).
 
 [PR #1408](https://github.com/n8n-io/n8n/pull/1408){:target=_blank .external link}
 

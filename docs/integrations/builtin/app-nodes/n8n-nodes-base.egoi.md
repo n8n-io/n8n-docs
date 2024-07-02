@@ -18,6 +18,7 @@ Refer to [E-goi credentials](/integrations/builtin/credentials/egoi/) for guidan
 ## Operations
 
 **Contact**
+
 - Create a member
 - Get a member
 - Get all members

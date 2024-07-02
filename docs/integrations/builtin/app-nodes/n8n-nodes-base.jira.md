@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Jira node supports and links 
 /// note | Credentials
 Refer to [Jira credentials](/integrations/builtin/credentials/jira/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Jira integrations](https://n8n.io/integrations/jira-software/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Issue
     * Get issue changelog
@@ -45,25 +42,26 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Delete a user.
     * Retrieve a user.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
-## FAQs
+## Related resources
 
-### How to fetch issues for a specific project?
+Refer to the [official JQL documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) about Jira Query Language (JQL) to learn more about it.
 
-The 'Get All' operation returns all the issues from Jira. To fetch issues for a particular project, you need to use JQL (Jira Query Language).
+## Fetch issues for a specific project
 
-For example, if you want to receive all the issues of a project named `n8n`, follow the steps mentioned below.
-- Select 'Get All' from the ***Operation*** dropdown list.
-- Toggle ***Return All*** to true.
-- Click on ***Add Option*** and select 'JQL'.
-- Enter `project=n8n` in the ***JQL*** field.
+The **Get All** operation returns all the issues from Jira. To fetch issues for a particular project, you need to use Jira Query Language (JQL).
+
+For example, if you want to receive all the issues of a project named `n8n`, you'd do something like this:
+
+- Select **Get All** from the **Operation** dropdown list.
+- Toggle **Return All** to true.
+- Select **Add Option** and select **JQL**.
+- Enter `project=n8n` in the **JQL** field.
 
 This query will fetch all the issues in the project named `n8n`. Enter the name of your project instead of `n8n` to fetch all the issues for your project.
-
-You can refer to the [official documentation](https://www.atlassian.com/software/jira/guides/expand-jira/jql) about JQL to learn more about it.
-
-
-
-
-

@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the LoneScale node supports, and 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale/).
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LoneScale integrations](https://n8n.io/integrations/lonescale/){:target=_blank .external-link} page.
-///	
+
 ## Operations
 
 * List
@@ -24,12 +22,15 @@ For usage examples and templates to help you get started, refer to n8n's [LoneSc
 * Item
 	* Create
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 ## Related resources
 
 Refer to [LoneScales documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link} for more information about the service.
 
 n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger/).
-	
-View [example workflows and related content](https://n8n.io/integrations/lonescaletrigger/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the KoboToolbox node supports and
 /// note | Credentials
 Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [KoboToolbox integrations](https://n8n.io/integrations/kobotoolbox/){:target="_blank" .external-link} list.
-///
+
 ## Operations
 
 * File
@@ -40,6 +38,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get Many
     * Get Validation Status
     * Update Validation Status
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Options
 

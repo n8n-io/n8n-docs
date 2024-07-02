@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the Linear node supports and link
 /// note | Credentials
 Refer to [Linear credentials](/integrations/builtin/credentials/linear/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Linear integrations](https://n8n.io/integrations/linear/){:target="_blank" .external-link} list.
-///
+
 ## Operations
 
 * Issue
@@ -25,5 +23,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get
     * Get All
     * Update
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

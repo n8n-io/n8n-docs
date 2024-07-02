@@ -19,19 +19,19 @@ Refer to [Ghost credentials](/integrations/builtin/credentials/ghost/) for guida
 
 ### Admin API
 
-**Post**
-- Create a post
-- Delete a post
-- Get a post
-- Get all posts
-- Update a post
+* **Post**
+    * Create a post
+    * Delete a post
+    * Get a post
+    * Get all posts
+    * Update a post
 
 
 ### Content API
 
-**Post**
-- Get a post
-- Get all posts
+* **Post**
+    * Get a post
+    * Get all posts
 
 ## Templates and examples
 

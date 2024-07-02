@@ -17,16 +17,14 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 
 ## Operations
 
-**Default**
-- GET
-- POST
-- DELETE 
-
-
-**Video Uploads**
-- GET
-- POST
-- DELETE 
+* **Default**
+    * GET
+    * POST
+    * DELETE 
+* **Video Uploads**
+    * GET
+    * POST
+    * DELETE 
 
 
 ### Parameters

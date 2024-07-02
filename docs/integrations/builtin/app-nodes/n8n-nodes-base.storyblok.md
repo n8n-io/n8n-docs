@@ -18,18 +18,20 @@ Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok/) f
 ## Operations
 
 ### Content API
-**Story**
-- Get a story
-- Get all stories
+
+- **Story**
+    - Get a story
+    - Get all stories
 
 
 ### Management API
-**Story**
-- Delete a story
-- Get a story
-- Get all stories
-- Publish a story
-- Unpublish a story
+
+- **Story**
+    - Delete a story
+    - Get a story
+    - Get all stories
+    - Publish a story
+    - Unpublish a story
 
 ## Templates and examples
 

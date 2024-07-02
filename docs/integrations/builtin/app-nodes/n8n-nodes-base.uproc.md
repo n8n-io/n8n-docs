@@ -14,19 +14,15 @@ On this page, you'll find a list of operations the uProc node supports and links
 /// note | Credentials
 Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [uProc integrations](https://n8n.io/integrations/uproc/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
-**Audio**
+### Audio
 
 - Get advanced human audio file by provided text and language
 - Get an audio file by provided text and language
 
-
-**Communication**
+### Communication
 
 - Discover if a domain has a social network presence
 - Discover if an email is valid, hard bounce, soft bounce, spam-trap, free, temporary, and recipient exists
@@ -105,8 +101,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get email by first name, last name, and company
 - Get parsed and validated phone
 
-
-**Company**
+### Company
 
 - Discover if a CIF card number is valid
 - Check if a company is a debtor by TaxID
@@ -150,8 +145,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get Twitter URI by company's domain
 - Get YouTube URI by company's domain
 
-
-**Finance**
+### Finance
 
 - Check if crypto wallet is valid
 - Discover if a BIC number has a valid format
@@ -181,7 +175,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get VAT by zip code
 
 
-**Geographical**
+### Geographical
 
 - Check if a country's ISO code exists
 - Discover if the distance between two coordinates is equal to another
@@ -264,7 +258,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get time data by postal address
 
 
-**Image**
+### Image
 
 - Get QR code decoded content by an image URL
 - It allows discovering all geographical and technical EXIF metadata present in a photographic JPEG image
@@ -276,7 +270,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get OCR text from image
 
 
-**Internet**
+### Internet
 
 - Check if a domain exists
 - Check if a domain has a DNS record
@@ -325,7 +319,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get WHOIS data fields by IP address provided
 
 
-**Personal**
+### Personal
 
 - Check if age is between two numbers
 - Check if date returns an age between 20 and 29
@@ -383,8 +377,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get XING profile by first name, last name, and company
 - Add a contact email to a person list
 
-
-**Product**
+### Product
 
 - Check if an ASIN code exists on the Amazon Marketplace
 - Check if an ASIN code has a valid format
@@ -421,9 +414,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get ISBN13 code by ISBN10 code
 - Get data By VIN number
 
-
-
-**Security**
+### Security
 
 - Check if a Luhn number is valid
 - Check if a password is strong
@@ -431,8 +422,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Get blacklists for a domain
 - Get blacklists for an IP address
 
-
-**Text**
+### Text
 
 - Check if a string only contains alphabets
 - Check if a string is alphanumeric
@@ -504,6 +494,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Convert all letters to uppercase
 - Count total words in a text
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

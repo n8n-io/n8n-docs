@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Shopify node supports and lin
 /// note | Credentials
 Refer to [Shopify credentials](/integrations/builtin/credentials/shopify/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Shopify integrations](https://n8n.io/integrations/shopify/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Order
     * Create an order
@@ -32,5 +29,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a product
     * Get all products
     * Update a product
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

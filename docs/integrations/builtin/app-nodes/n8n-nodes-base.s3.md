@@ -20,9 +20,6 @@ On this page, you'll find a list of operations the S3 node supports and links to
 /// note | Credentials
 Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [S3 integrations](https://n8n.io/integrations/s3/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -46,6 +43,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Create a folder
     * Delete a folder
     * Get all folders
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Node reference
 

@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Strapi node supports and link
 /// note | Credentials
 Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Strapi integrations](https://n8n.io/integrations/strapi/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -27,10 +24,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get Many
     * Update
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/strapi/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest){:target=_blank .external-link} for more information about the service.
 

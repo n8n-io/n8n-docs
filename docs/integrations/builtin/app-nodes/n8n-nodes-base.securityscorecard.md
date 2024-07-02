@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the SecurityScorecard node suppor
 /// note | Credentials
 Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [SecurityScorecard integrations](https://n8n.io/integrations/securityscorecard/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Company
     * Get company factor scores and issue counts
@@ -46,3 +43,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Generate a report
     * Get list of recently generated report
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

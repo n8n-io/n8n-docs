@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Tapfiliate node supports and 
 /// note | Credentials
 Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Tapfiliate integrations](https://n8n.io/integrations/tapfiliate/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Affiliate
     * Create an affiliate
@@ -35,3 +32,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Disapprove an affiliate
     * Get an affiliate in a program
     * Get all affiliates in program
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

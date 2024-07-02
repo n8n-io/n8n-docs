@@ -17,12 +17,12 @@ Refer to [Taiga credentials](/integrations/builtin/credentials/taiga/) for guida
 
 ## Operations
 
-**Issue**
-- Create an issue
-- Delete an issue
-- Get an issue
-- Get all issues
-- Update an issue
+- **Issue**
+    - Create an issue
+    - Delete an issue
+    - Get an issue
+    - Get all issues
+    - Update an issue
 
 ## Templates and examples
 

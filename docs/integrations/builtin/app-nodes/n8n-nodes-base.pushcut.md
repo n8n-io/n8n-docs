@@ -14,15 +14,15 @@ On this page, you'll find a list of operations the Pushcut node supports and lin
 /// note | Credentials
 Refer to [Pushcut credentials](/integrations/builtin/credentials/pushcut/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Pushcut integrations](https://n8n.io/integrations/pushcut/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
 * Notification
     * Send a notification
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 

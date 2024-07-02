@@ -11,11 +11,7 @@ PostBin is a service that helps you test API clients and webhooks. Use the PostB
 
 On this page, you'll find a list of operations the PostBin node supports, and links to more resources.
 
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Postbin integrations](https://n8n.io/integrations/postbin/){:target="_blank" .external-link} list.
-///
-# Operations
+## Operations
 
 * Bin
 	* Create
@@ -25,6 +21,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get
 	* Remove First
 	* Send
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Send requests
 

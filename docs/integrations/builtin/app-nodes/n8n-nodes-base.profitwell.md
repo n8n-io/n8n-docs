@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the ProfitWell node supports and 
 /// note | Credentials
 Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [ProfitWell integrations](https://n8n.io/integrations/profitwell/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -24,3 +21,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get your company's ProfitWell account settings
 * Metric
     * Retrieve financial metric broken down by day for either the current month or the last
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

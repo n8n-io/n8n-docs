@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Quick Base node supports and 
 /// note | Credentials
 Refer to [Quick Base credentials](/integrations/builtin/credentials/quickbase/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Quick Base integrations](https://n8n.io/integrations/quick-base/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -34,3 +31,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Report
     * Get a report
     * Run a report
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

@@ -27,4 +27,4 @@ Refer to [SeaTable credentials](/integrations/builtin/credentials/seatable/) for
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, slug) ]]
+[[ templatesWidget(title, 'seatable') ]]

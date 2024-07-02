@@ -20,7 +20,7 @@ On this page, you'll find the node parameters for the Recursive Character Text S
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, slug) ]]
+[[ templatesWidget(title, 'recursive-character-text-splitter') ]]
 
 ## Related resources
 

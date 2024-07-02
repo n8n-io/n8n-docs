@@ -27,7 +27,7 @@ On this page, you'll find a list of parameters the Default Data Loader node supp
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, slug) ]]
+[[ templatesWidget(title, 'default-data-loader') ]]
 
 ## Related resources
 

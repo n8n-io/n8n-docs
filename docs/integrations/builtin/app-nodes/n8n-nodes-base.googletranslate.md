@@ -14,13 +14,15 @@ On this page, you'll find a list of operations the Google Translate node support
 /// note | Credentials
 Refer to [Google Translate credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Translate integrations](https://n8n.io/integrations/google-translate/){:target="_blank" .external-link} list
-///
 
-## Basic Operations
+## Operations
 
 * Language
     * Translate data
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

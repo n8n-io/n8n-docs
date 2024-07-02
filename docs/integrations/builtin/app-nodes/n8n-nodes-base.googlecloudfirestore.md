@@ -15,10 +15,6 @@ On this page, you'll find a list of operations the Google Cloud Firestore node s
 Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Cloud Firestore integrations](https://n8n.io/integrations/google-cloud-firestore/){:target="_blank" .external-link} list.
-///
-
 ## Operations
 
 * Document
@@ -31,5 +27,9 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Collection
     * Get all root collections
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

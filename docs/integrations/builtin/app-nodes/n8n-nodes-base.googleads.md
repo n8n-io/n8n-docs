@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Google Ads node supports and 
 /// note | Credentials
 Refer to [Google Ads credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Ads integrations](https://n8n.io/integrations/google-ads/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -24,9 +21,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
   * Get all campaigns
   * Get a campaign
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/google-ads/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.
 

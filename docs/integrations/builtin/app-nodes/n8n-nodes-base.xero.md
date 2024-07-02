@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Xero node supports and links 
 /// note | Credentials
 Refer to [Xero credentials](/integrations/builtin/credentials/xero/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Xero integrations](https://n8n.io/integrations/xero/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Contact
     * Create a contact
@@ -31,9 +28,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all invoices
     * Update a invoice
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/xero/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
+## Related resources
 
 Refer to [Xero's API documentation](https://developer.xero.com/documentation/api/accounting/overview){:target=_blank .external-link} for more information about the service.
 

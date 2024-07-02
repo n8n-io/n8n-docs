@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the Venafi TLS Protect Cloud node
 /// note | Credentials
 Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Cloud integrations](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target="_blank" .external-link} list.
-///
+
 ## Operations
 
 * Certificate
@@ -30,11 +28,14 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get
 	* Get Many
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 ## Related resources
 
 Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/){:target=_blank .external-link} for more information on this service.
-
-View [example workflows and related content](https://n8n.io/integrations/venafi-tls-protect-cloud/){:target=_blank .external-link} on n8n's website.
 
 n8n also provides:
 <!-- vale off -->

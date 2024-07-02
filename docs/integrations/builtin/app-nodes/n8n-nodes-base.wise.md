@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Wise node supports and links 
 /// note | Credentials
 Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Wise integrations](https://n8n.io/integrations/wise/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Account
     * Retrieve balances for all account currencies of this user.
@@ -41,3 +38,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get
     * Get All
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

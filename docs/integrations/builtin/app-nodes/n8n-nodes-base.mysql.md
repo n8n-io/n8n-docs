@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the MySQL node supports and links
 /// note | Credentials
 Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [MySQL integrations](https://n8n.io/integrations/mysql/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -27,9 +24,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Select
 * Update
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/mysql/){:target=_blank .external-link} on n8n's website.
+Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html){:target=_blank .external-link} for more information about the service.
+
+Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html){:target=_blank .external-link} for more information on writing SQL queries.
 
 ## Use query parameters
 

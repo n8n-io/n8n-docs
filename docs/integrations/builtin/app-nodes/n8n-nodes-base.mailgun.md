@@ -14,12 +14,14 @@ On this page, you'll find a list of operations the Mailgun node supports and lin
 /// note | Credentials
 Refer to [Mailgun credentials](/integrations/builtin/credentials/mailgun/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Mailgun integrations](https://n8n.io/integrations/mailgun/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 - Send an email
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Oura node supports and links 
 /// note | Credentials
 Refer to [Oura credentials](/integrations/builtin/credentials/oura/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Oura integrations](https://n8n.io/integrations/oura/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -26,3 +23,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get the user's activity summary.
     * Get the user's readiness summary.
     * Get the user's sleep summary
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]

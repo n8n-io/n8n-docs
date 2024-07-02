@@ -14,12 +14,8 @@ On this page, you'll find a list of operations the MISP node supports and links 
 /// note | Credentials
 Refer to [MISP credentials](/integrations/builtin/credentials/misp/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [MISP integrations](https://n8n.io/integrations/misp/){:target="_blank" .external-link} list.
-///
 
-
-## Basic Operations
+## Operations
 
 * Attribute
     * Create
@@ -76,5 +72,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Warninglist
     * Get
     * Get All
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

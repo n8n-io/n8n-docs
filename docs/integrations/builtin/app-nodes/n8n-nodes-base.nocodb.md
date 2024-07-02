@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the NocoDB node supports and link
 /// note | Credentials
 Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [NocoDB integrations](https://n8n.io/integrations/nocodb/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -27,11 +24,13 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get Many
     * Update a row
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 ## Relates resources
 
 Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} for more information about the service.
-
-View [example workflows and related content](https://n8n.io/integrations/nocodb/){:target=_blank .external-link} on n8n's website.
-
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

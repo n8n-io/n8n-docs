@@ -14,20 +14,17 @@ On this page, you'll find a list of operations the Medium node supports and link
 /// note | Credentials
 Refer to [Medium credentials](/integrations/builtin/credentials/medium/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Medium integrations](https://n8n.io/integrations/medium/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Post
     * Create a post
 * Publication
     * Get all publications
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
-
-
-
-
-

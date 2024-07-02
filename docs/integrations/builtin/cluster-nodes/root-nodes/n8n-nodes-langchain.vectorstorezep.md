@@ -58,10 +58,12 @@ Disable this to configure your embeddings in Zep instead of in n8n.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/zep-vector-store-load/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/zep){:target=_blank .external-link} for more information about the service.
 

@@ -14,10 +14,6 @@ On this page, you'll find the node parameters for the Qdrant node, and links to 
 You can find authentication information for this node [here](/integrations/builtin/credentials/qdrant/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Qdrant Vector Store integrations](https://n8n.io/integrations/qdrant-vector-store/){:target=_blank .external-link} page.
-///
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
 ## Node parameters
@@ -42,6 +38,11 @@ For usage examples and templates to help you get started, refer to n8n's [Qdrant
 ### Metadata Filter
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
 

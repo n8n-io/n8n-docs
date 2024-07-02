@@ -1,5 +1,6 @@
 ---
-title: AI Agent
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Agent
 description: Documentation for the Agent node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 

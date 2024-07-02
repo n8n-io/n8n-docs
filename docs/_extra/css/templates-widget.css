@@ -1,0 +1,14 @@
+.n8n-templates-widget {
+	display: flex;
+	flex-direction: column;
+}
+
+.n8n-templates-widget-template {
+	display: flex;
+	flex-direction: column;
+	padding: 1em 0 0 0;
+}
+
+.n8n-templates-widget-more {
+	padding: 1em 0 0 0;
+}

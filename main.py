@@ -7,7 +7,7 @@ def define_env(env):
 
 	@env.macro
 	
-	def topThreeTemplates(title, page):
+	def templatesWidget(title, page):
 		nodeForTemplate = title.replace(' ', '+')
 		getLastBitOfUrl = re.search("(\.)(.*)(\/)$", page.abs_url)
 		nodeForIntegrationsSlug = getLastBitOfUrl.group(2)
@@ -17,8 +17,7 @@ def define_env(env):
 		workflow_one = toDict["workflows"][0]
 		workflow_two = toDict["workflows"][1]
 		workflow_three = toDict["workflows"][2]
-		print(nodeForIntegrationsSlug)
-		return f'<div style="border:1px solid red"><span>Total workflows: {total_workflows}</span><div><span>{workflow_one["name"]}</span><a href="https://n8n.io/workflows/{workflow_one["id"]}-{workflow_one["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div><span>{workflow_two["name"]}</span><a href="https://n8n.io/workflows/{workflow_two["id"]}-{workflow_two["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div><span>{workflow_three["name"]}</span><a href="https://n8n.io/workflows/{workflow_three["id"]}-{workflow_three["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><a href="https://n8n.io/integrations/{nodeForIntegrationsSlug}/" target="_blank">View more templates for this node</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></div>'
+		return f'<div class="n8n-templates-widget"><span>Total workflows: {total_workflows}</span><div class="n8n-templates-widget-template"><span>{workflow_one["name"]}</span><a href="https://n8n.io/workflows/{workflow_one["id"]}-{workflow_one["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div class="n8n-templates-widget-template"><span>{workflow_two["name"]}</span><a href="https://n8n.io/workflows/{workflow_two["id"]}-{workflow_two["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div class="n8n-templates-widget-template"><span>{workflow_three["name"]}</span><a href="https://n8n.io/workflows/{workflow_three["id"]}-{workflow_three["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{nodeForIntegrationsSlug}/" target="_blank">View more templates for the {title} integration</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span></div>'
 	
 	def workflowDemo(workflow_endpoint):
 		r = requests.get(url = workflow_endpoint)

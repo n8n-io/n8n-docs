@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Agent
+title: AI Agent
 description: Documentation for the Agent node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
@@ -11,8 +11,6 @@ description: Documentation for the Agent node in n8n, a workflow automation plat
 Use the Agent node to set which agent type you want to use.
 
 On this page, you'll find the node parameters for the Agent node, and links to more resources.
-
-[[ topThreeTemplates(title, page) ]]
 
 /// note | Connect a tool
 You must connect at least one tool sub-node.
@@ -206,6 +204,10 @@ The input from the chat. This is the user's query, also known as the prompt.
 #### Return Intermediate Steps
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
+
+## Templates and examples
+
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
 

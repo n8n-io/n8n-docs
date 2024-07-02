@@ -1,0 +1,28 @@
+.n8n-templates-widget {
+	display: flex;
+	flex-direction: column;
+}
+
+.n8n-templates-widget-template {
+	display: flex;
+	flex-direction: column;
+	border: .05rem solid var(--md-default-fg-color--lightest);
+	border-radius: 6px;
+	margin: .4em;
+	padding: 12px 16px; 
+}
+
+.n8n-templates-name {
+    margin-top: 0px;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+.n8n-templates-widget-more {
+	padding: 1em 0 0 0;
+}
+
+.n8n-templates-link {
+	font-weight: 600;
+    font-size: 15px;
+}

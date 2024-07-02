@@ -17,9 +17,9 @@ Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for g
 
 ## Operations
 
-**Job**
-- Execute a job
-- Get metadata of a job
+- **Job**
+    - Execute a job
+    - Get metadata of a job
 
 ## Templates and examples
 

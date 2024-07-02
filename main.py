@@ -1,23 +1,26 @@
 import requests
 import json
 import re
+import traceback
 import urllib.parse
 
 def define_env(env):
 
-	@env.macro
-	
+	@env.macro	
 	def templatesWidget(title, page):
-		nodeForTemplate = title.replace(' ', '+')
+		node_for_template = title.replace(' ', '+')
 		getLastBitOfUrl = re.search("(\.)(.*)(\/)$", page.abs_url)
 		nodeForIntegrationsSlug = getLastBitOfUrl.group(2)
-		r = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search=&category=&apps={nodeForTemplate}&page=1&sort=views:desc')
-		toDict = json.loads(r.content.decode('utf-8'))
-		total_workflows = toDict["totalWorkflows"]
-		workflow_one = toDict["workflows"][0]
-		workflow_two = toDict["workflows"][1]
-		workflow_three = toDict["workflows"][2]
-		return f'<div class="n8n-templates-widget"><span>Total workflows: {total_workflows}</span><div class="n8n-templates-widget-template"><span>{workflow_one["name"]}</span><a href="https://n8n.io/workflows/{workflow_one["id"]}-{workflow_one["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div class="n8n-templates-widget-template"><span>{workflow_two["name"]}</span><a href="https://n8n.io/workflows/{workflow_two["id"]}-{workflow_two["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div class="n8n-templates-widget-template"><span>{workflow_three["name"]}</span><a href="https://n8n.io/workflows/{workflow_three["id"]}-{workflow_three["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{nodeForIntegrationsSlug}/" target="_blank">View more templates for the {title} integration</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span></div>'
+		response = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search=&category=&apps={node_for_template}&page=1&sort=views:desc')
+		data = response.json()
+		# not all nodes have three templates
+		try:
+			workflows = data["workflows"][:3]
+			workflow_one, workflow_two, workflow_three = workflows
+		except:
+			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{nodeForIntegrationsSlug}/" target="_blank">Browse all {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'
+
+		return f'<div class="n8n-templates-widget"><div class="n8n-templates-widget-template"><strong>{workflow_one["name"]}</strong><p class="n8n-templates-name">by {workflow_one["user"]["name"]}</p><a class="n8n-templates-link" href="https://n8n.io/workflows/{workflow_one["id"]}-{workflow_one["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div class="n8n-templates-widget-template"><strong>{workflow_two["name"]}</strong><p class="n8n-templates-name">by {workflow_two["user"]["name"]}</p><a class="n8n-templates-link" href="https://n8n.io/workflows/{workflow_two["id"]}-{workflow_two["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><div class="n8n-templates-widget-template"><strong>{workflow_three["name"]}</strong><p class="n8n-templates-name">by {workflow_three["user"]["name"]}</p><a class="n8n-templates-link" href="https://n8n.io/workflows/{workflow_three["id"]}-{workflow_three["name"].lower().replace(" ", "-").replace(":", "")}/" target="_blank">View workflow details</a></div><span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{nodeForIntegrationsSlug}/" target="_blank">Browse {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span></div>'
 	
 	def workflowDemo(workflow_endpoint):
 		r = requests.get(url = workflow_endpoint)

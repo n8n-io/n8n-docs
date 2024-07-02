@@ -6,9 +6,19 @@
 .n8n-templates-widget-template {
 	display: flex;
 	flex-direction: column;
-	padding: 1em 0 0 0;
+	border: .05rem solid var(--md-default-fg-color--lightest);
+	margin: .4em;
+	padding: 1em;
+}
+
+.n8n-templates-name {
+
 }
 
 .n8n-templates-widget-more {
 	padding: 1em 0 0 0;
+}
+
+.n8n-templates-link {
+	
 }

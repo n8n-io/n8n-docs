@@ -16,13 +16,16 @@ On this page, you'll find a list of operations the _Name_ node supports, and lin
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
 ///
-///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [_Name_'s integrations](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} page.
-///	
+
 ## Node parameters
 
 * _Bullet list_
 * _Of available operations_.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, page) ]]
 
 ## Related resources
 

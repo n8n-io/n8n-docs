@@ -31,6 +31,8 @@ For usage examples and templates to help you get started, refer to n8n's [Aggreg
 	* **Options** > **Add Field**: use this to add the setting:
 		* **Include Binaries**: include binary data from the input in the new output.
 
+
+
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/aggregate/){:target=_blank .external-link} on n8n's website.

@@ -155,6 +155,9 @@ plugins:
   # - info
   # Search is built in, but must be enabled when you add other plugins
   - search
+  - exclude:
+      glob:
+        #- integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

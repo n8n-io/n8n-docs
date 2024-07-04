@@ -7,6 +7,8 @@ hide:
 
 # Welcome
 
+TEST
+
 This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](http://faircode.io){:target=_blank .external-link} licensed node-based workflow automation tool.
 
 It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing/) are welcome.

@@ -54,7 +54,7 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/pinecone-insert/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/pinecone-vector-store/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/pinecone){:target=_blank .external-link} for more information about the service.
 

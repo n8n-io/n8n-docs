@@ -51,7 +51,7 @@ See the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
 In addition to the parameters shared with the Webhook node, the Wait node has the following configuration options:
 
 * **Limit wait time**: Set the maximum amount of time to wait before the execution resumes.
-* **Add Option** > **Webhook Suffix**: Provide a suffix that you want to appended to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Not that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
+* **Add Option** > **Webhook Suffix**: Provide a suffix that you want to appended to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
 
 ### Limitations
 

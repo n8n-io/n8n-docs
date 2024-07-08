@@ -12,9 +12,6 @@ This node allows you to interact with your LDAP servers to create, find, and upd
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/ldap/).
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LDAP integrations](https://n8n.io/integrations/ldap/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -81,7 +78,7 @@ Only the **Search** operation has options:
 
 Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/){:target="_blank" .external-link} for more information on search scopes.
 
+## Templates and examples
 
-## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/ldap/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'ldap') ]]

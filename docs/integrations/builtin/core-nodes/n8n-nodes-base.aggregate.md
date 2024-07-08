@@ -8,11 +8,6 @@ description: Documentation for the Aggregate node in n8n, a workflow automation 
 
 Use the Aggregate node to take separate items, or portions of them, and group them together into individual items.
 
-
-///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Aggregate integrations](https://n8n.io/integrations/aggregate/){:target=_blank .external-link} page.
-///
-
 ## Node parameters
 
 To begin using the node, select the **Aggregate** you'd like to use. Choose whether to aggregate **Individual Fields** or **All Item Data**. The rest of the parameters depend on which Aggregate you select.
@@ -39,10 +34,11 @@ To begin using the node, select the **Aggregate** you'd like to use. Choose whet
 	* **Include Binaries**: The node displays this toggle for both Aggregate types. Turn it on if you want to include binary data from the input in the new output.
 	* **Keep Missing And Null Values**: The node displays this toggle when you select the **Individual Fields** Aggregate. Turn it on to add a null (empty) entry in the output list when there is a null or missing value in the input. If turned off, the output ignores null or empty values.
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'aggregate') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/aggregate/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-transformation-actions/data-section-link.md"

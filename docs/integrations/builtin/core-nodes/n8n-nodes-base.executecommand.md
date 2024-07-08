@@ -9,10 +9,6 @@ contentType: integration
 
 The Execute Command node runs shell commands on the host machine that runs n8n.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Execute Command integrations](https://n8n.io/integrations/execute-command/){:target=_blank .external-link} page.
-///
-
 /// note | Which shell runs the command?
 This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
 
@@ -70,3 +66,7 @@ If you want to run the curl command in the Execute Command node, you will have t
 4. Replace the Docker image you used before. For example, replace `docker.n8n.io/n8nio/n8n` with `n8n-curl`.
 5. Run the newly created Docker image. You'll now be able to execute ssh using the Execute Command Node.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'execute-command') ]]

@@ -9,10 +9,6 @@ contentType: integration
 
 Use the Compression node to compress and decompress files. Supports Zip and Gzip formats.
 
-///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Compression integrations](https://n8n.io/integrations/compression/){:target=_blank .external-link} page.
-///
-
 ## Node parameters
 
 The node parameters depend on which **Operation** you select. Choose from **Compress** and **Decompress**.
@@ -28,3 +24,8 @@ The node parameters depend on which **Operation** you select. Choose from **Comp
 
 - **Put Output File in Field**: Enter the name of the fields in the input data that contain the binary files you want to decompress. To decompress more than one file, use a comma-separated list.
 - **Output Prefix**: Enter a prefix to add to the output file name.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'compression') ]]

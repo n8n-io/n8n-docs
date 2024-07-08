@@ -9,10 +9,6 @@ contentType: integration
 
 [GraphQL](https://graphql.org/){:target=_blank .external-link} is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. Use the GraphQL node to query a GraphQL endpoint.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [GraphQL integrations](https://n8n.io/integrations/graphql/){:target=_blank .external-link} list.
-///
-
 ## Node parameters
 
 * **Authentication**: Select the type of authentication to use. If you select anything other than **None**, the **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
@@ -32,9 +28,12 @@ For usage examples and templates to help you get started, refer to n8n's [GraphQ
 
 Enter any **Headers** you want to pass as part of the query as **Name** / **Value** pairs.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/graphql/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'graphql') ]]
+
+## Related resources
 
 To use the GraphQL node, you need to understand GraphQL query language. GraphQL have their own [Introduction to GraphQL](https://graphql.org/learn/){:target=_blank .external-link} tutorial.
 

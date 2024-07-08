@@ -13,10 +13,6 @@ Work with JSON web tokens in your n8n workflows.
 You can find authentication information for this node [here](/integrations/builtin/credentials/jwt/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [JWT integrations](https://n8n.io/integrations/jwt/){:target=_blank .external-link} page.
-///
-
 ## Operations
 
 * Decode
@@ -96,3 +92,8 @@ This operation includes several node options:
 * **Ignore Not Before Claim**: This toggle controls whether to ignore the token's not before claim (`nbf`). Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5){:target=_blank .external-link} for more information.
 * **Clock Tolerance**: Enter the number of seconds to tolerate when checking the `nbf` and `exp` claims. This allows you to deal with small clock differences among different servers. Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4){:target=_blank .external-link} for more information.
 * **Override Algorithm**: The algorithm to use for verifying the token. This algorithm will override the algorithm selected in the credentials.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'jwt') ]]

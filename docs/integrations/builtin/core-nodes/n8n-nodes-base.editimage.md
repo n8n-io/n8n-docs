@@ -14,10 +14,6 @@ Use the Edit Image node to manipulate and edit images.
 2. You need to use a node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the image file as a data property to the Edit Image node.
 ///
 
-///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Edit Image integrations](https://n8n.io/integrations/edit-image/){:target=_blank .external-link} page.
-///
-
 ## Operations
 
 - Add a **Blur** to the image to reduce sharpness
@@ -172,7 +168,8 @@ For this operation, you only need to add the **Property Name** of the binary pro
 
 The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](/code/expressions/).
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/edit-image/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'edit-image') ]]
 

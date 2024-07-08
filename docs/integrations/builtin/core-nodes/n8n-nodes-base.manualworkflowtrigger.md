@@ -11,6 +11,7 @@ Use this node if you want to start a workflow by selecting **Test Workflow**, an
 
 Workflows always need a trigger (start point). In most cases, a trigger node starts the workflow in response to an external event. However, you still need a trigger node even when starting the workflow manually.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Manual Trigger integrations](https://n8n.io/integrations/manual-trigger/){:target=_blank .external-link} page.
-///
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'manual-trigger') ]]

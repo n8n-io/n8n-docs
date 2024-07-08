@@ -8,11 +8,6 @@ description: Documentation for the Convert to File node in n8n, a workflow autom
 
 Use the Convert to File node to take input data and output it as a file. This converts the input JSON data into a binary format.
 
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Convert to File integrations](https://n8n.io/integrations/convert-to-file/){:target=_blank .external-link} page.
-///
-
 /// note | Extract From File
 To extract data from a file and convert it to JSON, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) node.
 ///
@@ -129,3 +124,8 @@ Use the **Encoding** option to choose the character set to use to encode the dat
 ### Move Base64 String to File options
 
 Enter the **MIME Type** of the output file. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of common MIME types and the file extensions they relate to.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'convert-to-file') ]]

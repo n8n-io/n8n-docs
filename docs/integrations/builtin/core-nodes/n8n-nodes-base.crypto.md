@@ -9,10 +9,6 @@ contentType: integration
 
 Use the Crypto node to encrypt data in workflows.
 
-///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Crypto integrations](https://n8n.io/integrations/crypto/){:target=_blank .external-link} page.
-///
-
 ## Actions
 
 * **Generate** a random string
@@ -80,3 +76,7 @@ Node parameters depend on the action you select.
 	* **HEX**
 * **Private Key**: Enter a private key to use when signing the string.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'crypto') ]]

@@ -8,11 +8,6 @@ description: Documentation for the Read/Write Files from Disk node in n8n, a wor
 
 Use the Read/Write Files from Disk node to read and write files from/to the machine where n8n is running.
 
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Read/Write Files from Disk integrations](https://n8n.io/integrations/readwrite-files-from-disk/){:target=_blank .external-link} page.
-///
-
 /// note | Self-hosted n8n only
 This node isn't available on n8n Cloud.
 ///
@@ -56,6 +51,11 @@ The node options available depend on the operation you select.
 ### Write File to Disk options
 
 This operation includes a single option, whether to **Append** data to an existing file instead of creating a new one (turned on) or to create a new file instead of appending to existing (turned off).
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'readwrite-files-from-disk') ]]
 
 ## File locations
 

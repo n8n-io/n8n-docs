@@ -9,10 +9,6 @@ contentType: integration
 
 Use the Execute Workflow node to run a different workflow on the host machine that runs n8n.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Execute Workflow integrations](https://n8n.io/integrations/execute-workflow/){:target=_blank .external-link} page.
-///
-
 ## Node parameters
 
 - **Source**: Select where the node should get the sub-workflow's information from.
@@ -31,6 +27,11 @@ For usage examples and templates to help you get started, refer to n8n's [Execut
 ## Node options
 
 This node includes one option: **Wait for Sub-Workflow Completion**. This lets you control whether the main workflow should wait for the sub-workflow's completion before moving on to the next step (turned on) or whether the main workflow should continue without waiting (turned off).
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'execute-workflow') ]]
 
 ## Set up and use a sub-workflow
 

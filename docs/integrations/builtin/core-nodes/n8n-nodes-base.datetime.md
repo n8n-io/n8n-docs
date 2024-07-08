@@ -9,9 +9,6 @@ contentType: integration
 
 The Date & Time node manipulates date and time data and convert it to different formats.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Date & Time integrations](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} list.
-///
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
 /// note | Date and time in other nodes
@@ -151,9 +148,12 @@ ISO duration format displays a format as `P<n>Y<n>M<n>DT<n>H<n>M<n>S`. `<n>` is 
 
 Milliseconds don't get their own unit, but instead are decimal seconds. For example, 2.1 milliseconds is `0.0021S`.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/date-and-time/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'date-and-time') ]]
+
+## Related resources
 
 The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. You can also use Luxon in the [Code](/code/code-node/) node and [expressions](/code/expressions/). Refer to [Date and time with Luxon](/code/cookbook/luxon/) for more information.
 

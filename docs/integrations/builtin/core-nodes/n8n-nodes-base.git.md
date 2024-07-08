@@ -13,11 +13,6 @@ contentType: integration
 You can find authentication information for this node [here](/integrations/builtin/credentials/git/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Git integrations](https://n8n.io/integrations/git/){:target=_blank .external-link} page.
-///
-
-
 ## Operations
 
 * **Add** a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
@@ -106,3 +101,8 @@ You can use absolute paths or relative paths from the **Repository Path**.
 ### Push options
 
 The push operation adds the **Target Repository** option. Enter the URL or path of the repository to push to in this field.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'git') ]]

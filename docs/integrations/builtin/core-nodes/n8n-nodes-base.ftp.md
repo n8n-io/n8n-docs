@@ -13,10 +13,6 @@ The FTP node is useful to access and upload files to an FTP or SFTP server.
 You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [FTP integrations](https://n8n.io/integrations/ftp/){:target=_blank .external-link} page.
-///
-
 ## Operations
 
 - Delete a file or folder
@@ -70,3 +66,8 @@ The delete operation adds one new option: **Folder**. If you turn this option on
 ### Rename options
 
 The rename operation adds one new option: **Create Directories**. If you turn this option on, the node will recursively create the destination directory when renaming an existing file or folder.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'ftp') ]]

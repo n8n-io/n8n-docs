@@ -9,10 +9,6 @@ contentType: integration
 
 The Markdown node converts between Markdown and HTML formats.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Markdown integrations](https://n8n.io/integrations/markdown/){:target=_blank .external-link} page.
-///
-
 ## Operations
 
 This node's operations are called **Modes**:
@@ -84,6 +80,11 @@ Some of the options depend on each other, or can interact. We recommend testing 
 | **Style For Code Block** | Specify the styling for code blocks. Options are **Fence** and **Indented**. | Fence |
 | **Text Replacement Pattern** | Define a text replacement pattern using regex. | None |
 | **Treat As Blocks** | Specify HTML elements to treat as blocks (surround with blank lines) | None |
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'markdown') ]]
 
 ## Parsers
 

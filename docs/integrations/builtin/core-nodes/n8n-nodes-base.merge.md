@@ -13,10 +13,6 @@ Use the Merge node to combine data from two streams, once data of both streams i
 This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Merge integrations](https://n8n.io/integrations/merge/){:target=_blank .external-link} page.
-///
-
 ## Merge mode
 
 You can specify how the Merge node should combine data from different branches. The following options are available:
@@ -102,7 +98,18 @@ When merging by position:
 
 ### Choose branch
 
-Choose which input to keep. This option always waits until the data from both inputs is available. You can keep the data from Input 1 or Input 2, or you can output a single empty item. The node outputs the data from the chosen input, without changing it.
+Choose which input to keep. This option always waits until the data from both inputs is available. You can choose to **Output**:
+
+* The **Input 1 Data**
+* The **Input 2 Data**
+* **A Single, Empty Item**
+
+The node outputs the data from the chosen input, without changing it.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'merge') ]]
 
 ## Merging branches with uneven numbers of items
 

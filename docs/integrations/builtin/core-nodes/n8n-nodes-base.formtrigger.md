@@ -8,10 +8,6 @@ description: Documentation for the n8n Form Trigger node in n8n, a workflow auto
 
 Use the n8n Form trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [n8n Form trigger integrations](https://n8n.io/integrations/n8n-form-trigger/){:target=_blank .external-link} page.
-///
-
 ## Build and test workflows
 
 While building or testing a workflow, use the **Test URL**. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
@@ -79,3 +75,7 @@ Select **Add Option** to view more configuration options.
 * **Form Response**: choose how to respond when the user submits the form. Select **Respond With** > **Form Submitted Text** to show a message to the user, or **Respond With** > **Redirect URL** to send the user to a new page.
 * **Append n8n Attribution**: toggle this off to hide the **Form automated with n8n** message on the form.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'n8n-form-trigger') ]]

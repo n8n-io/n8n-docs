@@ -7,11 +7,7 @@ contentType: integration
 
 # Debug Helper
 
-The Debug Helper node can be used to trigger different error types or generate random datasets to help test n8n workflows.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Debug Helper integrations](https://n8n.io/integrations/debughelper/){:target=_blank .external-link} list.
-///
+Use the Debug Helper node to trigger different error types or generate random datasets to help test n8n workflows.
 
 ## Operations
 
@@ -71,6 +67,7 @@ The Out of Memory Category adds one parameter, the **Memory Size to Generate**. 
 * **Number of Items to Generate**: Enter the number of random items you'd like to generate.
 * **Output as Single Array**: Whether to generate the data as a single array (turned on) or multiple items (turned off).
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/debughelper/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'debughelper') ]]

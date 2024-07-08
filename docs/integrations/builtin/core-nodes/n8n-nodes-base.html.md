@@ -15,9 +15,6 @@ The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're 
 /// warning | Cross-site scripting
 When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link}. This is a security risk. Be careful with un-trusted inputs.
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [HTML integrations](https://n8n.io/integrations/html/){:target=_blank .external-link} page.
-///
 
 ## Operations
 
@@ -66,7 +63,7 @@ The node options depend on the operation you select. The **Generate HTML templat
 ### Extract HTML Content options
 
 * **Trim Values**: Controls whether to remove all spaces and newlines from the beginning and end of the values (turned on) or leaves them (turned off).
-* **Clean Up Text**: Controls whether to remove remove leading whitespaces, trailing whitespaces, and line breaks (newlines) and condense multiple consecutive whitespaces into a single space (turned on) or to leave them as-is (turned off).
+* **Clean Up Text**: Controls whether to remove leading whitespaces, trailing whitespaces, and line breaks (newlines) and condense multiple consecutive whitespaces into a single space (turned on) or to leave them as-is (turned off).
 
 ### Convert to HTML Table options
 
@@ -74,21 +71,11 @@ The node options depend on the operation you select. The **Generate HTML templat
 * **Custom Styling**: Controls whether to use custom styling (turned on) or not (turned off).
 * **Caption**: Enter a caption to add to the table.
 * **Table Attributes**: Enter any attributes to apply to the table, such as style attributes.
-* **Header Attributes**: Enter any attributes to apply to the headers `<th>`.
+* **Header Attributes**: Enter any attributes to apply to the table's headers `<th>`.
 * **Row Attributes**: Enter any attributes to apply to the table's rows `<tr>`.
 * **Cell Attributes**: Enter any attributes to apply to the table's cells `<td>`.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/html/){:target=_blank .external-link} on n8n's website.
-
-
-
-
-
-
-
-
-
-
-
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'html') ]]

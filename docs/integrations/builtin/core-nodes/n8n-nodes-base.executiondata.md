@@ -27,3 +27,4 @@ For usage examples and templates to help you get started, refer to n8n's [Execut
 ## Related resources
 
 View [example workflows and related content](https://n8n.io/integrations/execution-data/){:target=_blank .external-link} on n8n's website.
+

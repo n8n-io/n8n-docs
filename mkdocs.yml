@@ -82,6 +82,8 @@ extra:
 extra_css:
   - _extra/css/extra.css
   - _extra/css/macro-styles.css
+  - _extra/css/templates-widget.css
+  - _extra/css/workflow-demo.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js
@@ -153,6 +155,9 @@ plugins:
   # - info
   # Search is built in, but must be enabled when you add other plugins
   - search
+  - exclude:
+      glob:
+        #- integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false
@@ -357,7 +362,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.executecommand.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.executionData.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
         - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md

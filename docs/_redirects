@@ -1,3 +1,44 @@
+# 2024 SEO audit
+/nodes/nodes.html    /integrations/builtin/node-types/
+/getting-started/installation/advanced/server-setup.html    /hosting/installation/server-setups/
+/getting-started/installation/advanced/server-setup.html#server-setups  /hosting/installation/server-setups/
+/getting-started/key-components.html    /workflows/
+/integrations/buil%20%20%20%20%20%20%20%20%20%20%205tin/core-nodes/n8n-nodes-base.start/    /integrations/builtin/core-nodes/n8n-nodes-base.start/
+/getting-started/create-your-first-workflow/*    /try-it-out/
+/reference/security/   /privacy-security/security/
+/reference/reference.html   /
+/integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
+
+
+# Moved from 404.html
+/getting-started/key-concepts/   /flow-logic/
+/getting-started/key-concepts/#expression   /code/expressions/
+/getting-started/key-concepts/#item   /data/data-structure/
+/getting-started/key-concepts/#function   /data/code/
+/getting-started/key-concepts/#data   /data/
+/getting-started/key-concepts/#data-structure   /data/data-structure/
+/key-concepts/#data-flow   /data/data-structure/
+/key-concepts/#error-workflow   /flow-logic/error-handling/
+/key-concepts/#security   /hosting/configuration/user-management-self-hosted/
+/getting-started/whats-next.html    /try-it-out/quickstart/#next-steps
+/getting-started/installation/advanced/server-setup.html#docker-compose-examples    /hosting/installation/server-setups/docker-compose/
+/reference/faq.html#Integrations    /integrations/
+/reference/faq.html     /faircode-license/
+/reference/faq.html#License     /faircode-license/
+/reference/faq.html#n8n-cloud   /manage-cloud/overview/
+/nodes/expressions.html#expressions     /code/expressions/
+/editor-ui/workflows    /workflows/
+/editor-ui/credentials     /credentials/
+/editor-ui/executions   /workflows/executions/
+/editor-ui/admin-panel  /manage-cloud/update-cloud-version/
+/#what-is-n8n   /
+/getting-started/tutorials.html#blogposts   https://n8n.io/blog/tag/tutorial/
+/#server-setup     /hosting/installation/server-setups/
+/code-examples/expressions/expressions.html     /code/expressions/
+/hosting/configuration/#use-built-in-and-external-modules-in-function-nodes     /hosting/configuration/configuration-examples/modules-in-code-node/
+/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node      /hosting/configuration/configuration-examples/modules-in-code-node/
+
+
 /integrations/builtin/core-nodes/n8n-nodes-base.interval/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/
 /integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/google/googleai/
 
@@ -32,7 +73,7 @@
 /langchain/access-langchain/   /advanced-ai/
 
 
-/choose-n8n/cloud/   /manage-cloud/
+/choose-n8n/cloud/   /manage-cloud/overview/
 /choose-n8n/faircode-license/   /faircode-license/
 /cloud-admin-dashboard/   /manage-cloud/cloud-admin-dashboard/
 /hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/
@@ -138,7 +179,7 @@
 
 # License release 2022/2023
 
-/reference/license/   /choose-n8n/faircode-license/
+/reference/license/   /faircode-license/
 
 # Workflows refactor 2022
 
@@ -152,7 +193,7 @@
 # Hosting user paths 2022
 
 /hosting/options/   /choose-n8n/
-/hosting/installation/cloud/   /manage-cloud/
+/hosting/installation/cloud/   /manage-cloud/overview/
 /hosting/installation/desktop-app/   /choose-n8n/
 /hosting/server-setups/*   /hosting/installation/server-setups/:splat
 /hosting/configuration/   /hosting/configuration/environment-variables/
@@ -164,7 +205,6 @@
 /hosting/databases/structure/   /hosting/architecture/database-structure/
 /hosting/security/   /hosting/user-management/
 /hosting/user-management/   /user-management/
-/hosting/configuration/   /hosting/configuration/configuration-methods/
 
 
 # 2022 SEO audit
@@ -243,7 +283,7 @@
 # Updated during IA work
 /getting-started/key-components/                     /workflows/
 /getting-started/key-components/connection.html      /workflows/connections/
-/getting-started/key-components/editor-ui.html       /editor-ui/
+/getting-started/key-components/editor-ui.html       /
 /getting-started/key-components/node.html            /workflows/nodes/
 /getting-started/key-components/workflow.html        /workflows/workflows/
 /getting-started/key-concepts/looping.html            /flow-logic/looping/

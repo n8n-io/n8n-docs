@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Release notes
 description: Release notes detailing new features and bug fixes for n8n.
 tags:
@@ -28,14 +29,84 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.48.0
+## n8n@1.49.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.1...n8n@1.48.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-06-27
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.3...n8n@1.49.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains a new node, node enhancements, and bug fixes.
+
+### Node updates
+- New node added: [Vector Store Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) for the AI Agent
+- Enhanced nodes: Zep Cloud Memory, Copper, Embeddings Cohere, GitHub, Merge, Zammad
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}  
+[KhDu](https://github.com/KhDu){:target=_blank .external-link}  
+[Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}  
+[Pavlo Paliychuk](https://github.com/paul-paliychuk){:target=_blank .external-link}  
+
+
+## n8n@1.48.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.2...n8n@1.48.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.47.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.2...n8n@1.47.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.48.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.1...n8n@1.48.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-01
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.47.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.1...n8n@1.47.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-01
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.48.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.0...n8n@1.48.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-27
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.48.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.1...n8n@1.48.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-06-27
 
 
 
@@ -47,19 +118,11 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 [KubeAl](https://github.com/KubeAl){:target=_blank .external-link}  
 
+
 ## n8n@1.47.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.0...n8n@1.47.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-06-26
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
-/// warning | Breaking change
-Calling `$(...).last()` (or `(...).first()` or `$(...).all()`) without arguments now returns the last item (or first or all items) of the output that connects two nodes. Previously, it returned the item/items of the first output of that node. Refer to the [breaking changes log](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#1470){:target=_blank .external-link} for details.
-///
 
 This is a bug fix release.
 
@@ -102,7 +165,6 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.0...n8n@1.45.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-06-12
-
 
 
 This is a bug fix release.
@@ -8064,7 +8126,7 @@ For a comprehensive list of changes, check out the [commits](https://github.com/
 - Spotify: Added Create a Playlist operation to Playlist resource and Get New Releases to the Album resource
 - Bug fixes
 - Airtable: Fixed a bug with updating and deleting records
-- Added the functionality to expose metrics to Prometheus. Read more about that [here](/hosting/configuration/#prometheus)
+- Added the functionality to expose metrics to Prometheus. Read more about that [here](/hosting/configuration/environment-variables/)
 - Updated fallback values to match the value type
 - Added the functionality to display debugging information for pending workflows on exit
 - Fixed an issue with queue mode for the executions that shouldn't be saved

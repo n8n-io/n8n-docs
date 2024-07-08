@@ -1194,6 +1194,7 @@ nav:
         - hosting/configuration/configuration-examples/index.md
         - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
         - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
         - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
         - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
         - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md

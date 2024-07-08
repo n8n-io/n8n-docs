@@ -29,14 +29,57 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.48.2
+## n8n@1.49.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.1...n8n@1.48.2){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-07-01
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.3...n8n@1.49.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains a new node, node enhancements, and bug fixes.
+
+### Node updates
+- New node added: [Vector Store Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) for the AI Agent
+- Enhanced nodes: Zep Cloud Memory, Copper, Embeddings Cohere, GitHub, Merge, Zammad
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}  
+[KhDu](https://github.com/KhDu){:target=_blank .external-link}  
+[Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}  
+[Pavlo Paliychuk](https://github.com/paul-paliychuk){:target=_blank .external-link}  
+
+
+## n8n@1.48.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.2...n8n@1.48.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.47.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.2...n8n@1.47.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.48.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.1...n8n@1.48.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-01
 
 This release contains bug fixes.
 
@@ -46,10 +89,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.1...n8n@1.47.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-01
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains bug fixes.
 
@@ -126,7 +165,6 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.0...n8n@1.45.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-06-12
-
 
 
 This is a bug fix release.

@@ -5,7 +5,7 @@ description: Documentation for the Jira node in n8n, a workflow automation platf
 contentType: integration
 ---
 
-# Jira
+# Jira Software
 
 Use the Jira node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
 

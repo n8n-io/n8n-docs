@@ -1,13 +1,13 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+# https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Best practices for updating your self-hosted n8n
 title: Update self-hosted n8n
 contentType: explanation
 tags:
-	- update npm
-	- update docker
+  - update npm
+  - update docker
 hide:
-	- tags
+  - tags
 ---
 
 # Update self-hosted n8n

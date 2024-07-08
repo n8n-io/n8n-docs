@@ -1,7 +1,6 @@
 import requests
 import json
 import re
-import traceback
 import urllib.parse
 
 def define_env(env):

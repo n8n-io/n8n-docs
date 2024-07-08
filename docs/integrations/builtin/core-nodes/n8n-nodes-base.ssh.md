@@ -13,10 +13,6 @@ The SSH node is useful for executing commands using the Secure Shell Protocol.
 You can find authentication information for this node [here](/integrations/builtin/credentials/ssh/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [SSH integrations](https://n8n.io/integrations/ssh/){:target=_blank .external-link} page.
-///
-
 ## Basic Operations
 
 - **Execute** a command
@@ -57,3 +53,8 @@ The remaining parameters depend on the **Resource** and **Operation** you select
 The **File** Resources display one node option: **File Name**.
 
 If you select this option, any file name you enter here will override the binary data file name. This allows you to rename the file you're uploading or downloading.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'ssh') ]]

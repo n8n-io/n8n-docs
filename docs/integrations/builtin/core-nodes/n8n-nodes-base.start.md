@@ -16,15 +16,14 @@ The start node is the first node in a workflow. It exists by default when you cr
 
 In case there is no trigger node in the workflow, the workflow always starts from the Start node. The Start node can't be deleted. Even if a workflow contains a trigger node, there would still be a Start node.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Start integrations](https://n8n.io/integrations/start/){:target=_blank .external-link} page.
-///
+## Templates and examples
 
-## FAQs
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'start') ]]
 
-### When is it necessary to use the Start node?
+## When to use the Start node
 
-When using the *Execute Workflow* node in workflow A to execute workflow B, the *Start* node will act as the trigger node in workflow B. The second node in workflow B needs to be connected to the Start node for the workflow to execute correctly.
+When using the **Execute Workflow** node in workflow A to execute workflow B, the **Start** node will act as the trigger node in workflow B. The second node in workflow B needs to be connected to the Start node for the workflow to execute correctly.
 
 <!-- vale on -->
 

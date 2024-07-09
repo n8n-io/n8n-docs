@@ -15,25 +15,25 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Operations
 
-* **Add** a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
-* **Add Config**: Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} set or add.
-* **Clone** a repository: Performs a [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link}.
-* **Commit** files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link}.
-* **Fetch** from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link}.
-* **List Config**: Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} query.
-* **Log**: Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link}.
-* **Pull** from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link}.
-* **Push** to remote repository: Performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
-* **Push Tags** to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
-* Return **Status** of current repository: Performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
-* Create a new **Tag**: Performs a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
-* **User Setup**: Set the user.
+* [**Add**](#add) a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
+* [**Add Config**](#add-config): Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} set or add.
+* [**Clone**](#clone) a repository: Performs a [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link}.
+* [**Commit**](#commit) files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link}.
+* [**Fetch**](#fetch) from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link}.
+* [**List Config**](#list-config): Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} query.
+* [**Log**](#log): Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link}.
+* [**Pull**](#pull) from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link}.
+* [**Push**](#push) to remote repository: Performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
+* [**Push Tags**](#push-tags) to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
+* Return [**Status**](#status) of current repository: Performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
+* Create a new [**Tag**](#tag): Performs a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
+* [**User Setup**](#user-setup): Set the user.
 
 Refer to the sections below for more details on the parameters and options for each operation.
 
 ## Add
 
-### Add parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Paths to Add**: Enter a comma-separated list of paths of files or folders to add in this field. You can use absolute paths or relative paths from the **Repository Path**.
@@ -42,7 +42,7 @@ Refer to the sections below for more details on the parameters and options for e
 <!-- vale off -->
 ## Add Config
 
-### Add Config parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Key**: Enter the name of the key to set.
@@ -55,7 +55,7 @@ The add config operation adds the **Mode** option. Choose whether to **Set** or 
 
 ## Clone
 
-### Clone parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Authentication**: Select **Authenticate** to pass credentials in. Select **None** to not use authentication.
@@ -65,7 +65,7 @@ The add config operation adds the **Mode** option. Choose whether to **Set** or 
 
 ## Commit
 
-### Commit parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Message**: Enter the commit message to use in this field.
@@ -89,7 +89,7 @@ This operation only prompts you to enter the local path of the git repository in
 
 ## Log
 
-### Log parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Return All**: When turned on, the node will return all results. When turned off, the node will return results up to the set **Limit**.
@@ -107,7 +107,7 @@ This operation only prompts you to enter the local path of the git repository in
 
 ## Push
 
-### Push parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Authentication**: Select **Authenticate** to pass credentials in or **None** to not use authentication.
@@ -127,7 +127,7 @@ This operation only prompts you to enter the local path of the git repository in
 
 ## Tag
 
-### Tag parameters
+Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Name**: Enter the name of the tag to create in this field.

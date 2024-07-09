@@ -32,7 +32,7 @@ If you're using an earlier version of n8n, n8n recommends manually providing thi
 
 * n8n version
 * Database
-* n8n EXECUTIONS_PROCESS setting (default: own, main)
+* n8n EXECUTIONS_PROCESS setting
 * Running n8n via (Docker, npm, n8n cloud, desktop app)
 * Operating system
 ///

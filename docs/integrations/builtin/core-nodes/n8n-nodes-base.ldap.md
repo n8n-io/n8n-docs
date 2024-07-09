@@ -29,7 +29,7 @@ Refer to the sections below for details on configuring the node for each operati
 Configure this operation using these parameters:
 
 * **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* **DN**: Enter the Distinguished Name (DN) of the entry to compare.
 * **Attribute ID**: Enter the ID of the attribute to compare.
 * **Value**: Enter the value to compare.
 
@@ -38,15 +38,22 @@ Configure this operation using these parameters:
 Configure this operation using these parameters:
 
 * **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* **DN**: Enter the Distinguished Name (DN) of the entry to create.
 * **Attributes**: Add the **Attribute ID**/**Value** pairs you'd like to create.
+
+## Delete
+
+Configure this operation using these parameters:
+
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **DN**: Enter the Distinguished Name (DN) of the entry to be deleted.
 
 ## Rename
 
 Configure this operation using these parameters:
 
 * **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* **DN**: Enter the current Distinguished Name (DN) of the entry to rename.
 * **New DN**: Enter the new Distinguished Name (DN) for the entry in this field.
 
 ## Search
@@ -54,7 +61,6 @@ Configure this operation using these parameters:
 Configure this operation using these parameters:
 
 * **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
 * **Base DN**: Enter the Distinguished Name (DN) of the subtree to search in.
 * **Search For**: Select the directory object class to search for.
 * **Attribute**: Select the attribute to search for.
@@ -80,7 +86,7 @@ Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/
 Configure this operation using these parameters:
 
 * **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
-* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* **DN**: Enter the Distinguished Name (DN) of the entry to update.
 * ***Update Attributes**: Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute.
 * Then enter the **Attribute ID**/**Value** pair you'd like to update.
 

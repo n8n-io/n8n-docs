@@ -28,7 +28,10 @@ You can find authentication information for this node [here](/integrations/built
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options.
 * **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini){:target=_blank .external-link} for information on the available filters and levels.
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'google-vertex-chat-model') ]]
 
 ## Related resources
 

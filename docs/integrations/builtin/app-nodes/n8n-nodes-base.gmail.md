@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Gmail node supports and links
 /// note | Credentials
 Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Gmail integrations](https://n8n.io/integrations/gmail/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -50,14 +47,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Trash
 	* Untrash
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'gmail') ]]
+
 ## Related resources
 
 Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/api) for detailed information about the API that this node integrates with.
 
 n8n provides a trigger node for Gmail. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/).
-
-View [example workflows and related content](https://n8n.io/integrations/gmail/){:target=_blank .external-link} on our website.
-
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

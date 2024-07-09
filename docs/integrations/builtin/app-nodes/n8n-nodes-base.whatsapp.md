@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the WhatsApp Business node suppor
 /// note | Credentials
 Refer to [WhatsApp Business credentials](/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [WhatsApp Business integrations](https://n8n.io/integrations/whatsapp-business-cloud/){:target="_blank" .external-link} list.
-///
+
 ## Operations
 
 * Message
@@ -27,10 +25,13 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Download
 	* Delete
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'whatsapp-business-cloud') ]]
+
 ## Related resources
 
 Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
-
-View [example workflows and related content](https://n8n.io/integrations/whatsapp-business-cloud/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

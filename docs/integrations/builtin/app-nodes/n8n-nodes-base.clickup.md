@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the ClickUp node supports and lin
 /// note | Credentials
 Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [ClickUp integrations](https://n8n.io/integrations/clickup/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Checklist
     * Create a checklist
@@ -91,6 +88,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Add tag to time entry
     * Get all time entry tags
     * Remove tag from time entry
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'clickup') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

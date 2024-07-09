@@ -15,22 +15,16 @@ On this page, you'll find a list of operations the Facebook Graph API node suppo
 Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Facebook Graph API integrations](https://n8n.io/integrations/facebook-graph-api/){:target="_blank" .external-link} list.
-///
-
 ## Operations
 
-**Default**
-- GET
-- POST
-- DELETE 
-
-
-**Video Uploads**
-- GET
-- POST
-- DELETE 
+* **Default**
+    * GET
+    * POST
+    * DELETE 
+* **Video Uploads**
+    * GET
+    * POST
+    * DELETE 
 
 
 ### Parameters
@@ -49,4 +43,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * **Send Binary File**: Available for `POST` operations. If enabled binary data is sent as the body. Requires setting the following:
     * **Input Binary Field**: Name of the binary property which contains the data for the file to be uploaded.
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'facebook-graph-api') ]]

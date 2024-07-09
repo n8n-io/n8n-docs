@@ -14,61 +14,54 @@ To extract data from a file and convert it to JSON, use the [Extract from File](
 
 ## Operations
 
-* Convert to CSV
-* Convert to HTML
-* Convert to ICS
-* Convert to JSON
-* Convert to ODS
-* Convert to RTF
-* Convert to Text File
-* Convert to XLS
-* Convert to XLSX
-* Move Base64 String to File
+* [**Convert to CSV**](#convert-to-csv)
+* [**Convert to HTML**](#convert-to-html)
+* [**Convert to ICS**](#convert-to-ics)
+* [**Convert to JSON**](#convert-to-json)
+* [**Convert to ODS**](#convert-to-ods)
+* [**Convert to RTF**](#convert-to-rtf)
+* [**Convert to Text File**](#convert-to-text-file)
+* [**Convert to XLS**](#convert-to-xls)
+* [**Convert to XLSX**](#convert-to-xlsx)
+* [**Move Base64 String to File**](#move-base64-string-to-file)
 
-## Node parameters
+Node parameters and options depend on the operation you select.
 
-All operations include one node parameter: **Put Output File in Field**. Enter the name of the field in the output data to contain the file.
+### Convert to CSV
 
-The **Convert to ICS**, **Convert to JSON**, **Convert to Text File**, and **Move Base64 String to File** operations include other node parameters. Refer to the sections below for more details on these operations.
+Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
 
-### Convert to ICS parameters
+#### Convert to CSV options
 
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
+* If the first row of the file contains header names, turn on the **Header Row** option.
+
+### Convert to HTML
+
+Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+
+#### Convert to HTML options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
+* If the first row of the file contains header names, turn on the **Header Row** option.
+
+### Convert to ICS
+
+* **Put Output File in Field**. Enter the name of the field in the output data to contain the file.
 * **Event Title**: Enter the title for the event.
 * **Start**: Enter the date and time the event will start. All-day events ignore the time.
 * **End**: Enter the date and time the event will end. All-day events ignore the time. If unset, the node uses the start date.
 * **All Day**: Select whether the event is an all day event (turned on) or not (turned off).
 
-### Convert to JSON parameters
+#### Convert to ICS options
 
-Choose the best output **Mode** for your needs from these options:
+You can also configure this operation with these **Options**:
 
-* **All Items to One File**: Send all input items to a single file.
-* **Each Item to Separate File**: Create a file for every input item.
-
-### Convert to Text File parameters
-
-Enter the name of the **Text Input Field** that contains a string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
-
-### Move Base64 String to File parameters
-
-Enter the name of the **Base64 Input Field** that contains the Base64 string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
-
-## Node options
-
-Use the **Options** to configure more parameters specific to the file type you're creating.
-
-You can set the **File Name** for the generated output file for all operations.
-
-### Convert to CSV options
-
-If the first row of the file contains header names, turn on the **Header Row** option.
-
-### Convert to HTML options
-
-If the first row of the file contains header names, turn on the **Header Row** option.
-
-### Convert to ICS options
-
+* **File Name**: Enter the file name for the generated output file.
 * **Attendees**: Use this option to add attendees to the event. For each attendee, add:
 	* **Name**
 	* **Email**
@@ -91,39 +84,91 @@ If the first row of the file contains header names, turn on the **Header Row** o
 * **URL**: Enter a URL associated with the event.
 * **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings/).
 
-### Convert to JSON options
+### Convert to JSON
 
+Choose the best output **Mode** for your needs from these options:
+
+* **All Items to One File**: Send all input items to a single file.
+* **Each Item to Separate File**: Create a file for every input item.
+
+#### Convert to JSON options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
 * **Format**: Choose whether to format the JSON for easier reading (turned on) or not (turned off).
 * **Encoding**: Choose the character set to use to encode the data. The default is **utf8**.
 
-### Convert to ODS options
+### Convert to ODS
 
+Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+
+#### Convert to ODS options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
 * **Compression**: Choose whether to compress and reduce the file's output size.
 * **Header Row**: Turn on if the first row of the file contains header names.
 * **Sheet Name**: Enter the Sheet Name to create in the spreadsheet.
 
-### Convert to RFT options
+### Convert to RTF
 
-If the first row of the file contains header names, turn on the **Header Row** option.
+Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
 
-### Convert to Text File options
+#### Convert to RFT options
 
-Use the **Encoding** option to choose the character set to use to encode the data. The default is **utf8**.
+You can also configure this operation with these **Options**:
 
-### Convert to XLS options
+* **File Name**: Enter the file name for the generated output file.
+* If the first row of the file contains header names, turn on the **Header Row** option.
 
+### Convert to Text File
+
+Enter the name of the **Text Input Field** that contains a string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
+
+#### Convert to Text File options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
+* **Encoding**: Choose the character set to use to encode the data. The default is **utf8**.
+
+### Convert to XLS
+
+Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+
+#### Convert to XLS options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
 * **Header Row**: Turn on if the first row of the file contains header names.
 * **Sheet Name**: Enter the Sheet Name to create in the spreadsheet.
 
-### Convert to XLSX options
+### Convert to XLSX
 
+Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
+
+#### Convert to XLSX options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
 * **Compression**: Choose whether to compress and reduce the file's output size.
 * **Header Row**: Turn on if the first row of the file contains header names.
 * **Sheet Name**: Enter the Sheet Name to create in the spreadsheet.
 
-### Move Base64 String to File options
+### Move Base64 String to File
 
-Enter the **MIME Type** of the output file. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of common MIME types and the file extensions they relate to.
+Enter the name of the **Base64 Input Field** that contains the Base64 string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
+
+#### Move Base64 String to File options
+
+You can also configure this operation with these **Options**:
+
+* **File Name**: Enter the file name for the generated output file.
+* **MIME Type**: Enter the MIME type of the output file. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of common MIME types and the file extensions they relate to.
 
 ## Templates and examples
 

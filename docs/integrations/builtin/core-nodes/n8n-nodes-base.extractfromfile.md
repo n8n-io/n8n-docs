@@ -28,10 +28,20 @@ To convert JSON data to a file format, use the [Convert to File](/integrations/b
 
 ## Node parameters
 
-The parameters depend on the operation selected:
+### Input Binary Field
 
-* All operations have the **Input Binary Field** option: Enter the name of the field in the node input data that contains the binary file.
-* **Extract From JSON**, **Extract From ICS**, **Extract From Text File**, and **Move File to Base64 String** also have **Destination Output Field**: Enter the name of the field in the node output that will contain the extracted data.
+Enter the name of the field in the node input data that contains the binary file.
+
+### Destination Output Field
+
+Enter the name of the field in the node output that will contain the extracted data.
+
+This parameter is only available for these operations:
+
+* **Extract From JSON**
+* **Extract From ICS**
+* **Extract From Text File**
+* **Move File to Base64 String**
 
 ## Templates and examples
 

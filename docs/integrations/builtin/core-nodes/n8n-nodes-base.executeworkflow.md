@@ -11,18 +11,25 @@ Use the Execute Workflow node to run a different workflow on the host machine th
 
 ## Node parameters
 
-- **Source**: Select where the node should get the sub-workflow's information from.
-	- **Database**: Select this option to load the workflow from the database by ID. You must also enter:
-		- **Workflow ID**: Enter the ID for the workflow. The URL of the workflow contains the ID after `/workflow/`. For example, if the URL of a workflow is `https://my-n8n-acct.app.n8n.cloud/workflow/abCDE1f6gHiJKL7`, the **Workflow ID** is `abCDE1f6gHiJKL7`.
-	- **Local File**: Select this option to load the workflow from a locally saved JSON file. You must also enter:
-		- **Workflow Path**: Enter the path to the local JSON workflow file you want the node to execute.
-	- **Parameter**: Select this option to load the workflow from a parameter. You must also enter:
-		- **Workflow JSON**: Enter the JSON code you want the node to execute.
-	- **URL**: Select this option to load the workflow from a URL. You must also enter:
-		- **Workflow URL**: Enter the URL you want to load the workflow from.
-- **Mode**: Use this parameter to control the execution mode for the node. Choose from these options:
-	- **Run once with all items**: Selecting this option will pass all input items into a single execution of the node.
-	- **Run once for each item**: Selecting this option will execute the node once for each input item in turn.
+### Source
+
+Select where the node should get the sub-workflow's information from:
+
+- **Database**: Select this option to load the workflow from the database by ID. You must also enter:
+	- **Workflow ID**: Enter the ID for the workflow. The URL of the workflow contains the ID after `/workflow/`. For example, if the URL of a workflow is `https://my-n8n-acct.app.n8n.cloud/workflow/abCDE1f6gHiJKL7`, the **Workflow ID** is `abCDE1f6gHiJKL7`.
+- **Local File**: Select this option to load the workflow from a locally saved JSON file. You must also enter:
+	- **Workflow Path**: Enter the path to the local JSON workflow file you want the node to execute.
+- **Parameter**: Select this option to load the workflow from a parameter. You must also enter:
+	- **Workflow JSON**: Enter the JSON code you want the node to execute.
+- **URL**: Select this option to load the workflow from a URL. You must also enter:
+	- **Workflow URL**: Enter the URL you want to load the workflow from.
+
+### Mode
+
+Use this parameter to control the execution mode for the node. Choose from these options:
+
+- **Run once with all items**: Pass all input items into a single execution of the node.
+- **Run once for each item**: Execute the node once for each input item in turn.
 
 ## Node options
 

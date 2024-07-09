@@ -13,11 +13,13 @@ The node saves the original incoming data, and with each iteration, returns a pr
 
 When the node execution completes, it combines all the data and returns it through the **done** output.
 
-## Node reference
+## Node parameters
 
-- **Batch Size**: The number of items to return with each call.
-- **Options**:
-    - **Reset:** If set to true, the node will reset.
+- **Batch Size**: Enter the number of items to return with each call.
+
+## Node options
+
+- **Reset:** If set to true, the node will reset with the current input-data newly initialized.
 
 /// note | Check if you need this node
 n8n automatically processes incoming items. You may not need the Loop Over Items node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).

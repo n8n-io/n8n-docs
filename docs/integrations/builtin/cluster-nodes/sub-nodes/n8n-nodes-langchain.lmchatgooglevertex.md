@@ -15,6 +15,8 @@ On this page, you'll find the node parameters for the Google Vertex AI Chat Mode
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/service-account/).
 ///
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+
 ## Node parameters
 
 **Project ID**: the project ID from your Google Cloud account to use. n8n dynamically loads projects from the Google Cloud account, but you can also specify it manually.

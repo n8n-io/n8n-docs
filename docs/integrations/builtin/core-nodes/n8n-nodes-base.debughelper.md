@@ -11,30 +11,18 @@ Use the Debug Helper node to trigger different error types or generate random da
 
 ## Operations
 
-Operations are called **Categories** in this node.
+Define the operation by selecting the **Category**:
 
-* Do Nothing
-* Throw Error
-* Out Of Memory
-* Generate Random Data
-	* Address
-	* Coordinates
-	* Credit Card
-	* Email
-	* IPv4
-	* IPv6
-	* MAC
-	* NanoIds
-	* URL
-	* User Data
-	* UUID
-	* Version
+* **Do Nothing**: Don't do anything.
+* [**Throw Error**](#throw-error): Throw an error with the specified type and message.
+* [**Out Of Memory**](#out-of-memory): Generate a specific memory size to simulate being out of memory.
+* [**Generate Random Data**](#generate-random-data): Generate some random data in a selected format.
 
 ## Node parameters
 
 The node parameters depend on the **Category** selected. The **Do Nothing** Category has no other parameters.
 
-### Throw Error parameters
+### Throw Error
 
 * **Error Type**: Select the type of error to throw. Choose from:
 	* **NodeApiError**
@@ -42,11 +30,11 @@ The node parameters depend on the **Category** selected. The **Do Nothing** Cate
 	* **Error**
 * **Error Message**: Enter the error message to throw.
 
-### Out Of Memory parameters
+### Out Of Memory
 
 The Out of Memory Category adds one parameter, the **Memory Size to Generate**. Enter the approximate amount of memory to generate.
 
-### Generate Random Data parameters
+### Generate Random Data
 
 * **Data Type**: Choose the type of random data you'd like to generate. Options include:
 	* **Address**

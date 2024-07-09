@@ -11,10 +11,10 @@ Use the Crypto node to encrypt data in workflows.
 
 ## Actions
 
-* **Generate** a random string
-* **Hash** a text or file in a specified format
-* **Hmac** a text or file in a specified format
-* **Sign** a string using a private key
+* [**Generate** a random string](#generate-parameters)
+* [**Hash** a text or file](#hash-parameters) in a specified format
+* [**Hmac** a text or file](#hmac-parameters) in a specified format
+* [**Sign** a string](#sign-parameters) using a private key
 
 ## Node parameters
 

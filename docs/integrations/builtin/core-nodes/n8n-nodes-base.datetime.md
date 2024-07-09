@@ -29,7 +29,7 @@ Refer to the sections below for parameters and options specific to each operatio
 
 ## Add to a Date
 
-### Add to a Date parameters
+Configure the node for this operation using these parameters:
 
 * **Date to Add To**: Enter the date you want to change.
 * **Time Unit to Add**: Select the time unit for the **Duration** parameter.
@@ -42,7 +42,7 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Extract Part of a Date
 
-### Extract Part of a Date parameters
+Configure the node for this operation using these parameters:
 
 * **Date**: Enter the date you want to round or extract part of.
 * **Part**: Select the part of the date you want to extract. Choose from:
@@ -61,7 +61,7 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Format a Date
 
-### Format a Date parameters
+Configure the node for this operation using these parameters:
 
 * **Date**: Enter the date you want to format.
 * **Format**: Select the format you want to change the date to. Choose from:
@@ -83,7 +83,7 @@ This operation includes these options:
 
 ## Get Current Date
 
-### Get Current Date parameters
+Configure the node for this operation using these parameters:
 
 * **Include Current Time**: Choose whether to include the current time (turned on) or to set the time to midnight (turned off).
 * **Output Field Name**: Enter the name of the field to output the current date to.
@@ -99,10 +99,9 @@ This operation includes these options:
 Use `GMT` for +00:00 timezone.
 ///
 
-
 ## Get Time Between Dates
 
-### Get Time Between Dates parameters
+Configure the node for this operation using these parameters:
 
 * **Start Date**: Enter the earlier date you want to compare.
 * **End Date**: Enter the later date you want to compare.
@@ -144,7 +143,7 @@ Milliseconds don't get their own unit, but instead are decimal seconds. For exam
 
 ## Round a Date
 
-### Round a Date parameters
+Configure the node for this operation using these parameters:
 
 * **Date**: Enter the date you'd like to round.
 * **Mode**: Choose whether to **Round Down** or **Round Up**.
@@ -164,7 +163,7 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Subtract From a Date
 
-### Subtract From a Date parameters
+Configure the node for this operation using these parameters:
 
 * **Date to Subtract From**: Enter the date you'd like to subtract from.
 * **Time Unit to Subtract**: Select the unit for the **Duration** amount you want to subtract.

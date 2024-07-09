@@ -40,12 +40,16 @@ The parameters for this node depend on the operation you select.
 * **Blur**: Enter a number to set how strong the blur should be, between 0 and 1000. Higher numbers create blurrier images.
 * **Sigma**: Enter a number to set the stigma for the blur, between 0 and 1000. Higher numbers create blurrier images.
 
+Refer to [Node options](#node-options) for optional configuration options.
+
 ### Border parameters
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Border Width**: Enter the width of the border.
 * **Border Height**: Enter the height of the border.
 * **Border Color**: Set the color for the border. You can either enter a hex or select the color swatch to open a color picker.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ### Composite parameters
 
@@ -77,12 +81,16 @@ The parameters for this node depend on the operation you select.
 * **Position X**: Enter the x axis position (horizontal) of the composite image.
 * **Position Y**: Enter the y axis position (vertical) of the composite image.
 
+Refer to [Node options](#node-options) for optional configuration options.
+
 ### Create parameters
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Background Color**: Set the background color for the image. You can either enter a hex or select the color swatch to open a color picker.
 * **Image Width**: Enter the width of the image.
 * **Image Height**: Enter the height of the image.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ### Crop parameters
 
@@ -91,6 +99,8 @@ The parameters for this node depend on the operation you select.
 * **Height**: Enter the height you'd like to crop to.
 * **Position X**: Enter the x axis position (horizontal) to start the crop from.
 * **Position Y**: Enter the y axis position (vertical) to start the crop from.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ### Draw parameters
 
@@ -106,14 +116,20 @@ The parameters for this node depend on the operation you select.
 * **End Position Y**: Enter the y axis position (vertical) to start drawing at.
 * **Corner Radius**: Enter a number to set the corner radius. Adding a corner radius will round the corners of the drawn primitive.
 
+Refer to [Node options](#node-options) for optional configuration options.
+
 ### Get Information parameters
 
 For this operation, you only need to add the **Property Name** of the binary property that stores the image data.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ### Multi Step parameters
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Operations**: Add the operations you want the multi step operation to perform. You can use any of the other operations.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ### Resize parameters
 
@@ -128,17 +144,23 @@ For this operation, you only need to add the **Property Name** of the binary pro
 	* **Only if Smaller**: Resize the image only if it's smaller than the width and height you entered. The image maintains its aspect ratio.
 	* **Percent**: Resize the image using the width and height as percentages of the original image.
 
+Refer to [Node options](#node-options) for optional configuration options.
+
 ### Rotate parameters
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Rotate**: Enter the number of degrees to rotate the image, from --360 to 360.
 * **Background Color**: Set the background color for the image. You can either enter a hex or select the color swatch to open a color picker. This color is used to fill in the empty background whenever the image is rotated by multiples of 90 degrees. If multipled of 90 degrees are used for the **Rotate** field, the background color isn't used.
 
+Refer to [Node options](#node-options) for optional configuration options.
+
 ### Shear parameters
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Degrees X**: Enter the number of degrees to shear from the x axis.
 * **Degrees Y**: Enter the number of degrees to shear from the y axis.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ### Text parameters
 
@@ -150,10 +172,14 @@ For this operation, you only need to add the **Property Name** of the binary pro
 * **Position Y**: Enter the y axis position (vertical) to begin the text at.
 * **Max Line Length**: Enter the maximum amount of characters in a line before adding a line break.
 
+Refer to [Node options](#node-options) for optional configuration options.
+
 ### Transparent parameters
 
 * **Property Name**: Enter the name of the binary property that stores the image data.
 * **Color**: Set the color to make transparent. You can either enter a hex or select the color swatch to open a color picker.
+
+Refer to [Node options](#node-options) for optional configuration options.
 
 ## Node options
 

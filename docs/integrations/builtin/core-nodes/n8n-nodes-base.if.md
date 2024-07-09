@@ -20,74 +20,7 @@ Use the If node to split a workflow conditionally based on comparison operations
 Create comparison **Conditions** for your If node.
 
 - Use the data type dropdown to select the data type and comparison operation type for your condition. For example, to filter for dates after a particular date, select **Date & Time > is after**.
-- The fields and values to enter into the condition change based on the data type and comparison you select.
-
-### Available data type comparisons
-
-- **String**
-    - exists
-    - does not exist
-    - is empty
-    - is not empty
-    - is equal to
-    - is not equal to
-    - contains
-    - does not contain
-    - starts with
-    - does not start with
-    - ends with
-    - does not end with
-    - matches regex
-    - does not match regex
-- **Number**
-    - exists
-    - does not exist
-    - is empty
-    - is not empty
-    - is equal to
-    - is not equal to
-    - is greater than
-    - is less than
-    - is greater than or equal to
-    - is less than or equal to
-- **Date & Time**
-    - exists
-    - does not exist
-    - is empty
-    - is not empty
-    - is equal to
-    - is not equal to
-    - is after
-    - is before
-    - is after or equal to
-    - is before or equal to
-- **Boolean**
-    - exists
-    - does not exist
-    - is empty
-    - is not empty
-    - is true
-    - is false
-    - is equal to
-    - is not equal to
-- **Array**
-    - exists
-    - does not exist
-    - is empty
-    - is not empty
-    - contains
-    - does not contain
-    - length equal to
-    - length not equal to
-    - length greater than
-    - length less than
-    - length greater than or equal to
-    - length less than or equal to
-- **Object**
-    - exists
-    - does not exist
-    - is empty
-    - is not empty
+- The fields and values to enter into the condition change based on the data type and comparison you select. Refer to [Available data type comparisons](#available-data-type-comparisons) for a full list of all comparisons by data type.
 
 Select **Add condition** to create more conditions.
 
@@ -113,5 +46,93 @@ Refer to [Splitting with conditionals](/flow-logic/splitting/) for more informat
 
 If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/).
 
+## Available data type comparisons
 
+### String
+
+String data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is equal to
+- is not equal to
+- contains
+- does not contain
+- starts with
+- does not start with
+- ends with
+- does not end with
+- matches regex
+- does not match regex
+
+### Number
+
+Number data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is equal to
+- is not equal to
+- is greater than
+- is less than
+- is greater than or equal to
+- is less than or equal to
+
+### Date & Time
+
+Date & Time data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is equal to
+- is not equal to
+- is after
+- is before
+- is after or equal to
+- is before or equal to
+
+### Boolean
+
+Boolean data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- is true
+- is false
+- is equal to
+- is not equal to
+
+### Array
+
+Array data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
+- contains
+- does not contain
+- length equal to
+- length not equal to
+- length greater than
+- length less than
+- length greater than or equal to
+- length less than or equal to
+
+### Object
+
+Object data type supports these comparisons:
+
+- exists
+- does not exist
+- is empty
+- is not empty
 

@@ -30,7 +30,7 @@ n8n automatically processes incoming items. You may not need the Loop Over Items
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(title, 'split-in-batches') ]]
 
-## Example usage: Read RSS feed from two different sources
+### Read RSS feed from two different sources
 
 This workflow allows you to read an RSS feed from two different sources using the Loop Over Items node. You need the Loop Over Items node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/){:target=_blank .external-link} on n8n.io.
 
@@ -64,11 +64,11 @@ The final workflow looks like this:
 8. Configure RSS Feed Read: map `url` from the input to the **URL** field. You can do this by dragging and dropping from the **INPUT** panel, or using this expression: `{{ $json.url }}`.
 9. Select **Test Workflow** to run the workflow and see the resulting data.
 
-## Check that the node has processed all items
+### Check that the node has processed all items
 
 To check if the node still has items to process, use the following expression: `{{$node["Loop Over Items"].context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
 
-## Get the current running index of the node
+### Get the current running index of the node
 
 To get the current running index of the node, use the following expression: `{{$node["Loop Over Items"].context["currentRunIndex"];}}`.
 

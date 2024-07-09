@@ -881,6 +881,7 @@ nav:
         - integrations/builtin/credentials/drift.md
         - integrations/builtin/credentials/dropbox.md
         - integrations/builtin/credentials/dropcontact.md
+        - integrations/builtin/credentials/dynatrace.md
         - integrations/builtin/credentials/egoi.md
         - integrations/builtin/credentials/elasticsearch.md
         - integrations/builtin/credentials/elasticsecurity.md

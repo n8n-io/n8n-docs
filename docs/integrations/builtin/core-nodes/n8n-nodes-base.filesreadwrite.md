@@ -14,14 +14,14 @@ This node isn't available on n8n Cloud.
 
 ## Operations
 
-- **Read File(s) From Disk**: Use this operation to retrieve one or more files from the computer that runs n8n.
-- **Write File to Disk**: Use this operation to create a binary file on the computer that runs n8n.
+- [**Read File(s) From Disk**](#read-files-from-disk): Use this operation to retrieve one or more files from the computer that runs n8n.
+- [**Write File to Disk**](#write-file-to-disk): Use this operation to create a binary file on the computer that runs n8n.
 
-## Node parameters
+Refer to the sections below for more information on configuring the node for each operation.
 
-The node's parameters depend on which operation you select.
+## Read File(s) From Disk
 
-### Read File(s) From Disk parameters
+Configure this operation with these parameters:
 
 * **File(s) Selector**: Enter the path of the file you want to read.
 	- To enter multiple files, enter a page path pattern. You can use these characters to define a path pattern:
@@ -32,23 +32,25 @@ The node's parameters depend on which operation you select.
 
 Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing){:target=_blank .external-link} documentation for more information on these characters and their expected behavior.
 
-### Write File to Disk parameters
-
-* **File Path and Name**: Enter the destination for the file, the file's name, and the file's extension.
-* **Input Binary Field**: Enter the name of the field in the node input data that will contain the binary file.
-
-## Node options
-
-The node options available depend on the operation you select.
-
 ### Read File(s) From Disk options
+
+You can also configure this operation with these **Options**:
 
 * **File Extension**: Enter the extension for the file in the node output.
 * **File Name**: Enter the name for the file in the node output.
 * **MIME Type**: Enter the file's MIME type in the node output. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of file extensions and their MIME types.
 * **Put Output File in Field**: Enter the name of the field in the output data to contain the file.
 
+## Write File to Disk
+
+Configure this operation with these parameters:
+
+* **File Path and Name**: Enter the destination for the file, the file's name, and the file's extension.
+* **Input Binary Field**: Enter the name of the field in the node input data that will contain the binary file.
+
 ### Write File to Disk options
+
+You can also configure this operation with these **Options**:
 
 This operation includes a single option, whether to **Append** data to an existing file instead of creating a new one (turned on) or to create a new file instead of appending to existing (turned off).
 

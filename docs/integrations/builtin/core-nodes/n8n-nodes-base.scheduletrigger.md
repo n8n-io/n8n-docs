@@ -20,6 +20,7 @@ If a workflow uses the Schedule node as a trigger, make sure that you save and a
 Add **Trigger Rules** to determine when the trigger should run.
 
 Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other rule parameters depend on the interval you select. Choose from:
+
     * **Seconds**
     * **Minutes**
     * **Hours**
@@ -30,11 +31,11 @@ Use the **Trigger Interval** to select the time interval unit of measure to sche
 
 You can add multiple **Trigger Rules** to run the node on different schedules.
 
-## Seconds trigger interval
+### Seconds trigger interval
 
 * **Seconds Between Triggers**: Enter the number of seconds between each workflow trigger. For example, if you enter `30` here, the trigger will run every 30 seconds.
 
-## Minutes trigger interval
+### Minutes trigger interval
 
 * **Minutes Between Triggers**: Enter the number of minutes between each workflow trigger. For example, if you enter `5` here, the trigger will run every 5 minutes.
 
@@ -73,16 +74,7 @@ For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day
 
 ### Custom (Cron) interval
 
-Enter a custom cron **Expression** to set the schedule for the trigger. Refer to [Generate a custom Cron expression](#generate-a-custom-cron-expression) for more information.
-
-## Templates and examples
-
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'schedule-trigger') ]]
-
-## Generate a custom Cron expression
-
-If you need a custom time setting, select **Trigger Interval** > **Custom (Cron)**.
+Enter a custom cron **Expression** to set the schedule for the trigger.
 
 To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
 
@@ -105,4 +97,11 @@ The sixth asterisk in the Cron expression represents seconds. Setting this is op
 |  *  |  *  |  *  |  *  |  *  |  *  |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |second|minute|hour|day of month|month|day of week|
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'schedule-trigger') ]]
+
+
 

@@ -17,17 +17,17 @@ You can work with data and time in the Code node, and in expressions in any node
 
 ## Operations
 
-* Add to a Date
-* Extract Part of a Date
-* Format a Date
-* Get Current Date
-* Get Time Between Dates
-* Round a Date
-* Subtract From a Date
+* **Add to a Date**: Add a specified amount of time to a date.
+* **Extract Part of a Date**: Extract part of a date, such as the year, month, or day.
+* **Format a Date**: Transform a date's format to a new format using preset options or a custom expression.
+* **Get Current Date**: Get the current date and choose whether to include the current time or not. Useful for triggering other flows and conditional logic.
+* **Get Time Between Dates**: Calculate the amount of time in specific units between two dates.
+* **Round a Date**: Round a date up or down to the nearest unit of your choice, such as month, day, or hour.
+* **Subtract From a Date**: Subtract a specified amount of time from a date.
 
-## Node parameters
+Refer to the sections below for parameters and options specific to each operation.
 
-The node parameters depend on the **Operation** you select.
+## Add to a Date
 
 ### Add to a Date parameters
 
@@ -35,6 +35,12 @@ The node parameters depend on the **Operation** you select.
 * **Time Unit to Add**: Select the time unit for the **Duration** parameter.
 * **Duration**: Enter the number of time units to add to the date.
 * **Output Field Name**: Enter the name of the field to output the new date to.
+
+### Add to a Date options
+
+This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
+
+## Extract Part of a Date
 
 ### Extract Part of a Date parameters
 
@@ -49,6 +55,12 @@ The node parameters depend on the **Operation** you select.
     * **Second**
 * **Output Field Name**: Enter the name of the field to output the extracted date part to.
 
+### Extract Part of a Date options
+
+This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
+
+## Format a Date
+
 ### Format a Date parameters
 
 * **Date**: Enter the date you want to format.
@@ -61,10 +73,34 @@ The node parameters depend on the **Operation** you select.
     * **YYYY-MM-DD**: For `4 September 1986`, this formats the date as `1986-09-04`.
 * **Output Field Name**: Enter the name of the field to output the formatted date to.
 
+### Format a Date options
+
+This operation includes these options:
+
+* **Include Input Fields**: If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
+* **From Date Format**: If the node isn't recognizing the **Date** format correctly, enter the format for that **Date** here so the node can process it properly. Use Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens){:target=_blank .external-link} to enter the format. Tokens are case-sensitive
+* **Use Workflow Timezone**: Whether to use the input's time zone (turned off) or the workflow's timezone (turned on).
+
+## Get Current Date
+
 ### Get Current Date parameters
 
 * **Include Current Time**: Choose whether to include the current time (turned on) or to set the time to midnight (turned off).
 * **Output Field Name**: Enter the name of the field to output the current date to.
+
+### Get Current Date options
+
+This operation includes these options:
+
+* **Include Input Fields**: If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
+* **Timezone**: Set the timezone to use. If left blank, the node uses the n8n instance's timezone.
+
+/// note | +00:00 timezone
+Use `GMT` for +00:00 timezone.
+///
+
+
+## Get Time Between Dates
 
 ### Get Time Between Dates parameters
 
@@ -80,48 +116,6 @@ The node parameters depend on the **Operation** you select.
     * **Second**
     * **Millisecond**
 * **Output Field Name**: Enter the name of the field to output the calculated time between to.
-
-### Round a Date parameters
-
-* **Date**: Enter the date you'd like to round.
-* **Mode**: Choose whether to **Round Down** or **Round Up**.
-* **To Nearest**: Select the unit you'd like to round to. Choose from:
-    * **Year**
-    * **Month**
-    * **Week**
-    * **Day**
-    * **Hour**
-    * **Minute**
-    * **Second**
-* **Output Field Name**: Enter the name of the field to output the rounded date to.
-
-### Subtract From a Date parameters
-
-* **Date to Subtract From**: Enter the date you'd like to subtract from.
-* **Time Unit to Subtract**: Select the unit for the **Duration** amount you want to subtract.
-* **Duration**: Enter the amount of the time units you want to subtract from the **Date to Subtract From**.
-* **Output Field Name**: Enter the name of the field to output the rounded date to.
-
-## Node options
-
-All operations include the option to **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
-
-Some operations include more options; refer to the sections below for information on those.
-
-### Format a Date options
-
-The Format a Date operation includes the **Include Input Fields** option as well as these options:
-
-* **From Date Format**: If the node isn't recognizing the **Date** format correctly, enter the format for that **Date** here so the node can process it properly. Use Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens){:target=_blank .external-link} to enter the format. Tokens are case-sensitive
-* **Use Workflow Timezone**: Whether to use the input's time zone (turned off) or the workflow's timezone (turned on).
-
-### Get Current Date options
-
-The Get Current Date operation includes the **Include Input Fields** option as well as a **Timezone** option. Use the **Timezone** option to set the timezone to use. If left blank, the node usees the n8n instance's timezone.
-
-/// note | +00:00 timezone
-Use `GMT` for +00:00 timezone.
-///
 
 ### Get Time Between Dates options
 
@@ -147,6 +141,39 @@ ISO duration format displays a format as `P<n>Y<n>M<n>DT<n>H<n>M<n>S`. `<n>` is 
 * S = seconds
 
 Milliseconds don't get their own unit, but instead are decimal seconds. For example, 2.1 milliseconds is `0.0021S`.
+
+## Round a Date
+
+### Round a Date parameters
+
+* **Date**: Enter the date you'd like to round.
+* **Mode**: Choose whether to **Round Down** or **Round Up**.
+* **To Nearest**: Select the unit you'd like to round to. Choose from:
+    * **Year**
+    * **Month**
+    * **Week**
+    * **Day**
+    * **Hour**
+    * **Minute**
+    * **Second**
+* **Output Field Name**: Enter the name of the field to output the rounded date to.
+
+### Round a Date options
+
+This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
+
+## Subtract From a Date
+
+### Subtract From a Date parameters
+
+* **Date to Subtract From**: Enter the date you'd like to subtract from.
+* **Time Unit to Subtract**: Select the unit for the **Duration** amount you want to subtract.
+* **Duration**: Enter the amount of the time units you want to subtract from the **Date to Subtract From**.
+* **Output Field Name**: Enter the name of the field to output the rounded date to.
+
+### Subtract From a Date options
+
+This operation has one option: **Include Input Fields**. If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
 
 ## Templates and examples
 

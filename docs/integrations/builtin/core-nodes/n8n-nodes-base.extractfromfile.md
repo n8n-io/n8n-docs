@@ -38,10 +38,10 @@ Enter the name of the field in the node output that will contain the extracted d
 
 This parameter is only available for these operations:
 
-* **Extract From JSON**
-* **Extract From ICS**
-* **Extract From Text File**
-* **Move File to Base64 String**
+* Extract From JSON
+* Extract From ICS
+* Extract From Text File
+* Move File to Base64 String
 
 ## Templates and examples
 

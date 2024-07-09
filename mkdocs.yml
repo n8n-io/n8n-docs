@@ -371,7 +371,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md

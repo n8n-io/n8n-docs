@@ -21,13 +21,13 @@ This node replaces the Manual Chat trigger node from version 1.24.0.
 ## Node parameters
 
 * **Make Chat Publicly Available**: Set whether the chat should be publicly available (turned on) or only available through the manual chat interface (turned off).
-	* Leave this turned off while you're building the workflow. Turn it on on when you're ready to activate the workflow and allow users to access the chat.
+	* Leave this turned off while you're building the workflow. Turn it on when you're ready to activate the workflow and allow users to access the chat.
 * **Mode**: Choose how users access the chat. 
-	* **Hosted Chat**: Use n8n's hosted chat interface. n8n recommends this for most users: you can configure the interface using the [node options](#node-options) and don't have to do any other setup.
+	* **Hosted Chat**: Use n8n's hosted chat interface. n8n recommends this for most users because you can configure the interface using the [node options](#node-options) and don't have to do any other setup.
 	* **Embedded Chat**: This option requires you to create your own chat interface. You can use n8n's [chat widget](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} or build your own. Your chat interface must call the webhook URL shown in **Chat URL** in the node.
 * **Authentication**: Choose whether and how to restrict access to the chat.
 	* **None**: The chat doesn't use authentication. Anyone can use the chat.
-	* **Basic Auth**: The chat uses basic authentication. Select or create a **Credential for Basic Auth** with a username and password. The same username and password must be used by all users.
+	* **Basic Auth**: The chat uses basic authentication. Select or create a **Credential for Basic Auth** with a username and password. All users must use the same username and password.
 	* **n8n User Auth**: Only users logged in to an n8n account can use the chat.
 * If you're using **Hosted Chat**, configure the **Initial Message(s)**. This is the message the n8n chat interface displays when the user arrives on the page.
 

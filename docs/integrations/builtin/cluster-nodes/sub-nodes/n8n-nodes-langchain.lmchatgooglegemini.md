@@ -14,10 +14,6 @@ On this page, you'll find the node parameters for the Google Gemini Chat Model n
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google Gemini Chat Model integrations](https://n8n.io/integrations/google-gemini-chat-model/){:target=_blank .external-link} page.
-///
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -32,10 +28,12 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 * **Top P**: use a lower value to ignore less probable options. 
 * **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini){:target=_blank .external-link} for information on the available filters and levels.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'google-gemini-chat-model') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/google-gemini-chat-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Google Gemini documentation](https://js.langchain.com/docs/integrations/chat/google_generativeai){:target=_blank .external-link} for more information about the service.
 

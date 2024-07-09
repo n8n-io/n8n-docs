@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Trello node supports and link
 /// note | Credentials
 Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Trello integrations](https://n8n.io/integrations/trello/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Attachment
     * Create a new attachment for a card
@@ -70,17 +67,20 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all the cards in a list
     * Update a list
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'trello') ]]
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
-## FAQs
-
-### How do I find the List ID?
+## Find the List ID
 
 1. Open the Trello board that contains the list.
 2. If the list doesn't have any cards, add a card to the list.
-3. Open the card, add '.json' at the end of the URL, and press enter.
+3. Open the card, add `.json` at the end of the URL, and press enter.
 4. In the JSON file, you will see a field called `idList`.
-5. Copy `idList`and paste it in the *List ID* field in n8n.
+5. Copy the contents of the `idList`field and paste it in the ***List ID** field in n8n.
 
 
 

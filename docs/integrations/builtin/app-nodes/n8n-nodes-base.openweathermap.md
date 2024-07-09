@@ -14,11 +14,13 @@ On this page, you'll find a list of operations the OpenWeatherMap node supports 
 /// note | Credentials
 Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [OpenWeatherMap integrations](https://n8n.io/integrations/openweathermap/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Returns the current weather data
 * Returns the weather data for the next 5 days
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'openweathermap') ]]

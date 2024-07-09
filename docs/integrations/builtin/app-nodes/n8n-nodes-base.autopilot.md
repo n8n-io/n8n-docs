@@ -17,12 +17,8 @@ Autopilot has become Ortto. The Autopilot credentials and nodes are only compati
 /// note | Credentials
 Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [Autopilot integrations](https://n8n.io/integrations/autopilot/){:target=_blank .external-link} list.
-///
 
-
-## Basic Operations
+## Operations
 
 * Contact
     * Create/Update a contact
@@ -40,5 +36,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Create a list
     * Get all lists
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'autopilot') ]]
 

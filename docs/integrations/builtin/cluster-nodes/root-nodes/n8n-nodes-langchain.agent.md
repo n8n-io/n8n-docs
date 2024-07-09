@@ -206,8 +206,8 @@ The input from the chat. This is the user's query, also known as the prompt.
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
 ## Templates and examples
-
-[[ templatesWidget(title, page) ]]
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'agent') ]]
 
 ## Related resources
 

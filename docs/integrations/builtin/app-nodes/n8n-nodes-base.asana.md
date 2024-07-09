@@ -15,15 +15,11 @@ On this page, you'll find a list of operations the Asana node supports and links
 Refer to [Asana credentials](/integrations/builtin/credentials/asana/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Asana integrations](https://n8n.io/integrations/asana/){:target="_blank" .external-link} list.
-///
-
 /// note | Update to 1.22.2 or above
 Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
 ///
 
-## Basic Operations
+## Operations
 
 * Project
     * Create a new project
@@ -55,6 +51,10 @@ Due to changes in Asana's API, some operations in this node stopped working on 1
     * Get a user
     * Get all users
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'asana') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

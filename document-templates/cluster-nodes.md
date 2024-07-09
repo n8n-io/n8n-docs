@@ -25,9 +25,13 @@ You can find authentication information for this node [here](/integrations/built
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, page) ]]
+[[ templatesWidget(title, 'integrations-page-slug') ]]
 
 ## Related resources
 
 
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

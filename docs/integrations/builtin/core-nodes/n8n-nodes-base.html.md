@@ -18,17 +18,15 @@ When using the HTML node to generate an HTML template you can introduce [XSS (cr
 
 ## Operations
 
-* **Generate HTML template**
-* **Extract HTML content**
-* **Convert to HTML Table**
+* [**Generate HTML template**](#generate-html-template): Use this operation to create an HTML template. This allows you to take data from your workflow and output it as HTML.
+* [**Extract HTML content**](#extract-html-content): Extract contents from an HTML-formatted source. The source can be in JSON or a binary file (`.html`).
+* [**Convert to HTML Table**](#convert-to-html-table): Convert content to an HTML table.
 
-## Node parameters
+The node parameters and options depend on the operation you select. Refer to the sections below for more details on configuring each operation.
 
-The node parameters depend on which operation you select. The **Convert to HTML Table** operation has no separate node parameters.
+## Generate HTML template
 
-### Generate HTML template parameters
-
-Create an HTML template. This allows you to take data from your workflow and output it as HTML. You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview/)
+Create an HTML template. This allows you to take data from your workflow and output it as HTML. 
 
 You can include:
 
@@ -37,40 +35,44 @@ You can include:
 * JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
 * Expressions, wrapped in `{{}}`.
 
-### Extract HTML Content parameters
+You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview/). 
+
+## Extract HTML Content
 
 Extract contents from an HTML-formatted source. The source can be in JSON or a binary file (`.html`).
 
+Use these parameters:
+
 - **Source Data**: Select the source type for your HTML content. Choose between:
-	* **JSON**: If you select this source data, enter the **JSON Property**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
-	* **Binary**: If you select this source data, enter the **Input Binary Field**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
+* **JSON**: If you select this source data, enter the **JSON Property**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
+* **Binary**: If you select this source data, enter the **Input Binary Field**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
 - **Extraction Values**:
-	- **Key**: Enter the key to save the extracted value under.
-	- **CSS Selector**: Enter the CSS selector to search for.
-	- **Return Value**: Select the type of data to return. Choose from:
-		- **Attribute**: Return an attribute value like `class` from an element.
-			- If you select this option, enter the name of the **Attribute** to return the value of.
-		- **HTML**: Return the HTML that the element contains.
-		- **Text**: Return the text content of the element.
-			- If you choose this option, you can also enter a comma-separated list of selectors to skip in the **Skip Selectors**.
-		- **Value**: Return the value of an input, select, or text area.
-	- **Return Array**: Choose whether to return multiple extraction values as an array (turned on) or as a single string (turned off).
-
-## Node options
-
-The node options depend on the operation you select. The **Generate HTML template parameters** operation has no node options.
+- **Key**: Enter the key to save the extracted value under.
+- **CSS Selector**: Enter the CSS selector to search for.
+- **Return Value**: Select the type of data to return. Choose from:
+	- **Attribute**: Return an attribute value like `class` from an element.
+		- If you select this option, enter the name of the **Attribute** to return the value of.
+	- **HTML**: Return the HTML that the element contains.
+	- **Text**: Return the text content of the element.
+		- If you choose this option, you can also enter a comma-separated list of selectors to skip in the **Skip Selectors**.
+	- **Value**: Return the value of an input, select, or text area.
+- **Return Array**: Choose whether to return multiple extraction values as an array (turned on) or as a single string (turned off).
 
 ### Extract HTML Content options
+
+In addition to the parameters listed above, you can also configure this operation with these options:
 
 * **Trim Values**: Controls whether to remove all spaces and newlines from the beginning and end of the values (turned on) or leaves them (turned off).
 * **Clean Up Text**: Controls whether to remove leading whitespaces, trailing whitespaces, and line breaks (newlines) and condense multiple consecutive whitespaces into a single space (turned on) or to leave them as-is (turned off).
 
-### Convert to HTML Table options
+## Convert to HTML Table
+
+This operation expects to be passed data from another node. It has no parameters. It includes these options:
 
 * **Capitalize Headers**: Controls whether to capitalize the table's headers (turned on) or not (turned off).
 * **Custom Styling**: Controls whether to use custom styling (turned on) or not (turned off).
 * **Caption**: Enter a caption to add to the table.
-* **Table Attributes**: Enter any attributes to apply to the table, such as style attributes.
+* **Table Attributes**: Enter any attributes to apply to the `<table>`, such as style attributes.
 * **Header Attributes**: Enter any attributes to apply to the table's headers `<th>`.
 * **Row Attributes**: Enter any attributes to apply to the table's rows `<tr>`.
 * **Cell Attributes**: Enter any attributes to apply to the table's cells `<td>`.

@@ -10,7 +10,7 @@ contentType: integration
 The n8n trigger node gets triggered when the n8n instance starts or restarts. You can use the n8n trigger node to notify when the n8n instance starts.
 
 
-## Node Reference
+## Node parameters
 
 - Events
     - **Instance started**: Triggers when the n8n instance starts or restarts.

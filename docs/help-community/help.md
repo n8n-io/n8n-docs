@@ -31,7 +31,7 @@ The **Copy debug** option is available beginning in n8n version 1.49.0.
 If you're using an earlier version of n8n, n8n recommends manually providing this information:
 
 * n8n version
-* Database (default: SQLite)
+* Database
 * n8n EXECUTIONS_PROCESS setting (default: own, main)
 * Running n8n via (Docker, npm, n8n cloud, desktop app)
 * Operating system

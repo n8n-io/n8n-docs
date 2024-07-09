@@ -47,11 +47,11 @@ Choose the best output **Mode** for your needs from these options:
 
 ### Convert to Text File parameters
 
-Enter the name of the **Text Input Field** that contains a string to convert to a file. Use dot-notation for deep fields, for example 'level1.level2.currentKey'.
+Enter the name of the **Text Input Field** that contains a string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
 
 ### Move Base64 String to File parameters
 
-Enter the name of the **Base64 Input Field** that contains the Base64 string to convert to a file. Use dot-notation for deep fields, for example 'level1.level2.currentKey'.
+Enter the name of the **Base64 Input Field** that contains the Base64 string to convert to a file. Use dot-notation for deep fields, for example `level1.level2.currentKey`.
 
 ## Node options
 

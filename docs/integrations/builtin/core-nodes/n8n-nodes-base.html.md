@@ -43,10 +43,15 @@ Extract contents from an HTML-formatted source. The source can be in JSON or a b
 
 Use these parameters:
 
-- **Source Data**: Select the source type for your HTML content. Choose between:
+### Source Data
+
+Select the source type for your HTML content. Choose between:
+
 * **JSON**: If you select this source data, enter the **JSON Property**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
 * **Binary**: If you select this source data, enter the **Input Binary Field**: the name of the input containing the HTML you want to extract. The property can contain a string or an array of strings.
-- **Extraction Values**:
+
+### Extraction Values
+
 - **Key**: Enter the key to save the extracted value under.
 - **CSS Selector**: Enter the CSS selector to search for.
 - **Return Value**: Select the type of data to return. Choose from:
@@ -60,7 +65,7 @@ Use these parameters:
 
 ### Extract HTML Content options
 
-In addition to the parameters listed above, you can also configure this operation with these options:
+You can also configure this operation with these options:
 
 * **Trim Values**: Controls whether to remove all spaces and newlines from the beginning and end of the values (turned on) or leaves them (turned off).
 * **Clean Up Text**: Controls whether to remove leading whitespaces, trailing whitespaces, and line breaks (newlines) and condense multiple consecutive whitespaces into a single space (turned on) or to leave them as-is (turned off).

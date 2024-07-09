@@ -27,10 +27,6 @@ To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials]
 To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 ///
 
-## Node parameters
-
-Node parameters depend on the operation you select. Most operations display a common node parameter, the **Path**. Specify the remote path that you would like to connect to. This parameter isn't available when you select the **Rename** operation.
-
 ## Delete
 
 This operation includes one parameter: **Path**. Enter the remote path that you would like to connect to.
@@ -43,21 +39,21 @@ The delete operation adds one new option: **Folder**. If you turn this option on
 
 ## Download
 
-This operation includes these parameters:
+Configure this operation with these parameters:
 
 * **Path**: Enter the remote path that you would like to connect to.
 * **Put Output File in Field**: Enter the name of the output binary field to put the file in.
 
 ## List
 
-This operation includes these parameters:
+Configure this operation with these parameters:
 
 * **Path**: Enter the remote path that you would like to connect to.
 * **Recursive**: Select whether to return an object representing all directories / objects recursively found within the FTP/SFTP server (turned on) or not (turned off).
 
 ## Rename
 
-This operation includes these parameters:
+Configure this operation with these parameters:
 
 - **Old Path**: Enter the existing path of the file you'd like to rename in this field.
 - **New Path**: Enter the new path for the renamed file in this field.
@@ -68,7 +64,7 @@ This operation adds one new option: **Create Directories**. If you turn this opt
 
 ## Upload
 
-This operation includes these parameters:
+Configure this operation with these parameters:
 
 * **Path**: Enter the remote path that you would like to connect to.
 * **Binary File**: Select whether you'll upload a binary file (turned on) or enter text content to be uploaded (turned off). Other parameters depend on your selection in this field.

@@ -14,14 +14,32 @@ The Sort operation uses the default JavaScript operation where the elements to b
 
 ## Node parameters
 
-* **Type**: Use the dropdown to select how you want to input the sorting. The following options are available:
-	* **Simple**: When selected, use the **Add Field To Sort By** button to input the **Field Name** and select whether to use **Ascending** or **Descending** order.
-	* **Random**: When selected, the node creates a random order in the list.
-	* **Code**: When selected, displays a code input field where you can enter custom JavaScript code to perform the sort operation.
+Configure this node using the **Type** parameter.
 
-## Node options
+Use the dropdown to select how you want to input the sorting from these options.
+
+### Simple
+
+Performs an ascending or descending sort using the selected fields.
+
+When you select this **Type**:
+
+* Use the **Add Field To Sort By** button to input the **Field Name**.
+* Select whether to use **Ascending** or **Descending** order.
+
+#### Simple options
 
 When you select **Simple** as the **Type**, you have the option to **Disable Dot Notation**. By default, n8n enables dot notation to reference child fields in the format `parent.child`. Use this option to disable dot notation (turned on) or to continue using dot (turned off).
+
+### Random
+
+Creates a random order in the list.
+
+### Code
+
+Input custom JavaScript code to perform the sort operation. This is a good option if a simple sort won't meet your needs.
+
+Enter your custom JavaScript code in the **Code** input field.
 
 ## Templates and examples
 

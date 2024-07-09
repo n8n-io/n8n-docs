@@ -14,10 +14,6 @@ On this page, you'll find the node parameters, guidance on configuring the node,
 This node is only available on self-hosted n8n.
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [LangChain Code integrations](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} page.
-///	
-
 ## Node parameters
 
 ### Add Code
@@ -62,9 +58,12 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/langchaincode/builtin-methods.md"
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/langchain-code/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'langchain-code') ]]
+
+## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

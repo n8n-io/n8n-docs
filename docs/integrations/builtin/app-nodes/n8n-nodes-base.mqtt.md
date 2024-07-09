@@ -15,20 +15,17 @@ On this page, you'll find a list of operations the MQTT node supports and links 
 Refer to [MQTT credentials](/integrations/builtin/credentials/mqtt/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [MQTT integrations](https://n8n.io/integrations/mqtt/){:target="_blank" .external-link} list.
-///
-
 ## Operations
 
 Use the MQTT node to send a message. You can set the message topic, and choose whether to send the node input data as part of the message.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'mqtt') ]]
+
 ## Related resources
 
 n8n provides a trigger node for MQTT. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger/).
-
-
-View [example workflows and related content](https://n8n.io/integrations/mqtt/){:target=_blank .external-link} on n8n's website.
-
 
 Refer to [MQTT's documentation](https://mqtt.org/getting-started/){:target=_blank .external-link} for more information about the service.

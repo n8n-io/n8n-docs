@@ -14,22 +14,22 @@ On this page, you'll find a list of operations the Grist node supports and links
 /// note | Credentials
 Refer to [Grist credentials](/integrations/builtin/credentials/grist/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Grist integrations](https://n8n.io/integrations/grist/){:target="_blank" .external-link} list.
-///
 
-## Basic operations
+## Operations
 
 * Create rows in a table
 * Delete rows from a table
 * Read rows from a table
 * Update rows in a table
 
-## FAQs
+## Templates and examples
 
-### How to get the Row ID?
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'grist') ]]
 
-To update or delete a particular record, you need the Row ID. There are two ways to get the Row ID.
+## Get the Row ID
+
+To update or delete a particular record, you need the Row ID. There are two ways to get the Row ID:
 
 **Create a Row ID column in Grist**
 
@@ -37,14 +37,14 @@ Create a new column in your Grist table with the formula `$id`.
 
 **Use the Get All operation**
 
-The ***Get All*** operation returns the Row ID of each record along with the fields.
+The **Get All** operation returns the Row ID of each record along with the fields.
  
-You can obtain it with the expression `{{$node["GristNodeName"].json["id"]}}`.
+You can get it with the expression `{{$node["GristNodeName"].json["id"]}}`.
 
 
-### How to filter records when using the Get All operation?
+## Filter records when using the Get All operation
 
-- Click on ***Add Option*** and select 'Filter' from the dropdown list.
+- Select **Add Option** and select **Filter** from the dropdown list.
 - You can add filters for any number of columns. The result will only include records which match all the columns.
 - For each column, you can enter any number of values separated by commas. The result will include records which match any of the values for that column.
 

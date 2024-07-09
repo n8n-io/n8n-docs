@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the Citrix ADC node supports and 
 /// note | Credentials
 Refer to [Citrix ADC credentials](/integrations/builtin/credentials/citrixadc/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Citrix ADC integrations](https://n8n.io/integrations/citrix-adc/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -28,11 +25,14 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Download
 	* Upload
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'citrix-adc') ]]
+
 ## Related resources
 
 Refer to [Citrix ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/){:target=_blank .external-link} for more information about the service.
-
-View [example workflows and related content](https://n8n.io/integrations/citrix-adc/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

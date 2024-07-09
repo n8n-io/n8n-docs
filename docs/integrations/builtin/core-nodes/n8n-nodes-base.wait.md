@@ -9,15 +9,16 @@ contentType: integration
 
 Use the Wait node pause your workflow's execution. When the workflow pauses it offloads the execution data to the database. When the resume condition is met, the workflow reloads the data and the execution continues.
 
-The Wait node can resume on the following conditions:
+## Operations
 
-* After time interval
-* At specified time
-* On webhook call
+The Wait node can **Resume** on the following conditions:
 
-## Node parameters
+* [**After Time Interval**](#after-time-interval): The node waits for a certain amount of time.
+* [**At Specified Time**](#at-specified-time): The node waits until a specific time.
+* [**On Webhook Call**](#on-webhook-call): The node waits until it receives an HTTP call.
+* [**On Form Submitted**](#on-form-submitted): The node waits until it receives a form submission.
 
-Use the **Resume** parameter to choose the waiting mode the node should use to determine when to continue the workflow.
+Refer to the more detailed sections below for more detailed instructions.
 
 ### After Time Interval
 
@@ -95,6 +96,17 @@ Set whether the workflow will automatically resume execution after a specific li
 	* **At Specified Time**: Wait until a specific date and time to resume.
 		* **Max Date and Time**: Use the date and time picker to set the specified time the node should resume.
 
+#### On Webhook Call options
+
+* **Binary Property**: Enter the name of the binary property to write the data of the received file to. This option's only relevant if binary data is received.
+* **Ignore Bots**: Set whether to ignore requests from bots like link previewers and web crawlers (turned on) or not (turned off).
+* **IP(s) Whitelist**: Enter IP addresses here to limit who (or what) can invoke the webhook URL. Enter a comma-separated list of allowed IP addresses. Access from IPs outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook URL.
+* **No Response Body**: Set whether n8n should send a body in the response (turned off) or prevent n8n from sending a body in the response (turned on).
+* **Raw Body**: Set whether to return the body in a raw format like JSON or XML (turned on) or not (turned off).
+* **Response Data**: Enter any custom data you want to send in the response.
+* **Response Headers**: Send more headers in the webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
+* **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
+
 #### On Webhook Call limitations
 
 There are some limitations to keep in mind when using On Webhook Call:
@@ -127,7 +139,7 @@ Set up each field you want to appear on your form using these parameters:
 	* **Password**
 	* **Text**
 	* **Textarea**
-* **Required Field**: Set whether this field is required for the user to submit the form (turned on) or if the user can submit the form without completing it (turned off).
+* **Required Field**: Set whether the user must complete this field in order to submit the form (turned on) or if the user can submit the form without completing it (turned off).
 
 #### Respond When
 
@@ -149,22 +161,7 @@ If turned on, also set:
 	* **At Specified Time**: Wait until a specific date and time to resume.
 		* **Max Date and Time**: Use the date and time picker to set the specified time the node should resume.
 
-## Node options
-
-The options depend on which **Resume** option you select.
-
-### On Webhook Call options
-
-* **Binary Property**: Enter the name of the binary property to write the data of the received file to. This option's only relevant if binary data is received.
-* **Ignore Bots**: Set whether to ignore requests from bots like link previewers and web crawlers (turned on) or not (turned off).
-* **IP(s) Whitelist**: Enter IP addresses here to limit who (or what) can invoke the webhook URL. Enter a comma-separated list of allowed IP addresses. Access from IPs outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook URL.
-* **No Response Body**: Set whether n8n should send a body in the response (turned off) or prevent n8n from sending a body in the response (turned on).
-* **Raw Body**: Set whether to return the body in a raw format like JSON or XML (turned on) or not (turned off).
-* **Response Data**: Enter any custom data you want to send in the response.
-* **Response Headers**: Send more headers in the webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
-* **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
-
-### On Form Response options
+#### On Form Response options
 
 * **Form Response**: Choose how and what you want the form to **Respond With** from these options:
 	* **Form Submitted Text**: The form displays whatever text is entered in **Text to Show** after a user fills out the form. Use this option if you want to display a confirmation message.

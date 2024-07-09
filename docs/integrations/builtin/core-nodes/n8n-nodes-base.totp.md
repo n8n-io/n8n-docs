@@ -15,14 +15,31 @@ Refer to [TOTP credentials](/integrations/builtin/credentials/totp/) for guidanc
 
 ## Node parameters
 
-* **Credential to connect with**: Select or create a [TOTP credential](/integrations/builtin/credentials/totp/) for the node to use.
-* **Operation**: **Generate Secret** is the only operation currently supported.
+Configure this node with these parameters.
+
+### Credential to connect with
+
+Select or create a [TOTP credential](/integrations/builtin/credentials/totp/) for the node to use.
+
+### Operation
+
+**Generate Secret** is the only operation currently supported.
 
 ## Node options
 
-* **Algorithm**: Select the HMAC hashing algorithm to use. Default is SHA1.
-* **Digits**: Enter the number of digits in the generated code. Default is `6`.
-* **Period**: Enter how many seconds the TOTP is valid for. Default is `30`.
+Use these **Options** to further configure the node.
+
+### Algorithm
+
+Select the HMAC hashing algorithm to use. Default is SHA1.
+
+### Digits
+
+Enter the number of digits in the generated code. Default is `6`.
+
+### Period
+
+Enter how many seconds the TOTP is valid for. Default is `30`.
 
 ## Templates and examples
 

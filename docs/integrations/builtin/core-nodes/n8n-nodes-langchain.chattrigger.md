@@ -62,8 +62,8 @@ Use `*` (default) to allow all origins.
 
 Enter the text for these elements in the chat interface.
 
-	??? Details "View screenshot"
-		![Customizable text elements](/_images/integrations/builtin/core-nodes/chat-trigger/hosted-text-elements.png)
+??? Details "View screenshot"
+	![Customizable text elements](/_images/integrations/builtin/core-nodes/chat-trigger/hosted-text-elements.png)
 
 #### Load Previous Session
 
@@ -71,8 +71,8 @@ Select whether to load chat messages from a previous chat session.
 
 If you select any option other than **Off**, you must connect the Chat trigger and the Agent you're using to a memory sub-node. The memory connector on the Chat trigger appears when you set **Load Previous Session** to **From Memory**. n8n recommends connecting both the Chat trigger and Agent to the same memory sub-node, as this ensures a single source of truth for both nodes.
 
-	??? Details "View screenshot"
-		![Connect nodes to memory](/_images/integrations/builtin/core-nodes/chat-trigger/connect-memory.png)
+??? Details "View screenshot"
+	![Connect nodes to memory](/_images/integrations/builtin/core-nodes/chat-trigger/connect-memory.png)
 
 #### Response Mode
 
@@ -85,8 +85,8 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 Set whether to display a **New Conversation** button on the chat interface (turned on) or not (turned off).
 
-	??? Details "View screenshot"
-		![New Conversation button](/_images/integrations/builtin/core-nodes/chat-trigger/new-conversation-button.png)
+??? Details "View screenshot"
+	![New Conversation button](/_images/integrations/builtin/core-nodes/chat-trigger/new-conversation-button.png)
 
 
 ### Embedded chat options
@@ -103,8 +103,8 @@ Select whether to load chat messages from a previous chat session.
 
 If you select any option other than **Off**, you must connect the Chat trigger and the Agent you're using to a memory sub-node. The memory connector on the Chat trigger appears when you set **Load Previous Session** to **From Memory**. n8n recommends connecting both the Chat trigger and Agent to the same memory sub-node, as this ensures a single source of truth for both nodes.
 
-	??? Details "View screenshot"
-		![Connect nodes to memory](/_images/integrations/builtin/core-nodes/chat-trigger/connect-memory.png)
+??? Details "View screenshot"
+	![Connect nodes to memory](/_images/integrations/builtin/core-nodes/chat-trigger/connect-memory.png)
 
 #### Response Mode
 

@@ -33,25 +33,25 @@ To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials]
 
 ### Download parameters
 
-- **Put Output File in Field**: Only available when you select the **Download** operation. Enter the name of the output binary field to put the file in.
+This operation adds one new parameter: **Put Output File in Field**. Enter the name of the output binary field to put the file in.
 
 ### List parameters
-- **Recursive**: Only available when you select the **List** operation. Toggle that controls whether to return object representing all directories / objects recursively found within the FTP/SFTP server.
+
+This operation adds one new parameter: **Recursive**. Select whether to return an object representing all directories / objects recursively found within the FTP/SFTP server (turned on) or not (turned off).
 
 ### Rename parameters
 
-The rename operation adds two parameters:
+The Rename operation adds two parameters:
 
 - **Old Path**: Enter the existing path of the file you'd like to rename in this field.
 - **New Path**: Enter the new path for the renamed file in this field.
 
 ### Upload parameters
 
-The upload operation adds one new parameter: **Binary File**. Other parameters depend on your selection here.
+The Upload operation adds one new parameter: **Binary File**. Other parameters depend on your selection in this field.
 
-If you turn this control on, the node expects you to upload a binary file and displays the **Input Binary Field**. Enter the name of the input binary field that contains the file you'll upload in this field.
-
-If you turn the **Binary File** control off, the node displays the **File Content**. Enter the text content of the file you'll upload in this field.
+* If you turn this control on, the node expects you to upload a binary file and displays the **Input Binary Field**. Enter the name of the input binary field that contains the file you'll upload in this field.
+* If you turn the **Binary File** control off, the node displays the **File Content** field. Enter the text content of the file you'll upload in this field.
 
 ## Node options
 

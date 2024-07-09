@@ -41,7 +41,7 @@ To configure this credential, you'll need:
 If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html){:target=_blank .external-link} to a deployment, update your n8n credential **Base URL** with the new endpoint.
 ///
 
-## Using api key
+## Using API key
 
 To configure this credential, you'll need:
 

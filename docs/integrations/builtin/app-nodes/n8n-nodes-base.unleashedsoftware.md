@@ -14,14 +14,16 @@ On this page, you'll find a list of operations the Unleashed Software node suppo
 /// note | Credentials
 Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Unleashed Software integrations](https://n8n.io/integrations/unleashed-software/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Sales Order
     * Get all sales orders
 * Stock On Hand
     * Get a stock on hand
     * Get all stocks on hand
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'unleashed-software') ]]

@@ -14,12 +14,8 @@ On this page, you'll find a list of operations the AWS SES node supports and lin
 /// note | Credentials
 Refer to [AWS SES credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [AWS SES integrations](https://n8n.io/integrations/aws-ses/){:target=_blank .external-link} list.
-///
 
-
-## Basic Operations
+## Operations
 
 * Custom Verification Email
     * Create a new custom verification email template
@@ -37,6 +33,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a template
     * Get all templates
     * Update a template
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'aws-ses') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

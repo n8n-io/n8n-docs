@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Pipedrive node supports and l
 /// note | Credentials
 Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Pipedrive integrations](https://n8n.io/integrations/pipedrive/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Activity
     * Create an activity
@@ -74,5 +71,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Update a person
 * Product
     * Get data of all products
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'pipedrive') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

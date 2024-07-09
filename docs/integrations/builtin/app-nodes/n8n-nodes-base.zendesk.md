@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Zendesk node supports and lin
 /// note | Credentials
 Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Zendesk integrations](https://n8n.io/integrations/zendesk/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Ticket
     * Create a ticket
@@ -47,5 +44,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all organizations
     * Get data related to the organization
     * Update a organization
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'zendesk') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

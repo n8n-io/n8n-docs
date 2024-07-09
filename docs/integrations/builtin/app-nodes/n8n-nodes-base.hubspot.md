@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the HubSpot node supports and lin
 /// note | Credentials
 Refer to [HubSpot credentials](/integrations/builtin/credentials/hubspot/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [HubSpot integrations](https://n8n.io/integrations/hubspot/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Contact
     * Create/Update a contact
@@ -62,5 +59,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a ticket
     * Get all tickets
     * Update a ticket
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'hubspot') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Google Tasks node supports an
 /// note | Credentials
 Refer to [Google Tasks credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Tasks integrations](https://n8n.io/integrations/google-tasks/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Task
     * Add a task to task list
@@ -26,5 +23,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Retrieve a task
     * Retrieve all tasks from a task list
     * Update a task
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'google-tasks') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

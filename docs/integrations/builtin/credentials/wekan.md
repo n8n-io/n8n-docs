@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WeKan credentials
-description: Documentation for WeKan credentials. Use these credentials to authenticate WeKan in n8n, a workflow automation platform.
+title: Wekan credentials
+description: Documentation for Wekan credentials. Use these credentials to authenticate Wekan in n8n, a workflow automation platform.
 contentType: integration
 ---
 
-# WeKan credentials
+# Wekan credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [WeKan](/integrations/builtin/app-nodes/n8n-nodes-base.wekan/)
+- [Wekan](/integrations/builtin/app-nodes/n8n-nodes-base.wekan/)
 
 ## Prerequisites
 
-Install [WeKan](https://github.com/wekan/wekan/wiki) on your server.
+Install [Wekan](https://github.com/wekan/wekan/wiki) on your server.
 
 ## Supported authentication methods
 

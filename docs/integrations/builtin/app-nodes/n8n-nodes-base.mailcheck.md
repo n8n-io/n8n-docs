@@ -14,11 +14,13 @@ On this page, you'll find a list of operations the Mailcheck node supports and l
 /// note | Credentials
 Refer to [Mailcheck credentials](/integrations/builtin/credentials/mailcheck/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Mailcheck integrations](https://n8n.io/integrations/mailcheck/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
 * Email
     * Check
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'mailcheck') ]]

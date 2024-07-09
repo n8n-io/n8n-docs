@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Hacker News node supports and
 /// note | Credentials
 This node doesn't require authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Hacker News integrations](https://n8n.io/integrations/hacker-news/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * All
     * Get all items
@@ -26,3 +23,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a Hacker News article
 * User
     * Get a Hacker News user
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'hacker-news') ]]

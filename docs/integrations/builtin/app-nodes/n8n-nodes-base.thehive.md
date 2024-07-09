@@ -17,9 +17,6 @@ n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use T
 /// note | Credentials
 Refer to [TheHive credentials](/integrations/builtin/credentials/thehive/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -31,13 +28,16 @@ The available operations depend on your API version. To see the operations list,
 * Observable
 * Task
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'thehive') ]]
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Related resources
 
 n8n provides a trigger node for TheHive. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
-
-View [example workflows and related content](https://n8n.io/integrations/thehive/){:target=_blank .external-link} on n8n's website.
 
 Refer to TheHive's documentation for more information about the service:
 

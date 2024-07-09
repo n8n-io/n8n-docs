@@ -14,12 +14,8 @@ On this page, you'll find a list of operations the BambooHR node supports and li
 /// note | Credentials
 Refer to [BambooHR credentials](/integrations/builtin/credentials/bamboohr/) for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [BambooHR integrations](https://n8n.io/integrations/bamboohr/){:target=_blank .external-link} list.
-///
 
-
-## Basic Operations
+## Operations
 
 * Company Report
     * Get a company report
@@ -41,3 +37,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Update a company file
     * Upload a company file
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'bamboohr') ]]

@@ -10,10 +10,6 @@ The Token Splitter node splits a raw text string by first converting the text in
 
 On this page, you'll find the node parameters for the Token Splitter node, and links to more resources.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Token Splitter integrations](https://n8n.io/integrations/token-splitter/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -21,9 +17,12 @@ For usage examples and templates to help you get started, refer to n8n's [Token 
 * **Chunk Size**: number of characters in each chunk.
 * **Chunk Overlap**: how much overlap to have between chunks.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/token-splitter/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'token-splitter') ]]
+
+## Related resources
 
 Refer to [LangChain's token text splitter documentation](https://js.langchain.com/docs/modules/data_connection/document_transformers/text_splitters/token){:target=_blank .external-link} for more information about the service.
 

@@ -959,6 +959,7 @@ nav:
         - integrations/builtin/credentials/mailerlite.md
         - integrations/builtin/credentials/mailgun.md
         - integrations/builtin/credentials/mailjet.md
+        - integrations/builtin/credentials/malcore.md
         - integrations/builtin/credentials/mandrill.md
         - integrations/builtin/credentials/marketstack.md
         - integrations/builtin/credentials/matrix.md

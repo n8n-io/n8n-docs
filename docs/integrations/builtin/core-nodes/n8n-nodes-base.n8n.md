@@ -21,56 +21,101 @@ The HTTP Request node has options to [provide the SSL certificate](/integrations
 ## Operations
 
 * Audit
-	* **Generate** a security audit
+	* [**Generate** a security audit](#generate-audit)
 * Credential
-	* **Create** a credential
-	* **Delete** a credential
-	* **Get Schema**: Use this operation to get credential data schema for type
+	* [**Create** a credential](#create-credential)
+	* [**Delete** a credential](#delete-credential)
+	* [**Get Schema**](#get-credential-schema): Use this operation to get credential data schema for type
 * Execution
-	* **Get** an execution
-	* **Get Many** executions
-	* **Delete** an execution
+	* [**Get** an execution](#get-execution)
+	* [**Get Many** executions](#get-many-executions)
+	* [**Delete** an execution](#delete-execution)
 * Workflow
-	* **Activate** a workflow
-	* **Create** a workflow
-	* **Deactivate** a workflow
-	* **Delete** a workflow
-	* **Get** a workflow
-	* **Get Many** workflows
-	* **Update** a workflow
+	* [**Activate** a workflow](#activate-deactivate-delete-and-get-workflow)
+	* [**Create** a workflow](#create-workflow)
+	* [**Deactivate** a workflow](#activate-deactivate-delete-and-get-workflow)
+	* [**Delete** a workflow](#activate-deactivate-delete-and-get-workflow)
+	* [**Get** a workflow](#activate-deactivate-delete-and-get-workflow)
+	* [**Get Many** workflows](#get-many-workflows)
+	* [**Update** a workflow](#update-workflow)
 
-## Node parameters
+## Generate audit
 
-The parameters depend on the resource and operation you select.
+This operation has no parameters. Configure it with these options:
 
-### Create credential parameters
+* **Categories**: Select the risk categories you want the audit to include. Options include:
+	* **Credentials**
+	* **Database**
+	* **Filesystem**
+	* **Instance**
+	* **Nodes**
+* **Days Abandoned Workflow**: Use this option to set the number of days without execution after which a workflow should be considered abandoned. Enter a number of days. The default is `90`.
+
+## Create credential
+
+Configure this operation with these parameters:
 
 * **Name**: Enter the name of the credential you'd like to create.
 * **Credential Type**: Enter the credential's type. The available types depend on nodes installed on the n8n instance. Some built-in types include `githubApi`, `notionApi`, and `slackApi`.
 * **Data**: Enter a valid JSON object with the required properties for this **Credential Type**. To see the expected format, use the **Get Schema** operation.
 
-### Delete credential parameters
+## Delete credential
+
+Configure this operation with this parameter:
 
 * **Credential ID**: Enter the ID of the credential you want to delete.
 
-### Get credential schema parameters
+## Get credential schema
+
+Configure this operation with this parameter:
 
 * **Credential Type**: Enter the credential's type. The available types depend on nodes installed on the n8n instance. Some built-in types include `githubApi`, `notionApi`, and `slackApi`.
 
-### Get execution parameters
+## Get execution
+
+Configure this operation with this parameter:
 
 * **Execution ID**: Enter the ID of the execution you want to retrieve.
 
-### Get many executions parameters
+### Get execution option
+
+You can further configure this operation with this **Option**:
+
+* **Include Execution Details**: Use this control to set whether to include the detailed execution data (turned on) or not (turned off).
+
+## Get many executions
+
+Configure this operation with these parameters:
 
 * **Return All**: Set whether to return all results (turned on) or whether to limit the results to the entered **Limit** (turned on).
 * **Limit**: Set the number of results to return if the **Return All** control is turned off.
 
-### Delete execution parameters
+### Get many executions filters
+
+You can further configure this operation with these **Filters**:
+
+* **Workflow**: Filter the executions by workflow. Options include:
+	* **From list**: Select a workflow to use as a filter.
+	* **By URL**: Enter a workflow URL to use as a filter.
+	* **By ID**: Enter a workflow ID to use as a filter.
+* **Status**: Filter the executions by status. Options include:
+	* **Error**
+	* **Success**
+	* **Waiting**
+
+### Get many execution options
+
+You can further configure this operation with this **Option**:
+
+* **Include Execution Details**: Use this control to set whether to include the detailed execution data (turned on) or not (turned off).
+
+## Delete execution
+
+Configure this operation with this parameter:
 
 * **Execution ID**: Enter the ID of the execution you want to delete.
 
-### Activate, deactivate, delete, and get workflow parameters
+## Activate, deactivate, delete, and get workflow
 
 The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations all include the same parameter for you to select the **Workflow** you want to perform the operation on. Options include:
 
@@ -78,7 +123,9 @@ The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations al
 * **By URL**: Enter the URL of the workflow.
 * **By ID**: Enter the ID of the workflow.
 
-### Create workflow parameters
+## Create workflow
+
+Configure this operation with this parameter:
 
 * **Workflow Object**: Enter a valid JSON object with the new workflow's details. The object requires these fields:
 	* `name`
@@ -86,9 +133,25 @@ The **Activate**, **Deactivate**, **Delete**, and **Get** workflow operations al
 	* `connections`
 	* `settings`
 
-Refer to the [n8n API | Create a worfklow documentation](/api/api-reference/#tag/Workflow/paths/~1workflows/post) for more information.
+Refer to the [n8n API | Create a workflow documentation](/api/api-reference/#tag/Workflow/paths/~1workflows/post) for more information.
 
-### Update workflow parameters
+## Get many workflows
+
+Configure this operation with these parameters:
+
+* **Return All**: Set whether to return all results (turned on) or whether to limit the results to the entered **Limit** (turned on).
+* **Limit**: Set the number of results to return if the **Return All** control is turned off.
+
+### Get many workflows filters
+
+You can further configure this operation with these **Filters**:
+
+* **Return Only Active Workflows**: Select whether to return only active workflows (turned on) or active and inactive workflows (turned off).
+* **Tags**: Enter a comma-separated list of tags the returned workflows must have.
+
+## Update workflow
+
+Configure this operation with these parameters:
 
 * **Workflow**: Select the workflow you want to update. Options include:
 	* **From list**: Select the workflow from the list.
@@ -101,41 +164,6 @@ Refer to the [n8n API | Create a worfklow documentation](/api/api-reference/#tag
 	* `settings`
 
 Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
-
-## Node filters
-
-The node filters depend on the resource and operation you select.
-
-### Generate audit filters
-
-* **Categories**: Select the risk categories you want the audit to include. Options include:
-	* **Credentials**
-	* **Database**
-	* **Filesystem**
-	* **Instance**
-	* **Nodes**
-* **Days Abandoned Workflow**: Use this option to set the number of days without execution after which a workflow should be considered abandoned. Enter a number of days. The default is `90`.
-
-### Get many executions filters
-
-* **Workflow**: Filter the executions by workflow. Options include:
-	* **From list**: Select a workflow to use as a filter.
-	* **By URL**: Enter a workflow URL to use as a filter.
-	* **By ID**: Enter a workflow ID to use as a filter.
-* **Status**: Filter the executions by status. Options include:
-	* **Error**
-	* **Success**
-	* **Waiting**
-
-## Node options
-
-The options depend on the resource and operation you select.
-
-### Get single or many execution options
-
-The **Get Execution** and **Get Many Execution** operations have the same option:
-
-* **Include Execution Details**: Use this control to set whether to include the detailed execution data (turned on) or not (turned off).
 
 ## Templates and examples
 

@@ -11,7 +11,7 @@ The Markdown node converts between Markdown and HTML formats.
 
 ## Operations
 
-This node's operations are called **Modes**:
+This node's operations are **Modes**:
 
 * **Markdown to HTML**: Use this mode to convert from Markdown to HTML.
 * **HTML to Markdown**: Use this mode to convert from HTML to Markdown.
@@ -21,12 +21,12 @@ This node's operations are called **Modes**:
 * **HTML** or **Markdown**: Enter the data you want to convert. The field name changes based on which **Mode** you select.
 * **Destination Key**: Enter the field you want to put the output in. Specify nested fields using dots, for example `level1.level2.newKey`.
 
-## Options
+## Node options
 
 The node's **Options** depend on the **Mode** selected.
 
 /// note | Test out the options
-Some of the options depend on each other, or can interact. We recommend testing out options to confirm the effects are what you want.
+Some of the options depend on each other or can interact. We recommend testing out options to confirm the effects are what you want.
 ///
 
 ### Markdown to HTML options

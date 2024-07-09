@@ -7,7 +7,7 @@ contentType: integration
 
 # Schedule trigger
 
-Use the Schedule trigger node run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
+Use the Schedule trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
 
 /// note | You must activate the workflow
 If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 
@@ -21,15 +21,17 @@ Add **Trigger Rules** to determine when the trigger should run.
 
 Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other rule parameters depend on the interval you select. Choose from:
 
-    * **Seconds**
-    * **Minutes**
-    * **Hours**
-    * **Days**
-    * **Weeks**
-    * **Months**
-    * **Custom (Cron)**
+* [**Seconds**](#seconds-trigger-interval)
+* [**Minutes**](#minutes-trigger-interval)
+* [**Hours**](#hours-trigger-interval)
+* [**Days**](#days-trigger-interval)
+* [**Weeks**](#weeks-trigger-interval)
+* [**Months**](#months-trigger-interval)
+* [**Custom (Cron)**](#custom-cron-interval)
 
 You can add multiple **Trigger Rules** to run the node on different schedules.
+
+Refer to the sections below for more detail on configuring each **Trigger Interval**
 
 ### Seconds trigger interval
 

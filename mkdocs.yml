@@ -894,6 +894,7 @@ nav:
         - integrations/builtin/credentials/facebookleadads.md
         - integrations/builtin/credentials/figma.md
         - integrations/builtin/credentials/filemaker.md
+        - integrations/builtin/credentials/filescan.md
         - integrations/builtin/credentials/flow.md
         - integrations/builtin/credentials/formiotrigger.md
         - integrations/builtin/credentials/formstacktrigger.md

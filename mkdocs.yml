@@ -874,6 +874,7 @@ nav:
         - integrations/builtin/credentials/datadog.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/demio.md
+        - integrations/builtin/credentials/dfiriris.md
         - integrations/builtin/credentials/dhl.md
         - integrations/builtin/credentials/discord.md
         - integrations/builtin/credentials/discourse.md

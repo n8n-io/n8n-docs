@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: LDAP - n8n Documentation
+title: LDAP
 description: Documentation for the LDAP node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
 ---
@@ -15,41 +15,46 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Operations
 
-* **Compare** an attribute
-* **Create** a new entry
-* **Delete** an entry
-* **Rename** the DN of an existing entry
-* **Search** LDAP
-* **Update** attributes
+* [**Compare**](#compare) an attribute
+* [**Create**](#create) a new entry
+* [**Delete**](#delete) an entry
+* [**Rename**](#rename) the DN of an existing entry
+* [**Search**](#search) LDAP
+* [**Update**](#update) attributes
 
-## Node parameters
+Refer to the sections below for details on configuring the node for each operation.
 
-All operations share these parameters:
+## Compare
+
+Configure this operation using these parameters:
 
 * **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
 * **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
-
-Each operation also has its own parameters. Refer to the subsections below for more information.
-
-### Compare node parameters
-
-The compare operation adds two parameters:
-
 * **Attribute ID**: Enter the ID of the attribute to compare.
 * **Value**: Enter the value to compare.
 
-### Create node parameters
+## Create
 
-The create operation adds the **Attributes** parameter, where you can add the **Attribute ID**/**Value** pairs you'd like to create.
+Configure this operation using these parameters:
 
-### Rename node parameters
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* **Attributes**: Add the **Attribute ID**/**Value** pairs you'd like to create.
 
-The rename operation adds the **New DN** parameter. Enter the new Distinguished Name (DN) for the entry in this field.
+## Rename
 
-### Search node parameters
+Configure this operation using these parameters:
 
-The search operation adds several new parameters:
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* **New DN**: Enter the new Distinguished Name (DN) for the entry in this field.
 
+## Search
+
+Configure this operation using these parameters:
+
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
 * **Base DN**: Enter the Distinguished Name (DN) of the subtree to search in.
 * **Search For**: Select the directory object class to search for.
 * **Attribute**: Select the attribute to search for.
@@ -57,17 +62,9 @@ The search operation adds several new parameters:
 * **Return All**: When turned on, the node will return all results. When turned off, the node will return results up to the set **Limit**.
 * **Limit**: Only available when you turn off **Return All**. Enter the maximum number of results to return.
 
-### Update node parameters
+### Search options
 
-The update operation adds the **Update Attributes** parameter.
-
-Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute.
-
-Then enter the **Attribute ID**/**Value** pair you'd like to update.
-
-## Node options
-
-Only the **Search** operation has options:
+You can also configure this operation using these options:
 
 * **Attribute Names or IDs**: Enter a comma-separated list of attributes to return. Choose from the list or specify IDs using an expression.
 * **Page Size**: Enter the maximum number of results to request at one time. Set to 0 to disable paging.
@@ -77,6 +74,15 @@ Only the **Search** operation has options:
     * **Whole Subtree**: Often referred to as "sub," selecting this option will search the **Base DN** entry and all its subordinates to any depth.
 
 Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/){:target="_blank" .external-link} for more information on search scopes.
+
+## Update
+
+Configure this operation using these parameters:
+
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **DN**: Enter the Distinguished Name (DN) of the entry to complete the operation on.
+* ***Update Attributes**: Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute.
+* Then enter the **Attribute ID**/**Value** pair you'd like to update.
 
 ## Templates and examples
 

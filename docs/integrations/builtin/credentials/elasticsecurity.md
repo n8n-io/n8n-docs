@@ -19,6 +19,7 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods
 
 - Basic auth
+- API Key
 
 ## Related resources
 
@@ -40,3 +41,13 @@ To configure this credential, you'll need:
 If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html){:target=_blank .external-link} to a deployment, update your n8n credential **Base URL** with the new endpoint.
 ///
 
+## Using api key
+
+To configure this credential, you'll need:
+
+- A **API Key**: For the user account you log into Elasticsearch with.
+- Your Elasticsearch application's **Base URL** (also known as the Elasticsearch application endpoint):
+
+    1. In Elasticsearch, select the option to **Manage this deployment**.
+    2. In the **Applications** section, copy the endpoint of the **Elasticsearch** application.
+    3. Add this in n8n as the **Base URL**.

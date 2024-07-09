@@ -67,7 +67,7 @@ In addition to the parameters listed above, you can also configure this operatio
 
 ## Convert to HTML Table
 
-This operation expects to be passed data from another node. It has no parameters. It includes these options:
+This operation expects data from another node. It has no parameters. It includes these options:
 
 * **Capitalize Headers**: Controls whether to capitalize the table's headers (turned on) or not (turned off).
 * **Custom Styling**: Controls whether to use custom styling (turned on) or not (turned off).

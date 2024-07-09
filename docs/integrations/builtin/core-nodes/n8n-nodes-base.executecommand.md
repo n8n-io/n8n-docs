@@ -21,12 +21,17 @@ This node isn't available on n8n Cloud.
 
 ## Node parameters
 
-* **Execute Once**: Whether you want the node to execute only once (turned on) or once for every item it receives as input (turned off).
-* **Command**: Enter the command to execute on the host machine.
-    * To execute multiple commands, refer to the guidance in [Run multiple commands](#run-multiple-commands).
-    * To execute curl commands, refer to the guidance in [Run cURL command](#run-curl-command)
+Configure the node using the following parameters.
 
-### Run multiple commands
+### Execute Once
+
+Choose whether you want the node to execute only once (turned on) or once for every item it receives as input (turned off).
+
+### Command
+
+Enter the command to execute on the host machine. Refer to sections below for examples of running [multiple commands](#run-multiple-commands) and [cURL commands](#run-curl-command).
+
+#### Run multiple commands
 
 Use one of two methods to run multiple commands in one Execute Command node:
 
@@ -43,7 +48,7 @@ Use one of two methods to run multiple commands in one Execute Command node:
     ls
     ```
 
-### Run cURL command
+#### Run cURL command
 
 You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to make a cURL request.
 

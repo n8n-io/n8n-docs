@@ -10,8 +10,18 @@ Use the Limit node to remove items beyond a defined maximum number. You can choo
 
 ## Node parameters
 
-* **Max Items**: enter the maximum number of items that n8n should keep. If the input data contains more than this value, n8n removes the items.
-* **Keep**: when items must be removed, select if n8n keeps the input items at the beginning or end.
+Configure this node using the following parameters.
+
+### Max Items
+
+Enter the maximum number of items that n8n should keep. If the input data contains more than this value, n8n removes the items.
+
+### Keep
+
+If the node has to remove items, select where it keeps the input items from:
+
+* **First Items**: Keeps the **Max Items** number of items from the beginning of the input data.
+* **Last Items**: Keeps the **Max Items** number of items from the end of the input data.
 
 ## Templates and examples
 

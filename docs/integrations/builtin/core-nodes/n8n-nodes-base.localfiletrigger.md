@@ -15,15 +15,22 @@ This node isn't available on n8n Cloud.
 
 ## Node parameters
 
-You can choose what event to watch for:
+You can choose what event to watch for using the **Trigger On** parameter.
 
-**Trigger On**:
+## Changes to a Specific File
 
-- **Changes to a Specific File**: triggers when the specified file changes.
-	- **File to Watch**: the path to the file to watch.
-- **Changes Involving a Specific Folder**: triggers when a change occurs in the selected folder.
-	- **Folder to Watch**: the path of the folder to watch.
-	- **Watch for**: the type of change to watch for.
+The node triggers when the specified file changes.
+
+Enter the path for the file to watch in **File to Watch**.
+
+## Changes Involving a Specific Folder
+
+The node triggers when a change occurs in the selected folder.
+
+Configure these parameters:
+
+- **Folder to Watch**: Enter the path of the folder to watch.
+- **Watch for**: Select the type of change to watch for.
 
 
 ## Node options

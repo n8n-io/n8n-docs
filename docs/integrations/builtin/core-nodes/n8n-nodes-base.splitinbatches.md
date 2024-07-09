@@ -15,11 +15,15 @@ When the node execution completes, it combines all the data and returns it throu
 
 ## Node parameters
 
-- **Batch Size**: Enter the number of items to return with each call.
+### Batch Size
+
+Enter the number of items to return with each call.
 
 ## Node options
 
-- **Reset:** If set to true, the node will reset with the current input-data newly initialized.
+### Reset
+
+If turned on, the node will reset with the current input-data newly initialized with each loop.
 
 /// note | Check if you need this node
 n8n automatically processes incoming items. You may not need the Loop Over Items node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping/).

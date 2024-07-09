@@ -74,7 +74,7 @@ Select **Add Option** to view and select these options.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
 - **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.
-- **Pagination**: handle query results that are too big for the API to return in a single call.
+- **Pagination**: handle query results that are too big for the API to return in a single call. Refer to [Pagination](#pagination) for more information.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.
 

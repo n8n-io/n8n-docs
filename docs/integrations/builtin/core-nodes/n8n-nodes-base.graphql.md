@@ -11,18 +11,41 @@ contentType: integration
 
 ## Node parameters
 
-* **Authentication**: Select the type of authentication to use. If you select anything other than **None**, the **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
-* **HTTP Request Method**: Select the underlying HTTP Request method the node should use. Choose from:
-    * **GET**
-    * **POST**: If you select this method, you'll also need to select the **Request Format** the node should use for the query payload. Choose from:
-        * **GraphQL (Raw)**
-        * **JSON**
-* **Endpoint**: Enter the GraphQL Endpoint you'd like to hit.
-* **Ignore SSL Issues**: When you turn on this control, n8n ignores SSL certificate validation failure.
-* **Query**: Enter the GraphQL query you want to execute. Refer to [Related Resources](#related-resources) for information on writing your query.
-* **Response Format**: Select the format you'd like to receive query results in. Choose between:
+### Authentication
+
+Select the type of authentication to use.
+
+If you select anything other than **None**, the **Credential for <selected-auth-type>** parameter appears for you to select an existing or create a new authentication credential for that authentication type.
+
+### HTTP Request Method
+
+Select the underlying HTTP Request method the node should use. Choose from:
+
+* **GET**
+* **POST**: If you select this method, you'll also need to select the **Request Format** the node should use for the query payload. Choose from:
+    * **GraphQL (Raw)**
     * **JSON**
-    * **String**: If you select this format, enter a **Response Data Property Name** to define the property the string is written to.
+
+### Endpoint
+
+Enter the GraphQL Endpoint you'd like to hit.
+
+### Ignore SSL Issues
+
+When you turn on this control, n8n ignores SSL certificate validation failure.
+
+### Query
+
+Enter the GraphQL query you want to execute.
+
+Refer to [Related Resources](#related-resources) for information on writing your query.
+
+### Response Format
+
+Select the format you'd like to receive query results in. Choose between:
+
+* **JSON**
+* **String**: If you select this format, enter a **Response Data Property Name** to define the property the string is written to.
 
 ## Headers
 

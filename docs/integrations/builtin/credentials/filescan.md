@@ -18,7 +18,7 @@ Refer to [Filescan's API documentation](https://www.filescan.io/api/docs){:targe
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/filescan/){:target=_blank .external-link} on n8n's website.
 
 
-## Using Access Token
+## Using API key
 
 To configure this credential, you'll need:
 

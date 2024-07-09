@@ -19,7 +19,7 @@ You can find authentication information for this node [here](/integrations/built
 
 **Project ID**: the project ID from your Google Cloud account to use. n8n dynamically loads projects from the Google Cloud account, but you can also specify it manually.
 
-**Model Name**: the name of the model to use to generate the completion, for example `gemini-1.5-flash-001`, `gemini-1.5-pro-001`, etc. You can find the list of available models [here](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models).
+**Model Name**: the name of the model to use to generate the completion, for example `gemini-1.5-flash-001`, `gemini-1.5-pro-001`, etc. You can find the list of available models [here](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models){:target=_blank .external-link}.
 
 ## Node options
 

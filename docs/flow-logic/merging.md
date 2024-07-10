@@ -8,7 +8,7 @@ description: Merge data streams in you n8n workflows.
 
 Merging allows you to bring multiple data streams together.
 
-Merging data from different branches or nodes uses the [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) node. To merge data from multiple node executions, use the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
+Merging data from different branches or nodes uses the [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) node. You can also use the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node to merge data from multiple node executions. 
 
 To compare data, merge it, and output data streams depending on the comparison, use the [Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/) node.
 
@@ -19,6 +19,7 @@ If your workflow [splits](/flow-logic/splitting/), you combine the separate bran
 
 Here's an [example workflow](https://n8n.io/workflows/1747-joining-different-datasets/) showing different types of merging: appending data sets, keeping only new items, and keeping only existing items. The [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) documentation contains details on each of the merge operations.
 
+[[ workflowDemo("https://api.n8n.io/workflows/templates/1747") ]]
 
 ## Merge data from different nodes
 
@@ -35,8 +36,12 @@ This section describes merging data from multiple node executions. This is when 
 ///
 Refer to this [example workflow](https://n8n.io/workflows/1814-merge-multiple-runs-into-one/){:target=_blank .external-link} using Loop Over Items and Wait to artificially create multiple executions.
 
+[[ workflowDemo("https://api.n8n.io/workflows/templates/1814") ]]
+
 ## Compare, merge, and split again
 
 The [Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/) node compares data streams before merging them. It outputs up to four different branches.
 
 Refer to this [example workflow](https://n8n.io/workflows/1943-comparing-data-with-the-compare-datasets-node/){:target=_blank .external-link} for an example.
+
+[[ workflowDemo("https://api.n8n.io/workflows/templates/1943") ]]

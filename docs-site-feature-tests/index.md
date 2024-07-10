@@ -52,3 +52,10 @@ Other images like this should expand on click:
 [This link should show a preview of the quickstart on hover](/try-it-out/quickstart/){ data-preview }
 
 [This link should NOT show a preview on hover](/try-it-out/quickstart/)
+
+## Embed Workflow
+[[ workflowDemo("https://api.n8n.io/workflows/templates/655") ]]
+
+## Templates Widget
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget('Test Title', 'http-request') ]]

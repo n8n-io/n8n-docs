@@ -7,8 +7,11 @@ def define_env(env):
 
 	@env.macro	
 	def templatesWidget(title, slug):
-		node_for_template = title.replace(' ', '+')
-		response = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search=&category=&apps={node_for_template}&page=1&sort=views:desc')
+		if(title == 'Email Trigger (IMAP)'):
+			node_for_template = 'email+imap'
+		else:
+			node_for_template = title.replace(' ', '+')
+		response = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search={node_for_template}&page=1&sort=views:desc')
 		data = response.json()
 		# not all nodes have three templates
 		try:

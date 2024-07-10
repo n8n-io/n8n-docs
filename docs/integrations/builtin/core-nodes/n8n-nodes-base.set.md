@@ -9,19 +9,13 @@ contentType: integration
 
 Use the Edit Fields node to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Edit Fields integrations](https://n8n.io/integrations/set/){:target=_blank .external-link} page.
-///
-
-
-
 ## Node parameters
 
 The are the settings and options available in the Edit Fields node.
 
 ### Mode
 
-You can either use **Manual Mapping** to edit fields using the GUI, or **JSON Output** to write JSON that n8n adds to the input data.
+You can either use **Manual Mapping** to edit fields using the GUI or **JSON Output** to write JSON that n8n adds to the input data.
 
 ### Fields to Set
 
@@ -49,21 +43,21 @@ Enable this to discard any input data that you don't use in **Fields to Set**.
 
 Choose which input data to include in the node's output data.
 
-### Options
+## Node options
 
-Customize the behavior of the node.
+Use these options to customize the behavior of the node.
 
-#### Include Binary Data
+### Include Binary Data
 
 If the input data includes binary data, choose whether to include it in the Edit Fields node's output data.
 
-#### Ignore Type Conversion Errors
+### Ignore Type Conversion Errors
 
 Manual Mapping only.
 
 Enabling this allows n8n to ignore some data type errors when mapping fields.
 
-#### Support Dot Notation
+### Support Dot Notation
 
 By default, n8n supports dot notation.
 
@@ -78,6 +72,10 @@ You can prevent this behavior by selecting **Add Option** > **Support Dot Notati
 ```json
 { "number.one": 20 }
 ```
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'set') ]]
 
 ## Arrays and expressions in JSON Output mode
 

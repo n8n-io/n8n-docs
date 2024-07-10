@@ -18,11 +18,6 @@ You can use the Webhook node as a trigger for a workflow when you want to receiv
 
 The webhook allows you to trigger workflows from services that don't have a dedicated app trigger node.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Webhook integrations](https://n8n.io/integrations/webhook/){:target=_blank .external-link} list.
-///
-
-
 ## Build and test workflows
 
 While building or testing a workflow, use a test webhook URL. Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Test step** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
@@ -50,9 +45,6 @@ The Webhook node has two URLs: test URL and production URL. n8n displays the URL
 
 * **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
-
-
-
 
 ### HTTP Method
 
@@ -142,6 +134,11 @@ Select **Add Option** to view more configuration options. The available options 
 | Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'webhook') ]]
 
 ## Listen for multiple HTTP methods
 

@@ -54,6 +54,8 @@ Other images like this should expand on click:
 [This link should NOT show a preview on hover](/try-it-out/quickstart/)
 
 ## Embed Workflow
+
+You should see an interactive workflow, similar to the templates pages or forum.
 [[ workflowDemo("https://api.n8n.io/workflows/templates/655") ]]
 
 ## Templates Widget

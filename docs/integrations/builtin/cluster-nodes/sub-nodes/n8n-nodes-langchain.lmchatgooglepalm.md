@@ -14,10 +14,6 @@ On this page, you'll find the node parameters for the Google PaLM Chat Model nod
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google PaLM Chat Model integrations](https://n8n.io/integrations/google-palm-chat-model/){:target=_blank .external-link} page.
-///
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -30,10 +26,12 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 * **Top K**: the number of token choices the model uses to generate the next token.
 * **Top P**: use a lower value to ignore less probable options. 
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'google-palm-chat-model') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/google-palm-chat-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Google PaLM documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/google_palm){:target=_blank .external-link} for more information about the service.
 

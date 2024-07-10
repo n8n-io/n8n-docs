@@ -15,19 +15,18 @@ On this page, you'll find a list of operations the AWS DynamoDB node supports an
 Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [AWS DynamoDB integrations](https://n8n.io/integrations/aws-dynamodb/){:target=_blank .external-link} list.
-///
-
-
-
-## Basic operations
+## Operations
 
 * Item
   * Create a new record, or update the current one if it already exists (upsert/put)
   * Delete an item
   * Get an item
   * Get all items
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'aws-dynamodb') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

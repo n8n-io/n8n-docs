@@ -14,12 +14,14 @@ On this page, you'll find a list of operations the SIGNL4 node supports and link
 /// note | Credentials
 Refer to [SIGNL4 credentials](/integrations/builtin/credentials/signl4/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [SIGNL4 integrations](https://n8n.io/integrations/signl4/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Alert
     * Send an alert
     * Resolve an alert
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'signl4') ]]

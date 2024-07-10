@@ -15,11 +15,7 @@ On this page, you'll find a list of operations the Google Books node supports an
 Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Books integrations](https://n8n.io/integrations/google-books/){:target="_blank" .external-link} list.
-///
-
-## Basic Operations
+## Operations
 
 * Bookshelf
     * Retrieve a specific bookshelf resource for the specified user
@@ -33,5 +29,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Volume
     * Get a volume resource based on ID
     * Get all volumes filtered by query
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'google-books') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

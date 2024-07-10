@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the PagerDuty node supports and l
 /// note | Credentials
 Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [PagerDuty integrations](https://n8n.io/integrations/pagerduty/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Incident
     * Create an incident
@@ -34,7 +31,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * User
     * Get a user
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'pagerduty') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

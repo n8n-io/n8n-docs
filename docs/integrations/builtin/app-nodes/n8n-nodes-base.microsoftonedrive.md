@@ -14,10 +14,6 @@ On this page, you'll find a list of operations the Microsoft OneDrive node suppo
 /// note | Credentials
 Refer to [Microsoft OneDrive credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Microsoft OneDrive integrations](https://n8n.io/integrations/microsoft-onedrive/){:target="_blank" .external-link} list.
-///
-
 
 ## Operations
 
@@ -38,12 +34,14 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Search a folder
     * Share a folder
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'microsoft-onedrive') ]]
+
 ## Related resources
 
-
 Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link} for more information about the service.
-
-View [example workflows and related content](https://n8n.io/integrations/microsoft-onedrive/){:target=_blank .external-link} on n8n's website.
 
 ## Find the folder ID
 

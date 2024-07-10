@@ -157,7 +157,7 @@ plugins:
   - search
   - exclude:
       glob:
-        #- integrations/builtin/*
+      #- integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false
@@ -371,7 +371,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
@@ -396,7 +395,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.start.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
         - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
@@ -814,6 +812,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md

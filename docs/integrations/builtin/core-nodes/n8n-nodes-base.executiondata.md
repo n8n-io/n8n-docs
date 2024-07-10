@@ -15,15 +15,15 @@ You can retrieve custom execution data during workflow execution using the Code 
 Available on Pro and Enterprise plans.
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Execution Data integrations](https://n8n.io/integrations/execution-data/){:target=_blank .external-link} list.
-///
-
 ## Operations
 
 * Save Execution Data for Search
 
+## Data to Save
 
-## Related resources
+Add a **Saved Field** for each key/value pair of metadata you'd like to save.
 
-View [example workflows and related content](https://n8n.io/integrations/execution-data/){:target=_blank .external-link} on n8n's website.
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'execution-data') ]]

@@ -14,9 +14,6 @@ On this page, you'll find a list of operations the AWS ELB node supports and lin
 /// note | Credentials
 Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
 ///
-/// note | Examples and Templates
-For usage examples and templates to help you get started, take a look at n8n's [AWS Elastic Load Balancing integrations](https://n8n.io/integrations/aws-elb/){:target=_blank .external-link} list.
-///
 
 ## Operations
 
@@ -32,11 +29,14 @@ For usage examples and templates to help you get started, take a look at n8n's [
 
 This node supports creating and managing application and network load balancers. It doesn't currently support gateway load balancers.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'aws-elb') ]]
+
 ## Related resources
 
 Refer to [AWS ELB's documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html){:target=_blank .external-link} for more information on this service.
-
-View [example workflows and related content](https://n8n.io/integrations/aws-elb/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

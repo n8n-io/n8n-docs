@@ -14,9 +14,7 @@ On this page, you'll find a list of operations the crowd.dev node supports, and 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [crowd.dev integrations](https://n8n.io/integrations/crowddev/){:target="_blank" .external-link} list.
-///	
+
 ## Operations
 
 * Activity
@@ -49,11 +47,14 @@ For usage examples and templates to help you get started, refer to n8n's [crowd.
 	* Find
 	* Update
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'crowddev') ]]
+
 ## Related resources
 
 n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger/).
-	
-View [example workflows and related content](https://n8n.io/integrations/crowddev/){:target=_blank .external-link} on n8n's website.
 
 Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} for more information about the service.
 

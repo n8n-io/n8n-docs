@@ -57,5 +57,7 @@ Other images like this should expand on click:
 [[ workflowDemo("https://api.n8n.io/workflows/templates/655") ]]
 
 ## Templates Widget
+
+You should see a list of three templates, followed by links to the integrations page on the website, and the templates search.
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget('Test Title', 'http-request') ]]

@@ -395,7 +395,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.start.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
         - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md

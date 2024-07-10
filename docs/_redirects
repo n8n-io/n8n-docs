@@ -1,3 +1,5 @@
+/integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/
+
 # 2024 SEO audit
 /nodes/nodes.html    /integrations/builtin/node-types/
 /getting-started/installation/advanced/server-setup.html    /hosting/installation/server-setups/

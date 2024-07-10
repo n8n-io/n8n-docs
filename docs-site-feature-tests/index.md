@@ -60,6 +60,13 @@ You should see an interactive workflow, similar to the templates pages or forum.
 
 ## Templates Widget
 
-You should see a list of three templates, followed by links to the integrations page on the website, and the templates search.
+You should see a list of three HTTP Request templates, followed by links to the integrations page on the website, and the templates search.
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget('Test Title', 'http-request') ]]
+[[ templatesWidget('HTTP Request', 'http-request') ]]
+
+
+## Glossary
+
+You should see the AI Glossary below
+
+--8<-- "_glossary/ai-glossary.md"

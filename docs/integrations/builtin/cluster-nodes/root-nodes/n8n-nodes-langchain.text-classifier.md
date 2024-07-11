@@ -15,10 +15,12 @@ and links to more resources.
 
 ## Node parameters
 
-Add the categories that you want to classify your input as. By default the
-input field `chatInput` is used, but you can configure the field you want to
-use by changing the **Prompt**.
+**Input Prompt** defines the input to classify. This is usually an expression
+that references a field from the input items. For example, this could be 
+`{{ $json.chatInput }}` if the input is a chat trigger. By default it
+references the `text` field.
 
+**Categories**: Add the categories that you want to classify your input as.
 Categories have a name and a description. Use the description to tell the
 model what the category means. This is important if the meaning isn't obvious.
 You can add as many categories as you like.
@@ -34,20 +36,9 @@ You can add as many categories as you like.
   detected. Otherwise, if none of the categories are detected, the item is
   dropped.
 
-* **Prompt**: This determines what input to consider for the classification.
-
-	There are two options here:
-
-	* **Take from previous node automatically** (the default), which takes the
-	   `chatInput` field
-	* **Define below**, allows you to define your own input text. For example,
-	  use an expression that takes a different input field, such as
-	  `{{ $json.raw }}`
-
-* Other options:
-	* **System Prompt Template**, allows you to change the system prompt that's
-	  used for the classification. It uses a placeholder for the categories,
-	  `{categories}`
+* **System Prompt Template**, allows you to change the system prompt that's
+  used for the classification. It uses a placeholder for the categories,
+  `{categories}`
 
 
 ## Related resources

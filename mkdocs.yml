@@ -1207,7 +1207,7 @@ nav:
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
-      - Security audit: hosting/logging-monitoring/security-audit.md
+      - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
@@ -1217,6 +1217,14 @@ nav:
       - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md
       - Memory-related errors: hosting/scaling/memory-errors.md
+    - Securing n8n:
+      - Overview: hosting/securing/overview.md
+      - Set up SSL: hosting/securing/set-up-ssl.md
+      - Set up SSO: hosting/securing/set-up-sso.md
+      - Security audit: hosting/securing/security-audit.md
+      - Disable the API: hosting/securing/disable-public-api.md
+      - Opt out of data collection: hosting/securing/telemetry-opt-out.md
+      - Blocking nodes: hosting/securing/blocking-nodes.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

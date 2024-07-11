@@ -77,14 +77,14 @@ When merging data by **Mode > Combine**, you can set these **Options**:
 
 ### SQL Query
 
-You can write a custom SQL Query to merge the data. 
+Write a custom SQL Query to merge the data. 
 
 Example: 
 ```sql
 SELECT * FROM input1 LEFT JOIN input2 ON input1.name = input2.id
 ```
 
-Data from previous nodes are available as tables and you can use it in the SQL query as input1, input2, input3, and so on, based on their order. Refer to [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements){:target=_blank .external-link} for a full list of supported SQL statements. 
+Data from previous nodes are available as tables and you can use them in the SQL query as input1, input2, input3, and so on, based on their order. Refer to [AlaSQL GitHub page](https://github.com/alasql/alasql/wiki/Supported-SQL-statements){:target=_blank .external-link} for a full list of supported SQL statements. 
 
 ### Choose Branch
 

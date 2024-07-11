@@ -29,16 +29,33 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.49.0
+## n8n@1.50.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.3...n8n@1.49.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-07-03
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.49.0...n8n@1.50.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-10
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
+This release contains node enhancements and bug fixes.
 
+### Node updates
+- Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
+- Deprecated node: Orbit (product shut down)  
+
+### Contributors
+[Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}  
+[adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}  
+[Malki Davis](https://github.com/mxdavis){:target=_blank .external-link}  
+
+
+## n8n@1.49.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.3...n8n@1.49.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-03
 
 This release contains a new node, node enhancements, and bug fixes.
 
@@ -49,7 +66,6 @@ This release contains a new node, node enhancements, and bug fixes.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
-
 [Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}  
 [KhDu](https://github.com/KhDu){:target=_blank .external-link}  
 [Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}  
@@ -73,8 +89,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.47.2...n8n@1.47.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-03
-
-
 
 This release contains bug fixes.
 

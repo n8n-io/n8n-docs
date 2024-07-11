@@ -49,7 +49,7 @@ This release contains node enhancements and bug fixes.
 [CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
 [jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}  
 [adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}  
-
+[Malki Davis](https://github.com/mxdavis){:target=_blank .external-link}  
 
 
 ## n8n@1.49.0

@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Text Classifier
 description: Documentation for the Text Classifier node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+contentType: integration
 ---
 
 # Text Classifier
@@ -36,9 +37,7 @@ You can add as many categories as you like.
   detected. Otherwise, if none of the categories are detected, the item is
   dropped.
 
-* **System Prompt Template**, allows you to change the system prompt that's
-  used for the classification. It uses a placeholder for the categories,
-  `{categories}`
+* **System Prompt Template**: This option allows you to change the system prompt that's used for the classification. It uses the `{categories}` placeholder for the categories.
 
 
 ## Related resources

@@ -10,7 +10,7 @@
 /reference/security/   /privacy-security/security/
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-
+/reference/security.html    /privacy-security/security/ 
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/

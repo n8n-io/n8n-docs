@@ -44,12 +44,13 @@ This release contains node enhancements and bug fixes.
 - Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
 - Deprecated node: Orbit (product shut down)  
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ### Contributors
 [Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
 [CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
 [jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}  
 [adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}  
-
 
 
 ## n8n@1.49.0
@@ -70,7 +71,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 [KhDu](https://github.com/KhDu){:target=_blank .external-link}  
 [Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}  
 [Pavlo Paliychuk](https://github.com/paul-paliychuk){:target=_blank .external-link}  
-
+[Malki Davis](https://github.com/mxdavis){:target=_blank .external-link}  
 
 ## n8n@1.48.3
 

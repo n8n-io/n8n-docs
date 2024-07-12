@@ -1,3 +1,7 @@
+# NODE-1462
+/integrations/builtin/credentials/citrixadc/ /integrations/builtin/credentials/netscaleradc/
+/integrations/builtin/app-nodes/n8n-nodes-base.citrixadc/ /integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc/
+
 /integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/
 
 # 2024 SEO audit

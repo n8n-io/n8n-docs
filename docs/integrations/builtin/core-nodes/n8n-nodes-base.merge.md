@@ -27,7 +27,10 @@ You can specify how the Merge node should combine data from different branches b
 
 Keep data from all inputs. Choose a **Number of Inputs** to output items of each input, one after another. The node waits for the execution of all connected inputs. 
 
-![Diagram](/_images/integrations/builtin/core-nodes/merge/append-diagram.png)
+<figure markdown="span">
+![Sample Append mode inputs and output. Two separate data sources are on the left, one with items A, B, C and one with items D, E, F. The final data source combines both and lists A, B, C, D, E, F.](/_images/integrations/builtin/core-nodes/merge/append-diagram.png)
+<figcaption>Sample Append mode inputs and output</figcaption>
+</figure>
 
 ### Combine
 

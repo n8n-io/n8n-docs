@@ -1,25 +1,24 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Set up SSL
 description: "Set up SSL for your self-hosted n8n instance."
 contentType: howto
 ---
 
 # Set up SSL
 
-<!-- TODO: Not sure if these are actually appropriate steps, have someone review. Should this branch wait for Jon's CA/Self-signed cert branch https://github.com/n8n-io/n8n-docs/pull/2213 and link to that, too? -->
+There are two methods to support TLS/SSL in n8n.
 
-To enable the `https:` protocol in your instance, provide an SSL key and certificate.
+## Use a reverse proxy (recommended)
 
-## Add the SSL key
+Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/){:target=_blank .external-link} or a Network Load Balancer (NLB) in front of the n8n instance. This should also take care of certificate renewals.
 
-To set the SSL key, add the key as a string to the `N8N_SSL_KEY` environment variable.
+Refer to [Security | Data encryption](/privacy-security/security/#self-hosted-n8n) for more information.
 
-## Add the SSL certificate
+## Pass certificates into n8n directly (not recommended)
 
-To set the SSL certificate, add the certificate as a string to the `N8N_SSL_CERT` environment variable.
+To pass certificates into n8n, set the `N8N_SSL_CERT` and `N8N_SSL_KEY` environment variables to point to your generated certificate and key file.
 
-## Related resources
+You'll need to make sure the certificate stays renewed and up to date.
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment/) for more information on these environment variables.
-
-Refer to [Configuration](/hosting/configuration/configuration-methods/) for more information on setting environment variables.
+Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment/) for more information on these variables and [Configuration](/hosting/configuration/configuration-methods/) for more information on setting environment variables.

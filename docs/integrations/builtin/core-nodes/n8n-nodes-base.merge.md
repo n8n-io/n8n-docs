@@ -67,7 +67,7 @@ Output all possible item combinations, while merging fields with the same name.
 
 When merging data by **Mode > Combine**, you can set these **Options**:
 
-* **Clash Handling**: Choose how to merge when branches clash, or when there are sub-fields. Refer to [below](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#combine-mode-options/) for details.
+* **Clash Handling**: Choose how to merge when branches clash, or when there are sub-fields. Refer to [Clash handling](#clash-handling) for details.
 * **Fuzzy Compare**: Whether to tolerate type differences when comparing fields (enabled), or not (disabled, default). For example, when you enable this, n8n treats `"3"` and `3` as the same.
 * **Disable Dot Notation**: This prevents accessing child fields using `parent.child` in the field name.
 * **Multiple Matches**: Choose how n8n handles multiple matches when comparing branches.

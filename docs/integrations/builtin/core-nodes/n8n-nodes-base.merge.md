@@ -187,12 +187,16 @@ Now try different options in **Mode** to see how it affects the output data.
 
 Select **Mode** > **Append**, then select **Test step**.
 
-Output data in table view:
-
-<figure markdown="span">
-![Append mode output](/_images/integrations/builtin/core-nodes/merge/append-mode.png)
-<figcaption>Append mode output</figcaption>
-</figure>
+Your output in table view should look like this:
+<!-- vale off -->
+| **name** | **language** | **greeting** |
+| --- | --- | --- |
+| Stefan | de |  |
+| Jim | en |  |
+| Hans | de |  |
+|   | en | Hello |
+|   | de | Hallo |
+<!-- vale on -->
 
 #### Combine by Matching Fields
 
@@ -203,42 +207,53 @@ You can merge these two data inputs so that each person gets the correct greetin
 3. In both **Input 1 Field** and **Input 2 Field**, enter `language`. This tells n8n to combine the data by matching the values in the `language` field in each data set.
 4. Select **Test step**.
 
-Output in table view:
+Your output in table view should look like this:
+<!-- vale off -->
 
-<figure markdown="span">
-![Merge by Fields mode output](/_images/integrations/builtin/core-nodes/merge/merge-by-fields-mode.png)
-<figcaption>Merge by Fields mode output</figcaption>
-</figure>
+| **name** | **language** | **greeting** |
+| --- | --- | --- |
+| Stefan | de | Hallo |
+| Jim | en | Hello  |
+| Hans | de | Hallo |
+<!-- vale on -->
 
 #### Combine by Position
 
 Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Test step**.
 
-Default output in table view:
-
-<figure markdown="span">
-![Merge by Position mode output](/_images/integrations/builtin/core-nodes/merge/merge-by-position-mode-default.png)
-<figcaption>Merge by Position mode output</figcaption>
-</figure>
+Your output in table view should look like this:
+<!-- vale off -->
+| **name** | **language** | **greeting** |
+| --- | --- | --- |
+| Stefan | en | Hello |
+| Jim | de | Hallo  |
+<!-- vale on -->
 
 ##### Keep unpaired items
 
 If you want to keep all items, select **Add Option** > **Include Any Unpaired Items**, then turn on **Include Any Unpaired Items**.
 
-Output with unpaired items in table view:
-
-<figure markdown="span">
-![Merge by Position mode with unpaired items output](/_images/integrations/builtin/core-nodes/merge/merge-by-position-include-unpaired.png)
-<figcaption>Merge by Position mode with unpaired items output</figcaption>
-</figure>
+Your output in table view should look like this:
+<!-- vale off -->
+| **name** | **language** | **greeting** |
+| --- | --- | --- |
+| Stefan | en | Hello |
+| Jim | de | Hallo  |
+| Hans | de |  |
+<!-- vale on -->
 
 #### Combine by All Possible Combinations 
 
 Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, then select **Test step**.
 
-Output in table view:
-
-<figure markdown="span">
-![Merge by Multiplex mode output](/_images/integrations/builtin/core-nodes/merge/multiplex-mode.png)
-<figcaption>Merge by Multiplex mode output</figcaption>
-</figure>
+Your output in table view should look like this:
+<!-- vale off -->
+| **name** | **language** | **greeting** |
+| --- | --- | --- |
+| Stefan | en | Hello |
+| Stefan | de | Hallo |
+| Jim | en | Hello  |
+| Jim | de | Hallo |
+| Hans | en | Hello |
+| Hans | de | Hallo |
+<!-- vale on -->

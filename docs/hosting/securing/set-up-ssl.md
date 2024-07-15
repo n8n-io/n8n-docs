@@ -15,9 +15,9 @@ Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/){:target=_bla
 
 Refer to [Security | Data encryption](/privacy-security/security/#self-hosted-n8n) for more information.
 
-## Pass certificates into n8n directly (not recommended)
+## Pass certificates into n8n directly
 
-To pass certificates into n8n, set the `N8N_SSL_CERT` and `N8N_SSL_KEY` environment variables to point to your generated certificate and key file.
+You can also choose to pass certificates into n8n directly. To do so, set the `N8N_SSL_CERT` and `N8N_SSL_KEY` environment variables to point to your generated certificate and key file.
 
 You'll need to make sure the certificate stays renewed and up to date.
 

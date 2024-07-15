@@ -12,7 +12,7 @@ Both types provide integrations with external services.
 
 Trigger nodes start a workflow and supply the initial data. A workflow can contain multiple trigger nodes but with each execution, only one of them will execute, depending on the triggering event.
 
-There are mainly three types of trigger nodes in n8n which are: 
+There are three types of trigger nodes in n8n: 
 
 | Type | Description | Example Nodes |
 | --- | --- | --- |

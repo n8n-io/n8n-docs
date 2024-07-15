@@ -8,7 +8,7 @@ description: Merge data streams in you n8n workflows.
 
 Merging allows you to bring multiple data streams together.
 
-Merging data from different branches or nodes uses the [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) node. You can also use the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node to merge data from multiple node executions. 
+Merging data from different branches or nodes uses the [Merge](/integrations/builtin/core-nodes/n8n-nodes-base.merge/) node. To merge data from multiple node executions in a single node or multiple nodes, use the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node.
 
 To compare data, merge it, and output data streams depending on the comparison, use the [Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets/) node.
 

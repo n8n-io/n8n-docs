@@ -29,7 +29,7 @@ Keep data from all inputs. Choose a **Number of Inputs** to output items of each
 
 <figure markdown="span">
 ![Sample Append mode inputs and output. Two separate data sources are on the left, one with items A, B, C and one with items D, E, F. The final data source combines both and lists A, B, C, D, E, F.](/_images/integrations/builtin/core-nodes/merge/append-diagram.png)
-<figcaption>Sample Append mode inputs and output</figcaption>
+<figcaption>Append mode inputs and output</figcaption>
 </figure>
 
 ### Combine
@@ -48,20 +48,30 @@ n8n's default behavior is to keep matching items. You can change this using the 
 * **Enrich Input 1**: Keep all data from Input 1, and add matching data from Input 2. This is like a left join.
 * **Enrich Input 2**: Keep all data from Input 2, and add matching data from Input 1. This is like a right join.
 
-![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
+<figure markdown="span">
+![Sample Combine mode inputs and output. Two separate data sources are on the left. The final data source combines these data sources by matching fields.](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
+<figcaption>Combine by Matching Fields mode inputs and output</figcaption>
+</figure>
 
 
 #### Position
 
 Combine items based on their order. The item at index 0 in Input 1 merges with the item at index 0 in Input 2, and so on.
 
-![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-position-diagram.png)
+<figure markdown="span">
+![Sample Combine mode inputs and output. Two separate data sources are on the left. The final data source combines these data sources by index position.](/_images/integrations/builtin/core-nodes/merge/merge-by-position-diagram.png)
+<figcaption>Combine by Position mode inputs and output</figcaption>
+</figure>
+
 
 #### All Possible Combinations
 
 Output all possible item combinations, while merging fields with the same name.
 
-![Diagram](/_images/integrations/builtin/core-nodes/merge/multiplex-diagram.png)
+<figure markdown="span">
+![Sample Combine mode inputs and output. Two separate data sources are on the left. The final data source combines these data sources by all possible combinations.](/_images/integrations/builtin/core-nodes/merge/multiplex-diagram.png)
+<figcaption>Combine by All Possible Combinations mode inputs and output</figcaption>
+</figure>
 
 #### Combine mode options
 
@@ -179,8 +189,10 @@ Select **Mode** > **Append**, then select **Test step**.
 
 Output data in table view:
 
+<figure markdown="span">
 ![Append mode output](/_images/integrations/builtin/core-nodes/merge/append-mode.png)
-
+<figcaption>Append mode output</figcaption>
+</figure>
 
 #### Combine by Matching Fields
 
@@ -193,8 +205,10 @@ You can merge these two data inputs so that each person gets the correct greetin
 
 Output in table view:
 
+<figure markdown="span">
 ![Merge by Fields mode output](/_images/integrations/builtin/core-nodes/merge/merge-by-fields-mode.png)
-
+<figcaption>Merge by Fields mode output</figcaption>
+</figure>
 
 #### Combine by Position
 
@@ -202,8 +216,10 @@ Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Test
 
 Default output in table view:
 
+<figure markdown="span">
 ![Merge by Position mode output](/_images/integrations/builtin/core-nodes/merge/merge-by-position-mode-default.png)
-
+<figcaption>Merge by Position mode output</figcaption>
+</figure>
 
 ##### Keep unpaired items
 
@@ -211,8 +227,10 @@ If you want to keep all items, select **Add Option** > **Include Any Unpaired It
 
 Output with unpaired items in table view:
 
+<figure markdown="span">
 ![Merge by Position mode with unpaired items output](/_images/integrations/builtin/core-nodes/merge/merge-by-position-include-unpaired.png)
-
+<figcaption>Merge by Position mode with unpaired items output</figcaption>
+</figure>
 
 #### Combine by All Possible Combinations 
 
@@ -220,4 +238,7 @@ Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, t
 
 Output in table view:
 
+<figure markdown="span">
 ![Merge by Multiplex mode output](/_images/integrations/builtin/core-nodes/merge/multiplex-mode.png)
+<figcaption>Merge by Multiplex mode output</figcaption>
+</figure>

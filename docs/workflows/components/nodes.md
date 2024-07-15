@@ -27,7 +27,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 2. Select the trigger you want to use.
 
     /// note | Choose the correct app event
-	If you select **On App Event**, n8n shows a list of all the supported services. This allows you to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. However, not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see it at the top of the available operations list.
+	If you select **On App Event**, n8n shows a list of all the supported services. This allows you to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. But, not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see it at the top of the available operations list.
 
 	For example, this is the trigger for Asana:
 
@@ -44,10 +44,12 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Play** <span class="inline-image">![Run node icon](/_images/common-icons/play-node.png){.off-glb}</span> : run the node.
-* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: select node actions. Available actions:
+* **Test step** <span class="inline-image">![Test step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
+* **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
+* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
+* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
 	* Open node
-	* Execute node
+	* Test step
 	* Rename node
 	* Deactivate node
 	* Pin node
@@ -59,16 +61,24 @@ To view node controls, hover over the node on the canvas:
 
 ## Node settings
 
-The node settings allow you to control node behaviors and add node notes.
+The node settings under the **Settings** tab allow you to control node behaviors and add node notes.
 
-There are four toggles. When active, they do the following:
+When active or set, they do the following:
 
-* **Always Output Data**: the node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
-* **Execute Once**: the node executes once, with data from the first item it receives. It doesn't process any additional items.
-* **Retry On Fail**: when an execution fails, the node reruns until it succeeds. 
-* **Continue On Fail**: the workflow continues even if the execution of the node fails. When this happens, the node passes along input data from previous nodes, so if you enable this setting, the workflow design must handle unexpected output data.
+* **Request Options**: Select **Add Option** to view and select these options. 
+	- **Batching**: Control how to batch large numbers of input items.
+	- **Ignore SSL Issues**: Download the response even if SSL validation isn't possible.
+	- **Proxy**: Use this if you need to specify an HTTP proxy.
+	- **Timeout**: Set a timeout for the request in ms. 
+* **Always Output Data**: The node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
+* **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
+* **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 
+* **On Error**: 
+    - **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
+    - **Continue**: Proceeds to the next node despite the error, using the last valid data.
+    - **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
 
 You can document your workflow using node notes:
 
-* **Notes**: note to save with the node.
-* **Display note in flow**: if active, n8n displays the note in the workflow as a subtitle.
+* **Notes**: Note to save with the node.
+* **Display note in flow**: If active, n8n displays the note in the workflow as a subtitle.

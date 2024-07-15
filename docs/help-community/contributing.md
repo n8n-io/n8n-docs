@@ -62,9 +62,9 @@ n8n appreciates all contributions. Publishing a tutorial on your own site that s
 
 1. Email your idea to [marketing@n8n.io](mailto:marketing@n8n.io) with the subject "Blog contribution: [Your Topic]."
 2. Submit your draft:
-   >* Write your post in a Google Doc following the [style guide](https://www.notion.so/97dc73436a624933b75ddc941a361b70?pvs=21){:target=_blank class=.external-link}.
-   >* If your blog post includes example workflows, include the workflow JSON in a separate section at the end.
-   >* For author credit, provide a second Google Doc with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
+      -  Write your post in a Google Doc following the [style guide](https://www.notion.so/97dc73436a624933b75ddc941a361b70?pvs=21){:target=_blank class=.external-link}.
+      - If your blog post includes example workflows, include the workflow JSON in a separate section at the end.
+      -  For author credit, provide a second Google Doc with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
 3. Wait for feedback. We will respond if your draft fits with the blog's strategy and requirements. If you don't hear back within 30 days, it means we won't be moving forward with your blog post.
 
 ## Refer a candidate

@@ -26,7 +26,7 @@ def define_env(env):
 			try:
 				return {
 					"title": workflow["name"],
-					"user": workflow["user"]["name"],
+					"user": workflow["user"].get("name", "n8n Community"),
 					"url": f'https://n8n.io/workflows/{workflow["id"]}-{re.sub("[^A-Za-z0-9-]","",workflow["name"].replace(" ", "-")).lower()}/',
 				}
 			except KeyError:

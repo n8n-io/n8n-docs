@@ -7,7 +7,7 @@ contentType: howto
 
 # Configure n8n to use your own certificate authority or self-signed certificate
 
-You can add add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
+You can add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
 
 /// note | Available in version 1.42.0
 This feature is only available in version 1.42.0+.

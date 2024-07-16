@@ -23,12 +23,12 @@ def define_env(env):
 		try:
 			workflow_one_title = workflow_one["name"]
 			workflow_one_user = workflow_one["user"]["name"]
-			workflow_one_url = f'https://n8n.io/workflows/{workflow_one["id"]}-{workflow_one["name"].lower().replace(" ", "-").replace(":", "")}/'
+			workflow_one_url = f'https://n8n.io/workflows/{workflow_one["id"]}/'
 			workflow_two_title = workflow_two["name"]
 			workflow_two_user = workflow_two["user"]["name"]
-			workflow_two_url = f'https://n8n.io/workflows/{workflow_two["id"]}-{workflow_two["name"].lower().replace(" ", "-").replace(":", "")}/'
+			workflow_two_url = f'https://n8n.io/workflows/{workflow_two["id"]}/'
 			workflow_three_title = workflow_three["name"]
-			workflow_three_url = f'https://n8n.io/workflows/{workflow_three["id"]}-{workflow_three["name"].lower().replace(" ", "-").replace(":", "")}/'
+			workflow_three_url = f'https://n8n.io/workflows/{workflow_three["id"]}/'
 			workflow_three_user = workflow_three["user"]["name"]
 		except:
 			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse all {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'		
@@ -39,7 +39,7 @@ def define_env(env):
 	def workflowDemo(workflow_endpoint):
 		r = requests.get(url = workflow_endpoint)
 		wf_data = r.json()
-		template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{wf_data["name"].lower().replace(" ", "-").replace(":", "")}/'
+		template_url = f'https://n8n.io/workflows/{wf_data["id"]}/'
 		workflow_json = {
 			"nodes": wf_data['workflow']['nodes'],
 			"connections": wf_data['workflow']['connections']

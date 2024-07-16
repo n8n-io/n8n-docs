@@ -5,9 +5,13 @@ description: Customize the n8n container to work with self signed certificates w
 contentType: howto
 ---
 
-# Configure n8n to use your own certificate authority or self signed certificate
+# Configure n8n to use your own certificate authority or self-signed certificate
 
-Since version 1.42.0 it has been possible to add your own certificate authority or self signed certificate to n8n, This means you are able to trust a certain certificate instead of trusting all invalid certificates which is a potential security risk.
+You can add add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
+
+/// note | Available in version 1.42.0
+This feature is only available in version 1.42.0+.
+///
 
 To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container.
 

@@ -2,44 +2,63 @@ import requests
 import json
 import re
 import urllib.parse
+from typing import Optional
 
 def define_env(env):
 
 	@env.macro	
-	def templatesWidget(title, slug):
-		if(title == 'Email Trigger (IMAP)'):
-			node_for_template = 'email+imap'
-		else:
-			node_for_template = title.replace(' ', '+')
-		response = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search={node_for_template}&page=1&sort=views:desc')
-		data = response.json()
-		# not all nodes have three templates
-		try:
-			workflows = data["workflows"][:3]
-			workflow_one, workflow_two, workflow_three = workflows
-		except:
-			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'
-		# the data is not trustworthy
-		try:
-			workflow_one_title = workflow_one["name"]
-			workflow_one_user = workflow_one["user"]["name"]
-			workflow_one_url = f'https://n8n.io/workflows/{workflow_one["id"]}-{workflow_one["name"].lower().replace(" ", "-").replace(":", "")}/'
-			workflow_two_title = workflow_two["name"]
-			workflow_two_user = workflow_two["user"]["name"]
-			workflow_two_url = f'https://n8n.io/workflows/{workflow_two["id"]}-{workflow_two["name"].lower().replace(" ", "-").replace(":", "")}/'
-			workflow_three_title = workflow_three["name"]
-			workflow_three_url = f'https://n8n.io/workflows/{workflow_three["id"]}-{workflow_three["name"].lower().replace(" ", "-").replace(":", "")}/'
-			workflow_three_user = workflow_three["user"]["name"]
-		except:
-			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse all {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'		
+	def templatesWidget(title: str, slug: str, toLoad: int = 3) -> str:
+		node_for_template = 'email+imap' if title == 'Email Trigger (IMAP)' else title.replace(' ', '+')
 
-		return f'<div class="n8n-templates-widget"><div class="n8n-templates-widget-template"><strong>{workflow_one_title}</strong><p class="n8n-templates-name">by {workflow_one_user}</p><a class="n8n-templates-link" href="{workflow_one_url}" target="_blank">View template details</a></div><div class="n8n-templates-widget-template"><strong>{workflow_two_title}</strong><p class="n8n-templates-name">by {workflow_two_user}</p><a class="n8n-templates-link" href="{workflow_two_url}" target="_blank">View template details</a></div><div class="n8n-templates-widget-template"><strong>{workflow_three_title}</strong><p class="n8n-templates-name">by {workflow_three_user}</p><a class="n8n-templates-link" href="{workflow_three_url}" target="_blank">View template details</a></div><span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span></div>'
-	
+		try:
+			response = requests.get(f'https://api.n8n.io/api/templates/search?rows={toLoad}&search={node_for_template}&page=1&sort=views:desc')
+			response.raise_for_status()
+			data = response.json()
+		except requests.RequestException as e:
+			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'
+
+		workflows = data.get("workflows", [])[:toLoad]
+
+		if len(workflows) < 3:
+			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'
+
+		def get_workflow_details(workflow: dict) -> Optional[dict]:
+			try:
+				return {
+					"title": workflow["name"],
+					"user": workflow["user"]["name"],
+					"url": f'https://n8n.io/workflows/{workflow["id"]}-{re.sub("[^A-Za-z0-9-]","",workflow["name"].replace(" ", "-")).lower()}/',
+				}
+			except KeyError:
+				return None
+
+		workflow_details = [get_workflow_details(workflow) for workflow in workflows]
+		if any(detail is None for detail in workflow_details):
+			return f'<span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse all {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span>'
+
+		template_html = ''.join(
+			f'<div class="n8n-templates-widget-template">'
+			f'<strong>{detail["title"]}</strong>'
+			f'<p class="n8n-templates-name">by {detail["user"]}</p>'
+			f'<a class="n8n-templates-link" href="{detail["url"]}" target="_blank">View template details</a>'
+			f'</div>'
+			for detail in workflow_details
+		)
+
+		return (
+			f'<div class="n8n-templates-widget">'
+			f'{template_html}'
+			f'<span class="n8n-templates-widget-more">'
+			f'<a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse {title} integration templates</a>, or '
+			f'<a href="https://n8n.io/workflows/" target="_blank">search all templates</a>'
+			f'</span></div>'
+		)
+
 	@env.macro	
 	def workflowDemo(workflow_endpoint):
 		r = requests.get(url = workflow_endpoint)
 		wf_data = r.json()
-		template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{wf_data["name"].lower().replace(" ", "-").replace(":", "")}/'
+		template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{re.sub("[^A-Za-z0-9-]","",wf_data["name"].replace(" ", "-")).lower()}/'
 		workflow_json = {
 			"nodes": wf_data['workflow']['nodes'],
 			"connections": wf_data['workflow']['connections']

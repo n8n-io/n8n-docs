@@ -32,10 +32,14 @@ You can add as many categories as you like.
   always output a single class per item, or allow the model to select multiple
   classes.
 
-* **Add Fallback Option**: If this option is set, the model can select a
-  fallback-option, or "Other" category, for when none of the categories are
-  detected. Otherwise, if none of the categories are detected, the item is
-  dropped.
+* **When No Clear Match**: This option allows you to define what happens if
+  the model can't find a good match for an item. There are two options:
+
+	- **Discard Item** (the default): If none of the categories are detected,
+	  the item is dropped.
+
+	- **Output on Extra, 'Other' Branch**: Creates a separate output branch
+	  called 'Other', for when none of the categories are detected.
 
 * **System Prompt Template**: This option allows you to change the system prompt that's used for the classification. It uses the `{categories}` placeholder for the categories.
 

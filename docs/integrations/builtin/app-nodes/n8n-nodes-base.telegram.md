@@ -121,6 +121,34 @@ To use this operation, enter these parameters:
 
 Refer to the Telegram Bot API [setChatTitle](https://core.telegram.org/bots/api#setchattitle){:target=_blank .external-link} documentation for more information.
 
+### Answer Query
+
+<!-- TODO: Write this section once the method has been confirmed. -->
+
+### Answer Inline Query
+
+To use this operation, enter these parameters:
+
+* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Resource**: Select **Callback**.
+* **Operation**: Select **Answer Inline Query**.
+* **Query ID**: Enter the unique identifier of the query you want to answer.
+* **Results**: Enter a JSON-serialized array of results you want to use as answers to the query. Refer to the Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult){:target=_blank .external-link} documentation for more information on formatting your array.
+
+Telegram allows a maximum of 50 results per query.
+
+Refer to the Telegram Bot API [answerInlineQuery](https://core.telegram.org/bots/api#answerinlinequery){:target=_blank .external-link} documentation for more information.
+
+#### Answer Inline Query additional fields
+
+<!-- TODO: Finish this section -->
+Select **Add Field** if you want to add any of these fields:
+
+* **Cache Time**
+* **Show Alert**
+* **Text**
+* **URL**
+
 ### Get File
 
 To use this operation, enter these parameters:
@@ -198,6 +226,11 @@ Select **Add Field** if you want to add this field:
 
 Refer to Telegram's Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} documentation for more information. 
 
+### Send Message
+
+Telegram limits the number of messages you can send to 30 per second. If you expect to hit this limit, refer to [Send more than 30 messages per second](#send-more-than-30-messages-per-second) for a suggested workaround.
+
+
 ### Unpin Chat Message
 
 To use this operation, enter these parameters:
@@ -209,8 +242,7 @@ To use this operation, enter these parameters:
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node. Refer to [Get the Chat ID](#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to pin.
 
-Refer to the Telegram [messages.updatePinnedMessage](https://core.telegram.org/method/messages.updatePinnedMessage){:target=_blank .external-link} documentation for more information.
-
+Refer to the Telegram Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage){:target=_blank .external-link} documentation for more information.
 
 ## Templates and examples
 

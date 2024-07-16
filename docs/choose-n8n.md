@@ -26,7 +26,7 @@ There are different ways to set up n8n depending on how you intend to use it:
 
 n8n is [fair-code](http://faircode.io){:target=_blank .external-link} licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
 
-For a detailed explanation of the license, refer to [Faircode license](/faircode-license/).
+For a detailed explanation of the license, refer to [Fair-code license](/faircode-license/).
 
 ## Free versions
 

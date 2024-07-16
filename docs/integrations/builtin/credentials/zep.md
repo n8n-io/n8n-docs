@@ -3,6 +3,7 @@
 title: Zep credentials
 description: Documentation for the Zep credentials. Use these credentials to authenticate Zep in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Zep credentials

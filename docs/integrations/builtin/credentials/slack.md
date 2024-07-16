@@ -3,6 +3,7 @@
 title: Slack credentials
 description: Documentation for Slack credentials. Use these credentials to authenticate Slack in n8n, a workflow automation platform.
 contentType: integration
+priority: high
 ---
 
 # Slack credentials

@@ -3,6 +3,7 @@
 title: Manual trigger
 description: Documentation for the Manual trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: critical
 ---
 
 # Manual trigger

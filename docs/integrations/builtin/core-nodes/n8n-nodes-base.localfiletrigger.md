@@ -3,6 +3,7 @@
 title: Local File trigger
 description: Documentation for the Local File trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: high
 ---
 
 # Local File trigger

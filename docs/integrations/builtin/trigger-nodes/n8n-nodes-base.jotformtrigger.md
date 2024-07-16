@@ -3,6 +3,7 @@
 title: JotForm trigger
 description: Documentation for the JotForm trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # JotForm trigger

@@ -3,6 +3,7 @@
 title: Filter
 description: Documentation for the Filter node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: critical
 ---
 
 # Filter

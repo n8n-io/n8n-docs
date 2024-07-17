@@ -3,6 +3,7 @@
 title: Workflow trigger
 description: Documentation for the Workflow trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: high
 ---
 
 # Workflow trigger

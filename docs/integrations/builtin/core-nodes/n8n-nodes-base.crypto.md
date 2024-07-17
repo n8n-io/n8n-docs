@@ -3,6 +3,7 @@
 title: Crypto
 description: Documentation for the Crypto node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: medium
 ---
 
 # Crypto

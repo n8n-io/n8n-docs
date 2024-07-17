@@ -3,6 +3,7 @@
 title: n8n trigger
 description: Documentation for the n8n trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: medium
 ---
 
 # n8n trigger

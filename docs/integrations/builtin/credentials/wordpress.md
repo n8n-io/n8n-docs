@@ -3,6 +3,7 @@
 title: WordPress credentials
 description: Documentation for WordPress credentials. Use these credentials to authenticate WordPress in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # WordPress credentials

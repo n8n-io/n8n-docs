@@ -3,6 +3,7 @@
 title: Compression
 description: Documentation for the Compression node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: medium
 ---
 
 # Compression

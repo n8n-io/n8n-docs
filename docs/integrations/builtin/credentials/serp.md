@@ -3,6 +3,7 @@
 title: Serp credentials
 description: Documentation for the Serp credentials. Use these credentials to authenticate Serp in n8n, a workflow automation platform.
 contentType: integration
+priority: high
 ---
 
 # Serp credentials

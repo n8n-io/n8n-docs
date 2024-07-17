@@ -3,6 +3,7 @@
 title: Debug Helper
 description: Documentation for the Debug Helper node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: medium
 ---
 
 # Debug Helper

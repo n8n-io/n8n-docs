@@ -3,6 +3,7 @@
 title: XML
 description: Documentation for the XML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: medium
 ---
 
 # XML

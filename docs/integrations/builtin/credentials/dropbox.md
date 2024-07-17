@@ -3,6 +3,7 @@
 title: Dropbox credentials
 description: Documentation for Dropbox credentials. Use these credentials to authenticate Dropbox in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Dropbox credentials

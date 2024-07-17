@@ -58,7 +58,7 @@ You can write an article for the [n8n blog](https://blog.n8n.io/){:target=_blank
 
 ### How to submit a post
 
-n8n appreciates all contributions. Publishing a tutorial on your own site that supports the community is a great contribution. If you want n8n to highlight your post on the blog, you need to go through the following steps: 
+n8n appreciates all contributions. Publishing a tutorial on your own site that supports the community is a great contribution. If you want n8n to highlight your post on the blog, follow these steps: 
 
 1. Email your idea to [marketing@n8n.io](mailto:marketing@n8n.io) with the subject "Blog contribution: [Your Topic]."
 2. Submit your draft:

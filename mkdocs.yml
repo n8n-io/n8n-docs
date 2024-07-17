@@ -784,6 +784,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md

@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Supabase Vector Store
 description: Documentation for the Supabase node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: medium
 ---
 
 # Supabase Vector Store
@@ -12,10 +13,6 @@ On this page, you'll find the node parameters for the Supabase node, and links t
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/supabase/).
-///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Supabase integrations](https://n8n.io/integrations/supabase-vector-store/){:target=_blank .external-link} page.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -50,10 +47,12 @@ The name of the matching function you set up in Supabase. If you follow the [Sup
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/vector-store-metadata-filter.md"
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'supabase-vector-store') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/supabase-vectorstore/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Supabase documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/supabase){:target=_blank .external-link} for more information about the service.
 

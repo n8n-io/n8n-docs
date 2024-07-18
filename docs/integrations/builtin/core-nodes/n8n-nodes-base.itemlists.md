@@ -31,8 +31,6 @@ The Item Lists node enables you to perform the following operations:
 * Split Out Items: create separate items from a list of data within an item.
 * Summarize: aggregate items together. Similar to a pivot table.
 
-
-
 ### Split Out Items
 
 This operation is useful if your data contains a list of items, for example a list of customers, and you want to split them so that you have an item for each customer.
@@ -125,7 +123,7 @@ When using the Summarize operation, configure the following parameters and optio
 	* **Each Split in a Separate Item**: splitting generates a separate output item for each split out field.
 	* **All Splits in a Single Item**: splitting generates a single item, which lists the split out fields.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/item-lists/){:target=_blank .external-link} on n8n's website.
-
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'item-lists') ]]

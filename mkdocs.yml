@@ -157,7 +157,7 @@ plugins:
   - search
   - exclude:
       glob:
-        #- integrations/builtin/*
+      #- integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false
@@ -338,7 +338,7 @@ nav:
           - Security: privacy-security/security.md
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
-      - Faircode license: faircode-license.md    
+      - Fair-code license: faircode-license.md    
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -371,7 +371,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
@@ -396,7 +395,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.start.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
         - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
@@ -760,6 +758,7 @@ nav:
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
+          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
@@ -784,6 +783,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
@@ -813,6 +813,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
@@ -1192,6 +1193,7 @@ nav:
         - hosting/configuration/configuration-examples/index.md
         - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
         - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
         - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
         - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
         - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md

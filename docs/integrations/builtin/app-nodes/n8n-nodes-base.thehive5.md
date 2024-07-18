@@ -17,9 +17,6 @@ n8n provides two nodes for TheHive. Use this node (TheHive 5) if you want to use
 /// note | Credentials
 Refer to [TheHive credentials](/integrations/builtin/credentials/thehive5/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [TheHive integrations](https://n8n.io/integrations/thehive-5/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -80,13 +77,13 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get
 	* Search
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'thehive-5') ]]
 
 ## Related resources
 
 n8n provides a trigger node for TheHive. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/).
-
-<!--
-View [example workflows and related content](https://n8n.io/integrations/thehive5r/){:target=_blank .external-link} on n8n's website.
--->
 
 Refer to TheHive's [documentation](https://docs.strangebee.com/){:target=_blank .external-link} for more information about the service.

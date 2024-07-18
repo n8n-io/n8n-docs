@@ -3,6 +3,7 @@
 title: Kafka
 description: Documentation for the Kafka node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # Kafka
@@ -14,10 +15,12 @@ On this page, you'll find a list of operations the Kafka node supports and links
 /// note | Credentials
 Refer to [Kafka credentials](/integrations/builtin/credentials/kafka/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Kafka integrations](https://n8n.io/integrations/kafka/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
 - Send message
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'kafka') ]]

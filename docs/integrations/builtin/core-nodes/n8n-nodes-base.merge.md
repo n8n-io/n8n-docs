@@ -3,6 +3,7 @@
 title: Merge
 description: Documentation for the Merge node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: critical
 ---
 
 # Merge
@@ -11,10 +12,6 @@ Use the Merge node to combine data from two streams, once data of both streams i
 
 /// note | Major changes in 0.194.0
 This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
-///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Merge integrations](https://n8n.io/integrations/merge/){:target=_blank .external-link} page.
 ///
 
 ## Merge mode
@@ -37,10 +34,11 @@ Compare items by field values. Enter the fields you want to compare in **Fields 
 
 n8n's default behavior is to keep matching items. You can change this using the **Output Type** setting:
 
-* Keep matches: merge items that match.
-* Keep non-matches: merge items that don't match.
-* Enrich Input 1: keep all data from Input 1, and add matching data from Input 2.
-* Enrich Input 2: keep all data from Input 2, and add matching data from Input 1.
+* **Keep Matches**: Merge items that match. This is like an inner join.
+* **Keep Non-Matches**: Merge items that don't match.
+* **Keep Everything**: Merge items together that do match and include items that don't match. This is like an outer join.
+* **Enrich Input 1**: keep all data from Input 1, and add matching data from Input 2. This is like a left join.
+* **Enrich Input 2**: keep all data from Input 2, and add matching data from Input 1. This is like a right join.
 
 ![Diagram](/_images/integrations/builtin/core-nodes/merge/merge-by-field-diagram.png)
 
@@ -53,8 +51,8 @@ n8n's default behavior is to keep matching items. You can change this using the 
 
 Matching by field can generate multiple matches if the inputs contain duplicate data. To handle this, select **Add Option > Multiple Matches**. Then choose:
 
-* **Include All Matches**: output multiple items (one for each match).
-* **Include First Match Only**: keep the first item, discard subsequent items.
+* **Include All Matches**: Output multiple items if there are multiple matches, one for each match.
+* **Include First Match Only**: Keep the first item per match and discard the remaining multiple matches.
 
 
 #### Merge by position
@@ -101,7 +99,18 @@ When merging by position:
 
 ### Choose branch
 
-Choose which input to keep. This option always waits until the data from both inputs is available. You can keep the data from Input 1 or Input 2, or you can output a single empty item. The node outputs the data from the chosen input, without changing it.
+Choose which input to keep. This option always waits until the data from both inputs is available. You can choose to **Output**:
+
+* The **Input 1 Data**
+* The **Input 2 Data**
+* **A Single, Empty Item**
+
+The node outputs the data from the chosen input, without changing it.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'merge') ]]
 
 ## Merging branches with uneven numbers of items
 

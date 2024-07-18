@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the Zoho CRM node supports and li
 /// note | Credentials
 Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Zoho CRM integrations](https://n8n.io/integrations/zoho-crm/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Account
     * Create an account
@@ -91,5 +88,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a vendor
     * Get all vendors
     * Update a vendor
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'zoho-crm') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

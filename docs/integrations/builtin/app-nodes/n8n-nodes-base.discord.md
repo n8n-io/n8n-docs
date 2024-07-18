@@ -3,6 +3,7 @@
 title: Discord
 description: Documentation for the Discord node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: high
 ---
 
 # Discord
@@ -13,10 +14,6 @@ On this page, you'll find a list of operations the Discord node supports and lin
 
 /// note | Credentials
 Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for guidance on setting up authentication. 
-///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Discord integrations](https://n8n.io/integrations/discord/){:target="_blank" .external-link} list.
 ///
 
 ## Operations
@@ -38,11 +35,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	- Role Add
 	- Roll Remove
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'discord') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/discord/){:target=_blank .external-link} on n8n's website.
-
 
 Refer to [Discord's documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
 

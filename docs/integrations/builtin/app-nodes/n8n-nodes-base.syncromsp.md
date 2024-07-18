@@ -14,11 +14,8 @@ On this page, you'll find a list of operations the SyncroMSP node supports and l
 /// note | Credentials
 Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [SyncroMSP integrations](https://n8n.io/integrations/syncromsp/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Contact
     * Create new contact
@@ -45,3 +42,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Retrieve all tickets
     * Update ticket
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'syncromsp') ]]

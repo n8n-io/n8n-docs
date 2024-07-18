@@ -3,6 +3,7 @@
 title: Microsoft Outlook
 description: Documentation for the Microsoft Outlook node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: high
 ---
 
 # Microsoft Outlook
@@ -14,10 +15,6 @@ On this page, you'll find a list of operations the Microsoft Outlook node suppor
 /// note | Credentials
 Refer to [Microsoft Outlook credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Microsoft Outlook integrations](https://n8n.io/integrations/microsoft-outlook/){:target="_blank" .external-link} list.
-///
-
 
 ## Operations
 
@@ -67,9 +64,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
 	* Get
 	* Get Many
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/microsoft-outlook/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'microsoft-outlook') ]]
+
+## Related resources
 
 Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started){:target=_blank .external-link} for more information about the service.
 

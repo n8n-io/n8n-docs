@@ -3,6 +3,7 @@
 title: HTTP Request
 description: Documentation for the HTTP Request node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: critical
 ---
 
 # HTTP Request
@@ -17,9 +18,6 @@ There are two ways to create an HTTP request: configure the [node fields](#node-
 Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest/) for guidance on setting up authentication. 
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [HTTP Request integrations](https://n8n.io/integrations/http-request/){:target=_blank .external-link} page.
-///
 ## Node parameters
 
 ### Method
@@ -58,7 +56,7 @@ Select **Generic Credential Type** to set up authentication using one of the fol
 * OAuth2 API
 * Query Auth
 
-	
+
 Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
 
 ### Parameters, headers, and body
@@ -77,7 +75,7 @@ Select **Add Option** to view and select these options.
 - **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
 - **Redirects**: choose whether to follow redirects. Enabled by default.
 - **Response**: provide settings about the expected API response.
-- **Pagination**: handle query results that are too big for the API to return in a single call.
+- **Pagination**: handle query results that are too big for the API to return in a single call. Refer to [Pagination](#pagination) for more information.
 - **Proxy**: use this if you need to specify an HTTP proxy.
 - **Timeout**: set a timeout for the request.
 
@@ -110,6 +108,10 @@ n8n provides built-in variables for working with HTTP node requests and response
 
 --8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-api-differences.md"
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'http-request') ]]
 
 ## Import curl command
 
@@ -134,7 +136,4 @@ From version 1.40.0, you can use AI to configure the node parameters:
 For Cloud users, n8n provides a customized knowledge base of API specifications for the AI to draw on to provide good results. For services that aren't in the knowledge base, n8n falls back on OpenAI GPT-4's default knowledge. You can view the [list of services in the knowledge base](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/services/ai/resources/api-knowledgebase.json){:target=_blank .external-link}.
 
 Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/). On self-hosted you don't have access to n8n's API specifications knowledge base, so all responses from the AI use OpenAI GPT-4's default knowledge.
-
-
-
 

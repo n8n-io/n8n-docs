@@ -3,6 +3,7 @@
 title: Azure OpenAI credentials
 description: Documentation for Azure OpenAI credentials. Use these credentials to authenticate OpenAI in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Azure OpenAI credentials

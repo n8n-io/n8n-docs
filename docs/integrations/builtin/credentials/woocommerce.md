@@ -3,6 +3,7 @@
 title: WooCommerce credentials
 description: Documentation for WooCommerce credentials. Use these credentials to authenticate WooCommerce in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # WooCommerce credentials

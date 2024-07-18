@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Model
 description: Documentation for the OpenAI Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: high
 ---
 
 # OpenAI Model
@@ -13,10 +14,6 @@ On this page, you'll find the node parameters for the OpenAI Model node, and lin
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
 ///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [OpenAI Model integrations](https://n8n.io/integrations/openai-model/){:target=_blank .external-link} page.
-///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -34,11 +31,14 @@ For usage examples and templates to help you get started, refer to n8n's [OpenAI
 * **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Timeout**: maximum request time in milliseconds.
 * **Max Retries**: maximum number of times to retry a request.
-* **Top P**: use a lower value to ignore less probable options. 
+* **Top P**: use a lower value to ignore less probable options.
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'openai-model') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/openai-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/modules/model_io/models/llms/integrations/openai){:target=_blank .external-link} for more information about the service.
 

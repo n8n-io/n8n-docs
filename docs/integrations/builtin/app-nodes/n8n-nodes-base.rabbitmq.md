@@ -3,6 +3,7 @@
 title: RabbitMQ
 description: Documentation for the RabbitMQ node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # RabbitMQ
@@ -14,13 +15,13 @@ On this page, you'll find a list of operations the RabbitMQ node supports and li
 /// note | Credentials
 Refer to [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [RabbitMQ integrations](https://n8n.io/integrations/rabbitmq/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
 * Delete From Queue
 * Send a Message to RabbitMQ
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'rabbitmq') ]]

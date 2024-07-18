@@ -3,6 +3,7 @@
 title: GitLab credentials
 description: Documentation for GitLab credentials. Use these credentials to authenticate GitLab in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # GitLab credentials

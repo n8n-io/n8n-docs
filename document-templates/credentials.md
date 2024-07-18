@@ -20,6 +20,7 @@ Set the meta title and meta description in the frontmatter
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: _Name_ credentials
 description: Documentation for the _Name_ credentials. Use these credentials to authenticate _Name_ in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 <!-- 
@@ -48,8 +49,8 @@ _Include info on services they need to sign up for_
 Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
 
 
-<!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
+<!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/gmail/ 
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website. -->
 
 
 ## Using _Auth method_

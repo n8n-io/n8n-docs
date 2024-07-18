@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mistral Cloud Chat Model
 description: Documentation for the Mistral Cloud Chat Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: medium
 ---
 
 # Mistral Cloud Chat Model
@@ -13,10 +14,6 @@ On this page, you'll find the node parameters for the Mistral Cloud Chat Model n
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/mistral/).
 ///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Mistral Cloud Chat Model integrations](https://n8n.io/integrations/mistral-cloud-chat-model/){:target=_blank .external-link} page.
-///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -34,10 +31,12 @@ For usage examples and templates to help you get started, refer to n8n's [Mistra
 * **Enable Safe Mode**: enable safe mode by injecting a safety prompt at the beginning of the completion. This helps prevent the model from generating offensive content.
 * **Random Seed**: seed to use for random sampling. If set, different calls will generate deterministic results.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'mistral-cloud-chat-model') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/mistral-cloud-chat-model/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChains's Mistral documentation](https://js.langchain.com/docs/integrations/chat/mistral){:target=_blank .external-link} for more information about the service.
 

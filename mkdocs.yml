@@ -573,7 +573,6 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.orbit.md
         - integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -993,7 +992,6 @@ nav:
         - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openweathermap.md
-        - integrations/builtin/credentials/orbit.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md

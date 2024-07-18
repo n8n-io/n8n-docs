@@ -62,6 +62,8 @@ This release adds the [Google Vertex Chat Model node](/integrations/builtin/clus
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
+### Node updates
+- Enhanced nodes: Asana
 
 ## n8n@1.50.1
 

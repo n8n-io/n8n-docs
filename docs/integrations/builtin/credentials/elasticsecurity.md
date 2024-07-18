@@ -45,7 +45,7 @@ If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/curre
 
 To configure this credential, you'll need:
 
-- A **API Key**: For the user account you log into Elasticsearch with.
+- An **API Key**: For the user account you log into Elasticsearch with.
 - Your Elasticsearch application's **Base URL** (also known as the Elasticsearch application endpoint):
 
     1. In Elasticsearch, select the option to **Manage this deployment**.

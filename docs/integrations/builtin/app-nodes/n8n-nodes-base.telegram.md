@@ -238,6 +238,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 
 ### Send Animation
 
+<!-- TODO: FINISH THIS AND CONTINUE ON -->
 To use this operation, enter these parameters:
 
 * **Credential to connect with**: Create or select an existing Telegram credential.

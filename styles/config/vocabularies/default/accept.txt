@@ -67,6 +67,7 @@ CRM
 Cron
 Crypto
 crypto
+Datadog
 Datastore
 DeepL
 Demio

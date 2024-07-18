@@ -75,6 +75,7 @@ disabled
 Disqus
 Dockerfile
 Dropcontact
+Dynatrace
 eksctl
 Embeddable
 embeddable
@@ -145,6 +146,7 @@ Mailcheck
 Mailchimp
 Mailgun
 Mailjet
+Malcore
 marketstack
 Mattermost
 Mautic

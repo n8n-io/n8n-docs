@@ -3,6 +3,7 @@
 title: Pipedrive credentials
 description: Documentation for Pipedrive credentials. Use these credentials to authenticate Pipedrive in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Pipedrive credentials

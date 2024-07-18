@@ -3,6 +3,7 @@
 title: Edit Image
 description: Documentation for the Edit Image node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: medium
 ---
 
 # Edit Image

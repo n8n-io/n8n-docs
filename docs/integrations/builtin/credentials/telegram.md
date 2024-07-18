@@ -3,6 +3,7 @@
 title: Telegram credentials
 description: Documentation for Telegram credentials. Use these credentials to authenticate Telegram in n8n, a workflow automation platform.
 contentType: integration
+priority: critical
 ---
 
 # Telegram credentials

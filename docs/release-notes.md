@@ -29,14 +29,63 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * MINOR version when adding functionality in a backward-compatible manner.
 * PATCH version when making backward-compatible bug fixes.
 
-## n8n@1.50.0
+## n8n@1.51.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.49.0...n8n@1.50.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-07-10
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.50.1...n8n@1.51.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-18
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains new nodes, node enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Text Classifier
+
+This release adds the [Text Classifier node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Postgres Chat Memory
+
+This release adds the [Postgres Chat Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat/).
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Google Vertex Chat Model
+
+This release adds the [Google Vertex Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex/).
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Node updates
+- Enhanced nodes: Asana
+
+## n8n@1.50.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.50.0...n8n@1.50.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-16
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.50.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.49.0...n8n@1.50.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-10
 
 
 
@@ -59,9 +108,7 @@ This release contains node enhancements and bug fixes.
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.3...n8n@1.49.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-03
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains a new node, node enhancements, and bug fixes.
 

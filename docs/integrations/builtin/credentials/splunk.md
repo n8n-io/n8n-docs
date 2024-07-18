@@ -16,6 +16,10 @@ You can use these credentials to authenticate the following nodes:
 - [Download and install](https://www.splunk.com/en_us/download/splunk-enterprise.html){:target=_blank .external-link} Splunk Enterprise.
 - [Enable token authentication](https://docs.splunk.com/Documentation/Splunk/9.2.1/Security/EnableTokenAuth){:target=_blank .external-link} in **Settings > Tokens**.
 
+/// note | Free trial Splunk Cloud Platform accounts can't access the REST API
+Free trial Splunk Cloud Platform accounts don't have access to the REST API. Ensure you have the necessary permissions. Refer to [Access requirements and limitations for the Splunk Cloud Platform REST API](https://docs.splunk.com/Documentation/SplunkCloud/8.2.2203/RESTTUT/RESTandCloud){:target=_blank .external-link} for more details.
+///
+
 ## Supported authentication methods
 
 - API auth token

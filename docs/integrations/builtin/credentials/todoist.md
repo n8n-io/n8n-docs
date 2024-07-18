@@ -3,6 +3,7 @@
 title: Todoist credentials
 description: Documentation for Todoist credentials. Use these credentials to authenticate Todoist in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Todoist credentials

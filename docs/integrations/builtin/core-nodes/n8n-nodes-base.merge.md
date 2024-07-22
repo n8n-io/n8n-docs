@@ -83,7 +83,7 @@ When merging data by **Mode > Combine**, you can set these **Options**:
 * **Multiple Matches**: Choose how n8n handles multiple matches when comparing data streams.
     * **Include All Matches**: Output multiple items if there are multiple matches, one for each match.
     * **Include First Match Only**: Keep the first item per match and discard the remaining multiple matches.
-* **Include Any Unpaired Items**: Choose whether to keep or discard unpaired items When merging by position. The default behavior is to leave out the items without a match. 
+* **Include Any Unpaired Items**: Choose whether to keep or discard unpaired items when merging by position. The default behavior is to leave out the items without a match. 
 
 ##### Clash Handling
 

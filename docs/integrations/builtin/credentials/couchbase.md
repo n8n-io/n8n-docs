@@ -20,7 +20,7 @@ If you are setting up Couchbase from scratch, you'll have to create a cluster an
 
 ## Supported authentication methods
 
-- Database connection - Values
+- Database connection
 
 ## Related resources
 

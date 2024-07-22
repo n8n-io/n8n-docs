@@ -33,7 +33,7 @@ To configure this credential, you'll need:
 
 - The **Connection String** for the database
 - A **Username**, with the appropriate permissions.
-- A user **Password**
+- A **Password** for that user
 - A **Bucket**, **Scope**, and **Collection**
 - Under **Credential to connect with**, select **Create New Credential**
 - Input these values and press save

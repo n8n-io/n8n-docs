@@ -27,7 +27,7 @@ If you are setting up Couchbase from scratch, you'll have to create a cluster an
 Refer to the [Couchbase documentation](https://docs.couchbase.com/home/index.html){:target=_blank .external-link} for more information about the service.
 
 
-## Using database connection - Values
+## Using Database Connection
 
 To configure this credential, you'll need:
 

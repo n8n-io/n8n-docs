@@ -30,30 +30,31 @@ Refer to [Telegram credentials](/integrations/builtin/credentials/telegram/) for
     * [**Answer Inline Query**](#answer-inline-query): Use this operation to send answers to callback queries sent from inline queries using the Bot API [answerInlineQuery](https://core.telegram.org/bots/api#answerinlinequery){:target=_blank .external-link} method.
 * File operations
     * [**Get File**](#get-file): Use this operation to get a file from Telegram. Uses the Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link}.
-* Message
+* Message operations
     * [**Delete Chat Message**](#delete-chat-message): Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} method.
     * [**Edit Message Text**](#edit-message-text): Use this operation to edit the text of an existing message using the Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext){:target=_blank .external-link} method.
     * [**Pin Chat Message**](#pin-chat-message): Use this operation to pin a message for the chat using the Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage){:target=_blank .external-link} method.
-    * [**Send Animation**](#send-animation): Use this operation to send an animated file to the chat using the Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} method.
-        * Send GIFs or H.264/MPEG-4 AVC videos without sound using this method.
-        * Bots can send animation files of up to 50 MB in size.
-    Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound)
+    * [**Send Animation**](#send-animation): Use this operation to send GIFs or H.264/MPEG-4 AVC videos without sound up to 50 MB in size to the chat using the Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} method.
     * [**Send Audio**](#send-audio): Use this operation to send an audio file to the chat and display them in the music player using the Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} method.
     * [**Send Chat Action**](#send-chat-action): Use this operation when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less using the Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} method.
     * [**Send Document**](#send-document): Use this operation to send a document to the chat using the Bot API [sendDocument](https://core.telegram.org/bots/api#senddocument){:target=_blank .external-link} method.
     * [**Send Location**](#send-location): Use this operation to send a geolocation to the chat using the Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} method.
-    * [**Send Media Group**](#send-media-group): Use this operation to send a group of photos, videos, documents, or audios as an album using the Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} method.
+    * [**Send Media Group**](#send-media-group): Use this operation to send a group of photos and/or videos using the Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} method.
     * [**Send Message**](#send-message): Use this operation to send a message to the chat using the Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage){:target=_blank .external-link} method.
     * [**Send Photo**](#send-photo): Use this operation to send a photo to the chat using the Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} method.
     * [**Send Sticker**](#send-sticker): Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers using the Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} method.
     * [**Send Video**](#send-video): Use this operation to send a video to the chat using the Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} method.
     * [**Unpin Chat Message**](#unpin-chat-message): Use this operation to unpin a message from the chat using the Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage){:target=_blank .external-link} method.
+    
+    /// note | Add bot to channel
+    A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+    ///
 
 ### Get Chat
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Get**.
 * **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
@@ -65,7 +66,7 @@ Refer to the Telegram Bot API [getChat](https://core.telegram.org/bots/api#getch
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Get Administrators**.
 * **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
@@ -77,7 +78,7 @@ Refer to the Telegram Bot API [getChatAdministrators](https://core.telegram.org/
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Get Member**.
 * **Chat ID**: Enter the Chat ID or username of the target channel in the format `@channelusername`.
@@ -90,7 +91,7 @@ Refer to the Telegram Bot API [getChatMember](https://core.telegram.org/bots/api
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Leave**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
@@ -102,7 +103,7 @@ Refer to the Telegram Bot API [leaveChat](https://core.telegram.org/bots/api#lea
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Set Description**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
@@ -115,7 +116,7 @@ Refer to the Telegram Bot API [setChatDescription](https://core.telegram.org/bot
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Chat**.
 * **Operation**: Select **Set Title**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
@@ -128,7 +129,7 @@ Refer to the Telegram Bot API [setChatTitle](https://core.telegram.org/bots/api#
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Callback**.
 * **Operation**: Select **Answer Query**.
 * **Query ID**: Enter the unique identifier of the query you want to answer.
@@ -150,7 +151,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Callback**.
 * **Operation**: Select **Answer Inline Query**.
 * **Query ID**: Enter the unique identifier of the query you want to answer.
@@ -174,7 +175,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **File**.
 * **Operation**: Select **Get**.
 * **File ID**: Enter the ID of the file you want to get.
@@ -186,7 +187,7 @@ Refer to the Telegram Bot API [getFile](https://core.telegram.org/bots/api#getfi
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Delete Chat Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to delete in the format `@channelusername`.
@@ -199,7 +200,7 @@ Refer to the Telegram Bot API [deleteMessage](https://core.telegram.org/bots/api
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Edit Message Text**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
@@ -221,7 +222,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Pin Chat Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to pin the message to in the format `@channelusername`.
@@ -240,7 +241,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Animation**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the animation to in the format `@channelusername`.
@@ -250,6 +251,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to the Telegram Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 #### Send Animation additional fields
 
@@ -272,7 +277,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Audio**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the audio to in the format `@channelusername`.
@@ -282,6 +287,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to the Telegram Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 #### Send Audio additional fields
 
@@ -304,7 +313,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Chat Action**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the chat action to in the format `@channelusername`.
@@ -317,7 +326,7 @@ Refer to Telegram's Bot API [sendChatAction](https://core.telegram.org/bots/api#
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Document**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the document to in the format `@channelusername`.
@@ -327,6 +336,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to Telegram's Bot API [sendDocument](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 #### Send Document additional fields
 
@@ -346,7 +359,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Location**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the location to in the format `@channelusername`.
@@ -356,6 +369,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to Telegram's Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 #### Send Location additional fields
 
@@ -369,7 +386,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Media Group**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the media group to in the format `@channelusername`.
@@ -383,6 +400,10 @@ To use this operation, enter these parameters:
 
 Refer to Telegram's Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} documentation for more information.
 
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
+
 #### Send Media Group additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendMediaGroup method. Select **Add Field** to add any of the following:
@@ -395,7 +416,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the message to in the format `@channelusername`.
@@ -403,6 +424,10 @@ To use this operation, enter these parameters:
 * **Text**: Enter the text to send, max 4096 characters after entities parsing.
 
 Refer to Telegram's Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 /// warning | Send Message limits
 Telegram limits the number of messages you can send to 30 per second. If you expect to hit this limit, refer to [Send more than 30 messages per second](#send-more-than-30-messages-per-second) for a suggested workaround.
@@ -423,7 +448,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Photo**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the photo to in the format `@channelusername`.
@@ -433,6 +458,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to Telegram's Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 #### Send Photo additional fields
 
@@ -448,7 +477,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Sticker**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the sticker to in the format `@channelusername`.
@@ -458,6 +487,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to Telegram's Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 ### Send Sticker additional fields
 
@@ -471,7 +504,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Send Video**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to send the video to in the format `@channelusername`.
@@ -481,6 +514,10 @@ To use this operation, enter these parameters:
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
 Refer to Telegram's Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} documentation for more information.
+
+/// note | Add bot to channel
+A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
 
 #### Send Video additional fields
 
@@ -503,7 +540,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 To use this operation, enter these parameters:
 
-* **Credential to connect with**: Create or select an existing Telegram credential.
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
 * **Resource**: Select **Message**.
 * **Operation**: Select **Pin Chat Message**.
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to unpin the message from in the format `@channelusername`.
@@ -584,16 +621,6 @@ Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:tar
 
 n8n provides a trigger node for Telegram. Refer to the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) for more information.
 
-## Send more than 30 messages per second
-
-The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcasting-to-users){:target=_blank .external-link} of sending only 30 messages per second. Follow these steps to send more than 30 messages:
-
-1. **Loop Over Items node**: Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to get at most 30 chat IDs from your database.
-2. **Telegram node**: Connect the Telegram node with the Loop Over Items node. Use the **Expression Editor** to select the Chat IDs from the Loop Over Items node.
-3. **Code node**: Connect the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
-
-You can also use this [workflow](https://n8n.io/workflows/772){:target=_blank .external-link}.
-
 ## Add a bot to a Telegram channel
 
 For a bot to send a message to a channel, you must add the bot to the channel. If the bot hasn't been added to the channel, you'll see an error with a description like:
@@ -609,6 +636,14 @@ To add a bot to a channel:
 
 ## Get the Chat ID
 
-Use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node in your workflow to get a Chat ID.
+Use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node in your workflow to get a Chat ID. This node can trigger on a number of events and returns a Chat ID on successful execution.
 
-On successful execution, the Telegram Trigger node returns a Chat ID.
+## Send more than 30 messages per second
+
+The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcasting-to-users){:target=_blank .external-link} of sending only 30 messages per second. Follow these steps to send more than 30 messages:
+
+1. **Loop Over Items node**: Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node to get at most 30 chat IDs from your database.
+2. **Telegram node**: Connect the Telegram node with the Loop Over Items node. Use the **Expression Editor** to select the Chat IDs from the Loop Over Items node.
+3. **Code node**: Connect the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
+
+You can also use this [workflow](https://n8n.io/workflows/772){:target=_blank .external-link}.

@@ -25,6 +25,8 @@ Create a [Telegram](https://telegram.org/){:target=_blank .external-link} accoun
 
 Refer to [Telegram's Bot API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for more information about the service.
 
+Refer to the [Telegram Bot Features](https://core.telegram.org/bots/features){:target=_blank .external-link} documentation for more information on creating and working with bots.
+
 ## Using API bot access token
 
 To configure this credential, you'll need:

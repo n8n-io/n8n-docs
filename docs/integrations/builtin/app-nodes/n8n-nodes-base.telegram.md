@@ -580,7 +580,7 @@ Refer to [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardr
 
 ## Related resources
 
-Refer to [Telegram's documentation](https://core.telegram.org/){:target=_blank .external-link} for more information about the service.
+Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for more information about the service.
 
 n8n provides a trigger node for Telegram. Refer to the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) for more information.
 

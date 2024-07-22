@@ -8,7 +8,7 @@ priority: critical
 
 # Telegram trigger
 
-[Telegram](https://telegram.org/) is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type.
+[Telegram](https://telegram.org/){:target=_blank .external-link} is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type. On this page, you'll find a list of events the Telegram trigger node can respond to and links to more resources.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/telegram/).
@@ -18,15 +18,23 @@ You can find authentication information for this node [here](/integrations/built
 For usage examples and templates to help you get started, refer to n8n's [Telegram Trigger integrations](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} page.
 ///
 
-## Updates
+## Events
 
-- `*`: All updates
-- **message**: Trigger on a new incoming message of any kind- text, photo, sticker, etc
-- **edited_message**: Trigger on a new version of a channel post that's known to the bot and was edited
-- **channel_post**: Trigger on a new incoming channel post of any kind - text, photo, sticker, etc
-- **edited_channel_post**: Trigger on a new version of a channel post that's known to the bot and was edited
-- **inline_query**: Trigger on a new incoming inline query
-- **callback_query**: Trigger on a new incoming callback query
-- **shipping_query**: Trigger on a new incoming shipping query. Only for invoices with flexible price
-- **pre_checkout_query**: Trigger on a new incoming pre-checkout query. Contains full information about checkout
-- **poll**: Trigger on a new poll state. Bots receive only updates about stopped polls and polls which are sent by the bot
+- **`*`**: Triggers on all updates of any kind.
+- **Callback Query**: Triggers on a new incoming callback query.
+- **Channel Post**: Triggers on a new incoming channel post of any kind, including text, photo, sticker, and so on.
+- **Edited Channel Post**: Triggers on a new version of a channel post that's known to the bot and was edited.
+- **Edited Message**: Triggers on a new version of a message that's known to the bot and was edited.
+- **Inline Query**: Triggers on a new incoming inline query.
+- **Message**: Triggers on a new incoming message of any kind, including text, photo, sticker, and so on.
+- **Poll Change**: Triggers when the poll state changes. Bots receive updates about stopped polls and polls which are sent by the bot.
+- **Pre-Checkout Query**: Triggers on a new incoming pre-checkout query. This response contains full information about checkout.
+- **Shipping Query**: Triggers on a new incoming shipping query. Only for invoices with a flexible price.
+
+## Related resources
+
+n8n provides an app node for Telegram. You can find the node docs [here](/integrations/builtin/credentials/telegram/).
+
+View [example workflows and related content](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} on n8n's website.
+
+Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for details about their API.

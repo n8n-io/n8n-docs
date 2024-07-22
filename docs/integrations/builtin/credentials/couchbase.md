@@ -34,7 +34,7 @@ To configure this credential, you'll need:
 - The **Connection String** for the database
 - The **Username**
 - A user **Password**
-- - A **Bucket**, **Scope**, and **Collection**
+- A **Bucket**, **Scope**, and **Collection**
 - Under **Credential to connect with**, select **Create New Credential**
 - Input these values and press save
 

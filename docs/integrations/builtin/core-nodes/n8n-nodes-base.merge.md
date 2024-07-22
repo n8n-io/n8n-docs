@@ -10,7 +10,7 @@ contentType: integration
 Use the Merge node to combine data from multiple streams, once data of all streams is available.
 
 /// note | Major changes in 0.194.0
-This node was overhauled in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
+The n8n team overhauled this node in n8n 0.194.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/4ff688642cc9ee7ca7d00987847bf4e4515da59d/docs/integrations/builtin/core-nodes/n8n-nodes-base.merge.md){:target=_blank .external-link}.
 ///
 
 /// note | Minor changes in 1.49.0
@@ -21,7 +21,7 @@ The **Mode > SQL Query** feature was also added in n8n version 1.49.0 and isn't 
 
 ## Node parameters
 
-You can specify how the Merge node should combine data from different branches by choosing a **Mode**: 
+You can specify how the Merge node should combine data from different data streams by choosing a **Mode**: 
 
 ### Append
 
@@ -77,10 +77,10 @@ Output all possible item combinations, while merging fields with the same name.
 
 When merging data by **Mode > Combine**, you can set these **Options**:
 
-* **Clash Handling**: Choose how to merge when branches clash, or when there are sub-fields. Refer to [Clash handling](#clash-handling) for details.
+* **Clash Handling**: Choose how to merge when data streams clash, or when there are sub-fields. Refer to [Clash handling](#clash-handling) for details.
 * **Fuzzy Compare**: Whether to tolerate type differences when comparing fields (enabled), or not (disabled, default). For example, when you enable this, n8n treats `"3"` and `3` as the same.
 * **Disable Dot Notation**: This prevents accessing child fields using `parent.child` in the field name.
-* **Multiple Matches**: Choose how n8n handles multiple matches when comparing branches.
+* **Multiple Matches**: Choose how n8n handles multiple matches when comparing data streams.
     * **Include All Matches**: Output multiple items if there are multiple matches, one for each match.
     * **Include First Match Only**: Keep the first item per match and discard the remaining multiple matches.
 * **Include Any Unpaired Items**: Choose whether to keep or discard unpaired items When merging by position. The default behavior is to leave out the items without a match. 
@@ -115,7 +115,7 @@ The node outputs the data from the chosen input, without changing it.
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(title, 'merge') ]]
 
-## Merging branches with uneven numbers of items
+## Merging data streams with uneven numbers of items
 
 The items passed into Input 1 of the Merge node will take precedence. For example, if the Merge node receives five items in Input 1 and 10 items in Input 2, it only processes five items. The remaining five items from Input 2 aren't processed.
 

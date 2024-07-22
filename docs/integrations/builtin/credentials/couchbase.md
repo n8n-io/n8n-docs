@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [Database access credentials](https://docs.couchbase.com/cloud/clusters/manage-database-users.html#create-database-credentials){:target=_blank .external-link} (username and password) with the appropriate permissions on a [Couchbase Capella](https://cloud.couchbase.com/){:target=_blank .external-link} cluster or a [Couchbase Server](https://docs.couchbase.com/server/current/install/install-intro.html) cluster.
 
-If you are setting up Couchbase from scratch, create a cluster and a bucket. Refer to the [Couchbase documentation](https://docs.couchbase.com/home/index.html){:target=_blank .external-link} for more detailed instructions on these steps.
+If you are setting up Couchbase from scratch, you'll have to create a cluster and a bucket. Refer to the [Couchbase documentation](https://docs.couchbase.com/home/index.html){:target=_blank .external-link} for more detailed instructions on these steps.
 
 ## Supported authentication methods
 

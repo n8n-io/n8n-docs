@@ -253,10 +253,12 @@ To use this operation, enter these parameters:
 Refer to the Telegram Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Animation additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendAnimation method. Select **Add Field** to add any of the following:
 
@@ -269,9 +271,11 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
     * JPEG format
-    * Less than 200 kB in size
+    * Less than 200 KB in size
     * Width and height less than 320px.
 * **Width**: Enter the width of the video clip.
+
+<!-- vale on -->
 
 ### Send Audio
 
@@ -289,11 +293,12 @@ To use this operation, enter these parameters:
 Refer to the Telegram Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Audio additional fields
 
+<!-- vale off -->
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendAudio method. Select **Add Field** to add any of the following:
 
 * **Caption**: Enter a caption text for the audio, max of 1024 characters.
@@ -306,8 +311,9 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Title**: Enter the audio track's name.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
     * JPEG format
-    * Less than 200 kB in size
+    * Less than 200 KB in size
     * Width and height less than 320px.
+<!-- vale on -->
 
 ### Send Chat Action
 
@@ -338,11 +344,12 @@ To use this operation, enter these parameters:
 Refer to Telegram's Bot API [sendDocument](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Document additional fields
 
+<!--vale off-->
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendDocument method. Select **Add Field** to add any of the following:
 
 * **Caption**: Enter a caption text for the file, max of 1024 characters.
@@ -352,8 +359,9 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
     * JPEG format
-    * Less than 200 kB in size
+    * Less than 200 KB in size
     * Width and height less than 320px.
+<!--vale on -->
 
 ### Send Location
 
@@ -371,16 +379,20 @@ To use this operation, enter these parameters:
 Refer to Telegram's Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Location additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendLocation method. Select **Add Field** to add any of the following:
 
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
+
+<!-- vale on -->
 
 ### Send Media Group
 
@@ -401,16 +413,20 @@ To use this operation, enter these parameters:
 Refer to Telegram's Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Media Group additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendMediaGroup method. Select **Add Field** to add any of the following:
 
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
+
+<!-- vale on -->
 
 ### Send Message
 
@@ -425,15 +441,17 @@ To use this operation, enter these parameters:
 
 Refer to Telegram's Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage){:target=_blank .external-link} documentation for more information.
 
-/// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
-///
-
 /// warning | Send Message limits
 Telegram limits the number of messages you can send to 30 per second. If you expect to hit this limit, refer to [Send more than 30 messages per second](#send-more-than-30-messages-per-second) for a suggested workaround.
 ///
 
+/// note | Add bot to channel
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+///
+
 #### Send Message additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendMessage method. Select **Add Field** to add any of the following:
 
@@ -443,6 +461,8 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
+
+<!-- vale on -->
 
 ### Send Photo
 
@@ -460,10 +480,12 @@ To use this operation, enter these parameters:
 Refer to Telegram's Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Photo additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendPhoto method. Select **Add Field** to add any of the following:
 
@@ -472,6 +494,8 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
+
+<!-- vale on -->
 
 ### Send Sticker
 
@@ -489,16 +513,20 @@ To use this operation, enter these parameters:
 Refer to Telegram's Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 ### Send Sticker additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendSticker method. Select **Add Field** to add any of the following:
 
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
+
+<!-- vale on -->
 
 ### Send Video
 
@@ -516,10 +544,12 @@ To use this operation, enter these parameters:
 Refer to Telegram's Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} documentation for more information.
 
 /// note | Add bot to channel
-A bot must be added to a channel in order to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
+A bot must be added to a channel to be able to send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
 #### Send Video additional fields
+
+<!-- vale off -->
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendVideo method. Select **Add Field** to add any of the following:
 
@@ -532,9 +562,11 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
     * JPEG format
-    * Less than 200 kB in size
+    * Less than 200 KB in size
     * Width and height less than 320px.
 * **Width**: Enter the width of the video.
+
+<!-- vale on -->
 
 ### Unpin Chat Message
 

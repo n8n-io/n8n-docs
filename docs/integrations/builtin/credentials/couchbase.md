@@ -32,7 +32,7 @@ Refer to the [Couchbase documentation](https://docs.couchbase.com/home/index.htm
 To configure this credential, you'll need:
 
 - The **Connection String** for the database
-- The **Username**
+- A **Username**, with the appropriate permissions.
 - A user **Password**
 - A **Bucket**, **Scope**, and **Collection**
 - Under **Credential to connect with**, select **Create New Credential**

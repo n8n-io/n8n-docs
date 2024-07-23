@@ -22,8 +22,8 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 To configure this credential, you'll need:
 
-- Host of your Datadog instance
-- API Key
-- App Key
+- Your Datadog instance **Host**
+- An **API Key**
+- An **App Key**
 	
 Refer to [Authentication](https://docs.datadoghq.com/api/latest/authentication/){:target=_blank .external-link} on Datadog's website for more information.

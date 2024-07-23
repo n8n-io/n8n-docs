@@ -15,13 +15,13 @@ pageType: reference
 Within projects, there are three user roles: Admin, Editor and Viewer. These roles control what the user can do in a project. A user can have different roles within different projects.
 
 ### Project Admin
-A Project Admin is the most permissive role that can be assigned. As well as managing project settings (name and deletion), project members (inviting, changing roles and removing) admins can also view, create, update and delete any workflows, credentials or executions within a project. 
+A Project Admin role has the highest level of permissions. As well as managing project settings (name and deletion), project members (inviting, changing roles and removing) admins can also view, create, update and delete any workflows, credentials or executions within a project. 
 
 ### Project Editor
 A Project Editor can view, create, update and delete any workflows, credentials or executions within a project. 
 
 ### Project Viewer
-A Project Viewer is effectively a 'read-only' role with access to all workflows, credentials and executions within a project. Viewers are not able to manually execute any workflows that exist in a project. 
+A Project Viewer is effectively a 'read-only' role with access to all workflows, credentials and executions within a project. Viewers aren't able to manually execute any workflows that exist in a project. 
 
 
 /// note | Role types and account types

@@ -22,4 +22,6 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 To configure this credential, you'll need:
 
-- API Key
+- An **API Key**: Get an API Key from your **Account > API**.
+
+Refer to [Using the Malcore API](https://support.malcore.io/hc/en-au/articles/17711707070617-Using-the-Malcore-API){:target=_blank .external-link} for more information.

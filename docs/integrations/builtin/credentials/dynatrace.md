@@ -22,6 +22,6 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 To configure this credential, you'll need:
 
-- Access Token
+- An **Access Token**
 	
 Refer to [Access Tokens](https://docs.dynatrace.com/docs/manage/identity-access-management/access-tokens-and-oauth-clients/access-tokens){:target=_blank .external-link} on Dynatrace's website for more information.

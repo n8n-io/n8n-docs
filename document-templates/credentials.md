@@ -4,12 +4,12 @@
 1. Make a new branch. If working on an internal ticket, include it at the start of the name. For example, DOC-123-feature-summary.
 2. Create a new file, or find the file you want to edit, in integrations/builtin/credentials/. If creating a new file, the name should be the integration name.
 3. Copy the template into the file (don't copy this comment).
-4. Placeholder text is in _italic_ or between <>. Make sure to replace it! 
-5. Before publishing, delete any comments.
+4. Placeholder text is in _italic_ or between <>. Make sure to replace it!
+5. Use the "Low" priority credential section unless you've been told otherwise. Refer to https://docs.google.com/spreadsheets/d/14YVtqhVnKH2d59LmldyqcK2OW3-2KgHYVaDSFx-8oeM/edit?gid=0#gid=0 for priority breakdown from July 2024.
+6. Before publishing, delete any comments.
 
 Use the style guide: https://github.com/n8n-io/n8n-docs/wiki
 You can find more info on working with the docs project in the README: https://github.com/n8n-io/n8n-docs/blob/main/README.md
-
 -->
 
 <!--
@@ -39,13 +39,15 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-_Include info on services they need to sign up for_
+_Include info on services they need to sign up for or required account settings/permissions_
 
 ## Supported authentication methods
 
+* _List of supported auth methods. Identify if methods should only be used for certain purposes_
+
 ## Related resources
 
-<!-- add a link to the service's documentation. This should usually go direct to the API credential docs. Amend the link text if necessary. -->
+<!-- add a link to the service's documentation. This should usually go directly to the API credential docs. Amend the link text if necessary. -->
 Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
 
 
@@ -57,13 +59,16 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 To configure this credential, you'll need:
 
-- _List of fields they'll need to fill out within n8n_
-	
-_Link to product's docs for this auth method._
-	
-_STOP AND THINK: does this node require a step by step? If authentication is easy to set up, or if this node isn't heavily used, consider leaving out the step by step to minimise maintenance._
+- _List of fields they'll need to fill out within n8n and a brief description of what those fields are_
 
-_IF NEEDED: Include a step by step guide to how to set up a particular type of authentication. If multiple auth methods are available, create a section for each. For example, the Asana credentials have two sections: one for OAuth and one for access token (/integrations/builtin/credentials/asana/)_
+<!-- For "Medium," "High," or "Critical" credentials, use this section. For "Low" credentials, delete it. -->
+_Add an intro statement that makes sense. For example: To generate an access token, create a Slack app:_
+
+1. _Detailed numbered instructions to configure credential. Add links to specific docs here if there are any that are relevant._
+
+<!-- For all credentials, include a link to the service's documentation on this type of authentication. This usually goes directly to API credentials, OAuth, etc.
+Amend the link/sentence text as necessary. -->
+Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating to the service.
 
 <!-- IF OAUTH FOR CLOUD-HOSTED DOESN'T REQUIRE ANY SETUP, use the section below. Otherwise omit -->
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"

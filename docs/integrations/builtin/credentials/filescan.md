@@ -22,4 +22,4 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 To configure this credential, you'll need:
 
-- API Key
+- An **API Key**: Generate your API key from your [**profile settings**](https://www.filescan.io/users/profile){:target=_blank .external-link} **> API Key**. Refer to the [Filescan FAQ](https://www.filescan.io/help/faq){:target=_blank .external-link} for more information.

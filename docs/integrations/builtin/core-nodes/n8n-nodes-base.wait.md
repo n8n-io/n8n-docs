@@ -178,5 +178,5 @@ If turned on, also set:
 
 For the time-based resume operations, note that:
 
-* For wait times less than 65 seconds, the workflow doesn't offload execution data offloaded to the database. Instead, the process continues to run and execution resumes after the specified interval passes.
+* For wait times less than 65 seconds, the workflow doesn't offload execution data to the database. Instead, the process continues to run and the execution resumes after the specified interval passes.
 * The n8n server time is always used regardless of the timezone setting. Workflow timezone settings, and any changes made to them, don't affect the Wait node interval or specified time. 

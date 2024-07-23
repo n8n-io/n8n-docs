@@ -22,5 +22,5 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 To configure this credential, you'll need:
 
-- API Key
-- Base URL
+- An **API Key**: Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link} for instructions on getting your API key.
+- The **Base URL** of your DFIR-IRIS instance.

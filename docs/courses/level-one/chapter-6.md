@@ -9,7 +9,7 @@ In this chapter, you will learn how to export and import workflows.
 
 ## Exporting and importing workflows
 
-n8n workflows can be saved locally as JSON files. This is useful if you want to share your workflow with someone else or import a workflow from someone else.
+You can save n8n workflows locally as JSON files. This is useful if you want to share your workflow with someone else or import a workflow from someone else.
 
 /// warning | Sharing credentials
 Note that the exported JSON file of your workflow will contain your credentials as well. If you don't want to share your credentials (recommended), delete them from the JSON file.

@@ -39,7 +39,7 @@ To configure this credential, you'll need:
 - A **Client ID**: Generated when you create a new OAuth client.
 - A **Client Secret**: Generated when you create a new OAuth client.
 
-To create a new OAuth client after logging in to [Calendly's developer portal](https://developer.calendly.com/console/apps) {:target=_blank .external-link}, go to **Account > My Apps > Create new app**.
+To create a new OAuth client after logging in to [Calendly's developer portal](https://developer.calendly.com/console/apps){:target=_blank .external-link}, go to **Account > My Apps > Create new app**.
 
 Use these settings:
 

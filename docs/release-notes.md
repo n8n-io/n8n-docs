@@ -33,6 +33,37 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.52.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.51.1...n8n@1.52.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-25
+
+/// warning | [Breaking change](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md){:target=_blank .external-link}
+Prometheus metrics enabled via N8N_METRICS_INCLUDE_DEFAULT_METRICS and N8N_METRICS_INCLUDE_API_ENDPOINTS were fixed to include the default n8n_ prefix.
+
+If you are using Prometheus metrics from these categories and are using a non-empty prefix, please update those metrics to match their new prefixed names.
+///
+
+
+This release contains new features, node enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Added Azure Key Vault support
+
+This release adds [Azure Key Vault](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license. 
+
+</div>
+
+### Node updates
+Enhanced nodes: 
+- [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/), [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/), [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+
+Deprecated nodes: 
+- OpenAI Model: You can use the OpenAI Chat Model instead
+- Google Palm Chat Model: You can use Google Vertex or Gemini instead
+- Google Palm Model: You can use Google Vertex or Gemini instead
+
 
 ## n8n@1.51.1
 

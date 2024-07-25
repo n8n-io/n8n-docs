@@ -1156,7 +1156,7 @@ nav:
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
     - hosting/index.md
-    - Community Edition: hosting/community-edition-features.md
+    - Community edition: hosting/community-edition-features.md
     - Installation:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md

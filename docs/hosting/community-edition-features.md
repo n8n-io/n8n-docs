@@ -13,7 +13,7 @@ hide:
 
 The Community edition runs with almost the complete feature set of n8n. The exceptions are listed here. 
 
-Community Edition doesn't include these features:
+Community edition doesn't include these features:
 - [Environments](/source-control-environments/)
 - [Version control using Git](/source-control-environments/)
 - [External storage for binary data](/hosting/scaling/external-storage/)
@@ -26,8 +26,5 @@ Community Edition doesn't include these features:
 - Sharing ([workflows](/workflows/sharing/), [credentials](/credentials/credential-sharing/)) (All workflows and credentials are solely accessible to the instance owner and the user who creates them)
 
 The above features are either available on Starter, Pro or Enterprise plans (including the self-hosted Enterprise edition). 
-
-See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference. 
-The above features are either available on Starter, Pro or Enterprise plans (including the self-hosted Enterprise edition).
 
 See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference. 

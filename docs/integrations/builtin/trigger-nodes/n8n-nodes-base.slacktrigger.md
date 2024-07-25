@@ -17,6 +17,7 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Slack integrations](https://n8n.io/integrations/slack-trigger/){:target=_blank .external-link} page.
 ///
+
 ## Events
 
 * Any Event
@@ -36,13 +37,15 @@ View [example workflows and related content](https://n8n.io/integrations/slack-t
 
 Refer to [Slack's documentation](https://api.slack.com/apis/connections/events-api){:target=_blank .external-link} for details about their API.
 
-## Slack configuration
+## Slack app configuration
 
-To use this node you first need to create an application in Slack and enable event subscriptions. For the **Request URL** input the production or test URL displayed in the webhooks section of the node.
+To use this node, you need to create an application in Slack and enable event subscriptions. For the **Request URL** input the production or test URL displayed in the webhooks section of the node.
 
 ///  note  | Request URL
-Slack only allows one request URL per app, This means if you want to test your workflow you will need to either use the production URL with execution logging or change the URL in Slack to the test URL.
+Slack only allows one request URL per app. If you want to test your workflow, you'll need to do one of the following:
+
+- Use the production URL with execution logging.
+- Change the URL in Slack to the test URL.
 ///
 
-Once verified you can select the bot events to subscribe to. You can use the **Events** option in the node to filter these requests. If you want to use an event not in the list you can add it as a bot event and select **Any Event** in the node.
-
+Once verified you can select the bot events to subscribe to. Use the **Events** option in the node to filter these requests. To use an event not in the list, add it as a bot event and select **Any Event** in the node.

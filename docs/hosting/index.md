@@ -7,7 +7,9 @@ hide:
 
 # Self-hosting n8n
 
-This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions.
+This section provides guidance on setting up n8n for both the Enterprise and Community self-hosted editions. The Community edition is free, the Enterprise edition is not. 
+
+See [Community Edition features](/hosting/Community-Edition-features/) for a list of available features. 
 
 <div class="grid-cards-vertical cards" markdown>
 

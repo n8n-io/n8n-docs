@@ -56,7 +56,13 @@ This release adds [Azure Key Vault](/external-secrets/) to the list of external 
 </div>
 
 ### Node updates
-- Enhanced nodes: [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/), [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/), [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+Enhanced nodes: 
+- [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/), [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/), [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+
+Deprecated nodes: 
+- OpenAI Model: You can use the OpenAI Chat Model instead
+- Google Palm Chat Model: You can use Google Vertex or Gemini instead
+- Google Palm Model: You can use Google Vertex or Gemini instead
 
 
 ## n8n@1.51.1

@@ -51,18 +51,20 @@ To generate an integration secret, [create a Notion integration](https://develop
 7. Select the **Secrets** tab.
 8. Copy the **Internal Integration Token** and add it as your n8n **Internal Integration Secret**.
 
-Refer to [Get your API secret](https://developers.notion.com/docs/create-a-notion-integration#get-your-api-secret){:target=_blank .external-link} for more information.
+Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
 
-For your integration to interact with Notion, you must [share a Notion page with the integration](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions){:target=_blank .external-link}. To share a page with an integration:
+### Share Notion page(s) with the integration
+
+For your integration to interact with Notion, you must [give your integration page permission](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions){:target=_blank .external-link} to interact with page(s) in your Notion workspace:
 
 1. Visit the page in your Notion workspace.
 2. Select the triple dot menu at the top right of a page.
-3. Scroll down to **Add connections**.
+3. In **Connections**, select **Connect to**.
 4. Use the search bar to find and select your integration from the dropdown list.
 
 Once you share at least one page with the integration, you can start making API requests. If the page isn't shared, any API requests made will respond with an error.
 
-Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
+Refer to [Integration permissions](https://developers.notion.com/docs/authorization#integration-permissions){:target=_blank .external-link} for more information.
 
 ## Using OAuth2
 
@@ -90,7 +92,7 @@ You must [create a Notion integration](https://developers.notion.com/docs/create
 11. Go to the **Secrets** tab.
 12. Copy the **Client ID** and **Client Secret** and add them to your n8n credential.
 
-Refer to the [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
+Refer to Notion's [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
 
 ## Internal vs. public integrations
 

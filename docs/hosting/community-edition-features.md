@@ -1,25 +1,25 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Community Edition features
+description: Community edition features
 contentType: explanation
 tags:
-  - Community Edition
-  - Enterprise Edition
+  - Community edition
+  - Enterprise edition
 hide:
   - tags
 ---
 
 # Community Edition features
 
-The Community Edition runs with almost the complete feature set of n8n. The exceptions are listed here. 
+The Community edition runs with almost the complete feature set of n8n. The exceptions are listed here. 
 
-These features aren't included in the Community Edition:
+The Community edition does not include these features:
 
 * [Environments](/source-control-environments/)
 * [Version control using Git](/source-control-environments/)
 * [External storage for binary data](/hosting/scaling/external-storage/)
-* [Log streaming](log-streaming/) ([Logging](/hosting/logging-monitoring/logging/) is included, however)
-* [Multi-main mode](/hosting/scaling/queue-mode/#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode/) is included, however)
+* [Log streaming](log-streaming/) ([Logging](/hosting/logging-monitoring/logging/) _is_ included)
+* [Multi-main mode](/hosting/scaling/queue-mode/#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode/) _is_ included)
 * [External secrets](/external-secrets/)
 * SSO ([SAML](/hosting/securing/set-up-sso/), [LDAP](/user-management/ldap/))
 * [Projects](/user-management/rbac/projects/)
@@ -28,4 +28,4 @@ These features aren't included in the Community Edition:
 
 The above features are either available on Starter, Pro or Enterprise plans (including the self-hosted Enterprise edition).
 
-See our [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference. 
+See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference. 

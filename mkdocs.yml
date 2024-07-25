@@ -761,6 +761,7 @@ nav:
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
+          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md

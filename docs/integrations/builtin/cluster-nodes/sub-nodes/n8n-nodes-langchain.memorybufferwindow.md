@@ -20,7 +20,7 @@ If your n8n instance uses [queue mode](/hosting/scaling/queue-mode/), this node 
 ## Node parameters
 
 -   **Session Key**: the key to use to store the memory in the workflow data.
--   **Context Window Length**: the number of previous messages to consider for context.
+-   **Context Window Length**: the number of previous interactions to consider for context.
 
 ## Templates and examples
 

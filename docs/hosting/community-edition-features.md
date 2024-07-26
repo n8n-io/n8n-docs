@@ -14,6 +14,7 @@ hide:
 The community edition runs with almost the complete feature set of n8n. The exceptions are listed here. 
 
 Community edition doesn't include these features:
+
 - [Environments](/source-control-environments/) 
 - [Version control using Git](/source-control-environments/) 
 - [External storage for binary data](/hosting/scaling/external-storage/) 

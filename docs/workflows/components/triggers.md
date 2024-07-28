@@ -13,19 +13,19 @@ Triggers have a lot in common with other nodes. However, there are some key diff
 
 For more information, check out the [Nodes](/workflows/components/nodes/) page.
 
-## Adding a trigger to your workflow
+## Add a trigger to your workflow
 
 When you create a new workflow, n8n will automatically add a trigger node. This default node is a manual trigger. Just like in the node panel, you can easily see if a node in your workflow is a trigger. Just check to see if there is a lightning bolt icon next to the node. 
 
 You can add as many triggers as you want. When you activate your workflow, all added triggers will listen for their defined events to know when to start running.
 
-## Testing a trigger
+## Test a trigger
 
 Once you've added a trigger node, you can test it. Like with other nodes, select the **Test step** button near the trigger node to run it. 
 
 Next, your should see whether or not the trigger ran successfully. Double-click the trigger node to open its panel. Under **OUTPUT** is a table listing the result of its last successful execution. There, if the trigger ran successfully, should be a timestamped record of it running.   
 
-## Executing your workflow after adding triggers
+## Execute your workflow after adding triggers
 To execute your workflow means to run it. You can only execute a workflow that has a trigger. This can be done either in manual or production mode.
 
 ### Manual mode

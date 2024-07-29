@@ -36,11 +36,11 @@ To configure this credential, you'll need:
 
 - The **Host** or domain name for the server.
 - The **Database** name.
-- A **User** name
-- A user **Password**
+- A **User** name.
+- A user **Password**.
 - **Ignore SSL Issues**: Set whether the credential connects if SSL validation fails.
 - **SSL**: Choose whether to use SSL in your connection.
-- The **Port** number to use for the connection
+- The **Port** number to use for the connection.
 - **SSH Tunnel**: Choose if you want to use SSH to encrypt the network connection with the Postgres server.
 
 To set up the database connection:
@@ -69,8 +69,8 @@ To set up the database connection:
 
 8. **SSH Tunnel**: Turn this setting on to connect to the database over SSH. Refer to [SSH tunnel limitations](#ssh-tunnel-limitations) for some guidance around using SSH. Once turned on, you'll need:
     1. Select **SSH Authenticate with** to set the SSH Tunnel type to build:
-        - Select `Password` if you want to connect to SSH using a password.
-        - Select `Private Key` if you want to connect to SSH using an identity file (private key) and a passphrase.
+        - Select **Password** if you want to connect to SSH using a password.
+        - Select **Private Key** if you want to connect to SSH using an identity file (private key) and a passphrase.
     2. Enter the remote bind address you're connecting to as the **SSH Host**.
     3. **SSH Port**: Enter the local port number for the SSH tunnel.
     4. **SSH Postgres Port**: Enter the remote end of the tunnel, the port number the database server is using.

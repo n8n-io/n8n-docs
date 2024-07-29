@@ -27,7 +27,7 @@ For usage examples and templates to help you get started, refer to n8n's [Telegr
 - **Edited Message**: Triggers on a new version of a message that's known to the bot and was edited.
 - **Inline Query**: Triggers on a new incoming inline query.
 - **Message**: Triggers on a new incoming message of any kind, including text, photo, sticker, and so on.
-- **Poll Change**: Triggers when the poll state changes. Bots receive updates about stopped polls and polls which are sent by the bot.
+- **Poll**: Triggers when the poll state changes. Bots receive updates about stopped polls and polls which are sent by the bot.
 - **Pre-Checkout Query**: Triggers on a new incoming pre-checkout query. This response contains full information about checkout.
 - **Shipping Query**: Triggers on a new incoming shipping query. Only for invoices with a flexible price.
 

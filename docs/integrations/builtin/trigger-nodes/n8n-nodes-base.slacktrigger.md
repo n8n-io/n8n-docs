@@ -52,11 +52,6 @@ You can further refine the node's behavior when you **Add Option**s:
 * **Resolve IDs**: Whether to resolve the IDs to their respective names and return them (turned on) or not (turned off, default).
 * **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/code/expressions/).
 
-## Templates and examples
-
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, page) ]]
-
 ## Related resources
 
 n8n provides an app node for Slack. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.slack/).

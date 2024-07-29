@@ -75,7 +75,7 @@ To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nod
     Slack only allows one request URL per app. If you want to test your workflow, you'll need to do one of the following:
 
     - Test with your **Test URL** first, then change your Slack app to use the **Production URL** once you've verified everything's working
-    - Use the production URL with execution logging.
+    - Use the **Production URL** with execution logging.
     ///
 
 4. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests. 

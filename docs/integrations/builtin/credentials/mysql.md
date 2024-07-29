@@ -48,7 +48,7 @@ To set up your database connection credential:
 
     ```
     SHOW VARIABLES WHERE Variable_name = 'hostname';
-    ``
+    ```
 
 2. Enter your database's name as the **Database** in your n8n credential. Run this query to confirm the database name:
 

@@ -18,7 +18,7 @@ Refer to [Telegram credentials](/integrations/builtin/credentials/telegram/) for
 
 ## Operations
 
-* Chat operations
+* **Chat** operations
     * [**Get**](#get-chat): Use this operation to get up to date information about a chat using the Bot API [getChat](https://core.telegram.org/bots/api#getchat){:target=_blank .external-link} method.
     * [**Get Administrators**](#get-administrators): Use this operation to get a list of all administrators in a chat using the Bot API [getChatAdministrators](https://core.telegram.org/bots/api#getchatadministrators){:target=_blank .external-link} method.
     * [**Get Member**](#get-chat-member): Use this operation to get the details of a chat member using the Bot API [getChatMember](https://core.telegram.org/bots/api#getchatmember){:target=_blank .external-link} method.

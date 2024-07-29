@@ -34,9 +34,9 @@ Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/){:targ
 To configure this credential, you'll need:
 
 - The server **Host**: The database's host name or IP address.
-- The **Database** name
-- A **User** name
-- A **Password** for that user
+- The **Database** name.
+- A **User** name.
+- A **Password** for that user.
 - The **Port** number used by the MySQL server.
 - **Connect Timeout**: The number of milliseconds during the initial database connection before a timeout occurs.
 - **SSL**: If your database is using SSL, turn this on and add details for the SSL certificate.
@@ -76,8 +76,8 @@ To set up your database connection credential:
     3. Enter the `client-cert.pem` file contents in the **Client Certificate** field.
 8. If you want to use **SSH Tunnel** for the connection, turn this option on in the credential. Otherwise, skip it. If you turn it on:
     1. Select the **SSH Authenticate with** to set the SSH Tunnel type to build:
-        - Select `Password` if you want to connect to SSH using a password.
-        - Select `Private Key` if you want to connect to SSH using an identity file (private key) and a passphrase. 
+        - Select **Password** if you want to connect to SSH using a password.
+        - Select **Private Key** if you want to connect to SSH using an identity file (private key) and a passphrase. 
     2. Enter the **SSH Host**. n8n uses this host to create the SSH URI formatted as: `[user@]host:port`.
     3. Enter the **SSH Port**. n8n uses this port to create the SSH URI formatted as: `[user@]host:port`.
     4. Enter the **SSH User** to connect with. n8n uses this user to create the SSH URI formatted as: `[user@]host:port`.

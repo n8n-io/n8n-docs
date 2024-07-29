@@ -18,7 +18,7 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guida
 
 ## Operations
 
-* Channel
+* **Channel**
     * **Archive** a channel.
     * **Close** a direct message or multi-person direct message.
     * **Create** a public or private channel-based conversation.
@@ -36,31 +36,31 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guida
     * **Sets purpose** of a channel.
     * **Sets topic** of a channel.
     * **Unarchive** a channel.
-* File
+* **File**
     * **Get** a file.
     * **Get Many**: Get and filter team files.
     * **Upload**: Create or upload an existing file.
-* Message
+* **Message**
     * **Delete** a message
     * **Get permalink**: Get a message's permalink.
     * **Search** for messages
     * **Send** a message
     * **Update** a message
-* Reaction
+* **Reaction**
     * **Add** a reaction to a message.
     * **Get** a message's reactions.
     * **Remove** a reaction from a message.
-* Star
+* **Star**
     * **Add** a star to an item
     * **Delete** a star from an item
     * **Get Many**: Get a list of an authenticated user's stars
-* User
+* **User**
     * **Get** information about a user.
 	* **Get Many**: Get a list of users.
     * **Get User's Profile**
     * **Get User's Status**
 	* **Update User's Profile**
-* User Group
+* **User Group**
     * **Create** a user group.
     * **Disable** a user group.
     * **Enable** a user group.
@@ -75,8 +75,6 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guida
 ## Related resources
 
 Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .external-link} for more information about the service.
-
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Required scopes
 
@@ -125,3 +123,5 @@ If you create a Slack app for your [Slack credentials](/integrations/builtin/cre
 | User Group | Enable | [usergroups.enable](https://api.slack.com/methods/usergroups.enable){:target=blank .external-link} |
 | User Group | Get Many | [usergroups.list](https://api.slack.com/methods/usergroups.list){:target=blank .external-link} |
 | User Group | Update | [usergroups.update](https://api.slack.com/methods/usergroups.update){:target=blank .external-link} |
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

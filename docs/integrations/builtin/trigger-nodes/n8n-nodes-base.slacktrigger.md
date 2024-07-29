@@ -65,6 +65,10 @@ View [example workflows and related content](https://n8n.io/integrations/slack-t
 
 Refer to [Slack's documentation](https://api.slack.com/apis/connections/events-api){:target=_blank .external-link} for details about their API.
 
-## Slack app configuration
+## Required scopes
 
 To use this node, you need to create an application in Slack and enable event subscriptions. Refer to [Slack credentials | Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) for more information.
+
+You must add the appropriate scopes to your Slack app for this trigger node to work.
+
+The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods. Refer to the linked Slack method documentation to identify the scopes you should add to your app.

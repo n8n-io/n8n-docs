@@ -24,7 +24,9 @@ You can use these credentials to authenticate the following nodes:
 - API access token:
     - Required for the [Slack Trigger](/integrations/builtin/trigger-ndoes/n8n-nodes-base.slacktrigger/) node.
     - Works with the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node, but not recommended.
-- OAuth2: Recommended method for the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node. Doesn't work with the Slack Trigger node.
+- OAuth2:
+    - Recommended method for the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node.
+    - Doesn't work with the [Slack Trigger](/integrations/builtin/trigger-ndoes/n8n-nodes-base.slacktrigger/) node.
 
 ## Related resources
 
@@ -50,7 +52,7 @@ To generate an access token, create a Slack app:
     * If you're building a bot, add the required scopes under the **Bot Token Scopes** section. 
     
     /// note | Scopes
-    Scopes determine what permissions an app has. Set your scopes based on which operations you want the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#required-scopes) node to perform.
+    Scopes determine what permissions an app has. Set your scopes based on which operations you want the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#required-scopes) node to perform or the events you want the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/#required-scopes) node to trigger on.
     ///
 
 9. After you've added scopes, go up to the **OAuth Tokens for Your Workspace** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
@@ -77,7 +79,7 @@ To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nod
     ///
 
 4. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests. 
-    - To use an event not in the list, add it as a bot event and select **Any Event** in the node.
+    - To use an event not in the list, add it as a bot event and select **Any Event** in the n8n node.
 
 Refer to [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening){:target=_blank .external-link} for more information.
 
@@ -128,7 +130,7 @@ To get both, create a Slack app:
         * `users:read`
     
     /// note | Scopes
-    Scopes determine what permissions an app has. Set your scopes based on which operations or triggers you want the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node to perform. Refer to the **Required scopes** section of that page for more information.
+    Scopes determine what permissions an app has. Set your scopes based on which operations you want the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#required-scopes) node to perform or the events you want the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/#required-scopes) node to trigger on.
     ///
 
 13. After you've added scopes, go up to the **OAuth Tokens for Your Workspace** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.

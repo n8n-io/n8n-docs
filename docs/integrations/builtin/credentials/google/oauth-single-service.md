@@ -14,11 +14,11 @@ This document contains instructions for creating a Google credential for a singl
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}
-* If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
-* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}
-* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}
+* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}.
+* [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}. If you've already used OAuth in your Google Cloud project before, you can skip this step.
+* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}.
+* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.
 
 
 ## Set up OAuth
@@ -28,13 +28,13 @@ This document contains instructions for creating a Google credential for a singl
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/).
 
     /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+    If you create a credential by selecting **Create new** in the credentials dropdown within a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
 
 	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
 	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
     ///
 
-2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
+2. Copy the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
 
 	??? Details "View screenshot"
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)

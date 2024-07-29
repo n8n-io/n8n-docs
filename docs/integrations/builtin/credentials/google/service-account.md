@@ -10,14 +10,14 @@ contentType: integration
 Using service accounts is more complex than OAuth2. Before you begin:
 
 * Check if your node is [compatible](/integrations/builtin/credentials/google/#compatible-nodes) with Service Account.
-* Make sure you need to use Service Account. For most use cases, OAuth2 is a better option.
+* Make sure you need to use Service Account. For most use cases, [OAuth2](/integrations/builtin-credentials/google/oauth-single-service/) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts){:target=_blank .external-link}.
 
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}
+* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}.
 
 ## Set up Service Account
 
@@ -26,15 +26,13 @@ Using service accounts is more complex than OAuth2. Before you begin:
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
 
     /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+    If you create a credential by selecting **Create new** in the credentials dropdown within a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
 
 	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
 	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
     ///
 
-
-
-2. Note the **Private Key** from the node credential modal. You'll need this in the next section.
+2. Copy the **Private Key** from the node credential modal. You'll need this in the next section.
 
 ### Set up service account in Google Cloud
 
@@ -70,7 +68,7 @@ In n8n:
 
 1. In the **Service Account Email** field, enter the email associated with your new Service Account (you can find this in the **Details** tab in Google Cloud).
 2. Enter the **Private Key** from the downloaded JSON file. If you're running an n8n version older than 0.156.0: replace all instances of `\n` in the JSON file with new lines.
-3. **Optional**: Click the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} and enter the email.
+3. **Optional**: Select the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} and enter the email.
 4. **Save** your credentials.
 
 The following video demonstrates the steps described above.

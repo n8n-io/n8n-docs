@@ -13,11 +13,11 @@ This document contains instructions for creating a generic OAuth2 Google credent
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/){:target=_blank .external-link} account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:target=_blank .external-link}
-* If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
-* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link}
-* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}
+* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}.
+* [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}. If you've already used OAuth in your Google Cloud project before, you can skip this step.
+* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}.
+* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.
 
 ## Set up OAuth
 
@@ -26,17 +26,20 @@ This document contains instructions for creating a generic OAuth2 Google credent
 1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
 
     /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node.
+    If you create a credential by selecting **Create new** in the credentials dropdown within a node, n8n automatically creates the correct credential type for that node.
 	
 	If you select **Credentials > New**, you must browse for the credential type. To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
     ///
 
-2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
+2. Copy the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
 
 	??? Details "View screenshot"
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
 
-3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information.
+3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information. Enter multiple scopes in a space-separated list, for example
+	```
+	https://www.googleapis.com/auth/gmail.labels https://www.googleapis.com/auth/gmail.addons.current.action.compose
+	```
 
 ### Set up OAuth in Google Cloud
 
@@ -45,7 +48,7 @@ This document contains instructions for creating a generic OAuth2 Google credent
 	??? Details "View screenshot"
 		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
 
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**. .   
+2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
 
 	??? Details "View screenshot"   
 		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
@@ -90,7 +93,7 @@ n8n doesn't support all scopes. When creating a generic Google OAuth2 API creden
 	| Gmail | 	https://www.googleapis.com/auth/gmail.labels <br /> https://www.googleapis.com/auth/gmail.addons.current.action.compose <br />	https://www.googleapis.com/auth/gmail.addons.current.message.action <br /> https://mail.google.com/ <br /> https://www.googleapis.com/auth/gmail.modify <br />	https://www.googleapis.com/auth/gmail.compose |
 	| Google Ads | https://www.googleapis.com/auth/adwords |
 	| Google Analytics | https://www.googleapis.com/auth/analytics <br /> https://www.googleapis.com/auth/analytics.readonly |
-	| Google Big Query | https://www.googleapis.com/auth/bigquery |
+	| Google BigQuery | https://www.googleapis.com/auth/bigquery |
 	| Google Books | https://www.googleapis.com/auth/books |
 	| Google Calendar | 	https://www.googleapis.com/auth/calendar <br /> https://www.googleapis.com/auth/calendar.events |
 	| Google Cloud Natural Language | https://www.googleapis.com/auth/cloud-language <br /> https://www.googleapis.com/auth/cloud-platform |

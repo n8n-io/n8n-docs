@@ -80,6 +80,8 @@ Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .externa
 
 Once you create a Slack app for your [Slack credentials](/integrations/builtin/credentials/slack/), you must add the appropriate scopes to your Slack app for this node to work. Use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
 
+<!-- vale off -->
+
 | **Resource** | **Operation** | **Slack API method** |
 | --- | --- | --- |
 | Channel | Archive | [conversations.archive](https://api.slack.com/methods/conversations.archive){:target=blank .external-link} |
@@ -123,5 +125,7 @@ Once you create a Slack app for your [Slack credentials](/integrations/builtin/c
 | User Group | Enable | [usergroups.enable](https://api.slack.com/methods/usergroups.enable){:target=blank .external-link} |
 | User Group | Get Many | [usergroups.list](https://api.slack.com/methods/usergroups.list){:target=blank .external-link} |
 | User Group | Update | [usergroups.update](https://api.slack.com/methods/usergroups.update){:target=blank .external-link} |
+
+<!-- vale on -->
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

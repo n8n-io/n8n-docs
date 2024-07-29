@@ -19,7 +19,7 @@ Community edition doesn't include these features:
 - [Environments](/source-control-environments/) 
 - [Version control using Git](/source-control-environments/) 
 - [External storage for binary data](/hosting/scaling/external-storage/) 
-- [Log streaming](log-streaming/) ([Logging](/hosting/logging-monitoring/logging/) _is_ included) 
+- [Log streaming](/log-streaming/) ([Logging](/hosting/logging-monitoring/logging/) _is_ included) 
 - [Multi-main mode](/hosting/scaling/queue-mode/#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode/) _is_ included) 
 - [External secrets](/external-secrets/) 
 - SSO ([SAML](/hosting/securing/set-up-sso/), [LDAP](/user-management/ldap/)) 

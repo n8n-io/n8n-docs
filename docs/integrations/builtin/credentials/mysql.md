@@ -35,10 +35,10 @@ To configure this credential, you'll need:
 
 - The server **Host**: The database's host name or IP address.
 - The **Database** name
-- A **User** name: The user should have appropriate access privileges.
+- A **User** name
 - A **Password** for that user
-- The **Port** number: The port number used by the MySQL server (default is `3306`).
-- The **Connect Timeout**: The number of milliseconds during the initial database connection before a timeout occurs.
+- The **Port** number used by the MySQL server.
+- **Connect Timeout**: The number of milliseconds during the initial database connection before a timeout occurs.
 - **SSL**: If your database is using SSL, turn this on and add details for the SSL certificate.
 - **SSH Tunnel**: Choose whether to connect over an SSH tunnel. An SSH tunnel lets un-encrypted traffic pass over an encrypted connection and enables authorized remote access to servers protected from outside connections by a firewall.
 
@@ -56,26 +56,26 @@ To set up your database connection credential:
     SHOW DATABASES;
     ```
 
-3. Enter the username of a **User** in the database.
+3. Enter the username of a **User** in the database. This user should have appropriate permissions for whatever actions you want n8n to perform.
 4. Enter the **Password** for that user.
-5. Enter the **Port** number used by the MySQL server. Run this query to confirm the port number:
+5. Enter the **Port** number used by the MySQL server (default is `3306`). Run this query to confirm the port number:
 
     ```
     SHOW VARIABLES WHERE Variable_name = 'port';
     ```
 
-6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `1000` which is the default used by MySQL. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 100 to enter it in n8n: to convert from seconds to milliseconds:
+6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `1000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 100 before entering it in n8n:
 
     ```
     SHOW VARIABLES WHERE Variable_name = 'connect_timeout';
     ```
 
-7. If you want to use **SSL** for the connection, turn this option on in the node. Otherwise, skip it. If you turn it on, enter the information from your MySQL SSL certificate in these fields:
+7. If your database uses SSL and you'd like to use **SSL** for the connection, turn this option on in the credential. If you turn it on, enter the information from your MySQL SSL certificate in these fields:
     1. Enter the `ca.pem` file contents in the **CA Certificate** field.
     2. Enter the `client-key.pem` file contents in the **Client Private Key** field.
     3. Enter the `client-cert.pem` file contents in the **Client Certificate** field.
 8. If you want to use **SSH Tunnel** for the connection, turn this option on in the credential. Otherwise, skip it. If you turn it on:
-    1. Select the **SSH Authenticate with** to set which type of SSH Tunnel to build:
+    1. Select the **SSH Authenticate with** to set the SSH Tunnel type to build:
         - Select `Password` if you want to connect to SSH using a password.
         - Select `Private Key` if you want to connect to SSH using an identity file (private key) and a passphrase. 
     2. Enter the **SSH Host**. n8n uses this host to create the SSH URI formatted as: `[user@]host:port`.

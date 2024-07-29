@@ -36,7 +36,7 @@ This document contains instructions for creating a generic OAuth2 Google credent
 	??? Details "View screenshot"
 		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
 
-3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information. Enter multiple scopes in a space-separated list, for example
+3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information. Enter multiple scopes in a space-separated list, for example:
 	```
 	https://www.googleapis.com/auth/gmail.labels https://www.googleapis.com/auth/gmail.addons.current.action.compose
 	```

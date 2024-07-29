@@ -24,7 +24,7 @@ You can use these credentials to authenticate the following nodes:
 - OAuth2
 - Webhook
 
-Not sure which method to use? See [Which method do I use?](#which-method-should-i-use) for more guidance.
+Not sure which method to use? See [How to choose an authentication method](#how-to-choose-an-authentication-method) for more guidance.
 
 ## Related resources
 

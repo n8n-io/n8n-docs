@@ -23,8 +23,8 @@ See each supported authentication method below for more detailed instructions on
 
 ## Supported authentication methods
 
-- API key
-- OAuth2
+- API key: Use for the [WhatsApp](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) node.
+- OAuth2: Use for the [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) node.
 
 ## Related resources
 
@@ -37,7 +37,7 @@ Meta classifies users who create WhatsApp business apps as Tech Providers; refer
 To configure this credential, you'll need:
 
 - An API **Access Token**: Generated when you create a Meta app with WhatsApp as the product.
-- A **Business Account ID**: Generated for all WhatsApp Business accounts. You can view yours in **Business Manager** > **Business Settings** > **Accounts** > **WhatsApp Business Accounts** and viewing your account details, or copy it from the Meta app you create.
+- A **Business Account ID**: Generated for all WhatsApp Business accounts. You can view yours in **Business Manager** > **Business Settings** > **Accounts** > **WhatsApp Business Accounts** and view your account details, or copy it from the Meta app you create.
 
 To generate an access token, create a Meta app with WhatsApp as the product. To create the app:
 
@@ -60,7 +60,7 @@ To generate an access token, create a Meta app with WhatsApp as the product. To 
 
 Refer to [Test Business Messaging on WhatsApp](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-4--test-business-messaging-on-whatsapp){:target=_blank .external-link} for more information on the above steps.
 
-Fully verifying and launching your app will take further configuration. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-5--scale-your-solution){:target=_blank .external-link} Steps 5 and beyond for more information.
+Fully verifying and launching your app will take further configuration. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-5--scale-your-solution){:target=_blank .external-link} Steps 5 and beyond for more information. Refer to [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review){:target=_blank .external-link} for more information on the Meta App Review process.
 
 ## Using OAuth2
 
@@ -85,7 +85,7 @@ To generate both, create a Meta app with WhatsApp as the product. To create the 
 10. Set the **Privacy Policy URL** and **Terms of Service URL** for the app.
 10. Change the **App Mode** to **Live**.
 11. Go to **App settings** > **Basic**.
-12. Copy the **App ID**. Use this as the **Client ID** within the n8n credential.
-13. Copy the **App Secret**. Use this as the **Client Secret** within the n8n credential.
+12. Copy the **App ID** and enter it as the **Client ID** within the n8n credential.
+13. Copy the **App Secret** and enter it as the **Client Secret** within the n8n credential.
 
-Fully verifying and launching your app will take further configuration. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-5--scale-your-solution){:target=_blank .external-link} Steps 5 and beyond for more information.
+Fully verifying and launching your app will take further configuration. Refer to Meta's [Get Started for Tech Providers](https://developers.facebook.com/docs/whatsapp/solution-providers/get-started-for-tech-providers#step-5--scale-your-solution){:target=_blank .external-link} Steps 5 and beyond for more information. Refer to [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review){:target=_blank .external-link} for more information on the Meta App Review process.

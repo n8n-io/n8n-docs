@@ -1,17 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Export and import workflows
+title: Export and import workflows
+description: Different ways to export and import workflows in n8n.
 contentType: howto
 ---
 
 # Export and import workflows
 
-/// warning | Sharing credentials
-Note that the exported JSON file of your workflow will contain your credentials as well. If you don't want to share your credentials (recommended), delete them from the JSON file.
-///
-
 n8n saves workflows in JSON format. You can export your workflows as JSON files or import JSON files into your n8n library. 
 You can export and import workflows in several ways. 
+
+--8<-- "_snippets/workflows/sharing-credentials.md"
 
 ## Copy-Paste
 
@@ -25,9 +24,10 @@ To select all nodes or a group of nodes, click and drag:
 From the top navigation bar, select the three dots in the upper right <img alt="Workflow menu icon" class="off-glb" src="/_images/common-icons/three-dots-horizontal.png"> to see the following options: 
 
 <figure><img src="/_images/courses/level-one/chapter-six/l1-c6-import-export-menu.png" alt="Import/Export menu" style="width:100%"><figcaption align = "center"><i>Import & Export workflows menu</i></figcaption></figure>
-* **Download**: Downloads your current workflow as a JSON file to your computer
-* **Import from URL**: Imports a workflow as a published JSON file
-* **Import from File**: Imports a workflow as a JSON file from your computer
+
+* **Download**: Downloads your current workflow as a JSON file to your computer.
+* **Import from URL**: Imports workflow JSON from a URL, for example, [this workflow JSON file on GitHub](https://raw.githubusercontent.com/n8n-io/demo-setup/main/n8n/backup/workflows/srOnR8PAY3u4RSwb.json){:target=_blank .external-link}. 
+* **Import from File**: Imports a workflow as a JSON file from your computer.
 
 ## From the command line
 

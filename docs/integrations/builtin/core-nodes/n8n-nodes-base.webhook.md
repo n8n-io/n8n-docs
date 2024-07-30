@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webhook
 description: Documentation for the Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+priority: critical
 tags:
   - "webhook set route parameters"
   - "get webhook URL"

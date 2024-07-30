@@ -7,7 +7,7 @@ contentType: integration
 
 # Splunk
 
-Use the Splunk node to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including retrieving fired alerts reports, as well as deleting and retrieving search configuration. 
+Use the Splunk node to automate work in Splunk, and integrate Splunk with other applications. n8n has built-in support for a wide range of Splunk features, including getting fired alerts reports, as well as deleting and getting search configuration. 
 
 On this page, you'll find a list of operations the Splunk node supports and links to more resources.
 
@@ -18,24 +18,24 @@ Refer to [Splunk credentials](/integrations/builtin/credentials/splunk/) for gui
 ## Operations
 
 * Fired Alert
-    * Retrieve a fired alerts report
+    * Get a fired alerts report
 * Search Configuration
     * Delete a search configuration
-    * Retrieve a search configuration
-    * Retrieve all search configurations
+    * Get a search configuration
+    * Get many search configurations
 * Search Job
     * Create a search job
     * Delete a search job
-    * Retrieve a search job
-    * Retrieve all search jobs
+    * Get a search job
+    * Get many search jobs
 * Search Result
-    * Retrieve all search results for a search job
+    * Get many search results
 * User
-    * Create an user
-    * Delete an user
-    * Retrieve an user
-    * Retrieve all users
-    * Update an user
+    * Create a user
+    * Delete a user
+    * Get a user
+    * Get many users
+    * Update a user
 
 ## Templates and examples
 

@@ -3,6 +3,7 @@
 title: Ollama credentials
 description: Documentation for the Ollama credentials. Use these credentials to authenticate Ollama in n8n, a workflow automation platform.
 contentType: integration
+priority: high
 ---
 
 # Ollama credentials

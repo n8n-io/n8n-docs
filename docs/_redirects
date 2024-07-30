@@ -1,3 +1,4 @@
+/hosting/logging-monitoring/security-audit/     /hosting/securing/security-audit/
 /integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/
 
 # 2024 SEO audit
@@ -713,7 +714,6 @@
 /nodes/n8n-nodes-base.openthesaurus/		/integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus/
 /nodes/n8n-nodes-base.openWeatherMap/		/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/
 /nodes/n8n-nodes-base.openweathermap/		/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/
-/nodes/n8n-nodes-base.orbit/		/integrations/builtin/app-nodes/n8n-nodes-base.orbit/
 /nodes/n8n-nodes-base.oura/		/integrations/builtin/app-nodes/n8n-nodes-base.oura/
 /nodes/n8n-nodes-base.paddle/		/integrations/builtin/app-nodes/n8n-nodes-base.paddle/
 /nodes/n8n-nodes-base.pagerDuty/		/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/

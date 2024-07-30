@@ -71,15 +71,15 @@ To create an application with a bot and generate the **Bot Token**:
     - Attach Files
     - Read Message History
     - Add Reactions
-12. Add the app to your server:
+12. Add the app to your server or test server:
     1. Go to **Installation > Install Link** and copy the link listed there.
     2. Paste the link in your browser and hit Enter.
-    1. Select "Add to server" in the installation prompt.
-    1. Once your app's added to your test server, you'll see it in the member list.
+    1. Select **Add to server** in the installation prompt.
+    1. Once your app's added to your server, you'll see it in the member list.
 
 These steps outline the basic functionality needed to set up your n8n credential. Refer to the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide for more information on creating an app, especially:
 
-- [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials){:target=_blank .external-link} for getting your app's credentials into your local dev environment.
+- [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials){:target=_blank .external-link} for getting your app's credentials into your local developer environment.
 - [Handling interactivity](https://discord.com/developers/docs/quick-start/getting-started#step-3-handling-interactivity){:target=_blank .external-link} for information on setting up public endpoints for interactive `/slash` commands.
 
 ## Using OAuth2

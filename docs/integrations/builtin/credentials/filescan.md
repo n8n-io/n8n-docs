@@ -4,6 +4,8 @@ title: Filescan credentials
 description: Documentation for the Filescan credentials. Use these credentials to authenticate Filescan in n8n, a workflow automation platform.
 contentType: integration
 ---
+<!-- vale off -->
+<!-- Not adding "Filescan" as an exception generally. -->
 # Filescan credentials
 
 --8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
@@ -24,3 +26,4 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 To configure this credential, you'll need:
 
 - An **API Key**: Generate your API key from your [**profile settings**](https://www.filescan.io/users/profile){:target=_blank .external-link} **> API Key**. Refer to the [Filescan FAQ](https://www.filescan.io/help/faq){:target=_blank .external-link} for more information.
+<!-- vale on -->

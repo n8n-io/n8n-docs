@@ -28,7 +28,7 @@ There are five steps to connecting your n8n credential to Google services:
 
 ### Create a Google Cloud Console project
 
-Next, create a Google Cloud Console project. If you already have a project, jump to step 5 in this list:
+First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
 1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
 2. In the top menu, select the **Select a project** dropdown and select **New project**.

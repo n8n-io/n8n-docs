@@ -20,14 +20,14 @@ The community edition doesn't include these features:
 - [Environments](/source-control-environments/)
 - [External secrets](/external-secrets/)
 - [External storage for binary data](/hosting/scaling/external-storage/)
-- [Log streaming](/log-streaming/)
-- [Multi-main mode](/hosting/scaling/queue-mode/#multi-main-setup)
+- [Log streaming](/log-streaming/) ([Logging](/hosting/logging-monitoring/logging/) _is_ included) 
+- [Multi-main mode](/hosting/scaling/queue-mode/#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode/) _is_ included)
 - [Projects](/user-management/rbac/projects/)
 - SSO ([SAML](/hosting/securing/set-up-sso/), [LDAP](/user-management/ldap/))
 - Sharing ([workflows](/workflows/sharing/), [credentials](/credentials/credential-sharing/)) (Only the instance owner and the user who creates them can access workflows and credentials)
 - [Version control using Git](/source-control-environments/)
 - [Workflow history](/workflows/history/)
 
-These features are available in the Starter, Pro, or Enterprise plans, including the self-hosted Enterprise edition.
+These features are available in the Starter, Pro, or Enterprise Cloud plans, including the self-hosted Enterprise edition.
 
 See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.

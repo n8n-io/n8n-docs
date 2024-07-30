@@ -45,20 +45,18 @@ To create an application with a bot and generate the **Bot Token**:
 1. If you don't have one already, create an app in the [developer portal](https://discord.com/developers/applications?new_application=true){:target=_blank .external-link}.
 2. Enter a **Name** for your app.
 3. Select **Create**.
-4. In your Discord project folder on your local environment, rename the `.sample.env` file to `.env`. You'll store your app's credentials there.
-5. From the app's **General Information** page, copy the **Application ID**. In your `.env` file, replace `<YOUR_APP_ID>` with the copied ID.
-6. From the app's **General Information** page, copy the **Public Key**. In your `.env` file, replace `<YOUR_PUBLIC_KEY>` with the copied key.
-7. Select **Bot** from the left menu.
-8. Under **Token**, select **Reset Token** to generate a new bot token. In your `.env` file, replace `<YOUR_BOT_TOKEN>` with the copied token.
-9. Add this bot token to your n8n credential.
-10. In **Bot > Privileged Gateway Intents**, n8n recommends activating **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**. Refer to [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot){:target=_blank .external-link} for more information on privileged intents.
-11. In **Installation > Installation Contexts**, select the installation contexts you want your bot to use:
+4. Select **Bot** from the left menu.
+5. Under **Token**, select **Reset Token** to generate a new bot token. In your `.env` file, replace `<YOUR_BOT_TOKEN>` with the copied token.
+6. Add this bot token to your n8n credential.
+7. In **Bot > Privileged Gateway Intents**, add any privileged intents you want your bot to have. Refer to [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot){:target=_blank .external-link} for more information on privileged intents.
+    - n8n recommends activating **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**. 
+8. In **Installation > Installation Contexts**, select the installation contexts you want your bot to use:
     - Select **Guild Install** for server-installed apps. (Most common for n8n users.)
-    - Select **User Install** for user-installed apps. (Less common for n8n users.)
+    - Select **User Install** for user-installed apps. (Less common for n8n users, but may be useful for testing.)
     - Refer to Discord's [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts){:target=_blank .external-link} documentation for more information about these installation contexts.
-12. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
-13. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes){:target=_blank .external-link} documentation for more information about these and other scopes.
-14. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions){:target=_blank .external-link} documentation for more information. n8n recommends selecting these permissions for the [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) node:
+9. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
+10. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes){:target=_blank .external-link} documentation for more information about these and other scopes.
+11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions){:target=_blank .external-link} documentation for more information. n8n recommends selecting these permissions for the [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) node:
     - Manage Roles
     - Manage Channels
     - Read Messages/View Channels
@@ -73,19 +71,16 @@ To create an application with a bot and generate the **Bot Token**:
     - Attach Files
     - Read Message History
     - Add Reactions
-15. Add the app to your server:
+12. Add the app to your server:
     1. Go to **Installation > Install Link** and copy the link listed there.
-    2. For **Guild Install** tests, add this to your test server or live server:
-        1. Paste the link in your browser and hit Enter.
-        1. Select "Add to server" in the installation prompt.
-        1. Once your app's added to your test server, you'll see it in the member list.
-    4. For **User Install**, add the app to your user account:
-        1. Paste the same link in your browser and hit Enter again.
-        1. Select **Add to my apps** in the installation prompt.
-        1. Follow the prompt to install to your user account.
-        1. Once your app's installed to your user account, you can open a DM with it.
+    2. Paste the link in your browser and hit Enter.
+    1. Select "Add to server" in the installation prompt.
+    1. Once your app's added to your test server, you'll see it in the member list.
 
-Refer to the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide for more information.
+These steps outline the basic functionality needed to set up your n8n credential. Refer to the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app){:target=_blank .external-link} guide for more information on creating an app, especially:
+
+- [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials){:target=_blank .external-link} for getting your app's credentials into your local dev environment.
+- [Handling interactivity](https://discord.com/developers/docs/quick-start/getting-started#step-3-handling-interactivity){:target=_blank .external-link} for information on setting up public endpoints for interactive `/slash` commands.
 
 ## Using OAuth2
 

@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Groq credentials
 description: Documentation for the Groq credentials. Use these credentials to authenticate Groq in n8n, a workflow automation platform.
+priority: medium
 ---
 
 # Groq credentials

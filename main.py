@@ -7,8 +7,11 @@ def define_env(env):
 
 	@env.macro	
 	def templatesWidget(title, slug):
-		node_for_template = title.replace(' ', '+')
-		response = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search=&category=&apps={node_for_template}&page=1&sort=views:desc')
+		if(title == 'Email Trigger (IMAP)'):
+			node_for_template = 'email+imap'
+		else:
+			node_for_template = title.replace(' ', '+')
+		response = requests.get(url = f'https://api.n8n.io/api/templates/search?rows=3&search={node_for_template}&page=1&sort=views:desc')
 		data = response.json()
 		# not all nodes have three templates
 		try:
@@ -32,6 +35,7 @@ def define_env(env):
 
 		return f'<div class="n8n-templates-widget"><div class="n8n-templates-widget-template"><strong>{workflow_one_title}</strong><p class="n8n-templates-name">by {workflow_one_user}</p><a class="n8n-templates-link" href="{workflow_one_url}" target="_blank">View template details</a></div><div class="n8n-templates-widget-template"><strong>{workflow_two_title}</strong><p class="n8n-templates-name">by {workflow_two_user}</p><a class="n8n-templates-link" href="{workflow_two_url}" target="_blank">View template details</a></div><div class="n8n-templates-widget-template"><strong>{workflow_three_title}</strong><p class="n8n-templates-name">by {workflow_three_user}</p><a class="n8n-templates-link" href="{workflow_three_url}" target="_blank">View template details</a></div><span class="n8n-templates-widget-more"><a href="https://n8n.io/integrations/{slug}/" target="_blank">Browse {title} integration templates</a>, or <a href="https://n8n.io/workflows/" target="_blank">search all templates</a></span></div>'
 	
+	@env.macro	
 	def workflowDemo(workflow_endpoint):
 		r = requests.get(url = workflow_endpoint)
 		wf_data = r.json()

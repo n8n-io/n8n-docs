@@ -3,6 +3,7 @@
 title: MQTT credentials
 description: Documentation for MQTT credentials. Use these credentials to authenticate MQTT in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # MQTT credentials

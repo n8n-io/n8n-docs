@@ -1,3 +1,6 @@
+/hosting/logging-monitoring/security-audit/     /hosting/securing/security-audit/
+/integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/
+
 # 2024 SEO audit
 /nodes/nodes.html    /integrations/builtin/node-types/
 /getting-started/installation/advanced/server-setup.html    /hosting/installation/server-setups/
@@ -8,7 +11,7 @@
 /reference/security/   /privacy-security/security/
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-
+/reference/security.html    /privacy-security/security/ 
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/
@@ -39,6 +42,7 @@
 /hosting/configuration/#use-built-in-and-external-modules-in-the-code-node      /hosting/configuration/configuration-examples/modules-in-code-node/
 
 
+/integrations/builtin/core-nodes/n8n-nodes-base.interval/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/
 /integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/google/googleai/
 
 /n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/
@@ -584,7 +588,7 @@
 /nodes/n8n-nodes-base.iCal/		/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /nodes/n8n-nodes-base.if/		/integrations/builtin/core-nodes/n8n-nodes-base.if/
 /nodes/n8n-nodes-base.intercom/		/integrations/builtin/app-nodes/n8n-nodes-base.intercom/
-/nodes/n8n-nodes-base.interval/		/integrations/builtin/core-nodes/n8n-nodes-base.interval/
+/nodes/n8n-nodes-base.interval/		/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/
 /nodes/n8n-nodes-base.invoiceNinja/		/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/
 /nodes/n8n-nodes-base.invoiceninja/		/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/
 /nodes/n8n-nodes-base.invoiceNinjaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/
@@ -710,7 +714,6 @@
 /nodes/n8n-nodes-base.openthesaurus/		/integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus/
 /nodes/n8n-nodes-base.openWeatherMap/		/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/
 /nodes/n8n-nodes-base.openweathermap/		/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/
-/nodes/n8n-nodes-base.orbit/		/integrations/builtin/app-nodes/n8n-nodes-base.orbit/
 /nodes/n8n-nodes-base.oura/		/integrations/builtin/app-nodes/n8n-nodes-base.oura/
 /nodes/n8n-nodes-base.paddle/		/integrations/builtin/app-nodes/n8n-nodes-base.paddle/
 /nodes/n8n-nodes-base.pagerDuty/		/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/

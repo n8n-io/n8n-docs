@@ -3,6 +3,7 @@
 title: Google OAuth2 single service
 description: Documentation for single service OAuth2 Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 contentType: integration
+priority: critical
 ---
 
 # Google: OAuth2 single service

@@ -157,7 +157,7 @@ plugins:
   - search
   - exclude:
       glob:
-        #- integrations/builtin/*
+      # - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false
@@ -326,7 +326,9 @@ nav:
       - Log streaming: log-streaming.md
       - Enterprise license key: enterprise-key.md
     - Releases:
-      - Release notes: release-notes.md
+      - Release notes:
+        - 1.x: release-notes.md
+        - 0.x: release-notes/0-x.md
       - v1.0 migration guide: 1-0-migration-checklist.md
     - Help and community:
       - Where to get help: help-community/help.md
@@ -338,7 +340,7 @@ nav:
           - Security: privacy-security/security.md
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
-      - Faircode license: faircode-license.md    
+      - Fair-code license: faircode-license.md    
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -371,7 +373,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.interval.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
@@ -396,7 +397,6 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.start.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
         - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
@@ -575,7 +575,6 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.orbit.md
         - integrations/builtin/app-nodes/n8n-nodes-base.oura.md
         - integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
         - integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
@@ -761,6 +760,7 @@ nav:
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
+          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
@@ -785,6 +785,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
@@ -798,6 +799,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing.md
@@ -814,6 +816,7 @@ nav:
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
@@ -997,7 +1000,6 @@ nav:
         - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openweathermap.md
-        - integrations/builtin/credentials/orbit.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
         - integrations/builtin/credentials/pagerduty.md
@@ -1158,7 +1160,8 @@ nav:
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
-    - hosting/index.md
+    - Overview: hosting/index.md
+    - Community vs Enterprise: hosting/community-edition-features.md
     - Installation:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md
@@ -1199,6 +1202,7 @@ nav:
         - hosting/configuration/configuration-examples/index.md
         - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
         - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
         - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
         - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
         - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
@@ -1212,7 +1216,7 @@ nav:
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
-      - Security audit: hosting/logging-monitoring/security-audit.md
+      - Security audit: hosting/securing/security-audit.md
     - Scaling and performance:
       - Overview: hosting/scaling/overview.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
@@ -1222,6 +1226,14 @@ nav:
       - Binary data: hosting/scaling/binary-data.md
       - External storage for binary data: hosting/scaling/external-storage.md
       - Memory-related errors: hosting/scaling/memory-errors.md
+    - Securing n8n:
+      - Overview: hosting/securing/overview.md
+      - Set up SSL: hosting/securing/set-up-ssl.md
+      - Set up SSO: hosting/securing/set-up-sso.md
+      - Security audit: hosting/securing/security-audit.md
+      - Disable the API: hosting/securing/disable-public-api.md
+      - Opt out of data collection: hosting/securing/telemetry-opt-out.md
+      - Blocking nodes: hosting/securing/blocking-nodes.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

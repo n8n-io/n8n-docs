@@ -38,6 +38,8 @@ The way you build workflows affects how much data they consume when executed. Al
 
 Note that n8n itself consumes memory to run. On average, the software alone uses around 180MiB RAM.
 
+Interactions with the UI also consume memory. Playing around with the workflow UI while it performs heavy executions could also push the memory capacity over the limit.
+
 ## How to manage execution data on Cloud
 
 Execution data includes node data, parameters, variables, execution context, and binary data references. It's text-based.

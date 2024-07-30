@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webhook
 description: Documentation for the Webhook node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+priority: critical
 tags:
   - "webhook set route parameters"
   - "get webhook URL"
@@ -17,11 +18,6 @@ Use the Webhook node to create [webhooks](https://en.wikipedia.org/wiki/Webhook)
 You can use the Webhook node as a trigger for a workflow when you want to receive data and run a workflow based on the data. The Webhook node also supports returning the data generated at the end of a workflow. This makes it useful for build a workflow to process data and return the results, like an API endpoint.
 
 The webhook allows you to trigger workflows from services that don't have a dedicated app trigger node.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Webhook integrations](https://n8n.io/integrations/webhook/){:target=_blank .external-link} list.
-///
-
 
 ## Build and test workflows
 
@@ -50,9 +46,6 @@ The Webhook node has two URLs: test URL and production URL. n8n displays the URL
 
 * **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
-
-
-
 
 ### HTTP Method
 
@@ -142,6 +135,11 @@ Select **Add Option** to view more configuration options. The available options 
 | Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'webhook') ]]
 
 ## Listen for multiple HTTP methods
 

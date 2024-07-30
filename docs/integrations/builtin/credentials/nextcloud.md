@@ -3,6 +3,7 @@
 title: Nextcloud credentials
 description: Documentation for Nextcloud credentials. Use these credentials to authenticate Nextcloud in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Nextcloud credentials

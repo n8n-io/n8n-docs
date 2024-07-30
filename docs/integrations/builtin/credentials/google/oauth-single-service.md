@@ -14,32 +14,97 @@ This document contains instructions for creating a Google credential for a singl
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
-* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}.
+* Create a [Google Cloud](https://cloud.google.com/){:target=_blank .external-link} account.
+* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:target=_blank .external-link}.
 * [Configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}. If you've already used OAuth in your Google Cloud project before, you can skip this step.
-* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:targe=_blank .external-link}.
-* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:targe=_blank .external-link}.
+* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link}.
+* If using Google Ads: Get a [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}.
 
 
 ## Set up OAuth
 
-### Create a new credential in n8n
+There are six steps to connecting to Google services using a custom OAuth client:
 
-1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/).
+1. [Create your n8n credential](#create-your-n8n-credential).
+2. [Create a Google Cloud Console project](#create-a-google-cloud-console-project).
+3. [Enable APIs](#enable-apis).
+4. [Configure your OAuth consent screen](#configure-your-oauth-consent-screen).
+5. [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials).
+6. [Finish your n8n credential](#finish-your-n8n-credential).
 
-    /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown within a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+### Create your n8n credential
 
-	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
-	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
-    ///
+Create your n8n credential first so that you have the **OAuth Redirect URL**.
 
-2. Copy the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
+1. CrThe fastest way to create a new n8n credential for Google is to begin with the Google node you want and select **Create new** in the credentials dropdown within the node.
+2. Copy the **OAuth Redirect URL** from the node credential modal. You'll need this later.
 
-	??? Details "View screenshot"
-		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
+	![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png) 
 
+### Create a Google Cloud Console project
 
+Next, create a Google Cloud Console project. If you already have a project, jump to step 5 in this list:
+
+1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
+2. In the top menu, select the **Select a project** dropdown and select **New project**.
+3. Enter a **Project name** and select the **Location** for your project.
+4. Select **Create**.
+5. Check the top navigation and make sure your project is selected in the **Select a project** dropdown. If not, select the project you just created.
+
+### Enable APIs
+
+With your project created, enable the APIs you'll need access to:
+
+--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
+
+### Configure your OAuth consent screen
+
+If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
+
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project. 
+1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
+2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
+3. Select **Create**.
+4. Enter the essential information:
+	- **App name**
+	- **User support email**
+	- **Email addresses** field in **Developer contact information**
+5. In the **Authorized domains** section, add `n8n.cloud` if using n8n's Cloud service. If you're self-hosting, addr the domain of your n8n instance.
+7. Select **SAVE AND CONTINUE** to go to the **Scopes** page.
+8. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
+9. On the **Summary** page, review the information for accuracy.
+
+### Create your Google OAuth client credentials
+
+Next, create the OAuth client credentials in Google:
+
+1. In the **APIs & Services** section, select **Credentials**.
+2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
+
+	![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
+
+3. In the **Application type** dropdown, select **Web application**.
+
+	![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
+
+4. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
+5. Under **Authorized redirect URIs**, select **+ ADD URI**.
+
+	![Add URI](/_images/integrations/builtin/credentials/google/add-uri.png)
+
+6. Paste in the **OAuth redirect URL** from your n8n credential.
+7. Select **CREATE**.
+
+### Finish your n8n credential
+
+With the Google project and credentials fully configured, finish the n8n credential:
+
+1. From the **OAuth client created** pop-up, copy the **Client ID**. Enter this in your n8n credential.
+2. Copy the **Client Secret** from Google Cloud Console in the credentials modal and enter it in your n8n credential.
+2. Select **Sign in with Google** to complete your Google authentication.
+3. **Save** your new credentials.
+
+<!--
 ### Set up OAuth in Google Cloud
 
 1. Go to [Google Cloud Console | APIs and services](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
@@ -88,7 +153,7 @@ In n8n:
 1. Enter your new **Client ID** and **Client Secret** from Google Cloud Console in the credentials modal.
 2. Select **Sign in with Google** to complete your Google authentication.
 3. **Save** your new credentials.
-
+-->
 ## Video
 
 <div class="video-container">

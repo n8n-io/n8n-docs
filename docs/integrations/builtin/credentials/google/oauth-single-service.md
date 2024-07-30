@@ -85,7 +85,7 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
 2. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
-2. in n8n, select **Sign in with Google** to complete your Google authentication.
+2. In n8n, select **Sign in with Google** to complete your Google authentication.
 3. **Save** your new credentials.
 
 <!--

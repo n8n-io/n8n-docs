@@ -53,8 +53,8 @@ To create an application with a bot and generate the **Bot Token**:
 9. Add this bot token to your n8n credential.
 10. In **Bot > Privileged Gateway Intents**, n8n recommends activating **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**. Refer to [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot){:target=_blank .external-link} for more information on privileged intents.
 11. In **Installation > Installation Contexts**, select the installation contexts you want your bot to use:
-    - Select **User Install** for user-installed apps.
-    - Select **Guild Install** for server-installed apps.
+    - Select **Guild Install** for server-installed apps. (Most common for n8n users.)
+    - Select **User Install** for user-installed apps. (Less common for n8n users.)
     - Refer to Discord's [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts){:target=_blank .external-link} documentation for more information about these installation contexts.
 12. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
 13. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes){:target=_blank .external-link} documentation for more information about these and other scopes.
@@ -127,7 +127,7 @@ Refer to the [Discord Making a Webhook documentation](https://support.discord.co
 
 The simplest installation is a **webhook**. You create and add webhooks to a single channel on a Discord server. Webhooks can post messages to a channel. They don't require a bot user or authentication. But they can't listen or respond to user requests or commands. If you need a straightforward way to send messages to a channel without the need for interaction or feedback, use a webhook.
 
-A **bot** is an interactive step up from a webhook. You add bots to the Discord server (referred to as a `guild` in the Discord API documentation). Bots can interact with users on all the server's channels. They can manage channels, send and retrieve messages, retrieve the list of all users, and change their roles. If you need to build an interactive, complex, or multi-step workflow, use a bot.
+A **bot** is an interactive step up from a webhook. You add bots to the Discord server (referred to as a `guild` in the Discord API documentation) or to user accounts. Bots added to the server can interact with users on all the server's channels. They can manage channels, send and retrieve messages, retrieve the list of all users, and change their roles. If you need to build an interactive, complex, or multi-step workflow, use a bot.
 
-**OAuth2** is basically a **bot** that uses an OAuth2 flow rather than just the bot token. As with bots, you add these to the Discord server. These credentials offer the same functionalities as bots, but they can simplify the installation of the bot on your server.
+**OAuth2** is basically a **bot** that uses an OAuth2 flow rather than just the bot token. As with bots, you add these to the Discord server or to user accounts. These credentials offer the same functionalities as bots, but they can simplify the installation of the bot on your server.
 

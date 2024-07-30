@@ -93,7 +93,7 @@ To configure this credential, you'll need:
 - Choose whether to send **Authentication** in the **Header** or **Body**
 - A **Bot Token**
 
-For details on creating an application with a bot and generating the token, follow the same steps as in [Using Bot](#using-bot) above.
+For details on creating an application with a bot and generating the token, follow the same steps as in [Using bot](#using-bot) above.
 
 Then:
 

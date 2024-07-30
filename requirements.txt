@@ -1,3 +1,4 @@
 mkdocs-exclude==1.0.2
 mkdocs-glightbox
 mkdocs-macros-plugin==1.0.4
+python-slugify

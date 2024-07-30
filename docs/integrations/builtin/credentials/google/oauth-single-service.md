@@ -26,13 +26,6 @@ There are five steps to connecting your n8n credential to Google services:
 1. [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials).
 1. [Finish your n8n credential](#finish-your-n8n-credential).
 
-### Create your n8n credential
-
-Create your n8n credential first so that you have the **OAuth Redirect URL**.
-
-1. The fastest way to create a new n8n credential for Google is to begin with the Google node you want and select **Create new** in the credentials dropdown within the node.
-2. Copy the **OAuth Redirect URL** from the node credential modal. You'll need this later.
-
 ### Create a Google Cloud Console project
 
 Next, create a Google Cloud Console project. If you already have a project, jump to step 5 in this list:

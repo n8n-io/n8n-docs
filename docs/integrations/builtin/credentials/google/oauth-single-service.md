@@ -65,18 +65,9 @@ Next, create the OAuth client credentials in Google:
 
 1. In the **APIs & Services** section, select **Credentials**.
 2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
-
-	![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
-
 3. In the **Application type** dropdown, select **Web application**.
-
-	![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
-
 4. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
 5. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
-
-	![Add URI](/_images/integrations/builtin/credentials/google/add-uri.png)
-
 6. Select **CREATE**.
 
 ### Finish your n8n credential
@@ -88,56 +79,6 @@ With the Google project and credentials fully configured, finish the n8n credent
 2. In n8n, select **Sign in with Google** to complete your Google authentication.
 3. **Save** your new credentials.
 
-<!--
-### Set up OAuth in Google Cloud
-
-1. Go to [Google Cloud Console | APIs and services](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
-
-	??? Details "View screenshot"
-		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
-
-2. **Optional:** If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}. Expand the detailed steps below for more guidance.
-
-	??? Details "View detailed steps"
-		1. Select **OAuth consent screen**.
-		2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account.
-		3. Select **Create**.
-		4. Enter the essential information: **App name**, **User support email**, and the **Email addresses** field in **Developer contact information**.
-		5. Add an authorized domain: select **+ ADD DOMAIN**. Enter `n8n.cloud` if using n8n's Cloud service, or the domain of your n8n instance if you're self-hosting.
-		6. Select **SAVE AND CONTINUE** to go to the **Scopes** page.
-		7. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
-		8. On the **Summary** page, review the information, then select **BACK TO DASHBOARD**.
-
-3. Select **+ CREATE CREDENTIALS > OAuth client ID**.
-
-	??? Details "View screenshot"   
-		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
-
-4. In the **Application type** dropdown, select **Web application**. Google automatically generates a name.
-
-	??? Details "View screenshot"   
-		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
-
-5. Under **Authorized redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from n8n.
-
-	??? Details "View screenshot"  
-		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png) 
-		![Add URI](/_images/integrations/builtin/credentials/google/add-uri.png)
-
-6. Select **CREATE**.
-7. Enable each Google service API that you want to use:
-
-	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}.  
-	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
-
-### Create and test your connection
-
-In n8n:
-
-1. Enter your new **Client ID** and **Client Secret** from Google Cloud Console in the credentials modal.
-2. Select **Sign in with Google** to complete your Google authentication.
-3. **Save** your new credentials.
--->
 ## Video
 
 <div class="video-container">

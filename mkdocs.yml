@@ -157,7 +157,7 @@ plugins:
   - search
   - exclude:
       glob:
-      #- integrations/builtin/*
+      # - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false
@@ -1155,7 +1155,8 @@ nav:
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Hosting n8n:
-    - hosting/index.md
+    - Overview: hosting/index.md
+    - Community vs Enterprise: hosting/community-edition-features.md
     - Installation:
       - npm: hosting/installation/npm.md
       - Docker: hosting/installation/docker.md

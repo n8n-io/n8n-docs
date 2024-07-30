@@ -109,8 +109,8 @@ To configure this credential, you'll need:
 
 To get a Webhook URL, you create a webhook and copy the URL that gets generated:
 
-1. Open your Discord **Server Settings** and open the Integrations tab.
-2. Select "Create Webhook" to create a new webhook.
+1. Open your Discord **Server Settings** and open the **Integrations** tab.
+2. Select **Create Webhook** to create a new webhook.
 3. Give your webhook a **Name** that makes sense.
 3. Select the **avatar** next to the **Name** to edit or upload a new avatar.
 4. In the **CHANNEL** dropdown, select the channel the webhook should post to.

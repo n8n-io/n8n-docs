@@ -46,8 +46,8 @@ To create an application with a bot and generate the **Bot Token**:
 2. Enter a **Name** for your app.
 3. Select **Create**.
 4. Select **Bot** from the left menu.
-5. Under **Token**, select **Reset Token** to generate a new bot token. In your `.env` file, replace `<YOUR_BOT_TOKEN>` with the copied token.
-6. Add this bot token to your n8n credential.
+5. Under **Token**, select **Reset Token** to generate a new bot token. 
+6. Copy the token and add it to your n8n credential.
 7. In **Bot > Privileged Gateway Intents**, add any privileged intents you want your bot to have. Refer to [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot){:target=_blank .external-link} for more information on privileged intents.
     - n8n recommends activating **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD_MEMBERS**. 
 8. In **Installation > Installation Contexts**, select the installation contexts you want your bot to use:

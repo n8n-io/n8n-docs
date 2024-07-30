@@ -26,7 +26,7 @@ You can use these credentials to authenticate the following nodes:
 - OAuth2
 - Webhook
 
-Not sure which method to use? Refer to [How to choose an authentication method](#how-to-choose-an-authentication-method) for more guidance.
+Not sure which method to use? Refer to [Choose an authentication method](#choose-an-authentication-method) for more guidance.
 
 ## Related resources
 
@@ -118,7 +118,7 @@ To get a Webhook URL, you create a webhook and copy the URL that gets generated:
 
 Refer to the [Discord Making a Webhook documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks){:target=_blank .external-link} for more information.
 
-## How to choose an authentication method
+## Choose an authentication method
 
 The simplest installation is a **webhook**. You create and add webhooks to a single channel on a Discord server. Webhooks can post messages to a channel. They don't require a bot user or authentication. But they can't listen or respond to user requests or commands. If you need a straightforward way to send messages to a channel without the need for interaction or feedback, use a webhook.
 

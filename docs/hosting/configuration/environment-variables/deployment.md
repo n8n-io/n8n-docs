@@ -18,7 +18,7 @@ This page lists the deployment configuration options for your self-hosted n8n in
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n. |
+| `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n and the redirect URL for SAML based authentication. |
 | `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/configuration/configuration-methods/). |
 | `N8N_DISABLE_UI` | Boolean | `false` | Set to `true` to disable the UI. |
 | `N8N_PREVIEW_MODE` | Boolean | `false` | Set to `true` to run in preview mode. |

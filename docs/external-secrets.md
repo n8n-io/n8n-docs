@@ -25,6 +25,7 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Select **Set Up** for your store provider.
 1. Enter the credentials for your provider:
+	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target=_blank .external-link}. n8n supports only single-line values for secrets.
 	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions.
 
 		Example policy:

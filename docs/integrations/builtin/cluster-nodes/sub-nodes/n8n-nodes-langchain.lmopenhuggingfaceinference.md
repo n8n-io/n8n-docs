@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Hugging Face Inference Model
 description: Documentation for the Hugging Face Inference Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: medium
 ---
 
 # Hugging Face Inference Model

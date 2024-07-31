@@ -3,6 +3,7 @@
 title: GitHub credentials
 description: Documentation for GitHub credentials. Use these credentials to authenticate GitHub in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # GitHub credentials

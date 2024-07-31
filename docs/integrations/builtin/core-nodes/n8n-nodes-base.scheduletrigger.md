@@ -3,6 +3,7 @@
 title: Schedule trigger
 description: Documentation for the Schedule trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: critical
 ---
 
 # Schedule trigger

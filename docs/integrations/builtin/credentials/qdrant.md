@@ -3,6 +3,7 @@
 title: Qdrant credentials
 description: Documentation for the Qdrant credentials. Use these credentials to authenticate Qdrant in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Qdrant credentials

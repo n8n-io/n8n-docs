@@ -3,6 +3,7 @@
 title: Twilio credentials
 description: Documentation for Twilio credentials. Use these credentials to authenticate Twilio in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Twilio credentials

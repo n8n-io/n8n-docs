@@ -20,7 +20,7 @@ Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/
 * **Calendar**
     * **Availability**: If a time-slot is available in a calendar
 * **Event**
-    * **Create**: Add a event to calendar
+    * **Create**: Add an event to calendar
     * **Delete**: Delete an event
     * **Get**: Retrieve an event
     * **Get Many**: Retrieve all events from a calendar

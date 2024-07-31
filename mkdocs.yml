@@ -1082,6 +1082,7 @@ nav:
         - integrations/builtin/credentials/vonage.md
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/webflow.md
+        - integrations/builtin/credentials/webhook.md
         - integrations/builtin/credentials/wekan.md
         - integrations/builtin/credentials/whatsapp.md
         - integrations/builtin/credentials/wise.md

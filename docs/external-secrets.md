@@ -63,7 +63,7 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 	 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}.
 		///
 
-	* Google Cloud Platform: provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to GCP's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} for more information.
+	* Google Cloud Platform: provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to Google's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} for more information.
 
 1. **Save** your configuration.
 1. Enable the provider using the **Disabled / Enabled** toggle.

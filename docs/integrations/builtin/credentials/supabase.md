@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Supabase](https://supabase.com/){:target=_blank .external-link} account.
+Create a [Supabase](https://supabase.com/dashboard/sign-up){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
@@ -29,9 +29,12 @@ Refer to [Supabase's API documentation](https://supabase.com/docs/guides/api){:t
 
 To configure this credential, you'll need:
 
-- A **Host**: Go to [**Project Settings > API**](https://supabase.com/dashboard/project/_/settings/api){:target=_blank .external-link}. Copy the **URL** from the **Config** section and enter it as your n8n **Host**.
-- A **Service Role Secret**: Go to [**Project Settings > API**](https://supabase.com/dashboard/project/_/settings/api){:target=_blank .external-link}. Reveal the secret for the `service_role` API key. Copy that **secret** and enter it as your n8n **Service Role Secret**.
+- A **Host**
+- A **Service Role Secret**
 
-Refer to [API URL and keys](https://supabase.com/docs/guides/api#api-url-and-keys){:target=_blank .external-link} for more detailed instructions.
+To generate your API Key:
 
-Refer to [Understanding API Keys](https://supabase.com/docs/guides/api/api-keys){:target=_blank .external-link} for more information on the `service_role` privileges.
+1. In your Supabase account, go to the **Dashboard** and create or select a project for which you want to create an API key.
+2. Go to [**Project Settings > API**](https://supabase.com/dashboard/project/_/settings/api){:target=_blank .external-link} to see the API Settings for your project.
+3. Copy the **URL** from the **Project URL** section and enter it as your n8n **Host**. Refer to [API URL and keys](https://supabase.com/docs/guides/api#api-url-and-keys){:target=_blank .external-link} for more detailed instruction.
+4. Reveal and copy the **Project API key** for the `service_role`. Copy that key and enter it as your n8n **Service Role Secret**. Refer to [Understanding API Keys](https://supabase.com/docs/guides/api/api-keys){:target=_blank .external-link} for more information on the `service_role` privileges.

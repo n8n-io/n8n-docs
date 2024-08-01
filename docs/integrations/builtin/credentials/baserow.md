@@ -30,6 +30,11 @@ Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-doc
 
 To configure this credential, follow these steps:
 
+- Your Baserow **Host**
+- A **Username** and **Password** to log in with
+
+To set up the credential:
+
 1. Enter the **Host** for the Baserow instance:
     - For a Baserow-hosted instance: leave as `https://api.baserow.io`.
     - For a self-hosted instance: set to your self-hosted instance API URL.

@@ -70,9 +70,9 @@ With your project created, enable the APIs you'll need access to:
 
 With the Google project and credentials fully configured, finish the n8n credential:
 
-1. In your Service Account credential in Google Cloud, open the **Details** tab.
-2. Copy the **Email** listed there and enter it in your n8n credential as the **Service Account Email**.
-3. Open the downloaded JSON file and copy the **private_key**. Do not include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
+1. Open the downloaded JSON file.
+2. Copy the `client_email` and enter it in your n8n credential as the **Service Account Email**.
+3. Copy the `private_key`. Do not include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
 
 	///warning | Older versions of n8n
 	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.

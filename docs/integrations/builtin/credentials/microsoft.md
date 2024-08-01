@@ -47,8 +47,8 @@ Some Microsoft services require extra information for OAuth2. Refer to [Service-
 
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
-1. [Register an application with the Microsoft Identity Platform](#register-an-application).
-2. [Generate a client secret for that application](#generate-a-client-secret).
+1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
+2. [Generate a client secret](#generate-a-client-secret) for that application.
 
 Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}. 
 
@@ -67,7 +67,7 @@ Register an application with the Microsoft Identity Platform:
 6. Select **Register** to finish creating your application.
 7. Copy the **Application (client) ID** and paste it into n8n as the **Client ID**.
 
-Refer to [register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link} for more information.
+Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link} for more information.
 
 ### Generate a client secret
 

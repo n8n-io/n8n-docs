@@ -38,7 +38,7 @@ To generate your API Key:
 
 1. Login to your OpenAI account or [create](https://platform.openai.com/signup/){:target=_blank .external-link} an account.
 2. Open your [API keys](https://platform.openai.com/api-keys){:target=_blank .external-link} page.
-3. Click on **Create new secret key** to create an API key, optionally naming the key.
+3. Select **Create new secret key** to create an API key, optionally naming the key.
 4. Copy your key and add it as the **API Key** in n8n.
 
 Refer to the [API Quickstart Account Setup documentation](https://platform.openai.com/docs/quickstart/account-setup){:target=_blank .external-link} for more information.

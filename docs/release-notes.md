@@ -50,9 +50,9 @@ This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to
 
 <div class="n8n-new-features" markdown>
 
-#### New node: Information Extractor
+#### New node: Information Extraction
 
-This release adds the [Information Extraction node](/INSERT). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
+This release adds the Information Extraction node. The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
 
 </div>
 
@@ -60,7 +60,7 @@ This release adds the [Information Extraction node](/INSERT). The node is specif
 
 #### New node: Sentiment Analysis
 
-This release adds the [Sentiment Analysis node](/INSERT). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories
+This release adds the Sentiment Analysis node. The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
 
 </div>
 

@@ -30,11 +30,16 @@ There are five steps to connecting your n8n credential to Google services:
 
 First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
-1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
-2. In the top menu, select the **Select a project** dropdown and select **New project**.
+1. Log in to your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
+2. In the top menu, select the **Select a project** dropdown and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page
 3. Enter a **Project name** and select the **Location** for your project.
 4. Select **Create**.
-5. Check the top navigation and make sure the **Select a project** dropdown has your project selected. If not, select the project you just created.
+5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
+
+<figure markdown="span">
+![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/google/google-cloud-project-dropdown.png)
+<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+</figure>
 
 ### Enable APIs
 
@@ -46,7 +51,11 @@ With your project created, enable the APIs you'll need access to:
 
 If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
 
-1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project. 
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
 2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
 3. Select **Create**.

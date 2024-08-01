@@ -1,4 +1,8 @@
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+	<figure markdown="span">
+![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 1. Go to **APIs & Services > Library**.
 1. Search for and select the API(s) you want to enable. For example, for the Gmail node, search for and enable the Gmail API.
 1. Some integrations require other APIs or require you to request access:

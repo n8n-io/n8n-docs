@@ -37,10 +37,22 @@ To configure this credential, you'll need:
 - **Disable STARTTLS**: When SSL/TLS is disabled, the SMTP server can still try to [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS){:target=_blank .external-link}. Turning this on prevents that behaviour.
 - **Client Host Name**: If needed by your provider, add a client host name. This name identifies the client to the server.
 
-Refer to the quickstart guides for these common email providers:
+## Provider-specific instructions
 
-- [Gmail](/integrations/builtin/credentials/sendemail/gmail)
-- [Outlook.com](/integrations/builtin/credentials/sendemail/outlook)
-- [Yahoo](/integrations/builtin/credentials/sendemail/yahoo)
+Refer to the quickstart guides for these common email providers.
 
-If your email provider isn't listed here, search for `IMAP settings`, `SMTP settings` or `POP settings` to find detailed instructions.
+### Gmail
+
+Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail).
+
+### Outlook.com
+
+Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook).
+
+### Yahoo
+
+Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo).
+
+## My provider isn't listed
+
+If your email provider isn't listed here, search for `IMAP settings`, `SMTP settings` or `POP settings` to find their instructions.

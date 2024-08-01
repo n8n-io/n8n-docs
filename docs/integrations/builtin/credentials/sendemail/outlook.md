@@ -16,7 +16,9 @@ To configure the Send Email credential to use an Outlook.com account:
 
 1. Enter your Outlook.com email address as the **User**.
 2. Enter your Outlook.com password as the **Password**.
-    - Outlook.com doesn't require you to use an app password, but if you'd like to for security reasons, refer to [Use an app password](#use-an-app-password)
+    /// note | App password
+    - Outlook.com doesn't require you to use an app password, but if you'd like to for security reasons, refer to [Use an app password](#use-an-app-password).
+    ///
 3. Enter `smtp-mail.outlook.com` as the **Host**.
 4. Enter `587` for the **Port**.
 5. Turn on the **SSL/TLS** toggle.

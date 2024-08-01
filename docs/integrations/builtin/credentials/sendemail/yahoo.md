@@ -12,7 +12,7 @@ Follow these steps to configure the Send Email credentials with a Yahoo account.
 
 ## Prerequisites
 
-To follow these instructions, you must generate an app password:
+To follow these instructions, you must first generate an app password:
 
 1. Log in to your Yahoo account [Security page](https://login.yahoo.com/account/security).
 2. Select **Generate app password** or **Generate and manage app passwords**.

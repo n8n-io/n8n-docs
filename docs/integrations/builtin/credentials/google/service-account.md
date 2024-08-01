@@ -72,13 +72,14 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 1. In your Service Account credential in Google Cloud, open the **Details** tab.
 2. Copy the **Email** listed there and enter it in your n8n credential as the **Service Account Email**.
-3. Open the downloaded JSON file and copy the **Private Key**. Do not include the surrounding `"` marks. Paste this to your n8n credential **Private Key**.
+3. Open the downloaded JSON file and copy the **private_key**. Do not include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
 
 	///warning | Older versions of n8n
 	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.
 	///
 
-4. **Optional**: Select the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} and enter the email.
+4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link}(turned on).
+	- Enter the **Email** of the user you want to impersonate.
 5. If you plan to use this credential with the [HTTP Request] node, turn on **Set up for use in HTTP Request node**.
 	- With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for more information.
 6. **Save** your credentials.

@@ -13,66 +13,88 @@ This document contains instructions for creating a generic OAuth2 Google credent
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/){:target=_blank .external-link} account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:target=_blank .external-link}
-* If you haven't used OAuth in your Google Cloud project before, you need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}.
-* If using Google Perspective: [Request API Access](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link}
-* If using Google Ads: [Developer Token](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}
+* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
 
 ## Set up OAuth
 
-### Create a new credential in n8n
+There are five steps to connecting your n8n credential to Google services:
 
-1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
+1. [Create a Google Cloud Console project](#create-a-google-cloud-console-project).
+1. [Enable APIs](#enable-apis).
+1. [Configure your OAuth consent screen](#configure-your-oauth-consent-screen).
+1. [Create your Google OAuth client credentials](#create-your-google-oauth-client-credentials).
+1. [Finish your n8n credential](#finish-your-n8n-credential).
 
-    /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node.
-	
-	If you select **Credentials > New**, you must browse for the credential type. To create a credential for a [custom API call](/integrations/custom-operations/), select **Google OAuth2 API**. This allows you to create a generic credential, then set its scopes.
-    ///
+### Create a Google Cloud Console project
 
-2. Note the **OAuth Redirect URL** from the node credential modal. You'll need this in the next section.
+First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
-	??? Details "View screenshot"
-		![OAuth Callback URL](/_images/integrations/builtin/credentials/google/oauth_callback.png)
+1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
+2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
+3. Enter a **Project name** and select the **Location** for your project.
+4. Select **Create**.
+5. Check the top navigation and make sure the **Select a project** dropdown has your project selected. If not, select the project you just created.
 
-3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information.
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 
-### Set up OAuth in Google Cloud
+### Enable APIs
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com/apis/credentials){:target=_blank .external-link} and make sure you're in the project you want to use.
+With your project created, enable the APIs you'll need access to:
 
-	??? Details "View screenshot"
-		![Google project dropdown](/_images/integrations/builtin/credentials/google/check-google-project.png)
+--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**. .   
+### Configure your OAuth consent screen
 
-	??? Details "View screenshot"   
-		![Create credentials](/_images/integrations/builtin/credentials/google/create-credentials.png)
+If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
 
-3. In the **Application type** dropdown, select **Web application**. Google automatically generates a name.
-4. Under **Authorized redirect URIs**, select **+ ADD URI**. Paste in the OAuth redirect URL from the previous step.
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
+1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
+2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
+3. Select **Create**.
+4. Enter the essential information:
+	- **App name**
+	- **User support email**
+	- **Email addresses** field in **Developer contact information**
+5. In the **Authorized domains** section, add `n8n.cloud` if using n8n's Cloud service. If you're [self-hosting](/hosting/), add the domain of your n8n instance.
+7. Select **SAVE AND CONTINUE** to go to the **Scopes** page.
+8. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
+9. On the **Summary** page, review the information for accuracy.
 
-	??? Details "View screenshot"   
-		![Web application](/_images/integrations/builtin/credentials/google/application-web-application.png)
-		
-5. Select **CREATE**.
-6. Enable each Google service API that you want to use:
+### Create your Google OAuth client credentials
 
-	1. If using Google Perspective or Google Ads: [Request API Access for Perspective](https://developers.perspectiveapi.com/s/docs-get-started){:target=_blank .external-link} or a [Developer Token for Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token){:target=_blank .external-link}.  
-	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
+Next, create the OAuth client credentials in Google:
 
-### Create and test your connection
+1. In the **APIs & Services** section, select **Credentials**.
+2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
+3. In the **Application type** dropdown, select **Web application**.
+4. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
+5. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
+6. Select **CREATE**.
 
-In n8n:
+### Finish your n8n credential
 
-1. Enter your new **Client ID** and **Client Secret** from Google Cloud Console in the credentials modal.
-2. Select **Sign in with Google** to complete your Google authentication.
-3. **Save** your new credentials.
+With the Google project and credentials fully configured, finish the n8n credential:
+
+1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
+2. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
+3. You must provide the scopes for this credential. Refer to [Scopes](#scopes) for more information. Enter multiple scopes in a space-separated list, for example:
+	```
+	https://www.googleapis.com/auth/gmail.labels https://www.googleapis.com/auth/gmail.addons.current.action.compose
+	```
+4. In n8n, select **Sign in with Google** to complete your Google authentication.
+5. **Save** your new credentials.
+
+## Video
 
 The following video demonstrates the steps described above:
 
-## Video
 
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,9 +102,9 @@ The following video demonstrates the steps described above:
 
 ## Scopes
 
-Many Google services have multiple possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for a list of scopes for all services.
+Google services have one or more possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for a list of scopes for all services.
 
-n8n doesn't support all scopes. When creating a generic Google OAuth2 API credential, you can enter scopes from the list. If you enter a scope that n8n doesn't already support, it won't work.
+n8n doesn't support all scopes. When creating a generic Google OAuth2 API credential, you can enter scopes from the **Supported scopes** list below. If you enter a scope that n8n doesn't already support, it won't work.
 
 ??? Details "Supported scopes"
 	| Service | Available scopes |
@@ -90,7 +112,7 @@ n8n doesn't support all scopes. When creating a generic Google OAuth2 API creden
 	| Gmail | 	https://www.googleapis.com/auth/gmail.labels <br /> https://www.googleapis.com/auth/gmail.addons.current.action.compose <br />	https://www.googleapis.com/auth/gmail.addons.current.message.action <br /> https://mail.google.com/ <br /> https://www.googleapis.com/auth/gmail.modify <br />	https://www.googleapis.com/auth/gmail.compose |
 	| Google Ads | https://www.googleapis.com/auth/adwords |
 	| Google Analytics | https://www.googleapis.com/auth/analytics <br /> https://www.googleapis.com/auth/analytics.readonly |
-	| Google Big Query | https://www.googleapis.com/auth/bigquery |
+	| Google BigQuery | https://www.googleapis.com/auth/bigquery |
 	| Google Books | https://www.googleapis.com/auth/books |
 	| Google Calendar | 	https://www.googleapis.com/auth/calendar <br /> https://www.googleapis.com/auth/calendar.events |
 	| Google Cloud Natural Language | https://www.googleapis.com/auth/cloud-language <br /> https://www.googleapis.com/auth/cloud-platform |

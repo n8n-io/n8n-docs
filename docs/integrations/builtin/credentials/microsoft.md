@@ -43,6 +43,8 @@ Refer to the linked Microsoft API documentation below for more information about
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
+Some Microsoft services require extra information for OAuth2. Refer to [Service-specific settings](#service-specific-settings) for more guidance on those services.
+
 For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
 1. [Register an application with the Microsoft Identity Platform](#register-an-application).
@@ -98,15 +100,13 @@ Refer to the [Microsoft Datacenter regions documentation](https://learn.microsof
 
 ### Microsoft (general)
 
-The general Microsoft OAuth2 also requires this steps:
-
-1. Provide a space-separated list of **Scope**s for this credential.
+The general Microsoft OAuth2 also requires you to provide a space-separated list of **Scope**s for this credential.
 
 Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc){:target=_blank .external-link} for a list of possible scopes.
 
 ### Outlook
 
-Outlook OAuth supports the credential accessing a user's primary email inbox or a shared inbox. By default, the credential will access a user's primary email inbox. To change this behavior:
+Outlook OAuth2 supports the credential accessing a user's primary email inbox or a shared inbox. By default, the credential will access a user's primary email inbox. To change this behavior:
 
 1. Turn on **Use Shared Inbox**.
 2. Enter the target user's UPN or ID as the **User Principal Name**.

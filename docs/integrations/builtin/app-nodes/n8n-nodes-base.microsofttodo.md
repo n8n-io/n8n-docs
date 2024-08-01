@@ -12,7 +12,7 @@ Use the Microsoft To Do node to automate work in Microsoft To Do, and integrate 
 On this page, you'll find a list of operations the Microsoft To Do node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft To Do credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 ///
 
 ## Operations

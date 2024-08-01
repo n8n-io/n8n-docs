@@ -1032,7 +1032,11 @@ nav:
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md
         - integrations/builtin/credentials/sekoia.md
-        - integrations/builtin/credentials/sendemail.md
+        - Send Email:
+          - integrations/builtin/credentials/sendemail/index.md
+          - integrations/builtin/credentials/sendemail/gmail.md
+          - integrations/builtin/credentials/sendemail/outlook.md
+          - integrations/builtin/credentials/sendemail/yahoo.md
         - integrations/builtin/credentials/sendgrid.md
         - integrations/builtin/credentials/sendy.md
         - integrations/builtin/credentials/sentryio.md

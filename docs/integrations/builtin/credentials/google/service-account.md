@@ -30,16 +30,7 @@ There are four steps to connecting your n8n credential to a Google Service Accou
 
 First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
-1. Log in to your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
-2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
-3. Enter a **Project name** and select the **Location** for your project.
-4. Select **Create**.
-5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
-
-	<figure markdown="span">
-	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-	</figure>
+--8<-- "_snippets/integrations/builtin/credentials/google/create-google-cloud-project.md"
 
 ### Enable APIs
 
@@ -72,7 +63,7 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 1. Open the downloaded JSON file.
 2. Copy the `client_email` and enter it in your n8n credential as the **Service Account Email**.
-3. Copy the `private_key`. Do not include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
+3. Copy the `private_key`. Don't include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
 
 	///warning | Older versions of n8n
 	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.

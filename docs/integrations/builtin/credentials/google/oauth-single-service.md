@@ -36,10 +36,10 @@ First, create a Google Cloud Console project. If you already have a project, jum
 4. Select **Create**.
 5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-<figure markdown="span">
-![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/google/google-cloud-project-dropdown.png)
-<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-</figure>
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 
 ### Enable APIs
 
@@ -53,7 +53,7 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 
 1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
 	<figure markdown="span">
-	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/google/google-cloud-project-dropdown.png)
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
 1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.

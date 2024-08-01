@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Serp](https://serpapi.com/){:target=_blank .external-link} account.
+Create a [SerpApi](https://serpapi.com/){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 

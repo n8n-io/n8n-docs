@@ -443,7 +443,6 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.chargebee.md
         - integrations/builtin/app-nodes/n8n-nodes-base.circleci.md
         - integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.citrixadc.md
         - integrations/builtin/app-nodes/n8n-nodes-base.clearbit.md
         - integrations/builtin/app-nodes/n8n-nodes-base.clickup.md
         - integrations/builtin/app-nodes/n8n-nodes-base.clockify.md
@@ -565,6 +564,7 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md
         - integrations/builtin/app-nodes/n8n-nodes-base.nasa.md
         - integrations/builtin/app-nodes/n8n-nodes-base.netlify.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md
         - integrations/builtin/app-nodes/n8n-nodes-base.nextcloud.md
         - integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md
         - integrations/builtin/app-nodes/n8n-nodes-base.notion.md
@@ -858,7 +858,6 @@ nav:
         - integrations/builtin/credentials/ciscomeraki.md
         - integrations/builtin/credentials/ciscosecureendpoint.md
         - integrations/builtin/credentials/ciscoumbrella.md
-        - integrations/builtin/credentials/citrixadc.md
         - integrations/builtin/credentials/clearbit.md
         - integrations/builtin/credentials/clickup.md
         - integrations/builtin/credentials/clockify.md
@@ -983,6 +982,7 @@ nav:
         - integrations/builtin/credentials/mysql.md
         - integrations/builtin/credentials/nasa.md
         - integrations/builtin/credentials/netlify.md
+        - integrations/builtin/credentials/netscaleradc.md
         - integrations/builtin/credentials/nextcloud.md
         - integrations/builtin/credentials/nocodb.md
         - integrations/builtin/credentials/notion.md

@@ -85,11 +85,11 @@ With your application created, generate a client secret for it:
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link} for more information on adding a client secret.
 
-#### Service-specific settings
+### Service-specific settings
 
 The following services require extra information for OAuth2:
 
-### Dynamics
+#### Dynamics
 
 Dynamics OAuth2 requires information about your Dynamics domain and region. Follow these extra steps to complete the credential:
 
@@ -98,13 +98,13 @@ Dynamics OAuth2 requires information about your Dynamics domain and region. Foll
 
 Refer to the [Microsoft Datacenter regions documentation](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions){:target=_blank .external-link} for more information on the region options and corresponding URLs.
 
-### Microsoft (general)
+#### Microsoft (general)
 
 The general Microsoft OAuth2 also requires you to provide a space-separated list of **Scope**s for this credential.
 
 Refer to [Scopes and permissions in the Microsoft identity platform](https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc){:target=_blank .external-link} for a list of possible scopes.
 
-### Outlook
+#### Outlook
 
 Outlook OAuth2 supports the credential accessing a user's primary email inbox or a shared inbox. By default, the credential will access a user's primary email inbox. To change this behavior:
 

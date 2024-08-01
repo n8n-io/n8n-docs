@@ -13,63 +13,77 @@ Using service accounts is more complex than OAuth2. Before you begin:
 * Make sure you need to use Service Account. For most use cases, [OAuth2](/integrations/builtin-credentials/google/oauth-single-service/) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts){:target=_blank .external-link}.
 
-
 ## Prerequisites
 
 * Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
-* Create a [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}.
 
 ## Set up Service Account
 
-### Create a new credential in n8n
+There are four steps to connecting your n8n credential to a Google Service Account:
 
-1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
+1. [Create a Google Cloud Console project](#create-a-google-cloud-console-project).
+1. [Enable APIs](#enable-apis).
+1. [Set up Google Cloud Service Account](#set-up-google-cloud-service-account).
+1. [Finish your n8n credential](#finish-your-n8n-credential).
 
-    /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown within a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+### Create a Google Cloud Console project
 
-	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
-	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
-    ///
+First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
-2. Copy the **Private Key** from the node credential modal. You'll need this in the next section.
+1. Log in to your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
+2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
+3. Enter a **Project name** and select the **Location** for your project.
+4. Select **Create**.
+5. Check the top navigation and make sure the project dropdown has your project selected. If not, select the project you just created.
 
-### Set up service account in Google Cloud
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 
-In your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} dashboard:
+### Enable APIs
+
+With your project created, enable the APIs you'll need access to:
+
+--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
+
+### Set up Google Cloud Service Account
+
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 
 1. Select the hamburger menu **> APIs & Services > Credentials**. Google takes you to your **Credentials** page.
-
-	??? Details "View screenshot"
-		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-api-services-credentials.png)
-
 2. Select **+ CREATE CREDENTIALS > Service account**.
-
-	??? Details "View screenshot"
-		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-create-credentials.png)
-
 3. Enter a name in **Service account name** and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating){:target=_blank .external-link} for more information.
 4. Select **CREATE AND CONTINUE**.
 5. Based on your use-case, you may want to **Select a role** and **Grant users access to this service account**  using the corresponding sections.
 6. Select **DONE**.
 7. Select your newly created service account under the **Service Accounts** section. Open the **KEYS** tab.
 8. Select **ADD KEY > Create new key**.
-
-	??? Details "View screenshot"
-		![Create a new key](/_images/integrations/builtin/credentials/google/service-account-create-key.png)
-
 9. In the modal that appears, select **JSON**, then select **CREATE**. Google saves the file to your computer.
-10. Enable each Google service API that you want to use:
-	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
-### Create and test your connection
+### Finish your n8n credential
 
-In n8n:
+With the Google project and credentials fully configured, finish the n8n credential:
 
-1. In the **Service Account Email** field, enter the email associated with your new Service Account (you can find this in the **Details** tab in Google Cloud).
-2. Enter the **Private Key** from the downloaded JSON file. If you're running an n8n version older than 0.156.0: replace all instances of `\n` in the JSON file with new lines.
-3. **Optional**: Select the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} and enter the email.
-4. **Save** your credentials.
+1. In your Service Account credential in Google Cloud, open the **Details** tab.
+2. Copy the **Email** listed there and enter it in your n8n credential as the **Service Account Email**.
+3. Open the downloaded JSON file and copy the **Private Key**. Do not include the surrounding `"` marks. Paste this to your n8n credential **Private Key**.
+
+	///warning | Older versions of n8n
+	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.
+	///
+
+4. **Optional**: Select the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} and enter the email.
+5. If you plan to use this credential with the [HTTP Request] node, turn on **Set up for use in HTTP Request node**.
+	- With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for more information.
+6. **Save** your credentials.
+
+## Video
 
 The following video demonstrates the steps described above.
 

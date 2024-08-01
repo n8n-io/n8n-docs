@@ -13,7 +13,7 @@ Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and inte
 On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft OneDrive credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -33,11 +33,73 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.53.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.2...n8n@1.53.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-31
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains new features, new nodes, node enhancements, bug fixes and updates to our API.
+
+<div class="n8n-new-features" markdown>
+
+#### Added Azure Key Vault support
+
+This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license. 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Information Extractor
+
+This release adds the [Information Extractor node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor/). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Sentiment Analysis
+
+This release adds the [Sentiment Analysis node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis/). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
+
+</div>
+
+### Node updates
+Enhanced nodes:
+
+- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
+- [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/)
+- [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/)
+
+### API update
+Our [public REST API](/api/) now supports additional operations: 
+
+- Create, read, and delete for variables
+- Filtering workflows by project
+- Transferring workflows
+
+Find the details in the [API reference](/api/api-reference/). 
+
+### Contributors
+
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.52.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.1...n8n@1.52.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-31
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
 
 This release contains bug fixes.
 
@@ -47,10 +109,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.0...n8n@1.52.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-26
-
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains bug fixes.
 
@@ -107,12 +165,6 @@ Deprecated nodes:
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.51.0...n8n@1.51.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-23
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
 
 
 

@@ -41,14 +41,14 @@ To configure this credential, you'll need:
 
 To create a new OAuth app after logging in to [Calendly's developer portal](https://developer.calendly.com/console/apps){:target=_blank .external-link}, go to **Account > My Apps > Create new app**.
 
-Use these settings:
+To set up the integration: 
 
- - Give your app a name like **n8n Automation**
- - Set **Kind of app** to **Web**
- - Set **Environment type** to **Sandbox** or **Production**
- - Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URI** in the OAuth app.
- - Copy the **Client ID** for the Calendly app and enter this as your n8n **Client ID**.
- - Copy the **Client secret** from Calendly and enter this as your n8n **Client Secret**
+ 1. Give your app a name like **n8n Automation**.
+ 2. Set **Kind of app** to **Web**.
+ 3. Set **Environment type** to **Sandbox** or **Production**.
+ 4. Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URI** in the OAuth app.
+ 5. Copy the **Client ID** for the Calendly app and enter this as your n8n **Client ID**.
+ 6. Copy the **Client secret** from Calendly and enter this as your n8n **Client Secret**.
  
  
  Refer to [Registering your application with Calendly](https://developer.calendly.com/create-a-developer-account){:target=_blank .external-link} for more information.

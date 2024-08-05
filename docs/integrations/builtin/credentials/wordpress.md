@@ -69,4 +69,4 @@ Congratulations! You're now ready to set up your n8n credential:
 1. Enter your WordPress **Username** in your n8n credential.
 2. Enter the application password you copied above as the **Password** in your n8n credential.
 3. Enter the URL of your WordPress site as the **WordPress URL**.
-4. Optional: Choose if you want the n8n credential to connect even if SSL certificate validation fails (turned on) or whether to respect SSL certificate validation (turned off).
+4. Optional: Use the **Ignore SSL Issues** to choose whether you want the n8n credential to connect even if SSL certificate validation fails (turned on) or whether to respect SSL certificate validation (turned off).

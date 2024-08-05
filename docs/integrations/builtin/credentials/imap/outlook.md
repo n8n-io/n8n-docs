@@ -18,7 +18,7 @@ To set up the IMAP credential with Outlook.com account, use these settings:
 2. Enter your Outlook.com password as the **Password**.
 
     /// note | App password
-        Outlook.com doesn't require you to use an app password, but if you'd like to for security reasons, refer to [Use an app password](#use-an-app-password).
+    Outlook.com doesn't require you to use an app password, but if you'd like to for security reasons, refer to [Use an app password](#use-an-app-password).
     ///
 
 3. Enter `outlook.office365.com` as the **Host**.

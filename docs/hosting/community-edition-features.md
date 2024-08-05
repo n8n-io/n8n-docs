@@ -28,6 +28,6 @@ The community edition doesn't include these features:
 - [Version control using Git](/source-control-environments/)
 - [Workflow history](/workflows/history/)
 
-These features are available in the Starter, Pro, or Enterprise Cloud plans, including the self-hosted Enterprise edition.
+All of these features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
 See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.

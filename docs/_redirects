@@ -1,5 +1,10 @@
+# NODE-1462
+/integrations/builtin/credentials/citrixadc/ /integrations/builtin/credentials/netscaleradc/
+/integrations/builtin/app-nodes/n8n-nodes-base.citrixadc/ /integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc/
+/integrations/builtin/app-nodes/n8n-nodes-base.orbit/ /integrations/
 /hosting/logging-monitoring/security-audit/     /hosting/securing/security-audit/
 /integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/
+/integrations/builtin/credentials/orbit/ /integrations/
 
 # 2024 SEO audit
 /nodes/nodes.html    /integrations/builtin/node-types/

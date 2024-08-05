@@ -42,15 +42,15 @@ We encourage anyone who wants to use the Sustainable Use License. If you are bui
 
 ### What is and isn't allowed under the license in the context of n8n's product?
 
-Our license restricts use to "internal business purposes". In practice this means all use is allowed unless you are selling a product, service, or module in which the value derives entirely or substantially from n8n functionality. Here are some examples where we would consider that to be the case:
+Our license restricts use to "internal business purposes". In practice this means all use is allowed unless you are selling a product, service, or module in which the value derives entirely or substantially from n8n functionality. Here are some examples that wouldn't be allowed:
 
 * White-labeling n8n and offering it to your customers for money.
 * Hosting n8n and charging people money to access it.
 
 All of the following examples are allowed under our license: 
 
-* Using n8n to sync the data you control as a company, for example from a CRM to an internal database .
-* Creating an n8n node for your product, or any other integration between your product and n8n.
+* Using n8n to sync the data you control as a company, for example from a CRM to an internal database.
+* Creating an n8n node for your product or any other integration between your product and n8n.
 * Providing consulting services related to n8n, for example building workflows, custom features closely connect to n8n, or code that gets executed by n8n.
 * Supporting n8n, for example by setting it up or maintaining it on an internal company server.
 
@@ -58,19 +58,19 @@ All of the following examples are allowed under our license:
 
 Usually yes, as long as the back-end process doesn't use users' own credentials to access their data.
 
-We know this can be a bit of a grey area, so here are two examples to clarify:
+Here are two examples to clarify:
 
 ##### Example 1: Sync ACME app with HubSpot
 
-Bob has set up n8n to collect a user's HubSpot credentials to sync data in the ACME app with data in HubSpot.
+Bob sets up n8n to collect a user's HubSpot credentials to sync data in the ACME app with data in HubSpot.
 
 <span style="color: #BF2F51;">**NOT ALLOWED**</span> under the Sustainable Use License. This use case collects the user's own HubSpot credentials to pull information to feed into the ACME app.
 
 ##### Example 2: Embed AI chatbot in ACME app
 
-Bob has set up n8n to embed an AI chatbot within the ACME app. The AI chatbot's credentials in n8n use Bob's company credentials. End-users only enter their questions or queries to the chatbot.
+Bob sets up n8n to embed an AI chatbot within the ACME app. The AI chatbot's credentials in n8n use Bob's company credentials. ACME app end-users only enter their questions or queries to the chatbot.
 
-<span style="color: #1C9985;">**ALLOWED**</span> under the Sustainable Use License. No user credential data is being collected.
+<span style="color: #1C9985;">**ALLOWED**</span> under the Sustainable Use License. No user credentials are being collected.
 
 ### What if I want to use n8n for something that's not permitted by the license?
 

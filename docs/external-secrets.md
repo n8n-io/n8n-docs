@@ -9,7 +9,7 @@ contentType: howto
 
 /// info | Feature availability
 * External secrets are available on Enterprise Self-hosted and Enterprise Cloud plans.
-* n8n supports AWS Secrets Manager, Infisical and HashiCorp Vault. 
+* n8n supports AWS Secrets Manager, Azure Key Vault, GCP Secrets Manager, Infisical and HashiCorp Vault. 
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link}.
 ///
 
@@ -25,6 +25,7 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 1. In n8n, go to **Settings** > **External Secrets**.
 1. Select **Set Up** for your store provider.
 1. Enter the credentials for your provider:
+	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target=_blank .external-link}. n8n supports only single-line values for secrets.
 	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions.
 
 		Example policy:
@@ -61,7 +62,9 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 	    /// note | Infisical folders
 	 	n8n doesn't support [Infisical folders](https://infisical.com/docs/documentation/platform/folder){:target=_blank .external-link}.
 		///
-		
+
+	* Google Cloud Platform: provide a **Service Account Key** (JSON) for a service account that has at least these roles: `Secret Manager Secret Accessor` and `Secret Manager Secret Viewer`. Refer to Google's [service account documentation](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} for more information.
+
 1. **Save** your configuration.
 1. Enable the provider using the **Disabled / Enabled** toggle.
 

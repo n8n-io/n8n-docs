@@ -12,7 +12,7 @@ Use this operation to get a file from Telegram. Refer to [Telegram](/integration
 
 ## Get File
 
-Use this operation to get a file from Telegram using the Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link}.
+Use this operation to get a file from Telegram using the Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} method.
 
 Enter these parameters:
 

@@ -44,8 +44,8 @@ To set up the database connection:
 
 1. Enter the SQL Server Host Name as the **Server**. In an existing SQL Server connection, the host name comes before the instance name in the format `HOSTNAME\INSTANCENAME`. Find the host name:
     - In the **Object Explorer** pane as the top-level object for your database.
-    - In the footer of a query window
-    - Viewing the current connection **Properties** and looking for **Name** or **Display Name**
+    - In the footer of a query window.
+    - Viewing the current connection **Properties** and looking for **Name** or **Display Name**.
     - Refer to [Find SQL Server Instance Name | When you're connected to SQL Server](https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16#when-youre-connected-to-sql-server){:target=_blank .external-link} for more information. You can also find the information in the [Error logs](https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks?view=sql-server-ver16#before-you-connect-to-sql-server){:target=_blank .external-link}.
 2. Enter the SQL Server Instance Name as the **Database** name. Find this name using the same steps listed above for finding the host name.
     - If you don't see an instance name in any of these places, then your database uses the default `MSSQLSERVER` instance name.
@@ -57,7 +57,7 @@ To set up the database connection:
 6. You only need to enter the **Domain** name if users in multiple domains access your database. Run this SQL query to get the domain name:
 
     ```sql
-    SELECT DEFAULT_DOMAIN()[DomainName]
+    SELECT DEFAULT_DOMAIN()[DomainName];
     ```
 
 7. Select whether to use **TLS**.

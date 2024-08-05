@@ -145,7 +145,7 @@ n8n.<domain>.<suffix> {
 }
 ```
 
-If you were to use `automate.example.com` your `Caddyfile` may look something like:
+If you were to use `automate.example.com`, your `Caddyfile` may look something like:
 
 ```text
 automate.example.com {

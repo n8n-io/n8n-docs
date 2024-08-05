@@ -43,7 +43,7 @@ Refer to [Telegram credentials](/integrations/builtin/credentials/telegram/) for
     * [**Send Media Group**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-media-group): Send a group of photos and/or videos.
     * [**Send Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-message) to the chat.
     * [**Send Photo**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-photo) to the chat.
-    * [**Send Sticker**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-sticker): to the chat.
+    * [**Send Sticker**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-sticker) to the chat.
         * For use with static .WEBP, animated .TGS, or video .WEBM stickers.
     * [**Send Video**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-video) to the chat.
     * [**Unpin Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#unpin-chat-message) from the chat.

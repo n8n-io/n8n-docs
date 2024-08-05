@@ -13,7 +13,7 @@ Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integr
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft Outlook credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
 ///
 
 ## Operations

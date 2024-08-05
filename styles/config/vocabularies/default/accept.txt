@@ -108,6 +108,7 @@ geospatial
 GIMP
 Gotify
 Grafana
+Groq
 GSuite
 Gumroad
 Hetzner

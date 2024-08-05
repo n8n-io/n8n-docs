@@ -19,34 +19,34 @@ Refer to [Telegram credentials](/integrations/builtin/credentials/telegram/) for
 ## Operations
 
 * [**Chat** operations](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/)
-    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#get-chat) up-to-date information about a chat using the Bot API [getChat](https://core.telegram.org/bots/api#getchat){:target=_blank .external-link} method.
-    * [**Get Administrators**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#get-administrators): Get a list of all administrators in a chat using the Bot API [getChatAdministrators](https://core.telegram.org/bots/api#getchatadministrators){:target=_blank .external-link} method.
-    * [**Get Member**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#get-chat-member): Get the details of a chat member using the Bot API [getChatMember](https://core.telegram.org/bots/api#getchatmember){:target=_blank .external-link} method.
-    * [**Leave**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#leave-chat) a chat using the Bot API [leaveChat](https://core.telegram.org/bots/api#leavechat){:target=_blank .external-link} method.
-    * [**Set Description**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#set-description) of a chat using the Bot API [setChatDescription](https://core.telegram.org/bots/api#setchatdescription){:target=_blank .external-link} method.
-    * [**Set Title**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#set-title) of a chat using the Bot API [setChatTitle](https://core.telegram.org/bots/api#setchattitle){:target=_blank .external-link} method.
+    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#get-chat) up-to-date information about a chat.
+    * [**Get Administrators**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#get-administrators): Get a list of all administrators in a chat.
+    * [**Get Member**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#get-chat-member): Get the details of a chat member.
+    * [**Leave**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#leave-chat) a chat.
+    * [**Set Description**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#set-description) of a chat.
+    * [**Set Title**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations/#set-title) of a chat.
 * [**Callback** operations](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations/)
-    * [**Answer Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations/#answer-query): Send answers to callback queries sent from [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards){:target=_blank .external-link} using the Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} method.
-    * [**Answer Inline Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations/#answer-inline-query): Send answers to callback queries sent from inline queries using the Bot API [answerInlineQuery](https://core.telegram.org/bots/api#answerinlinequery){:target=_blank .external-link} method.
+    * [**Answer Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations/#answer-query): Send answers to callback queries sent from [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards){:target=_blank .external-link}.
+    * [**Answer Inline Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations/#answer-inline-query): Send answers to callback queries sent from inline queries.
 * [**File** operations](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations/)
-    * [**Get File**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations/#get-file) from Telegram using the Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} method.
+    * [**Get File**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations/#get-file) from Telegram.
 * [**Message** operations](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/)
-    * [**Delete Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#delete-chat-message) using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} method.
-    * [**Edit Message Text**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#edit-message-text): Edit the text of an existing message using the Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext){:target=_blank .external-link} method.
-    * [**Pin Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#pin-chat-message) for the chat using the Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage){:target=_blank .external-link} method.
-    * [**Send Animation**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-animation) to the chat using the Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} method.
+    * [**Delete Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#delete-chat-message).
+    * [**Edit Message Text**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#edit-message-text): Edit the text of an existing message.
+    * [**Pin Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#pin-chat-message) for the chat.
+    * [**Send Animation**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-animation) to the chat.
         * For use with GIFs or H.264/MPEG-4 AVC videos without sound up to 50 MB in size.
-    * [**Send Audio**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-audio) file to the chat and display it in the music player using the Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} method.
-    * [**Send Chat Action**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-chat-action): Tell the user that something is happening on the bot's side. The status is set for 5 seconds or less using the Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} method.
-    * [**Send Document**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-document) to the chat using the Bot API [sendDocument](https://core.telegram.org/bots/api#senddocument){:target=_blank .external-link} method.
-    * [**Send Location**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-location): Send a geolocation to the chat using the Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} method.
-    * [**Send Media Group**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-media-group): Send a group of photos and/or videos using the Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} method.
-    * [**Send Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-message) to the chat using the Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage){:target=_blank .external-link} method.
-    * [**Send Photo**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-photo) to the chat using the Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} method.
-    * [**Send Sticker**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-sticker): to the chat using the Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} method.
+    * [**Send Audio**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-audio) file to the chat and display it in the music player.
+    * [**Send Chat Action**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-chat-action): Tell the user that something is happening on the bot's side. The status is set for 5 seconds or less.
+    * [**Send Document**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-document) to the chat.
+    * [**Send Location**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-location): Send a geolocation to the chat.
+    * [**Send Media Group**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-media-group): Send a group of photos and/or videos.
+    * [**Send Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-message) to the chat.
+    * [**Send Photo**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-photo) to the chat.
+    * [**Send Sticker**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-sticker): to the chat.
         * For use with static .WEBP, animated .TGS, or video .WEBM stickers.
-    * [**Send Video**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-video) to the chat using the Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} method.
-    * [**Unpin Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#unpin-chat-message) from the chat using the Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage){:target=_blank .external-link} method.
+    * [**Send Video**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-video) to the chat.
+    * [**Unpin Chat Message**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#unpin-chat-message) from the chat.
     
     /// note | Add bot to channel
     To use most of the **Message** operations, you must add your bot to a channel so that it can send messages to that channel. Refer to [Add a bot to a Telegram channel](#add-a-bot-to-a-telegram-channel) for more information.

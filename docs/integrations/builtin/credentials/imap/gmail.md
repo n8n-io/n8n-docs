@@ -19,29 +19,11 @@ To follow these instructions, you must first:
 
 ### Enable 2-step Verification
 
-To enable 2-step Verification:
-
-1. Log in to your [Google Account](https://myaccount.google.com/){:target=_blank .external-link}.
-2. Select **Security** from the left navigation.
-3. Under **How you sign in to Google**, select **2-Step Verification**.
-    - If 2-Step Verification is already enabled, skip to the next section.
-4. Select **Get started**.
-5. Follow the on-screen steps to configure 2-Step Verification.
-
-Refer to [Turn on 2-step Verification](https://support.google.com/accounts/answer/185839){:target=_blank .external-link} for more information.
-
-If you can't turn on 2-step Verification, check with your email administrator.
+--8<-- "_snippets/integrations/builtin/credentials/email/gmail-two-step-verification.md"
 
 ### Generate an app password
 
-To generate an app password:
-
-1. In your Google account, go to [App passwords](https://myaccount.google.com/apppasswords){:target=_blank .external-link}.
-2. Enter an **App name** for your new app password, like `n8n credential`.
-3. Select **Create**.
-4. Copy the generated app password. You'll use this in your n8n credential.
-
-Refer to Google's [Sign in with app passwords documentation](https://support.google.com/accounts/answer/185833?hl=en){:target=_blank .external-link} for more information.
+--8<-- "_snippets/integrations/builtin/credentials/email/gmail-app-password.md"
 
 ## Set up the credential
 

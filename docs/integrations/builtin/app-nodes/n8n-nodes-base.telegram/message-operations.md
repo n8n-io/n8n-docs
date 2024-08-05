@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram Message operations
+title: Message operations
 description: Documentation for the Message operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Message operations.
 contentType: integration
 priority: critical
 ---
 
-# Chat operations
+# Telegram Chat operations
 
 Use these operations to send, edit, and delete messages in a chat; send files to a chat; and pin/unpin message from a chat. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) for more information on the Telegram node itself.
 

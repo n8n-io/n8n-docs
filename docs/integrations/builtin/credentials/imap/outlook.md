@@ -34,12 +34,12 @@ You may receive a connection error if you configured your Outlook.com account as
 
 1. Go to [account.live.com/activity](https://account.live.com/activity) and sign in using the email address and password of the affected account.
 1. Under **Recent activity**, find the **Session Type** event that matches the most recent time you received the connection error. Select it to expand the details.
-1. Select **This was me** to let the system know you authorize the IMAP connection.
+1. Select **This was me** to approve the IMAP connection.
 1. Retest your n8n credential.
 
 Refer to [What is the Recent activity page?](https://support.microsoft.com/en-us/account-billing/what-is-the-recent-activity-page-23cf5556-4dbe-70da-82c8-bb3a8d8f8016){:target=_blank .external-link} for more information on using this page.
 
-These instructions were adapted from the [Outlook.com IMAP connection errors](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040){:target=_blank .external-link} section. Refer to that documentation for more information.
+The source for these instructions is [Outlook.com IMAP connection errors](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040){:target=_blank .external-link}. Refer to that documentation for more information.
 
 ## Use an app password
 

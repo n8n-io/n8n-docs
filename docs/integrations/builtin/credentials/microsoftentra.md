@@ -28,14 +28,41 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need more detail on what's happening in the Microsoft OAuth web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}.
+For self-hosted users, there are two main steps to configure OAuth2 from scratch:
 
-To configure OAuth2 from scratch, [register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link}.
+1. [Register an application](#register-an-application) with the Microsoft Identity Platform.
+2. [Generate a client secret](#generate-a-client-secret) for that application.
 
-Use these settings for your application:
+Follow the detailed instructions for each step below. For more detail on the Microsoft OAuth2 web flow, refer to [Microsoft authentication and authorization basics](https://learn.microsoft.com/en-us/graph/auth/auth-concepts){:target=_blank .external-link}. 
 
-- For **Supported account types**, select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**.
-- Copy the **OAuth Callback URL** from n8n and use that as the **Redirect URI** in your Microsoft application.
-- Copy the **Application (client) ID** from your Microsoft application and add it as the **Client ID** in n8n.
-- Generate a new client secret in your application. Refer to the instructions in [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link}.
-- Copy the secret's **Value** and add it as the **Client Secret** in n8n.
+### Register an application
+
+Register an application with the Microsoft Identity Platform:
+
+1. Open the [Microsoft Application Registration Portal](https://aka.ms/appregistrations){:target=_blank .external-link}.
+2. Select **Register an application**.
+3. Enter a **Name** for your app.
+4. In **Supported account types**, select **Accounts in any organizational directory (Any Azure AD directory - Multi-tenant) and personal Microsoft accounts (for example, Skype, Xbox)**.
+5. In **Register an application**:
+    1. Copy the **OAuth Callback URL** from your n8n credential.
+    2. Paste it into the **Redirect URI (optional)** field.
+    3. Select **Select a platform** > **Web**.
+6. Select **Register** to finish creating your application.
+7. Copy the **Application (client) ID** and paste it into n8n as the **Client ID**.
+
+Refer to [Register an application with the Microsoft Identity Platform](https://learn.microsoft.com/en-us/graph/auth-register-app-v2){:target=_blank .external-link} for more information.
+
+### Generate a client secret
+
+With your application created, generate a client secret for it:
+
+1. On your Microsoft application page, select **Certificates & secrets** in the left navigation.
+1. In **Client secrets**, select **+ New client secret**.
+1. Enter a **Description** for your client secret, such as `n8n credential`.
+1. Select **Add**.
+1. Copy the **Secret** in the **Value** column.
+1. Paste it into n8n as the **Client Secret**.
+1. Select **Connect my account** in n8n to finish setting up the connection.
+1. Log in to your Microsoft account and allow the app to access your info.
+
+Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link} for more information on adding a client secret.

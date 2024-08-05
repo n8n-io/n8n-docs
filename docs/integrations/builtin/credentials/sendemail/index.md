@@ -55,4 +55,4 @@ Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo).
 
 ### My provider isn't listed
 
-If your email provider isn't listed here, search for `IMAP settings`, `SMTP settings` or `POP settings` to find their instructions.
+If your email provider isn't listed here, search for `SMTP settings` to find their instructions. (These instructions may also be included with `IMAP settings` or `POP settings`.)

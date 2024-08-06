@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WhatsApp Business credentials
-description: Documentation for WhatsApp Business credentials. Use these credentials to authenticate WhatsApp Business in n8n, a workflow automation platform.
+title: WhatsApp Business Cloud credentials
+description: Documentation for WhatsApp Business Cloud credentials. Use these credentials to authenticate WhatsApp Business Cloud in n8n, a workflow automation platform.
 contentType: integration
 priority: high
 ---
 
-# WhatsApp Business credentials
+# WhatsApp Business Cloud credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [WhatsApp](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/)
+- [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/)
 - [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/)
 
 ## Prerequisites
@@ -23,7 +23,7 @@ See each supported authentication method below for more detailed instructions on
 
 ## Supported authentication methods
 
-- API key: Use for the [WhatsApp](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) node.
+- API key: Use for the [WhatsApp Business Cloud](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) node.
 - OAuth2: Use for the [WhatsApp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) node.
 
 ## Related resources

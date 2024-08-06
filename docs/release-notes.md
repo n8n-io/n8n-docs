@@ -57,7 +57,7 @@ This release contains new features, new nodes, node enhancements, bug fixes and 
 
 <div class="n8n-new-features" markdown>
 
-#### Added Azure Key Vault support
+#### Added Google Cloud Platform Secrets Manager support
 
 This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license. 
 

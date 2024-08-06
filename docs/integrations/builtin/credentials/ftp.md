@@ -18,8 +18,8 @@ Create an account on a File Transfer Protocol (FTP) server.
 
 ## Supported authentication methods
 
-- FTP account: Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
-- SFTP account: Use this method if your FTP server supports SSH tunneling and encrypted connections.
+- **FTP account**: Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
+- **SFTP account**: Use this method if your FTP server supports SSH tunneling and encrypted connections.
 
 ## Related resources
 
@@ -27,24 +27,46 @@ File Transfer Protocol (FTP) and Secure Shell File Transfer Protocol (SFTP) are 
 
 ## Using FTP account
 
+Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
+
 To configure this credential, you'll need:
 
-- A **Host**: Enter the name or IP address of your FTP server's host.
-- A **Port**: Enter the port number the connection should use.
-- A **Username**: Enter the name of the user the connection should use.
-- A **Password**: Enter the user's password.
+- A **Host**
+- A **Port**
+- A **Username**
+- A **Password**
+
+To set up the credential:
+
+1. Enter the name or IP address of your FTP server's **Host**.
+2. Enter the **Port** number the connection should use.
+3. Enter the **Username** the credential should connect as.
+4. Enter the user's **Password**.
 
 Review your FTP server provider's documentation for instructions on getting the information you need.
 
 ## Using SFTP account
 
+Use this method if your FTP server supports SSH tunneling and encrypted connections.
+
 To configure this credential, you'll need:
 
-- A **Host**: Enter the name or IP address of your FTP server's host.
-- A **Port**: Enter the port number the connection should use.
-- A **Username**: Enter the name of the user the connection should use.
-- A **Password**: Enter the user's password.
-- A **Private Key**: Enter a string for either key-based or host-based user authentication (OpenSSH format).
-- A **Passphrase**: If the **Private Key** is encrypted, enter the passphrase used to decrypt it.
+- A **Host**
+- A **Port**
+- A **Username**
+- A **Password**
+- A **Private Key**
+- A **Passphrase**
+
+To set up the credential:
+
+1. Enter the name or IP address of your FTP server's **Host**.
+2. Enter the **Port** number the connection should use.
+3. Enter the **Username** the credential should connect as.
+4. Enter the user's **Password**.
+5. For the **Private Key**, enter a string for either key-based or host-based user authentication
+    - Enter your Private Key in OpenSSH format. This is most often generated using the ssh-keygen `-o` parameter, for example: `ssh-keygen -o -a 100 -t ed25519`.
+6. If the **Private Key** is encrypted, enter the **Passphrase** used to decrypt it.
+    - If the **Private Key** doesn't use a passphrase, leave this field blank.
 
 Review your FTP server provider's documentation for instructions on getting the information you need.

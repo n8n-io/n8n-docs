@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an account on a File Transfer Protocol (FTP) server.
+Create an account on a File Transfer Protocol (FTP) server like [OpenSSH](http://www.openssh.com/){:target=_blank .external-link} or [FileZilla Server](https://filezilla-project.org/){:target=_blank .external-link}.
 
 ## Supported authentication methods
 

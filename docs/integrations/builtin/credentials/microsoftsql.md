@@ -28,7 +28,7 @@ Refer to [Microsoft's Connect to SQL Server documentation](https://learn.microso
 
 To configure this credential, you'll need:
 
-- The **Server** name: Refer to [Find SQL Server Instance Name](https://learn.microsoft.com/en-us/sql/ssms/tutorials/ssms-tricks){:target=_blank .external-link} for more information.
+- The **Server** name
 - The **Database** name
 - Your **User** account/ID
 - Your **Password**

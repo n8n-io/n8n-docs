@@ -29,14 +29,7 @@ File Transfer Protocol (FTP) and Secure Shell File Transfer Protocol (SFTP) are 
 
 Use this method if your FTP server doesn't support SSH tunneling or encrypted connections.
 
-To configure this credential, you'll need:
-
-- A **Host**
-- A **Port**
-- A **Username**
-- A **Password**
-
-To set up the credential:
+To configure this credential, you'll need to:
 
 1. Enter the name or IP address of your FTP server's **Host**.
 2. Enter the **Port** number the connection should use.
@@ -49,16 +42,7 @@ Review your FTP server provider's documentation for instructions on getting the 
 
 Use this method if your FTP server supports SSH tunneling and encrypted connections.
 
-To configure this credential, you'll need:
-
-- A **Host**
-- A **Port**
-- A **Username**
-- A **Password**
-- A **Private Key**
-- A **Passphrase**
-
-To set up the credential:
+To configure this credential, you'll need to:
 
 1. Enter the name or IP address of your FTP server's **Host**.
 2. Enter the **Port** number the connection should use.

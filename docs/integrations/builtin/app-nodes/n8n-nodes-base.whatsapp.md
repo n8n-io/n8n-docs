@@ -13,7 +13,7 @@ Use the WhatsApp Business node to automate work in WhatsApp Business, and integr
 On this page, you'll find a list of operations the WhatsApp Business node supports and links to more resources.
 
 /// note | Credentials
-Refer to [WhatsApp Business credentials](/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
+Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
 ///
 
 ## Operations

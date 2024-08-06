@@ -22,11 +22,11 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods
 
 - API access token:
-    - Required for the [Slack Trigger](/integrations/builtin/trigger-ndoes/n8n-nodes-base.slacktrigger/) node.
+    - Required for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) node.
     - Works with the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node, but not recommended.
 - OAuth2:
     - Recommended method for the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node.
-    - Doesn't work with the [Slack Trigger](/integrations/builtin/trigger-ndoes/n8n-nodes-base.slacktrigger/) node.
+    - Doesn't work with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) node.
 
 ## Related resources
 

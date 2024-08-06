@@ -57,7 +57,7 @@ To configure this credential, you'll need the [Prerequisites](#prerequisites) li
 3. Enter the **Database** name.
 4. Enter the **User** you'd like to log in as.
 5. Enter the user's **Password**.
-6. Enter the **Port** to connect over. This should be the port number your server uses to listen for incoming connections.
+6. Enter the **Port** to connect over. This is the port number your server uses to listen for incoming connections.
 7. Select whether to **Use TLS**: Turn on to use TLS. You must have your MongoDB database configured to use TLS and have an x.509 certificate generated. Add information for these certificate fields in n8n:
     - **CA Certificate**
     - **Public Client Certificate**

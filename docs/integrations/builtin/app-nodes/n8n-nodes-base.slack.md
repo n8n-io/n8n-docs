@@ -78,7 +78,9 @@ Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .externa
 
 ## Required scopes
 
-Once you create a Slack app for your [Slack credentials](/integrations/builtin/credentials/slack/), you must add the appropriate scopes to your Slack app for this node to work. Use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
+Once you create a Slack app for your [Slack credentials](/integrations/builtin/credentials/slack/), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](/integrations/builtin/credentials/slack/#scopes) page.
+
+If those aren't enough, use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
 
 <!-- vale off -->
 

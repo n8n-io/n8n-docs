@@ -13,12 +13,6 @@ You can use these credentials to authenticate the following nodes:
 - [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)
 - [Slack Trigger](/integrations/builtin/trigger-ndoes/n8n-nodes-base.slacktrigger/)
 
-
-## Prerequisites
-
-- Create a [Slack](https://slack.com/){:target=_blank .external-link} account.
-- Create a Slack app. Refer to the Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link} for more information.
-
 ## Supported authentication methods
 
 - API access token:
@@ -34,7 +28,7 @@ Refer to [Slack's API documentation](https://api.slack.com/apis){:target=_blank 
 
 ## Using API access token
 
-To configure this credential, you'll need:
+To configure this credential, you'll need a [Slack](https://slack.com/){:target=_blank .external-link} account and:
 
 - An **Access Token**
 
@@ -47,14 +41,7 @@ To generate an access token, create a Slack app:
 5. Select **Create App**.
 6. In **Basic Information > Building Apps for Slack**, select **Add features and functionality**.
 7. Select **Permissions**.
-8. In the **Scopes** section:
-    * If you want your app to act on behalf of users who authorize the app, add the required scopes under the **User Token Scopes** section.
-    * If you're building a bot, add the required scopes under the **Bot Token Scopes** section. 
-    
-    /// note | Scopes
-    Scopes determine what permissions an app has. Set your scopes based on which operations you want the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#required-scopes) node to perform or the events you want the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/#required-scopes) node to trigger on.
-    ///
-
+8. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
 9. After you've added scopes, go up to the **OAuth Tokens for Your Workspace** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
 10. Select **Allow**.
 11. Go to **Features** > **OAuth Tokens for your Workspace** if you aren't automatically directed there.
@@ -87,7 +74,7 @@ Refer to [Quickstart | Configuring the app for event listening](https://api.slac
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting n8n](/hosting/) and need to configure OAuth2 from scratch, you'll need:
+If you're [self-hosting n8n](/hosting/) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/){:target=_blank .external-link} account and:
 
 - A **Client ID**
 - A **Client Secret**
@@ -107,34 +94,38 @@ To get both, create a Slack app:
 8. Copy the **OAuth Callback URL** from n8n and enter it as the new Redirect URL in Slack.
 9. Select **Add**.
 10. Select **Save URLs**.
-11. In the **Scopes** section:
-    * If you want your app to act on behalf of users who authorize the app, add the required scopes under the **User Token Scopes** section.
-    * If you're building a bot, add the required scopes under the **Bot Token Scopes** section.
-    * OAuth2 requires these scopes regardless of the node and operation you're using it for:
-        * `channels:read`
-        * `channels:write`: Not available as a bot token scope
-        * `chat:write`
-        * `files:read`
-        * `files:write`
-        * `groups:read`
-        * `im:read`
-        * `mpim:read`
-        * `reactions:read`
-        * `reactions:write`
-        * `stars:read`: Not available as a bot token scope
-        * `stars:write`: Not available as a bot token scope
-        * `usergroups:read`
-        * `usergroups:write`
-        * `users.profile:read`
-        * `users.profile:write`: Not available as a bot token scope
-        * `users:read`
-    
-    /// note | Scopes
-    Scopes determine what permissions an app has. Set your scopes based on which operations you want the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#required-scopes) node to perform or the events you want the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/#required-scopes) node to trigger on.
-    ///
-
+11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of scopes.
 13. After you've added scopes, go up to the **OAuth Tokens for Your Workspace** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
 14. Select **Allow**.
 15. At this point, you should be able to select the OAuth button in your n8n credential to connect.
 
 Refer to the Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link} for more information. Refer to the Slack [Installing with OAuth](https://api.slack.com/authentication/oauth-v2){:target=_blank .external-link} documentation for more details on the OAuth flow itself.
+
+## Scopes
+
+Scopes determine what permissions an app has.
+
+* If you want your app to act on behalf of users who authorize the app, add the required scopes under the **User Token Scopes** section.
+* If you're building a bot, add the required scopes under the **Bot Token Scopes** section.
+
+Here's the list of scopes the OAuth credential requires, which are a good starting point:
+
+| **Scope name** | **Notes** |
+| --- | --- |
+| `channels:read` | |
+| `channels:write` | Not available as a bot token scope |
+| `chat:write` | |
+| `files:read` | |
+| `files:write` | |
+| `groups:read` | |
+| `im:read` | |
+| `mpim:read` | |
+| `reactions:read` | |
+| `reactions:write` | |
+| `stars:read`| Not available as a bot token scope |
+| `stars:write` | Not available as a bot token scope |
+| `usergroups:read` | |
+| `usergroups:write` | | 
+| `users.profile:read` | |
+| `users.profile:write` | Not available as a bot token scope |
+| `users:read` | |

@@ -66,4 +66,4 @@ To use this node, you need to create an application in Slack and enable event su
 
 You must add the appropriate scopes to your Slack app for this trigger node to work.
 
-The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods. Refer to the linked Slack method documentation to identify the scopes you should add to your app.
+The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack/#scopes) list for a more complete list of scopes.

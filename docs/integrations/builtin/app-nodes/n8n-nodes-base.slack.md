@@ -51,15 +51,15 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guida
     * **Get** a message's reactions.
     * **Remove** a reaction from a message.
 * **Star**
-    * **Add** a star to an item
-    * **Delete** a star from an item
-    * **Get Many**: Get a list of an authenticated user's stars
+    * **Add** a star to an item.
+    * **Delete** a star from an item.
+    * **Get Many**: Get a list of an authenticated user's stars.
 * **User**
     * **Get** information about a user.
 	* **Get Many**: Get a list of users.
-    * **Get User's Profile**
-    * **Get User's Status**
-	* **Update User's Profile**
+    * **Get User's Profile**.
+    * **Get User's Status**.
+	* **Update User's Profile**.
 * **User Group**
     * **Create** a user group.
     * **Disable** a user group.

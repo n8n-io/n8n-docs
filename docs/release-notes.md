@@ -33,6 +33,32 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.54.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-07
+
+This release contains new features, node enhancements, bug fixes and updates to our API.
+
+
+### API update
+Our [public REST API](/api/) now supports additional operations: 
+
+- Create, delete, and edit roles for users
+- Create, read, update and delete projects
+
+Find the details in the [API reference](/api/api-reference/). 
+
+### Contributors
+
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[Javier Ferrer González](https://github.com/JavierCane){:target=_blank .external-link}  
+[Mickaël Andrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}  
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+[Pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.45.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.1...n8n@1.45.2){:target=_blank .external-link} for this version.<br />

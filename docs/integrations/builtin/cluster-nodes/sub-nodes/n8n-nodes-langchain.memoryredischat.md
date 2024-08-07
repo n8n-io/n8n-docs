@@ -21,6 +21,7 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Session Key**: the key to use to store the memory in the workflow data.
 * **Session Time To Live**: make the session expire after a given number of seconds.
+* **Context Window Length**: the number of previous interactions to consider for context.
 
 ## Templates and examples
 

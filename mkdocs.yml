@@ -349,6 +349,7 @@ nav:
         - integrations/builtin/core-nodes/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md

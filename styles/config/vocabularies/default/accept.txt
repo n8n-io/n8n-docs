@@ -173,6 +173,7 @@ Nextcloud
 ngrok
 Nodelinter
 npm
+NPM
 npx
 OAuth
 Odoo

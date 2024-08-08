@@ -9,7 +9,7 @@ description: Documentation for the JWT credentials. Use these credentials to aut
 You can use these credentials to authenticate the following nodes:
 
 - [JWT](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/)
-
+- [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
 
 ## Supported authentication methods
 

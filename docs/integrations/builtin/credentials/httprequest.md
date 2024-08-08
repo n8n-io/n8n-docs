@@ -44,25 +44,11 @@ You can use [Predefined credential types](/integrations/custom-operations/#prede
 
 Refer to [Custom API operations](/integrations/custom-operations/) for more information.
 
-## Using basic auth or digest auth
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/basic-auth.md"
 
-Use one of these generic authentications if your app or service supports basic or digest authentication.
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/digest-auth.md"
 
-To configure this credential, you'll need:
-
-- The **Username** you use to access the app or service your HTTP Request is targeting
-- The **Password** that goes with that username
-
-## Using header auth
-
-Use this generic authentication if your app or service supports header authentication.
-
-To configure this credential, you'll need:
-
-- The header **Name** you need to pass to the app or service your HTTP request is targeting
-- The **Value** for the header 
-
-Read more about [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#authentication){:target=_blank .external-link}.
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/header-auth.md"
 
 ## Using OAuth1
 

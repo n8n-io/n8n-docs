@@ -42,30 +42,33 @@ n8n recommends using the **Predefined Credential Type** option when it's availab
 
 #### Predefined credentials
 
-Select **Predefined Credential Type**. This allows you to perform custom operations, without additional authentication setup. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+Credentials for integrations supported by n8n, including both built-in and community nodes. Use **Predefined Credential Type** for custom operations without extra setup. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+
 
 #### Generic credentials
 
-Select **Generic Credential Type** to set up authentication using one of the following methods:
+Credentials for integrations not supported by n8n. You'll need to manually configure the authentication process, including specifying the required API endpoints, necessary parameters, and the authentication method. 
 
-* Basic Auth
-* Custom Auth
-* Digest Auth
-* Header Auth
+You can select one of the following methods:
+
+* Basic auth
+* Custom auth
+* Digest auth
+* Header auth
 * OAuth1 API
 * OAuth2 API
-* Query Auth
+* Query auth
 
 
 Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
 
 ### Parameters, headers, and body
 
-You can choose to send additional information with your request. The data you need to send depends on the API you're interacting with, and the type of request you're making. Refer to your service's API documentation for detailed guidance.
+You can choose to send extra information with your request. The data you need to send depends on the API you're interacting with, and the request you're making. Refer to your service's API documentation for detailed guidance.
 
-* **Send Query Parameters**: include query parameters. Query parameters are usually used as filters or searches on your query.
+* **Send Query Parameters**: include query parameters. Use query parameters as filters or searches on your query.
 * **Send Headers**: include request headers. Headers contain metadata about your request.
-* **Send Body**: send additional information in the body of your request.
+* **Send Body**: send extra information in the body of your request.
 
 ## Node options
 

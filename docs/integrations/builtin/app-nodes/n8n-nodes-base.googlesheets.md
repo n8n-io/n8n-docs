@@ -18,18 +18,147 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 
 ## Operations
 
-* Document
-    * Create
-	* Delete
-* Sheet within document
-	* Append or Update Row: append a new row, or update the current one if it already exists.
-	* Append Row: create a new row.
-	* Clear: clear all data from a sheet
-	* Create: create a new sheet
-	* Delete: delete a sheet
-	* Delete Rows or Columns: delete columns and rows from a sheet
-	* Get Many Rows: read all rows in a sheet.
-	* Update Row: update rows in a sheet
+* **Document**
+    * **Create** a spreadsheet
+	* **Delete** a spreadsheet
+* **Sheet Within Document**
+	* **Append or Update Row**: Append a new row, or update the current one if it already exists.
+	* **Append Row**: Create a new row.
+	* **Clear** all data from a sheet.
+	* **Create** a new sheet.
+	* **Delete** a sheet.
+	* **Delete Rows or Columns**: Delete columns and rows from a sheet.
+	* **Get Row(s)**: Read all rows in a sheet.
+	* **Update Row**: Update a row in a sheet. 
+
+### Create a spreadsheet
+
+Use this operation to create a new spreadsheet.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Document**.
+- **Operation**: Select **Create**.
+- **Title**: Enter the title of the new spreadsheet you want to create.
+- **Sheets**: Add the **Title(s)** of the sheet(s) you want to create within the spreadsheet. 
+- **Options**: 
+    - **Locale**: Enter the locale of the spreadsheet in one of the following formats; `en` (639-1), `fil` (639-2 if no 639-1 format exists) or `en_US` (combination of ISO language and country). This affects formatting details such as functions, dates, and currency. Note that Google doesn't support all locales/languages.
+    - **Recalculation Interval**: Enter the desired recalculation interval for the spreadsheet functions. This affects how often `NOW`, `TODAY`, `RAND`, and `RANDBETWEEN` are updated. Select **On Change** for recalculating whenever there is a change in the spreadsheet, **Minute** for recalculating every minute, or **Hour** for recalculating every hour.
+  	Refer to [Set a spreadsheet’s location & calculation settings](https://support.google.com/docs/answer/58515){:target=_blank .external-link} for more information about these options. 
+
+Refer to the[Google Sheets API](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets){:target=_blank .external-link} documentation for more information.
+
+### Delete a spreadsheet
+
+Use this operation to delete an existing spreadsheet.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Document**.
+- **Operation**: Select **Delete**.
+- **Document**: Choose a spreadsheet you want to delete. 
+    - Select **From list** to choose the title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the spreadsheet ID. 
+    - You can find the spreadsheet ID in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+
+Refer to the[Google Sheets API](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets){:target=_blank .external-link} documentation for more information.
+
+### Append or Update Row
+
+Use this operation to update existing entry or to add a new row at the end of the data if a matching entry isn't found in a Google Sheet. 
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Append or Update Row**.
+- **Document**: Choose a spreadsheet with the sheet you want to append a row to. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet you want to delete. 
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By ID** to enter the sheet title. 
+    - You can find the `sheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Mapping Column Mode**: 
+	- **Map Each Column Manually**: Enter **Values to Send** for each column.
+	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+--8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
+
+Refer to the[Google Sheets API | Method: spreadsheets.values.update](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update){:target=_blank .external-link} documentation for more information.
+
+### Append Row
+
+Use this operation to append a new row at the end of the data in a Google Sheet. 
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Append Row**.
+- **Document**: Choose a spreadsheet with the sheet you want to append a row to. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet you want to append a row to. 
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By ID** to enter the sheet title. 
+    - You can find the `sheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Mapping Column Mode**: 
+	- **Map Each Column Manually**: Select the **Column to Match On** when finding the rows to update. Enter **Values to Send** for each column.
+	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+--8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
+
+Refer to the[Google Sheets API | Method: spreadsheets.values.append](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append){:target=_blank .external-link} documentation for more information.
+
+### Clear 
+
+Use this operation to clear all data from a sheet.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Clear**.
+- **Document**: Choose a spreadsheet with the sheet you want to append a row to. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet you want to append a row to. 
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By ID** to enter the sheet title. 
+    - You can find the `sheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Clear**: 
+    - **Whole Sheet**: Turn on **Keep First Row** to keep the first row of the sheet. 
+    - **Specific Rows**: Enter **Start Row Number** and **Number of Rows to Delete** to specify the rows to clear. 
+    - **Specific Columns**: Enter **Start Column** and **Number of Columns to Delete** to specify the rows to clear. 
+    - **Specific Range**: Enter the table range to clear data from, in [A1 notation](https://developers.google.com/sheets/api/guides/concepts#cell){:target=_blank .external-link}.
+--8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
+
+Refer to the[Google Sheets API | Method: spreadsheets.values.clear](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear){:target=_blank .external-link} documentation for more information.
+
+### Create 
+
+Use this operation to create a new sheet. 
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Create**.
+- **Document**: Choose a spreadsheet in which you want to create your new Google Sheet. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Title**: Enter the title for your new sheet. 
+- **Options**: 
+    - **Hidden**: Turn on this option to keep the sheet hidden in the UI. 
+    - **Right To Left**: Turn on this option to use RTL sheet instead of an LTR sheet. 
+    - **Sheet ID**: Enter the ID of the sheet. 
+	- **Sheet Index**: Enter the `sheetId` 
+	- **Tab Color**:
 
 ## Templates and examples
 
@@ -117,14 +246,6 @@ You can choose how n8n formats the data returned by Google Sheets:
 
 To insert an array of data into Google Sheets, you must convert the data into a valid JSON (key, value) format. You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) to convert the array into JSON format.
 
-## Cell formatting for update and append
-
-You can choose how to format the data in cells:
-
-1. After setting up the node to append data, select **Add Option** > **Cell Format**.
-2. In **Cell Format**, select one of:
-	* **Let n8n format**: the new cells in your sheet keep the data type of the data in n8n.
-	* **Let Google Sheets format**: allow Google Sheets to style the cells as if you typed the data directly into the cells.
 
 
 

@@ -60,10 +60,14 @@ You should see an interactive workflow, similar to the templates pages or forum.
 
 ## Templates Widget
 
-You should see a list of three HTTP Request templates, followed by links to the integrations page on the website, and the templates search.
+You should see a list of three Wait node templates, followed by links to the integrations page on the website, and the templates search.
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget('HTTP Request', 'http-request') ]]
+[[ templatesWidget('wait', 'wait') ]]
 
+## Templates Widget Extra Items
+
+You should see a list of 5 HTTP Request templates
+[[ templatesWidget('HTTP Request', 'http-request', 5) ]]
 
 ## Glossary
 

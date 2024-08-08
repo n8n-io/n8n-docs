@@ -628,7 +628,12 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md
         - integrations/builtin/app-nodes/n8n-nodes-base.taiga.md
         - integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.telegram.md
+        - Telegram:
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
         - integrations/builtin/app-nodes/n8n-nodes-base.thehive.md
         - integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md
         - integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md

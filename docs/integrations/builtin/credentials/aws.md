@@ -25,10 +25,6 @@ You can use these credentials to authenticate the following nodes:
 - [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/)
 - [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock)
 
-## Prerequisites
-
-Create an [AWS](https://aws.amazon.com/){:target=_blank .external-link} account.
-
 ## Supported authentication methods
 
 - API access key
@@ -45,7 +41,7 @@ To configure this credential, you'll need an [AWS](https://aws.amazon.com/){:tar
 - The **Access Key ID**: Generated when you create an access key.
 - The **Secret Access Key**: Generated when you create an access key.
 
-To generate an access key and set up the credential:
+To create an access key and set up the credential:
 
 1. In your n8n credential, select your AWS **Region**.
 1. Log in to the [IAM console](https://console.aws.amazon.com/iam){:target=_blank .external-link}.
@@ -57,7 +53,7 @@ To generate an access key and set up the credential:
 7. Select **Create access key**.
 8. Reveal the **Access Key ID** and **Secret Access Key** and enter them in n8n.
 10. To use a **Temporary security credential**, turn that option on and add a **Session token**. Refer to the [AWS Temporary security credential documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html){:target=_blank .external-link} for more information on working with temporary security credentials.
-11. If you use [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/){:target=_blank .external-link} to host n8n, you can establish a connection between your VPC and some apps. Use Custom Endpoints to enter relevant custom endpoint(s) for this connection. The following apps are supported:
+11. If you use [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/){:target=_blank .external-link} to host n8n, you can establish a connection between your VPC and some apps. Use **Custom Endpoints** to enter relevant custom endpoint(s) for this connection. This setup works with these apps:
     - Rekognition
     - Lambda
     - SNS

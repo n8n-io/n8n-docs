@@ -33,7 +33,7 @@ To get your personal access token:
 2. Select your profile avatar in the upper right and go to **Account > Your settings >** [**Personal Tokens**](https://admin.typeform.com/user/tokens){:target=_blank .external-link}.
 3. Select **Generate a new token**.
 4. Give your token a **Name**, like `n8n integration`.
-5. For **scopes**, the [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/) requires these scopes:
+5. For **Scopes**, select **Custom scopes**. Select these scopes:
     - Forms: Read
     - Webhooks: Read, Write
 6. Select **Generate token**.

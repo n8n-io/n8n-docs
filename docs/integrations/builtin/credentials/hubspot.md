@@ -15,12 +15,12 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- App token: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
-- Developer API key: Used with [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node
-- OAuth2: Used with [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node
+- App token: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node.
+- Developer API key: Use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node.
+- OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node.
 
 /// note | API key deprecated
-HubSpot deprecated the regular API key authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app){:target=_blank .external-link} guide and set up an app token.
+HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app){:target=_blank .external-link} guide and set up an app token.
 ///
 
 ## Related resources
@@ -42,10 +42,10 @@ To generate an app token, create a private app in HubSpot:
 5. Hover over the **placeholder logo** and select the upload icon to upload a square image that will serve as the logo for your app.
 6. Enter a **Description** for your app.
 7. Open the **Scopes** tab and add the appropriate scopes. Refer to [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) for a complete list of scopes you should add.
-8. Select **Create app** to finish creating our app.
+8. Select **Create app** to finish the process.
 9. In the modal, review the info about your app's access token, then select **Continue creating**.
-10. Once our app is created, open the **Access token card** and select **Sho token** to reveal the token.
-11. Cop this token and enter it in our n8n credential.To start making API calls, navigate to the details page of your app.
+10. Once your app's created, open the **Access token card** and select **Show token** to reveal the token.
+11. Copy this token and enter it in your n8n credential.
 
 Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} for more information.
 
@@ -71,7 +71,7 @@ To create the public app and set up the credential:
 6. Copy the **Client ID** and enter it in n8n.
 7. Copy the **Client Secret** and enter it in n8n.
 8. In the **Scopes** section, select **Add new scope**.
-9. Add all of the scopes listed in [Required scopes for HubSpot Trigger node](#required-scopes-for-hubspot-trigger-node) to your app.
+9. Add all the scopes listed in [Required scopes for HubSpot Trigger node](#required-scopes-for-hubspot-trigger-node) to your app.
 10. Select **Update**.
 11. Copy the n8n **OAuth Redirect URL** and enter it as the **Redirect URL** in your HubSpot app.
 12. Select **Create app** to finish creating the HubSpot app.
@@ -111,7 +111,7 @@ If you're self-hosting n8n, you'll need to configure OAuth2 from scratch by crea
 6. Copy the **Client ID** and enter it in n8n.
 7. Copy the **Client Secret** and enter it in n8n.
 8. In the **Scopes** section, select **Add new scope**.
-9. Add all of the scopes listed in [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) to your app.
+9. Add all the scopes listed in [Required scopes for HubSpot node](#required-scopes-for-hubspot-node) to your app.
 10. Select **Update**.
 11. Copy the n8n **OAuth Redirect URL** and enter it as the **Redirect URL** in your HubSpot app.
 12. Select **Create app** to finish creating the HubSpot app.

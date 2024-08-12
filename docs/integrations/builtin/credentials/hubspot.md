@@ -86,10 +86,10 @@ If you're creating an app for use with the [HubSpot Trigger](/integrations/built
 | --- | --- | --- | --- |
 | n/a | n/a | n/a | `oauth` |
 | CRM | Companies | Read | `crm.objects.companies.read` |
-| CRM | Contacts | Read | `crm.objects.contacts.read` |
-| CRM | Deals | Read | `crm.objects.deals.read` |
 | CRM | Companies schemas | Read | `crm.schemas.companies.read` |
+| CRM | Contacts | Read | `crm.objects.contacts.read` |
 | CRM | Contacts schemas | Read | `crm.schemas.contacts.read` |
+| CRM | Deals | Read | `crm.objects.deals.read` |
 | CRM | Deals schemas| Read | `crm.schemas.deals.read` |
 
 /// warning | HubSpot old accounts
@@ -127,13 +127,13 @@ If you're creating an app for use with the [HubSpot](/integrations/builtin/app-n
 | n/a | n/a | n/a |  `oauth` |
 | n/a | n/a | n/a |  `forms` |
 | n/a | n/a | n/a |  `tickets` |
-| CRM | Companies | Read, Write | `crm.objects.companies.read` <br> `crm.objects.companies.write`|
-| CRM | Contacts | Read, Write | `crm.objects.contacts.read` <br> `crm.objects.contacts.write`|
-| CRM | Deals | Read, Write | `crm.objects.deals.read` <br> `crm.objects.deals.write`|
-| CRM | Owners | `crm.objects.owners.read` |
+| CRM | Companies | Read <br> Write | `crm.objects.companies.read` <br> `crm.objects.companies.write`|
 | CRM | Companies schemas | Read | `crm.schemas.companies.read` |
 | CRM | Contacts schemas | Read | `crm.schemas.contacts.read` |
+| CRM | Contacts | Read <br> Write | `crm.objects.contacts.read` <br> `crm.objects.contacts.write`|
+| CRM | Deals | Read <br> Write | `crm.objects.deals.read` <br> `crm.objects.deals.write`|
 | CRM | Deals schemas | Read | `crm.schemas.deals.read` |
+| CRM | Owners | Read | `crm.objects.owners.read` |
 
 /// warning | HubSpot old accounts
 Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.

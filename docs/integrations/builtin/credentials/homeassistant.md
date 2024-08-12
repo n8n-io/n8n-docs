@@ -22,7 +22,7 @@ Refer to [Home Assistant's API documentation](https://developers.home-assistant.
 
 ## Using API access token
 
-To configure this credential, you'll need to [Install](https://www.home-assistant.io/installation/) Home Assistant, create a [Home Assistant](https://www.home-assistant.io/getting-started/onboarding) account and have:
+To configure this credential, you'll need to [Install](https://www.home-assistant.io/installation/) Home Assistant, create a [Home Assistant](https://www.home-assistant.io/getting-started/onboarding) account, and have:
 
 - Your **Host**
 - The **Port**

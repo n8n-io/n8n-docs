@@ -26,7 +26,7 @@ To configure this credential, you'll need to [Install](https://www.home-assistan
 
 - Your **Host**
 - The **Port**
-- An **Access Token**
+- A Long-Lived **Access Token**
 
 To generate an access token and set up the credential:
 

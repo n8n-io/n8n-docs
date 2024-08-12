@@ -19,17 +19,17 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 ## Operations
 
 * **Document**
-    * [**Create**](/#create-a-spreadsheet) a spreadsheet.
-	* [**Delete**](/#delete-a-spreadsheet) a spreadsheet.
+    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#create-a-spreadsheet) a spreadsheet.
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#delete-a-spreadsheet) a spreadsheet.
 * **Sheet Within Document**
-	* [**Append or Update Row**](/#append-or-update-row): Append a new row, or update the current one if it already exists.
-	* [**Append Row**](/#append-row): Create a new row.
-	* [**Clear**](/#clear-a-sheet) all data from a sheet.
-	* [**Create**](/#create-a-new-sheet) a new sheet.
-	* [**Delete**](/#delete-a-sheet) a sheet.
-	* [**Delete Rows or Columns**](/#delete-rows-or-columns): Delete columns and rows from a sheet.
-	* [**Get Row(s)**](/#get-rows): Read all rows in a sheet.
-	* [**Update Row**](/#update-row): Update a row in a sheet. 
+	* [**Append or Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#append-or-update-row): Append a new row, or update the current one if it already exists.
+	* [**Append Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#append-row): Create a new row.
+	* [**Clear**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#clear-a-sheet) all data from a sheet.
+	* [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#create-a-new-sheet) a new sheet.
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#delete-a-sheet) a sheet.
+	* [**Delete Rows or Columns**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#delete-rows-or-columns): Delete columns and rows from a sheet.
+	* [**Get Row(s)**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#get-rows): Read all rows in a sheet.
+	* [**Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/#update-row): Update a row in a sheet. 
 
 ### Create a spreadsheet
 

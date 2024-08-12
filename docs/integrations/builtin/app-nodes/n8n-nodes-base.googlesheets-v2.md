@@ -19,17 +19,17 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 ## Operations
 
 * **Document**
-    * [**Create**](/#create-a-spreadsheet) a spreadsheet.
-	* [**Delete**](/#delete-a-spreadsheet) a spreadsheet.
+    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#create-a-spreadsheet) a spreadsheet.
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#delete-a-spreadsheet) a spreadsheet.
 * **Sheet Within Document**
-	* [**Append or Update Row**](/#append-or-update-row): Append a new row, or update the current one if it already exists.
-	* [**Append Row**](/#append-row): Create a new row.
-	* [**Clear**](/#clear-a-sheet) all data from a sheet.
-	* [**Create**](/#create-a-new-sheet) a new sheet.
-	* [**Delete**](/#delete-a-sheet) a sheet.
-	* [**Delete Rows or Columns**](/#delete-rows-or-columns): Delete columns and rows from a sheet.
-	* [**Get Row(s)**](/#get-rows): Read all rows in a sheet.
-	* [**Update Row**](/#update-row): Update a row in a sheet. 
+	* [**Append or Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#append-or-update-row): Append a new row, or update the current one if it already exists.
+	* [**Append Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#append-row): Create a new row.
+	* [**Clear**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#clear-a-sheet) all data from a sheet.
+	* [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#create-a-new-sheet) a new sheet.
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#delete-a-sheet) a sheet.
+	* [**Delete Rows or Columns**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#delete-rows-or-columns): Delete columns and rows from a sheet.
+	* [**Get Row(s)**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#get-rows): Read all rows in a sheet.
+	* [**Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets-v2/#update-row): Update a row in a sheet. 
 
 ### Create a spreadsheet
 

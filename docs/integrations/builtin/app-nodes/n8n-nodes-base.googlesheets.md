@@ -19,8 +19,8 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 ## Operations
 
 * **Document**
-    * **Create** a spreadsheet
-	* **Delete** a spreadsheet
+    * **Create** a spreadsheet.
+	* **Delete** a spreadsheet.
 * **Sheet Within Document**
 	* **Append or Update Row**: Append a new row, or update the current one if it already exists.
 	* **Append Row**: Create a new row.
@@ -47,7 +47,7 @@ Enter these parameters:
     - **Recalculation Interval**: Enter the desired recalculation interval for the spreadsheet functions. This affects how often `NOW`, `TODAY`, `RAND`, and `RANDBETWEEN` are updated. Select **On Change** for recalculating whenever there is a change in the spreadsheet, **Minute** for recalculating every minute, or **Hour** for recalculating every hour.
   	Refer to [Set a spreadsheet’s location & calculation settings](https://support.google.com/docs/answer/58515){:target=_blank .external-link} for more information about these options. 
 
-Refer to the[Google Sheets API](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets){:target=_blank .external-link} documentation for more information.
+Refer to the [Method: spreadsheets.create | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/create){:target=_blank .external-link} API documentation for more information.
 
 ### Delete a spreadsheet
 
@@ -63,11 +63,11 @@ Enter these parameters:
     - You can find the spreadsheet ID in a Google Sheets URL:
 	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
 
-Refer to the[Google Sheets API](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets){:target=_blank .external-link} documentation for more information.
+Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
 
 ### Append or Update Row
 
-Use this operation to update existing entry or to add a new row at the end of the data if a matching entry isn't found in a Google Sheet. 
+Use this operation to update existing row or to add a new row at the end of the data if a matching entry isn't found in a sheet. 
 
 Enter these parameters:
 
@@ -85,13 +85,14 @@ Enter these parameters:
 - **Mapping Column Mode**: 
 	- **Map Each Column Manually**: Enter **Values to Send** for each column.
 	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+    - **Nothing**: Don't map any data.
 --8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
 
-Refer to the[Google Sheets API | Method: spreadsheets.values.update](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update){:target=_blank .external-link} documentation for more information.
+Refer to the [Method: spreadsheets.values.update | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update){:target=_blank .external-link} API documentation for more information.
 
 ### Append Row
 
-Use this operation to append a new row at the end of the data in a Google Sheet. 
+Use this operation to append a new row at the end of the data in a sheet. 
 
 Enter these parameters:
 
@@ -109,11 +110,12 @@ Enter these parameters:
 - **Mapping Column Mode**: 
 	- **Map Each Column Manually**: Select the **Column to Match On** when finding the rows to update. Enter **Values to Send** for each column.
 	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+    - **Nothing**: Don't map any data.
 --8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
 
-Refer to the[Google Sheets API | Method: spreadsheets.values.append](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append){:target=_blank .external-link} documentation for more information.
+Refer to the [Method: spreadsheets.values.append | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append){:target=_blank .external-link} API documentation for more information.
 
-### Clear 
+### Clear a sheet
 
 Use this operation to clear all data from a sheet.
 
@@ -137,9 +139,9 @@ Enter these parameters:
     - **Specific Range**: Enter the table range to clear data from, in [A1 notation](https://developers.google.com/sheets/api/guides/concepts#cell){:target=_blank .external-link}.
 --8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
 
-Refer to the[Google Sheets API | Method: spreadsheets.values.clear](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear){:target=_blank .external-link} documentation for more information.
+Refer to the [Method: spreadsheets.values.clear | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear){:target=_blank .external-link} API documentation for more information.
 
-### Create 
+### Create a sheet
 
 Use this operation to create a new sheet. 
 
@@ -157,8 +159,122 @@ Enter these parameters:
     - **Hidden**: Turn on this option to keep the sheet hidden in the UI. 
     - **Right To Left**: Turn on this option to use RTL sheet instead of an LTR sheet. 
     - **Sheet ID**: Enter the ID of the sheet. 
-	- **Sheet Index**: Enter the `sheetId` 
-	- **Tab Color**:
+    	- You can find the `sheetId` in a Google Sheets URL:
+		`https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+	- **Sheet Index**: Enter the `sheetId` of the Google spreadsheet.
+	- **Tab Color**: Enter the color as hex code or use the color picker to set the color of the tab in the UI. 
+
+Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+
+### Delete a sheet
+
+Use this operation to permanently delete a sheet. 
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Create**.
+- **Document**: Choose a spreadsheet that contains the sheet you want to delete. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet in which you want to delete. 
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
+    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+
+Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+
+### Delete Rows or Columns
+
+Use this operation to delete rows or columns in a sheet.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Create**.
+- **Document**: Choose a spreadsheet that contains the sheet you want to delete. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet in which you want to delete. 
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
+    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **To Delete**: Choose to either delete **Rows** or **Columns**.
+- **Start Row Number** or **Start Column**: Enter the row number of column name to start deleting.
+- **Number of Rows to Delete** or **Number of Columns to delete**: Enter the number of rows or columns to delete. 
+
+Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+
+### Get Row(s)
+
+Use this operation to read one or more rows from a sheet. 
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Create**.
+- **Document**: Choose a spreadsheet that contains the sheet you want to get rows from. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet you want to read rows from.
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
+    - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Filters**: Set filters to return a limited set of results: By default, the node returns all rows in the sheet.
+  	- **Column**: Select the column in your sheet to search against.
+  	- **Value**: Enter a cell value to search for. You can drag input data parameters here.
+	If your filter matches multiple rows, n8n returns the first result. If you want all matching rows: 
+    	1. Under **Options**, select **Add Option** > **When Filter Has Multiple Matches**.
+        2. Change **When Filter Has Multiple Matches** to **Return All Matches**.
+- **Options**: 
+    - **Data Location on Sheet**: Use this option to specify a data range. By default, n8n will detect the range automatically until the last row in the sheet. 
+    - **Output Formatting**: Use this option to choose how n8n formats the data returned by Google Sheets.
+      - **General Formatting**: 
+        - **Values (unformatted)** (default): n8n removes currency signs and other special formatting. Data type remains as number.
+        - **Values (formatted)**: n8n displays the values as they appear in Google Sheets (for example, retaining commas or currency signs) by converting the data type from number to string.
+        - **Formulas**: n8n returns the formula. It doesn't calculate the formula output. For example, if a cell B2 has the formula `=A2`, n8n returns B2's value as `=A2` (in text). Refer to [About date & time values | Google Sheets](https://developers.google.com/sheets/api/guides/formats#about_date_time_values){:target=_blank .external-link} for more information. 
+      - **Date Formatting**: Refer to [DateTimeRenderOption | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/DateTimeRenderOption){:target=_blank .external-link} for more information. 
+	  	- **Formatted Text** (default): As displayed in Google Sheets, which depends on the spreadsheet locale. For example `01/01/2024`.
+	  	- **Serial Number**: Number of days since  December 30th 1899. 
+    - **When Filter Has Multiple Matches**: Set to **Return All Matches** to get multiple matches. By default only the first result gets returned. 
+
+/// note | First row
+n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
+///
+
+Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.
+
+### Update Row
+
+Use this operation to update existing row in a sheet. This operation only updates existing rows. To append rows when a matching entry isn't found in a sheet, use **Append or Update Row** operation instead.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Resource**: Select **Sheet Within Document**.
+- **Operation**: Select **Append or Update Row**.
+- **Document**: Choose a spreadsheet with the sheet you want to append a row to. 
+    - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
+    - You can find the `spreadsheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`
+- **Sheet**: Choose a sheet you want to delete. 
+    - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By ID** to enter the sheet title. 
+    - You can find the `sheetId` in a Google Sheets URL:
+	`https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
+- **Mapping Column Mode**: 
+	- **Map Each Column Manually**: Enter **Values to Send** for each column.
+	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+    - **Nothing**: Don't map any data.
+- **Options**:
+    - **Cell Format**: Use this option to choose how to format the data in cells. Refer to [Google Sheets API | CellFormat](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells#CellFormat){:target=_blank .external-link} for more information.
+        - **Let Google Sheets format** (default): Text and numbers in the cells are formatted according to Google Sheets' default settings. 
+        - **Let n8n format**: New cells in your sheet will have the same data types as the input data provided by n8n.
+    - **Data Location on Sheet**: Use this option when you need to specify where the data is located on your sheet.
+        - **Header Row**: Specify the row index that contains the column headers.
+        - **First Data Row**: Specify the row index where the actual data starts.
 
 ## Templates and examples
 
@@ -171,76 +287,21 @@ Refer to [Google Sheet's API documentation](https://developers.google.com/sheets
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
-## Update operations
-
-To update data in a sheet:
-
-1. Select your **Authentication** method and credential. Refer to [Google credentials](/integrations/builtin/credentials/google/) for more information.
-2. In **Resource**, select **Sheet Within Document**.
-3. In **Operation**, select one of the append operations.
-4. Choose the **Document** and **Sheet** you want to edit.
-5. Choose your **Data Mode**:
-	* **Map Automatically**: use this when the table column names (or JSON parameter names) in the node input view match the column names in your spreadsheet. In **Column to Match On**, select the column name in Google Sheets that you want to map to.
-	* **Map Each Column Manually**: use this when the column names and data structure in your node input data doesn't match the names and structure in Google Sheets. 
-		1. In **Column to Match On**, select or enter the column name in Google Sheets. 
-		2. In the first field in **Value to Update**, drag in the table column (or JSON parameter) whose value you want to search for.
-		3. In the second field of **Values to Update**, drag in the value you want to add. 
-
-			??? Details "View example and screenshots"
-				This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/).
-
-				1. Set up a Google Sheet with two columns, `test1` and `test`. In `test1`, enter the names from the Customer Datastore node:  
-				![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/test-sheet-before.png)  
-				2. Create the workflow: use the manual trigger, Customer Datastore, and Google Sheets nodes.  
-				![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/workflow.png)  
-				3. Open the Customer Datastore node, enable **Return All**, then select **Test step**.
-				4. In the Google Sheets node, go through the steps above, using these settings:
-					* Select **Update Row** as the **Operation**.
-					* In **Column to Match On**, select `test1`.
-					* For the first field of **Values to Update**, drag in the **name** from the input view.
-					* For the second field of **Values to Update**, drag in the **email** from the input view.
-				5. Select **Test step**.
-				6. View your spreadsheet. **test2** should now contain the email addresses that match to the names in the input data.  
-				![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/test-sheet-after.png)  
-
-	* **Nothing**: don't map any data.
-
-
-## Read operations
-
-To read from a sheet:
-
-1. Select your **Authentication** method and credential. Refer to [Google credentials](/integrations/builtin/credentials/google/) for more information.
-2. In **Resource**, select **Sheet Within Document**.
-3. In **Operation**, select **Get Many Rows**.
-4. Choose the **Document** and **Sheet** you want to read from.
-
-/// note | First row
-n8n treats the first row in a Google Sheet as a heading row, and doesn't return it when reading all rows. If you want to read the first row, use the **Options** to set **Data Location on Sheet**.
-///
-### Filters
-
-By default, the Google Sheets node reads and returns all rows in the sheet. To return a limited set of results:
-
-1. Select **Add Filter**.
-2. In **Column**, select the column in your sheet to search against.
-3. In **Value**, enter a cell value to search for. You can drag input data parameters here.
-
-If your filter matches multiple rows, n8n returns the first result. If you want all matching rows:
-
-1. Under **Options**, select **Add Option** > **When Filter Has Multiple Matches**.
-2. Change **When Filter Has Multiple Matches** to **Return All Matches**.
-
-### Output formatting
-
-You can choose how n8n formats the data returned by Google Sheets:
-
-1. After setting up the node to read rows, select **Add Option** > **Output Formatting**.
-2. In **General Formatting**, choose one of:
-	* **Values (unformatted)**: numbers stay as numbers, but n8n removes currency signs and other special formatting.
-	* **Values (formatted)**: n8n displays the values as they appear in Google Sheets (for example, retaining commas or currency signs) To do this, n8n converts the data type from number to string.
-	* **Formulas**: n8n returns the formula. It doesn't calculate the formula output. For example, if a cell B2 has the formula `=A2`, n8n returns B2's value as `=A2` (in text).
-3. Choose your preferred **Date Formatting**.
+## Examples
+This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/)	
+1. Set up a Google Sheet with two columns, `test1` and `test`. In `test1`, enter the names from the Customer Datastore node:  
+![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/test-sheet-before.png)  
+2. Create the workflow: use the manual trigger, Customer Datastore, and Google Sheets nodes.  
+![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/workflow.png)  
+3. Open the Customer Datastore node, enable **Return All**, then select **Test step**.
+4. In the Google Sheets node, go through the steps above, using these settings:
+	* Select **Update Row** as the **Operation**.
+	* In **Column to Match On**, select `test1`.
+	* For the first field of **Values to Update**, drag in the **name** from the input view.
+	* For the second field of **Values to Update**, drag in the **email** from the input view.
+5. Select **Test step**.
+6. View your spreadsheet. **test2** should now contain the email addresses that match to the names in the input data.  
+![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/test-sheet-after.png)  
 
 ## Append an array
 

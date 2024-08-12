@@ -37,7 +37,7 @@ Only use this method if you're using the V1 version of the X node. n8n released 
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're self-hosting n8n, you'll need to configure OAuth from scratch:
+If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth from scratch:
 
 1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link}, open your project.
 2. On the project's **Overview** tab, find the **Apps** section and select **Add App**.

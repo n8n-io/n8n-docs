@@ -100,7 +100,7 @@ Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating 
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're self-hosting n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
+If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
 
 1. Log into your [HubSpot app developer account](https://developers.hubspot.com/){:target=_blank .external-link}.
 2. Select **Apps** from the main navigation bar.

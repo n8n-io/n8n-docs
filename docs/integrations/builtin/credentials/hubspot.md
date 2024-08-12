@@ -83,7 +83,7 @@ To create the public app and set up the credential:
 If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node, n8n recommends starting with these scopes:
 
 | **Element** | **Object** | **Permission** | **Scope name** |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | n/a | n/a | n/a | `oauth` |
 | CRM | Companies | Read | `crm.objects.companies.read` |
 | CRM | Contacts | Read | `crm.objects.contacts.read` |
@@ -123,7 +123,7 @@ Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/
 If you're creating an app for use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node, n8n recommends starting with these scopes:
 
 | **Element** | **Object** | **Permission** | **Scope name(s)** |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | n/a | n/a | n/a |  `oauth` |
 | n/a | n/a | n/a |  `forms` |
 | n/a | n/a | n/a |  `tickets` |

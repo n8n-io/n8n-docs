@@ -12,10 +12,6 @@ You can use these credentials to authenticate the following nodes:
 
 - [Typeform Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/)
 
-## Prerequisites
-
-Create a [Typeform](https://typeform.com/){:target=_blank .external-link} account.
-
 ## Supported authentication methods
 
 - API token

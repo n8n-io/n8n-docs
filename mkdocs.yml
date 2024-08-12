@@ -340,7 +340,7 @@ nav:
           - Security: privacy-security/security.md
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
-      - Fair-code license: faircode-license.md    
+      - Sustainable use license: sustainable-use-license.md    
   - Integrations:
     - integrations/index.md
     - Built-in nodes:

@@ -54,7 +54,7 @@ To get your Client ID and Client Secret, register a new Typeform app:
 2. In the upper left, select the dropdown for your organization and select **Developer apps**.
 3. Select **Register a new app**.
 4. Enter an **App Name** that makes sense, like `n8n OAuth2 integration`.
-5. In the App website field, type the complete URL for your app's homepage.
+5. Enter your n8n base URL as the **App website**, for example `https://n8n-sample.app.n8n.cloud/`.
 6. From n8n, copy the **OAuth Redirect URL**. Enter this in Typeform as the **Redirect URI(s)**.
 7. Select **Register app**.
 8. Copy the **Client Secret** and enter it in your n8n credential.

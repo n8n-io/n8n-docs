@@ -14,12 +14,12 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API token
+- API token (recommended)
 - User auth token
 
-/// note | User auth token deprecation
-NocoDB deprecated user auth tokens in v0.205.1. Use API tokens instead.
-///
+    /// note | User auth token deprecation
+    NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
+    ///
 
 ## Related resources
 
@@ -65,4 +65,4 @@ To generate a user auth token:
 3. Enter that auth token as the **User Token** in n8n. 
 4. Enter the **Host** of your NocoDB instance, for example `http://localhost:8080`.
 
-Refer to the NocoDB [Auth Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/#auth-tokens){:target=_blank .external-link} for more information on Auth tokens.
+Refer to the NocoDB [Auth Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/#auth-tokens){:target=_blank .external-link} for more information.

@@ -19,15 +19,46 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
+- **OAuth2**: Recommended for most users.
 - **OAuth**: Listed as OAuth in n8n, use this credential only if you're using the V1 version of the [X](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/) node. n8n released V2 in [0.236.0](/release-notes/0-x/#n8n02360).
     - This method corresponds to X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method.
-- **OAuth2**: Recommended for most users.
 
 ## Related resources
 
 Refer to [X's API documentation](https://developer.x.com/en/docs/twitter-api){:target=_blank .external-link} for more information about the service. Refer to [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview){:target=_blank .external-link} for more information about authenticating with the service.
 
 Refer to [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only){:target=_blank .external-link} for more information about app-only authentication.
+
+## Using OAuth2
+
+Use this method if you're using n8n version 0.236.0 or later.
+
+To configure this credential, you'll need:
+
+- A **Client ID**
+- A **Client Secret**
+
+To generate your Client ID and Client Secret:
+
+1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link}, open your project.
+2. On the project's **Overview** tab, find the **Apps** section and select **Add App**.
+3. Give your app a **Name** and select **Next**.
+1. Go to the **App Settings**.
+4. In the **User authentication settings**, select **Set Up**.
+1. Set the **App permissions**. Choose **Read and write and Direct message** if you want to use all functions of the n8n X node.
+5. In the **Type of app** section, select **Web App, Automated App or Bot**.
+1. In n8n, copy the **OAuth Redirect URL**.
+7. In your X app, find the **App Info** section and paste that URL in as the **Callback URI / Redirect URL**.
+6. In **App Info**, copy the n8n **OAuth Redirect URL** and paste it in as the **Callback URI / Redirect URL**.
+7. Add a **Website URL**.
+8. Save your changes.
+1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.
+
+Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0){:target=_blank .external-link} for more information on working with this authentication method.
+
+/// note | X rate limits
+This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
+///
 
 ## Using OAuth
 
@@ -59,37 +90,6 @@ Refer to X's [API Key and Secret documentation](https://developer.x.com/en/docs/
 
 /// note | X rate limits
 This credential uses the OAuth 1.0a User Context authentication method, so you'll be subject to user rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
-///
-
-## Using OAuth2
-
-Use this method if you're using n8n version 0.236.0 or later.
-
-To configure this credential, you'll need:
-
-- A **Client ID**
-- A **Client Secret**
-
-To generate your Client ID and Client Secret:
-
-1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link}, open your project.
-2. On the project's **Overview** tab, find the **Apps** section and select **Add App**.
-3. Give your app a **Name** and select **Next**.
-1. Go to the **App Settings**.
-4. In the **User authentication settings**, select **Set Up**.
-1. Set the **App permissions**. Choose **Read and write and Direct message** if you want to use all functions of the n8n X node.
-5. In the **Type of app** section, select **Web App, Automated App or Bot**.
-1. In n8n, copy the **OAuth Redirect URL**.
-7. In your X app, find the **App Info** section and paste that URL in as the **Callback URI / Redirect URL**.
-6. In **App Info**, copy the n8n **OAuth Redirect URL** and paste it in as the **Callback URI / Redirect URL**.
-7. Add a **Website URL**.
-8. Save your changes.
-1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.
-
-Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0){:target=_blank .external-link} for more information on working with this authentication method.
-
-/// note | X rate limits
-This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
 ///
 
 ## X rate limits

@@ -11,11 +11,11 @@ contentType: howto
 Available on all Cloud plans, and Enterprise self-hosted plans.
 ///
 
-You can share a credential you created with other users in the same n8n workspace as you. The other users can then use the credential in their workflows. They can't access or edit the credential details.
+You can share a credential directly with other users to use in their workflows. Or into a project for all members of a project to use in workflows inside that project. Any users accessing a shared credential won't be able to access or edit the credential details.
 
-Users can share credentials they created. Instance owners, and users with the admin role, can view and share all credentials in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
+Users can share credentials they created and project admins can share credentials created inside a project. Instance owners, and users with the instance admin role, can view and share all credentials in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
 
-In [projects](/user-management/rbac/), all users have access to workflows and credentials belonging to projects they are part of.
+In [projects](/user-management/rbac/), all users have access to workflows and credentials belonging to projects they're part of.
 
 
 ## Share a credential
@@ -23,8 +23,9 @@ In [projects](/user-management/rbac/), all users have access to workflows and cr
 1. Open the left menu and select **Credentials**. n8n shows a list of your credentials.
 2. Select the credential you want to share. n8n opens the credential modal.
 3. Select **Sharing**.
-4. In **Add people**, browse or search for the user you want to share the credential with.
-5. Select a user.
+4. Browse or search for the user(s) or projects(s) you want to share a credential with.
+5. Select a user or project.
+6. **Save**.
 
 ## Remove access to a credential
 
@@ -35,3 +36,4 @@ To unshare a credential:
 3. Select **Sharing**.
 4. Select **Options** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> on the user you want to remove.
 5. Select **Remove**.
+6. **Save**.

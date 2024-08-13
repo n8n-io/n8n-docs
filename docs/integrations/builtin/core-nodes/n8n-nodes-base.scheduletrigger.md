@@ -22,13 +22,18 @@ Add **Trigger Rules** to determine when the trigger should run.
 
 Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other rule parameters depend on the interval you select. Choose from:
 
-* [**Seconds**](#seconds-trigger-interval)
-* [**Minutes**](#minutes-trigger-interval)
-* [**Hours**](#hours-trigger-interval)
-* [**Days**](#days-trigger-interval)
-* [**Weeks**](#weeks-trigger-interval)
-* [**Months**](#months-trigger-interval)
-* [**Custom (Cron)**](#custom-cron-interval)
+- [Schedule trigger](#schedule-trigger)
+  - [Node parameters](#node-parameters)
+    - [Seconds trigger interval](#seconds-trigger-interval)
+    - [Minutes trigger interval](#minutes-trigger-interval)
+    - [Hours trigger interval](#hours-trigger-interval)
+    - [Days trigger interval](#days-trigger-interval)
+    - [Weeks trigger interval](#weeks-trigger-interval)
+    - [Months trigger interval](#months-trigger-interval)
+    - [Custom (Cron) interval](#custom-cron-interval)
+      - [Examples](#examples)
+    - [Why there are six asterisks in the Cron expression](#why-there-are-six-asterisks-in-the-cron-expression)
+  - [Templates and examples](#templates-and-examples)
 
 You can add multiple **Trigger Rules** to run the node on different schedules.
 
@@ -81,25 +86,28 @@ Enter a custom cron **Expression** to set the schedule for the trigger.
 
 To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
 
-### Examples
+#### Examples
 
-If you want to trigger your workflow every day at 04:08:30, enter the following in the **Cron Expression** field.
-```
-30 8 4 * * *
-```
-
-If you want to trigger your workflow every day at 04:08, enter the following in the **Cron Expression** field.
-```
-8 4 * * *
-```
+|Type|Cron Expression|Description|
+|---|---|---|
+|Every X Seconds|`*/10 * * * * *`|Every 10 seconds.|
+|Every X Minutes|`*/5 * * * *`|Every 5 minutes.|
+|Hourly|`0 * * * *`|Every hour on the hour.|
+|Daily|`0 6 * * *`|At 6:00 AM every day.|
+|Weekly|`0 12 * * 1`|At noon every Monday.|
+|Monthly|`0 0 1 * *`|At midnight on the 1st of every month.|
+|Every X Days|`0 0 */3 * *`|At midnight every 3rd day.|
+|Only Weekdays|`0 9 * * 1-5`|At 9:00 AM Monday through Friday.|
+|Custom Hourly Range|`0 9-17 * * *`|Every hour from 9:00 AM to 5:00 PM every day.|
+|Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
 
 ### Why there are six asterisks in the Cron expression
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
 
-|  *  |  *  |  *  |  *  |  *  |  *  |
+|  (*)  |  *  |  *  |  *  |  *  |  *  |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-|second|minute|hour|day of month|month|day of week|
+|(second)|minute|hour|day of month|month|day of week(Sun-Sat)|
 
 ## Templates and examples
 

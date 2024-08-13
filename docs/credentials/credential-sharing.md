@@ -1,5 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Credential sharing
 description: Share credentials within an organization.
 contentType: howto
 ---
@@ -11,29 +12,33 @@ contentType: howto
 Available on all Cloud plans, and Enterprise self-hosted plans.
 ///
 
-You can share a credential directly with other users to use in their workflows. Or into a project for all members of a project to use in workflows inside that project. Any users accessing a shared credential won't be able to access or edit the credential details.
+You can share a credential directly with other users to use in their own workflows. Or share a credential in a project for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
 
-Users can share credentials they created and project admins can share credentials created inside a project. Instance owners, and users with the instance admin role, can view and share all credentials in the instance. Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
+Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance.
 
-In [projects](/user-management/rbac/), all users have access to workflows and credentials belonging to projects they're part of.
+Refer to [Account types](/user-management/account-types/) for more information about owners and admins.
 
+In [projects](/user-management/rbac/), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
 
 ## Share a credential
 
-1. Open the left menu and select **Credentials**. n8n shows a list of your credentials.
-2. Select the credential you want to share. n8n opens the credential modal.
-3. Select **Sharing**.
-4. Browse or search for the user(s) or projects(s) you want to share a credential with.
-5. Select a user or project.
-6. **Save**.
+To share a credential: 
+
+1. From the left menu, select either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project.
+2. Select **Credentials** to see a list of your credentials.
+3. Select the credential you want to share.
+4. Select **Sharing**.
+5. In the **Share with projects or users** dropdown, browse or search for the user or project with which you want to share your credentials.
+6. Select a user or project. 
+7. Select **Save** to apply the changes.
 
 ## Remove access to a credential
 
 To unshare a credential:
 
-1. Open the left menu and select **Credentials**. n8n shows a list of your credentials.
-2. Select the credential you want to share. n8n opens the credential modal.
-3. Select **Sharing**.
-4. Select **Options** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> on the user you want to remove.
-5. Select **Remove**.
-6. **Save**.
+1. From the left menu, select either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project.
+2. Select **Credentials** to see a list of your credentials.
+3. Select the credential you want to unshare.
+4. Select **Sharing**.
+5. Select **trash icon**<span class="inline-image">![Trash icon](/_images/common-icons/delete-node.png){.off-glb}</span> on the user or project you want to remove from the list of shared users and projects.
+6. Select **Save** to apply the changes.

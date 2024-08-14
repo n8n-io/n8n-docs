@@ -7,7 +7,9 @@ contentType: integration
 
 # Okta credentials
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+You can use these credentials to authenticate the following nodes:
+
+- [Okta](/integrations/builtin/app-nodes/n8n-nodes-base.okta/)
 
 ## Prerequisites
 
@@ -20,8 +22,6 @@ Create an [Okta free trial](https://www.okta.com/free-trial/){:target=_blank .ex
 ## Related resources
 
 Refer to [Okta's documentation](https://developer.okta.com/docs/reference/){:target=_blank .external-link} for more information about the service.
-
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/okta/){:target=_blank .external-link} on n8n's website.
 
 ## Using SSWS API access token
 

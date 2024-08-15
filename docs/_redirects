@@ -1,3 +1,6 @@
+# Remove Ask AI
+/hosting/configuration/environment-variables/ai/ /hosting/configuration/environment-variables/
+
 ## DOC-993
 /faircode-license/  /sustainable-use-license/
 

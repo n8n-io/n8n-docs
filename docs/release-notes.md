@@ -311,13 +311,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.49.0...n8n@1.50.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-10
 
-
-
 This release contains node enhancements and bug fixes.
 
 ### Node updates
 - Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
 - Deprecated node: Orbit (product shut down)  
+
+### Beta Feature Removal
+The Ask AI beta feature for the HTTP Request node has been removed from this version  
 
 ### Contributors
 [Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  

@@ -69,10 +69,11 @@ This release contains a new feature, a new node, a node update and bug fixes.
 
 #### Override the npm registry
 
-This release adds the option to override the npm registry for installing community packages. This also works as a security fix against a compromised .npmrc, by being explicitly using --registry in all npm install commands.
-</div>
+This release adds the option to override the npm registry for installing community packages. This is a paid feature. 
 
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+We now also prevent npm downloading community packages from a compromised npm registry by explicitly using --registry in all npm install commands.
+
+</div>
 
 <div class="n8n-new-features" markdown>
 
@@ -98,6 +99,7 @@ Enhanced node:
 
 This release also adds the new schema view for the expression editor modal. 
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.54.1
 

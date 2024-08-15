@@ -58,6 +58,8 @@ The Webhook node supports standard [HTTP Request Methods](https://developer.mozi
 * POST
 * PUT
 
+The webhook maximum payload size is 16MB
+
 ### Path
 
 By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. 

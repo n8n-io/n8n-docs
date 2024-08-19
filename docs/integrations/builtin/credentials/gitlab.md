@@ -13,10 +13,6 @@ You can use these credentials to authenticate the following nodes:
 - [GitLab](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab/)
 - [GitLab Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/)
 
-## Prerequisites
-
-Create a [GitLab](https://gitlab.com/){:target=_blank .external-link} account.
-
 ## Supported authentication methods
 
 - API access token

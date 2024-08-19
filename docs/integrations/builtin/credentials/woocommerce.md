@@ -32,15 +32,20 @@ To configure this credential, you'll need:
 
 - A **Consumer Key**: Created when you generate an API key.
 - A **Consumer Secret**: Created when you generate an API key.
-- A **WooCommerce URL**: Enter your WordPress site URL.
-- **Include Credentials in Query**: If turned on, n8n includes your credentials as query string parameters instead of in the Authorization header.
-    - Some servers may not parse the Authorization header and will display a "Consumer key is missing" error when authenticating over SSL. If you run into this error, turn this setting on to provide the consumer key/secret as query string parameters instead.
+- A **WooCommerce URL**
 
-To generate an API key:
+To generate an API key and set up your credential:
 
 1. Go to **WooCommerce > Settings > Advanced > Rest API > Add key**.
 2. Select **Read/Write** from the **Permissions** dropdown.
 3. Copy the generated **Consumer Key** and **Consumer Secret** and enter them into your n8n credentials.
+4. Enter your WordPress site URL as the **WooCommerce URL**.
+5. By default, n8n passes your credential details in the Authorization header. If you need to pass them as query string parameters instead, turn on **Include Credentials in Query**.
 
 Refer to [Generate Keys](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/#3-generate-keys){:target=_blank .external-link} for more information.
 
+## Resolve "Consumer key is missing" error
+
+This error occurs when the server can't parse the Authorization header details when authenticating over SSL.
+
+To resolve this error, turn on the **Include Credentials in Query** toggle to pass the consumer key/secret as query string parameters instead.

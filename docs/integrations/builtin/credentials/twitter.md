@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [X](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
+- [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
 
 ## Prerequisites
 

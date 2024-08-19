@@ -46,6 +46,8 @@ Refer to [Generate Keys](https://developer.woocommerce.com/docs/getting-started-
 
 ## Resolve "Consumer key is missing" error
 
-This error occurs when the server can't parse the Authorization header details when authenticating over SSL.
+When you try to connect your credentials, you may receive an error like this: `Consumer key is missing`.
 
-To resolve this error, turn on the **Include Credentials in Query** toggle to pass the consumer key/secret as query string parameters instead.
+This occurs when the server can't parse the Authorization header details when authenticating over SSL.
+
+To resolve it, turn on the **Include Credentials in Query** toggle to pass the consumer key/secret as query string parameters instead and retry the credential.

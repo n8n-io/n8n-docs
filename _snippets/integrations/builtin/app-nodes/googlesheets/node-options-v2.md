@@ -1,6 +1,6 @@
 #### Options
 
-| **Options** | **Description** |
+| **Option** | **Description** |
 |---|---------------|
 | **Cell Format** | Use this option to choose how to format the data in cells. Refer to [Google Sheets API | CellFormat](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/cells#CellFormat){:target=_blank .external-link} for more information. <br> - **Let Google Sheets format** (default): Text and numbers in the cells are formatted according to Google Sheets' default settings. <br> - **Let n8n format**: New cells in your sheet will have the same data types as the input data provided by n8n. |
 | **Data Location on Sheet** | Use this option when you need to specify where the data is located on your sheet. <br> - **Header Row**: Specify the row index that contains the column headers. <br> - **First Data Row**: Specify the row index where the actual data starts. |

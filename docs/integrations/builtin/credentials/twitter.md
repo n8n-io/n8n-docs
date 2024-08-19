@@ -49,7 +49,6 @@ To generate your Client ID and Client Secret:
 5. In the **Type of app** section, select **Web App, Automated App or Bot**.
 1. In n8n, copy the **OAuth Redirect URL**.
 7. In your X app, find the **App Info** section and paste that URL in as the **Callback URI / Redirect URL**.
-6. In **App Info**, copy the n8n **OAuth Redirect URL** and paste it in as the **Callback URI / Redirect URL**.
 7. Add a **Website URL**.
 8. Save your changes.
 1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.
@@ -62,8 +61,8 @@ This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll
 
 ## Using OAuth
 
-/// warning | Recommended usage
-Only use this method if you're using the V1 version of the X node. n8n released V2 in [0.236.0](/release-notes/0-x/#n8n02360). 
+/// warning | Deprecation warning
+Only use this method if you're using the V1 version of the X node. n8n released V2 in [0.236.0](/release-notes/0-x/#n8n02360).
 ///
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
@@ -81,7 +80,6 @@ If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth from scr
 5. In the **Type of app** section, select **Web App, Automated App or Bot**.
 1. In n8n, copy the **OAuth Redirect URL**.
 7. In your X app, find the **App Info** section and paste that URL in as the **Callback URI / Redirect URL**.
-6. In **App Info**, copy the n8n **OAuth Redirect URL** and paste it in as the **Callback URI / Redirect URL**.
 7. Add a **Website URL**.
 8. Save your changes.
 1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.

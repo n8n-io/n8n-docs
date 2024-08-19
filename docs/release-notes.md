@@ -33,14 +33,138 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.55.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.3...n8n@1.55.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-16
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.1...n8n@1.55.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-16
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.0...n8n@1.55.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.3...n8n@1.54.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-15
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.2...n8n@1.54.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.54.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.1...n8n@1.54.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.1...n8n@1.55.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-14
+
+/// warning | [Breaking change](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md){:target=_blank .external-link}
+The N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES environment variable now also blocks access to n8n's static cache directory at ~/.cache/n8n/public.
+
+If you are writing to or reading from a file at n8n's static cache directory via a node, e.g. Read/Write Files from Disk, please update your node to use a different path.
+///
+
+This release contains a new feature, a new node, a node update and bug fixes. 
+
+<div class="n8n-new-features" markdown>
+
+#### Override the npm registry
+
+This release adds the option to override the npm registry for installing community packages. This is a paid feature. 
+
+We now also prevent npm downloading community packages from a compromised npm registry by explicitly using --registry in all npm install commands.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: AI Transform
+
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview/). 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Okta
+
+This release adds the [Okta node](/integrations/builtin/app-nodes/n8n-nodes-base.okta/). Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
+
+</div>
+
+### Node updates
+Enhanced node:
+
+- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
+
+
+This release also adds the new schema view for the expression editor modal. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.0...n8n@1.54.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-13
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.53.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.53.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-08
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains a bug fix.
 
@@ -51,9 +175,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-07
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 
 
@@ -159,12 +281,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.1...n8n@1.52.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-31
-
-
-
-
-
-
 
 This release contains bug fixes.
 

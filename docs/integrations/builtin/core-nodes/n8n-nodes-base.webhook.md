@@ -58,6 +58,11 @@ The Webhook node supports standard [HTTP Request Methods](https://developer.mozi
 * POST
 * PUT
 
+    /// note | Webhook max payload
+	The webhook maximum payload size is 16MB.
+  If you're self-hosting n8n, you can change this using the [endpoint environment variable](/hosting/configuration/environment-variables/endpoints/) `N8N_PAYLOAD_SIZE_MAX`.
+	///	
+
 ### Path
 
 By default, this field contains a randomly generated webhook URL path, to avoid conflicts with other webhook nodes. 

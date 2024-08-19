@@ -31,7 +31,7 @@ You can't create a mix of AND and OR rules.
 ## Node options
 
 - **Ignore Case**: Whether to ignore letter case (turned on) or be case sensitive (turned off).
-- **Less Strict Type Validation**: Whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off).
+- **Less Strict Type Validation**: Whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off). Turn this on when facing a "wrong type:" error in your node.
 
 ## Templates and examples
 

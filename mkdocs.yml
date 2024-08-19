@@ -349,6 +349,7 @@ nav:
         - integrations/builtin/core-nodes/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
@@ -570,6 +571,7 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.notion.md
         - integrations/builtin/app-nodes/n8n-nodes-base.npm.md
         - integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.okta.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
         - integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md

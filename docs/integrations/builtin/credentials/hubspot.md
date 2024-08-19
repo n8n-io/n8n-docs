@@ -19,7 +19,7 @@ You can use these credentials to authenticate the following nodes:
 - Developer API key: Use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node.
 - OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node.
 
-/// note | API key deprecated
+/// warning | API key deprecated
 HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app){:target=_blank .external-link} guide and set up an app token.
 ///
 

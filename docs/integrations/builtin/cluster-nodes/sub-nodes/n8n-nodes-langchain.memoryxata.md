@@ -18,7 +18,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Session ID**: the ID to use to store the memory in the workflow data.
+-   **Session ID**: the ID to use to store the memory in the workflow data.
+-   **Context Window Length**: the number of previous interactions to consider for context.
 
 ## Templates and examples
 

@@ -19,6 +19,7 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Session Key**: the key to use to store the memory in the workflow data.
 * **Table Name**: the name of the table to store the chat history in. The system will create the table if doesn't exist.
+* **Context Window Length**: the number of previous interactions to consider for context.
 
 ## Related resources
 

@@ -340,7 +340,7 @@ nav:
           - Security: privacy-security/security.md
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
-      - Fair-code license: faircode-license.md    
+      - Sustainable use license: sustainable-use-license.md    
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -349,6 +349,7 @@ nav:
         - integrations/builtin/core-nodes/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
@@ -570,6 +571,7 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.notion.md
         - integrations/builtin/app-nodes/n8n-nodes-base.npm.md
         - integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.okta.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
         - integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md
@@ -937,7 +939,11 @@ nav:
         - integrations/builtin/credentials/humanticai.md
         - integrations/builtin/credentials/hunter.md
         - integrations/builtin/credentials/hybridanalysis.md
-        - integrations/builtin/credentials/imap.md
+        - IMAP:
+          - integrations/builtin/credentials/imap/index.md
+          - integrations/builtin/credentials/imap/gmail.md
+          - integrations/builtin/credentials/imap/outlook.md
+          - integrations/builtin/credentials/imap/yahoo.md
         - integrations/builtin/credentials/impervawaf.md
         - integrations/builtin/credentials/intercom.md
         - integrations/builtin/credentials/invoiceninja.md

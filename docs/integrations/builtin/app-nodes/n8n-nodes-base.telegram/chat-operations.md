@@ -84,7 +84,7 @@ Refer to the Telegram Bot API [setChatDescription](https://core.telegram.org/bot
 
 ## Set Title
 
-se this operation to set the title of a chat using the Bot API [setChatTitle](https://core.telegram.org/bots/api#setchattitle){:target=_blank .external-link} method.
+Use this operation to set the title of a chat using the Bot API [setChatTitle](https://core.telegram.org/bots/api#setchattitle){:target=_blank .external-link} method.
 
 Enter these parameters:
 

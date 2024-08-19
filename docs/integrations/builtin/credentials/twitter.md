@@ -19,7 +19,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- **OAuth2**: Recommended for most users.
+- OAuth2
 
 /// note | Deprecation warning
 n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x/#n8n02360).

@@ -48,7 +48,7 @@ Refer to GitLab's [Create a personal access token documentation](https://docs.gi
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need to create a new GitLab application:
+If you're [self-hosting](/hosting/) n8n, you'll need a [GitLab](https://gitlab.com/){:target=_blank .external-link} account. Then create a new GitLab application:
 
 1. In GitLab, select your avatar, then select **Edit profile**.
 2. In the left sidebar, select **Applications**.

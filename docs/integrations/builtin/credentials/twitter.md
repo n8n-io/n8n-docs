@@ -20,8 +20,10 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods
 
 - **OAuth2**: Recommended for most users.
-- **OAuth**: Listed as OAuth in n8n, use this credential only if you're using the V1 version of the [X](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/) node. n8n released V2 in [0.236.0](/release-notes/0-x/#n8n02360).
-    - This method corresponds to X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method.
+
+/// note | Deprecation warning
+n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x/#n8n02360).
+///
 
 ## Related resources
 
@@ -59,44 +61,13 @@ Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en
 This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
 ///
 
-## Using OAuth
-
-/// warning | Deprecation warning
-Only use this method if you're using the V1 version of the X node. n8n released V2 in [0.236.0](/release-notes/0-x/#n8n02360).
-///
-
---8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
-
-If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth from scratch:
-
-1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link}, open your project.
-2. On the project's **Overview** tab, find the **Apps** section and select **Add App**.
-3. Give your app a **Name** and select **Next**.
-1. In the app's **Keys & tokens** tab, copy the **API Key** and add it to n8n as the **Consumer Key**.
-3. Copy the **API Key Secret** and add it to n8n as the **Consumer Secret**.
-1. Go to the **App Settings**.
-4. In the **User authentication settings**, select **Set Up**.
-1. Set the **App permissions**. Choose **Read and write and Direct message** if you want to use all functions of the n8n X node.
-5. In the **Type of app** section, select **Web App, Automated App or Bot**.
-1. In n8n, copy the **OAuth Redirect URL**.
-7. In your X app, find the **App Info** section and paste that URL in as the **Callback URI / Redirect URL**.
-7. Add a **Website URL**.
-8. Save your changes.
-1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.
-
-Refer to X's [API Key and Secret documentation](https://developer.x.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) for more information on API Keys and Secrets. Refer to X's [OAuth 1.0a Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} for more information on working with this authentication method.
-
-/// note | X rate limits
-This credential uses the OAuth 1.0a User Context authentication method, so you'll be subject to user rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
-///
-
 ## X rate limits
 
 X has time-based rate limits per endpoint based on your developer access plan level. X calculates app rate limits and user rate limits independently. Refer to [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits){:target=_blank .external-link} for the access plan level rate limits and guidance on avoiding hitting them.
 
 Use the guidance below for calculating rate limits:
 
-- If you're [Using OAuth](#using-oauth), user rate limits apply. You'll have one limit per time window for each set of users' access tokens.
+- If you're using the deprecated OAuth method, user rate limits apply. You'll have one limit per time window for each set of users' access tokens.
 - If you're [Using OAuth2](#using-oauth2), app rate limits apply. You'll have a limit per time window for requests made by your app.
 
 X calculates user rate limits and app rate limits independently.

@@ -29,7 +29,7 @@ Refer to the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bo
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
 
-* **Cache Time**: Enter the maximum amount of time in seconds that the result of the callback query may be cached client-side. Telegram defaults to `0` seconds for this method.
+* **Cache Time**: Enter the maximum amount of time in seconds that the client may cache the result of the callback query. Telegram defaults to `0` seconds for this method.
 * **Show Alert**: Telegram can display the answer as a notification at the top of the chat screen or as an alert. Choose whether you want to keep the default notification display (turned off) or display the answer as an alert (turned on).
 * **Text**: If you want the answer to show text, enter up to 200 characters of text here.
 * **URL**: Enter a URL that will be opened by the user's client. Refer to the **url** parameter instructions at the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} documentation for more information.
@@ -55,7 +55,7 @@ Refer to the Telegram Bot API [answerInlineQuery](https://core.telegram.org/bots
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
 
-* **Cache Time**: The maximum amount of time in seconds that the result of the callback query may be cached client-side. Telegram defaults to `300` seconds for this method.
+* **Cache Time**: The maximum amount of time in seconds that the client may cache the result of the callback query. Telegram defaults to `300` seconds for this method.
 * **Show Alert**: Telegram can display the answer as a notification at the top of the chat screen or as an alert. Choose whether you want to keep the default notification display (turned off) or display the answer as an alert (turned on).
 * **Text**: If you want the answer to show text, enter up to 200 characters of text here.
-* **URL**: Enter a URL that will be opened by the user's client.
+* **URL**: Enter a URL that the user's client will open.

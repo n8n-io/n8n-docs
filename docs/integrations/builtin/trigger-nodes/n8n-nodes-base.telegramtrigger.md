@@ -23,11 +23,11 @@ For usage examples and templates to help you get started, refer to n8n's [Telegr
 - **`*`**: Triggers on all updates of any kind.
 - **Callback Query**: Triggers on a new incoming callback query.
 - **Channel Post**: Triggers on a new incoming channel post of any kind, including text, photo, sticker, and so on.
-- **Edited Channel Post**: Triggers on a new version of a channel post that's known to the bot and was edited.
-- **Edited Message**: Triggers on a new version of a message that's known to the bot and was edited.
+- **Edited Channel Post**: Triggers when someone edits a channel post that's known to the bot.
+- **Edited Message**: Triggers when someone edits a message that's known to the bot.
 - **Inline Query**: Triggers on a new incoming inline query.
 - **Message**: Triggers on a new incoming message of any kind, including text, photo, sticker, and so on.
-- **Poll**: Triggers when the poll state changes. Bots receive updates about stopped polls and polls which are sent by the bot.
+- **Poll**: Triggers when the poll state changes. Bots receive updates about polls they've sent and stopped polls.
 - **Pre-Checkout Query**: Triggers on a new incoming pre-checkout query. This response contains full information about checkout.
 - **Shipping Query**: Triggers on a new incoming shipping query. Only for invoices with a flexible price.
 

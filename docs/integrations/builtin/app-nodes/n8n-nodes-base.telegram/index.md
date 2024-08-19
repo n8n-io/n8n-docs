@@ -65,7 +65,7 @@ n8n provides a trigger node for Telegram. Refer to the trigger node docs [here](
 
 ## Add a bot to a Telegram channel
 
-For a bot to send a message to a channel, you must add the bot to the channel. If the bot hasn't been added to the channel, you'll see an error with a description like:
+For a bot to send a message to a channel, you must add the bot to the channel. If you haven't added the bot to the channel, you'll see an error with a description like:
 `Error: Forbidden: bot is not a participant of the channel`.
 
 To add a bot to a channel:

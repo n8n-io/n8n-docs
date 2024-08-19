@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 ## Supported authentication methods
 
 - API access token
-- OAuth2: Recommended
+- OAuth2 (Recommended)
 
 ## Related resources
 

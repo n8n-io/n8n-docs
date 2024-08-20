@@ -2,7 +2,6 @@ import requests
 import json
 import urllib.parse
 from typing import Optional
-from slugify import slugify
 
 def define_env(env):
 
@@ -27,7 +26,7 @@ def define_env(env):
 				return {
 					"title": workflow["name"],
 					"user": workflow["user"].get("name", "n8n Community"),
-					"url": f'https://n8n.io/workflows/{workflow["id"]}-{slugify(workflow["name"])}/',
+					"url": f'https://n8n.io/workflows/{workflow["id"]}/',
 				}
 			except KeyError:
 				return None
@@ -58,7 +57,7 @@ def define_env(env):
 	def workflowDemo(workflow_endpoint):
 		r = requests.get(url = workflow_endpoint)
 		wf_data = r.json()
-		template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{slugify(wf_data["name"])}/'
+		template_url = f'https://n8n.io/workflows/{wf_data["id"]}/'
 		workflow_json = {
 			"nodes": wf_data['workflow']['nodes'],
 			"connections": wf_data['workflow']['connections']

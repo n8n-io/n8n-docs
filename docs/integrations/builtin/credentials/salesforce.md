@@ -83,7 +83,7 @@ To configure this credential, you'll need a [Salesforce](https://www.salesforce.
 
 Cloud and hosted users will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
 
-If you're [self-hosting](/hosting) n8n, you'll need to configure OAuth2 from scratch.
+If you're [self-hosting](/hosting) n8n, you'll need to configure OAuth2 from scratch by creating a connected app:
 
 1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
 2. Enter your Salesforce **Username**.

@@ -34,7 +34,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 ## Get the kit
 
 <!-- vale off -->
-Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter-kit) to clone the repo and get started!
+Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter-kit){:target=_blank .external-link} to clone the repo and get started!
 <!-- vale on -->
 
 /// note | For testing only

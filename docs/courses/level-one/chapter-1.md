@@ -122,12 +122,13 @@ There are two ways to add nodes to your canvas:
 
 ### Node buttons
 
-If you hover on a node, you'll notice that four icons appear on top:
+If you hover on a node, you'll notice that three icons appear on top:
 
-- Delete the node (Trash icon)
-- Deactivate/Activate the node (Pause icon)
-- Duplicate the node (Copy icon)
 - Execute the node (Play icon)
+- Deactivate/Activate the node (Power icon)
+- Delete the node (Trash icon)
+
+Additionally, you'll see an elipsis icon, which opens a context menu containing other node options.
 
 /// note | Moving a workflow
 To move a workflow around the canvas, select all nodes with your mouse or by selecting **Ctrl + A**, select and hold on a node, then drag it to any point you want on the canvas.

@@ -9,7 +9,7 @@ contentType: howto
 
 The Self-hosted AI Starter Kit is an open, docker compose template that bootstraps a fully featured Local AI and Low Code development environment.
 
-Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n platform with a list of compatible AI products and components to get you started with building self-hosted AI workflows.
+Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n platform with a list of compatible AI products and components to get you started building self-hosted AI workflows.
 
 ## What’s included
 
@@ -23,7 +23,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 
 ## What you can build
 
-⭐️ AI Agents which can schedule appointments
+⭐️ AI Agents that can schedule appointments
 
 ⭐️ Summaries of company PDFs without leaking data
 
@@ -38,5 +38,5 @@ Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter
 <!-- vale on -->
 
 /// note | For testing only
-We designed this starter kit to help you get started with self-hosted AI workflows. While it’s not fully optimized for production environments, it combines robust components that work well together for proof-of-concept projects. Customize it to meet your needs. Secure and harden it before using in production.
+n8n designed this kit to help you get started with self-hosted AI workflows. While it’s not fully optimized for production environments, it combines robust components that work well together for proof-of-concept projects. Customize it to meet your needs. Secure and harden it before using in production.
 ///

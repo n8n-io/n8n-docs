@@ -51,7 +51,7 @@ To set things up:
 5. Enter that user's **Password**.
 6. If you want to receive QoS 1 and 2 messages while offline, turn off the **Clean Session** toggle.
 7. Enter a **Client ID** you'd like the credential to use. If you leave this blank, n8n will generate one for you. You can use a fixed or expression-based Client ID.
-    - Client IDs can be useful to identify and track connection access. n8n recommends using something with `n8n` in it so you know the connections are coming from n8n.
+    - Client IDs can be useful to identify and track connection access. n8n recommends using something with `n8n` in it for easier auditing.
 8. If your MQTT broker uses SSL, turn the **SSL** toggle on. Once you turn it on:
     1. Select whether to use **Passwordless** connection with certificates, which is like the SASL mechanism EXTERNAL. If turned on:
         1. Select whether to **Reject Unauthorized Certificate**: If turned off, n8n will connect even if the certificate validation fails.

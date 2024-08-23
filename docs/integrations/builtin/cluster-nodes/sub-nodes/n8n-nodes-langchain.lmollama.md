@@ -42,3 +42,5 @@ Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/modul
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"
+
+--8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

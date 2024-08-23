@@ -144,7 +144,7 @@ Enter these parameters:
 - **Sheet**: Choose the sheet in which you want to delete rows or columns.
     - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`. 
-- **Start Row Number** or **Start Column**: Enter the row number of column name to start deleting.
+- **Start Row Number** or **Start Column**: Enter the row number or column letter to start deleting.
 - **Number of Rows to Delete** or **Number of Columns to delete**: Enter the number of rows or columns to delete. 
 
 Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.

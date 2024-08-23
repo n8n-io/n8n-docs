@@ -62,7 +62,3 @@ This example uses the Customer Datastore node to provide sample data to load int
 ## Append an array
 
 To insert an array of data into Google Sheets, you must convert the data into a valid JSON (key, value) format. You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) to convert the array into JSON format.
-
-
-
-

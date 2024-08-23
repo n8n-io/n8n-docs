@@ -141,7 +141,7 @@ Enter these parameters:
 - **Document**: Choose a spreadsheet that contains the sheet you want to delete rows or columns from. 
     - Select **From list** to choose the spreadsheet title from the dropdown list, **By URL** to enter the url of the spreadsheet, or **By ID** to enter the `spreadsheetId`. 
     - You can find the `spreadsheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/spreadsheetId/edit#gid=0`.
-- **Sheet**: Choose a sheet in which you want to delete. 
+- **Sheet**: Choose the sheet in which you want to delete rows or columns.
     - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`. 
 - **Start Row Number** or **Start Column**: Enter the row number of column name to start deleting.

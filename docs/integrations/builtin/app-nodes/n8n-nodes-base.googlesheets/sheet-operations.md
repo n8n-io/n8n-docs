@@ -164,7 +164,7 @@ Enter these parameters:
 - **Sheet**: Choose a sheet you want to read rows from.
     - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the name of the sheet.
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
-- **Filters**: Set filters to return a limited set of results: By default, the node returns all rows in the sheet.
+- **Filters**: By default, the node returns all rows in the sheet. Set filters to return a limited set of results: 
   	- **Column**: Select the column in your sheet to search against.
   	- **Value**: Enter a cell value to search for. You can drag input data parameters here.
 	If your filter matches multiple rows, n8n returns the first result. If you want all matching rows: 

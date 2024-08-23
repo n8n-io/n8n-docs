@@ -46,12 +46,14 @@ Enter these parameters:
 
 Refer to the Telegram Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ### Edit Message Text additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
 
 * **Disable WebPage Preview**: Select whether you want to enable link previews for links in this message (turned off) or disable link previews for links in this message (turned on). This sets the `link_preview_options` parameter for `is_disabled`. Refer to the [LinkPreviewOptions](https://core.telegram.org/bots/api#linkpreviewoptions){:target=_blank .external-link} documentation for more information.
 * **Parse Mode**: Choose whether the message should be parsed using **HTML** (default), **Markdown (Legacy)**, or **MarkdownV2**. This sets the `parse_mode` parameter.
+<!-- vale on -->
 
 ## Pin Chat Message
 
@@ -68,11 +70,13 @@ Enter these parameters:
 
 Refer to the Telegram Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ### Pin Chat Message additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
 
 * **Disable Notifications**: By default, Telegram will notify all chat members that the message has been pinned. If you don't want these notifications to go out, turn this control on. Sets the `disable_notification` parameter to `true`.
+<!-- vale on -->
 
 ## Send Animation
 
@@ -91,9 +95,8 @@ Enter these parameters:
 
 Refer to the Telegram Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} documentation for more information.
 
-### Send Animation additional fields
-
 <!-- vale off -->
+### Send Animation additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendAnimation method. Select **Add Field** to add any of the following:
 
@@ -129,9 +132,9 @@ Enter these parameters:
 
 Refer to the Telegram Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ### Send Audio additional fields
 
-<!-- vale off -->
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendAudio method. Select **Add Field** to add any of the following:
 
 * **Caption**: Enter a caption text for the audio, max of 1024 characters.
@@ -180,9 +183,9 @@ Enter these parameters:
 
 Refer to Telegram's Bot API [sendDocument](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} documentation for more information.
 
+<!--vale off-->
 ### Send Document additional fields
 
-<!--vale off-->
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendDocument method. Select **Add Field** to add any of the following:
 
 * **Caption**: Enter a caption text for the file, max of 1024 characters.
@@ -213,9 +216,8 @@ Enter these parameters:
 
 Refer to Telegram's Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} documentation for more information.
 
-### Send Location additional fields
-
 <!-- vale off -->
+### Send Location additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendLocation method. Select **Add Field** to add any of the following:
 
@@ -245,16 +247,14 @@ Enter these parameters:
 
 Refer to Telegram's Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} documentation for more information.
 
-### Send Media Group additional fields
-
 <!-- vale off -->
+### Send Media Group additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendMediaGroup method. Select **Add Field** to add any of the following:
 
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
-
 <!-- vale on -->
 
 ## Send Message
@@ -276,9 +276,8 @@ Refer to Telegram's Bot API [sendMessage](https://core.telegram.org/bots/api#sen
 Telegram limits the number of messages you can send to 30 per second. If you expect to hit this limit, refer to [Send more than 30 messages per second](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/#send-more-than-30-messages-per-second) for a suggested workaround.
 ///
 
-### Send Message additional fields
-
 <!-- vale off -->
+### Send Message additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendMessage method. Select **Add Field** to add any of the following:
 
@@ -308,9 +307,8 @@ Enter these parameters:
 
 Refer to Telegram's Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} documentation for more information.
 
-### Send Photo additional fields
-
 <!-- vale off -->
+### Send Photo additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendPhoto method. Select **Add Field** to add any of the following:
 
@@ -319,7 +317,6 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
-
 <!-- vale on -->
 
 ## Send Sticker
@@ -339,16 +336,14 @@ Enter these parameters:
 
 Refer to Telegram's Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} documentation for more information.
 
-### Send Sticker additional fields
-
 <!-- vale off -->
+### Send Sticker additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendSticker method. Select **Add Field** to add any of the following:
 
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
-
 <!-- vale on -->
 
 ## Send Video
@@ -368,9 +363,8 @@ Enter these parameters:
 
 Refer to Telegram's Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} documentation for more information.
 
-### Send Video additional fields
-
 <!-- vale off -->
+### Send Video additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node using optional fields in Telegram's sendVideo method. Select **Add Field** to add any of the following:
 

@@ -25,6 +25,7 @@ Enter these parameters:
 
 Refer to the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ### Answer Query additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
@@ -33,6 +34,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 * **Show Alert**: Telegram can display the answer as a notification at the top of the chat screen or as an alert. Choose whether you want to keep the default notification display (turned off) or display the answer as an alert (turned on).
 * **Text**: If you want the answer to show text, enter up to 200 characters of text here.
 * **URL**: Enter a URL that will be opened by the user's client. Refer to the **url** parameter instructions at the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Answer Inline Query
 
@@ -51,6 +53,7 @@ Telegram allows a maximum of 50 results per query.
 
 Refer to the Telegram Bot API [answerInlineQuery](https://core.telegram.org/bots/api#answerinlinequery){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ### Answer Inline Query additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
@@ -59,3 +62,4 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 * **Show Alert**: Telegram can display the answer as a notification at the top of the chat screen or as an alert. Choose whether you want to keep the default notification display (turned off) or display the answer as an alert (turned on).
 * **Text**: If you want the answer to show text, enter up to 200 characters of text here.
 * **URL**: Enter a URL that the user's client will open.
+<!-- vale on -->

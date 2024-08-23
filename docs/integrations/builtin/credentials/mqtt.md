@@ -41,7 +41,7 @@ To configure this credential, you'll need:
 
 To set things up:
 
-1. Select the broker's **Protocol**: This determines the URL n8n should use. The protocol is the start of the URL. Options include:
+1. Select the broker's **Protocol**, which determines the URL n8n uses. Options include:
     - **Mqtt**: Begin the URL with the standard `mqtt:` protocol.
     - **Mqtts**: Begin the URL with the secure `mqtts:` protocol.
     - **Ws**: Begin the URL with the WebSocket `ws:` protocol.

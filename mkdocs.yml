@@ -499,7 +499,7 @@ nav:
         - Google Sheets: 
           - integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
           - Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
-          - integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
+          - Sheet within Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
         - integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
         - integrations/builtin/app-nodes/n8n-nodes-base.googletasks.md
         - integrations/builtin/app-nodes/n8n-nodes-base.googletranslate.md

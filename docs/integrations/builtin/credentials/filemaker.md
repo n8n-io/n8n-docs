@@ -33,7 +33,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Filemaker's Data API Guide](https://help.claris.com/en/data-api-guide/content/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [FileMaker's Data API Guide](https://help.claris.com/en/data-api-guide/content/index.html){:target=_blank .external-link} for more information about the service.
 
 ## Using database connection
 

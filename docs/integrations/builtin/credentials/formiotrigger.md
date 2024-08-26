@@ -33,6 +33,6 @@ To set up the credential:
 1. Select your **Environment**: 
     - Choose **Cloud hosted** if you aren't hosting Form.io yourself.
     - Choose **Self-hosted** if you're hosting Form.io yourself. Then add:
-        - Add your **Self-Hosted Domain**. Use only the domain itself. For example, if you view a form at `https://yourserver.com/yourproject/manage/view`, the Self-Hosted Domain is `https://yourserver.com`.
+        - Your **Self-Hosted Domain**. Use only the domain itself. For example, if you view a form at `https://yourserver.com/yourproject/manage/view`, the Self-Hosted Domain is `https://yourserver.com`.
 2. Enter the **Email address** you use to log in to Form.io.
 3. Enter the **Password** you use to log in to Form.io.

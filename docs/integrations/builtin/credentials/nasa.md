@@ -24,6 +24,10 @@ Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.go
 
 To configure this credential, you'll need:
 
-- An **API Key**: To generate an API key, complete the fields in the **Generate API Key** section of the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} page.
+- An **API Key**
 
+To generate an API key:
 
+1. Go to the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} page.
+2. Complete the fields in the **Generate API Key** section.
+3. Copy the **API Key** and enter it in your n8n credential.

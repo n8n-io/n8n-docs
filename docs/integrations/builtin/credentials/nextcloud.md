@@ -33,7 +33,7 @@ To configure this credential, you'll need a [Nextcloud](https://nextcloud.com/){
 
 To set it up:
 
-1. To create your **Web DAV URL**: If Nextcloud is installed in the root of your domain: Enter the URL you use to access Nextcloud and add `/remote.php/dav/`. So if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/dav`.
+1. To create your **Web DAV URL**: If Nextcloud is in the root of your domain: Enter the URL you use to access Nextcloud and add `/remote.php/dav/`. For example, if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/dav`.
     - If you have Nextcloud installed in a subdirectory, enter the URL you use to access Nextcloud and add `/<subdirectory>/remote.php/dav/`. Replace `<subdirectory>` with the subdirectory Nextcloud's installed in.
     - Refer to Nextcloud's [Third-party WebDAV clients](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html#third-party-webdav-clients){:target=_blank .external-link} documentation for more information on constructing your WebDAV URL.
 2. Enter your **User** name.
@@ -59,14 +59,16 @@ To set it up:
 3. Enter a **Name** for your client, like `n8n integration`.
 4. Copy the **OAuth Callback URL** from n8n and enter it as the **Redirection URI**.
 5. Then select **Add** in Nextcloud.
-6. In n8n, update the **Authorization URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. So if you access Nextcloud at `https://cloud.n8n.com`, the Authorization URL is `https://cloud.n8n.com/apps/oauth2/authorize`.
-7. In n8n, update the **Access Token URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. So if you access Nextcloud at `https://cloud.n8n.com`, the Access Token URL is `https://cloud.n8n.com/apps/oauth2/api/v1/token`.
+6. In n8n, update the **Authorization URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. For example, if you access Nextcloud at `https://cloud.n8n.com`, the Authorization URL is `https://cloud.n8n.com/apps/oauth2/authorize`.
+7. In n8n, update the **Access Token URL** to replace `https://nextcloud.example.com` with the URL you use to access Nextcloud. For example, if you access Nextcloud at `https://cloud.n8n.com`, the Access Token URL is `https://cloud.n8n.com/apps/oauth2/api/v1/token`.
+
     /// note | Pretty URL configuration
     The **Authorization URL** and **Access Token URL** assume that you've configured Nextcloud to use [Pretty URLs](https://docs.nextcloud.com/server/latest/admin_manual/installation/source_installation.html#pretty-urls){:target=_blank .external-link}. If you haven't, you must add `/index.php/` between your Nextcloud URL and the `/apps/oauth2` portion, for example: `https://cloud.n8n.com/index.php/apps/oauth2/api/v1/token`.
     ///
+    
 8. Copy the Nextcloud **Client Identifier** for your OAuth2 client and enter it as the **Client ID** in n8n.
 9. Copy the Nextcloud **Secret** and enter it as the **Client Secret** in n8n.
-10. In n8n, to create your **Web DAV URL**: If Nextcloud is installed in the root of your domain, enter the URL you use to access Nextcloud and add `/remote.php/dav/`. So if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/dav`.
+10. In n8n, to create your **Web DAV URL**: If Nextcloud is in the root of your domain, enter the URL you use to access Nextcloud and add `/remote.php/dav/`. For example, if you access Nextcloud at `https://cloud.n8n.com`, your WebDAV URL is `https://cloud.n8n.com/remote.php/dav`.
     - If you have Nextcloud installed in a subdirectory, enter the URL you use to access Nextcloud and add `/<subdirectory>/remote.php/dav/`. Replace `<subdirectory>` with the subdirectory Nextcloud's installed in.
     - Refer to Nextcloud's [Third-party WebDAV clients](https://docs.nextcloud.com/server/stable/user_manual/en/files/access_webdav.html#third-party-webdav-clients){:target=_blank .external-link} documentation for more information on constructing your WebDAV URL.
 

@@ -81,7 +81,7 @@ If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth2 manuall
 10. In n8n, copy the **OAuth Redirect URL** and enter it in the Dropbox **Redirect URIs**.
 11. In n8n, select the same **App Access Type** you selected for your app.
 
-Refer to the instructions in the [Dropbox Implementing OAuth documentation](https://developers.dropbox.com/oauth-guide#implementing-oauth){:target=_blank .external-link} to set up OAuth.
+Refer to the instructions in the [Dropbox Implementing OAuth documentation](https://developers.dropbox.com/oauth-guide#implementing-oauth){:target=_blank .external-link} for more information.
 
 For internal tools and limited usage, you can keep your app private. But if you'd like your app to be used by more than 50 users or you want to distribute it, you'll need to complete Dropbox's production approval process. Refer to **Production Approval** in the [DBX Platform developer guide](https://www.dropbox.com/developers/reference/developer-guide){:target=_blank .external-link} for more information.
 

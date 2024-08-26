@@ -30,10 +30,12 @@ To get an API key, create an app:
 1. In the DHL Developer portal, select the user icon to open your [User Apps](https://developer.dhl.com/user/apps){:target=_blank .external-link}.
 2. Select **+ Create App**.
 3. Enter an **App name**, like `n8n integration`.
-4. Enter a **Machine name**, which cannot contain spaces, like `n8n_integration`.
+4. Enter a **Machine name**, like `n8n_integration`.
 4. In **SELECT APIs**, select `Shipment Tracking - Unified`. The API is added to the **Add API to app** section.
 5. In the **Add API to app** section, select the **+** next to the **Shipment Tracking - Unified** API.
 6. Select **Create App**. The **Apps** page opens, displaying the app you just created.
 7. Select the app you just created to view its details.
 8. Select **Show key** next to **API Key**.
 9. Copy the **API Key** and enter it in your n8n credential.
+
+Refer to [How to create an app?](https://support-developer.dhl.com/support/solutions/articles/47001177011-how-to-create-an-app-){:target=_blank .external-link} for more information.

@@ -31,7 +31,7 @@ To configure this credential, you'll need a registered [Wolfram ID](https://acco
 To get an App ID:
 
 1. Open the Wolfram|Alpha Developer Portal and go to [**API Access**](https://developer.wolframalpha.com/access){:target=_blank .external-link}.
-2. Select **Get an App ID** to register an application and get an App ID.
+2. Select **Get an App ID**.
 3. Enter a **Name** for your application, like `n8n integration`.
 4. Enter a **Description** for your application.
 5. Select **Simple API** as the **API**.

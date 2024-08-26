@@ -32,7 +32,7 @@ To get an API key, create an app:
 2. Select **+ Create App**.
 3. Enter an **App name**, like `n8n integration`.
 4. Enter a **Machine name**, like `n8n_integration`.
-4. In **SELECT APIs**, select `Shipment Tracking - Unified`. The API is added to the **Add API to app** section.
+4. In **SELECT APIs**, select **Shipment Tracking - Unified**. The API is added to the **Add API to app** section.
 5. In the **Add API to app** section, select the **+** next to the **Shipment Tracking - Unified** API.
 6. Select **Create App**. The **Apps** page opens, displaying the app you just created.
 7. Select the app you just created to view its details.

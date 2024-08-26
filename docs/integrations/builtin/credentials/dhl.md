@@ -27,6 +27,7 @@ To configure this credential, you'll need a [DHL Developer](https://developer.dh
 - An **API Key**
 
 To get an API key, create an app:
+
 1. In the DHL Developer portal, select the user icon to open your [User Apps](https://developer.dhl.com/user/apps){:target=_blank .external-link}.
 2. Select **+ Create App**.
 3. Enter an **App name**, like `n8n integration`.

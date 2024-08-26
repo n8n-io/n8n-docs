@@ -97,7 +97,7 @@ Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-node
 | Product | Get data of all products | **Products: Read Only** | `products:read` |
 
 /// note | Files and Notes
-The scopes for Files and Notes depend on which object the file or note relates to:
+The scopes for Files and Notes depend on which object they relate to:
 
 - Files relate to Deals, Activities, or Contacts.
 - Notes relate to Deals or Contacts.

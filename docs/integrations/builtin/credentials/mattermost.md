@@ -49,7 +49,7 @@ Refer to the Mattermost [Personal access tokens documentation](https://developer
 Not seeing the **Personal Access Tokens** option has two possible causes:
 
 - Mattermost doesn't have the personal access tokens integration enabled.
-- You're trying to generate a personal access token as a non-admin user and that user doesn't have permission to generate personal access tokens.
+- You're trying to generate a personal access token as a non-admin user who doesn't have permission to generate personal access tokens.
 
 To identify the root cause and resolve it:
 

@@ -33,8 +33,8 @@ To configure this credential, you'll need a [Calendly](https://www.calendly.com/
 
 To get your access token:
 
-1. Go to the Calendly [Integrations & apps](https://calendly.com/integrations){:target=_blank .external-link} page.
-2. Select [API & Webhooks](https://calendly.com/integrations/api_webhooks){:target=_blank .external-link}.
+1. Go to the Calendly [**Integrations & apps**](https://calendly.com/integrations){:target=_blank .external-link} page.
+2. Select [**API & Webhooks**](https://calendly.com/integrations/api_webhooks){:target=_blank .external-link}.
 3. In **Your Personal Access Tokens**, select **Generate new token**.
 4. Enter a **Name** for your access token, like `n8n integration`.
 5. Select **Create token**.

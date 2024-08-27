@@ -48,7 +48,7 @@ To set it up, you'll need to create an app:
 1. Copy the **Private key** and enter it as the **API Token** in your n8n credential.
     - Refer to [Data API | Authentication](https://manual.bubble.io/core-resources/api/the-bubble-api/the-data-api/authentication){:target=_blank .external-link} for more information on generating API tokens.
 1. In n8n, select the **Environment** that best matches your app:
-    - Select **Development** for an app that hasn't yet been deployed, accessed at `https://appname.bubbleapps.io/version-test` or `https://www.mydomain.com/version-test`.
+    - Select **Development** for an app that you haven't deployed, accessed at `https://appname.bubbleapps.io/version-test` or `https://www.mydomain.com/version-test`.
     - Select **Live** for an app that's [been deployed](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/deploying-your-app){:target=_blank .external-link}, accessed at `https://appname.bubbleapps.io` or `https://www.mydomain.com`.
 1. In n8n, select your **Hosting**:
     - If you haven't set up a custom domain, select **Bubble Hosting**.

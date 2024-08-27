@@ -46,6 +46,6 @@ To get these, create an Adalo app:
 1. In the **API Key** section, select **Generate Key**.
     - If you don't have the correct plan level, you'll see a prompt to upgrade instead.
 1. Copy the key and enter it as the **API Key** in your n8n credential.
-1. The URL includes the **App ID** after `https://app.adalo.com/apps/`. So if the URL as you're editing your app is `https://app.adalo.com/apps/b78bdfcf-48dc-4550-a474-dd52c19fc371/app-settings`, `b78bdfcf-48dc-4550-a474-dd52c19fc371` is the App ID. Copy this value and enter it in your n8n credential.
+1. The URL includes the **App ID** after `https://app.adalo.com/apps/`. For example, if the URL for your app is `https://app.adalo.com/apps/b78bdfcf-48dc-4550-a474-dd52c19fc371/app-settings`, `b78bdfcf-48dc-4550-a474-dd52c19fc371` is the App ID. Copy this value and enter it in your n8n credential.
 
 Refer to [Creating an app](https://help.adalo.com/design/designing-your-app/creating-an-app){:target=_blank .external-link} for more information on creating apps in Adalo. Refer to [The Adalo API](https://help.adalo.com/integrations/the-adalo-api){:target=_blank .external-link} for more information on generating API keys.

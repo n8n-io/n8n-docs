@@ -30,20 +30,24 @@ To configure this credential, you'll need a [Zep server](https://www.getzep.com/
 - An **API URL**
 - An **API Key**
 
-The steps to set it up depend on whether you're using Zep Cloud or self-hosted Zep Open Source.
+Setup depends on whether you're using Zep Cloud or self-hosted Zep Open Source.
 
 ### Zep Cloud setup
 
-1. In Zep, open the [**Project Settings**](https://help.getzep.com/projects){:target=_blank .external-link}.
+Follow these instructions if you're using [Zep Cloud](https://app.getzep.com){:target=_blank .external-link}:
+
+1. In Zep, open the [**Project Settings**](https://app.getzep.com/projects){:target=_blank .external-link}.
 2. In the **Project Keys** section, select **Add Key**.
-3. Enter a **Key Name** for your key, like `n8n integration`.
+3. Enter a **Key Name**, like `n8n integration`.
 4. Select **Create**.
 5. Copy the key and enter it in your n8n integration as the **API Key**.
 6. Turn on the **Cloud** toggle.
 
 ### Self-hosted Zep Open Source setup
 
+Follow these instructions if you're self-hosting [Zep Open Source](https://docs.getzep.com/deployment/quickstart/){:target=_blank .external-link}:
+
 1. Enter the JWT token for your Zep server as the **API Key** in n8n.
-    - If you haven't generated a JWT token for your Zep server before, refer to Zep's [Configuring Authentication](https://docs.getzep.com/deployment/auth/){:target=_blank .external-link} for more information.
+    - If you haven't generated a JWT token for your Zep server before, refer to Zep's [Configuring Authentication](https://docs.getzep.com/deployment/auth/){:target=_blank .external-link} for instructions.
 2. Make sure the **Cloud** toggle is off.
 3. Enter the URL for your Zep server as the **API URL**.

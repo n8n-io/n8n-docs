@@ -42,10 +42,11 @@ To set it up, you'll need to create an app:
 1. Select the **API** tab.
 1. In the **Public API Endpoints** section, check the box to **Enable Data API**.
 1. The page displays the **Data API root URL**, for example: `https://n8n-integration.bubbleapps.io/version-test/api/1.1/obj`.
-1. Copy the portion of the URL after `https://` and before `.bubbleapps.io` and enter it in n8n as the **App Name**. In the above example, you'd enter `n8n-integration`.
+1. Copy the part of the URL after `https://` and before `.bubbleapps.io` and enter it in n8n as the **App Name**. In the above example, you'd enter `n8n-integration`.
 1. In Bubble, select **Generate a new API token**.
 8. Enter an **API Token Label**, like `n8n integration`.
 1. Copy the **Private key** and enter it as the **API Token** in your n8n credential.
+    - Refer to [Data API | Authentication](https://manual.bubble.io/core-resources/api/the-bubble-api/the-data-api/authentication){:target=_blank .external-link} for more information on generating API tokens.
 1. In n8n, select the **Environment** that best matches your app, either **Development** for testing or **Live** for production.
 1. In n8n, select your **Hosting**:
     - If you haven't set up a custom domain, select **Bubble Hosting**.

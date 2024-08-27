@@ -39,9 +39,7 @@ To generate a Secret key in live mode:
 4. Select **Create**. The new API key displays.
 4. Copy the key and enter it in your n8n credential as the **Secret Key**.
 
-/// note | Existing key use
-While you can use the existing Secret key created in your Stripe developer account, n8n recommends creating a Secret key specifically for your integration.
-///
+Refer to Stripe's [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link} for more information.
 
 ### Test mode Secret key
 
@@ -51,7 +49,7 @@ To use a Secret key in test mode, you must copy the existing one:
 2. In the **Standard Keys** section, select **Reveal test key** for the **Secret key**.
 3. Copy the key and enter it in your n8n credential as the **Secret Key**.
 
-Refer to [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link} for more detailed instructions.
+Refer to Stripe's [Create a secret API key](https://docs.stripe.com/keys#create-api-secret-key){:target=_blank .external-link} for more information.
 
 ## Test mode and live mode
 
@@ -72,6 +70,8 @@ Stripes' Secret keys always begin with `sk_`:
 - Live keys begin with `sk_live_`.
 - Test keys begin with `sk_test_`.
 
-Don't use the Publishable keys (prefixed `pk_`).
-
 n8n hasn't tested these credentials with Restricted keys (prefixed `rk_`).
+
+/// warning | Publishable keys
+Don't use the Publishable keys (prefixed `pk_`) with your n8n credential.
+///

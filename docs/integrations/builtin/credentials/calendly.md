@@ -58,7 +58,7 @@ To get both, create a new OAuth app in Calendly:
 3. In **Environment type**, select the environment that corresponds to your usage, either **Sandbox** or **Production**.
     - Calendly recommends starting with **Sandbox** for development and creating a second application for **Production** when you're ready to go live.
 4. Copy the **OAuth Redirect URL** from n8n and enter it as a **Redirect URI** in the OAuth app.
-5. Select **Save & Continue**. The app details are displayed.
+5. Select **Save & Continue**. The app details display.
 5. Copy the **Client ID** and enter this as your n8n **Client ID**.
 6. Copy the **Client secret** and enter this as your n8n **Client Secret**.
 1. Select **Connect my account** in n8n and follow the on-screen prompts to finish authorizing the credential.

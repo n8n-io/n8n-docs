@@ -49,7 +49,7 @@ To set it up, you'll need to create an app:
     - Refer to [Data API | Authentication](https://manual.bubble.io/core-resources/api/the-bubble-api/the-data-api/authentication){:target=_blank .external-link} for more information on generating API tokens.
 1. In n8n, select the **Environment** that best matches your app:
     - Select **Development** for an app that you haven't deployed, accessed at `https://appname.bubbleapps.io/version-test` or `https://www.mydomain.com/version-test`.
-    - Select **Live** for an app that's [been deployed](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/deploying-your-app){:target=_blank .external-link}, accessed at `https://appname.bubbleapps.io` or `https://www.mydomain.com`.
+    - Select **Live** for an app that you've [deployed](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/deploying-your-app){:target=_blank .external-link}, accessed at `https://appname.bubbleapps.io` or `https://www.mydomain.com`.
 1. In n8n, select your **Hosting**:
     - If you haven't set up a custom domain, select **Bubble Hosting**.
     - If you've set up a [custom domain](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/tabs-and-sections/settings-tab/custom-domain-and-dns){:target=_blank .external-link}, select **Self Hosted** and enter your custom **Domain**.

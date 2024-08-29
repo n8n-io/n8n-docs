@@ -429,7 +429,7 @@ nav:
         - AWS S3: integrations/builtin/app-nodes/n8n-nodes-base.awss3.md
         - AWS SES: integrations/builtin/app-nodes/n8n-nodes-base.awsses.md
         - AWS SNS: integrations/builtin/app-nodes/n8n-nodes-base.awssns.md
-        - AWS: SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
+        - AWS SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
         - AWS Textract: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
         - AWS Transcribe: integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md
         - BambooHR: integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md
@@ -764,72 +764,72 @@ nav:
         - integrations/builtin/cluster-nodes/index.md
         - Root nodes:
           - integrations/builtin/cluster-nodes/root-nodes/index.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
-          - integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
+          - AI Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent.md
+          - Basic LLM Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
+          - Question and Answer Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
+          - Summarization Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
+          - Information Extractor: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor.md
+          - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
+          - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
+          - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - In-Memory Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
+          - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
+          - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
+          - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
         - Sub-nodes:
           - integrations/builtin/cluster-nodes/sub-nodes/index.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieverworkflow.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittercharactertextsplitter.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
-          - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
+          - Default Data Loader: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
+          - GitHub Document Loader: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md
+          - Embeddings AWS Bedrock: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+          - Embeddings Azure OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
+          - Embeddings Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
+          - Embeddings Google Gemini: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
+          - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
+          - Embeddings HuggingFace Interface: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
+          - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
+          - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
+          - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
+          - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
+          - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+          - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
+          - Google PaLM Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
+          - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
+          - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
+          - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
+          - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
+          - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai.md
+          - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
+          - Google PaLM Language Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm.md
+          - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama.md
+          - OpenAI Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
+          - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
+          - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
+          - Window Buffer Memory (easiest): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
+          - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
+          - Redis Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
+          - Postgres Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
+          - Xata: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
+          - Zep: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md
+          - Auto-fixing Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing.md
+          - Item List Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist.md
+          - Structured Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured.md
+          - Contextual Compression Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression.md
+          - MultiQuery Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery.md
+          - Vector Store Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md
+          - Workflow Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieverworkflow.md
+          - Character Text Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittercharactertextsplitter.md
+          - Recursive Character Text Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md
+          - Token Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
+          - Calculator: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
+          - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+          - HTTP Request Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
+          - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+          - Vector Tool Store: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
+          - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
+          - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
+          - Custom n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
       - Credentials: 
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md

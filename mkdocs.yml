@@ -268,7 +268,6 @@ nav:
           - Okta Workforce Identity SAML setup: user-management/saml/okta.md
           - Troubleshooting: user-management/saml/troubleshooting.md
           - Manage users with SAML: user-management/saml/managing.md
-      - Change Ownership or Username: change-ownership-or-username.md
       - Keyboard shortcuts: keyboard-shortcuts.md
     - Key concepts:
       - Flow logic:
@@ -308,6 +307,7 @@ nav:
       - Set the timezone: manage-cloud/set-cloud-timezone.md
       - Cloud IP addresses: manage-cloud/cloud-ip.md
       - Cloud data management: manage-cloud/cloud-data-management.md
+      - Change ownership or username: manage-cloud/change-ownership-or-username.md
     - Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md

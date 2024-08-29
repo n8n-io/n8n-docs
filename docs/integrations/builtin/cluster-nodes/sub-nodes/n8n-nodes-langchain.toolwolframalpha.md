@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Wolfram|Alpha node documentation
+title: Wolfram|Alpha tool documentation
 description: Documentation for the Wolfram|Alpha node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: medium
 ---
 
-# Wolfram|Alpha node
+# Wolfram|Alpha tool
 
 Use the Wolfram|Alpha tool to connect your agents and chains to Wolfram|Alpha's computational intelligence engine.
 

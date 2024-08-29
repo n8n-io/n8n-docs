@@ -5,7 +5,7 @@ description: Documentation for the SerpAPI node in n8n, a workflow automation pl
 priority: high
 ---
 
-# SerpApi (Google Search) no
+# SerpApi (Google Search) node
 
 The SerpAPI node allows an agent in your workflow to call Google's Search API.
 

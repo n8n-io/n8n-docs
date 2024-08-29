@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: One Simple API
+title: One Simple API node documentation
 description: Documentation for the One Simple API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 <!-- vale off -->
 <!-- linting off because 'simple' isn't something I want to add to accept.txt -->
-# One Simple API
+# One Simple API node
 
 Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
 

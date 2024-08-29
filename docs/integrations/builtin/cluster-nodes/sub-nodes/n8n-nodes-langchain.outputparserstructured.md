@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Structured Output Parser
+title: Structured Output Parser node documentation
 description: Documentation for the Structured Output Parser node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: high
 ---
 
-# Structured Output Parser
+# Structured Output Parser node
 
 Use the Structured Output Parser node to return fields based on a JSON Schema.
 

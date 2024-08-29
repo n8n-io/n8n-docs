@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Contextual Compression Retriever
+title: Contextual Compression Retriever node documentation
 description: Documentation for the Contextual Compression Retriever node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: medium
 ---
 
-# Contextual Compression Retriever
+# Contextual Compression Retriever node
 
 The Contextual Compression Retriever node improves the answers returned from vector store document similarity searches by taking into account the context from the query.
 

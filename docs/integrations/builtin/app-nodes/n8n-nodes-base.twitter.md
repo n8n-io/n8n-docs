@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: X (Formerly Twitter)
+title: X (Formerly Twitter) node documentation
 description: Documentation for the X node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 priority: medium
 ---
 
-# X (Formerly Twitter)
+# X (Formerly Twitter) node
 
 Use the X node to automate work in X and integrate X with other applications. n8n has built-in support for a wide range of X features, including creating direct messages and deleting, searching, liking, and retweeting a tweet. 
 

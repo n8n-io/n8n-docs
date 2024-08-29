@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: npm
+title: npm node documentation
 description: Documentation for the npm node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 
-# npm
+# npm node
 
 Use the npm node to automate work in npm, and integrate npm with other applications.
 

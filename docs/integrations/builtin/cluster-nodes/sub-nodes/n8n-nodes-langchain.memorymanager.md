@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Chat Memory Manager
+title: Chat Memory Manager node documentation
 description: Documentation for the Chat Memory Manager node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: medium
 ---
 
-# Chat Memory Manager
+# Chat Memory Manager node
 
 The Chat Memory Manager node manages chat message memories within your workflows. Use this node to load, insert, and delete chat messages in an in-memory vector store.
 

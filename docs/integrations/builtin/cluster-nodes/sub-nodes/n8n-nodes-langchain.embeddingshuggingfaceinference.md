@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings HuggingFace Inference
+title: Embeddings HuggingFace Inference node documentation
 description: Documentation for the Embeddings HuggingFace Inference node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: medium
 ---
 
-# Embeddings HuggingFace Inference
+# Embeddings HuggingFace Inference node
 
 Use the Embeddings HuggingFace Inference node to generate embeddings for a given text.
 

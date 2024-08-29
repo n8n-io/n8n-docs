@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Question and Answer Chain
+title: Question and Answer Chain node documentation
 description: Documentation for the Question and Answer Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: high
 ---
 
-# Question and Answer Chain
+# Question and Answer Chain node
 
 Use the Question and Answer Chain node to use a vector store as a retriever.
 

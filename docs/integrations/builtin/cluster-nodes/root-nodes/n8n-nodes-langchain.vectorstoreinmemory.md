@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: In-Memory Vector Store
+title: In-Memory Vector Store node documentation
 description: Documentation for the In-Memory Vector Store node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: medium
 ---
 
-# In-Memory Vector Store
+# In-Memory Vector Store node
 
 Use the In Memory Vector Store node to store and retrieve embeddings in n8n's in-app memory. 
 

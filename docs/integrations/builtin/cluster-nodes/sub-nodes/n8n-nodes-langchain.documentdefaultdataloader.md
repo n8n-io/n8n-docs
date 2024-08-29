@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Default Data Loader
+title: Default Data Loader node documentation
 description: Documentation for the Default Data Loader node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: medium
 ---
 
-# Default Data Loader
+# Default Data Loader node
 
 Use the Default Data Loader node to load binary data files or JSON data for vector stores or summarization.
 

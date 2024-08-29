@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Sentiment Analysis
+title: Sentiment Analysis node documentation
 description: Documentation for the Sentiment Analysis node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 
-# Sentiment Analysis
+# Sentiment Analysis node
 
 Use the Sentiment Analysis node to analyze the sentiment of incoming text data. 
 The language model uses the [**Sentiment Categories**](#node-options) in the node options to determine each item's sentiment.

@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Item List Output Parser
+title: Item List Output Parser node documentation
 description: Documentation for the Item List Output Parser node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 priority: high
 ---
 
-# Item List Output Parser
+# Item List Output Parser node
 
 Use the Item List Output Parser node to return a list of items with a specific length and separator.
 

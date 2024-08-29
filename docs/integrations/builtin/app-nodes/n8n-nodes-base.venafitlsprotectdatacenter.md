@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Venafi TLS Protect Datacenter
+title: Venafi TLS Protect Datacenter node documentation
 description: Documentation for the Venafi TLS Protect Datacenter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 ---
 <!-- vale off -->
 <!-- disabled vale because of "Datacenter" Don't want to general approve it, but it's the brand name -->
-# Venafi TLS Protect Datacenter
+# Venafi TLS Protect Datacenter node
 
 Use the Venafi TLS Protect Datacenter node to automate work in Venafi TLS Protect Datacenter, and integrate Venafi TLS Protect Datacenter with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Datacenter features, including creating, deleting, and getting certificates. 
 

@@ -1,10 +1,10 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings Google PaLM
+title: Embeddings Google PaLM node documentation
 description: Documentation for the Embeddings Google PaLM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Embeddings Google PaLM
+# Embeddings Google PaLM node
 
 Use the Embeddings Google PaLM node to generate embeddings for a given text.
 

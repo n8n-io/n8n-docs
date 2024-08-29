@@ -1,10 +1,10 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zep Vector Store
+title: Zep Vector Store node documentation
 description: Documentation for the Zep Vector Store node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# Zep Vector Store
+# Zep Vector Store node
 
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 

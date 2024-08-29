@@ -1,10 +1,10 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: GitHub Document Loader
+title: GitHub Document Loader node documentation
 description: Documentation for the GitHub Document Loader node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
 
-# GitHub Document Loader
+# GitHub Document Loader node
 
 Use the GitHub Document Loader node to load data from a GitHub repository for vector stores or summarization.
 

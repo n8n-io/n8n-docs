@@ -167,7 +167,7 @@ Enter these parameters:
 - **Messages**: Enter a text prompt and assign a role that the model will use to generate responses. There are three roles you can choose from: 
     - **User**: Sends a message as a user and gets a response from the model. 
     - **Assistant**: Tells the model to adopt a specific tone or personality. 
-    - **System**: By default, the system message is "You are a helpful assistant". You can define instructions in the user message, but the instructions set in the system message are more effective. You can only set one system message per conversation. Use this to set the model's behavior or context for the next user message. 
+    - **System**: By default, the system message is `"You are a helpful assistant"`. You can define instructions in the user message, but the instructions set in the system message are more effective. You can only set one system message per conversation. Use this to set the model's behavior or context for the next user message. 
 	Refer to [Prompt engineering | OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) for more information on how to write a better prompt by utilizing these three roles. 
 - **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data. 
 - **Output Content as JSON**: Turn on to attempt to return the response in JSON format. Compatible with GPT-4 Turbo and all GPT-3.5 Turbo models newer than gpt-3.5-turbo-1106.
@@ -237,13 +237,16 @@ Enter these parameters:
 - **Model**: Select the model you want to use to generate an image. 
 - **Text Input**: Ask a question about the image.
 - **Input Type**: 
-  - **Image URL(s)**:
-  - **Binary File(s)**:
-- 
+  - **Image URL(s)**: Enter the URL(s) of the image(s) to analyze. Add multiple URLs separated by comma.
+  - **Binary File(s)**: Enter the name of the binary property which contains the image(s).
+  
 
 ### Options
 
-Refer to [–– | OpenAI]() documentation for more information.
+- **Detail**: Specify the balance between response time vs token usage. 
+- **Length of Description (Max Tokens)**: Defaults to 300. Fewer tokens will result in shorter, less detailed image description.
+
+Refer to [Images | OpenAI](https://platform.openai.com/docs/api-reference/images) documentation for more information.
 
 ## Generate an Image
 

@@ -44,7 +44,7 @@ To generate both, connect Line with [Line Notify](https://notify-bot.line.me/en/
 1. Once verification is complete, open [**My services**](https://notify-bot.line.me/my/services/){:target=_blank .external-link}.
 1. Select the service you just added.
 1. Copy the **Client ID** and enter it in your n8n credential.
-1. Copy the **Client Secret** and enter it in your n8n credential.
+1. Select the option to **Display** the **Client Secret**. Copy the **Client Secret** and enter it in your n8n credential.
 1. In n8n, select **Connect my account** and follow the on-screen prompts to finish the credential.
 
 Refer to the Authentication section of [Line Notify's API documentation](https://notify-bot.line.me/doc/en/){:target=_blank .external-link} for more information.

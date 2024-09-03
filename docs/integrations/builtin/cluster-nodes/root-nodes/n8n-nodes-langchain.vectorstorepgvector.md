@@ -21,7 +21,9 @@ You can find authentication information for this node [here](/integrations/built
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+<!-- vale off -->
 ### Get Many parameters
+<!-- vale on -->
 
 * **Table name**: Enter the name of the table you want to query.
 * **Prompt**: Enter your search query.

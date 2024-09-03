@@ -185,6 +185,7 @@ Ortto
 Oura
 PDFs
 Peekalink
+PGVector
 PhantomBuster
 Pinterest
 Pipedrive

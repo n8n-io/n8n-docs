@@ -78,7 +78,7 @@ To add a bot to a channel:
 
 ## Get the Chat ID
 
-Use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node in your workflow to get a Chat ID. This node can trigger on different events and returns a Chat ID on successful execution.
+`@channelusername` can only be used on public channels. To interact with a Telegram group, you need the ID of that group. Use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node in your workflow to get a Chat ID. This node can trigger on different events and returns a Chat ID on successful execution. Alternatively, you can open Telegram in your web browser and copy the ID from the URL.
 
 ## Send more than 30 messages per second
 

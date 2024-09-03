@@ -19,12 +19,11 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
 - **Resource**: Select **Text**.
 - **Operation**: Select **Message a Model**.
-- **Model**: Select the model you want to use. If you’re not sure which model to use then try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
-- **Messages**: Enter a text prompt and assign a role that the model will use to generate responses. There are three roles you can choose from: 
+- **Model**: Select the model you want to use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
+- **Messages**: Enter a **Text** prompt and assign a **Role** that the model will use to generate responses. Refer to [Prompt engineering | OpenAI](https://platform.openai.com/docs/guides/prompt-engineering){:target=_blank .external-link} for more information on how to write a better prompt by using these roles. Choose from one of these roles: 
     - **User**: Sends a message as a user and gets a response from the model. 
     - **Assistant**: Tells the model to adopt a specific tone or personality. 
     - **System**: By default, the system message is `"You are a helpful assistant"`. You can define instructions in the user message, but the instructions set in the system message are more effective. You can only set one system message per conversation. Use this to set the model's behavior or context for the next user message. 
-	Refer to [Prompt engineering | OpenAI](https://platform.openai.com/docs/guides/prompt-engineering){:target=_blank .external-link} for more information on how to write a better prompt by utilizing these three roles. 
 - **Simplify Output**: Turn on to return a simplified version of the response instead of the raw data. 
 - **Output Content as JSON**: Turn on to attempt to return the response in JSON format. Compatible with `GPT-4 Turbo` and all `GPT-3.5 Turbo` models newer than `gpt-3.5-turbo-1106`.
 
@@ -42,6 +41,7 @@ Refer to [Message a Model | OpenAI](https://platform.openai.com/docs/api-referen
 ## Classify Text for Violations
 
 Use this operation to identify and flag content that might be harmful. OpenAI model will analyze the text and return a response containing:
+
 - `flagged`: A boolean field indicating if the content is potentially harmful.
 - `categories`: A list of category-specific violation flags.
 - `category_scores`: Scores for each category.

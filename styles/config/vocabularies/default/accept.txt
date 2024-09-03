@@ -183,6 +183,7 @@ onboarding
 Onfleet
 Ortto
 Oura
+PDFs
 Peekalink
 PhantomBuster
 Pinterest
@@ -281,6 +282,7 @@ Vhost
 VM
 Vonage
 Vuex
+Wasabi's
 Webex
 Webflow
 WeKan

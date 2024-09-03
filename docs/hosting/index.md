@@ -39,6 +39,18 @@ See [Community edition features](/hosting/community-edition-features/) for a lis
 
 	[:octicons-arrow-right-24: Scaling](/hosting/scaling/queue-mode/)
 
+- __Securing n8n__
+
+	Secure your n8n instance by setting up SSL, SSO, or 2FA or blocking or opting out of some data collection or features.
+
+	[:octicons-arrow-right-24: Securing n8n guide](/hosting/securing/overview/)
+
+- __Starter kits__
+
+	New to n8n or AI? Try our Self-hosted AI Starter Kit. Curated by n8n, it combines the self-hosted n8n platform with compatible AI products and components to get you started building self-hosted AI workflows.
+
+	[:octicons-arrow-right-24: Starter kits](/hosting/starter-kits/ai-starter-kit/)
+
 </div>
 
 --8<-- "_snippets/self-hosting/warning.md"

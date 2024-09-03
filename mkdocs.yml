@@ -307,6 +307,7 @@ nav:
       - Set the timezone: manage-cloud/set-cloud-timezone.md
       - Cloud IP addresses: manage-cloud/cloud-ip.md
       - Cloud data management: manage-cloud/cloud-data-management.md
+      - Change ownership or username: manage-cloud/change-ownership-or-username.md
     - Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md
@@ -636,7 +637,12 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md
         - integrations/builtin/app-nodes/n8n-nodes-base.taiga.md
         - integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.telegram.md
+        - Telegram:
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
         - integrations/builtin/app-nodes/n8n-nodes-base.thehive.md
         - integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md
         - integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md
@@ -1247,6 +1253,8 @@ nav:
       - Disable the API: hosting/securing/disable-public-api.md
       - Opt out of data collection: hosting/securing/telemetry-opt-out.md
       - Blocking nodes: hosting/securing/blocking-nodes.md
+    - Starter Kits:
+      - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

@@ -6,7 +6,7 @@ contentType: integration
 priority: critical
 ---
 
-# OpenAI Text operations
+# OpenAI File operations
 
 Use this operation to create, delete, list, message, or update a file in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
 
@@ -35,7 +35,7 @@ Enter these parameters:
 
 ### Options
 
-- **Purpose**: Use this to only return files with the given purpose. Use `Assistants` to return only files related to Assistants and Message operations, and `Fine-Tune` for files related to [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
+- **Purpose**: Use this to only return files with the given purpose. Use **Assistants** to return only files related to Assistants and Message operations. Use **Fine-Tune** for files related to [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
 
 Refer to [List files | OpenAI](https://platform.openai.com/docs/api-reference/files/list) documentation for more information.
 
@@ -53,6 +53,6 @@ Enter these parameters:
 
 ### Options
 
-- **Purpose**: Enter the intended purpose of the uploaded file. Use `Assistants` for files associated with Assistants and Message operations, and `Fine-Tune` for [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
+- **Purpose**: Enter the intended purpose of the uploaded file. Use **Assistants** for files associated with Assistants and Message operations. Use **Fine-Tune** for [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
 
 Refer to [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/files/create){:target=_blank .external-link} documentation for more information.

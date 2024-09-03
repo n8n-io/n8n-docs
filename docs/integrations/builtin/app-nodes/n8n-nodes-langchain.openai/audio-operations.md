@@ -6,7 +6,7 @@ contentType: integration
 priority: critical
 ---
 
-# OpenAI Text operations
+# OpenAI Audio operations
 
 Use this operation to generate an audio, or transcribe or translate a recording in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
 
@@ -20,15 +20,15 @@ Enter these parameters:
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Generate Audio**.
 - **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts){:target=_blank .external-link} for more information.
-  - **TTS-1**: Use this to optimize for speed.
-  - **TTS-1-HD**:	Use this to optimize for quality.
+    - **TTS-1**: Use this to optimize for speed.
+    - **TTS-1-HD**:	Use this to optimize for quality.
 - **Text Input**: Enter the text to generate the audio for. The maximum length is 4096 characters.
 - **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart){:target=_blank .external-link}.
 
 ### Options
 
-- **Response Format**: Defaults to `MP3`. Choose from `MP3`, `OPUS`, `AAC`, `FLAC`, `WAV`, and `PCM`.
-- **Audio Speed**: Defaults to 1. Select the speed for the generated audio from a value from `0.25` to `4.0`.
+- **Response Format**: Select the format for the audio response. Choose from **MP3** (default), **OPUS**, **AAC**, **FLAC**, **WAV**, and **PCM**.
+- **Audio Speed**: Enter the speed for the generated audio from a value from `0.25` to `4.0`. Defaults to `1`.
 - **Put Output in Field**: Defaults to `data`. Enter the name of the output field to put the binary file data in. 
 
 Refer to [Create speech | OpenAI](https://platform.openai.com/docs/api-reference/audio/createSpeech){:target=_blank .external-link} documentation for more information.
@@ -42,7 +42,7 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Transcribe a Recording**.
-- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `flac`, `mp3`, `mp4`, `mpeg`, `mpga`, `m4a`, `ogg`, `wav`, or `webm`. 
+- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
 
 ### Options
 
@@ -60,7 +60,7 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Translate a Recording**.
-- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `flac`, `mp3`, `mp4`, `mpeg`, `mpga`, `m4a`, `ogg`, `wav`, or `webm`. 
+- **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
 
 ### Options
 

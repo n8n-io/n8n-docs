@@ -22,8 +22,8 @@ Enter these parameters:
 - **Model**: Select the model you want to use to generate an image. 
 - **Text Input**: Ask a question about the image.
 - **Input Type**: Select how you'd like to input the image. Options include:
-  - **Image URL(s)**: Enter the **URL(s)** of the image(s) to analyze. Add multiple URLs in a comma-separated list.
-  - **Binary File(s)**: Enter the name of the binary property which contains the image(s) in the **Input Data Field Name**.
+    - **Image URL(s)**: Enter the **URL(s)** of the image(s) to analyze. Add multiple URLs in a comma-separated list.
+    - **Binary File(s)**: Enter the name of the binary property which contains the image(s) in the **Input Data Field Name**.
 
 ### Options
 
@@ -49,8 +49,8 @@ Enter these parameters:
 - **Quality**: The quality of the image you generate. **HD** creates images with finer details and greater consistency across the image. This option is only supported for `dall-e-3`. Otherwise, choose **Standard**.
 - **Resolution**: Select the resolution of the generated images. Select **1024x1024** for `dall-e-2`. Select one of **1024x1024**, **1792x1024**, or **1024x1792** for `dall-e-3` models.
 - **Style**: Select the style of the generated images. This option is only supported for `dall-e-3`. 
-  - **Natural**: Use this to produce more natural looking images.
-  - **Vivid**: Use this to produce hyper-real and dramatic images.
+    - **Natural**: Use this to produce more natural looking images.
+    - **Vivid**: Use this to produce hyper-real and dramatic images.
 - **Respond with image URL(s)**: Whether to return image URL(s) instead of binary file(s).
 - **Put Output in Field**: Defaults to `data`. Enter the name of the output field to put the binary file data in. Only available if **Respond with image URL(s)** is turned off.
 

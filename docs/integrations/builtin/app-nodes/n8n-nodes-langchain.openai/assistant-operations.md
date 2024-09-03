@@ -19,7 +19,7 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **Create an Assistant**.
-- **Model**: Select the model that the assistant will use. If you’re not sure which model to use then try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
+- **Model**: Select the model that the assistant will use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
 - **Name**: Enter the name of the assistant. The maximum length is 256 characters.
 - **Description**: Enter the description of the assistant. The maximum length is 512 characters.
   ```
@@ -50,7 +50,7 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **Delete an Assistant**.
-- **Assistant**: Select the assistant you want to delete **From list** or **By ID** 
+- **Assistant**: Select the assistant you want to delete **From list** or **By ID**.
 
 Refer to [Delete assistant | OpenAI](https://platform.openai.com/docs/api-reference/assistants/deleteAssistant){:target=_blank .external-link} documentation for more information. 
 
@@ -104,7 +104,7 @@ Enter these parameters:
 
 ### Options
 
-- **Code Interpreter**: Turn on to enable the code interpreter for the assistant, that can write and execute code in a sandbox environment. Enable this tool for tasks that require computations, data analysis, or any logic-based processing.
+- **Code Interpreter**: Turn on to enable the code interpreter for the assistant, where it can write and execute code in a sandbox environment. Enable this tool for tasks that require computations, data analysis, or any logic-based processing.
 - **Description**: Enter the description of the assistant. The maximum length is 512 characters.
   ```
   A virtual assistant that helps users with daily tasks, including setting reminders, answering general questions, and providing quick information.
@@ -115,7 +115,7 @@ Enter these parameters:
   ```
 - **Knowledge Retrieval**: Turn on to enable knowledge retrieval for the assistant, allowing it to access external sources or a connected knowledge base. Refer to [File Search | OpenAI Platform](https://platform.openai.com/docs/assistants/tools/file-search){:target=_blank .external-link} for more information. 
 - **Files**: Select a file to upload for your external knowledge source. Use [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md#upload-a-file) operation to add more files. 
-- **Model**: Select the model that the assistant will use. If you’re not sure which model to use then try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
+- **Model**: Select the model that the assistant will use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
 - **Name**: Enter the name of the assistant. The maximum length is 256 characters.
 - **Remove All Custom Tools (Functions)**: Turn on to remove all custom tools (functions) from the assistant. 
 - **Output Randomness (Temperature)**: Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. Defaults to `1.0`. 

@@ -28,7 +28,7 @@ Learn more in the [Anthropic model documentation](https://docs.anthropic.com/cla
 
 ## Node options
 
-* **Maximum Number of Tokens**: Enter maximum number of tokens used in the completion length.
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 

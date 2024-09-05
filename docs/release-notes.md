@@ -44,13 +44,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 <div class="n8n-new-features" markdown>
 
-#### Execution curation
-This feature enables users to add annotations to workflow executions. This feature is only available for users on Cloud and Enterprise plans. 
-
-</div>
-
-<div class="n8n-new-features" markdown>
-
 #### New node: PGVector Vector Store
 
 This release adds the PGVector Vector Store node. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, and retrieve documents to provide them to a retriever connected to a chain.

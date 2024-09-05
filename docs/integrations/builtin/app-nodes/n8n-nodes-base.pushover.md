@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pushover node documentation
-description: Documentation for the Pushover node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Pushover node in n8n. Follow technical documentation to integrate Pushover node into your workflows.
 contentType: integration
 ---
 

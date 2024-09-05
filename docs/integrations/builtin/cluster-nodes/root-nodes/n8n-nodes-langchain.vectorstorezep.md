@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zep Vector Store node documentation
-description: Documentation for the Zep Vector Store node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Zep Vector Store node in n8n. Follow technical documentation to integrate Zep Vector Store node into your workflows.
+contentType: integration
 ---
 
 # Zep Vector Store node
@@ -24,19 +25,19 @@ For usage examples and templates to help you get started, refer to n8n's [Zep Ve
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
-### Parameters for **Insert Documents**
+### Insert Documents parameters
 
-* Collection Name: differentiates where the data is stored.
+* **Collection Name**: Enter the collection name where the data is stored.
 
-### Parameters for **Get Many**
+### Get Many parameters
 
-* Collection Name
-* Prompt
-* Limit
+* **Collection Name**: Enter the collection name where the data is stored.
+* **Prompt**: Enter the search query.
+* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-### Parameters for **Retrieve Documents (For Agent/Chain)**
+### Retrieve Documents (For Agent/Chain) parameters
 
-* Collection Name
+* **Collection Name**: Enter the collection name where the data is stored.
 
 ## Node options
 
@@ -44,13 +45,13 @@ For usage examples and templates to help you get started, refer to n8n's [Zep Ve
 
 Must be the same when embedding the data and when querying it.
 
-This sets the size of the array of floats used to represent the semantic meaning of a text document. 
+This sets the size of the array of floats used to represent the semantic meaning of a text document.
 
-Read more about Zep embeddings in [Zep's embeddings documentation](https://docs.getzep.com/deployment/embeddings/){:target=_blank .external-link}
+Read more about Zep embeddings in [Zep's embeddings documentation](https://docs.getzep.com/deployment/embeddings/){:target=_blank .external-link}.
 
 ### Is Auto Embedded
 
-Available in **Insert Documents** mode. This is enabled by default.
+Available in the **Insert Documents** Operation Mode, enabled by default.
 
 Disable this to configure your embeddings in Zep instead of in n8n.
 

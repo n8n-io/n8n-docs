@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Supabase Vector Store node documentation
-description: Documentation for the Supabase node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Supabase Vector Store node in n8n. Follow technical documentation to integrate Supabase Vector Store node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -23,19 +24,19 @@ Supabase provides a [quickstart for setting up your vector store](https://supaba
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
-Parameters for **Get Many**:
+### Get Many parameters
 
-* Table Name
-* Prompt
-* Limit
+* **Table Name**: Enter the Supabase table to use.
+* **Prompt**: Enter the search query.
+* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-Parameters for **Insert Documents**:
+### Insert Documents parameters
 
-* Table Name
+* **Table Name**: Enter the Supabase table to use.
 
-Parameters for **Retrieve Documents (For Agent/Chain)**:
+### Retrieve Documents (For Agent/Chain) parameters
 
-* Table Name
+* **Table Name**: Enter the Supabase table to use.
 
 ## Node options
 

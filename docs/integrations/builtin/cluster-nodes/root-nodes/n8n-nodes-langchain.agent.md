@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AI Agent node documentation
-description: Documentation for the Agent node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the AI Agent node in n8n. Follow technical documentation to integrate AI Agent node into your workflows.
+contentType: integration
 priority: critical
 ---
 

@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google PaLM Language Model node documentation
-description: Documentation for the Google PaLM Language Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Google PaLM Language Model node in n8n. Follow technical documentation to integrate Google PaLM Language Model node into your workflows.
+contentType: integration
 ---
 
 # Google PaLM Language Model node
@@ -18,14 +19,14 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the completion. n8n dynamically loads models from the Google PaLM API and you will only see the models available to your account.
+* **Model**: Select the model to use to generate the completion. n8n dynamically loads models from the Google PaLM API and you'll only see the models available to your account.
 
 ## Node options
 
-* **Maximum Number of Tokens**: the completion length, in characters.
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: the number of token choices the model uses to generate the next token.
-* **Top P**: use a lower value to ignore less probable options.
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: Enter the number of token choices the model uses to generate the next token.
+* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
 
 ## Templates and examples
 

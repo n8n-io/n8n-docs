@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Bedrock Chat Model node documentation
-description: Documentation for the AWS Bedrock Chat Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the AWS Bedrock Chat Model node in n8n. Follow technical documentation to integrate AWS Bedrock Chat Model node into your workflows.
+contentType: integration
 ---
 
 # AWS Bedrock Chat Model node
@@ -18,12 +19,14 @@ You can find authentication information for this node [here](/integrations/built
 	
 ## Node parameters
 
-* **Model**: the model that generates the completion. Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html){:target=_blank .external-link}.
+* **Model**: Select the model that generates the completion.
+
+Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html){:target=_blank .external-link}.
 
 ## Node options
 
-* **Maximum Number of Tokens**: the completion length.
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 
 ## Templates and examples
 

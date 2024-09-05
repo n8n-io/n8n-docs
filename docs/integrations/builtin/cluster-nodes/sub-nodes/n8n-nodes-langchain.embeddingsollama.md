@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Ollama node documentation
-description: Documentation for the Embeddings Ollama node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Embeddings Ollama node in n8n. Follow technical documentation to integrate Embeddings Ollama node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -19,10 +20,11 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Learn more about available models in [Ollama's models documentation](https://ollama.ai/library){:target=_blank .external-link}. Choose from: 
- 
-  * [all-minilm](https://ollama.com/library/all-minilm) (384 Dimensions)
-  * [nomic-embed-text](https://ollama.com/library/nomic-embed-text) (768 Dimensions)
+* **Model**: Select the model to use to generate the embedding. Choose from:
+    * [all-minilm](https://ollama.com/library/all-minilm) (384 Dimensions)
+    * [nomic-embed-text](https://ollama.com/library/nomic-embed-text) (768 Dimensions)
+
+Learn more about available models in [Ollama's models documentation](https://ollama.ai/library){:target=_blank .external-link}.
 
 ## Templates and examples
 

@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Cohere node documentation
-description: Documentation for the Embeddings Cohere node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Embeddings Cohere node in n8n. Follow technical documentation to integrate Embeddings Cohere node into your workflows.
+contentType: integration
 ---
 
 # Embeddings Cohere node
@@ -18,11 +19,12 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Learn more about available models in [Cohere's models documentation](https://docs.cohere.com/docs/models){:target=_blank .external-link} 
-	Choose from:
-	* Embed-English-v2.0(4096 Dimensions)
-	* Embed-English-Light-v2.0(1024 Dimensions)
-	* Embed-Multilingual-v2.0(768 Dimensions)
+* **Model**: Select the model to use to generate the embedding. Choose from:
+    * **Embed-English-v2.0(4096 Dimensions)**
+	* **Embed-English-Light-v2.0(1024 Dimensions)**
+	* **Embed-Multilingual-v2.0(768 Dimensions)**
+
+Learn more about available models in [Cohere's models documentation](https://docs.cohere.com/docs/models){:target=_blank .external-link}.
 
 ## Templates and examples
 

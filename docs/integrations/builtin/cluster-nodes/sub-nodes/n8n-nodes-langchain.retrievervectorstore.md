@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Vector Store Retriever node documentation
-description: Documentation for the Vector Store Retriever node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Vector Store Retriever node in n8n. Follow technical documentation to integrate Vector Store Retriever node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -15,7 +16,7 @@ On this page, you'll find the node parameters for the Vector Store Retriever nod
 
 ## Node parameters
 
-**Limit**: the maximum number of results to return.
+* **Limit**: Enter the maximum number of results to return.
 
 ## Templates and examples
 

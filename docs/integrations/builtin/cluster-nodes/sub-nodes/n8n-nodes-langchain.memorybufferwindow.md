@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Window Buffer Memory (easiest) node documentation
-description: Documentation for the Window Buffer Memory node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Window Buffer Memory node in n8n. Follow technical documentation to integrate Window Buffer Memory node into your workflows.
+contentType: integration
 priority: high
 ---
 
@@ -19,8 +20,8 @@ If your n8n instance uses [queue mode](/hosting/scaling/queue-mode/), this node 
 
 ## Node parameters
 
--   **Session Key**: the key to use to store the memory in the workflow data.
--   **Context Window Length**: the number of previous interactions to consider for context.
+-   **Session Key**: Enter the key to use to store the memory in the workflow data.
+-   **Context Window Length**: Enter the number of previous interactions to consider for context.
 
 ## Templates and examples
 

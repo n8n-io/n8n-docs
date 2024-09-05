@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Azure OpenAI Chat Model node documentation
-description: Documentation for the OpenAI Chat Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Azure OpenAI Chat Model node in n8n. Follow technical documentation to integrate Azure OpenAI Chat Model node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -19,18 +20,18 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the completion.
+* **Model**: Select the model to use to generate the completion.
 
 ## Node options
 
-* **Frequency Penalty**: increase this to reduce the chance of the model repeating itself.
-* **Maximum Number of Tokens**: the completion length, in characters.
-* **Response Format**: choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
-* **Presence Penalty**: increase this to increase the chance of the model talking about new topics.
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Timeout**: maximum request time in milliseconds.
-* **Max Retries**: maximum number of times to retry a request.
-* **Top P**: use a lower value to ignore less probable options. 
+* **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+* **Response Format**: Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
+* **Presence Penalty**: Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Timeout**: Enter the maximum request time in milliseconds.
+* **Max Retries**: Enter the maximum number of times to retry a request.
+* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 
 ## Templates and examples
 

@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SerpApi (Google Search) node documentation
-description: Documentation for the SerpAPI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the SerpApi (Google Search) node in n8n. Follow technical documentation to integrate SerpApi (Google Search) node into your workflows.
+contentType: integration
 priority: high
 ---
 
@@ -19,11 +20,11 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node options
 
-* **Country**: refer to [Google GL Parameter: Supported Google Countries](https://serpapi.com/google-countries){:target=_blank .external-link} for supported countries and country codes.
-* **Device**: the device to use to get the search results.
-* **Explicit Array**: whether to force SerpApi to fetch the Google results even if a cached version is already present.
-* **Google Domain**: refer to [Supported Google Domains](https://serpapi.com/google-domains) for supported domains.
-* **Language**: refer to [Google HL Parameter: Supported Google Languages](https://serpapi.com/google-languages){:target=_blank .external-link} for supported languages and language codes.
+* **Country**: Enter the country code you'd like to use. Refer to [Google GL Parameter: Supported Google Countries](https://serpapi.com/google-countries){:target=_blank .external-link} for supported countries and country codes.
+* **Device**: Select the device to use to get the search results.
+* **Explicit Array**: Choose whether to force SerpApi to fetch the Google results even if a cached version is already present (turned on) or not (turned off).
+* **Google Domain**: Enter the Google Domain to use. Refer to [Supported Google Domains](https://serpapi.com/google-domains) for supported domains.
+* **Language**: Enter the language code you'd like to use. Refer to [Google HL Parameter: Supported Google Languages](https://serpapi.com/google-languages){:target=_blank .external-link} for supported languages and language codes.
 
 ## Templates and examples
 

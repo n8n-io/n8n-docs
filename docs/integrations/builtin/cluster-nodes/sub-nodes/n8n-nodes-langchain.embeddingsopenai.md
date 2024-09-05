@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings OpenAI node documentation
-description: Documentation for the Embeddings OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Embeddings OpenAI node in n8n. Follow technical documentation to integrate Embeddings OpenAI node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -20,11 +21,11 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node options
 
-* **Model**: The model to use for generating embeddings.
-* **Base URL**: the URL to send the request to. Use this if you are using a self-hosted OpenAI-like model. 
-* **Batch Size**: maximum number of documents to send in each request.
-* **Strip New Lines**: whether to remove new line characters from input text. n8n enables this by default.
-* **Timeout**: maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
+* **Model**: Select the model to use for generating embeddings.
+* **Base URL**: Enter the URL to send the request to. Use this if you are using a self-hosted OpenAI-like model. 
+* **Batch Size**: Enter the maximum number of documents to send in each request.
+* **Strip New Lines**: Select whether to remove new line characters from input text (turned on) or not (turned off). n8n enables this by default.
+* **Timeout**: Enter the maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
 
 ## Templates and examples
 

@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Hugging Face Inference Model node documentation
-description: Documentation for the Hugging Face Inference Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Hugging Face Inference Model node in n8n. Follow technical documentation to integrate Hugging Face Inference Model node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -19,17 +20,17 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the completion.
+* **Model**: Select the model to use to generate the completion.
 
 ## Node options
 
-* **Custom Inference Endpoint**: endpoint URL.
-* **Frequency Penalty**: increase this to reduce the chance of the model repeating itself.
-* **Maximum Number of Tokens**: the completion length, in characters.
-* **Presence Penalty**: increase this to increase the chance of the model talking about new topics.
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: the number of token choices the model uses to generate the next token.
-* **Top P**: use a lower value to ignore less probable options. 
+* **Custom Inference Endpoint**: Enter a custom inference endpoint URL.
+* **Frequency Penalty**: Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+* **Presence Penalty**: Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: Enter the number of token choices the model uses to generate the next token.
+* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options.
 
 ## Templates and examples
 

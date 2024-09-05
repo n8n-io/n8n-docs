@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Workflow Retriever node documentation
-description: Documentation for the Workflow Retriever node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Workflow Retriever node in n8n. Follow technical documentation to integrate Workflow Retriever node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -19,8 +20,8 @@ On this page, you'll find the node parameters for the Workflow Retriever node, a
 
 Tell n8n which workflow to call. You can choose either:
 
-* **Database**, then enter a workflow ID.
-* **Parameter**, then copy in a complete [workflow JSON](/workflows/export-import/).
+* **Database** and enter a workflow ID.
+* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import/).
 
 ### Workflow values
 

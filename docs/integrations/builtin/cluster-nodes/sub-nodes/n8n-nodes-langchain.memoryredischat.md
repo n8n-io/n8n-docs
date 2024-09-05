@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Redis Chat Memory node documentation
-description: Documentation for the Redis Chat Memory node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Redis Chat Memory node in n8n. Follow technical documentation to integrate Redis Chat Memory node into your workflows.
+contentType: integration
 priority: medium
 ---
 
@@ -19,9 +20,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* **Session Key**: the key to use to store the memory in the workflow data.
-* **Session Time To Live**: make the session expire after a given number of seconds.
-* **Context Window Length**: the number of previous interactions to consider for context.
+* **Session Key**: Enter the key to use to store the memory in the workflow data.
+* **Session Time To Live**: Use this parameter to make the session expire after a given number of seconds.
+* **Context Window Length**: Enter the number of previous interactions to consider for context.
 
 ## Templates and examples
 

@@ -13,11 +13,6 @@ You can use these credentials to authenticate the following nodes:
 - [ActiveCampaign](/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign/)
 - [Active Campaign Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger/)
 
-
-## Prerequisites
-
-Create an [ActiveCampaign](https://www.activecampaign.com/){:target=_blank .external-link} account.
-
 ## Supported authentication methods
 
 * API key
@@ -28,9 +23,16 @@ Refer to [ActiveCampaign's API documentation](https://help.activecampaign.com/hc
 
 ## Using API key
 
-To configure this credential, you'll need:
+To configure this credential, you'll need an [ActiveCampaign](https://www.activecampaign.com/){:target=_blank .external-link} account and:
 
 - An **API URL**
 - An **API Key**
 
-Refer to the [ActiveCampaign API documentation](https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with-the-API#h_01HJ6REM2YQW19KYPB189726ST){:target=_blank .external-link} for full details on obtaining your API URL and key.
+To get both and set up the credential:
+
+1. In ActiveCampaign, select **Settings** (the gear cog icon) from the left menu.
+2. Select **Developer**.
+3. Copy the **API URL** and enter it in your n8n credential.
+4. Copy the **API Key** and enter it in your n8n credential.
+
+Refer to [How to obtain your ActiveCampaign API URL and Key](https://help.activecampaign.com/hc/en-us/articles/207317590-Getting-started-with-the-API#h_01HJ6REM2YQW19KYPB189726ST){:target=_blank .external-link} for more information or for instructions on resetting your API key.

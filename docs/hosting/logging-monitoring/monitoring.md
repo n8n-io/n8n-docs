@@ -9,14 +9,22 @@ contentType: howto
 There are two API endpoints you can call to check the status of your instance: `/healthz` and `/metrics`.
 
 <!-- vale off -->
-## healthz
+## healthz and healthz/readiness
 <!-- vale on -->
-The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It's available for both self-hosted and Cloud users.
+The `/healthz` endpoint returns a standard HTTP status code. 200 indicates the instance is reachable. It does not indicate DB status. It's available for both self-hosted and Cloud users.
 
 Access the endpoint:
 
 ```
 <your-instance-url>/healthz
+```
+
+The /healthz/readiness endpoint is similar to the `/healthz` endpoint, but it returns a HTTP status code of 200 if the DB is connected and migrated and therefore the instance is ready to accept traffic.
+
+Access the endpoint:
+
+```
+<your-instance-url>/healthz/readiness
 ```
 
 

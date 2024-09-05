@@ -12,11 +12,6 @@ You can use these credentials to authenticate the following nodes:
 
 - [SendGrid](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/)
 
-
-## Prerequisites
-
-Create a [SendGrid](https://sendgrid.com){:target=_blank .external-link} account.
-
 ## Supported authentication methods
 
 - API key
@@ -27,7 +22,17 @@ Refer to [SendGrid's API documentation](https://www.twilio.com/docs/sendgrid/api
 
 ## Using API key
 
-To configure this credential, you'll need:
+To configure this credential, you'll need a [SendGrid](https://sendgrid.com){:target=_blank .external-link} account and:
 
-- An **API Key**: To create an API key, go to **Settings > API Keys > Create API Key**. Refer to [Create API Keys](https://www.twilio.com/docs/sendgrid/api-reference/api-keys/create-api-keys){:target=_blank .external-link} for more information.
+- An **API Key**
 
+To create an API key:
+
+1. In the Twilio SendGrid app, go to **Settings >** [**API Keys**](https://app.sendgrid.com/settings/api_keys){:target=_blank .external-link}.
+2. Select **Create API Key**.
+3. Enter a **Name** for your API key, like `n8n integration`.
+4. Select **Full Access**.
+5. Select **Create & View**.
+6. Copy the key and enter it in your n8n credential.
+
+Refer to [Create API Keys](https://www.twilio.com/docs/sendgrid/api-reference/api-keys/create-api-keys){:target=_blank .external-link} for more information.

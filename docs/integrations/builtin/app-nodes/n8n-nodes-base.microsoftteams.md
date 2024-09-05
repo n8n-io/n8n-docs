@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Teams node documentation
-description: Documentation for the Microsoft Teams node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the Microsoft Teams node in n8n. Follow technical documentation to integrate Microsoft Teams node into your workflows.
 contentType: integration
 priority: medium
 ---

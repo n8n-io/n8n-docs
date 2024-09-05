@@ -95,3 +95,17 @@ The Telegram API has a [limitation](https://core.telegram.org/bots/faq#broadcast
 3. **Code node**: Connect the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node with the Telegram node. Use the Code node to wait for a few seconds before fetching the next batch of chat IDs. Connect this node with the Loop Over Items node.
 
 You can also use this [workflow](https://n8n.io/workflows/772){:target=_blank .external-link}.
+
+## Remove the n8n attribution from sent messages
+
+If you're using the node to [send Telegram messages](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-message), the message automatically gets an n8n attribution appended to the end:
+
+> This message was sent automatically with n8n
+
+To remove this attribution:
+
+1. In the node's **Additional Fields** section, select **Add Field**.
+2. Select **Append n8n attribution**.
+3. Turn the toggle off.
+
+Refer to [Send Message additional fields](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations/#send-message-additional-fields) for more information.

@@ -37,5 +37,14 @@ Refer to [LangChain's Buffer Window Memory documentation](https://js.langchain.c
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
+## Managing the Session ID
+
+In most cases, the `sessionId` is automatically retrieved from the **On Chat Message** trigger. But you may run into an error with the phrase `No sessionId`.
+
+If you have this error, first check the output of your Chat trigger to ensure it includes a `sessionId`.
+
+If you're not using the **On Chat Message** trigger, you'll need to manage sessions manually.
+
+For testing purposes, you can use a static key like `my_test_session`. If you use this approach, be sure to set up proper session management before activating the workflow to avoid potential issues in a live environment.
 
 --8<-- "_glossary/ai-glossary.md"

@@ -575,7 +575,13 @@ nav:
         - Okta: integrations/builtin/app-nodes/n8n-nodes-base.okta.md
         - One Simple API: integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
         - Onfleet: integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
-        - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md
+        - OpenAI: 
+          - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
+          - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
+          - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
+          - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
+          - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md 
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md

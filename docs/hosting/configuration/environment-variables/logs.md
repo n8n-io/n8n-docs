@@ -21,7 +21,7 @@ This page lists environment variables to set up logging for debugging. Refer to 
 <!-- vale off -->
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_LOG_LEVEL` | Enum string: `info`, `warn`, `error`, `verbose`, `debug` | `info` | Log output level. Refer to [Log levels](/hosting/logging-monitoring/logging/#log-levels) for details. |
+| `N8N_LOG_LEVEL` | Enum string: `info`, `warn`, `error`, `debug` | `info` | Log output level. Refer to [Log levels](/hosting/logging-monitoring/logging/#log-levels) for details. |
 | `N8N_LOG_OUTPUT` | Enum string: `console`, `file` | `console` | Where to output logs. Provide multiple values as a comma-separated list. |
 | `N8N_LOG_FILE_COUNT_MAX` | Number | `100` | Max number of log files to keep. |
 | `N8N_LOG_FILE_SIZE_MAX` | Number | `16` | Max size of each log file in MB. |

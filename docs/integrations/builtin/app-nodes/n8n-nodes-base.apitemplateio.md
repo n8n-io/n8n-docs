@@ -18,11 +18,11 @@ Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitempl
 ## Operations
 
 * Account
-  * Get
+    * Get
 * Image
-  * Create
+    * Create
 * PDF
-  * Create
+    * Create
 
 ## Templates and examples
 

@@ -19,7 +19,7 @@ Access the endpoint:
 <your-instance-url>/healthz
 ```
 
-The /healthz/readiness endpoint is similar to the `/healthz` endpoint, but it returns a HTTP status code of 200 if the DB is connected and migrated and therefore the instance is ready to accept traffic.
+The `/healthz/readiness` endpoint is similar to the `/healthz` endpoint, but it returns a HTTP status code of 200 if the DB is connected and migrated and therefore the instance is ready to accept traffic.
 
 Access the endpoint:
 

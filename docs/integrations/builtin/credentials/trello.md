@@ -13,11 +13,6 @@ You can use these credentials to authenticate the following nodes:
 - [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello/)
 - [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger/)
 
-## Prerequisites
-
-- Create a [Trello](https://trello.com/){:target=_blank .external-link} account.
-- Create a Trello [Power-Up](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-power-ups/#adding-a-new-custom-power-up){:target=_blank .external-link}. 
-
 ## Supported authentication methods
 
 - API key
@@ -28,9 +23,26 @@ Refer to [Trello's API documentation](https://developer.atlassian.com/cloud/trel
 
 ## Using API key
 
-To configure this credential, you'll need:
+To configure this credential, you'll need a [Trello](https://trello.com/){:target=_blank .external-link} account and:
 
-- An **API Key**: Generated from your Power-Up. Refer to [Managing your API key](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#managing-your-api-key){:target=_blank .external-link} for more information.
-- An **API Token**: Generated from your Power-Up. Refer to [Authentication and Authorization](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#authentication-and-authorization){:target=_blank .external-link} for more information.
+- An **API Key**
+- An **API Token**
 
-Once you've created your Power-Up, open its **API Key** tab and select the option to **Generate a new API key**. With your key generated, select the **Token** option next to it. When prompted, allow it all the permissions it asks for. Copy the Key and Token and add them to your n8n credential.
+To generate both the API Key and API Token, create a Trello Power-Up:
+
+1. Open the Trello [Power-Up Admin Portal](https://trello.com/power-ups/admin){:target=_blank .external-link}.
+2. Select **New**.
+3. Enter a **Name** for your Power-Up, like `n8n integration`.
+4. Select the **Workspace** the Power-Up should have access to.
+5. Leave the **iframe connector URL** blank.
+6. Enter appropriate contact information.
+7. Select **Create**.
+8. This should open the Power-Up to the **API Key** page. (If it doesn't, open that page.)
+9. Select **Generate a new API Key**.
+10. Copy the **API key** from Trello and enter it in your n8n credential.
+11. In your Trello API key page, enter your n8n base URL as an **Allowed origin**.
+12. Select the **Token** link next to your Trello **API Key**.
+13. When prompted, select **Allow** to grant all th epermissions it asks for.
+14. Copy the Trello **Token** and enter it as the n8n **API Token**.
+
+Refer to Trello's [API Introduction](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#api-introduction){:target=_blank .external-link} for more information on API keys and tokens. Refer to Trello's [Power-Up Admin Portal](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-power-ups/#power-up-admin-portal){:target=_blank .external-link} for more information on creating Power-Ups.

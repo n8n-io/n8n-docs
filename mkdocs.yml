@@ -307,6 +307,7 @@ nav:
       - Set the timezone: manage-cloud/set-cloud-timezone.md
       - Cloud IP addresses: manage-cloud/cloud-ip.md
       - Cloud data management: manage-cloud/cloud-data-management.md
+      - Change ownership or username: manage-cloud/change-ownership-or-username.md
     - Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md
@@ -340,7 +341,7 @@ nav:
           - Security: privacy-security/security.md
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
-      - Fair-code license: faircode-license.md    
+      - Sustainable use license: sustainable-use-license.md    
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -349,6 +350,7 @@ nav:
         - integrations/builtin/core-nodes/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
@@ -570,9 +572,16 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.notion.md
         - integrations/builtin/app-nodes/n8n-nodes-base.npm.md
         - integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
+        - integrations/builtin/app-nodes/n8n-nodes-base.okta.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
         - integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
-        - integrations/builtin/app-nodes/n8n-nodes-langchain.openai.md
+        - OpenAI: 
+          - integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
+          - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
+          - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
+          - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
+          - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md 
         - integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - integrations/builtin/app-nodes/n8n-nodes-base.oura.md
@@ -628,7 +637,12 @@ nav:
         - integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md
         - integrations/builtin/app-nodes/n8n-nodes-base.taiga.md
         - integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md
-        - integrations/builtin/app-nodes/n8n-nodes-base.telegram.md
+        - Telegram:
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
         - integrations/builtin/app-nodes/n8n-nodes-base.thehive.md
         - integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md
         - integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md
@@ -932,7 +946,11 @@ nav:
         - integrations/builtin/credentials/humanticai.md
         - integrations/builtin/credentials/hunter.md
         - integrations/builtin/credentials/hybridanalysis.md
-        - integrations/builtin/credentials/imap.md
+        - IMAP:
+          - integrations/builtin/credentials/imap/index.md
+          - integrations/builtin/credentials/imap/gmail.md
+          - integrations/builtin/credentials/imap/outlook.md
+          - integrations/builtin/credentials/imap/yahoo.md
         - integrations/builtin/credentials/impervawaf.md
         - integrations/builtin/credentials/intercom.md
         - integrations/builtin/credentials/invoiceninja.md
@@ -1235,6 +1253,8 @@ nav:
       - Disable the API: hosting/securing/disable-public-api.md
       - Opt out of data collection: hosting/securing/telemetry-opt-out.md
       - Blocking nodes: hosting/securing/blocking-nodes.md
+    - Starter Kits:
+      - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

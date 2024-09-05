@@ -108,6 +108,7 @@ geospatial
 GIMP
 Gotify
 Grafana
+Groq
 GSuite
 Gumroad
 Hetzner
@@ -172,6 +173,7 @@ Nextcloud
 ngrok
 Nodelinter
 npm
+NPM
 npx
 OAuth
 Odoo
@@ -181,6 +183,7 @@ onboarding
 Onfleet
 Ortto
 Oura
+PDFs
 Peekalink
 PhantomBuster
 Pinterest
@@ -279,6 +282,7 @@ Vhost
 VM
 Vonage
 Vuex
+Wasabi's
 Webex
 Webflow
 WeKan

@@ -38,9 +38,24 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.57.0...n8n@1.58.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-05
 
-This release bug fixes and feature enhancements. 
+This release contains new features, bug fixes and feature enhancements. 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+<div class="n8n-new-features" markdown>
+
+#### Execution curation
+This feature enables users to add annotations to workflow executions. This feature is only available for users on Cloud and Enterprise plans. 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: PGVector Vector Store
+
+This release adds the PGVector Vector Store node. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, and retrieve documents to provide them to a retriever connected to a chain.
+
+</div>
 
 ## n8n@1.57.0
 

@@ -15,17 +15,17 @@ You can use these credentials to authenticate the following nodes with Shopify.
 
 ## Supported authentication methods
 
-- API token
-- OAuth2
-- API key
+- Access token (recommended): For private apps/single store use. Can be created by regular admins.
+- OAuth2: For public apps. Must be created by partner accounts.
+- API key: Deprecated
 
 ## Related resources
 
 Refer to [Shopify's authentication documentation](https://shopify.dev/docs/apps/auth){:target=_blank .external-link} for more information about the service.
 
-## Using API token
+## Using access token
 
-To configure this credential, you'll need a [Shopify](https://shopify.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Shopify](https://shopify.com/){:target=_blank .external-link} admin account and:
 
 - Your **Shop Subdomain**
 - An **Access Token**: Generated when you create a custom app.
@@ -40,7 +40,7 @@ To set up the credential, you'll need to create and install a custom app:
 4. Select **Create a custom app**.
 
     /// note | Don't see this option?
-    If you don't see this option, custom app development probably hasn't been enabled for your store. Refer to [Enable custom app development](#enable-custom-app-development) to fix enable it.
+    If you don't see this option, your store probably doesn't have custom app development enabled. Refer to [Enable custom app development](#enable-custom-app-development) for more information.
     ///
 
 5. In the modal window, enter the **App name**.
@@ -56,17 +56,21 @@ To set up the credential, you'll need to create and install a custom app:
 13. Copy the **Admin API Access Token**. Enter this in your n8n credential as the **Access Token**.
 14. Copy the **API Secret Key**. Enter this in your n8n credential as the **APP Secret Key**.
 
-Refer to [Creating a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link} and [Generate access tokens for custom apps in the Shopify admin](https://shopify.dev/docs/apps/build/authentication-authorization/access-token-types/generate-app-access-tokens-admin){:target=_blank .external-link} for more information on the above steps.
+Refer to [Creating a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link} and [Generate access tokens for custom apps in the Shopify admin](https://shopify.dev/docs/apps/build/authentication-authorization/access-token-types/generate-app-access-tokens-admin){:target=_blank .external-link} for more information on these steps.
 
 ## Using OAuth2
 
 To configure this credential, you'll need a [Shopify partner](https://www.shopify.com/partners){:target=_blank .external-link} account and:
 
-- A **Client ID**: Generated when you create a custom app in the **API Access** section.
-- A **Client Secret**: Generated when you create a custom app in the **API Access** section.
+- A **Client ID**: Generated when you create a custom app.
+- A **Client Secret**: Generated when you create a custom app.
 - Your **Shop Subdomain**
 
 To set up the credential, you'll need to create and install a custom app:
+
+/// note | Custom app development
+Shopify provides templates for creating new apps. The instructions below only cover the elements necessary to set up your n8n credential. Refer to Shopify's [Build dev docs](https://shopify.dev/docs/apps/build){:target=_blank .external-link} for more information on building apps and working with app templates.
+///
 
 1. Open your [Shopify Partner dashboard](https://partners.shopify.com/){:target=_blank .external-link}.
 2. Select **Apps** from the left navigation.
@@ -76,16 +80,18 @@ To set up the credential, you'll need to create and install a custom app:
 7. When the app details open, copy the **Client ID**. Enter this in your n8n credential.
 8. Copy the **Client Secret**. Enter this in your n8n credential.
 9. In the left menu, select **Configuration**.
-10. In the **URLs** section, enter an **App URL** for your app.
 10. In n8n, copy the **OAuth Redirect URL** and paste it into the **Allowed redirection URL(s)** in the **URLs** section.
+10. In the **URLs** section, enter an **App URL** for your app. The host entered here needs to match the host for the **Allowed redirection URL(s)**, like the base URL for your n8n instance.
 8. Select **Save and release**.
 1. Select **Overview** from the left menu. At this point, you can choose to **Test your app** by installing it to one of your stores, or **Choose distribution** to distribute it publicly.
 1. In n8n, enter the **Shop Subdomain** of the store you installed the app to, either as a test or as a distribution.
     - Your subdomain is within the URL: `https://<subdomain>.myshopify.com`. For example, if the full URL is `https://n8n.myshopify.com`, the Shop Subdomain is `n8n`.
 
-
-
 ## Using API key
+
+/// warning | Method deprecated
+Shopify no longer generates API keys with passwords. Use the [Access token](#using-access-token) method instead.
+///
 
 To configure this credential, you'll need:
 
@@ -105,7 +111,8 @@ To enable custom app development, you must log in either as a store owner or as 
 3. Select **Allow custom app development**.
 4. Read the warning and information provided and select **Allow custom app development**.
 
-
 ## Forbidden credentials error
 
+<!-- vale off -->
 If you get a **Couldn't connect with these settings / Forbidden - perhaps check your credentials** warning when you test the credentials, this may be due to your app's [access scope](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} dependencies. For example, the `read_orders` scope also requires `read_products` scope. Review the scopes you have assigned and the action you're trying to complete.
+<!-- vale on -->

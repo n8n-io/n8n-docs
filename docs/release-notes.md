@@ -33,6 +33,15 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.58.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.0...n8n@1.58.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-06
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.58.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.57.0...n8n@1.58.0){:target=_blank .external-link} for this version.<br />
@@ -46,7 +55,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 #### New node: PGVector Vector Store
 
-This release adds the PGVector Vector Store node. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, and retrieve documents to provide them to a retriever connected to a chain.
+This release adds the PGVector Vector Store node. Use this node to interact with the PGVector tables in your PostgreSQL database. You can insert, get, and retrieve documents from a vector table to provide them to a retriever connected to a chain.
 
 </div>
 

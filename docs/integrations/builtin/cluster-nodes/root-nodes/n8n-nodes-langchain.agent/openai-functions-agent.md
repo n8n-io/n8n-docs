@@ -13,7 +13,9 @@ Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-lan
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
+/// note | OpenAI Chat Model required
 You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
+///
 
 ## Parameters
 

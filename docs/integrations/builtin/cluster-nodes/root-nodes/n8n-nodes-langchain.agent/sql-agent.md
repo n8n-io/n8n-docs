@@ -19,11 +19,12 @@ Configure the SQL Agent using the following parameters.
 
 Choose the database to use as a data source for the node. Options include:
 
-* **MySQL**
+* **MySQL**: Select this option to use a MySQL database.
     * Also select the **Credential for MySQL**.
-* **SQLite**: a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node before the Agent to read your SQLite file.
+* **SQLite**: Select this option to use a SQLite database.
+    * You must add a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node before the Agent to read your SQLite file.
     * Also enter the **Input Binary Field** name of your SQLite file coming from the Read/Write File From Disk node.
-* **Postgres**
+* **Postgres**: Select this option to use a Postgres database.
     * Also select the **Credential for Postgres**.
 
 /// warning | Postgres and MySQL Agents
@@ -58,9 +59,9 @@ If left empty, the agent includes all tables.
 
 ### Prefix Prompt
 
-Enter a message you'd like to send to the agent before the **Prompt** text. This initial message can provide additional guidance to the agent about what it can and can't do, additional context, and more.
+Enter a message you'd like to send to the agent before the **Prompt** text. This initial message can provide more context and guidance to the agent about what it can and can't do, how to format .
 
-n8n fills this field with a prompt example.
+n8n fills this field with an example.
 
 ### Suffix Prompt
 
@@ -72,7 +73,7 @@ Available LangChain expressions:
 * `{input}`: Contains the user prompt.
 * `{agent_scratchpad}`: Information to remember for the next iteration.
 
-n8n fills this field with a prompt example.
+n8n fills this field with an example.
 
 ### Limit
 

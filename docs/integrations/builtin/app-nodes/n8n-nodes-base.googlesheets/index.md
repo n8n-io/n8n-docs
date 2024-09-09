@@ -71,3 +71,11 @@ To do so, consider using:
     Convert 'languages' array to JSON (key, value) pairs.
     ```
 1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+
+## Column names were updated after the node's setup
+
+You'll receive this error if the Google Sheet's column names have changed since you set up the node.
+
+To refresh the column names, re-select **Mapping Column Mode**. This should prompt the node to fetch the column names again.
+
+Once the column names refresh, update the node parameters.

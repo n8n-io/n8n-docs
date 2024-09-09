@@ -9,13 +9,15 @@ priority: critical
 
 An AI agent is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals.
 
-The AI Agent node gives you six agent options, each designed for a specific use case.
+The AI Agent node gives you six LangChain agent options.
 
 On this page, you'll find a summary of the available agents with links to more detailed pages on each, templates and examples, and links to more resources.
 
 /// note | Connect a tool
 You must connect at least one tool [sub-node](/inteigrations/builtin-cluster-nodes/sub-nodes/) to an AI Agent node.
 ///
+
+## Available agents
 
 n8n provides these agents:
 

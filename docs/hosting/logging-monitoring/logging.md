@@ -16,7 +16,7 @@ To set up logging in n8n, you need to set the following environment variables (y
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|
-| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, verbose, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
+| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
 | n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
 | n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
 | n8n.log.file.maxsize | N8N_LOG_FILE_SIZE_MAX | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
@@ -48,7 +48,6 @@ n8n uses standard log levels to report:
 - `error`: outputs only errors and nothing else
 - `warn`: outputs errors and warning messages
 - `info`: contains useful information about progress
-- `verbose`: make n8n output additional information about progress that allows you to further understand what's happening
 - `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
 
 
@@ -84,10 +83,6 @@ import {
 // Info-level logging of a trigger function, with workflow name and workflow ID as additional metadata properties
 
 Logger.info(`Polling trigger initiated for workflow "${workflow.name}"`, {workflowName: workflow.name, workflowId: workflow.id});
-
-// Verbose-level logging of hook function execution, with execution ID, workflow ID, and session ID as metadata properties
-
-Logger.verbose(`Executing hook (workflowExecuteBefore, hookFunctionsPush)`, {executionId: this.executionId, workflowId: this.workflowData.id, sessionId: this.sessionId});
 ```
 
 When creating new loggers, some useful standards to keep in mind are:

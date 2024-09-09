@@ -50,3 +50,5 @@ You can find authentication information for this node [here](/integrations/built
 Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+--8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

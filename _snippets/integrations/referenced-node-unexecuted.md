@@ -13,6 +13,6 @@ To begin troubleshooting, test the workflow up to the named node.
 
 For nodes that call JavaScript or other custom code, determine if a node has executed before trying to use the value by calling:
 
-``` curl
+```js
 $("<node-name>").isExecuted
 ```

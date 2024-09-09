@@ -1,0 +1,83 @@
+---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: SQL AI Agent node documentation
+description: Learn how to use the SQL Agent of the AI Agent node in n8n. Follow technical documentation to integrate the SQL Agent into your workflows.
+priority: critical
+---
+
+# SQL AI Agent node
+
+The SQL Agent uses a SQL database as a data source. It can understand natural language questions, convert them into SQL queries, execute the queries, and present the results in a user-friendly format. This agent is valuable for building natural language interfaces to databases.
+
+## Parameters
+
+Configure the SQL Agent using the following parameters.
+
+### Data Source
+
+Choose the database to use as a data source for the node. Options include:
+
+* **MySQL**
+    * Also select the **Credential for MySQL**.
+* **SQLite**: a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node before the Agent to read your SQLite file.
+    * Also enter the **Input Binary Field** name of your SQLite file coming from the Read/Write File From Disk node.
+* **Postgres**
+    * Also select the **Credential for Postgres**.
+
+/// warning | Postgres and MySQL Agents
+If you are using [Postgres](/integrations/builtin/credentials/postgres/) or [MySQL](/integrations/builtin/credentials/mysql/), this agent doesn't support the credential tunnel options.
+///
+
+### Prompt
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/prompt.md"
+
+## Options
+
+Refine the SQL Agent node's behavior using these options:
+
+### Ignored Tables
+
+If you'd like the node to ignore any tables from the database, enter a comma-separated list of tables you'd like it to ignore.
+
+If left empty, the agent doesn't ignore any tables.
+
+### Include Sample Rows
+
+Enter the number of sample rows to include in the prompt to the agent. Default is `3`.
+
+Sample rows help the agent understand the schema of the database, but they also increase the number of tokens used.
+
+### Included Tables
+
+If you'd only like to include specific tables from the database, enter a comma-separated list of tables to include.
+
+If left empty, the agent includes all tables.
+
+### Prefix Prompt
+
+Enter a message you'd like to send to the agent before the **Prompt** text. This initial message can provide additional guidance to the agent about what it can and can't do, additional context, and more.
+
+n8n fills this field with a prompt example.
+
+### Suffix Prompt
+
+Enter a message you'd like to send to the agent after the **Prompt** text.
+
+Available LangChain expressions:
+
+* `{chatHistory}`: A history of messages in this conversation, useful for maintaining context.
+* `{input}`: Contains the user prompt.
+* `{agent_scratchpad}`: Information to remember for the next iteration.
+
+n8n fills this field with a prompt example.
+
+### Limit
+
+Enter the maximum number of results to return.
+
+Default is `10`.
+
+## Templates and examples
+
+Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/#templates-and-examples) section.

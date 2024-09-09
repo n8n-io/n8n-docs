@@ -96,7 +96,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 |Custom Hourly Range|`0 9-17 * * *`|Every hour from 9:00 AM to 5:00 PM every day.|
 |Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
 
-### Why there are six asterisks in the Cron expression
+#### Why there are six asterisks in the Cron expression
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
 

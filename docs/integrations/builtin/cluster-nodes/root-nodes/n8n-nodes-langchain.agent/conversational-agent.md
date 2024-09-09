@@ -44,16 +44,16 @@ Tell the agent about the tools it can use and add context to the user's input.
 
 You must include:
 
-* `{tools}`: a LangChain expression. Provides a string of the tools you've connected to the Agent.
-* `{format_instructions}`: a LangChain expression. Provides the schema or format from the output parser node you've connected.
-* `{{input}}`: a LangChain variable. The user's prompt. Populated with the value of the **Text** parameter.
+* `{tools}`: A LangChain expression. Provides a string of the tools you've connected to the Agent.
+* `{format_instructions}`: A LangChain expression. Provides the schema or format from the output parser node you've connected.
+* `{{input}}`: A LangChain variable. The user's prompt. Populated with the value of the **Prompt** parameter.
 
 Example:
 
 ```
 TOOLS
 ------
-Assistant can ask the user to use tools to look up information that may be helpful in answering the users original question. The tools the human can use are:
+Assistant can ask the user to use tools to look up information that may be helpful in answering the user's original question. The tools the human can use are:
 
 {tools}
 
@@ -61,7 +61,7 @@ Assistant can ask the user to use tools to look up information that may be helpf
 
 USER'S INPUT
 --------------------
-Here is the user's input (remember to respond with a markdown code snippet of a json blob with a single action, and NOTHING else):
+Here is the user's input (remember to respond with a markdown code snippet of a JSON blob with a single action, and NOTHING else):
 
 {{input}}
 ```

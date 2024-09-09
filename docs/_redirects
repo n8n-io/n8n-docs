@@ -1,3 +1,8 @@
+## DOC-979
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
+
 ## DOC-993
 /faircode-license/  /sustainable-use-license/
 

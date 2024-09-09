@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Sheets Sheets Within Document operations
+title: Google Sheets Sheet Within Document operations
 description: Documentation for the Sheet operations in Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 priority: critical
@@ -75,14 +75,15 @@ Enter these parameters:
 - **Sheet**: Choose a sheet you want to clear data from. 
     - Select **From list** to choose the sheet title from the dropdown list, **By URL** to enter the url of the sheet, **By ID** to enter the `sheetId`, or **By Name** to enter the sheet title. 
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
-- **Clear**: 
-    - **Whole Sheet**: Turn on **Keep First Row** to keep the first row of the sheet. 
-    - **Specific Rows**: Enter **Start Row Number** and **Number of Rows to Delete** to specify the rows to clear. 
-    - **Specific Columns**: Enter **Start Column** and **Number of Columns to Delete** to specify the rows to clear. 
+- **Clear**: Select what data you want cleared from the sheet.
+    - **Whole Sheet**: Clear the entire sheet's data. Turn on **Keep First Row** to keep the first row of the sheet. 
+    - **Specific Rows**: Clear data from specific rows. Also enter:
+        - **Start Row Number**: Enter the first row number you want to clear.
+        - **Number of Rows to Delete**: Enter the number of rows to clear. `1` clears data only the row in the **Start Row Number**.
+    - **Specific Columns**: Clear data from specific columns. Also enter:
+        - **Start Column**: Enter the first column you want to clear using the letter notation.
+        - **Number of Columns to Delete**: Enter the number of columns to clear. `1` clears data only in the **Start Column**.
     - **Specific Range**: Enter the table range to clear data from, in [A1 notation](https://developers.google.com/sheets/api/guides/concepts#cell){:target=_blank .external-link}.
-
-### Options
---8<-- "_snippets/integrations/builtin/app-nodes/googlesheets/node-options.md"
 
 Refer to the [Method: spreadsheets.values.clear | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear){:target=_blank .external-link} API documentation for more information.
 

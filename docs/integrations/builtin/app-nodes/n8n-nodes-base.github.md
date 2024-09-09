@@ -55,7 +55,12 @@ Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for gui
     * Get Repositories
     * Invite
 * Workflow
+	* Disable 	
 	* Dispatch
+	* Enable
+ 	* Get
+  	* Get Usage
+  	* List Workflows
 
 ## Templates and examples
 

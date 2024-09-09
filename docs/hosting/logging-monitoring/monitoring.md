@@ -6,7 +6,7 @@ contentType: howto
 
 # Monitoring
 
-There are two API endpoints you can call to check the status of your instance: `/healthz` and `/metrics`.
+There are three API endpoints you can call to check the status of your instance: `/healthz`, `healthz/readiness`, and `/metrics`.
 
 <!-- vale off -->
 ## healthz and healthz/readiness

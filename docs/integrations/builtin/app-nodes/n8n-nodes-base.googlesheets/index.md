@@ -68,6 +68,6 @@ To do so, consider using:
 1. The [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) node.
 1. The [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/) node. For example, try entering something like:
     ```
-    Convert 'languages' array to key, value pairs.
+    Convert 'languages' array to JSON (key, value) pairs.
     ```
 1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).

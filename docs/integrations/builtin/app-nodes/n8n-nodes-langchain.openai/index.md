@@ -76,7 +76,7 @@ Once you add a tool connection, the OpenAI node becomes a root node, allowing it
 
 ## The service is receiving too many requests from you
 
-This error appears when you've exceeded [OpenAI's rate limits](https://platform.openai.com/docs/guides/rate-limits){:target=_blank .external-link}.
+This error displays when you've exceeded [OpenAI's rate limits](https://platform.openai.com/docs/guides/rate-limits){:target=_blank .external-link}.
 
 There are two ways to work around this issue:
 

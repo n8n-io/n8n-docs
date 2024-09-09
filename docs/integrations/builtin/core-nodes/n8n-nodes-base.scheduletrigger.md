@@ -20,20 +20,15 @@ If a workflow uses the Schedule node as a trigger, make sure that you save and a
 
 Add **Trigger Rules** to determine when the trigger should run.
 
-Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other rule parameters depend on the interval you select. Choose from:
+Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other parameters depend on the interval you select. Choose from:
 
-- [Schedule trigger](#schedule-trigger)
-  - [Node parameters](#node-parameters)
-    - [Seconds trigger interval](#seconds-trigger-interval)
-    - [Minutes trigger interval](#minutes-trigger-interval)
-    - [Hours trigger interval](#hours-trigger-interval)
-    - [Days trigger interval](#days-trigger-interval)
-    - [Weeks trigger interval](#weeks-trigger-interval)
-    - [Months trigger interval](#months-trigger-interval)
-    - [Custom (Cron) interval](#custom-cron-interval)
-      - [Examples](#examples)
-    - [Why there are six asterisks in the Cron expression](#why-there-are-six-asterisks-in-the-cron-expression)
-  - [Templates and examples](#templates-and-examples)
+- [Seconds trigger interval](#seconds-trigger-interval)
+- [Minutes trigger interval](#minutes-trigger-interval)
+- [Hours trigger interval](#hours-trigger-interval)
+- [Days trigger interval](#days-trigger-interval)
+- [Weeks trigger interval](#weeks-trigger-interval)
+- [Months trigger interval](#months-trigger-interval)
+- [Custom (Cron) interval](#custom-cron-interval)
 
 You can add multiple **Trigger Rules** to run the node on different schedules.
 
@@ -78,7 +73,7 @@ For example, if you enter `2` **Weeks Between Triggers**, **Monday** for **Trigg
 * **Trigger at Hour**: Select the hour of the day to trigger the node.
 * **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
 
-For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day of Month**, **9am** for **Trigger at Hour**, and `0` **Trigger at Minute**, the node will run each quarter on the 28th day of the month at 9:00am.
+For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day of Month**, **9am** for **Trigger at Hour**, and `0` **Trigger at Minute**, the node will run each quarter on the 28th day of the month at 9:00 AM.
 
 ### Custom (Cron) interval
 

@@ -173,6 +173,7 @@ Nextcloud
 ngrok
 Nodelinter
 npm
+NPM
 npx
 OAuth
 Odoo
@@ -182,7 +183,9 @@ onboarding
 Onfleet
 Ortto
 Oura
+PDFs
 Peekalink
+PGVector
 PhantomBuster
 Pinterest
 Pipedrive
@@ -280,6 +283,7 @@ Vhost
 VM
 Vonage
 Vuex
+Wasabi's
 Webex
 Webflow
 WeKan

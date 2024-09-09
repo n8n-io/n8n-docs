@@ -1,3 +1,11 @@
+## DOC-979
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
+
+## DOC-993
+/faircode-license/  /sustainable-use-license/
+
 # NODE-1462
 /integrations/builtin/credentials/citrixadc/ /integrations/builtin/credentials/netscaleradc/
 /integrations/builtin/app-nodes/n8n-nodes-base.citrixadc/ /integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc/
@@ -31,8 +39,8 @@
 /getting-started/whats-next.html    /try-it-out/quickstart/#next-steps
 /getting-started/installation/advanced/server-setup.html#docker-compose-examples    /hosting/installation/server-setups/docker-compose/
 /reference/faq.html#Integrations    /integrations/
-/reference/faq.html     /faircode-license/
-/reference/faq.html#License     /faircode-license/
+/reference/faq.html     /sustainable-use-license/
+/reference/faq.html#License     /sustainable-use-license/
 /reference/faq.html#n8n-cloud   /manage-cloud/overview/
 /nodes/expressions.html#expressions     /code/expressions/
 /editor-ui/workflows    /workflows/
@@ -82,7 +90,7 @@
 
 
 /choose-n8n/cloud/   /manage-cloud/overview/
-/choose-n8n/faircode-license/   /faircode-license/
+/choose-n8n/faircode-license/   /sustainable-use-license/
 /cloud-admin-dashboard/   /manage-cloud/cloud-admin-dashboard/
 /hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/
 
@@ -187,7 +195,7 @@
 
 # License release 2022/2023
 
-/reference/license/   /faircode-license/
+/reference/license/   /sustainable-use-license/
 
 # Workflows refactor 2022
 

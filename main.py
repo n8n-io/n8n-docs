@@ -2,11 +2,19 @@ import requests
 import json
 import re
 import urllib.parse
+import sys
 
 def define_env(env):
+	# Check if '--no-template' flag is present in the command-line arguments
+	no_template = '--no-template' in sys.argv
 
-	@env.macro	
+	@env.macro    
 	def templatesWidget(title, slug):
+		if no_template:
+            # Return a placeholder or a default URL when '--no-template' is used
+			return f'<div class="n8n-templates-widget"><p>View templates at <a href="https://n8n.io/workflows/" target="_blank">n8n Workflows</a></p></div>'
+
+        # Original API request logic
 		if(title == 'Email Trigger (IMAP)'):
 			node_for_template = 'email+imap'
 		else:
@@ -37,6 +45,10 @@ def define_env(env):
 	
 	@env.macro	
 	def workflowDemo(workflow_endpoint):
+		if no_template:
+			return "<div class='n8n-workflow-preview'><p>Workflow preview placeholder.</p></div>"
+
+        # Original API request logic
 		r = requests.get(url = workflow_endpoint)
 		wf_data = r.json()
 		template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{wf_data["name"].lower().replace(" ", "-").replace(":", "")}/'
@@ -46,4 +58,3 @@ def define_env(env):
 		}
 		encoded_workflow_json = urllib.parse.quote(json.dumps(workflow_json))
 		return f"<div class='n8n-workflow-preview'><n8n-demo hidecanvaserrors='true' clicktointeract='true' frame='false' collapseformobile='false' workflow='{encoded_workflow_json}'></n8n-demo><a href='{template_url}' target='_blank'>View template details</a></div>"
-

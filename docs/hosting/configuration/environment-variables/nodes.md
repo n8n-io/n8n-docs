@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Nodes environment variables
-description: Environment variable to configure nodes management in self-hosted n8n instance. 
+description: Environment variable to configure nodes management in self-hosted n8n instance.
 contentType: reference
 tags:
   - environment variables
@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-This page lists the environment variables configuration options for managing nodes in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes. 
+This page lists the environment variables configuration options for managing nodes in n8n, including specifying which nodes to load or exclude, importing built-in or external modules in the Code node, and enabling community nodes.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -25,3 +25,4 @@ This page lists the environment variables configuration options for managing nod
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |
 | `N8N_CUSTOM_EXTENSIONS` | String | - | Specify the path to directories containing your custom nodes. |
 | `N8N_COMMUNITY_PACKAGES_ENABLED` | Boolean | `true` | Enables (true) or disables (false) community nodes. |
+| `N8N_COMMUNITY_PACKAGES_REGISTRY` | String | `https://registry.npmjs.org` | NPM registry URL to pull community packages from (license required). |

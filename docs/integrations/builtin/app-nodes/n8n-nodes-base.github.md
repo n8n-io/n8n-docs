@@ -54,6 +54,8 @@ Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for gui
 * User
     * Get Repositories
     * Invite
+* Workflow
+	* Dispatch
 
 ## Templates and examples
 

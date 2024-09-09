@@ -32,7 +32,7 @@ Use the **Trigger Interval** to select the time interval unit of measure to sche
 
 You can add multiple **Trigger Rules** to run the node on different schedules.
 
-Refer to the sections below for more detail on configuring each **Trigger Interval**
+Refer to the sections below for more detail on configuring each **Trigger Interval**. Refer to [Templates and examples](#templates-and-examples) for further examples.
 
 ### Seconds trigger interval
 
@@ -64,7 +64,7 @@ For example, if you enter `2` **Days Between Triggers**, **9am** for **Trigger a
 * **Trigger at Hour**: Select the hour of the day to trigger the node.
 * **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
 
-For example, if you enter `2` **Weeks Between Triggers**, **Monday** for **Trigger on Weekdays**, **3pm** for **Trigger at Hour**, and `30` **Trigger at Minute**, the node will run every two weeks on Monday at 3:30pm.
+For example, if you enter `2` **Weeks Between Triggers**, **Monday** for **Trigger on Weekdays**, **3pm** for **Trigger at Hour**, and `30` **Trigger at Minute**, the node will run every two weeks on Monday at 3:30 PM.
 
 ### Months trigger interval
 

@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Salesforce
 description: Documentation for the Salesforce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # Salesforce
@@ -13,11 +15,8 @@ On this page, you'll find a list of operations the Salesforce node supports and 
 /// note | Credentials
 Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Salesforce integrations](https://n8n.io/integrations/salesforce/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Account
     * Add note to an account
@@ -97,6 +96,11 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get a user
     * Get all users
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'salesforce') ]]
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Working with Salesforce custom fields
@@ -107,7 +111,3 @@ To add custom fields to your request:
 2. In the dropdown, select **Custom Fields**.
 
 You can then find and add your custom fields.
-
-
-
-

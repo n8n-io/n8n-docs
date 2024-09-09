@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Agile CRM credentials
 description: Documentation for Agile CRM credentials. Use these credentials to authenticate Agile CRM in n8n, a workflow automation platform.
 contentType: integration
@@ -6,7 +7,7 @@ contentType: integration
 
 # Agile CRM credentials
 
-You can use these credentials to authenticate the following nodes with Agile CRM.
+You can use these credentials to authenticate the following nodes:
 
 - [Agile CRM](/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm/)
 

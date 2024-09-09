@@ -1,11 +1,12 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: F5 Big-IP credentials
 description: Documentation for the F5 Big-IP credentials. Use these credentials to authenticate F5 Big-IP in n8n, a workflow automation platform.
 ---
 
 # F5 Big-IP credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 

@@ -1,6 +1,8 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Recursive Character Text Splitter
 description: Documentation for the Recursive Character Text Splitter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: medium
 ---
 
 # Recursive Character Text Splitter
@@ -9,10 +11,6 @@ The Recursive Character Text Splitter node splits document data recursively to k
 
 On this page, you'll find the node parameters for the Recursive Character Text Splitter node, and links to more resources.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Recursive Character Text Splitter integrations](https://n8n.io/integrations/recursive-character-text-splitter/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -20,9 +18,12 @@ For usage examples and templates to help you get started, refer to n8n's [Recurs
 * **Chunk Size**: number of characters in each chunk.
 * **Chunk Overlap**: how much overlap to have between chunks.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/recursive-character-text-splitter/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'recursive-character-text-splitter') ]]
+
+## Related resources
 
 Refer to [LangChain's recursively split by character documentation](https://js.langchain.com/docs/modules/data_connection/document_transformers/text_splitters/recursive_text_splitter){:target=_blank .external-link} for more information about the service.
 

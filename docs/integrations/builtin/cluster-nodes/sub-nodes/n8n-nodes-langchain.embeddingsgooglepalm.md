@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Google PaLM
 description: Documentation for the Embeddings Google PaLM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
@@ -13,19 +14,18 @@ On this page, you'll find the node parameters for the Embeddings Google PaLM nod
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google PaLM integrations](https://n8n.io/integrations/embeddings-google-palm/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
 **Model**: the model to use to generate the embedding. n8n dynamically loads models from the Google PaLM API and you will only see the models available to your account.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/embeddings-google-palm/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'embeddings-google-palm') ]]
+
+## Related resources
 
 Refer to [Langchain's Google PaLM embeddings documentation](https://js.langchain.com/docs/modules/data_connection/text_embedding/integrations/google_palm){:target=_blank .external-link} for more information about the service.
 

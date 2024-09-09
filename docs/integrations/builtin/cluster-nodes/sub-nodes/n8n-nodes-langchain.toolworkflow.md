@@ -1,6 +1,8 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Custom n8n Workflow Tool
 description: Documentation for the Custom n8n Workflow Tool node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: high
 ---
 
 # Custom n8n Workflow Tool
@@ -8,10 +10,6 @@ description: Documentation for the Custom n8n Workflow Tool node in n8n, a workf
 The Workflow Tool node is a tool that allows an agent to run another n8n workflow and fetch its output data. 
 
 On this page, you'll find the node parameters for the Workflow Tool node, and links to more resources.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Custom n8n Workflow Tool integrations](https://n8n.io/integrations/workflow-tool/){:target=_blank .external-link} page.
-///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -54,9 +52,12 @@ Enable this option to define the input schema for the workflow you're calling. T
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/schema-type-structuring.md"
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/workflow-tool/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'workflow-tool') ]]
+
+## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 

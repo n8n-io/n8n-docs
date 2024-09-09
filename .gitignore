@@ -12,3 +12,7 @@ yarn.lock
 venv
 env
 site
+__pycache__/
+
+## Ignore pyenv configuration
+.python-version

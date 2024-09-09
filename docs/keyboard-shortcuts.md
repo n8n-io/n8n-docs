@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 tags:
   - Keyboard
   - Move canvas
@@ -14,7 +15,7 @@ contentType: reference
 
 n8n provides keyboard shortcuts for some actions.
 
-## General
+## Workflow controls
  
  - **Ctrl** + **Alt** + **n**: create new workflow
  - **Ctrl** + **o**: open workflow

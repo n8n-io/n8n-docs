@@ -1,6 +1,8 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Summarization Chain
 description: Documentation for the Summarization Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: high
 ---
 
 # Summarization Chain
@@ -8,10 +10,6 @@ description: Documentation for the Summarization Chain node in n8n, a workflow a
 Use the Summarization Chain node to summarize multiple documents.
 
 On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Summarization Chain integrations](https://n8n.io/integrations/summarization-chain/){:target=_blank .external-link} page.
-///	
 
 ## Node parameters
 
@@ -35,9 +33,12 @@ Options in **Summarization Method**:
 
 You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/summarization-chain/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'summarization-chain') ]]
+
+## Related resources
 
 Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/modules/chains/popular/summarize){:target=_blank .external-link} for more information about the service.
 

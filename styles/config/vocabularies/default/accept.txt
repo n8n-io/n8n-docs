@@ -108,6 +108,7 @@ geospatial
 GIMP
 Gotify
 Grafana
+Groq
 GSuite
 Gumroad
 Hetzner
@@ -163,13 +164,16 @@ Motorhead
 Multiple
 multiple
 n8n
+nanoids
 namespace
 NASA
 Netlify
+Netscaler
 Nextcloud
 ngrok
 Nodelinter
 npm
+NPM
 npx
 OAuth
 Odoo
@@ -177,8 +181,11 @@ Okta
 Ollama
 onboarding
 Onfleet
+Ortto
 Oura
+PDFs
 Peekalink
+PGVector
 PhantomBuster
 Pinterest
 Pipedrive
@@ -276,6 +283,7 @@ Vhost
 VM
 Vonage
 Vuex
+Wasabi's
 Webex
 Webflow
 WeKan

@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -262,7 +263,7 @@ For this tutorial, you'll add two additional fields, to allow users to enter the
 
 ### Step 4: Add the execute method
 
-Step 5 set up the node UI and basic information. It's time to map the node UI to API requests, and make the node actually do something.
+You've set up the node UI and basic information. It's time to map the node UI to API requests, and make the node actually do something.
 
 The `execute` method runs every time the node runs. In this method, you have access to the input items and to the parameters that the user set in the UI, including the credentials.
 

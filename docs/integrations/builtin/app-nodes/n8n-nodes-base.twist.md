@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Twist
 description: Documentation for the Twist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,11 +14,8 @@ On this page, you'll find a list of operations the Twist node supports and links
 /// note | Credentials
 Refer to [Twist credentials](/integrations/builtin/credentials/twist/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Twist integrations](https://n8n.io/integrations/twist/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Channel
     * Archive a channel
@@ -46,15 +44,18 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all threads
     * Update a thread
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'twist') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
-## FAQs
+## Get the User ID
 
-### Where can I get the User ID?
+To get the User ID for a user:
 
-To get the User ID for a user follow the steps mentioned below
-1. Click on the ***Team*** tab.
-2. Click on a user's avatar.
-3. Copy the string of characters located after `/u/` in your Twist URL. This string is the User ID. For example, if the URL is `https://twist.com/a/4qw45/people/u/475370` the User ID will be `475370`.
+1. Open the **Team** tab.
+2. Select a user's avatar.
+3. Copy the string of characters located after `/u/` in your Twist URL. This string is the User ID. For example, if the URL is `https://twist.com/a/4qw45/people/u/475370` the User ID is `475370`.
 

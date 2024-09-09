@@ -1,11 +1,12 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: "Learn about the key components of automation in n8n."
 contentType: overview
 ---
 
 # Workflows
 
-A workflow is a connection of nodes connected together to automate a process.
+A workflow is a collection of nodes connected together to automate a process.
 
 
 * [Create](/workflows/create/) a workflow.

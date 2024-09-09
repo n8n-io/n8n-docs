@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mindee
 description: Documentation for the Mindee node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,21 +14,18 @@ On this page, you'll find a list of operations the Mindee node supports and link
 /// note | Credentials
 Refer to [Mindee credentials](/integrations/builtin/credentials/mindee/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Mindee integrations](https://n8n.io/integrations/mindee/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
-**Invoice**
-- Predict
+- **Invoice**
+    - Predict
+- **Receipt**
+    - Predict
 
+## Templates and examples
 
-**Receipt**
-- Predict
-
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'mindee') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
-
-
 

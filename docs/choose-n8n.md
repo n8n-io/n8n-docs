@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Choose between our Cloud service, or self-hosting options. Learn more about licenses and n8n payment plans.
 contentType: overview
 ---
@@ -23,9 +24,9 @@ There are different ways to set up n8n depending on how you intend to use it:
 
 ## Licenses
 
-n8n is [fair-code](http://faircode.io){:target=_blank .external-link} licensed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}.
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](http://faircode.io) model.
 
-For a detailed explanation of the license, refer to [Faircode license](/faircode-license/).
+For a detailed explanation of the license, refer to [Sustainable Use License](/sustainable-use-license/).
 
 ## Free versions
 

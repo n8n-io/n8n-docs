@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HTTP Request credentials
 description: Documentation for HTTP Request credentials. Use these credentials to authenticate HTTP Request in n8n, a workflow automation platform.
 contentType: integration
+priority: critical
 ---
 
 # HTTP Request credentials
@@ -9,6 +11,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes:
 
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
+- [HTTP Request Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest)
 
 ## Prerequisites
 

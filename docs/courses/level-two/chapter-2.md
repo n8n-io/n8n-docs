@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -14,60 +15,66 @@ You're most likely familiar with HTML and XML.
 /// note | HTML vs. XML
 HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 ///
-If you need to process HTML or XML data in your n8n workflows, use the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or [XML node](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+If you need to process HTML or XML data in your n8n workflows, use the [**HTML node**](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or the [**XML node**](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
 
-Use the HTML node to extract HTML content of a webpage, by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
+Use the **HTML node** to extract HTML content of a webpage by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
-### Exercise
+### HTML Exercise
 
-Let's get the title of the latest n8n blog post. Use the HTTP Request node to make a GET request to the URL `https://blog.n8n.io/`. Then, connect an HTML node and configure it to extract the title of the first post on the page.
+Let's get the title of the latest n8n blog post:
+
+1. Use the **HTTP Request node** to make a GET request to the URL `https://blog.n8n.io/` (this endpoint requires no authentication).
+2. Connect an **HTML node** and configure it to extract the title of the first blog post on the page.
+	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.item-title  a` should help!
 
 ??? note "Show me the solution"
 
-	Configure the HTTP Request node with the following parameters:
-
-	- Authentication: None
-	- Request Method: GET
-	- URL: https://blog.n8n.io/
-
+	1. Configure the HTTP Request node with the following parameters:
+		- **Authentication**: None
+		- **Request Method**: GET
+		- **URL**: https://blog.n8n.io/
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png" alt="Result of HTTP Request node" style="width:100%"><figcaption align = "center"><i>Result of HTTP Request node</i></figcaption></figure>
 
-	Connect an HTML node to the HTTP Request node and configure the former's parameters:
-
-	* Operation: Extract HTML Content
-	* Source Data: JSON
-	* JSON Property: data
-	* Extraction Values:  
-		* Key: title
-		* CSS Selector: .item-title  a
-		* Return Value: HTML
+	2. Connect an **HTML node** to the **HTTP Request node** and configure the former's parameters:
+		- **Operation**: Extract HTML Content
+		- **Source Data**: JSON
+		- **JSON Property**: data
+		- **Extraction Values**:  
+			- **Key**: title
+			- **CSS Selector**: `.item-title  a`
+			- **Return Value**: HTML
 
 	You can add more values to extract more data.
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
-	</details>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="Result of HTML Extract node" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
 
 
-Use the XML node to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON, and need to get and submit data between them in the two formats.
+Use the **XML node** to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON and need to get and submit data between them in the two formats.
 
-### Exercise
+### XML Exercise
 
-In a previous exercise, you used an HTTP Request node to make a request to an API. Now, use the XML node to convert the JSON output to XML.
+In the [final exercise of Chapter 1](/courses/level-two/chapter-1/#exercise_2), you used an **HTTP Request node** to make a request to the Quotable API. In this exercise, we'll return to that same API but we'll convert the output to XML:
+
+1. Add an **HTTP Request node** that makes the same request to the Quotable API at `https://api.quotable.io/quotes`.
+2. Use the XML node to convert the JSON output to XML.
 
 ??? note "Show me the solution"
 
-	Get data from the Quotable API using the HTTP Request node and connect an XML node to it with the following parameters:
-
-	- Mode: **JSON to XML**
-	- Property name: **data**
+	1. To get the quotes from the Quotable API, execute the **HTTP Request node** with the following parameters:
+		- **Authentication**: None
+		- **Request Method**: GET
+		- **URL**: https://api.quotable.io/quotes
+	2. Connect an **XML node** to it with the following parameters:
+		- **Mode**: JSON to XML
+		- **Property name**: data
 
 	The result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png" alt="Table view of XML Node (JSON to XML)" style="width:100%"><figcaption align = "center"><i>XML node (JSON to XML) – Table View</i></figcaption></figure>
 
 	To transform data the other way around, select the mode **XML to JSON**.
 
@@ -82,129 +89,186 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
 - `YEAR`: 2022, 22
 <!-- vale on -->
-If you need to convert date and time data to different formats, and calculate dates, use the [Date & Time node](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/).
+There are a few ways you can work with dates and times:
 
-You can also schedule workflows to run at a specific time, interval, or duration, using the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) node.
+- Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/) to convert date and time data to different formats and calculate dates.
+- Use [**Schedule Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) to schedule workflows to run at a specific time, interval, or duration.
+
+Sometimes, you might need to pause the workflow execution. This might be necessary if you know that a service doesn't process the data instantly or it's slow to return all the results. In these cases, you don't want n8n to pass incomplete data to the next node.
+
+If you run into situations like this, use the [**Wait node**](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The **Wait node** pauses the workflow execution and will resume execution:
+
+- At a specific time.
+- After a specified time interval.
+- On a webhook call.
 
 
-In some cases, you might need to pause the workflow execution. This might be necessary, for example, if you know that a service doesn't process the data instantly or it's generally slower, so you don't want the incomplete data to be passed to the next node. In this case, you can use the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The Wait node pauses the workflow execution and resumes it at a specific time, after a time interval, or on a webhook call.
 
-
-### Exercise
+### Date Exercise
 
 Build a workflow that adds five days to an input date from the Customer Datastore node that you used before. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
 
+
+To begin:
+<!-- To do: need to figure out what the actual desired output is here since Date & Time options have changed and I'm unclear what the Set node should be doing-->
+1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected. Return All.
+2. Add the **Date & Time node** to Round Up the created Date from the datastore to End of Month. Output this to field new-date. Include all input fields.
+3. Add the **If node** to check if that new rounded date is after `1960-01-01 00:00:00`.
+4. Add the **Wait node** to the True output of that node and set it to wait for one minute.
+5. Add the **Edit Fields (Set) node** to set a new field called outputValue to a String containing new-date. Include all input fields.
+6. Add the **Schedule Trigger node** at the beginning of the workflow to trigger it every 30 minutes. (You can keep the [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) for testing!)
+
 ??? note "Show me the solution"
 
-	You can build this workflow using the data from the *Customer Datastore node*, the three nodes for managing date and time, an *IF node* for conditional routing, and a *Set node* for setting the new calculated date. You can add a [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) too for easy testing during development. The workflow looks like this:
+	1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected.
+		- Select the option to **Return All**.
+	2. Add a **Date & Time node** connected to the Customer Datastore node. Select the option to **Round a Date**.
+		- Add the `created` date as the **Date** to round.
+		- Select `Round Up` as the **Mode** and `End of Month` as the **To**.
+		- Set the **Output Field Name** as `new-date`.
+		- In **Options**, select **Add Option** and use the control to **Include Input Fields**
+	3. Add an **If node** connected to the **Date & Time node**.
+		- Add the new-date field as the first part of the condition.
+		- Set the comparison to **Date &Time > is after**
+		- Add `1960-01-01 00:00:00` as the second part of the expression. (This should produce 3 items in the True Branch and 2 items in the False Branch)
+	4. Add a **Wait node** to the True output of the **If node**.
+		- Set **Resume** to `After Time interval`.
+		- Set **Wait Amount** to `1.00`.
+		- Set **Wait Unit** to `Minutes`.
+	5. Add an **Edit Fields (Set) node** to the **Wait node**.
+		- Use either JSON or Manual Mapping **Mode**.
+		- Set a new field called `outputValue` to be the value of the new-date field.
+		- Select the option to **Include Other Input Fields** and include **All** fields.
+	6. Add a **Schedule Trigger node** at the beginning of the workflow.
+		- Set the **Trigger Interval** to use `Minutes`.
+		- Set the **Minutes Between Triggers** to 30.
+		- To test your schedule, be sure to activate the workflow.
+		- Be sure to connect this node to the **Customer Datastore (n8n training) node** you began with!
+	
+	The workflow should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="Workflow for transforming dates" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
-	To check the configuration of each node, you can copy the JSON code of this workflow and paste it in your Editor UI.
+	To check the configuration of each node, you can copy the JSON code of this workflow and either paste it into the Editor UI or save it as a file and import from file into a new workflow. See [Export and import workflows](/workflows/export-import/) for more information.
 
 	```json
 	{
-	"meta": {
-		"templateCredsSetupCompleted": true,
-		"instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
-	},
+	"name": "Course 2, Ch 2, Date exercise",
 	"nodes": [
 		{
 		"parameters": {},
-		"id": "c2c4509b-c4d4-4e95-bd7d-039734954b68",
+		"id": "6bf64d5c-4b00-43cf-8439-3cbf5e5f203b",
 		"name": "When clicking \"Test workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
-			260,
-			2080
+			620,
+			280
 		]
-		},
-		{
-		"parameters": {
-			"action": "calculate",
-			"value": "={{$json[\"created\"]}}",
-			"duration": 5,
-			"dataPropertyName": "new-date",
-			"options": {}
-		},
-		"name": "Date & Time",
-		"type": "n8n-nodes-base.dateTime",
-		"typeVersion": 1,
-		"position": [
-			660,
-			2160
-		],
-		"id": "61b56e39-021f-4ad0-b72c-697978c4f384"
-		},
-		{
-		"parameters": {
-			"unit": "minutes"
-		},
-		"name": "Wait",
-		"type": "n8n-nodes-base.wait",
-		"typeVersion": 1,
-		"position": [
-			1040,
-			2160
-		],
-		"webhookId": "d17effb8-ad90-4a74-bb88-daa3d3d18583",
-		"id": "842b788f-c236-4c67-bad0-155de7ef1be4"
-		},
-		{
-		"parameters": {
-			"conditions": {
-			"dateTime": [
-				{
-				"value1": "={{$json[\"new-date\"]}}",
-				"value2": "1960-01-01T00:00:00"
-				}
-			]
-			}
-		},
-		"name": "IF",
-		"type": "n8n-nodes-base.if",
-		"typeVersion": 1,
-		"position": [
-			840,
-			2160
-		],
-		"id": "ce788b41-ba4c-41cd-85da-6bf23baa76aa"
-		},
-		{
-		"parameters": {
-			"values": {
-			"string": [
-				{
-				"name": "outputValue",
-				"value": "={{ $('IF').item.json['new-date'] }}"
-				}
-			]
-			},
-			"options": {}
-		},
-		"name": "Set",
-		"type": "n8n-nodes-base.set",
-		"typeVersion": 1,
-		"position": [
-			1220,
-			2160
-		],
-		"id": "df3e455c-5c5e-42af-ad5c-a9bb6869a921"
 		},
 		{
 		"parameters": {
 			"operation": "getAllPeople",
 			"returnAll": true
 		},
-		"name": "Customer Datastore",
+		"id": "a08a8157-99ee-4d50-8fe4-b6d7e16e858e",
+		"name": "Customer Datastore (n8n training)",
 		"type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
 		"typeVersion": 1,
 		"position": [
-			480,
-			2160
+			840,
+			360
+		]
+		},
+		{
+		"parameters": {
+			"operation": "roundDate",
+			"date": "={{ $json.created }}",
+			"mode": "roundUp",
+			"outputFieldName": "new-date",
+			"options": {
+			"includeInputFields": true
+			}
+		},
+		"id": "f66a4356-2584-44b6-a4e9-1e3b5de53e71",
+		"name": "Date & Time",
+		"type": "n8n-nodes-base.dateTime",
+		"typeVersion": 2,
+		"position": [
+			1080,
+			360
+		]
+		},
+		{
+		"parameters": {
+			"conditions": {
+			"options": {
+				"caseSensitive": true,
+				"leftValue": "",
+				"typeValidation": "strict"
+			},
+			"conditions": [
+				{
+				"id": "7c82823a-e603-4166-8866-493f643ba354",
+				"leftValue": "={{ $json['new-date'] }}",
+				"rightValue": "1960-01-01T00:00:00",
+				"operator": {
+					"type": "dateTime",
+					"operation": "after"
+				}
+				}
+			],
+			"combinator": "and"
+			},
+			"options": {}
+		},
+		"id": "cea39877-6183-4ea0-9400-e80523636912",
+		"name": "If",
+		"type": "n8n-nodes-base.if",
+		"typeVersion": 2,
+		"position": [
+			1280,
+			360
+		]
+		},
+		{
+		"parameters": {
+			"amount": 1,
+			"unit": "minutes"
+		},
+		"id": "5aa860b7-c73c-4df0-ad63-215850166f13",
+		"name": "Wait",
+		"type": "n8n-nodes-base.wait",
+		"typeVersion": 1.1,
+		"position": [
+			1480,
+			260
 		],
-		"id": "1f3573f7-1586-4e9a-9cbf-9eb7c7475b27"
+		"webhookId": "be78732e-787d-463e-9210-2c7e8239761e"
+		},
+		{
+		"parameters": {
+			"assignments": {
+			"assignments": [
+				{
+				"id": "e058832a-2461-4c6d-b584-043ecc036427",
+				"name": "outputValue",
+				"value": "={{ $json['new-date'] }}",
+				"type": "string"
+				}
+			]
+			},
+			"includeOtherFields": true,
+			"options": {}
+		},
+		"id": "be034e9e-3cf1-4264-9d15-b6760ce28f91",
+		"name": "Edit Fields",
+		"type": "n8n-nodes-base.set",
+		"typeVersion": 3.3,
+		"position": [
+			1700,
+			260
+		]
 		},
 		{
 		"parameters": {
@@ -217,62 +281,30 @@ Build a workflow that adds five days to an input date from the Customer Datastor
 			]
 			}
 		},
-		"id": "c3ce4d5e-524b-4806-9c25-43892113b5eb",
+		"id": "6e8e4308-d0e0-4d0d-bc29-5131b57cf061",
 		"name": "Schedule Trigger",
 		"type": "n8n-nodes-base.scheduleTrigger",
 		"typeVersion": 1.1,
 		"position": [
-			260,
-			2260
+			620,
+			480
 		]
 		}
 	],
+	"pinData": {},
 	"connections": {
 		"When clicking \"Test workflow\"": {
 		"main": [
 			[
 			{
-				"node": "Customer Datastore",
+				"node": "Customer Datastore (n8n training)",
 				"type": "main",
 				"index": 0
 			}
 			]
 		]
 		},
-		"Date & Time": {
-		"main": [
-			[
-			{
-				"node": "IF",
-				"type": "main",
-				"index": 0
-			}
-			]
-		]
-		},
-		"Wait": {
-		"main": [
-			[
-			{
-				"node": "Set",
-				"type": "main",
-				"index": 0
-			}
-			]
-		]
-		},
-		"IF": {
-		"main": [
-			[
-			{
-				"node": "Wait",
-				"type": "main",
-				"index": 0
-			}
-			]
-		]
-		},
-		"Customer Datastore": {
+		"Customer Datastore (n8n training)": {
 		"main": [
 			[
 			{
@@ -283,26 +315,58 @@ Build a workflow that adds five days to an input date from the Customer Datastor
 			]
 		]
 		},
+		"Date & Time": {
+		"main": [
+			[
+			{
+				"node": "If",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"If": {
+		"main": [
+			[
+			{
+				"node": "Wait",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
+		"Wait": {
+		"main": [
+			[
+			{
+				"node": "Edit Fields",
+				"type": "main",
+				"index": 0
+			}
+			]
+		]
+		},
 		"Schedule Trigger": {
 		"main": [
 			[
 			{
-				"node": "Customer Datastore",
+				"node": "Customer Datastore (n8n training)",
 				"type": "main",
 				"index": 0
 			}
 			]
 		]
 		}
-	},
-	"pinData": {}
+	}
 	}
 	```
 
 
 ## Binary data
 
-Up to now, you have mainly worked with text data. But what if you want to process data that's not text? For example, images or PDF files. This is binary data, as it's represented in the binary numeral system. In this form, binary data doesn't offer you useful information, so it needs to be converted into a readable form.
+Up to now, you have mainly worked with text data. But what if you want to process data that's not text, like images or PDF files? These types of files are represented in the binary numeral system, so they're considered binary data. In this form, binary data doesn't offer you useful information, so you'll need to convert it into a readable form.
 
 In n8n, you can process binary data with the following nodes:
 
@@ -315,7 +379,7 @@ In n8n, you can process binary data with the following nodes:
 Reading and writing files to disk isn't available on n8n Cloud. You'll read and write to the machine where you installed n8n. If you run n8n in Docker, your command runs in the n8n container and not the Docker host. The Read/Write Files From Disk node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.
 ///
 
-To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation), or in the node's `File Path and Name` parameter (for the Write operation).
+To read or write a binary file, you need to write the path (location) of the file in the node's `File(s) Selector` parameter (for the Read operation) or in the node's `File Path and Name` parameter (for the Write operation).
 
 /// warning | Naming the right path
 The file path looks slightly different depending on how you are running n8n:
@@ -326,21 +390,24 @@ The file path looks slightly different depending on how you are running n8n:
 
 
 
-### Exercise
+### Binary Exercise 1
 
-Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.` Then, use the Extract From File node to convert the file from binary to JSON.
+For our first binary exercise, let's convert a PDF file to JSON:
+
+1. Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kaspersky_Lab_Whitepaper_Anti_blocker.pdf.`
+2. Use the **Extract From File node** to convert the file from binary to JSON.
 
 ??? note "Show me the solution"
 
-	In the HTTP Request node, you should see the PDF file, like this:
+	In the **HTTP Request node**, you should see the PDF file, like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png" alt="HTTP Request node to get PDF" style="width:100%"><figcaption align = "center"><i>HTTP Request node to get PDF</i></figcaption></figure>
 
-	When you convert the PDF from binary to JSON Extract From File node, the result should look like this:
+	When you convert the PDF from binary to JSON using the **Extract From File node**, the result should look like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png" alt="Extract From File node" style="width:100%"><figcaption align = "center"><i>Extract From File node</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
+	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 
 	```json
 	{
@@ -416,17 +483,22 @@ Make an HTTP request to get this PDF file: `https://media.kaspersky.com/pdf/Kasp
 
 
 
-### Exercise
+### Binary Exercise 2
 
-Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1` and convert the returned data from JSON to binary using the Convert to File node. Then, write the new binary file data to the machine where n8n is running. Finally, to check that it worked out, read the generated binary file from the machine referencing it with an expression in the node.
+For our second binary exercise, let's convert some JSON data to binary:
+
+1. Make an HTTP request to the Poetry DB API `https://poetrydb.org/random/1`.
+2. Convert the returned data from JSON to binary using the **Convert to File node**.
+3. Write the new binary file data to the machine where n8n is running using the **Read/Write Files From Disk node**.
+4. To check that it worked out, use the **Read/Write Files From Disk node** to read the generated binary file.
 
 ??? note "Show me the solution"
 
 	The workflow for this exercise looks like this:
 
-	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-two/exercise_binarydata.png" alt="Workflow for moving JSON to binary data" style="width:100%"><figcaption align = "center"><i>Workflow for moving JSON to binary data</i></figcaption></figure>
 
-	To check the configuration of the nodes, you can copy-paste the JSON code of the workflow:
+	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 
 	```json
 	{

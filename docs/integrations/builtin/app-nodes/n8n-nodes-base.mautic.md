@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mautic
 description: Documentation for the Mautic node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # Mautic
@@ -13,11 +15,8 @@ On this page, you'll find a list of operations the Mautic node supports and link
 /// note | Credentials
 Refer to [Mautic credentials](/integrations/builtin/credentials/mautic/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Mautic integrations](https://n8n.io/integrations/mautic/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Campaign Contact
     * Add contact to a campaign
@@ -45,5 +44,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Remove contact from a segment
 * Segment Email
     * Send
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'mautic') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

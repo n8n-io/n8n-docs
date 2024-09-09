@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Disqus
 description: Documentation for the Disqus node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,14 +14,16 @@ On this page, you'll find a list of operations the Disqus node supports and link
 /// note | Credentials
 Refer to [Disqus credentials](/integrations/builtin/credentials/disqus/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Disqus integrations](https://n8n.io/integrations/disqus/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Forum
     * Return forum details
     * Return a list of categories within a forum
     * Return a list of threads within a forum
     * Return a list of posts within a forum
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'disqus') ]]

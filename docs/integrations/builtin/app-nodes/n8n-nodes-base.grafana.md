@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grafana
 description: Documentation for the Grafana node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,11 +14,8 @@ On this page, you'll find a list of operations the Grafana node supports and lin
 /// note | Credentials
 Refer to [Grafana credentials](/integrations/builtin/credentials/grafana/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Grafana integrations](https://n8n.io/integrations/grafana/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Dashboard
     * Create a dashboard
@@ -39,5 +37,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Delete a user from the current organization
     * Retrieve all users in the current organization
     * Update a user in the current organization
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'grafana') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

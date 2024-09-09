@@ -7,7 +7,7 @@ info:
     email: hello@n8n.io
   license:
     name: Sustainable Use License
-    url: https://github.com/n8n-io/n8n/blob/master/packages/cli/LICENSE.md
+    url: https://github.com/n8n-io/n8n/blob/master/LICENSE.md
   version: 1.1.1
 servers:
   - url: /api/v1
@@ -28,6 +28,10 @@ tags:
     description: Operations about tags
   - name: SourceControl
     description: Operations about source control
+  - name: Variables
+    description: Operations about variables
+  - name: Projects
+    description: Operations about projects
 externalDocs:
   description: n8n API documentation
   url: https://docs.n8n.io/api/
@@ -204,6 +208,14 @@ paths:
           schema:
             type: string
             example: '1000'
+        - name: projectId
+          in: query
+          required: false
+          explode: false
+          allowReserved: true
+          schema:
+            type: string
+            example: VmwOO9HeTEj20kxM
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/cursor'
       responses:
@@ -435,6 +447,14 @@ paths:
           schema:
             type: string
             example: My Workflow
+        - name: projectId
+          in: query
+          required: false
+          explode: false
+          allowReserved: true
+          schema:
+            type: string
+            example: VmwOO9HeTEj20kxM
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/cursor'
       responses:
@@ -558,6 +578,70 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '404':
           $ref: '#/components/responses/notFound'
+  /workflows/{id}/transfer:
+    put:
+      x-eov-operation-id: transferWorkflow
+      x-eov-operation-handler: v1/handlers/workflows/workflows.handler
+      tags:
+        - Workflow
+      summary: Transfer a workflow to another project.
+      description: Transfer a workflow to another project.
+      parameters:
+        - $ref: '#/components/parameters/workflowId'
+      requestBody:
+        description: Destination project information for the workflow transfer.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                destinationProjectId:
+                  type: string
+                  description: The ID of the project to transfer the workflow to.
+              required:
+                - destinationProjectId
+        required: true
+      responses:
+        '200':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /credentials/{id}/transfer:
+    put:
+      x-eov-operation-id: transferCredential
+      x-eov-operation-handler: v1/handlers/credentials/credentials.handler
+      tags:
+        - Workflow
+      summary: Transfer a credential to another project.
+      description: Transfer a credential to another project.
+      parameters:
+        - $ref: '#/components/parameters/credentialId'
+      requestBody:
+        description: Destination project for the credential transfer.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                destinationProjectId:
+                  type: string
+                  description: The ID of the project to transfer the credential to.
+              required:
+                - destinationProjectId
+        required: true
+      responses:
+        '200':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
   /workflows/{id}/tags:
     get:
       x-eov-operation-id: getWorkflowTags
@@ -622,6 +706,14 @@ paths:
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/cursor'
         - $ref: '#/components/parameters/includeRole'
+        - name: projectId
+          in: query
+          required: false
+          explode: false
+          allowReserved: true
+          schema:
+            type: string
+            example: VmwOO9HeTEj20kxM
       responses:
         '200':
           description: Operation successful.
@@ -631,6 +723,58 @@ paths:
                 $ref: '#/components/schemas/userList'
         '401':
           $ref: '#/components/responses/unauthorized'
+    post:
+      x-eov-operation-id: createUser
+      x-eov-operation-handler: v1/handlers/users/users.handler.ee
+      tags:
+        - User
+      summary: Create multiple users
+      description: Create one or more users.
+      requestBody:
+        description: Array of users to be created.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  email:
+                    type: string
+                    format: email
+                  role:
+                    type: string
+                    enum:
+                      - global:admin
+                      - global:member
+                required:
+                  - email
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      email:
+                        type: string
+                      inviteAcceptUrl:
+                        type: string
+                      emailSent:
+                        type: boolean
+                  error:
+                    type: string
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
   /users/{id}:
     get:
       x-eov-operation-id: getUser
@@ -651,6 +795,58 @@ paths:
                 $ref: '#/components/schemas/user'
         '401':
           $ref: '#/components/responses/unauthorized'
+    delete:
+      x-eov-operation-id: deleteUser
+      x-eov-operation-handler: v1/handlers/users/users.handler.ee
+      tags:
+        - User
+      summary: Delete a user
+      description: Delete a user from your instance.
+      parameters:
+        - $ref: '#/components/parameters/userIdentifier'
+      responses:
+        '204':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /users/{id}/role:
+    patch:
+      x-eov-operation-id: changeRole
+      x-eov-operation-handler: v1/handlers/users/users.handler.ee
+      tags:
+        - User
+      summary: Change a user's global role
+      description: Change a user's global role
+      parameters:
+        - $ref: '#/components/parameters/userIdentifier'
+      requestBody:
+        description: New role for the user
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newRoleName:
+                  type: string
+                  enum:
+                    - global:admin
+                    - global:member
+              required:
+                - newRoleName
+      responses:
+        '200':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /source-control/pull:
     post:
       x-eov-operation-id: pull
@@ -677,6 +873,149 @@ paths:
           $ref: '#/components/responses/badRequest'
         '409':
           $ref: '#/components/responses/conflict'
+  /variables:
+    post:
+      x-eov-operation-id: createVariable
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Create a variable
+      description: Create a variable in your instance.
+      requestBody:
+        description: Payload for variable to create.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/variable'
+        required: true
+      responses:
+        '201':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+    get:
+      x-eov-operation-id: getVariables
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Retrieve variables
+      description: Retrieve variables from your instance.
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/variableList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+  /variables/{id}:
+    delete:
+      x-eov-operation-id: deleteVariable
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Delete a variable
+      description: Delete a variable from your instance.
+      parameters:
+        - $ref: '#/components/parameters/variableId'
+      responses:
+        '204':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /projects:
+    post:
+      x-eov-operation-id: createProject
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: Create a project
+      description: Create a project in your instance.
+      requestBody:
+        description: Payload for project to create.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/project'
+        required: true
+      responses:
+        '201':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+    get:
+      x-eov-operation-id: getProjects
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: Retrieve projects
+      description: Retrieve projects from your instance.
+      parameters:
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/cursor'
+      responses:
+        '200':
+          description: Operation successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/projectList'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+  /projects/{projectId}:
+    delete:
+      x-eov-operation-id: deleteProject
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: Delete a project
+      description: Delete a project from your instance.
+      parameters:
+        - $ref: '#/components/parameters/projectId'
+      responses:
+        '204':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateProject
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Project
+      summary: Update a project
+      description: Update a project.
+      requestBody:
+        description: Updated project object.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/project'
+        required: true
+      responses:
+        '204':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
 components:
   schemas:
     audit:
@@ -826,6 +1165,8 @@ components:
           type: string
           nullable: true
           format: date-time
+        customData:
+          type: object
     executionList:
       type: object
       properties:
@@ -1175,6 +1516,62 @@ components:
                     type: string
                   tagId:
                     type: string
+    variable:
+      type: object
+      additionalProperties: false
+      required:
+        - key
+        - value
+      properties:
+        id:
+          type: string
+          readOnly: true
+        key:
+          type: string
+        value:
+          type: string
+          example: test
+        type:
+          type: string
+          readOnly: true
+    variableList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/variable'
+        nextCursor:
+          type: string
+          description: Paginate through variables by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
+    project:
+      type: object
+      additionalProperties: false
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+        type:
+          type: string
+          readOnly: true
+    projectList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/project'
+        nextCursor:
+          type: string
+          description: Paginate through projects by setting the cursor parameter to a nextCursor attribute returned by a previous request. Default value fetches the first "page" of the collection.
+          nullable: true
+          example: MTIzZTQ1NjctZTg5Yi0xMmQzLWE0NTYtNDI2NjE0MTc0MDA
     error:
       required:
         - message
@@ -1331,6 +1728,13 @@ components:
       required: true
       schema:
         type: string
+    credentialId:
+      name: id
+      in: path
+      description: The ID of the credential.
+      required: true
+      schema:
+        type: string
     includeRole:
       name: includeRole
       in: query
@@ -1348,6 +1752,20 @@ components:
       schema:
         type: string
         format: identifier
+    variableId:
+      name: id
+      in: path
+      description: The ID of the variable.
+      required: true
+      schema:
+        type: string
+    projectId:
+      name: projectId
+      in: path
+      description: The ID of the project.
+      required: true
+      schema:
+        type: string
     Cursor:
       $ref: '#/components/parameters/cursor'
     Limit:

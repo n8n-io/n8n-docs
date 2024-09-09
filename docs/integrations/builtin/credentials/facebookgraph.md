@@ -1,12 +1,14 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Graph API credentials
 description: Documentation for Facebook Graph API credentials. Use these credentials to authenticate Facebook Graph API in n8n, a workflow automation platform.
 contentType: integration
+priority: medium
 ---
 
 # Facebook Graph API credentials
 
-You can use these credentials to authenticate the following nodes with Facebook.
+You can use these credentials to authenticate the following nodes:
 
 - [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/)
 

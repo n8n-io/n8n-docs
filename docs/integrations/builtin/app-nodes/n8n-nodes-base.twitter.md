@@ -1,23 +1,22 @@
 ---
-title: Twitter
-description: Documentation for the Twitter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: X (Formerly Twitter)
+description: Documentation for the X node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
-# Twitter
+# X (Formerly Twitter)
 
-Use the Twitter node to automate work in Twitter, and integrate Twitter with other applications. n8n has built-in support for a wide range of Twitter features, including creating direct messages, and deleting, searching, liking and retweeting a tweet. 
+Use the X node to automate work in X and integrate X with other applications. n8n has built-in support for a wide range of X features, including creating direct messages and deleting, searching, liking, and retweeting a tweet. 
 
-On this page, you'll find a list of operations the Twitter node supports and links to more resources.
+On this page, you'll find a list of operations the X node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twitter credentials](/integrations/builtin/credentials/twitter/) for guidance on setting up authentication. 
-///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Twitter integrations](https://n8n.io/integrations/twitter/){:target="_blank" .external-link} list.
+Refer to [X credentials](/integrations/builtin/credentials/twitter/) for guidance on setting up authentication. 
 ///
 
-## Basic Operations
+## Operations
 
 * Direct Message
     * Create a direct message
@@ -27,3 +26,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Search tweets
     * Like a tweet
     * Retweet a tweet
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'twitter') ]]

@@ -1,10 +1,11 @@
 ---
-title: Privacy and security
-description: Privacy and security at n8n
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: n8n Privacy and security
+description: Learn about privacy and security at n8n. Explore how n8n handles and secures your data, with an overview of key policies and procedures.
 contentType: overview
 ---
 <!-- vale off -->
-# Privacy and security
+# Privacy and security at n8n
 
 n8n is committed to the privacy and security of your data. This section outlines how n8n handles and secures data. This isn't an exhaustive list of practices, but an overview of key policies and procedures.
 

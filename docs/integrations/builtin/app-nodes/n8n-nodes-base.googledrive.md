@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Drive
 description: Documentation for the Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: high
 ---
 
 # Google Drive
@@ -13,11 +15,8 @@ On this page, you'll find a list of operations the Google Drive node supports an
 /// note | Credentials
 Refer to [Google Drive credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Google Drive integrations](https://n8n.io/integrations/google-drive/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Drive
     * Create a drive
@@ -38,6 +37,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Delete a folder
     * Share a folder
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'google-drive') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

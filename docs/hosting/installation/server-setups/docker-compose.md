@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -195,7 +196,7 @@ The above example would result in: `https://n8n.example.com`
 n8n will only be reachable using `https` and not using `http`.
 
 /// warning | Secure your n8n instance
-Make sure that you [set up authentication](/hosting/user-management/) your n8n instance.
+Make sure that you [set up authentication](/hosting/user-management/) for your n8n instance.
 ///
 ## Next steps
 

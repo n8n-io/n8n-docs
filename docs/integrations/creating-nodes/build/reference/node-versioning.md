@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
@@ -31,7 +32,7 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
     name: 'NasaPics',
     icon: 'file:nasapics.svg',
     // List the available versions
-    version: [1,2,3]
+    version: [1,2,3],
     // More basic parameters here
     properties: [
         // Add a resource that's only displayed for version2

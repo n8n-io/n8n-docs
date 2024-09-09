@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Venafi TLS Protect Datacenter
 description: Documentation for the Venafi TLS Protect Datacenter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -14,9 +15,7 @@ On this page, you'll find a list of operations the Venafi TLS Protect Datacenter
 /// note | Credentials
 Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Venafi TLS Protect Datacenter integrations](https://n8n.io/integrations/venafi-tls-protect-datacenter/){:target="_blank" .external-link} list.
-///
+
 ## Operations
 
 * Certificate
@@ -29,9 +28,12 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Policy
 	* Get
 
-## Related resources
+## Templates and examples
 
-View [example workflows and related content](https://n8n.io/integrations/venafi-tls-protect-datacenter/){:target=_blank .external-link} on n8n's website.
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'venafi-tls-protect-datacenter') ]]
+
+## Related resources
 
 n8n also provides:
 

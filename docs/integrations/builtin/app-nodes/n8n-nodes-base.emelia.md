@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Emelia
 description: Documentation for the Emelia node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,11 +14,8 @@ On this page, you'll find a list of operations the Emelia node supports and link
 /// note | Credentials
 Refer to [Emelia credentials](/integrations/builtin/credentials/emelia/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Emelia integrations](https://n8n.io/integrations/emelia/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Campaign
     * Add Contact
@@ -30,5 +28,8 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Add
     * Get All
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'emelia') ]]
 

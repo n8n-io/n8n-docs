@@ -1,17 +1,15 @@
 ---
-title: In Memory Vector Store
-description: Documentation for the In Memory Vector Store node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: In-Memory Vector Store
+description: Documentation for the In-Memory Vector Store node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: medium
 ---
 
-# In Memory Vector Store
+# In-Memory Vector Store
 
 Use the In Memory Vector Store node to store and retrieve embeddings in n8n's in-app memory. 
 
 On this page, you'll find the node parameters for the In Memory Vector Store node, and links to more resources.
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [In Memory Vector Store integrations](https://n8n.io/integrations/in-memory-vector-store/){:target=_blank .external-link} page.
-///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
@@ -41,10 +39,13 @@ Parameters for **Insert Documents**:
 Parameters for **Retrieve Documents (For Agent/Chain)**:
 
 * Memory Key
-	
-## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/in-memory-vector-store/){:target=_blank .external-link} on n8n's website.
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'in-memory-vector-store') ]]
+
+## Related resources
 
 Refer to [LangChains's Memory Vector Store documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/memory){:target=_blank .external-link} for more information about the service.
 

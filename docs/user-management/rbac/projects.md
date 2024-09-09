@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 pageType: howto
 title: RBAC projects
 description: Understand how n8n uses project for RBAC. Learn how to create and manage projects.
@@ -50,6 +51,16 @@ To delete a project:
 1. Choose what to do with the workflows and credentials. You can select:
 	* **Transfer its workflows and credentials to another project**: n8n prompts you to choose a project to move the data to.
 	* **Delete its workflows and credentials**: n8n prompts you to confirm that you want to delete all the data in the project.
+
+## Move workflows and credentials between projects
+
+Workflow and credential owners can move a workflow or credential into a different project.
+
+1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
+1. Select the project you want to move to.
+1. Select **Next**.
+1. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.
+1. Select **Confirm move to new project**.
 
 ## Using external secrets in projects
 

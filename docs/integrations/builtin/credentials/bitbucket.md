@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Bitbucket credentials
 description: Documentation for Bitbucket credentials. Use these credentials to authenticate Bitbucket in n8n, a workflow automation platform.
 contentType: integration
@@ -6,7 +7,7 @@ contentType: integration
 
 # Bitbucket credentials
 
-You can use these credentials to authenticate the following nodes with Bitbucket.
+You can use these credentials to authenticate the following nodes:
 
 - [Bitbucket Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger/)
 

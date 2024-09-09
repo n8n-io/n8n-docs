@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: APITemplate.io
 description: Documentation for the APITemplate.io node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,20 +14,20 @@ On this page, you'll find a list of operations the APITemplate.io node supports 
 /// note | Credentials
 Refer to [APITemplate.io credentials](/integrations/builtin/credentials/apitemplateio/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [APITemplate.io integrations](https://n8n.io/integrations/apitemplateio/){:target="_blank" .external-link} list.
-///
-
 
 ## Operations
 
 * Account
-  * Get
+    * Get
 * Image
-  * Create
+    * Create
 * PDF
-  * Create
+    * Create
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'apitemplateio') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Ghost
 description: Documentation for the Ghost node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
@@ -13,28 +14,29 @@ On this page, you'll find a list of operations the Ghost node supports and links
 /// note | Credentials
 Refer to [Ghost credentials](/integrations/builtin/credentials/ghost/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Ghost integrations](https://n8n.io/integrations/ghost/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 ### Admin API
 
-**Post**
-- Create a post
-- Delete a post
-- Get a post
-- Get all posts
-- Update a post
+* **Post**
+    * Create a post
+    * Delete a post
+    * Get a post
+    * Get all posts
+    * Update a post
 
 
 ### Content API
 
-**Post**
-- Get a post
-- Get all posts
+* **Post**
+    * Get a post
+    * Get all posts
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'ghost') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

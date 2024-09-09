@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: FileMaker
 description: Documentation for the FileMaker node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # FileMaker
@@ -13,11 +15,8 @@ On this page, you'll find a list of operations the FileMaker node supports and l
 /// note | Credentials
 Refer to [FileMaker credentials](/integrations/builtin/credentials/filemaker/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [FileMaker integrations](https://n8n.io/integrations/filemaker/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 - Find Records
 - Get Records
@@ -28,3 +27,7 @@ For usage examples and templates to help you get started, take a look at n8n's [
 - Duplicate Record
 - Delete Record
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'filemaker') ]]

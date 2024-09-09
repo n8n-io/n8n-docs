@@ -1,62 +1,113 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Schedule trigger
 description: Documentation for the Schedule trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
+priority: critical
 ---
 
 # Schedule trigger
 
-Use the Schedule trigger node run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
+Use the Schedule trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Schedule Trigger integrations](https://n8n.io/integrations/schedule-trigger/){:target=_blank .external-link} page.
-///
-
-/// note | You must activate the workflow"
+/// note | You must activate the workflow
 If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 
 ///
 
 --8<-- "_snippets/integrations/builtin/core-nodes/schedule/timezone-settings.md"
 
+## Node parameters
 
-## Schedule your workflow
+Add **Trigger Rules** to determine when the trigger should run.
 
-Select an interval in **Trigger Interval**. n8n displays options for the selected interval.
+Use the **Trigger Interval** to select the time interval unit of measure to schedule the trigger for. All other parameters depend on the interval you select. Choose from:
 
-### Example
+- [Seconds trigger interval](#seconds-trigger-interval)
+- [Minutes trigger interval](#minutes-trigger-interval)
+- [Hours trigger interval](#hours-trigger-interval)
+- [Days trigger interval](#days-trigger-interval)
+- [Weeks trigger interval](#weeks-trigger-interval)
+- [Months trigger interval](#months-trigger-interval)
+- [Custom (Cron) interval](#custom-cron-interval)
 
-In this example, schedule a workflow to run once a quarter, at the end of the quarter, at 09:00.
+You can add multiple **Trigger Rules** to run the node on different schedules.
 
-1. In **Trigger Interval**, select **Months**.
-2. Change **Months Between Triggers** to `3`.
-3. To run the workflow at the end of the month, change **Trigger at Day of Month** to `28`.
-4. Change **Trigger at Hour** to **9am**. Leave **Trigger at Minute** as its default, `0`.
+Refer to the sections below for more detail on configuring each **Trigger Interval**. Refer to [Templates and examples](#templates-and-examples) for further examples.
 
-Note that the Schedule trigger uses the workflow timezone if available. Otherwise it uses the n8n instance timezone. 
+### Seconds trigger interval
 
-## Generate a custom Cron expression
+* **Seconds Between Triggers**: Enter the number of seconds between each workflow trigger. For example, if you enter `30` here, the trigger will run every 30 seconds.
 
-If you need a custom time setting, select **Trigger Interval** > **Custom (Cron)**.
+### Minutes trigger interval
+
+* **Minutes Between Triggers**: Enter the number of minutes between each workflow trigger. For example, if you enter `5` here, the trigger will run every 5 minutes.
+
+### Hours trigger interval
+
+* **Hours Between Triggers**: Enter the number of hours between each workflow trigger.
+* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+
+For example, if you enter `6` **Hours Between Triggers** and `30` **Trigger at Minute**, the node will run every six hours at 30 minutes past the hour.
+
+### Days trigger interval
+
+* **Days Between Triggers**: Enter the number of days between each workflow trigger.
+* **Trigger at Hour**: Select the hour of the day to trigger the node.
+* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+
+For example, if you enter `2` **Days Between Triggers**, **9am** for **Trigger at Hour**, and `15` **Trigger at Minute**, the node will run every two days at 9:15am.
+
+### Weeks trigger interval
+
+* **Weeks Between Triggers**: Enter the number of weeks between each workflow trigger.
+* **Trigger on Weekdays**: Select the day(s) of the week you want to trigger the node.
+* **Trigger at Hour**: Select the hour of the day to trigger the node.
+* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+
+For example, if you enter `2` **Weeks Between Triggers**, **Monday** for **Trigger on Weekdays**, **3pm** for **Trigger at Hour**, and `30` **Trigger at Minute**, the node will run every two weeks on Monday at 3:30 PM.
+
+### Months trigger interval
+
+* **Months Between Triggers**: Enter the number of months between each workflow trigger.
+* **Trigger at Day of Month**: Enter the day of the month the day should trigger at, from `1` to `31`. If a month doesn't have this day, the node won't trigger. For example, if you enter `30` here, the node won't trigger in February.
+* **Trigger at Hour**: Select the hour of the day to trigger the node.
+* **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
+
+For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day of Month**, **9am** for **Trigger at Hour**, and `0` **Trigger at Minute**, the node will run each quarter on the 28th day of the month at 9:00 AM.
+
+### Custom (Cron) interval
+
+Enter a custom cron **Expression** to set the schedule for the trigger.
 
 To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
 
-### Examples
+#### Examples
 
-If you want to trigger your workflow every day at 04:08:30, enter the following in the **Cron Expression** field.
-```
-30 8 4 * * *
-```
+|Type|Cron Expression|Description|
+|---|---|---|
+|Every X Seconds|`*/10 * * * * *`|Every 10 seconds.|
+|Every X Minutes|`*/5 * * * *`|Every 5 minutes.|
+|Hourly|`0 * * * *`|Every hour on the hour.|
+|Daily|`0 6 * * *`|At 6:00 AM every day.|
+|Weekly|`0 12 * * 1`|At noon every Monday.|
+|Monthly|`0 0 1 * *`|At midnight on the 1st of every month.|
+|Every X Days|`0 0 */3 * *`|At midnight every 3rd day.|
+|Only Weekdays|`0 9 * * 1-5`|At 9:00 AM Monday through Friday.|
+|Custom Hourly Range|`0 9-17 * * *`|Every hour from 9:00 AM to 5:00 PM every day.|
+|Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
 
-If you want to trigger your workflow every day at 04:08, enter the following in the **Cron Expression** field.
-```
-8 4 * * *
-```
-
-### Why there are six asterisks in the Cron expression
+#### Why there are six asterisks in the Cron expression
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
 
-|  *  |  *  |  *  |  *  |  *  |  *  |
+|  (*)  |  *  |  *  |  *  |  *  |  *  |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-|second|minute|hour|day of month|month|day of week|
+|(second)|minute|hour|day of month|month|day of week(Sun-Sat)|
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'schedule-trigger') ]]
+
+
 

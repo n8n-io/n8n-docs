@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Todoist
 description: Documentation for the Todoist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: medium
 ---
 
 # Todoist
@@ -13,11 +15,8 @@ On this page, you'll find a list of operations the Todoist node supports and lin
 /// note | Credentials
 Refer to [Todoist credentials](/integrations/builtin/credentials/todoist/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [Todoist integrations](https://n8n.io/integrations/todoist/){:target="_blank" .external-link} list.
-///
 
-## Basic Operations
+## Operations
 
 * Task
     * Create a new task
@@ -27,5 +26,10 @@ For usage examples and templates to help you get started, take a look at n8n's [
     * Get all tasks
     * Reopen a task
     * Update a task
+
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'todoist') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

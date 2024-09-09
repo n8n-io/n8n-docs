@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Autopilot credentials
 description: Documentation for Autopilot credentials. Use these credentials to authenticate Autopilot in n8n, a workflow automation platform.
 contentType: integration
@@ -6,29 +7,30 @@ contentType: integration
 
 # Autopilot credentials
 
-You can use these credentials to authenticate the following nodes with Autopilot.
+You can use these credentials to authenticate the following nodes:
 
 - [Autopilot](/integrations/builtin/app-nodes/n8n-nodes-base.autopilot/)
 - [Autopilot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger/)
 
+/// warning | Autopilot branding change
+Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
+///
+
 ## Prerequisites
 
-Create an [Autopilot](https://app.autopilothq.com) account.
+Create an [Autopilot](https://app.autopilothq.com){:target=_blank .external-link} account.
 
-## Using API Key
+## Supported authentication methods
 
-1. Open your Autopilot [dashboard](https://app.autopilothq.com).
-2. Click on the gears icon on the left sidebar to open the ***Settings*** menu.
-3. Click on ***Autopilot API***.
-4. Click on the ***Generate*** button to create the API key.
-5. Copy the displayed API key.
-6. Enter a name for your credentials in the ***Credentials Name*** field in the 'Autopilot API' credentials in n8n.
-7. Paste the API key in the ***API Key*** field in the 'Autopilot API' credentials in n8n.
-8. Click on the ***Create*** button to create the credentials.
+- API key
 
-The following video demonstrates the steps mentioned above.
+## Related resources
 
-<div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/zy8uVHpwVHM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+Refer to [Autopilot's API documentation](https://autopilot.docs.apiary.io/#){:target=_blank .external-link} for more information about the service.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- An **API Key**: Generate an API key in **Settings > Autopilot API**. Refer to [Autopilot API authentication](https://autopilot.docs.apiary.io/#reference/authentication){:target=_blank .external-link} for more information.
 

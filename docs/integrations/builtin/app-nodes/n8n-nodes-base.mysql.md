@@ -1,7 +1,9 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MySQL
 description: Documentation for the MySQL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
+priority: high
 ---
 
 # MySQL
@@ -13,9 +15,6 @@ On this page, you'll find a list of operations the MySQL node supports and links
 /// note | Credentials
 Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
 ///
-/// note | Examples and templates
-For usage examples and templates to help you get started, take a look at n8n's [MySQL integrations](https://n8n.io/integrations/mysql/){:target="_blank" .external-link} list.
-///
 
 ## Operations
 
@@ -26,9 +25,16 @@ For usage examples and templates to help you get started, take a look at n8n's [
 * Select
 * Update
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'mysql') ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/mysql/){:target=_blank .external-link} on n8n's website.
+Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html){:target=_blank .external-link} for more information about the service.
+
+Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html){:target=_blank .external-link} for more information on writing SQL queries.
 
 ## Use query parameters
 

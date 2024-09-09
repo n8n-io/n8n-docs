@@ -1,6 +1,8 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pinecone Vector Store
 description: Documentation for the Pinecone node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+priority: medium
 ---
 
 # Pinecone Vector Store
@@ -11,10 +13,6 @@ On this page, you'll find the node parameters for the Pinecone node, and links t
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/pinecone/).
-///
-
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Pinecone Vector Store integrations](https://n8n.io/integrations/pinecone-vector-store/){:target=_blank .external-link} page.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -51,9 +49,14 @@ Another segregation option for how to store your data within the index.
 
 Available in **Insert Documents** mode. Deletes all data from the namespace before inserting the new data.
 
+## Templates and examples
+
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'pinecone-vector-store') ]]
+
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/pinecone-insert/){:target=_blank .external-link} on n8n's website.
 
 Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/pinecone){:target=_blank .external-link} for more information about the service.
 

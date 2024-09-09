@@ -1,11 +1,13 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Qualys credentials
 description: Documentation for the Qualys credentials. Use these credentials to authenticate Qualys in n8n, a workflow automation platform.
+contentType: integration
 ---
 
 # Qualys credentials
 
-You can use these credentials to authenticate when using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to make a [Custom API call](/integrations/custom-operations/).
+--8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
 ## Prerequisites
 

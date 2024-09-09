@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -21,4 +22,4 @@ You can test your knowledge by taking a **quiz**, which consists of questions ab
 ## What's next?
 
 - Create new workflows for your work or personal use and share them with us. Don't have any ideas? Find inspiration on the [workflows page](https://n8n.io/workflows){:target="_blank" .external-link} and on our [blog](https://n8n.io/blog/){:target="_blank" .external-link}.
-- Dive deeper into n8n's features by reading the [docs](/){:target="_blank" .external}.
+- Dive deeper into n8n's features by reading the [docs](/).

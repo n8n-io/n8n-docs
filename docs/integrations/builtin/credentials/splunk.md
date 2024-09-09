@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Splunk credentials
 description: Documentation for Splunk credentials. Use these credentials to authenticate Splunk in n8n, a workflow automation platform.
 contentType: integration
@@ -14,6 +15,10 @@ You can use these credentials to authenticate the following nodes:
 
 - [Download and install](https://www.splunk.com/en_us/download/splunk-enterprise.html){:target=_blank .external-link} Splunk Enterprise.
 - [Enable token authentication](https://docs.splunk.com/Documentation/Splunk/9.2.1/Security/EnableTokenAuth){:target=_blank .external-link} in **Settings > Tokens**.
+
+/// note | Free trial Splunk Cloud Platform accounts can't access the REST API
+Free trial Splunk Cloud Platform accounts don't have access to the REST API. Ensure you have the necessary permissions. Refer to [Access requirements and limitations for the Splunk Cloud Platform REST API](https://docs.splunk.com/Documentation/SplunkCloud/8.2.2203/RESTTUT/RESTandCloud){:target=_blank .external-link} for more details.
+///
 
 ## Supported authentication methods
 

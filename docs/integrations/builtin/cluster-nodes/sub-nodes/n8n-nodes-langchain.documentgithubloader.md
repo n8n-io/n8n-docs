@@ -1,4 +1,5 @@
 ---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GitHub Document Loader
 description: Documentation for the GitHub Document Loader node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 ---
@@ -13,10 +14,6 @@ On this page, you'll find the node parameters for the GitHub Document Loader nod
 You can find authentication information for this node [here](/integrations/builtin/credentials/github/). This node doesn't support OAuth for authentication.
 ///
 
-/// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [GitHub Document Loader](https://n8n.io/integrations/github-document-loader/){:target=_blank .external-link} page.
-///	
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
@@ -29,10 +26,12 @@ For usage examples and templates to help you get started, refer to n8n's [GitHub
 * Recursive: whether to include sub-folders and files.
 * Ignore Paths: set directories to ignore.
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(title, 'github-document-loader') ]]
 
 ## Related resources
-
-View [example workflows and related content](https://n8n.io/integrations/github-document-loader/){:target=_blank .external-link} on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 

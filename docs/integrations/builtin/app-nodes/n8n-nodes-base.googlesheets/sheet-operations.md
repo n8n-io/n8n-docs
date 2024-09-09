@@ -107,7 +107,7 @@ Enter these parameters:
 - **Right To Left**: Turn on this option to use RTL sheet instead of an LTR sheet. 
 - **Sheet ID**: Enter the ID of the sheet. 
 	- You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`
-- **Sheet Index**: Enter the index of the sheet within the spreadsheet.
+- **Sheet Index**: By default, the new sheet is the last sheet in the spreadsheet. To override this behavior, enter the index you want the new sheet to use. When you add a sheet at a given index, Google increments the indices for all following sheets. Refer to [Sheets | SheetProperties](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#SheetProperties){:target=_blank .external-link} documentation for more information.
 - **Tab Color**: Enter the color as hex code or use the color picker to set the color of the tab in the UI. 
 
 Refer to the [Method: spreadsheets.batchUpdate | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate){:target=_blank .external-link} API documentation for more information.

@@ -8,7 +8,7 @@ priority: critical
 
 # Google Sheets Sheet Within Document operations
 
-Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) for more information on the Telegram node itself.
+Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) for more information on the Google Sheets node itself.
 
 ## Append or Update Row
 

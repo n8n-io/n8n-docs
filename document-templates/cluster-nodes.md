@@ -20,7 +20,14 @@ You can find authentication information for this node [here](/integrations/built
 ## Node parameters
 
 * _Bullet list_
-* _Of available operations_.
+* _Of available parameters_.
+
+<!-- If parameters vary by operation, include a separate ### heading for each operation, with title "_Operation Name_ parameters"-->
+<!-- You can also choose to do each parameter as its own ### heading here for clarity and ease of use. -->
+
+## Node options
+
+<!-- Repeat whatever treatment you used for the parameters here. -->
 
 ## Templates and examples
 

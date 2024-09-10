@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: ClickUp
-description: Documentation for the ClickUp node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: ClickUp node documentation
+description: Learn how to use the ClickUp node in n8n. Follow technical documentation to integrate ClickUp node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# ClickUp
+# ClickUp node
 
 Use the ClickUp node to automate work in ClickUp, and integrate ClickUp with other applications. n8n has built-in support for a wide range of ClickUp features, including creating, getting, deleting, and updating folders, checklists, tags, comments, and goals.
 

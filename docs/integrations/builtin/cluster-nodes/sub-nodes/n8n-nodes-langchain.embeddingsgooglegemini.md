@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings Google Gemini
-description: Documentation for the Embeddings Google Gemini node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Embeddings Google Gemini node documentation
+description: Learn how to use the Embeddings Google Gemini node in n8n. Follow technical documentation to integrate Embeddings Google Gemini node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Embeddings Google Gemini
+# Embeddings Google Gemini node
 
 Use the Embeddings Google Gemini node to generate embeddings for a given text.
 
@@ -19,7 +20,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}.
+* **Model**: Select the model to use to generate the embedding.
+
+Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}.
 
 ## Templates and examples
 

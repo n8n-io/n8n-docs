@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AWS Comprehend
-description: Documentation for the AWS Comprehend node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: AWS Comprehend node documentation
+description: Learn how to use the AWS Comprehend node in n8n. Follow technical documentation to integrate AWS Comprehend node into your workflows.
 contentType: integration
 ---
 
-# AWS Comprehend
+# AWS Comprehend node
 
 Use the AWS Comprehend node to automate work in AWS Comprehend, and integrate AWS Comprehend with other applications. n8n has built-in support for a wide range of AWS Comprehend features, including identifying and analyzing texts.
 

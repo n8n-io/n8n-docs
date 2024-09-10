@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft To Do
-description: Documentation for the Microsoft To Do node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Microsoft To Do node documentation
+description: Learn how to use the Microsoft To Do node in n8n. Follow technical documentation to integrate Microsoft To Do node into your workflows.
 contentType: integration
 ---
 
-# Microsoft To Do
+# Microsoft To Do node
 
 Use the Microsoft To Do node to automate work in Microsoft To Do, and integrate Microsoft To Do with other applications. n8n has built-in support for a wide range of Microsoft To Do features, including creating, updating, deleting, and getting linked resources, lists, and tasks. 
 

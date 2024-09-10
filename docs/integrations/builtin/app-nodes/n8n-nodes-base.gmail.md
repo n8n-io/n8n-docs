@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gmail
-description: Documentation for the Gmail node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Gmail node documentation
+description: Learn how to use the Gmail node in n8n. Follow technical documentation to integrate Gmail node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Gmail
+# Gmail node
 
 Use the Gmail node to automate work in Gmail, and integrate Gmail with other applications. n8n has built-in support for a wide range of Gmail features, including creating, updating, deleting, and getting drafts, messages, labels, thread.  
 

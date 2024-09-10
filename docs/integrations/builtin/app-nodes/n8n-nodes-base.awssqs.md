@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: AWS SQS
-description: Documentation for the AWS SQS node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: AWS SQS node documentation
+description: Learn how to use the AWS SQS node in n8n. Follow technical documentation to integrate AWS SQS node into your workflows.
 contentType: integration
 ---
 
-# AWS SQS
+# AWS SQS node
 
 Use the AWS SQS node to automate work in AWS SNS, and integrate AWS SQS with other applications. n8n has built-in support for a wide range of AWS SQS features, including sending messages.
 

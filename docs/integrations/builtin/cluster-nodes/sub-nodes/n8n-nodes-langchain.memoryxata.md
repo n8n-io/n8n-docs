@@ -1,10 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Xata
-description: Documentation for the Xata node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Xata node documentation
+description: Learn how to use the Xata node in n8n. Follow technical documentation to integrate Xata node into your workflows.
+contentType: integration
 ---
 
-# Xata
+# Xata node
 
 Use the Xata node to use Xata as a memory server.
 
@@ -18,8 +19,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
--   **Session ID**: the ID to use to store the memory in the workflow data.
--   **Context Window Length**: the number of previous interactions to consider for context.
+-   **Session ID**: Enter the ID to use to store the memory in the workflow data.
+-   **Context Window Length**: Enter the number of previous interactions to consider for context.
 
 ## Templates and examples
 

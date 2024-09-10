@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zammad
-description: Documentation for the Zammad node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Zammad node documentation
+description: Learn how to use the Zammad node in n8n. Follow technical documentation to integrate Zammad node into your workflows.
 contentType: integration
 ---
 
-# Zammad
+# Zammad node
 
 Use the Zammad node to automate work in Zammad, and integrate Zammad with other applications. n8n has built-in support for a wide range of Zammad features, including creating, retrieving, and deleting groups and organizations.
 

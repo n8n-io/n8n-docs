@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pushcut
-description: Documentation for the Pushcut node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Pushcut node documentation
+description: Learn how to use the Pushcut node in n8n. Follow technical documentation to integrate Pushcut node into your workflows.
 contentType: integration
 ---
 
-# Pushcut
+# Pushcut node
 
 Use the Pushcut node to automate work in Pushcut, and integrate Pushcut with other applications. n8n supports sending notifications with Pushcut.
 

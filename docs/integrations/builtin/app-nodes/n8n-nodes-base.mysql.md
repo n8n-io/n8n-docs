@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MySQL
-description: Documentation for the MySQL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: MySQL node documentation
+description: Learn how to use the MySQL node in n8n. Follow technical documentation to integrate MySQL node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# MySQL
+# MySQL node
 
 Use the MySQL node to automate work in MySQL, and integrate MySQL with other applications. n8n has built-in support for a wide range of MySQL features, including executing an SQL query, as well as inserting, and updating rows in a database.
 

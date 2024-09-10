@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: FileMaker
-description: Documentation for the FileMaker node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: FileMaker node documentation
+description: Learn how to use the FileMaker node in n8n. Follow technical documentation to integrate FileMaker node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# FileMaker
+# FileMaker node
 
 Use the FileMaker node to automate work in FileMaker, and integrate FileMaker with other applications. n8n has built-in support for a wide range of FileMaker features, including creating, finding, getting, editing, and duplicating files.
 

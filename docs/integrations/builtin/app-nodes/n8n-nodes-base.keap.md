@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Keap
-description: Documentation for the Keap node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Keap node documentation
+description: Learn how to use the Keap node in n8n. Follow technical documentation to integrate Keap node into your workflows.
 contentType: integration
 ---
 
-# Keap
+# Keap node
 
 Use the Keap node to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
 

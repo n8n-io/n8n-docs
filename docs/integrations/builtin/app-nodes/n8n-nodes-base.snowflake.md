@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Snowflake
-description: Documentation for the Snowflake node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Snowflake node documentation
+description: Learn how to use the Snowflake node in n8n. Follow technical documentation to integrate Snowflake node into your workflows.
 contentType: integration
 ---
 
-# Snowflake
+# Snowflake node
 
 Use the Snowflake node to automate work in Snowflake, and integrate Snowflake with other applications. n8n has built-in support for a wide range of Snowflake features, including executing SQL queries, and inserting rows in a database. 
 

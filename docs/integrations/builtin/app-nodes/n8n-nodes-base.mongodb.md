@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MongoDB
-description: Documentation for the MongoDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: MongoDB node documentation
+description: Learn how to use the MongoDB node in n8n. Follow technical documentation to integrate MongoDB node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# MongoDB
+# MongoDB node
 
 Use the MongoDB node to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
 

@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: ConvertKit
-description: Documentation for the ConvertKit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: ConvertKit node documentation
+description: Learn how to use the ConvertKit node in n8n. Follow technical documentation to integrate ConvertKit node into your workflows.
 contentType: integration
 ---
 
-# ConvertKit
+# ConvertKit node
 
 Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit with other applications. n8n has built-in support for a wide range of ConvertKit features, including creating and deleting custom fields, getting tags, and adding subscribers.
 

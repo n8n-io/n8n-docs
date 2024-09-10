@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Anthropic Chat Model
-description: Documentation for the Anthropic Chat Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Anthropic Chat Model node documentation
+description: Learn how to use the Anthropic Chat Model node in n8n. Follow technical documentation to integrate Anthropic Chat Model node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Anthropic Chat Model
+# Anthropic Chat Model node
 
 Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational agents.
 
@@ -19,17 +20,18 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* **Model**: the model that generates the completion. Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}. 
-	Available models:
-	* Claude
-	* Claude Instant
+* **Model**: Select the model that generates the completion. Choose from:
+	* **Claude**
+	* **Claude Instant**
+
+Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}.
 
 ## Node options
 
-* **Maximum Number of Tokens**: the completion length.
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: the number of token choices the model uses to generate the next token.
-* **Top P**: use a lower value to ignore less probable options. 
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: Enter the number of token choices the model uses to generate the next token.
+* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 
 ## Templates and examples
 

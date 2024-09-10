@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Demio
-description: Documentation for the Demio node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Demio node documentation
+description: Learn how to use the Demio node in n8n. Follow technical documentation to integrate Demio node into your workflows.
 contentType: integration
 ---
 
-# Demio
+# Demio node
 
 Use the Demio node to automate work in Demio, and integrate Demio with other applications. n8n has built-in support for a wide range of Demio features, including getting, and registering events and reports.
 

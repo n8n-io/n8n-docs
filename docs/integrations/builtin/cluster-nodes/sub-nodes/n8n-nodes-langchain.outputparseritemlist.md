@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Item List Output Parser
-description: Documentation for the Item List Output Parser node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Item List Output Parser node documentation
+description: Learn how to use the Item List Output Parser node in n8n. Follow technical documentation to integrate Item List Output Parser node into your workflows.
+contentType: integration
 priority: high
 ---
 
-# Item List Output Parser
+# Item List Output Parser node
 
 Use the Item List Output Parser node to return a list of items with a specific length and separator.
 
@@ -13,8 +14,8 @@ Use the Item List Output Parser node to return a list of items with a specific l
 
 ## Node options
 
-* **Number of Items**: the maximum items to return. Set to `-1` for unlimited items.
-* **Separator**: the separator used to split the results into separate items. Defaults to a new line.
+* **Number of Items**: Enter the maximum items to return. Set to `-1` for unlimited items.
+* **Separator**: Select the separator used to split the results into separate items. Defaults to a new line.
 
 ## Templates and examples
 

@@ -17,7 +17,7 @@ Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-lan
 You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
 ///
 
-## Parameters
+## Node parameters
 
 Configure the OpenAI Functions Agent using the following parameters.
 
@@ -29,7 +29,7 @@ Configure the OpenAI Functions Agent using the following parameters.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/output-format.md"
 
-## Options
+## Node options
 
 Refine the OpenAI Functions Agent node's behavior using these options:
 

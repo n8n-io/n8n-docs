@@ -25,7 +25,7 @@ This agent supports the following chat models:
 * [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
 * [Azure OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai/)
 
-## Parameters
+## Node parameters
 
 Configure the Tools Agent using the following parameters.
 
@@ -37,7 +37,7 @@ Configure the Tools Agent using the following parameters.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/output-format.md"
 
-## Options
+## Node options
 
 Refine the Tools Agent node's behavior using these options:
 

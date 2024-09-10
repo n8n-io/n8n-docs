@@ -15,7 +15,7 @@ Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-lan
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
-## Parameters
+## Node parameters
 
 Configure the Conversational Agent using the following parameters.
 
@@ -34,7 +34,7 @@ This parameter controls whether you want the node to require a specific output f
 * [Item List Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist/)
 * [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
-## Options
+## Node options
 
 Refine the Conversational Agent node's behavior using these options:
 

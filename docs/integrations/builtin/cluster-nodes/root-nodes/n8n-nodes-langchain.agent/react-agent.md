@@ -17,7 +17,7 @@ Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-lan
 The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts or simulate an ongoing conversation.
 ///
 
-## Parameters
+## Node parameters
 
 Configure the ReAct Agent using the following parameters.
 
@@ -29,7 +29,7 @@ Configure the ReAct Agent using the following parameters.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/output-format.md"
 
-## Options
+## Node options
 
 Use the options to create a message to send to the agent at the start of the conversation. The message type depends on the model you're using:
 

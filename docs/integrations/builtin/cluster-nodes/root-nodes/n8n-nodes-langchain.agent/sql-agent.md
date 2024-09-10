@@ -11,7 +11,7 @@ The SQL Agent uses a SQL database as a data source. It can understand natural la
 
 Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/) for more information on the AI Agent node itself and troubleshooting common errors.
 
-## Parameters
+## Node parameters
 
 Configure the SQL Agent using the following parameters.
 
@@ -35,7 +35,7 @@ If you are using [Postgres](/integrations/builtin/credentials/postgres/) or [MyS
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/prompt.md"
 
-## Options
+## Node options
 
 Refine the SQL Agent node's behavior using these options:
 

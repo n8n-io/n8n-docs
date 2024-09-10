@@ -11,7 +11,7 @@ The Plan and Execute Agent is like the [ReAct agent](/integrations/builtin/clust
 
 Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/) for more information on the AI Agent node itself and troubleshooting common errors.
 
-## Parameters
+## Node parameters
 
 Configure the Plan and Execute Agent using the following parameters.
 
@@ -23,7 +23,7 @@ Configure the Plan and Execute Agent using the following parameters.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/output-format.md"
 
-## Options
+## Node options
 
 Refine the Plan and Execute Agent node's behavior using these options:
 

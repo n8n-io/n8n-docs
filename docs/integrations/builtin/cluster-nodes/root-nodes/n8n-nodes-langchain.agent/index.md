@@ -76,6 +76,6 @@ You might see this in one of two scenarios:
 
 This error displays when n8n runs into an issue with the [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/) sub-node.
 
-It most often occurs when your worflow or the workflow template you copied uses an older version of the Window Buffer Memory node.
+It most often occurs when your workflow or the workflow template you copied uses an older version of the Window Buffer Memory node.
 
 Try removing the Window Buffer Memory node from your workflow and re-adding it, which will guarantee you're using the latest version of the node.

@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: marketstack
-description: Documentation for the marketstack node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: marketstack node documentation
+description: Learn how to use the marketstack node in n8n. Follow technical documentation to integrate marketstack node into your workflows.
 contentType: integration
 ---
 <!-- marketstack is not a typo. The brand name is all lowercase, so we match it -->
-# marketstack
+# marketstack node
 
 Use the marketstack node to automate work in marketstack, and integrate marketstack with other applications. n8n has built-in support for a wide range of marketstack features, including getting exchanges, end-of-day data, and tickers. 
 

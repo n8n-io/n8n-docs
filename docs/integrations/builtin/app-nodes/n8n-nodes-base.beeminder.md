@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Beeminder
-description: Documentation for the Beeminder node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Beeminder node documentation
+description: Learn how to use the Beeminder node in n8n. Follow technical documentation to integrate Beeminder node into your workflows.
 contentType: integration
 ---
 
-# Beeminder
+# Beeminder node
 
 Use the Beeminder node to automate work in Beeminder, and integrate Beeminder with other applications. n8n has built-in support for a wide range of Beeminder features, including creating, deleting, and updating data points.
 

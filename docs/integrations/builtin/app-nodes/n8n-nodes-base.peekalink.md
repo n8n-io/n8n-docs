@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Peekalink
-description: Documentation for the Peekalink node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Peekalink node documentation
+description: Learn how to use the Peekalink node in n8n. Follow technical documentation to integrate Peekalink node into your workflows.
 contentType: integration
 ---
 
-# Peekalink
+# Peekalink node
 
 Use the Peekalink node to automate work in Peekalink, and integrate Peekalink with other applications. n8n supports checking, and reviewing links with Peekalink.
 

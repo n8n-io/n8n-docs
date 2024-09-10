@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MultiQuery Retriever
-description: Documentation for the MultiQuery Retriever node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: MultiQuery Retriever node documentation
+description: Learn how to use the MultiQuery Retriever node in n8n. Follow technical documentation to integrate MultiQuery Retriever node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# MultiQuery Retriever
+# MultiQuery Retriever node
 
 The MultiQuery Retriever node automates the process of prompt tuning by using an LLM to generate multiple queries from different perspectives for a given user input query.
 
@@ -15,7 +16,7 @@ On this page, you'll find the node parameters for the MultiQuery Retriever node,
 
 ## Node options
 
-**Query Count**: how many different versions of the query to generate.
+* **Query Count**: Enter how many different versions of the query to generate.
 
 ## Templates and examples
 

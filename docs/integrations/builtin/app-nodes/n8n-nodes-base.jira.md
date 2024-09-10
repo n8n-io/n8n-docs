@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Jira Software
-description: Documentation for the Jira node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Jira Software node documentation
+description: Learn how to use the Jira Software node in n8n. Follow technical documentation to integrate Jira Software node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Jira Software
+# Jira Software node
 
-Use the Jira node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
+Use the Jira Software node to automate work in Jira, and integrate Jira with other applications. n8n has built-in support for a wide range of Jira features, including creating, updating, deleting, and getting issues, and users. 
 
-On this page, you'll find a list of operations the Jira node supports and links to more resources.
+On this page, you'll find a list of operations the Jira Software node supports and links to more resources.
 
 /// note | Credentials
 Refer to [Jira credentials](/integrations/builtin/credentials/jira/) for guidance on setting up authentication. 

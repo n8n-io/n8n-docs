@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Jenkins
-description: Documentation for the Jenkins node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Jenkins node documentation
+description: Learn how to use the Jenkins node in n8n. Follow technical documentation to integrate Jenkins node into your workflows.
 contentType: integration
 ---
 
-# Jenkins
+# Jenkins node
 
 Use the Jenkins node to automate work in Jenkins, and integrate Jenkins with other applications. n8n has built-in support for a wide range of Jenkins features, including listing builds, managing instances, and creating and copying jobs. 
 

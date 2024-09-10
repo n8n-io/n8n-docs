@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Salesforce
-description: Documentation for the Salesforce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Salesforce node documentation
+description: Learn how to use the Salesforce node in n8n. Follow technical documentation to integrate Salesforce node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Salesforce
+# Salesforce node
 
 Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachments, cases, and leads, as well as uploading documents. 
 

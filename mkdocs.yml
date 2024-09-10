@@ -890,8 +890,10 @@ nav:
         - integrations/builtin/credentials/crowddev.md
         - integrations/builtin/credentials/crowdstrike.md
         - integrations/builtin/credentials/customerio.md
+        - integrations/builtin/credentials/datadog.md
         - integrations/builtin/credentials/deepl.md
         - integrations/builtin/credentials/demio.md
+        - integrations/builtin/credentials/dfiriris.md
         - integrations/builtin/credentials/dhl.md
         - integrations/builtin/credentials/discord.md
         - integrations/builtin/credentials/discourse.md
@@ -899,6 +901,7 @@ nav:
         - integrations/builtin/credentials/drift.md
         - integrations/builtin/credentials/dropbox.md
         - integrations/builtin/credentials/dropcontact.md
+        - integrations/builtin/credentials/dynatrace.md
         - integrations/builtin/credentials/egoi.md
         - integrations/builtin/credentials/elasticsearch.md
         - integrations/builtin/credentials/elasticsecurity.md
@@ -911,6 +914,7 @@ nav:
         - integrations/builtin/credentials/facebookleadads.md
         - integrations/builtin/credentials/figma.md
         - integrations/builtin/credentials/filemaker.md
+        - integrations/builtin/credentials/filescan.md
         - integrations/builtin/credentials/flow.md
         - integrations/builtin/credentials/formiotrigger.md
         - integrations/builtin/credentials/formstacktrigger.md
@@ -978,6 +982,7 @@ nav:
         - integrations/builtin/credentials/mailerlite.md
         - integrations/builtin/credentials/mailgun.md
         - integrations/builtin/credentials/mailjet.md
+        - integrations/builtin/credentials/malcore.md
         - integrations/builtin/credentials/mandrill.md
         - integrations/builtin/credentials/marketstack.md
         - integrations/builtin/credentials/matrix.md

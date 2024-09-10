@@ -53,8 +53,6 @@ New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n
 
 ## Internal error: 400 Invalid value for 'content'
 
-This error displays when your prompt references a value that's empty, most often when you're 
-
 A full error message might look like this:
 
 ```

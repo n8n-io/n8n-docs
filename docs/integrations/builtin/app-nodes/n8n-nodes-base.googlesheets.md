@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Sheets
-description: Documentation for the Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google Sheets node documentation
+description: Learn how to use the Google Sheets node in n8n. Follow technical documentation to integrate Google Sheets node into your workflows.
 contentType: integration
 priority: critical
 ---
 
-# Google Sheets
+# Google Sheets node
 
 Use the Google Sheets node to automate work in Google Sheets, and integrate Google Sheets with other applications. n8n has built-in support for a wide range of Google Sheets features, including creating, updating, deleting, appending, removing and getting documents. 
 

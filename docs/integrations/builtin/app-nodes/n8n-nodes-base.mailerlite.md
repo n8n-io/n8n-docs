@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MailerLite
-description: Documentation for the MailerLite node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: MailerLite node documentation
+description: Learn how to use the MailerLite node in n8n. Follow technical documentation to integrate MailerLite node into your workflows.
 contentType: integration
 ---
 
-# MailerLite
+# MailerLite node
 
 Use the MailerLite node to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
 

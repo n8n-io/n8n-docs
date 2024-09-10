@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: PGVector Vector Store
-description: Documentation for the PGVector node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: PGVector Vector Store node documentation
+description: Learn how to use the PGVector Vector Store node in n8n. Follow technical documentation to integrate PGVector Vector Store node into your workflows.
 priority: medium
 ---
 
-# PGVector Vector Store
+# PGVector Vector Store node
 
 PGVector is an extension of Postgresql. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, and retrieve documents to provide them to a retriever connected to a chain.
 

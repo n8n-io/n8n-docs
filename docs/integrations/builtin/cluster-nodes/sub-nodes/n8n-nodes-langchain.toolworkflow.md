@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Custom n8n Workflow Tool documentation
+title: Custom n8n Workflow Tool node documentation
 description: Learn how to use the Custom n8n Workflow Tool node in n8n. Follow technical documentation to integrate Custom n8n Workflow Tool node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Custom n8n Workflow Tool
+# Custom n8n Workflow Tool node
 
 The Workflow Tool node is a tool that allows an agent to run another n8n workflow and fetch its output data. 
 

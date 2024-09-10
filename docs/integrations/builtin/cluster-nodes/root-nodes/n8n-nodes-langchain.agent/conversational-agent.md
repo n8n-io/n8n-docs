@@ -21,18 +21,11 @@ Configure the Conversational Agent using the following parameters.
 
 ### Prompt
 
-Select how you want the node to construct the prompt (also known as the user's query or input from the chat). Choose from:
-
-* **Take from previous node automatically**: If you select this option, the node expects an input from a previous node called `chatInput`.
-* **Define below**: If you select this option, enter the **Text** you want to use as the prompt. You can use expressions here for dynamic content.
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/prompt.md"
 
 ### Require Specific Output Format
 
-This parameter controls whether you want the node to require a specific output format. When turned on, n8n prompts you to connect one of these output parsers to the node:
-
-* [Auto-fixing Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing/)
-* [Item List Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist/)
-* [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/)
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/output-format.md"
 
 ## Node options
 

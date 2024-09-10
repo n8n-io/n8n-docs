@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Home Assistant
-description: Documentation for the Home Assistant node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Home Assistant node documentation
+description: Learn how to use the Home Assistant node in n8n. Follow technical documentation to integrate Home Assistant node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Home Assistant
+# Home Assistant node
 
 Use the Home Assistant node to automate work in Home Assistant, and integrate Home Assistant with other applications. n8n has built-in support for a wide range of Home Assistant features, including getting, creating, and checking camera proxies, configurations, logs, services, and templates. 
 

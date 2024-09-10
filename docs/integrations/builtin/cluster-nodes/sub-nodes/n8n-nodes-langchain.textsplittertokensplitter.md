@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Token Splitter
-description: Documentation for the Token Splitter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Token Splitter node documentation
+description: Learn how to use the Token Splitter node in n8n. Follow technical documentation to integrate Token Splitter node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Token Splitter
+# Token Splitter node
 
 The Token Splitter node splits a raw text string by first converting the text into BPE tokens, then splits these tokens into chunks and converts the tokens within a single chunk back into text.
 
@@ -15,8 +16,8 @@ On this page, you'll find the node parameters for the Token Splitter node, and l
 
 ## Node parameters
 
-* **Chunk Size**: number of characters in each chunk.
-* **Chunk Overlap**: how much overlap to have between chunks.
+* **Chunk Size**: Enter the number of characters in each chunk.
+* **Chunk Overlap**: Enter how much overlap to have between chunks.
 
 ## Templates and examples
 

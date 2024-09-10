@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pipedrive
-description: Documentation for the Pipedrive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Pipedrive node documentation
+description: Learn how to use the Pipedrive node in n8n. Follow technical documentation to integrate Pipedrive node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Pipedrive
+# Pipedrive node
 
 Use the Pipedrive node to automate work in Pipedrive, and integrate Pipedrive with other applications. n8n has built-in support for a wide range of Pipedrive features, including creating, updating, deleting, and getting activity, files, notes, organizations, and leads. 
 

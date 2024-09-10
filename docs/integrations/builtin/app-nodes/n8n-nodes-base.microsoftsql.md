@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft SQL
-description: Documentation for the Microsoft SQL node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Microsoft SQL node documentation
+description: Learn how to use the Microsoft SQL node in n8n. Follow technical documentation to integrate Microsoft SQL node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Microsoft SQL
+# Microsoft SQL node
 
 Use the Microsoft SQL node to automate work in Microsoft SQL, and integrate Microsoft SQL with other applications. n8n has built-in support for a wide range of Microsoft SQL features, including executing SQL queries, and inserting rows into the database. 
 

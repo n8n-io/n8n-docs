@@ -43,6 +43,8 @@ You can add as many categories as you like.
 
 * **System Prompt Template**: This option allows you to change the system prompt that's used for the classification. It uses the `{categories}` placeholder for the categories.
 
+* **Enable Auto-Fixing**: When enabled, the node automatically fixes model outputs to ensure they match the expected format. Do this by sending the schema parsing error to the LLM and asking it to fix it.
+
 
 ## Related resources
 

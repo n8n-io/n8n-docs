@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Twilio
-description: Documentation for the Twilio node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Twilio node documentation
+description: Learn how to use the Twilio node in n8n. Follow technical documentation to integrate Twilio node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Twilio
+# Twilio node
 
 Use the Twilio node to automate work in Twilio, and integrate Twilio with other applications. n8n supports sending MMS/SMS and WhatsApp messages with Twilio. 
 

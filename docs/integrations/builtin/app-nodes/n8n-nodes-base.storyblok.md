@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Storyblok
-description: Documentation for the Storyblok node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Storyblok node documentation
+description: Learn how to use the Storyblok node in n8n. Follow technical documentation to integrate Storyblok node into your workflows.
 contentType: integration
 ---
 
-# Storyblok
+# Storyblok node
 
 Use the Storyblok node to automate work in Storyblok, and integrate Storyblok with other applications. n8n has built-in support for a wide range of Storyblok features, including getting, deleting, and publishing stories. 
 

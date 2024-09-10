@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WooCommerce
-description: Documentation for the WooCommerce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: WooCommerce node documentation
+description: Learn how to use the WooCommerce node in n8n. Follow technical documentation to integrate WooCommerce node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# WooCommerce
+# WooCommerce node
 
 Use the WooCommerce node to automate work in WooCommerce, and integrate WooCommerce with other applications. n8n has built-in support for a wide range of WooCommerce features, including creating and deleting customers, orders, and products. 
 

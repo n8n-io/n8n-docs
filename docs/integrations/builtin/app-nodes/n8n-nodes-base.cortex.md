@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Cortex
-description: Documentation for the Cortex node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Cortex node documentation
+description: Learn how to use the Cortex node in n8n. Follow technical documentation to integrate Cortex node into your workflows.
 contentType: integration
 ---
 
-# Cortex
+# Cortex node
 
 Use the Cortex node to automate work in Cortex, and integrate Cortex with other applications. n8n has built-in support for a wide range of Cortex features, including executing analyzers, and responders, as well as getting job details.
 

@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: LangChain Code
-description: Documentation for the LangChain Code node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: LangChain Code node documentation
+description: Learn how to use the LangChain Code node in n8n. Follow technical documentation to integrate LangChain Code node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# LangChain Code
+# LangChain Code node
 
 Use the LangChain Code node to import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it. By configuring the LangChain Code node connectors you can use it as a normal node, root node or sub-node.
 

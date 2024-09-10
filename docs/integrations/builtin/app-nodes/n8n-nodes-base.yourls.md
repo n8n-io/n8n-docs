@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Yourls
-description: Documentation for the Yourls node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Yourls node documentation
+description: Learn how to use the Yourls node in n8n. Follow technical documentation to integrate Yourls node into your workflows.
 contentType: integration
 ---
 
-# Yourls
+# Yourls node
 
 Use the Yourls node to automate work in Yourls, and integrate Yourls with other applications. n8n has built-in support for a wide range of Yourls features, including expanding and shortening URLs. 
 

@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: YouTube
-description: Documentation for the YouTube node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: YouTube node documentation
+description: Learn how to use the YouTube node in n8n. Follow technical documentation to integrate YouTube node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# YouTube
+# YouTube node
 
 Use the YouTube node to automate work in YouTube, and integrate YouTube with other applications. n8n has built-in support for a wide range of YouTube features, including retrieving and updating channels, as well as creating and deleting playlists. 
 

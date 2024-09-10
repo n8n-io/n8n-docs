@@ -1,9 +1,11 @@
 ---
-title: Vector Store Tool
-description: Documentation for the Vector Store Tool node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Vector Store Tool node documentation
+description: Learn how to use the Vector Store Tool node in n8n. Follow technical documentation to integrate Vector Store Tool node into your workflows.
+contentType: integration
 ---
 
-# Vector Store Tool
+# Vector Store Tool node
 
 The Vector Store node is a tool that allows an agent to access content from a vector store. 
 
@@ -19,11 +21,11 @@ For usage examples and templates to help you get started, refer to n8n's [Vector
 
 ### Name
 
-The name of the tool for the agent to use.
+Enter the name of the tool for the agent to use.
 
 ### Description
 
-A description of what the vector store contains.
+Enter a description of what the vector store contains.
 
 ## Related resources
 

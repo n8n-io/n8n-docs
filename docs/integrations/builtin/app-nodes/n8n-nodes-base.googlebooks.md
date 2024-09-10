@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Books
-description: Documentation for the Google Books node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google Books node documentation
+description: Learn how to use the Google Books node in n8n. Follow technical documentation to integrate Google Books node into your workflows.
 contentType: integration
 ---
 
-# Google Books
+# Google Books node
 
 Use the Google Books node to automate work in Google Books, and integrate Google Books with other applications. n8n has built-in support for a wide range of Google Books features, including retrieving a specific bookshelf resource for the specified user, adding volume to a bookshelf, and getting volume.
 

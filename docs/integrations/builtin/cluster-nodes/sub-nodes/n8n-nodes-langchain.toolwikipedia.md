@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Wikipedia
-description: Documentation for the Wikipedia node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Wikipedia node documentation
+description: Learn how to use the Wikipedia node in n8n. Follow technical documentation to integrate Wikipedia node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Wikipedia
+# Wikipedia node
 
 The Wikipedia node is a tool that allows an agent to search and return information from Wikipedia.
 

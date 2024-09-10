@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Agile CRM
-description: Documentation for the Agile CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Agile CRM node documentation
+description: Learn how to use the Agile CRM node in n8n. Follow technical documentation to integrate Agile CRM node into your workflows.
 contentType: integration
 ---
 
-# Agile CRM
+# Agile CRM node
 
 Use the Agile CRM node to automate work in Agile CRM, and integrate Agile CRM with other applications. n8n has built-in support for a wide range of Agile CRM features, including creating, getting, updating and deleting companies, contracts, and deals.
 

@@ -1,6 +1,6 @@
 ### Operation Mode
 
-Vector Store nodes in n8n have three modes: **Get Many**, **Insert Documents** and **Retrieve Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
+Vector Store nodes in n8n have three modes: **Get Many**, **Insert Documents**, and **Retrieve Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
 
 <!-- vale off -->
 #### Get Many
@@ -9,7 +9,7 @@ In this mode, you can retrieve multiple documents from your vector database by p
 <!-- vale on -->
 #### Insert Documents
 
-Use insert documents mode to insert new documents into your vector database.
+Use Insert Documents mode to insert new documents into your vector database.
 
 #### Retrieve Documents (For Agent/Chain)
 

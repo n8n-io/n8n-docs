@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google BigQuery
-description: Documentation for the Google BigQuery node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google BigQuery node documentation
+description: Learn how to use the Google BigQuery node in n8n. Follow technical documentation to integrate Google BigQuery node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Google BigQuery
+# Google BigQuery node
 
 Use the Google BigQuery node to automate work in Google BigQuery, and integrate Google BigQuery with other applications. n8n has built-in support for a wide range of Google BigQuery features, including creating, and retrieving records.
 

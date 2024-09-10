@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Cloud Firestore
-description: Documentation for the Google Cloud Firestore node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google Cloud Firestore node documentation
+description: Learn how to use the Google Cloud Firestore node in n8n. Follow technical documentation to integrate Google Cloud Firestore node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Google Cloud Firestore
+# Google Cloud Firestore node
 
 Use the Google Cloud Firestore node to automate work in Google Cloud Firestore, and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, including creating, deleting, and getting documents. 
 

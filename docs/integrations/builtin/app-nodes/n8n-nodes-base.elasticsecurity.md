@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Elastic Security
-description: Documentation for the Elastic Security node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Elastic Security node documentation
+description: Learn how to use the Elastic Security node in n8n. Follow technical documentation to integrate Elastic Security node into your workflows.
 contentType: integration
 ---
 
-# Elastic Security
+# Elastic Security node
 
 Use the Elastic Security node to automate work in Elastic Security, and integrate Elastic Security with other applications. n8n's has built-in support for a wide range of Elastic Security features, including creating, updating, deleting, retrieving, and getting cases.
 

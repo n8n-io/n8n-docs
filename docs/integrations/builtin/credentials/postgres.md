@@ -13,6 +13,7 @@ You can use these credentials to authenticate the following nodes:
 - [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/)
 - [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
 - [Postgres Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat/) 
+- [PGVector Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector/) 
 
 /// note | Agent node users
 The Agent node doesn't support SSH tunnels.

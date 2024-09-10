@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: What is an agent in AI?
+title: What's an agent in AI?
 description: Understand agents in the context of AI. Learn how n8n provides agents.
 contentType: explanation
 ---
 
-# What is an agent in AI?
+# What's an agent in AI?
 
 One way to think of an agent is as a [chain](/advanced-ai/examples/understand-chains/) that knows how to make decisions. Where a chain follows a predetermined sequence of calls to different AI components, an agent uses a language model to determine which actions to take.
 

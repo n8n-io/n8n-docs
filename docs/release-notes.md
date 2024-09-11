@@ -33,6 +33,23 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.59.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.59.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-11
+
+/// warning | Chat Trigger
+If you are using the embedded Chat Trigger with authentication and have mis-configured the embed side you may see an error.
+///
+
+This release contains bug fixes and feature enhancements. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[oscarpedrero](https://github.com/oscarpedrero){:target=_blank .external-link} 
+
 ## n8n@1.58.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.0...n8n@1.58.1){:target=_blank .external-link} for this version.<br />

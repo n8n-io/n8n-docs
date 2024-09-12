@@ -19,34 +19,34 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/) for gui
 ## Operations
 
 * **Draft**
-	* **Create** a draft
-	* **Delete** a draft
-	* **Get** a draft
-	* **Get Many** drafts
+	* [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations/#create-a-draft) a draft
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations/#delete-a-draft) a draft
+	* [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations/#get-a-draft) a draft
+	* [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations/#get-many-drafts) drafts
 * **Label**
-	* **Create** a label
-	* **Delete** a label
-	* **Get** a label
-	* **Get Many** labels
+	* [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations/#create-a-label) a label
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations/#delete-a-label) a label
+	* [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations/#get-a-label) a label
+	* [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations/#get-many-labels) labels
 * **Message**
-	* **Add Label** to a message
-	* **Delete** a message
-	* **Get** a message
-	* **Get Many** messages
-	* **Mark as Read**
-	* **Mark as Unread**
-	* **Remove Label** from a message
-	* **Reply** to a message
-	* **Send** a message
+	* [**Add Label**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#add-label-to-a-message) to a message
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#delete-a-message) a message
+	* [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#get-a-message) a message
+	* [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#get-many-messages) messages
+	* [**Mark as Read**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#mark-as-read)
+	* [**Mark as Unread**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#mark-as-unread)
+	* [**Remove Label**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#remove-label-from-a-message) from a message
+	* [**Reply**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#reply-to-a-message) to a message
+	* [**Send**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#send-a-message) a message
 * **Thread**
-	* **Add Label** to a thread
-	* **Delete** a thread
-	* **Get** a thread
-	* **Get Many** threads
-	* **Remove Label** from thread
-	* **Reply** to a message
-	* **Trash** a thread
-	* **Untrash** a thread
+	* [**Add Label**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#add-label-to-a-thread) to a thread
+	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#delete-a-thread) a thread
+	* [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#get-a-thread) a thread
+	* [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#get-many-threads) threads
+	* [**Remove Label**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#remove-label-from-a-thread) from thread
+	* [**Reply**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#reply-to-a-message) to a message
+	* [**Trash**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#trash-a-thread) a thread
+	* [**Untrash**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#untrash-a-thread) a thread
 
 ## Templates and examples
 
@@ -60,3 +60,17 @@ Refer to Google's [Gmail API documentation](https://developers.google.com/gmail/
 n8n provides a trigger node for Gmail. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+## Remove the n8n attribution from sent messages
+
+If you're using the node to [send a message](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#send-a-message) or [reply to a message](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#reply-to-a-message), the node appends this statement to the end of the email:
+
+> This email was sent automatically with n8n
+
+To remove this attribution:
+
+1. In the node's **Options** section, select **Add option**.
+2. Select **Append n8n attribution**.
+3. Turn the toggle off.
+
+Refer to [Send options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#send-options) and [Reply options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#reply-options) for more information.

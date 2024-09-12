@@ -20,7 +20,7 @@ Enter these parameters:
 * **Resource**: Select **Draft**.
 * **Operation**: Select **Create**.
 * **Subject**: Enter the subject line.
-* Select the **Email Type**. Choose from **Text** and **HTML**.
+* Select the **Email Type**. Choose from **Text** or **HTML**.
 * **Message**: Enter the email message body.
 
 ### Create draft options
@@ -66,12 +66,14 @@ Enter these parameters:
 
 Use these options to further refine the node's behavior:
 
-* **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. So if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
+* **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. For example, if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
 * **Download Attachments**: Select whether the node should download the draft's attachments (turned on) or not (turned off).
 
 Refer to the [Gmail API Method: users.drafts.get](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ## Get Many drafts
+<!-- vale on -->
 
 Use this operation to get two or more drafts.
 
@@ -81,13 +83,15 @@ Enter these parameters:
 * **Resource**: Select **Draft**.
 * **Operation**: Select **Get Many**.
 * **Return All**: Choose whether the node returns all drafts (turned on) or only up to a set limit (turned off).
-* **Limit**: Enter the maximum number of drafts to return. Only used if **Return All** is turned off.
+* **Limit**: Enter the maximum number of drafts to return. Only used if you've turned off **Return All**.
 
+<!-- vale off -->
 ### Get Many drafts options
+<!-- vale on -->
 
 Use these options to further refine the node's behavior:
 
-* **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. So if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
+* **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. For example, if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
 * **Download Attachments**: Select whether the node should download the draft's attachments (turned on) or not (turned off).
 * **Include Spam and Trash**: Select whether the node should get drafts in the Spam and Trash folders (turned on) or not (turned off).
 

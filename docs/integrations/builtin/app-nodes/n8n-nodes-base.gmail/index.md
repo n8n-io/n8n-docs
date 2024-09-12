@@ -75,7 +75,7 @@ To remove this attribution:
 
 Refer to [Send options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#send-options) and [Reply options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#reply-options) for more information.
 
-## Forbidden - perhaps check your credentials?
+## Forbidden - perhaps check your credentials
 
 This error displays next to certain dropdowns in the node, like the **Label Names or IDs** dropdown. The full text looks something like this:
 
@@ -104,3 +104,9 @@ To resolve:
 2. For [Service Account](/integrations/builtin/credentials/google/service-account/) credentials:
     1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
     2. Make sure you add the Gmail API as part of the domain-wide delegation configuration.
+
+## Bad request - please check your parameters
+
+This error most often occurs if you enter a Message ID, Thread ID, or Label ID that doesn't exist.
+
+Try a **Get** operation with the ID to confirm it exists.

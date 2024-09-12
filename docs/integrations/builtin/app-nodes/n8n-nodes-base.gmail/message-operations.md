@@ -22,7 +22,9 @@ Enter these parameters:
 * **Message ID**: Enter the ID of the message you want to add the label to.
 * **Label Names or IDs**: Select the Label names you want to add or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
+<!-- vale off -->
 Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Delete a message
 
@@ -99,7 +101,9 @@ Enter these parameters:
 * **Operation**: Select **Mark as Read**.
 * **Message ID**: Enter the ID of the message you wish to mark as read.
 
+<!-- vale off -->
 Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Mark as Unread
 
@@ -112,7 +116,9 @@ Enter these parameters:
 * **Operation**: Select **Mark as Unread**.
 * **Message ID**: Enter the ID of the message you wish to mark as unread.
 
+<!-- vale off -->
 Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Remove Label from a message
 
@@ -126,7 +132,9 @@ Enter these parameters:
 * **Message ID**: Enter the ID of the message you want to remove the label from.
 * **Label Names or IDs**: Select the Label names you want to remove or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
+<!-- vale off -->
 Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Reply to a message
 

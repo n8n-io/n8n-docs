@@ -22,7 +22,9 @@ Enter these parameters:
 * **Thread ID**: Enter the ID of the thread you want to add the label to.
 * **Label Names or IDs**: Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
+<!-- vale off -->
 Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Delete a thread
 
@@ -103,7 +105,9 @@ Enter these parameters:
 * **Thread ID**: Enter the ID of the thread you want to remove the label from.
 * **Label Names or IDs**: Select the Label names you want to remove or enter an expression to specify their IDs. The dropdown populates based on the **Credential** you selected.
 
+<!-- vale off -->
 Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} documentation for more information.
+<!-- vale on -->
 
 ## Reply to a message
 

@@ -23,8 +23,6 @@ You must use the authentication method required by the app or service you want t
 - JWT auth
 - None
 
-Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link} for more information relating to generic credential types.
-
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/basic-auth.md"
 
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/header-auth.md"

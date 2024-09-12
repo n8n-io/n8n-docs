@@ -115,3 +115,4 @@ To delegate domain-wide authority to a service account, you must be a super admi
 5. In the **OAuth scopes** field, enter a list of comma-separate scopes to grant your application access. For example, if your application needs domain-wide full access to the Google Drive API and the Google Calendar API, enter: `https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/calendar`.
 6. Select **Authorize**.
 
+It can take from a few minutes up to 24 hours before impersonation is granted to all users in your Workspace.

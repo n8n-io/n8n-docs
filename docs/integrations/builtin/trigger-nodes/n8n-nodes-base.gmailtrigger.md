@@ -27,11 +27,9 @@ For usage examples and templates to help you get started, refer to n8n's [Gmail 
 Configure the node with these parameters:
 
 * **Credential to connect with**: Select or create a new Google credential to use for the trigger.
-* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to the sections below to configure the parameters for each mode type.
+* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](#poll-mode-options) to configure the parameters for each mode type.
 * **Simplify**: Choose whether to return a simplified version of the response (turned on) or the raw data (turned off). Default is on.
     * This returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
-
---8<-- "_snippets/integrations/builtin/poll-modes.md"
 
 ## Node filters
 
@@ -68,3 +66,7 @@ To resolve:
 2. For [Service Account](/integrations/builtin/credentials/google/service-account/) credentials:
     1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
     2. Make sure you add the Gmail API as part of the domain-wide delegation configuration.
+
+## Poll mode options
+
+--8<-- "_snippets/integrations/builtin/poll-modes.md"

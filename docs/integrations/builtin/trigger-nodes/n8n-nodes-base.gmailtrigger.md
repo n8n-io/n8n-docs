@@ -8,7 +8,7 @@ priority: high
 
 # Gmail trigger
 
-[Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google.
+[Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google. The Gmail trigger node can start a workflow based on events in Gmail.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/).

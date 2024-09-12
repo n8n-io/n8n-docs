@@ -39,7 +39,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.59.0
 **Release date:** 2024-09-11
 
 /// warning | Chat Trigger
-If you are using the embedded Chat Trigger with authentication and have mis-configured the embed side you may see an error.
+If you are using the Chat Trigger in "Embedded Chat" mode, with authentication turned on, you could see errors connecting to n8n if the authentication on the sending/embedded side is mis-configured.
 ///
 
 This release contains bug fixes and feature enhancements. 

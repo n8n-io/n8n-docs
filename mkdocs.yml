@@ -485,10 +485,10 @@ nav:
         - GitLab: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
         - Gmail:
           - Gmail: integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md
-          - Draft operations: integrations/builtin-app-nodes/n8n-nodes-base.gmail/draft-operations.md
-          - Label operations: integrations/builtin-app-nodes/n8n-nodes-base.gmail/label-operations.md
-          - Message operations: integrations/builtin-app-nodes/n8n-nodes-base.gmail/message-operations.md
-          - Thread operations: integrations/builtin-app-nodes/n8n-nodes-base.gmail/thread-operations.md
+          - Draft operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations.md
+          - Label operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations.md
+          - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+          - Thread operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md
         - Google Ads: integrations/builtin/app-nodes/n8n-nodes-base.googleads.md
         - Google Analytics: integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics.md
         - Google BigQuery: integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md

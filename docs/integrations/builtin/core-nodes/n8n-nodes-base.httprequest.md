@@ -60,7 +60,7 @@ You can select one of the following methods:
 * Query auth
 
 
-Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
+Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information on setting up each credential type.
 
 ### Parameters, headers, and body
 

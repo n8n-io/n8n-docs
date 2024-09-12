@@ -54,7 +54,7 @@ Refer to [Custom API operations](/integrations/custom-operations/) for more info
 
 Use this generic authentication if your app or service supports OAuth1 authentication.
 
-To configure this credential, you'll need:
+To configure this credential, enter:
 
 - An **Authorization URL**: Also known as the Resource Owner Authorization URI. This URL typically ends in `/oauth1/authorize`. The temporary credentials are sent here to prompt a user to complete authorization.
 - An **Access Token URL**: This is the URI used for the initial request for temporary credentials. This URL typically ends in `/oauth1/request` or `/oauth1/token`.
@@ -76,7 +76,7 @@ Use this generic authentication if your app or service supports OAuth2 authentic
 
 Requirements to configure this credential depend on the **Grant Type** selected. Refer to [OAuth Grant Types](https://oauth.net/2/grant-types/) for more information on each grant type.
 
-For most OAuth2 integrations, you'll need to configure an app, service, or integration to generate the values for most of these fields. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
+For most OAuth2 integrations, you'll need to configure an app, service, or integration. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
 
 Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
 
@@ -86,7 +86,7 @@ Use Authorization Code grant type to exchange an authorization code for an acces
 
 To configure this credential, select **Authorization Code** as the **Grant Type**.
 
-Then you'll need:
+Then enter:
 
 - An **Authorization URL**
 - An **Access Token URL**
@@ -95,8 +95,8 @@ Then you'll need:
 - _Optional:_ Enter one or more **Scope**s for the credential. If unspecified, the credential will request all scopes available to the client.
 - _Optional:_ Some services require more query parameters. If your service does, add them as **Auth URI Query Parameters**.
 - An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Will send the credentials as a basic auth header
-	- **Body**: Will send credentials in the body of the request
+	- **Header**: Send the credentials as a basic auth header.
+	- **Body**: Send the credentials in the body of the request.
 - _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
 
 ### Client Credentials grant type
@@ -105,15 +105,15 @@ Use the Client Credentials grant type when applications request an access token 
 
 To configure this credential, select **Client Credentials** as the **Grant Type**.
 
-Then you'll need:
+Then enter:
 
 - An **Access Token URL**: The URL to hit to begin the OAuth2 flow. Typically this URL ends in `/token`.
 - A **Client ID**: The ID or username to use to log in to the client.
 - A **Client Secret**: The secret or password used to log in to the client.
 - _Optional:_ Enter one or more **Scope**s for the credential. Most services don't support scopes for Client Credentials grant types; only enter scopes here if yours does.
 - An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Will send the credentials as a basic auth header
-	- **Body**: Will send credentials in the body of the request
+	- **Header**: Send the credentials as a basic auth header.
+	- **Body**: Send the credentials in the body of the request.
 - _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
 
 ### PKCE grant type
@@ -122,7 +122,7 @@ Proof Key for Code Exchange (PKCE) grant type is an extension to the Authorizati
 
 To configure this credential, select **PKCE** as the **Grant Type**.
 
-Then you'll need:
+Then enter:
 
 - An **Authorization URL**
 - An **Access Token URL**
@@ -131,15 +131,15 @@ Then you'll need:
 - _Optional:_ Enter one or more **Scope**s for the credential. If unspecified, the credential will request all scopes available to the client.
 - _Optional:_ Some services require more query parameters. If your service does, add them as **Auth URI Query Parameters**.
 - An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Will send the credentials as a basic auth header
-	- **Body**: Will send credentials in the body of the request
+	- **Header**: Send the credentials as a basic auth header.
+	- **Body**: Send the credentials in the body of the request.
 - _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
 
 ## Using query auth
 
 Use this generic authentication if your app or service supports passing authentication as a single key/value query parameter. (For multiple query parameters, use [Custom Auth](#using-custom-auth).)
 
-To configure this credential, you'll need:
+To configure this credential, enter:
 
 - A query parameter key or **Name**
 - A query parameter **Value**
@@ -148,7 +148,7 @@ To configure this credential, you'll need:
 
 Use this generic authentication if your app or service supports passing authentication as multiple key/value query parameters or you need more flexibility than the other generic auth options.
 
-The **Custom Auth** credential expects JSON data to define your credential. You can use `headers`, `qs`, `body` or a mix. See the examples below to get started.
+The **Custom Auth** credential expects JSON data to define your credential. You can use `headers`, `qs`, `body` or a mix. Review the examples below to get started.
 
 ### Sending two headers
 ```

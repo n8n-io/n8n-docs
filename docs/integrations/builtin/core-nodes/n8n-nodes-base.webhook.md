@@ -84,7 +84,7 @@ You can require authentication for any service calling your webhook URL. Choose 
 - JWT auth
 - None
 
-Refer to [Webhook credentials](/integrations/builtin/credentials/webhook/) for more information setting up each credential type.
+Refer to [Webhook credentials](/integrations/builtin/credentials/webhook/) for more information on setting up each credential type.
 
 ### Respond
 

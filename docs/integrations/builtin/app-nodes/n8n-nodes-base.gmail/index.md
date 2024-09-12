@@ -79,17 +79,22 @@ Refer to [Send options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/mes
 
 This error displays next to certain dropdowns in the node, like the **Label Names or IDs** dropdown. The full text looks something like this:
 
-> There was a problem loading the parameter options from server: "Forbidden - perhaps check your credentials?"
+```
+There was a problem loading the parameter options from server: "Forbidden - perhaps check your credentials?"
+```
 
-The error usually displays when you're using a Google Service Account as the credential and the credential doesn't have **Impersonate a User** turned on.
+The error most often displays when you're using a Google Service Account as the credential and the credential doesn't have **Impersonate a User** turned on.
 
 Refer to [Google Service Account: Finish your n8n credential](/integrations/builtin/credentials/google/service-account/#finish-your-n8n-credential) for more information.
 
 ## 401 unauthorized error
 
 The full text of the error looks like this:
-
-> 401 - {"error":"unauthorized_client","error_description":"Client is unauthorized to retrieve access tokens using this method, or client not authorized for any of the scopes requested."}
+<!--vale off-->
+```
+401 - {"error":"unauthorized_client","error_description":"Client is unauthorized to retrieve access tokens using this method, or client not authorized for any of the scopes requested."}
+```
+<!--vale on-->
 
 This error occurs when there's an issue with the credential you're using and its scopes or permissions.
 

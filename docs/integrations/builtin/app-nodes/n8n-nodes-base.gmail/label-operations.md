@@ -59,7 +59,9 @@ Enter these parameters:
 
 Refer to the [Gmail API Method: users.labels.get](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/get){:target=_blank .external-link} documentation for more information.
 
+<!-- vale off -->
 ## Get Many labels
+<!-- vale on -->
 
 Use this operation to get two or more labels.
 

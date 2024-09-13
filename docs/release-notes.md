@@ -33,6 +33,15 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.58.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.58.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-26
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.59.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.59.0){:target=_blank .external-link} for this version.<br />
@@ -64,7 +73,6 @@ This is the `latest` version. n8n recommends using the `latest` version. The `ne
 ///
 
 
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -76,8 +84,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.57.0...n8n@1.58.0
 
 This release contains new features, bug fixes and feature enhancements. 
 
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 <div class="n8n-new-features" markdown>
 
 #### New node: PGVector Vector Store
@@ -86,14 +92,12 @@ This release adds the PGVector Vector Store node. Use this node to interact with
 
 </div>
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.57.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.56.2...n8n@1.57.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-28
-
-
-
-
 
 This release contains new features and bug fixes.
 
@@ -126,10 +130,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.56.1...n8n@1.56.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-26
-
-
-
-
 
 This release contains a bug fix.
 
@@ -165,8 +165,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.2...n8n@1.55.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-16
-
-
 
 This release contains bug fixes.
 

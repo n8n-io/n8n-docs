@@ -36,7 +36,7 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ## n8n@1.58.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.58.2){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-08-26
+**Release date:** 2024-09-12
 
 This release contains bug fixes.
 

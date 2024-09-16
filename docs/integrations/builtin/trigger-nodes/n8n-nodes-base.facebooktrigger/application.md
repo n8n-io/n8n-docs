@@ -6,7 +6,7 @@ contentType: integration
 priority: medium
 ---
 
-# Ad account (Facebook trigger)
+# Application (Facebook trigger)
 
 Use this object to receive updates sent to a specific app. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 

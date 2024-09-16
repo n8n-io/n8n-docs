@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: What is memory in AI?
+title: What's memory in AI?
 description: Understand memory in the context of AI. Learn what's special about memory in n8n.
 contentType: explanation
 ---
 
-# What is memory in AI?
+# What's memory in AI?
 
 Memory is a key part of AI chat services. The memory keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
 

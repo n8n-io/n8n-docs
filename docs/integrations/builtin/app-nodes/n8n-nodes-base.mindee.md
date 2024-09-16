@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mindee
-description: Documentation for the Mindee node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Mindee node documentation
+description: Learn how to use the Mindee node in n8n. Follow technical documentation to integrate Mindee node into your workflows.
 contentType: integration
 ---
 
-# Mindee
+# Mindee node
 
 Use the Mindee node to automate work in Mindee, and integrate Mindee with other applications. n8n has built-in support for a wide range of Mindee features, including predicting invoices. 
 

@@ -6,7 +6,7 @@ contentType: overview
 
 # Workflows
 
-A workflow is a connection of nodes connected together to automate a process.
+A workflow is a collection of nodes connected together to automate a process.
 
 
 * [Create](/workflows/create/) a workflow.

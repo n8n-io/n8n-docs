@@ -37,7 +37,7 @@ There are five steps in setting up your credential:
 2. [Generate an App Access Token](#generate-an-app-access-token) for that app.
 3. [Configure the Facebook trigger](#configure-the-facebook-trigger).
 4. Optional: [Add an app secret](#optional-add-an-app-secret).
-5. [App Review](#app-review): Only required if your app will be used by users who don't have roles on the app itself. If you're creating the app for your own internal purposes, this isn't necessary.
+5. [App Review](#app-review): Only required if your app's users don't have roles on the app itself. If you're creating the app for your own internal purposes, this isn't necessary.
 
 Refer to the detailed instructions below for each step.
 
@@ -56,7 +56,7 @@ To create a Meta app:
 1. Select **Create app**.
 1. The **Add products to your app** page opens.
 1. Select **App settings > Basic** from the left menu.
-1. Enter a **Privacy Policy URL**. (This URL is required to take the app "Live.")
+1. Enter a **Privacy Policy URL**. (Required to take the app "Live.")
 1. Select **Save changes**.
 1. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
 1. In the left menu, select **Add Product**.
@@ -67,13 +67,13 @@ Refer to Meta's [Create an app](https://developers.facebook.com/docs/development
 
 ### Generate an App Access Token
 
-Next, create an app access token, which is required both for your n8n credential and for the webhooks to work:
+Next, create an app access token to be used by your n8n credential and the Webhooks product:
 
 1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}.
 2. Select the **Meta App** you just created in the **Access Token** section.
 3. In **User or Page**, select **Get App Token**.
 4. Select **Generate Access Token**.
-5. You'll be prompted to login and grant access. Follow the on-screen prompts.
+5. The page prompts you to log in and grant access. Follow the on-screen prompts.
 
     /// warning | App unavailable
     You may receive a warning that the app isn't available. Once you take an app live, there may be a few minutes' delay before you can generate an access token.
@@ -104,7 +104,7 @@ Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nod
 
 ### Optional: Add an App Secret
 
-For added security, Meta recommends adding an **App Secret**. This forces all API calls to be signed with the `appsecret_proof` parameter. The app secret proof is a sha256 hash of your access token, using your app secret as the key.
+For added security, Meta recommends adding an **App Secret**. This signs all API calls with the `appsecret_proof` parameter. The app secret proof is a sha256 hash of your access token, using your app secret as the key.
 
 To generate an App Secret:
 

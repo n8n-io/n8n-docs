@@ -704,7 +704,19 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger.md
+        - Facebook trigger:
+          - integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
+          - Ad account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
+          - Application: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md
+          - Certificate Transparency: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md
+          - Group: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/group.md
+          - Instagram: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/instagram.md
+          - Link: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/link.md
+          - Page: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page.md
+          - Permissions: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md
+          - User: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md
+          - WhatsApp Business Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md
+          - Workplace Security: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md

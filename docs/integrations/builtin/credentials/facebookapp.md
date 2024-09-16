@@ -16,15 +16,6 @@ You can use these credentials to authenticate the following nodes:
 If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) documentation.
 ///
 
-## Prerequisites
-
-- Create a [Facebook](https://www.facebook.com/){:target=_blank .external-link} account.
-- Sign up for [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} with that account.
-
-/// note | Unverified apps
-Facebook will only let you have a developer or administrator role on a maximum of 15 apps that aren't already linked to a Meta Verified Business Account. Refer to [Limitations | Create an app](https://developers.facebook.com/docs/development/create-an-app#limitations){:target=_blank .external-link} if you're over that limit.
-///
-
 ## Supported authentication methods
 
 - App access token
@@ -35,16 +26,18 @@ Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/g
 
 ## Using app access token
 
-To configure this credential, you'll need:
+To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
 
-- An app **Access Token**: Generate an access token by creating a Meta app.
-- An optional **App Secret**: When you add an App Secret, n8n will verify this signature to validate the integrity and origin of the payload.
+- An app **Access Token**
+- An optional **App Secret**: Used to verify the integrity and origin of the payload.
 
-There are xx steps in setting up your credential:
+There are five steps in setting up your credential:
 
-1. Create a [Meta app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link}.
-2. Generate an App Access Token for that app.
-3. Optional: Generate an **App Secret** for the app.
+1. [Create a Meta app](#create-a-meta-app) with the Webhooks product.
+2. [Generate an App Access Token](#generate-an-app-access-token) for that app.
+3. [Configure the Facebook trigger](#configure-the-facebook-trigger).
+4. Optional: [Add an app secret](#optional-add-an-app-secret).
+5. [App Review](#app-review): Only required if your app will be used by users who don't have roles on the app itself. If you're creating the app for your own internal purposes, this isn't necessary.
 
 Refer to the detailed instructions below for each step.
 
@@ -54,37 +47,87 @@ To create a Meta app:
 
 1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} and select **Create App**.
 2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
-3. Select **Other**, then select **Business** and **Next**.
+3. Select **Other**, then select **Next**.
+4. Select **Business** and **Next**.
 5. Complete the essential information:
     * Add an **App name**.
     * Add an **App contact email**.
     * Here again you can connect to a business portfolio or skip it.
+1. Select **Create app**.
+1. The **Add products to your app** page opens.
+1. Select **App settings > Basic** from the left menu.
+1. Enter a **Privacy Policy URL**. (This URL is required to take the app "Live.")
+1. Select **Save changes**.
+1. At the top of the page, toggle the **App Mode** from **Development** to **Live**.
+1. In the left menu, select **Add Product**.
 6. The **Add products to your app** page appears. Select **Webhooks**.
-7. The **Webhooks** product opens. **Subscribe** to the objects you want to receive Facebook Trigger notifications about.
+7. The **Webhooks** product opens.
+
+Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app) documentation for more information.
 
 ### Generate an App Access Token
 
-1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/).
+Next, create an app access token, which is required both for your n8n credential and for the webhooks to work:
+
+1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}.
 2. Select the **Meta App** you just created in the **Access Token** section.
-3. In **User or Page**, select **App Token**.
+3. In **User or Page**, select **Get App Token**.
 4. Select **Generate Access Token**.
-5. Copy that token. Enter it in your n8n credential as the **Access Token**.
-6. Return to the tab or window where the app's **Webhooks** product configuration is open. **Subscribe** to the objects you want to receive Facebook Trigger notifications about.
-7. Enter the **Access Token** you copied above as the **Verify token**.
-8. Copy the **Webhook URL** from n8n and enter it as the **Callback URL** in your Meta App.
+5. You'll be prompted to login and grant access. Follow the on-screen prompts.
+
+    /// warning | App unavailable
+    You may receive a warning that the app isn't available. Once you take an app live, there may be a few minutes' delay before you can generate an access token.
+    ///
+
+5. Copy the token and enter it in your n8n credential as the **Access Token**. Save this token somewhere else, too, since you'll need it for the Webhooks configuration.
+6. Save your n8n credential.
 
 Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} for more information on generating the token.
 
-### Generate an App Secret
+### Configure the Facebook trigger
 
-When you add an App Secret, n8n will verify this signature to validate the integrity and origin of the payload.
+Now that you have a token, you can configure the Facebook trigger node:
+
+1. In your Meta app, copy the **App ID** from the top navigation bar.
+1. In n8n, open your Facebook trigger.
+2. Paste the **App ID** into the **APP ID** field.
+3. Select **Test step** to shift the trigger into listening mode.
+6. Return to the tab or window where your Meta app's **Webhooks** product configuration is open.
+7. **Subscribe** to the objects you want to receive Facebook Trigger notifications about. For each subscription:
+    1. Copy the **Webhook URL** from n8n and enter it as the **Callback URL** in your Meta App.
+    1. Enter the **Access Token** you copied above as the **Verify token**.
+    1. Select **Verify and save**. (This step fails if you don't have your n8n trigger listening.)
+    1. Some webhook subscriptions, like **User**, prompt you to subscribe to individual events. Subscribe to the events you're interested in.
+    1. You can send some **Test** events from Meta to confirm things are working. If you send a test event, verify its receipt in n8n.
+
+Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) documentation for more information.
+
+### Optional: Add an App Secret
+
+For added security, Meta recommends adding an **App Secret**. This forces all API calls to be signed with the `appsecret_proof` parameter. The app secret proof is a sha256 hash of your access token, using your app secret as the key.
 
 To generate an App Secret:
 
-1. Return to the window or tab where the **Webhooks** product configuration was open.
-2. Select **App settings > Basic** from the left menu.
-3. Select the **Show** button next to the **App secret** field.
-4. The page prompts you to re-enter your Facebook account credentials. Once you do so, Meta shows the App Secret.
-5. Highlight it to select it, copy it, and paste this into your n8n credential as the **App Secret**.
+1. In Meta while viewing your app, select **App settings > Basic** from the left menu.
+1. Select **Show** next to the **App secret** field.
+1. The page prompts you to re-enter your Facebook account credentials. Once you do so, Meta shows the App Secret.
+1. Highlight it to select it, copy it, and paste this into your n8n credential as the **App Secret**.
+1. **Save** your n8n credential.
 
-Refer to the [App Dashboard Settings documentation](https://developers.facebook.com/docs/development/create-an-app/app-dashboard#settings){:target=_blank .external-link} and the [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link} for more information.
+Refer to the [App Secret documentation](https://developers.facebook.com/docs/facebook-login/security#appsecret){:target=_blank .external-link} for more information.
+
+### App review
+
+App Review requires Business Verification.
+
+If anyone without a role on the app or a role in a Business that has claimed the app will use it, it must first undergo App Review. If app users who have a role on the app itself will be your only app users, App Review isn't required.
+
+As part of the App Review process, you may need to request advanced access for your webhook subscriptions.
+
+Refer to Meta's [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review){:target=_blank .external-link} and [Advanced Access](https://developers.facebook.com/docs/graph-api/overview/access-levels#advanced-access){:target=_blank .external-link} documentation for more information.
+
+## Unverified apps
+
+Facebook only lets you have a developer or administrator role on a maximum of 15 apps that aren't already linked to a Meta Verified Business Account.
+
+Refer to [Limitations | Create an app](https://developers.facebook.com/docs/development/create-an-app#limitations){:target=_blank .external-link} if you're over that limit.

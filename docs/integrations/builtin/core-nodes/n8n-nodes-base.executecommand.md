@@ -60,9 +60,9 @@ If you want to run the curl command in the Execute Command node, you will have t
 
     ```shell
     FROM docker.n8n.io/n8nio/n8n
-	USER root
+    USER root
     RUN apk --update add curl
-	USER node
+    USER node
     ```
 
 3. In the same folder, execute the command below to build the Docker image.

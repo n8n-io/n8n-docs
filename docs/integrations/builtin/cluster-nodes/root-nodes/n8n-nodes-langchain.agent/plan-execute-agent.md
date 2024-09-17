@@ -41,3 +41,7 @@ Available LangChain expressions:
 ## Templates and examples
 
 Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/#templates-and-examples) section.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).

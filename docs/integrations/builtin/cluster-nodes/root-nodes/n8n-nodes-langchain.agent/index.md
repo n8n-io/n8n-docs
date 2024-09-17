@@ -52,29 +52,6 @@ New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"
 
-## Internal error: 400 Invalid value for 'content'
+## Common issues
 
-A full error message might look like this:
-
-```
-Internal error
-Error: 400 Invalid value for 'content': expected a string, got null.
-<stack-trace>
-```
-
-This error can occur if the **Prompt** input contains a null value.
-
-You might see this in one of two scenarios:
-
-1. When you've set the **Prompt** to **Define below** and have an expression in your **Text** that isn't generating a value.
-    * To resolve, make sure your expressions reference valid fields and that they resolve to valid input rather than null.
-2. When you've set the **Prompt** to **Take from previous node automatically** and the incoming data has null values.
-    * To resolve, remove any null values from the `chatInput` field of the input node.
-
-## Error in sub-node Window Buffer Memory
-
-This error displays when n8n runs into an issue with the [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/) sub-node.
-
-It most often occurs when your workflow or the workflow template you copied uses an older version of the Window Buffer Memory node.
-
-Try removing the Window Buffer Memory node from your workflow and re-adding it, which will guarantee you're using the latest version of the node.
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).

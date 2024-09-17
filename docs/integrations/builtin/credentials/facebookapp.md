@@ -126,7 +126,9 @@ As part of the App Review process, you may need to request advanced access for y
 
 Refer to Meta's [App Review](https://developers.facebook.com/docs/resp-plat-initiatives/app-review){:target=_blank .external-link} and [Advanced Access](https://developers.facebook.com/docs/graph-api/overview/access-levels#advanced-access){:target=_blank .external-link} documentation for more information.
 
-## Unverified apps
+## Common issues
+
+### Unverified apps
 
 Facebook only lets you have a developer or administrator role on a maximum of 15 apps that aren't already linked to a Meta Verified Business Account.
 

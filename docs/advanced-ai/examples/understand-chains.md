@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: What is a chain in AI?
+title: What's a chain in AI?
 description: Understand chains in the context of AI. Learn about chains in n8n.
 contentType: explanation
 ---
 
-# What is a chain in AI?
+# What's a chain in AI?
 
 Chains bring together different components of AI to create a cohesive system. They set up a sequence of calls between the components. These components can include models and memory (though note that in n8n chains can't use memory).
 

@@ -41,7 +41,7 @@ To generate an access token, create a Slack app:
 5. Select **Create App**. The app details open.
 6. In the left menu under **Features**, select **OAuth & Permissions**.
 8. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of recommended scopes.
-9. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to <Workspace>**. You must be a Slack workspace admin to complete this action.
+9. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
 10. Select **Allow**.
 12. Copy the **Bot User OAuth Token** and enter it as the **Access Token** in your n8n credential.
 13. If you're using this credential for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
@@ -92,7 +92,7 @@ To get both, create a Slack app:
 9. Select **Add**.
 10. Select **Save URLs**.
 11. In the **Scopes** section, select appropriate scopes for your app. Refer to [Scopes](#scopes) for a list of scopes.
-13. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to <Workspace>**. You must be a Slack workspace admin to complete this action.
+13. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
 14. Select **Allow**.
 15. At this point, you should be able to select the OAuth button in your n8n credential to connect.
 

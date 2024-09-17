@@ -42,7 +42,10 @@ These are the main node configuration fields.
 
 The Webhook node has two URLs: test URL and production URL. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
-![Screenshot of the webhook URLs](/_images/integrations/builtin/core-nodes/webhook/webhook-urls.png)
+<figure markdown="span">
+![Sample Webhook URLs in the Webhook node's Parameters tab display a Test URL and Production URL](/_images/integrations/builtin/core-nodes/webhook/webhook-urls.png)
+<figcaption>Sample Webhook URLs in the Webhook node's Parameters tab</figcaption>
+</figure>
 
 * **Test**: n8n registers a test webhook when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the webhook URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
@@ -77,19 +80,16 @@ The **Path** field can take the following formats:
 - `/:variable1/path/:variable2`
 - `/:variable1/:variable2`
 
-### Authentication
+### Supported authentication methods
 
-You can require authentication for any service calling your webhook URL.
+You can require authentication for any service calling your webhook URL. Choose from these authentication methods:
 
-* [**Basic Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the username and password in the request header. Create or select a basic auth credential for the node to use. Refer to the HTTP Request node [Using basic auth](/integrations/builtin/credentials/httprequest/#using-basic-auth-or-digest-auth) documentation for more information.
-* [**Header Auth**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization){:target=_blank .external-link}: a method of authentication where calls to the webhook URL must include the specified header parameter. For example, use this method when you want to authenticate using an API key or an access token. Create or select a header auth credential with a name/value pair for the node to use. Refer to the HTTP Request node [Using header auth](/integrations/builtin/credentials/httprequest/#using-header-auth) documentation for more information.
-		
-    /// note | Credential data can vary
-	The **Credential Data** required for header auth credentials depends on the type used. For example, if you need to provide an `Authorization: Bearer <token>` header, the Credential Data `Name` will be `Authorization` and the `Value` will be `Bearer <token>`.
-	///		
+- Basic auth
+- Header auth
+- JWT auth
+- None
 
-* [**JWT Auth**](https://jwt.io/introduction/){:target=_blank .external-link}: a method of authentication that uses JSON Web Tokens (JWT) to digitally sign data. This authentication method uses the [JWT credential](/integrations/builtin/credentials/jwt/) and can use either a **Passphrase** or **PEM Key** key type.
-* **None**: The node won't use authentication.
+Refer to [Webhook credentials](/integrations/builtin/credentials/webhook/) for more information on setting up each credential type.
 
 ### Respond
 
@@ -124,7 +124,7 @@ Select **Add Option** to view more configuration options. The available options 
 * **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: Choose the format for the webhook body.
 * **Response Data**: Send custom data with the response.
-* **Response Headers**: Send additional headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
+* **Response Headers**: Send extra headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
 
 | Option | Required node configuration |

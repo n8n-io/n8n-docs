@@ -536,6 +536,9 @@ This release contains node enhancements and bug fixes.
 - Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
 - Deprecated node: Orbit (product shut down)  
 
+### Beta Feature Removal
+The Ask AI beta feature for the HTTP Request node has been removed from this version  
+
 ### Contributors
 [Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
 [CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  

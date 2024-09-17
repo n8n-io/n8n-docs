@@ -34,7 +34,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [SearchApi's documentation](https://www.searchapi.io/){:target=_blank .external-link} for more information about the service. You can also view [LangChain's documentation on integration](https://js.langchain.com/v0.2/docs/integrations/tools/searchapi/){:target=_blank .external-link}.
+Refer to [SearchApi's documentation](https://www.searchapi.io/){:target=_blank .external-link} for more information about the service. You can also view [LangChain's documentation on integration](https://js.langchain.com/docs/integrations/tools/searchapi/){:target=_blank .external-link}.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

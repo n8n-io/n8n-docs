@@ -6,7 +6,7 @@ contentType: integration
 priority: critical
 ---
 
-# Common Issues
+# Common issues (OpenAI node)
 
 Here are some common errors and issues with the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) and steps to resolve or troubleshoot them.
 

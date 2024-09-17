@@ -34,11 +34,15 @@ Refer to [LangChain's Buffer Window Memory documentation](https://js.langchain.c
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
-## Single memory instance
+## Common issues
+
+Here are some common errors and issues and steps to resolve or troubleshoot them.
+
+### Single memory instance
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
-## Managing the Session ID
+### Managing the Session ID
 
 In most cases, the `sessionId` is automatically retrieved from the **On Chat Message** trigger. But you may run into an error with the phrase `No sessionId`.
 

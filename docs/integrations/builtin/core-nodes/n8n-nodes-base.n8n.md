@@ -10,7 +10,7 @@ priority: medium
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/) in your workflows.
 
-Refer to the [n8n Rest API documentation](/api/) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference/) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](/api/) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference/) for working with the API endpoints directly.
 
 /// note | Credentials
 You can find authentication information for this node in the [API authentication](/api/authentication/) documentation.

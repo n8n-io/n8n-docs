@@ -49,7 +49,11 @@ View [example workflows and related content](https://n8n.io/integrations/gmail-t
 
 Refer to [Google's Gmail API documentation](https://developers.google.com/gmail/api/guides){:target=_blank .external-link} for details about their API.
 
-## 401 unauthorized error
+## Common issues
+
+Here are some common errors and issues with the Gmail trigger node and steps to resolve or troubleshoot them.
+
+### 401 unauthorized error
 
 The full text of the error looks like this:
 <!--vale off-->
@@ -67,6 +71,6 @@ To resolve:
     1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
     2. Make sure you add the Gmail API as part of the domain-wide delegation configuration.
 
-## Poll mode options
+### Poll mode options
 
 --8<-- "_snippets/integrations/builtin/poll-modes.md"

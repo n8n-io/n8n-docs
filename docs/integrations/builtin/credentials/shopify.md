@@ -100,7 +100,11 @@ To configure this credential, you'll need:
 - Your **Shop Subdomain**: Your subdomain is within the URL: `https://<subdomain>.myshopify.com`. For example, if the full URL is `https://n8n.myshopify.com`, the Shop Subdomain is `n8n`.
 - _Optional:_ A **Shared Secret**
 
-## Enable custom app development
+## Common issues
+
+Here are some common issues setting up the Shopify credential and steps to resolve or troubleshoot them.
+
+### Enable custom app development
 
 If you don't see the option to **Create a custom app**, no one's enabled custom app development for your store.
 
@@ -111,7 +115,7 @@ To enable custom app development, you must log in either as a store owner or as 
 3. Select **Allow custom app development**.
 4. Read the warning and information provided and select **Allow custom app development**.
 
-## Forbidden credentials error
+### Forbidden credentials error
 
 <!-- vale off -->
 If you get a **Couldn't connect with these settings / Forbidden - perhaps check your credentials** warning when you test the credentials, this may be due to your app's [access scope](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} dependencies. For example, the `read_orders` scope also requires `read_products` scope. Review the scopes you have assigned and the action you're trying to complete.

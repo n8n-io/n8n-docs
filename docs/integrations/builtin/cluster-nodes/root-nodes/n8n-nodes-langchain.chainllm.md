@@ -70,9 +70,13 @@ Refer to [LangChain's documentation on Basic LLM Chains](https://js.langchain.co
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"
 
-## No prompt specified error
+## Common issues
 
-This error displays when you haven't set a **Prompt** or the
+Here are some common errors and issues with the Basic LLM Chain node and steps to resolve or troubleshoot them.
+
+### No prompt specified error
+
+This error displays when you haven't set a **Prompt** doesn't have a valid value.
 
 You might see this error in one of two scenarios:
 

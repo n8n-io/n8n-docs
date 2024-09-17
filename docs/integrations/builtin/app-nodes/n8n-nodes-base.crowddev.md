@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: crowd.dev
-description: Documentation for the crowd.dev node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: crowd.dev node documentation
+description: Learn how to use the crowd.dev node in n8n. Follow technical documentation to integrate crowd.dev node into your workflows.
 contentType: integration
 ---
 
-# crowd.dev
+# crowd.dev node
 
 Use the crowd.dev node to automate work in crowd.dev and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev features, which includes creating, updating, and deleting members, notes, organizations, and tasks.
 

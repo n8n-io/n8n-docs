@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Basic LLM Chain
-description: Documentation for the Basic LLM Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Basic LLM Chain node documentation
+description: Learn how to use the Basic LLM Chain node in n8n. Follow technical documentation to integrate Basic LLM Chain node into your workflows.
+contentType: integration
 priority: critical
 ---
 
-# Basic LLM Chain
+# Basic LLM Chain node
 
 Use the Basic LLM Chain node to set the prompt that the model will use along with setting an optional parser for the response.
 

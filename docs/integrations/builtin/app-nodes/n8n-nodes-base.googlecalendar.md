@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Calendar
-description: Documentation for the Google Calendar node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google Calendar node documentation
+description: Learn how to use the Google Calendar node in n8n. Follow technical documentation to integrate Google Calendar node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Google Calendar
+# Google Calendar node
 
 Use the Google Calendar node to automate work in Google Calendar, and integrate Google Calendar with other applications. n8n has built-in support for a wide range of Google Calendar features, including adding, retrieving, deleting and updating calendar events.
 
@@ -38,4 +38,4 @@ n8n provides a trigger node for Google Calendar. You can find the trigger node d
 
 Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for more information about the service.
 
-View [example workflows and related content](https://n8n.io/integrations/_Name_/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/Google Calendar/){:target=_blank .external-link} on n8n's website.

@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: OpenAI
+title: OpenAI node documentation
 description: Documentation for the OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 priority: critical
 ---
 
-# OpenAI
+# OpenAI node
 
 Use the OpenAI node to automate work in OpenAI, and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
 
@@ -22,26 +22,26 @@ Refer to [OpenAI credentials](/integrations/builtin/credentials/openai/) for gui
 
 ## Operations
 
-* Assistant
-	* Create
-	* Delete
-	* List
-	* Message
-	* Update
-* Text
-	* Message a Model
-	* Classify Text for Violations
-* Image
-	* Analyze
-	* Generate
-* Audio
-	* Generate
-	* Transcribe
-	* Translate
-* File
-	* Delete
-	* List
-	* Upload
+- **Assistant** 
+	- [**Create an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#create-an-assistant)
+	- [**Delete an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#delete-an-assistant)
+	- [**List Assistants**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#list-assistants)
+	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#message-an-assistant)
+	- [**Update an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#update-an-assistant)
+- **Text**
+	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#message-a-model)
+	- [**Classify Text for Violations**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#classify-text-for-violations)
+- **Image**
+	- [**Analyze Image**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations/#analyze-image)
+	- [**Generate an Image**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations/#generate-an-image)
+- **Audio**
+	- [**Generate Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations/#generate-audio)
+	- [**Transcribe Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations/#transcribe-audio)
+	- [**Translate Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations/#translate-audio)
+- **File**
+	- [**Delete a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#delete-a-file)
+	- [**List Files**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#list-files)
+	- [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#upload-a-file)
 
 ## Templates and examples
 
@@ -69,9 +69,7 @@ Once you add a tool connection, the OpenAI node becomes a root node, allowing it
 
 ### Operations that support tool connectors
 
-* Assistant
-	* Message Assistant
-* Text
-	* Message Model
-
-
+- **Assistant**
+	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#message-an-assistant)
+- **Text**
+	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#message-a-model)

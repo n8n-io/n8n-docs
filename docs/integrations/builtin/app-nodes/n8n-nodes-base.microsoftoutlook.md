@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft Outlook
-description: Documentation for the Microsoft Outlook node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Microsoft Outlook node documentation
+description: Learn how to use the Microsoft Outlook node in n8n. Follow technical documentation to integrate Microsoft Outlook node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Microsoft Outlook
+# Microsoft Outlook node
 
 Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integrate Microsoft Outlook with other applications. n8n has built-in support for a wide range of Microsoft Outlook features, including creating, updating, deleting, and getting folders, messages, and drafts. 
 

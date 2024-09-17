@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Netscaler ADC
-description: Documentation for the Netscaler ADC node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Netscaler ADC node documentation
+description: Learn how to use the Netscaler ADC node in n8n. Follow technical documentation to integrate Netscaler ADC node into your workflows.
 contentType: integration
 ---
 
-# Netscaler ADC
+# Netscaler ADC node
 
 Use the Netscaler ADC node to automate work in Netscaler ADC, and integrate Netscaler ADC with other applications. n8n has built-in support for a wide range of Netscaler ADC features, including creating and installing certificates and files.
 

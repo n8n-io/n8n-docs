@@ -1,5 +1,5 @@
 ## Available data type comparisons
-
+<!-- vale off -->
 ### String
 
 String data type supports these comparisons:
@@ -21,7 +21,7 @@ String data type supports these comparisons:
 
 ### Number
 
-Numberg data type supports these comparisons:
+Number data type supports these comparisons:
 
 - exists
 - does not exist
@@ -87,3 +87,5 @@ Object data type supports these comparisons:
 - does not exist
 - is empty
 - is not empty
+
+<!-- vale on -->

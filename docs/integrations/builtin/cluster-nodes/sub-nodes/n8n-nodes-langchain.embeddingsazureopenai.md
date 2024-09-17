@@ -1,10 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings Azure OpenAI
-description: Documentation for the Embeddings Azure OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Embeddings Azure OpenAI node documentation
+description: Learn how to use the Embeddings Azure OpenAI node in n8n. Follow technical documentation to integrate Embeddings Azure OpenAI node into your workflows.
+contentType: integration
 ---
 
-# Embeddings Azure OpenAI
+# Embeddings Azure OpenAI node
 
 Use the Embeddings Azure OpenAI node to generate embeddings for a given text.
 
@@ -19,10 +20,10 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node options
 
-* **Model (Deployment) Name**: The model(deployment) to use for generating embeddings.
-* **Batch Size**: maximum number of documents to send in each request.
-* **Strip New Lines**: whether to remove new line characters from input text. n8n enables this by default.
-* **Timeout**: maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
+* **Model (Deployment) Name**: Select the model (deployment) to use for generating embeddings.
+* **Batch Size**: Enter the maximum number of documents to send in each request.
+* **Strip New Lines**: Select whether to remove new line characters from input text (turned on) or not (turned off). n8n enables this by default.
+* **Timeout**: Enter the maximum amount of time a request can take in seconds. Set to `-1` for no timeout.
 
 ## Templates and examples
 

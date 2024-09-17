@@ -42,42 +42,45 @@ n8n recommends using the **Predefined Credential Type** option when it's availab
 
 #### Predefined credentials
 
-Select **Predefined Credential Type**. This allows you to perform custom operations, without additional authentication setup. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+Credentials for integrations supported by n8n, including both built-in and community nodes. Use **Predefined Credential Type** for custom operations without extra setup. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+
 
 #### Generic credentials
 
-Select **Generic Credential Type** to set up authentication using one of the following methods:
+Credentials for integrations not supported by n8n. You'll need to manually configure the authentication process, including specifying the required API endpoints, necessary parameters, and the authentication method. 
 
-* Basic Auth
-* Custom Auth
-* Digest Auth
-* Header Auth
+You can select one of the following methods:
+
+* Basic auth
+* Custom auth
+* Digest auth
+* Header auth
 * OAuth1 API
 * OAuth2 API
-* Query Auth
+* Query auth
 
 
-Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information setting up each credential type.
+Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information on setting up each credential type.
 
 ### Parameters, headers, and body
 
-You can choose to send additional information with your request. The data you need to send depends on the API you're interacting with, and the type of request you're making. Refer to your service's API documentation for detailed guidance.
+You can choose to send extra information with your request. The data you need to send depends on the API you're interacting with, and the request you're making. Refer to your service's API documentation for detailed guidance.
 
-* **Send Query Parameters**: include query parameters. Query parameters are usually used as filters or searches on your query.
-* **Send Headers**: include request headers. Headers contain metadata about your request.
-* **Send Body**: send additional information in the body of your request.
+* **Send Query Parameters**: Include query parameters. Use query parameters as filters or searches on your query.
+* **Send Headers**: Include request headers. Headers contain metadata about your request.
+* **Send Body**: Send extra information in the body of your request.
 
 ## Node options
 
 Select **Add Option** to view and select these options.
 
-- **Batching**: control how to batch large numbers of input items.
-- **Ignore SSL Issues**: download the response even if SSL validation isn't possible.
-- **Redirects**: choose whether to follow redirects. Enabled by default.
-- **Response**: provide settings about the expected API response.
-- **Pagination**: handle query results that are too big for the API to return in a single call. Refer to [Pagination](#pagination) for more information.
-- **Proxy**: use this if you need to specify an HTTP proxy.
-- **Timeout**: set a timeout for the request.
+- **Batching**: Control how to batch large numbers of input items.
+- **Ignore SSL Issues**: Download the response even if SSL certificate validation fails.
+- **Redirects**: Choose whether to follow redirects. Enabled by default.
+- **Response**: Provide settings about the expected API response.
+- **Pagination**: Handle query results that are too big for the API to return in a single call. Refer to [Pagination](#pagination) for more information.
+- **Proxy**: Use this if you need to specify an HTTP proxy.
+- **Timeout**: Set a timeout for the request in milliseconds.
 
 ### Pagination
 
@@ -96,9 +99,9 @@ Some options for pagination require knowledge of the data returned by the API yo
 Configure the pagination settings:
 
 * **Pagination Mode**:
-	* **Off**: turn off pagination.
-	* **Update a Parameter in Each Request**: use this when you need to dynamically set parameters for each request.
-	* **Response Contains Next URL**: use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
+	* **Off**: Turn off pagination.
+	* **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
+	* **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
 For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination/).
 

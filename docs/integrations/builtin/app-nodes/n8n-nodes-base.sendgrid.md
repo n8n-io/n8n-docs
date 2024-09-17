@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SendGrid
-description: Documentation for the SendGrid node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: SendGrid node documentation
+description: Learn how to use the SendGrid node in n8n. Follow technical documentation to integrate SendGrid node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# SendGrid
+# SendGrid node
 
 Use the SendGrid node to automate work in SendGrid, and integrate SendGrid with other applications. n8n has built-in support for a wide range of SendGrid features, including creating, updating, deleting, and getting contacts, and lists, as well as sending emails. 
 

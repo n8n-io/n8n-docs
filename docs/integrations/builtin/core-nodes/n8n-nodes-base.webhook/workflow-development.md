@@ -30,3 +30,5 @@ When using the Webhook node on localhost on a [self-hosted](/hosting/) n8n insta
 When your workflow is ready, switch to using the **Production** webhook URL. You can then activate your workflow, and n8n runs it automatically when an external service calls the webhook URL.
 
 When working with a Production webhook, ensure that you have saved and activated the workflow. Data flowing through the webhook isn't visible in the editor UI with the production webhook.
+
+Refer to [Create a workflow](/workflows/create/) for more information on activating workflows.

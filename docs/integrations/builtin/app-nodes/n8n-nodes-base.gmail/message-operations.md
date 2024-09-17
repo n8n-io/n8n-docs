@@ -191,3 +191,7 @@ Use these options to further refine the node's behavior:
 * **Reply to Sender Only**: Choose whether to reply all (turned off) or reply to the sender only (turned on).
 
 Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).

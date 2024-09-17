@@ -96,3 +96,7 @@ Use these options to further refine the node's behavior:
 * **Include Spam and Trash**: Select whether the node should get drafts in the Spam and Trash folders (turned on) or not (turned off).
 
 Refer to the [Gmail API Method: users.drafts.list](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).

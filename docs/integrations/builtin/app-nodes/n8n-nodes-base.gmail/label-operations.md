@@ -74,3 +74,7 @@ Enter these parameters:
 * **Limit**: Enter the maximum number of labels to return. Only used if you've turned off **Return All**.
 
 Refer to the [Gmail API Method: users.labels.list](https://developers.google.com/gmail/api/reference/rest/v1/users.labels/list){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).

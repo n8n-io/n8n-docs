@@ -161,3 +161,7 @@ Enter these parameters:
 * **Thread ID**: Enter the ID of the thread you want to move to the trash.
 
 Refer to the [Gmail API Method: users.threads.untrash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/untrash){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).

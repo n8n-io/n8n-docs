@@ -498,7 +498,10 @@ nav:
         - Google Docs: integrations/builtin/app-nodes/n8n-nodes-base.googledocs.md
         - Google Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
-        - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets.md
+        - Google Sheets: 
+          - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
+          - Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
+          - Sheet within Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
         - Google Slides: integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
         - Google Tasks: integrations/builtin/app-nodes/n8n-nodes-base.googletasks.md
         - Google Translate: integrations/builtin/app-nodes/n8n-nodes-base.googletranslate.md
@@ -1121,6 +1124,7 @@ nav:
         - integrations/builtin/credentials/vonage.md
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/webflow.md
+        - integrations/builtin/credentials/webhook.md
         - integrations/builtin/credentials/wekan.md
         - integrations/builtin/credentials/whatsapp.md
         - integrations/builtin/credentials/wise.md

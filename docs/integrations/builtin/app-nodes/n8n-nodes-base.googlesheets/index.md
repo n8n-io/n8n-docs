@@ -20,7 +20,7 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 
 ### Document
 
-Use these operations to create or delete new Google Sheet files. Select the operation below to get full setup instructions.
+Use these operations to create or delete new Google Sheet files. Select the operation below for setup instructions.
 
 <div class="grid cards" markdown>
 
@@ -36,9 +36,9 @@ Use these operations to create or delete new Google Sheet files. Select the oper
 
 ### Sheet Within Document
 
-Use these operations to create, update, clear or delete an individual sheet or tab within a Google Sheet.
+Use these operations to create, update, clear, or delete an individual sheet or tab within a Google Sheet.
 
-Select the operation below to get full setup instructions.
+Select the operation below for full setup instructions.
 
 <div class="grid cards" markdown>
 

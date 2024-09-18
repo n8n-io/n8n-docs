@@ -7,9 +7,6 @@ contentType: howto
 
 # Enable Prometheus metrics 
 
-/// note | Experimental
-Prometheus metrics are an experimental feature.
-///
 To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client){:target="_blank" .external-link} library.
 
 The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.

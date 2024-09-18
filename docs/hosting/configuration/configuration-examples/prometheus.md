@@ -17,9 +17,13 @@ export N8N_METRICS=true
 
 Refer to the respective [Environment Variables](/hosting/configuration/environment-variables/endpoints/) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.
 
+Both `main` and `worker` instances are able to expose metrics.
+
 ## Queue metrics
 
 To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
+
+Queue metrics are only available for the `main` instance in single-main mode.
 
 ```
 # HELP n8n_scaling_mode_queue_jobs_active Current number of jobs being processed across all workers in scaling mode.

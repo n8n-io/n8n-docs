@@ -19,7 +19,9 @@ This error displays when the node receives a 400 error indicating a bad request.
 
 Review the API documentation for your service to format your query parameters.
 
+<!-- vale off -->
 ## The resource you are requesting could not be found
+<!-- vale on -->
 
 This error displays when the endpoint **URL** you entered is invalid.
 

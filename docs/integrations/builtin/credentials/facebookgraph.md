@@ -32,7 +32,7 @@ o configure this credential, you'll need a [Meta for Developers](https://develop
 
 There are two steps in setting up your credential:
 
-1. [Create a Meta app](#create-a-meta-app) with the Webhooks product.
+1. [Create a Meta app](#create-a-meta-app) with the products you need to access.
 2. [Generate an App Access Token](#generate-an-app-access-token) for that app.
 
 Refer to the detailed instructions below for each step.
@@ -62,7 +62,7 @@ Refer to Meta's [Create an app](https://developers.facebook.com/docs/development
 
 ### Generate an App Access Token
 
-Next, create an app access token to be used by your n8n credential and the products you selected:
+Next, create an app access token to use with your n8n credential and the products you selected:
 
 1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}.
 2. Select the **Meta App** you just created in the **Access Token** section.

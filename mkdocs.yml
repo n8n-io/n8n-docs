@@ -373,7 +373,9 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
-        - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
+        - HTTP Request:
+          - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md

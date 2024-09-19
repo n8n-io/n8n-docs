@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: HTTP Request
-description: Documentation for the HTTP Request node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: HTTP Request node documentation
+description: Learn how to use the HTTP Request node in n8n. Follow technical documentation to integrate HTTP Request node into your workflows.
 contentType: integration
 priority: critical
 ---
 
-# HTTP Request
+# HTTP Request node
 
 The HTTP Request node is one of the most versatile nodes in n8n. It allows you to make HTTP requests to query data from any app or service with a REST API.
 
@@ -208,9 +208,9 @@ Some options for pagination require knowledge of the data returned by the API yo
 Configure the pagination settings:
 
 * **Pagination Mode**:
-	* **Off**: Turn off pagination.
-	* **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
-	* **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
+    * **Off**: Turn off pagination.
+    * **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
+    * **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
 For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination/).
 
@@ -248,3 +248,7 @@ Import a curl command:
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(title, 'http-request') ]]
+
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues/).

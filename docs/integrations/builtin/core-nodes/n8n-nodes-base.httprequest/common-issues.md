@@ -15,7 +15,9 @@ Here are some common errors and issues with the [HTTP Request node](/integration
 This error displays when the node receives a 400 error indicating a bad request. This error most often occurs because:
 
 * You're using an invalid name or value in a **Query Parameter**.
-* You're passing array values in a **Query Parameter** but the array isn't formatted correctly. Try using the **Array Format in Query Parameters** option. Review the API documentation for your service and the options available there to format your array.
+* You're passing array values in a **Query Parameter** but the array isn't formatted correctly. Try using the [**Array Format in Query Parameters**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/#array-format-in-query-parameters) option.
+
+Review the API documentation for your service to format your query parameters.
 
 ## The resource you are requesting could not be found
 
@@ -30,7 +32,7 @@ This error displays when you've passed a parameter as JSON and it's not formatte
 To resolve, review the JSON you've entered for these issues:
 
 * Test your JSON in a JSON checker or syntax parser to find errors like missing quotation marks, extra or missing commas, incorrectly formatted arrays, extra or missing square brackets or curly brackets, and so on.
-* If you've used an **Expression** in the node, ensure the entire JSON is wrapped in double curly brackets, for example:
+* If you've used an **Expression** in the node, be sure you've wrapped the entire JSON in double curly brackets, for example:
     ```
     {{
         {
@@ -39,7 +41,7 @@ To resolve, review the JSON you've entered for these issues:
             "name1": "value1",
             "name2": "value2",
             "array1":
-            ["value1","value2"]
+                ["value1","value2"]
         }
         }
     }}

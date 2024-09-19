@@ -54,7 +54,7 @@ You can now customize the maximum file size when uploading files within forms to
 Enhanced nodes: 
 
 - [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Added actions for bank transactions
-- [OpenAI](integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

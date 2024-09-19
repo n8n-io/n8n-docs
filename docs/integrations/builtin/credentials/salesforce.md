@@ -31,27 +31,28 @@ To configure this credential, you'll need a [Salesforce](https://www.salesforce.
 - Your Salesforce **Username**
 - A **Private Key** for a self-signed digital certificate
 
-To set things up, first you'll create a private key and certificate, then a connected app:
+To set things up, first you'll create a private key and certificate, then an external client app:
 
 1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
 2. Enter your Salesforce **Username**.
-1. Log in to your org in Salesforce.
-2. You'll need a private key and certificate issued by a certification authority. Use your own key/cert or use OpenSSL to create a key and a self-signed digital certificate. Refer to the Salesforce [Create a Private Key and Self-Signed Digital Certificate documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm){:target=_blank .external-link} for instructions on creating your own key and certificate.
-3. From **Setup** in Salesforce, enter `App Manager` in the Quick Find box, then select **App Manager**.
-3. On the App Manager page, select **New Connected App**.
-4. Enter the required **Basic Info** for your connected app, including a **Name** and **Contact Email address**. Refer to Salesforce's [Configure Basic Connected App Settings](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&type=5){:target=_blank .external-link} documentation for more information.
-5. Check the box to **Enable OAuth Settings**.
-6. For the **Callback URL**, enter `http://localhost:1717/OauthRedirect`.
-7. Check the box to **Use digital signatures**.
-8. Select **Choose File** and upload the file that contains your digital certificate, such as `server.crt`.
-9. Add these **OAuth scopes**:
+3. Log in to your org in Salesforce.
+4. You'll need a private key and certificate issued by a certification authority. Use your own key/cert or use OpenSSL to create a key and a self-signed digital certificate. Refer to the Salesforce [Create a Private Key and Self-Signed Digital Certificate documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_key_and_cert.htm){:target=_blank .external-link} for instructions on creating your own key and certificate.
+5. From **Setup** in Salesforce, enter `App Manager` in the Quick Find box, then select **App Manager**.
+6. On the App Manager page, select **New Connected App**.
+7. Select New External Client App.
+8. Enter the required **Basic Info** for your connected app, including a **Name** and **Contact Email address**. Select `Local` as Distribution State. Refer to Salesforce's [Create a Local External Client App](https://help.salesforce.com/s/articleView?id=sf.create_a_local_external_client_app.htm&type=5){:target=_blank .external-link} documentation for more information.
+9. In the OAuth Settings area of the page, select **Enable OAuth**.
+10. For the **Callback URL**, enter `http://localhost:1717/OauthRedirect`.
+11. Add these **OAuth scopes**:
     - **Manage user data via APIs (api)**
     - **Manage user data via Web browsers (web)**
     - **Perform requests at any time (refresh_token, offline_access)**
-10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
-11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
-12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
-13. Enter the contents of the private key file in n8n as **Private Key**.
+12. To configure JSON Web Token (JWT)-based access tokens, enable the **JWT Bearer Flow**.
+13. Select **Choose File** and upload the file that contains your digital certificate, such as `server.crt`.
+14. Select Save to save your external client app settings.
+15. After saving, you can retrieve the **Consumer Key** (also known as Client ID) from the external client app's settings.
+13. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
+14. Enter the contents of the private key file (that you created together with the digital certificate) in n8n as **Private Key**.
     - Use the multi-line editor in n8n.
     - Enter the private key in standard PEM key format:
         ```
@@ -62,15 +63,13 @@ To set things up, first you'll create a private key and certificate, then a conn
 
 These steps are what's required on the n8n side. Salesforce recommends setting refresh token policies, session policies, and OAuth policies too:
 
-14. In Salesforce, select **Back to Manage Connected Apps**.
-15. Select **Manage**.
-16. Select **Edit Policies**.
-17. Review the **Refresh Token Policy** field. Salesforce recommends using expire refresh token after 90 days.
+14. In Salesforce, within your External Client App select Tab **Policies**.
+15. Click **Edit**.
+17. Review the **OAuth Policies** Section. Salesforce recommends using expire refresh token after 90 days.
 18. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
 19. In the **OAuth Policies** section, select **Admin approved users are pre-authorized for permitted users** for **Permitted Users**, and select **OK**.
 20. Select **Save**.
-21. Select **Manage Profiles**, select the profiles that are pre-authorized to use this connected app, and select **Save**.
-22. Select **Manage Permission Sets** to select the permission sets. Create permission sets if necessary.
+21. Ensure your User is assigned to the Profile or Permission set you put under **Selected Profiles** or **Selected Permission Sets** that are pre-authorized to use this connected app.
 
 Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm){:target=_blank .external-link} documentation for more information.
 

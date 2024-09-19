@@ -75,7 +75,13 @@ Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more 
 
 If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [_Name_ OAuth documentation](){:target=_blank .external-link} to set up OAuth.
 
+## Common issues
+
 <!-- 
-Add any other sections here. 
-You should include: quirks, pain points, complex topics that trip people up
+If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
+
+If the node is large enough to warrant subpages, create a separate Common Issues page using the common-issues.md template. and link to it here using this text:
+
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/_relativepath_).
+
 -->

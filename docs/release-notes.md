@@ -48,10 +48,11 @@ You can now [expose and consume metrics from your workers](https://docs.n8n.io/h
 
 </div>
 
-You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints/) for this is 'N8N_FORMDATA_FILE_SIZE_MAX' . The default setting is 200MiB.
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints/) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates
 Enhanced nodes: 
+
 - [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Added actions for bank transactions
 - [OpenAI](integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
 

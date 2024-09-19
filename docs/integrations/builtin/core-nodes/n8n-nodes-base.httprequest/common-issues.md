@@ -15,7 +15,7 @@ Here are some common errors and issues with the [HTTP Request node](/integration
 This error displays when the node receives a 400 error indicating a bad request. This error most often occurs because:
 
 * You're using an invalid name or value in a **Query Parameter**.
-* You're passing array values in a **Query Parameter** but the array isn't formatted correctly. Try using the **Array Format in Query Parameters** option. Review the API documentation for your service and the options available there to ensure your array is formatted properly.
+* You're passing array values in a **Query Parameter** but the array isn't formatted correctly. Try using the **Array Format in Query Parameters** option. Review the API documentation for your service and the options available there to format your array.
 
 ## The resource you are requesting could not be found
 
@@ -23,12 +23,34 @@ This error displays when the endpoint **URL** you entered is invalid.
 
 This may be due to a typo in the URL or a deprecated API. Refer to your service's API documentation to verify you have a valid endpoint.
 
+## JSON parameter need to be an valid JSON
+
+This error displays when you've passed a parameter as JSON and it's not formatted as valid JSON.
+
+To resolve, review the JSON you've entered for these issues:
+
+* Test your JSON in a JSON checker or syntax parser to find errors like missing quotation marks, extra or missing commas, incorrectly formatted arrays, extra or missing square brackets or curly brackets, and so on.
+* If you've used an **Expression** in the node, ensure the entire JSON is wrapped in double curly brackets, for example:
+    ```
+    {{
+        {
+        "myjson":
+        {
+            "name1": "value1",
+            "name2": "value2",
+            "array1":
+            ["value1","value2"]
+        }
+        }
+    }}
+    ```
+
 ## Forbidden - perhaps check your credentials
 
 This error displays when the node receives a 403 error indicating authentication failed.
 
 To resolve, review the selected credentials and make sure you can authenticate with them. You may need to:
 
-* Update permissions or scopes so that your API key or account is allowed to perform the operation you've selected.
+* Update permissions or scopes so that your API key or account can perform the operation you've selected.
 * Format your generic credential in a different way.
 * Generate a new API key or token with the appropriate permissions or scopes.

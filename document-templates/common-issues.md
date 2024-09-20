@@ -25,7 +25,7 @@ contentType: integration
 priority: _priority-from-main-node_
 ---
 
-# HTTP Request node common issues
+# _Name_ node common issues
 
 Here are some common errors and issues with the [_Name_ node](/integrations/builtin/_relativepathtonode_) and steps to resolve or troubleshoot them.
 

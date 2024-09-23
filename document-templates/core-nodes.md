@@ -50,7 +50,7 @@ You should not include: basic usage examples
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, page) ]]
+[[ templatesWidget(page.title, page) ]]
 
 <!--Add the snippet below if the core node includes value1 > data type > value2 comparisons-->
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"

@@ -52,7 +52,7 @@ To configure the node with this operation, use these parameters:
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'switch') ]]
+[[ templatesWidget(page.title, 'switch') ]]
 
 ## Related resources
 

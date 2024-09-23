@@ -31,5 +31,5 @@ Refer to [Emelia credentials](/integrations/builtin/credentials/emelia/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'emelia') ]]
+[[ templatesWidget(page.title, 'emelia') ]]
 

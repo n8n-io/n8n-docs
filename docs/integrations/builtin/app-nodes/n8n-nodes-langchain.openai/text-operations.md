@@ -59,3 +59,7 @@ Enter these parameters:
 - **Use Stable Model**: Turn on to use the stable version of the model instead of the latest version, accuracy may be slightly lower.
 
 Refer to [Moderations | OpenAI](https://platform.openai.com/docs/api-reference/moderations){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).

@@ -50,8 +50,9 @@ Refer to [LangChain's documentation on agents](https://js.langchain.com/docs/con
 New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n.io/ai-agents/){:target=_blank .external-link}.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
 
 ## Common issues
 
 For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).
+
+--8<-- "_glossary/ai-glossary.md"

@@ -40,8 +40,7 @@ To create your app and set up the credential with **Facebook Login for Business*
     * Add an **App name**.
     * Add an **App contact email**.
     * Here again you can connect to a business portfolio or skip it.
-1. Select **Create app**.
-1. The **Add products to your app** page opens.
+1. Select **Create app**. The **Add products to your app** page opens.
 1. Select **Facebook Login for Business**. The **Settings** page for this product opens.
 1. Copy the **OAuth Redirect URL** from your n8n credential.
 1. In your Meta app settings in **Client OAuth settings**, paste that URL as the **Valid OAuth Redirect URIs**.

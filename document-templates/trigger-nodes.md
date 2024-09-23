@@ -18,23 +18,23 @@ Set the meta title and meta description in the frontmatter
 
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: _Name_ trigger
-description: Documentation for the _Name_ trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: _Name_ Trigger node documentation
+description: Learn how to use the _Name_ Trigger node in n8n. Follow technical documentation to integrate _Name_ Trigger node into your workflows.
 contentType: integration
 ---
 
 <!-- 
-The title should be the name of the integration, plus "trigger". For example, "Asana trigger"
-Match the brand name exactly. For example, GitHub NOT Github
+The title should be the name of the integration and capitalized as it is in the UI, most often "Trigger". For example, "Asana Trigger".
+Match the brand name exactly. For example, GitHub NOT Github.
 -->
-# _Name_ trigger
+# _Name_ Trigger node
 
 <!-- Briefly summarize the node. For example:_
 
-Use the _Name_ trigger node to respond to events in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, including . . .
+Use the _Name_ Trigger node to respond to events in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, including . . .
 -->
 
-On this page, you'll find a list of events the _Name_ trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the _Name_ Trigger node can respond to, and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
@@ -56,10 +56,15 @@ View [example workflows and related content](https://n8n.io/integrations/_Name_/
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for details about their API.
 
+## Common issues
+
 <!-- 
-Add any other sections here. 
-You should include: quirks, pain points, complex topics that trip people up
-You should not include: basic usage examples
+If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
+
+If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
+
 -->
 
 

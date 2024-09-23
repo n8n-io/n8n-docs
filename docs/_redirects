@@ -3,6 +3,9 @@
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
 
+# Remove Ask AI
+/hosting/configuration/environment-variables/ai/ /hosting/configuration/environment-variables/
+
 ## DOC-993
 /faircode-license/  /sustainable-use-license/
 

@@ -8,7 +8,7 @@ priority: critical
 
 # HTTP Request node common issues
 
-Here are some common errors and issues with the [HTTP Request node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) and steps to resolve or troubleshoot them.
 
 ## Bad request - please check your parameters
 

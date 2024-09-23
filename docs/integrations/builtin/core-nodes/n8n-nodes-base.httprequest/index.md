@@ -77,7 +77,7 @@ Use this parameter to send headers with your request. Headers contain metadata o
 
 **Specify Headers** using one of the available options:
 
-* **Using Fields Below**: Enter **Name**/**Value** pairs of **Header Parameters**. To enter more query parameter name/value pairs, select **Add Parameter**. The name is the header you wish to set, and the value is the value you want to pass for that header.
+* **Using Fields Below**: Enter **Name**/**Value** pairs of **Header Parameters**. To enter more header parameter name/value pairs, select **Add Parameter**. The name is the header you wish to set, and the value is the value you want to pass for that header.
 * **Using JSON**: Enter **JSON** to define your header parameters.
 
 Refer to your service's API documentation for detailed guidance.

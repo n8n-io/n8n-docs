@@ -10,8 +10,10 @@ priority: medium
 
 A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/) in your workflows.
 
+Refer to the [n8n REST API documentation](/api/) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference/) for working with the API endpoints directly.
+
 /// note | Credentials
-Refer to the [API authentication](/api/authentication/) documentation for guidance on getting your n8n credentials.
+You can find authentication information for this node in the [API authentication](/api/authentication/) documentation.
 ///
 
 /// warning | SSL
@@ -169,4 +171,4 @@ Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'n8n') ]]
+[[ templatesWidget(page.title, 'n8n') ]]

@@ -44,4 +44,4 @@ Enter how many seconds the TOTP is valid for. Default is `30`.
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'totp') ]]
+[[ templatesWidget(page.title, 'totp') ]]

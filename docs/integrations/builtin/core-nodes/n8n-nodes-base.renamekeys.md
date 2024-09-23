@@ -36,4 +36,4 @@ Using a regular expression can affect any keys that match the expression, includ
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'rename-keys') ]]
+[[ templatesWidget(page.title, 'rename-keys') ]]

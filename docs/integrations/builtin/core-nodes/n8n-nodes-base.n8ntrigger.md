@@ -19,5 +19,5 @@ The n8n trigger node gets triggered when the n8n instance starts or restarts. Yo
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'n8n-trigger') ]]
+[[ templatesWidget(page.title, 'n8n-trigger') ]]
 

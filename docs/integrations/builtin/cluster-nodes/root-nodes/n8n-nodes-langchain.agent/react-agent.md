@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: React AI Agent node documentation
-description: Learn how to use the React Agent of the AI Agent node in n8n. Follow technical documentation to integrate the React Agent into your workflows.
+title: ReAct AI Agent node documentation
+description: Learn how to use the ReAct Agent of the AI Agent node in n8n. Follow technical documentation to integrate the ReAct Agent into your workflows.
 contentType: integration
 priority: critical
 ---
 
-# React AI Agent node
+# ReAct AI Agent node
 
 The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_blank .external-link} logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
 

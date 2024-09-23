@@ -380,7 +380,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
+        - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md

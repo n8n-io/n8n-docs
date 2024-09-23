@@ -8,7 +8,7 @@ priority: critical
 
 # AI Agent node
 
-An AI agent is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself, or the context the agent operates within, which might include customer queries.
+An AI agent is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself, which might include customer queries, tools, or other context.
 
 The AI Agent node gives you six LangChain agent options.
 

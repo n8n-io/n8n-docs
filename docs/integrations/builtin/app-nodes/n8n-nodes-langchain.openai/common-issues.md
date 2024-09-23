@@ -129,7 +129,7 @@ There are two ways to work around this issue:
 
 ## Bad request - please check your parameters
 
-This error displays when n8n doesn't display the actual error from OpenAI.
+This error displays when the request errored but the OpenAI node wasn't able to interpret the error message from OpenAI.
 
 To begin troubleshooting, try running the same operation using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node, which should provide a more detailed error message.
 

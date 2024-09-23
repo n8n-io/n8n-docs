@@ -26,7 +26,7 @@ Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/g
 
 ## Using app access token
 
-o configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
 
 - An app **Access Token**
 

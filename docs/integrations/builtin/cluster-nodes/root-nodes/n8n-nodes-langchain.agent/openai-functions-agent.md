@@ -53,3 +53,5 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 ## Common issues
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).
+
+--8<-- "_glossary/ai-glossary.md"

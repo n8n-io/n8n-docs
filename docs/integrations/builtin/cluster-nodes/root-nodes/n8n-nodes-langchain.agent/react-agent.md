@@ -62,6 +62,10 @@ Add text to append after the tools list at the start of the conversation when th
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/return-intermediate-steps.md"
 
+## Related resources
+
+Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/#react-agents){:target=_blank .external-link} documentation for more information.
+
 ## Templates and examples
 
 Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/#templates-and-examples) section.

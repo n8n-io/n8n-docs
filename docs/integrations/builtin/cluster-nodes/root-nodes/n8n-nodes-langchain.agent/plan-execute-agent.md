@@ -30,7 +30,7 @@ Refine the Plan and Execute Agent node's behavior using these options:
 
 ### Human Message Template
 
-Enter a message that will be sent to the agent during each step execution.
+Enter a message that n8n will send to the agent during each step execution.
 
 Available LangChain expressions:
 

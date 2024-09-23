@@ -776,7 +776,15 @@ nav:
         - integrations/builtin/cluster-nodes/index.md
         - Root nodes:
           - integrations/builtin/cluster-nodes/root-nodes/index.md
-          - AI Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent.md
+          - AI Agent:
+            - AI Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md
+            - Conversational Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent.md
+            - OpenAI Functions Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/openai-functions-agent.md
+            - Plan and Execute Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/plan-execute-agent.md
+            - ReAct Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md
+            - SQL Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/sql-agent.md
+            - Tools Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+            - Common Issues: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md
           - Basic LLM Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
           - Question and Answer Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
           - Summarization Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md

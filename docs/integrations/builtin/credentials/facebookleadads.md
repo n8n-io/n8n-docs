@@ -57,5 +57,8 @@ Your credential should successfully connect now, but you'll need to go through t
 1. Facebook Login for Business requires Advanced Access for `public_profile`. To add it, go to **App Review > Permissions and Features**.
 1. Search for `public_profile` and select **Request advanced access**.
 1. Complete the steps for [business verification](https://www.facebook.com/business/tools/meta-verified-for-business/){:target=_blank .external-link}.
+1. Use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} to trigger some demo form submissions and test your workflow.
 
-Use the [Lead Ads Testing Tool](https://developers.facebook.com/tools/lead-ads-testing){:target=_blank .external-link} to trigger some demo form submissions and test your workflow.
+Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+
+For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.

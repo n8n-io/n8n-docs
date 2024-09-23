@@ -373,14 +373,16 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
+        - HTTP Request:
+          - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
+        - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
@@ -585,6 +587,7 @@ nav:
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
           - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md 
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md 
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
@@ -1214,7 +1217,6 @@ nav:
     - Configuration: 
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
-        - AI: hosting/configuration/environment-variables/ai.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md

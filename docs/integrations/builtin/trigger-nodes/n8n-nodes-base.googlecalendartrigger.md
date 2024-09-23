@@ -26,7 +26,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 - **Event Started**
 - **Event Updated**
 
-[[ templatesWidget(title, 'google-calendar-trigger') ]]
+[[ templatesWidget(page.title, 'google-calendar-trigger') ]]
 
 ## Related resources
 

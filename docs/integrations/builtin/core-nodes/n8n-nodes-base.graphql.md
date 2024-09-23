@@ -55,7 +55,7 @@ Enter any **Headers** you want to pass as part of the query as **Name** / **Valu
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'graphql') ]]
+[[ templatesWidget(page.title, 'graphql') ]]
 
 ## Related resources
 

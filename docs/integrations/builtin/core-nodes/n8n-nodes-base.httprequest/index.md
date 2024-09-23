@@ -73,7 +73,7 @@ Refer to your service's API documentation for detailed guidance.
 
 ### Send Headers
 
-Use this parameter send headers with your request. Headers contain metadata or context about your request.
+Use this parameter to send headers with your request. Headers contain metadata or context about your request.
 
 **Specify Headers** using one of the available options:
 

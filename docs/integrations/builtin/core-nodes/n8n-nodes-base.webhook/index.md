@@ -22,7 +22,7 @@ The webhook allows you to trigger workflows from services that don't have a dedi
 
 ## Workflow development process
 
-The Webhook node testing and development process works a bit differently. Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information.
+n8n provides different **Webhook URL**s for testing and production. The testing URL includes an option to **Listen for test event**. Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information on building, testing, and shifting your Webhook node to production.
 
 ## Node parameters
 

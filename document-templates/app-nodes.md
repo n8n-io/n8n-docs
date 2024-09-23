@@ -70,8 +70,8 @@ let users know they can use the HTTP node if their operation isn't supported
 <!-- 
 If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
 
-If the node is large enough to warrant subpages, create a separate Common Issues page using the common-issues.md template. and link to it here using this text:
+If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/_relativepath_).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
 
 -->

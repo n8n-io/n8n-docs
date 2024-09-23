@@ -52,11 +52,11 @@ Enter text to prefix the tools list at the start of the conversation. You don't 
 
 ### Suffix Message for Chat Model
 
-Add text to append after the tools list at the start of the conversation when a chat model is used. You don't need to add the list of tools. LangChain automatically adds the tools list.
+Add text to append after the tools list at the start of the conversation when the agent uses a chat model. You don't need to add the list of tools. LangChain automatically adds the tools list.
 
 ### Suffix Message for Regular Model
 
-Add text to append after the tools list at the start of the conversation when a regular/instruct model is used. You don't need to add the list of tools. LangChain automatically adds the tools list.
+Add text to append after the tools list at the start of the conversation when the agent uses a regular/instruct model. You don't need to add the list of tools. LangChain automatically adds the tools list.
 
 ### Return Intermediate Steps
 

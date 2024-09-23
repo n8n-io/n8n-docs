@@ -60,7 +60,7 @@ If left empty, the agent includes all tables.
 
 ### Prefix Prompt
 
-Enter a message you'd like to send to the agent before the **Prompt** text. This initial message can provide more context and guidance to the agent about what it can and can't do, how to format .
+Enter a message you'd like to send to the agent before the **Prompt** text. This initial message can provide more context and guidance to the agent about what it can and can't do, and how to format the response.
 
 n8n fills this field with an example.
 

@@ -27,6 +27,6 @@ Refer to [Linear credentials](/integrations/builtin/credentials/linear/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'linear') ]]
+[[ templatesWidget(page.title, 'linear') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

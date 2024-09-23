@@ -94,7 +94,7 @@ Use this option to send your body as `application/x-www-form-urlencoded`.
 
 **Specify Body** using one of the available options:
 
-* **Using Fields Below**: Enter **Name**/**Value** pairs of **Body Parameters**. To enter more query parameter name/value pairs, select **Add Parameter**. The name should be the form field name, and the value is what you wish to set that field to.
+* **Using Fields Below**: Enter **Name**/**Value** pairs of **Body Parameters**. To enter more body parameter name/value pairs, select **Add Parameter**. The name should be the form field name, and the value is what you wish to set that field to.
 * **Using Single Field**: Enter your name/value pairs in a single **Body** parameter with format `fieldname1=value1&fieldname2=value2`.
 
 Refer to your service's API documentation for detailed guidance.

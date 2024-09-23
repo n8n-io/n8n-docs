@@ -63,7 +63,9 @@ To create a Meta app:
 6. The **Add products to your app** page appears. Select **Webhooks**.
 7. The **Webhooks** product opens.
 
-Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app) documentation for more information.
+Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+
+For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.
 
 ### Generate an App Access Token
 

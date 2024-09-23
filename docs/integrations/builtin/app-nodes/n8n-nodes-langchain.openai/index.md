@@ -1,14 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI node documentation
-description: Documentation for the OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+description: Learn how to use the OpenAI node in n8n. Follow technical documentation to integrate OpenAI node into your workflows.
 contentType: integration
 priority: critical
+search:
+    boost: 3
 ---
 
 # OpenAI node
 
-Use the OpenAI node to automate work in OpenAI, and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
+Use the OpenAI node to automate work in OpenAI and integrate OpenAI with other applications. n8n has built-in support for a wide range of OpenAI features, including creating images and assistants, as well as chatting with models. 
 
 On this page, you'll find a list of operations the OpenAI node supports and links to more resources.
 
@@ -58,7 +60,6 @@ For help dealing with rate limits, refer to [Handling rate limits](/integrations
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
-
 ## Using tools with OpenAI assistants
 
 Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced-ai/examples/understand-tools/) act like addons that your AI can use to access extra context or resources.
@@ -73,3 +74,7 @@ Once you add a tool connection, the OpenAI node becomes a root node, allowing it
 	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#message-an-assistant)
 - **Text**
 	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#message-a-model)
+
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).

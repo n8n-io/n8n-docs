@@ -585,6 +585,7 @@ nav:
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
           - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md 
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md 
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
@@ -1207,7 +1208,6 @@ nav:
     - Configuration: 
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
-        - AI: hosting/configuration/environment-variables/ai.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md

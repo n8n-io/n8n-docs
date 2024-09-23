@@ -23,8 +23,10 @@ contentType: integration
 The title should be the name of the node. Add "trigger" if it's a core trigger node. For example:
 Item Lists
 Local File trigger
+When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
 -->
-# _Name_
+-->
+# _Name_ node
 
 _Briefly summarize the functionality._
 
@@ -52,3 +54,14 @@ You should not include: basic usage examples
 
 <!--Add the snippet below if the core node includes value1 > data type > value2 comparisons-->
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
+
+## Common issues
+
+<!-- 
+If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
+
+If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
+
+-->

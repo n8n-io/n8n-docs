@@ -162,14 +162,14 @@ Refer to your service's API documentation for guidance on which option to use.
 
 ### Batching
 
-Control how to batch large number of input items:
+Control how to batch large numbers of input items:
 
 * **Items per Batch**: Enter the number of input items to include in each batch.
 * **Batch Interval**: Enter the time to wait between each batch of requests in milliseconds. Enter 0 for no batch interval.
 
 ### Ignore SSL Issues
 
-Turn on to download the response even if SSL certificate validation fails. Turn off to enforce SSL certificate validation.
+By default, n8n only downloads the response if SSL certificate validation succeeds. If you'd like to download the response even if SSL certificate validation fails, turn this option on.
 
 ### Lowercase Headers
 
@@ -189,7 +189,7 @@ Use this option to set some details about the expected API response, including:
     * **Autodetect** (default): The node detects and formats the response based on the data returned.
     * **File**: Select this option to put the response into a file. Enter the field name where you want the file returned in **Put Output in Field**.
     * **JSON**: Select this option to format the response as JSON.
-    * **Text**: Select this option to format the response as plain text.
+    * **Text**: Select this option to format the response as plain text. Enter the field name where you want the file returned in **Put Output in Field**.
 
 ### Pagination
 
@@ -247,7 +247,7 @@ Import a curl command:
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'http-request') ]]
+[[ templatesWidget(page.title, 'http-request') ]]
 
 ## Common issues
 

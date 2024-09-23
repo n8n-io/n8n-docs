@@ -8,7 +8,7 @@ contentType: howto
 
 # Workflow development
 
-The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) works a bit differently than other nodes. n8n recommends following these processes for building, testing, and using your Webhook node in production.
+The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) works a bit differently from other core nodes. n8n recommends following these processes for building, testing, and using your Webhook node in production.
 
 n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
 

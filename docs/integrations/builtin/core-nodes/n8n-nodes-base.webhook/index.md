@@ -138,6 +138,6 @@ Select **Add Option** to view more configuration options. The available options 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'webhook') ]]
 
-## Common issues and questions
+## Common issues
 
-For common issues and questions with suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues/).

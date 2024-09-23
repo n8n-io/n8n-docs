@@ -76,7 +76,7 @@ Here are some common errors and issues with the Basic LLM Chain node and steps t
 
 ### No prompt specified error
 
-This error displays when you haven't set a **Prompt** doesn't have a valid value.
+This error displays when the **Prompt** is empty or invalid.
 
 You might see this error in one of two scenarios:
 

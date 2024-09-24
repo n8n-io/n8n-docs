@@ -711,10 +711,10 @@ nav:
         - ConvertKit Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
         - Copper Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
         - crowd.dev Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
+        - Customer.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
+        - Emelia Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
+        - Eventbrite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
+        - Facebook Lead Ads Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
         - Facebook Trigger:
           - Facebook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
           - Ad Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
@@ -728,10 +728,10 @@ nav:
           - User: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md
           - WhatsApp Business Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md
           - Workplace Security: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md
+        - Figma Trigger (Beta): integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
+        - Flow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
+        - Form.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
+        - Formstack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md

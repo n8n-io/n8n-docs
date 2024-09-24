@@ -29,4 +29,4 @@ Refer to [Cockpit credentials](/integrations/builtin/credentials/cockpit/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'cockpit') ]]
+[[ templatesWidget(page.title, 'cockpit') ]]

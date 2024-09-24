@@ -373,14 +373,16 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.git.md
         - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.httprequest.md
+        - HTTP Request:
+          - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
         - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
+        - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
@@ -404,7 +406,10 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
         - integrations/builtin/core-nodes/n8n-nodes-base.totp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.webhook.md
+        - Webhook:
+          - integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
+          - Workflow development: integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
       - Actions:
@@ -590,6 +595,7 @@ nav:
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
           - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md 
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md 
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
@@ -709,7 +715,19 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger.md
+        - Facebook Trigger:
+          - Facebook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
+          - Ad Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
+          - Application: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md
+          - Certificate Transparency: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md
+          - Group: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/group.md
+          - Instagram: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/instagram.md
+          - Link: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/link.md
+          - Page: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page.md
+          - Permissions: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md
+          - User: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md
+          - WhatsApp Business Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md
+          - Workplace Security: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
@@ -778,7 +796,15 @@ nav:
         - integrations/builtin/cluster-nodes/index.md
         - Root nodes:
           - integrations/builtin/cluster-nodes/root-nodes/index.md
-          - AI Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent.md
+          - AI Agent:
+            - AI Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md
+            - Conversational Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent.md
+            - OpenAI Functions Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/openai-functions-agent.md
+            - Plan and Execute Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/plan-execute-agent.md
+            - ReAct Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md
+            - SQL Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/sql-agent.md
+            - Tools Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+            - Common Issues: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md
           - Basic LLM Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
           - Question and Answer Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa.md
           - Summarization Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
@@ -1212,7 +1238,6 @@ nav:
     - Configuration: 
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
-        - AI: hosting/configuration/environment-variables/ai.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md

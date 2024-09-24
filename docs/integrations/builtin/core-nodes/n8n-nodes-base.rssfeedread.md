@@ -21,7 +21,7 @@ Use the RSS Read node to read data from RSS feeds published on the internet.
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'rss-read') ]]
+[[ templatesWidget(page.title, 'rss-read') ]]
 
 ## Related resources
 

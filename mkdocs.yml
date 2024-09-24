@@ -710,8 +710,8 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
-        - Facebook trigger:
-          - integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
+        - Facebook Trigger:
+          - Facebook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
           - Ad account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
           - Application: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md
           - Certificate Transparency: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md

@@ -33,7 +33,7 @@ To generate an access token and set up the credential:
 1. To generate your **Access Token**, log in to Home Assistant and open your [User profile](https://my.home-assistant.io/redirect/profile){:target=_blank .external-link}.
 2. In the **Long-Lived Access Tokens** section, generate a new token.
 3. Copy this token and enter it in n8n as your **Access Token**.
-4. Enter the URL or IP address of your Home Assistant **Host**, without the `http://` or `https://` part, for example `your.awesome.home`.
+4. Enter the URL or IP address of your Home Assistant **Host**, without the `http://` or `https://` protocol, for example `your.awesome.home`.
 5. For the **Port**, enter the appropriate port:
 	- If you've made no port changes and access Home Assistant at `http://`, keep the default of `8123`.
 	- If you've made no port changes and access Home Assistant at `https://`, enter `443`.

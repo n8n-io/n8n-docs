@@ -34,6 +34,9 @@ To generate an access token and set up the credential:
 2. In the **Long-Lived Access Tokens** section, generate a new token.
 3. Copy this token and enter it in n8n as your **Access Token**.
 4. Enter the URL or IP address of your Home Assistant **Host**, without the `http://` or `https://` part, for example `your.awesome.home`.
-5. For the **Port**, Home Assistant defaults to `8123`. If you've configured Home Assistant to use a different port, enter the correct port. If you access your home assistant UI via `https://`, the port should be `443`.
+5. For the **Port**, enter the appropriate port:
+	- If you've made no port changes and access Home Assistant at `http://`, keep the default of `8123`.
+	- If you've made no port changes and access Home Assistant at `https://`, enter `443`.
+	- If you've configured Home Assistant to use a specific port, enter that port.
 6. If you've enabled SSL in Home Assistant in the [config.yml map key](https://developers.home-assistant.io/docs/add-ons/configuration/?_highlight=ssl#add-on-configuration){:target=_blank .external-link}, turn on the **SSL** toggle in n8n. If you're not sure, it's best to turn this setting on if you access your home assistant UI using `https://` instead of `http://`.
 

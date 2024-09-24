@@ -25,7 +25,7 @@ To configure the trigger with this Object:
 1. Select the **Credential to connect with**. Select an existing or create a new [Facebook App credential](/integrations/builtin/credentials/facebookapp/).
 1. Enter the **APP ID** of the app connected to your credential. Refer to the [Facebook App credential](/integrations/builtin/credentials/facebookapp/) documentation for more information.
 1. Select **Application** as the **Object**.
-1. **Field Names or IDs**: By default, the node will trigger on all the available events using the `*`. If you'd like to limit the events, use the `X` to remove the star and use the dropdown or an expression to select the updates you're interested in. Options include:
+1. **Field Names or IDs**: By default, the node will trigger on all the available events using the `*` wildcard filter. If you'd like to limit the events, use the `X` to remove the star and use the dropdown or an expression to select the updates you're interested in. Options include:
     * **Add Account**
     * **Ads Rules Engine**
     * **Async Requests**

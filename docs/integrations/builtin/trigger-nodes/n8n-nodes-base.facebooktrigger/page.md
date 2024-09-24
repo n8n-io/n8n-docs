@@ -37,16 +37,16 @@ To configure the trigger with this Object:
 1. Select the **Credential to connect with**. Select an existing or create a new [Facebook App credential](/integrations/builtin/credentials/facebookapp/).
 1. Enter the **APP ID** of the app connected to your credential. Refer to the [Facebook App credential](/integrations/builtin/credentials/facebookapp/) documentation for more information.
 1. Select **Page** as the **Object**.
-1. **Field Names or IDs**: By default, the node will trigger on all the available events using the `*`. If you'd like to limit the events, use the `X` to remove the star and use the dropdown or an expression to select the updates you're interested in. Options include individual profile fields, as well as:
+1. **Field Names or IDs**: By default, the node will trigger on all the available events using the `*` wildcard filter. If you'd like to limit the events, use the `X` to remove the star and use the dropdown or an expression to select the updates you're interested in. Options include individual profile fields, as well as:
     * **Feed**: Describes most changes to a page's feed, including posts, likes, shares, and so on.
     * **Leadgen**: Notifies you when a page's lead generation settings change.
     * **Live Videos**: Notifies you when a page's live video status changes.
     * **Mention**: Notifies you when new mentions in pages, comments, and so on occur.
     * **Merchant Review**: Notifies you when a page's merchant review settings change.
     * **Page Change Proposal**: Notifies you when Facebook suggests proposed changes for your Facebook Page.
-    * **Page Upcoming Change**: Notifies you when about upcoming changes that will occur on your Facebook Page. Facebook has suggested these changes and they may have a deadline to accept or reject before automatically taking effect.
+    * **Page Upcoming Change**: Notifies you about upcoming changes that will occur on your Facebook Page. Facebook has suggested these changes and they may have a deadline to accept or reject before automatically taking effect.
     * **Product Review**: Notifies you when a page's product review settings change.
-    * **Ratings**: Notifies you when a page's ratings change, including new ratings or a user comments on or reacts to a rating.
+    * **Ratings**: Notifies you when a page's ratings change, including new ratings or when a user comments on or reacts to a rating.
     * **Videos**: Notifies you when the encoding status of a video on a page changes.
 1. In **Options**, turn on the toggle to **Include Values**. This Object type fails without the option enabled.
 

@@ -50,9 +50,12 @@ Enter these parameters:
 - **Operation**: Select **Upload a File**.
 - **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property which contains the file. The size of individual files can be a maximum of 512 MB or 2 million tokens for Assistants.
 
-
 ### Options
 
 - **Purpose**: Enter the intended purpose of the uploaded file. Use **Assistants** for files associated with Assistants and Message operations. Use **Fine-Tune** for [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning){:target=_blank .external-link}.
 
 Refer to [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/files/create){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).

@@ -55,3 +55,7 @@ Enter these parameters:
 - **Put Output in Field**: Defaults to `data`. Enter the name of the output field to put the binary file data in. Only available if **Respond with image URL(s)** is turned off.
 
 Refer to [Create image | OpenAI](https://platform.openai.com/docs/api-reference/images/create){:target=_blank .external-link} documentation for more information.
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).

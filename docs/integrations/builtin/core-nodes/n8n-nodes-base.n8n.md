@@ -171,4 +171,4 @@ Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'n8n') ]]
+[[ templatesWidget(page.title, 'n8n') ]]

@@ -37,6 +37,8 @@ You can use these credentials to authenticate the following nodes:
 <!--if this is a credential-only node, use this snippet instead-->
 --8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
 
+<!-- If this credential has numerous prerequisites, include the Prerequisites section below and remove the account reference in the in the Using_Auth method_ section.
+If a single prereq. like having an account, delete the Prerequisites section here and just update the intro statement in the Using _Auth method_ section -->
 ## Prerequisites
 
 _Include info on services they need to sign up for or required account settings/permissions_
@@ -48,7 +50,7 @@ _Include info on services they need to sign up for or required account settings/
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go directly to the API credential docs. Amend the link text if necessary. -->
-Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more information about the service.
 
 
 <!-- If this is a credential-only node, add a link to the node page on n8n's website. For example: https://n8n.io/integrations/gmail/ 
@@ -57,7 +59,7 @@ This is a credential-only node. Refer to [Custom API operations](/integrations/c
 
 ## Using _Auth method_
 
-To configure this credential, you'll need:
+To configure this credential, you'll need a _add link to account login or app page_ account and:
 
 - _List of fields they'll need to fill out within n8n and a brief description of what those fields are_
 
@@ -73,9 +75,24 @@ Refer to [_Name_'s API documentation](){:target=_blank .external-link} for more 
 <!-- IF OAUTH FOR CLOUD-HOSTED DOESN'T REQUIRE ANY SETUP, use the section below. Otherwise omit -->
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, refer to the instructions in the [_Name_ OAuth documentation](){:target=_blank .external-link} to set up OAuth.
+<!-- If OAuth method, self-hosted usually needs to configure OAuth from scratch. -->
+<!-- For low or unprioritized credentials, use this statement and delete the next one -->
+If you're [self-hosting](/hosting/) n8n, you'll need to _create an app_ to configure OAuth2. Refer to [_Name_'s OAuth documentation](){:target=_blank .external-link} for more information about setting up OAuth2.
+
+<!-- For Medium, High, or Critical credentials, use this section: -->
+If you're [self-hosting](/hosting/) n8n, you'll need to _create an app_ to configure OAuth2. To do so:
+
+1. _Detailed numbered instructions to create app for OAuth2 and configure credential. Add links to specific docs here if there are any that are relevant._
+
+Refer to [_Name_'s OAuth documentation](){:target=_blank .external-link} for more information about setting up OAuth2.
+
+## Common issues
 
 <!-- 
-Add any other sections here. 
-You should include: quirks, pain points, complex topics that trip people up
+If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
+
+If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
+
 -->

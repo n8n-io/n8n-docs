@@ -8,9 +8,9 @@ priority: medium
 
 # Facebook Lead Ads Trigger node
 
-Use the Facebook Lead Ads trigger node to respond to events in [Facebook Lead Ads](https://www.facebook.com/business/ads/lead-ads/){:target=_blank .external-link} and integrate Facebook Lead Ads with other applications. n8n has built-in support for responding to new leads.
+Use the Facebook Lead Ads Trigger node to respond to events in [Facebook Lead Ads](https://www.facebook.com/business/ads/lead-ads/){:target=_blank .external-link} and integrate Facebook Lead Ads with other applications. n8n has built-in support for responding to new leads.
 
-On this page, you'll find a list of events the Facebook Lead Ads trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the Facebook Lead Ads Trigger node can respond to, and links to more resources.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads/).

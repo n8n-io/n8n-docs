@@ -1,22 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Chat Trigger
-description: Documentation for the Chat trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Chat Trigger node documentation
+description: Learn how to use the Chat Trigger node in n8n. Follow technical documentation to integrate Chat Trigger node into your workflows.
 priority: critical
 ---
 
-# Chat trigger
+# Chat Trigger node
 
-Use the Chat trigger node when building AI workflows for chatbots and other chat interfaces. You can configure how users access the chat, using one of n8n's provided interfaces, or your own. You can add authentication.
+Use the Chat Trigger node when building AI workflows for chatbots and other chat interfaces. You can configure how users access the chat, using one of n8n's provided interfaces, or your own. You can add authentication.
 
 You must connect either an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/).
 
 /// warning | Workflow execution usage
-Every message to the Chat trigger executes your workflow. This means that one conversation where a user sends 10 messages uses 10 executions from your execution allowance. Check your payment plan for details of your allowance.
+Every message to the Chat Trigger executes your workflow. This means that one conversation where a user sends 10 messages uses 10 executions from your execution allowance. Check your payment plan for details of your allowance.
 ///
 
 /// note | Manual Chat trigger
-This node replaces the Manual Chat trigger node from version 1.24.0.
+This node replaces the Manual Chat Trigger node from version 1.24.0.
 ///
 
 ## Node parameters
@@ -79,8 +79,8 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 
 Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
 
-* **When Last Node Finishes**: The Chat trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Chat trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
+* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 
 #### Require Button Click to Start Chat
 
@@ -111,8 +111,8 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 
 Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
 
-* **When Last Node Finishes**: The Chat trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Chat trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
+* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
 
 ## Templates and examples
 

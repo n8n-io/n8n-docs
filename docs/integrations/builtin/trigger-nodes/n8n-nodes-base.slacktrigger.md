@@ -8,7 +8,7 @@ priority: medium
 
 # Slack Trigger node
 
-Use the Slack trigger node to respond to events in [Slack](https://slack.com/){:target=_blank .external-link} and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions, and new channels.
+Use the Slack Trigger node to respond to events in [Slack](https://slack.com/){:target=_blank .external-link} and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions, and new channels.
 
 On this page, you'll find a list of events the Slack Trigger node can respond to and links to more resources.
 

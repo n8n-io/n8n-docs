@@ -8,7 +8,7 @@ priority: critical
 
 # Telegram Trigger node
 
-[Telegram](https://telegram.org/){:target=_blank .external-link} is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type. On this page, you'll find a list of events the Telegram trigger node can respond to and links to more resources.
+[Telegram](https://telegram.org/){:target=_blank .external-link} is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type. On this page, you'll find a list of events the Telegram Trigger node can respond to and links to more resources.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/telegram/).

@@ -86,12 +86,12 @@ Next, create an app access token to be used by your n8n credential and the Webho
 
 Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} for more information on generating the token.
 
-### Configure the Facebook trigger
+### Configure the Facebook Trigger
 
-Now that you have a token, you can configure the Facebook trigger node:
+Now that you have a token, you can configure the Facebook Trigger node:
 
 1. In your Meta app, copy the **App ID** from the top navigation bar.
-1. In n8n, open your Facebook trigger.
+1. In n8n, open your Facebook Trigger node.
 2. Paste the **App ID** into the **APP ID** field.
 3. Select **Test step** to shift the trigger into listening mode.
 6. Return to the tab or window where your Meta app's **Webhooks** product configuration is open.

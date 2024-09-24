@@ -11,7 +11,7 @@ priority: medium
 Use this object to receive updates when your WhatsApp Business Account (WABA) changes. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// warning | Use WhatsApp trigger
-n8n recommends using the [WhatsApp trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook Trigger node. That trigger node includes twice the events to subscribe to.
+n8n recommends using the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook Trigger node. That trigger node includes twice the events to subscribe to.
 ///
 
 /// note | Credentials

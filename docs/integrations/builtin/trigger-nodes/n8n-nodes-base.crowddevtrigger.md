@@ -7,9 +7,9 @@ contentType: integration
 
 # crowd.dev Trigger node
 
-Use the crowd.dev trigger node to respond to events in [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev events, including new activities and new members.
+Use the crowd.dev Trigger node to respond to events in [crowd.dev](https://www.crowd.dev/){:target=_blank .external-link} and integrate crowd.dev with other applications. n8n has built-in support for a wide range of crowd.dev events, including new activities and new members.
 
-On this page, you'll find a list of events the crowd.dev trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the crowd.dev Trigger node can respond to and links to more resources.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).

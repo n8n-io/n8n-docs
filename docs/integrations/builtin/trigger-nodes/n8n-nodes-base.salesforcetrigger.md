@@ -7,9 +7,9 @@ priority: medium
 
 # Salesforce Trigger node
 
-Use the Salesforce trigger node to respond to events in [Salesforce](https://login.salesforce.com/){:target=_blank .external-link} and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce events.
+Use the Salesforce Trigger node to respond to events in [Salesforce](https://login.salesforce.com/){:target=_blank .external-link} and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce events.
 
-On this page, you'll find a list of events the Salesforce trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the Salesforce Trigger node can respond to, and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/salesforce/).

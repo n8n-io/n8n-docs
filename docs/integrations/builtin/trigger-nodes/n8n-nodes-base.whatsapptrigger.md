@@ -8,9 +8,9 @@ priority: high
 
 # WhatsApp Trigger node
 
-Use the WhatsApp trigger node to respond to events in WhatsApp and integrate WhatsApp with other applications. n8n has built-in support for a wide range of WhatsApp events, including account, message, and phone number events.
+Use the WhatsApp Trigger node to respond to events in WhatsApp and integrate WhatsApp with other applications. n8n has built-in support for a wide range of WhatsApp events, including account, message, and phone number events.
 
-On this page, you'll find a list of events the WhatsApp trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the WhatsApp Trigger node can respond to, and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/whatsapp/).

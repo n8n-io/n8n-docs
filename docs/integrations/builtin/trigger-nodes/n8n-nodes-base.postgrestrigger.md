@@ -8,7 +8,7 @@ priority: medium
 
 # Postgres Trigger node
 
-Use the Postgres trigger node to respond to events in [Postgres](https://www.postgresql.org/){:target=_blank .external-link} and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events.
+Use the Postgres Trigger node to respond to events in [Postgres](https://www.postgresql.org/){:target=_blank .external-link} and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/postgres/).

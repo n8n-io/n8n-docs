@@ -20,15 +20,10 @@ If your n8n instance uses [queue mode](/hosting/scaling/queue-mode/), this node 
 
 ## Node parameters
 
-Configure these parameters to configure the node.
+Configure these parameters to configure the node:
 
-### Session Key
-
-Enter the key to use to store the memory in the workflow data.
-
-### Context Window Length
-
-Enter the number of previous interactions to consider for context.
+* **Session Key**: Enter the key to use to store the memory in the workflow data.
+* **Context Window Length**: Enter the number of previous interactions to consider for context.
 
 ## Templates and examples
 

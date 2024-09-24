@@ -692,25 +692,25 @@ nav:
         - Zulip: integrations/builtin/app-nodes/n8n-nodes-base.zulip.md
       - Triggers:
         - integrations/builtin/trigger-nodes/index.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
+        - ActiveCampaign Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md
+        - Acuity Scheduling Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger.md
+        - Affinity Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger.md
+        - Airtable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md
+        - AMQP Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
+        - Asana Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
+        - Autopilot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
+        - AWS SNS Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md
+        - Bitbucket Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md
+        - Box Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md
+        - Brevo Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md
+        - Calendly Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md
+        - Cal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md
+        - Chargebee Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md
+        - ClickUp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md
+        - Clockify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md
+        - ConvertKit Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
+        - Copper Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
+        - crowd.dev Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md

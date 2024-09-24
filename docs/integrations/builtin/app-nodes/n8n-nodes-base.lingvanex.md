@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: LingvaNex
-description: Documentation for the LingvaNex node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: LingvaNex node documentation
+description: Learn how to use the LingvaNex node in n8n. Follow technical documentation to integrate LingvaNex node into your workflows.
 contentType: integration
 ---
 
-# LingvaNex
+# LingvaNex node
 
 Use the LingvaNex node to automate work in LingvaNex, and integrate LingvaNex with other applications. n8n has built-in support for translating data with LingvaNex.
 
@@ -22,5 +22,5 @@ Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'lingvanex') ]]
+[[ templatesWidget(page.title, 'lingvanex') ]]
 

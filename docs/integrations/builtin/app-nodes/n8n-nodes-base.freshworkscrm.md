@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Freshworks CRM
-description: Documentation for the Freshworks CRM node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Freshworks CRM node documentation
+description: Learn how to use the Freshworks CRM node in n8n. Follow technical documentation to integrate Freshworks CRM node into your workflows.
 contentType: integration
 ---
 
-# Freshworks CRM
+# Freshworks CRM node
 
 Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Freshworks CRM with other applications. n8n has built-in support for a wide range of Freshworks CRM features, including creating, updating, deleting, and retrieve, accounts, appointments, contacts, deals, notes, sales activity and more. 
 
@@ -58,7 +58,7 @@ Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshwor
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'freshworks-crm') ]]
+[[ templatesWidget(page.title, 'freshworks-crm') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

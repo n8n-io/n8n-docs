@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: S3
-description: Documentation for the S3 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: S3 node documentation
+description: Learn how to use the S3 node in n8n. Follow technical documentation to integrate S3 node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# S3
+# S3 node
 
 Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. For AWS S3, use [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3/).
 
@@ -48,7 +48,7 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 's3') ]]
+[[ templatesWidget(page.title, 's3') ]]
 
 ## Node reference
 

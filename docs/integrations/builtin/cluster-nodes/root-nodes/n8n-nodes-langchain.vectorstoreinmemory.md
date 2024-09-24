@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: In-Memory Vector Store
-description: Documentation for the In-Memory Vector Store node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: In-Memory Vector Store node documentation
+description: Learn how to use the In-Memory Vector Store node in n8n. Follow technical documentation to integrate In-Memory Vector Store node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# In-Memory Vector Store
+# In-Memory Vector Store node
 
 Use the In Memory Vector Store node to store and retrieve embeddings in n8n's in-app memory. 
 
@@ -23,27 +24,26 @@ This node creates a vector database in the app memory.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Get Many parameters
 
-Parameters for **Get Many**:
-
-* Memory Key: the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
-* Prompt: search query.
-* Limit: how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Prompt**: Enter the search query.
+* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 
-Parameters for **Insert Documents**:
+### Insert Documents parameters
 
-* Memory Key
-* Clear Store: whether to wipe the vector store for the given memory key for this workflow before inserting data.
+* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Clear Store**: Use this parameter to control whether to wipe the vector store for the given memory key for this workflow before inserting data (turned on).
 
-Parameters for **Retrieve Documents (For Agent/Chain)**:
+### Retrieve Documents (For Agent/Chain) parameters
 
-* Memory Key
+* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'in-memory-vector-store') ]]
+[[ templatesWidget(page.title, 'in-memory-vector-store') ]]
 
 ## Related resources
 

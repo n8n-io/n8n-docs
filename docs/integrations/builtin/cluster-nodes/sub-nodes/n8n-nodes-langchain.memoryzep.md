@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Zep
-description: Documentation for the Zep node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Zep node documentation
+description: Learn how to use the Zep node in n8n. Follow technical documentation to integrate Zep node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Zep
+# Zep node
 
 Use the Zep node to use Zep as a memory server.
 
@@ -19,12 +20,12 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Session ID**: the ID to use to store the memory in the workflow data.
+* **Session ID**: Enter the ID to use to store the memory in the workflow data.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'zep') ]]
+[[ templatesWidget(page.title, 'zep') ]]
 
 ## Related resources
 

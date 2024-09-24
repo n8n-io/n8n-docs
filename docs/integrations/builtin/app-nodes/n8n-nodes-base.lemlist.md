@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Lemlist
-description: Documentation for the Lemlist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Lemlist node documentation
+description: Learn how to use the Lemlist node in n8n. Follow technical documentation to integrate Lemlist node into your workflows.
 contentType: integration
 ---
 
-# Lemlist
+# Lemlist node
 
 Use the Lemlist node to automate work in Lemlist, and integrate Lemlist with other applications. n8n has built-in support for a wide range of Lemlist features, including getting activities, teams and campaigns, as well as creating, updating, and deleting leads. 
 
@@ -36,6 +36,6 @@ Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'lemlist') ]]
+[[ templatesWidget(page.title, 'lemlist') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

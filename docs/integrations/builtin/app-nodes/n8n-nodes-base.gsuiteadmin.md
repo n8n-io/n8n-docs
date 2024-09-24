@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: G Suite Admin
-description: Documentation for the G Suite Admin node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: G Suite Admin node documentation
+description: Learn how to use the G Suite Admin node in n8n. Follow technical documentation to integrate G Suite Admin node into your workflows.
 contentType: integration
 ---
 
-# G Suite Admin
+# G Suite Admin node
 
 Use the G Suite Admin node to automate work in G Suite Admin, and integrate G Suite Admin with other applications. n8n has built-in support for a wide range of G Suite Admin features, including creating, updating, deleting, and getting users, and groups. 
 
@@ -33,7 +33,7 @@ Refer to [G Suite Admin credentials](/integrations/builtin/credentials/google/) 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'google-workspace-admin') ]]
+[[ templatesWidget(page.title, 'google-workspace-admin') ]]
 
 ## How to project a user's information
 

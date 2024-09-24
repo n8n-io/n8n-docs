@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Bitwarden
-description: Documentation for the Bitwarden node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Bitwarden node documentation
+description: Learn how to use the Bitwarden node in n8n. Follow technical documentation to integrate Bitwarden node into your workflows.
 contentType: integration
 ---
 
-# Bitwarden
+# Bitwarden node
 
 Use the Bitwarden node to automate work in Bitwarden, and integrate Bitwarden with other applications. n8n has built-in support for a wide range of Bitwarden features, including creating, getting, deleting, and updating collections, events, groups, and members.
 
@@ -44,4 +44,4 @@ Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'bitwarden') ]]
+[[ templatesWidget(page.title, 'bitwarden') ]]

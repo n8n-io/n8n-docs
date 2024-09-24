@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Discord
-description: Documentation for the Discord node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Discord node documentation
+description: Learn how to use the Discord node in n8n. Follow technical documentation to integrate Discord node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Discord
+# Discord node
 
 Use the Discord node to automate work in Discord, and integrate Discord with other applications. n8n has built-in support for a wide range of Discord features, including sending messages in a Discord channel and managing channels.
 
@@ -17,6 +17,8 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for g
 ///
 
 ## Operations
+<!-- vale off -->
+<!-- "Many" triggers warnings -->
 
 - Channel
 	- Create
@@ -35,10 +37,12 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for g
 	- Role Add
 	- Roll Remove
 
+<!-- vale on -->
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'discord') ]]
+[[ templatesWidget(page.title, 'discord') ]]
 
 ## Related resources
 

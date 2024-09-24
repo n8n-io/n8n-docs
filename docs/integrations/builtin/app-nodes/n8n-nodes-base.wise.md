@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Wise
-description: Documentation for the Wise node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Wise node documentation
+description: Learn how to use the Wise node in n8n. Follow technical documentation to integrate Wise node into your workflows.
 contentType: integration
 ---
 
-# Wise
+# Wise node
 
 Use the Wise node to automate work in Wise, and integrate Wise with other applications. n8n has built-in support for a wide range of Wise features, including getting profiles, exchange rates, and recipients. 
 
@@ -41,4 +41,4 @@ Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidanc
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'wise') ]]
+[[ templatesWidget(page.title, 'wise') ]]

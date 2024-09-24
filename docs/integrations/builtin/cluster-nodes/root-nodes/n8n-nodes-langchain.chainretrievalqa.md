@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Question and Answer Chain
-description: Documentation for the Question and Answer Chain node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Question and Answer Chain node documentation
+description: Learn how to use the Question and Answer Chain node in n8n. Follow technical documentation to integrate Question and Answer Chain node into your workflows.
+contentType: integration
 priority: high
 ---
 
-# Question and Answer Chain
+# Question and Answer Chain node
 
 Use the Question and Answer Chain node to use a vector store as a retriever.
 
@@ -20,7 +21,7 @@ The question you want to ask.
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'retrieval-qanda-chain') ]]
+[[ templatesWidget(page.title, 'retrieval-qanda-chain') ]]
 
 ## Related resources
 

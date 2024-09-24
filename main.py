@@ -17,7 +17,7 @@ def define_env(env):
 		# Process the string
 		slug = ''.join(
 			CHAR_MAP.get(ch, ch).replace('-', ' ')
-        	for ch in unicodedata.normalize('NFKC', string)
+			for ch in unicodedata.normalize('NFKC', string)
 		)
 
 		# Remove not allowed characters and apply strict filtering
@@ -79,6 +79,10 @@ def define_env(env):
 
 	@env.macro	
 	def workflowDemo(workflow_endpoint):
+		if no_template:
+			return "<div class='n8n-workflow-preview'><p>Workflow preview placeholder.</p></div>"
+
+        # Original API request logic
 		r = requests.get(url = workflow_endpoint)
 		wf_data = r.json()
 		template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{wf_data["name"]}/'
@@ -88,4 +92,3 @@ def define_env(env):
 		}
 		encoded_workflow_json = urllib.parse.quote(json.dumps(workflow_json))
 		return f"<div class='n8n-workflow-preview'><n8n-demo hidecanvaserrors='true' clicktointeract='true' frame='false' collapseformobile='false' workflow='{encoded_workflow_json}'></n8n-demo><a href='{template_url}' target='_blank'>View template details</a></div>"
-

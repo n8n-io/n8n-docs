@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Invoice Ninja
-description: Documentation for the Invoice Ninja node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Invoice Ninja node documentation
+description: Learn how to use the Invoice Ninja node in n8n. Follow technical documentation to integrate Invoice Ninja node into your workflows.
 contentType: integration
 ---
 
-# Invoice Ninja
+# Invoice Ninja node
 
 Use the Invoice Ninja node to automate work in Invoice Ninja, and integrate Invoice Ninja with other applications. n8n has built-in support for a wide range of Invoice Ninja features, including creating, updating, deleting, and getting clients, expense, invoice, payments and quotes. 
 
@@ -53,6 +53,6 @@ Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceni
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'invoice-ninja') ]]
+[[ templatesWidget(page.title, 'invoice-ninja') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

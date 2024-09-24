@@ -33,14 +33,448 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
-## n8n@1.52.1
+## n8n@1.59.4
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.0...n8n@1.52.1){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-07-26
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.3...n8n@1.59.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-20
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.60.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.0...n8n@1.60.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-20
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.60.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.3...n8n@1.60.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-18
+
+
+
+This release contains new features, node enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Queue metrics for workers
+
+You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints/). 
+
+</div>
+
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints/) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+
+### Node updates
+Enhanced nodes: 
+
+- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Added actions for bank transactions
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link} 
+
+
+## n8n@1.59.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.2...n8n@1.59.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-18
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.59.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.1...n8n@1.59.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-17
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.59.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.0...n8n@1.59.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-16
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.58.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.58.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-12
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.59.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.59.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-11
+
+/// warning | Chat Trigger
+If you are using the Chat Trigger in "Embedded Chat" mode, with authentication turned on, you could see errors connecting to n8n if the authentication on the sending/embedded side is mis-configured.
+///
+
+This release contains bug fixes and feature enhancements. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[oscarpedrero](https://github.com/oscarpedrero){:target=_blank .external-link} 
+
+## n8n@1.58.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.0...n8n@1.58.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-06
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.58.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.57.0...n8n@1.58.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-05
+
+This release contains new features, bug fixes and feature enhancements. 
+
+<div class="n8n-new-features" markdown>
+
+#### New node: PGVector Vector Store
+
+This release adds the PGVector Vector Store node. Use this node to interact with the PGVector tables in your PostgreSQL database. You can insert, get, and retrieve documents from a vector table to provide them to a retriever connected to a chain.
+
+</div>
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.57.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.56.2...n8n@1.57.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-28
+
+This release contains new features and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Improved execution queue handling
+
+We are [exposing new execution queue metrics](/hosting/configuration/configuration-examples/prometheus/) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster. 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New credentials for the HTTP Request node
+
+We added credential support for Datadog, Dynatrace, Elastic Security, Filescan, Iris, and Malcore to the HTTP Request node making it easier to use existing credentials. 
+
+</div>
+
+
+We also made it easier to select workflows as tools when working with AI agents by implementing a new `workflow selector` parameter type.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+
+## n8n@1.56.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.56.1...n8n@1.56.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-26
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.56.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.56.0...n8n@1.56.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-23
+
+This release contains bug fixes. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.56.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.3...n8n@1.56.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-21
+
+This release contains node updates, security and bug fixes. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+### Contributors
+
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.2...n8n@1.55.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-16
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.1...n8n@1.55.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-16
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.0...n8n@1.55.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.3...n8n@1.54.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.2...n8n@1.54.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.1...n8n@1.54.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.55.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.1...n8n@1.55.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-14
+
+/// warning | [Breaking change](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md){:target=_blank .external-link}
+The N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES environment variable now also blocks access to n8n's static cache directory at ~/.cache/n8n/public.
+
+If you are writing to or reading from a file at n8n's static cache directory via a node, e.g. Read/Write Files from Disk, please update your node to use a different path.
+///
+
+This release contains a new feature, a new node, a node update and bug fixes. 
+
+<div class="n8n-new-features" markdown>
+
+#### Override the npm registry
+
+This release adds the option to override the npm registry for installing community packages. This is a paid feature. 
+
+We now also prevent npm downloading community packages from a compromised npm registry by explicitly using --registry in all npm install commands.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: AI Transform
+
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview/). 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Okta
+
+This release adds the [Okta node](/integrations/builtin/app-nodes/n8n-nodes-base.okta/). Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
+
+</div>
+
+### Node updates
+Enhanced node:
+
+- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
+
+
+This release also adds the new schema view for the expression editor modal. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.0...n8n@1.54.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-13
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.53.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.53.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-08
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.54.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-07
+
+This release contains new features, node enhancements, bug fixes and updates to our API.
+
+### API update
+Our [public REST API](/api/) now supports additional operations: 
+
+- Create, delete, and edit roles for users
+- Create, read, update and delete projects
+
+Find the details in the [API reference](/api/api-reference/). 
+
+### Contributors
+
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[Javier Ferrer González](https://github.com/JavierCane){:target=_blank .external-link}  
+[Mickaël Andrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}  
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+[Pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.45.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.45.1...n8n@1.45.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-06
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.53.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.0...n8n@1.53.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-08-02
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.53.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.2...n8n@1.53.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-31
+
+This release contains new features, new nodes, node enhancements, bug fixes and updates to our API.
+
+<div class="n8n-new-features" markdown>
+
+#### Added Google Cloud Platform Secrets Manager support
+
+This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license. 
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Information Extractor
+
+This release adds the [Information Extractor node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor/). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### New node: Sentiment Analysis
+
+This release adds the [Sentiment Analysis node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis/). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
+
+</div>
+
+### Node updates
+Enhanced nodes:
+
+- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
+- [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/)
+- [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/)
+
+### API update
+Our [public REST API](/api/) now supports additional operations: 
+
+- Create, read, and delete for variables
+- Filtering workflows by project
+- Transferring workflows
+
+Find the details in the [API reference](/api/api-reference/). 
+
+### Contributors
+
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.52.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.1...n8n@1.52.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-31
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.52.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.52.0...n8n@1.52.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-07-26
 
 This release contains bug fixes.
 
@@ -59,7 +493,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.51.1...n8n@1.52.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-25
-
 
 
 /// warning | [Breaking change](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md){:target=_blank .external-link}
@@ -98,14 +531,6 @@ Deprecated nodes:
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.51.0...n8n@1.51.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-23
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -115,8 +540,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.50.1...n8n@1.50.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-23
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -125,8 +548,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.50.1...n8n@1.51.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-18
-
-
 
 This release contains new nodes, node enhancements and bug fixes.
 
@@ -164,8 +585,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.50.0...n8n@1.50.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-16
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -175,13 +594,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.49.0...n8n@1.50.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-07-10
 
-
-
 This release contains node enhancements and bug fixes.
 
 ### Node updates
 - Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
 - Deprecated node: Orbit (product shut down)  
+
+### Beta Feature Removal
+The Ask AI beta feature for the HTTP Request node has been removed from this version  
 
 ### Contributors
 [Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
@@ -504,7 +924,7 @@ Note that this release removes the AI error debugger. We're working on a new and
 
 #### New feature: Tools Agent
 
-This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/#tools-agent).
+This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
 
 This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
 

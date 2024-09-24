@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gotify
-description: Documentation for the Gotify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Gotify node documentation
+description: Learn how to use the Gotify node in n8n. Follow technical documentation to integrate Gotify node into your workflows.
 contentType: integration
 ---
 
-# Gotify
+# Gotify node
 
 Use the Gotify node to automate work in Gotify, and integrate Gotify with other applications. n8n has built-in support for a wide range of Gotify features, including creating, deleting, and getting messages. 
 
@@ -25,4 +25,4 @@ Refer to [Gotify credentials](/integrations/builtin/credentials/gotify/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'gotify') ]]
+[[ templatesWidget(page.title, 'gotify') ]]

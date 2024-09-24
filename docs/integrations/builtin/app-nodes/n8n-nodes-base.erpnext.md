@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: ERPNext
-description: Documentation for the ERPNext node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: ERPNext node documentation
+description: Learn how to use the ERPNext node in n8n. Follow technical documentation to integrate ERPNext node into your workflows.
 contentType: integration
 ---
 
-# ERPNext
+# ERPNext node
 
 Use the ERPNext node to automate work in ERPNext, and integrate ERPNext with other applications. n8n has built-in support for a wide range of ERPNext features, including creating, updating, retrieving, and deleting documents. 
 
@@ -27,7 +27,7 @@ Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'erpnext') ]]
+[[ templatesWidget(page.title, 'erpnext') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -1,10 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: GitHub Document Loader
-description: Documentation for the GitHub Document Loader node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: GitHub Document Loader node documentation
+description: Learn how to use the GitHub Document Loader node in n8n. Follow technical documentation to integrate GitHub Document Loader node into your workflows.
+contentType: integration
 ---
 
-# GitHub Document Loader
+# GitHub Document Loader node
 
 Use the GitHub Document Loader node to load data from a GitHub repository for vector stores or summarization.
 
@@ -18,18 +19,18 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* Repository Link: URL of your GitHub repository.
-* Branch: the branch name.
+* **Repository Link**: Enter the URL of your GitHub repository.
+* **Branch**: Enter the branch name to use.
 
 ## Node options
 
-* Recursive: whether to include sub-folders and files.
-* Ignore Paths: set directories to ignore.
+* **Recursive**: Select whether to include sub-folders and files (turned on) or not (turned off).
+* **Ignore Paths**: Enter directories to ignore.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'github-document-loader') ]]
+[[ templatesWidget(page.title, 'github-document-loader') ]]
 
 ## Related resources
 

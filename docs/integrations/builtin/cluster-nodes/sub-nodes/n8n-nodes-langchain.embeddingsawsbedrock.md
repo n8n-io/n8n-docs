@@ -1,10 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings AWS Bedrock
-description: Documentation for the Embeddings AWS Bedrock node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Embeddings AWS Bedrock node documentation
+description: Learn how to use the Embeddings AWS Bedrock node in n8n. Follow technical documentation to integrate Embeddings AWS Bedrock node into your workflows.
+contentType: integration
 ---
 
-# Embeddings AWS Bedrock
+# Embeddings AWS Bedrock node
 
 Use the Embeddings AWS Bedrock node to generate embeddings for a given text.
 
@@ -18,12 +19,14 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html){:target=_blank .external-link}. 
+* **Model**: Select the model to use to generate the embedding.
+
+Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html){:target=_blank .external-link}. 
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'embeddings-aws-bedrock') ]]
+[[ templatesWidget(page.title, 'embeddings-aws-bedrock') ]]
 
 ## Related resources
 

@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: LoneScale
-description: Documentation for the LoneScale node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: LoneScale node documentation
+description: Learn how to use the LoneScale node in n8n. Follow technical documentation to integrate LoneScale node into your workflows.
 contentType: integration
 ---
 
-# LoneScale 
+# LoneScale node
 
 Use the LoneScale node to automate work in LoneScale and integrate LoneScale with other applications. n8n has built-in support for managing Lists and Items in LoneScale. 
 
@@ -25,7 +25,7 @@ You can find authentication information for this node [here](/integrations/built
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'lonescale') ]]
+[[ templatesWidget(page.title, 'lonescale') ]]
 
 ## Related resources
 

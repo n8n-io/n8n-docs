@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Pinecone Vector Store
-description: Documentation for the Pinecone node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Pinecone Vector Store node documentation
+description: Learn how to use the Pinecone Vector Store node in n8n. Follow technical documentation to integrate Pinecone Vector Store node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Pinecone Vector Store
+# Pinecone Vector Store node
 
 Use the Pinecone node to interact with your Pinecone database as vector store. You can insert documents into a vector database, get documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 
@@ -21,23 +22,23 @@ You can find authentication information for this node [here](/integrations/built
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
-### Parameters for **Get Many**
+### Get Many parameters
 
-* Pinecone Index
-* Prompt: search query.
-* Limit: how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+* **Pinecone Index**: Select or enter the Pinecone Index to use.
+* **Prompt**: Enter your search query.
+* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-### Parameters for **Insert Documents**
+### Insert Documents parameters
 
-* Pinecone Index
+* **Pinecone Index**: Select or enter the Pinecone Index to use.
 
-### Parameters for **Retrieve Documents (For Agent/Chain)**
+### Retrieve Documents (For Agent/Chain) parameters
 
-* Pinecone Index
+* **Pinecone Index**: Select or enter the Pinecone Index to use.
 
 ## Node options
 
-#### Pinecone Namespace 
+### Pinecone Namespace 
 
 Another segregation option for how to store your data within the index.
 
@@ -51,12 +52,10 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 ## Templates and examples
 
-
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'pinecone-vector-store') ]]
+[[ templatesWidget(page.title, 'pinecone-vector-store') ]]
 
 ## Related resources
-
 
 Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/modules/data_connection/vectorstores/integrations/pinecone){:target=_blank .external-link} for more information about the service.
 

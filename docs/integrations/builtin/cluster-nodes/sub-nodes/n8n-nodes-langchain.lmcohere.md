@@ -1,10 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Cohere Model
-description: Documentation for the Cohere Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Cohere Model node documentation
+description: Learn how to use the Cohere Model node in n8n. Follow technical documentation to integrate Cohere Model node into your workflows.
+contentType: integration
 ---
 
-# Cohere Model
+# Cohere Model node
 
 Use the Cohere Model node to use Cohere's models.
 
@@ -18,13 +19,13 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node Options
 
-* **Maximum Number of Tokens**: the completion length, in characters.
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'cohere-model') ]]
+[[ templatesWidget(page.title, 'cohere-model') ]]
 
 ## Related resources
 

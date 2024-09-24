@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Salesmate
-description: Documentation for the Salesmate node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Salesmate node documentation
+description: Learn how to use the Salesmate node in n8n. Follow technical documentation to integrate Salesmate node into your workflows.
 contentType: integration
 ---
 
-# Salesmate
+# Salesmate node
 
 Use the Salesmate node to automate work in Salesmate, and integrate Salesmate with other applications. n8n has built-in support for a wide range of Salesmate features, including creating, updating, deleting, and getting activities, companies, and deals. 
 
@@ -39,4 +39,4 @@ Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'salesmate') ]]
+[[ templatesWidget(page.title, 'salesmate') ]]

@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SecurityScorecard
-description: Documentation for the SecurityScorecard node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: SecurityScorecard node documentation
+description: Learn how to use the SecurityScorecard node in n8n. Follow technical documentation to integrate SecurityScorecard node into your workflows.
 contentType: integration
 ---
 
-# SecurityScorecard
+# SecurityScorecard node
 
 Use the SecurityScorecard node to automate work in SecurityScorecard, and integrate SecurityScorecard with other applications. n8n has built-in support for a wide range of SecurityScorecard features, including creating, updating, deleting, and getting portfolio, as well as getting a company's data.
 
@@ -46,4 +46,4 @@ Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/secur
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'securityscorecard') ]]
+[[ templatesWidget(page.title, 'securityscorecard') ]]

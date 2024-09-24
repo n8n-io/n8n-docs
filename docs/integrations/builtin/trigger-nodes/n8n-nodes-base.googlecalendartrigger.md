@@ -20,9 +20,18 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 ## Events
 
-- Event Cancelled
-- Event Created
-- Event Ended
-- Event Started
-- Event Updated
+- **Event Cancelled**
+- **Event Created**
+- **Event Ended**
+- **Event Started**
+- **Event Updated**
 
+[[ templatesWidget(page.title, 'google-calendar-trigger') ]]
+
+## Related resources
+
+n8n provides an app node for Google Calendar. You can find the node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.n8n-nodes-base.googlecalendar.md/).
+
+View [example workflows and related content](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} on n8n's website.
+
+Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for details about their API.

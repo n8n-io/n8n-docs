@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Airtable
-description: Documentation for the Airtable node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Airtable node documentation
+description: Learn how to use the Airtable node in n8n. Follow technical documentation to integrate Airtable node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Airtable
+# Airtable node
 
 Use the Airtable node to automate work in Airtable, and integrate Airtable with other applications. n8n has built-in support for a wide range of Airtable features, including creating, reading, listing, updating and deleting tables.
 
@@ -27,7 +27,7 @@ Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'airtable') ]]
+[[ templatesWidget(page.title, 'airtable') ]]
 
 ## Related resources
 

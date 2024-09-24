@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Freshservice
-description: Documentation for the Freshservice node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Freshservice node documentation
+description: Learn how to use the Freshservice node in n8n. Follow technical documentation to integrate Freshservice node into your workflows.
 contentType: integration
 ---
 
-# Freshservice
+# Freshservice node
 
 Use the Freshservice node to automate work in Freshservice and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting agent information and departments.
 
@@ -108,4 +108,4 @@ Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservi
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'freshservice') ]]
+[[ templatesWidget(page.title, 'freshservice') ]]

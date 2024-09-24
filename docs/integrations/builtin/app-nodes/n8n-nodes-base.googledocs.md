@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Docs
-description: Documentation for the Google Docs node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google Docs node documentation
+description: Learn how to use the Google Docs node in n8n. Follow technical documentation to integrate Google Docs node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Google Docs
+# Google Docs node
 
 Use the Google Docs node to automate work in Google Docs, and integrate Google Docs with other applications. n8n has built-in support for a wide range of Google Docs features, including creating, updating, and getting documents. 
 
@@ -26,6 +26,6 @@ Refer to [Google Docs credentials](/integrations/builtin/credentials/google/) fo
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'google-docs') ]]
+[[ templatesWidget(page.title, 'google-docs') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

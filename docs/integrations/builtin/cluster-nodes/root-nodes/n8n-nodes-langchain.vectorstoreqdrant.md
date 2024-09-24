@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Qdrant Vector Store
-description: Documentation for the Qdrant node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Qdrant Vector Store node documentation
+description: Learn how to use the Qdrant Vector Store node in n8n. Follow technical documentation to integrate Qdrant Vector Store node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Qdrant Vector Store
+# Qdrant Vector Store node
 
 Use the Qdrant node to interact with your Qdrant collection as a vector store. You can insert documents into a vector database, get documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain.
 
@@ -21,20 +22,29 @@ You can find authentication information for this node [here](/integrations/built
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
-### Parameters for Get Many
+### Get Many parameters
 
-* Qdrant collection name
-* Prompt: search query.
-* Limit: how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+* **Qdrant collection name**: Enter the name of the Qdrant collection to use.
+* **Prompt**: Enter the search query.
+* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-### Parameters for Insert Documents
+This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter).
 
-* Qdrant collection name
-* Qdrant collection creation configuration - Optional
+### Insert Documents parameters
 
-### Parameters for Retrieve Documents (For Agent/Chain)
+* **Qdrant collection name**: Enter the name of the Qdrant collection to use.
 
-* Qdrant collection name
+This Operation Mode includes one **Node option**:
+
+* **Collection Config**: Enter JSON options for creating a Qdrant collection creation configuration. Refer to the Qdrant [Collections](https://qdrant.tech/documentation/concepts/collections/){:target=_blank .external-link} documentation for more information.
+
+### Retrieve Documents (For Agent/Chain) parameters
+
+* **Qdrant collection name**: Enter the name of the Qdrant collection to use.
+
+This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter).
+
+## Node options
 
 ### Metadata Filter
 
@@ -43,10 +53,12 @@ You can find authentication information for this node [here](/integrations/built
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'qdrant-vector-store') ]]
+[[ templatesWidget(page.title, 'qdrant-vector-store') ]]
 
 ## Related resources
 
 Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+--8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

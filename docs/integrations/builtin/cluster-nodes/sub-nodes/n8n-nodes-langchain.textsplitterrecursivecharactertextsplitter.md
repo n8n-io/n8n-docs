@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Recursive Character Text Splitter
-description: Documentation for the Recursive Character Text Splitter node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Recursive Character Text Splitter node documentation
+description: Learn how to use the Recursive Character Text Splitter node in n8n. Follow technical documentation to integrate Recursive Character Text Splitter node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Recursive Character Text Splitter
+# Recursive Character Text Splitter node
 
 The Recursive Character Text Splitter node splits document data recursively to keep all paragraphs, sentences then words together as long as possible.
 
@@ -15,13 +16,13 @@ On this page, you'll find the node parameters for the Recursive Character Text S
 
 ## Node parameters
 
-* **Chunk Size**: number of characters in each chunk.
-* **Chunk Overlap**: how much overlap to have between chunks.
+* **Chunk Size**: Enter the number of characters in each chunk.
+* **Chunk Overlap**: Enter how much overlap to have between chunks.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'recursive-character-text-splitter') ]]
+[[ templatesWidget(page.title, 'recursive-character-text-splitter') ]]
 
 ## Related resources
 

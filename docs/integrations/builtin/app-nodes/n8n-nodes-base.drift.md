@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Drift
-description: Documentation for the Drift node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Drift node documentation
+description: Learn how to use the Drift node in n8n. Follow technical documentation to integrate Drift node into your workflows.
 contentType: integration
 ---
 
-# Drift
+# Drift node
 
 Use the Drift node to automate work in Drift, and integrate Drift with other applications. n8n has built-in support for a wide range of Drift features, including creating, updating, deleting, and getting contacts. 
 
@@ -27,7 +27,7 @@ Refer to [Drift credentials](/integrations/builtin/credentials/drift/) for guida
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'drift') ]]
+[[ templatesWidget(page.title, 'drift') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

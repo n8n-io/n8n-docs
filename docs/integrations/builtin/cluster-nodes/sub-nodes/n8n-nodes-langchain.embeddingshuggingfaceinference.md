@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings HuggingFace Inference
-description: Documentation for the Embeddings HuggingFace Inference node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Embeddings HuggingFace Inference node documentation
+description: Learn how to use the Embeddings HuggingFace Inference node in n8n. Follow technical documentation to integrate Embeddings HuggingFace Inference node into your workflows.
+contentType: integration
 priority: medium
 ---
 
-# Embeddings HuggingFace Inference
+# Embeddings HuggingFace Inference node
 
 Use the Embeddings HuggingFace Inference node to generate embeddings for a given text.
 
@@ -19,18 +20,20 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Refer to the [Hugging Face models documentation](https://huggingface.co/models?other=embeddings){:target=_blank .external-link} for available models.
+* **Model**: Select the model to use to generate the embedding.
+
+Refer to the [Hugging Face models documentation](https://huggingface.co/models?other=embeddings){:target=_blank .external-link} for available models.
 
 ## Node options
 
-Custom Inference Endpoint: the URL of your deployed model, hosted by HuggingFace. If you set this, n8n ignores the Model Name.
+* **Custom Inference Endpoint**: Enter the URL of your deployed model, hosted by HuggingFace. If you set this, n8n ignores the **Model Name**.
 
 Refer to [HuggingFace's guide to inference](https://huggingface.co/inference-endpoints){:target=_blank .external-link} for more information.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'embeddings-hugging-face-inference') ]]
+[[ templatesWidget(page.title, 'embeddings-hugging-face-inference') ]]
 
 ## Related resources
 

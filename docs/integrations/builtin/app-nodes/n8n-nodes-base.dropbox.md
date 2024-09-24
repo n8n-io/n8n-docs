@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Dropbox
-description: Documentation for the Dropbox node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Dropbox node documentation
+description: Learn how to use the Dropbox node in n8n. Follow technical documentation to integrate Dropbox node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Dropbox
+# Dropbox node
 
 Use the Dropbox node to automate work in Dropbox, and integrate Dropbox with other applications. n8n has built-in support for a wide range of Dropbox features, including creating, downloading, moving, and copying files and folders.
 
@@ -36,7 +36,7 @@ Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'dropbox') ]]
+[[ templatesWidget(page.title, 'dropbox') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

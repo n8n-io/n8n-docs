@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Reddit
-description: Documentation for the Reddit node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Reddit node documentation
+description: Learn how to use the Reddit node in n8n. Follow technical documentation to integrate Reddit node into your workflows.
 contentType: integration
 ---
 
-# Reddit
+# Reddit node
 
 Use the Reddit node to automate work in Reddit, and integrate Reddit with other applications. n8n has built-in support for a wide range of Reddit features, including getting profiles, and users, retrieving post comments and subreddit, as well as submitting, getting, and deleting posts. 
 
@@ -39,6 +39,6 @@ Refer to [Reddit credentials](/integrations/builtin/credentials/reddit/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'reddit') ]]
+[[ templatesWidget(page.title, 'reddit') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

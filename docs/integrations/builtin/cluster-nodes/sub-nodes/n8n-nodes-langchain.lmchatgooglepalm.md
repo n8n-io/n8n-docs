@@ -1,10 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google PaLM Chat Model
-description: Documentation for the Google PaLM Chat Model node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google PaLM Chat Model node documentation
+description: Learn how to use the Google PaLM Chat Model node in n8n. Follow technical documentation to integrate Google PaLM Chat Model node into your workflows.
+contentType: integration
 ---
 
-# Google PaLM Chat Model
+# Google PaLM Chat Model node
 
 Use the Google PaLM Chat Model node to use Google's PaLM chat models with conversational agents.
 
@@ -18,18 +19,20 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-**Model**: the model to use to generate the completion. n8n dynamically loads models from the Google PaLM API and you will only see the models available to your account.
+* **Model**: Select the model to use to generate the completion.
+
+n8n dynamically loads models from the Google PaLM API and you'll only see the models available to your account.
 
 ## Node options
 
-* **Sampling Temperature**: controls the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
-* **Top K**: the number of token choices the model uses to generate the next token.
-* **Top P**: use a lower value to ignore less probable options. 
+* **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+* **Top K**: Enter the number of token choices the model uses to generate the next token.
+* **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'google-palm-chat-model') ]]
+[[ templatesWidget(page.title, 'google-palm-chat-model') ]]
 
 ## Related resources
 

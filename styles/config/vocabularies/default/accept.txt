@@ -67,6 +67,7 @@ CRM
 Cron
 Crypto
 crypto
+Datadog
 Datastore
 DeepL
 Demio
@@ -74,6 +75,7 @@ disabled
 Disqus
 Dockerfile
 Dropcontact
+Dynatrace
 eksctl
 Embeddable
 embeddable
@@ -108,6 +110,7 @@ geospatial
 GIMP
 Gotify
 Grafana
+Groq
 GSuite
 Gumroad
 Hetzner
@@ -144,6 +147,7 @@ Mailcheck
 Mailchimp
 Mailgun
 Mailjet
+Malcore
 marketstack
 Mattermost
 Mautic
@@ -167,10 +171,12 @@ nanoids
 namespace
 NASA
 Netlify
+Netscaler
 Nextcloud
 ngrok
 Nodelinter
 npm
+NPM
 npx
 OAuth
 Odoo
@@ -180,7 +186,9 @@ onboarding
 Onfleet
 Ortto
 Oura
+PDFs
 Peekalink
+PGVector
 PhantomBuster
 Pinterest
 Pipedrive
@@ -212,12 +220,14 @@ Sendy
 Serp
 Serverless
 serverless
+sheetId
 Shopify
 shopify
 signup
 Splunk
 Spontit
 Spotify
+spreadsheetId
 Stackby
 Stackshare
 Storyblok
@@ -278,6 +288,7 @@ Vhost
 VM
 Vonage
 Vuex
+Wasabi's
 Webex
 Webflow
 WeKan

@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Brandfetch
-description: Documentation for the Brandfetch node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Brandfetch node documentation
+description: Learn how to use the Brandfetch node in n8n. Follow technical documentation to integrate Brandfetch node into your workflows.
 contentType: integration
 ---
 
-# Brandfetch
+# Brandfetch node
 
 Use the Brandfetch node to automate work in Brandfetch, and integrate Brandfetch with other applications. n8n has built-in support for a wide range of Brandfetch features, including returning a company’s information.
 
@@ -26,4 +26,4 @@ Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch/)
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'brandfetch') ]]
+[[ templatesWidget(page.title, 'brandfetch') ]]

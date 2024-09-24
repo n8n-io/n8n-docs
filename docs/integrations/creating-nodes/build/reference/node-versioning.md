@@ -32,7 +32,7 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
     name: 'NasaPics',
     icon: 'file:nasapics.svg',
     // List the available versions
-    version: [1,2,3]
+    version: [1,2,3],
     // More basic parameters here
     properties: [
         // Add a resource that's only displayed for version2

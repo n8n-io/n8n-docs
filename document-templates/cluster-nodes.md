@@ -1,11 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: _Name_
-description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: _Name_ node documentation
+description: Learn how to use the _Name_ node in n8n. Follow technical documentation to integrate _Name_ node into your workflows.
 contentType: integration
 ---
 
-# _Name_
+<!-- 
+The title should be the name of the integration 
+Match the brand name exactly. For example, GitHub NOT Github
+When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
+-->
+# _Name_ node
 
 <!-- Briefly summarize the node. For example:
 
@@ -19,19 +24,42 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* _Bullet list_
-* _Of available operations_.
+Configure the node with the following parameters.
+
+### _One subheading for each parameter_
+
+_Description of parameter_
+
+<!--
+Delete the Node options section and the following subheading if the node doesn't have any options.
+-->
+## Node options
+
+Use these options to further refine the node's behavior.
+
+### _One subheading for each option_
+
+_Description of node option_
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'integrations-page-slug') ]]
+[[ templatesWidget(page.title, 'integrations-page-slug') ]]
 
 ## Related resources
 
-
 Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
-
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"
+
+## Common issues
+
+<!-- 
+If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
+
+If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
+
+-->

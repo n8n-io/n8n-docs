@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Clockify
-description: Documentation for the Clockify node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Clockify node documentation
+description: Learn how to use the Clockify node in n8n. Follow technical documentation to integrate Clockify node into your workflows.
 contentType: integration
 ---
 
-# Clockify
+# Clockify node
 
 Use the Clockify node to automate work in Clockify, and integrate Clockify with other applications. n8n has built-in support for a wide range of Clockify features, including creating, updating, getting, and deleting tasks, time entries, projects, and tags.
 
@@ -43,7 +43,7 @@ Refer to [Clockify credentials](/integrations/builtin/credentials/clockify/) for
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'clockify') ]]
+[[ templatesWidget(page.title, 'clockify') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -26,45 +26,20 @@ For usage examples and templates to help you get started, refer to n8n's [Gmail 
 
 Configure the node with these parameters:
 
-### Credential to connect with
-
-Select or create a new Google credential to use for the trigger. Refer to [Google credentials](/integrations/builtin/credentials/google/) for more information on setting up a new credential.
-
-### Poll Times
-
-Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields.
-
-Refer to [Poll Mode options](#poll-mode-options) to configure the parameters for each mode type.
-
-### Simplify
-
-Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
-
-The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
+* **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](/integrations/builtin/credentials/google/) for more information on setting up a new credential.
+* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](#poll-mode-options) to configure the parameters for each mode type.
+* **Simplify**: Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
+    * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
 
 ## Node filters
 
 Use these filters to further refine the node's behavior:
 
-### Include Spam and Trash
-
-Select whether the node should trigger on new messages in the Spam and Trash folders (turned on) or not (turned off).
-
-### Label Names or IDs
-
-Only trigger on messages with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
-
-### Search
-
-Enter Gmail search refine filters, like `from:`, to trigger the node on the filtered conditions only. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
-
-### Read Status
-
-Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
-
-### Sender
-
-Enter an email or a part of a sender name to trigger only on messages from that sender.
+* **Include Spam and Trash**: Select whether the node should trigger on new messages in the Spam and Trash folders (turned on) or not (turned off).
+* **Label Names or IDs**: Only trigger on messages with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
+* **Search**: Enter Gmail search refine filters, like `from:`, to trigger the node on the filtered conditions only. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
+* **Read Status**: Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
+* **Sender**: Enter an email or a part of a sender name to trigger only on messages from that sender.
 
 ## Related resources
 

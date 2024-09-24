@@ -27,7 +27,7 @@ For usage examples and templates to help you get started, refer to n8n's [Gmail 
 Configure the node with these parameters:
 
 * **Credential to connect with**: Select or create a new Google credential to use for the trigger. Refer to [Google credentials](/integrations/builtin/credentials/google/) for more information on setting up a new credential.
-* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](#poll-mode-options) to configure the parameters for each mode type.
+* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options/) to configure the parameters for each mode type.
 * **Simplify**: Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
     * The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
 
@@ -48,12 +48,6 @@ n8n provides an app node for Gmail. You can find the node docs [here](/integrati
 View [example workflows and related content](https://n8n.io/integrations/gmail-trigger/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Google's Gmail API documentation](https://developers.google.com/gmail/api/guides){:target=_blank .external-link} for details about their API.
-
-## Poll mode options
-
-Here are the parameters you configure for each poll mode option.
-
---8<-- "_snippets/integrations/builtin/poll-modes.md"
 
 ## Common issues
 

@@ -737,6 +737,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
         - Gmail Trigger:
           - integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md
+          - Poll Mode options: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md
           - Common Issues: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger.md

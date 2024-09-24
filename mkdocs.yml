@@ -745,19 +745,19 @@ nav:
         - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
         - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
         - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
+        - Kafka Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+        - Keap Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
+        - KoboToolbox Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md
+        - Lemlist Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md
+        - Linear Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md
+        - LoneScale Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md
+        - Mailchimp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md
+        - MailerLite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
+        - Mailjet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
+        - Mautic Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
+        - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
+        - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+        - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md

@@ -13,7 +13,7 @@ You can find more info on working with the docs project in the README: https://g
 -->
 
 <!--
-Set the meta title and meta description in the frontmatter
+Set the meta title and meta description in the frontmatter 
 -->
 
 ---
@@ -34,7 +34,7 @@ Match the brand name exactly. For example, GitHub NOT Github.
 Use the _Name_ Trigger node to respond to events in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, including . . .
 -->
 
-On this page, you'll find a list of events the _Name_ Trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the _Name_ Trigger node can respond to and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).

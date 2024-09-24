@@ -23,7 +23,7 @@ Use the MQTT node to send a message. You can set the message topic, and choose w
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'mqtt') ]]
+[[ templatesWidget(page.title, 'mqtt') ]]
 
 ## Related resources
 

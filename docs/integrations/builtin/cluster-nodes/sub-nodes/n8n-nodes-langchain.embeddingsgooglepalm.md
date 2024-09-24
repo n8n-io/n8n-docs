@@ -26,7 +26,7 @@ n8n dynamically loads models from the Google PaLM API and you'll only see the mo
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'embeddings-google-palm') ]]
+[[ templatesWidget(page.title, 'embeddings-google-palm') ]]
 
 ## Related resources
 

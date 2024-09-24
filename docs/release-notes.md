@@ -33,14 +33,89 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
-## n8n@1.59.1
+## n8n@1.59.4
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.0...n8n@1.59.1){:target=_blank .external-link} for this version.<br />
-**Release date:** 2024-09-16
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.3...n8n@1.59.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-20
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.60.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.0...n8n@1.60.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-20
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.60.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.3...n8n@1.60.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-18
+
+
+
+This release contains new features, node enhancements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+#### Queue metrics for workers
+
+You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints/). 
+
+</div>
+
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints/) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+
+### Node updates
+Enhanced nodes: 
+
+- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Added actions for bank transactions
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link} 
+
+
+## n8n@1.59.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.2...n8n@1.59.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-18
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.59.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.1...n8n@1.59.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-17
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.59.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.0...n8n@1.59.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-09-16
 
 This release contains bug fixes.
 
@@ -51,9 +126,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.58.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-12
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 
 
@@ -65,10 +137,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.59.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-11
-
-
-
-
 
 /// warning | Chat Trigger
 If you are using the Chat Trigger in "Embedded Chat" mode, with authentication turned on, you could see errors connecting to n8n if the authentication on the sending/embedded side is mis-configured.
@@ -86,9 +154,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.0...n8n@1.58.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-06
-
-
-
 
 This release contains bug fixes.
 
@@ -222,7 +287,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.54.2...n8n@1.54.3
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.54.2
 
@@ -535,6 +599,9 @@ This release contains node enhancements and bug fixes.
 ### Node updates
 - Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
 - Deprecated node: Orbit (product shut down)  
+
+### Beta Feature Removal
+The Ask AI beta feature for the HTTP Request node has been removed from this version  
 
 ### Contributors
 [Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
@@ -857,7 +924,7 @@ Note that this release removes the AI error debugger. We're working on a new and
 
 #### New feature: Tools Agent
 
-This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/#tools-agent).
+This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
 
 This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
 

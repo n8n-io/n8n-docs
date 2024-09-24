@@ -36,6 +36,6 @@ You can't create a mix of AND and OR rules.
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'filter') ]]
+[[ templatesWidget(page.title, 'filter') ]]
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"

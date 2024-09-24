@@ -69,7 +69,8 @@ With the Google project and credentials fully configured, finish the n8n credent
 	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.
 	///
 
-4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link}(turned on).
+4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} (turned on).
+    1. To use this option, you must [Enable domain-wide delegation](#enable-domain-wide-delegation) for the service account as a Google Workspace super admin.
 	1. Enter the **Email** of the user you want to impersonate.
 5. If you plan to use this credential with the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node, turn on **Set up for use in HTTP Request node**.
 	1. With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for more information.
@@ -95,3 +96,23 @@ A Service Account can't access Google Drive files and folders that weren't share
 4. Paste your Service Account email into **Add People and groups**.
 5. Select **Editor** for read-write access or **Viewer** for read-only access.
 
+### Enable domain-wide delegation
+
+To impersonate a user with a service account, you must enable domain-wide delegation for the service account.
+
+/// warning | Not recommended
+Google recommends you [avoid using domain-wide delegation](https://cloud.google.com/iam/docs/best-practices-service-accounts#domain-wide-delegation){:target=_blank .external-link}, as it allows impersonation of any user (including super admins) and can pose a security risk.
+///
+
+To delegate domain-wide authority to a service account, you must be a super administrator for the Google Workspace domain. Then:
+
+1. From your Google Workspace domain's [Admin console](https://admin.google.com/){:target=_blank .external-link}, select the hamburger menu, then select **Security > Access and data control > API Controls**.
+2. In the **Domain wide delegation** pane, select **Manage Domain Wide Delegation**.
+3. Select **Add new**.
+4. In the **Client ID** field, enter the service account's **Client ID**. To get the Client ID:
+    * Open your Google Cloud Console project, then open the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts){:target=_blank .external-link} page.
+    * Copy the **OAuth 2 Client ID** and use this as the **Client ID** for the **Domain Wide Delegation**.
+5. In the **OAuth scopes** field, enter a list of comma-separate scopes to grant your application access. For example, if your application needs domain-wide full access to the Google Drive API and the Google Calendar API, enter: `https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/calendar`.
+6. Select **Authorize**.
+
+It can take from 5 minutes up to 24 hours before you can impersonate all users in your Workspace.

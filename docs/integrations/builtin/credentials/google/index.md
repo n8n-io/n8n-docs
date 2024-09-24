@@ -11,7 +11,7 @@ This section contains:
 
 * [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service/): Create an OAuth2 credential for a specific service node, such as the Gmail node.
 * [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic/): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations/).
-* [Service Account](/integrations/builtin/credentials/google/service-account/): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} credential for some specific service nodes, such as the Gmail node.
+* [Service Account](/integrations/builtin/credentials/google/service-account/): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} credential for some specific service nodes.
 * [Google PaLM and Gemini](/integrations/builtin/credentials/google/googleai/): Get your API key to work with Google PaLM and Google Gemini nodes.
 
 
@@ -33,7 +33,7 @@ Once configured, you can use your credentials to authenticate the following node
 | :--- | :---: | :-------------: |
 | [G Suite Admin](/integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin/) | :white_check_mark: | :x: |
 | [Google Ads](/integrations/builtin/app-nodes/n8n-nodes-base.googleads/) | :white_check_mark: | :x: |
-| [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :white_check_mark: |
+| [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :warning: |
 | [Google Analytics](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) | :white_check_mark: | :x: |
 | [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/) | :white_check_mark: | :white_check_mark: |
 | [Google Books](/integrations/builtin/app-nodes/n8n-nodes-base.googlebooks/) | :white_check_mark: | :white_check_mark: |
@@ -54,3 +54,8 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Translate](/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/) | :white_check_mark: | :white_check_mark: |
 | [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youtube/) | :white_check_mark: | :x: |
 
+/// warning | Gmail and Service Accounts
+Google technically supports Service Accounts for use with Gmail, but it requires enabling domain-wide delegation, which Google discourages, and its behavior can be inconsistent.
+
+n8n recommends using OAuth2 with the Gmail node.
+///

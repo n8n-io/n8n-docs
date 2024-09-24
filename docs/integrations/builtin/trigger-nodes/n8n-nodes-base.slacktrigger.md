@@ -1,15 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Slack trigger
-description: Documentation for the Slack trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Slack Trigger node documentation
+description: Learn how to use the Slack Trigger node in n8n. Follow technical documentation to integrate Slack Trigger node into your workflows.
 contentType: integration
 priority: medium
 ---
-# Slack trigger
 
-Use the Slack trigger node to respond to events in Slack and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions and new channels.
+# Slack Trigger node
 
-On this page, you'll find a list of events the Slack trigger node can respond to, and links to more resources.
+Use the Slack trigger node to respond to events in [Slack](https://slack.com/){:target=_blank .external-link} and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions, and new channels.
+
+On this page, you'll find a list of events the Slack Trigger node can respond to and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/slack/).

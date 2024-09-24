@@ -1,13 +1,13 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SeaTable trigger
-description: Documentation for the SeaTable trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: SeaTable Trigger node documentation
+description: Learn how to use the SeaTable Trigger node in n8n. Follow technical documentation to integrate SeaTable Trigger node into your workflows.
 contentType: integration
 ---
 
-# SeaTable trigger
+# SeaTable Trigger node
 
-[SeaTable](https://seatable.co) is a collaborative database application with a spreadsheet interface.
+[SeaTable](https://seatable.co){:target=_blank .external-link} is a collaborative database application with a spreadsheet interface.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/seatable/).

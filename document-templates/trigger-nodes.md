@@ -31,7 +31,7 @@ Match the brand name exactly. For example, GitHub NOT Github.
 
 <!-- Briefly summarize the node. For example:_
 
-Use the _Name_ Trigger node to respond to events in _Name_ and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, including . . .
+Use the _Name_ Trigger node to respond to events in [_Name_](_service-url.com_){:target=_blank .external-link} and integrate _Name_ with other applications. n8n has built-in support for a wide range of _Name_ events, including . . .
 -->
 
 On this page, you'll find a list of events the _Name_ Trigger node can respond to and links to more resources.

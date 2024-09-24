@@ -758,23 +758,23 @@ nav:
         - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
         - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
         - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
+        - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
+        - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
+        - Onfleet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
+        - PayPal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
+        - Pipedrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md
+        - Postgres Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md
+        - Postmark Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md
+        - Pushcut Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md
+        - RabbitMQ Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md
+        - Redis Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger.md
+        - Salesforce Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
+        - SeaTable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
+        - Shopify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
+        - Slack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
+        - Strava Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
+        - Stripe Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
+        - SurveyMonkey Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md

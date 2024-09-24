@@ -1,13 +1,13 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Netlify trigger
-description: Documentation for the Netlify trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Netlify Trigger node documentation
+description: Learn how to use the Netlify Trigger node in n8n. Follow technical documentation to integrate Netlify Trigger node into your workflows.
 contentType: integration
 ---
 
-# Netlify trigger
+# Netlify Trigger node
 
-[Netlify](https://netlify.com/) offers hosting and serverless backend services for web applications and static websites.
+[Netlify](https://netlify.com/){:target=_blank .external-link} offers hosting and serverless backend services for web applications and static websites.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/netlify/).

@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger Link Object
-description: Documentation for the Link Object of the Facebook trigger node in n8n, a workflow automation platform. Includes configuration details.
+title: Facebook Trigger Link object documentation
+description: Learn how to use the Link object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Link object into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Link (Facebook trigger)
+# Facebook Trigger Link object
 
-Use this object to receive updates about links for rich previews by an external provider. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
+Use this object to receive updates about links for rich previews by an external provider. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).

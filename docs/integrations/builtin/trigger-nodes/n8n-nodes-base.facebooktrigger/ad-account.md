@@ -6,7 +6,7 @@ contentType: integration
 priority: medium
 ---
 
-# Facebook Trigger Ad Account
+# Facebook Trigger Ad Account object
 
 Use this object to receive updates on certain ads changes in an Ad Account. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 

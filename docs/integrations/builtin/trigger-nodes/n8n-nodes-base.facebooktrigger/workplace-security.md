@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger Workplace Security Object
-description: Documentation for the Workplace Security Object of the Facebook trigger node in n8n, a workflow automation platform. Includes configuration details.
+title: Facebook Trigger Workplace Security object documentation
+description: Learn how to use the Workplace Security object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Workplace Security object into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Workplace Security (Facebook trigger)
+# Facebook Trigger Workplace Security object
 
-Use this object to receive updates when Workplace security events occur, like adding or removing admins, users joining or leaving a Workplace, and more. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
+Use this object to receive updates when Workplace security events occur, like adding or removing admins, users joining or leaving a Workplace, and more. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).

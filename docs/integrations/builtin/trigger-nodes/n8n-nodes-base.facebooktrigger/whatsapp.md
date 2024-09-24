@@ -1,17 +1,17 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger WhatsApp Business Account Object
-description: Documentation for the WhatsApp Business Account Object of the Facebook trigger node in n8n, a workflow automation platform. Includes configuration details.
+title: Facebook Trigger WhatsApp Business Account object documentation
+description: Learn how to use the WhatsApp Business Account object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's WhatsApp Business Account object into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# WhatsApp Business Account (Facebook trigger)
+# Facebook Trigger WhatsApp Business Account object
 
-Use this object to receive updates when your WhatsApp Business Account (WABA) changes. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
+Use this object to receive updates when your WhatsApp Business Account (WABA) changes. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// warning | Use WhatsApp trigger
-n8n recommends using the [WhatsApp trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook trigger node. That trigger node includes twice the events to subscribe to.
+n8n recommends using the [WhatsApp trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook Trigger node. That trigger node includes twice the events to subscribe to.
 ///
 
 /// note | Credentials

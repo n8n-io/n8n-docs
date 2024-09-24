@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger Certificate Transparency Object
-description: Documentation for the Certificate Transparency Object of the Facebook trigger node in n8n, a workflow automation platform. Includes configuration details.
+title: Facebook Trigger Certificate Transparency object documentation
+description: Learn how to use the Certificate Transparency object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Certificate Transparency object into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Certificate Transparency (Facebook trigger)
+# Facebook Trigger Certificate Transparency object
 
-Use this object to receive updates about newly issued certificates for any domains that you have subscribed for certificate alerts or phishing alerts. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
+Use this object to receive updates about newly issued certificates for any domains that you have subscribed for certificate alerts or phishing alerts. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).

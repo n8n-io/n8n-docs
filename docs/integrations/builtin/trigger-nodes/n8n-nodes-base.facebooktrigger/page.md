@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger Page Object
-description: Documentation for the Page Object of the Facebook trigger node in n8n, a workflow automation platform. Includes configuration details.
+title: Facebook Trigger Page object documentation
+description: Learn how to use the Page object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Page object into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Page (Facebook trigger)
+# Facebook Trigger Page object
 
-Use this object to receive updates when updates to your page profile fields or profile settings occur or someone mentions your page. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
+Use this object to receive updates when updates to your page profile fields or profile settings occur or someone mentions your page. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).

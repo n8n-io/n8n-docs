@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger Permissions Object
-description: Documentation for the Permissions Object of the Facebook trigger node in n8n, a workflow automation platform. Includes configuration details.
+title: Facebook Trigger Permissions object documentation
+description: Learn how to use the Permissions object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Permissions object into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Permissions (Facebook trigger)
+# Facebook Trigger Permissions object
 
-Use this object to receive updates when a user grants or revokes a permission for your app. Refer to [Facebook trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
+Use this object to receive updates when a user grants or revokes a permission for your app. Refer to [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) for more information on the trigger itself.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).

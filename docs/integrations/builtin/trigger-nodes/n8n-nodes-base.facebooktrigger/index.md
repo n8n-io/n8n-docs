@@ -31,13 +31,13 @@ For usage examples and templates to help you get started, refer to n8n's [Facebo
 - [**Page**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page/) updates
 - [**Permissions**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions/): Updates when granting or revoking permissions
 - [**User**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user/) profile updates
-- [**WhatsApp business account**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp/)
+- [**WhatsApp Business Account**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp/)
     
     /// note | Use WhatsApp Trigger
     n8n recommends using the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook Trigger node for these events. The WhatsApp Trigger node has more events to listen to.
     ///
 
-- [**Workplace security**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security/)
+- [**Workplace Security**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security/)
 
 For each **Object**, use the **Field Names or IDs** dropdown to select more details on what data to receive. Refer to the linked pages for more details.
 

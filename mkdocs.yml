@@ -847,7 +847,9 @@ nav:
           - OpenAI Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
           - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
           - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
-          - Window Buffer Memory (easiest): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
+          - Window Buffer Memory: 
+            - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
+            - Common Issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md
           - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
           - Redis Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - Postgres Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md

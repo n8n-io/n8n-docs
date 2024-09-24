@@ -775,23 +775,23 @@ nav:
         - Strava Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
         - Stripe Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
         - SurveyMonkey Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md
+        - Taiga Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
+        - Telegram Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger.md
+        - TheHive 5 Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
+        - TheHive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
+        - Toggl Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
+        - Trello Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
+        - Twilio Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
+        - Typeform Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
+        - Venafi TLS Protect Cloud Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
+        - Webex by Cisco Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
+        - Webflow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
+        - WhatsApp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
+        - Wise Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
+        - WooCommerce Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
+        - Workable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
+        - Wufoo Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md
+        - Zendesk Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md
       - Cluster nodes: 
         - integrations/builtin/cluster-nodes/index.md
         - Root nodes:

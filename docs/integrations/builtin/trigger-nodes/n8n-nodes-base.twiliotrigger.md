@@ -1,15 +1,15 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Twilio trigger
-description: Documentation for the Twilio trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Twilio Trigger node documentation
+description: Learn how to use the Twilio Trigger node in n8n. Follow technical documentation to integrate Twilio Trigger node into your workflows.
 contentType: integration
 ---
 
-# Twilio trigger
+# Twilio Trigger node
 
-Use the Twilio trigger node to respond to events in Twilio and integrate Twilio with other applications. n8n has built-in support for a wide range of Twilio events.
+Use the Twilio Trigger node to respond to events in [Twilio](https://www.twilio.com){:target=_blank .external-link} and integrate Twilio with other applications. n8n has built-in support for a wide range of Twilio events, including new SMS and calls.
 
-On this page, you'll find a list of events the Twilio trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the Twilio Trigger node can respond to and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/twilio/).
@@ -18,6 +18,7 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Twilio integrations](https://n8n.io/integrations/twilio-trigger/){:target=_blank .external-link} page.
 ///
+
 ## Events
 
 * On New SMS

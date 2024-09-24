@@ -49,28 +49,10 @@ View [example workflows and related content](https://n8n.io/integrations/gmail-t
 
 Refer to [Google's Gmail API documentation](https://developers.google.com/gmail/api/guides){:target=_blank .external-link} for details about their API.
 
-## Common issues
-
-Here are some common errors and issues with the Gmail trigger node and steps to resolve or troubleshoot them.
-
-### 401 unauthorized error
-
-The full text of the error looks like this:
-<!--vale off-->
-```
-401 - {"error":"unauthorized_client","error_description":"Client is unauthorized to retrieve access tokens using this method, or client not authorized for any of the scopes requested."}
-```
-<!--vale on-->
-
-This error occurs when there's an issue with the credential you're using and its scopes or permissions.
-
-To resolve:
-
-1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service/) credentials, make sure you've enabled the Gmail API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service/#enable-apis) for more information.
-2. For [Service Account](/integrations/builtin/credentials/google/service-account/) credentials:
-    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
-    2. Make sure you add the Gmail API as part of the domain-wide delegation configuration.
-
-### Poll mode options
+## Poll mode options
 
 --8<-- "_snippets/integrations/builtin/poll-modes.md"
+
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues/).

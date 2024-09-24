@@ -18,60 +18,6 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 
 ## Operations
 
-### Document
-
-Use these operations to create or delete new Google Sheet files. Select the operation below for setup instructions.
-
-<div class="grid cards" markdown>
-
--   __Create__
-
-    [Create a new spreadsheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations/#create-a-spreadsheet)
-
--   __Delete__
-
-    [Delete an existing sheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations/#delete-a-spreadsheet)
-
-</div>
-
-### Sheet Within Document
-
-Use these operations to create, update, clear, or delete an individual sheet or tab within a Google Sheet.
-
-Select the operation below for full setup instructions.
-
-<div class="grid cards" markdown>
-
--   __Append or Update Row__
-
-    [Append a new row or update the current one if it already exists :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#append-or-update-row)
-
--   __Clear__
-
-    [Clear all data from a sheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#clear-a-sheet)
-
--   __Create__
-
-    [Add a new tab to an existing spreadsheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#create-a-new-sheet)
-
--   __Delete__
-
-    [Delete a single sheet or tab from an existing spreadsheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#delete-a-sheet)
-
--   __Delete Rows or Columns__
-
-    [Delete entire rows or columns from a sheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#delete-rows-or-columns)
-
--   __Get Row(s)__
-
-    [Read all rows in a sheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#get-rows)
-
--   __Update Row__
-
-    [Update a row in a sheet :octicons-link-external-24:](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#update-row)
-
-</div>
-<!--
 * **Document**
     * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations/#create-a-spreadsheet) a spreadsheet.
 	* [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations/#delete-a-spreadsheet) a spreadsheet.
@@ -84,7 +30,7 @@ Select the operation below for full setup instructions.
 	* [**Delete Rows or Columns**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#delete-rows-or-columns): Delete columns and rows from a sheet.
 	* [**Get Row(s)**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#get-rows): Read all rows in a sheet.
 	* [**Update Row**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations/#update-row): Update a row in a sheet. 
--->
+
 
 ## Templates and examples
 
@@ -94,8 +40,6 @@ Select the operation below for full setup instructions.
 ## Related resources
 
 Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} for more information about the service.
-
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 <!-- ## Examples
 This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/).	
@@ -115,4 +59,6 @@ This example uses the Customer Datastore node to provide sample data to load int
 
 ## Common issues
 
-For common questions/issues and suggested solutions, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues/).
+
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

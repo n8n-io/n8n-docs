@@ -23,7 +23,9 @@ To do so, consider using:
     ```
 1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 
+<!-- vale off -->
 ## Column names were updated after the node's setup
+<!-- vale on -->
 
 You'll receive this error if the Google Sheet's column names have changed since you set up the node.
 

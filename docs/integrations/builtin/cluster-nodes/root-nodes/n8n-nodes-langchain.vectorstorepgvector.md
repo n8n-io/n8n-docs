@@ -63,7 +63,7 @@ The following options specify the names of the columns to store the vectors and 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'pgvector-vector-store') ]]
+[[ templatesWidget(page.title, 'pgvector-vector-store') ]]
 
 ## Related resources
 

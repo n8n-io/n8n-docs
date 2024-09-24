@@ -29,7 +29,7 @@ Learn more about available models in [Ollama's models documentation](https://oll
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'embeddings-ollama') ]]
+[[ templatesWidget(page.title, 'embeddings-ollama') ]]
 
 ## Related resources
 

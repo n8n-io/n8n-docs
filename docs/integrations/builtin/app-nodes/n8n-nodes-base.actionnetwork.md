@@ -52,7 +52,7 @@ Refer to [Action Network credentials](/integrations/builtin/credentials/actionne
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'action-network') ]]
+[[ templatesWidget(page.title, 'action-network') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

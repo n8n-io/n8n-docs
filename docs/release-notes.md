@@ -924,7 +924,7 @@ Note that this release removes the AI error debugger. We're working on a new and
 
 #### New feature: Tools Agent
 
-This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/#tools-agent).
+This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
 
 This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
 

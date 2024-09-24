@@ -58,7 +58,7 @@ This operation includes a single option, whether to **Append** data to an existi
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'readwrite-files-from-disk') ]]
+[[ templatesWidget(page.title, 'readwrite-files-from-disk') ]]
 
 ## File locations
 

@@ -406,7 +406,10 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
         - integrations/builtin/core-nodes/n8n-nodes-base.totp.md
         - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.webhook.md
+        - Webhook:
+          - integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
+          - Workflow development: integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
       - Actions:
@@ -485,7 +488,12 @@ nav:
         - Ghost: integrations/builtin/app-nodes/n8n-nodes-base.ghost.md
         - GitHub: integrations/builtin/app-nodes/n8n-nodes-base.github.md
         - GitLab: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
-        - Gmail: integrations/builtin/app-nodes/n8n-nodes-base.gmail.md
+        - Gmail:
+          - Gmail: integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md
+          - Draft operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations.md
+          - Label operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations.md
+          - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+          - Thread operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md
         - Google Ads: integrations/builtin/app-nodes/n8n-nodes-base.googleads.md
         - Google Analytics: integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics.md
         - Google BigQuery: integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md
@@ -707,7 +715,19 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger.md
+        - Facebook Trigger:
+          - Facebook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
+          - Ad Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
+          - Application: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md
+          - Certificate Transparency: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md
+          - Group: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/group.md
+          - Instagram: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/instagram.md
+          - Link: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/link.md
+          - Page: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page.md
+          - Permissions: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md
+          - User: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md
+          - WhatsApp Business Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md
+          - Workplace Security: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md

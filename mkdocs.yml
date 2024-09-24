@@ -732,19 +732,19 @@ nav:
         - Flow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
         - Form.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
         - Formstack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
+        - GetResponse Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md
+        - GitHub Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md
+        - GitLab Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
+        - Google Calendar Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
+        - Google Drive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger.md
+        - Google Sheets Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger.md
+        - Gumroad Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
+        - Help Scout Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
+        - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
+        - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
+        - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
+        - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md

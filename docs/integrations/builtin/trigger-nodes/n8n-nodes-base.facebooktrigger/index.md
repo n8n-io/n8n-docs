@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook trigger
-description: Documentation for the Facebook trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Facebook Trigger
+description: Learn how to use the Facebook Trigger node in n8n. Follow technical documentation to integrate Facebook Trigger node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# Facebook trigger
+# Facebook Trigger node
 
 [Facebook](https://www.facebook.com/){:target=_blank .external-link} is a social networking site to connect and share with family and friends online.
 
-Use the Facebook trigger node to trigger a workflow when events occur in Facebook.
+Use the Facebook Trigger node to trigger a workflow when events occur in Facebook.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/facebookapp/).
@@ -33,8 +33,8 @@ For usage examples and templates to help you get started, refer to n8n's [Facebo
 - [**User**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user/) profile updates
 - [**WhatsApp business account**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp/)
     
-    /// note | Use WhatsApp trigger
-    n8n recommends using the [WhatsApp trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook trigger node for these events. That trigger node includes twice the events to subscribe to.
+    /// note | Use WhatsApp Trigger
+    n8n recommends using the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/) with the [WhatsApp credentials](/integrations/builtin/credentials/whatsapp/) instead of the Facebook Trigger node for these events. The WhatsApp Trigger node has more events to listen to.
     ///
 
 - [**Workplace security**](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security/)

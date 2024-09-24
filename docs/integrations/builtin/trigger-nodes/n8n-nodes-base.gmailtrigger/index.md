@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gmail Trigger
-description: Documentation for the Gmail Trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Gmail Trigger node documentation
+description: Learn how to use the Gmail Trigger node in n8n. Follow technical documentation to integrate Gmail Trigger node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Gmail Trigger
+# Gmail Trigger node
 
 [Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google. The Gmail Trigger node can start a workflow based on events in Gmail.
 
@@ -26,10 +26,25 @@ For usage examples and templates to help you get started, refer to n8n's [Gmail 
 
 Configure the node with these parameters:
 
-* **Credential to connect with**: Select or create a new Google credential to use for the trigger.
-* **Poll Times**: Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields. Refer to [Poll Mode options](#poll-mode-options) to configure the parameters for each mode type.
-* **Simplify**: Choose whether to return a simplified version of the response (turned on) or the raw data (turned off). Default is on.
-    * This returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
+### Credential to connect with
+
+Select or create a new Google credential to use for the trigger. Refer to [Google credentials](/integrations/builtin/credentials/google/) for more information on setting up a new credential.
+
+### Poll Times
+
+Select a poll **Mode** to set how often to trigger the poll. Your **Mode** selection will add or remove relevant fields.
+
+Refer to [Poll Mode options](#poll-mode-options) to configure the parameters for each mode type.
+
+### Poll mode options
+
+--8<-- "_snippets/integrations/builtin/poll-modes.md"
+
+### Simplify
+
+Choose whether to return a simplified version of the response (turned on, default) or the raw data (turned off).
+
+The simplified version returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
 
 ## Node filters
 
@@ -62,10 +77,6 @@ n8n provides an app node for Gmail. You can find the node docs [here](/integrati
 View [example workflows and related content](https://n8n.io/integrations/gmail-trigger/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Google's Gmail API documentation](https://developers.google.com/gmail/api/guides){:target=_blank .external-link} for details about their API.
-
-## Poll mode options
-
---8<-- "_snippets/integrations/builtin/poll-modes.md"
 
 ## Common issues
 

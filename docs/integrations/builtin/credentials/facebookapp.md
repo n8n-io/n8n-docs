@@ -122,7 +122,12 @@ Refer to the [App Secret documentation](https://developers.facebook.com/docs/fac
 
 App Review requires Business Verification.
 
-If anyone without a role on the app or a role in a Business that has claimed the app will use it, it must first undergo App Review. If app users who have a role on the app itself will be your only app users, App Review isn't required.
+Your app must go through App Review if it will be used by someone who:
+
+- Doesn't have a role on the app itself.
+- Doesn't have a role in the Business that has claimed the app.
+
+If your only app users are users who have a role on the app itself, App Review isn't required.
 
 As part of the App Review process, you may need to request advanced access for your webhook subscriptions.
 

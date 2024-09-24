@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Gmail trigger
-description: Documentation for the Gmail trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Gmail Trigger
+description: Documentation for the Gmail Trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: integration
 priority: high
 ---
 
-# Gmail trigger
+# Gmail Trigger
 
-[Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google. The Gmail trigger node can start a workflow based on events in Gmail.
+[Gmail](https://www.gmail.com){:target=_blank .external-link} is an email service developed by Google. The Gmail Trigger node can start a workflow based on events in Gmail.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
@@ -35,11 +35,25 @@ Configure the node with these parameters:
 
 Use these filters to further refine the node's behavior:
 
-* **Include Spam and Trash**: Select whether the node should trigger on new messages in the Spam and Trash folders (turned on) or not (turned off).
-* **Label Names or IDs**: Only trigger on messages with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
-* **Search**: Enter Gmail search refine filters, like `from:`, to trigger the node on the filtered conditions only. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
-* **Read Status**: Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
-* **Sender**: Enter an email or a part of a sender name to trigger only on messages from that sender.
+### Include Spam and Trash
+
+Select whether the node should trigger on new messages in the Spam and Trash folders (turned on) or not (turned off).
+
+### Label Names or IDs
+
+Only trigger on messages with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
+
+### Search
+
+Enter Gmail search refine filters, like `from:`, to trigger the node on the filtered conditions only. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
+
+### Read Status
+
+Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
+
+### Sender
+
+Enter an email or a part of a sender name to trigger only on messages from that sender.
 
 ## Related resources
 

@@ -135,7 +135,7 @@ Refer to Meta's [App Review](https://developers.facebook.com/docs/resp-plat-init
 
 ## Common issues
 
-### Unverified apps
+### Unverified apps limit
 
 Facebook only lets you have a developer or administrator role on a maximum of 15 apps that aren't already linked to a Meta Verified Business Account.
 

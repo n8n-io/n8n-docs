@@ -52,7 +52,7 @@ To delete a project:
 	* **Transfer its workflows and credentials to another project**: n8n prompts you to choose a project to move the data to.
 	* **Delete its workflows and credentials**: n8n prompts you to confirm that you want to delete all the data in the project.
 
-## Move workflows and credentials between projects
+## Move workflows and credentials between projects or users
 
 Workflow and credential owners can move workflows or credentials (changing ownership) to other users or projects they have access to.
 

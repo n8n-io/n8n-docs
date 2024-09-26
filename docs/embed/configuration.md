@@ -69,7 +69,7 @@ For example:
     ```
 
 /// note
-There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`. 
+There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`.
 In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) for all child-credentials (`googleSheetsOAuth2Api`) to use.
 ///
 
@@ -83,7 +83,7 @@ n8n has many [environment variables](/reference/environment-variables/) you can 
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
 | `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"` |
+| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
 | `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
 | `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates/) for more information. |
@@ -115,14 +115,14 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 
 ### Registering hooks
 
-Set hooks by registering a hook file that contains the hook functions. 
-To register a hook, set the environment variable `EXTERNAL_HOOK_FILES`. 
+Set hooks by registering a hook file that contains the hook functions.
+To register a hook, set the environment variable `EXTERNAL_HOOK_FILES`.
 
-You can set the variable to a single file: 
+You can set the variable to a single file:
 
-`EXTERNAL_HOOK_FILES=/data/hook.js` 
+`EXTERNAL_HOOK_FILES=/data/hook.js`
 
-Or to contain multiple files separated by a semicolon: 
+Or to contain multiple files separated by a semicolon:
 
 `EXTERNAL_HOOK_FILES=/data/hook1.js;/data/hook2.js`
 

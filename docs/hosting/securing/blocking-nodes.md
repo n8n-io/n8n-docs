@@ -18,7 +18,7 @@ Update your `NODES_EXCLUDE` environment variable to include an array of strings 
 For example, setting the variable this way:
 
 ```
-NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"
+NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"
 ```
 
 Blocks the [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/) and [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) nodes.

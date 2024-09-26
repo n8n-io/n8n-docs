@@ -54,7 +54,7 @@ Set whether to include the phrase `This email was sent automatically with n8n` a
 
 Enter the name of the binary properties that contain data to add as an attachment. Some tips on using this option:
 
-* Use the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to upload the file to your workflow.
+* Use the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to upload the file to your workflow.
 * Add multiple attachments by entering a comma-separated list of binary properties.
 * Reference embedded images or other content within the body of an email message, for example `<img src="cid:image_1">`.
 

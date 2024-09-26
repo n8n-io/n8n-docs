@@ -23,7 +23,7 @@ Choose the database to use as a data source for the node. Options include:
 * **MySQL**: Select this option to use a MySQL database.
     * Also select the **Credential for MySQL**.
 * **SQLite**: Select this option to use a SQLite database.
-    * You must add a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node before the Agent to read your SQLite file.
+    * You must add a [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) node before the Agent to read your SQLite file.
     * Also enter the **Input Binary Field** name of your SQLite file coming from the Read/Write File From Disk node.
 * **Postgres**: Select this option to use a Postgres database.
     * Also select the **Credential for Postgres**.

@@ -389,7 +389,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md

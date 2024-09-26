@@ -18,10 +18,10 @@ Update your `NODES_EXCLUDE` environment variable to include an array of strings 
 For example, setting the variable this way:
 
 ```
-NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"
+NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readwritefile\"]"
 ```
 
-Blocks the [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/) and [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) nodes.
+Blocks the [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/) and [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) nodes.
 
 Your n8n users won't be able to search for or use these nodes.
 
@@ -30,7 +30,7 @@ Your n8n users won't be able to search for or use these nodes.
 The nodes that can pose security risks vary based on your use case and user profile. Here are some nodes you might want to start with:
 
 * [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/)
-* [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/)
+* [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/)
 
 ## Related resources
 

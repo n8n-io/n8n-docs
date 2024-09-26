@@ -70,7 +70,7 @@ The syntax to use the built-in methods and variables is `_variableName` or `_met
 
 You can't access the file system or make HTTP requests. Use the following nodes instead:
 
-* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) 
+* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) 
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 ## Coding in n8n

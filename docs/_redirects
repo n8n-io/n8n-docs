@@ -1,3 +1,6 @@
+#DOC-1127
+/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/ /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+
 ## DOC-979
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
@@ -105,8 +108,8 @@
 /integrations/builtin/core-nodes/n8n-nodes-base.ical/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /integrations/builtin/core-nodes/n8n-nodes-base.readpdf/   /integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
-/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
@@ -191,7 +194,7 @@
 /security-audit/   /hosting/logging-monitoring/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
-/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 /reference/release-notes/   /release-notes/
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
@@ -766,10 +769,10 @@
 /nodes/n8n-nodes-base.rabbitmqTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/
 /nodes/n8n-nodes-base.rabbitmqtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/
 /nodes/n8n-nodes-base.raindrop/		/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/
-/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /nodes/n8n-nodes-base.readPDF/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /nodes/n8n-nodes-base.readpdf/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /nodes/n8n-nodes-base.reddit/		/integrations/builtin/app-nodes/n8n-nodes-base.reddit/
@@ -897,8 +900,8 @@
 /nodes/n8n-nodes-base.workflowTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
 /nodes/n8n-nodes-base.workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
 /nodes/n8n-nodes-base.Workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
-/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /nodes/n8n-nodes-base.wufooTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/
 /nodes/n8n-nodes-base.wufootrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/
 /nodes/n8n-nodes-base.xero/		/integrations/builtin/app-nodes/n8n-nodes-base.xero/

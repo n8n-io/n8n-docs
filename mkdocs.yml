@@ -2,7 +2,7 @@ site_name: n8n Docs
 site_url: https://docs.n8n.io/
 site_description: Documentation for n8n, a workflow automation platform.
 # Must be the docs repo for the edit page buttons to work
-repo_url: https://github.com/n8n-io/n8n-docs 
+repo_url: https://github.com/n8n-io/n8n-docs
 edit_uri: edit/main/docs/
 validation:
   nav:
@@ -72,8 +72,8 @@ extra:
   consent:
     title: Cookie consent
     description: >-
-      We use cookies and other tracking technologies to improve your browsing experience, 
-      to analyze our website traffic, assist our marketing efforts and to understand where 
+      We use cookies and other tracking technologies to improve your browsing experience,
+      to analyze our website traffic, assist our marketing efforts and to understand where
       our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
   # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
   status:
@@ -119,7 +119,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg 
+        !!python/name:material.extensions.emoji.to_svg
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
@@ -136,7 +136,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format:
-            !!python/name:pymdownx.superfences.fence_code_format 
+            !!python/name:pymdownx.superfences.fence_code_format
       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
       preserve_tabs: true
   - pymdownx.tasklist:
@@ -188,7 +188,7 @@ nav:
     - Getting started:
       - Learning path: learning-path.md
       - Choose your n8n: choose-n8n.md
-      - Quickstarts: 
+      - Quickstarts:
         - try-it-out/index.md
         - A very quick quickstart: try-it-out/quickstart.md
         - A longer introduction: try-it-out/longer-introduction.md
@@ -228,12 +228,12 @@ nav:
       - Understand workflows:
         - workflows/index.md
         - Create and run: workflows/create.md
-        - Components: 
+        - Components:
           - workflows/components/index.md
           - Nodes: workflows/components/nodes.md
           - Connections: workflows/components/connections.md
           - Sticky Notes: workflows/components/sticky-notes.md
-        - Executions: 
+        - Executions:
           - workflows/executions/index.md
           - Workflow-level executions: workflows/executions/single-workflow-executions.md
           - All executions: workflows/executions/all-executions.md
@@ -262,7 +262,7 @@ nav:
         - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
-        - SAML: 
+        - SAML:
           - user-management/saml/index.md
           - Set up SAML: user-management/saml/setup.md
           - Okta Workforce Identity SAML setup: user-management/saml/okta.md
@@ -277,19 +277,19 @@ nav:
         - Looping: flow-logic/looping.md
         - Waiting: flow-logic/waiting.md
         - Sub-workflows: flow-logic/subworkflows.md
-        - Error handling: flow-logic/error-handling.md    
-        - Execution order in multi-branch workflows: flow-logic/execution-order.md    
+        - Error handling: flow-logic/error-handling.md
+        - Execution order in multi-branch workflows: flow-logic/execution-order.md
       - Data:
         - data/index.md
         - Data structure: data/data-structure.md
         - Data flow within nodes: data/data-flow-nodes.md
         - Transforming data: data/transforming-data.md
         - Process data using code: data/code.md
-        - Data mapping: 
+        - Data mapping:
           - data/data-mapping/index.md
           - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
           - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
-          - Data item linking: 
+          - Data item linking:
             - data/data-mapping/data-item-linking/index.md
             - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
             - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
@@ -341,7 +341,7 @@ nav:
           - Security: privacy-security/security.md
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
-      - Sustainable use license: sustainable-use-license.md    
+      - Sustainable use license: sustainable-use-license.md
   - Integrations:
     - integrations/index.md
     - Built-in nodes:
@@ -508,7 +508,7 @@ nav:
         - Google Docs: integrations/builtin/app-nodes/n8n-nodes-base.googledocs.md
         - Google Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
-        - Google Sheets: 
+        - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
           - Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
           - Sheet within Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
@@ -588,14 +588,14 @@ nav:
         - Okta: integrations/builtin/app-nodes/n8n-nodes-base.okta.md
         - One Simple API: integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
         - Onfleet: integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
-        - OpenAI: 
+        - OpenAI:
           - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
           - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
           - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
           - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
           - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
-          - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md 
-          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md 
+          - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
         - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
         - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
         - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
@@ -681,7 +681,7 @@ nav:
         - Wise: integrations/builtin/app-nodes/n8n-nodes-base.wise.md
         - WooCommerce: integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md
         - WordPress: integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md
-        - X (Formerly Twitter): integrations/builtin/app-nodes/n8n-nodes-base.twitter.md        
+        - X (Formerly Twitter): integrations/builtin/app-nodes/n8n-nodes-base.twitter.md
         - Xero: integrations/builtin/app-nodes/n8n-nodes-base.xero.md
         - Yourls: integrations/builtin/app-nodes/n8n-nodes-base.yourls.md
         - YouTube: integrations/builtin/app-nodes/n8n-nodes-base.youtube.md
@@ -792,7 +792,7 @@ nav:
         - integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md
         - integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md
-      - Cluster nodes: 
+      - Cluster nodes:
         - integrations/builtin/cluster-nodes/index.md
         - Root nodes:
           - integrations/builtin/cluster-nodes/root-nodes/index.md
@@ -847,7 +847,7 @@ nav:
           - OpenAI Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
           - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
           - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
-          - Window Buffer Memory (easiest): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md          
+          - Window Buffer Memory (easiest): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow.md
           - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
           - Redis Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - Postgres Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
@@ -871,7 +871,7 @@ nav:
           - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - Custom n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
-      - Credentials: 
+      - Credentials:
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
         - integrations/builtin/credentials/activecampaign.md
@@ -962,7 +962,7 @@ nav:
         - integrations/builtin/credentials/git.md
         - integrations/builtin/credentials/github.md
         - integrations/builtin/credentials/gitlab.md
-        - Google: 
+        - Google:
           - integrations/builtin/credentials/google/index.md
           - integrations/builtin/credentials/google/oauth-single-service.md
           - integrations/builtin/credentials/google/oauth-generic.md
@@ -1171,7 +1171,7 @@ nav:
       - Custom API actions for existing nodes: integrations/custom-operations.md
       - Handle rate limits: integrations/builtin/rate-limits.md
     - Community nodes:
-      - Installation and management: 
+      - Installation and management:
         - integrations/community-nodes/installation/index.md
         - GUI installation: integrations/community-nodes/installation/gui-install.md
         - Manual installation: integrations/community-nodes/installation/manual-install.md
@@ -1189,25 +1189,25 @@ nav:
         - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
         - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
       - Build your node:
-        - integrations/creating-nodes/build/index.md       
+        - integrations/creating-nodes/build/index.md
         - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
         - Reference:
           - integrations/creating-nodes/build/reference/index.md
-          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md 
+          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
-          - Versioning: integrations/creating-nodes/build/reference/node-versioning.md 
+          - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
           - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
-          - Base files: 
+          - Base files:
             - integrations/creating-nodes/build/reference/node-base-files/index.md
             - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
             - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
             - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
             - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
             - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
-          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md  
-          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md    
+          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
+          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
           - Item linking: integrations/creating-nodes/build/reference/paired-items.md
       - Test your node:
@@ -1235,7 +1235,7 @@ nav:
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
-    - Configuration: 
+    - Configuration:
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
@@ -1256,7 +1256,7 @@ nav:
         - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
         - Workflows: hosting/configuration/environment-variables/workflows.md
         - License: hosting/configuration/environment-variables/licenses.md
-      - Configuration methods: hosting/configuration/configuration-methods.md   
+      - Configuration methods: hosting/configuration/configuration-methods.md
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md
         - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
@@ -1269,9 +1269,9 @@ nav:
         - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
         - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
         - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
-        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md 
+        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-      - User management: hosting/configuration/user-management-self-hosted.md      
+      - User management: hosting/configuration/user-management-self-hosted.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
       - Monitoring: hosting/logging-monitoring/monitoring.md
@@ -1298,7 +1298,7 @@ nav:
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md
-    - Using the CLI: 
+    - Using the CLI:
       - CLI commands: hosting/cli-commands.md
   - Code in n8n:
       - code/index.md
@@ -1364,7 +1364,7 @@ nav:
           - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
           - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
           - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
-          - What is a vector database?: advanced-ai/examples/understand-vector-databases.md 
+          - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
           - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
   - API:
       - api/index.md

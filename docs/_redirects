@@ -1,6 +1,3 @@
-#DOC-1127
-/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/ /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
-
 ## DOC-979
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
@@ -30,7 +27,7 @@
 /reference/security/   /privacy-security/security/
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-/reference/security.html    /privacy-security/security/ 
+/reference/security.html    /privacy-security/security/
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/
@@ -110,6 +107,7 @@
 /integrations/builtin/core-nodes/n8n-nodes-base.readpdf/   /integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
@@ -328,8 +326,8 @@
 /reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /help-community/contributing/
-/reference/release-notes.html                        /reference/release-notes/	
-/reference/server-setup.html                         /hosting/installation/server-setups/  
+/reference/release-notes.html                        /reference/release-notes/
+/reference/server-setup.html                         /hosting/installation/server-setups/
 
 # The nodes library . . . may the odds be ever in your favour
 
@@ -563,7 +561,7 @@
 /nodes/n8n-nodes-base.googlefirebaserealtimedatabase/		/integrations/builtin/app-nodes/n8n-nodes-base.googlefirebaserealtimedatabase/
 /nodes/n8n-nodes-base.googlePerspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/
 /nodes/n8n-nodes-base.googleperspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/
-/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/	
+/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/
 /nodes/n8n-nodes-base.googlesheets/     /integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/
 /nodes/n8n-nodes-base.googleSlides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/
 /nodes/n8n-nodes-base.googleslides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/

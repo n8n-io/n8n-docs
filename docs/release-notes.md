@@ -49,7 +49,7 @@ This release contains new features, node enhancements and bug fixes.
 - [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/): Updated to use the new API
 - [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/): Made adding or removing the workflow link to a message easier
 
-Big datasets now render faster thanks to virtual scrolling and execution annotations are harder to delete. 
+Big datasets now render faster thanks to virtual scrolling and execution annotations are harder to delete.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -92,14 +92,14 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints/). 
+You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints/).
 
 </div>
 
 You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints/) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates
-Enhanced nodes: 
+Enhanced nodes:
 
 - [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Added actions for bank transactions
 - [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
@@ -108,7 +108,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link} 
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
 
 
 ## n8n@1.59.3
@@ -162,13 +162,13 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.59.0
 If you are using the Chat Trigger in "Embedded Chat" mode, with authentication turned on, you could see errors connecting to n8n if the authentication on the sending/embedded side is mis-configured.
 ///
 
-This release contains bug fixes and feature enhancements. 
+This release contains bug fixes and feature enhancements.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
 
-[oscarpedrero](https://github.com/oscarpedrero){:target=_blank .external-link} 
+[oscarpedrero](https://github.com/oscarpedrero){:target=_blank .external-link}
 
 ## n8n@1.58.1
 
@@ -184,7 +184,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.57.0...n8n@1.58.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-05
 
-This release contains new features, bug fixes and feature enhancements. 
+This release contains new features, bug fixes and feature enhancements.
 
 <div class="n8n-new-features" markdown>
 
@@ -207,7 +207,7 @@ This release contains new features and bug fixes.
 
 #### Improved execution queue handling
 
-We are [exposing new execution queue metrics](/hosting/configuration/configuration-examples/prometheus/) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster. 
+We are [exposing new execution queue metrics](/hosting/configuration/configuration-examples/prometheus/) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster.
 
 </div>
 
@@ -215,7 +215,7 @@ We are [exposing new execution queue metrics](/hosting/configuration/configurati
 
 #### New credentials for the HTTP Request node
 
-We added credential support for Datadog, Dynatrace, Elastic Security, Filescan, Iris, and Malcore to the HTTP Request node making it easier to use existing credentials. 
+We added credential support for Datadog, Dynatrace, Elastic Security, Filescan, Iris, and Malcore to the HTTP Request node making it easier to use existing credentials.
 
 </div>
 
@@ -226,7 +226,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
 
 ## n8n@1.56.2
 
@@ -242,7 +242,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.56.0...n8n@1.56.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-23
 
-This release contains bug fixes. 
+This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -251,15 +251,15 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.55.3...n8n@1.56.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-08-21
 
-This release contains node updates, security and bug fixes. 
+This release contains node updates, security and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 
 ### Contributors
 
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
-[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -328,13 +328,13 @@ The N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES environment variable now also blocks acce
 If you are writing to or reading from a file at n8n's static cache directory via a node, e.g. Read/Write Files from Disk, please update your node to use a different path.
 ///
 
-This release contains a new feature, a new node, a node update and bug fixes. 
+This release contains a new feature, a new node, a node update and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
 #### Override the npm registry
 
-This release adds the option to override the npm registry for installing community packages. This is a paid feature. 
+This release adds the option to override the npm registry for installing community packages. This is a paid feature.
 
 We now also prevent npm downloading community packages from a compromised npm registry by explicitly using --registry in all npm install commands.
 
@@ -344,7 +344,7 @@ We now also prevent npm downloading community packages from a compromised npm re
 
 #### New node: AI Transform
 
-This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview/). 
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview/).
 
 </div>
 
@@ -362,7 +362,7 @@ Enhanced node:
 - [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
 
 
-This release also adds the new schema view for the expression editor modal. 
+This release also adds the new schema view for the expression editor modal.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -392,20 +392,20 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0
 This release contains new features, node enhancements, bug fixes and updates to our API.
 
 ### API update
-Our [public REST API](/api/) now supports additional operations: 
+Our [public REST API](/api/) now supports additional operations:
 
 - Create, delete, and edit roles for users
 - Create, read, update and delete projects
 
-Find the details in the [API reference](/api/api-reference/). 
+Find the details in the [API reference](/api/api-reference/).
 
 ### Contributors
 
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
-[Javier Ferrer González](https://github.com/JavierCane){:target=_blank .external-link}  
-[Mickaël Andrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}  
-[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
-[Pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
+[Javier Ferrer González](https://github.com/JavierCane){:target=_blank .external-link}
+[Mickaël Andrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}
+[Pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -438,7 +438,7 @@ This release contains new features, new nodes, node enhancements, bug fixes and 
 
 #### Added Google Cloud Platform Secrets Manager support
 
-This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license. 
+This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license.
 
 </div>
 
@@ -467,18 +467,18 @@ Enhanced nodes:
 - [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/)
 
 ### API update
-Our [public REST API](/api/) now supports additional operations: 
+Our [public REST API](/api/) now supports additional operations:
 
 - Create, read, and delete for variables
 - Filtering workflows by project
 - Transferring workflows
 
-Find the details in the [API reference](/api/api-reference/). 
+Find the details in the [API reference](/api/api-reference/).
 
 ### Contributors
 
-[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
-[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -528,7 +528,7 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Added Azure Key Vault support
 
-This release adds [Azure Key Vault](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license. 
+This release adds [Azure Key Vault](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license.
 
 </div>
 
@@ -617,18 +617,18 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.49.0...n8n@1.50.0
 This release contains node enhancements and bug fixes.
 
 ### Node updates
-- Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram  
-- Deprecated node: Orbit (product shut down)  
+- Enhanced nodes: Chat Trigger, Google Cloud Firestore, Qdrant Vector Store, Splunk, Telegram
+- Deprecated node: Orbit (product shut down)
 
 ### Beta Feature Removal
-The Ask AI beta feature for the HTTP Request node has been removed from this version  
+The Ask AI beta feature for the HTTP Request node has been removed from this version
 
 ### Contributors
-[Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
-[jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}  
-[adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}  
-[Malki Davis](https://github.com/mxdavis){:target=_blank .external-link}  
+[Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
+[jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}
+[adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}
+[Malki Davis](https://github.com/mxdavis){:target=_blank .external-link}
 
 
 ## n8n@1.49.0
@@ -647,10 +647,10 @@ This release contains a new node, node enhancements, and bug fixes.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
-[Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}  
-[KhDu](https://github.com/KhDu){:target=_blank .external-link}  
-[Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}  
-[Pavlo Paliychuk](https://github.com/paul-paliychuk){:target=_blank .external-link}  
+[Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}
+[KhDu](https://github.com/KhDu){:target=_blank .external-link}
+[Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}
+[Pavlo Paliychuk](https://github.com/paul-paliychuk){:target=_blank .external-link}
 
 
 ## n8n@1.48.3
@@ -713,7 +713,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[KubeAl](https://github.com/KubeAl){:target=_blank .external-link}  
+[KubeAl](https://github.com/KubeAl){:target=_blank .external-link}
 
 
 ## n8n@1.47.1
@@ -748,15 +748,15 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 
 ### Contributors
 
-[Daniel](https://github.com/daniel-alba17){:target=_blank .external-link}  
-[ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}  
-[Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}  
-[Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}  
-[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}  
-[Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}  
-[n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}  
-[pebosi](https://github.com/pebosi){:target=_blank .external-link}  
-[Taylor Hoffmann](https://github.com/TaylorHo){:target=_blank .external-link}  
+[Daniel](https://github.com/daniel-alba17){:target=_blank .external-link}
+[ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}
+[Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}
+[Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}
+[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}
+[Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}
+[n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}
+[pebosi](https://github.com/pebosi){:target=_blank .external-link}
+[Taylor Hoffmann](https://github.com/TaylorHo){:target=_blank .external-link}
 
 ## n8n@1.45.1
 
@@ -782,9 +782,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Jean Khawand](https://github.com/jeankhawand){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
-[Valentin Coppin](https://github.com/valimero){:target=_blank .external-link}  
+[Jean Khawand](https://github.com/jeankhawand){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+[Valentin Coppin](https://github.com/valimero){:target=_blank .external-link}
 
 ## n8n@1.44.2
 
@@ -901,10 +901,10 @@ Cloud: contact [help@n8n.io](mailto:help@n8n.io).
 
 ### Contributors
 
-[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}  
-[Daniil Zobov](https://github.com/ddzobov){:target=_blank .external-link}  
-[Guilherme Barile](https://github.com/GuilhermeBarile){:target=_blank .external-link}  
-[Romain MARTINEAU](https://github.com/RJiraya){:target=_blank .external-link}  
+[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}
+[Daniil Zobov](https://github.com/ddzobov){:target=_blank .external-link}
+[Guilherme Barile](https://github.com/GuilhermeBarile){:target=_blank .external-link}
+[Romain MARTINEAU](https://github.com/RJiraya){:target=_blank .external-link}
 
 
 
@@ -954,7 +954,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Mike Quinlan](https://github.com/mjquinlan2000){:target=_blank .external-link}  
+[Mike Quinlan](https://github.com/mjquinlan2000){:target=_blank .external-link}
 [guangwu](https://github.com/testwill){:target=_blank .external-link}
 
 ## n8n@1.41.0
@@ -1010,14 +1010,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
-[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
-[Nicolas-nwb](https://github.com/Nicolas-nwb){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
-[pengqiseven](https://github.com/pengqiseven){:target=_blank .external-link}  
-[webk](https://github.com/webkp){:target=_blank .external-link}  
-[Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}  
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
+[Nicolas-nwb](https://github.com/Nicolas-nwb){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+[pengqiseven](https://github.com/pengqiseven){:target=_blank .external-link}
+[webk](https://github.com/webkp){:target=_blank .external-link}
+[Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}
 
 
 ## n8n@1.39.1
@@ -1079,7 +1079,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
 
 ## n8n@1.38.1
 
@@ -1129,8 +1129,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Chengyou Liu](https://github.com/cyliu0){:target=_blank .external-link}  
-[Francesco Mannino](https://github.com/manninofrancesco){:target=_blank .external-link}  
+[Chengyou Liu](https://github.com/cyliu0){:target=_blank .external-link}
+[Francesco Mannino](https://github.com/manninofrancesco){:target=_blank .external-link}
 
 ## n8n@1.37.2
 
@@ -1240,7 +1240,7 @@ This release adds the [Salesforce trigger node](/integrations/builtin/trigger-no
 
 #### New node: Twilio Trigger node
 
-This release adds the [Twilio trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/). 
+This release adds the [Twilio trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/).
 
 </div>
 
@@ -1347,7 +1347,7 @@ toInt()
 
 ### Contributors
 
-[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 ## n8n@1.33.1
@@ -1393,9 +1393,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[gumida](https://github.com/gumida){:target=_blank .external-link}  
-[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}  
-[Jordan](https://github.com/jordanburke){:target=_blank .external-link}  
+[gumida](https://github.com/gumida){:target=_blank .external-link}
+[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}
+[Jordan](https://github.com/jordanburke){:target=_blank .external-link}
 [MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link}
 
 ## n8n@1.32.1
@@ -1450,7 +1450,7 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
-#### New nodes: Microsoft Outlook trigger and Ollama embeddings 
+#### New nodes: Microsoft Outlook trigger and Ollama embeddings
 
 This release adds two new nodes.
 
@@ -1531,7 +1531,7 @@ Other highlights:
 
 ### Contributors
 
-[Bruno Inec](https://github.com/sweenu){:target=_blank .external-link}  
+[Bruno Inec](https://github.com/sweenu){:target=_blank .external-link}
 [Jesús Burgers](https://github.com/jburgers-chakray){:target=_blank .external-link}
 
 ## n8n@1.27.3
@@ -1560,7 +1560,7 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
-#### New nodes: Azure OpenAI chat model and embeddings 
+#### New nodes: Azure OpenAI chat model and embeddings
 
 This release adds two new nodes to work with [Azure OpenAI](https://azure.microsoft.com/en-gb/products/ai-services/openai-service/){:target=_blank .external-link} in your advanced AI workflows:
 
@@ -1621,7 +1621,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}  
+[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}
 [Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}
 
 ## n8n@1.25.1
@@ -1701,9 +1701,9 @@ This release introduces two new nodes to support [Mistral AI](https://mistral.ai
 
 ### Contributors
 
-[Anush](https://github.com/Anush008){:target=_blank .external-link}  
-[Eric Koleda](https://github.com/ekoleda-codaio){:target=_blank .external-link}  
-[Mason Geloso](https://github.com/MasonGeloso){:target=_blank .external-link}  
+[Anush](https://github.com/Anush008){:target=_blank .external-link}
+[Eric Koleda](https://github.com/ekoleda-codaio){:target=_blank .external-link}
+[Mason Geloso](https://github.com/MasonGeloso){:target=_blank .external-link}
 [vacitbaydarman](https://github.com/vacitbaydarman){:target=_blank .external-link}
 
 ## n8n@1.22.5
@@ -1754,11 +1754,11 @@ Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluste
 
 
 
-[Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}  
-[Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}  
-[Anush](https://github.com/Anush008){:target=_blank .external-link}  
-[Bin](https://github.com/soulhat){:target=_blank .external-link}  
-[Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}  
+[Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}
+[Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}
+[Anush](https://github.com/Anush008){:target=_blank .external-link}
+[Bin](https://github.com/soulhat){:target=_blank .external-link}
+[Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}
 
 
 
@@ -1875,7 +1875,7 @@ This release replaces the Item Lists node with a collection of nodes for data tr
 * [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/): identify and delete items that are identical across all fields or a subset of fields.
 * [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/): organize lists of in a desired ordering, or generate a random selection.
 * [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/): separate a single data item containing a list into multiple items.
-* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables. 
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables.
 
 </div>
 
@@ -2038,8 +2038,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 ### Contributors
 
 
-[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}  
-[teomane](https://github.com/teomane){:target=_blank .external-link}  
+[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}
+[teomane](https://github.com/teomane){:target=_blank .external-link}
 
 ## n8n@1.16.0
 
@@ -2071,7 +2071,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### Workflow history
 
-This release introduces workflow history: view and load previous versions of your workflows. 
+This release introduces workflow history: view and load previous versions of your workflows.
 
 Workflow history is available in Enterprise n8n, and with limited history for Cloud Pro.
 
@@ -2189,7 +2189,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Burak Akgün](https://github.com/mbakgun){:target=_blank .external-link}  
+[Burak Akgün](https://github.com/mbakgun){:target=_blank .external-link}
 
 ## n8n@1.12.1
 
@@ -2203,7 +2203,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Léo Martinez](https://github.com/martinezleoml){:target=_blank .external-link}  
+[Léo Martinez](https://github.com/martinezleoml){:target=_blank .external-link}
 
 ## n8n@1.11.2
 
@@ -2216,8 +2216,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 ## n8n@1.12.0
 
@@ -2238,9 +2238,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Damian Karzon](https://github.com/dkarzon){:target=_blank .external-link}  
-[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}  
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Damian Karzon](https://github.com/dkarzon){:target=_blank .external-link}
+[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 
 ## n8n@1.11.1
@@ -2328,11 +2328,11 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-## LangChain in n8n (beta)  
+## LangChain in n8n (beta)
 
 **Release date:** 2023-10-04
 
-This release introduces support for building with LangChain in n8n. 
+This release introduces support for building with LangChain in n8n.
 
 With n8n's LangChain nodes you can build AI-powered functionality within your workflows. The LangChain nodes are configurable, meaning you can choose your preferred agent, LLM, memory, and other components. Alongside the LangChain nodes, you can connect any n8n node as normal: this means you can integrate your LangChain logic with other data sources and services.
 
@@ -2424,7 +2424,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Quang-Linh LE](https://github.com/linktohack){:target=_blank .external-link}  
+[Quang-Linh LE](https://github.com/linktohack){:target=_blank .external-link}
 [MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link}
 
 ## n8n@1.6.1
@@ -2574,7 +2574,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Ian Gallagher](https://github.com/craSH){:target=_blank .external-link}  
+[Ian Gallagher](https://github.com/craSH){:target=_blank .external-link}
 [Xavier Calland](https://github.com/xavier-calland){:target=_blank .external-link}
 
 ## n8n@1.2.2
@@ -2686,12 +2686,12 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Adrián Martínez](https://github.com/adrian-martinez-vdshop){:target=_blank .external-link}  
-[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
-[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}  
-[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}  
-[Sandra Ashipala](https://github.com/sandramsc){:target=_blank .external-link}  
-[ZergRael](https://github.com/ZergRael){:target=_blank .external-link}  
+[Adrián Martínez](https://github.com/adrian-martinez-vdshop){:target=_blank .external-link}
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}
+[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}
+[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}
+[Sandra Ashipala](https://github.com/sandramsc){:target=_blank .external-link}
+[ZergRael](https://github.com/ZergRael){:target=_blank .external-link}
 
 ## n8n@1.0.5
 
@@ -2722,7 +2722,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}  
+[Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}
 [noctarius aka Christoph Engelbert](https://github.com/noctarius){:target=_blank .external-link}
 
 

@@ -38,7 +38,7 @@ Enter the subject line for the email.
 
 Select the format to send the email in. Choose from:
 
-* **Text**: Send the email in plain-text format. 
+* **Text**: Send the email in plain-text format.
 * **HTML**: Send the email in HTML format.
 * **Both**: Send the email in both formats. If you choose this option, the email recipient's client will set which format to display.
 

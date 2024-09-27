@@ -189,7 +189,7 @@ This release adds the PGVector Vector Store node. Use this node to interact with
 We have added collaborator avatars back to the workflow canvas. You will see other users that are active on the workflow, preventing you from overriding each others work. 
 
 <figure>
-    <img src="/docs/_images/release-notes/Collaboration-avatar.png" alt="Collaboration avatars">
+    <img src="/_images/release-notes/Collaboration-avatar.png" alt="Collaboration avatars">
     <figcaption align="center"><i>Collaboration avatars</i></figcaption>
 </figure>
 

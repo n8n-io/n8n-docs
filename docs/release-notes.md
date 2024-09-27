@@ -193,6 +193,11 @@ We added collaborator avatars back to the workflow canvas. You will see other us
     <figcaption align="center"><i>Collaboration avatars</i></figcaption>
 </figure>
 
+<figure markdown="span">
+![Collaboration avatars](/_images/release-notes/Collaboration-avatar.png)
+<figcaption>Collaboration avatars</figcaption>
+</figure>
+
 </div>
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.

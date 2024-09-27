@@ -1,15 +1,15 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: RSS Feed Trigger
-description: Documentation for the RSS Feed Trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: RSS Feed Trigger node documentation
+description: Learn how to use the RSS Feed Trigger node in n8n. Follow technical documentation to integrate RSS Feed Trigger node into your workflows.
 priority: medium
 ---
 
-# RSS Feed trigger
+# RSS Feed Trigger node
 
-The RSS Feed trigger node allows you to start an n8n workflow when a new RSS feed item has been published.
+The RSS Feed Trigger node allows you to start an n8n workflow when a new RSS feed item has been published.
 
-On this page, you'll find a list of operations the RSS Feed trigger node supports, and links to more resources.
+On this page, you'll find a list of operations the RSS Feed Trigger node supports, and links to more resources.
 
 ## Node parameters
 

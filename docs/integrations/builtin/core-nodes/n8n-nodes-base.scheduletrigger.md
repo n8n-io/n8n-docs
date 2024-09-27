@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Schedule trigger
-description: Documentation for the Schedule trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Schedule Trigger node documentation
+description: Learn how to use the Schedule Trigger node in n8n. Follow technical documentation to integrate Schedule Trigger node into your workflows.
 contentType: integration
 priority: critical
 ---
 
-# Schedule trigger
+# Schedule Trigger node
 
-Use the Schedule trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
+Use the Schedule Trigger node to run workflows at fixed intervals and times. This works in a similar way to the Cron software utility in Unix-like systems.
 
 /// note | You must activate the workflow
 If a workflow uses the Schedule node as a trigger, make sure that you save and activate the workflow. 

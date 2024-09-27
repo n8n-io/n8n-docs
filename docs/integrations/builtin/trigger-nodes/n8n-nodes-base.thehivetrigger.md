@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: TheHive trigger
-description: Documentation for the TheHive trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: TheHive Trigger node documentation
+description: Learn how to use the TheHive Trigger node in n8n. Follow technical documentation to integrate TheHive Trigger node into your workflows.
 contentType: integration
 ---
 
-# TheHive trigger
+# TheHive Trigger node
 
-On this page, you'll find a list of events the TheHive trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the TheHive Trigger node can respond to and links to more resources.
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5]().
+n8n provides two nodes for TheHive. Use this node (TheHive Trigger) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5 Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/).
 ///
 
 ///  note  | Examples and templates

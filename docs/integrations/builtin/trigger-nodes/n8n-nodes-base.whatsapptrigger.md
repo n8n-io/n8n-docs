@@ -1,18 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: WhatsApp trigger
-description: Documentation for the WhatsApp trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: WhatsApp Trigger node documentation
+description: Learn how to use the WhatsApp Trigger node in n8n. Follow technical documentation to integrate WhatsApp Trigger node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# WhatsApp trigger
+# WhatsApp Trigger node
 
+Use the WhatsApp Trigger node to respond to events in WhatsApp and integrate WhatsApp with other applications. n8n has built-in support for a wide range of WhatsApp events, including account, message, and phone number events.
 
-
-Use the WhatsApp trigger node to respond to events in WhatsApp and integrate WhatsApp with other applications. n8n has built-in support for a wide range of WhatsApp events, including account, message, and phone number events.
-
-On this page, you'll find a list of events the WhatsApp trigger node can respond to, and links to more resources.
+On this page, you'll find a list of events the WhatsApp Trigger node can respond to, and links to more resources.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/whatsapp/).
@@ -37,15 +35,8 @@ For usage examples and templates to help you get started, refer to n8n's [WhatsA
 
 ## Related resources
 
-
 n8n provides an app node for WhatsApp. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/).
-
 
 View [example workflows and related content](https://n8n.io/integrations/whatsapp-trigger/){:target=_blank .external-link} on n8n's website.
 
-
 Refer to [WhatsApp's documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank .external-link} for details about their API.
-
-
-
-

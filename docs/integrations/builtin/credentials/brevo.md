@@ -10,7 +10,7 @@ contentType: integration
 You can use these credentials to authenticate the following nodes:
 
 * [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo/)
-* [Brevo trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/)
+* [Brevo Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/)
 
 ## Prerequisites
 

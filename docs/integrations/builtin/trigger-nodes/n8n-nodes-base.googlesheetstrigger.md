@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Sheets trigger
-description: Documentation for the Google Sheets trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Google Sheets Trigger node documentation
+description: Learn how to use the Google Sheets Trigger node in n8n. Follow technical documentation to integrate Google Sheets Trigger node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Google Sheets trigger
+# Google Sheets Trigger node
 
 [Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
 

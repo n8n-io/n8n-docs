@@ -354,7 +354,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
-        - integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
+        - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
@@ -394,12 +394,12 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger.md
+        - RSS Feed Trigger: integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
+        - Schedule Trigger: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
+        - SSE Trigger: integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
         - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
         - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
@@ -410,7 +410,7 @@ nav:
           - integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
           - Workflow development: integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
+        - Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
       - Actions:
         - integrations/builtin/app-nodes/index.md
@@ -693,29 +693,29 @@ nav:
         - Zulip: integrations/builtin/app-nodes/n8n-nodes-base.zulip.md
       - Triggers:
         - integrations/builtin/trigger-nodes/index.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
+        - ActiveCampaign Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md
+        - Acuity Scheduling Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger.md
+        - Affinity Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger.md
+        - Airtable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md
+        - AMQP Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
+        - Asana Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
+        - Autopilot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
+        - AWS SNS Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md
+        - Bitbucket Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md
+        - Box Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md
+        - Brevo Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md
+        - Calendly Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md
+        - Cal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md
+        - Chargebee Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md
+        - ClickUp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md
+        - Clockify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md
+        - ConvertKit Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
+        - Copper Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
+        - crowd.dev Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
+        - Customer.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
+        - Emelia Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
+        - Eventbrite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
+        - Facebook Lead Ads Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
         - Facebook Trigger:
           - Facebook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
           - Ad Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
@@ -729,73 +729,73 @@ nav:
           - User: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md
           - WhatsApp Business Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md
           - Workplace Security: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
+        - Figma Trigger (Beta): integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
+        - Flow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
+        - Form.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
+        - Formstack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md
+        - GetResponse Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md
+        - GitHub Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md
+        - GitLab Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
         - Gmail Trigger:
           - integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md
           - Poll Mode options: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md
           - Common Issues: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md
-        - integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md
+        - Google Calendar Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
+        - Google Drive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger.md
+        - Google Sheets Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger.md
+        - Gumroad Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
+        - Help Scout Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
+        - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
+        - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
+        - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
+        - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
+        - Kafka Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+        - Keap Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
+        - KoboToolbox Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md
+        - Lemlist Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md
+        - Linear Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md
+        - LoneScale Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md
+        - Mailchimp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md
+        - MailerLite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
+        - Mailjet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
+        - Mautic Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
+        - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
+        - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+        - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
+        - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
+        - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
+        - Onfleet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
+        - PayPal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
+        - Pipedrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md
+        - Postgres Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md
+        - Postmark Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md
+        - Pushcut Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md
+        - RabbitMQ Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md
+        - Redis Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger.md
+        - Salesforce Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
+        - SeaTable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
+        - Shopify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
+        - Slack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
+        - Strava Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
+        - Stripe Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
+        - SurveyMonkey Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
+        - Taiga Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
+        - Telegram Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger.md
+        - TheHive 5 Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
+        - TheHive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
+        - Toggl Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
+        - Trello Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
+        - Twilio Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
+        - Typeform Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
+        - Venafi TLS Protect Cloud Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
+        - Webex by Cisco Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
+        - Webflow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
+        - WhatsApp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
+        - Wise Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
+        - WooCommerce Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
+        - Workable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
+        - Wufoo Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md
+        - Zendesk Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md
       - Cluster nodes:
         - integrations/builtin/cluster-nodes/index.md
         - Root nodes:

@@ -1,13 +1,13 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mautic trigger
-description: Documentation for the Mautic trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Mautic Trigger node documentation
+description: Learn how to use the Mautic Trigger node in n8n. Follow technical documentation to integrate Mautic Trigger node into your workflows.
 contentType: integration
 ---
 
-# Mautic trigger
+# Mautic Trigger node
 
-[Mautic](https://www.mautic.org/) is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
+[Mautic](https://www.mautic.org/){:target=_blank .external-link} is an open-source marketing automation software that helps online businesses automate their repetitive marketing tasks such as lead generation, contact scoring, contact segmentation, and marketing campaigns.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/mautic/).

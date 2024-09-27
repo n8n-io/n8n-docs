@@ -510,8 +510,9 @@ nav:
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
-          - Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
-          - Sheet within Document Operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
+          - Document operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
+          - Sheet within Document operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues.md
         - Google Slides: integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
         - Google Tasks: integrations/builtin/app-nodes/n8n-nodes-base.googletasks.md
         - Google Translate: integrations/builtin/app-nodes/n8n-nodes-base.googletranslate.md

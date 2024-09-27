@@ -58,8 +58,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.3...n8n@1.59.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-20
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -73,8 +71,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.0...n8n@1.60.1
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -83,8 +79,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.3...n8n@1.60.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-18
-
-
 
 This release contains new features, node enhancements and bug fixes.
 
@@ -116,12 +110,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.59.2...n8n@1.59.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-18
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.59.2
 
@@ -145,9 +136,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.58.1...n8n@1.58.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-12
-
-
-
 
 This release contains bug fixes.
 
@@ -191,6 +179,19 @@ This release contains new features, bug fixes and feature enhancements.
 #### New node: PGVector Vector Store
 
 This release adds the PGVector Vector Store node. Use this node to interact with the PGVector tables in your PostgreSQL database. You can insert, get, and retrieve documents from a vector table to provide them to a retriever connected to a chain.
+
+</div>
+
+<div class="n8n-new-features" markdown>
+
+#### See active collaborators on workflows
+
+We added collaborator avatars back to the workflow canvas. You will see other users who are active on the workflow, preventing you from overriding each other's work.
+
+<figure markdown="span">
+    ![Collaboration avatars](/_images/release-notes/Collaboration-avatar.png)
+    <figcaption>Collaboration avatars</figcaption>
+</figure>
 
 </div>
 

@@ -27,7 +27,7 @@
 /reference/security/   /privacy-security/security/
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-/reference/security.html    /privacy-security/security/ 
+/reference/security.html    /privacy-security/security/
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/
@@ -105,8 +105,9 @@
 /integrations/builtin/core-nodes/n8n-nodes-base.ical/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /integrations/builtin/core-nodes/n8n-nodes-base.readpdf/   /integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
-/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
@@ -191,7 +192,7 @@
 /security-audit/   /hosting/logging-monitoring/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
-/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 /reference/release-notes/   /release-notes/
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
@@ -325,8 +326,8 @@
 /reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /help-community/contributing/
-/reference/release-notes.html                        /reference/release-notes/	
-/reference/server-setup.html                         /hosting/installation/server-setups/  
+/reference/release-notes.html                        /reference/release-notes/
+/reference/server-setup.html                         /hosting/installation/server-setups/
 
 # The nodes library . . . may the odds be ever in your favour
 
@@ -560,7 +561,7 @@
 /nodes/n8n-nodes-base.googlefirebaserealtimedatabase/		/integrations/builtin/app-nodes/n8n-nodes-base.googlefirebaserealtimedatabase/
 /nodes/n8n-nodes-base.googlePerspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/
 /nodes/n8n-nodes-base.googleperspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/
-/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/	
+/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/
 /nodes/n8n-nodes-base.googlesheets/     /integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/
 /nodes/n8n-nodes-base.googleSlides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/
 /nodes/n8n-nodes-base.googleslides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/
@@ -766,10 +767,10 @@
 /nodes/n8n-nodes-base.rabbitmqTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/
 /nodes/n8n-nodes-base.rabbitmqtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/
 /nodes/n8n-nodes-base.raindrop/		/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/
-/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /nodes/n8n-nodes-base.readPDF/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /nodes/n8n-nodes-base.readpdf/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /nodes/n8n-nodes-base.reddit/		/integrations/builtin/app-nodes/n8n-nodes-base.reddit/
@@ -897,8 +898,8 @@
 /nodes/n8n-nodes-base.workflowTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
 /nodes/n8n-nodes-base.workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
 /nodes/n8n-nodes-base.Workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
-/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /nodes/n8n-nodes-base.wufooTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/
 /nodes/n8n-nodes-base.wufootrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/
 /nodes/n8n-nodes-base.xero/		/integrations/builtin/app-nodes/n8n-nodes-base.xero/

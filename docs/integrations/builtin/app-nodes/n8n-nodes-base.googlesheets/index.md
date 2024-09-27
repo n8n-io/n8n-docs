@@ -41,8 +41,6 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/) 
 
 Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} for more information about the service.
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
-
 <!-- ## Examples
 This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/).	
 	1. Set up a Google Sheet with two columns, `test1` and `test`. In `test1`, enter the names from the Customer Datastore node:  
@@ -59,23 +57,8 @@ This example uses the Customer Datastore node to provide sample data to load int
 	6. View your spreadsheet. **test2** should now contain the email addresses that match to the names in the input data.  
 	![The spreadsheet set up for testing](/_images/integrations/builtin/app-nodes/googlesheets/test-sheet-after.png)   -->
 
-## Append an array
+## Common issues
 
-To insert an array of data into Google Sheets, you must convert the array into a valid JSON (key, value) format.
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues/).
 
-To do so, consider using:
-
-1. The [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) node.
-1. The [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/) node. For example, try entering something like:
-    ```
-    Convert 'languages' array to JSON (key, value) pairs.
-    ```
-1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
-
-## Column names were updated after the node's setup
-
-You'll receive this error if the Google Sheet's column names have changed since you set up the node.
-
-To refresh the column names, re-select **Mapping Column Mode**. This should prompt the node to fetch the column names again.
-
-Once the column names refresh, update the node parameters.
+--8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

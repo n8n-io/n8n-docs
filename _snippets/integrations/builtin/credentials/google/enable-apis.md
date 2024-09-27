@@ -17,4 +17,9 @@
 	* Google Slides 
 	///
 
+    /// note | Google Vertex AI API
+	In addition to the Vertex AI API you will also need to enable the [Cloud Resource Manager API](https://console.cloud.google.com/apis/api/cloudresourcemanager.googleapis.com/){:target=_blank .external-link}.
+
+	///
+
 1. Select **ENABLE**.

@@ -58,3 +58,16 @@ To resolve, review the selected credentials and make sure you can authenticate w
 * Update permissions or scopes so that your API key or account can perform the operation you've selected.
 * Format your generic credential in a different way.
 * Generate a new API key or token with the appropriate permissions or scopes.
+
+## 429 - The service is receiving too many requests from you
+
+This error displays when the node receives a 429 error from the service that you're calling. This means that you have likely hit the rate limits of that service.
+
+To resolve the error, you can use the inbuilt options of the HTTP request node:
+1. **Batching**: This option allows you to send requests in batches and introduce a delay between them.
+   - In the HTTP Request node, select **Add Option > Batching**
+   - Set **Items per Batch** to the number of input items to include in each request
+   - Set **Batch Interval (ms)** to introduce a delay between requests. For example, if the API allows one request per second, set **Batch Interval (ms)** to `1000`
+2. **Retry on Fail**: This option allows you retry the node after a failed attempt
+   - - In the HTTP Request node, go to **Settings** and toggle **Retry on Fail**
+	- Set **Max Tries** and **Wait Between Tries (ms)** to the desired delay between retries.

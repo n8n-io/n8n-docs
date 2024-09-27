@@ -61,13 +61,23 @@ To resolve, review the selected credentials and make sure you can authenticate w
 
 ## 429 - The service is receiving too many requests from you
 
-This error displays when the node receives a 429 error from the service that you're calling. This means that you have likely hit the rate limits of that service.
+This error displays when the node receives a [429 error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429){:target=_blank .external-link} from the service that you're calling. This often means that you have hit the rate limits of that service. You can find out more on the [Handling API rate limits](/integrations/builtin/rate-limits/) page.
 
-To resolve the error, you can use the inbuilt options of the HTTP request node:
-1. **Batching**: This option allows you to send requests in batches and introduce a delay between them.
-   - In the HTTP Request node, select **Add Option > Batching**
-   - Set **Items per Batch** to the number of input items to include in each request
-   - Set **Batch Interval (ms)** to introduce a delay between requests. For example, if the API allows one request per second, set **Batch Interval (ms)** to `1000`
-2. **Retry on Fail**: This option allows you retry the node after a failed attempt
-   - - In the HTTP Request node, go to **Settings** and toggle **Retry on Fail**
-	- Set **Max Tries** and **Wait Between Tries (ms)** to the desired delay between retries.
+To resolve the error, you can use one of the built-in options of the HTTP request node:
+
+### Batching
+
+Use this option to send requests in batches and introduce a delay between them.
+
+1. In the HTTP Request node, select **Add Option > Batching**.
+1. Set **Items per Batch** to the number of input items to include in each request.
+1. Set **Batch Interval (ms)** to introduce a delay between requests in milliseconds. For example, to send one request to an API per second, set **Batch Interval (ms)** to `1000`.
+
+### Retry on Fail
+
+Use this option to retry the node after a failed attempt.
+
+1. In the HTTP Request node, go to **Settings** and enable **Retry on Fail**.
+1. Set **Max Tries** to the maximum number of times n8n should retry the node.
+1. Set **Wait Between Tries (ms)** to the desired delay in milliseconds between retries. For example, to wait one second before retrying the request again, set **Wait Between Tries (ms)** to `1000`.
+

@@ -41,4 +41,4 @@ Try removing the Window Buffer Memory node from your workflow and re-adding it, 
 
 This error displays when n8n tries to execute the node without having a Chat Model connected.
 
-To do this, click the + Chat Model button at the bottom of your screen when the node is open, or click the Chat Model + connector when the node is closed. n8n will then open a selection of possible Chat Models to pick from.
+To resolve this, click the + Chat Model button at the bottom of your screen when the node is open, or click the Chat Model + connector when the node is closed. n8n will then open a selection of possible Chat Models to pick from.

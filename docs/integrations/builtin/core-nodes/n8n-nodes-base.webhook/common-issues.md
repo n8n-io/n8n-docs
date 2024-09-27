@@ -89,7 +89,7 @@ While building or testing a workflow, use the **Test URL**. Once you're ready to
 
 | **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
 | :--- | --- | --- | :---: |
-| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white-check-mark: |
+| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white_check_mark: |
 | Production URL | Activate the workflow | Until workflow deactivated | :x: |
 
 Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information.

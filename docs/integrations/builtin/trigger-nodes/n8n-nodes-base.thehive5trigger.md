@@ -12,7 +12,7 @@ Use the TheHive 5 Trigger node to respond to events in [TheHive](https://strange
 On this page, you'll find a list of events the TheHive5 Trigger node can respond to and links to more resources.
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive 5 Trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
+n8n provides two nodes for TheHive. Use this node (TheHive 5 Trigger) if you want to use TheHive's version 5 API. If you want to use version 3 or 4, use [TheHive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/).
 ///
 
 ///  note  | Examples and templates

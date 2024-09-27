@@ -5,7 +5,7 @@ description: Learn how to use the RSS Feed Trigger node in n8n. Follow technical
 priority: medium
 ---
 
-# RSS Feed trigger
+# RSS Feed Trigger node
 
 The RSS Feed Trigger node allows you to start an n8n workflow when a new RSS feed item has been published.
 

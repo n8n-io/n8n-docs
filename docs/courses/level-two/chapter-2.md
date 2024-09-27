@@ -41,7 +41,7 @@ Let's get the title of the latest n8n blog post:
 		- **Operation**: Extract HTML Content
 		- **Source Data**: JSON
 		- **JSON Property**: data
-		- **Extraction Values**:  
+		- **Extraction Values**:
 			- **Key**: title
 			- **CSS Selector**: `.item-title  a`
 			- **Return Value**: HTML
@@ -83,7 +83,7 @@ In the [final exercise of Chapter 1](/courses/level-two/chapter-1/#exercise_2), 
 
 Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `YEAR`. The dates and times can be passed in different formats, for example:
 <!-- vale off -->
-- `DATE`: March 29 2022, 29-03-2022, 2022/03/29 
+- `DATE`: March 29 2022, 29-03-2022, 2022/03/29
 - `TIME`: 08:30:00, 8:30, 20:30
 - `DATETIME`: 2022/03/29 08:30:00
 - `TIMESTAMP`: 1616108400 (Unix timestamp), 1616108400000 (Unix ms timestamp)
@@ -144,7 +144,7 @@ To begin:
 		- Set the **Minutes Between Triggers** to 30.
 		- To test your schedule, be sure to activate the workflow.
 		- Be sure to connect this node to the **Customer Datastore (n8n training) node** you began with!
-	
+
 	The workflow should look like this:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="Workflow for transforming dates" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
@@ -371,7 +371,7 @@ Up to now, you have mainly worked with text data. But what if you want to proces
 In n8n, you can process binary data with the following nodes:
 
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to request and send files from/to web resources and APIs.
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) to read and write files from/to the machine where n8n is running.
 - [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
 - [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
 

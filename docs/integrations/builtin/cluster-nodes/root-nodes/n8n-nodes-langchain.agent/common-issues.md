@@ -36,3 +36,9 @@ This error displays when n8n runs into an issue with the [Window Buffer Memory](
 It most often occurs when your workflow or the workflow template you copied uses an older version of the Window Buffer Memory node.
 
 Try removing the Window Buffer Memory node from your workflow and re-adding it, which will guarantee you're using the latest version of the node.
+
+## A Chat Model sub-node must be connected error
+
+This error displays when n8n tries to execute the node without having a Chat Model connected.
+
+To resolve this, click the + Chat Model button at the bottom of your screen when the node is open, or click the Chat Model + connector when the node is closed. n8n will then open a selection of possible Chat Models to pick from.

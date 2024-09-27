@@ -21,7 +21,7 @@ You can find authentication information for this node [here](/integrations/built
 - [**Upload** a file](#upload-file)
 
 /// note | Uploading files
-To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+To attach a file for upload, you will need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
 ///
 
 ### Execute Command

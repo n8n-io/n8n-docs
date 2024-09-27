@@ -6,7 +6,7 @@ This page gives usage information about the Code node. For more guidance on codi
 * Reference documentation on [Built-in methods and variables](/code/builtin/overview/)
 * Guidance on [Handling dates](/code/cookbook/luxon/) and [Querying JSON](/code/cookbook/jmespath/)
 * A growing collection of examples in the [Cookbook](/code/cookbook/)
-/// 
+///
 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Code integrations](https://n8n.io/integrations/code/){:target=_blank .external-link} page.
@@ -70,7 +70,7 @@ The syntax to use the built-in methods and variables is `_variableName` or `_met
 
 You can't access the file system or make HTTP requests. Use the following nodes instead:
 
-* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) 
+* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/)
 * [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 ## Coding in n8n

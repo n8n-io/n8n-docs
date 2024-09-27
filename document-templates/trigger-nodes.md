@@ -59,8 +59,10 @@ Refer to [_Name_'s documentation](){:target=_blank .external-link} for details a
 ## Common issues
 
 <!-- 
-If the node is small enough for a single page, add a subheading here for each error, quirk, pain point, or other complex topic that might trip people up. Refer to the common_issues.md template for suggested wording.
-
+if the node is small enough for a single page, add the sentence below. Create a subheading below this for each error, quirk, pain point, or other complex topic that might trip people up
+-->
+Here are some common errors and issues with the _Name_ node and steps to resolve or troubleshoot them.
+<!-- 
 If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).

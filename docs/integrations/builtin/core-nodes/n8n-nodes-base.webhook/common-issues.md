@@ -80,3 +80,16 @@ By default, the response format is JSON or an array. To send a response of type 
 9. Toggle **Keep Only Set** to on (green).
 
 When you call the Webhook, it sends the string response from the Edit Fields node.
+
+## Test URL versus Production URL
+
+n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
+
+While building or testing a workflow, use the **Test URL**. Once you're ready to use your Webhook URL in production, use the **Production URL**.
+
+| **URL Type** | **How to Trigger** | **Activity duration** | **Data Displayed in Editor UI?** | 
+| --- | --- | --- |
+| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | Yes |
+| Production URL | Activate the workflow | Until workflow deactivated | No |
+
+Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information.

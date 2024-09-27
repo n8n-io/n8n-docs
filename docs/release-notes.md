@@ -258,7 +258,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
 [Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -401,10 +401,10 @@ Find the details in the [API reference](/api/api-reference/).
 
 ### Contributors
 
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
-[Javier Ferrer González](https://github.com/JavierCane){:target=_blank .external-link}
-[Mickaël Andrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}
-[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[Javier Ferrer González](https://github.com/JavierCane){:target=_blank .external-link}  
+[Mickaël Andrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}  
+[Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}  
 [Pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -477,7 +477,7 @@ Find the details in the [API reference](/api/api-reference/).
 
 ### Contributors
 
-[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
 [Oz Weiss](https://github.com/thewizarodofoz){:target=_blank .external-link}
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -624,10 +624,10 @@ This release contains node enhancements and bug fixes.
 The Ask AI beta feature for the HTTP Request node has been removed from this version
 
 ### Contributors
-[Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
-[jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}
-[adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}
+[Stanley Yoshinori Takamatsu](https://github.com/stanleytakamatsu){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[jeanpaul](https://github.com/jeanpaul){:target=_blank .external-link}  
+[adrian-martinez-onestic](https://github.com/adrian-martinez-onestic){:target=_blank .external-link}  
 [Malki Davis](https://github.com/mxdavis){:target=_blank .external-link}
 
 
@@ -647,9 +647,9 @@ This release contains a new node, node enhancements, and bug fixes.
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ### Contributors
-[Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}
-[KhDu](https://github.com/KhDu){:target=_blank .external-link}
-[Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}
+[Jochem](https://github.com/jvdweerthof){:target=_blank .external-link}  
+[KhDu](https://github.com/KhDu){:target=_blank .external-link}  
+[Nico Weichbrodt](https://github.com/envy){:target=_blank .external-link}  
 [Pavlo Paliychuk](https://github.com/paul-paliychuk){:target=_blank .external-link}
 
 
@@ -748,14 +748,14 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 
 ### Contributors
 
-[Daniel](https://github.com/daniel-alba17){:target=_blank .external-link}
-[ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}
-[Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}
-[Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}
-[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}
-[Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}
-[n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}
-[pebosi](https://github.com/pebosi){:target=_blank .external-link}
+[Daniel](https://github.com/daniel-alba17){:target=_blank .external-link}  
+[ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}  
+[Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}  
+[Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}  
+[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}  
+[Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}  
+[n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}  
+[pebosi](https://github.com/pebosi){:target=_blank .external-link}  
 [Taylor Hoffmann](https://github.com/TaylorHo){:target=_blank .external-link}
 
 ## n8n@1.45.1
@@ -782,8 +782,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Jean Khawand](https://github.com/jeankhawand){:target=_blank .external-link}
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}
+[Jean Khawand](https://github.com/jeankhawand){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
 [Valentin Coppin](https://github.com/valimero){:target=_blank .external-link}
 
 ## n8n@1.44.2
@@ -901,9 +901,9 @@ Cloud: contact [help@n8n.io](mailto:help@n8n.io).
 
 ### Contributors
 
-[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}
-[Daniil Zobov](https://github.com/ddzobov){:target=_blank .external-link}
-[Guilherme Barile](https://github.com/GuilhermeBarile){:target=_blank .external-link}
+[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}  
+[Daniil Zobov](https://github.com/ddzobov){:target=_blank .external-link}  
+[Guilherme Barile](https://github.com/GuilhermeBarile){:target=_blank .external-link}  
 [Romain MARTINEAU](https://github.com/RJiraya){:target=_blank .external-link}
 
 
@@ -954,7 +954,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Mike Quinlan](https://github.com/mjquinlan2000){:target=_blank .external-link}
+[Mike Quinlan](https://github.com/mjquinlan2000){:target=_blank .external-link}  
 [guangwu](https://github.com/testwill){:target=_blank .external-link}
 
 ## n8n@1.41.0
@@ -1010,13 +1010,13 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}
-[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
-[Nicolas-nwb](https://github.com/Nicolas-nwb){:target=_blank .external-link}
-[pemontto](https://github.com/pemontto){:target=_blank .external-link}
-[pengqiseven](https://github.com/pengqiseven){:target=_blank .external-link}
-[webk](https://github.com/webkp){:target=_blank .external-link}
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[Nicolas-nwb](https://github.com/Nicolas-nwb){:target=_blank .external-link}  
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[pengqiseven](https://github.com/pengqiseven){:target=_blank .external-link}  
+[webk](https://github.com/webkp){:target=_blank .external-link}  
 [Yoshino-s](https://github.com/Yoshino-s){:target=_blank .external-link}
 
 
@@ -1129,7 +1129,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Chengyou Liu](https://github.com/cyliu0){:target=_blank .external-link}
+[Chengyou Liu](https://github.com/cyliu0){:target=_blank .external-link}  
 [Francesco Mannino](https://github.com/manninofrancesco){:target=_blank .external-link}
 
 ## n8n@1.37.2
@@ -1347,7 +1347,7 @@ toInt()
 
 ### Contributors
 
-[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}
+[Bram Kn](https://github.com/bramkn){:target=_blank .external-link}  
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 ## n8n@1.33.1
@@ -1393,9 +1393,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[gumida](https://github.com/gumida){:target=_blank .external-link}
-[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}
-[Jordan](https://github.com/jordanburke){:target=_blank .external-link}
+[gumida](https://github.com/gumida){:target=_blank .external-link}  
+[Ayato Hayashi](https://github.com/hayashi-ay){:target=_blank .external-link}  
+[Jordan](https://github.com/jordanburke){:target=_blank .external-link}  
 [MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link}
 
 ## n8n@1.32.1
@@ -1531,7 +1531,7 @@ Other highlights:
 
 ### Contributors
 
-[Bruno Inec](https://github.com/sweenu){:target=_blank .external-link}
+[Bruno Inec](https://github.com/sweenu){:target=_blank .external-link}  
 [Jesús Burgers](https://github.com/jburgers-chakray){:target=_blank .external-link}
 
 ## n8n@1.27.3
@@ -1621,7 +1621,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}
+[Daniel Schröder](https://github.com/schroedan){:target=_blank .external-link}  
 [Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}
 
 ## n8n@1.25.1
@@ -1701,9 +1701,9 @@ This release introduces two new nodes to support [Mistral AI](https://mistral.ai
 
 ### Contributors
 
-[Anush](https://github.com/Anush008){:target=_blank .external-link}
-[Eric Koleda](https://github.com/ekoleda-codaio){:target=_blank .external-link}
-[Mason Geloso](https://github.com/MasonGeloso){:target=_blank .external-link}
+[Anush](https://github.com/Anush008){:target=_blank .external-link}  
+[Eric Koleda](https://github.com/ekoleda-codaio){:target=_blank .external-link}  
+[Mason Geloso](https://github.com/MasonGeloso){:target=_blank .external-link}  
 [vacitbaydarman](https://github.com/vacitbaydarman){:target=_blank .external-link}
 
 ## n8n@1.22.5
@@ -1754,10 +1754,10 @@ Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluste
 
 
 
-[Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}
-[Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}
-[Anush](https://github.com/Anush008){:target=_blank .external-link}
-[Bin](https://github.com/soulhat){:target=_blank .external-link}
+[Aaron Gutierrez](https://github.com/aarongut){:target=_blank .external-link}  
+[Advaith Gundu](https://github.com/geodic){:target=_blank .external-link}  
+[Anush](https://github.com/Anush008){:target=_blank .external-link}  
+[Bin](https://github.com/soulhat){:target=_blank .external-link}  
 [Nihaal Sangha](https://github.com/nihaals){:target=_blank .external-link}
 
 
@@ -2038,7 +2038,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 ### Contributors
 
 
-[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}
+[antondollmaier](https://github.com/antondollmaier){:target=_blank .external-link}  
 [teomane](https://github.com/teomane){:target=_blank .external-link}
 
 ## n8n@1.16.0
@@ -2216,7 +2216,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}
+[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}  
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 ## n8n@1.12.0
@@ -2238,8 +2238,8 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Damian Karzon](https://github.com/dkarzon){:target=_blank .external-link}
-[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}
+[Damian Karzon](https://github.com/dkarzon){:target=_blank .external-link}  
+[Inga](https://github.com/inga-lovinde){:target=_blank .external-link}  
 [pemontto](https://github.com/pemontto){:target=_blank .external-link}
 
 
@@ -2424,7 +2424,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Quang-Linh LE](https://github.com/linktohack){:target=_blank .external-link}
+[Quang-Linh LE](https://github.com/linktohack){:target=_blank .external-link}  
 [MC Naveen](https://github.com/mcnaveen){:target=_blank .external-link}
 
 ## n8n@1.6.1
@@ -2574,7 +2574,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Ian Gallagher](https://github.com/craSH){:target=_blank .external-link}
+[Ian Gallagher](https://github.com/craSH){:target=_blank .external-link}  
 [Xavier Calland](https://github.com/xavier-calland){:target=_blank .external-link}
 
 ## n8n@1.2.2
@@ -2686,11 +2686,11 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Adrián Martínez](https://github.com/adrian-martinez-vdshop){:target=_blank .external-link}
-[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}
-[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}
-[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}
-[Sandra Ashipala](https://github.com/sandramsc){:target=_blank .external-link}
+[Adrián Martínez](https://github.com/adrian-martinez-vdshop){:target=_blank .external-link}  
+[Alberto Pasqualetto](https://github.com/albertopasqualetto){:target=_blank .external-link}  
+[Marten Steketee](https://github.com/Marten-S){:target=_blank .external-link}  
+[perseus-algol](https://github.com/perseus-algol){:target=_blank .external-link}  
+[Sandra Ashipala](https://github.com/sandramsc){:target=_blank .external-link}  
 [ZergRael](https://github.com/ZergRael){:target=_blank .external-link}
 
 ## n8n@1.0.5
@@ -2722,7 +2722,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}
+[Romain Dunand](https://github.com/airmoi){:target=_blank .external-link}  
 [noctarius aka Christoph Engelbert](https://github.com/noctarius){:target=_blank .external-link}
 
 

@@ -87,9 +87,9 @@ n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a *
 
 While building or testing a workflow, use the **Test URL**. Once you're ready to use your Webhook URL in production, use the **Production URL**.
 
-| **URL Type** | **How to Trigger** | **Activity duration** | **Data Displayed in Editor UI?** | 
+| **URL type** | **How to trigger** | **Listening duration** | **Data shown in editor UI?** | 
 | --- | --- | --- | --- |
-| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | Yes |
-| Production URL | Activate the workflow | Until workflow deactivated | No |
+| Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white-check-mark: |
+| Production URL | Activate the workflow | Until workflow deactivated | :x: |
 
 Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information.

@@ -57,7 +57,7 @@ n8n handles data encryption for n8n Cloud users.
 
 #### Encryption of data in transit: TLS and SSL certificates
 
-When you use the n8n web application, it encrypts traffic between your client and n8n services in transit. The same applies for traffic related to the public API or webhook trigger nodes. n8n manages and renews SSL certificates.
+When you use the n8n web application, it encrypts traffic between your client and n8n services in transit. The same applies for traffic related to the public API or Webhook Trigger nodes. n8n manages and renews SSL certificates.
 
 
 #### Encryption of data at rest

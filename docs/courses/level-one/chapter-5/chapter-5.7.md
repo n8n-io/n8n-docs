@@ -9,16 +9,16 @@ In this step of the workflow, you will learn how to schedule your workflow so th
 
 The workflow you've built so far executes only when you click on **Test Workflow**. But Nathan needs it to run automatically every Monday morning. You can do this with the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/), which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
 
-To achieve this, we'll remove the Manual trigger node we started with and replace it with a Schedule Trigger node instead.
+To achieve this, we'll remove the Manual Trigger node we started with and replace it with a Schedule Trigger node instead.
 
-## Remove the Manual trigger node
+## Remove the Manual Trigger node
 
-First, let's remove the Manual trigger node:
+First, let's remove the Manual Trigger node:
 
-1. Select the Manual trigger node connected to your HTTP Request node.
+1. Select the Manual Trigger node connected to your HTTP Request node.
 2. Select the trash can icon to delete.
 
-The Manual trigger node will be removed and you'll see an "Add first step" option.
+The Manual Trigger node will be removed and you'll see an "Add first step" option.
 
 ## Add the Schedule Trigger node
 

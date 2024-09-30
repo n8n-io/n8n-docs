@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Form Trigger
-description: Documentation for the n8n Form Trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: n8n Form Trigger node documentation
+description: Learn how to use the n8n Form Trigger node in n8n. Follow technical documentation to integrate n8n Form Trigger node into your workflows.
 contentType: integration
 priority: critical
 ---
 
-# n8n Form trigger
+# n8n Form Trigger node
 
 Use the n8n Form trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
 
@@ -43,7 +43,7 @@ To configure this credential, you'll need:
 
 ### Form URLs
 
-The Form trigger node has two URLs: **Test URL** and **Production URL**. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
+The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n displays the URLs at the top of the node panel. Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ![Screenshot of the form URLs](/_images/integrations/builtin/core-nodes/form-trigger/form-urls.png)
 

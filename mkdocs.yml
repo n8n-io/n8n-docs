@@ -348,7 +348,7 @@ nav:
       - Node types: integrations/builtin/node-types.md
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
+        - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
@@ -361,11 +361,11 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
         - integrations/builtin/core-nodes/n8n-nodes-base.set.md
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
+        - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executecommand.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
+        - Execute Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
         - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
@@ -380,14 +380,14 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
+        - Local File Trigger: integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
+        - n8n Form Trigger: integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
+        - n8n Trigger: integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
         - integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md

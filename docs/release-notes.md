@@ -881,7 +881,7 @@ The number of projects and role types vary depending on your plan. Refer to [Pri
 
 #### New node: Slack Trigger
 
-This release adds a trigger node for Slack. Refer to the [Slack trigger documentation](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) for details.
+This release adds a trigger node for Slack. Refer to the [Slack Trigger documentation](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) for details.
 
 </div>
 
@@ -1064,7 +1064,7 @@ This release contains new nodes, node enhancements, and bug fixes.
 
 #### New node: WhatsApp Trigger
 
-This release adds the [WhatsApp trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/).
+This release adds the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/).
 
 </div>
 
@@ -1072,7 +1072,7 @@ This release adds the [WhatsApp trigger node](/integrations/builtin/trigger-node
 
 #### Node enhancement: Multiple methods, one Webhook node
 
-The Webhook trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#listen-for-multiple-http-methods) for information on enabling this.
+The Webhook Trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#listen-for-multiple-http-methods) for information on enabling this.
 
 </div>
 
@@ -1233,7 +1233,7 @@ This release contains new nodes, enhancements and bug fixes.
 
 #### New node: Salesforce Trigger node
 
-This release adds the [Salesforce trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/).
+This release adds the [Salesforce Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/).
 
 </div>
 
@@ -1241,7 +1241,7 @@ This release adds the [Salesforce trigger node](/integrations/builtin/trigger-no
 
 #### New node: Twilio Trigger node
 
-This release adds the [Twilio trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/).
+This release adds the [Twilio Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/).
 
 </div>
 
@@ -1291,7 +1291,7 @@ This release contains new features, new nodes, and bug fixes.
 
 #### New node: Microsoft OneDrive Trigger node
 
-This release adds the [Microsoft OneDrive trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger/). You can now trigger workflows on file and folder creation and update events.
+This release adds the [Microsoft OneDrive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger/). You can now trigger workflows on file and folder creation and update events.
 
 </div>
 
@@ -2162,7 +2162,7 @@ This release failed to publish to npm. Upgrade directly to 1.14.0.
 ///
 <div class="n8n-new-features" markdown>
 
-#### RSS Feed trigger node
+#### RSS Feed Trigger node
 
 This releases introduces a new node, the [RSS Feed Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger/). Use this node to start a workflow when a new RSS feed item is published.
 
@@ -2170,7 +2170,7 @@ This releases introduces a new node, the [RSS Feed Trigger](/integrations/builti
 
 <div class="n8n-new-features" markdown>
 
-#### Facebook Lead Ads trigger node
+#### Facebook Lead Ads Trigger node
 
 This releases add another new node, the [Facebook Lead Ads Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger/). Use this node to trigger a workflow when you get a new lead.
 
@@ -2229,7 +2229,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 <div class="n8n-new-features" markdown>
 
-#### Form trigger node
+#### Form Trigger node
 
 This releases introduces a new node, the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
 
@@ -2455,7 +2455,7 @@ Skip this version and upgrade directly to 1.6.1, which contains essential bug fi
 This release introduces support for TheHive API version 5. This uses a new node and credentials:
 
 * [TheHive 5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
-* [TheHive 5 trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
+* [TheHive 5 Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
 * [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/)
 
 #### `N8N_PERSISTED_BINARY_DATA_TTL` removed

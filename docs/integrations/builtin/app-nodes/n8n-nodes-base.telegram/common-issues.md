@@ -8,7 +8,7 @@ priority: critical
 
 # Telegram node common issues
 
-Here are some common errors and issues with the [Telegram node](/integrations/builtin/app-nodes/telegram/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) and steps to resolve or troubleshoot them.
 
 ## Add a bot to a Telegram channel
 

@@ -8,7 +8,7 @@ priority: critical
 
 # Gmail node common issues
 
-Here are some common errors and issues with the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes--base.gmail/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) and steps to resolve or troubleshoot them.
 
 ## Remove the n8n attribution from sent messages
 

@@ -9,6 +9,10 @@ search:
 
 # n8n public REST API
 
+/// info | Feature availability
+The n8n API isn't available during the free trial. Please upgrade to access this feature.  
+///
+
 Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
 * How to [authenticate](/api/authentication/)

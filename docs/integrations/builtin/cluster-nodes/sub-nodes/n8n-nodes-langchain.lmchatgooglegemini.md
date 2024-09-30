@@ -13,7 +13,7 @@ Use the Google Gemini Chat Model node to use Google's Gemini chat models with co
 On this page, you'll find the node parameters for the Google Gemini Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/googleai/).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

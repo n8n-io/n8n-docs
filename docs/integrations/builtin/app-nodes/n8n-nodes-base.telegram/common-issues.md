@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Telegram node Common Issues 
-description: Documentation for Common Issues and resolutions in the Telegram node in n8n, a workflow automation platform. Includes details of the issue and suggested resolutions.
+title: Telegram node common issues
+description: Documentation for common issues and questions in the Telegram node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: integration
 priority: critical
 ---
 
-# Common issues (Telegram node)
+# Telegram node common issues
 
-Here are some common errors and issues with the [Telegram node](/integrations/builtin/app-nodes/telegram/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Telegram node](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) and steps to resolve or troubleshoot them.
 
 ## Add a bot to a Telegram channel
 

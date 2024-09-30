@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail node common issues 
-description: Documentation for common issues and resolutions in the Gmail node in n8n, a workflow automation platform. Includes details of the issue and suggested resolutions.
+description: Documentation for common issues and questions in the Gmail node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: integration
 priority: critical
 ---
 
-# Common issues (Gmail node)
+# Gmail node common issues
 
-Here are some common errors and issues with the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes--base.gmail/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) and steps to resolve or troubleshoot them.
 
 ## Remove the n8n attribution from sent messages
 

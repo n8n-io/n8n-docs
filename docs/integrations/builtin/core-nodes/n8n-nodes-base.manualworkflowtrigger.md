@@ -21,7 +21,7 @@ Use this trigger:
 
 ## Common issues
 
-Here are some common issues/questions and suggested solutions for the Manual Trigger node.
+Here are some common errors and issues with the Manual Trigger node and steps to resolve or troubleshoot them.
 
 <!-- vale off -->
 ### Only one 'Manual Trigger' node is allowed in a workflow

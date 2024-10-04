@@ -74,10 +74,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ### Contributors
 
-[Benjamin Roedell](https://github.com/benrobot){:target=_blank .external-link} 
-[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link} 
-[manuelbcd](https://github.com/manuelbcd){:target=_blank .external-link} 
-[Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link} 
+[Benjamin Roedell](https://github.com/benrobot){:target=_blank .external-link}  
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[manuelbcd](https://github.com/manuelbcd){:target=_blank .external-link}  
+[Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link}  
 
 
 ## n8n@1.61.0

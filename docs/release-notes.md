@@ -48,7 +48,7 @@ We skipped 1.62.0 and went straight to 1.62.1 with an additional fix.
 
 #### Additional nodes as tools
 
-We have made additional nodes available to be used with the [Tools AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/). 
+We have made additional nodes usable with the [Tools AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/). 
 <br /><br />
 
 <video src="/_video/release-notes/nodes-as-tools.mp4" controls width="100%"></video>

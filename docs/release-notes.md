@@ -33,6 +33,53 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.62.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.61.0...n8n@1.62.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-10-02
+
+This release contains new features, node enhancements and bug fixes.
+
+/// note | Skipped 1.62.0
+We skipped 1.62.0 and went straight to 1.62.1 with an additional fix. 
+///
+
+<div class="n8n-new-features" markdown>
+
+#### Additional nodes as tools
+
+We have made additional nodes available to be used with the [Tools AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/). 
+
+<video src="/_video/release-notes/nodes-as-tools.mp4" controls width="100%"></video>
+
+Additionally, we have added a `$fromAI()` placeholder function to be used with tools, allowing dynamic passing of information from the models to the tools used. This function works similarly to placeholders used elsewhere in n8n. 
+
+Both of these new features enable you to build even more powerful AI agents by drawing directly from the apps used in your business. This makes the integration of LLMs into you business processes even easier than before. 
+
+</div>
+
+### Node updates
+
+- [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/): Added option to return numeric values as integers and not strings 
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): Added credential support for Sysdig 
+- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Additional query params for getAll requests 
+- [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/): Added the option to use a custom prompt 
+
+
+Drag and drop insertion on cursor position from schema view is now also enabled for code, SQL and Html fields in nodes. 
+
+Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. For highlighting a [Execution Data Node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/) (or Code node) needs to be added to the workflow to set [custom executions data](/workflows/executions/custom-executions-data/). 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Benjamin Roedell](https://github.com/benrobot){:target=_blank .external-link} 
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link} 
+[manuelbcd](https://github.com/manuelbcd){:target=_blank .external-link} 
+[Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link} 
+
+
 ## n8n@1.61.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.1...n8n@1.61.0){:target=_blank .external-link} for this version.<br />

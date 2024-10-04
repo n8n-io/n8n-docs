@@ -69,7 +69,7 @@ Both of these new features enable you to build even more powerful AI agents by d
 
 Drag and drop insertion on cursor position from schema view is now also enabled for code, SQL and Html fields in nodes. 
 
-Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. For highlighting a [Execution Data Node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/) (or Code node) needs to be added to the workflow to set [custom executions data](/workflows/executions/custom-executions-data/). 
+Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. To use highlighting, add an [Execution Data Node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/) (or Code node) to the workflow to set [custom executions data](/workflows/executions/custom-executions-data/). 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

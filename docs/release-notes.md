@@ -49,11 +49,12 @@ We skipped 1.62.0 and went straight to 1.62.1 with an additional fix.
 #### Additional nodes as tools
 
 We have made additional nodes available to be used with the [Tools AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/). 
+<br /><br />
 
 <video src="/_video/release-notes/nodes-as-tools.mp4" controls width="100%"></video>
-
+<br /><br />
 Additionally, we have added a `$fromAI()` placeholder function to be used with tools, allowing dynamic passing of information from the models to the tools used. This function works similarly to placeholders used elsewhere in n8n. 
-
+<br /><br />
 Both of these new features enable you to build even more powerful AI agents by drawing directly from the apps used in your business. This makes the integration of LLMs into you business processes even easier than before. 
 
 </div>

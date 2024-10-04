@@ -55,7 +55,7 @@ We have made additional nodes usable with the [Tools AI Agent node](/integration
 <br /><br />
 Additionally, we have added a `$fromAI()` placeholder function to use with tools, allowing you to dynamically pass information from the models to the connected tools. This function works similarly to placeholders used elsewhere in n8n. 
 <br /><br />
-Both of these new features enable you to build even more powerful AI agents by drawing directly from the apps used in your business. This makes the integration of LLMs into you business processes even easier than before. 
+Both of these new features enable you to build even more powerful AI agents by drawing directly from the apps your business uses. This makes integrating LLMs into your business processes even easier than before. 
 
 </div>
 

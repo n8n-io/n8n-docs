@@ -101,8 +101,8 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 
 When configuring tools connected to the Tools Agent, you can use the `$fromAI()` function to dynamically populate parameter values using the AI model. The AI model will fill in appropriate data given the context from the task and information from other connected tools.
 
-/// note | Only for the Tools Agent
-The `$fromAI()` function is only available for tools connected to the Tools Agent. You also can't use the `$fromAI()` function with the [Call n8n Workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/) tool.
+/// note | Only for the Node Tools
+The `$fromAI()` function is only available for app node tools connected to the Tools Agent. It isn't possible to use the `$fromAI()` function with the [Call n8n Workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/), [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode/), or [HTTP Request](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/) tools.
 ///
 
 The `$fromAI()` function accepts the following parameters:
@@ -121,7 +121,7 @@ The `$fromAI()` function accepts the following parameters:
 As an example, you could use the following `$fromAI()` expression to dynamically populate a field with a name:
 
 ```javascript
-$fromAI("name", "The commenter's name", "string", "")
+$fromAI("name", "The commenter's name", "string", "Jane Doe")
 ```
 
 If you don't need the optional parameters, you could simplify this as:

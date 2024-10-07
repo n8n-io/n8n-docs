@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google AI credentials
-description: Documentation for the Google AI credentials. Use these credentials to authenticate Google AI nodes in n8n, a workflow automation platform.
+title: Google Gemini(PaLM) credentials
+description: Documentation for the Google Gemini(PaLM) credentials. Use these credentials to authenticate Google Gemini and Google PaLM AI nodes in n8n, a workflow automation platform.
 priority: high
 ---
 
-# Google AI credentials
+# Google Gemini(PaLM) credentials
 
 You can use these credentials to authenticate the following nodes:
 

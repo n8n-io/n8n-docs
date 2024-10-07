@@ -1,15 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n trigger
-description: Documentation for the n8n trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: n8n Trigger node documentation
+description: Learn how to use the n8n Trigger node in n8n. Follow technical documentation to integrate n8n Trigger node into your workflows.
 contentType: integration
 priority: medium
 ---
 
-# n8n trigger
+# n8n Trigger node
 
-The n8n trigger node gets triggered when the n8n instance starts or restarts. You can use the n8n trigger node to notify when the n8n instance starts.
-
+The n8n Trigger node gets triggered when the n8n instance starts or restarts. You can use the n8n Trigger node to notify when the n8n instance starts.
 
 ## Node parameters
 

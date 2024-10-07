@@ -348,7 +348,7 @@ nav:
       - Node types: integrations/builtin/node-types.md
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
+        - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - integrations/builtin/core-nodes/n8n-nodes-base.code.md
@@ -361,11 +361,11 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
         - integrations/builtin/core-nodes/n8n-nodes-base.set.md
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
+        - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executecommand.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
+        - Execute Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
         - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
@@ -380,14 +380,14 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
+        - Local File Trigger: integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
+        - n8n Form Trigger: integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
+        - n8n Trigger: integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
         - integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md
@@ -841,16 +841,13 @@ nav:
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
-          - Google PaLM Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
           - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
           - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama.md
           - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
-          - Google PaLM Language Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm.md
           - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama.md
-          - OpenAI Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai.md
           - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
           - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
           - Window Buffer Memory: 
@@ -975,7 +972,7 @@ nav:
           - integrations/builtin/credentials/google/oauth-single-service.md
           - integrations/builtin/credentials/google/oauth-generic.md
           - integrations/builtin/credentials/google/service-account.md
-          - integrations/builtin/credentials/google/googleai.md
+        - integrations/builtin/credentials/googleai.md
         - integrations/builtin/credentials/gotify.md
         - integrations/builtin/credentials/gotowebinar.md
         - integrations/builtin/credentials/grafana.md

@@ -40,8 +40,8 @@ To receive error messages for a failed workflow, set the **Error Workflow** in t
 The only difference between a regular workflow and an Error Workflow is that the latter contains an **Error Trigger node**. Make sure to create this node before you set this as another workflow's designated Error Workflow.
 
 /// note | Error workflows
-- If a workflow uses the Error trigger node, you don't have to activate the workflow.
-- If a workflow contains the Error trigger node, by default, the workflow uses itself as the error workflow.
+- If a workflow uses the Error Trigger node, you don't have to activate the workflow.
+- If a workflow contains the Error Trigger node, by default, the workflow uses itself as the error workflow.
 - You can't test error workflows when running workflows manually. The Error trigger only runs when an automatic workflow errors.
 - You can set the same Error Workflow for multiple workflows.
 ///
@@ -51,8 +51,8 @@ The only difference between a regular workflow and an Error Workflow is that the
 In the previous chapters, you've built several small workflows. Now, pick one of them that you want to monitor and create an Error Workflow for it:
 
 1. Create a new Error Workflow.
-2. Add the **Error trigger node**.
-3. Connect a node for the communication platform of your choice to the Error trigger node, like [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/), [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/), [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/), or even [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) or a more generic [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/).
+2. Add the **Error Trigger node**.
+3. Connect a node for the communication platform of your choice to the Error Trigger node, like [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/), [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/), [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/), or even [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) or a more generic [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/).
 4. In the workflow you want to monitor, open the [Workflow Settings](/workflows/settings/) and select the new Error Workflow you just created. Note that this workflow needs to run automatically to trigger the error workflow.
 
 ??? note "Show me the solution"

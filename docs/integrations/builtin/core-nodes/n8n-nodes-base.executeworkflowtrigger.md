@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Execute Workflow Trigger
-description: Documentation for the Execute Workflow trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Execute Workflow Trigger node documentation
+description: Learn how to use the Execute Workflow Trigger node in n8n. Follow technical documentation to integrate Execute Workflow Trigger node into your workflows.
 contentType: integration
 priority: high
 ---
 
-# Execute Workflow trigger
+# Execute Workflow Trigger node
 
 Use this node to start a workflow in response to another workflow. It should be the first node in the workflow.
 

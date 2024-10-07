@@ -102,7 +102,7 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 When configuring tools connected to the Tools Agent, you can use the `$fromAI()` function to dynamically populate parameter values using the AI model. The AI model will fill in appropriate data given the context from the task and information from other connected tools.
 
 /// note | Only for the Node Tools
-The `$fromAI()` function is only available for app node tools connected to the Tools Agent. It isn't possible to use the `$fromAI()` function with the [Call n8n Workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/), [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode/), or [HTTP Request](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/) tools.
+The `$fromAI()` function is only available for [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent. It isn't possible to use the `$fromAI()` function with the [Call n8n Workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/), [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode/), [HTTP Request](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/), or [other cluster sub-nodes](/integrations/builtin/cluster-nodes/sub-nodes/).
 ///
 
 The `$fromAI()` function accepts the following parameters:

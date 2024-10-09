@@ -134,7 +134,7 @@ This error displays when your OpenAI account doesn't have enough credits to fulf
 To troubleshoot this error:
 
 * check that your [OpenAI account](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} has enough credit
-* check that the [OpenAI credentials](/integrations/builtin/credentials/openai/) use a valid [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} for your funded account
+* check that the [OpenAI credentials](/integrations/builtin/credentials/openai/) use a valid [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} for the account you've added money to
 * ensure that you connect the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) to the correct [OpenAI credentials](/integrations/builtin/credentials/openai/)
 
 If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} to automatically reload your account with credits when your balance reaches $0.

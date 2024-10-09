@@ -127,14 +127,14 @@ There are two ways to work around this issue:
     ```
 2. Use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart){:target=_blank .external-link} instead of using the OpenAI node.
 
-## OpenAI: Insufficient quota
+## Insufficient quota
 
-This error displays when your OpenAI account has insufficient quota. This may mean that your OpenAI trial period has ended or that your OpenAI account needs more credit.
+This error displays when your OpenAI account has doesn't have enough credits to fulfill your request. This may mean that your OpenAI trial period has ended or that your OpenAI account needs more credit.
 
 To troubleshoot this error:
 
-* ensure that you connect the correct [OpenAI credentials](/integrations/builtin/credentials/openai/) to the OpenAI node
 * check the OpenAI account associated with your OpenAI credentials has enough credit
+* make sure to connect the OpenAI node to the correct [OpenAI credentials](/integrations/builtin/credentials/openai/)
 
 ## Bad request - please check your parameters
 

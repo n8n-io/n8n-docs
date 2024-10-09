@@ -7,6 +7,10 @@ contentType: explanation
 
 n8n doesn't restrict the amount of data each node can fetch and process. While this gives you freedom, it can lead to errors when workflow executions require more memory than available. This page explains how to identify and avoid these errors.
 
+/// note | Only for self-hosted n8n
+This page describes memory-related errors when [self-hosting n8n](/hosting/). Visit [Cloud data management](/manage-cloud/cloud-data-management/) to learn about memory limits for [n8n Cloud](/manage-cloud/overview/).
+///
+
 ## Identifying out of memory situations
 
 n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it)**.

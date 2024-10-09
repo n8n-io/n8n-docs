@@ -136,6 +136,8 @@ To troubleshoot this error:
 * check the OpenAI account associated with your OpenAI credentials has enough credit
 * make sure to connect the OpenAI node to the correct [OpenAI credentials](/integrations/builtin/credentials/openai/)
 
+If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} to automatically reload your account with credits when your balance reaches $0.
+
 ## Bad request - please check your parameters
 
 This error displays when the request results in an error but the OpenAI node wasn't able to interpret the error message from OpenAI.

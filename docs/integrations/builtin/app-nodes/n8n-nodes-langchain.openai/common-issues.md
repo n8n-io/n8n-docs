@@ -129,7 +129,7 @@ There are two ways to work around this issue:
 
 ## Insufficient quota
 
-This error displays when your OpenAI account has doesn't have enough credits to fulfill your request. This may mean that your OpenAI trial period has ended or that your OpenAI account needs more credit.
+This error displays when your OpenAI account doesn't have enough credits to fulfill your request. This may mean that your OpenAI trial period has ended or that your OpenAI account needs more credit.
 
 To troubleshoot this error:
 

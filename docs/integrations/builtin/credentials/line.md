@@ -8,6 +8,12 @@ priority: medium
 
 # Line credentials
 
+<!-- vale off -->
+/// warning | Deprecated: End of service
+LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View Line Notify's [end of service announement](https://notify-bot.line.me/closing-announce){:target=_blank .external-link} for more information.
+///
+<!-- vale on -->
+
 You can use these credentials to authenticate the following nodes:
 
 - [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line/)

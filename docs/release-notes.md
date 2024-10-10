@@ -33,6 +33,39 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.63.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.3...n8n@1.63.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-10-09
+
+/// warning | [Breaking change](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md){:target=_blank .external-link}
+What changed?
+
+- The worker server used to bind to IPv6 by default. It now binds to IPv4 by default.  
+- The worker server's /healthz used to report healthy status based on database and Redis checks. It now reports healthy status regardless of database and Redis status, and the database and Redis checks are part of /healthz/readiness.  
+
+When is action necessary?
+
+- If you experience a port conflict error when starting a worker server using its default port, set a different port for the worker server with QUEUE_HEALTH_CHECK_PORT.  
+- If you are relying on database and Redis checks for worker health status, switch to checking /healthz/readiness instead of /healthz.  
+///
+
+This release contains new features, node enhancements and bug fixes.
+
+### Node updates
+
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added the option to choose between the default memory connector to provide memory to the assistant or to specify a thread ID    
+- [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) and [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/): Added custom approval operations to have a human in the loop of a workflow  
+
+We have also optimized the [worker health checks](/hosting/logging-monitoring/monitoring/) (see breaking change above). 
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+[Pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+
 ## n8n@1.62.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.2...n8n@1.62.3){:target=_blank .external-link} for this version.<br />
@@ -51,12 +84,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.1...n8n@1.62.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-07
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.62.1
 
@@ -105,7 +135,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 [manuelbcd](https://github.com/manuelbcd){:target=_blank .external-link}  
 [Miguel Prytoluk](https://github.com/mprytoluk){:target=_blank .external-link}  
 
-
 ## n8n@1.61.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.1...n8n@1.61.0){:target=_blank .external-link} for this version.<br />
@@ -114,10 +143,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.1...n8n@1.61.0
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
-
-
-
-
 
 This release contains new features, node enhancements and bug fixes.
 
@@ -178,7 +203,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 ### Contributors
 
 [CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}
-
 
 ## n8n@1.59.3
 

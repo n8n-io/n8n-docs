@@ -93,3 +93,7 @@ While building or testing a workflow, use the **Test URL**. Once you're ready to
 | Production URL | Activate the workflow | Until workflow deactivated | :x: |
 
 Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information.
+
+## IPs in Whitelist are failing to connect
+
+If you have IPs in the allowlist and they're not able to connect check if you are running n8n behind a reverse proxy and if you set the `N8N_PROXY_HOPS` [environment variable](https://docs.n8n.io/hosting/configuration/environment-variables/) number of reverse-proxies n8n is running behind.

@@ -50,3 +50,4 @@ This page lists the deployment configuration options for your self-hosted n8n in
 | `N8N_DEV_RELOAD` | Boolean | `false` | When working on the n8n source code, set this to `true` to automatically reload or restart the application when changes occur in the source code files. |
 | `N8N_REINSTALL_MISSING_PACKAGES` | Boolean | `false` | If set to `true`, n8n will automatically attempt to reinstall any missing packages. |
 | `N8N_TUNNEL_SUBDOMAIN` | String | - | Specifies the subdomain for the n8n tunnel. If not set, n8n generates a random subdomain.|
+| `N8N_PROXY_HOPS` | Number | 0 | Number of reverse-proxies n8n is running behind. | 

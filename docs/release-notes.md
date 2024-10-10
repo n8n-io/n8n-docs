@@ -42,7 +42,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.3...n8n@1.63.0
 What changed?
 
 - The worker server used to bind to IPv6 by default. It now binds to IPv4 by default.  
-- The worker server's /healthz used to report healthy status based on database and Redis checks. It now reports healthy status regardless of database and Redis status, and the database and Redis checks are part of /healthz/readiness.  
+- The worker server's `/healthz` used to report healthy status based on database and Redis checks. It now reports healthy status regardless of database and Redis status, and the database and Redis checks are part of `/healthz/readiness`.  
 
 When is action necessary?
 

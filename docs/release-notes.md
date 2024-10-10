@@ -46,7 +46,7 @@ What changed?
 
 When is action necessary?
 
-- If you experience a port conflict error when starting a worker server using its default port, set a different port for the worker server with QUEUE_HEALTH_CHECK_PORT.  
+- If you experience a port conflict error when starting a worker server using its default port, set a different port for the worker server with `QUEUE_HEALTH_CHECK_PORT`.  
 - If you are relying on database and Redis checks for worker health status, switch to checking `/healthz/readiness` instead of `/healthz`.  
 ///
 

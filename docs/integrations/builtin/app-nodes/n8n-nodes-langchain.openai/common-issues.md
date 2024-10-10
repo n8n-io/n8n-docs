@@ -129,13 +129,13 @@ There are two ways to work around this issue:
 
 ## Insufficient quota
 
-This error displays when your OpenAI account doesn't have enough credits to fulfill your request. This may mean that your OpenAI trial period has ended, that your OpenAI account needs more credit, or that your OpenAI account has reached its current usage limits.
+This error displays when your OpenAI account doesn't have enough credits or capacity to fulfill your request. This may mean that your OpenAI trial period has ended, that your account needs more credit, or that you've gone over a usage limit.
 
 To troubleshoot this error, in your OpenAI organization:
 
 * check that your [OpenAI account](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} has enough credit
 * check that you haven't exceeded your organization's [usage limits](https://platform.openai.com/account/rate-limits){:target=_blank .external-link}
-* check that you haven't exceeded your OpenAI project's usage limits by selecting the project in your [organization settings](https://platform.openai.com/settings/organization){:target=_blank .external-link} and viewing the project limits
+* check that you haven't passed your OpenAI project's usage limits. Select the project in your [organization settings](https://platform.openai.com/settings/organization){:target=_blank .external-link} and view or change the project limits.
 
 In n8n:
 

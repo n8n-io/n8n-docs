@@ -96,4 +96,4 @@ Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.
 
 ## IPs in Whitelist are failing to connect
 
-If you have IPs in the allowlist and they're not able to connect check if you are running n8n behind a reverse proxy and if you set the `N8N_PROXY_HOPS` [environment variable](https://docs.n8n.io/hosting/configuration/environment-variables/) number of reverse-proxies n8n is running behind.
+If you have IPs in the allowlist and they're not able to connect check if you are running n8n behind a reverse proxy and if you set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables/) number of reverse-proxies n8n is running behind.

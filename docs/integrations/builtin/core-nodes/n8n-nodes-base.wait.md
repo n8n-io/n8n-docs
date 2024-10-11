@@ -113,7 +113,6 @@ Set whether the workflow will automatically resume execution after a specific li
 There are some limitations to keep in mind when using On Webhook Call:
 
 * Partial executions of your workflow changes the `$resumeWebhookUrl`, so be sure that the node sending this URL to your desired third-party runs in the same execution as the Wait node.
-* When testing your workflow using the Editor UI, you can't see the rest of the execution following the Wait node. To inspect the execution results, enable **Save Manual Executions** in your [Workflow settings](/workflows/settings/) so you can review the execution results there.
 
 ### On Form Submitted
 

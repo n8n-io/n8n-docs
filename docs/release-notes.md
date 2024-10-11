@@ -86,6 +86,8 @@ This release contains new features, node enhancements and bug fixes.
 
 We have also optimized the [worker health checks](/hosting/logging-monitoring/monitoring/) (see breaking change above). 
 
+Each credential now has a seperate url you can link to. This makes sharing much easier. 
+
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

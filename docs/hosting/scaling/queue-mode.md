@@ -120,7 +120,7 @@ You can set up multiple worker processes. Make sure that all the worker processe
 
 Each worker process runs a server that exposes optional endpoints:
 
-- `/healthz` (worker is up, if `QUEUE_HEALTH_CHECK_ACTIVE` is enabled)
+- `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
 - `/healthz/readiness` (worker's DB and Redis connections are ready, if `QUEUE_HEALTH_CHECK_ACTIVE` is enabled)
 - [credentials overwrite endpoint](https://docs.n8n.io/embed/configuration/#credential-overwrites)
 - [`/metrics`](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/)

@@ -45,7 +45,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 ## n8n@1.62.6
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.5...n8n@1.63.6){:target=_blank .external-link} for this version.<br />
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.5...n8n@1.62.6){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-15
 
 This release contains a bug fix.

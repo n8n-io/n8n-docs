@@ -69,6 +69,10 @@ Crypto
 crypto
 Datadog
 Datastore
+Dedupe
+dedupe
+Deduplication
+deduplication
 DeepL
 Demio
 disabled
@@ -266,6 +270,8 @@ typeahead
 Typeform
 Unarchive
 unarchive
+Uncomment
+uncomment
 Unformatted
 unformatted
 Unpublish

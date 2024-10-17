@@ -144,6 +144,7 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
   - pymdownx.tabbed:
       alternate_style: true
+  - sane_lists
   - tables
   # https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages
   - toc:
@@ -390,7 +391,9 @@ nav:
         - n8n Trigger: integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
         - integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md
+        - Remove Duplicates:
+          - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md
+          - Templates and examples: integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md

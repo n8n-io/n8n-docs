@@ -40,8 +40,7 @@ This node will use credentials.
 Credentials are unique pieces of information that identify a user or a service and enable them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
 ///
 
-In this case, we'll need to provide credentials to access the ABCorp data warehouse API.
-
+In this case, you'll need the credentials for the ABCorp data warehouse API included in the email from n8n you received when you signed up for this course. If you haven't signed up yet, [sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external-link}.
 
 In the Parameters of the HTTP Request node, make the following adjustments:
 

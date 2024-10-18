@@ -495,6 +495,7 @@ nav:
           - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
           - Thread operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md
+        - Gong: integrations/builtin/app-nodes/n8n-nodes-base.gong.md
         - Google Ads: integrations/builtin/app-nodes/n8n-nodes-base.googleads.md
         - Google Analytics: integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics.md
         - Google BigQuery: integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md
@@ -967,6 +968,7 @@ nav:
         - integrations/builtin/credentials/git.md
         - integrations/builtin/credentials/github.md
         - integrations/builtin/credentials/gitlab.md
+        - integrations/builtin/credentials/gong.md
         - Google:
           - integrations/builtin/credentials/google/index.md
           - integrations/builtin/credentials/google/oauth-single-service.md

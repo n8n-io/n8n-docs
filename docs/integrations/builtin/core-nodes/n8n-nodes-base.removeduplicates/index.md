@@ -94,7 +94,7 @@ When using the **Clear Deduplication History** operation, the following paramete
 
 When using the **Clear Deduplication History** operation, the following option is available:
 
-* **Scope**: Sets the scope n8n use when managing the duplication database.
+* **Scope**: Sets the scope n8n uses when managing the duplication database.
 	* **Node**: (default) Manages the duplication database specific to this Remove Duplicates node instance.
 	* **Workflow**: Manages the duplication database shared by all Remove Duplicate node instances that use workflow scope.
 

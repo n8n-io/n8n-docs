@@ -58,22 +58,22 @@ When you set the "Operation" field to **Remove Items Processed in Previous Execu
 When using the **Remove Items Processed in Previous Executions** operation, the following parameters are available:
 
 * **Keep Items Where**: Select how n8n decides which items to keep. The following options are available:
-    * **Value Is New**: n8n removes items if their value matches items from earlier executions.
-    * **Value Is Higher than Any Previous Value**: n8n removes items if the current value isn't higher than previous values.
-    * **Value Is a Date Later than Any Previous Date**: n8n removes date items if the current date isn't later than previous dates.
+	* **Value Is New**: n8n removes items if their value matches items from earlier executions.
+	* **Value Is Higher than Any Previous Value**: n8n removes items if the current value isn't higher than previous values.
+	* **Value Is a Date Later than Any Previous Date**: n8n removes date items if the current date isn't later than previous dates.
 
 * **Value to Dedupe On**: The input field or fields to compare. The option you select for the **Keep Items Where** parameter determines the exact format you need:
-    * When using **Value Is New**, this must be an input field or combination of fields with a unique ID.
-    * When using **Value Is Higher than Any Previous Value**, this must be an input field or combination of fields that has an incremental value.
-    * When using **Value Is a Date Later than Any Previous Date**, this must be an input field that has a date value in ISO format.
+	* When using **Value Is New**, this must be an input field or combination of fields with a unique ID.
+	* When using **Value Is Higher than Any Previous Value**, this must be an input field or combination of fields that has an incremental value.
+	* When using **Value Is a Date Later than Any Previous Date**, this must be an input field that has a date value in ISO format.
 
 #### Remove Items Processed in Previous Executions options
 
 When using the **Remove Items Processed in Previous Executions** operation, the following option is available:
 
 * **Scope**: Sets how n8n stores and uses the deduplication data for comparisons. The following options are available:
-    * **Node**: (default) Stores the data for this node independently from other Remove Duplicates instances in the workflow. When you use this scope, you can [clear the duplication history](#clear-deduplication-history) for this node instance without affecting other nodes.
-    * **Workflow**: Stores the duplication data at the workflow level. This shares duplication data with any other Remove Duplicate nodes set to use "workflow" scope.  n8n will still manage the duplication data for other Remove Duplicate nodes set to "node" scope independently.
+	* **Node**: (default) Stores the data for this node independently from other Remove Duplicates instances in the workflow. When you use this scope, you can [clear the duplication history](#clear-deduplication-history) for this node instance without affecting other nodes.
+	* **Workflow**: Stores the duplication data at the workflow level. This shares duplication data with any other Remove Duplicate nodes set to use "workflow" scope.  n8n will still manage the duplication data for other Remove Duplicate nodes set to "node" scope independently.
 
 When you select **Value Is New** as your **Keep Items Where** choice, this option is also available:
 
@@ -88,15 +88,15 @@ When you set the "Operation" field to **Clear Deduplication History**, the Remov
 When using the **Clear Deduplication History** operation, the following parameter is available:
 
 * **Mode**: How you want to manage the key / value items stored in the database. The following option is available:
-    * **Clean Database**: Deletes all duplication data stored in the database. This resets the duplication database to its original state.
+	* **Clean Database**: Deletes all duplication data stored in the database. This resets the duplication database to its original state.
 
 #### Clear Deduplication History options
 
 When using the **Clear Deduplication History** operation, the following option is available:
 
 * **Scope**: Sets the scope n8n use when managing the duplication database.
-    * **Node**: (default) Manages the duplication database specific to this Remove Duplicates node instance.
-    * **Workflow**: Manages the duplication database shared by all Remove Duplicate node instances that use workflow scope.
+	* **Node**: (default) Manages the duplication database specific to this Remove Duplicates node instance.
+	* **Workflow**: Manages the duplication database shared by all Remove Duplicate node instances that use workflow scope.
 
 ## Templates and examples
 

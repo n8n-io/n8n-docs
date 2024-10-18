@@ -33,6 +33,35 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.64.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.63.4...n8n@1.64.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-10-16
+
+This release contains a new node, node enhancements, performance improvements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+### Enhanced node: Remove Duplicates
+The [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/) got a major makeover with the addition of two new operations: 
+
+- Remove Items Processed in Previous Executions: Compare items in the current input to items from previous executions and remove duplicates  
+- Clear Deduplication History: Wipe the memory of items from previous executions.
+
+This makes it easier to only process new items from any data source. For example, you can now more easily poll a Google sheet for new entries by `id` or remove duplicate orders from the same customer by comparing their `order date`. The great thing is, you can now do this within **and across** workflow runs. 
+
+</div>
+
+### New node: Gong
+  
+The new node for [Gong](/integrations/builtin/app-nodes/n8n-nodes-base.gong/) allows you to get users and calls to process them further in n8n. Very useful for sales related workflows. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+- [Sören Uhrbach](https://github.com/soerenuhrbach){:target=_blank .external-link}  
+
 ## n8n@1.63.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.63.3...n8n@1.63.4){:target=_blank .external-link} for this version.<br />
@@ -46,7 +75,6 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
 ## n8n@1.62.6
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.5...n8n@1.62.6){:target=_blank .external-link} for this version.<br />
@@ -59,7 +87,6 @@ This is the `latest` version. n8n recommends using the `latest` version. The `ne
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.63.3
 
@@ -75,8 +102,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.63.1...n8n@1.63.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-11
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -85,8 +110,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.4...n8n@1.62.5){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-11
-
-
 
 This release contains a bug fix.
 
@@ -97,19 +120,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.63.0...n8n@1.63.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-11
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.62.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.3...n8n@1.62.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-11
-
-
 
 This release contains a bug fix.
 
@@ -154,8 +172,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.2...n8n@1.62.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-08
-
-
 
 This release contains bug fixes.
 
@@ -222,8 +238,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.1...n8n@1.61.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-25
 
-
-
 This release contains new features, node enhancements and bug fixes.
 
 ### Node updates
@@ -248,8 +262,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.60.0...n8n@1.60.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-09-20
-
-
 
 This release contains bug fixes.
 

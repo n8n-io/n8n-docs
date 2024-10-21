@@ -11,7 +11,7 @@ In AI, 'tools' has a specific meaning. Tools act like addons that your AI can us
 
 Here are a couple of other ways of expressing it:
 
-> Tools are interfaces that an agent can use to interact with the world ([source](https://js.langchain.com/docs/modules/agents/tools/){:target=_blank .external-link})
+> Tools are interfaces that an agent can use to interact with the world ([source](https://langchain-ai.github.io/langgraphjs/how-tos/tool-calling/){:target=_blank .external-link})
 
 <!--  -->
 

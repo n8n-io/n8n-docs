@@ -5,6 +5,8 @@ description: Learn how to use the Google My Business Trigger node in n8n. Follow
 contentType: integration
 ---
 
+<!-- vale from-microsoft.FirstPerson = NO -->
+
 # Google My Business Trigger node
 
 Use the Google My Business Trigger node to respond to events in [Google My Business](https://www.google.com/business/){:target=_blank .external-link} and integrate Google My Business with other applications. n8n has built-in support for responding to new reviews.
@@ -27,3 +29,5 @@ n8n provides an app node for Google My Business. You can find the node docs [her
 View [example workflows and related content](https://n8n.io/integrations/google-my-business-trigger/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Google My Business's documentation](https://developers.google.com/my-business/reference/rest){:target=_blank .external-link} for details about their API.
+
+<!-- vale from-microsoft.FirstPerson = NO -->

@@ -5,6 +5,8 @@ description: Learn how to use the Google My Business node in n8n. Follow technic
 contentType: integration
 ---
 
+<!-- vale from-microsoft.FirstPerson = NO -->
+
 # Google My Business node
 
 Use the Google My Business node to automate work in Google My Business and integrate Google My Business with other applications. n8n has built-in support for a wide range of Google My Business features, which includes creating, updating, and deleting posts and reviews.
@@ -42,3 +44,5 @@ n8n provides a trigger node for Google My Business. You can find the trigger nod
 Refer to [Google My Business's documentation](https://developers.google.com/my-business/reference/rest){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+<!-- vale from-microsoft.FirstPerson = YES -->

@@ -17,21 +17,31 @@ Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for g
 
 ## Operations
 
+<!-- vale from-write-good.Weasel = NO -->
+<!-- vale from-write-good.TooWordy = NO -->
 * Activity
-    * Get All
+    * Get Many: Get many activities
 * Campaign
-    * Get All
+    * Get Many: Get many campaigns
+    * Get Stats: Get campaign stats
+* Enrichment
+	* Get: Fetches a previously completed enrichment
+	* Enrich Lead: Enrich a lead using an email or LinkedIn URL
+	* Enrich Person: Enrich a person using an email or LinkedIn URL
 * Lead
-    * Create
-    * Delete
-    * Get
-    * Unsubscribe
+    * Create: Create a new lead
+    * Delete: Delete an existing lead
+    * Get: Get an existing lead
+    * Unsubscribe: Unsubscribe an existing lead
 * Team
-    * Get
-* Unsubscribes
-    * Add
-    * Delete
-    * Get All
+    * Get: Get an existing team
+	* Get Credits: Get an existing team's credits
+* Unsubscribe
+    * Add: Add an email to an unsubscribe list
+    * Delete: Delete an email from an unsubscribe list
+    * Get Many: Get many unsubscribed emails
+<!-- vale from-write-good.TooWordy = YES -->
+<!-- vale from-write-good.Weasel = YES -->
 
 ## Templates and examples
 

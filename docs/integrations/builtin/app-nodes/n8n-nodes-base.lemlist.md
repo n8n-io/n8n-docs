@@ -17,6 +17,8 @@ Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for g
 
 ## Operations
 
+<!-- vale from-write-good.Weasel = NO -->
+<!-- vale from-write-good.TooWordy = NO -->
 * Activity
     * Get Many: Get many activities
 * Campaign
@@ -38,6 +40,8 @@ Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for g
     * Add: Add an email to an unsubscribe list
     * Delete: Delete an email from an unsubscribe list
     * Get Many: Get many unsubscribed emails
+<!-- vale from-write-good.TooWordy = YES -->
+<!-- vale from-write-good.Weasel = YES -->
 
 ## Templates and examples
 

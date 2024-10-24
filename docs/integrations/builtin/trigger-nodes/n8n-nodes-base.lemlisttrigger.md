@@ -19,6 +19,7 @@ For usage examples and templates to help you get started, refer to n8n's [Lemlis
 
 ## Events
 
+<!-- vale Vale.Spelling = NO -->
 - *
 - Aircall Created
 - Aircall Done
@@ -67,3 +68,4 @@ For usage examples and templates to help you get started, refer to n8n's [Lemlis
 - Send Limit Reached
 - Skipped
 - Warmed
+<!-- vale Vale.Spelling = YES -->

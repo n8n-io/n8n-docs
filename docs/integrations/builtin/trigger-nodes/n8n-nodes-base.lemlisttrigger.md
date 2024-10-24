@@ -47,18 +47,18 @@ For usage examples and templates to help you get started, refer to n8n's [Lemlis
 - Hooked
 - Interested
 - Lemwarm Paused
-- Linkedin Interested
-- Linkedin Invite Accepted
-- Linkedin Invite Done
-- Linkedin Invite Failed
-- Linkedin Not Interested
-- Linkedin Replied
-- Linkedin Send Failed
-- Linkedin Sent
-- Linkedin Visit Done
-- Linkedin Visit Failed
-- Linkedin Voice Note Done
-- Linkedin Voice Note Failed
+- LinkedIn Interested
+- LinkedIn Invite Accepted
+- LinkedIn Invite Done
+- LinkedIn Invite Failed
+- LinkedIn Not Interested
+- LinkedIn Replied
+- LinkedIn Send Failed
+- LinkedIn Sent
+- LinkedIn Visit Done
+- LinkedIn Visit Failed
+- LinkedIn Voice Note Done
+- LinkedIn Voice Note Failed
 - Manual Interested
 - Manual Not Interested
 - Not Interested

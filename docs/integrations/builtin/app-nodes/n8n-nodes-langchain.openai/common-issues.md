@@ -131,11 +131,18 @@ There are two ways to work around this issue:
 
 This error displays when your OpenAI account doesn't have enough credits or capacity to fulfill your request. This may mean that your OpenAI trial period has ended, that your account needs more credit, or that you've gone over a usage limit.
 
-To troubleshoot this error, in your OpenAI organization:
+To troubleshoot this error, on your [OpenAI settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page:
 
-* check that your [OpenAI account](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} has enough credit
-* check that you haven't exceeded your organization's [usage limits](https://platform.openai.com/account/rate-limits){:target=_blank .external-link}
-* check that you haven't passed your OpenAI project's usage limits. Select the project in your [organization settings](https://platform.openai.com/settings/organization){:target=_blank .external-link} and view or change the project limits.
+* Select the correct organization for your API key in the first selector in the upper-left corner.
+* Select the correct project for your API key in the second selector in the upper-left corner.
+* Check the organization-level [billing overview](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page to ensure that the organization has enough credit. Double-check that you select the correct organization for this page.
+* Check the organization-level [usage limits](https://platform.openai.com/settings/organization/limits){:target=_blank .external-link} page. Double-check that you select the correct organization for this page and scroll to the **Usage limits** section to verify that you haven't exceeded your organization's usage limits.
+* Check your OpenAI project's usage limits. Double-check that you select the correct project in the second selector in the upper-left corner. Select **Project** > **Limits** to view or change the project limits.
+* Check that the [OpenAI API](https://status.openai.com/){:target=_blank .external-link} is operating as expected.
+
+/// note | Balance waiting period
+After topping up your balance, there may be a delay before your OpenAI account reflects the new balance.
+///
 
 In n8n:
 

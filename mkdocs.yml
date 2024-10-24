@@ -387,6 +387,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
+        - n8n Form: integrations/builtin/core-nodes/n8n-nodes-base.form.md
         - n8n Form Trigger: integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
         - n8n Trigger: integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.noop.md

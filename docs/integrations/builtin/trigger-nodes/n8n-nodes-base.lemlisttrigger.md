@@ -19,10 +19,51 @@ For usage examples and templates to help you get started, refer to n8n's [Lemlis
 
 ## Events
 
-- Email Bounced
-- Email Clicked
-- Email Opened
-- Email Replied
-- Email Send Failed
-- Email Sent
-- Email Unsubscribed
+- *
+- Aircall Created
+- Aircall Done
+- Aircall Ended
+- Aircall Interested
+- Aircall Not Interested
+- Api Done
+- Api Failed
+- Api Interested
+- Api Not Interested
+- Attracted
+- Connection Issue
+- Contacted
+- Custom Domain Errors
+- Emails Bounced
+- Emails Clicked
+- Emails Failed
+- Emails Interested
+- Emails Not Interested
+- Emails Opened
+- Emails Replied
+- Emails Send Failed
+- Emails Sent
+- Emails Unsubscribed
+- Hooked
+- Interested
+- Lemwarm Paused
+- Linkedin Interested
+- Linkedin Invite Accepted
+- Linkedin Invite Done
+- Linkedin Invite Failed
+- Linkedin Not Interested
+- Linkedin Replied
+- Linkedin Send Failed
+- Linkedin Sent
+- Linkedin Visit Done
+- Linkedin Visit Failed
+- Linkedin Voice Note Done
+- Linkedin Voice Note Failed
+- Manual Interested
+- Manual Not Interested
+- Not Interested
+- Opportunities Done
+- Paused
+- Resumed
+- Send Limit Reached
+- Skipped
+- Warmed

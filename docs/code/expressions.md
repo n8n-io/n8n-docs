@@ -79,7 +79,7 @@ This expression:
 
 ### Example: Writing longer JavaScript
 
-An expression contains one line of JavaScript. This means you can do things like variable assignments or multiple standalone operations.
+An expression contains one line of JavaScript. This means you cannot do things like variable assignments or multiple standalone operations.
 
 To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression. 
 

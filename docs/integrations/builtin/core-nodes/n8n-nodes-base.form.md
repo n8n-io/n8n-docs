@@ -8,7 +8,7 @@ workflowFile: integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclu
 
 # n8n Form node
 
-Use the n8n Form node to display form pages and process form data when a user submits a form. The node generates the form web page for you to use. You can create forms that have multiple steps with custom logic between. You must start the workflow with the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/).
+Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/).
 
 <figure markdown>
 !["Screenshot of a workflow using the Form node"](/_images/integrations/builtin/core-nodes/n8n-nodes-base.form/example_image.png)
@@ -46,12 +46,12 @@ Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and th
 
 ### Defining the form using JSON
 
-Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of object](/data/data-structure). Each object defines a single field by using a combination of these keys:
+Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](/data/data-structure). Each object defines a single field by using a combination of these keys:
 
 - `fieldLabel`: The label that appears above the input field. 
 - `fieldType`: Choose from `date`, `dropdown`, `email`, `file`, `number`, `password`, `text`, or `textarea`.
     - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon/) for more information on formatting dates.
-	- When using `dropdown`, set the choices by with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`.
+	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`.
 	- When using `file`, set `multipleFiles` to `true` to allow users to select more than one file. To define the file types to allow, set `acceptFileTypes` to a string containing a comma-separated list of file extensions (reference the example below).
 - `placeholder`: Specify placeholder data for the field. You can use this for every `fieldType` except `dropdown`, `date`, and `file`.
 - `requiredField`: Require users to complete this field on the form.

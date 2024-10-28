@@ -64,7 +64,7 @@ When is action necessary?
 If you have set `QUEUE_RECOVERY_INTERVAL`, you can remove it as it no longer has any effect.
 ///
 
-This release contains a new features, a new nodes, node enhancements, and bug fixes.
+This release contains a new features, new nodes, node enhancements, and bug fixes.
 
 <div class="n8n-new-features" markdown>
 

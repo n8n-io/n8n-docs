@@ -87,7 +87,7 @@ Additionally you can:
 ### Node updates
 New nodes: 
 
-- [Google Business Profile](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md) and [Google Business Profile Trigger](integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md): Use these to integrate Google Business Profile reviews and posts with your workflows  
+- [Google Business Profile](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile/) and [Google Business Profile Trigger](integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger/): Use these to integrate Google Business Profile reviews and posts with your workflows  
 
 Enhanced nodes:
 

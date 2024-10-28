@@ -9,7 +9,8 @@ workflowFile: credentials/dynamic_credentials_using_expressions.json
 
 You can get to the credential modal by either: 
 
-* Opening the left menu, then selecting either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project, then **Credentials** > **Add Credential** and browsing for the service you want to connect to.
+* Opening the left menu, then selecting <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home**, your **Personal** space, or a project, then **+ Create** > **Credential** and browsing for the service you want to connect to. Projects and the personal space are only available in Cloud and Enterprise versions.
+* Selecting the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png)</span> **Universal create button** in the upper-left corner and selecting **Credential**.  If you're using a [platform and version](/choose-n8n/) of n8n that supports projects, select **Personal** space or a project. If your version does not support projects, n8n will create the credential in your <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home**.
 * Selecting **Create New** in the **Credential** dropdown in a node.
 
 Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](/integrations/builtin/credentials/) for guidance.

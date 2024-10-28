@@ -10,7 +10,13 @@ A workflow is a collection of nodes connected together to automate a process. Yo
 
 ## Create a workflow
 
-1. If your n8n instance has [RBAC and projects](/user-management/rbac/) enabled: select either <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** to create a workflow in your own space, or a project to create a workflow and automatically share it with other project members 
+1. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png)</span> **Universal create button** in the upper-left corner or the **+ Create** button in the upper-right corner. Select **Workflow**.
+1. If you're using a [platform and version](/choose-n8n/) of n8n that supports projects, choose whether you want to create the workflow in your **Personal** space or a project. If your version does not support projects, n8n will create the workflow in your <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home**. If you're using the **+ Create** button in the upper-right corner and currently in your **Personal** space or a project, the workflow will use that scope automatically.
+1. Get started by adding a trigger node: select **Add first step...**
+
+Alternatively, create a new workflow in your <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** with the following:
+
+1. Select <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** to create a workflow in your own space.
 1. On the **Workflows** list, select **Add Workflow**.
 1. Get started by adding a trigger node: select **Add first step...**
 

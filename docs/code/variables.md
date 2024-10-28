@@ -23,7 +23,8 @@ When you create a variable, it's available to everyone on your n8n instance.
 
 To create a new variable:
 
-1. On the **Variables** page, select **Add Variable**.
+1. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png)</span> **Universal create button** in the upper-left corner or the **+ Create** button in the upper-right corner. Select **Variable**.
+1. Choose whether you want to create the workflow in your **Personal** space or a project. If you're using the **+ Create** button in the upper-right corner and currently in your **Personal** space or a project, the variable will use that scope automatically.
 3. Enter a **Key** and **Value**. The maximum key length is 50 characters, and the maximum value length is 220 characters. n8n limits the characters you can use in the key and value to lowercase and uppercase letters, numbers, and underscores (`A-Z`, `a-z`, `0-9`, `_`).
 4. Select **Save**. The variable is now available for use in all workflows in the n8n instance.
 
@@ -31,7 +32,7 @@ To create a new variable:
 
 To edit or delete a variable:
 
-1. On the **Variables** page, hover over the variable you want to change.
+1. Select your project or personal space in the left-hand menu. On the **Variables** tab, hover over the variable you want to change.
 2. Select **Edit** or **Delete**.
 
 ## Use variables in workflows

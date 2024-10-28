@@ -77,6 +77,7 @@ Use the [n8n Form node](/integrations/builtin/core-nodes/n8n-nodes-base.form/) t
 </figure>
 
 Additionally you can: 
+
 - Set default selections with query parameters  
 - Define the form with a JSON array of object  
 - Show a completion screen and redirect to another URL

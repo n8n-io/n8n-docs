@@ -10,6 +10,8 @@ priority: critical
 
 Use the n8n Form trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
 
+You can add more pages to continue the form with the [n8n Form](/integrations/builtin/core-nodes/n8n-nodes-base.form/) node.
+
 ## Build and test workflows
 
 While building or testing a workflow, use the **Test URL**. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 

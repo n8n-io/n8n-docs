@@ -33,6 +33,59 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.65.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.64.1...n8n@1.65.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-10-24
+
+/// warning | [Breaking change](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md){:target=_blank .external-link}
+What changed?
+Queue polling via the environment variable `QUEUE_RECOVERY_INTERVAL` has been removed.
+
+When is action necessary?
+If you have set `QUEUE_RECOVERY_INTERVAL`, you can remove it as it no longer has any effect.
+///
+
+This release contains a new features, a new nodes, node enhancements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+### New node: n8n Form
+Use the [n8n Form node](/integrations/builtin/core-nodes/n8n-nodes-base.form/) to create user-facing forms with multiple pages. You can add other nodes with custom logic between to process user input. Start the workflow with a [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/). 
+
+<figure markdown="span">
+    ![A multi-page form with branching](/_images/integrations/builtin/core-nodes/n8n-nodes-base.form/example_image.png)
+    <figcaption>A multi-page form with branching</figcaption>
+</figure>
+
+Additionally you can: 
+- Set default selections with query parameters  
+- Define the form with a JSON array of object  
+- Show a completion screen and redirect to another URL
+
+</div>
+
+### Node updates
+New nodes: 
+
+- [Google Business Profile](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md) and [Google Business Profile Trigger](integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md): Use these to integrate Google Business Profile reviews and posts with your workflows  
+
+Enhanced nodes:
+
+- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Removed the requirement to add at least one tool  
+- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added workflows as a resource operation  
+- [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/): Added more user-friendly error messages
+
+For additional security, we improved how we handle multi-factor authentication, hardened config file permissions and introduced JWT for the public API. 
+
+For better performance, we improved how partial executions are handled in loops. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+### Contributors
+
+- [Idan Fishman](https://github.com/idanfishman){:target=_blank .external-link}  
+
 ## n8n@1.64.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.64.0...n8n@1.64.1){:target=_blank .external-link} for this version.<br />

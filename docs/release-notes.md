@@ -92,7 +92,7 @@ New nodes:
 Enhanced nodes:
 
 - [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Removed the requirement to add at least one tool  
-- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added workflows as a resource operation  
+- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/): Added workflows as a resource operation  
 - [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/): Added more user-friendly error messages
 
 For additional security, we improved how we handle multi-factor authentication, hardened config file permissions and introduced JWT for the public API. 

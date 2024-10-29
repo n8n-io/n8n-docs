@@ -78,3 +78,7 @@ If you want to run the curl command in the Execute Command node, you will have t
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'execute-command') ]]
+
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues/).

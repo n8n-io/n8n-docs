@@ -11,7 +11,7 @@ priority: high
 Here are some common errors and issues with the [Execute Command node](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/) and steps to resolve or troubleshoot them.
 
 <!-- vale off -->
-### Command failed: &lt;command&gt; /bin/sh: &lt;command&gt;: not found
+## Command failed: &lt;command&gt; /bin/sh: &lt;command&gt;: not found
 <!-- vale on -->
 
 This error occurs when the shell environment can't find one of the commands in the **Command** parameter.
@@ -36,7 +36,7 @@ To fix this error, review the following:
 		```
 
 <!-- vale off -->
-### Error: stdout maxBuffer length exceeded
+## Error: stdout maxBuffer length exceeded
 <!-- vale on -->
 
 This error happens when your command returns more output than the Execute Command node is able to process at one time.

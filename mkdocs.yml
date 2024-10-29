@@ -364,7 +364,9 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.executecommand.md
+        - Execute Command:
+          - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
         - Execute Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md

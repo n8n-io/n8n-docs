@@ -10,3 +10,6 @@ priority: critical
 
 --8<-- "_snippets/integrations/builtin/core-nodes/code-node.md"
 
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues/).

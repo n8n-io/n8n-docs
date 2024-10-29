@@ -84,7 +84,7 @@ If you want to run the curl command in the Execute Command node, you will have t
 Here are some common errors and issues with the Execute Command node and steps to resolve or troubleshoot them.
 
 <!-- vale off -->
-### Command failed: <command> /bin/sh: <command>: not found
+### Command failed: &lt;command&gt; /bin/sh: &lt;command&gt;: not found
 <!-- vale on -->
 
 This error occurs when the shell environment can't find one of the commands in the **Command** parameter.

@@ -3,18 +3,13 @@
 contentType: explanation
 title: Agents vs chains
 description: A workflow example that demonstrates key differences between agents and chains.
-workflowFile: advanced-ai/examples/agents_vs_chains.json
 ---
 
 # Demonstration of key differences between agents and chains
 
 In this workflow you can choose whether your chat query goes to an agent or chain. It shows some of the ways that agents are more powerful than chains.
 
-
-<figure markdown>
-!["Screenshot of the workflow"](/_images/advanced-ai/examples/agents-vs-chains.png)
-<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
-</figure>
+[[ workflowDemo("file:///advanced-ai/examples/agents_vs_chains.json") ]]
 
 ## Key features
 
@@ -28,4 +23,4 @@ This workflow uses:
 
 ## Using the example
 
-[[% include "_includes/examples-color-key.html" %]]
+--8<-- "_snippets/examples-color-key.md"

@@ -1,6 +1,6 @@
 To load the template into your n8n instance:
 
-1. [Download the workflow JSON file](/_workflows/[[ page.meta.workflowFile ]]){:target=_blank .external-link}.
+1. Download the workflow JSON file.
 1. Open a new workflow in your n8n instance.
 1. Copy in the JSON, or select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> > **Import from file...**.
 

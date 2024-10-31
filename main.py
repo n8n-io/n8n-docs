@@ -91,25 +91,29 @@ def define_env(env):
 
 		parsed_workflow_url = urllib.parse.urlparse(workflow_json)
 
-		match parsed_workflow_url.scheme:
-			case "https" | "http":
-				r = requests.get(url = workflow_json)
-				wf_data = r.json()
-				template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{custom_slugify(wf_data["name"])}/'
-				workflow_json = {
-					"nodes": wf_data['workflow']['nodes'],
-					"connections": wf_data['workflow']['connections']
-				}
-			case "file":
-				BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-				request_path = parsed_workflow_url.path
-				file_path = f'{BASE_DIR}/docs/_workflows{request_path}'
-				with open(file_path, 'r') as file:
-					wf_data = json.load(file)
-				template_url = f'/_workflows{request_path}'
-				workflow_json = {
-					"nodes": wf_data['nodes'],
-					"connections": wf_data['connections']
-				}
+		if parsed_workflow_url.scheme in ["https", "http"]:
+			r = requests.get(url = workflow_json)
+			wf_data = r.json()
+			template_url = f'https://n8n.io/workflows/{wf_data["id"]}-{custom_slugify(wf_data["name"])}/'
+			workflow_json = {
+				"nodes": wf_data['workflow']['nodes'],
+				"connections": wf_data['workflow']['connections']
+			}
+			workflow_message = "View template details"
+		elif parsed_workflow_url.scheme == "file":
+			BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+			request_path = parsed_workflow_url.path
+			file_path = f'{BASE_DIR}/docs/_workflows{request_path}'
+			with open(file_path, 'r') as file:
+				wf_data = json.load(file)
+			template_url = f'/_workflows{request_path}'
+			workflow_json = {
+				"nodes": wf_data['nodes'],
+				"connections": wf_data['connections']
+			}
+			workflow_message = "View workflow file"
+		else:
+			raise ValueError("Workflow JSON must include a URL scheme")
+
 		encoded_workflow_json = urllib.parse.quote(json.dumps(workflow_json))
-		return f"<div class='n8n-workflow-preview'><n8n-demo hidecanvaserrors='true' clicktointeract='true' frame='false' collapseformobile='false' workflow='{encoded_workflow_json}'></n8n-demo><a href='{template_url}' target='_blank'>View template details</a></div>"
+		return f"<div class='n8n-workflow-preview'><n8n-demo hidecanvaserrors='true' clicktointeract='true' frame='false' collapseformobile='false' workflow='{encoded_workflow_json}'></n8n-demo><a href='{template_url}' target='_blank'>{workflow_message}</a></div>"

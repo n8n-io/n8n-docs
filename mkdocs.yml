@@ -379,7 +379,9 @@ nav:
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.if.md
+        - If:
+          - If: integrations/builtin/core-nodes/n8n-nodes-base.if/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.if/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
         - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
         - integrations/builtin/core-nodes/n8n-nodes-base.limit.md

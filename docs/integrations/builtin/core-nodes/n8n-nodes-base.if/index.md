@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: If
+title: If node
 description: Documentation for the If node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 priority: critical
 tags:
@@ -12,7 +12,7 @@ hide:
   - tags
 ---
 
-# If
+# If node
 
 Use the If node to split a workflow conditionally based on comparison operations.
 
@@ -49,3 +49,6 @@ If you need more than two conditional outputs, use the [Switch node](/integratio
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.if/common-issues/).

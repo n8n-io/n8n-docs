@@ -21,7 +21,7 @@ To resolve this, make sure that the code you provide is valid JSON:
 
 ## Can't get data for expression
 
-This error occurs when the Edit Fields (Set) node can't retrieve the data referenced by an expression.
+This error occurs when the Edit Fields (Set) node can't retrieve the data referenced by an expression. This happens when n8n tries to find an item through [item linking](/data/data-mapping/data-item-linking/) but runs into problems.
 
 For example, this JSON references the parameters of the input data. This error will display if you test this step without connecting it to another node:
 
@@ -31,7 +31,7 @@ For example, this JSON references the parameters of the input data. This error w
 }
 ```
 
-To troubleshoot this problem, make sure that expressions in your Edit Fields (Set) node don't reference input data that may not exist when the node executes.
+To troubleshoot this problem, see the [item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/) page to understand how to reference data from nodes that don't include pairing information.
 
 ## Invalid syntax
 

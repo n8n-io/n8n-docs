@@ -93,3 +93,18 @@ To resolve this issue, try changing your `import` statements to use `require`:
 // New code:
 const express = require("express");
 ```
+
+## Cannot find module '&lt;module&gt;'
+
+This error occurs if you try to use `require` in the Code node and n8n can't find the module.
+
+/// warning | Only for self-hosted
+n8n doesn't support importing modules in the [Cloud](/manage-cloud/overview/) version.
+///
+
+If you're [self-hosting](/hosting) n8n, follow these steps:
+
+* Install the module into your n8n environment.
+	* If you are running n8n with [npm](/hosting/installation/npm/), install the module in the same environment as n8n.
+	* If you are running n8n with [Docker](/hosting/installation/docker/), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your module.
+* Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](/hosting/configuration/configuration-examples/modules-in-code-node/) to allow importing modules.

@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Edit Fields (Set)
+title: Edit Fields (Set) node
 description: Documentation for the Edit Fields node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
 priority: critical
 ---
 
-# Edit Fields (Set)
+# Edit Fields (Set) node
 
 Use the Edit Fields node to set workflow data. This node can set new data as well as overwrite data that already exists. This node is crucial in workflows which expect incoming data from previous nodes, such as when inserting values to Google Sheets or databases.
 
@@ -34,7 +34,9 @@ If you don't want to use expressions:
 
 You can do this for both the name and value of the field.
 
+<!-- vale Vale.Spelling = NO -->
 ![A gif showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
+<!-- vale Vale.Spelling = YES -->
 
 ### Keep Only Set Fields
 
@@ -240,6 +242,6 @@ You get this output:
 ]
 ```
 
+## Common issues
 
-
-
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.set/common-issues/).

@@ -360,7 +360,9 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.set.md
+        - Edit Fields (Set):
+          - Edit Fields (Set): integrations/builtin/core-nodes/n8n-nodes-base.set/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.set/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md

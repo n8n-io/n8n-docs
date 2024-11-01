@@ -41,7 +41,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Chat](/integrations/builtin/app-nodes/n8n-nodes-base.googlechat/) | :x: | :white_check_mark: |
 | [Google Cloud Storage](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage/) | :white_check_mark: | :x: |
 | [Google Contacts](/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/) | :white_check_mark: | :x: |
-| [Google Cloud Firestore](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) | :white_check_mark: | :x: |
+| [Google Cloud Firestore](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/) | :white_check_mark: | :white_check_mark: |
 | [Google Cloud Natural Language](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudnaturallanguage/) | :white_check_mark: | :x: |
 | [Google Cloud Realtime Database](/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudrealtimedatabase/) | :white_check_mark: | :x: |
 | [Google Docs](/integrations/builtin/app-nodes/n8n-nodes-base.googledocs/) | :white_check_mark: | :white_check_mark: |

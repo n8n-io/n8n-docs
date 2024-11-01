@@ -1,3 +1,6 @@
+## DOC-994
+/privacy-security/security/ https://n8n.io/legal/#security
+
 ## DOC-979
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/

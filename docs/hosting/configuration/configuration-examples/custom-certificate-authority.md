@@ -43,3 +43,14 @@ services:
             - 5678:5678
         image: docker.n8n.io/n8nio/n8n
 ```
+
+### Set correct permissions
+
+Don't forget to sett correct permissions. The `node` user have `1000:1000` and can be fixed with something like this on the server running the docker:
+
+```
+#!/bin/bash
+
+cp -f /mnt/letsencrypt/live/n8n.example.com/*.pem /root/n8n-self-hosted-ai-starter-kit/pki/
+chown 1000:1000 -R /root/n8n-self-hosted-ai-starter-kit/pki/
+```

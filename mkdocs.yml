@@ -192,6 +192,7 @@ plugins:
       links: true
       links_attr_map:
         target: _blank
+        rel: external
 nav:
   - Using n8n:
     - Welcome: index.md

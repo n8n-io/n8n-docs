@@ -183,6 +183,16 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   - tags:
       enabled: true
+  # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+  # This is enabled to automatically add `target="_blank"` to external links.
+  # Specifically, we needed some way to open nav links to external locations
+  # (like the main site) in new tabs
+  - privacy:
+      assets: false
+      links: true
+      links_attr_map:
+        target: _blank
+        rel: external
 nav:
   - Using n8n:
     - Welcome: index.md
@@ -339,7 +349,7 @@ nav:
       - Privacy and security:
           - privacy-security/index.md
           - Privacy: privacy-security/privacy.md
-          - Security: privacy-security/security.md
+          - Security: https://n8n.io/legal/#security
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
       - Sustainable use license: sustainable-use-license.md

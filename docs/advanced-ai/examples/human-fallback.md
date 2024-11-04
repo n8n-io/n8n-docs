@@ -3,7 +3,6 @@
 contentType: howto
 title: Set a human fallback for AI workflows
 description: Have a workflow that triggers a human answer when the AI can't help.
-workflowFile: advanced-ai/examples/ask_a_human.json
 ---
 
 # Have a human fallback for AI workflows
@@ -12,10 +11,7 @@ This is a workflow that tries to answer user queries using the standard GPT-4 mo
 
 This workflow uses the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/) to provide the chat interface, and the [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/) to call a second workflow that handles checking for email addresses and sending the Slack message. 
 
-<figure markdown>
-!["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/ask-a-human.png)
-<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
-</figure>
+[[ workflowDemo("file:///advanced-ai/examples/ask_a_human.json") ]]
 
 ## Key features
 
@@ -27,4 +23,4 @@ This workflow uses:
 
 ## Using the example
 
-[[% include "_includes/examples-color-key.html" %]]
+--8<-- "_snippets/examples-color-key.md"

@@ -3,17 +3,13 @@
 title: n8n Form node documentation
 description: Documentation for the n8n Form node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: integration
-workflowFile: integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json
 ---
 
 # n8n Form node
 
 Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/).
 
-<figure markdown>
-!["Screenshot of a workflow using the Form node"](/_images/integrations/builtin/core-nodes/n8n-nodes-base.form/example_image.png)
-<figcaption markdown>A multi-page form with branching</figcaption>
-</figure>
+[[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json") ]]
 
 ## Setting up the node
 
@@ -153,10 +149,7 @@ Form workflows containing mutually exclusive branches work as expected. n8n will
 
 This workflow demonstrates mutually exclusive branching. Each selection can only execute a single branch.
 
-<figure markdown>
-!["Screenshot of a workflow with mutually exclusive branching"](/_images/integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.png)
-<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
-</figure>
+[[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json") ]]
 
 #### Workflows that may execute multiple branches
 
@@ -166,14 +159,7 @@ n8n only executes a single **Form Ending** n8n Form node for each execution. Whe
 
 This workflow may execute more than one branch during an execution. Here, n8n executes all valid branches sequentially. This impacts which n8n Form nodes n8n executes (in particular, which **Form Ending** node displays):
 
-<figure markdown>
-!["Screenshot of a workflow that can execute multiple branches"](/_images/integrations/builtin/core-nodes/n8n-nodes-base.form/multiple-branch-execution.png)
-<figcaption markdown>[Download the example workflow](/_workflows/integrations/builtin/core-nodes/n8n-nodes-base.form/multiple-branch-execution.json)</figcaption>
-</figure>
-
-#### Using the examples
-
-[[% include "_includes/examples-color-key.html" %]]
+[[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/multiple-branch-execution.json") ]]
 
 ### Node options
 

@@ -2,7 +2,6 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Creating and editing credentials.
 contentType: howto
-workflowFile: credentials/dynamic_credentials_using_expressions.json
 ---
 
 # Create and edit credentials
@@ -31,11 +30,8 @@ You can use expressions to set credentials dynamically as your workflow runs:
 
 ### Example workflow
 
-<figure markdown>
-!["Screenshot of the two workflows in this example"](/_images/credentials/dynamic-creds-example-workflow.png)
-<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
-</figure>
+[[ workflowDemo("file:///credentials/dynamic_credentials_using_expressions.json") ]]
 
 #### Using the example
 
-[[% include "_includes/examples-color-key.html" %]]
+--8<-- "_snippets/examples-color-key.md"

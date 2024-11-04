@@ -41,7 +41,7 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library){:
 
 ## Related resources
 
-Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/ollama){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

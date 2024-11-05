@@ -28,15 +28,15 @@ The community edition doesn't include these features:
 - [Version control using Git](/source-control-environments/)
 - [Workflow history](/workflows/history/) (You can get one day of workflow history with the community edition by [registering](#registered-community-edition))
 
-All of these features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
+These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
 See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.
 
 ## Registered Community Edition
 
-You can unlock additional features by registering your n8n community edition. You register with your email and receive a license key.
+You can unlock extra features by registering your n8n community edition. You register with your email and receive a license key.
 
-Registering unlocks these additional features for the community edition:
+Registering unlocks these features for the community edition:
 
 * [Debug in editor](/workflows/executions/debug/): Copy and pin execution data when working on a workflow
 * One day of [workflow history](/workflows/history/): 24 hours of workflow history so you can revert back to previous workflow versions
@@ -53,4 +53,4 @@ To register an existing community edition instance:
 
 Once you have a license key, activate it by clicking the button in the license email or by visiting **Options > Settings > Usage and plan** and selecting **Enter activation key**.
 
-Once you have activated your license you will have access to it indefinitely. The unlocked features might change in the future, however.
+Once you have activated your license you will have access to it indefinitely. The features unlocked by the license might change in the future.

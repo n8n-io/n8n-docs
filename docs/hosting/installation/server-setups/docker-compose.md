@@ -137,6 +137,13 @@ If you are running n8n as a non-root user, add this under `volumes` for the n8n 
 
 You will now be able to write files to the `/files` directory in n8n and they will appear on your server in either `/local-files` or `/home/<YOUR USERNAME>/n8n-local-files`, respectively.
 
+Create the two docker volumes required :
+
+```bash
+docker volume create traefik_data
+docker volume create n8n_data
+```
+
 ### 6. Create `.env` file
 
 Create an `.env` file and change it accordingly.

@@ -35,7 +35,7 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 
 ## Related resources
 
-Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/bedrock){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -39,17 +39,17 @@ Available nodes:
 * [Sentiment Analysis](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis/)
 * [Text Classifier](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier/)
 
-Learn more about [Chains in LangChain](https://js.langchain.com/docs/modules/chains/){:target=_blank .external-link}.
+Learn more about [chaining in LangChain](https://js.langchain.com/docs/concepts/lcel){:target=_blank .external-link}.
 
 #### Agents
 
-> An agent has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}
+> An agent has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://github.com/langchain-ai/langchainjs/blob/def3a26c054575e1ed40b9062087e8c0a8899633/docs/core_docs/docs/modules/agents/index.mdx){:target=_blank .external-link}
 
 Available nodes:
 
 * [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/)
 
-Learn more about [Agents in LangChain](https://js.langchain.com/docs/modules/agents/){:target=_blank .external-link}.
+Learn more about [Agents in LangChain](https://js.langchain.com/docs/concepts/agents){:target=_blank .external-link}.
 
 #### Vector stores
 
@@ -62,7 +62,7 @@ Vector stores store embedded data, and perform vector searches on it.
 * [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
 * [Zep Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/)
 
-Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/modules/data_connection/vectorstores/){:target=_blank .external-link}.
+Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/concepts/vectorstores/){:target=_blank .external-link}.
 
 #### Miscellaneous
 
@@ -83,7 +83,7 @@ Available nodes:
 * [Default Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/)
 * [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader/)
 
-Learn more about [Document loaders in LangChain](https://js.langchain.com/docs/modules/data_connection/document_loaders/){:target=_blank .external-link}.
+Learn more about [Document loaders in LangChain](https://js.langchain.com/docs/concepts/document_loaders){:target=_blank .external-link}.
 
 #### Language models
 
@@ -100,7 +100,7 @@ Available nodes:
 * [Ollama Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/)
 * [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)
 
-Learn more about [Language models in LangChain](https://js.langchain.com/docs/modules/model_io/models/){:target=_blank .external-link}.
+Learn more about [Language models in LangChain](https://js.langchain.com/docs/concepts/chat_models){:target=_blank .external-link}.
 
 #### Memory
 
@@ -115,7 +115,7 @@ Available nodes:
 * [Xata](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata/)
 * [Zep](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep/)
 
-Learn more about [Memory in LangChain](https://js.langchain.com/docs/modules/memory/){:target=_blank .external-link}.
+Learn more about [Memory in LangChain](https://langchain-ai.github.io/langgraphjs/concepts/memory/){:target=_blank .external-link}.
 
 #### Output parsers
 
@@ -127,7 +127,7 @@ Available nodes:
 * [Item List Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist/)
 * [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/)
 
-Learn more about [Output parsers in LangChain](https://js.langchain.com/docs/modules/model_io/output_parsers/){:target=_blank .external-link}.
+Learn more about [Output parsers in LangChain](https://js.langchain.com/docs/concepts/output_parsers/){:target=_blank .external-link}.
 
 #### Retrievers
 
@@ -148,7 +148,7 @@ Available nodes:
 * [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter/)
 * [Token Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter/)
 
-n8n's text splitter nodes implements parts of [LangChain's text_splitter API](https://js.langchain.com/docs/api/text_splitter/){:target=_blank .external-link}.
+n8n's text splitter nodes implements parts of [LangChain's text_splitter API](https://js.langchain.com/docs/concepts/text_splitters/){:target=_blank .external-link}.
 
 #### Tools
 
@@ -177,7 +177,7 @@ Available nodes:
 * [Embeddings Ollama](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama/)
 * [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai/)
 
-Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/modules/data_connection/text_embedding/){:target=_blank .external-link}.
+Learn more about [Text embeddings in LangChain](https://js.langchain.com/docs/concepts/embedding_models/){:target=_blank .external-link}.
 
 
 #### Miscellaneous

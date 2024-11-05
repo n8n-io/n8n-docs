@@ -40,7 +40,7 @@ Learn more in the [Anthropic model documentation](https://docs.anthropic.com/cla
 
 ## Related resources
 
-Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/modules/model_io/models/chat/integrations/anthropic){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

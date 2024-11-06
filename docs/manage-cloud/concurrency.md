@@ -9,7 +9,11 @@ contentType: explanation
 This document discusses concurrency in n8n Cloud. Read [self-hosted n8n concurrency control](/hosting/scaling/concurrency-control/) to learn how concurrency works with self-hosted n8n instances.
 ///
 
-Too many concurrent executions can cause performance degradation and unresponsiveness. To prevent this and improve instance stability, n8n sets concurrency limits for production executions in regular mode. Any executions beyond the limits queue for later processing. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
+Too many concurrent executions can cause performance degradation and unresponsiveness. To prevent this and improve instance stability, n8n sets concurrency limits for production executions in regular mode.
+
+Any executions beyond the limits queue for later processing. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
+
+## Concurrency limits
 
 n8n limits the number of concurrent executions for Cloud instances according to their plan:
 
@@ -18,7 +22,9 @@ n8n limits the number of concurrent executions for Cloud instances according to 
 * Pro (50k workflow executions, 50 active workflows): 50
 * Enterprise (in regular mode): 200
 
-Keep in mind:
+## Details
+
+Some other details about concurrency to keep in mind:
 
 - Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, or error executions.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.

@@ -3,7 +3,7 @@
 contentType: explanation
 ---
 
-# Self-hosted Concurrency control
+# Self-hosted concurrency control
 
 /// info | Only for self-hosted n8n
 This document is for self-hosted concurrency control. Read [Cloud concurrency](/manage-cloud/concurrency/) to learn how concurrency works with n8n Cloud accounts.

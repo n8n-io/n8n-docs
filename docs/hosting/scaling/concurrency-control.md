@@ -3,7 +3,11 @@
 contentType: explanation
 ---
 
-# Concurrency control
+# Self-hosted Concurrency control
+
+/// info | Only for self-hosted n8n
+This document is for self-hosted concurrency control. Read [Cloud concurrency](/manage-cloud/concurrency/) to learn how concurrency works with n8n Cloud accounts.
+///
 
 In regular mode, n8n doesn't limit how many production executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. 
 

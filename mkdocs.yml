@@ -319,6 +319,7 @@ nav:
       - Cloud IP addresses: manage-cloud/cloud-ip.md
       - Cloud data management: manage-cloud/cloud-data-management.md
       - Change ownership or username: manage-cloud/change-ownership-or-username.md
+      - Concurrency: manage-cloud/concurrency.md
     - Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md

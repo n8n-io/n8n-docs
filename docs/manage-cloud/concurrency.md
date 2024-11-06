@@ -13,10 +13,9 @@ Too many concurrent executions can cause performance degradation and unresponsiv
 
 n8n limits the number of concurrent executions for Cloud instances according to their plan:
 
-* Starter: 5
+* Starter and Trial: 5
 * Pro (10k workflow executions, 15 active workflows): 20
 * Pro (50k workflow executions, 50 active workflows): 50
-* Trial: 20
 * Enterprise (in regular mode): 200
 
 Keep in mind:
@@ -24,9 +23,6 @@ Keep in mind:
 - Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, or error executions.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
-<!-- vale off -->
-- To monitor concurrency control, watch logs for executions being added to the queue and released. In a future version, n8n will show concurrency control in the UI.
-<!-- vale on -->
 
 ## Comparison to queue mode
 

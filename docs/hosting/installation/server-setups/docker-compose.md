@@ -26,6 +26,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
+#alternative: optional One liner install script from docker:
+(this will install the latest version including docker compose - please skip appropriate steps after this)
+```
+curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+```
+This will download the docker install and install docker and docker compose. suggested to only run on a fresh install.
+
 
 ### 2. Optional: Non-root user access
 

@@ -33,6 +33,29 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.67.1
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.67.0...n8n@1.67.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-11-07
+
+This release contains a bug fix.
+
+## n8n@1.67.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.66.0...n8n@1.67.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-11-06
+
+This release contains node updates and bug fixes.
+
+### Node updates
+
+- [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/): Improved usability  
+- [Anthropic Chat Model Node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/): Added Haiku 3.5 support  
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/): Added delimiter option for writing to CSV  
+- [Gmail Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/): Added option to filter for draft messages  
+- [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom/): Credential can now be used in the HTTP Request node  
+- [Rapid7 InsightVM](/integrations/builtin/credentials/rapid7insightvm/): Added credential support  
+
+
 ## n8n@1.66.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.65.2...n8n@1.66.0){:target=_blank .external-link} for this version.<br />
@@ -158,8 +181,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.64.0...n8n@1.64.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-21
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -198,10 +219,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.63.3...n8n@1.63.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-15
 
-
-
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -210,8 +227,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.62.5...n8n@1.62.6){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-15
-
-
 
 This release contains a bug fix.
 

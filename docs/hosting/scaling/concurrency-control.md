@@ -3,7 +3,11 @@
 contentType: explanation
 ---
 
-# Concurrency control
+# Self-hosted concurrency control
+
+/// info | Only for self-hosted n8n
+This document is for self-hosted concurrency control. Read [Cloud concurrency](/manage-cloud/concurrency/) to learn how concurrency works with n8n Cloud accounts.
+///
 
 In regular mode, n8n doesn't limit how many production executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. 
 
@@ -24,9 +28,9 @@ Keep in mind:
 - To monitor concurrency control, watch logs for executions being added to the queue and released. In a future version, n8n will show concurrency control in the UI.
 <!-- vale on -->
 
-## Comparison to scaling mode
+## Comparison to queue mode
 
-In scaling mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode/#configure-worker-concurrency). 
+In queue mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode/#configure-worker-concurrency).
 
-Concurrency control in scaling mode is a separate mechanism from concurrency control in regular mode, but the environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT` controls both of them. In scaling mode, n8n takes the limit from this variable if set to a value other than `-1`, falling back to the `--concurrency` flag or its default.
+Concurrency control in queue mode is a separate mechanism from concurrency control in regular mode, but the environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT` controls both of them. In queue mode, n8n takes the limit from this variable if set to a value other than `-1`, falling back to the `--concurrency` flag or its default.
 

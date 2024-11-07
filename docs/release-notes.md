@@ -39,6 +39,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.67.0...n8n@1.67.1
 
 This release contains a bug fix.
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.67.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.66.0...n8n@1.67.0){:target=_blank .external-link} for this version.<br />
@@ -55,6 +57,7 @@ This release contains node updates and bug fixes.
 - [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom/): Credential can now be used in the HTTP Request node  
 - [Rapid7 InsightVM](/integrations/builtin/credentials/rapid7insightvm/): Added credential support  
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.66.0
 

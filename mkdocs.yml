@@ -1107,6 +1107,7 @@ nav:
         - integrations/builtin/credentials/quickbooks.md
         - integrations/builtin/credentials/rabbitmq.md
         - integrations/builtin/credentials/raindrop.md
+        - integrations/builtin/credentials/rapid7insightvm.md
         - integrations/builtin/credentials/recordedfuture.md
         - integrations/builtin/credentials/reddit.md
         - integrations/builtin/credentials/redis.md

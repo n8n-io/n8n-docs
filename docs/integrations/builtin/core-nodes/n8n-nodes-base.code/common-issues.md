@@ -94,7 +94,9 @@ To resolve this issue, try changing your `import` statements to use `require`:
 const express = require("express");
 ```
 
+<!-- vale off -->
 ## Cannot find module '&lt;module&gt;'
+<!-- vale on -->
 
 This error occurs if you try to use `require` in the Code node and n8n can't find the module.
 
@@ -108,3 +110,13 @@ If you're [self-hosting](/hosting) n8n, follow these steps:
 	* If you are running n8n with [npm](/hosting/installation/npm/), install the module in the same environment as n8n.
 	* If you are running n8n with [Docker](/hosting/installation/docker/), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your module.
 * Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](/hosting/configuration/configuration-examples/modules-in-code-node/) to allow importing modules.
+
+## Using global variables
+
+Sometimes you may wish to set and retrieve simple global data related to a workflow across and within executions. For example, you may wish to include the date of the previous report when compiling a report with a list of project updates.
+
+To set, update, and retrieve data directly to a workflow, use the [static data](/code/cookbook/builtin/get-workflow-static-data/) functions within your code. You can manage data either globally or tied to specific nodes.
+
+/// info | Use Remove Duplicates when possible
+If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
+///

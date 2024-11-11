@@ -363,7 +363,9 @@ nav:
         - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
-        - Code: integrations/builtin/core-nodes/n8n-nodes-base.code.md
+        - Code:
+          - Code: integrations/builtin/core-nodes/n8n-nodes-base.code/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
         - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md

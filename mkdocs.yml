@@ -363,7 +363,7 @@ nav:
         - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
         - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
-        - integrations/builtin/core-nodes/n8n-nodes-base.code.md
+        - Code: integrations/builtin/core-nodes/n8n-nodes-base.code.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
         - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
@@ -1332,7 +1332,7 @@ nav:
   - Code in n8n:
       - code/index.md
       - Expressions: code/expressions.md
-      - Code node: code/code-node.md
+      - Using the Code node: code/code-node.md
       - AI coding: code/ai-code.md
       - Built in methods and variables:
           - Overview: code/builtin/overview.md

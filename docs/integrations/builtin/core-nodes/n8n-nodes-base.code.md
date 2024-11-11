@@ -7,8 +7,10 @@ priority: critical
 tags:
   - code node
   - code
+hide:
+  - tags
 search:
-  boost: 3
+  boost: 1.5
 ---
 
 # Code node

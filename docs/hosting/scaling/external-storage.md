@@ -5,8 +5,10 @@ contentType: howto
 tags:
   - external storage
   - storage
+hide:
+  - tags
 search:
-  boost: 4
+  boost: 1.5
 ---
 
 # External storage

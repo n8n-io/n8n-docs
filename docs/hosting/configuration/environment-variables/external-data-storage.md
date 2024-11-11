@@ -10,8 +10,6 @@ tags:
 hide:
   - toc
   - tags
-search:
-  boost: 2
 ---
 
 # External data storage environment variables

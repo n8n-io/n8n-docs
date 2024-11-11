@@ -4,8 +4,8 @@ contentType: integration
 tags:
   - code node
   - code
-search:
-  boost: 2
+hide:
+  - tags
 ---
 
 # Using the Code node

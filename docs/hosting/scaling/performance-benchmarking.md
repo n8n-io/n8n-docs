@@ -14,14 +14,14 @@ This document outlines n8n's performance benchmarking. It describes the factors 
 
 The performance of n8n depends on factors including: 
 
-* The type of workflow
+* The workflow type
 * The resources available to n8n
 * How you configure n8n's scaling options
 
 
 ## Run your own benchmarking
 
-To get an accurate estimate for your use case, run n8n's [benchmarking framework](https://github.com/n8n-io/n8n-benchmarking){:target=_blank .external-link}. The repository contains more information about the benchmarking.
+To get an accurate estimate for your use case, run n8n's [benchmarking framework](https://github.com/n8n-io/n8n/tree/master/packages/%40n8n/benchmark){:target=_blank .external-link}. The repository contains more information about the benchmarking.
 
 ## Example: Single instance performance
 

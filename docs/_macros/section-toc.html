@@ -6,6 +6,8 @@
 <li><a href="/[[ child.url ]]">[[ child.title ]]</a></li>
 [[% elif child.is_section %]]
 <li><a href="/[[ child.children[0].url ]]">[[ child.title ]]</a></li>
+[[% elif child.is_link %]]
+<li><a href="[[ child.url ]]">[[ child.title ]]</a></li>
 [[% endif %]]
 [[% endif %]]
 [[% endfor %]]

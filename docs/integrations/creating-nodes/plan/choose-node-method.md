@@ -5,7 +5,7 @@ contentType: explanation
 
 # Choose your node building approach
 
-n8n has two node-building styles, declarative and programmatic. 
+n8n has two node-building styles, declarative and programmatic.
 
 You should use the declarative style for most nodes. This style:
 
@@ -31,8 +31,13 @@ To understand the difference between the declarative and programmatic styles, co
 In programmatic style:
 
 ```js
-import { IExecuteFunctions } from 'n8n-core';
-import { INodeExecutionData, INodeType, INodeTypeDescription } from 'n8n-workflow';
+import {
+	IExecuteFunctions,
+	INodeExecutionData,
+	INodeType,
+	INodeTypeDescription,
+	IRequestOptions,
+} from 'n8n-workflow';
 
 // Create the FriendGrid class
 export class FriendGrid implements INodeType {
@@ -98,7 +103,7 @@ export class FriendGrid implements INodeType {
       Object.assign(data, additionalFields);
 
       // Make HTTP request as defined in https://sendgrid.com/docs/api-reference/
-      const options: OptionsWithUri = {
+      const options: IRequestOptions = {
         headers: {
             'Accept': 'application/json',
             'Authorization': `Bearer ${credentials.apiKey}`,
@@ -158,7 +163,7 @@ export class FriendGrid implements INodeType {
             value: 'create',
             description: 'Create a contact',
             // Add the routing object
-            routing: { 
+            routing: {
                 request: {
                 method: 'POST',
                 url: '=/contacts',

@@ -4,6 +4,13 @@ title: Code node documentation
 description: Documentation for the Code node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: integration
 priority: critical
+tags:
+  - code node
+  - code
+hide:
+  - tags
+search:
+  boost: 1.5
 ---
 
 # Code node

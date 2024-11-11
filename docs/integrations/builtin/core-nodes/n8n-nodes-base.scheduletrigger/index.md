@@ -55,7 +55,9 @@ For example, if you enter `6` **Hours Between Triggers** and `30` **Trigger at M
 * **Trigger at Hour**: Select the hour of the day to trigger the node.
 * **Trigger at Minute**: Enter the minute past the hour to trigger the node when it runs, from `0` to `59`.
 
+<!-- vale from-microsoft.AMPM = NO -->
 For example, if you enter `2` **Days Between Triggers**, **9am** for **Trigger at Hour**, and `15` **Trigger at Minute**, the node will run every two days at 9:15am.
+<!-- vale from-microsoft.AMPM = YES -->
 
 ### Weeks trigger interval
 
@@ -83,6 +85,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 
 #### Examples
 
+<!-- vale from-write-good.Weasel = NO -->
 |Type|Cron Expression|Description|
 |---|---|---|
 |Every X Seconds|`*/10 * * * * *`|Every 10 seconds.|
@@ -95,6 +98,7 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 |Only Weekdays|`0 9 * * 1-5`|At 9:00 AM Monday through Friday.|
 |Custom Hourly Range|`0 9-17 * * *`|Every hour from 9:00 AM to 5:00 PM every day.|
 |Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
+<!-- vale from-write-good.Weasel = YES -->
 
 #### Why there are six asterisks in the Cron expression
 
@@ -109,5 +113,6 @@ The sixth asterisk in the Cron expression represents seconds. Setting this is op
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'schedule-trigger') ]]
 
+## Common issues
 
-
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues/).

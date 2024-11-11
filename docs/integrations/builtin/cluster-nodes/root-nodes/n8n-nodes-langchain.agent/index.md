@@ -45,7 +45,7 @@ n8n provides these agents:
 
 ## Related resources
 
-Refer to [LangChain's documentation on agents](https://js.langchain.com/docs/concepts/#agents){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's documentation on agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} for more information about the service.
 
 New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n.io/ai-agents/){:target=_blank .external-link}.
 

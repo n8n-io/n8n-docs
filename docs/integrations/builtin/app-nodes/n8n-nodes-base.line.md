@@ -8,6 +8,12 @@ priority: medium
 
 # Line node
 
+<!-- vale off -->
+/// warning | Deprecated: End of service
+LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce){:target=_blank .external-link} for more information.
+///
+<!-- vale on -->
+
 Use the Line node to automate work in Line, and integrate Line with other applications. n8n has built-in support for a wide range of Line features, including sending notifications. 
 
 On this page, you'll find a list of operations the Line node supports and links to more resources.

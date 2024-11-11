@@ -10,6 +10,7 @@ description: View and restore previous versions of your workflow.
 /// info | Feature availability
 * Full workflow history is available on Enterprise Cloud and Enterprise Self-hosted.
 * Versions from the last five days are available for Cloud Pro users.
+* Versions from the last 24 hours are available for registered Community users.
 ///	
 
 Use workflow history to view and restore previous versions of your workflows. 

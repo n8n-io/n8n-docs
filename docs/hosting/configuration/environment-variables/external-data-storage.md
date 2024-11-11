@@ -5,6 +5,8 @@ description: Environment variables to configure external data storage for your s
 contentType: reference
 tags:
   - environment variables
+  - external storage
+  - storage
 hide:
   - toc
   - tags

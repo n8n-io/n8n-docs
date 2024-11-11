@@ -64,7 +64,7 @@ Add text to append after the tools list at the start of the conversation when th
 
 ## Related resources
 
-Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/#react-agents){:target=_blank .external-link} documentation for more information.
+Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} documentation for more information.
 
 ## Templates and examples
 

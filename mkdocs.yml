@@ -183,6 +183,16 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   - tags:
       enabled: true
+  # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+  # This is enabled to automatically add `target="_blank"` to external links.
+  # Specifically, we needed some way to open nav links to external locations
+  # (like the main site) in new tabs
+  - privacy:
+      assets: false
+      links: true
+      links_attr_map:
+        target: _blank
+        rel: external
 nav:
   - Using n8n:
     - Welcome: index.md
@@ -309,6 +319,7 @@ nav:
       - Cloud IP addresses: manage-cloud/cloud-ip.md
       - Cloud data management: manage-cloud/cloud-data-management.md
       - Change ownership or username: manage-cloud/change-ownership-or-username.md
+      - Concurrency: manage-cloud/concurrency.md
     - Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md
@@ -339,7 +350,7 @@ nav:
       - Privacy and security:
           - privacy-security/index.md
           - Privacy: privacy-security/privacy.md
-          - Security: privacy-security/security.md
+          - Security: https://n8n.io/legal/#security
           - Incident response: privacy-security/incident-response.md
           - What you can do: privacy-security/what-you-can-do.md
       - Sustainable use license: sustainable-use-license.md
@@ -403,7 +414,9 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - RSS Feed Trigger: integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
-        - Schedule Trigger: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger.md
+        - Schedule Trigger:
+          - Schedule Trigger: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
         - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
         - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
@@ -844,7 +857,7 @@ nav:
           - Embeddings Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
           - Embeddings Google Gemini: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
           - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
-          - Embeddings HuggingFace Interface: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
+          - Embeddings HuggingFace Inference: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
@@ -1097,6 +1110,7 @@ nav:
         - integrations/builtin/credentials/quickbooks.md
         - integrations/builtin/credentials/rabbitmq.md
         - integrations/builtin/credentials/raindrop.md
+        - integrations/builtin/credentials/rapid7insightvm.md
         - integrations/builtin/credentials/recordedfuture.md
         - integrations/builtin/credentials/reddit.md
         - integrations/builtin/credentials/redis.md
@@ -1320,7 +1334,7 @@ nav:
   - Code in n8n:
       - code/index.md
       - Expressions: code/expressions.md
-      - Code node: code/code-node.md
+      - Using the Code node: code/code-node.md
       - AI coding: code/ai-code.md
       - Built in methods and variables:
           - Overview: code/builtin/overview.md

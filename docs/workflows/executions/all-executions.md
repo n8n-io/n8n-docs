@@ -8,7 +8,7 @@ contentType: howto
 
 To view **all executions** from an n8n instance, navigate to the **Overview** page and then click into the Executions tab. This will show you all executions from the workflows you have access to.
 
-If your n8n instance supports **projects**, you’ll also be be able to view the executions tab within projects you have access to. This will show you executions only from the workflows within the specified project.
+If your n8n instance supports **projects**, you’ll also be able to view the executions tab within projects you have access to. This will show you executions only from the workflows within the specified project.
 
 /// note | Deleted workflows
 When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.

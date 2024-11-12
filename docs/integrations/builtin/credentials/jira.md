@@ -39,7 +39,7 @@ Then:
 5. Copy the API token.
 6. In n8n, enter the **Email** address associated with your Jira account.
 7. Paste the API token you copied as your **API Token**.
-8. Enter the **Domain** you access Jira on, for example `https://id.atlassian.com`.
+8. Enter the **Domain** you access Jira on, for example `https://example.atlassian.net`.
 
 Refer to [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/){:target=_blank .external-link} for more information.
 

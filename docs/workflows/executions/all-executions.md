@@ -4,9 +4,11 @@ description: View and filter all executions for all workflows.
 contentType: howto
 ---
 
-# All executions list
+# All executions
 
-The **All executions** list shows all executions for all workflows you have access to.
+To view **all executions** from an n8n instance, navigate to the **Overview** page and then click into the Executions tab. This will show you all executions from the workflows you have access to.
+
+If your n8n instance supports **projects**, you’ll also be be able to view the executions tab within projects you have access to. This will show you executions only from the workflows within the specified project.
 
 /// note | Deleted workflows
 When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
@@ -21,7 +23,7 @@ Select **All executions** <span class="inline-image">![All executions menu icon]
 You can filter the executions list.
 
 
-1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png){.off-glb}</span> to open the list.
+1. Select the Executions tab either from with the **Overview** page or a specific **project** to open the list.
 2. Select **Filters**.
 3. Enter your filters. You can filter by:
 	* **Workflows**: choose all workflows, or a specific workflow name.
@@ -35,7 +37,7 @@ You can filter the executions list.
 
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
-1. Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png){.off-glb}</span> to open the list. 
+1. Select the Executions tab from within either Overview or a specific project  to open the list. 
 2. On the execution you want to retry, select **Retry execution** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"
 

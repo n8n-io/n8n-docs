@@ -10,15 +10,15 @@ A workflow is a collection of nodes connected together to automate a process. Yo
 
 ## Create a workflow
 
-1. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png)</span> **Universal create button** in the upper-left corner or the **+ Create** button in the upper-right corner. Select **Workflow**.
-1. If you're using a [platform and version](/choose-n8n/) of n8n that supports projects, choose whether you want to create the workflow in your **Personal** space or a project. If your version does not support projects, n8n will create the workflow in your <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home**. If you're using the **+ Create** button in the upper-right corner and currently in your **Personal** space or a project, the workflow will use that scope automatically.
-1. Get started by adding a trigger node: select **Add first step...**
+1. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png)</span> **button** in the upper-left corner of the side menu. Select workflow
+2. If your n8n instance supports projects, you’ll also need to choose whether to create the workflow inside your **personal space** or a specific **project** you have access to. If you’re using the community version, it will always be created inside your personal space.
+3. Get started by adding a trigger node: select **Add first step...**
 
-As an alternative, create a new workflow in your <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** with the following:
+Alternatively:
 
-1. Select <span class="inline-image">![Home icon](/_images/common-icons/home.png)</span> **Home** to create a workflow in your own space.
-1. On the **Workflows** list, select **Add Workflow**.
-1. Get started by adding a trigger node: select **Add first step...**
+1. Select the  <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png)</span> create button in the upper-right corner from either the **Overview** page or a specific **project**. Select workflow.
+2. If you’re doing this from the **Overview** page, the workflow will be added to your personal space. If you’re doing this from inside a project, the workflow will be added to that specific project.
+3. Get started by adding a trigger node: select **Add first step...**
 
 If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/) to quickly try out n8n features.
 

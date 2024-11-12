@@ -21,7 +21,7 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 
 The quickest way to get started with deploying n8n to Heroku is using the **Deploy to Heroku** button:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/n8n-io/n8n-heroku/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/n8n-io/n8n-heroku/tree/main)
 
 This opens the **Create New App** page on Heroku. Set a name for the project, and choose the region to deploy the project to.
 

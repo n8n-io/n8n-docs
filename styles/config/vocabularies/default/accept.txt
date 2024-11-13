@@ -177,6 +177,8 @@ NASA
 Netlify
 Netscaler
 Nextcloud
+Nginx
+nginx
 ngrok
 Nodelinter
 npm
@@ -206,6 +208,8 @@ Prefilled
 prefilled
 Prepopulate
 prepopulate
+Proxying
+proxying
 Pushbullet
 Pushcut
 Pyodide
@@ -299,6 +303,10 @@ Vuex
 Wasabi's
 Webex
 Webflow
+Websocket
+websocket
+Websockets
+websockets
 WeKan
 Wireframe
 wireframe

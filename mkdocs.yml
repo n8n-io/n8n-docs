@@ -806,7 +806,9 @@ nav:
         - Stripe Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
         - SurveyMonkey Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
         - Taiga Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
-        - Telegram Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger.md
+        - Telegram Trigger:
+          - Telegram Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md
+          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md
         - TheHive 5 Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
         - TheHive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
         - Toggl Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md

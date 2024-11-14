@@ -31,4 +31,4 @@ The next three examples highlight the Custom n8n Workflow Tool:
 - [Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)
 - [Set up a human fallback](/advanced-ai/examples/human-fallback/)
 
-Afterwards, learn how to [dynamically populate parameters for tools with `$fromAI()`](/advanced-ai/examples/dynamic-parameters-for-tools/).
+You can also learn how to [dynamically populate parameters for tools with the `$fromAI()` function](/advanced-ai/examples/dynamic-parameters-for-tools/).

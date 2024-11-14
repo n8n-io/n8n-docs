@@ -48,7 +48,7 @@ This release contains node updates, performance improvements and many bug fixes.
 
 #### New AI agent canvas chat
 
-We revamped the chat experience for AI agent on the canvas. A neatly organized view instead of a modal hiding the nodes. You can now see the canvas, chat and logs at the same time when testing your workflow. 
+We revamped the chat experience for AI agents on the canvas. A neatly organized view instead of a modal hiding the nodes. You can now see the canvas, chat and logs at the same time when testing your workflow. 
 <br /><br />
 
 <video src="/_video/release-notes/AI-chat-on-canvas.mp4" controls width="100%"></video>

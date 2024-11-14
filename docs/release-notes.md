@@ -44,6 +44,18 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains node updates, performance improvements and many bug fixes.
 
+<div class="n8n-new-features" markdown>
+
+#### New AI agent canvas chat
+
+We revamped the chat experience for AI agents on the canvas. A neatly organized view instead of a modal hiding the nodes. You can now see the canvas, chat and logs at the same time when testing your workflow. 
+<br /><br />
+
+<video src="/_video/release-notes/AI-chat-on-canvas.mp4" controls width="100%"></video>
+<br /><br />
+
+</div>
+
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.67.1

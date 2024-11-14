@@ -42,7 +42,7 @@ You will build two workflows:
 1. **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, or [n8n Cloud](/manage-cloud/overview/){:target="_blank" .external}.
 2. **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
 3. Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but isn't necessary.
-4. An [account on the n8n community forum](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external} if you wish to receive a profile badge and avatar upon successful completion
+4. An [account on the n8n community forum](https://community.n8n.io/){:target="_blank" .external} if you wish to receive a profile badge and avatar upon successful completion
 
 ## How long does the course take?
 

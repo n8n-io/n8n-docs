@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Dynamic parameters for app tools with `$fromAI()`
+title: Let AI specify tool parameters with `$fromAI()`
 description: Understand how n8n's `$fromAI()` function works and how to use it to dynamically populate parameters for AI app tools.
 contentType: explanation
 tags:
@@ -12,7 +12,7 @@ hide:
   - tags
 ---
 
-# Dynamic parameters for app tools with `$fromAI()`
+# Let AI specify tool parameters with `$fromAI()`
 
 When configuring [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent, you can use the `$fromAI()` function to dynamically populate parameter values using the AI model. The AI model will fill in appropriate data given the context from the task and information from other connected tools.
 

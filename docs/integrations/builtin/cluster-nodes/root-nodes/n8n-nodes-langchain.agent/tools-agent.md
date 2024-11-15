@@ -99,7 +99,7 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 
 ## Dynamic parameters for tools with `$fromAI()`
 
-To learn how to dynamically populate parameters for app node tools, refer to [Dynamic parameters for app tools with `$fromAI()`](/advanced-ai/examples/dynamic-parameters-for-tools).
+To learn how to dynamically populate parameters for app node tools, refer to [Let AI specify tool parameters with `$fromAI()`](/advanced-ai/examples/using-the-fromai-function/).
 
 ## Common issues
 

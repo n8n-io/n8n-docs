@@ -29,7 +29,7 @@ This section provides explanations of important AI concepts, and workflow templa
     [:octicons-arrow-right-24: Chat with Google Sheets](/advanced-ai/examples/data-google-sheets/)  
 	[:octicons-arrow-right-24: Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)  
 	[:octicons-arrow-right-24: Set up a human fallback](/advanced-ai/examples/human-fallback/)  
-	[:octicons-arrow-right-24: Dynamic parameters for app tools with `$fromAI()`](/advanced-ai/examples/dynamic-parameters-for-tools/)
+	[:octicons-arrow-right-24: Let AI specify tool parameters with `$fromAI()`](/advanced-ai/examples/using-the-fromai-function/)
 
 -   __Vector databases__
 

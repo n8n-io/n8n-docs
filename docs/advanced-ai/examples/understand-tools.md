@@ -27,6 +27,8 @@ n8n provides tool sub-nodes that you can connect to your AI agent. As well as pr
 
 The next three examples highlight the Custom n8n Workflow Tool:
 
-- [Chat with Google Sheets](/advanced-ai/examples/data-google-sheets/)  
-- [Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)  
+- [Chat with Google Sheets](/advanced-ai/examples/data-google-sheets/)
+- [Call an API to fetch data](/advanced-ai/examples/api-workflow-tool/)
 - [Set up a human fallback](/advanced-ai/examples/human-fallback/)
+
+You can also learn how to [let AI dynamically specify parameters for tools with the `$fromAI()` function](/advanced-ai/examples/using-the-fromai-function/).

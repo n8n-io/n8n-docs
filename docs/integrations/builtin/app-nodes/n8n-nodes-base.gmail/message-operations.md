@@ -192,6 +192,35 @@ Use these options to further refine the node's behavior:
 
 Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
 
+## Send a message and wait for approval
+
+Use this operation to send a message and wait for approval from the recipient before continuing the workflow execution.
+
+/// info | Use Wait for complex approvals
+The **Send and Wait for Approval** operation is well-suited for simple approval processes. For more complex approvals, consider using the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/).
+///
+
+Enter these parameters:
+
+* Select the **Credential to connect with** or create a new one.
+* **Resource**: Select **Message**.
+* **Operation**: Select **Send and Wait for Approval**.
+* **To**: Enter the email address you want the email sent to.
+* **Subject**: Enter the subject line.
+* **Message**: Enter the email message body.
+
+### Send and wait for approval options
+
+Use these options to further refine the node's behavior:
+
+* **Type of Approval**: Choose **Approve Only** (default) to include only an approval button or **Approve and Disapprove** to also include a disapproval option.
+* **Approve Button Label**: The label to use for the approval button (**Approve** by default).
+* **Approve Button Style**: Whether to style the approval button as a **Primary** (default) or **Secondary** button.
+* **Disapprove Button Label**: The label to use for the disapproval button (**Decline** by default). Only visible when you set **Type of Approval** to **Approve and Disapprove**.
+* **Disapprove Button Style**: Whether to style the disapproval button as a **Primary** or **Secondary** (default) button. Only visible when you set **Type of Approval** to **Approve and Disapprove**.
+
+Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+
 ## Common issues
 
 For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).

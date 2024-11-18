@@ -38,3 +38,7 @@ n8n provides an app node for Telegram. You can find the node docs [here](/integr
 View [example workflows and related content](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} on n8n's website.
 
 Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for details about their API.
+
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues/).

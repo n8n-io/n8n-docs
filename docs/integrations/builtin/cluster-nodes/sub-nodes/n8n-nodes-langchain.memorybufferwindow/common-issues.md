@@ -12,7 +12,7 @@ Here are some common errors and issues with the [Window Buffer Memory node](/int
 
 ## Single memory instance
 
-[[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
+If you add more than one Window Buffer Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
 
 ## Managing the Session ID
 

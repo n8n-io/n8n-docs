@@ -311,7 +311,7 @@ nav:
         - Data filtering: data/data-filtering.md
         - Data mocking: data/data-mocking.md
         - Binary data: data/binary-data.md
-    - Manage n8n Cloud:
+    - n8n Cloud:
       - Overview: manage-cloud/overview.md
       - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
       - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
@@ -320,6 +320,7 @@ nav:
       - Cloud data management: manage-cloud/cloud-data-management.md
       - Change ownership or username: manage-cloud/change-ownership-or-username.md
       - Concurrency: manage-cloud/concurrency.md
+      - AI Assistant: manage-cloud/ai-assistant.md
     - Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md

@@ -45,6 +45,7 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guida
     * **Get permalink**: Get a message's permalink.
     * **Search** for messages
     * **Send** a message
+    * **Send and Wait for Approval**: Send a message and wait for approval from the recipient before continuing.
     * **Update** a message
 * **Reaction**
     * **Add** a reaction to a message.
@@ -110,6 +111,7 @@ If those aren't enough, use the table below to look up the resource and operatio
 | Message | Get Permalink | [chat.getPermalink](https://api.slack.com/methods/chat.getPermalink){:target=blank .external-link} |
 | Message | Search | [search.messages](https://api.slack.com/methods/search.messages){:target=blank .external-link} |
 | Message | Send | [chat.postMessage](https://api.slack.com/methods/chat.postMessage){:target=blank .external-link} |
+| Message | Send and Wait for Approval | [chat.postMessage](https://api.slack.com/methods/chat.postMessage){:target=blank .external-link} |
 | Message | Update | [chat.update](https://api.slack.com/methods/chat.update){:target=blank .external-link} |
 | Reaction | Add | [reactions.add](https://api.slack.com/methods/reactions.add){:target=blank .external-link} |
 | Reaction | Get | [reactions.get](https://api.slack.com/methods/reactions.get){:target=blank .external-link} |

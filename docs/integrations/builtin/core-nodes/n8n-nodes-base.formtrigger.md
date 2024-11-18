@@ -27,6 +27,33 @@ When your workflow is ready, switch to using the **Production URL**. You can the
 
 When working with a production URL, ensure that you have saved and activated the workflow. Data flowing through the Form trigger isn't visible in the editor UI with the production URL.
 
+## Set default selections with query parameters
+
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form/) receives the same query parameters sent to the n8n Form Trigger URL.
+
+/// note | Only for production
+Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
+///
+
+<!-- vale from-microsoft.Percentages = NO -->
+When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+
+As an example, imagine you have a form with the following properties:
+
+* Production URL: `https://my-account.n8n.cloud/form/my-form`
+* Fields:
+	* `name`: `Jane Doe`
+	* `email`: `jane.doe@example.com`
+
+With query parameters and percent-encoding, you could use the following URL to set initial field values to the data above:
+
+```
+https://my-account.n8n.cloud/form/my-form?email=jane.doe%40example.com&name=Jane%20Doe
+```
+
+Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and the space character (` `) with the string `%20`. This will set the initial value for these fields no matter which page of the form they appear on.
+<!-- vale from-microsoft.Percentages = YES -->
+
 ## Node parameters
 
 These are the main node configuration fields:

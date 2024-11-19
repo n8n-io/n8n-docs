@@ -14,7 +14,7 @@ Here are some common errors and issues with the [Chat Trigger node](/integration
 
 When [embedding](https://www.npmjs.com/package/@n8n/chat) the Chat Trigger node in a website, you might want to pass extra information to the Chat Trigger. For example, passing a user ID stored in a site cookie.
 
-To to this, use the `metadata` field in the JSON object you pass to the `createChat` function in your embedded chat window:
+To do this, use the `metadata` field in the JSON object you pass to the `createChat` function in your embedded chat window:
 
 ```javascript
 createChat({
@@ -40,4 +40,4 @@ In Chat Triggers, the **Load Previous Session** option retrieves previous chat m
 
 One instance where you may want to attach separate memory nodes to your Chat Trigger and the Agent is if you want to set the **Session ID** in your memory node to **Define below**.
 
-If you're retrieving the session ID from an expression, the same expression must work for all of the nodes attached to it. If the expression isn't compatible with all of the nodes that need memory, you might need to use separate memory nodes so you can customize the expression for the session ID on a per-node basis.
+If you're retrieving the session ID from an expression, the same expression must work for each of the nodes attached to it. If the expression isn't compatible with each of the nodes that need memory, you might need to use separate memory nodes so you can customize the expression for the session ID on a per-node basis.

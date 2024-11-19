@@ -17,8 +17,8 @@ Credentials are securely stored authentication information used to connect n8n w
 
 Or:
 
-1. Using the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
-2.  If you're doing this from the **Overview page**, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
+1. Using the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **Create** button in the upper-right corner from either the <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Overview** page or a specific project. Select Credential.
+2.  If you're doing this from the <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Overview** page, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
 3. Select the app or service you wish to connect to.
 
 You can also create new credential in the credential drop down when editing a node on the workflow editor.

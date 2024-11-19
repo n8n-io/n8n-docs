@@ -25,7 +25,7 @@ Users can share workflows they created. Instance owners, and users with the admi
 
 You can browse and search workflows on the **Workflows** list. The workflows in the list depend on the project:
 
-* **Overview** lists all workflows you can access. This includes:
+* <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Overview** lists all workflows you can access. This includes:
 	* Your own workflows.
 	* Workflows shared with you.
 	* Workflows in projects you're a member of.

@@ -27,7 +27,7 @@ createChat({
 
 The `metadata` field can contain arbitrary data that will appear in the Chat Trigger output alongside other output data. From there, you can query and process the data from downstream nodes as usual using	n8n's [data processing features](/data/).
 
-## Embedded Chat Trigger node doesn't fetch previous messages
+## Chat Trigger node doesn't fetch previous messages
 
 When you configure a Chat Trigger node, you might experience problems fetching previous messages if you aren't careful about how you configure session loading. This often manifests as a `workflow could not be started!` error.
 

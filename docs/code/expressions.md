@@ -107,3 +107,7 @@ While the second example is valid:
 ```js
 {{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
 ```
+
+## Common issues
+
+For common errors or issues with expressions and suggested resolution steps, refer to [Common Issues](/code/cookbook/expressions/common-issues/).

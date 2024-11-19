@@ -369,7 +369,9 @@ nav:
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
-        - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger.md
+        - Chat Trigger:
+          - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md

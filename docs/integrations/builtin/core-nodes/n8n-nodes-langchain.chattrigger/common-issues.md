@@ -29,8 +29,15 @@ The `metadata` field can contain arbitrary data that will appear in the Chat Tri
 
 ## Embedded Chat Trigger node doesn't fetch previous messages
 
-When you configure an [embedded Chat Trigger](https://www.npmjs.com/package/@n8n/chat) node, when it sends the `loadPreviousSession` action, you may receive a `workflow could not be started!` of there is a problem retrieving the session.
+When you configure a Chat Trigger node, you might experience problems fetching previous messages if you aren't careful about how you configure session loading. This often manifests as a `workflow could not be started!` error.
 
-The `loadPreviousSession` action retrieves previous chat messages for a session using the `sessionID`. When using [**From memory**](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#load-previous-session) for the **Load Previous Session** option, you typically want to connect the same memory node for both the Chat Trigger and the Agent in your workflow.
+In Chat Triggers, the **Load Previous Session** option retrieves previous chat messages for a session using the `sessionID`. When you set the **Load Previous Session** option to [**From memory**](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#load-previous-session), it's almost always best to [connect the same memory node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#load-previous-session) to both the Chat Trigger and the Agent in your workflow:
 
-However, if you use an expression to retrieve the `sessionID` in the memory node instead of populating it automatically, the above error may occur. In this case, use [two separate memory nodes](https://community.n8n.io/t/n8n-chat-trigger-failing-to-fetch-previous-messages-loadprevioussession/49015) for the Chat Trigger and the Agent. Set the **Session ID** for the Chat Trigger memory node to **Take from previous node automatically**. For the Agent node, you can continue to use the expression to retrieve the session ID.
+1. In your **Chat Trigger** node, set the **Load Previous Session** option to **From Memory**. This is only visible if you've made the chat publicly available.
+2. Attach a **Window Buffer Memory** node to the **Memory** connector.
+3. Attach the same **Window Buffer Memory** node to **Memory** connector of your **Agent**.
+4. In the **Window Buffer Memory** node, set **Session ID** to **Take from previous node automatically**.
+
+One instance where you may want to attach separate memory nodes to your Chat Trigger and the Agent is if you want to set the **Session ID** in your memory node to **Define below**.
+
+If you're retrieving the session ID from an expression, the same expression must work for all of the nodes attached to it. If the expression isn't compatible with all of the nodes that need memory, you might need to use separate memory nodes so you can customize the expression for the session ID on a per-node basis.

@@ -27,3 +27,10 @@ This error occurs when you run n8n behind a reverse proxy and there is a problem
 When running n8n behind a reverse proxy, you must [configure the `WEBHOOK_URL` environment variable](/hosting/configuration/configuration-examples/webhook-url/) with the public URL where your n8n instance is running. For Telegram, this URL must use HTTPS.
 
 To fix this issue, configure TLS/SSL termination in your reverse proxy. Afterward, update your `WEBHOOK_URL` environment variable to use the HTTPS address.
+
+## Workflow only works in testing or production
+
+Telegram only allows you to register a single webhook per app. This means that if you change from using the testing URL to the production URL (or vice versa), Telegram overwrites the previous webhook URL. 
+
+They have the workflow activated and are trying to test it as well, Due to Telegram only allowing 1 webhook per app this causes issues. We are putting in a change for this shortly.
+

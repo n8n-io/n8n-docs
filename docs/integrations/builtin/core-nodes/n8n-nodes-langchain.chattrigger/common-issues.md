@@ -31,7 +31,7 @@ The `metadata` field can contain arbitrary data that will appear in the Chat Tri
 
 When you configure a Chat Trigger node, you might experience problems fetching previous messages if you aren't careful about how you configure session loading. This often manifests as a `workflow could not be started!` error.
 
-In Chat Triggers, the **Load Previous Session** option retrieves previous chat messages for a session using the `sessionID`. When you set the **Load Previous Session** option to [**From memory**](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#load-previous-session), it's almost always best to [connect the same memory node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#load-previous-session) to both the Chat Trigger and the Agent in your workflow:
+In Chat Triggers, the **Load Previous Session** option retrieves previous chat messages for a session using the `sessionID`. When you set the **Load Previous Session** option to **From memory**, it's almost always best to [connect the same memory node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/#load-previous-session) to both the Chat Trigger and the Agent in your workflow:
 
 1. In your **Chat Trigger** node, set the **Load Previous Session** option to **From Memory**. This is only visible if you've made the chat publicly available.
 2. Attach a **Window Buffer Memory** node to the **Memory** connector.

@@ -314,6 +314,7 @@ WordPress
 Wufoo
 Xata
 Xero
+Zabbix
 Zammad
 Zapier
 Zendesk

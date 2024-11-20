@@ -1199,6 +1199,7 @@ nav:
         - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md
+        - integrations/builtin/credentials/zabbix.md
         - integrations/builtin/credentials/zammad.md
         - integrations/builtin/credentials/zendesk.md
         - integrations/builtin/credentials/zep.md

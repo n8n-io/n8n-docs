@@ -110,3 +110,9 @@ Outlook OAuth2 supports the credential accessing a user's primary email inbox or
 
 1. Turn on **Use Shared Inbox**.
 2. Enter the target user's UPN or ID as the **User Principal Name**.
+
+#### SharePoint
+
+SharePoint OAuth2 requires information about your SharePoint **Subdomain**.
+
+To complete the credential, enter the **Subdomain** part of your SharePoint URL. For example, if your SharePoint URL is `https://tenant123.sharepoint.com`, the subdomain is `tenant123`.

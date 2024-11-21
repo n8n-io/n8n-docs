@@ -533,7 +533,13 @@ nav:
         - Google Cloud Storage: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage.md
         - Google Contacts: integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts.md
         - Google Docs: integrations/builtin/app-nodes/n8n-nodes-base.googledocs.md
-        - Google Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive.md
+        - Google Drive:
+          - Google Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations.md
+          - File and folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations.md
+          - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
+          - Shared drive operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md

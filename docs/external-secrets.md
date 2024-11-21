@@ -38,7 +38,11 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 					"Effect": "Allow",
 					"Action": [
 						"secretsmanager:ListSecrets",
-						"secretsmanager:BatchGetSecretValue"
+						"secretsmanager:BatchGetSecretValue",
+ 						"secretsmanager:GetResourcePolicy",
+						"secretsmanager:GetSecretValue",
+						"secretsmanager:DescribeSecret",
+						"secretsmanager:ListSecretVersionIds",
 					],
 					"Resource": "*"
 				}

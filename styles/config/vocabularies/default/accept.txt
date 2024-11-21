@@ -57,6 +57,8 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+commenter
+commenters
 Cohere
 Combinator
 Contentful
@@ -124,6 +126,7 @@ hostname
 HubSpot
 Humantic
 Imperva
+indexable
 invalid
 Infisical
 Intuit

@@ -20,11 +20,11 @@ Here are some common errors and issues with the [Google Drive node](/integration
 
 ## Google Drive OAuth error
 
-If using the OAuth authentication method, you may see an error indicating that you can't sign in because the app doesn't comply with Google's OAuth 2.0 policy for keeping apps secure.
+If using the OAuth authentication method, you may see an error indicating that you can't sign in because the app doesn't meet Google's expectations for keeping apps secure.
 
-Most often, the actual cause of this issue is mismatched URLs between Google's OAuth configuration and n8n. To avoid this, start by reviewing any links included in Google's error message. This will contain details about the exact error that occurred.
+Most often, the actual cause of this issue is that the URLs don't match between Google's OAuth configuration and n8n. To avoid this, start by reviewing any links included in Google's error message. This will contain details about the exact error that occurred.
 
-If you are self-hostin n8n, check the n8n configuration items that are used to construct external URLs. Verify that the [`N8N_EDITOR_BASE_URL`](/hosting/configuration/environment-variables/deployment/) and [`WEBHOOK_URL`](/hosting/configuration/configuration-examples/webhook-url/) environment variables are set to fully qualified domains.
+If you are self-hostin n8n, check the n8n configuration items used to construct external URLs. Verify that the [`N8N_EDITOR_BASE_URL`](/hosting/configuration/environment-variables/deployment/) and [`WEBHOOK_URL`](/hosting/configuration/configuration-examples/webhook-url/) environment variables use fully qualified domains.
 
 ## Get recent files from Google Drive
 

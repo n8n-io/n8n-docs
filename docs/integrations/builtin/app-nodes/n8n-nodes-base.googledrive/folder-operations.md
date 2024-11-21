@@ -46,7 +46,7 @@ Enter these parameters:
 
 ### Options
 
-- **Delete Permanently**: Choose whether to delete the folder immediately instead of moving it to the trash.
+- **Delete Permanently**: Choose whether to delete the folder now instead of moving it to the trash.
 
 Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
 
@@ -73,7 +73,9 @@ Enter these parameters:
 ### Options
 
 - **Email Message**: A plain text custom message to include in the notification email.
-- **Move to New Owners Root**: Can be used when trying to transfer ownership while sharing an item not in a shared drive. When enabled, the folder is moved to the new owner's My Drive root folder.
+<!-- vale from-microsoft.FirstPerson = NO -->
+- **Move to New Owners Root**: Available when trying to transfer ownership while sharing an item not in a shared drive. When enabled, moves the folder to the new owner's My Drive root folder.
+<!-- vale from-microsoft.FirstPerson = YES -->
 - **Send Notification Email**: Whether to send a notification email when sharing to users or groups.
 - **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
 - **Use Domain Admin Access**: Whether to perform the action as a domain administrator.

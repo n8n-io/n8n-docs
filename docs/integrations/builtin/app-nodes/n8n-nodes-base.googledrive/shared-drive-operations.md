@@ -42,12 +42,12 @@ Enter these parameters:
 	- **Can Share**: Whether the current user can share files or folders in this shared drive.
 	- **Can Trash Children**: Whether the current user can trash children from folders in this shared drive.
 - **Color RGB**: The color of this shared drive as an RGB hex string.
-- **Hidden**: Whether this shared drive is hidden from the default view.
+- **Hidden**: Whether to hide this shared drive in the default view.
 - **Restrictions**: Restrictions to add to this shared drive (see [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives) for more details):
 	- **Admin Managed Restrictions**: When enabled, restrictions here will override the similarly named fields to true for any file inside of this shared drive.
 	- **Copy Requires Writer Permission**: Whether the options to copy, print, or download files inside this shared drive should be disabled for readers and commenters.
-	- **Domain Users Only**: Whether access to this shared drive and items inside this shared drive is restricted to users of the domain to which this shared drive belongs.
-	- **Drive Members Only**: Whether access to items inside this shared drive is restricted to its members.
+	- **Domain Users Only**: Whether to restrict access to this shared drive and items inside this shared drive to users of the domain to which this shared drive belongs.
+	- **Drive Members Only**: Whether to restrict access to items inside this shared drive to its members.
 
 Refer to the [Method: drives.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/insert){:target=_blank .external-link} API documentation for more information.
 
@@ -81,13 +81,15 @@ Enter these parameters:
 
 ### Options
 
-- **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, the requester will be granted access if they are an administrator of the domain to which the shared drive belongs.
+- **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
 
 Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} API documentation for more information.
 
+<!-- vale from-write-good.Weasel = NO -->
 ## Get many shared drives
 
 Use this operation to get many shared drives.
+<!-- vale from-write-good.Weasel = YES -->
 
 Enter these parameters:
 
@@ -103,7 +105,7 @@ Enter these parameters:
 ### Options
 
 - **Query**: The query string to use to search for shared drives. See [Search for shared drives | Google Drive](https://developers.google.com/drive/api/guides/search-shareddrives) for more information.
-- **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, the requester will be granted access if they are an administrator of the domain to which the shared drive belongs.
+- **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
 
 Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} API documentation for more information.
 
@@ -127,7 +129,7 @@ Enter these parameters:
 - **Restrictions**: Restrictions for this shared drive (see [REST Resources: drives | Google Drive](https://developers.google.com/drive/api/reference/rest/v3/drives) for more details):
 	- **Admin Managed Restrictions**: When enabled, restrictions here will override the similarly named fields to true for any file inside of this shared drive.
 	- **Copy Requires Writer Permission**: Whether the options to copy, print, or download files inside this shared drive should be disabled for readers and commenters.
-	- **Domain Users Only**: Whether access to this shared drive and items inside this shared drive is restricted to users of the domain to which this shared drive belongs.
-	- **Drive Members Only**: Whether access to items inside this shared drive is restricted to its members.
+	- **Domain Users Only**: Whether to restrict access to this shared drive and items inside this shared drive to users of the domain to which this shared drive belongs.
+	- **Drive Members Only**: Whether to restrict access to items inside this shared drive to its members.
 
 Refer to the [Method: drives.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/update){:target=_blank .external-link} API documentation for more information.

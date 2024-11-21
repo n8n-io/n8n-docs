@@ -20,7 +20,7 @@ Enter these parameters:
 - **Resource**: Select **File/Folder**.
 - **Operation**: Select **Search**.
 - **Search Method**: Choose how you want to search:
-	- **Search File/Folder Name**: Fill out the **Search Query** with the name of the file or folder you want to search for. Returns files and folders that partially match the query as well.
+	- **Search File/Folder Name**: Fill out the **Search Query** with the name of the file or folder you want to search for. Returns files and folders that are partial matches for the query as well.
 	- **Advanced Search**: Fill out the **Query String** to search for files and folders using [Google query string syntax](https://developers.google.com/drive/api/guides/search-files).
 - **Return All**: Choose whether to return all results or only up to a given limit.
 - **Limit**: The maximum number of items to return when **Return All** is disabled.

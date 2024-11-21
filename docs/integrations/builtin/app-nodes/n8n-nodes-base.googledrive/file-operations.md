@@ -8,7 +8,7 @@ priority: high
 
 # Google Drive File operations
 
-Use this operation to create, delete, modify, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
 
 ## Copy a file
 
@@ -54,10 +54,14 @@ You can find the `driveId` and `folderID` by visiting the shared drive or folder
 
 - **APP Properties**: A bundle of arbitrary key-value pairs which are private to the requesting app.
 - **Properties**: A bundle of arbitrary key-value pairs which are visible to all apps.
-- **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. A maximum of 200 revisions can be kept, after which you must delete the pinned revisions.
+- **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. You can keep a maximum of 200 revisions, after which you must delete the pinned revisions.
+<!-- vale from-microsoft.RangeFormat = NO -->
+<!-- vale from-microsoft.Ranges = NO -->
 - **OCR Language**: An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code to help the OCR interpret the content during import.
+<!-- vale from-microsoft.Ranges = YES -->
+<!-- vale from-microsoft.RangeFormat = YES -->
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
-- **Convert to Google Document**: Choose whether to create a Google Document instead of the default `.txt` format. The Google Docs API must be enabled in the [Google API Console](https://console.cloud.google.com/apis/library/docs.googleapis.com) for this to work.
+- **Convert to Google Document**: Choose whether to create a Google Document instead of the default `.txt` format. You must enable the Google Docs API in the [Google API Console](https://console.cloud.google.com/apis/library/docs.googleapis.com) for this to work.
 
 Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert){:target=_blank .external-link} API documentation for more information.
 
@@ -76,7 +80,7 @@ Enter these parameters:
 
 ### Options
 
-- **Delete Permanently**: Choose whether to delete the file immediately instead of moving it to the trash.
+- **Delete Permanently**: Choose whether to delete the file now instead of moving it to the trash.
 
 Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
 
@@ -147,7 +151,9 @@ Enter these parameters:
 ### Options
 
 - **Email Message**: A plain text custom message to include in the notification email.
-- **Move to New Owners Root**: Can be used when trying to transfer ownership while sharing an item not in a shared drive. When enabled, the file is moved to the new owner's My Drive root folder.
+<!-- vale from-microsoft.FirstPerson = NO -->
+- **Move to New Owners Root**: Available when trying to transfer ownership while sharing an item not in a shared drive. When enabled, moves the file to the new owner's My Drive root folder.
+<!-- vale from-microsoft.FirstPerson = YES -->
 - **Send Notification Email**: Whether to send a notification email when sharing to users or groups.
 - **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
 - **Use Domain Admin Access**: Whether to perform the action as a domain administrator.
@@ -174,8 +180,12 @@ Enter these parameters:
 
 - **APP Properties**: A bundle of arbitrary key-value pairs which are private to the requesting app.
 - **Properties**: A bundle of arbitrary key-value pairs which are visible to all apps.
-- **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. A maximum of 200 revisions can be kept, after which you must delete the pinned revisions.
+- **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. You can keep a maximum of 200 revisions, after which you must delete the pinned revisions.
+<!-- vale from-microsoft.RangeFormat = NO -->
+<!-- vale from-microsoft.Ranges = NO -->
 - **OCR Language**: An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code to help the OCR interpret the content during import.
+<!-- vale from-microsoft.Ranges = YES -->
+<!-- vale from-microsoft.RangeFormat = YES -->
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Move to Trash**: Whether to move the file to the trash. Only possible for the file owner.
 - **Return Fields**: Return metadata fields about the file. Can be one or more of the following: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, or **webViewLink**.
@@ -202,8 +212,12 @@ You can find the `driveId` and `folderID` by visiting the shared drive or folder
 
 - **APP Properties**: A bundle of arbitrary key-value pairs which are private to the requesting app.
 - **Properties**: A bundle of arbitrary key-value pairs which are visible to all apps.
-- **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. A maximum of 200 revisions can be kept, after which you must delete the pinned revisions.
+- **Keep Revision Forever**: Choose whether to set the `keepForever` field in the new head revision. This only applies to files with binary content. You can keep a maximum of 200 revisions, after which you must delete the pinned revisions.
+<!-- vale from-microsoft.RangeFormat = NO -->
+<!-- vale from-microsoft.Ranges = NO -->
 - **OCR Language**: An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code to help the OCR interpret the content during import.
+<!-- vale from-microsoft.Ranges = YES -->
+<!-- vale from-microsoft.RangeFormat = YES -->
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Simplify Output**: Choose whether to return a simplified version of the response instead of including all fields.
 

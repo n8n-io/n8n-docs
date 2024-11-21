@@ -13,10 +13,6 @@ If your n8n instance supports **projects**, you'll also be able to view the exec
 /// note | Deleted workflows
 When you delete a workflow, n8n deletes its execution history as well. This means you can't view executions for deleted workflows.
 ///
-## Browse executions
-
-Select **All executions** <span class="inline-image">![All executions menu icon](/_images/common-icons/executions-menu.png){.off-glb}</span> to open the list. 
-
 
 ## Filter executions
 

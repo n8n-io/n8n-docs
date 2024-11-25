@@ -33,10 +33,6 @@ Tell n8n which workflow to call. You can choose either:
 * **Database** and enter a workflow ID.
 * **Parameter** and copy in a complete [workflow JSON](/workflows/export-import/).
 
-### Field to Return
-
-This must match the name of the output property in the workflow you're calling.
-
 ### Workflow Values
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/workflow-values.md"

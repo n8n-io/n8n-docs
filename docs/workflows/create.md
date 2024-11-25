@@ -16,8 +16,8 @@ A workflow is a collection of nodes connected together to automate a process. Yo
 
 Or:
 
-1. Select the  <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **create** button in the upper-right corner from either the <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Overview** page or a specific **project**. Select workflow.
-2. If you're doing this from the <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Overview** page, you'll create the workflow inside your personal space. If you're doing this from inside a project, you'll create the workflow inside that specific project.
+1. Select the  <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **create** button in the upper-right corner from either the **Overview** page or a specific **project**. Select workflow.
+2. If you're doing this from the **Overview** page, you'll create the workflow inside your personal space. If you're doing this from inside a project, you'll create the workflow inside that specific project.
 3. Get started by adding a trigger node: select **Add first step...**
 
 If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/) to quickly try out n8n features.

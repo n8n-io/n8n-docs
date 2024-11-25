@@ -24,7 +24,7 @@ In [projects](/user-management/rbac/), a user's role controls how they can inter
 
 To share a credential: 
 
-1. From the left menu, select either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project.
+1. From the left menu, select either **Overview** or a project.
 2. Select **Credentials** to see a list of your credentials.
 3. Select the credential you want to share.
 4. Select **Sharing**.
@@ -36,7 +36,7 @@ To share a credential:
 
 To unshare a credential:
 
-1. From the left menu, select either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project.
+1. From the left menu, select either **Overview** or a project.
 2. Select **Credentials** to see a list of your credentials.
 3. Select the credential you want to unshare.
 4. Select **Sharing**.

@@ -33,7 +33,7 @@ On the left side of the **Editor UI**, there is a panel which contains the core 
 
 The panel contains the following sections:
 
-- <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
+- **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
 - **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
 - **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
 - **All executions**: Contains information about your workflow executions.

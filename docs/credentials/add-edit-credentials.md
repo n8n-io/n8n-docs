@@ -6,10 +6,21 @@ contentType: howto
 
 # Create and edit credentials
 
-You can get to the credential modal by either: 
+Credentials are securely stored authentication information used to connect n8n workflows to external services such as APIs, or databases.
 
-* Opening the left menu, then selecting either <span class="inline-image">![Home icon](/_images/common-icons/home.png){.off-glb}</span> **Home** or a project, then **Credentials** > **Add Credential** and browsing for the service you want to connect to.
-* Selecting **Create New** in the **Credential** dropdown in a node.
+## Create a credential
+
+1. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** in the upper-left corner of the side menu. Select credential. 
+2. If your n8n instance supports projects, you'll also need to choose whether to create the credential inside your personal space or a specific project you have access to. If you're using the community version, you'll create the credential inside your personal space.
+3. Select the app or service you wish to connect to.
+
+Or:
+
+1. Using the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **Create** button in the upper-right corner from either the **Overview** page or a specific project. Select Credential.
+2.  If you're doing this from the **Overview** page, you'll create the credential inside your personal space. If you're doing this from inside a project, you'll create the credential inside that specific project.
+3. Select the app or service you wish to connect to.
+
+You can also create new credential in the credential drop down when editing a node on the workflow editor.
 
 Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](/integrations/builtin/credentials/) for guidance.
 

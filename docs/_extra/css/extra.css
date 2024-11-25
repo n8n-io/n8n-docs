@@ -14,8 +14,8 @@
   
   
   :root {
-	--color-primary: hsl(26, 78%, 48%);
-	--color-primary-shade-1: hsl(26, 78%, 43%);
+	--color-primary: hsl(31, 100%, 58%);
+	--color-primary-shade-1: hsl(32, 100%, 57%);
 	--color-text-base: #58585F; 
 	--color-text-dark: #555555;
 	--color-background-base: #f2f4f8;

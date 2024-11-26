@@ -44,6 +44,11 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library){:
 Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues/).
+
 --8<-- "_glossary/ai-glossary.md"
 
 --8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

@@ -642,7 +642,9 @@ nav:
         - Pipedrive: integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md
         - Plivo: integrations/builtin/app-nodes/n8n-nodes-base.plivo.md
         - PostBin: integrations/builtin/app-nodes/n8n-nodes-base.postbin.md
-        - Postgres: integrations/builtin/app-nodes/n8n-nodes-base.postgres.md
+        - Postgres:
+          - Postgres: integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues.md
         - PostHog: integrations/builtin/app-nodes/n8n-nodes-base.posthog.md
         - ProfitWell: integrations/builtin/app-nodes/n8n-nodes-base.profitwell.md
         - Pushbullet: integrations/builtin/app-nodes/n8n-nodes-base.pushbullet.md

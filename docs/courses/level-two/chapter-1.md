@@ -175,7 +175,7 @@ There are several ways to transform data for the purposes mentioned above:
 	- Use the [**Split Out node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) to separate a single data item containing a list into multiple items.
 	- Use the [**Aggregate node**](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) to take separate items, or portions of them, and group them together into individual items.
 - Use the **Code node** to write JavaScript functions to modify the data structure of incoming data using the **Run Once for All Items** mode:
-    - To create multiple items from a single item, you can use this JavaScript code assuming the item has the key named `data` with the value being an array of items in the form `[{ "data": [{<item_1>}, {<item_2>}, ...] }]`:
+    - To create multiple items from a single item, you can use JavaScript code like this. This example assumes that the item has a key named `data` set to an array of items in the form of: `[{ "data": [{<item_1>}, {<item_2>}, ...] }]`:
 	```javascript
 	return $input.first().json.data.map(item => {
         return {

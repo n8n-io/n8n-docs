@@ -68,3 +68,26 @@ To use this node, you need to create an application in Slack and enable event su
 You must add the appropriate scopes to your Slack app for this trigger node to work.
 
 The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack/#scopes) list for a more complete list of scopes.
+
+## Common issues
+
+Here are some common errors and issues with the Slack Trigger node and steps to resolve or troubleshoot them.
+
+### Workflow only works in testing or production
+
+Slack only allows you to register a single webhook per app. This means that you can't switch from using the testing URL to the production URL (and vice versa) without reconfiguring the registered webhook URL. 
+
+You may have trouble with this if you try to test a workflow that's also active in production. Slack will only send events to one of the two webhook URLs, so the other will never receive event notifications.
+
+To work around this, you can disable your workflow when testing:
+
+/// warning | Halts production traffic
+This temporarily disables your production workflow for testing. Your workflow will no longer receive production traffic while it's deactivated.
+///
+
+1. Go to your workflow page.
+2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
+3. Edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) to use the testing webhook URL instead of the production webhook URL.
+4. Test your workflow using the test webhook URL.
+5. When you finish testing, edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) to use the production webhook URL instead of the testing webhook URL.
+6. Toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.

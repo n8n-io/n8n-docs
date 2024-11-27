@@ -44,8 +44,8 @@ This release contains bug fixes.
 
 ### Contributors
 
-[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}
-[adina-hub](https://github.com/adina-hub){:target=_blank .external-link}
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+[adina-hub](https://github.com/adina-hub){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

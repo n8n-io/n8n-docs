@@ -143,7 +143,7 @@ Data is only sent to AI services if workspaces have opted in to use the assistan
 - **General Workflow Information**: This includes details about which nodes are present in your workflow, the number of items currently in the workflow, and whether the workflow is active.
 - **Input & Output Schemas of Nodes**: This includes the schema of all nodes with incoming data and the output schema of a node in question. We do not send the actual data value of the schema.
 - **Node Configuration**: This includes the operations, options, and settings chosen in the referenced node.
-- **Code and Expressions**: This includes any code or expressions in the node in question to help with debugging potential issues and optimizations.
+- **Code and Node Parameters**: This includes any code in the code node or parameter values (both text and resolved expressions) that are used in the node configurations. These values are only send when the node in question is opened or is being debugged on.
 
 #### What n8n doesn't share
 

@@ -1,6 +1,6 @@
 ### Operation Mode
 
-This Vector Store node has three modes: **Get Many**, **Insert Documents**, and **Retrieve Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
+This Vector Store node has four modes: **Get Many**, **Insert Documents**, **Retrieve Documents**, and **Update Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
 
 <!-- vale off -->
 #### Get Many
@@ -14,3 +14,7 @@ Use Insert Documents mode to insert new documents into your vector database.
 #### Retrieve Documents (For Agent/Chain)
 
 Use Retrieve Documents mode with a vector-store retriever to retrieve documents from a vector database and provide them to the retriever connected to a chain. In this mode you must connect the node to a retriever node or root node.
+
+#### Update Documents
+
+Use Update Documents mode to update documents in a vector database by ID. Fill in the **ID** with the ID of the embedding entry to update.

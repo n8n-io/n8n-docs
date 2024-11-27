@@ -20,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 	
 ## Node parameters
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
 
 ### Get Many parameters
 

@@ -253,6 +253,8 @@ subreddit
 Subtask
 subtask
 Supabase
+Sysdig
+sysdig
 Syslog
 syslog
 Tapfiliate

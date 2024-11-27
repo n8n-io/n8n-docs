@@ -1168,6 +1168,7 @@ nav:
         - integrations/builtin/credentials/supabase.md
         - integrations/builtin/credentials/surveymonkey.md
         - integrations/builtin/credentials/syncromsp.md
+        - integrations/builtin/credentials/sysdig.md
         - integrations/builtin/credentials/taiga.md
         - integrations/builtin/credentials/tapfiliate.md
         - integrations/builtin/credentials/telegram.md

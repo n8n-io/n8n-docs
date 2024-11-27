@@ -60,8 +60,6 @@ To set up the database connection:
     - **Allow**: Sets the `ssl-mode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
     - **Disable**: Sets the `ssl-mode` parameter to `disable`. Only try a non-SSL connection.
     - **Require**: Sets the `ssl-mode` parameter to `require`. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
-    - **Verify**: Sets the `ssl-mode` parameter to `verify-ca`. Only try an SSL connection and verify that a trusted certificate authority (CA) issued the server certificate.
-    - **Verify-Full**: Sets the `ssl-mode` parameter to `verify-full`. Only try an SSL connection, verify that a trusted certificate authority (CA) issued the server certificate and that the requested server host name matches that in the certificate.
 7. Enter the **Port** number to use for the connection. You can either run the `/conninfo` command to confirm the host name or run this query:
 
     ```

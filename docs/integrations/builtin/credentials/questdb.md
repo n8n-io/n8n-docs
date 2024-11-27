@@ -35,8 +35,6 @@ To configure this credential, you'll need:
     - **Allow**
     - **Disable**
     - **Require**
-    - **Verify**
-    - **Verify-Full**
 - The **Port**: Enter the port number to use for the connection. Default is `8812`.
 
 Refer to [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties){:target=_blank .external-link} for more information.

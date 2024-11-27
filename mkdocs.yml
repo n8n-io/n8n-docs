@@ -779,7 +779,9 @@ nav:
         - Google Calendar Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
         - Google Drive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger.md
         - Google Business Profile Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md
-        - Google Sheets Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger.md
+        - Google Sheets Trigger:
+          - Google Sheets Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md
+          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md
         - Gumroad Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
         - Help Scout Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
         - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md

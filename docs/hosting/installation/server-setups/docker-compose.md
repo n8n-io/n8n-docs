@@ -7,6 +7,8 @@ contentType: tutorial
 
 If you have already installed Docker and Docker-Compose, then you can start with step 4.
 
+You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
+
 --8<-- "_snippets/self-hosting/warning.md"
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"

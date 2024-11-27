@@ -11,6 +11,8 @@ contentType: tutorial
 * Easier setup for your preferred database.
 * Can avoid issues due to different operating systems, as Docker provides a consistent system.
 
+You can also use n8n in Docker with [Docker Compose](/hosting/installation/server-setups/docker-compose/). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
+
 ## Prerequisites
 
 Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}.

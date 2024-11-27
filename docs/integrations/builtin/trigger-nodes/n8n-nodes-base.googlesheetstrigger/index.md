@@ -32,3 +32,6 @@ n8n provides an app node for Google Sheets. You can find the node docs [here](/i
 
 View [example workflows and related content](https://n8n.io/integrations/google-sheets-trigger/){:target=_blank .external-link} on n8n's website.
 
+## Common issues
+
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues/).

@@ -35,4 +35,8 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
 
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues/).
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

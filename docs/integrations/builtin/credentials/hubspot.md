@@ -134,6 +134,7 @@ If you're creating an app for use with the [HubSpot](/integrations/builtin/app-n
 | CRM | Deals | Read <br> Write | `crm.objects.deals.read` <br> `crm.objects.deals.write`|
 | CRM | Deals schemas | Read | `crm.schemas.deals.read` |
 | CRM | Owners | Read | `crm.objects.owners.read` |
+| CRM | Lists | Write | `crm.lists.write` |
 
 /// warning | HubSpot old accounts
 Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.

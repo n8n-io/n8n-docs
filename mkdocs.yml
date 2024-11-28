@@ -714,7 +714,9 @@ nav:
         - Vonage: integrations/builtin/app-nodes/n8n-nodes-base.vonage.md
         - Webflow: integrations/builtin/app-nodes/n8n-nodes-base.webflow.md
         - Wekan: integrations/builtin/app-nodes/n8n-nodes-base.wekan.md
-        - WhatsApp Business Cloud: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp.md
+        - WhatsApp Business Cloud:
+          - WhatsApp Business Cloud: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md
         - Wise: integrations/builtin/app-nodes/n8n-nodes-base.wise.md
         - WooCommerce: integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md
         - WordPress: integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md

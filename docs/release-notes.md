@@ -35,6 +35,32 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.70.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.69.0...n8n@1.70.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-11-27
+
+This release contains node and performance improvements and bug fixes.
+
+### New canvas in beta
+The new canvas is now the default setting for all users. It should bring significant performance improvements and adds a handy minimap. As it is still a beta version you can still revert to the previous version with the three dot menu.  
+
+We're looking forward to your feedback. Should you encounter a bug, you will find a handy button to create an issue at the bottom of the new canvas as well. 
+
+### Node improvements
+- We added credential support for [Zabbix](/integrations/builtin/credentials/zabbix/) to the HTTP request node  
+- We added new OAuth2 credentials for [Microsoft SharePoint](/integrations/builtin/credentials/microsoft/)
+- The [Slack node](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#operations) now uses markdown for the approval message when using the `Send and Wait for Approval` operation
+
+### Contributors
+
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+[adina-hub](https://github.com/adina-hub){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 
 ## n8n@1.68.1
 
@@ -97,11 +123,6 @@ This is the `latest` version. n8n recommends using the `latest` version. The `ne
 ///
 
 
-
-
-
-
-
 This release contains node updates, performance improvements and many bug fixes.
 
 <div class="n8n-new-features" markdown>
@@ -121,10 +142,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 ## n8n@1.67.1
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.67.0...n8n@1.67.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-11-07
-
-
-
-
 
 This release contains a bug fix.
 

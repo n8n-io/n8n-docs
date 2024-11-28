@@ -41,7 +41,7 @@ Now that the table is ready, let's return to the workflow in the n8n Editor UI.
 Add an Airtable node connected to the HTTP Request node.
 
 ///note | Remember
-You can add a ndoe connected to an existing node by selecting the **+** icon next to the existing node.
+You can add a node connected to an existing node by selecting the **+** icon next to the existing node.
 ///
 
 In the node panel:

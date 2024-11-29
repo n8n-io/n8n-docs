@@ -44,14 +44,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.69.0...n8n@1.70.0
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-This release contains node and performance improvements and bug fixes.
+This release contains node updates, performance improvements and bug fixes.
 
 ### New canvas in beta
 The new canvas is now the default setting for all users. It should bring significant performance improvements and adds a handy minimap. As it is still a beta version you can still revert to the previous version with the three dot menu.  
 
 We're looking forward to your feedback. Should you encounter a bug, you will find a handy button to create an issue at the bottom of the new canvas as well. 
 
-### Node improvements
+### Node updates
 - We added credential support for [Zabbix](/integrations/builtin/credentials/zabbix/) to the HTTP request node  
 - We added new OAuth2 credentials for [Microsoft SharePoint](/integrations/builtin/credentials/microsoft/)
 - The [Slack node](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#operations) now uses markdown for the approval message when using the `Send and Wait for Approval` operation

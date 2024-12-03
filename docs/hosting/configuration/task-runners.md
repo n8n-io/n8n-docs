@@ -7,7 +7,7 @@ contentType: howto
 
 # Task runners
 
-Task runners are a generic mechanism to execute tasks in a secure and performant way. They are used to execute user-provided JavaScript code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
 
 This document describes how task runners work and how you can configure them.
 
@@ -17,7 +17,7 @@ The task runner feature consists of three components: a task runner, a task brok
 
 ![Task runner overview](/_images/hosting/configuration/task-runner-concept.png)
 
-Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker, which will be picked up by an available task runner.
+Task runners connect to the task broker using a websocket connection. A task requester submits a task request to the broker where an available task runner can pick it up for execution.
 
 The runner executes the task and submits the results to the task requester. The task broker coordinates communication between the runner and the requester.
 
@@ -33,7 +33,7 @@ In internal mode, the n8n instance launches the task runner as a child process. 
 
 ### External mode
 
-In external mode, an external orchestrator (for example, Kubernetes) launches the task runner instead of n8n. Usually, this means you would configure the task runner to run as a side-car container next to n8n.
+In external mode, an external orchestrator (for example, Kubernetes) launches the task runner instead of n8n. Typically, this means you would configure the task runner to run as a side-car container next to n8n.
 
 ![Task runner deployed as a side-car container](/_images/hosting/configuration/task-runner-external-mode.png)
 
@@ -75,7 +75,7 @@ Set the following environment variables for the container, adjusted to fit your 
 | Environment variables | Description |
 | ------ | ----- |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | The shared secret the task runner uses to connect to the broker. |
-| `N8N_RUNNERS_MAX_CONCURRENCY=5` | How many concurrent tasks the runner can execute. |
+| `N8N_RUNNERS_MAX_CONCURRENCY=5` | The number of concurrent tasks the runner can execute. |
 | `N8N_RUNNERS_SERVER_ENABLED=true` | Enable the health check server on the runner. |
 | `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679` | The address of the task broker server within the n8n instance. |
 | `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15` | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |

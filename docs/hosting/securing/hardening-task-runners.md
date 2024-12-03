@@ -7,7 +7,7 @@ contentType: howto
 
 # Hardening task runners
 
-[Task runners](/hosting/configuration/task-runners/) are responsible for executing code from the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/). While Code node executions are generally safe, you can follow these recommendations to further harden your task runners.
+[Task runners](/hosting/configuration/task-runners/) are responsible for executing code from the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/). While Code node executions are secure, you can follow these recommendations to further harden your task runners.
 
 ## Run task runners as sidecars in external mode
 

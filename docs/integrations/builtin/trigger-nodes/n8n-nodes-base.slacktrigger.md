@@ -92,6 +92,6 @@ This temporarily disables your production workflow for testing. Your workflow wi
 5. When you finish testing, edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) to use the production webhook URL instead of the testing webhook URL.
 6. Toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
 
-### Token Expired
+### Token expired
 
 --8<-- "_snippets/integrations/builtin/credentials/slack/token-rotation.md"

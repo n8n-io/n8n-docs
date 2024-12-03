@@ -1,7 +1,7 @@
-Slack offers **token rotation** that can be turned on for bot and user tokens. This will make the token expire every 12 hours. While this may be useful for testing, it will cause the n8n credential to fail after expiry. If you want to use your slack credentials in production, this feature needs to be turned **off**. 
+Slack offers **token rotation** that you can turn on for bot and user tokens. This makes every tokens expire after 12 hours. While this may be useful for testing, n8n credentials using tokens with this enabled will fail after expiry. If you want to use your Slack credentials in production, you need to turn this feature **off**.
 
-To check if you have token rotation turned on for your slack app, please refer to the [Slack API Documentation | Token Rotation](https://api.slack.com/authentication/rotation){:target=_blank .external-link} for instructions.
+To check if your Slack app has token rotation turned on, refer to the [Slack API Documentation | Token Rotation](https://api.slack.com/authentication/rotation){:target=_blank .external-link}.
 
-/// note | If Token Rotation has been activated
-Please note, token rotation may not be turned off again and you will have to create a new slack app instead. 
+/// note | If your app uses token rotation
+Please note, if your Slack app uses token rotation, you can't turn it off again. You need to create a new Slack app with token rotation disabled instead. 
 ///

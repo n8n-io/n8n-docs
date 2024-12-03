@@ -127,8 +127,8 @@ Here's the list of scopes the OAuth credential requires, which are a good starti
 | `users.profile:write` | Not available as a bot token scope |
 | `users:read` | |
 
-## Troubleshooting
+## Common issues
 
-### Token Expired
+### Token expired
 
 --8<-- "_snippets/integrations/builtin/credentials/slack/token-rotation.md"

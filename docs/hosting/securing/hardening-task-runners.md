@@ -11,4 +11,4 @@ contentType: howto
 
 ## Run task runners as sidecars in external mode
 
-To increase the isolation between the core n8n process and code in the Code node, run task runners in [external mode](/hosting/configuration/task-runners#setting-up-external-mode). External task runners launch as separate containers, providing a sandboxed environment to execute the JavaScript defined in the Code node.
+To increase the isolation between the core n8n process and code in the Code node, run task runners in [external mode](/hosting/configuration/task-runners#setting-up-external-mode). External task runners launch as separate containers, providing a fully isolated environment to execute the JavaScript defined in the Code node.

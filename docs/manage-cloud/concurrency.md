@@ -22,6 +22,8 @@ n8n limits the number of concurrent executions for Cloud instances according to 
 * Pro (50k workflow executions, 50 active workflows): 50
 * Enterprise (in regular mode): 200
 
+You can view the number of active executions and your plan's concurrency limit at the top of a project's or workflow's executions tab.
+
 ## Details
 
 Some other details about concurrency to keep in mind:

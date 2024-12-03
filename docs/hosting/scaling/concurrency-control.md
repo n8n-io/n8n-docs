@@ -28,6 +28,8 @@ Keep in mind:
 - To monitor concurrency control, watch logs for executions being added to the queue and released. In a future version, n8n will show concurrency control in the UI.
 <!-- vale on -->
 
+When you enable concurrency control, you can view the number of active executions and the configured limit at the top of a project's or workflow's executions tab.
+
 ## Comparison to queue mode
 
 In queue mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode/#configure-worker-concurrency).

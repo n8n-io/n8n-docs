@@ -30,7 +30,7 @@ Refer to [Webflow's API documentation](https://developers.webflow.com/data/refer
 
 To configure this credential, you'll need:
 
-- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Generate an API token](https://developers.webflow.com/data/docs/get-a-site-token){:target=_blank .external-link} for more information.
+- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Get a Site Token](https://developers.webflow.com/data/docs/get-a-site-token){:target=_blank .external-link} for more information.
 
 ## Using OAuth2
 
@@ -44,4 +44,4 @@ Use these settings for your application:
 - Once you've created your application, copy the **Client ID** and **Client Secret** and enter them in your n8n credential.
 - If you are using the Webflow Data API V1 (deprecated), enable the **Legacy** toggle. Otherwise, leave this inactive.
 
-Refer to [OAuth 2.0](https://developers.webflow.com/data/reference/oauth-app){:target=_blank .external-link} for more information on Webflow's OAuth web flow.
+Refer to [OAuth](https://developers.webflow.com/data/reference/oauth-app){:target=_blank .external-link} for more information on Webflow's OAuth web flow.

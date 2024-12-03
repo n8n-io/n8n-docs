@@ -69,7 +69,6 @@ You must add the appropriate scopes to your Slack app for this trigger node to w
 
 The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack/#scopes) list for a more complete list of scopes.
 
-<<<<<<< Updated upstream
 ## Common issues
 
 Here are some common errors and issues with the Slack Trigger node and steps to resolve or troubleshoot them.

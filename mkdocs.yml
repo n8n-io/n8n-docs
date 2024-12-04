@@ -608,7 +608,9 @@ nav:
         - Monica CRM: integrations/builtin/app-nodes/n8n-nodes-base.monicacrm.md
         - MQTT: integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md
         - MSG91: integrations/builtin/app-nodes/n8n-nodes-base.msg91.md
-        - MySQL: integrations/builtin/app-nodes/n8n-nodes-base.mysql.md
+        - MySQL:
+          - MySQL: integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md
         - Customer Datastore (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore.md
         - Customer Messenger (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md
         - NASA: integrations/builtin/app-nodes/n8n-nodes-base.nasa.md

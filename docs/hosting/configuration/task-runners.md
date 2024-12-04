@@ -61,7 +61,7 @@ For full list of environment variables see [task runner environment variables](/
 
 The task runner comes bundled within the n8n Docker image. The Docker image also includes the task runner launcher.
 
-The launcher can start the runner on-demand, which means lower memory usage when there's no work needed, but a short delay (few hundred ms) in cold-start. The launcher also monitors the launcher and restarts it in case of infinite loops or other issues.
+The launcher can start the runner on-demand, which means lower memory usage when there's no work needed, but a short delay (few hundred ms) in cold-start. The launcher also monitors the runner and restarts it in case of infinite loops or other issues.
 
 Run a task runner container from the n8n Docker image by setting the following properties:
 

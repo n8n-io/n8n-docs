@@ -197,6 +197,8 @@ Ortto
 Oura
 PDFs
 Peekalink
+Performant
+performant
 PGVector
 PhantomBuster
 Pinterest
@@ -226,6 +228,8 @@ Rekognition
 requester
 Rundeck
 Salesmate
+Sandboxed
+sandboxed
 Sekoia
 Sendy
 Serp

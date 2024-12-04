@@ -69,3 +69,7 @@ Then in **Query Parameters**, provide the field values to use. You can provide f
 // users is an example table name
 users, {{ $json.email }} 
 ```
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues/).

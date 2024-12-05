@@ -1,11 +1,16 @@
 /* form itself */
 .md-feedback {
+	background-color: var(--color-primary-tint-1);
+	padding: 10px;
+}
+
+.md-feedback fieldset {
 }
 
 /* form title */
 .md-feedback__title {
 	color: var(--color-primary);
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 }
 
 /* container for vote buttons and note */
@@ -17,6 +22,9 @@
 }
 
 /* rating button icons */
+.md-feedback__icon {
+}
+
 .md-feedback__icon svg {
 	width: 1.5rem;
 	height: 1.5rem;

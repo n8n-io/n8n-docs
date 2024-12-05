@@ -17,6 +17,7 @@
   :root {
 	--color-primary: hsl(170, 69%, 35%);
 	--color-primary-shade-1: hsl(170, 69%, 30%);
+	--color-primary-tint-1: hsl(170, 69%, 97%);
 	--color-text-base: #58585F; 
 	--color-text-dark: #555555;
 	--color-background-base: #f2f4f8;

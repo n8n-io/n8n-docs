@@ -33,6 +33,44 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.71.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.70.2...n8n@1.71.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-12-04
+
+This release contains node updates, performance improvements, and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+### Task runners for the Code node in public beta
+We're introducing a significant performance upgrade to the Code node with our new Task runner system. This enhancement moves JavaScript code execution to a separate process, improving your workflow execution speed while adding better isolation.
+
+<figure markdown="span">
+    ![Task runners overview](/_images/hosting/configuration/task-runner-concept.png)
+    <figcaption>Task runners overview</figcaption>
+</figure>
+
+Our benchmarks show up to 6x improvement in workflow executions using Code nodes - from approximately 6 to 35 executions per second. All these improvements happen under the hood, keeping your Code node experience exactly the same.
+
+The Task runner comes in two modes:
+
+- Internal mode (default): Perfect for getting started, automatically managing task runners as child processes  
+- External mode: For advanced hosting scenarios requiring maximum isolation and security
+
+Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables/task-runners/). Once stable, it will become the default execution method for Code nodes.
+
+To start using Task runners today, [check out the docs](/hosting/configuration/task-runners/).
+
+</div>
+
+### Node updates
+
+- [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/): We improved the prompt for code generation to transform data
+- [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/): We added a warning if `pairedItem` is absent or could not be auto mapped  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
 ## n8n@1.70.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.70.1...n8n@1.70.2){:target=_blank .external-link} for this version.<br />
@@ -73,8 +111,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.69.0...n8n@1.70.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-11-27
 
-
-
 This release contains node updates, performance improvements and bug fixes.
 
 ### New canvas in beta
@@ -96,7 +132,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 
 
-
 ## n8n@1.68.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.68.0...n8n@1.68.1){:target=_blank .external-link} for this version.<br />
@@ -114,9 +149,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.69.1...n8n@1.69.2
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
-
-
-
 
 
 This release contains a bug fix.
@@ -156,8 +188,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.67.1...n8n@1.68.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-11-13
-
-
 
 
 This release contains node updates, performance improvements and many bug fixes.
@@ -207,8 +237,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.65.2...n8n@1.66.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-31
 
-
-
 This release contains performance improvements, a node update and bug fixes.
 
 ### Node update
@@ -231,8 +259,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.65.1...n8n@1.65.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-28
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -241,8 +267,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.64.2...n8n@1.64.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-10-25
-
-
 
 This release contains bug fixes.
 

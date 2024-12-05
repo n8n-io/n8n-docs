@@ -84,6 +84,7 @@ extra_css:
   - _extra/css/macro-styles.css
   - _extra/css/templates-widget.css
   - _extra/css/workflow-demo.css
+  - _extra/css/feedback.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js

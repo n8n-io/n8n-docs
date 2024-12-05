@@ -64,7 +64,7 @@ extra:
           note: >-
             Thanks for your feedback!
         - icon: material/emoticon-sad-outline
-          name: This page could be improved
+          name: This page wasn't helpful
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by
@@ -84,6 +84,7 @@ extra_css:
   - _extra/css/macro-styles.css
   - _extra/css/templates-widget.css
   - _extra/css/workflow-demo.css
+  - _extra/css/feedback.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js

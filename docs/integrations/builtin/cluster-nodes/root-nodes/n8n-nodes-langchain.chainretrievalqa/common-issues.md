@@ -31,7 +31,7 @@ This error displays when n8n tries to execute the node without having a Retrieve
 
 To resolve this, click the + Retriever button at the bottom of your screen when the node is open, or click the Retriever + connector when the node isn't open. n8n will then open a selection of possible Retrievers to pick from.
 
-## Question and Answer Chain doesn't produce long responses
+## Can't produce longer responses
 
 If you need to generate longer responses than the Question and Answer Chain node produces by default, you can try one or more of the following techniques:
 

@@ -608,7 +608,9 @@ nav:
         - Monica CRM: integrations/builtin/app-nodes/n8n-nodes-base.monicacrm.md
         - MQTT: integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md
         - MSG91: integrations/builtin/app-nodes/n8n-nodes-base.msg91.md
-        - MySQL: integrations/builtin/app-nodes/n8n-nodes-base.mysql.md
+        - MySQL:
+          - MySQL: integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md
         - Customer Datastore (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore.md
         - Customer Messenger (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md
         - NASA: integrations/builtin/app-nodes/n8n-nodes-base.nasa.md
@@ -1292,24 +1294,25 @@ nav:
     - Configuration:
       - Environment variables:
         - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - Binary data: hosting/configuration/environment-variables/binary-data.md
         - Credentials: hosting/configuration/environment-variables/credentials.md
         - Database: hosting/configuration/environment-variables/database.md
         - Deployment: hosting/configuration/environment-variables/deployment.md
-        - Binary data: hosting/configuration/environment-variables/binary-data.md
-        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
         - Endpoints: hosting/configuration/environment-variables/endpoints.md
-        - External hooks: hosting/configuration/environment-variables/external-hooks.md
         - Executions: hosting/configuration/environment-variables/executions.md
-        - Logs: hosting/configuration/environment-variables/logs.md
         - External data storage: hosting/configuration/environment-variables/external-data-storage.md
+        - External hooks: hosting/configuration/environment-variables/external-hooks.md
+        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Logs: hosting/configuration/environment-variables/logs.md
+        - License: hosting/configuration/environment-variables/licenses.md
         - Nodes: hosting/configuration/environment-variables/nodes.md
         - Queue mode: hosting/configuration/environment-variables/queue-mode.md
         - Security: hosting/configuration/environment-variables/security.md
         - Source control: hosting/configuration/environment-variables/source-control.md
-        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Task runners: hosting/configuration/environment-variables/task-runners.md
         - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
+        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
         - Workflows: hosting/configuration/environment-variables/workflows.md
-        - License: hosting/configuration/environment-variables/licenses.md
       - Configuration methods: hosting/configuration/configuration-methods.md
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md
@@ -1325,6 +1328,7 @@ nav:
         - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
         - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - Task runners: hosting/configuration/task-runners.md
       - User management: hosting/configuration/user-management-self-hosted.md
     - Logging and monitoring:
       - Logging: hosting/logging-monitoring/logging.md
@@ -1347,6 +1351,7 @@ nav:
       - Disable the API: hosting/securing/disable-public-api.md
       - Opt out of data collection: hosting/securing/telemetry-opt-out.md
       - Blocking nodes: hosting/securing/blocking-nodes.md
+      - Hardening task runners: hosting/securing/hardening-task-runners.md
     - Starter Kits:
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
     - Architecture:

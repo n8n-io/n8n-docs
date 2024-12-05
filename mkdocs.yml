@@ -64,7 +64,7 @@ extra:
           note: >-
             Thanks for your feedback!
         - icon: material/emoticon-sad-outline
-          name: This page could be improved
+          name: This page wasn't helpful
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by

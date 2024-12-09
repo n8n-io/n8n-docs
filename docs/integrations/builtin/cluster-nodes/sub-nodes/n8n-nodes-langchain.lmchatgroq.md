@@ -20,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* **Model**: Select the model which will generate the completion. n8n dynaymically loads available models from the Groq API. Learn more in the [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}.
+* **Model**: Select the model which will generate the completion. n8n dynamically loads available models from the Groq API. Learn more in the [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}.
 
 ## Node options
 

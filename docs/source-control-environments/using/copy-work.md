@@ -35,9 +35,11 @@ A common pattern is:
 You can automate parts of the process of copying work, using the `/source-control/pull` API endpoint. Call the API after merging the changes:
 
 ```curl
-curl --location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
+curl --request POST \
+	--location '<YOUR-INSTANCE-URL>/api/v1/source-control/pull' \
 	--header 'Content-Type: application/json' \
-	--header 'X-N8N-API-KEY: <YOUR-API-KEY>'
+	--header 'X-N8N-API-KEY: <YOUR-API-KEY>' \
+	--data '{"force": true}'
 ```
 
 This means you can use a GitHub Action or GitLab CI/CD to automatically pull changes to the production instance on merge.

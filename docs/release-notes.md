@@ -40,13 +40,18 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.71.0...n8n@1.72.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-12-11
 
-This release contains bug fixes.
+This release contains node updates, usability improvements, and bug fixes.
 
+### Node updates
 
+- [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/): The `maximum context length` error now retries with reduced payload size
+- [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/): Added support for `continue on fail`
+
+### Improved commit modal 
+
+We added filters and text search to the commit modal when working with [Environments](/source-control-environments/). This will make committing easier as we provide more information and better visibility. Environments are available on the Enterprise plan. 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.71.2
 
@@ -79,8 +84,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.71.0...n8n@1.71.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-12-06
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -89,8 +92,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.70.2...n8n@1.70.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-12-05
-
-
 
 This release contains bug fixes.
 

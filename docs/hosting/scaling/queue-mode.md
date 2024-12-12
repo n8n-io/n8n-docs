@@ -135,7 +135,7 @@ You can view running workers and their performance metrics in n8n by selecting *
 
 ## Running n8n with queues
 
-When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency. However, the manual workflow executions still use the main process.
+When running n8n with queues, all the production workflow executions get processed by worker processes. This means that even the webhook calls get delegated to the worker processes, which might add some overhead and extra latency.
 
 Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 
@@ -184,7 +184,7 @@ When using multiple webhook processes you will need a load balancer to route req
 - Redirect any request that matches `/webhook/*` to the webhook servers pool
 - All other paths (the n8n internal API, the static files for the editor, etc.) should get routed to the main process
 
-**Note:** Manual workflow executions still occur on the main process and the default URL for these is `/webhook-test/*`. Make sure that these URLs route to your main process.
+**Note:** The default URL for manual workflow executions is `/webhook-test/*`. Make sure that these URLs route to your main process.
 
 You can change this path in the configuration file `endpoints.webhook` or using the `N8N_ENDPOINT_WEBHOOK` environment variable. If you change these, update your load balancer accordingly.
 
@@ -219,7 +219,7 @@ In queue mode you can run more than one `main` process for high availability.
 
 In a single-mode setup, the `main` process does two sets of tasks: 
 
-- **regular tasks**, such as running the API, serving the UI, listening for webhooks, and handling manual executions, and 
+- **regular tasks**, such as running the API, serving the UI, and listening for webhooks, and 
 - **at-most-once tasks**, such as running non-HTTP triggers (timers, pollers, and persistent connections like RabbitMQ and IMAP), and pruning executions and binary data.
 
 In a multi-main setup, there are two kinds of `main` processes:

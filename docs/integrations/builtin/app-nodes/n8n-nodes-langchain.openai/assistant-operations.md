@@ -114,7 +114,7 @@ Enter these parameters:
   Always respond in a friendly and engaging manner. When a user asks a question, provide a concise answer first, followed by a brief explanation or additional context if necessary. If the question is open-ended, offer a suggestion or ask a clarifying question to guide the conversation. Keep the tone positive and supportive, and avoid technical jargon unless specifically requested by the user.
   ```
 - **Knowledge Retrieval**: Turn on to enable knowledge retrieval for the assistant, allowing it to access external sources or a connected knowledge base. Refer to [File Search | OpenAI Platform](https://platform.openai.com/docs/assistants/tools/file-search){:target=_blank .external-link} for more information. 
-- **Files**: Select a file to upload for your external knowledge source. Use [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md#upload-a-file) operation to add more files. 
+- **Files**: Select a file to upload for your external knowledge source. Use [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#upload-a-file) operation to add more files. 
 - **Model**: Select the model that the assistant will use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
 - **Name**: Enter the name of the assistant. The maximum length is 256 characters.
 - **Remove All Custom Tools (Functions)**: Turn on to remove all custom tools (functions) from the assistant. 

@@ -38,7 +38,7 @@ An expression is a string of characters and symbols in a programming language th
 
 In the If node window, configure the parameters:
 
-- **Value 1**: `{{$json["orderStatus"]}}`
+- **Value 1**: `{{ $json.orderStatus }}`
     1. To select this value, first hover over the value1 field.
     2. Select the **Expression** tab on the right side of the Value 1 field.
     3. Next, open the expression editor by selecting the link icon: 

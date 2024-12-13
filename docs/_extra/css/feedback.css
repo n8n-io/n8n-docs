@@ -25,6 +25,10 @@
 .md-feedback__icon {
 }
 
+.md-feedback__icon:enabled.md-icon[data-md-value="0"]:hover {
+	color: var(--color-feedback-negative);
+}
+
 .md-feedback__icon svg {
 	width: 1.5rem;
 	height: 1.5rem;

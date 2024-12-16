@@ -18,14 +18,14 @@ Most nodes, including root nodes, take any number of items as input, process the
 
 In sub-nodes, the expression always resolves to the first item. For example, given an input of five name values, the expression `{{ $json.name }}` always resolves to the first name.
 
-## How do I add the structured output parser node?
+## Adding the structured output parser node to AI nodes
 
-Output parser nodes can be attached select [AI root nodes](/integrations/builtin/cluster-nodes/root-nodes/).
+You can attach output parser nodes to select [AI root nodes](/integrations/builtin/cluster-nodes/root-nodes/).
 
 To add the Structured Output Parser to a node, enable the **Require Specific Output Format** option in the AI root node you wish to format. Once the option is enabled, a new **output parser** attachment point is displayed. Click the **output parser** attachment point to add the Structured Output Parser node to the node.
 
 ## Using the structured output parser to format intermediary steps
 
-The Structured Output Parser node is intended to structure the final output from AI agents. It is not intended to structure intermediary output to pass to additional AI tools or stages.
+The Structured Output Parser node structures the final output from AI agents. It's not intended to structure intermediary output to pass to other AI tools or stages.
 
 To request a specific format for intermediary output, include the response structure in the **System Message** for the **AI Agent**. The message can include either a schema or example response for the agent to use as a template for its results.

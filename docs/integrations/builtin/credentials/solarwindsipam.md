@@ -22,6 +22,6 @@ To configure this credential, you'll need a SolarWinds IPAM account and:
 
 - URL - The base url for your SolarWinds IPAM server
 - Username - The username you use to access SolarWinds IPAM
-- Password - The password you use to access SolarWinds IPAM
+- **Password**: The password you use to access SolarWinds IPAM
 
 Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST){:target=_blank .external-link} for more information about authenticating to the service.

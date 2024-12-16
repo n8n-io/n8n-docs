@@ -22,7 +22,7 @@ Refer to [SolarWinds Observability SaaS's API documentation](https://documentati
 
 To configure this credential, you'll need a SolarWinds Observability SaaS account and:
 
-- URL - The URL you use to access the SolarWinds Observability SaaS platform
+- **URL**: The URL you use to access the SolarWinds Observability SaaS platform
 - API Token - An API token found under `Settings > Api Tokens`
 
 Refer to [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/settings/api-tokens.htm){:target=_blank .external-link} for more information about authenticating to the service.

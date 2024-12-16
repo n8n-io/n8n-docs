@@ -47,5 +47,5 @@ services:
 You should also give the right permissions to the imported certs. You can do this once the container is running:
 
 ```bash
-docker exec --user 0 n8n chown -R /opt/custom-certificates
+docker exec --user 0 n8n chown -R 1000:1000 /opt/custom-certificates
 ```

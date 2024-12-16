@@ -912,7 +912,9 @@ nav:
           - Zep: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md
           - Auto-fixing Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing.md
           - Item List Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist.md
-          - Structured Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured.md
+          - Structured Output Parser:
+            - Structured Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/index.md
+            - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues.md
           - Contextual Compression Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression.md
           - MultiQuery Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery.md
           - Vector Store Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md

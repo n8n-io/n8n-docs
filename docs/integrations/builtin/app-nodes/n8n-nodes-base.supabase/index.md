@@ -31,3 +31,7 @@ Refer to [Supabase credentials](/integrations/builtin/credentials/supabase/) for
 [[ templatesWidget(page.title, 'supabase') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues/).

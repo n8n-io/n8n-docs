@@ -58,6 +58,7 @@ You can configure n8n to use external task runners by setting the following envi
 | `N8N_RUNNERS_ENABLED=true`                             | Enables task runners.                                      |
 | `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                         |
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker. |
+| `N8N_RUNNERS_SERVER_LISTEN_ADDRESS=0.0.0.0` | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
 
 For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners/).
 

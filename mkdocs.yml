@@ -1162,12 +1162,12 @@ nav:
         - integrations/builtin/credentials/serp.md
         - integrations/builtin/credentials/servicenow.md
         - integrations/builtin/credentials/sms77.md
-        - integrations/builtin/credentials/solarwindsobservability.md
         - integrations/builtin/credentials/shopify.md
         - integrations/builtin/credentials/shuffler.md
         - integrations/builtin/credentials/signl4.md
         - integrations/builtin/credentials/slack.md
         - integrations/builtin/credentials/snowflake.md
+        - integrations/builtin/credentials/solarwindsobservability.md
         - integrations/builtin/credentials/splunk.md
         - integrations/builtin/credentials/spontit.md
         - integrations/builtin/credentials/spotify.md

@@ -40,5 +40,6 @@ To configure this credential, you'll need:
 - Select the **Actor**: The actor defines how the OAuth2 application should create issues, comments and other changes. Options include:
     - **User** (Linear's default): The application creates resources as the authorizing user. Use this option if you want each user to do their own authentication.
     - **Application**: The application creates resources as itself. Use this option if you have only one user (like an admin) authorizing the application.
+- To use this credential with the [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger/) node, you must enable the **Include Admin Scope** toggle.
 
 Refer to the [Linear OAuth2 Authentication documentation](https://developers.linear.app/docs/oauth/authentication){:target=_blank .external-link} for more detailed instructions and explanations. Use the n8n **OAuth Redirect URL** as the **Redirect callback URL** in your Linear OAuth2 application.

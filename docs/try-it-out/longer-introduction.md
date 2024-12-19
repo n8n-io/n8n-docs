@@ -93,7 +93,7 @@ Add the If node:
 		If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
 		///
 
-    2. Change the comparison operation to **String>Contains**.
+    2. Change the comparison operation to **String > Contains**.
     3. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
 1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 

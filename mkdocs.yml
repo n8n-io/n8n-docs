@@ -1174,6 +1174,7 @@ nav:
         - integrations/builtin/credentials/slack.md
         - integrations/builtin/credentials/snowflake.md
         - integrations/builtin/credentials/solarwindsipam.md
+        - integrations/builtin/credentials/solarwindsobservability.md
         - integrations/builtin/credentials/splunk.md
         - integrations/builtin/credentials/spontit.md
         - integrations/builtin/credentials/spotify.md

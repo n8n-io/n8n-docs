@@ -36,7 +36,7 @@ In Chat Triggers, the **Load Previous Session** option retrieves previous chat m
 1. In your **Chat Trigger** node, set the **Load Previous Session** option to **From Memory**. This is only visible if you've made the chat publicly available.
 2. Attach a **Window Buffer Memory** node to the **Memory** connector.
 3. Attach the same **Window Buffer Memory** node to **Memory** connector of your **Agent**.
-4. In the **Window Buffer Memory** node, set **Session ID** to **Take from previous node automatically**.
+4. In the **Window Buffer Memory** node, set **Session ID** to **Connected Chat Trigger Node**.
 
 One instance where you may want to attach separate memory nodes to your Chat Trigger and the Agent is if you want to set the **Session ID** in your memory node to **Define below**.
 

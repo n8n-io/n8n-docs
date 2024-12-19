@@ -19,7 +19,7 @@ You might see this in one of two scenarios:
 1. When you've set the **Prompt** to **Define below** and have an expression in your **Text** that isn't generating a value.
     * To resolve, enter a valid prompt in the **Text** field.
     * Make sure any expressions reference valid fields and that they resolve to valid input rather than null.
-2. When you've set the **Prompt** to **Take from previous node automatically** and the incoming data has null values.
+2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has null values.
     * To resolve, make sure your input contains a `chatInput` field. Add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node to edit an incoming field name to `chatInput`.
     * Remove any null values from the `chatInput` field of the input node.
 

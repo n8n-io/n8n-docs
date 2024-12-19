@@ -79,7 +79,7 @@ Enter these parameters:
 - **Operation**: Select **Message an Assistant**.
 - **Assistant**: Select the assistant you want to message.
 - **Prompt**: Enter the text prompt or message that you want to send to the assistant.
-    - **Take from Previous Node Automatically**: Automatically use the input from a previous node's `chatInput` field.
+    - **Connected Chat Trigger Node**: Automatically use the input from a previous node's `chatInput` field.
     - **Define Below**: Manually define the prompt by entering static text or using an expression to reference data from previous nodes.
 
 ### Options

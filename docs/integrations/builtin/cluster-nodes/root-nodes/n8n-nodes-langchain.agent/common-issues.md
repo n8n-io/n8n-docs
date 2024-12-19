@@ -26,7 +26,7 @@ You might see this in one of two scenarios:
 
 1. When you've set the **Prompt** to **Define below** and have an expression in your **Text** that isn't generating a value.
     * To resolve, make sure your expressions reference valid fields and that they resolve to valid input rather than null.
-2. When you've set the **Prompt** to **Take from previous node automatically** and the incoming data has null values.
+2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has null values.
     * To resolve, remove any null values from the `chatInput` field of the input node.
 
 ## Error in sub-node Window Buffer Memory
@@ -47,4 +47,4 @@ To resolve this, click the + Chat Model button at the bottom of your screen when
 
 This error occurs when the agent expects to get the prompt from the previous node automatically. Typically, this happens when you're using the [Chat Trigger Node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/). 
 
-To resolve this issue, find the **Prompt** parameter of the AI Agent node and change it from **Take from previous node automatically** to **Define below**. This allows you to manually build your prompt by referencing output data from other nodes or by adding static text.
+To resolve this issue, find the **Prompt** parameter of the AI Agent node and change it from **Connected Chat Trigger Node** to **Define below**. This allows you to manually build your prompt by referencing output data from other nodes or by adding static text.

@@ -55,6 +55,7 @@ To get the Record ID of your record, you can use the **List** operation of the A
 ### Filter records when using the List operation
 
 To filter records from your Airtable base, use the **Filter By Formula** option. For example, if you want to return all the users that belong to the organization `n8n`, follow the steps mentioned below:
+
 1. Select 'List' from the **Operation** dropdown list.
 2. Enter the base ID and the table name in the **Base ID** and **Table** field, respectively.
 3. Click on **Add Option** and select 'Filter By Formula' from the dropdown list.
@@ -64,8 +65,6 @@ Similarly, if you want to return all the users that don't belong to the organiza
 
 Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference){:target=_balnk .external-link} to learn more about the formulas.
 
+## Common issues
 
-
-
-
-
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues/).

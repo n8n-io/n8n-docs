@@ -444,7 +444,9 @@ nav:
         - Adalo: integrations/builtin/app-nodes/n8n-nodes-base.adalo.md
         - Affinity: integrations/builtin/app-nodes/n8n-nodes-base.affinity.md
         - Agile CRM: integrations/builtin/app-nodes/n8n-nodes-base.agilecrm.md
-        - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable.md
+        - Airtable:
+          - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md

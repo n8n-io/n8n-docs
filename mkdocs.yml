@@ -686,7 +686,9 @@ nav:
         - Strapi: integrations/builtin/app-nodes/n8n-nodes-base.strapi.md
         - Strava: integrations/builtin/app-nodes/n8n-nodes-base.strava.md
         - Stripe: integrations/builtin/app-nodes/n8n-nodes-base.stripe.md
-        - Supabase: integrations/builtin/app-nodes/n8n-nodes-base.supabase.md
+        - Supabase:
+          - Supabase: integrations/builtin/app-nodes/n8n-nodes-base.supabase/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues.md
         - SyncroMSP: integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md
         - Taiga: integrations/builtin/app-nodes/n8n-nodes-base.taiga.md
         - Tapfiliate: integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md

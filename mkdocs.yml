@@ -1173,6 +1173,7 @@ nav:
         - integrations/builtin/credentials/signl4.md
         - integrations/builtin/credentials/slack.md
         - integrations/builtin/credentials/snowflake.md
+        - integrations/builtin/credentials/solarwindsipam.md
         - integrations/builtin/credentials/splunk.md
         - integrations/builtin/credentials/spontit.md
         - integrations/builtin/credentials/spotify.md

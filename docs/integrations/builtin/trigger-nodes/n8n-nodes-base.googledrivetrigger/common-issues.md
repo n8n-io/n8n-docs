@@ -29,6 +29,14 @@ To resolve:
     1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
     2. Make sure you add the Google Drive API as part of the domain-wide delegation configuration.
 
+## Handling more than one file change
+
+The Google Drive Trigger node polls Google Drive for changes at a set interval (once every minute by default).
+
+If multiple changes to the **Watch For** criteria occur during the polling interval, a single Google Drive Trigger event occurs containing the changes as items. To handle this, your workflow must account for times when the data might contain more than one item.
+
+You can use an [if node](/integrations/builtin/core-nodes/n8n-nodes-base.if/) or a [switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/) to change your workflow's behavior depending on whether the data from the Google Drive Trigger node contains a single item or multiple items.
+
 ## Google Drive Trigger not capturing when file moved into a folder
 
 To trigger a workflow when a file is moved into a Google Drive folder, you can set a Google Drive Trigger node to watch for file changes.

@@ -93,13 +93,15 @@ Add the If node:
 		If you didn't follow the step in the previous section to run the NASA node, you won't see any data to work with in this step.
 		///
 
-    2. Change the comparison operation to **Contains**.
+    2. Change the comparison operation to **String > Contains**.
     3. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
 1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
 /// note | Weeks without large solar flares
 In this tutorial, you are working with live date. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**. 
 ///
+
+5. Once you are happy the node will return some events, you can close the node to return to the canvas.
 
 ## Step six: Output data from your workflow
 
@@ -112,7 +114,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 1. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
 1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 1. In n8n, paste your Postbin ID into **Bin ID**.
-1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
+1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
 1. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
 1. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
     ```js

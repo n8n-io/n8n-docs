@@ -28,3 +28,5 @@ Outbound traffic may appear to originate from any of:
 * 72.144.128.145
 * 72.144.83.147
 * 72.144.69.38
+* 72.144.111.50
+* 4.182.128.108

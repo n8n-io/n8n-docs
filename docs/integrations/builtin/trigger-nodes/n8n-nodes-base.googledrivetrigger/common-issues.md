@@ -36,15 +36,3 @@ The Google Drive Trigger node polls Google Drive for changes at a set interval (
 If multiple changes to the **Watch For** criteria occur during the polling interval, a single Google Drive Trigger event occurs containing the changes as items. To handle this, your workflow must account for times when the data might contain more than one item.
 
 You can use an [if node](/integrations/builtin/core-nodes/n8n-nodes-base.if/) or a [switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/) to change your workflow's behavior depending on whether the data from the Google Drive Trigger node contains a single item or multiple items.
-
-## Google Drive Trigger not capturing when file moved into a folder
-
-To trigger a workflow when a file is moved into a Google Drive folder, you can set a Google Drive Trigger node to watch for file changes.
-
-To configure this behavior:
-
-1. Set the **Trigger On** parameter to **Changes Involving a Specific Folder**.
-2. Select the **Folder** to watch with the **From list** option.
-3. In the **Watch For** parameter, select **File Updated** to capture changes to files, including moving a file into a folder.
-
-If you want to trigger when a file is created in that folder as well, add a second Google Drive Trigger node with the same configuration, but with **Watch For** set to **File Created**. The File Created event only occurs when an entirely new file is created in your Google Drive account.

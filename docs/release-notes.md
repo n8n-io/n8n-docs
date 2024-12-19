@@ -33,6 +33,44 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.73.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.73.0...n8n@1.73.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-12-19
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.73.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.72.0...n8n@1.73.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2024-12-19
+
+This release contains node updates, performance improvements, and bug fixes.
+
+### Node updates
+
+- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Updated descriptions for Chat Trigger options
+- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/): Updated for API v21.0
+- [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/): Added two new options for the `Send and wait` operation, free text and custom form  
+- [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger/): Added support for admin scope  
+- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/): Now supports the new API  
+- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/):  Added two new options for the `Send and wait` operation, free text and custom form  
+
+We also added credential support for [SolarWinds IPAM](/integrations/builtin/credentials/solarwindsipam/) and [SolarWinds Observability](/integrations/builtin/credentials/solarwindsobservability/). 
+
+Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180). 
+
+### Contributors
+
+[CodeShakingSheep](https://github.com/CodeShakingSheep){:target=_blank .external-link}  
+[mickaelandrieu](https://github.com/mickaelandrieu){:target=_blank .external-link}  
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+[pbdco](https://github.com/pbdco){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 
 ## n8n@1.72.1
@@ -48,8 +86,6 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.71.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.71.2...n8n@1.71.3){:target=_blank .external-link} for this version.<br />
@@ -59,22 +95,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.71.2...n8n@1.71.3
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.72.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.71.0...n8n@1.72.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-12-11
-
-
-
-
 
 This release contains node updates, usability improvements, and bug fixes.
 

@@ -69,7 +69,7 @@ In the body, include your embed information in the message content like this:
 }
 ```
 
-## Mentioning users and channels
+## Mention users and channels
 
 To mention users and channels in Discord messages, you need to format your message according to [Discord's message formatting guidelines](https://discord.com/developers/docs/reference#message-formatting).
 

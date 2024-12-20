@@ -51,3 +51,6 @@ Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues/).

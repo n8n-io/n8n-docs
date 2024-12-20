@@ -623,7 +623,9 @@ nav:
         - Netscaler ADC: integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md
         - Nextcloud: integrations/builtin/app-nodes/n8n-nodes-base.nextcloud.md
         - NocoDB: integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md
-        - Notion: integrations/builtin/app-nodes/n8n-nodes-base.notion.md
+        - Notion:
+          - Notion: integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues.md
         - npm: integrations/builtin/app-nodes/n8n-nodes-base.npm.md
         - Odoo: integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
         - Okta: integrations/builtin/app-nodes/n8n-nodes-base.okta.md

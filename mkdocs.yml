@@ -494,7 +494,9 @@ nav:
         - DeepL: integrations/builtin/app-nodes/n8n-nodes-base.deepl.md
         - Demio: integrations/builtin/app-nodes/n8n-nodes-base.demio.md
         - DHL: integrations/builtin/app-nodes/n8n-nodes-base.dhl.md
-        - Discord: integrations/builtin/app-nodes/n8n-nodes-base.discord.md
+        - Discord:
+          - Discord: integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md
         - Discourse: integrations/builtin/app-nodes/n8n-nodes-base.discourse.md
         - Disqus: integrations/builtin/app-nodes/n8n-nodes-base.disqus.md
         - Drift: integrations/builtin/app-nodes/n8n-nodes-base.drift.md

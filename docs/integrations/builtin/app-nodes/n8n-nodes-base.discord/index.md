@@ -50,3 +50,6 @@ Refer to [Discord's documentation](https://discord.com/developers/docs/intro){:t
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
+## Common issues
+
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues/).

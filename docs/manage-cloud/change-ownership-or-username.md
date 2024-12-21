@@ -12,6 +12,8 @@ Note that for the change to be effective, the new email address can't be linked 
 
 Changing emails will change the owner of the instance, the email you log in with, and the email your invoices and general communication gets sent to.
 
+If your workspace is deactivated, there will be no **Settings** page and no possibility to change the email address nor the owner info.
+
 ## Change instance username
 
 It's not currently possible to change usernames.

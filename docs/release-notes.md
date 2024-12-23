@@ -65,7 +65,7 @@ This release contains node updates, performance improvements, and bug fixes.
 
 We also added credential support for [SolarWinds IPAM](/integrations/builtin/credentials/solarwindsipam/) and [SolarWinds Observability](/integrations/builtin/credentials/solarwindsobservability/). 
 
-Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180). 
+Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180) and added drag and drop re-ordering to parameters. This comes in very handy in the [If](/integrations/builtin/core-nodes/n8n-nodes-base.if/) or [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) nodes. 
 
 ### Contributors
 

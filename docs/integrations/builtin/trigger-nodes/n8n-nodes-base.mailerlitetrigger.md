@@ -23,7 +23,6 @@ For usage examples and templates to help you get started, refer to n8n's [Mailer
 
 - Campaign Sent
 - Subscriber Added to Group
-- Subscriber Added through web form
 - Subscriber Automation Completed
 - Subscriber Automation Triggered
 - Subscriber Bounced

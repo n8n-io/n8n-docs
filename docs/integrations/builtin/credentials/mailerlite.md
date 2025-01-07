@@ -30,3 +30,8 @@ To configure this credential, you'll need:
 
 - An **API Key**: Generate an API key from the **Integrations** menu. Refer to the [API Authentication documentation](https://developers.mailerlite.com/docs/#authentication){:target=_blank .external-link} for more detailed instructions.
 
+Enable the **Classic API** toggle if the API key is for a MailerLite Classic account instead of the newer MailerLite experience.
+
+/// note
+Most new MailerLite accounts and all free accounts should disable the **Classic API** toggle. You can find out [which version of MailerLite you are using](https://www.mailerlite.com/help/which-version-of-mailerlite-am-i-using) and learn more about the differences between the two in the [MailerLite FAQ](https://www.mailerlite.com/help/new-mailerlite-faq).
+///

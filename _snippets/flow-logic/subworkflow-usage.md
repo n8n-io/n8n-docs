@@ -5,11 +5,15 @@
 	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
 	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
 1. Add the **Execute Workflow Trigger** node.
-1. Add other nodes as needed to build your sub-workflow functionality.		
+1. Set the **Input data mode** to choose how you to define the sub-workflow's input data:
+	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide.
+	* **Define using JSON example**: Choose mode to provide an example JSON object that demonstrates the expected input items and their types.
+	* **Accept all data**: Choose this mode to accept all data unconditionally. The sub-workflow won't define any require input items. This sub-workflow must handle any input inconsistencies or missing values.
+1. Add other nodes as needed to build your sub-workflow functionality.
 1. Save the sub-workflow.
 
 /// note | Sub-workflow mustn't contain errors
-If there are errors in the sub-workflow, the parent workflow can't trigger it.  
+If there are errors in the sub-workflow, the parent workflow can't trigger it.
 ///
 /// note | Load data into sub-workflow before building
 This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
@@ -17,9 +21,12 @@ This requires the ability to [load data from previous executions](/workflows/exe
 If you want to load data into your sub-workflow to use while building it:
 
 1. Create the sub-workflow and add the **Execute Workflow Trigger**. 
+1. Set the node's **Input data mode** to **Accept all data** or define the input items using fields or JSON if they're already known.
 1. In the sub-workflow [settings](/workflows/settings/), set **Save successful production executions** to **Save**. 
 1. Skip ahead to setting up the parent workflow, and run it.
 1. Follow the steps to [load data from previous executions](/workflows/executions/debug/).
+1. Adjust the **Input data mode** to match the input sent by the parent workflow if necessary.
+
 You can now pin example data in the trigger node, enabling you to work with real data while configuring the rest of the workflow.
 ///
 
@@ -34,6 +41,9 @@ You can now pin example data in the trigger node, enabling you to work with real
     Your sub-workflow's ID is the alphanumeric string at the end of its URL.
     ///
 
+1. Fill in the required input items defined by the sub-workflow.
 1. Save your workflow.
 
 When your workflow executes, it will send data to the sub-workflow, and run it.
+
+You can follow the execution flow from the parent workflow to the sub-workflow by opening the Execute Workflow node and selecting the **View sub-execution** link. Likewise, the sub-workflow's execution contains a link back to the parent workflow's execution to navigate in the other direction.

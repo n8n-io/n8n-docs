@@ -120,7 +120,7 @@ There are two ways to work around this issue:
 This error displays when your OpenAI account doesn't have enough credits or capacity to fulfill your request. This may mean that your OpenAI trial period has ended, that your account needs more credit, or that you've gone over a usage limit.
 
 /// note | Zero balance issue
-Users have reported that if an API key is issued when the account balance is zero, even if funds are subsequently added, operations will always report "insufficient quota". The current suggestion to avoid this issue is to ensure there is credit in the account and issue a new API key from the [API keys screen](https://platform.openai.com/settings/organization/api-keys).
+If you create an API key when the account balance is zero, operations will always report "insufficient quota" even if funds are added later. To avoid this issue, ensure that there is credit in the account before issuing a new API key from the [API keys screen](https://platform.openai.com/settings/organization/api-keys).
 ///
 
 To troubleshoot this error, on your [OpenAI settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page:

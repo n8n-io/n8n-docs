@@ -7,7 +7,7 @@ contentType: integration
 
 # HighLevel node
 
-Use the HighLevel node to automate work in HighLevel, and integrate HighLevel with other applications. n8n has built-in support for a wide range of HighLevel features, including creating, updating, deleting, and getting contacts, opportunities, and tasks. 
+Use the HighLevel node to automate work in HighLevel, and integrate HighLevel with other applications. n8n has built-in support for a wide range of HighLevel features, including creating, updating, deleting, and getting contacts, opportunities, and tasks, as well as booking appointments and getting free time slots in calendars. 
 
 On this page, you'll find a list of operations the HighLevel node supports and links to more resources.
 
@@ -18,23 +18,26 @@ Refer to [HighLevel credentials](/integrations/builtin/credentials/highlevel/) f
 ## Operations
 
 * Contact
-	* Create or Update
+	* Create or update
 	* Delete
 	* Get
-	* Get All
-	* Lookup
+	* Get many
 	* Update
 * Opportunity
 	* Create
 	* Delete
 	* Get
-	* Get All
+	* Get many
 	* Update
 * Task
 	* Create
+	* Delete
 	* Get
-	* Get All
+	* Get many
 	* Update
+* Calendar
+	* Book an appointment
+	* Get free slots
 
 ## Templates and examples
 

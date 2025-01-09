@@ -6,7 +6,9 @@ description: Documentation for the Microsoft Entra ID credentials. Use these cre
 
 # Microsoft Entra ID credentials
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+You can use these credentials to authenticate the following nodes:
+
+* [Microsoft Entra ID](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra/)
 
 ## Prerequisites
 
@@ -21,8 +23,6 @@ Microsoft includes an Entra ID free plan when you create a [Microsoft Azure](htt
 ## Related resources
 
 Refer to [Microsoft Entra ID's documentation](https://www.microsoft.com/en-us/security/business/identity-access/azure-active-directory){:target=_blank .external-link} for more information about the service.
-
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/microsoft-entra-id-azure-active-directory/){:target=_blank .external-link} on n8n's website.
 
 ## Using OAuth2
 

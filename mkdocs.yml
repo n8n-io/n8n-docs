@@ -598,6 +598,7 @@ nav:
         - MessageBird: integrations/builtin/app-nodes/n8n-nodes-base.messagebird.md
         - Metabase: integrations/builtin/app-nodes/n8n-nodes-base.metabase.md
         - Microsoft Dynamics CRM: integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm.md
+        - Microsoft Entra ID: integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra.md
         - Microsoft Excel 365: integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel.md
         - Microsoft Graph Security: integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity.md
         - Microsoft OneDrive: integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md

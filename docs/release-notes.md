@@ -67,9 +67,9 @@ We added a ton of new helpers to the Code node, making edits of your code much f
 - Drag and drop for all Code node modes  
 - Indentation markers  
 
-We build this on a web worker architecture so you won't have to suffer from performance degradation while typing. 
-
-To get the full picture, check out our Studio update with Max and Elias, where they discuss and demo the new editing experience. 👇
+We build this on a web worker architecture so you won't have to suffer from performance degradation while typing. <br>
+<br>
+To get the full picture, check out our Studio update with Max and Elias, where they discuss and demo the new editing experience. 👇 <br>
 
 [![Studio](/_images/release-notes/The_Studio_thumbnail_Code_node.jpg)](https://youtu.be/De1E58MPaMQ?t=645)
 <figure markdown="span">

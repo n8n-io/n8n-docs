@@ -1,6 +1,12 @@
 ### Create the sub-workflow
 
+
 1. Create a new workflow.
+
+    /// note | Create sub-workflows from existing workflows
+    You can optionally create a sub-workflow directly from an existing parent workflow using the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node. In the node, select the **Database** and **From list** options and select **Create a sub-workflow** in the list.
+    ///
+
 1. **Optional**: configure which workflows can call the sub-workflow:
 	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
 	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
@@ -16,7 +22,7 @@
 If there are errors in the sub-workflow, the parent workflow can't trigger it.
 ///
 /// note | Load data into sub-workflow before building
-This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available to Pro and Enterprise users.
+This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available on n8n Cloud and registered Community plans.
 
 If you want to load data into your sub-workflow to use while building it:
 

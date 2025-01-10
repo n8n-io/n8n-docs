@@ -33,6 +33,14 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.74.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.0...n8n@1.74.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-01-09
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 
 ## n8n@1.74.0
@@ -40,7 +48,48 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.73.0...n8n@1.74.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-08
 
-This release contains bug fixes.
+This release contains new features, a new node, node updates, performance improvements and bug fixes.
+
+<div class="n8n-new-features" markdown>
+
+### Overhauled Code node editing experience
+We added a ton of new helpers to the Code node, making edits of your code much faster and more comfortable. You get:
+
+- TypeScript autocomplete  
+- TypeScript linting  
+- TypeScript hover tips  
+- Search and replace  
+- New keyboard shortcuts based on the VSCode keymap  
+- Auto-formatting using prettier (Alt+Shift+F)  
+- Remember folded regions and history after refresh  
+- Multi cursor  
+- Type function in the Code node using JSDoc types  
+- Drag and drop for all Code node modes  
+- Indentation markers  
+
+We build this on a web worker architecture so you won't have to suffer from performance degradation while typing. 
+
+To get the full picture, check out our Studio update with Max and Elias, where they discuss and demo the new editing experience. 👇
+
+[![Studio](/_images/release-notes/The_Studio_thumbnail_Code_node.jpg)](https://youtu.be/De1E58MPaMQ?t=645)
+<figure markdown="span">
+    <figcaption>[Studio Update #04](https://youtu.be/De1E58MPaMQ?t=645)</figcaption>
+</figure>
+
+</div>
+
+### New node: Microsoft Entra ID
+Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure AD) is used for cloud-based identity and access management. [The new node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra/) supports a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups. 
+
+### Node updates
+
+- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Vector stores can now be directly used as tools for the agent
+- [Code](/code/builtin/overview/): Tons of new speed and convenience features, see above for details  
+- [Google Vertex Chat](/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex/): Added option to specify the GCP region for the Google API credentials  
+- [HighLevel](/builtin/app-nodes/n8n-nodes-base.highlevel/): Added support for calendar items  
+
+
+We also added a custom [projects](/user-management/rbac/projects/) icon selector on top of the available emojis. Pretty!
 
 ### Contributors
 

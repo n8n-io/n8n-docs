@@ -5,10 +5,10 @@
 	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
 	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
 1. Add the **Execute Workflow Trigger** node.
-1. Set the **Input data mode** to choose how you to define the sub-workflow's input data:
+1. Set the **Input data mode** to choose how you will define the sub-workflow's input data:
 	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide.
-	* **Define using JSON example**: Choose mode to provide an example JSON object that demonstrates the expected input items and their types.
-	* **Accept all data**: Choose this mode to accept all data unconditionally. The sub-workflow won't define any require input items. This sub-workflow must handle any input inconsistencies or missing values.
+	* **Define using JSON example**: Choose this mode to provide an example JSON object that demonstrates the expected input items and their types.
+	* **Accept all data**: Choose this mode to accept all data unconditionally. The sub-workflow won't define any required input items. This sub-workflow must handle any input inconsistencies or missing values.
 1. Add other nodes as needed to build your sub-workflow functionality.
 1. Save the sub-workflow.
 

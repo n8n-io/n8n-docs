@@ -32,7 +32,7 @@ If you select a sub-workflow using the **database** and **From list** options, t
 
 You can optionally remove requested input items, in which case the sub-workflow receives `null` as the item's value. You can also enable **Attempt to convert types** to try to automatically convert data to the sub-workflow item's requested type.
 
-Input items won't display if the sub-workflow's Workflow Input Trigger node uses the "Accept all data" input data mode.
+Input items won't appear if the sub-workflow's Workflow Input Trigger node uses the "Accept all data" input data mode.
 
 ### Mode
 

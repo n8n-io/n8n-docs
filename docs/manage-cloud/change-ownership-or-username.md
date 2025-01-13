@@ -17,4 +17,4 @@ If your workspace is deactivated, there will be no **Settings** page and no poss
 ## Change instance username
 
 It's not currently possible to change usernames.
-If you want your instance to have a different name you will need to create a new account and transfer your work into it. [Here](https://docs.n8n.io/workflows/export-import/) you can see how you can transfer your work no a new n8n instance.
+If you want your instance to have a different name you will need to create a new account and transfer your work into it. [The import/export documentation](https://docs.n8n.io/workflows/export-import/) explains how you can transfer your work to a new n8n instance.

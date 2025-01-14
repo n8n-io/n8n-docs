@@ -21,28 +21,28 @@ For usage examples and templates to help you get started, refer to n8n's [Telegr
 ## Events
 
 - **`*`**: All updates except "Chat Member", "Message Reaction", and "Message Reaction Count" (default behavior of Telegram API as they produces a lot of calls of updates).
-- **Business Connection**: Trigger when the bot was connected to or disconnected from a business account, or a user edited an existing connection with the bot.
-- **Business Message**: Trigger on new message from a connected business account.
+- **Business Connection**: Trigger when the bot is connected to or disconnected from a business account, or a user edited an existing connection with the bot.
+- **Business Message**: Trigger on a new message from a connected business account.
 - **Callback Query**: Trigger on new incoming callback query.
-- **Channel Post**: Trigger on new incoming channel post of any kind — text, photo, sticker, etc.
-- **Chat Boost**: Trigger when a chat boost was added or changed. The bot must be an administrator in the chat to receive these updates.
-- **Chat Join Request**: Trigger when a request to join the chat has been sent. The bot must have the can_invite_users administrator right in the chat to receive these updates.
-- **Chat Member**: Trigger when a chat member's status was updated in a chat. The bot must be an administrator in the chat.
-- **Chosen Inline Result**: Trigger when the result of an inline query that was chosen by a user and sent to their chat partner. Please see our documentation on the feedback collecting for details on how to enable these updates for your bot.
-- **Deleted Business Messages**: Trigger when messages were deleted from a connected business account.
+- **Channel Post**: Trigger on new incoming channel post of any kind — including text, photo, sticker, and so on.
+- **Chat Boost**: Trigger when a chat boost is added or changed. The bot must be an administrator in the chat to receive these updates.
+- **Chat Join Request**: Trigger when a request to join the chat is sent. The bot must have the `can_invite_users` administrator right in the chat to receive these updates.
+- **Chat Member**: Trigger when a chat member's status is updated. The bot must be an administrator in the chat.
+- **Chosen Inline Result**: Trigger when the result of an inline query chosen by a user is sent. Please see our documentation on the feedback collecting for details on how to enable these updates for your bot.
+- **Deleted Business Messages**: Trigger when messages are deleted from a connected business account.
 - **Edited Business Message**: Trigger on new version of a message from a connected business account.
-- **Edited Channel Post**: Trigger on new version of a channel post that is known to the bot and was edited.
-- **Edited Message**: Trigger on new version of a channel post that is known to the bot and was edited.
+- **Edited Channel Post**: Trigger on new version of a channel post that is known to the bot is edited.
+- **Edited Message**: Trigger on new version of a channel post that is known to the bot is edited.
 - **Inline Query**: Trigger on new incoming inline query.
-- **Message**: Trigger on new incoming message of any kind — text, photo, sticker, etc.
-- **Message Reaction**: Trigger when a reaction to a message was changed by a user. The bot must be an administrator in the chat. The update isn't received for reactions set by bots.
-- **Message Reaction Count**: Trigger when reactions to a message with anonymous reactions were changed. The bot must be an administrator in the chat. The updates are grouped and can be sent with delay up to a few minutes.
-- **My Chat Member**: Trigger when the bot's chat member status was updated in a chat. For private chats, this update is received only when the bot is blocked or unblocked by the user.
-- **Poll**: Trigger on new poll state. Bots receive only updates about stopped polls and polls, which are sent by the bot.
-- **Poll Answer**: Trigger when user changed their answer in a non-anonymous poll. Bots receive new votes only in polls that were sent by the bot itself.
+- **Message**: Trigger on new incoming message of any kind — text, photo, sticker, and so on.
+- **Message Reaction**: Trigger when a reaction to a message is changed by a user. The bot must be an administrator in the chat. The update isn't received for reactions set by bots.
+- **Message Reaction Count**: Trigger when reactions to a message with anonymous reactions are changed. The bot must be an administrator in the chat. The updates are grouped and can be sent with delay up to a few minutes.
+- **My Chat Member**: Trigger when the bot's chat member status is updated in a chat. For private chats, this update is received only when the bot is blocked or unblocked by the user.
+- **Poll**: Trigger on new poll state. Bots only receive updates about stopped polls and polls which are sent by the bot.
+- **Poll Answer**: Trigger when user changes their answer in a non-anonymous poll. Bots only receive new votes in polls that were sent by the bot itself.
 - **Pre-Checkout Query**: Trigger on new incoming pre-checkout query. Contains full information about checkout.
-- **Purchased Paid Media**: Trigger when a user purchased paid media with a non-empty payload sent by the bot in a non-channel chat.
-- **Removed Chat Boost**: Trigger when a boost was removed from a chat. The bot must be an administrator in the chat to receive these updates.
+- **Purchased Paid Media**: Trigger when a user purchases paid media with a non-empty payload sent by the bot in a non-channel chat.
+- **Removed Chat Boost**: Trigger when a boost is removed from a chat. The bot must be an administrator in the chat to receive these updates.
 - **Shipping Query**: Trigger on new incoming shipping query. Only for invoices with flexible price.
 
 Some **events may require additional permissions**, see [Telegram's API documentation](https://core.telegram.org/bots/api#getting-updates) for more information.

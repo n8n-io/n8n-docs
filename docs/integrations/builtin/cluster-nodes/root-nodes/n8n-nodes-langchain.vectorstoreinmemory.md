@@ -20,6 +20,34 @@ The in-memory storage described here is different to the AI memory nodes such as
 This node creates a vector database in the app memory.
 ///
 
+## Node usage patterns
+
+You can use the In-Memory Vector Store node in the following patterns.
+
+### Use as a regular node to insert and retrieve documents
+
+You can use the In-Memory Vector Store as a regular node to insert or get documents. This pattern places the In-Memory Vector Store in the regular connection flow without using an agent.
+
+You can see an example of in step 2 of [this template](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/).
+
+### Connect directly to an AI agent as a tool
+
+You can connect the In-Memory Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) to use vector store as a resource when answering queries.
+
+Here, the connection would be: AI agent (tools connector) -> In-Memory Vector Store node.
+
+### Use a retriever to fetch documents
+
+You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore/) node with the In-Memory Vector Store node to fetch documents from the In-Memory Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
+
+An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) (the linked example uses Pinecone, but the pattern in the same) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> In-Memory Vector Store.
+
+### Use the Vector Store Question Answer Tool to answer questions
+
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the In-Memory Vector Store node. Rather than connecting the In-Memory Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data to formulate an answer to questions.
+
+The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> In-Memory Vector store.
+
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
@@ -36,9 +64,16 @@ This node creates a vector database in the app memory.
 * **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
 * **Clear Store**: Use this parameter to control whether to wipe the vector store for the given memory key for this workflow before inserting data (turned on).
 
-### Retrieve Documents (For Agent/Chain) parameters
+### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
 * **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+
+### Retrieve Documents (As Tool for AI Agent) parameters
+
+* **Name**: The name of the vector store.
+* **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
+* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Templates and examples
 

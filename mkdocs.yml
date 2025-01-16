@@ -1096,6 +1096,7 @@ nav:
         - integrations/builtin/credentials/medium.md
         - integrations/builtin/credentials/messagebird.md
         - integrations/builtin/credentials/metabase.md
+        - integrations/builtin/credentials/microsoftazuremonitor.md
         - integrations/builtin/credentials/microsoft.md
         - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md

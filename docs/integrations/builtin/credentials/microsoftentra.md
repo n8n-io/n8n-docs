@@ -12,7 +12,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a Microsoft Entra ID account or subscription.
+- Create a Microsoft Entra ID account or subscription.
+- If the user account is managed by a corporate Microsoft Entra account, the administrator account has enabled the option “User can consent to apps accessing company data on their behalf” for this user (see the [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent)).
 
 Microsoft includes an Entra ID free plan when you create a [Microsoft Azure](https://azure.microsoft.com/){:target=_blank .external-link} account.
 
@@ -66,3 +67,9 @@ With your application created, generate a client secret for it:
 1. Log in to your Microsoft account and allow the app to access your info.
 
 Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials){:target=_blank .external-link} for more information on adding a client secret.
+
+## Common issues
+
+Here are the known common errors and issues with Microsoft Entra credentials.
+
+--8<-- "_snippets/integrations/builtin/credentials/microsoft-need-admin-approval.md"

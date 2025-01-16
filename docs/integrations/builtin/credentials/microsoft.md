@@ -22,6 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 - Create a [Microsoft Azure](https://azure.microsoft.com/){:target=_blank .external-link} account.
 - Create at least one user account with access to the appropriate service.
+- If the user account is managed by a corporate Microsoft Entra account, the administrator account has enabled the option “User can consent to apps accessing company data on their behalf” for this user (see the [Microsoft Entra documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent)).
 
 ## Supported authentication methods
 
@@ -116,3 +117,9 @@ Outlook OAuth2 supports the credential accessing a user's primary email inbox or
 SharePoint OAuth2 requires information about your SharePoint **Subdomain**.
 
 To complete the credential, enter the **Subdomain** part of your SharePoint URL. For example, if your SharePoint URL is `https://tenant123.sharepoint.com`, the subdomain is `tenant123`.
+
+## Common issues
+
+Here are the known common errors and issues with Microsoft OAuth2 credentials.
+
+--8<-- "_snippets/integrations/builtin/credentials/microsoft-need-admin-approval.md"

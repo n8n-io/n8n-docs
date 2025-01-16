@@ -7,7 +7,7 @@ contentType: integration
 
 # Zep Vector Store node
 
-Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get many documents from a vector database, retrieve documents to provide them to a retriever connected to a chain, or connect it directly to an agent to use as a tool.
+Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a chain, or connect it directly to an agent to use as a tool.
 
 On this page, you'll find the node parameters for the Zep Vector Store node, and links to more resources.
 
@@ -45,7 +45,7 @@ An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Zep Vector Store node. Rather than connecting the Zep Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data to formulate an answer to questions.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Zep Vector Store node. Rather than connecting the Zep Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) (this example uses Supabase, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Zep Vector store.
 	
@@ -55,23 +55,25 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 ### Insert Documents parameters
 
-* **Collection Name**: Enter the collection name where the data is stored.
+* **Collection Name**: Enter the collection name to store the data in.
 
+<!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
+<!-- vale from-write-good.Weasel = YES -->
 
-* **Collection Name**: Enter the collection name where the data is stored.
+* **Collection Name**: Enter the collection name to retrieve the data from.
 * **Prompt**: Enter the search query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
-* **Collection Name**: Enter the collection name where the data is stored.
+* **Collection Name**: Enter the collection name to retrieve the data from.
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
 * **Name**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Collection Name**: Enter the collection name where the data is stored.
+* **Collection Name**: Enter the collection name to retrieve the data from.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Node options

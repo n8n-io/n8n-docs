@@ -42,7 +42,7 @@ An [example of the connection flow](https://n8n.io/workflows/2183-ai-crew-to-aut
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Qdrant Vector Store node. Rather than connecting the Qdrant Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data to formulate an answer to questions.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Qdrant Vector Store node. Rather than connecting the Qdrant Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitch-deck-ai-vision-chatbot-and-qdrant-vector-store/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Qdrant Vector store.
 	
@@ -50,7 +50,9 @@ The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitc
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+<!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
+<!-- vale from-write-good.Weasel = YES -->
 
 * **Qdrant collection name**: Enter the name of the Qdrant collection to use.
 * **Prompt**: Enter the search query.

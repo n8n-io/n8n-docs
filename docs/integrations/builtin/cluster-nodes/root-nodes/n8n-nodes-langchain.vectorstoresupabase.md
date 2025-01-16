@@ -8,7 +8,7 @@ priority: medium
 
 # Supabase Vector Store node
 
-Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get many documents from a vector database, retrieve documents to provide them to a retriever connected to a chain, or connect it directly to an agent to use as a tool.
+Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a chain, or connect it directly to an agent to use as a tool.
 
 On this page, you'll find the node parameters for the Supabase node, and links to more resources.
 
@@ -44,7 +44,7 @@ An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Supabase Vector Store node. Rather than connecting the Supabase Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data to formulate an answer to questions.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Supabase Vector Store node. Rather than connecting the Supabase Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files-in-supabase-storage/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Supabase Vector store.
 
@@ -52,7 +52,9 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
 
+<!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
+<!-- vale from-write-good.Weasel = YES -->
 
 * **Table Name**: Enter the Supabase table to use.
 * **Prompt**: Enter the search query.

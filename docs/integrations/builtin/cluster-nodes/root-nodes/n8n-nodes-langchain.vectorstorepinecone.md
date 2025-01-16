@@ -42,7 +42,7 @@ An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Pinecone Vector Store node. Rather than connecting the Pinecone Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data to formulate an answer to questions.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Pinecone Vector Store node. Rather than connecting the Pinecone Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-documentation-rag-powered-chatbot-with-pinecone-and-openai/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Pinecone Vector store.
 	
@@ -50,7 +50,9 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
 
+<!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
+<!-- vale from-write-good.Weasel = YES -->
 
 * **Pinecone Index**: Select or enter the Pinecone Index to use.
 * **Prompt**: Enter your search query.

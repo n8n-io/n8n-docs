@@ -52,7 +52,9 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+<!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
+<!-- vale from-write-good.Weasel = YES -->
 
 * **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
 * **Prompt**: Enter the search query.

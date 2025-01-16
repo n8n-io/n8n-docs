@@ -19,13 +19,13 @@ Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/
 ## Operations
 
 * **Calendar**
-    * **Availability**: If a time-slot is available in a calendar
+    * [**Availability**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations/#availability): If a time-slot is available in a calendar
 * **Event**
-    * **Create**: Add an event to calendar
-    * **Delete**: Delete an event
-    * **Get**: Retrieve an event
-    * **Get Many**: Retrieve all events from a calendar
-    * **Update**: Update an event
+    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#create): Add an event to calendar
+    * [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#delete): Delete an event
+    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#get): Retrieve an event
+    * [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#get-many): Retrieve all events from a calendar
+    * [**Update**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#update): Update an event
 
 ## Templates and examples
 

@@ -530,7 +530,10 @@ nav:
         - Google BigQuery: integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md
         - Google Books: integrations/builtin/app-nodes/n8n-nodes-base.googlebooks.md
         - Google Business Profile: integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md
-        - Google Calendar: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar.md
+        - Google Calendar:
+          - Google Calendar: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md
+          - Calendar operations: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md
+          - Event operations: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md
         - Google Chat: integrations/builtin/app-nodes/n8n-nodes-base.googlechat.md
         - Google Cloud Firestore: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore.md
         - Google Cloud Natural Language: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudnaturallanguage.md

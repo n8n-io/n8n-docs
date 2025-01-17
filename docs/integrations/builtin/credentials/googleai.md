@@ -35,6 +35,11 @@ To configure this credential, you'll need:
 - The API **Host** URL: Both PaLM and Gemini use the default `https://generativelanguage.googleapis.com`.
 - An **API Key**: Create a key in [Google AI Studio](https://makersuite.google.com/app/apikey){:target=_blank .external-link}.
 
+/// warning | Custom hosts not supported
+
+The related nodes do not currently support custom hosts or proxies for the API host and must use 'https://generativelanguage.googleapis.com'.
+///
+
 To create an API key:
 
 1. Go to the API Key page in Google AI Studio: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey){:target=_blank .external-link}.

@@ -45,15 +45,14 @@ To set things up, first you'll create a private key and certificate, then a conn
 7. Check the box to **Use digital signatures**.
 8. Select **Choose File** and upload the file that contains your digital certificate, such as `server.crt`.
 9. Add these **OAuth scopes**:
-    - **Manage user data via APIs (api)**
-    - **Manage user data via Web browsers (web)**
-    - **Perform requests at any time (refresh_token, offline_access)**
+	- **Full access (full)**
+	- **Perform requests at any time (refresh_token, offline_access)**
 10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
 11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
 12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
 13. Enter the contents of the private key file in n8n as **Private Key**.
-    - Use the multi-line editor in n8n.
-    - Enter the private key in standard PEM key format:
+	- Use the multi-line editor in n8n.
+	- Enter the private key in standard PEM key format:
         ```
         -----BEGIN PRIVATE KEY-----
         KEY DATA GOES HERE
@@ -94,13 +93,12 @@ If you're [self-hosting](/hosting) n8n, you'll need to configure OAuth2 from scr
 5. Check the box to **Enable OAuth Settings**.
 6. For the **Callback URL**, enter `http://localhost:1717/OauthRedirect`.
 9. Add these **OAuth scopes**:
-    - **Manage user data via APIs (api)**
-    - **Manage user data via Web browsers (web)**
-    - **Perform requests at any time (refresh_token, offline_access)**
+	- **Full access (full)**
+	- **Perform requests at any time (refresh_token, offline_access)**
 10. Make sure the following settings are unchecked:
-    - **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**
-    - **Require Secret for Web Server Flow**
-    - **Require Secret for Refresh Token Flow**
+	- **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**
+	- **Require Secret for Web Server Flow**
+	- **Require Secret for Refresh Token Flow**
 10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
 11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
 12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.

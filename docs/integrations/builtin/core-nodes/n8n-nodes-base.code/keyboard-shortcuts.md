@@ -291,7 +291,7 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
     |-------------|--------------------------------------------------------------------|
     | Fold code   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>[</kbd>                      |
     | Unfold code | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>]</kbd>                      |
-    | Fold all    | <kbd>Ctrl</kbd>+<kbd>K</kbd> **then** <kbd>Ctrl</kbd>+<kbd>O</kbd> |
+    | Fold all    | <kbd>Ctrl</kbd>+<kbd>K</kbd> **then** <kbd>Ctrl</kbd>+<kbd>0</kbd> |
     | Unfold all  | <kbd>Ctrl</kbd>+<kbd>K</kbd> **then** <kbd>Ctrl</kbd>+<kbd>J</kbd> |
 
 ## Multi-cursor

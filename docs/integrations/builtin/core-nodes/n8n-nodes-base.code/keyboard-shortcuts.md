@@ -31,20 +31,20 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
 
 === "macOS"
 
-    | Action                    | Shortcut                                                   |
-    |---------------------------|------------------------------------------------------------|
-    | Move cursor left          | <kbd>←</kbd> **or** <kbd>Ctrl</kbd>+<kbd>B</kbd>           |
-    | Move cursor right         | <kbd>→</kbd> **or** <kbd>Ctrl</kbd>+<kbd>F</kbd>           |
-    | Move cursor up            | <kbd>↑</kbd> **or** <kbd>Ctrl</kbd>+<kbd>P</kbd>           |
-    | Move cursor down          | <kbd>↓</kbd> **or** <kbd>Ctrl</kbd>+<kbd>N</kbd>           |
-    | Move cursor by word left  | <kbd>Alt</kbd>+<kbd>←</kbd>                                |
-    | Move cursor by word right | <kbd>Alt</kbd>+<kbd>→</kbd>                                |
-    | Move to line start        | <kbd>Cmd</kbd>+<kbd>←<kbd> or <kbd>Ctrl</kbd>+<kbd>A</kbd> |
-    | Move to line end          | <kbd>Cmd+<kbd>→</kbd> or <kbd>Ctrl</kbd>+E</kbd>           |
-    | Move to document start    | <kbd>Cmd</kbd>+<kbd>↑</kbd>                                |
-    | Move to document end      | <kbd>Cmd</kbd>+<kbd>↓</kbd>                                |
-    | Move page up              | <kbd>Page Up</kbd> **or** <kbd>Alt+<kbd>V</kbd>            |
-    | Move page down            | <kbd>Page Down</kbd> **or** <kbd>Ctrl</kbd>+<kbd>V</kbd>   |
+    | Action                    | Shortcut                                                        |
+    |---------------------------|-----------------------------------------------------------------|
+    | Move cursor left          | <kbd>←</kbd> **or** <kbd>Ctrl</kbd>+<kbd>B</kbd>                |
+    | Move cursor right         | <kbd>→</kbd> **or** <kbd>Ctrl</kbd>+<kbd>F</kbd>                |
+    | Move cursor up            | <kbd>↑</kbd> **or** <kbd>Ctrl</kbd>+<kbd>P</kbd>                |
+    | Move cursor down          | <kbd>↓</kbd> **or** <kbd>Ctrl</kbd>+<kbd>N</kbd>                |
+    | Move cursor by word left  | <kbd>Alt</kbd>+<kbd>←</kbd>                                     |
+    | Move cursor by word right | <kbd>Alt</kbd>+<kbd>→</kbd>                                     |
+    | Move to line start        | <kbd>Cmd</kbd>+<kbd>←</kbd> **or** <kbd>Ctrl</kbd>+<kbd>A</kbd> |
+    | Move to line end          | <kbd>Cmd</kbd>+<kbd>→</kbd> **or** <kbd>Ctrl</kbd>+<kbd>E</kbd> |
+    | Move to document start    | <kbd>Cmd</kbd>+<kbd>↑</kbd>                                     |
+    | Move to document end      | <kbd>Cmd</kbd>+<kbd>↓</kbd>                                     |
+    | Move page up              | <kbd>Page Up</kbd> **or** <kbd>Alt</kbd>+<kbd>V</kbd>           |
+    | Move page down            | <kbd>Page Down</kbd> **or** <kbd>Ctrl</kbd>+<kbd>V</kbd>        |
 
 === "Linux"
 

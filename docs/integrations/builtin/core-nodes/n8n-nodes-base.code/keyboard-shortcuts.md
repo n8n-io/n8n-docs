@@ -23,7 +23,7 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
     | Move cursor by word left  | <kbd>Ctrl</kbd>+<kbd>←</kbd>                        |
     | Move cursor by word right | <kbd>Ctrl</kbd>+<kbd>→</kbd>                        |
     | Move to line start        | <kbd>Home</kbd> **or** <kbd>Ctrl</kbd>+<kbd>←</kbd> |
-    | Move to line end          | <kbd>End</kbd> or <kbd>Ctrl</kbd>+<kbd>→</kbd>      |
+    | Move to line end          | <kbd>End</kbd> **or** <kbd>Ctrl</kbd>+<kbd>→</kbd>      |
     | Move to document start    | <kbd>Ctrl</kbd>+<kbd>Home</kbd>                     |
     | Move to document end      | <kbd>Ctrl</kbd>+<kbd>End</kbd>                      |
     | Move page up              | <kbd>Page Up</kbd>                                  |

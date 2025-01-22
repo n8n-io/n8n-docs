@@ -1103,6 +1103,7 @@ nav:
         - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
         - integrations/builtin/credentials/mindee.md
+        - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md
         - integrations/builtin/credentials/mist.md
         - integrations/builtin/credentials/mistral.md

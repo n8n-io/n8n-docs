@@ -27,8 +27,8 @@ Task runners are currently in public beta testing and might contain undiscovered
 | `N8N_RUNNERS_ENABLED` | Boolean | `false` | Are task runners enabled. |
 | `N8N_RUNNERS_MODE` | Enum string: `internal`, `external` | `internal` | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. `external` means an external orchestrator will launch the task runner. |
 | `N8N_RUNNERS_AUTH_TOKEN` | String | Random string | Shared secret used by a task runner to authenticate to n8n. Required when using `external` mode. |
-| `N8N_RUNNERS_SERVER_PORT` | Number | `5679` | Port the task broker listens on for task runner connections. |
-| `N8N_RUNNERS_SERVER_LISTEN_ADDRESS` | String | `127.0.0.1` | Address the task broker listens on. |
+| `N8N_RUNNERS_BROKER_PORT` | Number | `5679` | Port the task broker listens on for task runner connections. |
+| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS` | String | `127.0.0.1` | Address the task broker listens on. |
 | `N8N_RUNNERS_MAX_PAYLOAD` | Number | `1 073 741 824` | Maximum payload size in bytes for communication between a task broker and a task runner. |
 | `N8N_RUNNERS_MAX_OLD_SPACE_SIZE` | String |  | The `--max-old-space-size` option to use for a task runner (in MB). By default, Node.js will set this based on available memory. |
 | `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `5` | The number of concurrent tasks a task runner can execute at a time. |

@@ -210,7 +210,7 @@ n8n worker --concurrency=5
 
 ## Concurrency and scaling recommendations
 
-n8n recommends setting concurrency to 5 or higher for your worker instances.  Setting low concurrency values with a large numbers of workers can exhaust your database's connection pool, leading to processing delays and failures.
+n8n recommends setting concurrency to 5 or higher for your worker instances. Setting low concurrency values with a large numbers of workers can exhaust your database's connection pool, leading to processing delays and failures.
 
 ## Multi-main setup
 

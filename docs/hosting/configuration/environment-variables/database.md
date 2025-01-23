@@ -14,9 +14,9 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [removed support for MySQL and MariaDB](/1-0-migration-checklist/#mysql-and-mariadb) in v1.0. 
+By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [removed support for MySQL and MariaDB](/1-0-migration-checklist/#mysql-and-mariadb) in v1.0.
 
-This page outlines environment variables to configure your chosen database for your self-hosted n8n instance. 
+This page outlines environment variables to configure your chosen database for your self-hosted n8n instance.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -45,4 +45,5 @@ This page outlines environment variables to configure your chosen database for y
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
+| `DB_SQLITE_POOL_SIZE` | Number | `0` | Control whether to use SQLite in [WAL mode](https://www.sqlite.org/wal.html) or in rollback journal mode. A value of zero means n8n will open SQLite file in rollback journal mode, and a number higher than zero means n8n will use the WAL mode. WAL mode is much more performant and reliable than the rollback journal mode. The parameter also controls how many parallel SQLite read connections n8n should have. |
 | `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target="_blank" .external-link} operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |

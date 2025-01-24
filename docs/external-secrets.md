@@ -65,9 +65,7 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 						"secretsmanager:ListSecrets",
 						"secretsmanager:BatchGetSecretValue"
 					],
-					"Resource": [
-						"*"
-					]
+					"Resource": "*"
 				},
 				{
 					"Sid": "RetrievingSecrets",

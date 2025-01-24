@@ -26,15 +26,15 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 1. Select **Set Up** for your store provider.
 1. Enter the credentials for your provider:
 	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target=_blank .external-link}. n8n supports only single-line values for secrets.
-	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions.
+	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
 
-		Example policy:
+		To allow n8n to access all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:
 		```json
 		{
 			"Version": "2012-10-17",
 			"Statement": [
 				{
-					"Sid": "VisualEditor0",
+					"Sid": "AccessAllSecrets",
 					"Effect": "Allow",
 					"Action": [
 						"secretsmanager:ListSecrets",
@@ -49,6 +49,42 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 			]
 		}
 		```
+
+		If you'd like to be more restrictive and avoid n8n having access to all of your secrets, you'll still need to allow `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` access to all resources. This doesn't allow access to the secret values but is needed to retrieve any ARN-scoped secrets. You will need to scope `secretsmanager:GetSecretValue` to the specific Amazon Resource Names (ARNs) for the secrets you wish to share with n8n. Ensure you use the correct region and account ID in each resource ARNs. You can find the ARN details in the AWS dashboard for your secrets.
+		
+		For example, the following IAM policy would only allow access to secrets with a name starting with `n8n` in your specified AWS account and region:
+
+		```json
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "ListingSecrets",
+					"Effect": "Allow",
+					"Action": [
+						"secretsmanager:ListSecrets",
+						"secretsmanager:BatchGetSecretValue"
+					],
+					"Resource": [
+						"*"
+					]
+				},
+				{
+					"Sid": "RetrievingSecrets",
+					"Effect": "Allow",
+					"Action": [
+						"secretsmanager:GetSecretValue",
+						"secretsmanager:DescribeSecret"
+					],
+					"Resource": [
+						"arn:aws:secretsmanager:us-west-2:123456789000:secret:n8n*"
+					]
+				}
+			]
+		}
+		```
+
+		For more IAM permission policy examples, consult the [AWS documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_iam-policies.html#auth-and-access_examples_batch){:target=_blank .external-link}.
 
 	* HashiCorp Vault: provide the **Vault URL** for your vault instance, and select your **Authentication Method**.  Enter your authentication details. Optionally provide a namespace.
 		- Refer to the HashiCorp documentation for your authentication method:

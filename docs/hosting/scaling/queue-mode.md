@@ -8,7 +8,7 @@ contentType: howto
 You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
 /// note | Binary data storage
-n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
+n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](./external-storage.md).
 ///
 
 ## How it works

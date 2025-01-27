@@ -28,7 +28,7 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 	* Azure Key Vault: Provide your **vault name**, **tenant ID**, **client ID**, and **client secret**. Refer to the Azure documentation to [register a Microsoft Entra ID app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal){:target=_blank .external-link}. n8n supports only single-line values for secrets.
 	* AWS Secrets Manager: provide your **access key ID**, **secret access key**, and **region**. The IAM user must have the `secretsmanager:ListSecrets`, `secretsmanager:BatchGetSecretValue`, and `secretsmanager:GetSecretValue` permissions.
 
-		To allow n8n to access all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:
+		To give n8n access to all secrets in your AWS Secrets Manager, you can attach the following policy to the IAM user:
 		```json
 		{
 			"Version": "2012-10-17",
@@ -50,9 +50,11 @@ Your secret names can't contain spaces, hyphens, or other special characters. n8
 		}
 		```
 
-		If you'd like to be more restrictive and avoid n8n having access to all of your secrets, you'll still need to allow `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` access to all resources. This doesn't allow access to the secret values but is needed to retrieve any ARN-scoped secrets. You will need to scope `secretsmanager:GetSecretValue` to the specific Amazon Resource Names (ARNs) for the secrets you wish to share with n8n. Ensure you use the correct region and account ID in each resource ARNs. You can find the ARN details in the AWS dashboard for your secrets.
+		You can also be more restrictive and give n8n access to select AWS Secret Manager secrets. You still need to allow the `secretsmanager:ListSecrets` and `secretsmanager:BatchGetSecretValue` permissions to access all resources. These permissions allow n8n to retrieve ARN-scoped secrets, but don't provide access to the secret values.
+
+		Next, you need set the scope for the `secretsmanager:GetSecretValue` permission to the specific Amazon Resource Names (ARNs) for the secrets you wish to share with n8n. Ensure you use the correct region and account ID in each resource ARNs. You can find the ARN details in the AWS dashboard for your secrets.
 		
-		For example, the following IAM policy would only allow access to secrets with a name starting with `n8n` in your specified AWS account and region:
+		For example, the following IAM policy only allows access to secrets with a name starting with `n8n` in your specified AWS account and region:
 
 		```json
 		{

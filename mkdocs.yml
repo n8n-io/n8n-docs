@@ -900,6 +900,7 @@ nav:
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - DeepSeek Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
           - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
@@ -910,6 +911,7 @@ nav:
           - OpenAI Chat Model:
             - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md
+          - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
@@ -999,6 +1001,7 @@ nav:
         - integrations/builtin/credentials/customerio.md
         - integrations/builtin/credentials/datadog.md
         - integrations/builtin/credentials/deepl.md
+        - integrations/builtin/credentials/deepseek.md
         - integrations/builtin/credentials/demio.md
         - integrations/builtin/credentials/dfiriris.md
         - integrations/builtin/credentials/dhl.md
@@ -1130,6 +1133,7 @@ nav:
         - integrations/builtin/credentials/onfleet.md
         - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/opencti.md
+        - integrations/builtin/credentials/openrouter.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md

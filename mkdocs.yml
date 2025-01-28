@@ -126,6 +126,8 @@ markdown_extensions:
       linenums: true
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
   - pymdownx.inlinehilite
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#keys
+  - pymdownx.keys
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
   - pymdownx.snippets:
       auto_append:

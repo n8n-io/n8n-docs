@@ -109,7 +109,7 @@ The Code node editing environment supports a range of keyboard shortcuts to spee
     | Undo selection            | ++control+u++                            |
     | Copy                      | ++control+c++                            |
     | Cut                       | ++control+x++                            |
-    | Paste                     | +++control+v++                           |
+    | Paste                     | ++control+v++                           |
 
 === "macOS"
 

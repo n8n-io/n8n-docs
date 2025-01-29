@@ -369,6 +369,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
         - Code:
           - Code: integrations/builtin/core-nodes/n8n-nodes-base.code/index.md
+          - Keyboard shortcuts: integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md

@@ -69,6 +69,10 @@ n8n provides built-in methods and variables for working with data and accessing 
 
 The syntax to use the built-in methods and variables is `_variableName` or `_methodName()`. Type `_` in the Code node to see a list of suggested methods and variables.
 
+### Keyboard shortcuts
+
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. A full list can be found in the [list of keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts).
+
 ## File system and HTTP requests
 
 You can't access the file system or make HTTP requests. Use the following nodes instead:

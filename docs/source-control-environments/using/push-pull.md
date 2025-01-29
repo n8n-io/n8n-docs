@@ -15,14 +15,20 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 ## Fetch other people's work
 
-/// note | Restricted to instance owners
-Ordinary users can't fetch work from Git.
+/// note | Restricted feature
+Ordinary users can't fetch work from Git. You must be an n8n instance owner, admin, or project owner to fetch work from Git.
 ///
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
 n8n may display a warning about overriding local changes. Select **Pull and override** to override your local work with the content in Git.
+
+When the changes include new variable or credential stubs, n8n notifies you that you need to populate the values for the items before using them.
+
+/// info | How deleted resources are handled
+When workflows, credentials, variables, and tags are deleted from the repository, your local versions of these resources aren't deleted automatically. Instead, when you pull repository changes, n8n notifies you about any outdated resources and asks if you'd like to delete them.
+///
 
 ### Workflow and credential owner may change on pull
 
@@ -42,9 +48,10 @@ If you pull changes to an active workflow, n8n sets the workflow to inactive whi
 
 ## Send your work to Git
 
-/// note | Restricted to instance owners
-Ordinary users can't send work to Git.
+/// note | Restricted feature
+Ordinary users can't send work to Git. You must be an n8n instance owner, admin, or project owner to send work to Git.
 ///
+
 --8<-- "_snippets/source-control-environments/push.md"
 
 ## What gets committed
@@ -58,9 +65,6 @@ n8n commits the following to Git:
 
 You can programmatically [Manage variables](/source-control-environments/using/manage-variables/) using the n8n API.
 
-/// note | Coming soon: credential support with secret managers
-n8n is working on support for external secret managers to handle credentials. Once this feature is complete, n8n will support linking the secret manager to multiple instances.
-///
 ## Merge behaviors and conflicts
 
 n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.
@@ -99,5 +103,5 @@ On push:
 * If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
 
 /// note | Manage credentials with an external secrets vault
-If you need different credentials on different n8n environments, use [External secrets](/external-secrets/).
+If you need different credentials on different n8n environments, use [external secrets](/external-secrets/).
 ///

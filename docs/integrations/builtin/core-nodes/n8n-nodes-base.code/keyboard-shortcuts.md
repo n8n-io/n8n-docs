@@ -6,7 +6,7 @@ description: A list of the keyboard shortcuts, for multiple platforms, which are
 priority: high
 ---
 
-# Keyboard shortcuts when using the Code ediotr
+# Keyboard shortcuts when using the Code editor
 
 The Code node editing environment supports a range of keyboard shortcuts to speed up and enhance your experience. Select the appropriate tab to see the relevant shortcuts for your operating system.
 

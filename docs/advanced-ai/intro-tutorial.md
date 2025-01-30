@@ -56,7 +56,7 @@ By incorporating the AI agent as a node, n8n can combine AI-driven steps with tr
 
 Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'. For this workflow, we want to start with a chat node.
 
- 1. Select **Add first step** or press ++Tab++ to open the node menu.
+ 1. Select **Add first step** or press ++tab++ to open the node menu.
 
  1. Search for **Chat Trigger**. n8n shows a list of nodes that match the search.
 
@@ -64,7 +64,7 @@ Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'
 
  1. Close the node details view (Select **Back to canvas**) to return to the canvas.
 
-??? explanation "Explanation..."
+??? explanation "More about the Chat Trigger node..."
     The trigger node generates output when there is an event causing it to trigger. In this case we want to be able to type in text to cause the workflow to run. In production, this trigger can be hooked up to a public chat interface as provided by n8n or embedded into another website. To start this simple workflow we will just use the built-in local chat interface to communicate, so no further setup is required.
 
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_01.json") ]]

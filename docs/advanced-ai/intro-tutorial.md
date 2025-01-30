@@ -11,7 +11,7 @@ type: tutorial
 !["Screenshot of the completed workflow"](/_images/advanced-ai/ai-intro01.png)
 
 
-Many people find it easier to take in new information in video format. This tutorial is based on one of our accompanying videos, linked below. Watch the video or read the steps here, or both!
+Many people find it easier to take in new information in video format. This tutorial is based on one of n8n's popular videos, linked below. Watch the video or read the steps here, or both!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yzvLfHb0nqE?si=7ruaUEycFcoQbYsD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

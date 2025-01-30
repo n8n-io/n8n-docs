@@ -71,6 +71,16 @@ Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'
 
 ## 3. Add an AI Agent Node
 
+The AI Agent node is the core of adding AI to your workflows.
+
+ 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the trigger node to bring up the node search
+
+ 1. Start typing "AI" and choose the **AI agent** node to add it.
+
+ 1. The editing view of the **AI agent** will now be displayed. 
+ 
+ 1. There are some fields which can be changed. For this tutorial, the default **Agent** should be left at the default (**Tools Agent**). As we are using the **Chat Trigger** node, the other default setting for the source and specification of the prompt don't need to be changed.
+
 ??? explanation "Explanation..."
     Some text with a more detailed explanation of this step
 
@@ -78,8 +88,9 @@ Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'
 
 ## 4. Configure the node
   
-- AI agents require a chat model (e.g., a large language model like GPT) to function.
-- Add a chat model by clicking the plus (+) button and connecting to a model (e.g., OpenAI GPT).
+AI agents require a chat model to be attached to process the incoming prompts.
+
+1. Add a chat model by pressing the Add a chat model by clicking the plus (+) button and connecting to a model (e.g., OpenAI GPT).
 
 ## 5. Add credentials (if needed)
 

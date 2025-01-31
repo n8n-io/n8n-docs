@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+Thanks for helping us improve docs! Please give us as much information as you can about the changes you'd like to see.
+
 **What information is missing?**
 
 

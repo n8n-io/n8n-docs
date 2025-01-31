@@ -100,6 +100,10 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 |Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
 <!-- vale from-write-good.Weasel = YES -->
 
+/// warning | Using variables in the Cron expression
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. If you alter a variable's value in the settings after a workflow is activated, the changes won't alter the cron schedule.
+/// 
+
 #### Why there are six asterisks in the Cron expression
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.

@@ -38,3 +38,7 @@ To set the timezone for an individual workflow:
 1. Select **Settings**.
 1. Change the **Timezone** setting.
 1. Select **Save**.
+
+### Variables not working as expected
+
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. After activating the worfklow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then re-activate the workflow to apply the updated variable value.

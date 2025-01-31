@@ -15,7 +15,7 @@ This is for issues with _documentation_ of **n8n**. If the problem you are havin
 Please help us by pasting in the URL of the page or telling us the title.
 
 **What problem did you find?**
-A clear and concise description of what is wrong
+A clear and concise description of what is wrong.
 
 **Can you suggest a fix?**
 For some issues, like a broken link, it will help us resolve them faster if you can indicate what you think the correct information would be.

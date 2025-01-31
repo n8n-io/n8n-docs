@@ -120,7 +120,7 @@ Kafka
 Lemlist
 Lenovo
 [Ll]inter
-LLM
+LLMs?
 Luhn
 Luxon
 [Mm]agnetopause

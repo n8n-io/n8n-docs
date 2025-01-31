@@ -12,7 +12,7 @@ assignees: ''
 This is for issues with _documentation_ of n8n. If the problem you are having is actually a bug in the software, please [file a bug here instead](https://github.com/n8n-io/n8n/issues).
 
 **Where is the bug/mistake?**
-Please help us by pasting in the url of the page or telling us the title.
+Please help us by pasting in the URL of the page or telling us the title.
 
 **What problem did you find?**
 A clear and concise description of what is wrong

@@ -316,6 +316,7 @@ nav:
         - Data filtering: data/data-filtering.md
         - Data mocking: data/data-mocking.md
         - Binary data: data/binary-data.md
+      - Glossary: glossary.md
     - n8n Cloud:
       - Overview: manage-cloud/overview.md
       - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md

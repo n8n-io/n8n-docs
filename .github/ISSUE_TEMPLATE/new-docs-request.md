@@ -1,7 +1,7 @@
 ---
 name: New docs request
 about: Suggest additional pages or information to improve docs
-title: "[REQUEST] - "
+title: "[DOCS-REQUEST] - "
 labels: enhancement
 assignees: ''
 

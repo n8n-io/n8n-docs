@@ -78,6 +78,8 @@ extra:
   # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
   status:
     beta: This feature is in beta
+  inline_plus: >-
+    <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span>
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css

@@ -4,6 +4,8 @@ description: Learn how to build AI workflows with n8n
 type: tutorial
 ---
 
+{{ macros_info() }}
+
 # Tutorial: Build an AI chat agent with n8n
 
 - TODO: Introduction text
@@ -33,7 +35,10 @@ Many people find it easier to take in new information in video format. This tuto
 
 If you're already familiar with AI, feel free to skip this section. This is a basic introduction to AI concepts and how they can be used in n8n workflows.
 
-An AI agent builds on Large Language Models (LLMs), which generate text based on input by predicting the next word. While LLMs only process input to produce output, AI agents add goal-oriented functionality. They can use tools, process their outputs, and make decisions to complete tasks and solve problems.
+An AI agent builds on Large Language Models (LLMs), which generate text based
+on input by predicting the next word. While LLMs only process input to produce
+output, AI agents add goal-oriented functionality. They can use tools, process
+their outputs, and make decisions to complete tasks and solve problems.
 
 In n8n, the AI agent is represented as a node with some extra connections. 
 
@@ -90,11 +95,21 @@ The AI Agent node is the core of adding AI to your workflows.
   
 AI agents require a chat model to be attached to process the incoming prompts.
 
-1. Add a chat model by pressing the Add a chat model by clicking the plus (+) button and connecting to a model (e.g., OpenAI GPT).
+1. Add a chat model by pressing the Add a chat model by clicking the plus <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneat the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
+
+2. The search dialog will appear, filtered on 'Language Models'. These are the models with built-in support in n8n. For this tutorial we will use **OpenAI Chat Model**.
+
+3. Selecting the **OpenAI Chat model** from the list will attach it to the **AI Agent** node and open the node editor. One of the parameters which can be changed is the 'Model'. Note that for the basic OpenAI accounts, only the 'gpt-4o-mini' model is allowed.
+
+??? explanation "Which chat model?"
+    As mentioned earlier, the LLM is the component which generates the text according to a prompt it is given. LLMs have to be created and trained, usually an intensive process. Different LLMS may have different capabilities or specialties, depending on the data they were trained with. 
 
 ## 5. Add credentials (if needed)
 
-- explain credentials
+In order for n8n to communicate with the chat model, it will need some credentials (login data giving it access to an account on a different online service). If you already have an account 
+
+
+![image showing the credentials dialog for OpenAI](_images/advanced-ai/ai-tutorial-credentials.png)
 
 ??? explanation "Keeping your credentials safe"
     Some text with a more detailed explanation of this step

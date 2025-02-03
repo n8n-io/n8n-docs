@@ -30,3 +30,4 @@ Outbound traffic may appear to originate from any of:
 * 98.67.233.200/32
 
 * 20.52.126.0/28
+* 20.218.238.112/28

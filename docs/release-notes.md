@@ -44,6 +44,15 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
+## n8n@1.76.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.1...n8n@1.76.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 
 
 ## n8n@1.77.0

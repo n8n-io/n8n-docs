@@ -28,7 +28,7 @@ For usage examples and templates to help you get started, refer to n8n's [Telegr
 - **Chat Boost**: Trigger when a chat boost is added or changed. The bot must be an administrator in the chat to receive these updates.
 - **Chat Join Request**: Trigger when a request to join the chat is sent. The bot must have the `can_invite_users` administrator right in the chat to receive these updates.
 - **Chat Member**: Trigger when a chat member's status is updated. The bot must be an administrator in the chat.
-- **Chosen Inline Result**: Trigger when the result of an inline query chosen by a user is sent. Please see Telegram's API documentation on the [feedback collecting](https://core.telegram.org/bots/inline#collecting-feedback) for details on how to enable these updates for your bot.
+- **Chosen Inline Result**: Trigger when the result of an inline query chosen by a user is sent. Please see Telegram's API documentation on [feedback collection](https://core.telegram.org/bots/inline#collecting-feedback) for details on how to enable these updates for your bot.
 - **Deleted Business Messages**: Trigger when messages are deleted from a connected business account.
 - **Edited Business Message**: Trigger on new version of a message from a connected business account.
 - **Edited Channel Post**: Trigger on new version of a channel post that is known to the bot is edited.

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Unleashed Software credentials
 description: Documentation for Unleashed Software credentials. Use these credentials to authenticate Unleashed Software in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Unleashed Software credentials

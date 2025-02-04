@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: uProc node documentation
 description: Learn how to use the uProc node in n8n. Follow technical documentation to integrate uProc node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # uProc node

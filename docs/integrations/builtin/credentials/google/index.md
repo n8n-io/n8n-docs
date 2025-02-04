@@ -31,7 +31,6 @@ Once configured, you can use your credentials to authenticate the following node
 
 | Node | OAuth | Service Account |
 | :--- | :---: | :-------------: |
-| [G Suite Admin](/integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin/) | :white_check_mark: | :x: |
 | [Google Ads](/integrations/builtin/app-nodes/n8n-nodes-base.googleads/) | :white_check_mark: | :x: |
 | [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) | :white_check_mark: | :warning: |
 | [Google Analytics](/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/) | :white_check_mark: | :x: |
@@ -52,6 +51,7 @@ Once configured, you can use your credentials to authenticate the following node
 | [Google Slides](/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/) | :white_check_mark: | :white_check_mark: |
 | [Google Tasks](/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/) | :white_check_mark: | :x: |
 | [Google Translate](/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/) | :white_check_mark: | :white_check_mark: |
+| [Google Workspace Admin](/integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin/) | :white_check_mark: | :x: |
 | [YouTube](/integrations/builtin/app-nodes/n8n-nodes-base.youtube/) | :white_check_mark: | :x: |
 
 /// warning | Gmail and Service Accounts

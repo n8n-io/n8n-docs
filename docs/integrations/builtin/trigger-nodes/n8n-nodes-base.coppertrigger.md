@@ -7,7 +7,7 @@ contentType: integration
 
 # Copper Trigger node
 
-[Copper](https://www.copper.com/){:target=_blank .external-link} is a CRM that focuses on strong integration with Google's G Suite. It's mainly targeted towards small and medium-sized businesses.
+[Copper](https://www.copper.com/){:target=_blank .external-link} is a CRM that focuses on strong integration with Google Workspace. It's mainly targeted towards small and medium-sized businesses.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/copper/).

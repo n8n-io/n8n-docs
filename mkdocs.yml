@@ -561,11 +561,11 @@ nav:
         - Google Slides: integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
         - Google Tasks: integrations/builtin/app-nodes/n8n-nodes-base.googletasks.md
         - Google Translate: integrations/builtin/app-nodes/n8n-nodes-base.googletranslate.md
+        - Google Workspace Admin: integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin.md
         - Gotify: integrations/builtin/app-nodes/n8n-nodes-base.gotify.md
         - GoToWebinar: integrations/builtin/app-nodes/n8n-nodes-base.gotowebinar.md
         - Grafana: integrations/builtin/app-nodes/n8n-nodes-base.grafana.md
         - Grist: integrations/builtin/app-nodes/n8n-nodes-base.grist.md
-        - G Suite Admin: integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin.md
         - Hacker News: integrations/builtin/app-nodes/n8n-nodes-base.hackernews.md
         - HaloPSA: integrations/builtin/app-nodes/n8n-nodes-base.halopsa.md
         - Harvest: integrations/builtin/app-nodes/n8n-nodes-base.harvest.md

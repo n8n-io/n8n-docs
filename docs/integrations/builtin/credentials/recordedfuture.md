@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Recorded Future credentials
 description: Documentation for the Recorded Future credentials. Use these credentials to authenticate Recorded Future in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Recorded Future credentials

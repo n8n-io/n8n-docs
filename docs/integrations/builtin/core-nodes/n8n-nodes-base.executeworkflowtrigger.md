@@ -1,12 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Execute Workflow Trigger node documentation
-description: Learn how to use the Execute Workflow Trigger node in n8n. Follow technical documentation to integrate Execute Workflow Trigger node into your workflows.
+title: Execute Sub-workflow Trigger node documentation
+description: Learn how to use the Execute Sub-workflow Trigger node in n8n. Follow technical documentation to integrate Execute Sub-workflow Trigger node into your workflows.
 contentType: [integration, reference]
 priority: high
 ---
 
-# Execute Workflow Trigger node
+# Execute Sub-workflow Trigger node
 
 Use this node to start a workflow in response to another workflow. It should be the first node in the workflow.
 

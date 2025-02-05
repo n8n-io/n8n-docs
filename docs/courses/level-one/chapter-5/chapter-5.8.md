@@ -45,7 +45,7 @@ Access these settings by selecting the three dots in the upper right corner of t
 In the **Workflow Settings** window you can configure the following settings:
 
 - [**Error Workflow**](/flow-logic/error-handling/): A workflow to run in case the execution of the current workflow fails.
-- **This workflow can be called by**: Workflows that are allowed to call this workflow using the [Execute Workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/).
+- **This workflow can be called by**: Workflows that are allowed to call this workflow using the [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/).
 - **Timezone**: The timezone to use in the current workflow. If not set, the global timezone (by default "New York") is used. This setting is particularly important for the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/), as you want to make sure that the workflow gets executed at the right time.
 - **Save failed production executions**: If the Execution data of the workflow should be saved when it fails. Default is to save.
 - **Save successful production executions**: If the Execution data of the workflow should be saved when it succeeds. Default is to save.

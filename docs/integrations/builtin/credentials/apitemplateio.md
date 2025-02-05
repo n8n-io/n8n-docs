@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: APITemplate.io credentials
 description: Documentation for APITemplate.io credentials. Use these credentials to authenticate APITemplate.io in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # APITemplate.io credentials

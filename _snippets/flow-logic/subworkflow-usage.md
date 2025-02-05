@@ -52,4 +52,4 @@ You can now pin example data in the trigger node, enabling you to work with real
 
 When your workflow executes, it will send data to the sub-workflow, and run it.
 
-You can follow the execution flow from the parent workflow to the sub-workflow by opening the Execute Workflow node and selecting the **View sub-execution** link. Likewise, the sub-workflow's execution contains a link back to the parent workflow's execution to navigate in the other direction.
+You can follow the execution flow from the parent workflow to the sub-workflow by opening the Execute Sub-workflow node and selecting the **View sub-execution** link. Likewise, the sub-workflow's execution contains a link back to the parent workflow's execution to navigate in the other direction.

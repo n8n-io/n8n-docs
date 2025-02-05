@@ -43,7 +43,7 @@ Other images like this should expand on click:
 
 ## Links
 
-[This link should open in a new tab](https://example.com/){:target=_blank .external-link}
+[This link should open in a new tab](https://example.com/)
 
 [This link should open in the same tab](/try-it-out/quickstart/)
 
@@ -74,3 +74,5 @@ You should see a list of 5 HTTP Request templates
 You should see the AI Glossary below
 
 --8<-- "_glossary/ai-glossary.md"
+
+Link to [workflows](/glossary/#workflow-n8n){ data-preview } glossary definition with preview.

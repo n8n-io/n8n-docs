@@ -14,7 +14,7 @@ hide:
 
 # Let AI specify the tool parameters
 
-When configuring [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent, many parameters can be filled in by the Ai model itself. The AI model will use the context from the task and information from other connected tools to fill in the appropriate details.
+When configuring [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent, many parameters can be filled in by the AI model itself. The AI model will use the context from the task and information from other connected tools to fill in the appropriate details.
 
 There are two ways to do this, and you can switch between them.
 
@@ -25,7 +25,7 @@ Each appropriate paramater field in the tool's editing dialog has an extra butto
 ![image showing stars icon to the right of parameter field]()
 
 In this case the AI Agent will fill in the expression for you, with no need for any further user input.
-The field itself will be filled in with a message indicating that the parameter has been defined automatically by the model.
+The field itself is filled in with a message indicating that the parameter has been defined automatically by the model.
 
 If you want to revert to defining the parameter yourself, click on the 'X' in this box to revert to user-defined values. Note that the 'expression' field will now contain the expression compiled by AI, though you can now edit it further to add extra details as described in the following section.
 

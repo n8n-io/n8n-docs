@@ -35,6 +35,22 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.78.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.0...n8n@1.78.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-05
+
+This release contains bug fixes.
+
+### Contributors
+
+[mocanew](https://github.com/mocanew){:target=_blank .external-link}  
+[Timtendo12](https://github.com/Timtendo12){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.77.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.1...n8n@1.77.2){:target=_blank .external-link} for this version.<br />

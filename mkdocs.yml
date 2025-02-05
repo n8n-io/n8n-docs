@@ -391,7 +391,7 @@ nav:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
-        - Execute Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
+        - Execute Sub-workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
         - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.filter.md

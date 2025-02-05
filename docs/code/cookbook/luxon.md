@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-contentType: howto
+title: Date and time with Luxon
 description: Use Luxon to work with date and time in n8n.
+contentType: howto
 ---
 
 # Date and time with Luxon

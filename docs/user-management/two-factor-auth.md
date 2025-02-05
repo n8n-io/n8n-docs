@@ -1,6 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: How to enable 2FA for your n8n account
+contentType: howto
 ---
 
 # Two-factor authentication (2FA)

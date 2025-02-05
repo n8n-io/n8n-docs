@@ -3,6 +3,7 @@
 title: BambooHR credentials
 description: Documentation for BambooHR credentials. Use these credentials to authenticate BambooHR in n8n, a workflow automation platform.
 contentType: [integration, reference]
+priority: medium
 ---
 
 # BambooHR credentials

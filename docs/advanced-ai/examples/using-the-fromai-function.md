@@ -29,6 +29,10 @@ The field itself is filled in with a message indicating that the parameter has b
 
 If you want to revert to defining the parameter yourself, click on the 'X' in this box to revert to user-defined values. Note that the 'expression' field will now contain the expression compiled by AI, though you can now edit it further to add extra details as described in the following section.
 
+/// warning 
+Activating this feature will overwrite any manual definition you may have already added.
+///
+
 ## Use the `$fromAI()` function 
 
 The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/).  You can use the `$fromAI()` function in expressions within [app nodes](/integrations/builtin/app-nodes/) (like [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/), [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/), or [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)) which are connected to the **AI Agent** as a tool.

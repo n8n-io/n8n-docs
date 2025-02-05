@@ -10,7 +10,7 @@
 1. **Optional**: configure which workflows can call the sub-workflow:
 	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
 	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
-1. Add the **When Executed by Another Workflow** trigger node (also found under **Execute Sub-workflow Trigger**).
+1. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).
 1. Set the **Input data mode** to choose how you will define the sub-workflow's input data:
 	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide.
 	* **Define using JSON example**: Choose this mode to provide an example JSON object that demonstrates the expected input items and their types.

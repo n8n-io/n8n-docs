@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Let AI specify tool parameters with `$fromAI()`
-description: Understand how n8n's `$fromAI()` function works and how to use it to dynamically populate parameters for AI app tools.
+title: Let AI specify tool parameters
+description: Understand how n8n's `$fromAI()` function works and how to use it to dynamically populate parameters for AI app tools, or use the built-in automation to complete them instead.
 contentType: explanation
 tags:
   - $fromAI
@@ -12,13 +12,30 @@ hide:
   - tags
 ---
 
-# Let AI specify tool parameters with `$fromAI()`
+# Let AI specify the tool parameters
 
-When configuring [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent, you can use the `$fromAI()` function to dynamically populate parameter values using the AI model. The AI model will fill in appropriate data given the context from the task and information from other connected tools.
+When configuring [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent, many parameters can be filled in by the AI model itself. The AI model will use the context from the task and information from other connected tools to fill in the appropriate details.
 
-## How the `$fromAI()` function works
+There are two ways to do this, and you can switch between them.
 
-The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/).  You can use the `$fromAI()` function in expressions within [app nodes](/integrations/builtin/app-nodes/) (like [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/), [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/), or [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)) connected to a tool node.
+## Let the model fill in the parameter
+
+Each appropriate parameter field in the tool's editing dialog has an extra button at the end:
+
+![image showing stars icon to the right of parameter field](/_images/advanced-ai/ai-stars.png)
+
+On activating this button, the AI Agent will fill in the expression for you, with no need for any further user input.
+The field itself is filled in with a message indicating that the parameter has been defined automatically by the model.
+
+If you want to define the parameter yourself, click on the 'X' in this box to revert to user-defined values. Note that the 'expression' field will now contain the expression compiled by AI, though you can now edit it further to add extra details as described in the following section.
+
+/// warning 
+Activating this feature will overwrite any manual definition you may have already added.
+///
+
+## Use the `$fromAI()` function 
+
+The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/).  You can use the `$fromAI()` function in expressions within [app nodes](/integrations/builtin/app-nodes/) (like [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/), [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/), or [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)) which are connected to the **AI Agent** as tools.
 
 /// note | Only for the Node Tools
 The `$fromAI()` function is only available for [app node](/integrations/builtin/app-nodes/) tools connected to the Tools Agent. It isn't possible to use the `$fromAI()` function with the [Call n8n Workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow/), [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode/), [HTTP Request](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/), or [other cluster sub-nodes](/integrations/builtin/cluster-nodes/sub-nodes/).
@@ -34,7 +51,7 @@ The `key` parameter and other arguments to the `$fromAI()` function aren't refer
 
 For instance, if you choose a key called `email`, the AI Model will look for an email address in its context, other tools, and input data. In chat workflows, it may ask the user for an email address if it can't find one elsewhere. You can optionally pass other parameters like `description` to give extra context to the AI model.
 
-## Parameters
+### Parameters
 
 The `$fromAI()` function accepts the following parameters:
 
@@ -49,7 +66,7 @@ The `$fromAI()` function accepts the following parameters:
 
 <!-- vale on -->
 
-## Examples
+### Examples
 
 As an example, you could use the following `$fromAI()` expression to dynamically populate a field with a name:
 
@@ -69,7 +86,7 @@ To dynamically populate the number of items you have in stock, you could use a `
 $fromAI("numItemsInStock", "Number of items in stock", "number", 5)
 ```
 
-## Templates
+### Templates
 
 You can see the `$fromAI()` function in action in the following templates:
 

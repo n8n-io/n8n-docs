@@ -22,7 +22,7 @@ There are two ways to do this, and you can switch between them.
 
 Each appropriate paramater field in the tool's editing dialog has an extra button at the end:
 
-![image showing stars icon to the right of parameter field]()
+![image showing stars icon to the right of parameter field](_images/advanced-ai/ai-stars.png)
 
 In this case the AI Agent will fill in the expression for you, with no need for any further user input.
 The field itself is filled in with a message indicating that the parameter has been defined automatically by the model.

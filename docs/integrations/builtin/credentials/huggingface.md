@@ -2,7 +2,6 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Hugging Face credentials
 description: Documentation for the Hugging Face credentials. Use these credentials to authenticate Hugging Face in n8n, a workflow automation platform.
-priority: medium
 contentType: [integration, reference]
 priority: medium
 ---

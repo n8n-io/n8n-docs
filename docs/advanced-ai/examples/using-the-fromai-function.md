@@ -20,11 +20,11 @@ There are two ways to do this, and you can switch between them.
 
 ## Let the model fill in the parameter
 
-Each appropriate paramater field in the tool's editing dialog has an extra button at the end:
+Each appropriate parameter field in the tool's editing dialog has an extra button at the end:
 
 ![image showing stars icon to the right of parameter field](/_images/advanced-ai/ai-stars.png)
 
-In this case the AI Agent will fill in the expression for you, with no need for any further user input.
+On activating this button, the AI Agent will fill in the expression for you, with no need for any further user input.
 The field itself is filled in with a message indicating that the parameter has been defined automatically by the model.
 
 If you want to revert to defining the parameter yourself, click on the 'X' in this box to revert to user-defined values. Note that the 'expression' field will now contain the expression compiled by AI, though you can now edit it further to add extra details as described in the following section.

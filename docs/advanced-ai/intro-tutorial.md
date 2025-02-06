@@ -4,7 +4,7 @@ description: Learn how to build AI workflows with n8n
 type: tutorial
 ---
 
-# Tutorial: Build an AI chat agent with n8n
+# Build an AI chat agent with n8n
 
 Welcome to the introductory tutorial for building AI workflows with n8n. Whether you ahve used n8n before, or this is your first time, we will show you how the building blocks of AI workflows fit together and contruct a working AI-powered chat agent which you can easily customize for your own purposes.
 
@@ -84,9 +84,6 @@ The AI Agent node is the core of adding AI to your workflows.
  
  1. There are some fields which can be changed. For this tutorial, the default **Agent** should be left at the default (**Tools Agent**). As we are using the **Chat Trigger** node, the other default setting for the source and specification of the prompt don't need to be changed.
 
-??? explanation "Explanation..."
-    Some text with a more detailed explanation of this step
-
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_02.json") ]]
 
 ## 4. Configure the node
@@ -144,8 +141,7 @@ The logs in the previous step reveal some extra data - the system prompt. This i
 1. The system message is now displayed. This is the same priming prompt we noticed before in the logs. Change the prompt to something else to prime the chat model in a different way. You could try something like "You are a brilliant poet who always replies in rhyming couplets" for example.
 
 1. Close the node and return to the chat window. Repeat your message and notice how the output has changed.
-
-![image showing changed chat text, now in rhyming couplets](/_images/advanced-ai/ai-intro-poet.png)
+   ![image showing changed chat text, now in rhyming couplets](/_images/advanced-ai/ai-intro-poet.png)
 
 ## 8. Persistence
 
@@ -154,8 +150,7 @@ The chat model is now giving us useful output, but there is something wrong with
 1. Use the chat and tell the chat model your name, for example "Hi there, my name is Nick".
 
 1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no memory.
-
-![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
+   ![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
     
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
 

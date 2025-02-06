@@ -123,7 +123,7 @@ Now that the node is connected to the **Chat Trigger** and a chat model, we can 
 
 1. Type in a message and press ++enter++. You will now see the response from the chat model appear below your message.
 
-1. The log window displays the inputs and outputs to and from the AI Agent.
+1. The log window displays the inputs to and outputs from the AI Agent.
    ![image showing a chat session in progress](/_images/advanced-ai/ai-intro-chat.png)
 
 ??? explanation "Accessing the logs..."

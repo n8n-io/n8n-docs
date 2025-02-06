@@ -145,7 +145,7 @@ The logs in the previous step reveal some extra data - the system prompt. This i
 
 1. Close the node and return to the chat window. Repeat your message and notice how the output has changed.
 
-![image showing changed chat text, now in rhyming couplets]()
+![image showing changed chat text, now in rhyming couplets](/_images/advanced-ai/ai-intro-poet.png)
 
 ## 8. Persistence
 
@@ -155,7 +155,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no memory.
 
-![image showing a conversation illustrating the above]()
+![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
     
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
 

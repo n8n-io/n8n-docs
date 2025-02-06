@@ -97,7 +97,7 @@ AI agents require a chat model to be attached to process the incoming prompts.
 1. Selecting the **OpenAI Chat model** from the list will attach it to the **AI Agent** node and open the node editor. One of the parameters which can be changed is the 'Model'. Note that for the basic OpenAI accounts, only the 'gpt-4o-mini' model is allowed.
 
 ??? explanation "Which chat model?"
-    As mentioned earlier, the LLM is the component which generates the text according to a prompt it is given. LLMs have to be created and trained, usually an intensive process. Different LLMS may have different capabilities or specialties, depending on the data they were trained with. 
+    As mentioned earlier, the LLM is the component which generates the text according to a prompt it is given. LLMs have to be created and trained, usually an intensive process. Different LLMS may have different capabilities or specialties, depending on the data they were trained with.
 
 ## 5. Add credentials (if needed)
 
@@ -113,9 +113,7 @@ In order for n8n to communicate with the chat model, it will need some credentia
 1. The API key is just one long string. That's all you need for this particular credential. Copy it from the OpenAI website and paste it into the **API key** section.
 
 ??? explanation "Keeping your credentials safe"
-    Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n
-	For more about credentials
-
+    Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n.
 
 ## 6. Test the node
 
@@ -151,13 +149,12 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no memory.
    ![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
-    
+
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
 
 1. From the panel which appears, select "Window Buffer Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
 
 1. Repeat the exercise of having a conversation above, and see that the AI Agent now remembers your name.
-
 
 ## 9. saving the workflow
 

@@ -129,11 +129,11 @@ Now the node is connected to the **Chat Trigger** and a chat model, we can test 
 1. Type in a message and press ++enter++. You will now see the response from the chat model appear below your message.
 
 1. The log window displays the inputs and outputs to and from the AI Agent.
-   ![image showing a chat session in progress]()
+   ![image showing a chat session in progress](/_images/advanced-ai/ai-intro-chat.png)
 
 ??? explanation "Accessing the logs..."
     You can access the logs for the AI node even when you aren't using the chat interface. Open up the **AI Agent** node and click on the **Logs** tab in the right hand panel.
-	![screenshot showing the Logs tab in the AIAgent]()
+	![screenshot showing the Logs tab in the AIAgent](/_images/advanced-ai/ai-intro-logs.png)
 
 ## 7. Changing the prompt
 

@@ -4,11 +4,9 @@ description: Learn how to build AI workflows with n8n
 type: tutorial
 ---
 
-{{ macros_info() }}
-
 # Tutorial: Build an AI chat agent with n8n
 
-- TODO: Introduction text
+Welcome to the introductory tutorial for building AI workflows with n8n. Whether you ahve used n8n before, or this is your first time, we will show you how the building blocks of AI workflows fit together and contruct a working AI-powered chat agent which you can easily customize for your own purposes.
 
 !["Screenshot of the completed workflow"](/_images/advanced-ai/ai-intro01.png)
 
@@ -108,10 +106,10 @@ AI agents require a chat model to be attached to process the incoming prompts.
 
 In order for n8n to communicate with the chat model, it will need some credentials (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
 
-![image showing the credentials dialog for OpenAI](_images/advanced-ai/ai-tutorial-credentials.png)
+![image showing the credentials dialog for OpenAI](/_images/advanced-ai/ai-tutorial-credentials.png)
 
-1. To add a new credential, ++left-button++ on the text which says 'Select credential'. An option to add a new credential will appear
-   ![Screenshot showing create a new credential button](docs/_images/advanced-ai/ai-tutorial-create-credential.png)
+1. To add a new credential, click on the text which says 'Select credential'. An option to add a new credential will appear
+   ![Screenshot showing create a new credential button](/_images/advanced-ai/ai-tutorial-create-credential.png)
 
 1. This credential just needs an API key. When adding credentials of any type, check the text to the right-hand side. In this case it has a handy link to take you straight to your OpenAI account to retrieve the API key.
 
@@ -126,7 +124,7 @@ In order for n8n to communicate with the chat model, it will need some credentia
 
 Now the node is connected to the **Chat Trigger** and a chat model, we can test this part of the workflow
 
-1. ++left-button++ on the 'Chat' button near the bottom of the canvas. This opens up a local chat window on the left and the AI agent logs on the right.
+1. Click on the 'Chat' button near the bottom of the canvas. This opens up a local chat window on the left and the AI agent logs on the right.
 
 1. Type in a message and press ++enter++. You will now see the response from the chat model appear below your message.
 
@@ -170,12 +168,11 @@ The chat model is now giving us useful output, but there is something wrong with
 
 Before we leave the workflow editor, remember to save the workflow or all your changes will be lost.
 
-1. ++left-button++ on the "Save" button in the top right of the editor window. Your workflow will now be saved and you can return to it later to chat again or add new features.
+1. Click on the "Save" button in the top right of the editor window. Your workflow will now be saved and you can return to it later to chat again or add new features.
 
 ## Congratulations!
 
 You have taken your first steps in building useful and effective workflows with AI. In this tutorial we have investigated the basic building blocks of an AI workflow, added an **AI Agent** and a chat model, and adjusted the prompt to get the kind of output we wanted. We also added memory so the chat could retain context between messages.
-There is certainly a lot more to explore. Below you will find a list of some suggestions for where to continue your journey and find out what more n8n can do with AI.
 
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_complete.json") ]]
 

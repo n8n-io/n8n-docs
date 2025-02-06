@@ -35,7 +35,7 @@ Configure this operation with these parameters:
 ### Download File
 
 - **Credential to connect with**: Select an existing or create a new [SSH credential](/integrations/builtin/credentials/ssh/) to connect with.
-- **Path**: Enter the path for the file you want to download. This path must include the file name. The downloaded file will use this file name. To use a different name, use the **File Name** option. Refer to [Node options](#node-options) for more information.
+- **Path**: Enter the path for the file you want to download. This path must include the file name. The downloaded file will use this file name. To use a different name, use the **File Name** option. Refer to [Download File options](#download-file-options) for more information.
 - **File Property**: Enter the name of the object property that holds the binary data you want to download.
 
 #### Download File options
@@ -46,7 +46,7 @@ You can further configure this operation with the **File Name** option. Use this
 
 - **Credential to connect with**: Select an existing or create a new [SSH credential](/integrations/builtin/credentials/ssh/) to connect with.
 - **Input Binary Field**: Enter the name of the input binary field that contains the file you want to upload.
-- **Target Directory**: The directory to upload the file to. The name of the file is taken from the binary data file name. To enter a different name, use the **File Name** option. Refer to [Node options](#node-options) for more information.
+- **Target Directory**: The directory to upload the file to. The name of the file is taken from the binary data file name. To enter a different name, use the **File Name** option. Refer to [Upload File options](#upload-file-options) for more information.
 
 #### Upload File options
 

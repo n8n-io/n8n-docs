@@ -376,8 +376,8 @@ Passing the additional value `active` in your JSON payload:
 
 There are four steps to follow to implement this method:
 
-* Obtain the credentials for each user, and any additional parameters that may be required based on the workflow. See [Obtain user credentials](#obtain-user-credentials) above.
-* Create the n8n credentials for this user. See [Create user credentials](#create-user-credentials) above.
+* Obtain the credentials for each user, and any additional parameters that may be required based on the workflow. See [Obtain user credentials](#1-obtain-user-credentials) above.
+* Create the n8n credentials for this user. See [Create user credentials](#2-create-user-credentials) above.
 * Create the workflow.
 * Call the workflow as needed.
 

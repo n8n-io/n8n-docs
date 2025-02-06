@@ -156,7 +156,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. Repeat the exercise of having a conversation above, and see that the AI Agent now remembers your name.
 
-## 9. saving the workflow
+## 9. Saving the workflow
 
 Before we leave the workflow editor, remember to save the workflow or all your changes will be lost.
 

@@ -141,7 +141,7 @@ The logs in the previous step reveal some extra data - the system prompt. This i
 1. Close the node and return to the chat window. Repeat your message and notice how the output has changed.
    ![image showing changed chat text, now in rhyming couplets](/_images/advanced-ai/ai-intro-poet.png)
 
-## 8. Persistence
+## 8. Adding persistence
 
 The chat model is now giving us useful output, but there is something wrong with it which will become apparent when you try to have a conversation.
 

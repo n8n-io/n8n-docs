@@ -1,0 +1,31 @@
+{
+    "name": "AI tutorial",
+    "nodes": [
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          -200,
+          -40
+        ],
+        "id": "a2d42e1f-36df-4a6a-a3b4-99a162074d11",
+        "name": "When chat message received",
+        "webhookId": "97c1a41f-8ef0-4d63-a924-92eb634384d3"
+      }
+    ],
+    "pinData": {},
+    "connections": {},
+    "active": false,
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "versionId": "b1641385-c6b0-48a8-8e26-20d1f6bd7fda",
+    "meta": {
+      "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+    },
+    "id": "l05TkWXXYbOiuL4o",
+    "tags": []
+  }

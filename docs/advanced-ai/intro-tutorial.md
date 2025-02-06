@@ -49,7 +49,7 @@ In n8n, the AI agent is represented as a node with some extra connections.
 | Scope               | Generates language         | Performs complex, real-world tasks |
 | Example             | LLM generating a paragraph | An agent scheduling an appointment |
 
-By incorporating the AI agent as a node, n8n can combine AI-driven steps with traditional programming for efficient, real-world workflows. For instance, simpler tasks like validating an email address does not require AI, whereas a complex tasks like processing the _content_ of an email or dealing with multimodal inputs (e.g., images, audio) is an excellent use of an AI agent.
+By incorporating the AI agent as a node, n8n can combine AI-driven steps with traditional programming for efficient, real-world workflows. For instance, simpler tasks, like validating an email address, do not require AI, whereas a complex tasks, like processing the _content_ of an email or dealing with multimodal inputs (e.g., images, audio), are excellent uses of an AI agent.
 
 ## 1. Create a new workflow
 

@@ -16,7 +16,7 @@ Many people find it easier to take in new information in video format. This tuto
 
 ### What you will need
 
-- **n8n**: For this tutorial we recommend using the [n8n cloud](/choose-n8n/cloud/) service - there is a free trial for new users!. For a self hosted service, refer to the [installation pages](/hosting/installation/docker/).
+- **n8n**: For this tutorial we recommend using the [n8n cloud](/choose-n8n/cloud/) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker/).
 - **Credentials for a chat model**: This tutorial will use OpenAI, but you can easily user DeepSeek, Google Gemini, Groq, Azure and others (see the [sub-nodes documentation](/integrations/builtin/cluster-nodes/sub-nodes/) for more).
 
 ### What you will learn

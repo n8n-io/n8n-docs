@@ -117,7 +117,7 @@ In order for n8n to communicate with the chat model, it will need some credentia
 
 ## 6. Test the node
 
-Now the node is connected to the **Chat Trigger** and a chat model, we can test this part of the workflow
+Now that the node is connected to the **Chat Trigger** and a chat model, we can test this part of the workflow.
 
 1. Click on the 'Chat' button near the bottom of the canvas. This opens up a local chat window on the left and the AI agent logs on the right.
 

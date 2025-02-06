@@ -90,7 +90,7 @@ The AI Agent node is the core of adding AI to your workflows.
   
 AI agents require a chat model to be attached to process the incoming prompts.
 
-1. Add a chat model by pressing the Add a chat model by clicking the plus <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneath the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
+1. Add a chat model by clicking the plus <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneath the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
 
 1. The search dialog will appear, filtered on 'Language Models'. These are the models with built-in support in n8n. For this tutorial we will use **OpenAI Chat Model**.
 
@@ -101,7 +101,7 @@ AI agents require a chat model to be attached to process the incoming prompts.
 
 ## 5. Add credentials (if needed)
 
-In order for n8n to communicate with the chat model, it will need some credentials (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
+In order for n8n to communicate with the chat model, it will need some [credentials](/credentials/) (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
 
 ![image showing the credentials dialog for OpenAI](/_images/advanced-ai/ai-tutorial-credentials.png)
 
@@ -139,7 +139,7 @@ The logs in the previous step reveal some extra data - the system prompt. This i
 1. The system message is now displayed. This is the same priming prompt we noticed before in the logs. Change the prompt to something else to prime the chat model in a different way. You could try something like "You are a brilliant poet who always replies in rhyming couplets" for example.
 
 1. Close the node and return to the chat window. Repeat your message and notice how the output has changed.
-   ![image showing changed chat text, now in rhyming couplets](/_images/advanced-ai/ai-intro-poet.png)
+   ![image showing changed text for chat, now it rhymes; if you can believe that](/_images/advanced-ai/ai-intro-poet.png)
 
 ## 8. Adding persistence
 

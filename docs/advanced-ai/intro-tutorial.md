@@ -93,7 +93,7 @@ The AI Agent node is the core of adding AI to your workflows.
   
 AI agents require a chat model to be attached to process the incoming prompts.
 
-1. Add a chat model by pressing the Add a chat model by clicking the plus <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneat the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
+1. Add a chat model by pressing the Add a chat model by clicking the plus <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneath the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
 
 1. The search dialog will appear, filtered on 'Language Models'. These are the models with built-in support in n8n. For this tutorial we will use **OpenAI Chat Model**.
 

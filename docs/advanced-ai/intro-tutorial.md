@@ -139,7 +139,7 @@ Now the node is connected to the **Chat Trigger** and a chat model, we can test 
 
 ## 7. Changing the prompt
 
-The logs in the previous step reveal some extra data - the system prompt. This is the default message that the **AI Agent** primes the chat model with. From the log you can see this is set to "You are a helpful assistant". We can however change this prompt to alter the behaviour of the chat model.
+The logs in the previous step reveal some extra data - the system prompt. This is the default message that the **AI Agent** primes the chat model with. From the log you can see this is set to "You are a helpful assistant". We can however change this prompt to alter the behavior of the chat model.
 
 1. Open the **AI Agent** node. In the bottom of the panel is a section labeled 'Options' and a selector labeled 'Add Option'. Use this to select 'System message'
 
@@ -159,14 +159,23 @@ The chat model is now giving us useful output, but there is something wrong with
 
 ![image showing a conversation illustrating the above]()
     
-1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node.
+1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
+
+1. From the panel which appears, select "Window Buffer Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
+
+1. Repeat the exercise of having a conversation above, and see that the AI Agent now remembers your name.
 
 
 ## 9. saving the workflow
 
+Before we leave the workflow editor, remember to save the workflow or all your changes will be lost.
+
+1. ++left-button++ on the "Save" button in the top right of the editor window. Your workflow will now be saved and you can return to it later to chat again or add new features.
+
 ## Congratulations!
 
-TODO: summary of what was achieved
+You have taken your first steps in building useful and effective workflows with AI. In this tutorial we have investigated the basic building blocks of an AI workflow, added an **AI Agent** and a chat model, and adjusted the prompt to get the kind of output we wanted. We also added memory so the chat could retain context between messages.
+There is certainly a lot more to explore. Below you will find a list of some suggestions for where to continue your journey and find out what more n8n can do with AI.
 
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_complete.json") ]]
 

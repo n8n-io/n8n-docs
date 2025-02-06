@@ -21,7 +21,7 @@ Many people find it easier to take in new information in video format. This tuto
 
 ### What you will learn
 
-- Concepts of AI in n8n
+- AI concepts in n8n
 - How to use the AI Agent node
 - Working with Chat input
 - Connecting with AI models

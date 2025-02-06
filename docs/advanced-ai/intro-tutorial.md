@@ -76,7 +76,7 @@ Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'
 
 The AI Agent node is the core of adding AI to your workflows.
 
- 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the trigger node to bring up the node search
+ 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the trigger node to bring up the node search.
 
  1. Start typing "AI" and choose the **AI agent** node to add it.
 

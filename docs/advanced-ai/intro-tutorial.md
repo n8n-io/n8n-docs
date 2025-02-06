@@ -182,5 +182,5 @@ Now you have seen how to create a basic AI workflow, there are plenty of resourc
 
 * Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction/).
 * Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}.
-* ...
+* Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools/).
 * ...

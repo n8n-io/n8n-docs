@@ -27,7 +27,7 @@ n8n will introduce external storage for other data types in the future.
 n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html){:target=_blank .external-link} as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
 
 /// info | Enterprise-tier feature
-You will need an [Enterprise license key](/enterprise-key/) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
+You will need an [Enterprise license key](/enterprise-key.md) for external storage. If your license key expires and you remain on S3 mode, the instance will be able to read from, but not write to, the S3 bucket.
 ///
 ### Setup
 

@@ -12,7 +12,7 @@ Use the Dropcontact node to automate work in Dropcontact, and integrate Dropcont
 On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact/) for guidance on setting up authentication. 
+Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

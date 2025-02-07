@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Elasticsearch](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/)
+- [Elasticsearch](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch.md)
 
 ## Supported authentication methods
 

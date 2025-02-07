@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Strava](https://www.strava.com/){:target=_blank .external-link} is an internet service for tracking human exercise which incorporates social network features.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/strava/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/strava.md).
 ///
 
 ///  note  | Examples and templates

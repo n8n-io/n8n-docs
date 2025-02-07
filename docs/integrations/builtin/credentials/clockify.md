@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Clockify](/integrations/builtin/app-nodes/n8n-nodes-base.clockify/)
-- [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger/)
+- [Clockify](/integrations/builtin/app-nodes/n8n-nodes-base.clockify.md)
+- [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md)
 
 ## Prerequisites
 

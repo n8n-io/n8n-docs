@@ -11,7 +11,7 @@ contentType: tutorial
 * Easier setup for your preferred database.
 * Can avoid issues due to different operating systems, as Docker provides a consistent system.
 
-You can also use n8n in Docker with [Docker Compose](/hosting/installation/server-setups/docker-compose/). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
+You can also use n8n in Docker with [Docker Compose](/hosting/installation/server-setups/docker-compose.md). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ If no directory is found, n8n creates automatically one on
 startup. In this case, existing credentials saved with a different encryption key can not be used anymore.
 
 /// note | Keep in mind
-Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/configuration/environment-variables/).
+Persisting the `/home/node/.n8n` directory even when using alternate databases is the recommended best practice, but not explicitly required. The encryption key can be provided using the `N8N_ENCRYPTION_KEY` [environment variable](/hosting/configuration/environment-variables/index.md).
 ///
 ### PostgresDB
 

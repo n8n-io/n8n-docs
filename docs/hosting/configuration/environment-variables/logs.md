@@ -14,14 +14,14 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](/hosting/logging-monitoring/logging/) for details. 
+This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](/hosting/logging-monitoring/logging.md) for details. 
 
 ## n8n logs
 
 <!-- vale off -->
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_LOG_LEVEL` | Enum string: `info`, `warn`, `error`, `debug` | `info` | Log output level. Refer to [Log levels](/hosting/logging-monitoring/logging/#log-levels) for details. |
+| `N8N_LOG_LEVEL` | Enum string: `info`, `warn`, `error`, `debug` | `info` | Log output level. Refer to [Log levels](/hosting/logging-monitoring/logging.md#log-levels) for details. |
 | `N8N_LOG_OUTPUT` | Enum string: `console`, `file` | `console` | Where to output logs. Provide multiple values as a comma-separated list. |
 | `N8N_LOG_FILE_COUNT_MAX` | Number | `100` | Max number of log files to keep. |
 | `N8N_LOG_FILE_SIZE_MAX` | Number | `16` | Max size of each log file in MB. |
@@ -35,7 +35,7 @@ This page lists environment variables to set up logging for debugging. Refer to 
 
 ## Log streaming
 
-Refer to [Log streaming](/log-streaming/) for more information on this feature.
+Refer to [Log streaming](/log-streaming.md) for more information on this feature.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

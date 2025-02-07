@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Affinity](/integrations/builtin/app-nodes/n8n-nodes-base.affinity/)
-- [Affinity Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger/)
+- [Affinity](/integrations/builtin/app-nodes/n8n-nodes-base.affinity.md)
+- [Affinity Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger.md)
 
 ## Prerequisites
 

@@ -12,7 +12,7 @@ Use the Bitly node to automate work in Bitly, and integrate Bitly with other app
 On this page, you'll find a list of operations the Bitly node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Bitly credentials](/integrations/builtin/credentials/bitly/) for guidance on setting up authentication. 
+Refer to [Bitly credentials](/integrations/builtin/credentials/bitly.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

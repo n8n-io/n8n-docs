@@ -8,7 +8,7 @@ priority: high
 
 # OpenAI Chat Model node common issues
 
-Here are some common errors and issues with the [OpenAI Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [OpenAI Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) and steps to resolve or troubleshoot them.
 
 ## Processing parameters
 

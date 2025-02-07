@@ -12,7 +12,7 @@ Use the Beeminder node to automate work in Beeminder, and integrate Beeminder wi
 On this page, you'll find a list of operations the Beeminder node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Beeminder credentials](/integrations/builtin/credentials/beeminder/) for guidance on setting up authentication. 
+Refer to [Beeminder credentials](/integrations/builtin/credentials/beeminder.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

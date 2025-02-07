@@ -12,7 +12,7 @@ Use the MISP node to automate work in MISP, and integrate MISP with other applic
 On this page, you'll find a list of operations the MISP node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MISP credentials](/integrations/builtin/credentials/misp/) for guidance on setting up authentication. 
+Refer to [MISP credentials](/integrations/builtin/credentials/misp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

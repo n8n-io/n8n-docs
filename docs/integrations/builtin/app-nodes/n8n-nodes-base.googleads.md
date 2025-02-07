@@ -13,7 +13,7 @@ Use the Google Ads node to automate work in Google Ads, and integrate Google Ads
 On this page, you'll find a list of operations the Google Ads node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Ads credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

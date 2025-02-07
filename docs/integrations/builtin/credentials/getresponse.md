@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getresponse/)
-- [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger/)
+- [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getresponse.md)
+- [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md)
 
 ## Prerequisites
 

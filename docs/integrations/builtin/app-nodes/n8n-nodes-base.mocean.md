@@ -12,7 +12,7 @@ Use the Mocean node to automate work in Mocean, and integrate Mocean with other 
 On this page, you'll find a list of operations the Mocean node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mocean credentials](/integrations/builtin/credentials/mocean/) for guidance on setting up authentication. 
+Refer to [Mocean credentials](/integrations/builtin/credentials/mocean.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

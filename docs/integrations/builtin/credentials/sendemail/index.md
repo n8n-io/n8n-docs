@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md)
 
 ## Prerequisites
 
@@ -43,15 +43,15 @@ Refer to the quickstart guides for these common email providers.
 
 #### Gmail
 
-Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail).
+Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail.md).
 
 #### Outlook.com
 
-Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook).
+Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook.md).
 
 #### Yahoo
 
-Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo).
+Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo.md).
 
 ### My provider isn't listed
 

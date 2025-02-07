@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pushbullet](/integrations/builtin/app-nodes/n8n-nodes-base.pushbullet/)
+- [Pushbullet](/integrations/builtin/app-nodes/n8n-nodes-base.pushbullet.md)
 
 ## Prerequisites
 

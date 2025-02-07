@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [UptimeRobot](/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot/)
+- [UptimeRobot](/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot.md)
 
 ## Prerequisites
 

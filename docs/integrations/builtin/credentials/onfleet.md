@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Onfleet](/integrations/builtin/app-nodes/n8n-nodes-base.onfleet/)
-- [Onfleet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger/)
+- [Onfleet](/integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md)
+- [Onfleet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md)
 
 ## Prerequisites
 

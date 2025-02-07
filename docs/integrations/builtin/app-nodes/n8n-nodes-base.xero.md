@@ -12,7 +12,7 @@ Use the Xero node to automate work in Xero, and integrate Xero with other applic
 On this page, you'll find a list of operations the Xero node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Xero credentials](/integrations/builtin/credentials/xero/) for guidance on setting up authentication. 
+Refer to [Xero credentials](/integrations/builtin/credentials/xero.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

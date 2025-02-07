@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following node:
 
-- [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2/)
+- [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2.md)
 
 ## Prerequisites
 

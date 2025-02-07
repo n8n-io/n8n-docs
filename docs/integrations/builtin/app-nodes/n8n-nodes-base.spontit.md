@@ -12,7 +12,7 @@ Use the Spontit node to automate work in Spontit, and integrate Spontit with oth
 On this page, you'll find a list of operations the Spontit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Spontit credentials](/integrations/builtin/credentials/spontit/) for guidance on setting up authentication. 
+Refer to [Spontit credentials](/integrations/builtin/credentials/spontit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

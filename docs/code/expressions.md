@@ -15,7 +15,7 @@ Use expressions to set node parameters dynamically based on data from:
 
 You can execute JavaScript within an expression. 
 
-n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code-examples/methods-variables-reference/) and [data transformation functions](/code-examples/expressions/data-transformation-functions/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
+n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
 
 n8n supports two libraries:
 
@@ -26,7 +26,7 @@ n8n supports two libraries:
 Expressions must use JavaScript.
 ///
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/) for more information on working with data in your workflows.
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
 ///
 ## Writing expressions
 
@@ -110,4 +110,4 @@ While the second example is valid:
 
 ## Common issues
 
-For common errors or issues with expressions and suggested resolution steps, refer to [Common Issues](/code/cookbook/expressions/common-issues/).
+For common errors or issues with expressions and suggested resolution steps, refer to [Common Issues](/code/cookbook/expressions/common-issues.md).

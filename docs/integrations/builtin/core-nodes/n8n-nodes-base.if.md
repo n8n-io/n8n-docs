@@ -44,9 +44,9 @@ You can choose to keep data:
 
 ## Related resources
 
-Refer to [Splitting with conditionals](/flow-logic/splitting/) for more information on using conditionals to create complex logic in n8n.
+Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
 
-If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/).
+If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md).
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 

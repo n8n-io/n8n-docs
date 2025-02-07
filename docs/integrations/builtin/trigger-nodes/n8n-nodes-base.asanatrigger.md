@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Asana](https://asana.com/){:target=_blank .external-link} is a web and mobile application designed to help teams organize, track, and manage their work.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/asana/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/asana.md).
 ///
 
 ///  note  | Examples and templates

@@ -12,7 +12,7 @@ Use the AWS Certificate Manager node to automate work in AWS Certificate Manager
 On this page, you'll find a list of operations the AWS Certificate Manager node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

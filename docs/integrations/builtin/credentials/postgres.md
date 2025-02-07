@@ -10,10 +10,10 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/)
-- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
-- [Postgres Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat/) 
-- [PGVector Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector/) 
+- [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md)
+- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
+- [Postgres Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md) 
+- [PGVector Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md) 
 
 /// note | Agent node users
 The Agent node doesn't support SSH tunnels.
@@ -85,6 +85,6 @@ Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org
 
 Only use the **SSH Tunnel** setting if:
 
-- You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/) node (Agent node doesn't support SSH tunnels).
+- You're using the credential with the [Postgres](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md) node (Agent node doesn't support SSH tunnels).
 - You have an SSH server running on the same machine as the Postgres server.
 - You have a user account that can log in using `ssh`.

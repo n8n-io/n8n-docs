@@ -12,7 +12,7 @@ Use the AWS Elastic Load Balancing node to automate work in AWS ELB, and integra
 On this page, you'll find a list of operations the AWS ELB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
+Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws.md){:target=_blank .external-link} for guidance on setting up authentication. 
 ///
 
 ## Operations

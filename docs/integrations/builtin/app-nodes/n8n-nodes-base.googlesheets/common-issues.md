@@ -8,7 +8,7 @@ priority: critical
 
 # Google Sheets node common issues
 
-Here are some common errors and issues with the [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Sheets node](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) and steps to resolve or troubleshoot them.
 
 ## Append an array
 
@@ -16,12 +16,12 @@ To insert an array of data into Google Sheets, you must convert the array into a
 
 To do so, consider using:
 
-1. The [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/) node.
-1. The [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/) node. For example, try entering something like:
+1. The [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) node.
+1. The [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md) node. For example, try entering something like:
     ```
     Convert 'languages' array to JSON (key, value) pairs.
     ```
-1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+1. The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
 <!-- vale off -->
 ## Column names were updated after the node's setup

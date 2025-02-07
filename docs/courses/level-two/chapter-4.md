@@ -16,7 +16,7 @@ n8n tracks executions of your workflows.
 
 When one of your workflows fails, you can check the Executions log to see what went wrong. The Executions log shows you a list of the latest execution time, status, mode, and running time of your saved workflows.
 
-Open the Executions log by selecting [**Executions**](/editor-ui/#executions) in the left-side panel. 
+Open the Executions log by selecting [**Executions**](/workflows/executions/index.md#execution-modes) in the left-side panel. 
 
 To investigate a specific failed execution from the list, select the name or the **View** button that appears when you hover over the row of the respective execution.
 
@@ -31,11 +31,11 @@ To toggle between viewing the execution and the editor, select the **Editor | Ex
 
 ## Catching erroring workflows
 
-To catch failed workflows, create a separate [**Error Workflow**](/flow-logic/error-handling/error-workflows/) with the [**Error Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/). This workflow will only execute if the main workflow execution fails.
+To catch failed workflows, create a separate [**Error Workflow**](/flow-logic/error-handling.md) with the [**Error Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md). This workflow will only execute if the main workflow execution fails.
 
 Use additional nodes in your **Error Workflow** that make sense, like sending notifications about the failed workflow and its errors using email or Slack.
 
-To receive error messages for a failed workflow, set the **Error Workflow** in the [Workflow Settings](/workflows/settings/) to an Error Workflow that uses an **Error Trigger node**.
+To receive error messages for a failed workflow, set the **Error Workflow** in the [Workflow Settings](/workflows/settings.md) to an Error Workflow that uses an **Error Trigger node**.
 
 The only difference between a regular workflow and an Error Workflow is that the latter contains an **Error Trigger node**. Make sure to create this node before you set this as another workflow's designated Error Workflow.
 
@@ -52,8 +52,8 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 
 1. Create a new Error Workflow.
 2. Add the **Error Trigger node**.
-3. Connect a node for the communication platform of your choice to the Error Trigger node, like [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/), [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/), [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/), or even [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) or a more generic [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/).
-4. In the workflow you want to monitor, open the [Workflow Settings](/workflows/settings/) and select the new Error Workflow you just created. Note that this workflow needs to run automatically to trigger the error workflow.
+3. Connect a node for the communication platform of your choice to the Error Trigger node, like [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md), [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md), [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md), or even [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) or a more generic [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md).
+4. In the workflow you want to monitor, open the [Workflow Settings](/workflows/settings.md) and select the new Error Workflow you just created. Note that this workflow needs to run automatically to trigger the error workflow.
 
 ??? note "Show me the solution"
 
@@ -118,7 +118,7 @@ In the previous chapters, you've built several small workflows. Now, pick one of
 
 ## Throwing exceptions in workflows
 
-Another way of troubleshooting workflows is to include a [**Stop and Error node**](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror/) in your workflow. This node throws an error. You can specify the error type:
+Another way of troubleshooting workflows is to include a [**Stop and Error node**](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) in your workflow. This node throws an error. You can specify the error type:
 
 - **Error Message**: returns a custom message about the error
 - **Error Object**: returns the type of error

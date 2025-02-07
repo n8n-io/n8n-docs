@@ -12,7 +12,7 @@ Use the Workable Trigger node to respond to events in the [Workable](https://www
 On this page, you'll find a list of events the Workable Trigger node can respond to and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/workable/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/workable.md).
 ///
 
 ///  note  | Examples and templates

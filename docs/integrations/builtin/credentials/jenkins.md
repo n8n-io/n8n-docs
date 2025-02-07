@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Jenkins](/integrations/builtin/app-nodes/n8n-nodes-base.jenkins/)
+- [Jenkins](/integrations/builtin/app-nodes/n8n-nodes-base.jenkins.md)
 
 
 ## Prerequisites

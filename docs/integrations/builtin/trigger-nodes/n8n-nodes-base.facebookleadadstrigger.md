@@ -13,7 +13,7 @@ Use the Facebook Lead Ads Trigger node to respond to events in [Facebook Lead Ad
 On this page, you'll find a list of events the Facebook Lead Ads Trigger node can respond to, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads.md).
 ///
 
 /// note | Examples and templates

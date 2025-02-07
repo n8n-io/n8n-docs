@@ -12,7 +12,7 @@ Use the npm node to automate work in npm, and integrate npm with other applicati
 On this page, you'll find a list of operations the npm node supports and links to more resources.
 
 /// note | Credentials
-Refer to [npm credentials](/integrations/builtin/credentials/npm/) for guidance on setting up authentication. 
+Refer to [npm credentials](/integrations/builtin/credentials/npm.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

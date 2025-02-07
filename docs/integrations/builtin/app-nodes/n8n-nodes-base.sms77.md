@@ -12,7 +12,7 @@ Use the seven node to automate work in seven, and integrate seven with other app
 On this page, you'll find a list of operations the seven node supports and links to more resources.
 
 /// note | Credentials
-Refer to [seven credentials](/integrations/builtin/credentials/sms77/) for guidance on setting up authentication. 
+Refer to [seven credentials](/integrations/builtin/credentials/sms77.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

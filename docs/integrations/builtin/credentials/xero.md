@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero/)
+- [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md)
 
 ## Prerequisites
 
@@ -44,6 +44,6 @@ Xero doesn't support app instances within the Xero Developer Centre that contain
 - For the **Company or Application URL**, enter the URL of your n8n server or reverse proxy address. For cloud users, for example, this is: `https://your-username.app.n8n.cloud/`.
 - Copy the **OAuth Redirect URL** from n8n and add it as an **OAuth 2.0 redirect URI** in your app.
 - Select appropriate **scopes** for your app. Refer to [OAuth2 Scopes](https://developer.xero.com/documentation/guides/oauth2/scopes/){:target=_blank .external-link} for more information.
-    - To use all functionality in the [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero/) node, add the `accounting.contacts` and `accounting.transactions` scopes.
+    - To use all functionality in the [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md) node, add the `accounting.contacts` and `accounting.transactions` scopes.
 
 Refer to Xero's [OAuth Custom Connections](https://developer.xero.com/documentation/guides/oauth2/custom-connections){:target=_blank .external-link} documentation for more information.

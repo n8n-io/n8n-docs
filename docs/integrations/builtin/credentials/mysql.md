@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
-- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
+- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md)
+- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
 
 /// note | Agent node users
 The Agent node doesn't support SSH tunnels.

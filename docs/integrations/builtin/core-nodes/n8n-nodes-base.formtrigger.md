@@ -10,7 +10,7 @@ priority: critical
 
 Use the n8n Form trigger to start a workflow when a user submits a form, taking the input data from the form. The node generates the form web page for you to use.
 
-You can add more pages to continue the form with the [n8n Form](/integrations/builtin/core-nodes/n8n-nodes-base.form/) node.
+You can add more pages to continue the form with the [n8n Form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) node.
 
 ## Build and test workflows
 
@@ -29,7 +29,7 @@ When working with a production URL, ensure that you have saved and activated the
 
 ## Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form/) receives the same query parameters sent to the n8n Form Trigger URL.
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) receives the same query parameters sent to the n8n Form Trigger URL.
 
 /// note | Only for production
 Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
@@ -99,7 +99,7 @@ Every field has the following settings:
 
 - **Field Label**: Enter the label that appears above the input field. 
 - **Field Type**: Choose from **Date**, **Dropdown List**, **Email**, **File**, **Number**, **Password**, **Text**, or **Textarea**.
-    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon/) for more information on formatting dates.
+    - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
 	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**. 
 - **Required Field**: Turn on to require users to complete this field on the form. 
 
@@ -119,7 +119,7 @@ Select **Add Option** to view more configuration options:
     - **Respond With** > **Form Submitted Text**: Show a message to the user.
     - **Respond With** > **Redirect URL**: Send the user to a new page.
 - **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers. 
-- **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/workflows/settings/) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output. 
+- **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/workflows/settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output. 
 
 ## Templates and examples
 

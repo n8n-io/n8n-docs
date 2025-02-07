@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Brevo](https://www.brevo.com/){:target=_blank .external-link} is a digital marketing platform to help users grow their business.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/brevo/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/brevo.md).
 ///
 
 ///  note  | Examples and templates

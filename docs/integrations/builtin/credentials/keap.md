@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap/)
-- [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger/)
+- [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap.md)
+- [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md)
 
 ## Prerequisites
 

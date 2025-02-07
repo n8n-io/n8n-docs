@@ -82,7 +82,7 @@ n8n takes care to keep self-hosted data anonymous and avoids collecting sensitiv
         - DB_TYPE
         - N8N_VERSION_NOTIFICATIONS_ENABLED
         - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
-        - [Execution variables](/hosting/configuration/environment-variables/executions)
+        - [Execution variables](/hosting/configuration/environment-variables/executions.md)
     - OS, RAM, and CPUs
     - Anonymous instance ID
  - IP address
@@ -118,7 +118,7 @@ To opt out of checking for new versions of n8n:
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
-See [configuration](/hosting/configuration/configuration-methods/) for more info on how to set environment variables.
+See [configuration](/hosting/configuration/configuration-methods.md) for more info on how to set environment variables.
 
 ### Data collection in n8n Cloud
 
@@ -149,7 +149,7 @@ Data is only sent to AI services if workspaces have opted in to use the assistan
 
 - **Credentials**: Any values of the credential fields of your nodes.
 - **Output Data**: The actual data processed by your workflows.
-- **Sensitive Information**: Any personally identifiable information or other sensitive data that could compromise your privacy or security that you have not explicitly mentioned in node parameters or your code of a [Code Node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+- **Sensitive Information**: Any personally identifiable information or other sensitive data that could compromise your privacy or security that you have not explicitly mentioned in node parameters or your code of a [Code Node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
 ### Documentation telemetry
 
@@ -177,7 +177,7 @@ If you choose to delete your n8n account, n8n deletes all customer data and even
 
 ### Self-hosted
 
-Self-hosted users should have their own PID policy and data deletion processes. Refer to [What you can do](/privacy-security/what-you-can-do/) for more information.
+Self-hosted users should have their own PID policy and data deletion processes. Refer to [What you can do](/privacy-security/what-you-can-do.md) for more information.
 
 ## Payment processor
 

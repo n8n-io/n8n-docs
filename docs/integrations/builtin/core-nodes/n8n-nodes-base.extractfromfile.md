@@ -11,7 +11,7 @@ priority: high
 Use the Extract From File node to get data from a binary format and convert it to JSON.
 
 /// note | Convert to File
-To convert JSON data to a file format, use the [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) node.
+To convert JSON data to a file format, use the [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) node.
 ///
 
 ## Operations

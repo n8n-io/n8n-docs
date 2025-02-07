@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Bannerbear](/integrations/builtin/app-nodes/n8n-nodes-base.bannerbear/)
+- [Bannerbear](/integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md)
 
 ## Prerequisites
 

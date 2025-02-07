@@ -11,7 +11,7 @@ priority: medium
 [GitLab](https://gitlab.com/){:target=_blank .external-link} is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab.md).
 ///
 
 ///  note  | Examples and templates

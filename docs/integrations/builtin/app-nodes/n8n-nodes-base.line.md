@@ -19,7 +19,7 @@ Use the Line node to automate work in Line, and integrate Line with other applic
 On this page, you'll find a list of operations the Line node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Line credentials](/integrations/builtin/credentials/line/) for guidance on setting up authentication. 
+Refer to [Line credentials](/integrations/builtin/credentials/line.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

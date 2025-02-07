@@ -6,7 +6,7 @@ contentType: howto
 
 # Update your Cloud version
 
-n8n recommends regularly updating your Cloud version. Check the [Release notes](/release-notes/) to learn more about changes.
+n8n recommends regularly updating your Cloud version. Check the [Release notes](/release-notes.md) to learn more about changes.
 
 /// info
 Only instance owners can upgrade n8n Cloud versions. Contact your instance owner if you don't have permission to update n8n Cloud.

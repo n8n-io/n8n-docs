@@ -11,7 +11,7 @@ priority: medium
 [ClickUp](https://clickup.com/){:target=_blank .external-link} is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/clickup/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/clickup.md).
 ///
 
 ///  note  | Examples and templates

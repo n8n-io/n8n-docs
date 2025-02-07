@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-Refer to [User management](/hosting/configuration/user-management-self-hosted/) for more information on setting up user management and emails.
+Refer to [User management](/hosting/configuration/user-management-self-hosted.md) for more information on setting up user management and emails.
 <!-- vale off -->
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

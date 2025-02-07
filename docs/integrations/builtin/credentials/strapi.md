@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Strapi](/integrations/builtin/app-nodes/n8n-nodes-base.strapi/)
+- [Strapi](/integrations/builtin/app-nodes/n8n-nodes-base.strapi.md)
 
 ## Prerequisites
 

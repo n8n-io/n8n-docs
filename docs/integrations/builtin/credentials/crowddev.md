@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [crowd.dev](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev/)
-* [crowd.dev Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger/)
+* [crowd.dev](/integrations/builtin/app-nodes/n8n-nodes-base.crowddev.md)
+* [crowd.dev Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md)
 
 ## Prerequisites
 

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/)
+- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md)
 
 /// warning | Supported Calendly plans
 The Calendly Trigger node relies on Calendly webhooks. Calendly only offers access to webhooks in their paid plans.

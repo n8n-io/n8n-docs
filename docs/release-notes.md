@@ -33,7 +33,28 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x)
 ///
 
+## n8n@1.77.3
 
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.2...n8n@1.77.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-06
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.78.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.0...n8n@1.78.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-05
+
+This release contains new features, node updates, and bug fixes.
+
+### Contributors
+
+[mocanew](https://github.com/mocanew){:target=_blank .external-link}  
+[Timtendo12](https://github.com/Timtendo12){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.77.2
 
@@ -48,8 +69,6 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.76.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.2...n8n@1.76.3){:target=_blank .external-link} for this version.<br />
@@ -63,14 +82,10 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.77.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.0...n8n@1.77.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-03
-
-
 
 This release contains bug fixes.
 
@@ -81,49 +96,32 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.1...n8n@1.76.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-03
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.77.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.0...n8n@1.77.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-29
 
-
-
 This release contains new features, editor updates, new nodes, new credentials, node updates, and bug fixes.
 
-
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.76.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.0...n8n@1.76.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-23
 
-
-
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.76.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.75.0...n8n@1.76.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-22
-
-
 
 This release contains new features, editor updates, new credentials, node improvements, and bug fixes.
 
@@ -134,18 +132,10 @@ This release contains new features, editor updates, new credentials, node improv
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.75.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.75.1...n8n@1.75.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-17
-
-
-
-
-
-
 
 This release contains a bug fix.
 
@@ -156,31 +146,27 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.2...n8n@1.74.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-17
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.75.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.75.0...n8n@1.75.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-17
 
-
-
 This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.74.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.1...n8n@1.74.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-17
 
-
-
 This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.75.0
 
@@ -189,15 +175,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.0...n8n@1.75.0
 
 This release contains bug fixes and editor updates.
 
-
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.74.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.0...n8n@1.74.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-01-09
-
-
 
 This release contains a bug fix.
 

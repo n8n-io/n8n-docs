@@ -196,4 +196,5 @@ plugins:
       links_attr_map:
         target: _blank
         rel: external
+
 INHERIT: ./nav.yml

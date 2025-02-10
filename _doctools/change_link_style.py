@@ -7,10 +7,6 @@ def find_markdown_files(directory):
 	"""Return a list of path objects for all markdown files in the given directory."""
 	return list(Path(directory).rglob("*.[mM][dD]"))
 
-def get_abs_path_from_dir(path, root_dir):
-	"""Return an absolute path from a root_dir."""
-	return "/" / path.relative_to(root_dir)
-
 def map_urls_to_files(path_list, root_dir):
 	"""Return a dictionary mapping URL link targets to file targets."""
 	path_maps = dict()

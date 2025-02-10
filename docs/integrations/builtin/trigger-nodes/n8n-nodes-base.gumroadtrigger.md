@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Gumroad](https://gumroad.com){:target=_blank .external-link} is an online platform that enables creators to sell products directly to consumers.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gumroad/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/gumroad.md).
 ///
 
 ///  note  | Examples and templates

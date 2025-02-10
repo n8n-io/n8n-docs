@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/)
+- [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md)
 
 ## Prerequisites
 

@@ -22,7 +22,7 @@ Create a [CrowdStrike](https://www.crowdstrike.com/en-us/){:target=_blank .exter
 
 Refer to CrowdStrike's documentation for more information about the service. Their documentation is behind a log in, so you must log in to your account on their website to access the API documentation.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/crowdstrike/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/crowdstrike/){:target=_blank .external-link} on n8n's website.
 
 ## Using OAuth2
 

@@ -13,7 +13,7 @@ Use the OpenAI Chat Model node to use OpenAI's chat models with conversational a
 On this page, you'll find the node parameters for the OpenAI Chat Model node and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/openai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -79,6 +79,6 @@ Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integ
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

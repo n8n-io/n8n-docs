@@ -8,7 +8,7 @@ priority: critical
 
 # Respond to Webhook
 
-Use the Respond to Webhook node to control the response to incoming webhooks. This node works with the [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node.
+Use the Respond to Webhook node to control the response to incoming webhooks. This node works with the [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node.
 
 /// note | Runs once for the first data item
 The Respond to Webhook node runs once, using the first incoming data item. Refer to [Return more than one data item](#return-more-than-one-data-item-deprecated) for more information.
@@ -18,7 +18,7 @@ The Respond to Webhook node runs once, using the first incoming data item. Refer
 
 To use the Respond to Webhook node:
 
-1. Add a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node as the trigger node for the workflow.
+1. Add a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node as the trigger node for the workflow.
 1. In the Webhook node, set **Respond** to **Using 'Respond to Webhook' node**.
 1. Add the Respond to Webhook node anywhere in your workflow. If you want it to return data from other nodes, place it after those nodes.
 
@@ -66,9 +66,9 @@ When using the Respond to Webhook node, workflows behave as follows:
 n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
 ///
 
-The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions/). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
+The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions.md). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
 
 If you need to return more than one data item, choose one of these options:
 
 - Instead of using the Respond to Webhook node, use the **When Last Node Finishes** option in **Respond** in the Webhook node. Use this when you want to return the final data that the workflow outputs.
-- Use the [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Set **Aggregate** to **All Item Data (Into a Single List)**.
+- Use the [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) node to turn multiple items into a single item before passing the data to the Respond to Webhook node. Set **Aggregate** to **All Item Data (Into a Single List)**.

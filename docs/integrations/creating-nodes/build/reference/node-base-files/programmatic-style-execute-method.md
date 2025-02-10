@@ -12,5 +12,5 @@ The main difference between the declarative and programmatic styles is how they 
 The `execute()` method creates and returns an instance of `INodeExecutionData`.
 
 /// warning | Paired items
-You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/build/reference/paired-items/).
+You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](/integrations/creating-nodes/build/reference/paired-items.md).
 ///

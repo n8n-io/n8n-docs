@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following node:
 
-- [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/)
+- [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch.md)
 
 ## Prerequisites
 

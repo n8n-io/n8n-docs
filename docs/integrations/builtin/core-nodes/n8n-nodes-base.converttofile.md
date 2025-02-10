@@ -11,7 +11,7 @@ priority: critical
 Use the Convert to File node to take input data and output it as a file. This converts the input JSON data into a binary format.
 
 /// note | Extract From File
-To extract data from a file and convert it to JSON, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) node.
+To extract data from a file and convert it to JSON, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node.
 ///
 
 ## Operations
@@ -84,7 +84,7 @@ You can also configure this operation with these **Options**:
 	* **Tentative**
 * **UID**: Enter a universally unique ID (UID) for the event. The UID should be globally unique. The node automatically generates a UID if you don't enter one.
 * **URL**: Enter a URL associated with the event.
-* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings/).
+* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings.md).
 
 ### Convert to JSON
 

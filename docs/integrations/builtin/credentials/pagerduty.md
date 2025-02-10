@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [PagerDuty](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/)
+- [PagerDuty](/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md)
 
 ## Prerequisites
 

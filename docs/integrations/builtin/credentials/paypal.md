@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal/)
-- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger/)
+- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal.md)
+- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md)
 
 ## Prerequisites
 

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/)
+- [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext.md)
 
 ## Prerequisites
 

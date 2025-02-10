@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [LoneScale](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale/)
-- [LoneScale Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger/)
+- [LoneScale](/integrations/builtin/app-nodes/n8n-nodes-base.lonescale.md)
+- [LoneScale Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md)
 
 ## Prerequisites
 

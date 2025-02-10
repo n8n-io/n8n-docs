@@ -11,7 +11,7 @@ priority: medium
 [RabbitMQ](https://www.rabbitmq.com){:target=_blank .external-link} is an open-source message broker that accepts and forwards messages.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/rabbitmq/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/rabbitmq.md).
 ///
 
 /// note | Examples and templates
@@ -20,6 +20,6 @@ For usage examples and templates to help you get started, refer to n8n's [Rabbit
 
 ## Related resources
 
-n8n provides an app node for RabbitMQ. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/).
+n8n provides an app node for RabbitMQ. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md).
 
 View [example workflows and related content](https://n8n.io/integrations/rabbitmq-trigger/){:target=_blank .external-link} on n8n's website.

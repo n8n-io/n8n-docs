@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger/)
+- [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md)
 
 ## Prerequisites
 

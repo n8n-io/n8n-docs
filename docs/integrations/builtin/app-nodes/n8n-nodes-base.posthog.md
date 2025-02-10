@@ -12,7 +12,7 @@ Use the PostHog node to automate work in PostHog, and integrate PostHog with oth
 On this page, you'll find a list of operations the PostHog node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PostHog credentials](/integrations/builtin/credentials/posthog/) for guidance on setting up authentication. 
+Refer to [PostHog credentials](/integrations/builtin/credentials/posthog.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/)
-- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger/)
+- [Zendesk](/integrations/builtin/app-nodes/n8n-nodes-base.zendesk.md)
+- [Zendesk Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md)
 
 ## Prerequisites
 

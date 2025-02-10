@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad/)
+- [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad.md)
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ To configure this credential, you'll need:
 
 - A **Base URL**: Enter the URL of your Zammad instance.
 - An **Access Token**: Once **API Token Access** is enabled for the Zammad instance, any user with the `user_preferences.access_token` permission can generate an **Access Token** by going to your **avatar > Profile > Token Access** and **Create** a new token.
-    - The access token permissions depend on what actions you'd like to complete with this credential. For all functionality within the [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad/) node, select:
+    - The access token permissions depend on what actions you'd like to complete with this credential. For all functionality within the [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad.md) node, select:
         - `admin.group`
         - `admin.organization`
         - `admin.user`

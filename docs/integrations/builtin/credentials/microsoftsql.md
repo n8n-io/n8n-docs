@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/)
+- [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md)
 
 ## Prerequisites
 

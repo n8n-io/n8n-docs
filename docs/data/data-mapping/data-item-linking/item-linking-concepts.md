@@ -9,9 +9,9 @@ Each output item created by a node includes metadata that links them to the inpu
 
 This document provides a conceptual overview of this feature. For usage details, refer to:
 
-* [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building/), for details on how to handle item linking when building a node.
-* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node/), to learn how to handle item linking in the Code node.
-* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/), to understand the errors you may encounter in the editor UI.
+* [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md), for details on how to handle item linking when building a node.
+* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md), to learn how to handle item linking in the Code node.
+* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md), to understand the errors you may encounter in the editor UI.
 
 ## n8n's automatic item linking
 
@@ -24,7 +24,7 @@ If a node doesn't control how to link input items to output items, n8n tries to 
 	* If the number of inputs and outputs is equal, n8n links the items in order. This means that output-1 links to input-1, output-2 to input-2, and so on.
 	* If the number isn't equal, or you create completely new items, n8n can't automatically link items.
 
-If n8n can't link items automatically, and the node doesn't handle the item linking, n8n displays an error. Refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/) for more information.
+If n8n can't link items automatically, and the node doesn't handle the item linking, n8n displays an error. Refer to [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md) for more information.
 
 ## Item linking example
 
@@ -34,10 +34,10 @@ In this example, it's possible for n8n to link an item in one node back several 
 
 The methods for accessing linked items are different depending on whether you're using the UI, expressions, or the code node. Explore the following resources:
 
-* [Mapping in the UI](/data/data-mapping/data-mapping-ui/)
-* [Mapping in the expressions editor](/data/data-mapping/data-mapping-expressions/)
-* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node/)
-* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors/)
+* [Mapping in the UI](/data/data-mapping/data-mapping-ui.md)
+* [Mapping in the expressions editor](/data/data-mapping/data-mapping-expressions.md)
+* [Item linking in the Code node](/data/data-mapping/data-item-linking/item-linking-code-node.md)
+* [Item linking errors](/data/data-mapping/data-item-linking/item-linking-errors.md)
 
 
 

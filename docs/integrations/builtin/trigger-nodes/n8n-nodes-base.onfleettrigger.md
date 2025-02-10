@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Onfleet](https://onfleet.com/){:target=_blank .external-link} is a logistics platform offering a last-mile delivery solution.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet.md).
 ///
 
 ///  note  | Examples and templates

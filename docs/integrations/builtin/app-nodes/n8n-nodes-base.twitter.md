@@ -13,7 +13,7 @@ Use the X node to automate work in X and integrate X with other applications. n8
 On this page, you'll find a list of operations the X node supports and links to more resources.
 
 /// note | Credentials
-Refer to [X credentials](/integrations/builtin/credentials/twitter/) for guidance on setting up authentication. 
+Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

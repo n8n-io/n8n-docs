@@ -33,6 +33,6 @@ Refer to [LangChain's output parser documentation](https://js.langchain.com/docs
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

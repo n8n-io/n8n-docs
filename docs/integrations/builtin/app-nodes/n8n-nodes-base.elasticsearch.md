@@ -13,7 +13,7 @@ Use the Elasticsearch node to automate work in Elasticsearch, and integrate Elas
 On this page, you'll find a list of operations the Elasticsearch node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Elasticsearch credentials](/integrations/builtin/credentials/elasticsearch/) for guidance on setting up authentication. 
+Refer to [Elasticsearch credentials](/integrations/builtin/credentials/elasticsearch.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

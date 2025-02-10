@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshworks CRM](/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm/)
+- [Freshworks CRM](/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm.md)
 
 ## Prerequisites
 

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [JotForm Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger/)
+- [JotForm Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md)
 
 ## Supported authentication methods
 

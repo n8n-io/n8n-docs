@@ -15,7 +15,7 @@ contentType: howto
 
 You can use an external secrets store to manage credentials for n8n.
 
-n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](/source-control-environments/) in one central place.
+n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](/source-control-environments/index.md) in one central place.
 
 ## Connect n8n to your secrets store
 
@@ -125,13 +125,13 @@ To use a secret from your store in an n8n credential:
 
 ## Using external secrets with n8n environments
 
-n8n's [Source control and environments](/source-control-environments/) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
+n8n's [Source control and environments](/source-control-environments/index.md) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
 
 For example, you have two n8n instances, one for development and one for production. You use Infisical for your vault. In Infisical, create a project with two environments, development and production. Generate a token for each Infisical environment. Use the token for the development environment to connect your development n8n instance, and the token for your production environment to connect your production n8n instance.
 
 ## Using external secrets in projects
 
-To use external secrets in an [RBAC project](/user-management/rbac/), you must have an [instance owner or instance admin](/user-management/account-types/) as a member of the project.
+To use external secrets in an [RBAC project](/user-management/rbac/index.md), you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.
 
 ## Troubleshooting
 

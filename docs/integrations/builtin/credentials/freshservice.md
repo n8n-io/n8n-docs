@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshservice](/integrations/builtin/app-nodes/n8n-nodes-base.freshservice/)
+- [Freshservice](/integrations/builtin/app-nodes/n8n-nodes-base.freshservice.md)
 
 ## Prerequisites
 

@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Pipedrive](https://www.pipedrive.com/){:target=_blank .external-link} is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/pipedrive/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/pipedrive.md).
 ///
 
 ///  note  | Examples and templates

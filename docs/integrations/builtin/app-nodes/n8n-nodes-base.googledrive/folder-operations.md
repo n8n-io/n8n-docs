@@ -8,14 +8,14 @@ priority: high
 
 # Google Drive Folder operations
 
-Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
 
 ## Create a folder
 
 Use this operation to create a new folder in a drive.
 
 Enter these parameters:
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Folder**.
 - **Operation**: Select **Create**.
 - **Folder Name**: The name to use for the new folder.
@@ -37,7 +37,7 @@ Use this operation to delete a folder from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Folder**.
 - **Operation**: Select **Delete**.
 - **Folder**: Choose a folder you want to delete. 
@@ -56,7 +56,7 @@ Use this operation to add sharing permissions to a folder.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Folder**.
 - **Operation**: Select **Share**.
 - **Folder**: Choose a file you want to move. 

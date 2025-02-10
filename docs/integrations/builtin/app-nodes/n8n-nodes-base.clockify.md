@@ -12,7 +12,7 @@ Use the Clockify node to automate work in Clockify, and integrate Clockify with 
 On this page, you'll find a list of operations the Clockify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Clockify credentials](/integrations/builtin/credentials/clockify/) for guidance on setting up authentication. 
+Refer to [Clockify credentials](/integrations/builtin/credentials/clockify.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

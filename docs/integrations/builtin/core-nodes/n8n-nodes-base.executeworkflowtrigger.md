@@ -17,7 +17,7 @@ n8n allows you to call workflows from other workflows. This is useful if you wan
 
 ## Usage
 
-This node runs in response to a call from the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node.
+This node runs in response to a call from the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node.
 
 --8<-- "_snippets/flow-logic/subworkflow-usage.md"
 

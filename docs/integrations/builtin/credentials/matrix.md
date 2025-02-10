@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Matrix](/integrations/builtin/app-nodes/n8n-nodes-base.matrix/)
+- [Matrix](/integrations/builtin/app-nodes/n8n-nodes-base.matrix.md)
 
 ## Prerequisites
 

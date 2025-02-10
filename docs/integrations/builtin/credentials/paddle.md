@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Paddle](/integrations/builtin/app-nodes/n8n-nodes-base.paddle/)
+- [Paddle](/integrations/builtin/app-nodes/n8n-nodes-base.paddle.md)
 
 ## Prerequisites
 

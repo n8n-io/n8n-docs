@@ -12,7 +12,7 @@ Use the Webflow node to automate work in Webflow, and integrate Webflow with oth
 On this page, you'll find a list of operations the Webflow node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Webflow credentials](/integrations/builtin/credentials/webflow/) for guidance on setting up authentication. 
+Refer to [Webflow credentials](/integrations/builtin/credentials/webflow.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Adalo](/integrations/builtin/app-nodes/n8n-nodes-base.adalo/)
+- [Adalo](/integrations/builtin/app-nodes/n8n-nodes-base.adalo.md)
 
 /// note | API access
 You need a Team or Business plan to use the Adalo APIs.

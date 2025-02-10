@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/)
+- [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md)
 
 ## Prerequisites
 

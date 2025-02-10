@@ -13,7 +13,7 @@ Use the LinkedIn node to automate work in LinkedIn, and integrate LinkedIn with 
 On this page, you'll find a list of operations the LinkedIn node supports and links to more resources.
 
 /// note | Credentials
-Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedIn/) for guidance on setting up authentication. 
+Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedin.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

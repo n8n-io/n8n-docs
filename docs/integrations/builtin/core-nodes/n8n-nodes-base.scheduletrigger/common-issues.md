@@ -8,7 +8,7 @@ priority: critical
 
 # Schedule Trigger node common issues
 
-Here are some common errors and issues with the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) and steps to resolve or troubleshoot them.
 
 ## Invalid cron expression
 
@@ -16,8 +16,8 @@ This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n
 
 To debug, check that the following:
 
-* That your cron expression follows the syntax used in the [cron examples](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/#custom-cron-interval)
-* That your cron expression (after removing the [seconds column](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
+* That your cron expression follows the syntax used in the [cron examples](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#custom-cron-interval)
+* That your cron expression (after removing the [seconds column](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
 
 ## Scheduled workflows run at the wrong time
 
@@ -25,9 +25,9 @@ If the Schedule Trigger node runs at the wrong time, it may mean that you need t
 
 ### Adjust the timezone globally
 
-If you're using [n8n Cloud](/manage-cloud/overview/), follow the instructions on the [set the Cloud instance timezone](/manage-cloud/set-cloud-timezone/) page to ensure that n8n executes in sync with your local time.
+If you're using [n8n Cloud](/manage-cloud/overview.md), follow the instructions on the [set the Cloud instance timezone](/manage-cloud/set-cloud-timezone.md) page to ensure that n8n executes in sync with your local time.
 
-If you're [self hosting](/hosting/), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization/).
+If you're [self hosting](/hosting/index.md), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md).
 
 ### Adjust the timezone for an individual workflow
 

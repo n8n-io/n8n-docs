@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [Venafi TLS Protect Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud/)
-* [Venafi TLS Protect Cloud Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/)
+* [Venafi TLS Protect Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md)
+* [Venafi TLS Protect Cloud Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md)
 
 ## Prerequisites
 

@@ -12,7 +12,7 @@ Use the Iterable node to automate work in Iterable, and integrate Iterable with 
 On this page, you'll find a list of operations the Iterable node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Iterable credentials](/integrations/builtin/credentials/iterable/) for guidance on setting up authentication. 
+Refer to [Iterable credentials](/integrations/builtin/credentials/iterable.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

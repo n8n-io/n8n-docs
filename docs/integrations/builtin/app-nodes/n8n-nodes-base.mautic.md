@@ -13,7 +13,7 @@ Use the Mautic node to automate work in Mautic, and integrate Mautic with other 
 On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mautic credentials](/integrations/builtin/credentials/mautic/) for guidance on setting up authentication. 
+Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

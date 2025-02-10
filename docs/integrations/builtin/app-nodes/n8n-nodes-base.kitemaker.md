@@ -12,7 +12,7 @@ Use the Kitemaker node to automate work in Kitemaker, and integrate Kitemaker wi
 On this page, you'll find a list of operations the Kitemaker node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker/) for guidance on setting up authentication. 
+Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

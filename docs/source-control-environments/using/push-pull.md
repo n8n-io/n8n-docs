@@ -9,7 +9,7 @@ contentType: howto
 
 If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
 
-This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](/source-control-environments/understand/git/) for an introduction to how n8n works with Git.
+This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](/source-control-environments/understand/git.md) for an introduction to how n8n works with Git.
 
 --8<-- "_snippets/source-control-environments/one-direction.md"
 
@@ -38,7 +38,7 @@ If the original owner is a user:
 
 If the same owner is available on both instances (matching email), the owner remains the same. If the original owner isn't on the new instance, n8n sets the user performing the pull as the workflow owner.
 
-If the original owner is a [project](/user-management/rbac/):
+If the original owner is a [project](/user-management/rbac/index.md):
 
 n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
 
@@ -63,7 +63,7 @@ n8n commits the following to Git:
 * Variable stubs (ID and name)
 * Projects
 
-You can programmatically [Manage variables](/source-control-environments/using/manage-variables/) using the n8n API.
+You can programmatically [Manage variables](/source-control-environments/using/manage-variables.md) using the n8n API.
 
 ## Merge behaviors and conflicts
 
@@ -103,5 +103,5 @@ On push:
 * If a credential already exists, n8n overwrites it with the changes, but doesn't apply these changes to existing credentials on pull.
 
 /// note | Manage credentials with an external secrets vault
-If you need different credentials on different n8n environments, use [external secrets](/external-secrets/).
+If you need different credentials on different n8n environments, use [external secrets](/external-secrets.md).
 ///

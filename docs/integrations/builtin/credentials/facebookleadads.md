@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-* [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger/)
+* [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md)
 
 ## Supported authentication methods
 
@@ -49,7 +49,7 @@ To create your app and set up the credential with **Facebook Login for Business*
 1. Copy the **App ID** and enter it as the **Client ID** within your n8n credential.
 1. Copy the **App Secret** and enter it as the **Client Secret** within your n8n credential.
 
-Your credential should successfully connect now, but you'll need to go through the steps to take your Meta app live before you can use it with the [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger/). Here's a summary of what you'll need to do:
+Your credential should successfully connect now, but you'll need to go through the steps to take your Meta app live before you can use it with the [Facebook Lead Ads trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md). Here's a summary of what you'll need to do:
 
 1. In your Meta app, select **App settings > Basic** from the left menu.
 1. Enter a **Privacy Policy URL**. (Required to take the app "Live.")

@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/)
-- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/)
+- [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md)
+- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
 ## Prerequisites
 

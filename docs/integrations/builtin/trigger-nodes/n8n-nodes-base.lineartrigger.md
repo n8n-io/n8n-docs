@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Linear](https://linear.app/){:target=_blank .external-link} is a SaaS issue tracking tool.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/linear/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/linear.md).
 ///
 
 ///  note  | Examples and templates

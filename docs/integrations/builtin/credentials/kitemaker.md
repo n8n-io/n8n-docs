@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Kitemaker](/integrations/builtin/app-nodes/n8n-nodes-base.kitemaker/)
+- [Kitemaker](/integrations/builtin/app-nodes/n8n-nodes-base.kitemaker.md)
 
 ## Prerequisites
 

@@ -15,5 +15,5 @@ These tasks can and should be automated! And you don't need advanced technical k
 
 ## Available courses
 
-- [Level 1: Beginner course](/courses/level-one/)
-- [Level 2: Intermediate course](/courses/level-two/)
+- [Level 1: Beginner course](/courses/level-one/index.md)
+- [Level 2: Intermediate course](/courses/level-two/index.md)

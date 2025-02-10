@@ -12,7 +12,7 @@ Use the Coda node to automate work in Coda, and integrate Coda with other applic
 On this page, you'll find a list of operations the Coda node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Coda credentials](/integrations/builtin/credentials/coda/) for guidance on setting up authentication. 
+Refer to [Coda credentials](/integrations/builtin/credentials/coda.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

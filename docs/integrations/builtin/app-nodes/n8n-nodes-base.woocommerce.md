@@ -13,7 +13,7 @@ Use the WooCommerce node to automate work in WooCommerce, and integrate WooComme
 On this page, you'll find a list of operations the WooCommerce node supports and links to more resources.
 
 /// note | Credentials
-Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce/) for guidance on setting up authentication. 
+Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

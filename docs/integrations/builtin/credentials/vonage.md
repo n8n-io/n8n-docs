@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Vonage](/integrations/builtin/app-nodes/n8n-nodes-base.vonage/)
+- [Vonage](/integrations/builtin/app-nodes/n8n-nodes-base.vonage.md)
 
 ## Prerequisites
 

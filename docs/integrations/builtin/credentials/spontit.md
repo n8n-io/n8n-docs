@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit/)
+- [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit.md)
 
 ## Prerequisites
 

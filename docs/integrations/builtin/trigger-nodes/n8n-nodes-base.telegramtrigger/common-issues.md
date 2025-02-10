@@ -8,7 +8,7 @@ priority: critical
 
 # Telegram Trigger node common issues
 
-Here are some common errors and issues with the [Telegram Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Telegram Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) and steps to resolve or troubleshoot them.
 
 ## Stuck waiting for trigger event
 
@@ -24,7 +24,7 @@ To resolve this issue, check your reverse proxy configuration (Nginx, Caddy, Apa
 
 This error occurs when you run n8n behind a reverse proxy and there is a problem with your instance's webhook URL.
 
-When running n8n behind a reverse proxy, you must [configure the `WEBHOOK_URL` environment variable](/hosting/configuration/configuration-examples/webhook-url/) with the public URL where your n8n instance is running. For Telegram, this URL must use HTTPS.
+When running n8n behind a reverse proxy, you must [configure the `WEBHOOK_URL` environment variable](/hosting/configuration/configuration-examples/webhook-url.md) with the public URL where your n8n instance is running. For Telegram, this URL must use HTTPS.
 
 To fix this issue, configure TLS/SSL termination in your reverse proxy. Afterward, update your `WEBHOOK_URL` environment variable to use the HTTPS address.
 

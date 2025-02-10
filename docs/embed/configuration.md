@@ -11,9 +11,9 @@ contentType: howto
 
 ## Authentication
 
-You can secure n8n by setting up [User management](/user-management/), n8n's built-in authentication feature.
+You can secure n8n by setting up [User management](/user-management/index.md), n8n's built-in authentication feature.
 
-n8n supports [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/).
+n8n supports [LDAP](/user-management/ldap.md) and [SAML](/user-management/saml/index.md).
 
 ### Credential overwrites
 
@@ -75,7 +75,7 @@ In this case, you can set parameters on the parent credentials (`googleOAuth2Api
 
 ## Environment variables
 
-n8n has many [environment variables](/reference/environment-variables/) you can configure. Here are the most relevant environment variables for your hosted solution:
+n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
@@ -86,7 +86,7 @@ n8n has many [environment variables](/reference/environment-variables/) you can 
 | `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
 | `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
-| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates/) for more information. |
+| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates.md) for more information. |
 
 ## Backend hooks
 

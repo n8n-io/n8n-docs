@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard/)
+- [SecurityScorecard](/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard.md)
 
 
 ## Prerequisites

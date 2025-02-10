@@ -24,7 +24,7 @@ Self-hosted n8n only.
 	| LANGCHAIN_TRACING_V2 | `true` |
 	| LANGCHAIN_API_KEY | Set this to your API key |
 
-	Set the variables so that they're available globally in the environment where you host your n8n instance. You can do this in the same way as the rest of your general configuration. These aren't n8n environment variables, so don't try to set them using the [n8n configuration file](/hosting/configuration/configuration-methods/#set-environment-variables-using-a-file).
+	Set the variables so that they're available globally in the environment where you host your n8n instance. You can do this in the same way as the rest of your general configuration. These aren't n8n environment variables, so don't try to set them using the [n8n configuration file](/hosting/configuration/configuration-methods.md#set-environment-variables-using-a-file).
 
 1. Restart n8n.
 

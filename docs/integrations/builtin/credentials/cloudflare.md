@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [Cloudflare node](/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare/)
+* [Cloudflare node](/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare.md)
 
 ## Prerequisites
 

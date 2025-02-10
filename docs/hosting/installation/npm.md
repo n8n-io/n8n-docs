@@ -54,7 +54,7 @@ Windows users remember to change into the `.n8n` directory of your Home folder (
 ///
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/).
+Try out n8n using the [Quickstarts](/try-it-out/index.md).
 
 ## Updating
 

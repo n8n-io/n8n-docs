@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Formstack](https://www.formstack.com/){:target=_blank .external-link} is a workplace productivity platform that helps organizations streamline digital work through no-code online forms, documents, and signatures.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/formstacktrigger.md).
 ///
 
 ///  note  | Examples and templates

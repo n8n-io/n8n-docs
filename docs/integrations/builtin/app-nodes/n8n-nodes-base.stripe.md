@@ -12,7 +12,7 @@ Use the Stripe node to automate work in Stripe, and integrate Stripe with other 
 On this page, you'll find a list of operations the Stripe node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Stripe credentials](/integrations/builtin/credentials/stripe/) for guidance on setting up authentication. 
+Refer to [Stripe credentials](/integrations/builtin/credentials/stripe.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

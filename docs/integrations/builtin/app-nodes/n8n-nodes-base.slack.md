@@ -13,7 +13,7 @@ Use the Slack node to automate work in Slack, and integrate Slack with other app
 On this page, you'll find a list of operations the Slack node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Slack credentials](/integrations/builtin/credentials/slack/) for guidance on setting up authentication. 
+Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -79,7 +79,7 @@ Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .externa
 
 ## Required scopes
 
-Once you create a Slack app for your [Slack credentials](/integrations/builtin/credentials/slack/), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](/integrations/builtin/credentials/slack/#scopes) page.
+Once you create a Slack app for your [Slack credentials](/integrations/builtin/credentials/slack.md), you must add the appropriate scopes to your Slack app for this node to work. Start with the scopes listed in the [Scopes | Slack credentials](/integrations/builtin/credentials/slack.md#scopes) page.
 
 If those aren't enough, use the table below to look up the resource and operation you want to use, then follow the link to Slack's API documentation to find the correct scopes.
 

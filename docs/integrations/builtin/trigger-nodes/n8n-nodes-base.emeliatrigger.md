@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Emelia](https://emelia.io){:target=_blank .external-link} is a cold-mailing tool.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/emelia/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/emelia.md).
 ///
 
 ///  note  | Examples and templates

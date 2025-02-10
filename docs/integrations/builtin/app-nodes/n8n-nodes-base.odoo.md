@@ -13,7 +13,7 @@ Use the Odoo node to automate work in Odoo, and integrate Odoo with other applic
 On this page, you'll find a list of operations the Odoo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Odoo credentials](/integrations/builtin/credentials/odoo/) for guidance on setting up authentication. 
+Refer to [Odoo credentials](/integrations/builtin/credentials/odoo.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

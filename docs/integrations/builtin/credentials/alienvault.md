@@ -22,7 +22,7 @@ Create an [AlienVault](https://otx.alienvault.com){:target=_blank .external-link
 
 Refer to [AlienVault's documentation](https://otx.alienvault.com/api){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/alienvault/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/alienvault/){:target=_blank .external-link} on n8n's website.
 
 ## Using API key
 

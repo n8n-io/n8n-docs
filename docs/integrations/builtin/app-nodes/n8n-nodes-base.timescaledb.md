@@ -12,7 +12,7 @@ Use the TimescaleDB node to automate work in TimescaleDB, and integrate Timescal
 On this page, you'll find a list of operations the TimescaleDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb/) for guidance on setting up authentication. 
+Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

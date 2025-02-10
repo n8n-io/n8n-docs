@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow/)
-- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/)
+- [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow.md)
+- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md)
 
 ## Prerequisites
 

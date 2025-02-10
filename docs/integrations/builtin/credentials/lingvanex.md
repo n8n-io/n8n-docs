@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [LingvaNex](/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex/)
+- [LingvaNex](/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex.md)
 
 ## Prerequisites
 

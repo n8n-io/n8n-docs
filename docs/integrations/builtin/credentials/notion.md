@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/)
-- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/)
+- [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md)
+- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md)
 
 ## Prerequisites
 

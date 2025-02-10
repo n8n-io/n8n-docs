@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Wufoo](https://wufoo.com){:target=_blank .external-link} is an online form builder that helps you create custom HTML forms without writing code.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/wufoo/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/wufoo.md).
 ///
 
 ///  note  | Examples and templates

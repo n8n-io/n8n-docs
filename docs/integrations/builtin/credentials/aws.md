@@ -10,20 +10,20 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock)
-- [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager/)
-- [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/)
-- [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb/)
-- [AWS Lambda](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda/)
-- [AWS Rekognition](/integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition/)
-- [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awsS3/)
-- [AWS SES](/integrations/builtin/app-nodes/n8n-nodes-base.awsses/)
-- [AWS SNS](/integrations/builtin/app-nodes/n8n-nodes-base.awssns/)
-- [AWS SNS Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger/)
-- [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/)
-- [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/)
-- [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/)
-- [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock)
+- [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md)
+- [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md)
+- [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md)
+- [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb.md)
+- [AWS Lambda](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md)
+- [AWS Rekognition](/integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition.md)
+- [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3.md)
+- [AWS SES](/integrations/builtin/app-nodes/n8n-nodes-base.awsses.md)
+- [AWS SNS](/integrations/builtin/app-nodes/n8n-nodes-base.awssns.md)
+- [AWS SNS Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md)
+- [AWS SQS](/integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md)
+- [AWS Textract](/integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md)
+- [AWS Transcribe](/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md)
+- [Embeddings AWS Bedrock](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md)
 
 ## Supported authentication methods
 

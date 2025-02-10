@@ -14,7 +14,7 @@ Use the Google Analytics node to automate work in Google Analytics, and integrat
 On this page, you'll find a list of operations the Google Analytics node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Analytics credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Analytics credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

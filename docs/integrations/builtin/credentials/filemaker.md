@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [FileMaker](/integrations/builtin/app-nodes/n8n-nodes-base.filemaker/)
+- [FileMaker](/integrations/builtin/app-nodes/n8n-nodes-base.filemaker.md)
 
 ## Prerequisites
 

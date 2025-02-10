@@ -7,7 +7,7 @@ contentType: tutorial
 
 In this step of the workflow, you will learn how to schedule your workflow so that it runs automatically at a set time/interval using the Schedule Trigger node.
 
-The workflow you've built so far executes only when you click on **Test Workflow**. But Nathan needs it to run automatically every Monday morning. You can do this with the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/), which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
+The workflow you've built so far executes only when you click on **Test Workflow**. But Nathan needs it to run automatically every Monday morning. You can do this with the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
 
 To achieve this, we'll remove the Manual Trigger node we started with and replace it with a Schedule Trigger node instead.
 
@@ -38,7 +38,7 @@ Your Schedule Trigger node should look like this:
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-7-schedule-trigger-node.png" alt="Schedule Trigger Node" style="width:100%"><figcaption align = "center"><i>Schedule Trigger Node</i></figcaption></figure>
 
 /// warning | Keep in mind
-To ensure accurate scheduling with the Schedule Trigger node, be sure the timezone is set correctly for your [n8n instance](/manage-cloud/set-cloud-timezone/) or the [workflow's settings](/workflows/settings/). The Schedule Trigger node will use the workflow's timezone if it's set; it will fall back to the n8n instance's timezone if it's not.
+To ensure accurate scheduling with the Schedule Trigger node, be sure the timezone is set correctly for your [n8n instance](/manage-cloud/set-cloud-timezone.md) or the [workflow's settings](/workflows/settings.md). The Schedule Trigger node will use the workflow's timezone if it's set; it will fall back to the n8n instance's timezone if it's not.
 ///
 
 ## Connect the Schedule Trigger node

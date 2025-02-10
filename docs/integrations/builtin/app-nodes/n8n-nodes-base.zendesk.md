@@ -12,7 +12,7 @@ Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with oth
 On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk/) for guidance on setting up authentication. 
+Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

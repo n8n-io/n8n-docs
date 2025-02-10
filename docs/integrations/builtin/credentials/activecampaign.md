@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [ActiveCampaign](/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign/)
-- [Active Campaign Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger/)
+- [ActiveCampaign](/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign.md)
+- [Active Campaign Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md)
 
 ## Supported authentication methods
 

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following node:
 
-- [Beeminder](/integrations/builtin/app-nodes/n8n-nodes-base.beeminder/)
+- [Beeminder](/integrations/builtin/app-nodes/n8n-nodes-base.beeminder.md)
 
 ## Prerequisites
 

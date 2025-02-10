@@ -8,7 +8,7 @@ contentType: howto
 
 # Workflow development
 
-The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) works a bit differently from other core nodes. n8n recommends following these processes for building, testing, and using your Webhook node in production.
+The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) works a bit differently from other core nodes. n8n recommends following these processes for building, testing, and using your Webhook node in production.
 
 n8n generates two **Webhook URLs** for each Webhook node: a **Test URL** and a **Production URL**.
 
@@ -18,10 +18,10 @@ While building or testing a workflow, use the **Test** webhook URL.
 
 Using a test webhook ensures that you can view the incoming data in the editor UI, which is useful for debugging. Select **Listen for test event** to register the webhook before sending the data to the test webhook. The test webhook stays active for 120 seconds.
 
-When using the Webhook node on localhost on a [self-hosted](/hosting/) n8n instance, run n8n in tunnel mode:
+When using the Webhook node on localhost on a [self-hosted](/hosting/index.md) n8n instance, run n8n in tunnel mode:
 
-* [npm with tunnel](/hosting/installation/npm/#n8n-with-tunnel)
-* [Docker with tunnel](/hosting/installation/docker/#n8n-with-tunnel)
+* [npm with tunnel](/hosting/installation/npm.md#n8n-with-tunnel)
+* [Docker with tunnel](/hosting/installation/docker.md#n8n-with-tunnel)
 
 <video src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" controls width="100%"></video>
 
@@ -31,4 +31,4 @@ When your workflow is ready, switch to using the **Production** webhook URL. You
 
 When working with a Production webhook, ensure that you have saved and activated the workflow. Data flowing through the webhook isn't visible in the editor UI with the production webhook.
 
-Refer to [Create a workflow](/workflows/create/) for more information on activating workflows.
+Refer to [Create a workflow](/workflows/create.md) for more information on activating workflows.

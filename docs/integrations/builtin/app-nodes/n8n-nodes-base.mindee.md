@@ -12,7 +12,7 @@ Use the Mindee node to automate work in Mindee, and integrate Mindee with other 
 On this page, you'll find a list of operations the Mindee node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mindee credentials](/integrations/builtin/credentials/mindee/) for guidance on setting up authentication. 
+Refer to [Mindee credentials](/integrations/builtin/credentials/mindee.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

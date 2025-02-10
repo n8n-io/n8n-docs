@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Grafana](/integrations/builtin/app-nodes/n8n-nodes-base.grafana/)
+- [Grafana](/integrations/builtin/app-nodes/n8n-nodes-base.grafana.md)
 
 ## Prerequisites
 

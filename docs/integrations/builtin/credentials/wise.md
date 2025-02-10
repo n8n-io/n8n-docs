@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Wise](/integrations/builtin/app-nodes/n8n-nodes-base.wise/)
-- [Wise Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger/)
+- [Wise](/integrations/builtin/app-nodes/n8n-nodes-base.wise.md)
+- [Wise Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md)
 
 ## Prerequisites
 

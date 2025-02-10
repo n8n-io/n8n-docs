@@ -11,7 +11,7 @@ priority: medium
 [Calendly](https://calendly.com/){:target=_blank .external-link} is an automated scheduling software that's designed to help find meeting times.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/calendly/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/calendly.md).
 ///
 
 ///  note  | Examples and templates

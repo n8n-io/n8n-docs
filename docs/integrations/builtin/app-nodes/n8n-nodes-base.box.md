@@ -12,7 +12,7 @@ Use the Box node to automate work in Box, and integrate Box with other applicati
 On this page, you'll find a list of operations the Box node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Box credentials](/integrations/builtin/credentials/box/) for guidance on setting up authentication. 
+Refer to [Box credentials](/integrations/builtin/credentials/box.md) for guidance on setting up authentication. 
 ///
  
 

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [seven](/integrations/builtin/app-nodes/n8n-nodes-base.sms77/)
+- [seven](/integrations/builtin/app-nodes/n8n-nodes-base.sms77.md)
 
 ## Prerequisites
 

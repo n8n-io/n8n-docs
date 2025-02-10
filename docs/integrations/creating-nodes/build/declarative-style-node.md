@@ -5,7 +5,7 @@ contentType: tutorial
 
 # Build a declarative-style node
 
-This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/) for more information.
+This tutorial walks through building a declarative-style node. Before you begin, make sure this is the node style you need. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) for more information.
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ Now create the following directories and files:
 `nodes/NasaPics/NasaPics.node.ts`  
 `credentials/NasaPicsApi.credentials.ts`  
 
-These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information on required files and recommended organization.
+These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information on required files and recommended organization.
 
 Now install the project dependencies:
 
@@ -72,9 +72,9 @@ Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/common
 
 ### Step 3: Create the node
 
-Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for detailed information about base file parameters.
+Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for detailed information about base file parameters.
 
-In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure/) for more information.
+In this example, the file is `NasaPics.node.ts`. To keep this tutorial short, you'll place all the node functionality in this one file. When building more complex nodes, you should consider splitting out your functionality into modules. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information.
 
 #### Step 3.1: Imports
 
@@ -164,7 +164,7 @@ properties: [
 ]
 ```
 
-`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
+`type` controls which UI element n8n displays for the resource, and tells n8n what type of data to expect from the user. `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
 
 #### Step 3.5: Add operations
 
@@ -367,7 +367,7 @@ export class NasaPicsApi implements ICredentialType {
 }
 ```
 
-For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files/).
+For more information about credentials files and options, refer to [Credentials file](/integrations/creating-nodes/build/reference/credentials-files.md).
 
 
 ### Step 5: Add node metadata
@@ -399,7 +399,7 @@ Add the following code to the JSON file:
 }
 ```
 
-For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files/).
+For more information on these parameters, refer to [Node codex files](/integrations/creating-nodes/build/reference/node-codex-files.md).
 
 ### Step 6: Update the npm package details
 
@@ -461,7 +461,7 @@ You need to update the `package.json` to include your own information, such as y
 
 ## Next steps
 
-* [Deploy your node](/integrations/creating-nodes/deploy/).
+* [Deploy your node](/integrations/creating-nodes/deploy/index.md).
 * View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
-* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).
+* Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
 

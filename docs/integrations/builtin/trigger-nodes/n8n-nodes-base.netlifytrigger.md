@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Netlify](https://netlify.com/){:target=_blank .external-link} offers hosting and serverless backend services for web applications and static websites.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/netlify/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/netlify.md).
 ///
 
 ///  note  | Examples and templates
@@ -19,7 +19,7 @@ For usage examples and templates to help you get started, refer to n8n's [Netlif
 
 ## Related resources
 
-n8n provides an app node for Netlify. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.netlify/).
+n8n provides an app node for Netlify. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.netlify.md).
 
 View [example workflows and related content](https://n8n.io/integrations/netlify/){:target=_blank .external-link} on n8n's website.
 

@@ -12,7 +12,7 @@ Use the Splunk node to automate work in Splunk, and integrate Splunk with other 
 On this page, you'll find a list of operations the Splunk node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Splunk credentials](/integrations/builtin/credentials/splunk/) for guidance on setting up authentication. 
+Refer to [Splunk credentials](/integrations/builtin/credentials/splunk.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

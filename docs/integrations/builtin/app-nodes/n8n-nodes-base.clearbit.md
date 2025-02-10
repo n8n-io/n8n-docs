@@ -12,7 +12,7 @@ Use the Clearbit node to automate work in Clearbit, and integrate Clearbit with 
 On this page, you'll find a list of operations the Clearbit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Clearbit credentials](/integrations/builtin/credentials/clearbit/) for guidance on setting up authentication. 
+Refer to [Clearbit credentials](/integrations/builtin/credentials/clearbit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -1,5 +1,5 @@
 /// info | 0.236.0 and below
-n8n removed this execution behavior in version 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before version 1.0. You can change the execution order in your [workflow settings](/workflows/settings/).
+n8n removed this execution behavior in version 1.0. This section applies to workflows using the **v0 (legacy)** workflow execution order. By default, this is all workflows built before version 1.0. You can change the execution order in your [workflow settings](/workflows/settings.md).
 ///
 If you add a Merge node to a workflow containing an If node, it can result in both output data streams of the If node executing.
 

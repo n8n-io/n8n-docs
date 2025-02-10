@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Copper](https://www.copper.com/){:target=_blank .external-link} is a CRM that focuses on strong integration with Google Workspace. It's mainly targeted towards small and medium-sized businesses.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/copper/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/copper.md).
 ///
 
 ///  note  | Examples and templates

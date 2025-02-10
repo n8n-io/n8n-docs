@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following node:
 
-- [Clearbit](/integrations/builtin/app-nodes/n8n-nodes-base.clearbit/)
+- [Clearbit](/integrations/builtin/app-nodes/n8n-nodes-base.clearbit.md)
 
 ## Prerequisites
 

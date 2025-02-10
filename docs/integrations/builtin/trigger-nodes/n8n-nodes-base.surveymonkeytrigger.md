@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [SurveyMonkey](https://www.surveymonkey.com/){:target=_blank .external-link} is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey.md).
 ///
 
 ///  note  | Examples and templates

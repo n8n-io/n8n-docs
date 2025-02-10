@@ -14,9 +14,9 @@ Nodes are the key building blocks of a workflow. They perform a range of actions
 
 n8n provides a collection of built-in nodes, as well as the ability to create your own nodes. Refer to:
 
-* [Built-in integrations](/integrations/builtin/node-types/) to browse the node library.
-* [Community nodes](/integrations/community-nodes/installation/) for guidance on finding and installing community-created nodes.
-* [Creating nodes](/integrations/creating-nodes/overview/) to start building your own nodes.
+* [Built-in integrations](/integrations/builtin/node-types.md) to browse the node library.
+* [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on finding and installing community-created nodes.
+* [Creating nodes](/integrations/creating-nodes/overview.md) to start building your own nodes.
 
 
 ## Add a node to your workflow

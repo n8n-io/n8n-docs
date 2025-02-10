@@ -12,7 +12,7 @@ Use the AWS SQS node to automate work in AWS SNS, and integrate AWS SQS with oth
 On this page, you'll find a list of operations the AWS SQS node supports and links to more resources.
 
 /// note | Credentials
-Refer to  [AWS SQS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to  [AWS SQS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

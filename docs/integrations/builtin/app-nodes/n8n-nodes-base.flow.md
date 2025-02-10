@@ -12,7 +12,7 @@ Use the Flow node to automate work in Flow, and integrate Flow with other applic
 On this page, you'll find a list of operations the Flow node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Flow credentials](/integrations/builtin/credentials/flow/) for guidance on setting up authentication. 
+Refer to [Flow credentials](/integrations/builtin/credentials/flow.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

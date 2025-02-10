@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Taiga](/integrations/builtin/app-nodes/n8n-nodes-base.taiga/)
-- [Taiga Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger/)
+- [Taiga](/integrations/builtin/app-nodes/n8n-nodes-base.taiga.md)
+- [Taiga Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md)
 
 ## Prerequisites
 

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4/)
+- [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4.md)
 
 ## Prerequisites
 

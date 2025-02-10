@@ -10,15 +10,15 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 This document describes how to configure your n8n instance to support user management, and the steps to start inviting users.
 
-Refer to the main [User management](/user-management/) guide for more information about usage, including:
+Refer to the main [User management](/user-management/index.md) guide for more information about usage, including:
 
-* [Managing users](/user-management/manage-users/)
-* [Account types](/user-management/account-types/)
-* [Best practices](/user-management/best-practices/)
+* [Managing users](/user-management/manage-users.md)
+* [Account types](/user-management/account-types.md)
+* [Best practices](/user-management/best-practices.md)
 
-For LDAP setup information, refer to [LDAP](/user-management/ldap/).
+For LDAP setup information, refer to [LDAP](/user-management/ldap.md).
 
-For SAML setup information, refer to [SAML](/user-management/saml/).
+For SAML setup information, refer to [SAML](/user-management/saml/index.md).
 
 /// note | Basic auth and JWT removed
 n8n removed support for basic auth and JWT in version 1.0.
@@ -45,7 +45,7 @@ Get the following information from your SMTP provider:
 * SMTP password
 * SMTP sender name
 
-To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/configuration-methods/)
+To set up SMTP with n8n, configure the SMTP environment variables for your n8n instance. For information on how to set environment variables, refer to [Configuration](/hosting/configuration/configuration-methods.md)
 <!-- vale off -->
 | Variable | Type | Description | Required? |
 | -------- | ---- | ----------- | --------- |
@@ -67,7 +67,7 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 
 /// note | More configuration options
-There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/configuration/environment-variables/) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
+There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
 ///
 
 /// note | New to SMTP?

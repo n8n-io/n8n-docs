@@ -12,7 +12,7 @@ Use the Bannerbear node to automate work in Bannerbear, and integrate Bannerbear
 On this page, you'll find a list of operations the Bannerbear node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Bannerbear credentials](/integrations/builtin/credentials/bannerbear/) for guidance on setting up authentication. 
+Refer to [Bannerbear credentials](/integrations/builtin/credentials/bannerbear.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

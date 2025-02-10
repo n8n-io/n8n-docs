@@ -33,7 +33,7 @@ n8n provides two ways to start a workflow:
 * Manually, by selecting **Test Workflow**, or from the CLI if you installed n8n with npm or Docker.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
-For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/). This allows you to run the workflow on a schedule:
+For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md). This allows you to run the workflow on a schedule:
 
 1. Select **Add first step**.
 2. Search for **Schedule**. n8n shows a list of nodes that match the search.
@@ -46,7 +46,7 @@ For this tutorial, use the [Schedule trigger](/integrations/builtin/core-nodes/n
 
 ## Step four: Add the NASA node and set up credentials
 
-The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you to interact with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link}. The API gives you data to work with in this tutorial.
+The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) allows you to interact with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link}. The API gives you data to work with in this tutorial.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Schedule Trigger node.
 2. Search for **NASA**. n8n shows a list of nodes that match the search.
@@ -70,7 +70,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
     This generates a date in the correct format, seven days before the current date.
 
     /// note | Date and time in n8n
-    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon/). 
+    n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md). 
     ///
 
 7. Close the **Edit Expression** modal to return to the NASA node.
@@ -79,7 +79,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa/) allows you
 
 ## Step five: Add logic with the If node
 
-n8n supports complex logic in workflows. In this tutorial, use the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
+n8n supports complex logic in workflows. In this tutorial, use the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) to create two branches that each generate a report from the NASA data. Solar flares have five possible classifications. You'll create logic that sends a report with the lower classifications to one output, and the higher classifications to another. 
 
 Add the If node:
 
@@ -138,5 +138,5 @@ Postbin's bins exist for 30 minutes after creation. You may need to create a new
 
 ## Next steps
 
-* Take n8n's [text courses](/courses/) or [video courses](/video-courses/).
+* Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
 * Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.

@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut/)
-- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger/)
+- [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut.md)
+- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md)
 
 ## Prerequisites
 

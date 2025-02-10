@@ -8,7 +8,7 @@ priority: critical
 
 # Google Sheets Document operations
 
-Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) for more information on the Google Sheets node itself.
+Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
 
 ## Create a spreadsheet
 
@@ -16,7 +16,7 @@ Use this operation to create a new spreadsheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Document**.
 - **Operation**: Select **Create**.
 - **Title**: Enter the title of the new spreadsheet you want to create.
@@ -40,7 +40,7 @@ Use this operation to delete an existing spreadsheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Document**.
 - **Operation**: Select **Delete**.
 - **Document**: Choose a spreadsheet you want to delete. 

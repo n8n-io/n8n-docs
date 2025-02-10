@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Humantic AI](/integrations/builtin/app-nodes/n8n-nodes-base.humanticai/)
+- [Humantic AI](/integrations/builtin/app-nodes/n8n-nodes-base.humanticai.md)
 
 ## Prerequisites
 

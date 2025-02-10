@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mailgun](/integrations/builtin/app-nodes/n8n-nodes-base.mailgun/)
+- [Mailgun](/integrations/builtin/app-nodes/n8n-nodes-base.mailgun.md)
 
 ## Prerequisites
 

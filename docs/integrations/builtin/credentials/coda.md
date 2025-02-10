@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda/)
+- [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda.md)
 
 ## Prerequisites
 

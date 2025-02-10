@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/)
+- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
 
 ## Prerequisites
 

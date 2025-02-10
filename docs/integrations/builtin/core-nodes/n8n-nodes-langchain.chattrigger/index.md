@@ -9,7 +9,7 @@ priority: critical
 
 Use the Chat Trigger node when building AI workflows for chatbots and other chat interfaces. You can configure how users access the chat, using one of n8n's provided interfaces, or your own. You can add authentication.
 
-You must connect either an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/).
+You must connect either an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/index.md).
 
 /// warning | Workflow execution usage
 Every message to the Chat Trigger executes your workflow. This means that one conversation where a user sends 10 messages uses 10 executions from your execution allowance. Check your payment plan for details of your allowance.
@@ -80,7 +80,7 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
 
 #### Require Button Click to Start Chat
 
@@ -112,7 +112,7 @@ If you select any option other than **Off**, you must connect the Chat trigger a
 Use this option when building a workflow with steps after the agent or chain that's handling the chat. Choose from:
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
 
 ## Templates and examples
 
@@ -133,4 +133,4 @@ If you need to manually create the response sent to the user, you must create a 
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md).

@@ -18,7 +18,7 @@ Create a [Filescan](https://www.filescan.io/auth/signup/){:target=_blank .extern
 
 Refer to [Filescan's API documentation](https://www.filescan.io/api/docs){:target=_blank .external-link} for more information about authenticating with the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/filescan/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/filescan/){:target=_blank .external-link} on n8n's website.
 
 
 ## Using API key

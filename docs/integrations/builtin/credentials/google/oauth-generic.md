@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Google: OAuth2 generic
 
-This document contains instructions for creating a generic OAuth2 Google credential for use with [custom operations](/integrations/custom-operations/).
+This document contains instructions for creating a generic OAuth2 Google credential for use with [custom operations](/integrations/custom-operations.md).
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 
@@ -62,7 +62,7 @@ If you haven't used OAuth in your Google Cloud project before, you'll need to [c
 	- **App name**
 	- **User support email**
 	- **Email addresses** field in **Developer contact information**
-5. In the **Authorized domains** section, add `n8n.cloud` if using n8n's Cloud service. If you're [self-hosting](/hosting/), add the domain of your n8n instance.
+5. In the **Authorized domains** section, add `n8n.cloud` if using n8n's Cloud service. If you're [self-hosting](/hosting/index.md), add the domain of your n8n instance.
 7. Select **SAVE AND CONTINUE** to go to the **Scopes** page.
 8. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
 9. On the **Summary** page, review the information for accuracy.

@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Taiga](https://www.taiga.io/){:target=_blank .external-link} is a free and open-source project management platform for startups, agile developers, and designers.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/taiga/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/taiga.md).
 ///
 
 ///  note  | Examples and templates

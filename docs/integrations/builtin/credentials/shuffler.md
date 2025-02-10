@@ -22,7 +22,7 @@ Create a [Shuffler](https://shuffler.io){:target=_blank .external-link} account 
 
 Refer to [Shuffler's documentation](https://shuffler.io/docs/API#authentication){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/shuffler/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/shuffler/){:target=_blank .external-link} on n8n's website.
 
 ## Using API key
 

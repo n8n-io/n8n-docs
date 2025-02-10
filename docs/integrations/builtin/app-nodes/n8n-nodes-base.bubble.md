@@ -13,7 +13,7 @@ Use the Bubble node to automate work in Bubble, and integrate Bubble with other 
 On this page, you'll find a list of operations the Bubble node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Bubble credentials](/integrations/builtin/credentials/bubble/) for guidance on setting up authentication. 
+Refer to [Bubble credentials](/integrations/builtin/credentials/bubble.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

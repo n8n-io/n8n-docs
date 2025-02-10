@@ -8,7 +8,7 @@ priority: high
 
 # Google Drive File operations
 
-Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
 
 ## Copy a file
 
@@ -16,7 +16,7 @@ Use this operation to copy a file to a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Copy**.
 - **File**: Choose a file you want to copy. 
@@ -40,7 +40,7 @@ Refer to the [Method: files.copy | Google Drive](https://developers.google.com/d
 Use this operation to create a new file in a drive from provided text.
 
 Enter these parameters:
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Create From Text**.
 - **File Content**: Enter the file content to use to create the new file.
@@ -71,7 +71,7 @@ Use this operation to delete a file from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Delete**.
 - **File**: Choose a file you want to delete. 
@@ -90,7 +90,7 @@ Use this operation to download a file from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Download**.
 - **File**: Choose a file you want to download. 
@@ -115,7 +115,7 @@ Use this operation to move a file to a different location in a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Move**.
 - **File**: Choose a file you want to move. 
@@ -134,7 +134,7 @@ Use this operation to add sharing permissions to a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Share**.
 - **File**: Choose a file you want to share. 
@@ -166,7 +166,7 @@ Use this operation to update a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Update**.
 - **File to Update**: Choose a file you want to update. 
@@ -198,7 +198,7 @@ Use this operation to upload a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Upload**.
 - **Input Data Field Name**: The name of the input field that contains the binary file data you wish to use.

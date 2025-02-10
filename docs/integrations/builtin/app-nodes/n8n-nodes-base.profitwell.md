@@ -12,7 +12,7 @@ Use the ProfitWell node to automate work in ProfitWell, and integrate ProfitWell
 On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
+Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

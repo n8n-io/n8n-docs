@@ -12,7 +12,7 @@ The AWS Bedrock Chat Model node allows you use LLM models utilising AWS Bedrock 
 On this page, you'll find the node parameters for the AWS Bedrock Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

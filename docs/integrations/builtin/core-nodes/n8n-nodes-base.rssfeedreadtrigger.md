@@ -26,4 +26,4 @@ On this page, you'll find a list of operations the RSS Feed Trigger node support
 
 ## Related resources
 
-n8n provides an app node for RSS Feeds. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/).
+n8n provides an app node for RSS Feeds. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md).

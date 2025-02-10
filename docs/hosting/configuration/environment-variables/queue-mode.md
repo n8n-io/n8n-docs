@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for more information.
+You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode.md) for more information.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -37,7 +37,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 
 ## Multi-main setup
 
-Refer to [Configuring multi-main setup](/hosting/scaling/queue-mode/#configuring-multi-main-setup) for details.
+Refer to [Configuring multi-main setup](/hosting/scaling/queue-mode.md#configuring-multi-main-setup) for details.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

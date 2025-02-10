@@ -12,7 +12,7 @@ Use the Embeddings Google PaLM node to generate embeddings for a given text.
 On this page, you'll find the node parameters for the Embeddings Google PaLM node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/googleai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

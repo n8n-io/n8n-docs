@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Raindrop](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/)
+- [Raindrop](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop.md)
 
 ## Prerequisites
 

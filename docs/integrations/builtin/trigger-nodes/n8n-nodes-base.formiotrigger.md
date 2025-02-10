@@ -11,7 +11,7 @@ priority: medium
 [Form.io](https://www.form.io/){:target=_blank .external-link} is an enterprise class combined form and API data management platform for building complex form-based business process applications.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/formiotrigger/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/formiotrigger.md).
 ///
 
 ///  note  | Examples and templates

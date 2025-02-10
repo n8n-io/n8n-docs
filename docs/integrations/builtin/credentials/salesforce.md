@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/)
-- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/)
+- [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md)
+- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md)
 
 ## Supported authentication methods
 
@@ -82,7 +82,7 @@ To configure this credential, you'll need a [Salesforce](https://www.salesforce.
 
 Cloud and hosted users will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
 
-If you're [self-hosting](/hosting) n8n, you'll need to configure OAuth2 from scratch by creating a connected app:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a connected app:
 
 1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
 2. Enter your Salesforce **Username**.

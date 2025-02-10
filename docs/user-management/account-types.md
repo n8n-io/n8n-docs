@@ -13,9 +13,9 @@ To use admin accounts, you need a pro or enterprise plan.
 ///
 
 /// note | Account types and role types
-Account types and role types are different things. Role types are part of [RBAC](/user-management/rbac/). 
+Account types and role types are different things. Role types are part of [RBAC](/user-management/rbac/index.md). 
 
-Every account has one type. The account can have different [role types](/user-management/rbac/role-types/) for different [projects](/user-management/rbac/projects/).
+Every account has one type. The account can have different [role types](/user-management/rbac/role-types.md) for different [projects](/user-management/rbac/projects.md).
 ///
 
 /// note | Create a member-level account for the owner
@@ -31,8 +31,8 @@ n8n recommends that owners create a member-level account for themselves. Owners 
 | Delete tags | :white_check_mark: | :white_check_mark: | :x: |
 | View and share all workflows | :white_check_mark: | :white_check_mark: | :x: |
 | View, edit, and share all credentials | :white_check_mark: | :white_check_mark: | :x: |
-| Set up and use [Source control](/source-control-environments/) | :white_check_mark: | :white_check_mark: | :x: |
-| Create [projects](/user-management/rbac/projects/) | :white_check_mark: | :white_check_mark: | :x: |
+| Set up and use [Source control](/source-control-environments/index.md) | :white_check_mark: | :white_check_mark: | :x: |
+| Create [projects](/user-management/rbac/projects.md) | :white_check_mark: | :white_check_mark: | :x: |
 | View all projects | :white_check_mark: | :white_check_mark: | :x: |
 | Add and remove users | :white_check_mark: | :white_check_mark: | :x: |
 | Access the Cloud dashboard | :white_check_mark: | :x: | :x: |

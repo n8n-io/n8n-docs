@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Unleashed Software](/integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware/)
+- [Unleashed Software](/integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware.md)
 
 ## Prerequisites
 

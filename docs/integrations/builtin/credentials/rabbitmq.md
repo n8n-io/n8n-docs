@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [RabbitMQ](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/)
-- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/)
+- [RabbitMQ](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md)
+- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md)
 
 ## Supported authentication methods
 

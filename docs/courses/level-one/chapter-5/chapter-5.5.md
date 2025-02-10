@@ -17,7 +17,7 @@ To calculate data and add more functionality to your workflows you can use the C
 ## About the Code node
 
 /// warning | Code node modes
-The Code node has two operational **Modes** that change the way it processes data. The **Run Once for All Items** mode allows you to accumulate data from all items on the input list. The **Run Once for Each Item** is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+The Code node has two operational **Modes** that change the way it processes data. The **Run Once for All Items** mode allows you to accumulate data from all items on the input list. The **Run Once for Each Item** is used to add custom snippets of JavaScript code that should be executed once for every item that it receives as the input. Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 ///
 - Create your own node.
 - Write custom expressions.
@@ -86,7 +86,7 @@ Now select **Test step** and you should see the following results:
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node output" style="width:100%"><figcaption align = "center"><i>Code node output</i></figcaption></figure>
 
 /// note | Using Python in code nodes
-You can also use Python in the Code node. To learn more about this, refer to the [Code node](/code/code-node/) documentation.
+You can also use Python in the Code node. To learn more about this, refer to the [Code node](/code/code-node.md) documentation.
 ///
 
 ## What's next?

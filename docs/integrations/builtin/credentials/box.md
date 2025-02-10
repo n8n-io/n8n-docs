@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box/)
-- [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger/)
+- [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box.md)
+- [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md)
 
 ## Prerequisites
 

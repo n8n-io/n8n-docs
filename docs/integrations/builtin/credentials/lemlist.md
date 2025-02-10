@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Lemlist](/integrations/builtin/app-nodes/n8n-nodes-base.lemlist/)
-- [Lemlist Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger/)
+- [Lemlist](/integrations/builtin/app-nodes/n8n-nodes-base.lemlist.md)
+- [Lemlist Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md)
 
 ## Prerequisites
 

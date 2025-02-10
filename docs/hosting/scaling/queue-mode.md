@@ -39,11 +39,11 @@ Workers are n8n instances that do the actual work. They receive information from
 
 ### Set encryption key
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/) if desired.
+n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/index.md) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
-Set the encryption key for each worker node in a [configuration file](/hosting/configuration/configuration-methods/) or by setting the corresponding environment variable:
+Set the encryption key for each worker node in a [configuration file](/hosting/configuration/configuration-methods.md) or by setting the corresponding environment variable:
 
 ```bash
 export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
@@ -61,7 +61,7 @@ Set the environment variable `EXECUTIONS_MODE` to `queue` using the following co
 export EXECUTIONS_MODE=queue
 ```
 
-Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/environment-variables/).
+Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/environment-variables/index.md).
 
 ### Start Redis
 
@@ -140,7 +140,7 @@ When running n8n with queues, all the production workflow executions get process
 Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 
 /// note | Migrate data
-If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
+If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands.md#export-workflows-and-credentials) documentation to learn how to use these commands.
 ///
 
 ## Webhook processors

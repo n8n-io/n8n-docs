@@ -11,7 +11,7 @@ validation:
     absolute_links: ignore
   links:
     not_found: warn
-    absolute_links: ignore
+    absolute_links: relative_to_docs
     unrecognized_links: info
 theme:
   name: material

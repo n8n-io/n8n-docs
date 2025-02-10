@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Pushcut](https://pushcut.io){:target=_blank .external-link} is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/pushcut/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/pushcut.md).
 ///
 
 ///  note  | Examples and templates

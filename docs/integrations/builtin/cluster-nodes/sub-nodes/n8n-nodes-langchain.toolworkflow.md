@@ -31,7 +31,7 @@ Enter a custom code a description. This tells the agent when to use this tool. F
 Tell n8n which workflow to call. You can choose either:
 
 * **Database** and enter a workflow ID.
-* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import/).
+* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import.md).
 
 ### Workflow Values
 

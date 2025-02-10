@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/)
+- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm.md)
 
 ## Prerequisites
 

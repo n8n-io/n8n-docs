@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Toggl](https://toggl.com/){:target=_blank .external-link} is a time tracking app that offers online time tracking and reporting services through their website along with mobile and desktop applications.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/toggl/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/toggl.md).
 ///
 
 ///  note  | Examples and templates

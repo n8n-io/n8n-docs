@@ -13,7 +13,7 @@ Use the Spotify node to automate work in Spotify, and integrate Spotify with oth
 On this page, you'll find a list of operations the Spotify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Spotify credentials](/integrations/builtin/credentials/spotify/) for guidance on setting up authentication. 
+Refer to [Spotify credentials](/integrations/builtin/credentials/spotify.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Ghost](/integrations/builtin/app-nodes/n8n-nodes-base.ghost/)
+- [Ghost](/integrations/builtin/app-nodes/n8n-nodes-base.ghost.md)
 
 ## Prerequisites
 

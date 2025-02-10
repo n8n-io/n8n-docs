@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chargebee](/integrations/builtin/app-nodes/n8n-nodes-base.chargebee/)
-- [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger/)
+- [Chargebee](/integrations/builtin/app-nodes/n8n-nodes-base.chargebee.md)
+- [Chargebee Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md)
 
 ## Prerequisites
 

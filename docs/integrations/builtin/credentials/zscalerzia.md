@@ -22,7 +22,7 @@ Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler
 
 Refer to [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link} on n8n's website.
 
 ## Using basic auth and API key combo
 

@@ -12,7 +12,7 @@ Use the Pushcut node to automate work in Pushcut, and integrate Pushcut with oth
 On this page, you'll find a list of operations the Pushcut node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pushcut credentials](/integrations/builtin/credentials/pushcut/) for guidance on setting up authentication. 
+Refer to [Pushcut credentials](/integrations/builtin/credentials/pushcut.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

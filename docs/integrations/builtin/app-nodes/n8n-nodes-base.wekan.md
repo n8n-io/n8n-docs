@@ -12,7 +12,7 @@ Use the Wekan node to automate work in Wekan, and integrate Wekan with other app
 On this page, you'll find a list of operations the Wekan node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Wekan credentials](/integrations/builtin/credentials/wekan/) for guidance on setting up authentication. 
+Refer to [Wekan credentials](/integrations/builtin/credentials/wekan.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

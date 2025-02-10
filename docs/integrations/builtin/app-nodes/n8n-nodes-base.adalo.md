@@ -13,7 +13,7 @@ Use the Adalo node to automate work in Adalo, and integrate Adalo with other app
 On this page, you'll find a list of operations the Adalo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
+Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for guidance on setting up authentication. 
 ///	
 
 ## Operations

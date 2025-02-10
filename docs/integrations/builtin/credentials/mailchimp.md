@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mailchimp](/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp/)
-- [Mailchimp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger/)
+- [Mailchimp](/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp.md)
+- [Mailchimp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md)
 
 ## Prerequisites
 

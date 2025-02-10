@@ -12,9 +12,9 @@ In this lesson you will learn how to navigate the Editor UI. We will walk throug
 Begin by setting up n8n. There are two ways you can do this:
 
 - [n8n Cloud](https://app.n8n.cloud/register){:target="_blank" .external} - Hosted solution, no installation needed. Great for all levels of experience.
-- [Self-host](/hosting/){:target="_blank" .external} - Recommended for advanced users with technical knowledge
+- [Self-host](/hosting/index.md){:target="_blank" .external} - Recommended for advanced users with technical knowledge
 
-For more details on the different ways to set up n8n, see our [platforms documentation](/choose-n8n/#platforms){:target="_blank" .external}.
+For more details on the different ways to set up n8n, see our [platforms documentation](/choose-n8n.md#platforms){:target="_blank" .external}.
 
 /// warning | n8n version
 This course was developed on n8n version 1.30.0. In other versions, some of the user interface might look different, but the core functionality shouldn't be impacted.
@@ -25,7 +25,7 @@ Once you have n8n running, open the Editor UI in a browser window. It should loo
 
 ## Editor UI settings
 
-The [Editor UI](/editor-ui/) is the web interface where you build [workflows](/workflows/workflows/). You can access all your workflows and credentials, as well as support pages, from the Editor UI.
+The editor UI is the web interface where you build [workflows](/workflows/index.md). You can access all your workflows and credentials, as well as support pages, from the Editor UI.
 
 ### Left-side panel
 
@@ -63,7 +63,7 @@ The **canvas** is the gray dotted grid background in the Editor UI. It displays 
 - Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, and reset the canvas to the original resolution.
 - A button to **Execute Workflow**. When you click on it, all nodes on the canvas are executed.
 - A button with a **+** sign inside. This button opens the nodes panel.
-- A button with a note icon inside. This button adds a [sticky note](/workflows/sticky-notes){:target="_blank" .external} to the canvas. (Visible when hovering on the top right + icon)
+- A button with a note icon inside. This button adds a [sticky note](/workflows/components/sticky-notes.md) to the canvas. (Visible when hovering on the top right + icon)
 - A dotted square with the text "Add first step." This is where you add your first node.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
@@ -89,13 +89,13 @@ A node is an individual step in your workflow: one that either (a) loads, (b) pr
 
 Based on their function, n8n classifies nodes into four types:
 
-- **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. Refer to the [Action nodes library](/integrations/builtin/app-nodes/) for a full list of these nodes.
-- **Trigger Nodes** start a workflow and supply the initial data. Refer to the [Trigger nodes library](/integrations/builtin/trigger-nodes/) for a full list of trigger nodes.
+- **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. Refer to the [Action nodes library](/integrations/builtin/app-nodes/index.md) for a full list of these nodes.
+- **Trigger Nodes** start a workflow and supply the initial data. Refer to the [Trigger nodes library](/integrations/builtin/trigger-nodes/index.md) for a full list of trigger nodes.
 - **Core Nodes** can be core or app nodes. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls. Refer to the [Core Nodes library](https://docs.n8n.io/integrations/builtin/core-nodes/) for a full list of core nodes.
-- **Cluster Nodes** are node groups that work together to provide functionality in a workflow. Refer to [Cluster nodes](/integrations/builtin/cluster-nodes/) for more information.
+- **Cluster Nodes** are node groups that work together to provide functionality in a workflow. Refer to [Cluster nodes](/integrations/builtin/cluster-nodes/index.md) for more information.
 
 /// note | Learn more
-Refer to [Node types](/builtin/node-types/) for a more detailed explanation of all node types.
+Refer to [Node types](/integrations/builtin/node-types.md) for a more detailed explanation of all node types.
 ///
 
 ### Finding nodes
@@ -128,7 +128,7 @@ If you hover on a node, you'll notice that three icons appear on top:
 - Deactivate/Activate the node (Power icon)
 - Delete the node (Trash icon)
 
-Additionally, you'll see an elipsis icon, which opens a context menu containing other [node options](/workflows/components/nodes/#node-controls).
+Additionally, you'll see an elipsis icon, which opens a context menu containing other [node options](/workflows/components/nodes.md#node-controls).
 
 /// note | Moving a workflow
 To move a workflow around the canvas, select all nodes with your mouse or by selecting **Ctrl + A**, select and hold on a node, then drag it to any point you want on the canvas.

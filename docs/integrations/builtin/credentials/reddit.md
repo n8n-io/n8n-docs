@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit/)
+- [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit.md)
 
 ## Prerequisites
 

@@ -31,7 +31,7 @@ export class ExampleNode implements INodeType {
 	};
 }
 ```
-Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/) for information on parameters available to all node types. Refer to [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters/) for the parameters available for declarative-style nodes.
+Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) for information on parameters available to all node types. Refer to [Declarative-style parameters](/integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md) for the parameters available for declarative-style nodes.
 
 ## Outline structure for a programmatic-style node
 
@@ -55,4 +55,4 @@ export class ExampleNode implements INodeType {
 };
 ```
 
-Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/) for information on parameters available to all node types. Refer to [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters/) and [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method/) for more information on working with programmatic-style nodes.
+Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) for information on parameters available to all node types. Refer to [Programmatic-style parameters](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md) and [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md) for more information on working with programmatic-style nodes.

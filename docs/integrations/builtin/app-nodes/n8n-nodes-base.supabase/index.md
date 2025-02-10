@@ -13,7 +13,7 @@ Use the Supabase node to automate work in Supabase, and integrate Supabase with 
 On this page, you'll find a list of operations the Supabase node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Supabase credentials](/integrations/builtin/credentials/supabase/) for guidance on setting up authentication. 
+Refer to [Supabase credentials](/integrations/builtin/credentials/supabase.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -34,4 +34,4 @@ Refer to [Supabase credentials](/integrations/builtin/credentials/supabase/) for
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues.md).

@@ -13,7 +13,7 @@ Use the Pipedrive node to automate work in Pipedrive, and integrate Pipedrive wi
 On this page, you'll find a list of operations the Pipedrive node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive/) for guidance on setting up authentication. 
+Refer to [Pipedrive credentials](/integrations/builtin/credentials/pipedrive.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Vero](/integrations/builtin/app-nodes/n8n-nodes-base.vero/)
+- [Vero](/integrations/builtin/app-nodes/n8n-nodes-base.vero.md)
 
 ## Prerequisites
 

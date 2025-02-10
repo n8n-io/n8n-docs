@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/)
-- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
+- [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/index.md)
+- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md)
 
 ## Prerequisites
 

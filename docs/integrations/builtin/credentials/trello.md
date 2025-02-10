@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello/)
-- [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger/)
+- [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello.md)
+- [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md)
 
 ## Supported authentication methods
 

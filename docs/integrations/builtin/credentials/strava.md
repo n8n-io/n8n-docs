@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava/)
-- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger/)
+- [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava.md)
+- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md)
 
 ## Prerequisites
 

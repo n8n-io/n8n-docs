@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git/)
+- [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git.md)
 
 ## Prerequisites
 

@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [ConvertKit](/integrations/builtin/app-nodes/n8n-nodes-base.convertkit/)
-- [ConvertKit Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger/)
+- [ConvertKit](/integrations/builtin/app-nodes/n8n-nodes-base.convertkit.md)
+- [ConvertKit Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md)
 
 ## Prerequisites
 

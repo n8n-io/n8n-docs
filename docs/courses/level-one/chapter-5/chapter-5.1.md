@@ -5,7 +5,7 @@ contentType: tutorial
 
 # 1. Getting data from the data warehouse
 
-In this part of the workflow you will learn how to get data by making HTTP requests using the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node.
+In this part of the workflow you will learn how to get data by making HTTP requests using the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node.
 
 First, let's set up the scene for building Nathan's workflow.
 
@@ -22,7 +22,7 @@ The first thing you need to do is get data from ABCorp's old data warehouse.
 
 In the previous chapter, you used an action node connected to a specific app (Hacker News). But not all apps or services have dedicated nodes, like the legacy data warehouse from Nathan's company.
 
-Though we can't directly export the data, Nathan told us that the data warehouse has a couple of API endpoints. That's all we need to access the data using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) in n8n.
+Though we can't directly export the data, Nathan told us that the data warehouse has a couple of API endpoints. That's all we need to access the data using the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) in n8n.
 
 /// note | No node for that service?
 The HTTP Request node is one of the most versatile nodes, allowing you to make HTTP requests to query data from apps and services. You can use it to access data from apps or services that don't have a dedicated node in n8n.
@@ -30,7 +30,7 @@ The HTTP Request node is one of the most versatile nodes, allowing you to make H
 
 ## Add an HTTP Request node
 
-Now, in your Editor UI, add an HTTP Request node like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1/#adding-nodes). The node window will open, where you need to configure some parameters.
+Now, in your Editor UI, add an HTTP Request node like you learned in the lesson [Adding nodes](/courses/level-one/chapter-1.md#adding-nodes). The node window will open, where you need to configure some parameters.
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node.png" alt="HTTP Request node" style="width:100%"><figcaption align = "center"><i>HTTP Request node</i></figcaption></figure>
 
@@ -67,7 +67,7 @@ Select the **Test step** button in the HTTP Request node window. The result of t
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node output" style="width:100%"><figcaption align = "center"><i>HTTP Request node output</i></figcaption></figure>
 
-This view should be familiar to you from the [Building a mini-workflow](/courses/level-one/chapter-2/).
+This view should be familiar to you from the [Building a mini-workflow](/courses/level-one/chapter-2.md).
 
 This is the data from ABCorp's data warehouse that Nathan needs to work with. This data set includes sales information of 30 customers with five columns:
 

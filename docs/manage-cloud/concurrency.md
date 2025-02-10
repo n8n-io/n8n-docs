@@ -6,7 +6,7 @@ contentType: explanation
 # Cloud concurrency
 
 /// info | Only for n8n Cloud
-This document discusses concurrency in n8n Cloud. Read [self-hosted n8n concurrency control](/hosting/scaling/concurrency-control/) to learn how concurrency works with self-hosted n8n instances.
+This document discusses concurrency in n8n Cloud. Read [self-hosted n8n concurrency control](/hosting/scaling/concurrency-control.md) to learn how concurrency works with self-hosted n8n instances.
 ///
 
 Too many concurrent executions can cause performance degradation and unresponsiveness. To prevent this and improve instance stability, n8n sets concurrency limits for production executions in regular mode.

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/)
+- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist.md)
 
 ## Supported authentication methods
 
@@ -39,7 +39,7 @@ Refer to [Find your API token](https://todoist.com/help/articles/find-your-api-t
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need a [Todoist](https://todoist.com/){:target=_blank .external-link} account and:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Todoist](https://todoist.com/){:target=_blank .external-link} account and:
 
 - A **Client ID**
 - A **Client Secret**

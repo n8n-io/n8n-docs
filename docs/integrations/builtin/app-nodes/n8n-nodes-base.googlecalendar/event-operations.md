@@ -8,7 +8,7 @@ priority: high
 
 # Google Calendar Event operations
 
-Use these operations to create, delete, get, and update events in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/) for more information on the Google Calendar node itself.
+Use these operations to create, delete, get, and update events in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md) for more information on the Google Calendar node itself.
 
 ## Create
 
@@ -16,7 +16,7 @@ Use this operation to add an event to a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Create**.
 - **Calendar**: Choose a calendar you want to add an event to. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -57,7 +57,7 @@ Use this operation to delete an event from a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Delete**.
 - **Calendar**: Choose a calendar you want to delete an event from. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -75,7 +75,7 @@ Use this operation to retrieve an event from a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Get**.
 - **Calendar**: Choose a calendar you want to get an event from. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -97,7 +97,7 @@ Use this operation to retrieve more than one event from a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Get Many**.
 - **Calendar**: Choose a calendar you want to get an event from. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -132,7 +132,7 @@ Use this operation to update an event in a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Update**.
 - **Calendar**: Choose a calendar you want to add an event to. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.

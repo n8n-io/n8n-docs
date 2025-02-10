@@ -11,7 +11,7 @@ priority: high
 Use the IMAP Email node to receive emails using an IMAP email server. This node is a trigger node.
 
 /// note | Credential
-You can find authentication information for this node [here](/integrations/builtin/credentials/imap/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/imap/index.md).
 ///
 
 ## Operations
@@ -24,7 +24,7 @@ Configure the node using the following parameters.
 
 ### Credential to connect with
 
-Select or create an [IMAP credential](/integrations/builtin/credentials/imap/) to connect to the server with.
+Select or create an [IMAP credential](/integrations/builtin/credentials/imap/index.md) to connect to the server with.
 
 ### Mailbox Name
 

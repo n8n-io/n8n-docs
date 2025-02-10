@@ -33,7 +33,7 @@ A Project Viewer is effectively a `read-only` role with access to all workflows,
 Viewers aren't able to manually execute any workflows that exist in a project. 
 
 /// note | Role types and account types
-Role types and [account types](/user-management/account-types/) are different things. Every account has one type. The account can have different role types for different [projects](/user-management/rbac/projects/).
+Role types and [account types](/user-management/account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](/user-management/rbac/projects.md).
 ///
 
 | Permission | Admin | Editor | Viewer | 
@@ -47,4 +47,4 @@ Role types and [account types](/user-management/account-types/) are different th
 | Manage members | :white_check_mark: | :x: | :x: | 
 | Modify the project | :white_check_mark: | :x: | :x: | 
 
-[Variables](/code/variables/) and [tags](/workflows/tags/) aren't affected by RBAC: they're global across the n8n instance.
+[Variables](/code/variables.md) and [tags](/workflows/tags.md) aren't affected by RBAC: they're global across the n8n instance.

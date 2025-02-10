@@ -12,7 +12,7 @@ Use the Linear node to automate work in Linear, and integrate Linear with other 
 On this page, you'll find a list of operations the Linear node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Linear credentials](/integrations/builtin/credentials/linear/) for guidance on setting up authentication. 
+Refer to [Linear credentials](/integrations/builtin/credentials/linear.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

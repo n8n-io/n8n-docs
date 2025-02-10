@@ -8,7 +8,7 @@ priority: high
 
 # Google Sheets Trigger node common issues
 
-Here are some common errors and issues with the [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md) and steps to resolve or troubleshoot them.
 
 ## Stuck waiting for trigger event
 

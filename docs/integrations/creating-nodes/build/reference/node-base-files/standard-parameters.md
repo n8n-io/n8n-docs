@@ -7,7 +7,7 @@ contentType: reference
 
 # Standard parameters
 
-These are the standard parameters for the [node base file](/integrations/creating-nodes/build/reference/node-base-files/). They're the same for all node types.
+These are the standard parameters for the [node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md). They're the same for all node types.
 
 ## `displayName`
 
@@ -134,7 +134,7 @@ A resource object includes the following parameters:
 
 * `displayName`: String. This should always be `Resource`.
 * `name`: String. This should always be `resource`.
-* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
+* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `options` results in n8n adding a dropdown that allows users to choose one option. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `resource`. 
 
 ### Operations objects
@@ -143,7 +143,7 @@ The operations object defines the available operations on a resource.
 
 * `displayName`: String. This should always be `Options`.
 * `name`: String. This should always be `option`.
-* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements/) for more information.
+* `type`: String. Tells n8n which UI element to use, and what input type to expect. For example, `dateTime` results in n8n adding a date picker. Refer to [Node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md) for more information.
 * `noDataExpression`: Boolean. Prevents using an expression for the parameter. Must always be `true` for `operation`.
 * `options`: Array of objects. Each objects describes an operation's behavior, such as its routing, the REST verb it uses, and so on. An `options` object includes:
 	* `name`. String.
@@ -178,4 +178,4 @@ displayOptions: {
 }
 ```
 
-For more information about UI element types, refer to [UI elements](/integrations/creating-nodes/build/reference/ui-elements/).
+For more information about UI element types, refer to [UI elements](/integrations/creating-nodes/build/reference/ui-elements.md).

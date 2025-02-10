@@ -11,7 +11,7 @@ priority: medium
 [MQTT](https://mqtt.org){:target=_blank .external-link} is an open OASIS and ISO standard lightweight, publish-subscribe network protocol that transports messages between devices.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mqtt/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/mqtt.md).
 ///
 
 ///  note  | Examples and templates

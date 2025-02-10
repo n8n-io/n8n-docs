@@ -4,7 +4,7 @@ This error displays when you've exceeded [OpenAI's rate limits](https://platform
 
 There are two ways to work around this issue:
 
-1. Split your data up into smaller chunks using the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node and add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
+1. Split your data up into smaller chunks using the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node and add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
     ```
     {
         "nodes": [
@@ -113,7 +113,7 @@ There are two ways to work around this issue:
         "pinData": {}
     }
     ```
-2. Use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart){:target=_blank .external-link} instead of using the OpenAI node.
+2. Use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart){:target=_blank .external-link} instead of using the OpenAI node.
 
 ## Insufficient quota
 
@@ -138,8 +138,8 @@ After topping up your balance, there may be a delay before your OpenAI account r
 
 In n8n:
 
-* check that the [OpenAI credentials](/integrations/builtin/credentials/openai/) use a valid [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} for the account you've added money to
-* ensure that you connect the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) to the correct [OpenAI credentials](/integrations/builtin/credentials/openai/)
+* check that the [OpenAI credentials](/integrations/builtin/credentials/openai.md) use a valid [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} for the account you've added money to
+* ensure that you connect the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) to the correct [OpenAI credentials](/integrations/builtin/credentials/openai.md)
 
 If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} to automatically reload your account with credits when your balance reaches $0.
 
@@ -147,4 +147,4 @@ If you find yourself frequently running out of account credits, consider turning
 
 This error displays when the request results in an error but n8n wasn't able to interpret the error message from OpenAI.
 
-To begin troubleshooting, try running the same operation using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node, which should provide a more detailed error message.
+To begin troubleshooting, try running the same operation using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, which should provide a more detailed error message.

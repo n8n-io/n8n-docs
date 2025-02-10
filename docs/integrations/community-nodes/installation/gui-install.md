@@ -23,12 +23,12 @@ To install a community node:
     * To install the latest version of a package called n8n-node-weather: enter `n8n-nodes-storms` in **Enter npm package name**.
     * To install version 2.3: enter `n8n-node-storms@2.3` in **Enter npm package name**.
     <!-- vale off -->
-5. Agree to the [risks](/integrations/community-nodes/risks/) of using community nodes: select **I understand the risks of installing unverified code from a public source.**
+5. Agree to the [risks](/integrations/community-nodes/risks.md) of using community nodes: select **I understand the risks of installing unverified code from a public source.**
     <!-- vale on -->
 6. Select **Install**. n8n installs the node, and returns to the **Community Nodes** list in **Settings**.
 
 /// note | Nodes on the blocklist
-n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist/) for more information.
+n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist.md) for more information.
 ///
 ## Uninstall a community node
 

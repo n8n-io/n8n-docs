@@ -11,7 +11,7 @@ priority: medium
 [JotForm](https://www.jotform.com/){:target=_blank .external-link} is an online form building service. JotForm's software creates forms with a drag and drop creation tool and an option to encrypt user data.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/jotform/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/jotform.md).
 ///
 
 ///  note  | Examples and templates

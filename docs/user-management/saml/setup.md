@@ -54,6 +54,6 @@ Documentation links for common IdPs.
 | Authentik | [Applications](https://goauthentik.io/docs/applications){:target=_blank .external-link} and the [SAML Provider](https://goauthentik.io/docs/providers/saml/){:target=_blank .external-link} |
 | Azure AD | [SAML authentication with Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml){:target=_blank .external-link} |
 | Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started){:target=_blank .external-link} guide depending on your hosting. |
-| Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta/) |
+| Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta.md) |
 | PingIdentity | [PingOne SSO](https://docs.pingidentity.com/r/en-us/pingone/pingone_p1sso_start){:target=_blank .external-link} |
 

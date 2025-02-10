@@ -4,12 +4,12 @@
 1. Create a new workflow.
 
     /// note | Create sub-workflows from existing workflows
-    You can optionally create a sub-workflow directly from an existing parent workflow using the [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node. In the node, select the **Database** and **From list** options and select **Create a sub-workflow** in the list.
+    You can optionally create a sub-workflow directly from an existing parent workflow using the [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node. In the node, select the **Database** and **From list** options and select **Create a sub-workflow** in the list.
     ///
 
 1. **Optional**: configure which workflows can call the sub-workflow:
 	1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu > **Settings**. n8n opens the **Workflow settings** modal.
-	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings/) for more information on configuring your workflows.
+	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings.md) for more information on configuring your workflows.
 1. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).
 1. Set the **Input data mode** to choose how you will define the sub-workflow's input data:
 	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide.
@@ -22,15 +22,15 @@
 If there are errors in the sub-workflow, the parent workflow can't trigger it.
 ///
 /// note | Load data into sub-workflow before building
-This requires the ability to [load data from previous executions](/workflows/executions/debug/), which is available on n8n Cloud and registered Community plans.
+This requires the ability to [load data from previous executions](/workflows/executions/debug.md), which is available on n8n Cloud and registered Community plans.
 
 If you want to load data into your sub-workflow to use while building it:
 
 1. Create the sub-workflow and add the **Execute Sub-workflow Trigger**. 
 1. Set the node's **Input data mode** to **Accept all data** or define the input items using fields or JSON if they're already known.
-1. In the sub-workflow [settings](/workflows/settings/), set **Save successful production executions** to **Save**. 
+1. In the sub-workflow [settings](/workflows/settings.md), set **Save successful production executions** to **Save**. 
 1. Skip ahead to setting up the parent workflow, and run it.
-1. Follow the steps to [load data from previous executions](/workflows/executions/debug/).
+1. Follow the steps to [load data from previous executions](/workflows/executions/debug.md).
 1. Adjust the **Input data mode** to match the input sent by the parent workflow if necessary.
 
 You can now pin example data in the trigger node, enabling you to work with real data while configuring the rest of the workflow.

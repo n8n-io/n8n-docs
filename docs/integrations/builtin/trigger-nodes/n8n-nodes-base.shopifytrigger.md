@@ -11,7 +11,7 @@ priority: medium
 [Shopify](https://www.shopify.com/){:target=_blank .external-link} is an e-commerce platform that allows users to set up an online store and sell their products.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/shopify/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/shopify.md).
 ///
 
 ///  note  | Examples and templates

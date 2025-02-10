@@ -53,4 +53,4 @@ N8N_METRICS=true
 QUEUE_HEALTH_CHECK_ACTIVE=true
 ```
 
-Refer to [Configuration methods](/hosting/configuration/configuration-methods/) for more information on how to configure your instance using environment variables.
+Refer to [Configuration methods](/hosting/configuration/configuration-methods.md) for more information on how to configure your instance using environment variables.

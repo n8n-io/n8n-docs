@@ -21,7 +21,7 @@ Create a [Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/) account.
 
 Refer to [Rapid7 InsightVM's API documentation](https://help.rapid7.com/insightvm/en-us/api/integrations.html){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/rapid7-insight-platform/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/rapid7-insight-platform/){:target=_blank .external-link} on n8n's website.
 
 ## Using API key
 

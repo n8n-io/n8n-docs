@@ -12,7 +12,7 @@ Use the Microsoft Graph Security node to automate work in Microsoft Graph Securi
 On this page, you'll find a list of operations the Microsoft Graph Security node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 
 ## Operations

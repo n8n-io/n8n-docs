@@ -13,7 +13,7 @@ Use the Shopify node to automate work in Shopify, and integrate Shopify with oth
 On this page, you'll find a list of operations the Shopify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Shopify credentials](/integrations/builtin/credentials/shopify/) for guidance on setting up authentication. 
+Refer to [Shopify credentials](/integrations/builtin/credentials/shopify.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

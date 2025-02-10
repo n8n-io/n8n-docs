@@ -11,7 +11,7 @@ priority: medium
 [Jira](https://www.atlassian.com/software/jira){:target=_blank .external-link} is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/jira/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/jira.md).
 ///
 
 ///  note  | Examples and templates

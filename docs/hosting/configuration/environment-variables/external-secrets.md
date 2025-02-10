@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-You can use an external secrets store to manage credentials for n8n. Refer to [External secrets](/external-secrets/) for details.
+You can use an external secrets store to manage credentials for n8n. Refer to [External secrets](/external-secrets.md) for details.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

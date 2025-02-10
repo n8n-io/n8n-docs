@@ -12,7 +12,7 @@ contentType: [integration, reference]
 Use the Redis Trigger node to subscribe to a Redis channel. The workflow starts whenever the channel receives a new message.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/redis/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/redis.md).
 ///
 
 ///  note  | Examples and templates

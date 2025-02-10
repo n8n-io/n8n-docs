@@ -10,7 +10,7 @@ contentType: [integration, reference]
 On this page, you'll find a list of events the TheHive Trigger node can respond to and links to more resources.
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive Trigger) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5 Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/).
+n8n provides two nodes for TheHive. Use this node (TheHive Trigger) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5 Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md).
 ///
 
 ///  note  | Examples and templates
@@ -42,7 +42,7 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 ## Related resources
 
-n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive/).
+n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive.md).
 
 View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} on n8n's website.
 

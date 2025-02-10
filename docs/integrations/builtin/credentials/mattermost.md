@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md)
 
 ## Supported authentication methods
 

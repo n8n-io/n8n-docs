@@ -12,7 +12,7 @@ contentType: [integration, reference]
 On this page, you'll find a list of events the MailerLite Trigger node can respond to and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mailerlite/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/mailerlite.md).
 ///
 
 ///  note  | Examples and templates

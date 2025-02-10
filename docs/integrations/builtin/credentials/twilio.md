@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio/)
-- [Twilio trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/)
+- [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio.md)
+- [Twilio trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md)
 
 ## Supported authentication methods
 

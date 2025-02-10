@@ -12,7 +12,7 @@ Use the AWS Rekognition node to automate work in AWS Rekognition, and integrate 
 On this page, you'll find a list of operations the AWS Rekognition node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Rekognition credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Rekognition credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

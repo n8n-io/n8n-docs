@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [Netscaler ADC node](/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc/)
+* [Netscaler ADC node](/integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md)
 
 ## Prerequisites
 

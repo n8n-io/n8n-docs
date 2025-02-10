@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [AWS SNS](https://aws.amazon.com/sns/){:target=_blank .external-link} is a notification service provided as part of Amazon Web Services. It provides a low-cost infrastructure for the mass delivery of messages, predominantly to mobile users.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
 ///
 
 ///  note  | Examples and templates

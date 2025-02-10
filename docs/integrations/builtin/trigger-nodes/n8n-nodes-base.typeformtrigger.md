@@ -11,7 +11,7 @@ priority: medium
 [Typeform](https://www.typeform.com/){:target=_blank .external-link} is an online software as a service company that specializes in online form building and online surveys. Its main software creates dynamic forms based on user needs.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/typeform/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/typeform.md).
 ///
 
 /// note | Examples and templates

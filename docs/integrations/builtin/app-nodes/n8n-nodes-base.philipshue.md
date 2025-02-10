@@ -12,7 +12,7 @@ Use the Philips Hue node to automate work in Philips Hue, and integrate Philips 
 On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/) for guidance on setting up authentication. 
+Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

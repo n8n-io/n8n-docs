@@ -12,7 +12,7 @@ Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit
 On this page, you'll find a list of operations the ConvertKit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit/) for guidance on setting up authentication. 
+Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

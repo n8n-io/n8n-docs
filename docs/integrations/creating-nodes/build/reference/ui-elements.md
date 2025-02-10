@@ -723,7 +723,7 @@ Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nod
 
 ## Notice
 
-Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/) for guidance on writing good hints and info text.
+Display a yellow box with a hint or extra info. Refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design.md) for guidance on writing good hints and info text.
 
 ```js
 {

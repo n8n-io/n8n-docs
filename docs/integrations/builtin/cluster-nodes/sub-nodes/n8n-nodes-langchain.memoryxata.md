@@ -12,7 +12,7 @@ Use the Xata node to use Xata as a memory server.
 On this page, you'll find a list of operations the Xata node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/xata/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/xata.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

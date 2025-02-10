@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble/)
+- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble.md)
 
 /// note | API access
 You need a paid plan to access the Bubble APIs.

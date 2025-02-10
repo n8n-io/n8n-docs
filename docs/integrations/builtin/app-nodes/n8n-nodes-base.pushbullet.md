@@ -12,7 +12,7 @@ Use the Pushbullet node to automate work in Pushbullet, and integrate Pushbullet
 On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet/) for guidance on setting up authentication. 
+Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

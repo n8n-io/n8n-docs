@@ -12,7 +12,7 @@ Use the Grist node to automate work in Grist, and integrate Grist with other app
 On this page, you'll find a list of operations the Grist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Grist credentials](/integrations/builtin/credentials/grist/) for guidance on setting up authentication. 
+Refer to [Grist credentials](/integrations/builtin/credentials/grist.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

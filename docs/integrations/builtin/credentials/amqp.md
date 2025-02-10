@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [AMQP Sender](/integrations/builtin/app-nodes/n8n-nodes-base.amqp/)
-- [AMQP Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger/)
+- [AMQP Sender](/integrations/builtin/app-nodes/n8n-nodes-base.amqp.md)
+- [AMQP Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md)
 
 ## Prerequisites
 

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Odoo](/integrations/builtin/app-nodes/n8n-nodes-base.odoo/)
+- [Odoo](/integrations/builtin/app-nodes/n8n-nodes-base.odoo.md)
 
 ## Supported authentication methods
 

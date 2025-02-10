@@ -22,7 +22,7 @@ The webhook allows you to trigger workflows from services that don't have a dedi
 
 ## Workflow development process
 
-n8n provides different **Webhook URL**s for testing and production. The testing URL includes an option to **Listen for test event**. Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information on building, testing, and shifting your Webhook node to production.
+n8n provides different **Webhook URL**s for testing and production. The testing URL includes an option to **Listen for test event**. Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information on building, testing, and shifting your Webhook node to production.
 
 ## Node parameters
 
@@ -55,7 +55,7 @@ The Webhook node supports standard [HTTP Request Methods](https://developer.mozi
 
     /// note | Webhook max payload
 	The webhook maximum payload size is 16MB.
-  If you're self-hosting n8n, you can change this using the [endpoint environment variable](/hosting/configuration/environment-variables/endpoints/) `N8N_PAYLOAD_SIZE_MAX`.
+  If you're self-hosting n8n, you can change this using the [endpoint environment variable](/hosting/configuration/environment-variables/endpoints.md) `N8N_PAYLOAD_SIZE_MAX`.
 	///	
 
 ### Path
@@ -81,13 +81,13 @@ You can require authentication for any service calling your webhook URL. Choose 
 - JWT auth
 - None
 
-Refer to [Webhook credentials](/integrations/builtin/credentials/webhook/) for more information on setting up each credential type.
+Refer to [Webhook credentials](/integrations/builtin/credentials/webhook.md) for more information on setting up each credential type.
 
 ### Respond
 
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.
 * **When Last Node Finishes**: The Webhook node returns the response code and the data output from the last node executed in the workflow.
-* **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: The Webhook node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
 
 ### Response Code
 
@@ -140,4 +140,4 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md).

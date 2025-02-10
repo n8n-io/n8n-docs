@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/)
+- [Action Network](/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork.md)
 
 ## Supported authentication methods
 

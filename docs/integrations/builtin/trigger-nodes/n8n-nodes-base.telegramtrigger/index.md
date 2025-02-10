@@ -11,7 +11,7 @@ priority: critical
 [Telegram](https://telegram.org/){:target=_blank .external-link} is a cloud-based instant messaging and voice over IP service. Users can send messages and exchange photos, videos, stickers, audio, and files of any type. On this page, you'll find a list of events the Telegram Trigger node can respond to and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/telegram/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/telegram.md).
 ///
 
 ///  note  | Examples and templates
@@ -49,7 +49,7 @@ Some **events may require additional permissions**, see [Telegram's API document
 
 ## Related resources
 
-n8n provides an app node for Telegram. You can find the node docs [here](/integrations/builtin/credentials/telegram/).
+n8n provides an app node for Telegram. You can find the node docs [here](/integrations/builtin/credentials/telegram.md).
 
 View [example workflows and related content](https://n8n.io/integrations/telegram-trigger/){:target=_blank .external-link} on n8n's website.
 
@@ -57,4 +57,4 @@ Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:tar
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md).

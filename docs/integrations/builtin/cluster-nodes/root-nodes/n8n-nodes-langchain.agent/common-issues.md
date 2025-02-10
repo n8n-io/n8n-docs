@@ -8,7 +8,7 @@ priority: critical
 
 # AI Agent node common issues
 
-Here are some common errors and issues with the [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) and steps to resolve or troubleshoot them.
 
 ## Internal error: 400 Invalid value for 'content'
 
@@ -31,7 +31,7 @@ You might see this in one of two scenarios:
 
 ## Error in sub-node Window Buffer Memory
 
-This error displays when n8n runs into an issue with the [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/) sub-node.
+This error displays when n8n runs into an issue with the [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) sub-node.
 
 It most often occurs when your workflow or the workflow template you copied uses an older version of the Window Buffer Memory node.
 

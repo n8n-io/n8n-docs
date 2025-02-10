@@ -12,7 +12,7 @@ Use the QuestDB node to automate work in QuestDB, and integrate QuestDB with oth
 On this page, you'll find a list of operations the QuestDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb/) for guidance on setting up authentication. 
+Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

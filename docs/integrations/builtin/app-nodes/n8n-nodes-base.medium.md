@@ -12,7 +12,7 @@ Use the Medium node to automate work in Medium, and integrate Medium with other 
 On this page, you'll find a list of operations the Medium node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Medium credentials](/integrations/builtin/credentials/medium/) for guidance on setting up authentication. 
+Refer to [Medium credentials](/integrations/builtin/credentials/medium.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

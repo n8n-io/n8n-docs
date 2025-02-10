@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Automizy](/integrations/builtin/app-nodes/n8n-nodes-base.automizy/)
+- [Automizy](/integrations/builtin/app-nodes/n8n-nodes-base.automizy.md)
 
 ## Prerequisites
 

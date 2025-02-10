@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Chargebee](https://www.chargebee.com/){:target=_blank .external-link} is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee.md).
 ///
 
 ///  note  | Examples and templates

@@ -8,7 +8,7 @@ priority: high
 
 # Structured Output Parser node common issues
 
-Here are some common errors and issues with the [Structured Output Parser node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Structured Output Parser node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/index.md) and steps to resolve or troubleshoot them.
 
 ## Processing parameters
 
@@ -20,7 +20,7 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 ## Adding the structured output parser node to AI nodes
 
-You can attach output parser nodes to select [AI root nodes](/integrations/builtin/cluster-nodes/root-nodes/).
+You can attach output parser nodes to select [AI root nodes](/integrations/builtin/cluster-nodes/root-nodes/index.md).
 
 To add the Structured Output Parser to a node, enable the **Require Specific Output Format** option in the AI root node you wish to format. Once the option is enabled, a new **output parser** attachment point is displayed. Click the **output parser** attachment point to add the Structured Output Parser node to the node.
 
@@ -32,6 +32,6 @@ To request a specific format for intermediary output, include the response struc
 
 ## Structuring output from agents
 
-Structured output parsing is often not reliable when working with [agents](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/).
+Structured output parsing is often not reliable when working with [agents](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md).
 
-If your workflow uses agents, n8n recommends using a separate [LLM-chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm/) to receive the data from the agent and parse it. This leads to better, more consistent results than parsing directly in the agent workflow.
+If your workflow uses agents, n8n recommends using a separate [LLM-chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md) to receive the data from the agent and parse it. This leads to better, more consistent results than parsing directly in the agent workflow.

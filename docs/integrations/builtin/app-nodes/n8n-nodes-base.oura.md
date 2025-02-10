@@ -12,7 +12,7 @@ Use the Oura node to automate work in Oura, and integrate Oura with other applic
 On this page, you'll find a list of operations the Oura node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Oura credentials](/integrations/builtin/credentials/oura/) for guidance on setting up authentication. 
+Refer to [Oura credentials](/integrations/builtin/credentials/oura.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

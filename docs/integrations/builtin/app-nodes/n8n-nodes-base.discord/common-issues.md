@@ -8,7 +8,7 @@ priority: high
 
 # Discord node common issues
 
-Here are some common errors and issues with the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) and steps to resolve or troubleshoot them.
 
 ## Add extra fields to embeds
 
@@ -39,7 +39,7 @@ For example, to include `footer` and `fields`, neither of which are available us
 
 You can learn more about embeds in [Using Webhooks and Embeds | Discord](https://discord.com/safety/using-webhooks-and-embeds).
 
-If you experience issues when working with embeds with the Discord node, you can use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) with your existing Discord credentials to `POST` to the following URL:
+If you experience issues when working with embeds with the Discord node, you can use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) with your existing Discord credentials to `POST` to the following URL:
 
 ```
 https://discord.com/api/v10/channels/<CHANNEL_ID>/messages

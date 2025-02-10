@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following node:
 
-- [Baserow](/integrations/builtin/app-nodes/n8n-nodes-base.baserow/)
+- [Baserow](/integrations/builtin/app-nodes/n8n-nodes-base.baserow.md)
 
 ## Prerequisites
 

@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Copper](/integrations/builtin/app-nodes/n8n-nodes-base.copper/)
-- [Copper Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger/)
+- [Copper](/integrations/builtin/app-nodes/n8n-nodes-base.copper.md)
+- [Copper Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md)
 
 ## Prerequisites
 

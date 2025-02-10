@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [E-goi](/integrations/builtin/app-nodes/n8n-nodes-base.egoi/)
+- [E-goi](/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md)
 
 ## Prerequisites
 

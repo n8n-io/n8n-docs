@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Gotify](/integrations/builtin/app-nodes/n8n-nodes-base.gotify/)
+- [Gotify](/integrations/builtin/app-nodes/n8n-nodes-base.gotify.md)
 
 ## Prerequisites
 

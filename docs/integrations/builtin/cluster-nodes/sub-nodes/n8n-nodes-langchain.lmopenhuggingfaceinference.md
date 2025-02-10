@@ -13,7 +13,7 @@ Use the Hugging Face Inference Model node to use Hugging Face's models.
 On this page, you'll find the node parameters for the Hugging Face Inference Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

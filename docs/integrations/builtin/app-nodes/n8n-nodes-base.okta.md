@@ -12,7 +12,7 @@ Use the Okta node to automate work in Okta and integrate Okta with other applica
 On this page, you'll find a list of operations the Okta node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/okta/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/okta.md).
 ///
 
 ## Operations

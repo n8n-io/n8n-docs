@@ -13,7 +13,7 @@ Use the Microsoft SQL node to automate work in Microsoft SQL, and integrate Micr
 On this page, you'll find a list of operations the Microsoft SQL node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft SQL credentials](/integrations/builtin/credentials/microsoftsql/) for guidance on setting up authentication. 
+Refer to [Microsoft SQL credentials](/integrations/builtin/credentials/microsoftsql.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

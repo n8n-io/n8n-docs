@@ -12,7 +12,7 @@ Use the E-goi node to automate work in E-goi, and integrate E-goi with other app
 On this page, you'll find a list of operations the E-goi node supports and links to more resources.
 
 /// note | Credentials
-Refer to [E-goi credentials](/integrations/builtin/credentials/egoi/) for guidance on setting up authentication. 
+Refer to [E-goi credentials](/integrations/builtin/credentials/egoi.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

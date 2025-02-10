@@ -7,7 +7,7 @@ contentType: howto
 
 # Expressions common issues
 
-Here are some common errors and issues related to [expressions](/code/expressions/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues related to [expressions](/code/expressions.md) and steps to resolve or troubleshoot them.
 
 ## The 'JSON Output' in item 0 contains invalid JSON
 

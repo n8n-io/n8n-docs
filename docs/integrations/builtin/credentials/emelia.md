@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Emelia](/integrations/builtin/app-nodes/n8n-nodes-base.emelia/)
-- [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger/)
+- [Emelia](/integrations/builtin/app-nodes/n8n-nodes-base.emelia.md)
+- [Emelia Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md)
 
 ## Prerequisites
 

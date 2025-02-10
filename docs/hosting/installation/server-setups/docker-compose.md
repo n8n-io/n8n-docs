@@ -125,7 +125,7 @@ volumes:
     external: true
 ```
 
-If you are planning on reading/writing local files with n8n (for example, by using the [Read/Write Files from Disk node](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
+If you are planning on reading/writing local files with n8n (for example, by using the [Read/Write Files from Disk node](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md), you will need to configure a data directory for those files here. If you are running n8n as a root user, add this under `volumes` for the n8n service:
 
 ```yaml
 - /local-files:/files
@@ -198,7 +198,7 @@ The above example would result in: `https://n8n.example.com`
 n8n will only be reachable using `https` and not using `http`.
 
 /// warning | Secure your n8n instance
-Make sure that you [set up authentication](/hosting/user-management/) for your n8n instance.
+Make sure that you [set up authentication](/user-management/index.md) for your n8n instance.
 ///
 ## Next steps
 

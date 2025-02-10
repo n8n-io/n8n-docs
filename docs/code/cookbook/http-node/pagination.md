@@ -6,9 +6,9 @@ contentType: howto
 
 # Pagination in the HTTP Request node
 
-The HTTP Request node supports pagination. This page provides some example configurations, including using the [HTTP node variables](/code/builtin/http-node-variables/).
+The HTTP Request node supports pagination. This page provides some example configurations, including using the [HTTP node variables](/code/builtin/http-node-variables.md).
 
-Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) for more information on the node.
+Refer to [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) for more information on the node.
 
 --8<-- "_snippets/integrations/builtin/core-nodes/http/pagination-api-differences.md"
 

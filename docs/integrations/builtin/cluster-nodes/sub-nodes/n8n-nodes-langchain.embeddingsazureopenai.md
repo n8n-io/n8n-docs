@@ -12,7 +12,7 @@ Use the Embeddings Azure OpenAI node to generate embeddings for a given text.
 On this page, you'll find the node parameters for the Embeddings Azure OpenAI node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

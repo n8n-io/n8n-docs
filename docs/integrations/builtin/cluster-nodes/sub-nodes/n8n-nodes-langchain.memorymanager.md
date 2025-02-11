@@ -8,7 +8,7 @@ priority: medium
 
 # Chat Memory Manager node
 
-The Chat Memory Manager node manages chat message [memories](/glossary/#ai-memory){ data-preview } within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](/glossary/#ai-vector-store){ data-preview }.
+The Chat Memory Manager node manages chat message [memories](/glossary.md#ai-memory){ data-preview } within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](/glossary.md#ai-vector-store){ data-preview }.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/chat-memory-manager-purpose.md"
 

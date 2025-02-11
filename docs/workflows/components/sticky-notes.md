@@ -8,7 +8,7 @@ contentType: howto
 
 Sticky Notes allow you to annotate and comment on your workflows.
 
-n8n recommends using Sticky Notes heavily, especially on [template workflows](/glossary/#template-n8n){ data-preview }, to help other users understand your workflow.
+n8n recommends using Sticky Notes heavily, especially on [template workflows](/glossary.md#template-n8n){ data-preview }, to help other users understand your workflow.
 
 ![Screenshot of a basic workflow with an example sticky note](/_images/workflows/components/stickies/example-sticky-note.png)
 

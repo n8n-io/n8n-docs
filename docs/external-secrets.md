@@ -13,7 +13,7 @@ contentType: howto
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets){:target=_blank .external-link}.
 ///
 
-You can use an external secrets store to manage [credentials](/glossary/#credential-n8n){ data-preview } for n8n.
+You can use an external secrets store to manage [credentials](/glossary.md#credential-n8n){ data-preview } for n8n.
 
 n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](/source-control-environments/index.md) in one central place.
 
@@ -117,7 +117,7 @@ To use a secret from your store in an n8n credential:
 1. On the field where you want to use a secret:
 	1. Hover over the field.
 	1. Select **Expression**.
-1. In the field where you want to use a secret, enter an [expression](/glossary/#expression-n8n){ data-preview } referencing the secret name:
+1. In the field where you want to use a secret, enter an [expression](/glossary.md#expression-n8n){ data-preview } referencing the secret name:
 	```js
 	{{ $secrets.<vault-name>.<secret-name> }}
 	```

@@ -66,7 +66,7 @@ Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced
 
 Select the **Tools** connector to browse the available tools and add them.
 
-Once you add a tool connection, the OpenAI node becomes a [root node](/glossary/#root-node-n8n){ data-preview }, allowing it to form a [cluster node](/glossary/#cluster-node-n8n){ data-preview } with the tools [sub-nodes](/glossary/#sub-node-n8n){ data-preview }. See [Node types](/integrations/builtin/node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
+Once you add a tool connection, the OpenAI node becomes a [root node](/glossary.md#root-node-n8n){ data-preview }, allowing it to form a [cluster node](/glossary.md#cluster-node-n8n){ data-preview } with the tools [sub-nodes](/glossary.md#sub-node-n8n){ data-preview }. See [Node types](/integrations/builtin/node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
 
 ### Operations that support tool connectors
 

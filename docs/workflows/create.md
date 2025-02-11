@@ -6,7 +6,7 @@ contentType: howto
 
 # Create a workflow
 
-A [workflow](/glossary/#workflow-n8n){ data-preview } is a collection of nodes connected together to automate a process. You build workflows on the [workflow canvas](/glossary/#canvas-n8n){ data-preview }.
+A [workflow](/glossary.md#workflow-n8n){ data-preview } is a collection of nodes connected together to automate a process. You build workflows on the [workflow canvas](/glossary.md#canvas-n8n){ data-preview }.
 
 ## Create a workflow
 

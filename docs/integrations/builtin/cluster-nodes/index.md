@@ -12,9 +12,9 @@ description: Understand cluster nodes in n8n, and browse the cluster nodes libra
 
 ## Root nodes
 
-Each cluster starts with one [root node](/glossary/#root-node-n8n){ data-preview }.
+Each cluster starts with one [root node](/glossary.md#root-node-n8n){ data-preview }.
 
 ## Sub-nodes
 
-Each root node can have one or more [sub-nodes](/glossary/#sub-node-n8n){ data-preview } attached to it.
+Each root node can have one or more [sub-nodes](/glossary.md#sub-node-n8n){ data-preview } attached to it.
 

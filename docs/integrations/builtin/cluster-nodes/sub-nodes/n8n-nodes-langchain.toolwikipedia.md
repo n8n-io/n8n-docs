@@ -8,7 +8,7 @@ priority: medium
 
 # Wikipedia node
 
-The Wikipedia node is a [tool](/glossary/#ai-tool){ data-preview } that allows an [agent](/glossary/#ai-agent){ data-preview } to search and return information from Wikipedia.
+The Wikipedia node is a [tool](/glossary.md#ai-tool){ data-preview } that allows an [agent](/glossary.md#ai-agent){ data-preview } to search and return information from Wikipedia.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 

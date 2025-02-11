@@ -8,7 +8,7 @@ priority: high
 
 # Window Buffer Memory node
 
-Use the Window Buffer Memory node to [persist](/glossary/#ai-memory){ data-preview } chat history in your workflow.
+Use the Window Buffer Memory node to [persist](/glossary.md#ai-memory){ data-preview } chat history in your workflow.
 
 On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
 

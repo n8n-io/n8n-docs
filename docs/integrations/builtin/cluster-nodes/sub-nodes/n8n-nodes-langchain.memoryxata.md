@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Xata node
 
-Use the Xata node to use Xata as a [memory](/glossary/#ai-memory){ data-preview } server.
+Use the Xata node to use Xata as a [memory](/glossary.md#ai-memory){ data-preview } server.
 On this page, you'll find a list of operations the Xata node supports, and links to more resources.
 
 /// note | Credentials

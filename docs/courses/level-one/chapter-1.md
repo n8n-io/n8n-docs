@@ -5,7 +5,7 @@ contentType: tutorial
 
 # Navigating the Editor UI
 
-In this lesson you will learn how to navigate the [Editor UI](/glossary/#editor-n8n){ data-preview }. We will walk through the [canvas](/glossary/#canvas-n8n){ data-preview } and show you what each icon means and where to find things you will need while building workflows in n8n.
+In this lesson you will learn how to navigate the [Editor UI](/glossary.md#editor-n8n){ data-preview }. We will walk through the [canvas](/glossary.md#canvas-n8n){ data-preview } and show you what each icon means and where to find things you will need while building workflows in n8n.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ Once you have n8n running, open the Editor UI in a browser window. It should loo
 
 ## Editor UI settings
 
-The editor UI is the web interface where you build [workflows](/workflows/index.md). You can access all your workflows and [credentials](/glossary/#credential-n8n){ data-preview }, as well as support pages, from the Editor UI.
+The editor UI is the web interface where you build [workflows](/workflows/index.md). You can access all your workflows and [credentials](/glossary.md#credential-n8n){ data-preview }, as well as support pages, from the Editor UI.
 
 ### Left-side panel
 

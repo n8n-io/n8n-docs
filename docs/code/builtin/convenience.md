@@ -8,7 +8,7 @@ hide:
 
 # Convenience methods
 
-n8n provides these methods to make it easier to perform common tasks in [expressions](/glossary/#expression-n8n){ data-preview }.
+n8n provides these methods to make it easier to perform common tasks in [expressions](/glossary.md#expression-n8n){ data-preview }.
 
 /// note | Python support
 You can use Python in the Code node. It isn't available in expressions.

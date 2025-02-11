@@ -8,7 +8,7 @@ priority: high
 
 # Custom Code Tool node
 
-Use the Custom Code Tool node to write code that an [agent](/glossary/#ai-agent){ data-preview } can run.
+Use the Custom Code Tool node to write code that an [agent](/glossary.md#ai-agent){ data-preview } can run.
 
 On this page, you'll find the node parameters for the Custom Code Tool node and links to more resources.
 

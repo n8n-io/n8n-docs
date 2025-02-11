@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Embeddings Mistral Cloud node
 
-Use the Embeddings Mistral Cloud node to generate [embeddings](/glossary/#ai-embedding){ data-preview } for a given text.
+Use the Embeddings Mistral Cloud node to generate [embeddings](/glossary.md#ai-embedding){ data-preview } for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Mistral Cloud node, and links to more resources.
 

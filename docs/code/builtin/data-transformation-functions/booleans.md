@@ -7,7 +7,7 @@ contentType: reference
 
 # Booleans
 
-A reference document listing built-in convenience functions to support data transformation in [expressions](/glossary/#expression-n8n){ data-preview } for arrays.
+A reference document listing built-in convenience functions to support data transformation in [expressions](/glossary.md#expression-n8n){ data-preview } for arrays.
 
 /// note | JavaScript in expressions
 You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions.md) for more information.

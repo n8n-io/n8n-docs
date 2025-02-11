@@ -53,7 +53,6 @@ This agent supports the following chat models:
     * [DHL](/integrations/builtin/app-nodes/n8n-nodes-base.dhl.md)
     * [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md)
     * [Dropbox](/integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md)
-    * [E2E Test](/integrations/builtin/app-nodes/n8n-nodes-base.e2eTest/)
     * [Elasticsearch](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch.md)
     * [ERPNext](/integrations/builtin/app-nodes/n8n-nodes-base.erpnext.md)
     * [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md)

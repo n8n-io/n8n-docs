@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Drift](/integrations/builtin/app-nodes/n8n-nodes-base.drift/)
+- [Drift](/integrations/builtin/app-nodes/n8n-nodes-base.drift.md)
 
 ## Prerequisites
 

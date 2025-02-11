@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Lemlist](https://Lemlist.com){:target=_blank .external-link} is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist.md).
 ///
 
 ///  note  | Examples and templates

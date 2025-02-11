@@ -8,7 +8,7 @@ priority: high
 
 # Execute Command node common issues
 
-Here are some common errors and issues with the [Execute Command node](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Execute Command node](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md) and steps to resolve or troubleshoot them.
 
 <!-- vale off -->
 ## Command failed: &lt;command&gt; /bin/sh: &lt;command&gt;: not found

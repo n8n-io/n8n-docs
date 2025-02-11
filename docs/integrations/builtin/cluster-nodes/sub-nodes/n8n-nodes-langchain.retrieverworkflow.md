@@ -21,7 +21,7 @@ On this page, you'll find the node parameters for the Workflow Retriever node, a
 Tell n8n which workflow to call. You can choose either:
 
 * **Database** and enter a workflow ID.
-* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import/).
+* **Parameter** and copy in a complete [workflow JSON](/workflows/export-import.md).
 
 ### Workflow values
 

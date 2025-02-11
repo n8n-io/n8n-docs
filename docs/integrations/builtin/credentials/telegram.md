@@ -10,8 +10,8 @@ priority: critical
 
 You can use these credentials to authenticate the following nodes:
 
-- [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/)
-- [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/)
+- [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md)
+- [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md)
 
 ## Prerequisites
 

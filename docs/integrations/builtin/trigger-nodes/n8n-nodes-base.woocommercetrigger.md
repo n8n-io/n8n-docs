@@ -11,7 +11,7 @@ priority: medium
 [WooCommerce](https://woocommerce.com/){:target=_blank .external-link} is a customizable, open-source e-commerce plugin for WordPress.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce.md).
 ///
 
 ///  note  | Examples and templates

@@ -10,7 +10,7 @@ priority: critical
 
 You can use these credentials to authenticate the following nodes:
 
-- [Chat OpenRouter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter/)
+- [Chat OpenRouter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md)
 
 ## Prerequisites
 

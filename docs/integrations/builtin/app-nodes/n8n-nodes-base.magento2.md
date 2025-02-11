@@ -12,7 +12,7 @@ Use the Magento 2 node to automate work in Magento 2, and integrate Magento 2 wi
 On this page, you'll find a list of operations the Magento 2 node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Magento 2 credentials](/integrations/builtin/credentials/magento2/) for guidance on setting up authentication. 
+Refer to [Magento 2 credentials](/integrations/builtin/credentials/magento2.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

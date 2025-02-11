@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Okta](/integrations/builtin/app-nodes/n8n-nodes-base.okta/)
+- [Okta](/integrations/builtin/app-nodes/n8n-nodes-base.okta.md)
 
 ## Prerequisites
 

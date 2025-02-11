@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [JWT](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/)
-- [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
+- [JWT](/integrations/builtin/core-nodes/n8n-nodes-base.jwt.md)
+- [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md)
 
 ## Supported authentication methods
 

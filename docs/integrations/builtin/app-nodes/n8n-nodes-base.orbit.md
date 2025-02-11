@@ -11,10 +11,6 @@ Use the Orbit node to automate work in Orbit, and integrate Orbit with other app
 
 On this page, you'll find a list of operations the Orbit node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Orbit credentials](/integrations/builtin/credentials/orbit/) for guidance on setting up authentication. 
-///
-
 ## Operations
 
 * Activity

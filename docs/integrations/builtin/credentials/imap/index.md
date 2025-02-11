@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [IMAP Email](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/)
+- [IMAP Email](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md)
 
 ## Prerequisites
 
@@ -41,15 +41,15 @@ Refer to the quickstart guides for these common email providers.
 
 #### Gmail
 
-Refer to [Gmail](/integrations/builtin/credentials/imap/gmail).
+Refer to [Gmail](/integrations/builtin/credentials/imap/gmail.md).
 
 #### Outlook.com
 
-Refer to [Outlook.com](/integrations/builtin/credentials/imap/outlook).
+Refer to [Outlook.com](/integrations/builtin/credentials/imap/outlook.md).
 
 #### Yahoo
 
-Refer to [Yahoo](/integrations/builtin/credentials/imap/yahoo).
+Refer to [Yahoo](/integrations/builtin/credentials/imap/yahoo.md).
 
 ### My provider isn't listed
 

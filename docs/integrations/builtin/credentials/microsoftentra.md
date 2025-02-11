@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-* [Microsoft Entra ID](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra/)
+* [Microsoft Entra ID](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra.md)
 
 ## Prerequisites
 

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mailcheck](/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck/)
+- [Mailcheck](/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck.md)
 
 ## Prerequisites
 

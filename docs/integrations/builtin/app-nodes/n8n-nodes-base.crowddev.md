@@ -12,7 +12,7 @@ Use the crowd.dev node to automate work in crowd.dev and integrate crowd.dev wit
 On this page, you'll find a list of operations the crowd.dev node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev.md).
 ///
 
 ## Operations
@@ -54,7 +54,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger/).
+n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md).
 
 Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} for more information about the service.
 

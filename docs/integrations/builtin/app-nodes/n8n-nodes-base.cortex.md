@@ -12,7 +12,7 @@ Use the Cortex node to automate work in Cortex, and integrate Cortex with other 
 On this page, you'll find a list of operations the Cortex node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Cortex credentials](/integrations/builtin/credentials/cortex/) for guidance on setting up authentication. 
+Refer to [Cortex credentials](/integrations/builtin/credentials/cortex.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

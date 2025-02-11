@@ -30,13 +30,13 @@ The **Executions** window displays a table with the following information:
 
 /// note | Workflow execution status
 You can filter the displayed **Executions** by workflow and by status (**Any Status**, **Failed**, **Cancelled**, **Running**, **Success**, or **Waiting**).
-The information displayed here depends on which executions are configured to be saved in the [**Workflow Settings**](/workflows/settings/).
+The information displayed here depends on which executions are configured to be saved in the [**Workflow Settings**](/workflows/settings.md).
 ///
 
 
 ## Workflow Settings
 
-You can customize your workflows and executions, or overwrite some of the global default settings in [**Workflow Settings**](/workflows/settings/).
+You can customize your workflows and executions, or overwrite some of the global default settings in [**Workflow Settings**](/workflows/settings.md).
 
 Access these settings by selecting the three dots in the upper right corner of the Editor UI, then select **Settings**.
 
@@ -44,9 +44,9 @@ Access these settings by selecting the three dots in the upper right corner of t
 
 In the **Workflow Settings** window you can configure the following settings:
 
-- [**Error Workflow**](/flow-logic/error-handling/): A workflow to run in case the execution of the current workflow fails.
-- **This workflow can be called by**: Workflows that are allowed to call this workflow using the [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/).
-- **Timezone**: The timezone to use in the current workflow. If not set, the global timezone (by default "New York") is used. This setting is particularly important for the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/), as you want to make sure that the workflow gets executed at the right time.
+- [**Error Workflow**](/flow-logic/error-handling.md): A workflow to run in case the execution of the current workflow fails.
+- **This workflow can be called by**: Workflows that are allowed to call this workflow using the [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md).
+- **Timezone**: The timezone to use in the current workflow. If not set, the global timezone (by default "New York") is used. This setting is particularly important for the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), as you want to make sure that the workflow gets executed at the right time.
 - **Save failed production executions**: If the Execution data of the workflow should be saved when it fails. Default is to save.
 - **Save successful production executions**: If the Execution data of the workflow should be saved when it succeeds. Default is to save.
 - **Save manual executions**: If executions started from the Editor UI should be saved. Default is to save.

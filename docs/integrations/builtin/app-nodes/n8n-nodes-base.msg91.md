@@ -12,7 +12,7 @@ Use the MSG91 node to automate work in MSG91, and integrate MSG91 with other app
 On this page, you'll find a list of operations the MSG91 node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MSG91 credentials](/integrations/builtin/credentials/msg91/) for guidance on setting up authentication. 
+Refer to [MSG91 credentials](/integrations/builtin/credentials/msg91.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

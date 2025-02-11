@@ -15,7 +15,7 @@ When using this node, you're creating a REST API call. You need some understandi
 There are two ways to create an HTTP request: configure the [node parameters](#node-parameters) or [import a curl command](#import-curl-command).
 
 /// note | Credentials
-Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest/) for guidance on setting up authentication. 
+Refer to [HTTP Request credentials](/integrations/builtin/credentials/httprequest.md) for guidance on setting up authentication. 
 ///
 
 ## Node parameters
@@ -42,7 +42,7 @@ n8n recommends using the **Predefined Credential Type** option when it's availab
 
 #### Predefined credentials
 
-Credentials for integrations supported by n8n, including both built-in and community nodes. Use **Predefined Credential Type** for custom operations without extra setup. Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+Credentials for integrations supported by n8n, including both built-in and community nodes. Use **Predefined Credential Type** for custom operations without extra setup. Refer to [Custom API operations](/integrations/custom-operations.md) for more information.
 
 #### Generic credentials
 
@@ -58,7 +58,7 @@ You can select one of the following methods:
 * OAuth2 API
 * Query auth
 
-Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest/) for more information on setting up each credential type.
+Refer to [HTTP request credentials](/integrations/builtin/credentials/httprequest.md) for more information on setting up each credential type.
 
 ### Send Query Parameters
 
@@ -212,7 +212,7 @@ Configure the pagination settings:
     * **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
     * **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
-For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination/).
+For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md).
 
 n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 
@@ -251,4 +251,4 @@ Import a curl command:
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md).

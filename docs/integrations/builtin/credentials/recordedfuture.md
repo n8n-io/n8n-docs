@@ -21,7 +21,7 @@ Create a [Recorded Future](https://www.recordedfuture.com){:target=_blank .exter
 
 Refer to [Recorded Future's documentation](https://api.recordedfuture.com/index.html){:target=_blank .external-link} for more information about the service. The rest of Recorded Future's help center requires a paid account.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/recorded-future/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/recorded-future/){:target=_blank .external-link} on n8n's website.
 
 ## Using API access token
 

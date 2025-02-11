@@ -12,7 +12,7 @@ Use the Reddit node to automate work in Reddit, and integrate Reddit with other 
 On this page, you'll find a list of operations the Reddit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Reddit credentials](/integrations/builtin/credentials/reddit/) for guidance on setting up authentication. 
+Refer to [Reddit credentials](/integrations/builtin/credentials/reddit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

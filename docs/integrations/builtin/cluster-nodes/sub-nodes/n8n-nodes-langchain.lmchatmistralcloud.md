@@ -13,7 +13,7 @@ Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models wit
 On this page, you'll find the node parameters for the Mistral Cloud Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mistral/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/mistral.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

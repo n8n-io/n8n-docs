@@ -13,7 +13,7 @@ The Ollama Model node allows you use local Llama 2 models.
 On this page, you'll find the node parameters for the Ollama Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -47,7 +47,7 @@ Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/integ
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"
 

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [SSH](/integrations/builtin/core-nodes/n8n-nodes-base.ssh/)
+- [SSH](/integrations/builtin/core-nodes/n8n-nodes-base.ssh.md)
 
 ## Prerequisites
 

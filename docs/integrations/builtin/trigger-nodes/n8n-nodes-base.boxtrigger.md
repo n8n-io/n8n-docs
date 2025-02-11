@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Box](https://www.box.com/){:target=_blank .external-link} is a cloud computing company which provides file sharing, collaborating, and other tools for working with files uploaded to its servers.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/box/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/box.md).
 ///
 
 ///  note  | Examples and templates

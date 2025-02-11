@@ -13,7 +13,7 @@ Use the Home Assistant node to automate work in Home Assistant, and integrate Ho
 On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
+Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

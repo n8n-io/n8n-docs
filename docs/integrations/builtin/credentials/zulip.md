@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zulip](/integrations/builtin/app-nodes/n8n-nodes-base.zulip/)
+- [Zulip](/integrations/builtin/app-nodes/n8n-nodes-base.zulip.md)
 
 ## Prerequisites
 

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [LinkedIn](/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/)
+- [LinkedIn](/integrations/builtin/app-nodes/n8n-nodes-base.linkedin.md)
 
 
 ## Prerequisites
@@ -71,7 +71,7 @@ All users must select:
 	- To use this option, you must put your app through LinkedIn's [Community Management App Review](https://learn.microsoft.com/en-us/linkedin/marketing/community-management-app-review){:target=_blank .external-link} process.
 - **Legacy**: If turned on, the credential uses legacy scopes for `r_liteprofile` and `r_emailaddress` instead of the newer `profile` and `email` scopes.
 
-If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth2 from scratch by creating a new developer app:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a new developer app:
 
 1. Log into LinkedIn and select this link to [create a new developer app](https://www.linkedin.com/developers/apps/new){:target=_blank .external-link}.
 2. Enter an **App name** for your app, like `n8n integration`.

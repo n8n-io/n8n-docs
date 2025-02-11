@@ -12,7 +12,7 @@ Use the Copper node to automate work in Copper, and integrate Copper with other 
 On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
+Refer to [Copper credentials](/integrations/builtin/credentials/copper.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

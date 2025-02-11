@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [DeepL](/integrations/builtin/app-nodes/n8n-nodes-base.deepl/)
+- [DeepL](/integrations/builtin/app-nodes/n8n-nodes-base.deepl.md)
 
 
 ## Prerequisites

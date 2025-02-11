@@ -10,10 +10,10 @@ priority: critical
 
 You can use these credentials to authenticate the following nodes:
 
-- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/)
-- [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai)
-- [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai)
-- [LM OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai)
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md)
+- [Chat OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md)
+- [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md)
+- [LM OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md)
 
 ## Prerequisites
 

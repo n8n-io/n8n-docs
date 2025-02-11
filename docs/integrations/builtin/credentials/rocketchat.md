@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Rocket.Chat](/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat/)
+- [Rocket.Chat](/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat.md)
 
 ## Prerequisites
 

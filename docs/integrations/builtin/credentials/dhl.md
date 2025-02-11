@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [DHL](/integrations/builtin/app-nodes/n8n-nodes-base.dhl/)
+- [DHL](/integrations/builtin/app-nodes/n8n-nodes-base.dhl.md)
 
 ## Supported authentication methods
 

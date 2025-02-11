@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [urlscan.io](/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio/)
+- [urlscan.io](/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio.md)
 
 ## Prerequisites
 

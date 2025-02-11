@@ -7,13 +7,13 @@ contentType: reference
 
 # Programmatic-style parameters
 
-These are the parameters available for [node base file](/integrations/creating-nodes/build/reference/node-base-files/) of programmatic-style nodes.
+These are the parameters available for [node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) of programmatic-style nodes.
 
-This document gives short code snippets to help understand the code structure and concepts. For a full walk-through of building a node, including real-world code examples, refer to [Build a programmatic-style node](/integrations/creating-nodes/build/programmatic-style-node/).
+This document gives short code snippets to help understand the code structure and concepts. For a full walk-through of building a node, including real-world code examples, refer to [Build a programmatic-style node](/integrations/creating-nodes/build/programmatic-style-node.md).
 
-Programmatic-style nodes also use the `execute()` method. Refer to [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method/) for more information.
+Programmatic-style nodes also use the `execute()` method. Refer to [Programmatic-style execute method](/integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md) for more information.
 
-Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters/) for parameters available to all nodes.
+Refer to [Standard parameters](/integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md) for parameters available to all nodes.
 
 ## `defaultVersion`
 
@@ -21,7 +21,7 @@ _Number_ | _Optional_
 
 Use `defaultVersion` when using the full versioning approach.
 
-n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
+n8n support two methods of node versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information.
 
 ## `methods` and `loadOptions`
 
@@ -67,5 +67,5 @@ Use `version` when using the light versioning approach.
 
 If you have one version of your node, this can be a number. If you want to support multiple versions, turn this into an array, containing numbers for each node version.
 
-n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information.
+n8n support two methods of node versioning. Programmatic-style nodes can use either. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information.
 

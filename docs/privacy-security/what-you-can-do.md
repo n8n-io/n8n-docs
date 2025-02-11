@@ -12,7 +12,7 @@ It's also your responsibility as a customer to ensure you are securing your code
 ## All users
 
 * Report security issues and [terms of service](https://n8n.io/legal/#terms){:target=_blank .external-link} violations to security@n8n.io.
-* If more than one person uses your n8n instance, set up [User management](/user-management/) and follow the [Best practices](/user-management/best-practices/).
+* If more than one person uses your n8n instance, set up [User management](/user-management/index.md) and follow the [Best practices](/user-management/best-practices.md).
 * Use OAuth to connect integrations whenever possible.
 
 ## Self-hosted users
@@ -21,11 +21,11 @@ If you self-host n8n, there are additional steps you can take:
 
 * Set up a reverse proxy to handle TLS, ensuring data is encrypted in transit.
 * Ensure data is encrypted at rest by using encrypted partitions, or encryption at the hardware level, and ensuring n8n and its database is written to that location.
-* Run a [Security audit](/hosting/logging-monitoring/security-audit/).
-* Be aware of the [Risks](/integrations/community-nodes/risks/) when installing community nodes, or choose to disable them.
+* Run a [Security audit](/hosting/securing/security-audit.md).
+* Be aware of the [Risks](/integrations/community-nodes/risks.md) when installing community nodes, or choose to disable them.
 * Make sure users can't import external modules in the Code node. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/configuration/environment-variables/nodes) for more information.
 * Choose to exclude certain nodes. For example, you can disable nodes like Execute Command or SSH. Refer to [Environment variables | Nodes](https://docs.n8n.io/hosting/configuration/environment-variables/nodes) for more information.
-* For maximum privacy, you can [Isolate n8n](/hosting/configuration/configuration-examples/isolation/).
+* For maximum privacy, you can [Isolate n8n](/hosting/configuration/configuration-examples/isolation.md).
 
 ### GDPR for self-hosted users
 

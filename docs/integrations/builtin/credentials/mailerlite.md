@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/)
-- [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger/)
+- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite.md)
+- [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md)
 
 ## Prerequisites
 

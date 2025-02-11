@@ -22,7 +22,7 @@ Create a [Hybrid Analysis](https://www.hybrid-analysis.com/){:target=_blank .ext
 
 Refer to [Hybrid Analysis' API documentation](https://www.hybrid-analysis.com/docs/api/v2){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/hybrid-analysis/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/hybrid-analysis/){:target=_blank .external-link} on n8n's website.
 
 ## Using API key
 

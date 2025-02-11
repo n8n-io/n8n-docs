@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [PayPal](https://paypal.com){:target=_blank .external-link} is a digital payment service that supports online fund transfers that customers can use when shopping online.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/paypal/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/paypal.md).
 ///
 
 ///  note  | Examples and templates

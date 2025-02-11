@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickup/)
-- [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger/)
+- [ClickUp](/integrations/builtin/app-nodes/n8n-nodes-base.clickup.md)
+- [ClickUp Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md)
 
 ## Supported authentication methods
 
@@ -40,7 +40,7 @@ Refer to [ClickUp's Personal Token documentation](https://clickup.com/api/develo
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need to create an OAuth app:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to create an OAuth app:
 
 1. In ClickUp, select your avatar and select **Integrations**.
 2. Select **ClickUp API**.

@@ -12,7 +12,7 @@ Use the Harvest node to automate work in Harvest, and integrate Harvest with oth
 On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Harvest credentials](/integrations/builtin/credentials/harvest/) for guidance on setting up authentication. 
+Refer to [Harvest credentials](/integrations/builtin/credentials/harvest.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

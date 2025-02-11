@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Cal.com Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger/)
+- [Cal.com Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md)
 
 ## Prerequisites
 

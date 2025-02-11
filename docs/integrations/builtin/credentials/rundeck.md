@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Rundeck](/integrations/builtin/app-nodes/n8n-nodes-base.rundeck/)
+- [Rundeck](/integrations/builtin/app-nodes/n8n-nodes-base.rundeck.md)
 
 ## Prerequisites
 

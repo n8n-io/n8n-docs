@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following node:
 
-- [Bitwarden](/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden/)
+- [Bitwarden](/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden.md)
 
 ## Prerequisites
 

@@ -9,7 +9,7 @@ contentType: howto
 RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
 ///
 
-n8n uses projects to group workflows and credentials, and assigns [roles](/user-management/rbac/role-types/) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
+n8n uses projects to group workflows and credentials, and assigns [roles](/user-management/rbac/role-types.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
 
 ## Create a project
 
@@ -31,7 +31,7 @@ To add a user to a project:
 1. Select **Project settings**.
 1. Under **Project members**, browse for users or search by username or email address.
 1. Select the user you want to add.
-1. Check the [role type](/user-management/rbac/role-type/) and change it if needed.
+1. Check the [role type](/user-management/rbac/role-types.md) and change it if needed.
 1. Select **Save**.
 
 To remove a user from a project:
@@ -64,4 +64,4 @@ Workflow and credential owners can move workflows or credentials (changing owner
 
 ## Using external secrets in projects
 
-To use [external secrets](/external-secrets/) in a project, you must have an [instance owner or instance admin](/user-management/account-types/) as a member of the project.
+To use [external secrets](/external-secrets.md) in a project, you must have an [instance owner or instance admin](/user-management/account-types.md) as a member of the project.

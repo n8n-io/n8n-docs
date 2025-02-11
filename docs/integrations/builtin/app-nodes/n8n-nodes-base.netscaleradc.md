@@ -12,7 +12,7 @@ Use the Netscaler ADC node to automate work in Netscaler ADC, and integrate Nets
 On this page, you'll find a list of operations the Netscaler ADC node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaleradc/) for guidance on setting up authentication. 
+Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaleradc.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

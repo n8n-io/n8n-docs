@@ -14,7 +14,7 @@ Figma doesn't support webhooks on the free "Starter" plan. Your team needs to be
 ///
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/figma/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/figma.md).
 ///
 
 ///  note  | Examples and templates

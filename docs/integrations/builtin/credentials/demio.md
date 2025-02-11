@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Demio](/integrations/builtin/app-nodes/n8n-nodes-base.demio/)
+- [Demio](/integrations/builtin/app-nodes/n8n-nodes-base.demio.md)
 
 
 ## Prerequisites

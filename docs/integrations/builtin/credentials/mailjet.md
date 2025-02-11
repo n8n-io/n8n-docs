@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mailjet](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/)
-- [Mailjet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger/)
+- [Mailjet](/integrations/builtin/app-nodes/n8n-nodes-base.mailjet.md)
+- [Mailjet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md)
 
 ## Prerequisites
 

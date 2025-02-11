@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Flow](https://www.getflow.com/){:target=_blank .external-link} is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/flow/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/flow.md).
 ///
 
 ///  note  | Examples and templates

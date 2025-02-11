@@ -12,7 +12,7 @@ Use the Humantic AI node to automate work in Humantic AI, and integrate Humantic
 On this page, you'll find a list of operations the Humantic AI node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Humantic AI credentials](/integrations/builtin/credentials/humanticai/) for guidance on setting up authentication. 
+Refer to [Humantic AI credentials](/integrations/builtin/credentials/humanticai.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

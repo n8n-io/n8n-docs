@@ -12,7 +12,7 @@ Use the SIGNL4 node to automate work in SIGNL4, and integrate SIGNL4 with other 
 On this page, you'll find a list of operations the SIGNL4 node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SIGNL4 credentials](/integrations/builtin/credentials/signl4/) for guidance on setting up authentication. 
+Refer to [SIGNL4 credentials](/integrations/builtin/credentials/signl4.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

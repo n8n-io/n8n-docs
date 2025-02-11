@@ -12,7 +12,7 @@ Use the Google Business Profile Trigger node to respond to events in [Google Bus
 On this page, you'll find a list of events the Google Business Profile Trigger node can respond to and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
 ///
 
 ## Events
@@ -21,7 +21,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides an app node for Google Business Profile. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile/).
+n8n provides an app node for Google Business Profile. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md).
 
 <!-- add a link to the node page on n8n's website. For example: https://n8n.io/integrations/356-gmail/ -->
 View [example workflows and related content](https://n8n.io/integrations/google-business-profile-trigger/){:target=_blank .external-link} on n8n's website.

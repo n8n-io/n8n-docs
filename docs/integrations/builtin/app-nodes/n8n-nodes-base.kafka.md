@@ -13,7 +13,7 @@ Use the Kafka node to automate work in Kafka, and integrate Kafka with other app
 On this page, you'll find a list of operations the Kafka node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Kafka credentials](/integrations/builtin/credentials/kafka/) for guidance on setting up authentication. 
+Refer to [Kafka credentials](/integrations/builtin/credentials/kafka.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -13,7 +13,7 @@ Use the One Simple API node to automate work in One Simple API, and integrate On
 On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
 
 /// note | Credentials
-Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi/) for guidance on setting up authentication. 
+Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpleapi.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

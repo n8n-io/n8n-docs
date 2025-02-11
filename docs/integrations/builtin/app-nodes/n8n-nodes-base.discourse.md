@@ -12,7 +12,7 @@ Use the Discourse node to automate work in Discourse, and integrate Discourse wi
 On this page, you'll find a list of operations the Discourse node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Discourse credentials](/integrations/builtin/credentials/discourse/) for guidance on setting up authentication. 
+Refer to [Discourse credentials](/integrations/builtin/credentials/discourse.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

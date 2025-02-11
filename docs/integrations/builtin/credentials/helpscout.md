@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout/)
-- [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger/)
+- [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout.md)
+- [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md)
 
 ## Prerequisites
 

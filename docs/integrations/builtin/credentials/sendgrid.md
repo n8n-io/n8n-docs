@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [SendGrid](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/)
+- [SendGrid](/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid.md)
 
 ## Supported authentication methods
 

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twake](/integrations/builtin/app-nodes/n8n-nodes-base.twake/)
+- [Twake](/integrations/builtin/app-nodes/n8n-nodes-base.twake.md)
 
 ## Prerequisites
 

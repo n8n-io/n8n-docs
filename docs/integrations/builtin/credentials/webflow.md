@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow/)
-- [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/)
+- [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow.md)
+- [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md)
 
 ## Prerequisites
 

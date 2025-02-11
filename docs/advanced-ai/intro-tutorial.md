@@ -16,8 +16,8 @@ Many people find it easier to take in new information in video format. This tuto
 
 ### What you will need
 
-- **n8n**: For this tutorial we recommend using the [n8n cloud](/choose-n8n/cloud/) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker/).
-- **Credentials for a chat model**: This tutorial uses OpenAI, but you can easily use DeepSeek, Google Gemini, Groq, Azure, and others (see the [sub-nodes documentation](/integrations/builtin/cluster-nodes/sub-nodes/) for more).
+- **n8n**: For this tutorial we recommend using the [n8n cloud](/manage-cloud/overview.md) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker.md).
+- **Credentials for a chat model**: This tutorial uses OpenAI, but you can easily use DeepSeek, Google Gemini, Groq, Azure, and others (see the [sub-nodes documentation](/integrations/builtin/cluster-nodes/sub-nodes/index.md) for more).
 
 ### What you will learn
 
@@ -101,7 +101,7 @@ AI agents require a chat model to be attached to process the incoming prompts.
 
 ## 5. Add credentials (if needed)
 
-In order for n8n to communicate with the chat model, it will need some [credentials](/credentials/) (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
+In order for n8n to communicate with the chat model, it will need some [credentials](/credentials/index.md) (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
 
 ![image showing the credentials dialog for OpenAI](/_images/advanced-ai/ai-tutorial-credentials.png)
 
@@ -172,6 +172,6 @@ You have taken your first steps in building useful and effective workflows with 
 
 Now you have seen how to create a basic AI workflow, there are plenty of resources to build on that knowledge and plenty of examples to give you ideas of where to go next:
 
-* Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction/).
+* Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction.md).
 * Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}.
-* Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools/).
+* Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools.md).

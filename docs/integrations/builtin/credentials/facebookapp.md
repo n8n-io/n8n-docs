@@ -10,10 +10,10 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/)
+- [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md)
 
 /// note | Facebook Graph API credentials
-If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) documentation.
+If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) documentation.
 ///
 
 ## Supported authentication methods
@@ -102,7 +102,7 @@ Now that you have a token, you can configure the Facebook Trigger node:
     1. Some webhook subscriptions, like **User**, prompt you to subscribe to individual events. Subscribe to the events you're interested in.
     1. You can send some **Test** events from Meta to confirm things are working. If you send a test event, verify its receipt in n8n.
 
-Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) documentation for more information.
+Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) documentation for more information.
 
 ### Optional: Add an App Secret
 

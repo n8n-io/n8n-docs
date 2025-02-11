@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Google Vertex Chat Model node
 
-Use the Google Vertex AI Chat Model node to use Google's Vertex AI chat models with conversational agents.
+Use the Google Vertex AI Chat Model node to use Google's Vertex AI chat models with conversational [agents](/glossary/#ai-agent){ data-preview }.
 
 On this page, you'll find the node parameters for the Google Vertex AI Chat Model node, and links to more resources.
 

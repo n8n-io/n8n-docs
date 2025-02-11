@@ -103,7 +103,7 @@ You can append `_FILE` to individual environment variables to provide their conf
 
 Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for details on each variable.
 
-While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as credentials and database configuration. Here are some examples: 
+While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as [credentials](/glossary/#credential-n8n){ data-preview } and database configuration. Here are some examples: 
 
 ```yaml
 CREDENTIALS_OVERWRITE_DATA_FILE=/path/to/credentials_data

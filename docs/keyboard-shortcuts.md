@@ -78,4 +78,4 @@ n8n provides keyboard shortcuts for some actions.
 
 ## Within nodes
 
-- **=**: in an empty parameter input, this switches to expressions mode.
+- **=**: in an empty parameter input, this switches to [expressions](/glossary/#expression-n8n){ data-preview } mode.

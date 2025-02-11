@@ -5,7 +5,7 @@ contentType: overview
 
 # Creating nodes
 
-Learn how to build your own custom nodes.
+Learn how to build your own custom [nodes](/glossary/#node-n8n){ data-preview }.
 
 This section includes:
 

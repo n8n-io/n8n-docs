@@ -8,7 +8,7 @@ priority: medium
 
 # Qdrant Vector Store node
 
-Use the Qdrant node to interact with your Qdrant collection as a vector store. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a chain or connect it directly to an agent to use as a tool..
+Use the Qdrant node to interact with your Qdrant collection as a [vector store](/glossary/#ai-vector-store){ data-preview }. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary/#ai-chain){ data-preview } or connect it directly to an [agent](/glossary/#ai-agent){ data-preview } to use as a [tool](/glossary/#ai-tool){ data-preview }.
 
 On this page, you'll find the node parameters for the Qdrant node, and links to more resources.
 

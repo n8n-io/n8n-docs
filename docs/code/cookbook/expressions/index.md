@@ -6,7 +6,7 @@ contentType: overview
 
 # Expressions cookbook
 
-This section contains examples and recipes for tasks you can do with expressions.
+This section contains examples and recipes for tasks you can do with [expressions](/glossary/#expression-n8n){ data-preview }.
 
 /// note | Python support
 You can use Python in the Code node. It isn't available in expressions.

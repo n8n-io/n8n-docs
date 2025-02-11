@@ -6,7 +6,7 @@ contentType: overview
 
 # Workflows
 
-A workflow is a collection of nodes connected together to automate a process.
+A [workflow](/glossary/#workflow-n8n){ data-preview } is a collection of nodes connected together to automate a process.
 
 
 * [Create](/workflows/create.md) a workflow.

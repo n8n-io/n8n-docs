@@ -59,7 +59,7 @@ This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/index.md):
 
 ### Workflow templates
 
-You can browse workflow templates in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
+You can browse [workflow templates](/glossary/#template-n8n){ data-preview } in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
 
 Refer to [Templates](/workflows/templates.md) for information on accessing templates in-app.
 

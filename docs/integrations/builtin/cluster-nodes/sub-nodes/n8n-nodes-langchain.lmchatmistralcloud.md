@@ -8,7 +8,7 @@ priority: medium
 
 # Mistral Cloud Chat Model node
 
-Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models with conversational agents.
+Use the Mistral Cloud Chat Model node to combine Mistral Cloud's chat models with conversational [agents](/glossary/#ai-agent){ data-preview }.
 
 On this page, you'll find the node parameters for the Mistral Cloud Chat Model node, and links to more resources.
 

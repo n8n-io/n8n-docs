@@ -5,7 +5,7 @@ contentType: tutorial
 
 # Building a Mini-workflow
 
-In this lesson, you will build a small workflow that gets 10 articles about automation from Hacker News. The workflow consists of five steps:
+In this lesson, you will build a small [workflow](/glossary/#workflow-n8n){ data-preview } that gets 10 articles about automation from Hacker News. The workflow consists of five steps:
 
 1. [Add a Manual Trigger node](#1-add-a-manual-trigger-node)
 2. [Add the Hacker News node](#2-add-the-hacker-news-node)
@@ -15,7 +15,7 @@ In this lesson, you will build a small workflow that gets 10 articles about auto
 
 ## 1. Add a Manual Trigger node
 
-Open the nodes panel (reminder: you can open this by selecting the **+** icon in the top right corner of the canvas or selecting Tab on your keyboard).
+Open the nodes panel (reminder: you can open this by selecting the **+** icon in the top right corner of the [canvas](/glossary/#canvas-n8n){ data-preview } or selecting Tab on your keyboard).
 
 Then:
 
@@ -27,7 +27,7 @@ This will add the Manual Trigger node to your canvas, which will allow you to ru
 /// note | Manual triggers
 For faster workflow creation, you can skip this step in the future. Adding any other node without a trigger will add the Manual Trigger node to the workflow.
 
-In a real-world scenario, you would likely want to set up a schedule or some other trigger to run the workflow.
+In a real-world scenario, you would likely want to set up a schedule or some other [trigger](/glossary/#trigger-node-n8n){ data-preview } to run the workflow.
 ///
 
 ## 2. Add the Hacker News node

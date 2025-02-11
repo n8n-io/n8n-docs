@@ -8,7 +8,7 @@ priority: medium
 
 # Azure OpenAI Chat Model node
 
-Use the Azure OpenAI Chat Model node to use OpenAI's chat models with conversational agents.
+Use the Azure OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary/#ai-agent){ data-preview }.
 
 On this page, you'll find the node parameters for the Azure OpenAI Chat Model node, and links to more resources.
 

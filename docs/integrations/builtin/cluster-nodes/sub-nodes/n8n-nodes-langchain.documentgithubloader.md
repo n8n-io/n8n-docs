@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # GitHub Document Loader node
 
-Use the GitHub Document Loader node to load data from a GitHub repository for vector stores or summarization.
+Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](/glossary/#ai-vector-store){ data-preview } or summarization.
 
 On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.
 

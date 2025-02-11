@@ -5,13 +5,13 @@ contentType: overview
 
 # Built-in integrations
 
-This section contains the node library: reference documentation for every built-in node in n8n, and their credentials.
+This section contains the [node](/glossary/#node-n8n){ data-preview } library: reference documentation for every built-in node in n8n, and their credentials.
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Core nodes
 
-Core nodes can be actions or triggers. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.
+Core nodes can be actions or [triggers](/glossary/#trigger-node-n8n){ data-preview }. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.
 
 ## Cluster nodes
 
@@ -19,7 +19,7 @@ Core nodes can be actions or triggers. Whereas most nodes connect to a specific 
 
 ## Credentials
 
-External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as credentials.
+External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as [credentials](/glossary/#credential-n8n){ data-preview }.
 
 Nodes in n8n can then request that credential information. As another layer of security, only node types with specific access rights can access the credentials.
 

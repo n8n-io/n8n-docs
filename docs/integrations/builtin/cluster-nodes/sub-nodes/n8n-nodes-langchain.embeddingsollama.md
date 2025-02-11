@@ -8,7 +8,7 @@ priority: medium
 
 # Embeddings Ollama node
 
-Use the Embeddings Ollama node to generate embeddings for a given text.
+Use the Embeddings Ollama node to generate [embeddings](/glossary/#ai-embedding){ data-preview } for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Ollama node, and links to more resources.
 

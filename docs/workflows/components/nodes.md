@@ -6,7 +6,7 @@ contentType: howto
 
 # Nodes
 
-Nodes are the key building blocks of a workflow. They perform a range of actions, including:
+[Nodes](/glossary/#node-n8n){ data-preview } are the key building blocks of a [workflow](/glossary/#workflow-n8n){ data-preview }. They perform a range of actions, including:
 
 * Starting the workflow.
 * Fetching and sending data.
@@ -23,7 +23,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 
 ### Add a node to an empty workflow
 
-1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse trigger nodes.
+1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse [trigger nodes](/glossary/#trigger-node-n8n){ data-preview }.
 2. Select the trigger you want to use.
 
     /// note | Choose the correct app event

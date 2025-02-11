@@ -7,7 +7,7 @@ contentType: howto
 
 --8<-- "_snippets/code/tournament-notes.md"
 
-Use expressions to set node parameters dynamically based on data from:
+Use [expressions](/glossary/#expression-n8n){ data-preview } to set node parameters dynamically based on data from:
 
 - Previous nodes
 - The workflow

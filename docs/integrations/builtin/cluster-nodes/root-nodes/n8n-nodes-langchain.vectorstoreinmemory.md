@@ -8,7 +8,7 @@ priority: medium
 
 # In-Memory Vector Store node
 
-Use the In Memory Vector Store node to store and retrieve embeddings in n8n's in-app memory. 
+Use the In Memory Vector Store node to store and retrieve [embeddings](/glossary/#ai-embedding){ data-preview } in n8n's in-app memory. 
 
 On this page, you'll find the node parameters for the In Memory Vector Store node, and links to more resources.
 
@@ -17,7 +17,7 @@ On this page, you'll find the node parameters for the In Memory Vector Store nod
 /// note | This node is different to AI memory nodes
 The in-memory storage described here is different to the AI memory nodes such as [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md).
 
-This node creates a vector database in the app memory.
+This node creates a [vector database](/glossary/#ai-vector-store){ data-preview } in the app memory.
 ///
 
 ## Node usage patterns
@@ -32,7 +32,7 @@ You can see an example of in step 2 of [this template](https://n8n.io/workflows/
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the In-Memory Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use vector store as a resource when answering queries.
+You can connect the In-Memory Vector Store node directly to the [tool](/glossary/#ai-tool){ data-preview } connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> In-Memory Vector Store node.
 

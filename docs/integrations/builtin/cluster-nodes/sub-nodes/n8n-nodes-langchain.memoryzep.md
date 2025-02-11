@@ -8,7 +8,7 @@ priority: medium
 
 # Zep node
 
-Use the Zep node to use Zep as a memory server.
+Use the Zep node to use Zep as a [memory](/glossary/#ai-memory){ data-preview } server.
 
 On this page, you'll find a list of operations the Zep node supports, and links to more resources.
 

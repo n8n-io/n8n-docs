@@ -19,7 +19,7 @@ Here are a couple of other ways of expressing it:
 
 ## AI tools in n8n
 
-n8n provides tool sub-nodes that you can connect to your AI agent. As well as providing some popular tools, such as [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md) and [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md), n8n provides three especially powerful tools:
+n8n provides tool [sub-nodes](/glossary/#sub-node-n8n){ data-preview } that you can connect to your [AI agent](/glossary/#ai-agent){ data-preview }. As well as providing some popular tools, such as [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md) and [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md), n8n provides three especially powerful tools:
 
 * [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md): use this to load any n8n workflow as a tool.
 * [Custom Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md): write code that your agent can run.

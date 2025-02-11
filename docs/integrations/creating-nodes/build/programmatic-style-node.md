@@ -18,7 +18,7 @@ You need some understanding of:
 - JavaScript/TypeScript
 - REST APIs
 - git
-- Expressions in n8n
+- [Expressions](/glossary/#expression-n8n){ data-preview } in n8n
 
 
 ## Build your node

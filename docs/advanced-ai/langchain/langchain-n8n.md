@@ -25,11 +25,11 @@ This feature is n8n's implementation of [LangChain's JavaScript framework](https
 
 ### Root nodes
 
-Each cluster starts with one root node.
+Each cluster starts with one [root node](/glossary/#root-node-n8n){ data-preview }.
 
 #### Chains
 
-A chain is a series of LLMs, and related tools, linked together to support functionality that can't be provided by a single LLM alone.
+A [chain](/glossary/#ai-chain){ data-preview } is a series of LLMs, and related tools, linked together to support functionality that can't be provided by a single LLM alone.
 
 Available nodes:
 
@@ -43,7 +43,7 @@ Learn more about [chaining in LangChain](https://js.langchain.com/docs/concepts/
 
 #### Agents
 
-> An agent has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://github.com/langchain-ai/langchainjs/blob/def3a26c054575e1ed40b9062087e8c0a8899633/docs/core_docs/docs/modules/agents/index.mdx){:target=_blank .external-link}
+> An [agent](/glossary/#ai-agent){ data-preview} has access to a suite of tools, and determines which ones to use depending on the user input. Agents can use multiple tools, and use the output of one tool as the input to the next. [Source](https://github.com/langchain-ai/langchainjs/blob/def3a26c054575e1ed40b9062087e8c0a8899633/docs/core_docs/docs/modules/agents/index.mdx){:target=_blank .external-link}
 
 Available nodes:
 
@@ -53,7 +53,7 @@ Learn more about [Agents in LangChain](https://js.langchain.com/docs/concepts/ag
 
 #### Vector stores
 
-Vector stores store embedded data, and perform vector searches on it.
+[Vector stores](/glossary/#ai-vector-store){ data-preview } store embedded data, and perform vector searches on it.
 
 * [In Memory Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md)
 * [PGVector Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md)
@@ -72,7 +72,7 @@ Utility nodes.
 
 ### Sub-nodes
 
-Each root node can have one or more sub-nodes attached to it.
+Each root node can have one or more [sub-nodes](/glossary/#sub-node-n8n){ data-preview } attached to it.
 
 #### Document loaders
 
@@ -87,7 +87,7 @@ Learn more about [Document loaders in LangChain](https://js.langchain.com/docs/c
 
 #### Language models
 
-LLMs (large language models) are programs that analyze datasets. They're the key element of working with AI.
+[LLMs (large language models)](/glossary/#large-language-model-llm){ data-preview } are programs that analyze datasets. They're the key element of working with AI.
 
 Available nodes:
 
@@ -104,7 +104,7 @@ Learn more about [Language models in LangChain](https://js.langchain.com/docs/co
 
 #### Memory
 
-Memory retains information about previous queries in a series of queries. For example, when a user interacts with a chat model, it's useful if your application can remember and call on the full conversation, not just the most recent query entered by the user.
+[Memory](/glossary/#ai-memory){ data-preview } retains information about previous queries in a series of queries. For example, when a user interacts with a chat model, it's useful if your application can remember and call on the full conversation, not just the most recent query entered by the user.
 
 Available nodes:
 
@@ -152,7 +152,7 @@ n8n's text splitter nodes implements parts of [LangChain's text_splitter API](ht
 
 #### Tools
 
-Utility tools.
+Utility [tools](/glossary/#ai-tool){ data-preview }.
 
 * [Calculator](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md)
 * [Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md)
@@ -164,7 +164,7 @@ Utility tools.
 
 #### Embeddings
 
-> Embeddings capture the "relatedness" of text, images, video, or other types of information. ([source](https://supabase.com/docs/guides/ai/concepts){:target=_blank .external-link})
+> [Embeddings](/glossary/#ai-embedding){ data-preview } capture the "relatedness" of text, images, video, or other types of information. ([source](https://supabase.com/docs/guides/ai/concepts){:target=_blank .external-link})
 
 Available nodes:
 

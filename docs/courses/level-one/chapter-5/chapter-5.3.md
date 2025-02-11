@@ -33,7 +33,7 @@ With the connection to the Airtable node removed, add an If node connected to th
 For the If node, we'll use an expression.
 
 /// note | Expressions
-An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
+An [expression](/glossary/#expression-n8n){ data-preview } is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
 ///
 
 In the If node window, configure the parameters:

@@ -8,7 +8,7 @@ priority: high
 
 # Ollama Chat Model node
 
-The Ollama Chat Model node allows you use local Llama 2 models with conversational agents.
+The Ollama Chat Model node allows you use local Llama 2 models with conversational [agents](/glossary/#ai-agent){ data-preview }.
 
 On this page, you'll find the node parameters for the Ollama Chat Model node, and links to more resources.
 

@@ -8,7 +8,7 @@ priority: critical
 
 # AI Agent node
 
-An AI agent is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself, which might include customer queries, tools, or other context.
+An [AI agent](/glossary/#ai-agent){ data-preview } is an autonomous system that receives data, makes rational decisions, and acts within its environment to achieve specific goals. The AI agent's environment is everything the agent can access that isn't the agent itself, which might include customer queries, tools, or other context.
 
 The AI Agent node gives you six LangChain agent options.
 
@@ -22,7 +22,7 @@ You must connect at least one tool [sub-node](/integrations/builtin/cluster-node
 
 n8n provides these agents:
 
-* [**Tools Agent**](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) (default): This agent uses external tools and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
+* [**Tools Agent**](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md) (default): This agent uses external [tools](/glossary/#ai-tool){ data-preview } and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
 
     /// note | Begin here
     n8n recommends using this agent for most use cases. It will handle most scenarios and provides the best experience when working with [tools](/advanced-ai/examples/understand-tools.md).

@@ -30,7 +30,7 @@ Stores the history of a SAML connection.
 
 ### credentials_entity
 
-Stores the credentials used to authenticate with integrations.
+Stores the [credentials](/glossary/#credential-n8n){ data-preview } used to authenticate with integrations.
 
 ### event_destinations
 

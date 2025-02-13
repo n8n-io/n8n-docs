@@ -10,6 +10,8 @@ priority: critical
 
 Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Append or Update Row
 
 Use this operation to update an existing row or add a new row at the end of the data if a matching entry isn't found in a sheet. 

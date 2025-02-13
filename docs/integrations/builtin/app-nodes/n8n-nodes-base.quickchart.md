@@ -12,6 +12,8 @@ Use the QuickChart node to automate work in QuickChart, and integrate QuickChart
 
 On this page, you'll find a list of operations the QuickChart node supports and links to more resources.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 Create a chart by selecting the chart type:

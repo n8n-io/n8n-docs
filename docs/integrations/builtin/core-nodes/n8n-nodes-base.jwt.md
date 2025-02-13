@@ -22,6 +22,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 * **Credential to connect with**: Select or create a [JWT credential](/integrations/builtin/credentials/jwt.md) to connect with.
 * **Token**: Enter the token to **Verify** or **Decode**.
 * If you select the **Sign** operation, you'll also have this parameter:

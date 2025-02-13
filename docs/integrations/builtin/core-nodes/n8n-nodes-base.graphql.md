@@ -12,6 +12,8 @@ priority: medium
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ### Authentication
 
 Select the type of authentication to use.

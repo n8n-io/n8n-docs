@@ -14,6 +14,8 @@ Use these operations to send, edit, and delete messages in a chat; send files to
 To use most of these operations, you must add your bot to a channel so that it can send messages to that channel. Refer to [Common Issues | Add a bot to a Telegram channel](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#add-a-bot-to-a-telegram-channel) for more information.
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+s
 ## Delete Chat Message
 
 Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} method.

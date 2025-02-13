@@ -95,7 +95,7 @@ String field with more than one row:
 
 ### Support drag and drop for data keys
 
-Users can drag and drop data values to map them to fields. Dragging and dropping creates an [expression](/glossary.md#expression-n8n){ data-preview } to load the data value. n8n supports this automatically.
+Users can drag and drop data values to map them to fields. Dragging and dropping creates an [expression](/glossary.md#expression-n8n) to load the data value. n8n supports this automatically.
 
 You need to add an extra configuration option to support dragging and dropping data keys:
 

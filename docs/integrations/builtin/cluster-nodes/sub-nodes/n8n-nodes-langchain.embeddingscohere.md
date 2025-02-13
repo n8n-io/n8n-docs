@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Embeddings Cohere node
 
-Use the Embeddings Cohere node to generate [embeddings](/glossary.md#ai-embedding){ data-preview } for a given text.
+Use the Embeddings Cohere node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Cohere node, and links to more resources.
 

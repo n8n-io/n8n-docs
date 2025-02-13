@@ -8,7 +8,7 @@ priority: medium
 
 # Pinecone Vector Store node
 
-Use the Pinecone node to interact with your Pinecone database as [vector store](/glossary.md#ai-vector-store){ data-preview }. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain){ data-preview }, or connect directly to an [agent](/glossary.md#ai-agent){ data-preview } as a [tool](/glossary.md#ai-tool){ data-preview }.
+Use the Pinecone node to interact with your Pinecone database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
 
 On this page, you'll find the node parameters for the Pinecone node, and links to more resources.
 

@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Embeddings Azure OpenAI node
 
-Use the Embeddings Azure OpenAI node to generate [embeddings](/glossary.md#ai-embedding){ data-preview } for a given text.
+Use the Embeddings Azure OpenAI node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Azure OpenAI node, and links to more resources.
 

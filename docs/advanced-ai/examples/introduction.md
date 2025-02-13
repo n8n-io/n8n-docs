@@ -15,7 +15,7 @@ This section provides explanations of important AI concepts, and workflow templa
 
 -   __Agents and chains__
 
-	Learn about [agents](/glossary.md#ai-agent){ data-preview } and [chains](/glossary.md#ai-chain){ data-preview } in AI, including exploring key differences using the example workflow.
+	Learn about [agents](/glossary.md#ai-agent) and [chains](/glossary.md#ai-chain) in AI, including exploring key differences using the example workflow.
 
 	[:octicons-arrow-right-24: What's a chain in AI?](/advanced-ai/examples/understand-chains.md)  
     [:octicons-arrow-right-24: What's an agent in AI?](/advanced-ai/examples/understand-agents.md)  
@@ -23,7 +23,7 @@ This section provides explanations of important AI concepts, and workflow templa
 
 -   __Custom n8n Workflow Tool__
 
-    Learn about [tools](/glossary.md#ai-tool){ data-preview } in AI, then explore examples that use n8n workflows as custom tools to give your AI workflow access to more data.
+    Learn about [tools](/glossary.md#ai-tool) in AI, then explore examples that use n8n workflows as custom tools to give your AI workflow access to more data.
 
 	[:octicons-arrow-right-24: What's a tool in AI?](/advanced-ai/examples/understand-tools.md)  
     [:octicons-arrow-right-24: Chat with Google Sheets](/advanced-ai/examples/data-google-sheets.md)  
@@ -33,14 +33,14 @@ This section provides explanations of important AI concepts, and workflow templa
 
 -   __Vector databases__
 
-    Learn about [vector databases](/glossary.md#ai-vector-store){ data-preview } in AI, along with related concepts including [embeddings](/glossary.md#ai-embedding){ data-preview } and retrievers.
+    Learn about [vector databases](/glossary.md#ai-vector-store) in AI, along with related concepts including [embeddings](/glossary.md#ai-embedding) and retrievers.
 
 	[:octicons-arrow-right-24: What's a vector database?](/advanced-ai/examples/understand-vector-databases.md)  
     [:octicons-arrow-right-24: Populate a Pinecone vector database from a website](/advanced-ai/examples/vector-store-website.md)   
 
 -   __Memory__
 
-    Learn about [memory](/glossary.md#ai-memory){ data-preview } in AI.
+    Learn about [memory](/glossary.md#ai-memory) in AI.
 
 	[:octicons-arrow-right-24: What's memory in AI?](/advanced-ai/examples/understand-memory.md)  
 

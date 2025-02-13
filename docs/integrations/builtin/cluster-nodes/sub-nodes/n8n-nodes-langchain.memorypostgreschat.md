@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Postgres Chat Memory node
 
-Use the Postgres Chat Memory node to use Postgres as a [memory](/glossary.md#ai-memory){ data-preview } server for storing chat history.
+Use the Postgres Chat Memory node to use Postgres as a [memory](/glossary.md#ai-memory) server for storing chat history.
 
 On this page, you'll find a list of operations the Postgres Chat Memory node supports, and links to more resources.
 

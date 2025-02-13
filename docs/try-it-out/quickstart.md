@@ -6,11 +6,11 @@ contentType: tutorial
 
 # The very quick quickstart
 
-This quickstart gives you a quick taste of n8n. Its aim is to allow you to try out the UI, and introduce you to two key features: workflow templates and [expressions](/glossary.md#expression-n8n){ data-preview }. It doesn't include detailed explanations or explore concepts.
+This quickstart gives you a quick taste of n8n. Its aim is to allow you to try out the UI, and introduce you to two key features: workflow templates and [expressions](/glossary.md#expression-n8n). It doesn't include detailed explanations or explore concepts.
 
 You will:
 
-* Load a [workflow](/glossary.md#workflow-n8n){ data-preview } from the workflow templates library
+* Load a [workflow](/glossary.md#workflow-n8n) from the workflow templates library
 * Add a node and configure it using expressions.
 * Run your first workflow
 
@@ -20,7 +20,7 @@ You will:
 
 ## Step two: Open a workflow template
 
-n8n provides a quickstart [template](/glossary.md#template-n8n){ data-preview } using training nodes. This allows you to work with fake data, and avoids setting up [credentials](/glossary.md#credential-n8n){ data-preview }.
+n8n provides a quickstart [template](/glossary.md#template-n8n) using training nodes. This allows you to work with fake data, and avoids setting up [credentials](/glossary.md#credential-n8n).
 
 1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/){:target=_blank .external-link}.
 1. Select **Use workflow** to view the options for using the template.
@@ -43,7 +43,7 @@ Add a third node to message each customer and tell them their description. Use t
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Edit Fields node.
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
-3. Select **Customer Messenger (n8n training)** to add the node to the [canvas](/glossary.md#canvas-n8n){ data-preview }. n8n opens the node automatically.
+3. Select **Customer Messenger (n8n training)** to add the node to the [canvas](/glossary.md#canvas-n8n). n8n opens the node automatically.
 4. Use [expressions](/code/expressions.md) to map in the **Customer ID** and create the **Message**:
 	1. Drag **customer_id** from the **INPUT** panel into the **Customer ID** field in the node settings.
     2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.

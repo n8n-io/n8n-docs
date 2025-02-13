@@ -8,7 +8,7 @@ priority: medium
 
 # Motorhead node
 
-Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory){ data-preview } server.
+Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory) server.
 
 On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.
 

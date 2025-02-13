@@ -8,7 +8,7 @@ priority: medium
 
 # Embeddings HuggingFace Inference node
 
-Use the Embeddings HuggingFace Inference node to generate [embeddings](/glossary.md#ai-embedding){ data-preview } for a given text.
+Use the Embeddings HuggingFace Inference node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings HuggingFace Inference, and links to more resources.
 

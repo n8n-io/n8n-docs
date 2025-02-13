@@ -29,4 +29,4 @@ In this section:
 Related sections:
 
 * [Variables](/code/variables.md): reusable values.
-* [External secrets](/external-secrets.md): manage [credentials](/glossary.md#credential-n8n){ data-preview } with an external secrets vault.
+* [External secrets](/external-secrets.md): manage [credentials](/glossary.md#credential-n8n) with an external secrets vault.

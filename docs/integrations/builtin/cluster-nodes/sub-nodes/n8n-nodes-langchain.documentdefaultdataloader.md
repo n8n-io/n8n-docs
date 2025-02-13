@@ -8,7 +8,7 @@ priority: medium
 
 # Default Data Loader node
 
-Use the Default Data Loader node to load binary data files or JSON data for [vector stores](/glossary.md#ai-vector-store){ data-preview } or summarization.
+Use the Default Data Loader node to load binary data files or JSON data for [vector stores](/glossary.md#ai-vector-store) or summarization.
 
 On this page, you'll find a list of parameters the Default Data Loader node supports, and links to more resources.
 

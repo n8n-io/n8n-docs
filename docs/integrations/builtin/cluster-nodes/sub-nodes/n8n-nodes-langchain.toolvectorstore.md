@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Vector Store Question Answer Tool node
 
-The Vector Store Question Answer node is a [tool](/glossary.md#ai-tool){ data-preview } that allows an [agent](/glossary.md#ai-agent){ data-preview } to summarize results and answer questions based on chunks from a [vector store](/glossary.md#ai-vector-store){ data-preview }. 
+The Vector Store Question Answer node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to summarize results and answer questions based on chunks from a [vector store](/glossary.md#ai-vector-store). 
 
 On this page, you'll find the node parameters for the Vector Store Question Answer node, and links to more resources.
 

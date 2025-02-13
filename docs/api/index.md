@@ -13,7 +13,7 @@ search:
 The n8n API isn't available during the free trial. Please upgrade to access this feature.  
 ///
 
-Using n8n's public [API](/glossary.md#api){ data-preview }, you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
+Using n8n's public [API](/glossary.md#api), you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
 * How to [authenticate](/api/authentication.md)
 * [Paginating](/api/pagination.md) results

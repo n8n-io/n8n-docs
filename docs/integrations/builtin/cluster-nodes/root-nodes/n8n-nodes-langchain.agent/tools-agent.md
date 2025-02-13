@@ -8,7 +8,7 @@ priority: critical
 
 # Tools AI Agent node
 
-The Tools Agent uses external [tools](/glossary.md#ai-tool){ data-preview } and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
+The Tools Agent uses external [tools](/glossary.md#ai-tool) and APIs to perform actions and retrieve information. It can understand the capabilities of different tools and determine which tool to use depending on the task. This agent helps integrate LLMs with various external services and databases.
 
 This agent has an enhanced ability to work with tools and can ensure a standard output format.
 

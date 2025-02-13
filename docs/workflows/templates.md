@@ -6,7 +6,7 @@ contentType: howto
 
 # Workflow templates
 
-When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing [template](/glossary.md#template-n8n){ data-preview }.
+When creating a new workflow, you can choose whether to start with an empty workflow, or use an existing [template](/glossary.md#template-n8n).
 
 Templates provide:
 

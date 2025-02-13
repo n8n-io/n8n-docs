@@ -11,6 +11,8 @@ Use the CoinGecko node to automate work in CoinGecko, and integrate CoinGecko wi
 
 On this page, you'll find a list of operations the CoinGecko node supports and links to more resources.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Coin

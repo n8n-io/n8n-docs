@@ -10,6 +10,8 @@ priority: critical
 
 Use this operation to create or delete a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Create a spreadsheet
 
 Use this operation to create a new spreadsheet.

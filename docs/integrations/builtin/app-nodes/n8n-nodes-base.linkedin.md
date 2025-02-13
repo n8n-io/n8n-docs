@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the LinkedIn node supports and li
 Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedin.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Post

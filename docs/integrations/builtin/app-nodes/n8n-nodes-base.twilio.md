@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Twilio node supports and link
 Refer to [Twilio credentials](/integrations/builtin/credentials/twilio.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * SMS

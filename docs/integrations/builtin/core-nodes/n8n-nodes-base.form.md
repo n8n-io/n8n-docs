@@ -42,11 +42,11 @@ Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and th
 
 ### Displaying custom HTML
 
-You can display custom HTML on your form by adding a **Custom HTML** field to your form. This provides an **HTML** box where you can insert arbitrary HTML code to be displayed as part of the form page.
+You can display custom HTML on your form by adding a **Custom HTML** field to your form. This provides an **HTML** box where you can insert arbitrary HTML code to display as part of the form page.
 
-You can use the HTML field to enrich your form page by including things like links, images, videos, and more. The content will be rendered with the rest of the form fields in the normal document flow.
+You can use the HTML field to enrich your form page by including things like links, images, videos, and more. n8n will render the content with the rest of the form fields in the normal document flow.
 
-Because custom HTML content is read-only, these fields are not included in the form output data by default. To include the raw HTML content in the node output, provide a name for the data using the **Element Name** field.
+Because custom HTML content is read-only, these fields aren't included in the form output data by default. To include the raw HTML content in the node output, provide a name for the data using the **Element Name** field.
 
 The HTML field doesn't support `<script>`, `<style>`, or `<input>` elements.
 
@@ -146,7 +146,7 @@ An example JSON that shows the general format required and the keys available:
 
 ### Form Ending
 
-Use the **Form Ending** Page Type to end a form and either show a completion page, redirect the user to a URL, or display custom HTML or text. Only one Form Ending page is displayed per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
+Use the **Form Ending** Page Type to end a form and either show a completion page, redirect the user to a URL, or display custom HTML or text. Only one Form Ending page displays per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
 
 Choose between these options when using **On n8n Form Submission**:
 

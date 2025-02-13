@@ -21,7 +21,7 @@ n8n isn't CPU intensive so even small instances (of providers such as AWS and GC
 
 ## Database considerations
 
-n8n uses its database to store credentials, past executions, and workflows.
+n8n uses its database to store [credentials](/glossary.md#credential-n8n), past executions, and workflows.
 
 A core feature of n8n is the flexibility to choose a database. All the supported databases have different advantages and disadvantages, which you have to consider individually and pick the one that best suits your needs. By default n8n creates an SQLite database if no database exists at the given location.
 

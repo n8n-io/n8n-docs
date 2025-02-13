@@ -8,7 +8,7 @@ priority: high
 
 # DeepSeek Chat Model node
 
-Use the DeepSeek Chat Model node to use DeepSeek's chat models with conversational agents.
+Use the DeepSeek Chat Model node to use DeepSeek's chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the DeepSeek Chat Model node and links to more resources.
 

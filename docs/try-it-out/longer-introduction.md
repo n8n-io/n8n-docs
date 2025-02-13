@@ -6,15 +6,15 @@ contentType: tutorial
 
 # A slightly longer introduction
 
-This guide shows you how to automate a task using a workflow in n8n, explaining key concepts along the way. You will:
+This guide shows you how to automate a task using a [workflow](/glossary.md#workflow-n8n) in n8n, explaining key concepts along the way. You will:
 
 * Create a workflow from scratch. You'll build a workflow that runs every week to get data from NASA, filters the data, and generates two reports.
 * Understand key concepts and skills, including:
     * Starting workflows with trigger nodes
-    * Configuring credentials
+    * Configuring [credentials](/glossary.md#credential-n8n)
     * Manipulating data
     * Representing logic in an n8n workflow
-    * Using expressions
+    * Using [expressions](/glossary.md#expression-n8n)
 
 
 ## Step one: Sign up for n8n

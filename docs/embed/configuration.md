@@ -17,7 +17,7 @@ n8n supports [LDAP](/user-management/ldap.md) and [SAML](/user-management/saml/i
 
 ### Credential overwrites
 
-To offer OAuth login to users, it's possible to overwrite credentials on a global basis. This credential data isn't visible to users but the backend uses it automatically.
+To offer OAuth login to users, it's possible to overwrite [credentials](/glossary.md#credential-n8n) on a global basis. This credential data isn't visible to users but the backend uses it automatically.
 
 In the Editor UI, n8n hides all overwritten fields by default. This means that users are able to authenticate using  OAuth by pressing the "connect" button on the credentials.
 
@@ -85,7 +85,7 @@ n8n has many [environment variables](/hosting/configuration/environment-variable
 | `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
 | `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
+| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable [workflow templates](/glossary.md#template-n8n) (true) or disable (false). |
 | `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates.md) for more information. |
 
 ## Backend hooks

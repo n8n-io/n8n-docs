@@ -8,7 +8,7 @@ priority: medium
 
 # Vector Store Retriever node
 
-Use the Vector Store Retriever node to retrieve documents from a vector store.
+Use the Vector Store Retriever node to retrieve documents from a [vector store](/glossary.md#ai-vector-store).
 
 On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
 

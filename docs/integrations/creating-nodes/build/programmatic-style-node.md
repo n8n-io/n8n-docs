@@ -18,7 +18,7 @@ You need some understanding of:
 - JavaScript/TypeScript
 - REST APIs
 - git
-- Expressions in n8n
+- [Expressions](/glossary.md#expression-n8n) in n8n
 
 
 ## Build your node

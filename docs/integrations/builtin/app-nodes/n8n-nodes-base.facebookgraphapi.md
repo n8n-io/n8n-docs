@@ -13,7 +13,7 @@ Use the Facebook Graph API node to automate work in Facebook Graph API, and inte
 On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
+Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

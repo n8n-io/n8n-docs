@@ -8,12 +8,12 @@ priority: high
 
 # SerpApi (Google Search) node
 
-The SerpAPI node allows an agent in your workflow to call Google's Search API.
+The SerpAPI node allows an [agent](/glossary.md#ai-agent) in your workflow to call Google's Search API.
 
 On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/serp/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/serp.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger/)
+- [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md)
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ To configure this credential, you'll need:
 
     <!-- vale off -->
     /// note | Token scopes
-    If you're using this credential with the [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger/) node, select the `r_candidates` and `r_jobs` scopes when you generate your token. If you're using this credential in other ways, select scopes that are relevant for your use case.
+    If you're using this credential with the [Workable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md) node, select the `r_candidates` and `r_jobs` scopes when you generate your token. If you're using this credential in other ways, select scopes that are relevant for your use case.
 
     Refer to [Supported API scopes](https://help.workable.com/hc/en-us/articles/115015785428-Generating-revoking-access-tokens-for-Workable-s-API#SupportedAPIscopes){:target=_blank .external-link} for more information on scopes.
     ///

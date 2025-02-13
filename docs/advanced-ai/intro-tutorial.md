@@ -16,8 +16,8 @@ Many people find it easier to take in new information in video format. This tuto
 
 ### What you will need
 
-- **n8n**: For this tutorial we recommend using the [n8n cloud](/choose-n8n/cloud/) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker/).
-- **Credentials for a chat model**: This tutorial uses OpenAI, but you can easily use DeepSeek, Google Gemini, Groq, Azure, and others (see the [sub-nodes documentation](/integrations/builtin/cluster-nodes/sub-nodes/) for more).
+- **n8n**: For this tutorial we recommend using the [n8n cloud](/manage-cloud/overview.md) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker.md).
+- **Credentials for a chat model**: This tutorial uses OpenAI, but you can easily use DeepSeek, Google Gemini, Groq, Azure, and others (see the [sub-nodes documentation](/integrations/builtin/cluster-nodes/sub-nodes/index.md) for more).
 
 ### What you will learn
 
@@ -33,9 +33,9 @@ Many people find it easier to take in new information in video format. This tuto
 
 If you're already familiar with AI, feel free to skip this section. This is a basic introduction to AI concepts and how they can be used in n8n workflows.
 
-An AI agent builds on Large Language Models (LLMs), which generate text based
+An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm), which generate text based
 on input by predicting the next word. While LLMs only process input to produce
-output, AI agents add goal-oriented functionality. They can use tools, process
+output, AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), process
 their outputs, and make decisions to complete tasks and solve problems.
 
 In n8n, the AI agent is represented as a node with some extra connections. 
@@ -57,7 +57,7 @@ By incorporating the AI agent as a node, n8n can combine AI-driven steps with tr
 
 ## 2. Add a trigger node
 
-Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'. For this workflow, we want to start with a chat node.
+Every workflow needs somewhere to start. In n8n these are called ['trigger nodes'](/glossary.md#trigger-node-n8n). For this workflow, we want to start with a chat node.
 
  1. Select **Add first step** or press ++tab++ to open the node menu.
 
@@ -101,7 +101,7 @@ AI agents require a chat model to be attached to process the incoming prompts.
 
 ## 5. Add credentials (if needed)
 
-In order for n8n to communicate with the chat model, it will need some [credentials](/credentials/) (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
+In order for n8n to communicate with the chat model, it will need some [credentials](/credentials/index.md) (login data giving it access to an account on a different online service). If you already have credentials set up for OpenAI, these should appear by default in the credentials selector. Otherwise you can use the Credentials selector to help you add a new credential.
 
 ![image showing the credentials dialog for OpenAI](/_images/advanced-ai/ai-tutorial-credentials.png)
 
@@ -147,7 +147,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. Use the chat and tell the chat model your name, for example "Hi there, my name is Nick".
 
-1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no memory.
+1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no [memory](/glossary.md#ai-memory).
    ![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
 
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
@@ -172,6 +172,6 @@ You have taken your first steps in building useful and effective workflows with 
 
 Now you have seen how to create a basic AI workflow, there are plenty of resources to build on that knowledge and plenty of examples to give you ideas of where to go next:
 
-* Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction/).
+* Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction.md).
 * Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}.
-* Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools/).
+* Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools.md).

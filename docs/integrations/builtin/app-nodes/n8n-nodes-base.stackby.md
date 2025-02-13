@@ -12,7 +12,7 @@ Use the Stackby node to automate work in Stackby, and integrate Stackby with oth
 On this page, you'll find a list of operations the Stackby node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Stackby credentials](/integrations/builtin/credentials/stackby/) for guidance on setting up authentication. 
+Refer to [Stackby credentials](/integrations/builtin/credentials/stackby.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

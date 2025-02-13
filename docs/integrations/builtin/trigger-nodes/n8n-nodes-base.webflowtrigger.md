@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Webflow](https://webflow.com){:target=_blank .external-link} is an application that allows you to build responsive websites with browser-based visual editing software.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/webflow/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/webflow.md).
 ///
 
 ///  note  | Examples and templates

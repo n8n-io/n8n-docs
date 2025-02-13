@@ -8,12 +8,12 @@ priority: high
 
 # DeepSeek Chat Model node
 
-Use the DeepSeek Chat Model node to use DeepSeek's chat models with conversational agents.
+Use the DeepSeek Chat Model node to use DeepSeek's chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the DeepSeek Chat Model node and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/deepseek/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/deepseek.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

@@ -12,7 +12,7 @@ Use the Mailjet node to automate work in Mailjet, and integrate Mailjet with oth
 On this page, you'll find a list of operations the Mailjet node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailjet credentials](/integrations/builtin/credentials/mailjet/) for guidance on setting up authentication. 
+Refer to [Mailjet credentials](/integrations/builtin/credentials/mailjet.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

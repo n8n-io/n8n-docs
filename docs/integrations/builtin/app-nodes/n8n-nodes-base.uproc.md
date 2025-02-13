@@ -12,7 +12,7 @@ Use the uProc node to automate work in uProc, and integrate uProc with other app
 On this page, you'll find a list of operations the uProc node supports and links to more resources.
 
 /// note | Credentials
-Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guidance on setting up authentication. 
+Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -11,7 +11,7 @@ priority: medium
 [Google Calendar](https://www.google.com/calendar/){:target=_blank .external-link} is a time-management and scheduling calendar service developed by Google.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
 ///
 
 ///  note  | Examples and templates
@@ -30,7 +30,7 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 ## Related resources
 
-n8n provides an app node for Google Calendar. You can find the node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.n8n-nodes-base.googlecalendar.md/).
+n8n provides an app node for Google Calendar. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md).
 
 View [example workflows and related content](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} on n8n's website.
 

@@ -12,7 +12,7 @@ Use the Sentry.io node to automate work in Sentry.io, and integrate Sentry.io wi
 On this page, you'll find a list of operations the Sentry.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio/) for guidance on setting up authentication. 
+Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

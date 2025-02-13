@@ -10,7 +10,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/)
+- [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md)
 
 ## Prerequisites
 

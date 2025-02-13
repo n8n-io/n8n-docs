@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [uProc](/integrations/builtin/app-nodes/n8n-nodes-base.uproc/)
+- [uProc](/integrations/builtin/app-nodes/n8n-nodes-base.uproc.md)
 
 ## Prerequisites
 

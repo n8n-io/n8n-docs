@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Jira](/integrations/builtin/app-nodes/n8n-nodes-base.jira/)
-- [Jira Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger/)
+- [Jira](/integrations/builtin/app-nodes/n8n-nodes-base.jira.md)
+- [Jira Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md)
 
 ## Prerequisites
 

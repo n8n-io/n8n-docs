@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/)
+- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md)
 
 ## Supported authentication methods
 

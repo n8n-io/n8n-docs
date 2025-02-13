@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Affinity](https://www.affinity.co/){:target=_blank .external-link} is a powerful relationship intelligence platform enabling teams to leverage their network to close the next big deal.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/affinity/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/affinity.md).
 ///
 
 ///  note  | Examples and templates

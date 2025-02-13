@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following node:
 
-- [BambooHR](/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr/)
+- [BambooHR](/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md)
 
 ## Prerequisites
 

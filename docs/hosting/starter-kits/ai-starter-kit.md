@@ -13,7 +13,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 
 ## What’s included
 
-✅ [**Self-hosted n8n**](/hosting/): Low-code platform with over 400 integrations and advanced AI components.
+✅ [**Self-hosted n8n**](/hosting/index.md): Low-code platform with over 400 integrations and advanced AI components.
 
 ✅ [**Ollama**](https://ollama.com/){:target=_blank .external-link}: Cross-platform LLM platform to install and run the latest local LLMs.
 
@@ -23,7 +23,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 
 ## What you can build
 
-⭐️ AI Agents that can schedule appointments
+⭐️ [AI Agents](/glossary.md#ai-agent){ data-preview} that can schedule appointments
 
 ⭐️ Summaries of company PDFs without leaking data
 

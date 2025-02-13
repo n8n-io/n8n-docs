@@ -12,7 +12,7 @@ Use the Freshservice node to automate work in Freshservice and integrate Freshse
 On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice/) for guidance on setting up authentication. 
+Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

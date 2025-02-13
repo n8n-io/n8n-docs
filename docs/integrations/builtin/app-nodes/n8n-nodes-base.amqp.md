@@ -12,7 +12,7 @@ Use the AMQP Sender node to automate work in AMQP Sender, and integrate AMQP Sen
 On this page, you'll find a list of operations the AMQP Sender node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AMQP Sender credentials](/integrations/builtin/credentials/amqp/) for guidance on setting up authentication. 
+Refer to [AMQP Sender credentials](/integrations/builtin/credentials/amqp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

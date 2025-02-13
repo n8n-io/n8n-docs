@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/)
+- [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md)
 
 ## Prerequisites
 

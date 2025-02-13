@@ -12,7 +12,7 @@ Use the PhantomBuster node to automate work in PhantomBuster, and integrate Phan
 On this page, you'll find a list of operations the PhantomBuster node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PhantomBuster credentials](/integrations/builtin/credentials/phantombuster/) for guidance on setting up authentication. 
+Refer to [PhantomBuster credentials](/integrations/builtin/credentials/phantombuster.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

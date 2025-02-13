@@ -21,7 +21,7 @@ Create a [Fortinet FortiGate](https://www.fortinet.com/){:target=_blank .externa
 
 Refer to [Fortinet FortiGate's API documentation](https://docs.fortinet.com/document/fortigate/7.4.3/administration-guide/940602/using-apis){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/fortinet-fortigate/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/fortinet-fortigate/){:target=_blank .external-link} on n8n's website.
 
 ## Using API access token
 

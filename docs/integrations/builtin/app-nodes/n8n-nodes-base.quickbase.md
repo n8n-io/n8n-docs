@@ -12,7 +12,7 @@ Use the Quick Base node to automate work in Quick Base, and integrate Quick Base
 On this page, you'll find a list of operations the Quick Base node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Quick Base credentials](/integrations/builtin/credentials/quickbase/) for guidance on setting up authentication. 
+Refer to [Quick Base credentials](/integrations/builtin/credentials/quickbase.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

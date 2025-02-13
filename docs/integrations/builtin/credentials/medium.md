@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium/)
+- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium.md)
 
 /// warning | Medium API no longer supported
 Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you can't configure new integrations using them.

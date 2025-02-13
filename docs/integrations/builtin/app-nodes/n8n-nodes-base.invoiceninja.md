@@ -12,7 +12,7 @@ Use the Invoice Ninja node to automate work in Invoice Ninja, and integrate Invo
 On this page, you'll find a list of operations the Invoice Ninja node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja/) for guidance on setting up authentication. 
+Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [PhantomBuster](/integrations/builtin/app-nodes/n8n-nodes-base.phantombuster/)
+- [PhantomBuster](/integrations/builtin/app-nodes/n8n-nodes-base.phantombuster.md)
 
 ## Prerequisites
 

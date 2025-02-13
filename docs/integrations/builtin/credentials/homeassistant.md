@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/)
+- [Home Assistant](/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant.md)
 
 ## Supported authentication methods
 

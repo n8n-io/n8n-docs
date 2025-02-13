@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [MQTT](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/)
-- [MQTT Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger/)
+- [MQTT](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md)
+- [MQTT Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md)
 
 ## Prerequisites
 

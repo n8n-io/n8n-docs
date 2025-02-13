@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy/)
+- [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy.md)
 
 ## Prerequisites
 

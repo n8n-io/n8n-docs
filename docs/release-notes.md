@@ -30,7 +30,7 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 * PATCH version when making backward-compatible bug fixes.
 
 /// note | Older versions
-You can find the release notes for older versions of n8n [here](/release-notes/0-x)
+You can find the release notes for older versions of n8n [here](/release-notes/0-x.md)
 ///
 
 ## n8n@1.77.3
@@ -227,17 +227,17 @@ To get the full picture, check out our Studio update with Max and Elias, where t
 </div>
 
 ### New node: Microsoft Entra ID
-Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure AD) is used for cloud-based identity and access management. [The new node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra/) supports a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups. 
+Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure AD) is used for cloud-based identity and access management. [The new node](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra.md) supports a wide range of Microsoft Entra ID features, which includes creating, getting, updating, and deleting users and groups, as well as adding users to and removing them from groups. 
 
 ### Node updates
 
-- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Vector stores can now be directly used as tools for the agent
-- [Code](/code/builtin/overview/): Tons of new speed and convenience features, see above for details  
-- [Google Vertex Chat](/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex/): Added option to specify the GCP region for the Google API credentials  
-- [HighLevel](/builtin/app-nodes/n8n-nodes-base.highlevel/): Added support for calendar items  
+- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): Vector stores can now be directly used as tools for the agent
+- [Code](/code/builtin/overview.md): Tons of new speed and convenience features, see above for details  
+- [Google Vertex Chat](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md): Added option to specify the GCP region for the Google API credentials  
+- [HighLevel](/integrations/builtin/app-nodes/n8n-nodes-base.highlevel.md): Added support for calendar items  
 
 
-We also added a custom [projects](/user-management/rbac/projects/) icon selector on top of the available emojis. Pretty!
+We also added a custom [projects](/user-management/rbac/projects.md) icon selector on top of the available emojis. Pretty!
 
 ### Contributors
 
@@ -270,16 +270,16 @@ This release contains node updates, performance improvements, and bug fixes.
 
 ### Node updates
 
-- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Updated descriptions for Chat Trigger options
-- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/): Updated for API v21.0
-- [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/): Added two new options for the `Send and wait` operation, free text and custom form  
-- [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger/): Added support for admin scope  
-- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/): Now supports the new API  
-- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/):  Added two new options for the `Send and wait` operation, free text and custom form  
+- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): Updated descriptions for Chat Trigger options
+- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md): Updated for API v21.0
+- [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md): Added two new options for the `Send and wait` operation, free text and custom form  
+- [Linear Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md): Added support for admin scope  
+- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite.md): Now supports the new API  
+- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md):  Added two new options for the `Send and wait` operation, free text and custom form  
 
-We also added credential support for [SolarWinds IPAM](/integrations/builtin/credentials/solarwindsipam/) and [SolarWinds Observability](/integrations/builtin/credentials/solarwindsobservability/). 
+We also added credential support for [SolarWinds IPAM](/integrations/builtin/credentials/solarwindsipam.md) and [SolarWinds Observability](/integrations/builtin/credentials/solarwindsobservability.md). 
 
-Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180) and added drag and drop re-ordering to parameters. This comes in very handy in the [If](/integrations/builtin/core-nodes/n8n-nodes-base.if/) or [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) nodes. 
+Last, but not least, we [improved the schema view performance in the node details view by 90%](https://github.com/n8n-io/n8n/pull/12180) and added drag and drop re-ordering to parameters. This comes in very handy in the [If](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) or [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) nodes. 
 
 ### Contributors
 
@@ -324,12 +324,12 @@ This release contains node updates, usability improvements, and bug fixes.
 
 ### Node updates
 
-- [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/): The `maximum context length` error now retries with reduced payload size
-- [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/): Added support for `continue on fail`
+- [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md): The `maximum context length` error now retries with reduced payload size
+- [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md): Added support for `continue on fail`
 
 ### Improved commit modal 
 
-We added filters and text search to the commit modal when working with [Environments](/source-control-environments/). This will make committing easier as we provide more information and better visibility. Environments are available on the Enterprise plan. 
+We added filters and text search to the commit modal when working with [Environments](/source-control-environments/index.md). This will make committing easier as we provide more information and better visibility. Environments are available on the Enterprise plan. 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -399,16 +399,16 @@ The Task runner comes in two modes:
 - Internal mode (default): Perfect for getting started, automatically managing task runners as child processes  
 - External mode: For advanced hosting scenarios requiring maximum isolation and security
 
-Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables/task-runners/). Once stable, it will become the default execution method for Code nodes.
+Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables/task-runners.md). Once stable, it will become the default execution method for Code nodes.
 
-To start using Task runners today, [check out the docs](/hosting/configuration/task-runners/).
+To start using Task runners today, [check out the docs](/hosting/configuration/task-runners.md).
 
 </div>
 
 ### Node updates
 
-- [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/): We improved the prompt for code generation to transform data
-- [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/): We added a warning if `pairedItem` is absent or could not be auto mapped  
+- [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md): We improved the prompt for code generation to transform data
+- [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md): We added a warning if `pairedItem` is absent or could not be auto mapped  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -445,9 +445,9 @@ The new canvas is now the default setting for all users. It should bring signifi
 We're looking forward to your feedback. Should you encounter a bug, you will find a handy button to create an issue at the bottom of the new canvas as well. 
 
 ### Node updates
-- We added credential support for [Zabbix](/integrations/builtin/credentials/zabbix/) to the HTTP request node  
-- We added new OAuth2 credentials for [Microsoft SharePoint](/integrations/builtin/credentials/microsoft/)
-- The [Slack node](/integrations/builtin/app-nodes/n8n-nodes-base.slack/#operations) now uses markdown for the approval message when using the `Send and Wait for Approval` operation
+- We added credential support for [Zabbix](/integrations/builtin/credentials/zabbix.md) to the HTTP request node  
+- We added new OAuth2 credentials for [Microsoft SharePoint](/integrations/builtin/credentials/microsoft.md)
+- The [Slack node](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md#operations) now uses markdown for the approval message when using the `Send and Wait for Approval` operation
 
 ### Contributors
 
@@ -547,12 +547,12 @@ This release contains node updates and bug fixes.
 
 ### Node updates
 
-- [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/): Improved usability  
-- [Anthropic Chat Model Node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/): Added Haiku 3.5 support  
-- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/): Added delimiter option for writing to CSV  
-- [Gmail Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/): Added option to filter for draft messages  
-- [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom/): Credential can now be used in the HTTP Request node  
-- [Rapid7 InsightVM](/integrations/builtin/credentials/rapid7insightvm/): Added credential support  
+- [AI Transform](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md): Improved usability  
+- [Anthropic Chat Model Node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md): Added Haiku 3.5 support  
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md): Added delimiter option for writing to CSV  
+- [Gmail Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md): Added option to filter for draft messages  
+- [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom.md): Credential can now be used in the HTTP Request node  
+- [Rapid7 InsightVM](/integrations/builtin/credentials/rapid7insightvm.md): Added credential support  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -565,7 +565,7 @@ This release contains performance improvements, a node update and bug fixes.
 
 ### Node update
 
-- [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/): Added support for claude-3-5-sonnet-20241022  
+- [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md): Added support for claude-3-5-sonnet-20241022  
 
 We made updates to how projects and workflow ownership are displayed making them easier to understand and navigate. 
 
@@ -623,7 +623,7 @@ This release contains a new features, new nodes, node enhancements, and bug fixe
 <div class="n8n-new-features" markdown>
 
 ### New node: n8n Form
-Use the [n8n Form node](/integrations/builtin/core-nodes/n8n-nodes-base.form/) to create user-facing forms with multiple pages. You can add other nodes with custom logic between to process user input. Start the workflow with a [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/). 
+Use the [n8n Form node](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) to create user-facing forms with multiple pages. You can add other nodes with custom logic between to process user input. Start the workflow with a [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). 
 
 <figure markdown="span">
     ![A multi-page form with branching](/_images/integrations/builtin/core-nodes/n8n-nodes-base.form/example_image.png)
@@ -641,13 +641,13 @@ Additionally you can:
 ### Node updates
 New nodes: 
 
-- [Google Business Profile](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile/) and [Google Business Profile Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger/): Use these to integrate Google Business Profile reviews and posts with your workflows  
+- [Google Business Profile](/integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md) and [Google Business Profile Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md): Use these to integrate Google Business Profile reviews and posts with your workflows  
 
 Enhanced nodes:
 
-- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/): Removed the requirement to add at least one tool  
-- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/): Added workflows as a resource operation  
-- [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/): Added more user-friendly error messages
+- [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): Removed the requirement to add at least one tool  
+- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github.md): Added workflows as a resource operation  
+- [Structured Output Parser](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/index.md): Added more user-friendly error messages
 
 For additional security, we improved how we handle multi-factor authentication, hardened config file permissions and introduced JWT for the public API. 
 
@@ -687,7 +687,7 @@ This release contains a new node, node enhancements, performance improvements an
 <div class="n8n-new-features" markdown>
 
 ### Enhanced node: Remove Duplicates
-The [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/) got a major makeover with the addition of two new operations: 
+The [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md) got a major makeover with the addition of two new operations: 
 
 - Remove Items Processed in Previous Executions: Compare items in the current input to items from previous executions and remove duplicates  
 - Clear Deduplication History: Wipe the memory of items from previous executions.
@@ -698,7 +698,7 @@ This makes it easier to only process new items from any data source. For example
 
 ### New node: Gong
   
-The new node for [Gong](/integrations/builtin/app-nodes/n8n-nodes-base.gong/) allows you to get users and calls to process them further in n8n. Very useful for sales related workflows. 
+The new node for [Gong](/integrations/builtin/app-nodes/n8n-nodes-base.gong.md) allows you to get users and calls to process them further in n8n. Very useful for sales related workflows. 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -790,10 +790,10 @@ This release contains new features, node enhancements and bug fixes.
 
 ### Node updates
 
-- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added the option to choose between the default memory connector to provide memory to the assistant or to specify a thread ID    
-- [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) and [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/): Added custom approval operations to have a human in the loop of a workflow  
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md): Added the option to choose between the default memory connector to provide memory to the assistant or to specify a thread ID    
+- [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) and [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md): Added custom approval operations to have a human in the loop of a workflow  
 
-We have also optimized the [worker health checks](/hosting/logging-monitoring/monitoring/) (see breaking change above). 
+We have also optimized the [worker health checks](/hosting/logging-monitoring/monitoring.md) (see breaking change above). 
 
 Each credential now has a seperate url you can link to. This makes sharing much easier. 
 
@@ -837,7 +837,7 @@ We skipped 1.62.0 and went straight to 1.62.1 with an additional fix.
 
 #### Additional nodes as tools
 
-We have made additional nodes usable with the [Tools AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/). 
+We have made additional nodes usable with the [Tools AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md). 
 <br /><br />
 
 <video src="/_video/release-notes/nodes-as-tools.mp4" controls width="100%"></video>
@@ -850,15 +850,15 @@ Both of these new features enable you to build even more powerful AI agents by d
 
 ### Node updates
 
-- [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/): Added option to return numeric values as integers and not strings 
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): Added credential support for Sysdig 
-- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Additional query params for getAll requests 
-- [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/): Added the option to use a custom prompt 
+- [Google BigQuery](/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md): Added option to return numeric values as integers and not strings 
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md): Added credential support for Sysdig 
+- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md): Additional query params for getAll requests 
+- [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md): Added the option to use a custom prompt 
 
 
 Drag and drop insertion on cursor position from schema view is now also enabled for code, SQL and Html fields in nodes. 
 
-Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. To use highlighting, add an [Execution Data Node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata/) (or Code node) to the workflow to set [custom executions data](/workflows/executions/custom-executions-data/). 
+Customers with an enterprise license can now rate, tag and highlight execution data in the executions view. To use highlighting, add an [Execution Data Node](/integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md) (or Code node) to the workflow to set [custom executions data](/workflows/executions/custom-executions-data.md). 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -878,8 +878,8 @@ This release contains new features, node enhancements and bug fixes.
 
 ### Node updates
 
-- [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/): Updated to use the new API
-- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/): Made adding or removing the workflow link to a message easier
+- [Brandfetch](/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch.md): Updated to use the new API
+- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md): Made adding or removing the workflow link to a message easier
 
 Big datasets now render faster thanks to virtual scrolling and execution annotations are harder to delete.
 
@@ -914,17 +914,17 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints/).
+You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
 
 </div>
 
-You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints/) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints.md) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates
 Enhanced nodes:
 
-- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/): Added actions for bank transactions
-- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/): Added O1 models to the model select
+- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md): Added actions for bank transactions
+- [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md): Added O1 models to the model select
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -1035,7 +1035,7 @@ This release contains new features and bug fixes.
 
 #### Improved execution queue handling
 
-We are [exposing new execution queue metrics](/hosting/configuration/configuration-examples/prometheus/) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster.
+We are [exposing new execution queue metrics](/hosting/configuration/configuration-examples/prometheus.md) to give users more visibility of the queue length. This helps to inform decisions on horizontal scaling, based on queue status. We have also made querying executions faster.
 
 </div>
 
@@ -1172,7 +1172,7 @@ We now also prevent npm downloading community packages from a compromised npm re
 
 #### New node: AI Transform
 
-This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform/). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview/).
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview.md).
 
 </div>
 
@@ -1180,14 +1180,14 @@ This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-n
 
 #### New node: Okta
 
-This release adds the [Okta node](/integrations/builtin/app-nodes/n8n-nodes-base.okta/). Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
+This release adds the [Okta node](/integrations/builtin/app-nodes/n8n-nodes-base.okta.md). Use the Okta node to automate work in Okta and integrate Okta with other applications. n8n has built-in support for a wide range of Okta features, which includes creating, updating, and deleting users.
 
 </div>
 
 ### Node updates
 Enhanced node:
 
-- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
+- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md)
 
 
 This release also adds the new schema view for the expression editor modal.
@@ -1220,12 +1220,12 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0
 This release contains new features, node enhancements, bug fixes and updates to our API.
 
 ### API update
-Our [public REST API](/api/) now supports additional operations:
+Our [public REST API](/api/index.md) now supports additional operations:
 
 - Create, delete, and edit roles for users
 - Create, read, update and delete projects
 
-Find the details in the [API reference](/api/api-reference/).
+Find the details in the [API reference](/api/api-reference.md).
 
 ### Contributors
 
@@ -1266,7 +1266,7 @@ This release contains new features, new nodes, node enhancements, bug fixes and 
 
 #### Added Google Cloud Platform Secrets Manager support
 
-This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license.
+This release adds [Google Cloud Platform Secrets Manager](/external-secrets.md) to the list of external secret stores. We already support AWS secrets, Azure Key Vault, Infisical and HashiCorp Vault. External secret stores are available under an enterprise license.
 
 </div>
 
@@ -1274,7 +1274,7 @@ This release adds [Google Cloud Platform Secrets Manager](/external-secrets/) to
 
 #### New node: Information Extractor
 
-This release adds the [Information Extractor node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor/). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
+This release adds the [Information Extractor node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor.md). The node is specifically tailored for information extraction tasks. It uses Structured Output Parser under the hood, but provides a simpler way to extract information from text in a structured JSON form.
 
 </div>
 
@@ -1282,26 +1282,26 @@ This release adds the [Information Extractor node](/integrations/builtin/cluster
 
 #### New node: Sentiment Analysis
 
-This release adds the [Sentiment Analysis node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis/). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
+This release adds the [Sentiment Analysis node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md). The node leverages LLMs to analyze and categorize the sentiment of input text. Users can easily integrate this node into their workflows to perform sentiment analysis on text data. The node is flexible enough to handle various use cases, from basic positive/negative classification to more nuanced sentiment categories.
 
 </div>
 
 ### Node updates
 Enhanced nodes:
 
-- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/)
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/)
-- [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/)
+- [Calendly Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
+- [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md)
+- [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md)
 
 ### API update
-Our [public REST API](/api/) now supports additional operations:
+Our [public REST API](/api/index.md) now supports additional operations:
 
 - Create, read, and delete for variables
 - Filtering workflows by project
 - Transferring workflows
 
-Find the details in the [API reference](/api/api-reference/).
+Find the details in the [API reference](/api/api-reference.md).
 
 ### Contributors
 
@@ -1356,16 +1356,16 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Added Azure Key Vault support
 
-This release adds [Azure Key Vault](/external-secrets/) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license.
+This release adds [Azure Key Vault](/external-secrets.md) to the list of external secret stores. We already support AWS secrets, Infisical and HashiCorp Vault and are working on Google Secrets Manager. External secret stores are available under an enterprise license.
 
 </div>
 
 ### Node updates
 Enhanced nodes:
 
-- [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/)
-- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+- [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md)
+- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md)
 
 Deprecated nodes:
 
@@ -1403,7 +1403,7 @@ This release contains new nodes, node enhancements and bug fixes.
 
 #### New node: Text Classifier
 
-This release adds the [Text Classifier node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier).
+This release adds the [Text Classifier node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md).
 
 </div>
 
@@ -1411,7 +1411,7 @@ This release adds the [Text Classifier node](/integrations/builtin/cluster-nodes
 
 #### New node: Postgres Chat Memory
 
-This release adds the [Postgres Chat Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat/).
+This release adds the [Postgres Chat Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md).
 
 </div>
 
@@ -1419,7 +1419,7 @@ This release adds the [Postgres Chat Memory node](/integrations/builtin/cluster-
 
 #### New node: Google Vertex Chat Model
 
-This release adds the [Google Vertex Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex/).
+This release adds the [Google Vertex Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md).
 
 </div>
 
@@ -1469,7 +1469,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.48.3...n8n@1.49.0
 This release contains a new node, node enhancements, and bug fixes.
 
 ### Node updates
-- New node added: [Vector Store Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) for the AI Agent
+- New node added: [Vector Store Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) for the AI Agent
 - Enhanced nodes: Zep Cloud Memory, Copper, Embeddings Cohere, GitHub, Merge, Zammad
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -1570,7 +1570,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 #### New node: HTTP request tool
 
-This release adds the HTTP request tool. You can use it with an AI agent as a tool to collect information from a website or API. Refer to the [HTTP request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/) for details.
+This release adds the HTTP request tool. You can use it with an AI agent as a tool to collect information from a website or API. Refer to the [HTTP request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md) for details.
 
 </div>
 
@@ -1687,7 +1687,7 @@ Although this release doesn't include a breaking change, it is a significant upd
 ///
 
 /// Note | Credential sharing required for manual executions
-Instance owners and admins: you will see changes if you try to manually execute a workflow where the credentials aren't shared with you. Manual workflow executions now use the same permissions checks as production executions, meaning you can't do a manual execution of a workflow if you don't have access to the credentials. Previously, owners and admins could do manual executions without credentials being shared with them. To resolve this, the credential creator needs to [share the credential](/credentials/credential-sharing/) with you.
+Instance owners and admins: you will see changes if you try to manually execute a workflow where the credentials aren't shared with you. Manual workflow executions now use the same permissions checks as production executions, meaning you can't do a manual execution of a workflow if you don't have access to the credentials. Previously, owners and admins could do manual executions without credentials being shared with them. To resolve this, the credential creator needs to [share the credential](/credentials/credential-sharing.md) with you.
 ///
 
 <div class="n8n-new-features" markdown>
@@ -1696,7 +1696,7 @@ Instance owners and admins: you will see changes if you try to manually execute 
 
 With projects and roles, you can give your team access to collections of workflows and credentials, rather than having to share each workflow and credential individually. Simultaneously, you tighten security by limiting access to people on the relevant team.
 <br /><br />
-Refer to the [RBAC](/user-management/rbac/) documentation for information on creating projects and using roles.
+Refer to the [RBAC](/user-management/rbac/index.md) documentation for information on creating projects and using roles.
 <br /><br />
 The number of projects and role types vary depending on your plan. Refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} for details.
 
@@ -1708,13 +1708,13 @@ The number of projects and role types vary depending on your plan. Refer to [Pri
 
 #### New node: Slack Trigger
 
-This release adds a trigger node for Slack. Refer to the [Slack Trigger documentation](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) for details.
+This release adds a trigger node for Slack. Refer to the [Slack Trigger documentation](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) for details.
 
 </div>
 
 ### Other highlights
 
-* Improved [memory support for OpenAI assistants](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/#using-memory-with-openai-assistants).
+* Improved [memory support for OpenAI assistants](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md).
 
 ### Rolling back to a previous version
 
@@ -1772,7 +1772,7 @@ Note that this release removes the AI error debugger. We're working on a new and
 
 #### New feature: Tools Agent
 
-This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent).
+This release adds a new option to the Agent node: the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).
 
 This agent has an enhanced ability to work with tools, and can ensure a standard output format. This is now the recommended default agent.
 
@@ -1822,7 +1822,7 @@ You can now ask AI to help create API requests in the HTTP Request node:
 1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
 1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
-Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/ai/)
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/index.md)
 
 </div>
 
@@ -1830,7 +1830,7 @@ Self-hosted users need to [enable AI features and provide their own API keys](/h
 
 #### New node: Groq Chat Model
 
-This release adds the [Groq Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq/).
+This release adds the [Groq Chat Model node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md).
 
 </div>
 
@@ -1891,7 +1891,7 @@ This release contains new nodes, node enhancements, and bug fixes.
 
 #### New node: WhatsApp Trigger
 
-This release adds the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger/).
+This release adds the [WhatsApp Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md).
 
 </div>
 
@@ -1899,7 +1899,7 @@ This release adds the [WhatsApp Trigger node](/integrations/builtin/trigger-node
 
 #### Node enhancement: Multiple methods, one Webhook node
 
-The Webhook Trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#listen-for-multiple-http-methods) for information on enabling this.
+The Webhook Trigger node can now handle calls to multiple HTTP methods. Refer to the [Webhook node documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md#listen-for-multiple-http-methods) for information on enabling this.
 
 </div>
 
@@ -1941,7 +1941,7 @@ This release contains new nodes, bug fixes, and node enhancements.
 
 #### New node: Google Gemini Chat Model
 
-This release adds the [Google Gemini Chat Model sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/).
+This release adds the [Google Gemini Chat Model sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md).
 
 </div>
 
@@ -1949,7 +1949,7 @@ This release adds the [Google Gemini Chat Model sub-node](/integrations/builtin/
 
 #### New node: Embeddings Google Gemini
 
-This release adds the [Google Gemini Embeddings sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini/).
+This release adds the [Google Gemini Embeddings sub-node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md).
 
 </div>
 
@@ -1995,7 +1995,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.37.0...n8n@1.37.1
 
 
 /// warning | Breaking change
-Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands.md) for more information on CLI options.
 ///
 
 This release contains bug fixes.
@@ -2020,7 +2020,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.36.1...n8n@1.37.0
 
 
 /// warning | Breaking change
-Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands/) for more information on CLI options.
+Please note that this version contains a breaking change for self-hosted n8n. It removes the `--file` flag for the `execute` CLI command. If you have scripts relying on the `--file` flag, update them to first import the workflow and then execute it using the `--id` flag. Refer to [CLI commands](/hosting/cli-commands.md) for more information on CLI options.
 ///
 
 This release contains a new node, improvements to error handling and messaging, node enhancements, and bug fixes.
@@ -2029,7 +2029,7 @@ This release contains a new node, improvements to error handling and messaging, 
 
 #### New node: JWT
 
-This release adds the [JWT core node](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/).
+This release adds the [JWT core node](/integrations/builtin/core-nodes/n8n-nodes-base.jwt.md).
 
 </div>
 
@@ -2060,7 +2060,7 @@ This release contains new nodes, enhancements and bug fixes.
 
 #### New node: Salesforce Trigger node
 
-This release adds the [Salesforce Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/).
+This release adds the [Salesforce Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md).
 
 </div>
 
@@ -2068,7 +2068,7 @@ This release adds the [Salesforce Trigger node](/integrations/builtin/trigger-no
 
 #### New node: Twilio Trigger node
 
-This release adds the [Twilio Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/).
+This release adds the [Twilio Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md).
 
 </div>
 
@@ -2118,7 +2118,7 @@ This release contains new features, new nodes, and bug fixes.
 
 #### New node: Microsoft OneDrive Trigger node
 
-This release adds the [Microsoft OneDrive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger/). You can now trigger workflows on file and folder creation and update events.
+This release adds the [Microsoft OneDrive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md). You can now trigger workflows on file and folder creation and update events.
 
 </div>
 
@@ -2126,7 +2126,7 @@ This release adds the [Microsoft OneDrive Trigger node](/integrations/builtin/tr
 
 #### New data transformation functions
 
-This release introduces new [data transformation functions](/code/builtin/data-transformation-functions/):
+This release introduces new [data transformation functions](/code/builtin/data-transformation-functions/index.md):
 
 **String**
 
@@ -2213,7 +2213,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### Support for Claude 3
 
-This release adds support for Claude 3 to the [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/) node.
+This release adds support for Claude 3 to the [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md) node.
 
 </div>
 
@@ -2282,8 +2282,8 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 This release adds two new nodes.
 
-* [Microsoft Outlook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger/)
-* [Ollama Embeddings](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama/)
+* [Microsoft Outlook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md)
+* [Ollama Embeddings](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md)
 
 </div>
 
@@ -2348,14 +2348,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 #### OpenAI node overhaul
 
-This release includes a new version of the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/), adding more operations, including support for working with assistants.
+This release includes a new version of the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md), adding more operations, including support for working with assistants.
 
 </div>
 
 Other highlights:
 
-* Support for AI events in [log streaming](/log-streaming/).
-* Added support for workflow tags in the [public API](/api/).
+* Support for AI events in [log streaming](/log-streaming.md).
+* Added support for workflow tags in the [public API](/api/index.md).
 
 ### Contributors
 
@@ -2392,8 +2392,8 @@ This release contains new features, new nodes, node enhancements and bug fixes.
 
 This release adds two new nodes to work with [Azure OpenAI](https://azure.microsoft.com/en-gb/products/ai-services/openai-service/){:target=_blank .external-link} in your advanced AI workflows:
 
-* [Embeddings Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai/)
-* [Azure OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai/)
+* [Embeddings Azure OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
+* [Azure OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 
 </div>
 
@@ -2427,7 +2427,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.26.0...n8n@1.27.0
 **Release date:** 2024-01-31
 
 /// warning | Breaking change
-This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](/hosting/scaling/queue-mode/) for information on configuring queue mode.
+This release removes `own` mode for self-hosted n8n. You must now use `EXECUTIONS_MODE` and set to either `regular` or `queue`. Refer to [Queue mode](/hosting/scaling/queue-mode.md) for information on configuring queue mode.
 ///
 
 /// note | Skip this release
@@ -2476,7 +2476,7 @@ This release contains a new node, feature improvements, and bug fixes.
 
 #### New node: Chat Memory Manager
 
-The [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/) node replaces the Chat Messages Retriever node. It manages chat message memories within your AI workflows.
+The [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md) node replaces the Chat Messages Retriever node. It manages chat message memories within your AI workflows.
 
 </div>
 
@@ -2512,7 +2512,7 @@ This release contains new nodes for advanced AI, node enhancements, new features
 
 #### Chat trigger
 
-n8n has created a new [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
+n8n has created a new [Chat Trigger node](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md). The new node provides a chat interface that you can make publicly available, with customization and authentication options.
 
 </div>
 
@@ -2522,8 +2522,8 @@ n8n has created a new [Chat Trigger node](/integrations/builtin/core-nodes/n8n-n
 
 This release introduces two new nodes to support [Mistral AI](https://mistral.ai/){:target=_blank .external-link}:
 
-* [Mistral Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud/)
-* [Embeddings Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud/)
+* [Mistral Cloud Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md)
+* [Embeddings Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md)
 
 </div>
 
@@ -2560,11 +2560,11 @@ This release includes a major overhaul of nodes relating to files (binary data).
 
 There are now three key nodes dedicated to handling binary data files:
 
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) to read and write files from/to the machine where n8n is running.
-- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
-- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) to get data from a binary format and convert it to JSON.
 
-n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nodes, and removed the iCalendar, Read PDF, and Spreadsheet File nodes. There are still standalone nodes for [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html/) and [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nodes, and removed the iCalendar, Read PDF, and Spreadsheet File nodes. There are still standalone nodes for [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html.md) and [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml.md).
 
 </div>
 
@@ -2574,7 +2574,7 @@ n8n has moved support for iCalendar, PDF, and spreadsheet formats into these nod
 
 This release adds support for [Qdrant](https://qdrant.tech/){:target=_blank .external-link} with the Qdrant vector store node.
 
-Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant/)
+Read n8n's [Qdrant vector store node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md)
 
 </div>
 
@@ -2688,7 +2688,7 @@ This release contains new features and nodes, node enhancements, and bug fixes.
 
 This release introduces a third account type: admin. This role is available on pro and enterprise plans. Admins have similar permissions to instance owners.
 
-[Read more about user roles](/user-management/account-types/)
+[Read more about user roles](/user-management/account-types.md)
 
 </div>
 
@@ -2698,12 +2698,12 @@ This release introduces a third account type: admin. This role is available on p
 
 This release replaces the Item Lists node with a collection of nodes for data transformation tasks:
 
-* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): take separate items, or portions of them, and group them together into individual items.
-* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate/): remove items beyond a defined maximum number.
-* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/): identify and delete items that are identical across all fields or a subset of fields.
-* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort/): organize lists of in a desired ordering, or generate a random selection.
-* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout/): separate a single data item containing a list into multiple items.
-* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize/): aggregate items together, in a manner similar to Excel pivot tables.
+* [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): take separate items, or portions of them, and group them together into individual items.
+* [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): remove items beyond a defined maximum number.
+* [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md): identify and delete items that are identical across all fields or a subset of fields.
+* [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md): organize lists of in a desired ordering, or generate a random selection.
+* [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md): separate a single data item containing a list into multiple items.
+* [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): aggregate items together, in a manner similar to Excel pivot tables.
 
 </div>
 
@@ -2781,7 +2781,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### LangChain general availability
 
-This release adds LangChain support to the main n8n version. Refer to [LangChain](/langchain/) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
+This release adds LangChain support to the main n8n version. Refer to [LangChain](/advanced-ai/langchain/overview.md) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
 
 </div>
 
@@ -2821,7 +2821,7 @@ Built a template you want to share? This release introduces the n8n Creator hub.
 
 #### Node input and output search filter
 
-Cloud Pro and Enterprise users can now search and filter the input and output data in nodes. Refer to [Data filtering](/data/data-filtering/) for more information.
+Cloud Pro and Enterprise users can now search and filter the input and output data in nodes. Refer to [Data filtering](/data/data-filtering.md) for more information.
 
 </div>
 
@@ -2903,7 +2903,7 @@ This release introduces workflow history: view and load previous versions of you
 
 Workflow history is available in Enterprise n8n, and with limited history for Cloud Pro.
 
-Learn more in the [Workflow history](/workflows/history/) documentation.
+Learn more in the [Workflow history](/workflows/history.md) documentation.
 
 </div>
 
@@ -2932,7 +2932,7 @@ All nodes apart from sub-nodes and trigger nodes have a new optional output: **E
 
 #### Pagination support added to HTTP Request node
 
-The HTTP Request node now supports an pagination. Read the [node docs](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) for information and examples.
+The HTTP Request node now supports an pagination. Read the [node docs](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) for information and examples.
 
 </div>
 
@@ -2971,7 +2971,7 @@ This release contains node enhancements and bug fixes.
 
 #### Switch node supports more outputs
 
-The [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/) now supports an unlimited number of outputs.
+The [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) now supports an unlimited number of outputs.
 
 </div>
 
@@ -2991,7 +2991,7 @@ This release failed to publish to npm. Upgrade directly to 1.14.0.
 
 #### RSS Feed Trigger node
 
-This releases introduces a new node, the [RSS Feed Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger/). Use this node to start a workflow when a new RSS feed item is published.
+This releases introduces a new node, the [RSS Feed Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md). Use this node to start a workflow when a new RSS feed item is published.
 
 </div>
 
@@ -2999,7 +2999,7 @@ This releases introduces a new node, the [RSS Feed Trigger](/integrations/builti
 
 #### Facebook Lead Ads Trigger node
 
-This releases add another new node, the [Facebook Lead Ads Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger/). Use this node to trigger a workflow when you get a new lead.
+This releases add another new node, the [Facebook Lead Ads Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md). Use this node to trigger a workflow when you get a new lead.
 
 </div>
 
@@ -3058,7 +3058,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### Form Trigger node
 
-This releases introduces a new node, the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger/). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
+This releases introduces a new node, the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Use this node to start a workflow based on a user submitting a form. It provides a configurable form interface.
 
 </div>
 
@@ -3092,7 +3092,7 @@ This release contains new features and bug fixes.
 
 #### External storage for binary files
 
-Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/external-storage/).
+Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/external-storage.md).
 
 If you're using n8n Cloud and are interested in this feature, please [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 
@@ -3166,9 +3166,9 @@ With n8n's LangChain nodes you can build AI-powered functionality within your wo
 
 Read more:
 
-* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/langchain/access-langchain/) to try it out. Self-hosted and Cloud options are available.
-* Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/langchain/langchain-n8n/).
-* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/). This is a new set of node types that allows for multiple nodes to work together to configure each other.
+* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
+* Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
+* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
 * If you want to take a look at the code, it's available on the [ai-beta](https://github.com/n8n-io/n8n/tree/ai-beta){:target=_blank .external-link} in the n8n repository. Note that it may move in the future.
 
 
@@ -3281,9 +3281,9 @@ Skip this version and upgrade directly to 1.6.1, which contains essential bug fi
 
 This release introduces support for TheHive API version 5. This uses a new node and credentials:
 
-* [TheHive 5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
-* [TheHive 5 Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger/)
-* [TheHive 5 credentials](/integrations/builtin/credentials/thehive5/)
+* [TheHive 5 node](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md)
+* [TheHive 5 Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md)
+* [TheHive 5 credentials](/integrations/builtin/credentials/thehive5.md)
 
 #### `N8N_PERSISTED_BINARY_DATA_TTL` removed
 
@@ -3321,7 +3321,7 @@ Skip this version and upgrade directly to 1.5.1, which contains essential bug fi
 
 Enterprise-tier accounts can now use external secrets vaults to manage credentials in n8n. This allows you to store credential information securely outside your n8n instance. n8n supports Infisical and HashiCorp Vault.
 
-Refer to [External secrets](/external-secrets/) for guidance on enabling and using this feature.
+Refer to [External secrets](/external-secrets.md) for guidance on enabling and using this feature.
 
 </div>
 
@@ -3329,7 +3329,7 @@ Refer to [External secrets](/external-secrets/) for guidance on enabling and usi
 
 #### Two-factor authentication
 
-n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n is working on bringing support to Cloud. Refer to [Two-factor authentication](/user-management/two-factor-auth/) for guidance on enabling and using it.
+n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n is working on bringing support to Cloud. Refer to [Two-factor authentication](/user-management/two-factor-auth.md) for guidance on enabling and using it.
 
 </div>
 
@@ -3339,7 +3339,7 @@ n8n now supports two-factor authentication (2FA) for self-hosted instances. n8n 
 
 Users on a paid n8n plan can now load data from previous executions into their current workflow. This is useful when debugging a failed execution.
 
-Refer to [Debug executions](/workflows/executions/debug/) for guidance on using this feature.
+Refer to [Debug executions](/workflows/executions/debug.md) for guidance on using this feature.
 
 </div>
 
@@ -3394,7 +3394,7 @@ This release contains new features and bug fixes.
 
 This release introduces limited support for using AI to generate code in the Code node. Initially this feature is only available on Cloud, and will gradually be rolled out, starting with about 20% of users.
 
-Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](/code/ai-code/).
+Learn how to use the feature, including guidance on writing prompts, in [Generate code with ChatGPT](/code/ai-code.md).
 
 </div>
 
@@ -3442,32 +3442,32 @@ When upgrading, skip this release and go directly to 1.2.1.
 
 This release introduces support for setting up credentials in n8n for the following services:
 
-* [AlienVault](/integrations/builtin/credentials/alienvault/)
-* [Auth0 Management](/integrations/builtin/credentials/auth0management/)
-* [Carbon Black API](/integrations/builtin/credentials/carbonblack/)
-* [Cisco Meraki API](/integrations/builtin/credentials/ciscomeraki/)
-* [Cisco Secure Endpoint](/integrations/builtin/credentials/ciscosecureendpoint/)
-* [Cisco Umbrella API](/integrations/builtin/credentials/ciscoumbrella/)
-* [CrowdStrike](/integrations/builtin/credentials/crowdstrike/)
-* [F5 Big-IP](/integrations/builtin/credentials/f5bigip/)
-* [Fortinet FortiGate](/integrations/builtin/credentials/fortigate/)
-* [Hybrid Analysis](/integrations/builtin/credentials/hybridanalysis/)
-* [Imperva WAF](/integrations/builtin/credentials/impervawaf/)
-* [Kibana](/integrations/builtin/credentials/kibana/)
-* [Microsoft Entra ID](/integrations/builtin/credentials/microsoftentra/)
-* [Mist](/integrations/builtin/credentials/mist/)
-* [Okta](/integrations/builtin/credentials/okta/)
-* [OpenCTI](/integrations/builtin/credentials/opencti/)
-* [QRadar](/integrations/builtin/credentials/qradar/)
-* [Qualys](/integrations/builtin/credentials/qualys/)
-* [Recorded Future](/integrations/builtin/credentials/recordedfuture/)
-* [Sekoia](/integrations/builtin/credentials/sekoia/)
-* [Shuffler](/integrations/builtin/credentials/shuffler/)
-* [Trellix ePO](/integrations/builtin/credentials/trellixepo/)
-* [VirusTotal](/integrations/builtin/credentials/virustotal/)
-* [Zscaler ZIA](/integrations/builtin/credentials/zscalerzia/)
+* [AlienVault](/integrations/builtin/credentials/alienvault.md)
+* [Auth0 Management](/integrations/builtin/credentials/auth0management.md)
+* [Carbon Black API](/integrations/builtin/credentials/carbonblack.md)
+* [Cisco Meraki API](/integrations/builtin/credentials/ciscomeraki.md)
+* [Cisco Secure Endpoint](/integrations/builtin/credentials/ciscosecureendpoint.md)
+* [Cisco Umbrella API](/integrations/builtin/credentials/ciscoumbrella.md)
+* [CrowdStrike](/integrations/builtin/credentials/crowdstrike.md)
+* [F5 Big-IP](/integrations/builtin/credentials/f5bigip.md)
+* [Fortinet FortiGate](/integrations/builtin/credentials/fortigate.md)
+* [Hybrid Analysis](/integrations/builtin/credentials/hybridanalysis.md)
+* [Imperva WAF](/integrations/builtin/credentials/impervawaf.md)
+* [Kibana](/integrations/builtin/credentials/kibana.md)
+* [Microsoft Entra ID](/integrations/builtin/credentials/microsoftentra.md)
+* [Mist](/integrations/builtin/credentials/mist.md)
+* [Okta](/integrations/builtin/credentials/okta.md)
+* [OpenCTI](/integrations/builtin/credentials/opencti.md)
+* [QRadar](/integrations/builtin/credentials/qradar.md)
+* [Qualys](/integrations/builtin/credentials/qualys.md)
+* [Recorded Future](/integrations/builtin/credentials/recordedfuture.md)
+* [Sekoia](/integrations/builtin/credentials/sekoia.md)
+* [Shuffler](/integrations/builtin/credentials/shuffler.md)
+* [Trellix ePO](/integrations/builtin/credentials/trellixepo.md)
+* [VirusTotal](/integrations/builtin/credentials/virustotal.md)
+* [Zscaler ZIA](/integrations/builtin/credentials/zscalerzia.md)
 
-This makes it easier to do [Custom operations](/integrations/custom-operations/) with these services, using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node.
+This makes it easier to do [Custom operations](/integrations/custom-operations.md) with these services, using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node.
 
 </div>
 
@@ -3482,7 +3482,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.1.0...n8n@1.1.1){
 This is a bug fix release.
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -3494,7 +3494,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.5...n8n@1.1.0){
 This release contains new features, bug fixes, and node enhancements.
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 ### Highlights
 
@@ -3506,7 +3506,7 @@ This release introduces source control and environments for enterprise users.
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 
-Refer to [Source control and environments](/source-control-environments/) to learn more about the features and set up your environments.
+Refer to [Source control and environments](/source-control-environments/index.md) to learn more about the features and set up your environments.
 
 </div>
 
@@ -3531,7 +3531,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.4...n8n@1.0.5){
 This is a bug fix release.
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -3544,7 +3544,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.3...n8n@1.0.4){
 This is a bug fix release.
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -3562,7 +3562,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.2...n8n@1.0.3){
 This release contains API enhancements and adds support for sending messages to forum threads in the Telegram node.
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -3578,7 +3578,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.1...n8n@1.0.2){
 This is a bug fix release.
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes if upgrading from a `0.x.x` version. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 ### Contributors
 
@@ -3590,11 +3590,11 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.0.0...n8n@1.0.1){
 **Release date:** 2023-07-05
 
 /// warning | Breaking changes
-Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+Please note that this version contains breaking changes. For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 ///
 This is n8n's version one release.
 
-For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist/).
+For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checklist.md).
 
 ### Highlights
 
@@ -3602,7 +3602,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node/) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 

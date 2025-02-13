@@ -12,7 +12,7 @@ Use the MailerLite node to automate work in MailerLite, and integrate MailerLite
 On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite/) for guidance on setting up authentication. 
+Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

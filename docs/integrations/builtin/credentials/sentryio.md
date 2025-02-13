@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/)
+- [Sentry.io](/integrations/builtin/app-nodes/n8n-nodes-base.sentryio.md)
 
 ## Prerequisites
 

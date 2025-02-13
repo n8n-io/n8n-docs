@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Peekalink](/integrations/builtin/app-nodes/n8n-nodes-base.peekalink/)
+- [Peekalink](/integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md)
 
 ## Prerequisites
 

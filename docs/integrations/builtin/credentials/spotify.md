@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Spotify](/integrations/builtin/app-nodes/n8n-nodes-base.spotify/)
+- [Spotify](/integrations/builtin/app-nodes/n8n-nodes-base.spotify.md)
 
 ## Supported authentication methods
 
@@ -24,7 +24,7 @@ Refer to [Spotify's Web API documentation](https://developer.spotify.com/documen
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/){:target=_blank .external-link} account so you can create a Spotify app:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Spotify Developer](https://developer.spotify.com/){:target=_blank .external-link} account so you can create a Spotify app:
 
 1. Open the [Spotify developer dashboard](https://developer.spotify.com/dashboard){:target=_blank .external-link}.
 2. Select **Create an app**.

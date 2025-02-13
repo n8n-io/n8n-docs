@@ -13,7 +13,7 @@ Use the OpenWeatherMap node to automate work in OpenWeatherMap, and integrate Op
 On this page, you'll find a list of operations the OpenWeatherMap node supports and links to more resources.
 
 /// note | Credentials
-Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap/) for guidance on setting up authentication. 
+Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

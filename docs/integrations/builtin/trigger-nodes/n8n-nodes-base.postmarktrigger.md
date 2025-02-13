@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Postmark](https://postmarkapp.com){:target=_blank .external-link} helps deliver and track application email. You can track statistics such as the number of emails sent or processed, opens, bounces and, spam complaints.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/postmark/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/postmark.md).
 ///
 
 ///  note  | Examples and templates

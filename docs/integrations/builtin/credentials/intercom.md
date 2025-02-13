@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom/)
+- [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom.md)
 
 
 ## Prerequisites

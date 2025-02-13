@@ -12,7 +12,7 @@ Use the Contentful node to automate work in Contentful, and integrate Contentful
 On this page, you'll find a list of operations the Contentful node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Contentful credentials](/integrations/builtin/credentials/contentful/) for guidance on setting up authentication. 
+Refer to [Contentful credentials](/integrations/builtin/credentials/contentful.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

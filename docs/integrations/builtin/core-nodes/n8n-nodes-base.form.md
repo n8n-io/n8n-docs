@@ -40,6 +40,24 @@ https://my-account.n8n.cloud/form/my-form?email=jane.doe%40example.com&name=Jane
 Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and the space character (` `) with the string `%20`. This will set the initial value for these fields no matter which page of the form they appear on.
 <!-- vale from-microsoft.Percentages = YES -->
 
+### Displaying custom HTML
+
+You can display custom HTML on your form by adding a **Custom HTML** field to your form. This provides an **HTML** box where you can insert arbitrary HTML code to be displayed as part of the form page.
+
+You can use the HTML field to enrich your form page by including things like links, images, videos, and more. The content will be rendered with the rest of the form fields in the normal document flow.
+
+Because custom HTML content is read-only, these fields are not included in the form output data by default. To include the raw HTML content in the node output, provide a name for the data using the **Element Name** field.
+
+The HTML field doesn't support `<script>`, `<style>`, or `<input>` elements.
+
+### Including hidden fields
+
+It's possible to include fields in a form without displaying them to users. This is useful when you want to pass extra data to the form that doesn't require interactive user input.
+
+To add fields that won't show up on the form, use the **Hidden Field** form element. There, you can define the **Field Name** and optionally provide a default value by filling out the **Field Value**.
+
+When serving the form, you can pass values for hidden fields using [query parameters](#set-default-selections-with-query-parameters).
+
 ### Defining the form using JSON
 
 Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](/data/data-structure.md). Each object defines a single field by using a combination of these keys:
@@ -128,7 +146,7 @@ An example JSON that shows the general format required and the keys available:
 
 ### Form Ending
 
-Use the **Form Ending** Page Type to end a form and either show a completion page or redirect the user to a URL. Only one Form Ending page is displayed per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
+Use the **Form Ending** Page Type to end a form and either show a completion page, redirect the user to a URL, or display custom HTML or text. Only one Form Ending page is displayed per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
 
 Choose between these options when using **On n8n Form Submission**:
 
@@ -138,6 +156,8 @@ Choose between these options when using **On n8n Form Submission**:
 	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
 
 When using **Redirect to URL**, fill in the **URL** field with the page you want to redirect to when users complete the form.
+
+Use **Show Text** to display a final page defined by arbitrary plain text and HTML. Fill in the **Text** field with the HTML or plain text content you wish to show.
 
 ### Forms with branches
 

@@ -91,16 +91,20 @@ Enter the title for your form. n8n displays the **Form Title** as the webpage ti
 
 Enter the description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
 
-### Form Fields
+### Form Elements
 
-Create the question fields for your form. Select **Add Form Field** to add a new field.
+Create the question fields for your form. Select **Add Form Element** to add a new field.
 
 Every field has the following settings:
 
 - **Field Label**: Enter the label that appears above the input field. 
-- **Field Type**: Choose from **Date**, **Dropdown List**, **Email**, **File**, **Number**, **Password**, **Text**, or **Textarea**.
+- **Element Type**: Choose from **Custom HTML**, **Date**, **Dropdown List**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Text**, or **Textarea**.
+	- Select **Custom HTML** to insert arbitrary HTML.
+		- You can include elements like links, images, video, and more. You cannot include `<script>`, `<style>`, or `<input>` elements.
+		- By default, Custom HTML fields are not included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
     - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
 	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**. 
+	- Select **Hidden Field** to include a form element without displaying it on the form. You can set a default value using the **Field Value** parameter or pass values for the field using [query parameters](#set-default-selections-with-query-parameters).
 - **Required Field**: Turn on to require users to complete this field on the form. 
 
 ### Respond When

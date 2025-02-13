@@ -16,6 +16,8 @@ On this page, you'll find the node parameters for the Custom Code Tool node and 
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tool.md"
+
 ### Name
 
 Give your custom code a name. It can't contain whitespace.

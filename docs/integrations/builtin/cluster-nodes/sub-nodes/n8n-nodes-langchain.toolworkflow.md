@@ -16,6 +16,8 @@ On this page, you'll find the node parameters for the Workflow Tool node, and li
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tool.md"
+
 ### Name
 
 Enter a name for your custom code. It can't contain whitespace or special characters.

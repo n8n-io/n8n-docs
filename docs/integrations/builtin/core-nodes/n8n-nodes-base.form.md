@@ -186,7 +186,7 @@ This workflow may execute more than one branch during an execution. Here, n8n ex
 Select **Add Option** to view more configuration options: 
 
 - **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
-- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
 - **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
 
 ## Running the node

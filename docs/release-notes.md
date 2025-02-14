@@ -42,7 +42,6 @@ This release contains new features, node updates, and bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
 ## n8n@1.77.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.2...n8n@1.77.3){:target=_blank .external-link} for this version.<br />

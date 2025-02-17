@@ -38,7 +38,7 @@ You can unlock extra features by registering your n8n community edition. You reg
 
 Registering unlocks these features for the community edition:
 
-* [Debug in editor](/workflows/executions/debug.md): Copy and pin execution data when working on a workflow
+* [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
 * One day of [workflow history](/workflows/history.md): 24 hours of workflow history so you can revert back to previous workflow versions
 * [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
 

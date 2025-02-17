@@ -8,7 +8,7 @@ priority: high
 
 # Calculator node
 
-The Calculator node is a tool that allows an agent to run mathematical calculations.
+The Calculator node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to run mathematical calculations.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 

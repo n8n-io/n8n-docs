@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Postgres node supports and li
 Refer to [Postgres credentials](/integrations/builtin/credentials/postgres.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * [**Delete**](#delete): Delete an entire table or rows in a table

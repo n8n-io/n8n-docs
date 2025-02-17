@@ -8,7 +8,7 @@ priority: high
 
 # OpenAI Chat Model node
 
-Use the OpenAI Chat Model node to use OpenAI's chat models with conversational agents.
+Use the OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the OpenAI Chat Model node and links to more resources.
 

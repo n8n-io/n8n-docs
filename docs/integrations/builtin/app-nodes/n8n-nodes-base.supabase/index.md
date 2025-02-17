@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Supabase node supports and li
 Refer to [Supabase credentials](/integrations/builtin/credentials/supabase.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Row

@@ -8,7 +8,7 @@ priority: high
 
 # Custom n8n Workflow Tool node
 
-The Workflow Tool node is a tool that allows an agent to run another n8n workflow and fetch its output data. 
+The Workflow Tool node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to run another n8n workflow and fetch its output data. 
 
 On this page, you'll find the node parameters for the Workflow Tool node, and links to more resources.
 

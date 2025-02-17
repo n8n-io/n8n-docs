@@ -33,9 +33,9 @@ Many people find it easier to take in new information in video format. This tuto
 
 If you're already familiar with AI, feel free to skip this section. This is a basic introduction to AI concepts and how they can be used in n8n workflows.
 
-An AI agent builds on Large Language Models (LLMs), which generate text based
+An [AI agent](/glossary.md#ai-agent) builds on [Large Language Models (LLMs)](/glossary.md#large-language-model-llm), which generate text based
 on input by predicting the next word. While LLMs only process input to produce
-output, AI agents add goal-oriented functionality. They can use tools, process
+output, AI agents add goal-oriented functionality. They can use [tools](/glossary.md#ai-tool), process
 their outputs, and make decisions to complete tasks and solve problems.
 
 In n8n, the AI agent is represented as a node with some extra connections. 
@@ -57,7 +57,7 @@ By incorporating the AI agent as a node, n8n can combine AI-driven steps with tr
 
 ## 2. Add a trigger node
 
-Every workflow needs somewhere to start. In n8n these are called 'trigger nodes'. For this workflow, we want to start with a chat node.
+Every workflow needs somewhere to start. In n8n these are called ['trigger nodes'](/glossary.md#trigger-node-n8n). For this workflow, we want to start with a chat node.
 
  1. Select **Add first step** or press ++tab++ to open the node menu.
 
@@ -147,7 +147,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. Use the chat and tell the chat model your name, for example "Hi there, my name is Nick".
 
-1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no memory.
+1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no [memory](/glossary.md#ai-memory).
    ![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
 
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".

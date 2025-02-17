@@ -7,7 +7,7 @@ contentType: howto
 
 --8<-- "_snippets/embed-license.md"
 
-n8n provides a library of workflow templates. When embedding n8n, you can:
+n8n provides a library of workflow [templates](/glossary.md#template-n8n). When embedding n8n, you can:
 
 * Continue to use n8n's workflow templates library (this is the default behavior)
 * Disable workflow templates

@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the AWS Transcribe node supports 
 Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 **Transcription Job**

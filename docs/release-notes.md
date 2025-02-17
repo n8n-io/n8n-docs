@@ -33,6 +33,68 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x.md)
 ///
 
+## n8n@1.75.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.75.2...n8n@1.75.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-15
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.74.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.3...n8n@1.74.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-15
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.79.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.79.0...n8n@1.79.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-15
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.78.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.78.0...n8n@1.78.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-15
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.77.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.3...n8n@1.77.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-15
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.76.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.3...n8n@1.76.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-15
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.79.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.0...n8n@1.78.0){:target=_blank .external-link} for this version.<br />
@@ -47,10 +109,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.2...n8n@1.77.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-06
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -59,10 +117,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.0...n8n@1.78.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-05
-
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains new features, node updates, and bug fixes.
 

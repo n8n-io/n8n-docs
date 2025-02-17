@@ -51,7 +51,7 @@ docker run -it --rm \
 n8n:
     environment:
       - EXECUTIONS_DATA_SAVE_ON_ERROR=all
- 	  - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
       - EXECUTIONS_DATA_SAVE_ON_PROGRESS=true
       - EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 ```

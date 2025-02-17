@@ -13,7 +13,7 @@ Use the Facebook Graph API node to automate work in Facebook Graph API, and inte
 On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
+Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -29,6 +29,8 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 
 
 ### Parameters
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 * **Host URL**: The host URL for the request. The following options are available:
     * **Default**: Requests are passed to the `graph.facebook.com` host URL. Used for the majority of requests.

@@ -11,7 +11,7 @@ priority: medium
 [GitHub](https://github.com/){:target=_blank .external-link} provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/github/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/github.md).
 ///
 
 ///  note  | Examples and templates

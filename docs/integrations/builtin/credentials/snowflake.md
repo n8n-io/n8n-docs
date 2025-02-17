@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Snowflake](/integrations/builtin/app-nodes/n8n-nodes-base.snowflake/)
+- [Snowflake](/integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md)
 
 ## Prerequisites
 

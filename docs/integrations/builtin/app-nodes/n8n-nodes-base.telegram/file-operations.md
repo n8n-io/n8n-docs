@@ -8,7 +8,9 @@ priority: critical
 
 # Telegram node File operations
 
-Use this operation to get a file from Telegram. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) for more information on the Telegram node itself.
+Use this operation to get a file from Telegram. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Get File
 
@@ -16,7 +18,7 @@ Use this operation to get a file from Telegram using the Bot API [getFile](https
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
 * **Resource**: Select **File**.
 * **Operation**: Select **Get**.
 * **File ID**: Enter the ID of the file you want to get.

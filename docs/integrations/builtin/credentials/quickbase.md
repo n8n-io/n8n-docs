@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase/)
+- [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase.md)
 
 ## Prerequisites
 

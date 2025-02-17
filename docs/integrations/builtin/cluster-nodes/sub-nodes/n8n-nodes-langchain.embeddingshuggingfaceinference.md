@@ -8,12 +8,12 @@ priority: medium
 
 # Embeddings HuggingFace Inference node
 
-Use the Embeddings HuggingFace Inference node to generate embeddings for a given text.
+Use the Embeddings HuggingFace Inference node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings HuggingFace Inference, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

@@ -16,7 +16,7 @@ LINE Notify is discontinuing service as of April 1st 2025 and this node will no 
 
 You can use these credentials to authenticate the following nodes:
 
-- [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line/)
+- [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line.md)
 
 ## Supported authentication methods
 

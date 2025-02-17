@@ -25,7 +25,7 @@ The APIs referenced in this document are subject to change at any time. Be sure 
 There are three general steps to follow:
 
 * Obtain the credentials for each user, and any additional parameters that may be required based on the workflow.
-* Create the n8n credentials for this user.
+* Create the [n8n credentials](/glossary.md#credential-n8n) for this user.
 * Create the workflow.
 
 ### 1. Obtain user credentials
@@ -376,8 +376,8 @@ Passing the additional value `active` in your JSON payload:
 
 There are four steps to follow to implement this method:
 
-* Obtain the credentials for each user, and any additional parameters that may be required based on the workflow. See [Obtain user credentials](#obtain-user-credentials) above.
-* Create the n8n credentials for this user. See [Create user credentials](#create-user-credentials) above.
+* Obtain the credentials for each user, and any additional parameters that may be required based on the workflow. See [Obtain user credentials](#1-obtain-user-credentials) above.
+* Create the n8n credentials for this user. See [Create user credentials](#2-create-user-credentials) above.
 * Create the workflow.
 * Call the workflow as needed.
 
@@ -385,10 +385,10 @@ There are four steps to follow to implement this method:
 
 The details and scope of this workflow will vary greatly according to the individual use case, however there are a few design implementations to keep in mind:
 
-* This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) node.
+* This workflow must be triggered by a [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node.
 * The incoming webhook call must contain the user’s credentials and any other workflow parameters required.
-* Each node where the user’s credentials are needed should use an [expression](/code/expressions/) so that the node’s credential field reads the credential provided in the webhook call.
-* Save and activate the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) for more information.
+* Each node where the user’s credentials are needed should use an [expression](/code/expressions.md) so that the node’s credential field reads the credential provided in the webhook call.
+* Save and activate the workflow, ensuring the production URL is selected for the Webhook node. Refer to [webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) for more information.
 
 ### Call the workflow
 

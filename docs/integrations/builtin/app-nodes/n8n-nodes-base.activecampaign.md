@@ -13,8 +13,10 @@ Use the ActiveCampaign node to automate work in ActiveCampaign, and integrate Ac
 On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign/) for guidance on setting up authentication. 
+Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

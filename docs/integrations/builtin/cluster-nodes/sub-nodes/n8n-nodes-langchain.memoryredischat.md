@@ -8,12 +8,12 @@ priority: medium
 
 # Redis Chat Memory node
 
-Use the Redis Chat Memory node to use Redis as a memory server.
+Use the Redis Chat Memory node to use Redis as a [memory](/glossary.md#ai-memory) server.
 
 On this page, you'll find a list of operations the Redis Chat Memory node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/redis/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/redis.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

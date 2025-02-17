@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getresponse/)
-- [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger/)
+- [GetResponse](/integrations/builtin/app-nodes/n8n-nodes-base.getresponse.md)
+- [GetResponse Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md)
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ To configure this credential, you'll need:
 When you register your application, copy the **OAuth Redirect URL** from n8n and add it as the **Redirect URL** in GetResponse.
 
 /// note | Redirect URL with localhost
-The Redirect URL should be a URL in your domain, for example: `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept a localhost callback URL. Refer to the [FAQs](#how-do-i-configure-oauth2-credentials-for-a-local-environment) to configure the credentials for the local environment.
+The Redirect URL should be a URL in your domain, for example: `https://mytemplatemaker.example.com/gr_callback`. GetResponse doesn't accept a localhost callback URL. Refer to the [FAQs](#configure-oauth2-credentials-for-a-local-environment) to configure the credentials for the local environment.
 ///
 
 ## Configure OAuth2 credentials for a local environment

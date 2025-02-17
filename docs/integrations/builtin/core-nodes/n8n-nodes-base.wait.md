@@ -62,12 +62,12 @@ Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` sho
 * **None**: Don't use authentication.
 
 /// note | Auth reference
-Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#authentication) for more information on each auth type.
+Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#supported-authentication-methods) for more information on each auth type.
 ///
 
 #### HTTP Method
 
-Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#http-method) for more information.
+Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#http-method) for more information.
 
 #### Response Code
 
@@ -84,7 +84,7 @@ Set when and how to respond to the webhook from these options:
 		* **First Entry JSON**: Return the JSON data of the first entry of the last node in a JSON object.
 		* **First Entry Binary**: Return the binary data of the first entry of the last node in a binary file.
 		* **No Response Body**: Return with no body.
-* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
 
 #### Limit Wait Time
 
@@ -147,7 +147,7 @@ Set when to respond to the form submission. Choose from:
 
 * **Form Is Submitted**: Respond as soon as this node receives the form submission.
 * **Workflow Finishes**: Respond when the last node of this workflow finishes.
-* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node executes.
+* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node executes.
 
 #### Limit Wait Time
 

@@ -12,8 +12,10 @@ Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with 
 On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho/) for guidance on setting up authentication. 
+Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

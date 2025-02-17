@@ -12,7 +12,7 @@ Use the Onfleet node to automate work in Onfleet, and integrate Onfleet with oth
 On this page, you'll find a list of operations the Onfleet node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Onfleet credentials](/integrations/builtin/credentials/onfleet/) for guidance on setting up authentication. 
+Refer to [Onfleet credentials](/integrations/builtin/credentials/onfleet.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

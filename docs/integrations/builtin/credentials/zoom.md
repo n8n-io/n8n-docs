@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom/)
+- [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md)
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ Use these settings for your OAuth app:
 - Select **User-managed app** for **Select how the app is managed**.
 - Copy the **OAuth Callback URL** from n8n and enter it as an **OAuth Redirect URL** in Zoom.
 - If your n8n credential displays a **Whitelist URL**, also enter that URL as a an **OAuth Redirect URL**.
-- Enter **Scopes** for the scopes you plan to use. For all functionality in the [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom/) node, select:
+- Enter **Scopes** for the scopes you plan to use. For all functionality in the [Zoom](/integrations/builtin/app-nodes/n8n-nodes-base.zoom.md) node, select:
     - `meeting:read`
     - `meeting:write`
     - Refer to [OAuth scopes | Meeting scopes](https://developers.zoom.us/docs/integrations/oauth-scopes/#meeting-scopes){:target=_blank .external-link} for more information on meeting scopes.

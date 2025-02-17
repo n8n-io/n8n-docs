@@ -10,16 +10,18 @@ contentType: [integration, reference]
 The TOTP node provides a way to generate a TOTP (time-based one-time password).
 
 /// note | Credentials
-Refer to [TOTP credentials](/integrations/builtin/credentials/totp/) for guidance on setting up authentication. 
+Refer to [TOTP credentials](/integrations/builtin/credentials/totp.md) for guidance on setting up authentication. 
 ///
 
 ## Node parameters
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 Configure this node with these parameters.
 
 ### Credential to connect with
 
-Select or create a [TOTP credential](/integrations/builtin/credentials/totp/) for the node to use.
+Select or create a [TOTP credential](/integrations/builtin/credentials/totp.md) for the node to use.
 
 ### Operation
 

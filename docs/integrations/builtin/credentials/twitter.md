@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
+- [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md)
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ You can use these credentials to authenticate the following nodes:
 - OAuth2
 
 /// note | Deprecation warning
-n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x/#n8n02360).
+n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x.md#n8n02360).
 ///
 
 ## Related resources

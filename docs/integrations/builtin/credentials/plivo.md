@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Plivo](/integrations/builtin/app-nodes/n8n-nodes-base.plivo/)
+- [Plivo](/integrations/builtin/app-nodes/n8n-nodes-base.plivo.md)
 
 ## Prerequisites
 

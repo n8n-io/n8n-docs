@@ -12,7 +12,7 @@ Use the Plivo node to automate work in Plivo, and integrate Plivo with other app
 On this page, you'll find a list of operations the Plivo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Plivo credentials](/integrations/builtin/credentials/plivo/) for guidance on setting up authentication. 
+Refer to [Plivo credentials](/integrations/builtin/credentials/plivo.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Cal](https://cal.com/) is the event-juggling scheduler for everyone. Focus on meeting, not making meetings.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cal/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/cal.md).
 ///
 
 ///  note  | Examples and templates

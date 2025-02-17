@@ -11,7 +11,7 @@ n8n collects some anonymous data from self-hosted n8n installations. Use the ins
 
 ## Collected data
 
-Refer to [Privacy | Data collection in self-hosted n8n](/privacy-security/privacy/#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
+Refer to [Privacy | Data collection in self-hosted n8n](/privacy-security/privacy.md#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
 
 ## How collection works
 
@@ -39,10 +39,10 @@ export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 
 ## Disable all connection to n8n servers
 
-If you want to fully prevent all communication with n8n's servers, refer to [Isolate n8n](/hosting/configuration/configuration-examples/isolation/).
+If you want to fully prevent all communication with n8n's servers, refer to [Isolate n8n](/hosting/configuration/configuration-examples/isolation.md).
 
 ## Related resources
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment/) for more information on these environment variables.
+Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) for more information on these environment variables.
 
-Refer to [Configuration](/hosting/configuration/configuration-methods/) for more information on setting environment variables.
+Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.

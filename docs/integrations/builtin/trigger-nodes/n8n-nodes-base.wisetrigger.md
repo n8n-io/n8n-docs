@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Wise](https://wise.com) allows you to transfer money abroad with low-cost money transfers, receive money with international account details, and track transactions on your phone.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/wise/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/wise.md).
 ///
 
 /// note | Examples and templates

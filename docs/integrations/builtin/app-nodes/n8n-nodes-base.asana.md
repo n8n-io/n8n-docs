@@ -13,12 +13,14 @@ Use the Asana node to automate work in Asana, and integrate Asana with other app
 On this page, you'll find a list of operations the Asana node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Asana credentials](/integrations/builtin/credentials/asana/) for guidance on setting up authentication. 
+Refer to [Asana credentials](/integrations/builtin/credentials/asana.md) for guidance on setting up authentication.
 ///
 
 /// note | Update to 1.22.2 or above
 Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -58,6 +60,3 @@ Due to changes in Asana's API, some operations in this node stopped working on 1
 [[ templatesWidget(page.title, 'asana') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
-
-
-

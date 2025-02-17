@@ -8,7 +8,7 @@ priority: medium
 
 # Templates and examples
 
-Here are some templates and examples for the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/).
+Here are some templates and examples for the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md).
 
 /// note | Continuous examples
 The examples included in this section are a sequence. Follow from one to another to avoid unexpected results.

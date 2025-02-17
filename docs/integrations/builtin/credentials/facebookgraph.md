@@ -10,10 +10,10 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/)
+- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md)
 
 /// note | Facebook Trigger credentials
-If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp/) documentation.
+If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp.md) documentation.
 ///
 
 ## Supported authentication methods

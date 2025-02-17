@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Webex by Cisco](https://webex.com/){:target=_blank .external-link} is a web conferencing and videoconferencing application.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ciscowebex/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ciscowebex.md).
 ///
 
 ///  note  | Examples and templates

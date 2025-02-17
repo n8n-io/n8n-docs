@@ -12,8 +12,10 @@ Use the Gotify node to automate work in Gotify, and integrate Gotify with other 
 On this page, you'll find a list of operations the Gotify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Gotify credentials](/integrations/builtin/credentials/gotify/) for guidance on setting up authentication. 
+Refer to [Gotify credentials](/integrations/builtin/credentials/gotify.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

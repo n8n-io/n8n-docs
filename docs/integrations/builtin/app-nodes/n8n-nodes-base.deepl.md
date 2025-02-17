@@ -12,8 +12,10 @@ Use the DeepL node to automate work in DeepL, and integrate DeepL with other app
 On this page, you'll find a list of operations the DeepL node supports and links to more resources.
 
 /// note | Credentials
-Refer to [DeepL credentials](/integrations/builtin/credentials/deepl/) for guidance on setting up authentication. 
+Refer to [DeepL credentials](/integrations/builtin/credentials/deepl.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [KoboToolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger/)
-* [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/)
+* [KoboToolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md)
+* [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md)
 
 ## Prerequisites
 

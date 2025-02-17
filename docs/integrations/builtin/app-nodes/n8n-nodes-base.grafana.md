@@ -12,8 +12,10 @@ Use the Grafana node to automate work in Grafana, and integrate Grafana with oth
 On this page, you'll find a list of operations the Grafana node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Grafana credentials](/integrations/builtin/credentials/grafana/) for guidance on setting up authentication. 
+Refer to [Grafana credentials](/integrations/builtin/credentials/grafana.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [GetResponse](https://www.getresponse.com/){:target=_blank .external-link} is an online platform that offers email marketing software, landing page creator, webinar hosting, and much more.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/getresponse.md).
 ///
 
 ///  note  | Examples and templates

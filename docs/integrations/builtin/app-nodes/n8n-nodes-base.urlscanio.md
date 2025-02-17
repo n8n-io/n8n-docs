@@ -12,8 +12,10 @@ Use the urlscan.io node to automate work in urlscan.io, and integrate urlscan.io
 On this page, you'll find a list of operations the urlscan.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio/) for guidance on setting up authentication. 
+Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

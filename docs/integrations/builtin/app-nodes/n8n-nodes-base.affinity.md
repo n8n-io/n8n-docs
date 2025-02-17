@@ -12,8 +12,10 @@ Use the Affinity node to automate work in Affinity, and integrate Affinity with 
 On this page, you'll find a list of operations the Affinity node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Affinity credentials](/integrations/builtin/credentials/affinity/) for guidance on setting up authentication.
+Refer to [Affinity credentials](/integrations/builtin/credentials/affinity.md) for guidance on setting up authentication.
 ///	
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

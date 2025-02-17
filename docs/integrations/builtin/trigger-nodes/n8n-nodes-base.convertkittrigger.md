@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [ConvertKit](https://www.convertkit.com/){:target=_blank .external-link} is a fully featured email marketing platform. Use ConvertKit to build an email list, send email broadcasts, automate sequences, create segments, and build landing pages.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/convertkit.md).
 ///
 
 ///  note  | Examples and templates

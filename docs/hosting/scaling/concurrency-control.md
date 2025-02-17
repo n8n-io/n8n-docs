@@ -6,7 +6,7 @@ contentType: explanation
 # Self-hosted concurrency control
 
 /// info | Only for self-hosted n8n
-This document is for self-hosted concurrency control. Read [Cloud concurrency](/manage-cloud/concurrency/) to learn how concurrency works with n8n Cloud accounts.
+This document is for self-hosted concurrency control. Read [Cloud concurrency](/manage-cloud/concurrency.md) to learn how concurrency works with n8n Cloud accounts.
 ///
 
 In regular mode, n8n doesn't limit how many production executions may run at the same time. This can lead to a scenario where too many concurrent executions thrash the event loop, causing performance degradation and unresponsiveness. 
@@ -21,7 +21,7 @@ export N8N_CONCURRENCY_PRODUCTION_LIMIT=20
 
 Keep in mind:
 
-- Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
+- Concurrency control applies only to production executions: those started from a webhook or [trigger](/glossary.md#trigger-node-n8n) node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
 <!-- vale off -->
@@ -32,7 +32,7 @@ When you enable concurrency control, you can view the number of active execution
 
 ## Comparison to queue mode
 
-In queue mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode/#configure-worker-concurrency).
+In queue mode, you can control how many jobs a worker may run concurrently using the [`--concurrency` flag](/hosting/scaling/queue-mode.md#configure-worker-concurrency).
 
 Concurrency control in queue mode is a separate mechanism from concurrency control in regular mode, but the environment variable `N8N_CONCURRENCY_PRODUCTION_LIMIT` controls both of them. In queue mode, n8n takes the limit from this variable if set to a value other than `-1`, falling back to the `--concurrency` flag or its default.
 

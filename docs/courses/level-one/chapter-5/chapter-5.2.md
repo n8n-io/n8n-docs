@@ -5,10 +5,10 @@ contentType: tutorial
 
 # 2. Inserting data into Airtable
 
-In this step of the workflow, you will learn how to insert the data received from the HTTP Request node into Airtable using the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/).
+In this step of the workflow, you will learn how to insert the data received from the HTTP Request node into Airtable using the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md).
 
 /// note | Spreadsheet nodes
-You can replace the Airtable node with another spreadsheet app/service. For example, n8n also has a node for [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/).
+You can replace the Airtable node with another spreadsheet app/service. For example, n8n also has a node for [**Google Sheets**](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md).
 ///
 
 After this step, your workflow should look like this:
@@ -56,7 +56,7 @@ In the Airtable node window, configure the following parameters:
 - **Credential to connect with**:
 	- Select 'Create new credential'
 	- Keep the default option 'Connect using: Access Token' selected
-	- **Access token**: Follow the instructions [here](/integrations/builtin/credentials/airtable/){:target="_blank"} to create your token.
+	- **Access token**: Follow the instructions [here](/integrations/builtin/credentials/airtable.md){:target="_blank"} to create your token.
 Adding credentials for Airtable is similar to the HTTP Request node you configured in the previous chapter. However, the process of obtaining an API key for Airtable (and other apps/services) is different.
 - **Resource**: Record
 - **Operation**: Create. This operation will create the new record in the table.

@@ -13,8 +13,10 @@ Use the NocoDB node to automate work in NocoDB, and integrate NocoDB with other 
 On this page, you'll find a list of operations the NocoDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb/) for guidance on setting up authentication. 
+Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

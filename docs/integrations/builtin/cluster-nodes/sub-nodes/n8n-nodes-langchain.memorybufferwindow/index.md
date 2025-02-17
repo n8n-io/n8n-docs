@@ -8,12 +8,12 @@ priority: high
 
 # Window Buffer Memory node
 
-Use the Window Buffer Memory node to persist chat history in your workflow.
+Use the Window Buffer Memory node to [persist](/glossary.md#ai-memory) chat history in your workflow.
 
 On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
 
 /// warning | Don't use this node if running n8n in queue mode
-If your n8n instance uses [queue mode](/hosting/scaling/queue-mode/), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Window Buffer Memory will go to the same worker.
+If your n8n instance uses [queue mode](/hosting/scaling/queue-mode.md), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Window Buffer Memory will go to the same worker.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -38,6 +38,6 @@ Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.lan
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

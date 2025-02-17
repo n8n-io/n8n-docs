@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Nextcloud](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/)
+- [Nextcloud](/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud.md)
 
 ## Supported authentication methods
 

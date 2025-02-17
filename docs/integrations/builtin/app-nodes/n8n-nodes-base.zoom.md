@@ -12,8 +12,10 @@ Use the Zoom node to automate work in Zoom, and integrate Zoom with other applic
 On this page, you'll find a list of operations the Zoom node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zoom credentials](/integrations/builtin/credentials/zoom/) for guidance on setting up authentication. 
+Refer to [Zoom credentials](/integrations/builtin/credentials/zoom.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

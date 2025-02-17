@@ -12,7 +12,7 @@ Use the Vero node to automate work in Vero and integrate Vero with other applica
 On this page, you'll find a list of operations the Vero node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Vero credentials](/integrations/builtin/credentials/vero/) for guidance on setting up authentication. 
+Refer to [Vero credentials](/integrations/builtin/credentials/vero.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

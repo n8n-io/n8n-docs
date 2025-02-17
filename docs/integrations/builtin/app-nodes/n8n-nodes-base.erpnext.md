@@ -12,8 +12,10 @@ Use the ERPNext node to automate work in ERPNext, and integrate ERPNext with oth
 On this page, you'll find a list of operations the ERPNext node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext/) for guidance on setting up authentication. 
+Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

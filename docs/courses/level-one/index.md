@@ -39,7 +39,7 @@ You will build two workflows:
 
 ## What do I need to get started?
 
-1. **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm/){:target="_blank" .external}, or [n8n Cloud](/manage-cloud/overview/){:target="_blank" .external}.
+1. **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm.md){:target="_blank" .external}, or [n8n Cloud](/manage-cloud/overview.md){:target="_blank" .external}.
 2. **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external} to get your unique ID and other credentials you will need in the course.
 3. Basic knowledge of JavaScript and [APIs](https://n8n.io/blog/what-are-apis-how-to-use-them-with-no-code/){:target="_blank" .external} would be helpful, but isn't necessary.
 4. An [account on the n8n community forum](https://community.n8n.io/){:target="_blank" .external} if you wish to receive a profile badge and avatar upon successful completion
@@ -52,7 +52,7 @@ Completing the course should take around **two hours**. You don't have to comple
 
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
-- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1/){:target="_blank" .external}
+- [x] Building the [main workflow](/courses/level-one/chapter-5/chapter-5.1.md){:target="_blank" .external}
 - [x] Passing the [quiz](https://n8n-community.typeform.com/to/JMoBXeGA){:target="_blank" .external-link} at the end of the course
 
 /// note | Check your progress

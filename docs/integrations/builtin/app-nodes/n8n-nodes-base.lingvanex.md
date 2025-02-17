@@ -12,7 +12,7 @@ Use the LingvaNex node to automate work in LingvaNex, and integrate LingvaNex wi
 On this page, you'll find a list of operations the LingvaNex node supports and links to more resources.
 
 /// note | Credentials
-Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex/) for guidance on setting up authentication. 
+Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes with Customer.io.
 
-- [Customer.io](/integrations/builtin/app-nodes/n8n-nodes-base.customerio/)
-- [Customer.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger/)
+- [Customer.io](/integrations/builtin/app-nodes/n8n-nodes-base.customerio.md)
+- [Customer.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md)
 
 ## Prerequisites
 

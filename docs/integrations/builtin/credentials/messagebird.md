@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird/)
+- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird.md)
 
 ## Prerequisites
 

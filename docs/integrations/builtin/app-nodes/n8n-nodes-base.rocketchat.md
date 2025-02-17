@@ -12,8 +12,10 @@ Use the Rocket.Chat node to automate work in Rocket.Chat, and integrate Rocket.C
 On this page, you'll find a list of operations the Rocket.Chat node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Rocket.Chat credentials](/integrations/builtin/credentials/rocketchat/) for guidance on setting up authentication. 
+Refer to [Rocket.Chat credentials](/integrations/builtin/credentials/rocketchat.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

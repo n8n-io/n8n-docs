@@ -11,7 +11,7 @@ priority: medium
 [Stripe](https://stripe.com/){:target=_blank .external-link} is a suite of payment APIs that powers commerce for online businesses.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/stripe/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/stripe.md).
 ///
 
 ///  note  | Examples and templates

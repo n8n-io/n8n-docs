@@ -8,10 +8,10 @@ priority: medium
 
 # Wolfram|Alpha tool node
 
-Use the Wolfram|Alpha tool node to connect your agents and chains to Wolfram|Alpha's computational intelligence engine.
+Use the Wolfram|Alpha tool node to connect your [agents](/glossary.md#ai-agent) and [chains](/glossary.md#ai-chain) to Wolfram|Alpha's computational intelligence engine.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/wolframalpha/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/wolframalpha.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

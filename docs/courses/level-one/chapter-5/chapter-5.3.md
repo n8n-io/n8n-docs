@@ -9,10 +9,10 @@ In this step of the workflow you will learn how to filter data using conditional
 
 To insert only processing orders into Airtable we need to filter our data by `orderStatus`. Basically, we want to tell the program that _if_ the `orderStatus` is processing, _then_ insert all records with this status into Airtable; _else_, for example, if the `orderStatus` isn't *processing*, calculate the sum of all orders with the other `orderStatus (booked)`.
 
-This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if/){:target="_blank" .external}, which splits a workflow conditionally based on comparison operations.
+This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md){:target="_blank" .external}, which splits a workflow conditionally based on comparison operations.
 
 /// note | If vs. Switch
-If you need to filter data on more than two conditional routes that are possible with the If node (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/){:target="_blank" .external}. The Switch node is similar to the If node, but supports multiple output routes.
+If you need to filter data on more than two conditional routes that are possible with the If node (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md){:target="_blank" .external}. The Switch node is similar to the If node, but supports multiple output routes.
 ///
 
 ## Remove the connection to the Airtable node
@@ -33,7 +33,7 @@ With the connection to the Airtable node removed, add an If node connected to th
 For the If node, we'll use an expression.
 
 /// note | Expressions
-An expression is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
+An [expression](/glossary.md#expression-n8n) is a string of characters and symbols in a programming language that represents a value depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
 ///
 
 In the If node window, configure the parameters:
@@ -65,7 +65,7 @@ Note that the orders with `orderStatus` equal to `processing` should show for th
 
 ## Insert data into Airtable
 
-Next, we want to insert this data into Airtable. Remember what Nathan said at the end of the [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2/) lesson?
+Next, we want to insert this data into Airtable. Remember what Nathan said at the end of the [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2.md) lesson?
 
 > I actually need to insert only processing orders in the table...
 

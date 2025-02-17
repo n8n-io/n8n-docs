@@ -12,8 +12,10 @@ Use the Pushover node to automate work in Pushover, and integrate Pushover with 
 On this page, you'll find a list of operations the Pushover node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pushover credentials](/integrations/builtin/credentials/pushover/) for guidance on setting up authentication. 
+Refer to [Pushover credentials](/integrations/builtin/credentials/pushover.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

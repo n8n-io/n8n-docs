@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger/)
-- [Stripe](/integrations/builtin/app-nodes/n8n-nodes-base.stripe/)
+- [Stripe Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md)
+- [Stripe](/integrations/builtin/app-nodes/n8n-nodes-base.stripe.md)
 
 ## Supported authentication methods
 

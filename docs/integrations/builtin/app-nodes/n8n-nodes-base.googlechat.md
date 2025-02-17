@@ -13,8 +13,10 @@ Use the Google Chat node to automate work in Google Chat, and integrate Google C
 On this page, you'll find a list of operations the Google Chat node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

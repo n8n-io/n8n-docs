@@ -10,7 +10,7 @@ contentType: [integration, reference]
 [Eventbrite](https://www.eventbrite.com/){:target=_blank .external-link} is an event management and ticketing website. The service allows users to browse, create, and promote local events.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/eventbrite/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/eventbrite.md).
 ///
 
 ///  note  | Examples and templates

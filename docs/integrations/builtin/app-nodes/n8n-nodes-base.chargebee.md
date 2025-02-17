@@ -12,7 +12,7 @@ Use the Chargebee node to automate work in Chargebee, and integrate Chargebee wi
 On this page, you'll find a list of operations the Chargebee node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Chargebee credentials](/integrations/builtin/credentials/chargebee/) for guidance on setting up authentication. 
+Refer to [Chargebee credentials](/integrations/builtin/credentials/chargebee.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

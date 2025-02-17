@@ -13,7 +13,7 @@ Use the OpenRouter Chat Model node to use OpenRouter's chat models with conversa
 On this page, you'll find the node parameters for the OpenRouter Chat Model node and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/openrouter/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/openrouter.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

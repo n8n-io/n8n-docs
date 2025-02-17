@@ -10,9 +10,9 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-* [Embeddings Google Gemini](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini/)
-* [Google Gemini Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/)
-* [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm/)
+* [Embeddings Google Gemini](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md)
+* [Google Gemini Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md)
+* [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md)
 
 ## Prerequisites
 
@@ -35,6 +35,10 @@ To configure this credential, you'll need:
 
 - The API **Host** URL: Both PaLM and Gemini use the default `https://generativelanguage.googleapis.com`.
 - An **API Key**: Create a key in [Google AI Studio](https://makersuite.google.com/app/apikey){:target=_blank .external-link}.
+
+/// warning | Custom hosts not supported
+The related nodes don't yet support custom hosts or proxies for the API host and must use 'https://generativelanguage.googleapis.com'.
+///
 
 To create an API key:
 

@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Hacker News node supports and
 This node doesn't require authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * All

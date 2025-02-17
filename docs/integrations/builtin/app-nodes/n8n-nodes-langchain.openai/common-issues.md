@@ -8,7 +8,7 @@ priority: critical
 
 # OpenAI node common issues
 
-Here are some common errors and issues with the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) and steps to resolve or troubleshoot them.
 
 --8<-- "_snippets/integrations/openai-api-issues.md"
 --8<-- "_snippets/integrations/referenced-node-unexecuted.md"

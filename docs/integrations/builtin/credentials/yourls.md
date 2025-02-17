@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Yourls](/integrations/builtin/app-nodes/n8n-nodes-base.yourls/)
+- [Yourls](/integrations/builtin/app-nodes/n8n-nodes-base.yourls.md)
 
 ## Prerequisites
 

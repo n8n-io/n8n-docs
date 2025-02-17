@@ -13,8 +13,10 @@ Use the Mattermost node to automate work in Mattermost, and integrate Mattermost
 On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost/) for guidance on setting up authentication. 
+Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

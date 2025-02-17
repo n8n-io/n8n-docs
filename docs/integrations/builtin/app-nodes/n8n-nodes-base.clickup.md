@@ -13,8 +13,10 @@ Use the ClickUp node to automate work in ClickUp, and integrate ClickUp with oth
 On this page, you'll find a list of operations the ClickUp node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup/) for guidance on setting up authentication. 
+Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

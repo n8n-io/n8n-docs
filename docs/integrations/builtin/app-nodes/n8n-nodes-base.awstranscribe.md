@@ -12,8 +12,10 @@ Use the AWS Transcribe node to automate work in AWS Transcribe, and integrate AW
 On this page, you'll find a list of operations the AWS Transcribe node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

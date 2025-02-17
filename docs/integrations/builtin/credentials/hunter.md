@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Hunter](/integrations/builtin/app-nodes/n8n-nodes-base.hunter/)
+- [Hunter](/integrations/builtin/app-nodes/n8n-nodes-base.hunter.md)
 
 ## Prerequisites
 

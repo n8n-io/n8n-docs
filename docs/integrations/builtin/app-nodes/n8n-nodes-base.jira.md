@@ -13,8 +13,10 @@ Use the Jira Software node to automate work in Jira, and integrate Jira with oth
 On this page, you'll find a list of operations the Jira Software node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Jira credentials](/integrations/builtin/credentials/jira/) for guidance on setting up authentication. 
+Refer to [Jira credentials](/integrations/builtin/credentials/jira.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -12,7 +12,7 @@ Use the Automizy node to automate work in Automizy, and integrate Automizy with 
 On this page, you'll find a list of operations the Automizy node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Automizy credentials](/integrations/builtin/credentials/automizy/) for guidance on setting up authentication. 
+Refer to [Automizy credentials](/integrations/builtin/credentials/automizy.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

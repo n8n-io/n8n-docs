@@ -13,8 +13,10 @@ Use the Baserow node to automate work in Baserow, and integrate Baserow with oth
 On this page, you'll find a list of operations the Baserow node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Baserow credentials](/integrations/builtin/credentials/baserow/) for guidance on setting up authentication. 
+Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

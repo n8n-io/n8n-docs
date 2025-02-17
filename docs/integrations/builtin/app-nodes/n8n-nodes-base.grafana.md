@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Grafana node supports and lin
 Refer to [Grafana credentials](/integrations/builtin/credentials/grafana.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Dashboard

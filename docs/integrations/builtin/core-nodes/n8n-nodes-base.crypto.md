@@ -19,6 +19,8 @@ Use the Crypto node to encrypt data in workflows.
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 Node parameters depend on the action you select.
 
 ### Generate parameters

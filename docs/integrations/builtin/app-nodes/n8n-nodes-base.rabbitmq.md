@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the RabbitMQ node supports and li
 Refer to [RabbitMQ credentials](/integrations/builtin/credentials/rabbitmq.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Delete From Queue

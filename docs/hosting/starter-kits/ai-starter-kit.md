@@ -23,7 +23,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 
 ## What you can build
 
-⭐️ AI Agents that can schedule appointments
+⭐️ [AI Agents](/glossary.md#ai-agent){ data-preview} that can schedule appointments
 
 ⭐️ Summaries of company PDFs without leaking data
 

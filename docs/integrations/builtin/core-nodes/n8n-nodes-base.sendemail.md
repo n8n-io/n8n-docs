@@ -16,6 +16,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 Configure this node using the following parameters.
 
 ### Credential to connect with

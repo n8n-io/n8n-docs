@@ -10,6 +10,8 @@ priority: high
 
 Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Create a folder
 
 Use this operation to create a new folder in a drive.

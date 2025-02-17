@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Notion node supports and link
 Refer to [Notion credentials](/integrations/builtin/credentials/notion.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Block

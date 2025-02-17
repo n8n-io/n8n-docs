@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Discord node supports and lin
 Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 <!-- vale off -->
 <!-- "Many" triggers warnings -->

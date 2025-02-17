@@ -8,7 +8,7 @@ priority: high
 
 # SerpApi (Google Search) node
 
-The SerpAPI node allows an agent in your workflow to call Google's Search API.
+The SerpAPI node allows an [agent](/glossary.md#ai-agent) in your workflow to call Google's Search API.
 
 On this page, you'll find the node parameters for the SerpAPI node, and links to more resources.
 

@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the OpenWeatherMap node supports 
 Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Returns the current weather data

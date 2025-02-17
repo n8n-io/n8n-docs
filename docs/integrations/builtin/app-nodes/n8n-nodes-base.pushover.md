@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Pushover node supports and li
 Refer to [Pushover credentials](/integrations/builtin/credentials/pushover.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Message

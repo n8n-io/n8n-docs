@@ -12,7 +12,7 @@ The Loop Over Items node helps you loop through data.
 
 The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
 
-When the node execution completes, it combines all the data and returns it through the **done** output.
+When the node execution completes, it combines all of the processed data and returns it through the **done** output.
 
 ## When to use the Loop Over Items node
 
@@ -34,6 +34,12 @@ Enter the number of items to return with each call.
 ### Reset
 
 If turned on, the node will reset with the current input-data newly initialized with each loop. Use this when you want the Loop Over Items node to treat incoming data as a new set of data instead of a continuation of previous items.
+
+For example, you can use the Loop Over Items node with the reset option and an [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) to query a paginated service when you don't know how many pages you need in advance. The loop queries pages one at a time, performs any processing, and increments the page number. The loop reset ensures the loop recognizes each iteration as a new set of data. The If node evaluates an exit condition to decide whether to perform another iteration or not.
+
+/// warning | Include a valid termination condition
+For workflows like the example described above, it's critical to include a valid termination condition for the loop. If your termination condition never matches, your workflow execution will get stuck in an infinite loop.
+///
 
 When enabled, you can adjust the reset conditions by switching the parameter representation from **Fixed** to **Expression**. The results of your expression evaluation determine when the node will reset item processing.
 

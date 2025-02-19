@@ -24,6 +24,8 @@ You can find authentication information for this node [here](/integrations/built
 
 Refer to the sections below for details on configuring the node for each operation.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Compare
 
 Configure this operation using these parameters:

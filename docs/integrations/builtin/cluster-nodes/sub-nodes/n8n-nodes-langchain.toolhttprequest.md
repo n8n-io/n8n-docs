@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # HTTP Request Tool node
 
-The HTTP Request tool works just like the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, but it's designed to be used with an AI agent as a tool to collect information from a website or API.
+The HTTP Request tool works just like the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, but it's designed to be used with an [AI agent](/glossary.md#ai-agent) as a tool to collect information from a website or API.
 
 On this page, you'll find a list of operations the HTTP Request node supports and links to more resources.
 

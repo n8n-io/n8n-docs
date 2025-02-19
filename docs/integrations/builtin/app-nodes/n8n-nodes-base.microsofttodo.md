@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Microsoft To Do node supports
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Linked Resource

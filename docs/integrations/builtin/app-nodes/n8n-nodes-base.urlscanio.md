@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the urlscan.io node supports and 
 Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Scan

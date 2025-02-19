@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Embeddings Google PaLM node
 
-Use the Embeddings Google PaLM node to generate embeddings for a given text.
+Use the Embeddings Google PaLM node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Google PaLM node, and links to more resources.
 

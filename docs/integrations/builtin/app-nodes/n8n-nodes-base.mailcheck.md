@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Mailcheck node supports and l
 Refer to [Mailcheck credentials](/integrations/builtin/credentials/mailcheck.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Email

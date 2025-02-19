@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the ClickUp node supports and lin
 Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Checklist

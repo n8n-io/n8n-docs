@@ -42,7 +42,7 @@ You can then access n8n by opening:
 
 ## Using alternate databases
 
-By default n8n uses SQLite to save credentials, past executions and workflows. n8n also supports PostgresDB configurable using environment variables as detailed below.
+By default n8n uses SQLite to save [credentials](/glossary.md#credential-n8n), past executions and workflows. n8n also supports PostgresDB configurable using environment variables as detailed below.
 
 It's important to still persist data in the `/home/node/.n8n` folder as it contains n8n user data and even more importantly the encryption key for credentials. It's also the name of the webhook when the n8n tunnel is used.
 

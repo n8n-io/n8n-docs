@@ -12,7 +12,7 @@ contentType: howto
 Available on all Cloud plans, and Enterprise self-hosted plans.
 ///
 
-You can share a credential directly with other users to use in their own workflows. Or share a credential in a project for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
+You can share a credential directly with other users to use in their own workflows. Or share a credential in a [project](/glossary.md#project-n8n) for all members of that project to use. Any users using a shared credential won't be able to view or edit the credential details.
 
 Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance.
 

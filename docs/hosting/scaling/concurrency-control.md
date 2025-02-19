@@ -21,7 +21,7 @@ export N8N_CONCURRENCY_PRODUCTION_LIMIT=20
 
 Keep in mind:
 
-- Concurrency control applies only to production executions: those started from a webhook or trigger node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
+- Concurrency control applies only to production executions: those started from a webhook or [trigger](/glossary.md#trigger-node-n8n) node. It doesn't apply to any other kinds, such as manual executions, sub-workflow executions, error executions, or started from CLI.
 - You can't retry queued executions. Cancelling or deleting a queued execution also removes it from the queue.
 - On instance startup, n8n resumes queued executions up to the concurrency limit and re-enqueues the rest.
 <!-- vale off -->

@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the WooCommerce node supports and
 Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Customer

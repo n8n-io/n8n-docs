@@ -8,7 +8,7 @@ contentType: overview
 Data is the information that n8n nodes receive and process. For basic usage of n8n you don't need to understand data structures and manipulation. However, it becomes important if you want to:
 
  - Create your own node
- - Write custom expressions
+ - Write custom [expressions](/glossary.md#expression-n8n)
  - Use the Function or Function Item node
 
 This section covers: 

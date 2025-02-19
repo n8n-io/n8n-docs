@@ -1004,6 +1004,7 @@ nav:
         - integrations/builtin/credentials/coda.md
         - integrations/builtin/credentials/cohere.md
         - integrations/builtin/credentials/contentful.md
+        - integrations/builtin/credentials/convertapi.md
         - integrations/builtin/credentials/convertkit.md
         - integrations/builtin/credentials/copper.md
         - integrations/builtin/credentials/cortex.md

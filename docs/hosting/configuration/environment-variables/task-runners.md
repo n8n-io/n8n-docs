@@ -14,10 +14,6 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-/// note | Experimental feature
-Task runners are currently in public beta testing and might contain undiscovered issues. We don't recommend using them with business critical workflows.
-///
-
 [Task runners](/hosting/configuration/task-runners.md) execute code defined by the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
 ## n8n instance environment variables

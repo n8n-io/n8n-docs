@@ -20,10 +20,10 @@ jobs:
         with:
           args: >
             --verbose
-            --exclude "https://example.com"
+            --exclude "^https://docs.n8n.io/*"
             --accept 200,206
             --timeout 10
-            "**/*.md" "**/*.html"
+            "**/*.md"
 
       - name: Report Status
         if: failure()

@@ -1,19 +1,28 @@
-name: Restore lychee cache
-id: restore-cache
-uses: actions/cache/restore@v4
-with:
-  path: .lycheecache
-  key: cache-lychee-${{ github.sha }}
-  restore-keys: cache-lychee-
+name: Lychee external linkcheck
+on:
+  push:
+    branches:
+      - main  # Adjust as needed
+  pull_request:
 
-name: Run lychee
-uses: lycheeverse/lychee-action@v2
-with:
-  args: "--base . --cache --max-cache-age 1d ."
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
 
-name: Save lychee cache
-uses: actions/cache/save@v4
-if: always()
-with:
-  path: .lycheecache
-  key: ${{ steps.restore-cache.outputs.cache-primary-key }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Lychee Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: >
+            --verbose
+            --exclude "https://example.com"
+            --accept 200,206
+            --timeout 10
+            "**/*.md" "**/*.html"
+
+      - name: Report Status
+        if: failure()
+        run: echo "❌ Broken links detected. Please fix them!"

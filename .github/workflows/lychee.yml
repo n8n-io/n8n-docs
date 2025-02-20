@@ -19,11 +19,7 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           args: >
-            --verbose
-            --exclude "^https://docs.n8n.io/*"
-            --accept 200,206
-            --timeout 10
-            "**/*.md"
+            --config lychee.toml
 
       - name: Report Status
         if: failure()

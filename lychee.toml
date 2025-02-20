@@ -99,7 +99,7 @@ exclude = [
   '^https://www\.linkedin\.com', 
   '^https://web\.archive\.org/web/',
   '^https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4',
-  '^https://docs.n8n.io'
+  '^https://docs.n8n.io/*'
   ]
 
 # Exclude these filesystem paths from getting checked.

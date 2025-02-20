@@ -1,0 +1,24 @@
+name: Lychee external linkcheck
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+  schedule:
+    - cron: "18 7 * * *"  
+  workflow_dispatch: 
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Lychee Link Checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --config lychee.toml ./docs
+
+      - name: Report Status
+        if: failure()
+        run: echo "❌ Broken links detected. Please fix them!"

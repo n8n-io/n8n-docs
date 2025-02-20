@@ -1,9 +1,5 @@
 name: Lychee external linkcheck
 on:
-  push:
-    branches:
-      - main  
-  pull_request:
   schedule:
     - cron: "18 7 * * *"  
   workflow_dispatch: 

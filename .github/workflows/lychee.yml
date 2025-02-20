@@ -14,12 +14,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      - run: |
+          ls -al
       - name: Run Lychee Link Checker
         uses: lycheeverse/lychee-action@v1
         with:
-          args: >
-            --config lychee.toml
+          args: --config lychee.toml
 
       - name: Report Status
         if: failure()

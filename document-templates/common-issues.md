@@ -27,7 +27,7 @@ priority: _priority-from-main-node_
 
 # _Name_ node common issues
 
-Here are some common errors and issues with the [_Name_ node](/integrations/builtin/_relativepathtonode_) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [_Name_ node](/integrations/builtin/_filepathtonode_.md) and steps to resolve or troubleshoot them.
 
 <!--
 Create a subheading for each error code, issue, or tip.

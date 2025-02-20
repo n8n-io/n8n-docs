@@ -12,7 +12,16 @@ The Loop Over Items node helps you loop through data.
 
 The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
 
-When the node execution completes, it combines all the data and returns it through the **done** output.
+When the node execution completes, it combines all of the processed data and returns it through the **done** output.
+
+## When to use the Loop Over Items node
+
+n8n automatically processes incoming items. Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](/flow-logic/looping.md) page.
+
+In particular, these two sections are of particular interest to the Loop Over Items node:
+
+* [Loop until all items are processed](/flow-logic/looping.md#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
+* [Node exceptions](/flow-logic/looping.md#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
 
 ## Node parameters
 
@@ -24,11 +33,15 @@ Enter the number of items to return with each call.
 
 ### Reset
 
-If turned on, the node will reset with the current input-data newly initialized with each loop.
+If turned on, the node will reset with the current input-data newly initialized with each loop. Use this when you want the Loop Over Items node to treat incoming data as a new set of data instead of a continuation of previous items.
 
-/// note | Check if you need this node
-n8n automatically processes incoming items. You may not need the Loop Over Items node in your workflow. To learn more about how n8n handles multiple items, refer to the documentation on [Looping in n8n](/flow-logic/looping.md).
+For example, you can use the Loop Over Items node with the reset option and an [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) to query a paginated service when you don't know how many pages you need in advance. The loop queries pages one at a time, performs any processing, and increments the page number. The loop reset ensures the loop recognizes each iteration as a new set of data. The If node evaluates an exit condition to decide whether to perform another iteration or not.
+
+/// warning | Include a valid termination condition
+For workflows like the example described above, it's critical to include a valid termination condition for the loop. If your termination condition never matches, your workflow execution will get stuck in an infinite loop.
 ///
+
+When enabled, you can adjust the reset conditions by switching the parameter representation from **Fixed** to **Expression**. The results of your expression evaluation determine when the node will reset item processing.
 
 ## Templates and examples
 
@@ -43,7 +56,9 @@ The example walks through building the workflow, but assumes you are already fam
 
 The final workflow looks like this:
 
-![A workflow with the Loop Over Items node](/_images/integrations/builtin/core-nodes/splitinbatches/workflow.png)
+[[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/rss-feed-example.json") ]]
+
+Copy the workflow file above and paste into your instance, or manually build it by following these steps:
 
 1. Add the manual trigger.
 2. Add the Code node.

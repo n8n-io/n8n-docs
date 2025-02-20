@@ -15,24 +15,24 @@ You can find more info on working with the docs project in the README: https://g
 
 ## n8n@<version-number>
 
-View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>){:target=_blank .external-link} for this version.<br />
+View the [commits](<url for GitHub's 'Comparing changes' view, comparing this release to the previous one>) for this version.<br />
 **Release date:** <yyyy-MM-dd>
 
 _One or two sentence summary of release._
 
-For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
 
 <!-- if this release contains breaking changes, include the breaking changes warning 
 
 /// warning | Breaking changes
-Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230){:target=_blank .external-link}.
+Please note that this version contains a breaking change. The minimum Node.js version is now v16. You can read more about it [here](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#02230).
 ///
 -->
 
 <!--  Explain the different versions. This note should go on both the latest and next versions, and be updated as the version status updates. For the next version, add: "Use the next version to try n8n's newest features, and to help test 
 
 ///  note  | <Latest/Next> version
-This is the <Latest/Next> version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+This is the <Latest/Next> version. n8n recommends using the latest version. The next version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 ///
 -->
 	

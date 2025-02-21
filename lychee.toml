@@ -101,7 +101,7 @@ exclude = [
   '^https://www\.notion\.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4',
   '^https://docs\.n8n\.io/.*',
   '^https://support\.discord\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
-  '^https://platform.openai.com/docs/.*',                # Actively blocks linkchecks
+  '^https://platform\.openai\.com/docs/.*',                # Actively blocks linkchecks
   '^https://segment\.com/docs/.*',                       # Actively blocks linkchecks
   '^https://support\.plivo\.com/hc/en-us/articles/.*',   # Actively blocks linkchecks
   '^https://support\.unleashedsoftware\.com/hc/en-us/articles/.*', # Actively blocks linkchecks

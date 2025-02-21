@@ -79,33 +79,18 @@ This expression:
 
 ### Example: Writing longer JavaScript
 
-An expression contains one line of JavaScript. This means you cannot do things like variable assignments or multiple standalone operations.
+You can do things like variable assignments or multiple statements in an expression, but you need to wrap your code using the syntax for an IIFE (Immediately Invoked Function Expression).
 
-To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression. 
-
-However, the first example isn't a valid n8n expression:
+The following code use the Luxon date and time library to find the time between two dates in months. We surround the code in both the handlebar brackets for an expression and the IIFE syntax.
 
 
 ```js
-// This example is split over multiple lines for readability
-// It's still invalid when formatted as a single line
-{{
-  function example() {
-    let end = DateTime.fromISO('2017-03-13');
-    let start = DateTime.fromISO('2017-02-13');
-    let diffInMonths = end.diff(start, 'months');
-    return diffInMonths.toObject();
-  }
-  example();
-}}
-```
-
-
-While the second example is valid:
-
-
-```js
-{{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
+{{(()=>{
+  let end = DateTime.fromISO('2017-03-13');
+  let start = DateTime.fromISO('2017-02-13');
+  let diffInMonths = end.diff(start, 'months');
+  return diffInMonths.toObject();
+})()}}
 ```
 
 ## Common issues

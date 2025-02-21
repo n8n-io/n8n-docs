@@ -9,6 +9,7 @@ no_progress = true
 
 # Path to summary output file.
 output = ".config.dummy.report.md"
+format = "markdown"
 
 #############################  Cache  ###############################
 
@@ -32,18 +33,18 @@ max_redirects = 5
 max_retries = 2
 
 # Maximum number of concurrent link checks.
-max_concurrency = 10
+max_concurrency = 5
 
 #############################  Requests  ############################
 
 # User agent to send with each request.
-user_agent = "curl/7.83. 1"
+user_agent = "lychee/0.18.1"
 
 # Website timeout from connect to response finished.
 timeout = 20
 
 # Minimum wait time in seconds between retries of failed requests.
-retry_wait_time = 2
+retry_wait_time = 10
 
 # Comma-separated list of accepted status codes for valid links.
 # Supported values are:
@@ -63,7 +64,7 @@ insecure = false
 scheme = ["https", "http"]
 
 # When links are available using HTTPS, treat HTTP links as errors.
-require_https = false
+require_https = true
 
 # Request method
 method = "get"
@@ -97,9 +98,15 @@ glob_ignore_case = false
 # Exclude URLs and mail addresses from checking (supports regex).
 exclude = [
   '^https://www\.linkedin\.com', 
-  '^https://web\.archive\.org/web/',
-  '^https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4',
-  '^https://docs.n8n.io/*'
+  '^https://www\.notion\.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4',
+  '^https://docs\.n8n\.io/.*',
+  '^https://support\.discord\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
+  '^https://platform\.openai\.com/docs/.*',                # Actively blocks linkchecks
+  '^https://segment\.com/docs/.*',                       # Actively blocks linkchecks
+  '^https://support\.plivo\.com/hc/en-us/articles/.*',   # Actively blocks linkchecks
+  '^https://support\.unleashedsoftware\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
+  '^https://github\.com/n8n-io/n8n/compare/.*', # We don't need to check these
+  '^https://github\.com/n8n-io/n8n/pull/.*',    # These are automated and likely valid
   ]
 
 # Exclude these filesystem paths from getting checked.

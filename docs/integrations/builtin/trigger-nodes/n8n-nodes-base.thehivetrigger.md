@@ -48,8 +48,8 @@ View [example workflows and related content](https://n8n.io/integrations/thehive
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](http://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
-* [Version 4](http://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}
+* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
+* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}
 
 
 ## Configure a webhook in TheHive

@@ -29,6 +29,7 @@ This page lists the deployment configuration options for your self-hosted n8n in
 | `N8N_PATH` | String | `/` | The path n8n deploys to. |
 | `N8N_HOST` | String | `localhost` | Host name n8n runs on. |
 | `N8N_PORT` | Number | `5678` | The HTTP port n8n runs on. |
+| `QUEUE_HEALTH_CHECK_PORT` | Number | `5678` | The HTTP port n8n worker instances run on in queue mode. |
 | `N8N_LISTEN_ADDRESS` | String | `0.0.0.0` | The IP address n8n should listen on. |
 | `N8N_PROTOCOL` | Enum string: `http`, `https` | `http` | The protocol used to reach n8n. |
 | `N8N_SSL_KEY` | String | - | The SSL key for HTTPS protocol. |

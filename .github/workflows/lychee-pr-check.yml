@@ -21,6 +21,9 @@ jobs:
         with:
           args: --config lychee.toml ${{ steps.changed-files.outputs.all_changed_files }}
       - name: Comment Broken Links
+        permissions:
+          contents: read
+          pull-requests: write
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           path: lychee/out.md

@@ -21,14 +21,10 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           args: --config lychee.toml ${{ steps.changed-files.outputs.all_changed_files }}
-        run: echo "report=$(cat lychee/out.md)" >> $GITHUB_OUTPUT
       - name: PR comment with file
         uses: thollander/actions-comment-pull-request@v3
         with:
-          message: ${{ steps.vars.outputs.lychee }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          file-path: lychee/out.md
       - name: Report Status
         if: failure()
         run: echo "❌ Broken links detected. Please fix them!"

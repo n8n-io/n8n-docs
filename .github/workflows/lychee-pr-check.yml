@@ -3,6 +3,8 @@ on:
   pull_request:
     branches:
       - main
+permissions:
+  pull-requests: write
 jobs:
   link-check:
     runs-on: ubuntu-latest
@@ -21,6 +23,8 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           path: lychee/out.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Report Status
         if: failure()

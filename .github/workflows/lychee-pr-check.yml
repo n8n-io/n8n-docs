@@ -1,0 +1,30 @@
+name: Lychee PR external linkcheck
+on:
+  pull_request:
+    branches:
+      - main
+permissions:  
+  contents: read 
+  pull-requests: write
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v45
+      - name: Run Lychee Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --config lychee.toml ${{ steps.changed-files.outputs.all_changed_files }}
+      - name: PR comment with file
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          file-path: lychee/out.md
+      - name: Report Status
+        if: failure()
+        run: echo "❌ Broken links detected. Please fix them!"

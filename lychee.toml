@@ -9,7 +9,7 @@ no_progress = true
 
 # Path to summary output file.
 output = ".config.dummy.report.md"
-format = "markdown"
+format = "Markdown"
 
 #############################  Cache  ###############################
 

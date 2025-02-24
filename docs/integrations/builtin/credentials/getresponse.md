@@ -35,8 +35,8 @@ To configure this credential, you'll need:
 
 To configure this credential, you'll need:
 
-- A **Client ID**: Generated when you [register your application](https://apidocs.getresponse.com/v3/oauth2){:target=_blank .external-link}.
-- A **Client Secret**: Generated when you [register your application](https://apidocs.getresponse.com/v3/oauth2){:target=_blank .external-link} as the **Client Secret Key**.
+- A **Client ID**: Generated when you [register your application](https://apidocs.getresponse.com/v3/authentication/oauth2){:target=_blank .external-link}.
+- A **Client Secret**: Generated when you [register your application](https://apidocs.getresponse.com/v3/authentication/oauth2){:target=_blank .external-link} as the **Client Secret Key**.
 
 When you register your application, copy the **OAuth Redirect URL** from n8n and add it as the **Redirect URL** in GetResponse.
 

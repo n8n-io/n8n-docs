@@ -7,7 +7,7 @@ contentType: tutorial
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
 
-* [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Server from the internet.
+* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Server from the internet.
 * [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
 
 --8<-- "_snippets/self-hosting/warning.md"

@@ -23,7 +23,7 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 - OAuth2
 
 /// note | API Key deprecation
-n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/docs/airtable-api-key-deprecation-notice){:target=_blank .external-link} as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
+n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines){:target=_blank .external-link} as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
 ///
 
 ## Related resources
@@ -49,7 +49,7 @@ To create your PAT:
 1. Select **Create token**.
 1. Airtable opens a modal with your token displayed. Copy this token and enter it in your n8n credential as the **Access Token**.
 
-Refer to Airtable's [Find/create PATs documentation](https://support.airtable.com/docs/creating-personal-access-tokens#understanding-the-basics-of-personal-access-tokens){:target=_blank .external-link} for more information.
+Refer to Airtable's [Find/create PATs documentation](https://support.airtable.com/v1/docs/creating-personal-access-tokens){:target=_blank .external-link} for more information.
 
 ## Using OAuth2
 

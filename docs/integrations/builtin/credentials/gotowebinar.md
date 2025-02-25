@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [GoToWebinar](https://gotowebinar.com/){:target=_blank .external-link} account with [Developer Center](https://developer.goto.com/){:target=_blank .external-link} access.
+Create a [GoToWebinar](https://www.goto.com/webinar){:target=_blank .external-link} account with [Developer Center](https://developer.goto.com/){:target=_blank .external-link} access.
 
 ## Supported authentication methods
 

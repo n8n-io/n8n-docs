@@ -25,7 +25,7 @@ Let's get the title of the latest n8n blog post:
 
 1. Use the **HTTP Request node** to make a GET request to the URL `https://blog.n8n.io/` (this endpoint requires no authentication).
 2. Connect an **HTML node** and configure it to extract the title of the first blog post on the page.
-	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.item-title  a` should help!
+	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.post .item-title  a` should help!
 
 ??? note "Show me the solution"
 
@@ -43,7 +43,7 @@ Let's get the title of the latest n8n blog post:
 		- **JSON Property**: data
 		- **Extraction Values**:
 			- **Key**: title
-			- **CSS Selector**: `.item-title  a`
+			- **CSS Selector**: `.post .item-title  a`
 			- **Return Value**: HTML
 
 	You can add more values to extract more data.

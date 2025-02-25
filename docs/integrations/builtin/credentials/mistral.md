@@ -17,7 +17,7 @@ You can use these credentials to authenticate the following nodes:
 
 <!-- vale off -->
 - Create a [Mistral](https://mistral.ai/){:target=_blank .external-link} La Plateforme account.
-- You must add payment information in **Workspace >** [**Billing**](https://console.mistral.ai/billing/){:target=_blank .external-link} and activate payments to enable API keys. Refer to [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} for more information.
+- You must add payment information in **Workspace >** [**Billing**](https://admin.mistral.ai/organization/billing){:target=_blank .external-link} and activate payments to enable API keys. Refer to [Account setup](https://docs.mistral.ai/getting-started/quickstart/#account-setup){:target=_blank .external-link} for more information.
 <!-- vale on -->
 
 ## Supported authentication methods
@@ -38,7 +38,7 @@ To configure this credential, you'll need:
 
 Once you've added payment information to your Mistral Cloud account:
 
-1. Sign in to your [Mistral account](https://console.mistral.ai/){:target=_blank .external-link}.
+1. Sign in to your [Mistral account](https://console.mistral.ai/home){:target=_blank .external-link}.
 2. Go to the **API Keys** page.
 3. Select **Create new key**.
 4. Copy the API key and enter it in your n8n credential.

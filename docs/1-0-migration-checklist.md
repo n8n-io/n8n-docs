@@ -79,7 +79,7 @@ Workflow executions may fail due to syntax or runtime errors in expressions, suc
 
 ### Mandatory owner account
 
-This change makes [User Management](/user-management/index.md) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](http://n8n.cloud/){:target=_blank .external link} or custom plans still varies depending on your subscription.
+This change makes [User Management](/user-management/index.md) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](https://n8n.cloud/){:target=_blank .external link} or custom plans still varies depending on your subscription.
 
 [PR #6362](https://github.com/n8n-io/n8n/pull/6362){:target=_blank .external link}
 

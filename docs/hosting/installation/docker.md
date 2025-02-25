@@ -36,7 +36,7 @@ docker volume create n8n_data
 docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-This command creates a volume to store persistant data, downloads the required n8n image, and starts your container, exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n_data`, to persist your data locally.
+This command creates a volume to store persistent data, downloads the required n8n image, and starts your container, exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n_data`, to persist your data locally.
 
 Once running, you can access n8n by opening:
 [http://localhost:5678](http://localhost:5678)
@@ -47,7 +47,7 @@ By default, n8n uses SQLite to save [credentials](/glossary.md#credential-n8n), 
 
 When using PostgreSQL, it's still important to persist the data stored in the `/home/node/.n8n` folder. This includes n8n user data and, even more importantly, the encryption key for credentials. It's also the name of the webhook when using the [n8n tunnel](#n8n-with-tunnel).
 
-If n8n can't find the `/home/node/.n8n` directory on startup, it automatically creates one. In this case, existing credentials saved with a different encryption key can't be used anymore.
+If n8n can't find the `/home/node/.n8n` directory on startup, it automatically creates one. In this case, all existing credentials that n8n saved with a different encryption key will no longer work.
 
 /// note | Keep in mind
 While persisting the `/home/node/.n8n` directory with PostgreSQL is the recommended best practice, it's not explicitly required. You can provide the encryption key by passing the [`N8N_ENCRYPTION_KEY` environment variable](/hosting/configuration/environment-variables/deployment.md) when starting your Docker container.
@@ -72,13 +72,13 @@ docker run -it --rm \
  docker.n8n.io/n8nio/n8n
 ```
 
-A complete `docker-compose` file for PostgreSQL can be found in the [n8n hosting repo](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres).
+You can find a complete `docker-compose` file for PostgreSQL in the [n8n hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres).
 
 ## Setting timezone
 
 To define the timezone n8n should use, you can set the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md). Schedule-oriented nodes, like the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) use this to determine the correct timezone.
 
-The timezone of the system can also be set separately. This controls what some scripts and commands like `date` return. The system timezone can be set using the `TZ` environment variable.
+You can set the system timezone, which controls what some scripts and commands like `date` return, using the `TZ` environment variable.
 
 This example sets the same timezone for both variables:
 

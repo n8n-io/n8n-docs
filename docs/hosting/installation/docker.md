@@ -11,6 +11,7 @@ contentType: tutorial
 * Easier setup for your preferred database.
 * Can avoid issues due to different operating systems, as Docker provides a consistent system.
 * Can avoid compatibility issues due to differences in operating systems and tools.
+* Makes migrating to new hosts or environments more straightforward.
 
 You can also use n8n in Docker with [Docker Compose](/hosting/installation/server-setups/docker-compose.md). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 

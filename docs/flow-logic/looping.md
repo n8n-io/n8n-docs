@@ -61,4 +61,5 @@ Nodes and operations where you need to design a loop into your workflow:
 * [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md) executes once for `insert`.
 * [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md):
 	* Info: this operation executes only once, regardless of the number of items in the incoming data.
+* [RSS Read](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md) executes once for the requested URL.
 * [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md) executes once for `insert` and `update`.

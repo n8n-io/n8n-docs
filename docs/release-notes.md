@@ -3334,8 +3334,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.2...n8n@1.9.0){
 
 This release contains new features, performance improvements, and bug fixes.
 
---8<-- "_snippets/code/tournament-notes.md"
-
 <div class="n8n-new-features" markdown>
 
 #### Tournament

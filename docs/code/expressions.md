@@ -5,8 +5,6 @@ contentType: howto
 
 # Expressions
 
---8<-- "_snippets/code/tournament-notes.md"
-
 Use [expressions](/glossary.md#expression-n8n) to set node parameters dynamically based on data from:
 
 - Previous nodes

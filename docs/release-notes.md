@@ -1734,7 +1734,7 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 [ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}  
 [Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}  
 [Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}  
-[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}  
+Mohammad Alsmadi 
 [Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}  
 [n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}  
 [pebosi](https://github.com/pebosi){:target=_blank .external-link}  
@@ -3323,8 +3323,6 @@ Read more:
 * This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
 * Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
-* If you want to take a look at the code, it's available on the [ai-beta](https://github.com/n8n-io/n8n/tree/ai-beta){:target=_blank .external-link} in the n8n repository. Note that it may move in the future.
-
 
 ## n8n@1.9.0
 

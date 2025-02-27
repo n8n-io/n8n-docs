@@ -30,7 +30,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_BULL_REDIS_DUALSTACK` | Boolean | `false` | Enable dual-stack support (IPv4 and IPv6) on Redis connections. |
 | `QUEUE_WORKER_TIMEOUT` (**deprecated**) | Number | `30` | **Deprecated** Use `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` instead.<br/><br/>How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
-| `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
+| `QUEUE_HEALTH_CHECK_PORT` | Number | 5678 | The port to serve health checks on, also the HTTP port n8n worker instances run on in queue mode. |
 | `QUEUE_WORKER_LOCK_DURATION` | Number | `30000` | How long (in ms) is the lease period for a worker to work on a message. |
 | `QUEUE_WORKER_LOCK_RENEW_TIME` | Number | `15000` | How frequently (in ms) should a worker renew the lease time. |
 | `QUEUE_WORKER_STALLED_INTERVAL` | Number | `30000` | How often should a worker check for stalled jobs (use 0 for never). |

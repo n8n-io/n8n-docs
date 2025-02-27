@@ -11,7 +11,7 @@ Expressions are a powerful feature implemented in all n8n nodes. They allow node
 - The workflow
 - Your n8n environment
 
-You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data fields into useful parameter values without having to resort to writing extensive extra code.
+You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data into useful parameter values without writing extensive extra code.
 
 n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
 

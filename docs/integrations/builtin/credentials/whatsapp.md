@@ -88,7 +88,7 @@ To configure this credential, you'll need:
 
 To retrieve these items, follow these steps:
 
-1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
+1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/).
 2. Select your Meta app.
 3. In the left-side menu, select **App settings** > **Basic**.
 4. Copy the **App ID** and enter it as the **Client ID** within the n8n credential.

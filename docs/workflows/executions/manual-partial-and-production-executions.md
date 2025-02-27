@@ -25,7 +25,7 @@ On future runs, instead of executing the pinned node, n8n will substitute the pi
 
 Clicking the **Test workflow** button at the bottom of the workflow in the **Editor** tab manually runs the entire workflow. You can also perform partial executions to run specific steps in your workflow. Partial executions are manual executions that only run a subset of your workflow nodes.
 
-To perform a partial execution, select a node, open its detail view, and select **Test step**. This executes the specific node and, if required, any preceding nodes required to fill in its input data. You can also temporarily disable specific nodes in the workflow chain to avoid interacting with those services while building.
+To perform a partial execution, select a node, open its detail view, and select **Test step**. This executes the specific node and any preceding nodes required to fill in its input data. You can also temporarily disable specific nodes in the workflow chain to avoid interacting with those services while building.
 
 In particular, partial executions are useful when updating the logic of a specific node since they allow you to re-execute the node with the same input data.
 

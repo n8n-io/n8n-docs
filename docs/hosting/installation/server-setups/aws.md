@@ -116,7 +116,7 @@ This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kube
 
 You can configure n8n settings and behaviors using environment variables.
 
-Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
+Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables/overview.md) for n8n environment variables details.
 
 ## Deployments
 

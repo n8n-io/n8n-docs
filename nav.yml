@@ -1,11 +1,13 @@
 nav:
   - Getting started:
-    - Getting started: index.md
-    - Get n8n:
+    - Welcome: index.md
+    - Hello World:
+      - Get n8n: manage-cloud/overview.md
+      - Your first workflow: try-it-out/longer-introduction.md
+      - Going deeper: learning-path.md
+    - Choose your n8n:
       - Choose your flavor: choose-n8n.md
       - Plan comparison: hosting/community-edition-features.md
-    - Set up n8n:
-      - Sign up for Cloud: manage-cloud/overview.md
       - Install self-hosted:
         - npm: hosting/installation/npm.md
         - Docker: hosting/installation/docker.md
@@ -19,9 +21,10 @@ nav:
           - Google Cloud: hosting/installation/server-setups/google-cloud.md
           - Docker Compose: hosting/installation/server-setups/docker-compose.md
         - Updating: hosting/installation/updating.md
-      - Install embed: embed/prerequisites.md
-    - Your first workflow: try-it-out/quickstart.md
-    - Going deeper: learning-path.md
+      - Install embeded: embed/prerequisites.md
+    - Help and community:
+      - Where to get help: help-community/help.md
+      - Contributing: help-community/contributing.md
   - Understanding n8n:
     - Components:
       - workflows/components/index.md
@@ -1282,8 +1285,6 @@ nav:
       - Pagination: api/pagination.md
       - Using the API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
-  - Help and community:
-    - Where to get help: help-community/help.md
-    - Contributing: help-community/contributing.md
+
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md

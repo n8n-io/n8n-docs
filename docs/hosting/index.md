@@ -25,7 +25,7 @@ See [Community edition features](/hosting/community-edition-features.md) for a l
 
 	Learn how to configure n8n with environment variables.
 
-	[:octicons-arrow-right-24: Environment Variables](/hosting/configuration/environment-variables/index.md)
+	[:octicons-arrow-right-24: Environment Variables](/hosting/configuration/environment-variables/overview.md)
 
 - __Users and authentication__
 

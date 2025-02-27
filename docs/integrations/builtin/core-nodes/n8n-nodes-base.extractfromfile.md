@@ -8,7 +8,7 @@ priority: high
 
 # Extract From File
 
-A common pattern in n8n workflows is to receive a file, either from and [HTTP Request node][] (for files you are fetching from a website), a [Webhook Node][] (for files which are sent to your workflow from elsewhere) or from a local source. Data obtained in this way is usually in a binary format, for example a spreadsheet or PDF.
+A common pattern in n8n workflows is to receive a file, either from and [HTTP Request node][] (for files you are fetching from a website), a [Webhook Node][] (for files which are sent to your workflow from elsewhere), or from a local source. Data obtained in this way is often in a binary format, for example a spreadsheet or PDF.
 
 The Extract From File node extracts data from a binary format file and converts it to JSON, which can then be easily manipulated by the rest of your workflow.
 

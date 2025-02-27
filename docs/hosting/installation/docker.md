@@ -104,6 +104,12 @@ To update n8n, in Docker Desktop, navigate to the **Images** tab and select **Pu
 You can also use the command line to pull the latest, or a specific version:
 
 ```sh
+# Switch to the docker user
+su - docker
+
+# Navigate to the n8n-caddy folder
+cd n8n-caddy-docker
+
 # Pull latest (stable) version
 docker pull docker.n8n.io/n8nio/n8n
 

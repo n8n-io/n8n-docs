@@ -69,13 +69,9 @@ To generate an access token, create a Meta app with WhatsApp as the product. To 
 1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
 2. Select your Meta app.
 3. In the left-side menu, select **WhatsApp** > **API Setup**.
-4. Select **Generate access token**.
+4. Select **Generate access token** and confirm the access you want to grant.
 5. Copy the **Access token** and add it to n8n as the **Access Token**.
-6. Visit the [Facebook Business site](https://business.facebook.com).
-7. Select your Facebook business portfolio.
-8. Select **Settings**.
-9. Select **Business portfolio info**.
-6. Copy the **Business portfolio ID** and add it to n8n as the **Business Account ID**.
+6. Copy the **WhatsApp Business Account ID** and add it to n8n as the **Business Account ID**.
 
 Refer to [Test Business Messaging on WhatsApp](https://developers.facebook.com/docs/whatsapp/solution-providers/become-a-tech-provider-legacy-flow#step-4--test-business-messaging-on-whatsapp) for more information on the above steps.
 

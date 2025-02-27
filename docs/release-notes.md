@@ -41,6 +41,8 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.3...n8n@1.80.4
 
 This release contains a bug fix.
 
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.81.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.81.1){:target=_blank .external-link} for this version.<br />
@@ -51,7 +53,6 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 ///
 
 This release contains bug fixes.
-
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

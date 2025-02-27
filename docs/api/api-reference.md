@@ -24,7 +24,7 @@ contentType: reference
     },
     "sidebar": {
       "backgroundColor": "#eaeaea",
-      "width": "280px",
+      "width": "280px"
     }
   }' />
 <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"> </script>

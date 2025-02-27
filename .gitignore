@@ -13,6 +13,7 @@ venv
 env
 site
 __pycache__/
+n8ndocs
 
 ## Ignore pyenv configuration
 .python-version

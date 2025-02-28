@@ -15,12 +15,12 @@ You can use these credentials to authenticate the following nodes:
 
 ## Requirements
 
-To create credentials for WhatsApp, you need the following Meta assets. Each of the supported authentication methods will walk you through setting these up:
+To create credentials for WhatsApp, you need the following Meta assets:
 
 - A [Meta developer](https://developers.facebook.com/docs/development/register) account: A developer account allows you to create and manage Meta apps, including WhatsApp integrations.
 ??? note "Set up a Meta developer account"
 	1. Visit the [Facebook Developers site](https://developers.facebook.com).
-	2. Click **Getting Started** in the upper-right corner.
+	2. Click **Getting Started** in the upper-right corner (if the link says **My Apps**, you've already set up a developer account).
 	3. Agree to terms and conditions.
 	4. Provide a phone number for verification.
 	5. Select your occupation or role.
@@ -28,6 +28,7 @@ To create credentials for WhatsApp, you need the following Meta assets. Each of 
 ??? note "Set up a Meta business portfolio"
 	1. Visit the [Facebook Business site](https://business.facebook.com).
 	2. Select **Create an account**.
+		* If you already have a Facebook Business account and portfolio, but want a new portfolio, open the business portfolio selector in the left-side menu and select **Create a business portfolio**.
 	3. Enter a **Business portfolio name**.
 	4. Enter your **name**.
 	5. Enter a **business email**.
@@ -62,7 +63,7 @@ You need WhatsApp API key credentials to use the [WhatsApp Business Cloud](/inte
 To configure this credential, you'll need:
 
 - An API **Access Token**
-- A **Business Account ID**: Generated for all WhatsApp Business accounts. You can view yours in **Business Manager** > **Business Settings** > **Accounts** > **WhatsApp Business Accounts** and view your account details, or copy it from the Meta app you create.
+- A **Business Account ID**
 
 To generate an access token, create a Meta app with WhatsApp as the product. To create the app:
 

@@ -65,7 +65,7 @@ To configure this credential, you'll need:
 - An API **Access Token**
 - A **Business Account ID**
 
-To generate an access token, create a Meta app with WhatsApp as the product. To create the app:
+To generate an access token, follow these steps:
 
 1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/).
 2. Select your Meta app.
@@ -84,8 +84,8 @@ You need WhatsApp OAuth2 credentials to use the [WhatsApp Trigger](/integrations
 
 To configure this credential, you'll need:
 
-- A **Client ID**: Generated once you create a Meta app with WhatsApp as the product.
-- A **Client Secret**: Generated once you create a Meta app with WhatsApp as the product.
+- A **Client ID**
+- A **Client Secret**
 
 To retrieve these items, follow these steps:
 

@@ -19,7 +19,7 @@ This guide shows you how to automate a task using a [workflow](/glossary.md#work
 
 ## Step one: Sign up for n8n
 
---8<-- "_snippets/try-it-out/install-run-n8n.md"
+This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is available for new users. If you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
 
 ## Step two: New workflow
 

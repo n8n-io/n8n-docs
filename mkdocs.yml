@@ -897,6 +897,7 @@ nav:
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
+          - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
         - Sub-nodes:
           - integrations/builtin/cluster-nodes/sub-nodes/index.md
           - Default Data Loader: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
@@ -1120,6 +1121,7 @@ nav:
         - integrations/builtin/credentials/microsoftazuremonitor.md
         - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
+        - integrations/builtin/credentials/milvus.md
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md

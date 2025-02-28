@@ -137,6 +137,7 @@ Meraki
 Metabase
 [Mm]iddleware
 [Mm]illicore
+Milvus
 Mindee
 [Mm]inimum
 Mocean

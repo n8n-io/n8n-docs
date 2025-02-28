@@ -24,8 +24,6 @@ jobs:
       - name: PR comment with file
         uses: thollander/actions-comment-pull-request@v3
         with:
-          message: |
-            _(execution **${{ github.run_id }}** / attempt **${{ github.run_attempt }}**)_
           file-path: lychee/out.md
           comment-tag: execution
           mode: recreate

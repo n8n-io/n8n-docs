@@ -67,7 +67,7 @@ To configure this credential, you'll need:
 
 To generate an access token, create a Meta app with WhatsApp as the product. To create the app:
 
-1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/)
+1. Visit the [Meta for Developers Apps dashboard](https://developers.facebook.com/apps/).
 2. Select your Meta app.
 3. In the left-side menu, select **WhatsApp** > **API Setup**.
 4. Select **Generate access token** and confirm the access you want to grant.

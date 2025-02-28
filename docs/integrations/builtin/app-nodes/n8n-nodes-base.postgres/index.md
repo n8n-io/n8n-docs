@@ -236,7 +236,7 @@ Then in **Query Parameters**, provide the field values to use. You can provide f
 
 ```js
 // users is an example table name
-users, {{ $json.email }} 
+{{ [ 'users', $json.email ] }} 
 ```
 
 ## Common issues

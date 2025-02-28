@@ -101,12 +101,26 @@ exclude = [
   '^https://www\.notion\.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4',
   '^https://docs\.n8n\.io/.*',
   '^https://support\.discord\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
-  '^https://platform\.openai\.com/docs/.*',                # Actively blocks linkchecks
+  '^https://platform\.openai\.com/.*',                   # Actively blocks linkchecks
   '^https://segment\.com/docs/.*',                       # Actively blocks linkchecks
   '^https://support\.plivo\.com/hc/en-us/articles/.*',   # Actively blocks linkchecks
+  '^https://platform\.deepseek\.com/.*',                 # Actively blocks linkchecks
   '^https://support\.unleashedsoftware\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
-  '^https://github\.com/n8n-io/n8n/compare/.*', # We don't need to check these
-  '^https://github\.com/n8n-io/n8n/pull/.*',    # These are automated and likely valid
+  '^https://reddit\.com/.*',                             # Actively blocks linkchecks
+  '^https://www\.mysql\.com/.*',                         # Actively blocks linkchecks
+  '^https://dev\.mysql\.com/.*',
+  '^https://help\.activecampaign\.com/hc/en-us/.*',
+  '^https://support\.ouraring\.com/hc/en-us/.*',
+  '^https://help\.mailgun\.com/hc/en-us/.*',
+  '^https://documentation\.mailjet\.com/hc/en-us/.*',
+  '^https://github\.com/n8n-io/n8n/compare/.*',          # We don't need to check these
+  '^https://github\.com/n8n-io/n8n/pull/.*',             # These are automated and likely valid
+  '^https://app\.pipedrive\.com/settings/api',           # Auth check
+  '^https://www\.convertapi\.com/a/signin',
+  '^https://app\.asana\.com/0/my-apps',
+  '^https://support\.onfleet\.com/hc/en-us/.*',
+  '^https://help\.shopify\.com/.*',
+  '^https://www\.goto\.com/.*',
   ]
 
 # Exclude these filesystem paths from getting checked.

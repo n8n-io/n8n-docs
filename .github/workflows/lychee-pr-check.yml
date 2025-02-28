@@ -26,6 +26,7 @@ jobs:
         with:
           file-path: lychee/out.md
           comment-tag: execution
+
       - name: Report Status
         if: failure()
         run: echo "❌ Broken links detected. Please fix them!"

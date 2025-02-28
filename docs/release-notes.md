@@ -35,14 +35,92 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.80.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.4...n8n@1.80.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-28
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.80.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.3...n8n@1.80.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-27
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.81.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.81.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-27
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.81.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.0...n8n@1.81.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-24
+
+
+
+This release contains bug fixes, a core update, editor improvements, and a node update.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.80.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.2...n8n@1.80.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-21
+
+
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.79.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.79.3...n8n@1.79.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-21
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.80.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.1...n8n@1.80.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-21
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains a bug fix.
 
@@ -53,9 +131,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.79.2...n8n@1.79.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-21
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains a bug fix.
 
@@ -1700,7 +1776,7 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 [ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}  
 [Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}  
 [Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}  
-[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}  
+Mohammad Alsmadi 
 [Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}  
 [n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}  
 [pebosi](https://github.com/pebosi){:target=_blank .external-link}  
@@ -3289,8 +3365,6 @@ Read more:
 * This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
 * Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
-* If you want to take a look at the code, it's available on the [ai-beta](https://github.com/n8n-io/n8n/tree/ai-beta){:target=_blank .external-link} in the n8n repository. Note that it may move in the future.
-
 
 ## n8n@1.9.0
 
@@ -3299,8 +3373,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.2...n8n@1.9.0){
 
 
 This release contains new features, performance improvements, and bug fixes.
-
---8<-- "_snippets/code/tournament-notes.md"
 
 <div class="n8n-new-features" markdown>
 

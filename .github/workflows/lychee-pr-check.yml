@@ -24,6 +24,7 @@ jobs:
       - name: PR comment with file
         uses: thollander/actions-comment-pull-request@v3
         with:
+          : # deletes any previous comment when creating output
           file-path: lychee/out.md
           comment-tag: execution
           mode: recreate

@@ -18,7 +18,7 @@ Refer to [Google Analytics credentials](/integrations/builtin/credentials/google
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
-v
+
 ## Operations
 
 * Report

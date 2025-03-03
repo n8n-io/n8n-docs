@@ -152,7 +152,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
 
-1. From the panel which appears, select "Window Buffer Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
+1. From the panel which appears, select "Simple Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
 
 1. Repeat the exercise of having a conversation above, and see that the AI Agent now remembers your name.
 

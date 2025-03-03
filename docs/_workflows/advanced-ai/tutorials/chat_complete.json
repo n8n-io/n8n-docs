@@ -61,7 +61,7 @@
           180
         ],
         "id": "afbab05c-1e87-4f7a-9d66-c86f9db1ec64",
-        "name": "Window Buffer Memory"
+        "name": "Simple Memory"
       }
     ],
     "pinData": {},
@@ -88,7 +88,7 @@
           ]
         ]
       },
-      "Window Buffer Memory": {
+      "Simple Memory": {
         "ai_memory": [
           [
             {

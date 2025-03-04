@@ -35,6 +35,23 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.82.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.82.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-03
+
+This release contains core updates, editor updates, new nodes, node updates, new credentials, credential updates, and bug fixes.
+
+### Contributors
+
+[Rostammahabadi](https://github.com/Rostammahabadi){:target=_blank .external-link}  
+[Lanhild](https://github.com/Lanhild){:target=_blank .external-link}  
+[matthiez](https://github.com/matthiez){:target=_blank .external-link}  
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+[adina-hub](https://github.com/adina-hub){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.81.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.3...n8n@1.81.4){:target=_blank .external-link} for this version.<br />

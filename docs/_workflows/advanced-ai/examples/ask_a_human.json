@@ -4,7 +4,7 @@
     {
       "parameters": {},
       "id": "a60c8572-56c1-4bf3-8352-a6419a475887",
-      "name": "Window Buffer Memory",
+      "name": "Simple Memory",
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.1,
       "position": [
@@ -280,7 +280,7 @@
   ],
   "pinData": {},
   "connections": {
-    "Window Buffer Memory": {
+    "Simple Memory": {
       "ai_memory": [
         [
           {

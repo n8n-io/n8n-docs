@@ -15,7 +15,7 @@ On this page, you'll find the node parameters for the In Memory Vector Store nod
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 /// note | This node is different to AI memory nodes
-The in-memory storage described here is different to the AI memory nodes such as [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md).
+The in-memory storage described here is different to the AI memory nodes such as [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md).
 
 This node creates a [vector database](/glossary.md#ai-vector-store) in the app memory.
 ///

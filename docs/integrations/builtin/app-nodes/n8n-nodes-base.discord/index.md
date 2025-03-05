@@ -37,7 +37,7 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for
 - Member
 	- Get Many
 	- Role Add
-	- Roll Remove
+	- Role Remove
 
 <!-- vale on -->
 

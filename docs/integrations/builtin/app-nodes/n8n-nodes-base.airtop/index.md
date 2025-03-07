@@ -12,7 +12,7 @@ When you add this node to mkdocs.yml in the navigation, prepend it with the `_Na
 -->
 # Airtop node
 
-Use the Airtop node to automate work in Airtop and integrate Airtop with other applications. n8n has built-in support for a wide range of Airtop features, which includes interacting, scraping, and querying web pages.
+Use the Airtop node to automate work in Airtop, and integrate Airtop with other applications. n8n has built-in support for a wide range of Airtop features, enabling you to control a cloud-based web browser for tasks like querying, scraping, and interacting with web pages.
 
 On this page, you'll find a list of operations the Airtop node supports, and links to more resources.
 
@@ -52,17 +52,19 @@ You can find authentication information for this node [here](/integrations/built
 
 Refer to [Airtop's documentation](https://docs.airtop.ai/){:target=_blank .external-link} for more information about the service.
 
+Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance or to create a feature request.
+
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Node reference
 
 ### Create a session and window
 
-Create a session to get a Session ID, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
+Create an Airtop browser session to get a Session ID, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
 
 ### Content extraction
 
-Extract content using these operations:
+Extract content from a web browser using these operations:
 
 - Query page: Extract information from the current window
 - Query page with pagination: Extract information from pages with pagination or infinite scrolling

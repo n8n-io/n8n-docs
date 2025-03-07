@@ -24,22 +24,22 @@ You can find authentication information for this node [here](/integrations/built
 ## Operations
 
 * Session
-  * Create session
-  * Save profile on termination
-  * Terminate session
+    * Create session
+    * Save profile on termination
+    * Terminate session
 * Window
-  * Create a new browser window
-  * Load URL
-  * Take screenshot
-  * Close window
+    * Create a new browser window
+    * Load URL
+    * Take screenshot
+    * Close window
 * Extraction
-  * Query page
-  * Query page with pagination
-  * Smart scrape page
+    * Query page
+    * Query page with pagination
+    * Smart scrape page
 * Interaction
-  * Click an element
-  * Hover on an element
-  * Type
+    * Click an element
+    * Hover on an element
+    * Type
 
 
 ## Templates and examples

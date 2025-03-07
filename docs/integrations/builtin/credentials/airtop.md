@@ -19,7 +19,6 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites
 
 * Create an [Airtop](https://portal.airtop.ai/sign-up){:target=_blank .external-link} account
-* Generate an API Key [here](https://portal.airtop.ai/api-keys){:target=_blank .external-link}
 
 ## Supported authentication methods
 

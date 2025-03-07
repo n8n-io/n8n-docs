@@ -17,7 +17,7 @@ Use the Airtop node to automate work in Airtop, and integrate Airtop with other 
 On this page, you'll find a list of operations the Airtop node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/airtop.md).
+Refer to [Airtop credentials](/integrations/builtin/credentials/airtop.md) for guidance on setting up authentication.
 ///
 
 

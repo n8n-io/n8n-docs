@@ -78,7 +78,4 @@ Click, hover, or type on elements by describing the element you want to interact
 
 ### Terminate session
 
-End your session to save resources. Either:
-
-- Use the **Terminate Session** operation when done
-- Set an _Idle Timeout_ of 5-10 minutes in the _Create Session_ operation
+End your session to save resources. Sessions are automatically terminated based on the _Idle Timeout_ in the _Create Session_ operation or can be manually terminated using the **Terminate Session** operation.

@@ -52,9 +52,9 @@ Refer to [Airtop credentials](/integrations/builtin/credentials/airtop.md) for g
 
 Refer to [Airtop's documentation](https://docs.airtop.ai/){:target=_blank .external-link} for more information about the service.
 
-Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance or to create a feature request.
-
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance or to create a feature request.
 
 ## Node reference
 
@@ -78,4 +78,4 @@ Click, hover, or type on elements by describing the element you want to interact
 
 ### Terminate session
 
-End your session to save resources. Sessions are automatically terminated based on the _Idle Timeout_ in the _Create Session_ operation or can be manually terminated using the **Terminate Session** operation.
+End your session to save resources. Sessions are automatically terminated based on the _Idle Timeout_ in the **Create Session** operation or can be manually terminated using the **Terminate Session** operation.

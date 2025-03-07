@@ -76,8 +76,13 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 1. From Google's **OAuth client created** modal, copy the **Client ID**. Enter this in your n8n credential.
 2. From the same Google modal, copy the **Client Secret**. Enter this in your n8n credential.
-2. In n8n, select **Sign in with Google** to complete your Google authentication.
-3. **Save** your new credentials.
+3. In n8n, select **Grant Type** to Authorization Code.
+4. In the **Authorization URL** field, enter: https://accounts.google.com/o/oauth2/v2/auth
+5. In the **Access Token URL** field, enter: https://oauth2.googleapis.com/token
+6. In the **Auth URI Query Parameters** field, enter: access_type=offline
+7. In the **Authentication** field, select Header. 
+8. In n8n, select **Sign in with Google** to complete your Google authentication.
+9. **Save** your new credentials.
 
 ## Video
 

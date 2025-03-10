@@ -63,7 +63,7 @@ Moving workflows or credentials removes all existing sharing.
 1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
 
 	/// info | Moving workflows with credentials
-	When moving a workflow with credentials, you can choose to share credentials that you own with the new project or user so that it executes the same in its new context. n8n will note any credentials that can't be moved (credentials that have been shared with you, that you don't own).
+	When moving a workflow with credentials you have permission to share, you can choose to share the credentials as well. This ensures that the workflow continues to have access to the credentials it needs to execute. n8n will note any credentials that can't be moved (credentials you don't have permission to share).
 	///
 
 1. Select the project or user you want to move to.

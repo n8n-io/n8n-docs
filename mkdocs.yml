@@ -460,6 +460,8 @@ nav:
         - Airtable:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
+        - Airtop:
+          - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop/index.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
@@ -968,6 +970,7 @@ nav:
         - integrations/builtin/credentials/affinity.md
         - integrations/builtin/credentials/agilecrm.md
         - integrations/builtin/credentials/airtable.md
+        - integrations/builtin/credentials/airtop.md
         - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
         - integrations/builtin/credentials/anthropic.md

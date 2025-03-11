@@ -477,6 +477,7 @@ nav:
         - AWS SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
         - AWS Textract: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
         - AWS Transcribe: integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md
+        - Azure Storage: integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md
         - BambooHR: integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md
         - Bannerbear: integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md
         - Baserow: integrations/builtin/app-nodes/n8n-nodes-base.baserow.md
@@ -891,7 +892,7 @@ nav:
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
-          - In-Memory Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
@@ -978,6 +979,7 @@ nav:
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
+        - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
         - integrations/builtin/credentials/baserow.md

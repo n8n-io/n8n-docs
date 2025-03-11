@@ -55,7 +55,7 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
 ///
 
-Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
+Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.
 
 ```bash
 export EXECUTIONS_MODE=queue
@@ -99,7 +99,7 @@ Now you can start your n8n instance and it will connect to your Redis instance.
 
 ### Start workers
 
-You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it's connected to your Redis instance and the n8n database.
+You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it's connected to your Redis instance and the n8n database. You will also need to make sure that `EXECUTIONS_MODE` is set to `queue`.
 
 Start worker processes by running the following command from the root directory:
 
@@ -110,7 +110,7 @@ Start worker processes by running the following command from the root directory:
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n worker
+docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n worker
 ```
 
 You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
@@ -164,7 +164,7 @@ You can start the webhook processor by executing the following command from the 
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n webhook
+docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n webhook
 ```
 
 ### Configure webhook URL

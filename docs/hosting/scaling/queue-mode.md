@@ -99,7 +99,7 @@ Now you can start your n8n instance and it will connect to your Redis instance.
 
 ### Start workers
 
-You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it's connected to your Redis instance and the n8n database. You will also need to make sure that `EXECUTIONS_MODE` is set to `queue`.
+You will need to start worker processes to allow n8n to execute workflows. If you want to host workers on a separate machine, install n8n on the machine and make sure that it's connected to your Redis instance and the n8n database.
 
 Start worker processes by running the following command from the root directory:
 
@@ -110,7 +110,7 @@ Start worker processes by running the following command from the root directory:
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n worker
+docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n worker
 ```
 
 You can set up multiple worker processes. Make sure that all the worker processes have access to Redis and the n8n database.
@@ -146,7 +146,7 @@ If you want to migrate data from one database to another, you can use the Export
 ## Webhook processors
 
 /// note | Keep in mind
-Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+Webhook processes rely on Redis and need the `EXECUTIONS_MODE` environment variable set too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
 ///
 
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.

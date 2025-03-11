@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # Azure Storage node
 
-Use the Azure Storage node to automate work in Azure Storage and integrate Azure Storage with other applications. n8n has built-in support for a wide range of Azure Storage features, which includes creating, getting, and deleting blobs and containers.
+The Azure Storage node has built-in support for a wide range of features, which includes creating, getting, and deleting blobs and containers. Use this node to automate work within the Azure Storage service or integrate it with other services in your workflow.
 
 On this page, you'll find a list of operations the Azure Storage node supports, and links to more resources.
 
@@ -37,6 +37,6 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [Azure Storage's documentation](https://learn.microsoft.com/en-us/rest/api/storageservices/) for more information about the service.
+Refer to [Microsoft's Azure Storage documentation](https://learn.microsoft.com/en-us/rest/api/storageservices/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

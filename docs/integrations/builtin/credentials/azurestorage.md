@@ -72,8 +72,8 @@ Refer to Microsoft's [Add credentials](https://learn.microsoft.com/en-us/graph/a
 
 To configure this credential, you'll need:
 
-* An **Account**: The name of your Azure storage account.
-* A **Key**: A shared key for your Azure storage account. Select **Security + networking** and then **Access keys**. You can use either of the two account keys for this purpose.
+* An **Account**: The name of your Azure Storage account.
+* A **Key**: A shared key for your Azure Storage account. Select **Security + networking** and then **Access keys**. You can use either of the two account keys for this purpose.
 
 Refer to [Manage storage account access keys | Microsoft](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage) for more detailed steps.
 

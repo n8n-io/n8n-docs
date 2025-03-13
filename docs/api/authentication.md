@@ -8,6 +8,10 @@ contentType: howto
 
 n8n uses API keys to authenticate API calls.
 
+/// info | Feature availability The n8n API isn't available during the free trial. Please upgrade to access this feature.
+///
+
+
 ## Create an API key
 
 1. Log in to n8n.
@@ -15,12 +19,6 @@ n8n uses API keys to authenticate API calls.
 3. Select **Create an API key**.
 4. Copy **My API Key** and use this key to authenticate your calls.
 
-## Delete an API key
-
-1. Log in to n8n.
-2. Go to **Settings** > **n8n API**.
-3. Select **Delete** next to the key you want to delete.
-4. Confirm the delete by selecting **Delete Forever**.
 
 ## Call the API using your key
 
@@ -41,3 +39,10 @@ curl -X 'GET' \
   -H 'accept: application/json' \
   -H 'X-N8N-API-KEY: <your-api-key>'
 ```
+
+## Delete an API key
+
+1. Log in to n8n.
+2. Go to **Settings** > **n8n API**.
+3. Select **Delete** next to the key you want to delete.
+4. Confirm the delete by selecting **Delete Forever**.

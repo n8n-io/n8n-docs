@@ -5,7 +5,7 @@ contentType: tutorial
 
 # Designing the Workflow
 
-Now that we know what Nathan wants to automate, let's consider the steps he needs to take to achieve this:
+Now that we know what Nathan wants to automate, let's consider the steps he needs to take to achieve his goals:
 
 1. Get the relevant data (order id, order status, order value, employee name) from the data warehouse
 2. Filter the orders by their status (Processing or Booked)
@@ -15,6 +15,7 @@ Now that we know what Nathan wants to automate, let's consider the steps he need
 6. Schedule this workflow to run every Monday morning
 
 Nathan's workflow involves sending data from the company's data warehouse to two external services:
+
 - Discord
 - Airtable
 

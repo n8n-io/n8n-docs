@@ -7,12 +7,12 @@ contentType: tutorial
 
 In this step of the workflow, you will learn how to send messages to a Discord channel using the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md).
 
-Now that you have a calculated summary of the booked orders, you need to notify Nathan's team in their Discord channel. For this workflow, you will send messages to the [n8n server](https://discord.gg/G98WXzsjky){:target="_blank" .external} on Discord.
+Now that you have a calculated summary of the booked orders, you need to notify Nathan's team in their Discord channel. For this workflow, you will send messages to the [n8n server](https://discord.gg/G98WXzsjky) on Discord.
 
 Before you begin the steps below, use the link above to connect to the n8n server on Discord. Be sure you can access the `#course-level-1` channel.
 
-/// note | Communication nodes
-You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md){:target="_blank" .external} and [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md){:target="_blank" .external}.
+/// note | Communication app nodes
+You can replace the Discord node with another communication app. For example, n8n also has nodes for [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) and [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md).
 ///
 
 In your workflow, add a Discord node connected to the Code node.
@@ -29,7 +29,9 @@ In the Discord node window, configure these parameters:
 - **Message**:
     - Select the **Expression** tab on the right side of the Message field.
     - Copy the text below and paste it into the **Expression** window, or construct it manually using the **Expression Editor**.
-        - `This week we've {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}`
+		```
+		This week we've {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}
+		```
 
         /// note | Constructing your own message
         To add the Unique ID portion of the statement, you'll need to expand **Nodes** > **HTTP Request** > **Parameters** > **headerParameters** > **parameters** > **[Item: 0]** and select the **value**.

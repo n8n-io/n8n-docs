@@ -33,8 +33,6 @@ n8n uses [semantic versioning](https://semver.org/){:target=_blank .external-lin
 You can find the release notes for older versions of n8n [here](/release-notes/0-x.md)
 ///
 
-
-
 ## n8n@1.83.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.0...n8n@1.83.1){:target=_blank .external-link} for this version.<br />
@@ -48,13 +46,10 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
 ## n8n@1.83.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.0...n8n@1.83.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-12
-
-
 
 This release contains bug fixes and an editor update.
 
@@ -83,22 +78,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.0...n8n@1.82.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-04
 
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.82.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.82.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-03
-
-
 
 This release contains core updates, editor updates, new nodes, node updates, new credentials, credential updates, and bug fixes.
 
@@ -117,10 +104,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.3...n8n@1.81.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-03
 
-
-
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -134,13 +117,10 @@ This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.81.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.1...n8n@1.81.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-28
-
 
 
 This release contains bug fixes.

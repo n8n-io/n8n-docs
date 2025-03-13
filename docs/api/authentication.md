@@ -8,7 +8,8 @@ contentType: howto
 
 n8n uses API keys to authenticate API calls.
 
-/// info | Feature availability The n8n API isn't available during the free trial. Please upgrade to access this feature.
+/// info | Feature availability 
+The n8n API isn't available during the free trial. Please upgrade to access this feature.
 ///
 
 

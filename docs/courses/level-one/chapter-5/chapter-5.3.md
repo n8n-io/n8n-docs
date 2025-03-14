@@ -12,7 +12,7 @@ To insert only processing orders into Airtable we need to filter our data by `or
 This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md), which splits a workflow conditionally based on comparison operations.
 
 /// note | If vs. Switch
-If you need to filter data on more than booleans (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md). The Switch node is similar to the If node, but supports multiple output connectors.
+If you need to filter data on more than boolean values (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md). The Switch node is similar to the If node, but supports multiple output connectors.
 ///
 
 ## Remove the connection to the Airtable node
@@ -60,7 +60,7 @@ Your results should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-3-if-node-output.png" alt="If node output" style="width:100%"><figcaption align = "center"><i>If node output</i></figcaption></figure>
 
-Note that the orders with `orderStatus` equal to `processing` should show for the **True Branch** output, while the orders with `orderStatus` equal to `booked` should show in the **False Branch** output.
+Note that the orders with a `processing` order status should show for the **True Branch** output, while the orders with a `booked` order status should show in the **False Branch** output.
 
 Close the If node detail view when you're finished.
 
@@ -76,7 +76,7 @@ In this case, since the Airtable node is already on our canvas, select the **If 
 
 It's a good idea at this point to retest the Airtable node. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Test step**.
 
-Review your data in Airtable to be sure your workflow only added the correct orders (those with orderStatus of `processing`). There should be 14 records now instead of 30.
+Review your data in Airtable to be sure your workflow only added the correct orders (those with `orderStatus` of `processing`). There should be 14 records now instead of 30.
 
 At this stage, your workflow should look like this:
 

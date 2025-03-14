@@ -135,7 +135,7 @@ Here's our Hacker News output in JSON view:
 
 The node window displays more information about the node execution:
 
-- Next to the **Output** title, notice a small icon (this will be a green checkmark if the node executed successfully). Beside it is an info icon. If you hover on it, you'll get two more pieces of information that can provide insights into the performance of each individual node in a workflow:
+- Next to the **Output** title, notice a small icon (this will be a green checkmark if the node executed successfully). Beside it, there is an info icon. If you hover on it, you'll get two more pieces of information that can provide insights into the performance of each individual node in a workflow:
     - **Start Time**: When the node execution started.
     - **Execution Time**: How long it took for the node to return the results from the moment it started executing.
 - Just below the **Output** title, you'll notice another piece of information: **10 items**. This field displays the number of items (records) that the node request returned. In this example, it's expected to be 10, since this is the limit we set in step 2. But if you don't set a limit, it's useful to see how many records are actually returned.

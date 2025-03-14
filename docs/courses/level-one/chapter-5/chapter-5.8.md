@@ -53,8 +53,8 @@ In the **Workflow Settings** window you can configure the following settings:
 - **Save failed production executions**: If the Execution data of the workflow should be saved when it fails. Default is to save.
 - **Save successful production executions**: If the Execution data of the workflow should be saved when it succeeds. Default is to save.
 - **Save manual executions**: If executions started from the Editor UI should be saved. Default is to save.
-- **Save execution progress**: If the execution data of each node should be saved. If set to Save, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower. Default is not to save.
-- **Timeout Workflow**: Whether to cancel a workflow execution after a specific period of time. Default is not to timeout.
+- **Save execution progress**: If the execution data of each node should be saved. If set to Save, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower. Default is to not save.
+- **Timeout Workflow**: Whether to cancel a workflow execution after a specific period of time. Default is to not timeout.
 
 
 ## What's next?

@@ -50,7 +50,7 @@ In n8n, the data that's passed between nodes is an array of objects with the fol
 ```
 
 1. (required) Each item must contain a `json` property, but it can be an empty object like `{}`. Any kind of JSON data is allowed, so arrays and deeply nested data is fine.
-2. (optional) Binary data of item. Most items in n8n do not contain binary data.
+2. (optional) Binary data of item. Most items in n8n don't contain binary data.
 3. (required) Arbitrary key name for the binary data.
 4. (required) Base64-encoded binary data.
 5. (optional) Should set if possible.

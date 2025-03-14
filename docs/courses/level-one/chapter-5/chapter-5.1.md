@@ -9,6 +9,10 @@ contentType: tutorial
 
 In this part of the workflow, you will learn how to get data by making HTTP requests with the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node.
 
+After completing this section, your workflow will look like this:
+
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.1.json") ]]
+
 First, let's set the scene for building Nathan's workflow.
 
 ## Create new workflow

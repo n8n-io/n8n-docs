@@ -9,6 +9,10 @@ contentType: tutorial
 
 In this step of the workflow, you will learn how to filter data using conditional logic and how to use expressions in nodes using the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md).
 
+After this step, your workflow should look like this:
+
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.3.json") ]]
+
 To insert only processing orders into Airtable we need to filter our data by `orderStatus`. Basically, we want to tell the program that _if_ the `orderStatus` is processing, _then_ insert all records with this status into Airtable; _else_, for example, if the `orderStatus` isn't *processing*, calculate the sum of all orders with the other `orderStatus` (`booked`).
 
 This if-then-else command is conditional logic. In n8n workflows, you can add conditional logic with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md), which splits a workflow conditionally based on comparison operations.
@@ -82,7 +86,7 @@ Review your data in Airtable to be sure your workflow only added the correct ord
 
 At this stage, your workflow should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-3-workflow-with-if-node.png" alt="Workflow with the If node" style="width:100%"><figcaption align = "center"><i>Workflow with the If node</i></figcaption></figure>
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.3.json") ]]
 
 ## What's next?
 

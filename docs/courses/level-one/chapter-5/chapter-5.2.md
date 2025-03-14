@@ -15,7 +15,7 @@ You can replace the Airtable node with another spreadsheet app/service. For exam
 
 After this step, your workflow should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-workflow-with-airtable-node.png" alt="Workflow with the Airtable node" style="width:100%"><figcaption align = "center"><i>Workflow with the Airtable node</i></figcaption></figure>
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.2.json") ]]
 
 ## Configure your table
 

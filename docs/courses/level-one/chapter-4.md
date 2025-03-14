@@ -25,7 +25,7 @@ Before that, the data has to be wrangled with general functions (conditional fil
 
 n8n provides integrations for all these steps, so Nathan's workflow in n8n would look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-four/l1-c4-nathans-workflow.png" alt="Finished workflow" style="width:100%"><figcaption align = "center"><i>Nathan's workflow</i></figcaption></figure>
+[[ workflowDemo("file:////courses/level-one/finished.json") ]]
 
 You will build this workflow in eight steps:
 

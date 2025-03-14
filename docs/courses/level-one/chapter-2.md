@@ -15,6 +15,10 @@ In this lesson, you will build a small [workflow](/glossary.md#workflow-n8n) tha
 4. [Execute the node](#4-execute-the-node)
 5. [Save the workflow](#5-save-the-workflow)
 
+The finished workflow will look like this:
+
+[[ workflowDemo("file:////courses/level-one/chapter-2.json") ]]
+
 ## 1. Add a Manual Trigger node
 
 Open the nodes panel (reminder: you can open this by selecting the **+** icon in the top right corner of the [canvas](/glossary.md#canvas-n8n) or selecting ++tab++ on your keyboard).

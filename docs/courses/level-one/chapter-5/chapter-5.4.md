@@ -7,7 +7,9 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # 4. Setting Values for Processing Orders
 
-In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the Edit Fields (Set) node.
+In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the Edit Fields (Set) node. After this step, your workflow should look like this:
+
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.4.json") ]]
 
 The next step in Nathan's workflow is to filter the data to only insert the `employeeName` and `orderID` of all `processing` orders into Airtable.
 
@@ -58,7 +60,7 @@ Next, let's insert these values into Airtable:
 
 At this stage, your workflow should now look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-workflow-with-set-node.png" alt="Workflow with the Edit Fields node" style="width:100%"><figcaption align = "center"><i>Workflow with the Edit Fields node</i></figcaption></figure>
+[[ workflowDemo("file:////courses/level-one/chapter-5/chapter-5.4.json") ]]
 
 ## What's next?
 

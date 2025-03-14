@@ -7,7 +7,9 @@ contentType: tutorial
 <!-- vale from-microsoft.FirstPerson = NO -->
 # 7. Scheduling the Workflow
 
-In this step of the workflow, you will learn how to schedule your workflow so that it runs automatically at a set time/interval using the Schedule Trigger node.
+In this step of the workflow, you will learn how to schedule your workflow so that it runs automatically at a set time/interval using the Schedule Trigger node. After this step, your workflow should look like this:
+
+[[ workflowDemo("file:////courses/level-one/finished.json") ]]
 
 The workflow you've built so far executes only when you click on **Test Workflow**. But Nathan needs it to run automatically every Monday morning. You can do this with the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
 
@@ -49,7 +51,7 @@ Return to the canvas and connect your Schedule Trigger node to the HTTP Request 
 
 Your full workflow should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-7-inactivated-workflow.png" alt="Full workflow" style="width:100%"><figcaption align = "center"><i>Full workflow</i></figcaption></figure>
+[[ workflowDemo("file:////courses/level-one/finished.json") ]]
 
 ## What's next?
 

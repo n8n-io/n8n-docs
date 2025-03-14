@@ -146,6 +146,6 @@ To move a workflow around the canvas, select all nodes with your mouse or ++ctrl
 
 ## Summary
 
-In this lesson you learned how to navigate the Editor UI, what the icons mean, how to access the left-side and node panels, and how to add nodes to the canvas and interpret their execution results.
+In this lesson you learned how to navigate the Editor UI, what the icons mean, how to access the left-side and node panels, and how to add nodes to the canvas.
 
 In the next lesson, you will build a mini-workflow to put into practice what you've learned so far.

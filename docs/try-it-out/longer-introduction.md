@@ -69,6 +69,8 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     ```
     This generates a date in the correct format, seven days before the current date.
 
+    ![image showing the expression above generating a date](/_images/try-it-out/tutorial-date.png)
+
     ??? explanation "Date and time formats in n8n..."
         n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md).
 
@@ -96,9 +98,9 @@ Add the If node:
     1. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
 1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
-/// note | Weeks without large solar flares
-In this tutorial, you are working with live data. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**.
-///
+    /// note | Weeks without large solar flares
+    In this tutorial, you are working with live data. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**.
+    ///
 
 1. Once you are happy the node will return some events, you can close the node to return to the canvas.
 
@@ -121,6 +123,8 @@ The last step of the workflow is to send the two reports about solar flares. For
     There was a solar flare of class {{$json["classType"]}}
     ```
 
+    ![image showing the expression above generating output](/_images/try-it-out/tutorial-expression.png)
+
 1. Close the expressions editor to return to the node.
 1. Close the Postbin node to return to the canvas.
 1. Add another Postbin node, to handle the **false** output path from the If node:
@@ -137,7 +141,21 @@ The last step of the workflow is to send the two reports about solar flares. For
 Postbin's bins exist for 30 minutes after creation. You may need to create a new bin and update the ID in the Postbin nodes, if you exceed this time limit.
 ///
 
+
+## Congratulations
+
+You now have a fully functioning workflow that does something useful! It should look something like this:
+
 [[ workflowDemo("file:///try-it-out/quickstart/tutorial.json") ]]
+
+Along the way you have discovered:
+
+- How to find the nodes you want and join them together
+- How to use expresssions to manipulate data
+- How to create credentials and attach them to nodes
+- How to use logic in your workflows
+
+There are plenty of things you could add to this (perhaps add some more credentials and a node to send you an email of the results), or maybe you have a specific project in mind. Whatever your next steps, the resources linked below should help.
 
 ## Next steps
 

@@ -57,7 +57,7 @@ To delete a project:
 Workflow and credential owners can move workflows or credentials (changing ownership) to other users or projects they have access to.
 
 /// warning | Moving revokes sharing
-Moving workflows or credentials removes all existing sharing.
+Moving workflows or credentials removes all existing sharing. Be aware that this could impact other workflows currently sharing these resources.
 ///
 
 1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.

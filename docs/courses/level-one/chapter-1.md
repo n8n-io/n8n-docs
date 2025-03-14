@@ -3,12 +3,14 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # Navigating the Editor UI
 
 In this lesson you will learn how to navigate the [Editor UI](/glossary.md#editor-n8n). We will walk through the [canvas](/glossary.md#canvas-n8n) and show you what each icon means and where to find things you will need while building workflows in n8n.
 
 /// warning | n8n version
-This course was developed on n8n version 1.30.0. In other versions, some of the user interface might look different, but the core functionality shouldn't be impacted.
+This course was developed on n8n version 1.30.0. In other versions, some user interfaces might look different, but this shouldn't impact the core functionality.
 ///
 
 ## Getting started
@@ -46,8 +48,8 @@ The panel contains the following sections:
 - **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
 - **All executions**: Contains information about your workflow executions.
 - **Help**: Contains resources around n8n product and community.
-- **Update**: (When updates are available) Indicator for any recently released product updates.
-- **Settings**: Under the ellipsis (...) menu by your username. Manage users and access settings for a variety of features.
+- **Update**: (When updates are available) Indicator for any recent product updates.
+- **Settings**: Under the ellipsis (`...`) menu by your username. Manage users and access settings for a variety of features.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
@@ -69,7 +71,7 @@ The top bar of the **Editor UI** contains the following information:
 The **canvas** is the gray dotted grid background in the Editor UI. It displays several icons and a node with different functionalities:
 
 - Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, and tidy up the nodes on screen.
-- A button to **Test workflow** once you add your first node. When you click on it, all nodes on the canvas are executed.
+- A button to **Test workflow** once you add your first node. When you click on it, n8n executes all nodes on the canvas in sequence.
 - A button with a **+** sign inside. This button opens the nodes panel.
 - A button with a note icon inside. This button adds a [sticky note](/workflows/components/sticky-notes.md) to the canvas (visible when hovering on the top right + icon).
 - A dotted square with the text "Add first step." This is where you add your first node.
@@ -136,7 +138,7 @@ If you hover on a node, you'll notice that three icons appear on top:
 - Deactivate/Activate the node (Power icon)
 - Delete the node (Trash icon)
 
-Additionally, you'll see an ellipsis icon, which opens a context menu containing other [node options](/workflows/components/nodes.md#node-controls).
+There will also be an ellipsis icon, which opens a context menu containing other [node options](/workflows/components/nodes.md#node-controls).
 
 /// note | Moving a workflow
 To move a workflow around the canvas, select all nodes with your mouse or ++ctrl+a++, select and hold on a node, then drag it to any point you want on the canvas.

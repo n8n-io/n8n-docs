@@ -3,9 +3,11 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 5. Calculating Booked Orders
 
-In this step of the workflow you will learn how n8n data is structured and how to add custom JavaScript code to perform calculations using the Code node.
+In this step of the workflow you will learn how n8n structures data and how to add custom JavaScript code to perform calculations using the Code node.
 
 The next step in Nathan's workflow is to calculate two values from the booked orders:
 
@@ -19,7 +21,7 @@ To calculate data and add more functionality to your workflows you can use the C
 /// warning | Code node modes
 The Code node has two operational **modes**, depending on how you want to process items:
 
-* **Run Once for All Items** allows you to write code to process all of input items at once, as a group.
+* **Run Once for All Items** allows you to write code to process all input items at once, as a group.
 * **Run Once for Each Item** executes your code once for each input item.
 
 Learn more about how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
@@ -49,7 +51,7 @@ In n8n, the data that's passed between nodes is an array of objects with the fol
 ]
 ```
 
-1. (required) Each item must contain a `json` property, but it can be an empty object like `{}`. Any kind of JSON data is allowed, so arrays and deeply nested data is fine.
+1. (required) Each item must contain a `json` property, but it can be an empty object like `{}`. This can be any kind of JSON data, so arrays and deeply nested data is fine.
 2. (optional) Binary data of item. Most items in n8n don't contain binary data.
 3. (required) Arbitrary key name for the binary data.
 4. (required) Base64-encoded binary data.
@@ -59,7 +61,7 @@ In n8n, the data that's passed between nodes is an array of objects with the fol
 
 ## Configure the Code node
 
-Now let's see how to implement Nathan's task using the Code node.
+Now let's see how to accomplish Nathan's task using the Code node.
 
 In your workflow, add a **Code node** connected to the `false` branch of the **If node**. 
 
@@ -102,7 +104,7 @@ Now select **Test step** and you should see the following results:
 
 ## What's next?
 
-**Nathan 🙋**: Wow, the Code node is really powerful! This means that if I have some basic JavaScript skills I can power up my workflows.
+**Nathan 🙋**: Wow, the Code node is powerful! This means that if I have some basic JavaScript skills I can power up my workflows.
 
 **You 👩‍🔧**: Yes! You can progress from no-code to low-code!
 

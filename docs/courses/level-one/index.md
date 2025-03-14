@@ -3,6 +3,8 @@
 contentType: overview
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # Level one: Introduction
 
 Welcome to the **n8n Course Level 1**!

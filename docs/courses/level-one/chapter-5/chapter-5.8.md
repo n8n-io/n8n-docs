@@ -3,11 +3,13 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 8. Activating and Examining the Workflow
 
 In this step of the workflow, you will learn how to activate your workflow and change the default workflow settings.
 
-Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all newly created workflows are deactivated.
+Activating a workflow means that it will run automatically every time a trigger node receives input or meets a condition. By default, all newly created workflows start deactivated.
 
 To activate your workflow, set the **Inactive** toggle in the top navigation of the Editor UI to be **Activated**. Nathan's workflow will now be executed automatically every Monday at 9 AM:
 
@@ -15,7 +17,7 @@ To activate your workflow, set the **Inactive** toggle in the top navigation of 
 
 ## Workflow Executions
 
-An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions, allowing you to see if the workflow was completed successfully or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
+An execution represents a completed run of a workflow, from the first to the last node. n8n logs workflow executions, allowing you to see if the workflow succeeded or not. The execution log is useful for debugging your workflow and seeing at what stage it runs into issues.
 
 To view the executions for a specific workflow, you can switch to the **Executions** tab when the workflow is open on the canvas. Use the **Editor** tab to swap back to the node editor.
 
@@ -32,13 +34,13 @@ The **Executions** window displays a table with the following information:
 
 /// note | Workflow execution status
 You can filter the displayed **Executions** by workflow and by status (**Any Status**, **Failed**, **Cancelled**, **Running**, **Success**, or **Waiting**).
-The information displayed here depends on which executions are configured to be saved in the [**Workflow Settings**](/workflows/settings.md).
+The information displayed here depends on which executions you configure to save in the [**Workflow Settings**](/workflows/settings.md).
 ///
 
 
 ## Workflow Settings
 
-You can customize your workflows and executions, or overwrite some of the global default settings in [**Workflow Settings**](/workflows/settings.md).
+You can customize your workflows and executions, or overwrite some global default settings in [**Workflow Settings**](/workflows/settings.md).
 
 Access these settings by selecting the three dots in the upper right corner of the Editor UI when the workflow is open on the canvas, then select **Settings**.
 
@@ -46,14 +48,14 @@ Access these settings by selecting the three dots in the upper right corner of t
 
 In the **Workflow Settings** window you can configure the following settings:
 
-- **Execution Order**: Choose the execution logic for multi-branch workflows. We recommend leaving this set to `v1` if you don't have workflows that rely on the legacy execution ordering.
+- **Execution Order**: Choose the execution logic for multi-branch workflows. You should leave this set to `v1` if you don't have workflows that rely on the legacy execution ordering.
 - [**Error Workflow**](/flow-logic/error-handling.md): A workflow to run if the execution of the current workflow fails.
-- **This workflow can be called by**: Workflows that are allowed to call this workflow using the [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md).
-- **Timezone**: The timezone to use in the current workflow. If not set, the global timezone. This setting is particularly important for the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), as you want to make sure that the workflow gets executed at the right time.
-- **Save failed production executions**: If the Execution data of the workflow should be saved when it fails. Default is to save.
-- **Save successful production executions**: If the Execution data of the workflow should be saved when it succeeds. Default is to save.
-- **Save manual executions**: If executions started from the Editor UI should be saved. Default is to save.
-- **Save execution progress**: If the execution data of each node should be saved. If set to Save, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower. Default is to not save.
+- **This workflow can be called by**: Workflows allowed to call this workflow using the [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md).
+- **Timezone**: The timezone to use in the current workflow. If not set, the global timezone. In particular, this setting is important for the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), as you want to make sure that the workflow gets executed at the right time.
+- **Save failed production executions**: If n8n should save the Execution data of the workflow when it fails. Default is to save.
+- **Save successful production executions**: If n8n should save the Execution data of the workflow when it succeeds. Default is to save.
+- **Save manual executions**: If n8n should save executions started from the Editor UI. Default is to save.
+- **Save execution progress**: If n8n should save the execution data of each node. If set to Save, you can resume the workflow from where it stopped in case of an error, though keep in mind that this might make the execution slower. Default is to not save.
 - **Timeout Workflow**: Whether to cancel a workflow execution after a specific period of time. Default is to not timeout.
 
 

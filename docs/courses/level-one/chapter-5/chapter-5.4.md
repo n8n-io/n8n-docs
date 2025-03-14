@@ -3,6 +3,8 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 4. Setting Values for Processing Orders
 
 In this step of the workflow, you will learn how to select and set data before transferring it to Airtable using the Edit Fields (Set) node.
@@ -46,7 +48,7 @@ Next, let's insert these values into Airtable:
     - `employeeName`: Single line text
 
     ///note | Reminder
-    If you get stuck, refer back to the [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2.md) lesson.
+    If you get stuck, refer to the [Inserting data into Airtable](/courses/level-one/chapter-5/chapter-5.2.md) lesson.
     ///
 
 4. Delete the three empty rows in the new table.
@@ -60,6 +62,6 @@ At this stage, your workflow should now look like this:
 
 ## What's next?
 
-**Nathan 🙋**: You've already automated half of my work! Now I still need to calculate the booked orders for my colleagues. Can that be automated as well?
+**Nathan 🙋**: You've already automated half of my work! Now I still need to calculate the booked orders for my colleagues. Can we automate that as well?
 
 **You 👩‍🔧**: Yes! In the next step, I'll use some JavaScript code in a node to calculate the booked orders.

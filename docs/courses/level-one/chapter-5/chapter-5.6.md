@@ -3,6 +3,8 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 6. Notifying the Team
 
 In this step of the workflow, you will learn how to send messages to a Discord channel using the [Discord node](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md).
@@ -34,7 +36,7 @@ In the Discord node window, configure these parameters:
 		```
 
         /// note | Constructing your own message
-        To add the Unique ID portion of the statement, you'll need to expand **Nodes** > **HTTP Request** > **Parameters** > **headerParameters** > **parameters** > **[Item: 0]** and select the **value**.
+        To add the Unique ID part of the statement, you'll need to expand **Nodes** > **HTTP Request** > **Parameters** > **headerParameters** > **parameters** > **[Item: 0]** and select the **value**.
         ///
 
 Now select **Test step** in the Discord node. If all works well, you should see this output in n8n:
@@ -47,6 +49,6 @@ And your message should appear in the Discord channel #course-level-1:
 
 ## What's next?
 
-**Nathan 🙋**: Incredible, you've saved me so many hours of tedious work already! Now I can execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 AM...
+**Nathan 🙋**: Incredible, you've saved me hours of tedious work already! Now I can execute this workflow when I need it. I just need to remember to run it every Monday morning at 9 AM.
 
 **You 👩‍🔧**: Don't worry about that, you can actually schedule the workflow to run on a specific day, time, or interval. I'll set this up in the next step.

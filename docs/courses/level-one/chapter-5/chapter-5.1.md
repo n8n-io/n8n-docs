@@ -3,6 +3,8 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 1. Getting data from the data warehouse
 
 In this part of the workflow, you will learn how to get data by making HTTP requests with the [**HTTP Request**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node.
@@ -58,7 +60,7 @@ In the **Parameters** of the HTTP Request node, make the following adjustments:
     <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-credentials.png" alt="HTTP Request node credentials" style="width:100%"><figcaption align = "center"><i>HTTP Request node credentials</i></figcaption></figure>
 
 /// note | Credentials naming
-New credentials are named "<node name> account" by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app/service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
+New credential names follow the "<node name> account" format by default. You can rename the credentials by clicking on the name, similarly to renaming nodes. It's good practice to give them names that identify the app/service, type, and purpose of the credential. A naming convention makes it easier to keep track of and identify your credentials.
 ///
 
 Once you save, exit out of the Credentials window to return to the HTTP Request node.
@@ -75,9 +77,9 @@ This is the data from ABCorp's data warehouse that Nathan needs to work with. Th
 
 - `orderID`: The unique id of each order.
 - `customerID`: The unique id of each customer.
-- `employeeName`: The name of Nathan's colleague who is responsible for the customer.
+- `employeeName`: The name of Nathan's colleague responsible for the customer.
 - `orderPrice`: The total price of the customer's order.
-- `orderStatus`: Whether the customer's order status is booked (`booked`) or still in processing (`processing`).
+- `orderStatus`: Whether the customer's order status is `booked` or still in `processing`.
 
 ## What's next?
 

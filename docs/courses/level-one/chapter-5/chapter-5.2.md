@@ -3,6 +3,8 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 2. Inserting data into Airtable
 
 In this step of the workflow, you will learn how to insert the data received from the HTTP Request node into Airtable using the [Airtable node](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md).
@@ -88,6 +90,6 @@ All 30 data records will now appear in the orders table in Airtable:
 
 ## What's next?
 
-**Nathan 🙋**: Wow, this automation is really useful! But this inserts all collected data from the HTTP Request node into Airtable. Remember that I actually need to insert only processing orders in the table and calculate the price of booked orders?
+**Nathan 🙋**: Wow, this automation is already so useful! But this inserts all collected data from the HTTP Request node into Airtable. Remember that I actually need to insert only processing orders in the table and calculate the price of booked orders?
 
 **You 👩‍🔧**: Sure, no problem. As a next step, I'll use a new node to filter the orders based on their status.

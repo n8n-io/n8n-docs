@@ -3,13 +3,15 @@
 contentType: tutorial
 ---
 
+<!-- vale from-microsoft.We = NO -->
+<!-- vale from-microsoft.FirstPerson = NO -->
 # 3. Filtering Orders
 
 In this step of the workflow, you will learn how to filter data using conditional logic and how to use expressions in nodes using the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md).
 
 To insert only processing orders into Airtable we need to filter our data by `orderStatus`. Basically, we want to tell the program that _if_ the `orderStatus` is processing, _then_ insert all records with this status into Airtable; _else_, for example, if the `orderStatus` isn't *processing*, calculate the sum of all orders with the other `orderStatus` (`booked`).
 
-This if-then-else command is conditional logic. In n8n workflows, conditional logic can be implemented with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md), which splits a workflow conditionally based on comparison operations.
+This if-then-else command is conditional logic. In n8n workflows, you can add conditional logic with the [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md), which splits a workflow conditionally based on comparison operations.
 
 /// note | If vs. Switch
 If you need to filter data on more than boolean values (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md). The Switch node is similar to the If node, but supports multiple output connectors.
@@ -33,7 +35,7 @@ With the connection to the Airtable node removed, add an If node connected to th
 For the If node, we'll use an expression.
 
 /// note | Expressions
-An [expression](/glossary.md#expression-n8n) is a string of characters and symbols in a programming language that can be processed to obtain a value, usually depending upon its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
+An [expression](/glossary.md#expression-n8n) is a string of characters and symbols in a programming language that can be evaluated to get a value, often according to its input. In n8n workflows, you can use expressions in a node to refer to another node for input data. In our example, the If node references the data output by the HTTP Request node.
 ///
 
 In the If node window, configure the parameters:
@@ -45,7 +47,7 @@ In the If node window, configure the parameters:
     <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-3-if-node-open-editor.png" alt="Opening the Expression Editor" style="width:100%"><figcaption align = "center"><i>Opening the Expression Editor</i></figcaption></figure>
     4. Use the left-side panel to select **HTTP Request** >  **orderStatus** and drag it into the **Expression** field in the center of the window.
     <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-3-if-node-expression-editor.png" alt="Expression Editor in the IF node" style="width:100%"><figcaption align = "center"><i>Expression Editor in the If node</i></figcaption></figure>
-    6. Once the Expression is added, close the **Edit Expression** dialog.
+    6. Once you add the expression, close the **Edit Expression** dialog.
 
 - **Operation**: Select **String** > **is equal to**
 - Set the `value2` placeholder to `processing`.
@@ -84,7 +86,7 @@ At this stage, your workflow should look like this:
 
 ## What's next?
 
-**Nathan 🙋**: This If node is really useful for filtering data! Now I have all the information about processing orders. I actually only need the `employeeName` and `orderID`, but I guess I can keep all the other fields just in case.
+**Nathan 🙋**: This If node is so useful for filtering data! Now I have all the information about processing orders. I actually only need the `employeeName` and `orderID`, but I guess I can keep all the other fields just in case.
 
 **You 👩‍🔧**: Actually, I wouldn't recommend doing that. Inserting more data requires more computational power, the data transfer is slower and takes longer, and takes up more storage resources in your table. In this particular case, 14 records with 5 fields might not seem like it'd make a significant difference, but if your business grows to thousands of records and dozens of fields, things add up and even one extra column can affect performance.
 

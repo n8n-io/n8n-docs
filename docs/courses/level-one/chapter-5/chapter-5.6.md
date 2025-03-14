@@ -37,10 +37,6 @@ In the Discord node window, configure these parameters:
 		This week we've {{$json["totalBooked"]}} booked orders with a total value of {{$json["bookedSum"]}}. My Unique ID: {{ $('HTTP Request').params["headerParameters"]["parameters"][0]["value"] }}
 		```
 
-        /// note | Constructing your own message
-        To add the Unique ID part of the statement, you'll need to expand **Nodes** > **HTTP Request** > **Parameters** > **headerParameters** > **parameters** > **[Item: 0]** and select the **value**.
-        ///
-
 Now select **Test step** in the Discord node. If all works well, you should see this output in n8n:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-6-discord-output.png" alt="Discord node output" style="width:100%"><figcaption align = "center"><i>Discord node output</i></figcaption></figure>

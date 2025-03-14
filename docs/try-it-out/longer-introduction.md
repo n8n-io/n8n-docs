@@ -22,7 +22,7 @@ This quickstart uses [n8n Cloud](/manage-cloud/overview.md), which is recommende
 
 When you open n8n, you'll see either:
 
-* A window with large buttons: Choose "Start from Scratch" to create a new workflow.
+* A window with a welcome message and two large buttons: Choose "Start from Scratch" to create a new workflow.
 * The **Workflows** list on the **Overview** page. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** to create a new workflow.
 
 
@@ -151,7 +151,7 @@ You now have a fully functioning workflow that does something useful! It should 
 Along the way you have discovered:
 
 - How to find the nodes you want and join them together
-- How to use expresssions to manipulate data
+- How to use expressions to manipulate data
 - How to create credentials and attach them to nodes
 - How to use logic in your workflows
 

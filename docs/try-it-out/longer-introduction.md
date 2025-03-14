@@ -30,7 +30,7 @@ When you open n8n, you'll see either:
 
 n8n provides two ways to start a workflow:
 
-* Manually, by selecting **Test Workflow** (or from the CLI if you installed n8n with Docker).
+* Manually, by selecting **Test Workflow**.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
 For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md). This allows you to run the workflow on a schedule:
@@ -61,9 +61,9 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     6. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
 1. By default, DONKI Solar Flare provides data for the past 30 days. To limit it to just the last week, use **Additional Fields**:
     1. Select **Add field**.
-    2. Select **Start date**.
-    3. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
-    4. In the **Expression** field, enter the following expression:
+    1. Select **Start date**.
+    1. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
+    1. In the **Expression** field, enter the following expression:
     ```js
     {{$today.minus({days: 7}).toFormat('yyyy-MM-dd')}}
     ```

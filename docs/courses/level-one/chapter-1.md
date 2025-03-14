@@ -10,7 +10,7 @@ contentType: tutorial
 In this lesson you will learn how to navigate the [Editor UI](/glossary.md#editor-n8n). We will walk through the [canvas](/glossary.md#canvas-n8n) and show you what each icon means and where to find things you will need while building workflows in n8n.
 
 /// warning | n8n version
-This course was developed on n8n version 1.30.0. In other versions, some user interfaces might look different, but this shouldn't impact the core functionality.
+This course is based on n8n version 1.82.1. In other versions, some user interfaces might look different, but this shouldn't impact the core functionality.
 ///
 
 ## Getting started

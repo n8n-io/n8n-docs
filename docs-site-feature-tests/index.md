@@ -76,3 +76,6 @@ You should see the AI Glossary below
 --8<-- "_glossary/ai-glossary.md"
 
 Link to [workflows](/glossary/#workflow-n8n){ data-preview } glossary definition with preview.
+
+
+[A broken link](https://granblekon.com)

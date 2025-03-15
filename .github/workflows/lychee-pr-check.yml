@@ -15,12 +15,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v45
+        uses: jitterbit/get-changed-files@d06c756
       - name: Run Lychee Link Checker
         id: lychee
         uses: lycheeverse/lychee-action@v1
+
         with:
-          args: --config lychee.toml ${{ steps.changed-files.outputs.all_changed_files }}
+          args: --config lychee.toml ${{ steps.changed-files.outputs.all }}
       - name: PR comment with file
         uses: thollander/actions-comment-pull-request@v3
         with:

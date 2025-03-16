@@ -190,12 +190,12 @@ Here is an example for loops:
 Before
 <br>
 
-<video src="/_video/release-notes/Partial-execution-loop-before.mp4" controls width="100%"></video>
+<video src="docs/_video/release-notes/Partial-execution-loop-before.mp4" controls width="100%"></video>
 <br>
 After
 <br>
 
-<video src="/_video/release-notes/Partial-execution-loop-after.mp4" controls width="100%"></video>
+<video src="docs/_video/release-notes/Partial-execution-loop-after.mp4" controls width="100%"></video>
 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.

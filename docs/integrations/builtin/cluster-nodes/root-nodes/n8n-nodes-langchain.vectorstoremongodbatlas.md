@@ -2,12 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MongoDB Atlas Vector Store node documentation
 description: Learn how to use the MongoDB Atlas Vector Store node in n8n. Follow technical documentation to integrate MongoDB Atlas Vector Store node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
 # MongoDB Atlas Vector Store node
 
-MongoDB Atlas Vector Search is a feature of MongoDB Atlas that allows you to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
+MongoDB Atlas Vector Search is a feature of MongoDB Atlas that enables users to store and query vector embeddings. Use this node to interact with Vector Search indexes in your MongoDB Atlas collections. You can insert documents, retrieve documents, and use the vector store in chains or as a tool for agents.
 
 On this page, you'll find the node parameters for the MongoDB Atlas Vector Store node, and links to more resources.
 
@@ -19,40 +20,40 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Prerequisites
 
-Before using this node, you need to create a [Vector Search index](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/) in your MongoDB Atlas collection. Follow these steps to create one:
+Before using this node, create a [Vector Search index](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/) in your MongoDB Atlas collection. Follow these steps to create one:
 
 1. Log in to the [MongoDB Atlas dashboard](https://cloud.mongodb.com/).
-2. Select your organization and project.
-3. Find "Search & Vector Search" section.
-4. Select your cluster and click "Go to search"
+
+3. Select your organization and project.
+4. Find "Search & Vector Search" section.
+5. Select your cluster and click "Go to search".
 7. Click "Create Search Index".
-8. Choose "Vector Search" mode and use the visual or JSON editors. Example of a JSON
-
-```json
-{
-  "fields": [
-    {
-      "type": "vector",
-      "path": "<field-name>",
-      "numDimensions": 1536, // any other value
-      "similarity": "<similarity-function>"
-    }
-  ]
-}
-```
-
+8. Choose "Vector Search" mode and use the visual or JSON editors. For example:
+   ```json
+   {
+     "fields": [
+       {
+         "type": "vector",
+         "path": "<field-name>",
+         "numDimensions": 1536, // any other value
+         "similarity": "<similarity-function>"
+       }
+     ]
+   }
+   ```
 
 9. Adjust the "dimensions" value according to your embedding model (e.g., 1536 for default OpenAI's text-embedding-small-3).
 10. Name your index and create.
 
 Make sure to note the following values as you'll need them for the node configuration:
+
 - Collection name
 - Vector index name 
 - Field names for embeddings and metadata
 
 ## Node usage patterns
 
-You can use the MongoDB Atlas Vector Store node in the following patterns.
+You can use the MongoDB Atlas Vector Store node in the following patterns:
 
 ### Use as a regular node to insert and retrieve documents
 

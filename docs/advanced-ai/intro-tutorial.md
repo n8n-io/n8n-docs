@@ -82,7 +82,7 @@ The AI Agent node is the core of adding AI to your workflows.
 
  1. The editing view of the **AI agent** will now be displayed. 
  
- 1. There are some fields which can be changed. As we are using the **Chat Trigger** node, the default setting for the source and specification of the prompt don't need to be changed.
+ 1. There are some fields which can be changed. As we're using the **Chat Trigger** node, the default setting for the source and specification of the prompt don't need to be changed.
 
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_02.json") ]]
 

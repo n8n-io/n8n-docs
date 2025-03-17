@@ -17,6 +17,39 @@ You can find authentication information for this node [here](/integrations/built
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
+## Prerequisites
+
+Before using this node, you need to create a [Vector Search index](https://www.mongodb.com/docs/atlas/atlas-vector-search/vector-search-type/) in your MongoDB Atlas collection. Follow these steps to create one:
+
+1. Log in to the [MongoDB Atlas dashboard](https://cloud.mongodb.com/).
+2. Select your organization and project.
+3. Find "Search & Vector Search" section.
+4. Select your cluster and click "Go to search"
+7. Click "Create Search Index".
+8. Choose "Vector Search" mode and use the visual or JSON editors. Example of a JSON
+
+```json
+{
+  "fields": [
+    {
+      "type": "vector",
+      "path": "<field-name>",
+      "numDimensions": 1536, // any other value
+      "similarity": "<similarity-function>"
+    }
+  ]
+}
+```
+
+
+9. Adjust the "dimensions" value according to your embedding model (e.g., 1536 for default OpenAI's text-embedding-small-3).
+10. Name your index and create.
+
+Make sure to note the following values as you'll need them for the node configuration:
+- Collection name
+- Vector index name 
+- Field names for embeddings and metadata
+
 ## Node usage patterns
 
 You can use the MongoDB Atlas Vector Store node in the following patterns.

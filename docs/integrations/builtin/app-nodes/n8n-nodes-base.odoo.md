@@ -26,12 +26,6 @@ Refer to [Odoo credentials](/integrations/builtin/credentials/odoo.md) for guida
     * Get a contact
     * Get all contacts
     * Update a contact
-* Custom Resource
-    * Create a new item
-    * Delete an item
-    * Get an item
-    * Get all items
-    * Update an item
 * Note
     * Create a new note
     * Delete a note
@@ -44,6 +38,44 @@ Refer to [Odoo credentials](/integrations/builtin/credentials/odoo.md) for guida
     * Get an opportunity
     * Get all opportunities
     * Update an opportunity
+* Custom Resource
+    * Create a new item
+    * Delete an item
+    * Get an item
+    * Get all items
+    * Update an item
+
+## Custom Resources
+
+When calling a custom resource you are able to call any model in Odoo. The call is transformed into a JSON RPC call on the Odoo side of things. This is helpful to keep in mind when building the filters. 
+
+
+### Adding a filter
+
+Click **Add condition** after selecting **Custom Resource** from the **Resource** dropdown. These filters work well for discrete values. If there are values in your Odoo instance that are falsey or truthy then it might be better
+to use a **Domain filter**.
+
+### Using domain filters
+
+The **Domain Filter** field is only available for **Custom Resource**. It takes a JSON object and passes it to Odoo's JSON RPC. Odoo converts this into a Python Tuple to filter the model on upon execution. Below is a table for some Odoo domains and how they would be entered in the string field of **Domain Filter** in the Odoo node on n8n.
+
+
+| Odoo Domain Filter | n8n Odoo Domain Filter String |
+| -------------------- | ------------------------------------------------ |
+| `[("intended_use", "=", False)]` | `[["intended_use", "=", false]]` |
+| `["&", ("detailed_type", "=", "product"), "&", ("type", "=", "product"), ("reduced_template_price", "!=", False)]` | `["&", ["detailed_type", "=", "product"], "&", ["type", "=", "product"], ["reduced_template_price", "!=", false]]` |
+
+You can "convert" a tuple to a JSON object by copying the Python Tuple and running it with a simple Python script:
+
+```python
+import json
+
+tuple = [("intended_use", "=", False)]
+json.dumps(tuple)
+
+# outputs: [["intended_use", "=", false]]
+```
+
 
 ## Templates and examples
 

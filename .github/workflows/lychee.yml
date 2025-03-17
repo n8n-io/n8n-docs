@@ -1,7 +1,7 @@
 name: Lychee external linkcheck
 on:
   schedule:
-    - cron: "18 7 * * *"  
+    - cron: "18 7 * * 1"  
   workflow_dispatch: 
 jobs:
   link-check:

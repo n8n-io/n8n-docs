@@ -42,10 +42,10 @@ Before using this node, create a [Vector Search index](https://www.mongodb.com/d
    }
    ```
 
-9. Adjust the "dimensions" value according to your embedding model (e.g., 1536 for default OpenAI's text-embedding-small-3).
+9. Adjust the "dimensions" value according to your embedding model (For example, `1536` for OpenAI's `text-embedding-small-3`).
 10. Name your index and create.
 
-Make sure to note the following values which will be required when configuring the node:
+Make sure to note the following values which are required when configuring the node:
 
 - Collection name
 - Vector index name 

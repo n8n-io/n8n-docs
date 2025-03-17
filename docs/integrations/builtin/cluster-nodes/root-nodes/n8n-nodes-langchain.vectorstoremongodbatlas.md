@@ -45,7 +45,7 @@ Before using this node, create a [Vector Search index](https://www.mongodb.com/d
 9. Adjust the "dimensions" value according to your embedding model (e.g., 1536 for default OpenAI's text-embedding-small-3).
 10. Name your index and create.
 
-Make sure to note the following values as you'll need them for the node configuration:
+Make sure to note the following values which will be required when configuring the node:
 
 - Collection name
 - Vector index name 
@@ -63,7 +63,7 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the MongoDB Atlas Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) to use vector store as a resource when answering queries.
+You can connect the MongoDB Atlas Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) to use the vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> MongoDB Atlas Vector Store node.
 
@@ -75,7 +75,7 @@ An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the MongoDB Atlas Vector Store node. Rather than connecting the MongoDB Atlas Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the MongoDB Atlas Vector Store node. Rather than connecting the MongoDB Atlas Vector Store directly as a tool, this pattern uses a tool specifically designed to summarize data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) (the linked example uses the In-Memory Vector Store, but the pattern is the same) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> In-Memory Vector store.
 
@@ -87,38 +87,38 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ### Get Many parameters
 <!-- vale on -->
 
-* **Mongo Collection**: Enter the name of the MongoDB collection you want to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-* **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
-* **Metadata Field**: Enter the field name in your documents that contains the text metadata.
+- **Mongo Collection**: Enter the name of the MongoDB collection to use.
+- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+- **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
+- **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Insert Documents parameters
 
-* **Mongo Collection**: Enter the name of the MongoDB collection you want to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-* **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
-* **Metadata Field**: Enter the field name in your documents that contains the text metadata.
+- **Mongo Collection**: Enter the name of the MongoDB collection to use.
+- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+- **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
+- **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Retrieve Documents parameters (As Vector Store for Chain/Tool)
 
-* **Mongo Collection**: Enter the name of the MongoDB collection you want to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-* **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
-* **Metadata Field**: Enter the field name in your documents that contains the text metadata.
+- **Mongo Collection**: Enter the name of the MongoDB collection to use.
+- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+- **Embedding Field**: Enter the field name in your documents that contains the vector embeddings.
+- **Metadata Field**: Enter the field name in your documents that contains the text metadata.
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-* **Name**: The name of the vector store.
-* **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Mongo Collection**: Enter the name of the MongoDB collection you want to use.
-* **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
-* **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
+- **Name**: The name of the vector store.
+- **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
+- **Mongo Collection**: Enter the name of the MongoDB collection to use.
+- **Vector Index Name**: Enter the name of the Vector Search index in your MongoDB Atlas collection.
+- **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Node options
 
 ### Options
 
-* **Metadata Filter**: Filters results based on metadata.
+- **Metadata Filter**: Filters results based on metadata.
 
 ## Templates and examples
 
@@ -128,8 +128,9 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ## Related resources
 
 Refer to:
-* [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas){:target=_blank .external-link} for more information about the service.
-* [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/){:target=_blank .external-link} for more information about MongoDB Atlas Vector Search.
+
+- [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas){:target=_blank .external-link} for more information about the service.
+- [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/){:target=_blank .external-link} for more information about MongoDB Atlas Vector Search.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

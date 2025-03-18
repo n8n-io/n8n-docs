@@ -115,7 +115,7 @@
     },
     {
       "parameters": {
-        "content": "## Setup required\n\nYou need to create a NASA account and create credentials and create bin on Postbin and enter the ID - see [the documentation](https://docs.n8n.io/try-it-out/longer-introduction/)",
+        "content": "## Setup required\n\nYou need to create a NASA account and create credentials, and create a bin with Postbin and enter the ID - see [the documentation](https://docs.n8n.io/try-it-out/longer-introduction/)",
         "height": 120,
         "width": 600
       },

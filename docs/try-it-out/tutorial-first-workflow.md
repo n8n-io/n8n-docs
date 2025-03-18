@@ -27,7 +27,6 @@ When you open n8n, you'll see either:
 * A window with a welcome message and two large buttons: Choose "Start from Scratch" to create a new workflow.
 * The **Workflows** list on the **Overview** page. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** to create a new workflow.
 
-
 ## Step two: Add a trigger node
 
 n8n provides two ways to start a workflow:
@@ -38,17 +37,19 @@ n8n provides two ways to start a workflow:
 For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md). This allows you to run the workflow on a schedule:
 
 1. Select **Add first step**.
-2. Search for **Schedule**. n8n shows a list of nodes that match the search.
-3. Select **Schedule Trigger** to add the node to the canvas. n8n opens the node.
-4. For **Trigger Interval**, select **Weeks**.
-5. For **Weeks Between Triggers**, enter `1`.
-6. Enter a time and day. For this example, select **Monday** in **Trigger on Weekdays**, select **9am** in **Trigger at Hour**, and enter `0` in **Trigger at Minute**.
-7. Close the node details view to return to the canvas.
-
+1. Search for **Schedule**. n8n shows a list of nodes that match the search.
+1. Select **Schedule Trigger** to add the node to the canvas. n8n opens the node.
+1. For **Trigger Interval**, select **Weeks**.
+1. For **Weeks Between Triggers**, enter `1`.
+1. Enter a time and day. For this example, select **Monday** in **Trigger on Weekdays**, select **9am** in **Trigger at Hour**, and enter `0` in **Trigger at Minute**.
+1. Close the node details view to return to the canvas.
 
 ## Step three: Add the NASA node and set up credentials
 
 The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interacts with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link} to fetch useful data. We will use the real-time data from the API to find solar events.
+
+??? explanation "Credentials"
+    Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n.
 
 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Schedule Trigger node.
 1. Search for **NASA**. n8n shows a list of nodes that match the search.
@@ -61,13 +62,14 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     1. Check your email account for the API key. Copy the key, and paste it into **API Key** in n8n.
     1. Select **Save**.
     1. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
+
 1. By default, DONKI Solar Flare provides data for the past 30 days. To limit it to just the last week, use **Additional Fields**:
     1. Select **Add field**.
     1. Select **Start date**.
     1. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
     1. In the **Expression** field, enter the following expression:
     ```js
-    {{$today.minus({days: 7}).toFormat('yyyy-MM-dd')}}
+    {{ $today.minus(7, 'days') }}
     ```
     This generates a date in the correct format, seven days before the current date.
 
@@ -110,7 +112,7 @@ Add the If node:
 
 The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link}. Postbin is a service that receives data and displays it on a temporary web page.
 
-1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node.png){.off-glb}</span> connector labeled **true**.
+1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector labeled **true**.
 1. Search for **PostBin**. n8n shows a list of nodes that match the search.
 1. Select **PostBin**.
 1. Select **Send a request**. n8n adds the node to the canvas and opens it.
@@ -118,8 +120,8 @@ The last step of the workflow is to send the two reports about solar flares. For
 1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 1. In n8n, paste your Postbin ID into **Bin ID**.
 1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
-1. Select **Current Node** > **Input Data** > **JSON** > **classType**. n8n adds the expression to the **Expression** editor, and displays a sample output.
-1. The expression is: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
+1. You can now click and drag the correct field from the If Node output into the expressions editor to automatically create a reference for it. In this case the input we want is 'classType'.
+1. Once dropped into the expressions editor it will transform into this reference: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
 
     ```js
     There was a solar flare of class {{$json["classType"]}}
@@ -131,7 +133,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 1. Close the Postbin node to return to the canvas.
 1. Add another Postbin node, to handle the **false** output path from the If node:
     1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** to duplicate the first Postbin node.
-    2. Drag the **false** connector from the If node to the left side of the new Postbin node.
+    1. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
 ## Step six: Test the workflow
 

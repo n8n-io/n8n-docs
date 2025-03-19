@@ -1,3 +1,11 @@
+### THESE REDIRECTS ARE HANDLED BY NETLIFY, SEE DOC FOR DETAILS ###
+### https://docs.netlify.com/routing/redirects/redirect-options/ ###
+
+
+## tutorials refresh
+
+/try-it-out/longer-introduction/ /try-it-out/tutorial-first-workflow/
+
 ## DOC-994
 /privacy-security/security/ https://n8n.io/legal/#security
 

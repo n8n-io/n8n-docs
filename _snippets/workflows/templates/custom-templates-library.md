@@ -15,19 +15,19 @@ The endpoints are:
 
 The `/templates/search` endpoint accepts the following query parameters:
 
-  | Parameter  | Type                                         | Description                             |
-  |------------|----------------------------------------------|-----------------------------------------|
-  | `page`     | integer                                      | The page of results to return           |
-  | `rows`     | integer                                      | The maximum number of results to return per page |
-  | `category` | comma-separated list of strings (categories) | The categories to search within         |
-  | `search`   | string                                       | The search query                        |
+| Parameter  | Type                                         | Description                                      |
+|------------|----------------------------------------------|--------------------------------------------------|
+| `page`     | integer                                      | The page of results to return                    |
+| `rows`     | integer                                      | The maximum number of results to return per page |
+| `category` | comma-separated list of strings (categories) | The categories to search within                  |
+| `search`   | string                                       | The search query                                 |
 
 The `/templates/collections` endpoint accepts the following query parameters:
 
-   | Parameter  | Type                                         | Description                     |
-   |------------|----------------------------------------------|---------------------------------|
-   | `category` | comma-separated list of strings (categories) | The categories to search within |
-   | `search`   | string                                       | The search query                |
+| Parameter  | Type                                         | Description                     |
+|------------|----------------------------------------------|---------------------------------|
+| `category` | comma-separated list of strings (categories) | The categories to search within |
+| `search`   | string                                       | The search query                |
 
 To learn about the data structure, try out n8n's API endpoints:
 

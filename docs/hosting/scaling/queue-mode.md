@@ -251,6 +251,4 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
-/// note | Keep in mind
-In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Running `webhook` processes is neither needed nor allowed in multi-main setup.
-///
+

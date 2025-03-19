@@ -1,5 +1,7 @@
 In your environment variables, set `N8N_TEMPLATES_HOST` to the base URL of your API.
 
+### Endpoints
+
 Your API must provide the same endpoints and data structure as n8n's.
 
 The endpoints are:
@@ -12,6 +14,8 @@ The endpoints are:
 | GET | /templates/collections | 
 | GET | /templates/categories |
 | GET | /health |
+
+### Query parameters
 
 The `/templates/search` endpoint accepts the following query parameters:
 
@@ -29,11 +33,297 @@ The `/templates/collections` endpoint accepts the following query parameters:
 | `category` | comma-separated list of strings (categories) | The categories to search within |
 | `search`   | string                                       | The search query                |
 
-To learn about the data structure, try out n8n's API endpoints:
+### Data schema
+
+You can explore the data structure of the endpoints here:
+
+??? note "Show `workflow` data schema"
+	```json title="Workflow data schema"
+	{
+	  "$schema": "http://json-schema.org/draft-07/schema#",
+	  "title": "Generated schema for Root",
+	  "type": "object",
+	  "properties": {
+	    "id": {
+	      "type": "number"
+	    },
+	    "name": {
+	      "type": "string"
+	    },
+	    "totalViews": {
+	      "type": "number"
+	    },
+	    "price": {},
+	    "purchaseUrl": {},
+	    "recentViews": {
+	      "type": "number"
+	    },
+	    "createdAt": {
+	      "type": "string"
+	    },
+	    "user": {
+	      "type": "object",
+	      "properties": {
+	        "username": {
+	          "type": "string"
+	        },
+	        "verified": {
+	          "type": "boolean"
+	        }
+	      },
+	      "required": [
+	        "username",
+	        "verified"
+	      ]
+	    },
+	    "nodes": {
+	      "type": "array",
+	      "items": {
+	        "type": "object",
+	        "properties": {
+	          "id": {
+	            "type": "number"
+	          },
+	          "icon": {
+	            "type": "string"
+	          },
+	          "name": {
+	            "type": "string"
+	          },
+	          "codex": {
+	            "type": "object",
+	            "properties": {
+	              "data": {
+	                "type": "object",
+	                "properties": {
+	                  "details": {
+	                    "type": "string"
+	                  },
+	                  "resources": {
+	                    "type": "object",
+	                    "properties": {
+	                      "generic": {
+	                        "type": "array",
+	                        "items": {
+	                          "type": "object",
+	                          "properties": {
+	                            "url": {
+	                              "type": "string"
+	                            },
+	                            "icon": {
+	                              "type": "string"
+	                            },
+	                            "label": {
+	                              "type": "string"
+	                            }
+	                          },
+	                          "required": [
+	                            "url",
+	                            "label"
+	                          ]
+	                        }
+	                      },
+	                      "primaryDocumentation": {
+	                        "type": "array",
+	                        "items": {
+	                          "type": "object",
+	                          "properties": {
+	                            "url": {
+	                              "type": "string"
+	                            }
+	                          },
+	                          "required": [
+	                            "url"
+	                          ]
+	                        }
+	                      }
+	                    },
+	                    "required": [
+	                      "primaryDocumentation"
+	                    ]
+	                  },
+	                  "categories": {
+	                    "type": "array",
+	                    "items": {
+	                      "type": "string"
+	                    }
+	                  },
+	                  "nodeVersion": {
+	                    "type": "string"
+	                  },
+	                  "codexVersion": {
+	                    "type": "string"
+	                  }
+	                },
+	                "required": [
+	                  "categories"
+	                ]
+	              }
+	            }
+	          },
+	          "group": {
+	            "type": "string"
+	          },
+	          "defaults": {
+	            "type": "object",
+	            "properties": {
+	              "name": {
+	                "type": "string"
+	              },
+	              "color": {
+	                "type": "string"
+	              }
+	            },
+	            "required": [
+	              "name"
+	            ]
+	          },
+	          "iconData": {
+	            "type": "object",
+	            "properties": {
+	              "icon": {
+	                "type": "string"
+	              },
+	              "type": {
+	                "type": "string"
+	              },
+	              "fileBuffer": {
+	                "type": "string"
+	              }
+	            },
+	            "required": [
+	              "type"
+	            ]
+	          },
+	          "displayName": {
+	            "type": "string"
+	          },
+	          "typeVersion": {
+	            "type": "number"
+	          },
+	          "nodeCategories": {
+	            "type": "array",
+	            "items": {
+	              "type": "object",
+	              "properties": {
+	                "id": {
+	                  "type": "number"
+	                },
+	                "name": {
+	                  "type": "string"
+	                }
+	              },
+	              "required": [
+	                "id",
+	                "name"
+	              ]
+	            }
+	          }
+	        },
+	        "required": [
+	          "id",
+	          "icon",
+	          "name",
+	          "codex",
+	          "group",
+	          "defaults",
+	          "iconData",
+	          "displayName",
+	          "typeVersion"
+	        ]
+	      }
+	    }
+	  },
+	  "required": [
+	    "id",
+	    "name",
+	    "totalViews",
+	    "price",
+	    "purchaseUrl",
+	    "recentViews",
+	    "createdAt",
+	    "user",
+	    "nodes"
+	  ]
+	}
+	```
+
+??? note "Show `category` data schema"
+	```json title="Category data schema"
+	{
+	  "$schema": "http://json-schema.org/draft-07/schema#",
+	  "type": "object",
+	  "properties": {
+	    "id": {
+	      "type": "number"
+	    },
+	    "name": {
+	      "type": "string"
+	    }
+	  },
+	  "required": [
+	    "id",
+	    "name"
+	  ]
+	}
+	```
+
+??? note "Show `collection` data schema"
+	```json title="Collection data schema"
+	{
+	  "$schema": "http://json-schema.org/draft-07/schema#",
+	  "type": "object",
+	  "properties": {
+	    "id": {
+	      "type": "number"
+	    },
+	    "rank": {
+	      "type": "number"
+	    },
+	    "name": {
+	      "type": "string"
+	    },
+	    "totalViews": {},
+	    "createdAt": {
+	      "type": "string"
+	    },
+	    "workflows": {
+	      "type": "array",
+	      "items": {
+	        "type": "object",
+	        "properties": {
+	          "id": {
+	            "type": "number"
+	          }
+	        },
+	        "required": [
+	          "id"
+	        ]
+	      }
+	    },
+	    "nodes": {
+	      "type": "array",
+	      "items": {}
+	    }
+	  },
+	  "required": [
+	    "id",
+	    "rank",
+	    "name",
+	    "totalViews",
+	    "createdAt",
+	    "workflows",
+	    "nodes"
+	  ]
+	}
+	```
+
+You can also interactively explore n8n's API endpoints:
 
 [https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)  
 [https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)  
 [https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)  
 [https://api.n8n.io/health](https://api.n8n.io/health)  
 
-You can also [contact us](mailto:help@n8n.io) for more support.
+
+You can [contact us](mailto:help@n8n.io) for more support.

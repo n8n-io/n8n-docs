@@ -16,7 +16,7 @@ You can find Docker Compose configurations for various architectures in the [n8n
 
 ## 1. Install Docker and Docker Compose
 
-How you install Docker and Docker Compose can vary depending on the Linux distribution you use. You can find detailed instructions in [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installation documentation. The following example is for Ubuntu:
+How you install Docker and Docker Compose can vary depending on the Linux distribution you use. You can find detailed instructions in both the [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installation documentation. The following example is for Ubuntu:
 
 ```bash
 # Remove incompatible or out of date Docker implementations if they exist
@@ -45,7 +45,7 @@ docker compose version
 
 ## 2. Optional: Non-root user access
 
-You can optionally grant access to run docker without the `sudo` command.
+You can optionally grant access to run Docker without the `sudo` command.
 
 To grant access to the user that you're currently logged in with (assuming they have `sudo` access), run:
 
@@ -61,7 +61,7 @@ To grant access to a different user, type the following, substituting `<USER_TO_
 sudo usermod -aG docker <USER_TO_RUN_DOCKER>
 ```
 
-You will need to run `exec sg docker newgrp` from any of that user's existing sessions for it to access its new group permissions.
+You will need to run `exec sg docker newgrp` from any of that user's existing sessions for it to access the new group permissions.
 
 You can verify that your current session recognizes the `docker` group by typing:
 

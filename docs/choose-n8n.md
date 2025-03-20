@@ -32,6 +32,8 @@ The entry-level hosted version of n8n makes it easier to use and maintain - n8n 
  - small businesses
  - casual users
 
+[Sign up for n8n Cloud here »](https://www.n8n.io/)
+
 ## n8n Cloud Pro
 
 The Pro version of n8n Cloud adds extra capacity and features for people making more use of workflows and collaborating with others, as well as features to deal with running many workflows at scale. 

@@ -6,41 +6,75 @@ contentType: overview
 
 # Choose your n8n
 
-This section contains information on n8n's range of platforms, pricing plans, and licenses.
+Our goal is to ensure that **everyone** can run n8n, in a way that matches their needs and their budget. 
 
-## Platforms
 
-There are different ways to set up n8n depending on how you intend to use it:
+## Community edition (self-hosted)
 
-* [n8n Cloud](/manage-cloud/overview.md): hosted solution, no need to install anything.
-* [Self-host](/hosting/index.md): recommended method for production or customized use cases.
-	* [npm](/hosting/installation/npm.md)
-	* [Docker](/hosting/installation/docker.md)
-	* [Server setup guides](/hosting/installation/server-setups/index.md) for popular platforms
-* [Embed](/embed/index.md): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/){:target=_blank .external-link} for pricing and support.
+The code for n8n is free to use; in fact we make it easier for you by packaging it up nicely and making it easy to install with Docker. This option does mean that you will need to host n8n somewhere - whether that is your laptop, home server or an instance on a public cloud.
 
---8<-- "_snippets/self-hosting/warning.md"
+**Great for:**
 
+ - casual users
+ - experimenting
+ - home automation
+ - node development
+
+[Check out the hosting Guide for install instructions »][hosting]
+
+## n8n Cloud Starter
+
+The entry-level hosted version of n8n makes it easier to use and maintain - n8n takes care of all the server-side aspects and you get to concentrate on creating and using workflows. It's also the best way to try out n8n and discover what you can make - there's a free trial so _everybody_ can see what n8n can do.
+
+**Great for:**
+ - people who want automations, but don't want to maintain a server
+ - small businesses
+ - casual users
+
+## n8n Cloud Pro
+
+The Pro version of n8n Cloud adds extra capacity and features for people making more use of 
+**Great for:**
+
+[Sign up for n8n Cloud here »](https://www.n8n.io/)
+
+## Enterprise
+
+The Enterprise version of n8n is for people who rely on automation at scale, need enhanced support
+
+**Great for:**
+- mission critical workflows
+
+## Embed
+n8n Embed enables you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/) for pricing and support.
+
+## Feature comparison
+
+| Feature                     | Community Edition         | Cloud Starter   | Cloud Pro       | Enterprise                   |
+|-----------------------------|---------------------------|-----------------|-----------------|------------------------------|
+| **Workflow Executions**     | Unlimited                 | 2.5k/month      | 10k–50k+/month  | Unlimited                    |
+| **Active Workflows**        | Unlimited                 | 5               | 15–50           | Unlimited                    |
+| **Shared Projects**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }                        | 1               | 3               | Unlimited                    |
+| **Concurrent Executions**   | Not specified             | 5               | 20–50           | 200+                         |
+| **Max Execution Time**      | Unlimited                 | 5 mins          | 40 mins         | Unlimited                    |
+| **Execution Log Retention** | 7 days                    | 7 days          | 30 days         | Unlimited                    |
+| **Workflow History**        | 1 day (with registration) | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | Up to 5 days    | Up to 365 days               |
+| **Global Variables**        | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }        | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **Multiple Environments**   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **Version Control**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **SSO (SAML, LDAP)**        | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **External Secret Store**   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **Log Streaming**           | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **Scaling Options**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
+| **Support**                 | Community forum           | Community forum | Community forum | Dedicated support with SLA   |
+| **Hosting**                 | Self-hosted               | Hosted by n8n   | Hosted by n8n   | Self-hosted or hosted by n8n |
+| **Pricing**                 | Free                      | [see website][] | [see website][] | [see website][]              |
 
 ## Licenses
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](https://faircode.io/) model.
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md) are based on the [fair-code](https://faircode.io/) model.
 
 For a detailed explanation of the license, refer to [Sustainable Use License](/sustainable-use-license.md).
 
-## Free versions
-
-n8n offers the following free options:
-
-* A free trial of Cloud
-* A free self-hosted community edition for self-hosted users
-
-## Paid versions
-
-n8n has two paid versions:
-
-* n8n Cloud: choose from a range of paid plans to suit your usage and feature needs.
-* Self-hosted: there are both free and paid versions of self-hosted.
-
-For details of the Cloud plans and contact details for Enterprise Self-hosted, refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} on the n8n website.
-
+[see website]: https://n8n.io/pricing/
+[hosting]: /hosting/index.md

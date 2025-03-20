@@ -2,15 +2,15 @@ nav:
   - Getting started:
     - Welcome: index.md
     - Hello World:
-      - Get n8n: manage-cloud/overview.md
-      - Your first workflow: try-it-out/longer-introduction.md
-      - Going deeper: learning-path.md
+      - Get n8n: try-it-out/getn8n.md
+      - Your first workflow: try-it-out/tutorial-first-workflow.md
+      - Going further: try-it-out/going-further.md
     - Choose your n8n:
       - Chose a plan: choose-n8n.md
       - Plan comparison: hosting/community-edition-features.md
       - Install self-hosted:
-        - npm: hosting/installation/npm.md
         - Docker: hosting/installation/docker.md
+        - Docker Compose: hosting/installation/server-setups/docker-compose.md
         - Server setups:
           - hosting/installation/server-setups/index.md
           - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
@@ -19,7 +19,6 @@ nav:
           - Amazon Web Services: hosting/installation/server-setups/aws.md
           - Azure: hosting/installation/server-setups/azure.md
           - Google Cloud: hosting/installation/server-setups/google-cloud.md
-          - Docker Compose: hosting/installation/server-setups/docker-compose.md
         - Updating: hosting/installation/updating.md
       - Install embeded: embed/prerequisites.md
     - Help and community:

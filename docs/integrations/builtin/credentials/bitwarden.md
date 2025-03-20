@@ -30,7 +30,7 @@ To configure this credential, you'll need:
 - A **Client ID**: Provided when you generate an API key
 - A **Client Secret**: Provided when you generate an API key
 - The **Environment**:
-    - Choose **Cloud-hosted** if you don't self-host Bitwarden. No further configuration required.
+    - Choose **Cloud-hosted** if you don't self-host Bitwarden. Select the suitable **Region**. Refer to the [Bitwarden Server Geographies documentation](https://bitwarden.com/help/server-geographies/) for more information about server geographies.
     - Choose **Self-hosted** if you host Bitwarden on your own server. Enter your **Self-hosted domain** in the appropriate field.
 
 The Client ID and Client Secret must be for an **Organization API Key**, not a Personal API Key. Refer to the [Bitwarden Public API Authentication documentation](https://bitwarden.com/help/public-api/#authentication){:target=_blank .external-link} for instructions on generating an Organization API Key.

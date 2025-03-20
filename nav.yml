@@ -7,9 +7,10 @@ nav:
       - Going further: try-it-out/going-further.md
     - Choose your n8n:
       - Chose a plan: choose-n8n.md
-      - Install self-hosted:
+      - Install n8n:
         - Docker: hosting/installation/docker.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
+        - Install n8n embed: embed/prerequisites.md
         - Server setups:
           - hosting/installation/server-setups/index.md
           - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
@@ -18,8 +19,6 @@ nav:
           - Amazon Web Services: hosting/installation/server-setups/aws.md
           - Azure: hosting/installation/server-setups/azure.md
           - Google Cloud: hosting/installation/server-setups/google-cloud.md
-        - Updating: hosting/installation/updating.md
-      - Install embeded: embed/prerequisites.md
     - Help and community:
       - Where to get help: help-community/help.md
       - Contributing: help-community/contributing.md

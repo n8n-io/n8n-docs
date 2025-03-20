@@ -20,6 +20,11 @@ The simple vector storage described here is different to the AI memory nodes suc
 This node creates a [vector database](/glossary.md#ai-vector-store) in the app memory.
 ///
 
+
+/// warning | For development use only
+Data is stored in memory and will be lost if n8n restarts. Data may also be cleared if available memory gets low. This node is not recommended for production usage.
+///
+
 ## Node usage patterns
 
 You can use the Simple Vector Store node in the following patterns.
@@ -47,6 +52,23 @@ An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-
 Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Simple Vector Store node. Rather than connecting the Simple Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsapp-chatbot/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Simple Vector store.
+
+### Memory Management
+
+The Simple Vector Store implements memory management to prevent excessive memory usage:
+
+- Automatically cleans up old vector stores when memory pressure increases
+- Removes inactive stores that haven't been accessed for a configurable period
+- Each workflow gets its own isolated storage space identified by the workflow ID and memory key
+
+#### Configuration Options
+
+You can control memory usage with these environment variables:
+
+- __N8N_VECTOR_STORE_MAX_MEMORY__: Maximum memory in MB allowed for all vector stores combined (-1 to disable limits). Default: -1
+- __N8N_VECTOR_STORE_TTL_HOURS__: Hours of inactivity after which a store gets removed (-1 to disable TTL). Default: -1
+
+On n8n Cloud, these values are preset to 100MB (approximately 8,000 documents, varying with document size and metadata) and 7 days respectively. For self-hosted instances, both values default to -1(no memory limits or time-based cleanup).
 
 ## Node parameters
 

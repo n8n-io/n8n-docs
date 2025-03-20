@@ -10,7 +10,8 @@ Our goal is to ensure that **everyone** can run n8n, in a way that matches their
 
 ## Community edition (self-hosted)
 
-The code for n8n is free to use; in fact we make it easier for you by packaging it up nicely and making it easy to install with Docker. This option does mean that you will need to host n8n somewhere - whether that is your laptop, home server or an instance on a public cloud.
+The code for n8n is free to use; in fact we make it easier for you by packaging it up nicely and making it easy to install with Docker. The features you miss out on are those which can only be delivered through  n8n cloud, or are only of use to larger organisations.
+Choosing this option does mean that you will need to host n8n somewhere - whether that is your laptop, home server or an instance on a public cloud.
 
 **Great for:**
 
@@ -61,25 +62,26 @@ n8n Embed enables you to white label n8n and build it into your own product. Con
 
 ## Feature comparison
 
-| Feature                     | Community Edition         | Cloud Starter   | Cloud Pro       | Enterprise                   |
-|-----------------------------|---------------------------|-----------------|-----------------|------------------------------|
-| **Workflow Executions**     | Unlimited                 | 2.5k/month      | 10k–50k+/month  | Unlimited                    |
-| **Active Workflows**        | Unlimited                 | 5               | 15–50           | Unlimited                    |
-| **Shared Projects**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }                        | 1               | 3               | Unlimited                    |
-| **Concurrent Executions**   | Not specified             | 5               | 20–50           | 200+                         |
-| **Max Execution Time**      | Unlimited                 | 5 mins          | 40 mins         | Unlimited                    |
-| **Execution Log Retention** | 7 days                    | 7 days          | 30 days         | Unlimited                    |
-| **Workflow History**        | 1 day (with registration) | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | Up to 5 days    | Up to 365 days               |
-| **Global Variables**        | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }        | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **Multiple Environments**   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **Version Control**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **SSO (SAML, LDAP)**        | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **External Secret Store**   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **Log Streaming**           | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **Scaling Options**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }             | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }   | :octicons-check-circle-fill-24:{ style="color:#289b63" }                     |
-| **Support**                 | Community forum           | Community forum | Community forum | Dedicated support with SLA   |
-| **Hosting**                 | Self-hosted               | Hosted by n8n   | Hosted by n8n   | Self-hosted or hosted by n8n |
-| **Pricing**                 | Free                      | [see website][] | [see website][] | [see website][]              |
+This isn't an exhaustive comparison - for more details on the features available and current pricing, please see th main [n8n website][see website].
+
+| Feature                     | Community Edition                                    | Cloud Starter                                        | Cloud Pro                                                | Enterprise                                               |
+|-----------------------------|------------------------------------------------------|------------------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|
+| **Workflow Executions**     | Unlimited                                            | 2.5k/month                                           | 10k–50k+/month                                           | Unlimited                                                |
+| **Active Workflows**        | Unlimited                                            | 5                                                    | 15–50                                                    | Unlimited                                                |
+| **Shared Projects**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | 1                                                    | 3                                                        | Unlimited                                                |
+| **Max Execution Time**      | Unlimited                                            | 5 mins                                               | 40 mins                                                  | Unlimited                                                |
+| **Execution Log Retention** | 7 days                                               | 7 days                                               | 30 days                                                  | Unlimited                                                |
+| **Workflow History**        | 1 day (with registration)                            | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | Up to 5 days                                             | Up to 365 days                                           |
+| **Global Variables**        | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-check-circle-fill-24:{ style="color:#289b63" } | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **Multiple Environments**   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }     | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **Version Control**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }     | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **SSO (SAML, LDAP)**        | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }     | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **External Secret Store**   | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }     | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **Log Streaming**           | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }     | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **Scaling Options**         | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" } | :octicons-x-circle-fill-24:{ style="color:#2b0fof" }     | :octicons-check-circle-fill-24:{ style="color:#289b63" } |
+| **Support**                 | Community forum                                      | Community forum                                      | Community forum                                          | Dedicated support with SLA                               |
+| **Hosting**                 | Self-hosted                                          | Hosted by n8n                                        | Hosted by n8n                                            | Self-hosted or hosted by n8n                             |
+| **Pricing**                 | Free                                                 | [see website][]                                      | [see website][]                                          | [see website][]                                          |
 
 ## Licenses
 

@@ -8,7 +8,6 @@ contentType: overview
 
 Our goal is to ensure that **everyone** can run n8n, in a way that matches their needs and their budget. 
 
-
 ## Community edition (self-hosted)
 
 The code for n8n is free to use; in fact we make it easier for you by packaging it up nicely and making it easy to install with Docker. This option does mean that you will need to host n8n somewhere - whether that is your laptop, home server or an instance on a public cloud.
@@ -27,25 +26,37 @@ The code for n8n is free to use; in fact we make it easier for you by packaging 
 The entry-level hosted version of n8n makes it easier to use and maintain - n8n takes care of all the server-side aspects and you get to concentrate on creating and using workflows. It's also the best way to try out n8n and discover what you can make - there's a free trial so _everybody_ can see what n8n can do.
 
 **Great for:**
+
  - people who want automations, but don't want to maintain a server
  - small businesses
  - casual users
 
 ## n8n Cloud Pro
 
-The Pro version of n8n Cloud adds extra capacity and features for people making more use of 
+The Pro version of n8n Cloud adds extra capacity and features for people making more use of workflows and collaborating with others, as well as features to deal with running many workflows at scale. 
+
 **Great for:**
+
+- collaborating in teams
+- larger volumes of workflows
+- all the other benefits of the Cloud Starter level
 
 [Sign up for n8n Cloud here »](https://www.n8n.io/)
 
 ## Enterprise
 
-The Enterprise version of n8n is for people who rely on automation at scale, need enhanced support
+The Enterprise version of n8n is for people who rely on automation at scale, need enhanced support, have larger teams and more requirements for control and observability. Can be self-hosted or hosted by n8n.
 
 **Great for:**
+
 - mission critical workflows
+- larger teams
+- ultimate control and observability
+
+[Find out more about enterprise features »][enterprise]
 
 ## Embed
+
 n8n Embed enables you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/) for pricing and support.
 
 ## Feature comparison
@@ -78,3 +89,4 @@ For a detailed explanation of the license, refer to [Sustainable Use License](/s
 
 [see website]: https://n8n.io/pricing/
 [hosting]: /hosting/index.md
+[enterprise]: https://n8n.io/enterprise/

@@ -35,10 +35,10 @@ The `/templates/collections` endpoint accepts the following query parameters:
 
 ### Data schema
 
-You can explore the data structure of the endpoints here:
+You can explore the data structure of the items in the response object returned by endpoints here:
 
-??? note "Show `workflow` data schema"
-	```json title="Workflow data schema"
+??? note "Show `workflow` item data schema"
+	```json title="Workflow item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
 	  "title": "Generated schema for Root",
@@ -248,8 +248,8 @@ You can explore the data structure of the endpoints here:
 	}
 	```
 
-??? note "Show `category` data schema"
-	```json title="Category data schema"
+??? note "Show `category` item data schema"
+	```json title="Category item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
 	  "type": "object",
@@ -268,8 +268,8 @@ You can explore the data structure of the endpoints here:
 	}
 	```
 
-??? note "Show `collection` data schema"
-	```json title="Collection data schema"
+??? note "Show `collection` item data schema"
+	```json title="Collection item data schema"
 	{
 	  "$schema": "http://json-schema.org/draft-07/schema#",
 	  "type": "object",

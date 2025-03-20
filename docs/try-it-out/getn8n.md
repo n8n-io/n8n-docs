@@ -5,7 +5,7 @@ contentType: overview
 
 # Get n8n
 
-It couldn't be simpler to get started with n8n - we recommend you sign up for a free trial of **n8n cloud**, or cloud-hosted solution - it's a convenient, fast way to get started with everything you need to try out n8n and make some amazingly useful workflows with minimum effort.
+It couldn't be simpler to get started with n8n - we recommend you sign up for a free trial of [**n8n cloud**](https://www.n8n.io/), our cloud-hosted solution - it's a convenient, fast way to get started with everything you need to try out n8n and make some amazingly useful workflows with minimum effort.
 
 ![Screenshot of n8n cloud](/_images/try-it-out/cloud.png){: style="height:250px"; border="0px"}
 

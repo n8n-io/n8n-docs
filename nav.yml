@@ -7,7 +7,6 @@ nav:
       - Going further: try-it-out/going-further.md
     - Choose your n8n:
       - Chose a plan: choose-n8n.md
-      - Plan comparison: hosting/community-edition-features.md
       - Install self-hosted:
         - Docker: hosting/installation/docker.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
@@ -217,7 +216,7 @@ nav:
       - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
       - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
       - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
-  - How to Guides:
+  - Using n8n:
     - Configuration:
       - Cloud configuration:
         - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md

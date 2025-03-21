@@ -16,7 +16,7 @@ It couldn't be simpler to get started with n8n - we recommend you sign up for a 
 - Managed OAuth for authentication
 - One-click upgrades to the newest n8n versions
 
-[Sign up for n8n Cloud here »](https://www.n8n.io/)
+[Sign up for n8n Cloud here »](https://app.n8n.cloud/register){ .md-button }
 
 ## Other options
 

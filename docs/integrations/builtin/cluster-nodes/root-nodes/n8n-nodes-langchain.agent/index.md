@@ -14,6 +14,10 @@ An [AI agent](/glossary.md#ai-agent) is an autonomous system that receives data,
 You must connect at least one tool [sub-node](/integrations/builtin/cluster-nodes/sub-nodes/index.md) to an AI Agent node.
 ///
 
+/// note | Older versions
+
+Prior to version 1.82.0, the AI Agent had a setting for working as different agent types. This has now been removed and all AI Agent nodes work as a 'ToolsAgent' which was the recommended and most frequently used setting. If you are working with older versions of the AI Agent in workflows or templates, as long as they were set to 'ToolsAgent', they should continue to behave as intended with the updated node in its default setting.
+
 
 ## Templates and examples
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

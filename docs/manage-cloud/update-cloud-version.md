@@ -27,6 +27,6 @@ Only instance owners can upgrade n8n Cloud versions. Contact your instance owner
 
 ## Automatic update
 
-n8n automatically updates outdated Cloud instances. 
+n8n automatically updates outdated Cloud instances.
 
 If you don't update you instance for 120 days, n8n emails you to warn you to update. After a further 30 days, n8n automatically updates your instance.

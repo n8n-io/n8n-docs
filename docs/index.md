@@ -10,9 +10,18 @@ hide:
 # Welcome to n8n Docs
 
 
-This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](https://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
+This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation platform that uniquely combines AI capabilities with business process automation, giving technical teams the flexibility of code with the speed of no-code.
 
-It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
+## How to use this documentation
+
+Our documentation arranges information by type, to make it easier to find what you are looking for, when you need it. 
+
+
+/// note | Visiting docs from the n8n editor
+Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's 
+///
+
+ [contributions](/help-community/contributing.md) are welcome.
 
 
 ## Where to start
@@ -45,10 +54,5 @@ It covers everything from setup to usage and development. It's a work in progres
     [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)    
 </div>
 
-## About n8n
 
-n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
-
-* Customizable: highly flexible workflows and the option to build custom nodes.
-* Convenient: use the npm or Docker to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
-* Privacy-focused: self-host n8n for privacy and security.
+[Getting started?](#){ .md-button .md-button--primary }

@@ -1,4 +1,4 @@
-Please include fronmatter indicating a tutorial with a relevant description, for example:
+Please include frontmatter indicating a tutorial with a relevant description, for example:
 
 ```
 ---

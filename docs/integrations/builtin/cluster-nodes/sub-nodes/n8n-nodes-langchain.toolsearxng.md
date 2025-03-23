@@ -16,13 +16,13 @@ contentType: [integration, reference]
   - The search term or phrase you want to query.
 
 - **Categories** (`string`, optional)
-  - Comma-separated list of categories to search within, (eg: `general`, `images`).
+  - Comma-separated list of categories to search within, (for example: `general`, `images`).
   - Options available are: **`general`, `files`, `images`, `IT`, `map`, `music`, `news`, `science`, `social media`, `videos`**
   - If left empty, the default categories configured in your SearXNG instance will be used.
 
 - **Language** (`string`, optional)
-  - Two-letter language code to filter search results by language (e.g., `en` for English, `fr` for French).
-  - Look [here](https://docs.searxng.org/user/search-syntax.html#select-language) for exhaustive list of langage codes
+  - Two-letter language code to filter search results by language (for example: `en` for English, `fr` for French).
+  - Look [here](https://docs.searxng.org/user/search-syntax.html#select-language) for exhaustive list of language codes
 
 - **Time Range** (`string`, optional)
   - Set a time range if needed; format is XXX
@@ -33,12 +33,13 @@ contentType: [integration, reference]
 - **Results Per Page** (`number`, optional)
   - Specify the number of results to retrieve per page.​
 
-- **Page Number** (`number`, optional) Indicate the page number of the results to retrieve.
+- **Page Number** (`number`, optional)
+  - Specify the page from the results you would like to retrieve.
 
 ## Node Options
 You can further configure the node using these options:
 - **API URL** (`string`, optional)
-  - Provide a custom URL for a SearXNG instance if you are not using the default instance.​
+  - Provide a custom URL for a SearXNG instance if you aren't using the default instance.​
 
 ## Example Usage
 
@@ -47,7 +48,7 @@ To use the SearXNG node in a workflow:
 1. Add the **SearXNG** node to your workflow.
 2. Set the **Query** parameter to your desired search term.
 3. Optionally, specify **Categories**, **Language**, **Time Range**, and **Safe Search** parameters to refine your search.
-4. Connect the node to subsequent nodes to process the search results as needed.
+4. Connect the node to subnodes to process the search results as needed.
 
 ## Practical Applications
 
@@ -57,6 +58,15 @@ To use the SearXNG node in a workflow:
 
 ## Considerations
 - This node requires you to run the SearXNG service on the same network as your n8n instance. **Ensure your n8n instance has network access to the SearXNG service.**
+- SearXNG service is not configured by default to output results in a JSON format, which is a requirement for this node to function as a tool to the n8n AI Agent node. To enable json output, you need to explicitely mention "json" in "formats" section of your "search:" section in the settings.yml file of your SearXNG instance. 
+	example:
+	search:
+      # options available for formats: [html, csv, json, rss]
+	  formats:
+	    - html
+	    - json
+  If the formats section isnt there, add it.
+  The exact location of the settings file will depend on how you installed SearXNG; go to SearXNG documentation [here] for more detail (https://docs.searxng.org/admin/installation-searxng.html#id5)  
 - The quality and availability of search results depend on the configuration and health of the SearXNG instance you are using.
 
 For more information on setting up and configuring SearXNG, refer to the [SearXNG documentation](https://docs.searxng.org/).

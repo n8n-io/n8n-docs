@@ -19,8 +19,7 @@ jobs:
         with:
           # Avoid using single or double quotes for multiline patterns
           files: |
-            **.md
-            docs/**.md
+            docs/**/*.md
       - name: Run Lychee Link Checker
         id: lychee
         if: steps.changed-markdown-files.outputs.any_changed == 'true'

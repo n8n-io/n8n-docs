@@ -18,15 +18,15 @@ This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://fair
 
 Our documentation arranges information by type, to make it easier to find what you are looking for, when you need it. 
 
-**Getting Started** details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
+[**Getting Started**](/) details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
 
-**Using n8n** has step-by-step instructions for .
+[**Using n8n**](/) has step-by-step instructions for all sorts of common tasks and operations.
 
-**Reference** xxxx xxxx xx xxxxx xxxx xx x xxx. X xxx xx x xxxx xxxxx xxxxxx xxxx xxx xxx xxxxxx. X xx xxx xxxxx xxx xxxx xxxxx xx xxxxxxxx xxx. Xxxx xxxxxxxxx xxxxxxx xxx xx xxxxxxx xxx xxxxxx.
+[**Reference**](/) is the section to browse when you want to find out more about node parameters, environment variables or other settings. Remember you can visit many of these pages directly through the user interface with the helpful links embedded in the editor.
 
-**Tutorials and courses** xxxx xxxx xxxxx xxxxxxxx xxxx xx x xxx. X xxx xxxx xxx xx xxxxx xxxxxx xxxx xxx xxx xxxxxx. X xx xxx xxxxx xxx xxxx xxxxx xx xxxxxxxx xxx. Xxxx xxxxx x xxxxxxx xxx xx xxxx xxx xxxxxx.
+[**Tutorials and courses**](/). For structured learning or more hand-on learning of key topics, we have created two complete courses covering basic and advanced workflow generation. There is also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
 
-**Understanding n8n** xxxx xxxx xx xxxxx xxxx xx x xxx. X xxx xx x xxxx xxxxx xxxxxx xxxx xxx xxx xxxxxx. X xx xxx xxxxx xxx xxxx xxxxx xx xxxxxxxx xxx. Xxxx xxxxxxxxx xxxxxxx xxx xx xxxxxxx xxx xxxxxx.
+[**Understanding n8n**](/) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
 
 /// note | Visiting docs from the n8n editor
 Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's edit panel.
@@ -42,4 +42,5 @@ Xx xxxxxxxx xxxxxxxxxx xx x xx xxxxxxxxxxxxx xxxx xxxxxxxxx xx xxxxxxx xxx xxxxx
 We welcome contributions from the community. Please see the [contributing guide](/help-community/contributing.md).
 
 ## Licensing
-Xx xxxxxxxx xxxxxxxxxx xx x xx xxxxxxxxxxxxx xxxx xxxxxxxxx xx xxxxxxx xxx xxxxxx xxxx xx xxxxxxxx xxx. Xxxxxxxx xxxx xx x xxxxxx xxxx xxxxxxxx.X xxx xx x xxxx xxxxx xxxxxx xxxx xxx xxx xxxxxx. X xx xxx xxxxx xxx xxxx xxxxx xx xxxxxxxx xxx. Xxxx xxxxxxxxx xxxxxxx xxx xx xxxxxxx xxx xxxxxx.
+
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](https://faircode.io/) model. For more details, see the [license explanation](sustainable-use-license.md).

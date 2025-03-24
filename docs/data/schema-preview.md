@@ -7,7 +7,7 @@ contentType: overview
 
 # Schema Preview
 
-Schema Preview exposes expected schema data from the previous node in the Node Editor without the user having to provide credentials or execute the node. This makes it possible to construct workflows without having to repeatedly test nodes, or provide credentials in advance. The preview does not include mock data, but it does expose the expected fields, making it possible to select and incorporate them into the input of subsequent nodes.
+Schema Preview exposes expected schema data from the previous node in the Node Editor without the user having to provide credentials or execute the node. This makes it possible to construct workflows without having to provide credentials in advance. The preview doesn't include mock data, but it does expose the expected fields, making it possible to select and incorporate them into the input of subsequent nodes.
 
 ## Using the preview 
 

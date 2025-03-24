@@ -55,20 +55,6 @@ extra:
   analytics:
     provider: google
     property: G-0SC4FF2FH9
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page wasn't helpful
-          data: 0
-          note: >-
-            Thanks for your feedback! Help us improve this page by
-            submitting an issue or a fix in our <a href="https://github.com/n8n-io/n8n-docs" target="_blank" rel="noopener">GitHub repo</a>.
   consent:
     title: Cookie consent
     description: >-
@@ -98,18 +84,6 @@ markdown_extensions:
   # attr_list is required for several other features. Always enable.
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#automatic-previews
-  - material.extensions.preview:
-      # This is currently not documented (issue here https://github.com/squidfunk/mkdocs-material/issues/8001)
-      # It is mentioned here though: https://github.com/squidfunk/mkdocs-material/issues/6704#issuecomment-1986840660
-      # We use it to process these two settings independently. Otherwise, previews would only work
-      # on links in source pages _to_ target pages
-      configurations:
-        - sources:
-            include:
-              - release-notes.md
-        - targets:
-            include:
-              - glossary.md
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - md_in_html
   - meta
@@ -125,10 +99,7 @@ markdown_extensions:
         - details
   - pymdownx.details
   # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg
+
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       linenums: true
@@ -200,8 +171,4 @@ plugins:
   # (like the main site) in new tabs
   - privacy:
       assets: false
-      links: true
-      links_attr_map:
-        target: _blank
-        rel: external
 INHERIT: ./nav.yml

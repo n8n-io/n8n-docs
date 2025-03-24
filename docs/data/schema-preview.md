@@ -5,7 +5,9 @@ description:
 contentType: overview
 ---
 
+# Schema Preview
 
+Schema Preview exposes expected schema data from the previous node in the Node Editor without the user having to provide credentials or execute the node.
 
 
 

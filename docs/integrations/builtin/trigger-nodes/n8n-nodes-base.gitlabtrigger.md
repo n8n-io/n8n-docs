@@ -14,6 +14,23 @@ priority: medium
 You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab.md).
 ///
 
-///  note  | Examples and templates
+## Events
+
+* Comment
+* Confidential issues
+* Confidential comments
+* Deployments
+* Issue
+* Job
+* Merge request
+* Pipeline
+* Push
+* Release
+* Tag
+* Wiki page
+
+## Related resources
+
+n8n provides an app node for GitLab. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md).
+
 For usage examples and templates to help you get started, refer to n8n's [GitLab Trigger integrations](https://n8n.io/integrations/gitlab-trigger/){:target=_blank .external-link} page.
-///

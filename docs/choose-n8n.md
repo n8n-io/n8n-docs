@@ -13,12 +13,7 @@ Our goal is to ensure that **everyone** can run n8n, in a way that matches their
 The code for n8n is free to use; in fact we make it easier for you by packaging it up nicely and making it easy to install with Docker. The features you miss out on are those which can only be delivered through  n8n cloud, or are only of use to larger organisations.
 Choosing this option does mean that you will need to host n8n somewhere - whether that is your laptop, home server or an instance on a public cloud.
 
-**Great for:**
-
- - casual users
- - experimenting
- - home automation
- - node development
+**Great for:** casual users, experimenting, node development.
 
 [Check out the hosting Guide for install instructions »][hosting]
 
@@ -26,11 +21,7 @@ Choosing this option does mean that you will need to host n8n somewhere - whethe
 
 The entry-level hosted version of n8n makes it easier to use and maintain - n8n takes care of all the server-side aspects and you get to concentrate on creating and using workflows. It's also the best way to try out n8n and discover what you can make - there's a free trial so _everybody_ can see what n8n can do.
 
-**Great for:**
-
- - people who want automations, but don't want to maintain a server
- - small businesses
- - casual users
+**Great for:** people who want automations but don't want to maintain a server, small businesses, casual users.
 
 [Sign up for n8n Cloud here »](https://www.n8n.io/)
 
@@ -38,11 +29,7 @@ The entry-level hosted version of n8n makes it easier to use and maintain - n8n 
 
 The Pro version of n8n Cloud adds extra capacity and features for people making more use of workflows and collaborating with others, as well as features to deal with running many workflows at scale. 
 
-**Great for:**
-
-- collaborating in teams
-- larger volumes of workflows
-- all the other benefits of the Cloud Starter level
+**Great for:** collaborating in teams, larger volumes of workflows, all the other benefits of the Cloud Starter level.
 
 [Sign up for n8n Cloud here »](https://www.n8n.io/)
 
@@ -50,11 +37,7 @@ The Pro version of n8n Cloud adds extra capacity and features for people making 
 
 The Enterprise version of n8n is for people who rely on automation at scale, need enhanced support, have larger teams and more requirements for control and observability. Can be self-hosted or hosted by n8n.
 
-**Great for:**
-
-- mission critical workflows
-- larger teams
-- ultimate control and observability
+**Great for:** mission critical workflows, larger teams, ultimate control and observability.
 
 [Find out more about enterprise features »][enterprise]
 

@@ -315,6 +315,7 @@ nav:
       - Troubleshooting: integrations/community-nodes/troubleshooting.md
       - Building community nodes: integrations/community-nodes/build-community-nodes.md
   - Reference:
+    - reference/index.md
     - Environment variables: hosting/configuration/environment-variables.md
     - n8n CLI commands: hosting/cli-commands.md
     - Keyboard shortcuts: keyboard-shortcuts.md
@@ -1220,7 +1221,7 @@ nav:
       - Overview: data/overview.md
       - Data structure: data/data-structure.md
       - Binary data: data/binary-data.md
-    - Built in methods and variables:
+    - Methods and variables:
       - Overview: code/builtin/overview.md
       - Current node input: code/builtin/current-node-input.md
       - Output of other nodes: code/builtin/output-other-nodes.md

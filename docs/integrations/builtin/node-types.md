@@ -3,9 +3,9 @@
 contentType: overview
 ---
 
-# Built-in integrations
+# Node types
 
-This section contains the [node](/glossary.md#node-n8n) library: reference documentation for every built-in node in n8n, and their credentials.
+This section contains the [node](/glossary.md#node-n8n) library: reference documentation for every built-in node in n8n.
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 

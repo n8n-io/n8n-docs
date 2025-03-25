@@ -17,3 +17,55 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [GitHub Trigger integrations](https://n8n.io/integrations/github-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* Check run
+* Check suite
+* Commit comment
+* Create
+* Delete
+* Deploy key
+* Deployment
+* Deployment status
+* Fork
+* GitHub app authorization
+* Gollum
+* Installation
+* Installation repositories
+* Issue comment
+* Label
+* Marketplace purchase
+* Member
+* Membership
+* Meta
+* Milestone
+* Org block
+* Organization
+* Page build
+* Project
+* Project card
+* Project column
+* Public
+* Pull request
+* Pull request review
+* Pull request review comment
+* Push
+* Release
+* Repository
+* Repository import
+* Repository vulnerability alert
+* Security advisory
+* Star
+* Status
+* Team
+* Team add
+* Watch
+
+## Related resources
+
+n8n provides an app node for GitHub. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.github.md).
+
+View [example workflows and related content](https://n8n.io/integrations/github-trigger/) on n8n's website.
+
+Refer to [GitHub's documentation](https://docs.github.com/en/rest) for details about their API.

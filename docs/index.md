@@ -32,11 +32,6 @@ Our documentation arranges information by type, to make it easier to find what y
 Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's edit panel.
 ///
 
- [contributions](/help-community/contributing.md) are welcome.
-
-## Community
-Xx xxxxxxxx xxxxxxxxxx xx x xx xxxxxxxxxxxxx xxxx xxxxxxxxx xx xxxxxxx xxx xxxxxx xxxx xx xxxxxxxx xxx. Xxxxxxxx xxxx xx x xxxxxx xxxx xxxxxxxx.X xxx xx x xxxx xxxxx xxxxxx xxxx xxx xxx xxxxxx. X xx xxx xxxxx xxx xxxx xxxxx xx xxxxxxxx xxx. Xxxx xxxxxxxxx xxxxxxx xxx xx xxxxxxx xxx xxxxxx. X xxx xx x xxxx xxxxx xxxxxx xxxx xxx xxx xxxxxx. X xx xxx xxxxx xxx xxxx xxxxx xx xxxxxxxx xxx. Xxxx xxxxxxxxx xxxxxxx xxx xx xxxxxxx xxx xxxxxx.
-
 ## Contributing
 
 We welcome contributions from the community. Please see the [contributing guide](/help-community/contributing.md).

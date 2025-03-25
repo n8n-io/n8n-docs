@@ -36,3 +36,5 @@ For usage examples and templates to help you get started, refer to n8n's [Conver
 n8n provides an app node for ConvertKit. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.convertkit.md).
 
 View [example workflows and related content](https://n8n.io/integrations/convertkit-trigger/) on n8n's website.
+
+Refer to [ConvertKit's documentation](https://developers.kit.com/v4#introduction) for details about their API.

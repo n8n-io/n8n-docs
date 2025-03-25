@@ -59,3 +59,5 @@ For usage examples and templates to help you get started, refer to n8n's [Affini
 n8n provides an app node for Affinity. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.affinity.md).
 
 View [example workflows and related content](https://n8n.io/integrations/affinity-trigger/) on n8n's website.
+
+Refer to [Affinity's documentation](https://api-docs.affinity.co/) for details about their API.

@@ -38,15 +38,13 @@
           "__rl": true,
           "value": "app9nOVsRxdypoknP",
           "mode": "list",
-          "cachedResultName": "beginner course",
-          "cachedResultUrl": "https://airtable.com/app9nOVsRxdypoknP"
+          "cachedResultName": "beginner course"
         },
         "table": {
           "__rl": true,
           "value": "tblTIOsm4BLJD9Tql",
           "mode": "list",
-          "cachedResultName": "processingOrders",
-          "cachedResultUrl": "https://airtable.com/app9nOVsRxdypoknP/tblTIOsm4BLJD9Tql"
+          "cachedResultName": "processingOrders"
         },
         "columns": {
           "mappingMode": "autoMapInputData",

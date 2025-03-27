@@ -22,7 +22,7 @@ These links highlight some of the cases where the Loop Over Items node can be us
 
 * [Loop until all items are processed](/flow-logic/looping.md#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
 * [Node exceptions](/flow-logic/looping.md#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
-* [Avoiding rate limiting](/builtin/rate-limits.md): demonstrates how to batch API requests to avoid rate limits from other services.
+* [Avoiding rate limiting](/integrations/builtin/rate-limits.md): demonstrates how to batch API requests to avoid rate limits from other services.
 
 ## Node parameters
 

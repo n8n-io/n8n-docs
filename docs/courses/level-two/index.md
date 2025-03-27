@@ -51,6 +51,4 @@ You can always **check your progress** throughout the course by entering your un
 
 If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2){:target="_blank" .external} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 
-<div style="text-align:center;">
-	<button style="font-weight: 600;padding: 20px 46px;border-radius: 30px;color: #fff;background-color: #ff6d5a;border-color: #ff6d5a;border: 1px solid #ff6d5a;font-size: 14px;"><a href="/courses/level-two/chapter-1/" style="color: #fff;">Let's get started!</a></button>
-</div>
+[Let's get started!](/courses/level-two/chapter-1.md){ .md-button }

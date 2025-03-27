@@ -8,7 +8,7 @@ priority: critical
 
 # Loop Over Items
 
-The Loop Over Items node helps you loop through data.
+The Loop Over Items node helps you loop through data when needed.
 
 The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
 
@@ -16,12 +16,13 @@ When the node execution completes, it combines all of the processed data and ret
 
 ## When to use the Loop Over Items node
 
-By default, n8n nodes process input items one at a time. Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](/flow-logic/looping.md) page.
+By default, n8n nodes are designed to process a list of input items (with some exceptions, detailed below). Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](/flow-logic/looping.md) page.
 
-In particular, these two sections are of particular interest to the Loop Over Items node:
+These links highlight some of the cases where the Loop Over Items node can be useful:
 
 * [Loop until all items are processed](/flow-logic/looping.md#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
 * [Node exceptions](/flow-logic/looping.md#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
+* [Avoiding rate limiting](/builtin/rate-limits.md): demonstrates how to batch API requests to avoid rate limits from other services.
 
 ## Node parameters
 

@@ -16,3 +16,50 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Customer.io Trigger integrations](https://n8n.io/integrations/customerio-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* Customer
+  * Subscribed
+  * Unsubscribe
+* Email
+  * Bounced
+  * Clicked
+  * Converted
+  * Delivered
+  * Drafted
+  * Failed
+  * Opened
+  * Sent
+  * Spammed
+* Push
+  * Attempted
+  * Bounced
+  * Clicked
+  * Delivered
+  * Drafted
+  * Failed
+  * Opened
+  * Sent
+* Slack
+  * Attempted
+  * Clicked
+  * Drafted
+  * Failed
+  * Sent
+* Sms
+  * Attempted
+  * Bounced
+  * Clicked
+  * Delivered
+  * Drafted
+  * Failed
+  * Sent
+
+## Related resources
+
+n8n provides an app node for Customer.io. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.customerio.md).
+
+View [example workflows and related content](https://n8n.io/integrations/customerio-trigger/) on n8n's website.
+
+Refer to [Customer.io's documentation](https://docs.customer.io/api/) for details about their API.

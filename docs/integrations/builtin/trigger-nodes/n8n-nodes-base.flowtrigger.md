@@ -16,3 +16,15 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Flow Trigger integrations](https://n8n.io/integrations/flow-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* New Flow event
+
+## Related resources
+
+n8n provides an app node for Flow. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.flow.md).
+
+View [example workflows and related content](https://n8n.io/integrations/flow-trigger/) on n8n's website.
+
+Refer to [Flow's documentation](https://developer.getflow.com/api/) for details about their API.

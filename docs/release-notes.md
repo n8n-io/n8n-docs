@@ -239,6 +239,10 @@ Schema Preview lets you view and work with a node’s expected output without ex
 - Open the next node in the sequence - Schema Preview data appears in the Node Editor where you would typically find it in the Schema View.
 - Use Schema Preview fields just like other schema data - drag and drop them into parameters and settings as needed.
 
+<br>
+<video src="/_video/release-notes/Schema_preview.mp4" controls width="100%"></video>
+<br>
+
 Don’t forget to add the required credentials before putting your workflow into production.
 
 ### Contributors

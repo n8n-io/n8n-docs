@@ -122,7 +122,7 @@ Create and manage folders within your personal space or within projects. You can
 </figure>
 <br>
 
-Folders are available for all [registered](https://docs.n8n.io/hosting/community-edition-features/#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+Folders are available for all [registered](/hosting/community-edition-features.md#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
 
 ### Enhancements to Form Trigger Node
 

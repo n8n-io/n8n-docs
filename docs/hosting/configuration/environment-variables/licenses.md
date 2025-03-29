@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-To enable enterprise features, you need to add your enterprise license key. You can do this through the UI, or using environment variables. Refer to [Enterprise license key](/enterprise-key.md) for details.
+To enable enterprise features, you need to add your enterprise license key. You can do this through the UI, or using environment variables. Refer to [Enterprise license key](/license-key.md) for details.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

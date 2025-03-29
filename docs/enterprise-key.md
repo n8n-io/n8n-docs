@@ -1,26 +1,27 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Enterprise key
-description: How to use your enterprise license key.
+title: License key
+description: How to activate your license key.
 contentType: howto
 ---
 
-# Enterprise license key
+# License Key
 
-You need to add your enterprise license key to enable enterprise features. You can do this through the UI, or using environment variables.
+To get access to certain features, you need to activate your license key. You can do this through the UI, or using environment variables.
 
-## Add an enterprise license key in the UI
+## Add a license key via the UI
 
 In your n8n instance:
 
+1. Log in as **Admin** or **Owner**.
 1. Select **Settings** > **Usage and plan**.
 1. Select **Enter activation key**.
 1. Paste in your license key.
 1. Select **Activate**.
 
-## Add an enterprise license key using environment variables
+## Add a license key via environment variables
 
-In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key.
+In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key. If the instance already has an activated license, this variable will have no effect.
 
 Refer to [Environment variables](/hosting/configuration/configuration-methods.md) to learn more about configuring n8n.
 

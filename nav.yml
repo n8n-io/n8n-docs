@@ -135,12 +135,17 @@ nav:
         - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
         - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
   - Tutorials and courses:
-    - Create and run workflows: workflows/create.md
+    - Using the tutorials: tutorials/overview
+    - Your first workflow:  try-it-out/tutorial-first-workflow.md
     - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
-    - A longer introduction: try-it-out/longer-introduction.md
+    - AI examples:
+      - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
+      - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
+      - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
     - Video courses: video-courses.md
     - Text courses:
-      - courses/index.md
       - Level one:
         - courses/level-one/index.md
         - Navigating the editor UI: courses/level-one/chapter-1.md
@@ -170,9 +175,6 @@ nav:
           - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
           - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
         - Test your knowledge: courses/level-two/chapter-6.md
-    - Using nodes:
-      - Custom API actions for existing nodes: integrations/custom-operations.md
-      - Handle rate limits: integrations/builtin/rate-limits.md
     - Creating nodes:
       - integrations/creating-nodes/overview.md
       - Plan your node:
@@ -212,12 +214,6 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
-    - AI:
-      - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
-      - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
-      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
-      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
-      - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
   - How to Guides:
     - Configuration:
       - Cloud configuration:

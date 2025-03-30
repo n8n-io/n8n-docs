@@ -49,7 +49,7 @@ Kubernetes and n8n require a series of configuration files. You can clone these 
 Clone the repository with the following command:
 
 ```shell
-git clone git clone https://github.com/n8n-io/n8n-hosting.git
+git clone https://github.com/n8n-io/n8n-hosting.git
 ```
 
 And change directory to the root of the repository you cloned:

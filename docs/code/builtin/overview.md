@@ -4,7 +4,7 @@ description: n8n's built-in custom methods and variables.
 contentType: overview
 ---
 
-# Built-in methods and variables
+# Methods and variables
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides a reference of available methods and variables for use in [expressions](/glossary.md#expression-n8n), with a short description. 
 

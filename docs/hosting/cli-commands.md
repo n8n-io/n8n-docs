@@ -204,7 +204,7 @@ Clear your existing license from n8n's database and reset n8n to default feature
 n8n license:clear
 ```
 
-If your license includes floatable entitlements, running this command will also attempt to release them back to the pool, making them available for other instances.
+If your license includes floating entitlements, running this command will also attempt to release them back to the pool, making them available for other instances.
 
 ### Info
 

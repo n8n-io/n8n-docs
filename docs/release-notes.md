@@ -35,6 +35,23 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.86.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.86.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-31
+
+This release contains bug fixes.
+
+### Contributors
+
+[Aijeyomah](https://github.com/Aijeyomah){:target=_blank .external-link}  
+[ownerer](https://github.com/ownerer){:target=_blank .external-link}  
+[ulevitsky](https://github.com/ulevitsky){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.85.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.3...n8n@1.85.4){:target=_blank .external-link} for this version.<br />

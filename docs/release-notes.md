@@ -277,6 +277,24 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.82.0
 
 This release contains core updates, editor updates, new nodes, node updates, new credentials, credential updates, and bug fixes.
 
+### Tidy up
+Tidy up instantly aligns nodes, centers stickies, untangles connections, and brings structure to your workflows. Whether you're preparing to share a workflow or just want to improve readability, this feature saves you time and makes your logic easier to follow. Clean, well-organized workflows aren't just nicer to look at—they’re also quicker to understand.
+
+**How to:** 
+
+Open the workflow you want to tidy, then choose one of these options:
+
+- Click the **Tidy up** button in the bottom-left corner of the canvas (it looks like a broom 🧹)
+- Press **Shift + Alt + T** on your keyboard
+- Right-click anywhere on the canvas and select **Tidy up workflow**
+
+Want to tidy up just part of your workflow? Select the specific nodes you want to clean up first - Tidy up will only adjust those, along with any stickies behind them.
+
+<br>
+<video src="/_video/release-notes/tidy_up.mp4" controls width="100%"></video>
+<br>
+
+
 ### Multiple API keys
 n8n now supports multiple API keys, allowing users to generate and manage separate keys for different workflows or integrations. This improves security by enabling easier key rotation and isolation of credentials. Future updates will introduce more granular controls. <br>
 

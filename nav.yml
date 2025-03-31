@@ -147,6 +147,7 @@ nav:
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
   - Using n8n:
+    - using-n8n/index.md
     - Configuration:
       - n8n Cloud:
         - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md

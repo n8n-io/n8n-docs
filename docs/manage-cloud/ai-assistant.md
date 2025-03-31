@@ -3,7 +3,7 @@
 contentType: explanation
 ---
 
-# AI Assistant
+# AI assistant
 
 The n8n AI Assistant helps you build, debug, and optimize your workflows seamlessly. From answering questions about n8n to providing help with coding and [expressions](/glossary.md#expression-n8n), the AI Assistant can streamline your workflow-building process and support you as you navigate n8n's capabilities.
 

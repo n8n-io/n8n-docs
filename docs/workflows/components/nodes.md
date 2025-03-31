@@ -4,7 +4,7 @@ description: A node is an entry point for retrieving data, a function to process
 contentType: howto
 ---
 
-# Nodes
+# Manage nodes
 
 [Nodes](/glossary.md#node-n8n) are the key building blocks of a [workflow](/glossary.md#workflow-n8n). They perform a range of actions, including:
 

@@ -23,21 +23,20 @@ nav:
       - Where to get help: help-community/help.md
       - Contributing: help-community/contributing.md
   - Understanding n8n:
-    - To categorize:
-      - Concurrency: manage-cloud/concurrency.md
-      - AI assistant: manage-cloud/ai-assistant.md
-      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-      - Concurrency control: hosting/scaling/concurrency-control.md
-      - Memory-related errors: hosting/scaling/memory-errors.md
-      - Deployment: embed/deployment.md
-      - Best practices: user-management/best-practices.md
-      - Understand:
-        - source-control-environments/understand/index.md
-        - Environments: source-control-environments/understand/environments.md
-        - Git in n8n: source-control-environments/understand/git.md
-        - Branch patterns: source-control-environments/understand/patterns.md
-      - Risks: integrations/community-nodes/risks.md
-      - Blocklist: integrations/community-nodes/blocklist.md
+    - Concurrency: manage-cloud/concurrency.md
+    - AI assistant: manage-cloud/ai-assistant.md
+    - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
+    - Concurrency control: hosting/scaling/concurrency-control.md
+    - Memory-related errors: hosting/scaling/memory-errors.md
+    - Deployment: embed/deployment.md
+    - Best practices: user-management/best-practices.md
+    - Understand:
+      - source-control-environments/understand/index.md
+      - Environments: source-control-environments/understand/environments.md
+      - Git in n8n: source-control-environments/understand/git.md
+      - Branch patterns: source-control-environments/understand/patterns.md
+    - Risks: integrations/community-nodes/risks.md
+    - Blocklist: integrations/community-nodes/blocklist.md
     - Components:
       - workflows/components/index.md
       - Nodes:
@@ -81,13 +80,13 @@ nav:
         - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
         - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
   - Tutorials and courses:
-    - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
+    - tutorials/index.md
+    - Create environments with source control: source-control-environments/create-environments.md
     - Okta Workforce Identity SAML setup: user-management/saml/okta.md
     - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
-    - A longer introduction: try-it-out/longer-introduction.md
-    - Video courses: video-courses.md
+    - AI examples:
+      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
     - Text courses:
-      - courses/index.md
       - Level one:
         - courses/level-one/index.md
         - Navigating the editor UI: courses/level-one/chapter-1.md
@@ -119,6 +118,7 @@ nav:
         - Test your knowledge: courses/level-two/chapter-6.md
     - Using nodes:
       - Custom API actions for existing nodes: integrations/custom-operations.md
+    - Video courses: video-courses.md
     - Creating nodes:
       - integrations/creating-nodes/overview.md
       - Plan your node:
@@ -146,8 +146,6 @@ nav:
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
-    - AI:
-      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
   - Using n8n:
     - Cloud configuration:
       - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
@@ -282,6 +280,7 @@ nav:
           - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
           - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
+          - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
       - Handling dates: code/cookbook/luxon.md
       - Querying JSON: code/cookbook/jmespath.md
     - Using expressions:
@@ -315,16 +314,13 @@ nav:
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Reference:
     - reference/index.md
-    - Environment variables: hosting/configuration/environment-variables.md
     - n8n CLI commands: hosting/cli-commands.md
     - Keyboard shortcuts: keyboard-shortcuts.md
+    - Cloud IP addresses: manage-cloud/cloud-ip.md
     - Glossary: glossary.md
-    - To categorize:
-      - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
-      - Cloud IP addresses: manage-cloud/cloud-ip.md
+    - Configuration:
+      - Environment variables: hosting/configuration/environment-variables.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
-      - Account types: user-management/account-types.md
-      - Role types: user-management/rbac/role-types.md
     - Built-in nodes:
       - integrations/builtin/node-types.md
       - Core nodes:
@@ -1219,6 +1215,9 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
+    - User management:
+      - Account types: user-management/account-types.md
+      - Role types: user-management/rbac/role-types.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

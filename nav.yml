@@ -22,130 +22,6 @@ nav:
     - Help and community:
       - Where to get help: help-community/help.md
       - Contributing: help-community/contributing.md
-  - Understanding n8n:
-    - Concurrency: manage-cloud/concurrency.md
-    - AI assistant: manage-cloud/ai-assistant.md
-    - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-    - Concurrency control: hosting/scaling/concurrency-control.md
-    - Memory-related errors: hosting/scaling/memory-errors.md
-    - Deployment: embed/deployment.md
-    - Best practices: user-management/best-practices.md
-    - Understand:
-      - source-control-environments/understand/index.md
-      - Environments: source-control-environments/understand/environments.md
-      - Git in n8n: source-control-environments/understand/git.md
-      - Branch patterns: source-control-environments/understand/patterns.md
-    - Risks: integrations/community-nodes/risks.md
-    - Blocklist: integrations/community-nodes/blocklist.md
-    - Components:
-      - workflows/components/index.md
-      - Nodes:
-        - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
-        - Node types: integrations/builtin/node-types.md
-        - Trigger nodes: placeholder.md
-        - App nodes: placeholder.md
-        - Execution order in multi-branch workflows: flow-logic/execution-order.md
-        - Data transformation nodes: data/transforming-data.md
-        - AI nodes: integrations/builtin/cluster-nodes/ai-nodes.md
-        - Human in the loop nodes: placeholder.md
-    - Data mapping and transformation:
-      - data/data-mapping/index.md
-      - Data flow within nodes: data/data-flow-nodes.md
-      - Data item linking:
-        - data/data-mapping/data-item-linking/index.md
-        - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
-    - Code in n8n:
-      - code/index.md
-      - Using the Code node: code/code-node.md
-      - Cookbook:
-        - Built-in methods and variables examples:
-          - code/cookbook/builtin/index.md
-          - execution: code/cookbook/builtin/execution.md
-          - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
-          - (node-name).all: code/cookbook/builtin/all.md
-          - vars: code/cookbook/builtin/vars.md
-    - AI in n8n:
-      - advanced-ai/index.md
-      - AI concepts:
-        - advanced-ai/examples/introduction.md
-        - What is a chain?: advanced-ai/examples/understand-chains.md
-        - What is an agent?: advanced-ai/examples/understand-agents.md
-        - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
-        - What is memory?: advanced-ai/examples/understand-memory.md
-        - What is a tool?: advanced-ai/examples/understand-tools.md
-        - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
-      - AI coding: code/ai-code.md
-      - LangChain in n8n:
-        - advanced-ai/langchain/overview.md
-        - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
-        - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
-  - Tutorials and courses:
-    - tutorials/index.md
-    - Create environments with source control: source-control-environments/create-environments.md
-    - Okta Workforce Identity SAML setup: user-management/saml/okta.md
-    - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
-    - AI examples:
-      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
-    - Text courses:
-      - Level one:
-        - courses/level-one/index.md
-        - Navigating the editor UI: courses/level-one/chapter-1.md
-        - Building a mini-workflow: courses/level-one/chapter-2.md
-        - Automating a (real-world) use case: courses/level-one/chapter-3.md
-        - Designing the workflow: courses/level-one/chapter-4.md
-        - Building the workflow:
-          - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
-          - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
-          - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
-          - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
-          - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
-          - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
-          - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
-          - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
-        - Exporting and importing workflows: courses/level-one/chapter-6.md
-        - Test your knowledge: courses/level-one/chapter-7.md
-      - Level two:
-        - courses/level-two/index.md
-        - Understanding the data structure: courses/level-two/chapter-1.md
-        - Processing different data types: courses/level-two/chapter-2.md
-        - Merging and splitting data: courses/level-two/chapter-3.md
-        - Dealing with errors in workflows: courses/level-two/chapter-4.md
-        - Automating a business workflow:
-          - Use case: courses/level-two/chapter-5/chapter-5.0.md
-          - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
-          - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
-          - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
-        - Test your knowledge: courses/level-two/chapter-6.md
-    - Using nodes:
-      - Custom API actions for existing nodes: integrations/custom-operations.md
-    - Video courses: video-courses.md
-    - Creating nodes:
-      - integrations/creating-nodes/overview.md
-      - Plan your node:
-        - integrations/creating-nodes/plan/index.md
-        - Choose a node type: integrations/creating-nodes/plan/node-types.md
-        - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
-        - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
-        - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
-      - Build your node:
-        - integrations/creating-nodes/build/index.md
-        - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
-        - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
-        - Reference:
-          - integrations/creating-nodes/build/reference/index.md
-          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
-          - Code standards: integrations/creating-nodes/build/reference/code-standards.md
-          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
-          - Base files:
-            - integrations/creating-nodes/build/reference/node-base-files/index.md
-            - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
-            - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
-            - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
-            - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
-            - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
-          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
-          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
-          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
   - Using n8n:
     - using-n8n/index.md
     - Configuration:
@@ -314,6 +190,134 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
+  - Tutorials and courses:
+    - tutorials/index.md
+    - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
+    - AI examples:
+      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
+    - Text courses:
+      - Level one:
+        - courses/level-one/index.md
+        - Navigating the editor UI: courses/level-one/chapter-1.md
+        - Building a mini-workflow: courses/level-one/chapter-2.md
+        - Automating a (real-world) use case: courses/level-one/chapter-3.md
+        - Designing the workflow: courses/level-one/chapter-4.md
+        - Building the workflow:
+          - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
+          - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
+          - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
+          - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
+          - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
+          - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
+          - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
+          - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
+        - Exporting and importing workflows: courses/level-one/chapter-6.md
+        - Test your knowledge: courses/level-one/chapter-7.md
+      - Level two:
+        - courses/level-two/index.md
+        - Understanding the data structure: courses/level-two/chapter-1.md
+        - Processing different data types: courses/level-two/chapter-2.md
+        - Merging and splitting data: courses/level-two/chapter-3.md
+        - Dealing with errors in workflows: courses/level-two/chapter-4.md
+        - Automating a business workflow:
+          - Use case: courses/level-two/chapter-5/chapter-5.0.md
+          - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
+          - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
+          - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
+        - Test your knowledge: courses/level-two/chapter-6.md
+    - Using nodes:
+      - Custom API actions for existing nodes: integrations/custom-operations.md
+    - Video courses: video-courses.md
+    - Creating nodes:
+      - integrations/creating-nodes/overview.md
+      - Plan your node:
+        - integrations/creating-nodes/plan/index.md
+        - Choose a node type: integrations/creating-nodes/plan/node-types.md
+        - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+        - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
+        - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
+      - Build your node:
+        - integrations/creating-nodes/build/index.md
+        - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
+        - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
+        - Reference:
+          - integrations/creating-nodes/build/reference/index.md
+          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
+          - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
+          - Base files:
+            - integrations/creating-nodes/build/reference/node-base-files/index.md
+            - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
+            - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
+            - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
+            - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
+            - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
+          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
+          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
+          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+    - Create environments with source control: source-control-environments/create-environments.md
+    - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+  - Understanding n8n:
+    - understanding/index.md
+    - Workflows: 
+      -  Learn about workflows: understanding/workflows.md
+#Workflow settings - Tags - Workflow history - Export/import - Workflow ID
+    - Nodes:
+      - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
+      - Node types: integrations/builtin/node-types.md
+#      - Trigger nodes: placeholder.md
+#      - App nodes: placeholder.md
+      - Execution order in multi-branch workflows: flow-logic/execution-order.md
+      - Data transformation nodes: data/transforming-data.md
+      - AI nodes: integrations/builtin/cluster-nodes/ai-nodes.md
+#      - Human in the loop nodes: placeholder.md
+      - Community nodes:
+        - Risks: integrations/community-nodes/risks.md
+        - Blocklist: integrations/community-nodes/blocklist.md
+#    - Execution: understanding/executions.md
+#        - Pinning and mocking
+#        - Debugging executions
+    - Data mapping and transformation: 
+        - Data structure: data/data-structure.md
+        - Data item linking: data/data-mapping/data-item-linking/item-linking-concepts.md
+        - Transforming data: data/transforming-data.md
+        - Data flow within nodes: data/data-flow-nodes.md
+#        - Expressions overview
+#        - Code in n8n
+#        - Handling dates
+#        - Query JSON with JMESPath
+    - Credentials: 
+      - What are credentials?: understanding/credentials.md
+    - AI:
+      - advanced-ai/index.md
+      - AI concepts:
+        - advanced-ai/examples/introduction.md
+        - What is a chain?: advanced-ai/examples/understand-chains.md
+        - What is an agent?: advanced-ai/examples/understand-agents.md
+        - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
+        - What is memory?: advanced-ai/examples/understand-memory.md
+        - What is a tool?: advanced-ai/examples/understand-tools.md
+        - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
+      - AI coding: code/ai-code.md
+      - LangChain in n8n:
+        - advanced-ai/langchain/overview.md
+        - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+        - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+    - Cloud: 
+      - Concurrency: manage-cloud/concurrency.md
+      - AI assistant: manage-cloud/ai-assistant.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
+    - Self-hosted:
+      - Self-hosted vs Cloud: hosting/self-hosted/self-hosted-vs-cloud.md
+      - Self-hosted maintenance: hosting/self-hosted/maintenance.md
+      - Self-hosted security: hosting/self-hosted/security.md
+    - Source control: 
+      - source-control-environments/understand/index.md
+      - Environments: source-control-environments/understand/environments.md
+      - Git in n8n: source-control-environments/understand/git.md
+      - Branch patterns: source-control-environments/understand/patterns.md
   - Reference:
     - reference/index.md
     - n8n CLI commands: hosting/cli-commands.md

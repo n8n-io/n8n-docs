@@ -3687,7 +3687,7 @@ Read more:
 
 * This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
-* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
+* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/ai-nodes.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
 
 ## n8n@1.9.0
 

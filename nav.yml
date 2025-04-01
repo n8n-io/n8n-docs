@@ -6,7 +6,7 @@ nav:
       - Your first workflow: try-it-out/tutorial-first-workflow.md
       - Going further: try-it-out/going-further.md
     - Choose your n8n:
-      - Chose a plan: choose-n8n.md
+      - Choose a plan: choose-n8n.md
       - Install n8n:
         - Docker: hosting/installation/docker.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
@@ -87,8 +87,9 @@ nav:
         - SAML:
           - user-management/saml/index.md
           - Set up SAML: user-management/saml/setup.md
-          - Troubleshooting: user-management/saml/troubleshooting.md
           - Manage users with SAML: user-management/saml/managing.md
+          - Set up SAML with Okta Workforce Identity: user-management/saml/okta.md
+          - Troubleshooting: user-management/saml/troubleshooting.md
       - Source control and environments:
         - source-control-environments/index.md
         - Set up: source-control-environments/setup.md
@@ -1280,3 +1281,43 @@ nav:
 
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md
+#exclude_docs: |
+not_in_nav: |
+  /learning-path.md
+  /placeholder.md
+  /code/index.md
+  /code/code-node.md
+  /code/cookbook/builtin/index.md
+  /code/cookbook/http-node/index.md
+  /courses/index.md
+  /data/code.md
+  /data/data-mapping/index.md
+  /data/data-mapping/data-item-linking/index.md
+  /hosting/index.md
+  /hosting/community-edition-features.md
+  /hosting/configuration/environment-variables/binary-data.md
+  /hosting/configuration/environment-variables/credentials.md
+  /hosting/configuration/environment-variables/database.md
+  /hosting/configuration/environment-variables/deployment.md
+  /hosting/configuration/environment-variables/endpoints.md
+  /hosting/configuration/environment-variables/executions.md
+  /hosting/configuration/environment-variables/external-data-storage.md
+  /hosting/configuration/environment-variables/external-hooks.md
+  /hosting/configuration/environment-variables/external-secrets.md
+  /hosting/configuration/environment-variables/licenses.md
+  /hosting/configuration/environment-variables/logs.md
+  /hosting/configuration/environment-variables/nodes.md
+  /hosting/configuration/environment-variables/overview.md
+  /hosting/configuration/environment-variables/queue-mode.md
+  /hosting/configuration/environment-variables/security.md
+  /hosting/configuration/environment-variables/source-control.md
+  /hosting/configuration/environment-variables/task-runners.md
+  /hosting/configuration/environment-variables/timezone-localization.md
+  /hosting/configuration/environment-variables/user-management-smtp-2fa.md
+  /hosting/configuration/environment-variables/workflows.md
+  /hosting/installation/npm.md
+  /hosting/installation/updating.md
+  /integrations/builtin/trigger-nodes/index.md
+  /manage-cloud/overview.md
+  /understanding/nodes.md
+  /workflows/components/index.md

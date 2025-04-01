@@ -14,5 +14,8 @@ The specifics of each credential depend on the service being authenticated to. S
 - Basic Authentication: Uses a username and password to authenticate requests.
 - API Key: Used when a service requires an API key for access.
 - OAuth: Common for services like Google, Slack, and GitHub, where users authenticate via OAuth and n8n stores the access token.
+- Header Auth: For some APIs and webhooks, authentication uses similar tokens but formatted into request headers.
 
 Credentials are managed in the n8n credential manager, where they can be added, edited, or deleted without modifying workflows. This approach improves security by keeping sensitive data encrypted and separate from workflow logic, making automation more scalable and secure.
+
+For more on how to use and manage credentials in n8n, see the [Using n8n documentation](/credentials/index.md).

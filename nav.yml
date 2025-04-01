@@ -196,6 +196,7 @@ nav:
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Tutorials and courses:
     - tutorials/index.md
+    - Your first workflow: tutorials/tutorial-first-workflow.md
     - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
     - AI examples:
       - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
@@ -259,8 +260,8 @@ nav:
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
-    - Create environments with source control: source-control-environments/create-environments.md
-    - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+    - Enterprise:
+      - Create environments with source control: source-control-environments/create-environments.md
   - Understanding n8n:
     - understanding/index.md
     - Workflows: 
@@ -314,11 +315,9 @@ nav:
       - Concurrency control: hosting/scaling/concurrency-control.md
       - Memory-related errors: hosting/scaling/memory-errors.md
     - Self-hosted:
-      - Self-hosted vs Cloud: hosting/self-hosted/self-hosted-vs-cloud.md
-      - Self-hosted maintenance: hosting/self-hosted/maintenance.md
-      - Self-hosted security: hosting/self-hosted/security.md
-    - Source control: 
-      - source-control-environments/understand/index.md
+      - Why self host?: understanding/self-hosting.md
+    - Enterprise: 
+      - Source control: source-control-environments/understand/index.md
       - Environments: source-control-environments/understand/environments.md
       - Git in n8n: source-control-environments/understand/git.md
       - Branch patterns: source-control-environments/understand/patterns.md

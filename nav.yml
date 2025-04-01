@@ -260,8 +260,8 @@ nav:
   - Understanding n8n:
     - understanding/index.md
     - Workflows: 
-      - understanding workflows: understanding/workflows.md
-    #Workflow settings - Tags - Workflow history - Export/import - Workflow ID
+      -  Learn about workflows: understanding/workflows.md
+#Workflow settings - Tags - Workflow history - Export/import - Workflow ID
     - Nodes:
       - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
       - Node types: integrations/builtin/node-types.md
@@ -274,11 +274,10 @@ nav:
       - Community nodes:
         - Risks: integrations/community-nodes/risks.md
         - Blocklist: integrations/community-nodes/blocklist.md
-    - Execution: understanding/executions.md
+#    - Execution: understanding/executions.md
 #        - Pinning and mocking
 #        - Debugging executions
     - Data mapping and transformation: 
-        - understanding/data.md
         - Data structure: data/data-structure.md
         - Data item linking: data/data-mapping/data-item-linking/item-linking-concepts.md
         - Transforming data: data/transforming-data.md
@@ -287,7 +286,8 @@ nav:
 #        - Code in n8n
 #        - Handling dates
 #        - Query JSON with JMESPath
-    - Credentials: understanding/credentials.md
+    - Credentials: 
+      - What are credentials?: understanding/credentials.md
     - AI:
       - advanced-ai/index.md
       - AI concepts:
@@ -313,7 +313,6 @@ nav:
       - Self-hosted vs Cloud: hosting/self-hosted/self-hosted-vs-cloud.md
       - Self-hosted maintenance: hosting/self-hosted/maintenance.md
       - Self-hosted security: hosting/self-hosted/security.md
-    - Users: user-management/best-practices.md
     - Source control: 
       - source-control-environments/understand/index.md
       - Environments: source-control-environments/understand/environments.md

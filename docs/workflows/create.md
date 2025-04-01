@@ -20,7 +20,7 @@ Or:
 2. If you're doing this from the **Overview** page, you'll create the workflow inside your personal space. If you're doing this from inside a project, you'll create the workflow inside that specific project.
 3. Get started by adding a trigger node: select **Add first step...**
 
-If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/index.md) to quickly try out n8n features.
+If it's your first time building a workflow, you may want to use the [tutorial](/try-it-out/tutorial-first-workflow.md) to quickly try out n8n features.
 
 ## Run workflows manually
 

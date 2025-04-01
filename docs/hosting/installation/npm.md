@@ -52,7 +52,7 @@ n8n start
 
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/index.md).
+Try out n8n using the [Tutorials](/tutorials/index.md).
 
 ## Updating
 

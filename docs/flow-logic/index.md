@@ -17,7 +17,7 @@ This section covers:
 
 ## Related sections
 
-You need some understanding of [Data](/data/index.md) in n8n, including [Data structure](/data/data-structure.md) and [Data flow within nodes](/data/data-flow-nodes.md).
+You need some understanding of [Data](/data/overview.md) in n8n, including [Data structure](/data/data-structure.md) and [Data flow within nodes](/data/data-flow-nodes.md).
 
 When building your logic, you'll use n8n's [Core nodes](/integrations/builtin/core-nodes/index.md), including:
 

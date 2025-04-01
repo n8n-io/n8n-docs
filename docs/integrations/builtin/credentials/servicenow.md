@@ -30,7 +30,7 @@ To configure this credential, you'll need:
 
 - A **User** name: Enter your ServiceNow username.
 - A **Password**: Enter your ServiceNow password.
-- A **Subdomain**: The subdomain for your servicenow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
+- A **Subdomain**: The subdomain for your ServiceNow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
 
 ## Using OAuth2
 
@@ -38,7 +38,7 @@ To configure this credential, you'll need:
 
 - A **Client ID**: Generated once you register a new app.
 - A **Client Secret**: Generated once you register a new app.
-- A **Subdomain**: The subdomain for your servicenow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
+- A **Subdomain**: The subdomain for your ServiceNow instance is in your instance URL: `https://<subdomain>.service-now.com/`. For example, if the full URL is `https://dev99890.service-now.com`, then the subdomain is `dev99890`.
 
 To generate your **Client ID** and **Client Secret**, register a new app in **System OAuth > Application Registry > New > Create an OAuth API endpoint for external clients**. Use these settings for your app:
 

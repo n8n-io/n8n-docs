@@ -33,7 +33,7 @@ For help building your own custom nodes, and publish them to [npm](https://www.n
 
 External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as [credentials](/glossary.md#credential-n8n).
 
-While not nodes themselves, credentials are often required to correctly use nodes.  Once saved, nodes in n8n can request that credential information. As another layer of security, only node types with specific access rights can access the credentials.
+While not nodes themselves, credentials are often required to correctly use nodes. Once saved, nodes in n8n can request that credential information. As another layer of security, only node types with specific access rights can access the credentials.
 
 To make sure that the data is secure, it gets saved to the database encrypted. n8n uses a random personal encryption key, which it automatically generates on the first run of n8n and then saved under `~/.n8n/config`.
 

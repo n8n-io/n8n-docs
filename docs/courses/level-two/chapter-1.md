@@ -194,7 +194,8 @@ There are several ways to transform data for the purposes mentioned above:
       ];
 	```
 
-These JavaScript examples assume your entire input is what you want to transform. As in the exercise above, you can also execute either operation on a specific field by identifying that in the items list, for example, if our workEmail example had multiple emails in a single field, we could run some code like this:
+These JavaScript examples assume your entire input is what you want to transform. As in the exercise above, you can also execute either operation on a specific field by identifying that in the items list, for example, if our `workEmail` example had multiple emails in a single field, we could run some code like this:
+
 ```javascript
 let items = $input.all();
 return items[0].json.workEmail.map(item => {

@@ -84,7 +84,9 @@ Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservi
     * Create a requester
     * Delete a requester
     * Retrieve a requester
+<!-- vale Vale.Spelling = NO -->
     * Retrieve all requesters
+<!-- vale Vale.Spelling = YES -->
     * Update a requester
 * Requester Group
     * Create a requester group

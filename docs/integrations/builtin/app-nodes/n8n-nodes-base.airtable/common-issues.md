@@ -20,7 +20,7 @@ There was a problem loading the parameter options from server: "Forbidden - perh
 
 The error most often displays when the credential you're using doesn't have the scopes it requires on the resources you're attempting to manage.
 
-Refer to the [Airtable credentials](/integrations/builtin/credentials/airtable.md) and [Airtables scopes documentation](https://airtable.com/developers/web/api/scopes) for more information.
+Refer to the [Airtable credentials](/integrations/builtin/credentials/airtable.md) and [Airtable scopes documentation](https://airtable.com/developers/web/api/scopes) for more information.
 
 ## Service is receiving too many requests from you
 

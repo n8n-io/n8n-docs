@@ -30,13 +30,13 @@ Refer to Ghost's [Admin API documentation](https://ghost.org/docs/admin-api/){:t
 
 To configure this credential, you'll need:
 
-- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/admin-api/#base-url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
+- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/admin-api/#base-url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require HTTPS.
 - An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Admin API Token Authentication Key documentation](https://ghost.org/docs/admin-api/#token-authentication){:target=_blank .external-link} for more detailed instructions. Copy the **Admin API Key** and use this as the **API Key** in the Ghost Admin n8n credential.
 
 ## Using Content API key
 
 To configure this credential, you'll need:
 
-- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/content-api/#url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
+- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/content-api/#url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require HTTPS.
 - An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Content API Key documentation](https://ghost.org/docs/content-api/#key){:target=_blank .external-link} for more detailed instructions. Copy the **Content API Key** and use this as the **API Key** in the Ghost Content n8n credential.
 

@@ -34,7 +34,7 @@ If you don't want to use expressions:
 
 You can do this for both the name and value of the field.
 
-![A gif showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
+![A GIF showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
 
 ### Keep Only Set Fields
 

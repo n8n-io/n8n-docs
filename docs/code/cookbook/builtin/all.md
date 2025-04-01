@@ -9,6 +9,7 @@ This gives access to all the items of the current or parent nodes. If you don't 
 
 ## Getting items
 
+<!-- vale Vale.Spelling = NO -->
 === "JavaScript"
 	```js
 	// Returns all the items of the given node and current run
@@ -37,6 +38,7 @@ This gives access to all the items of the current or parent nodes. If you don't 
 	# Returns all items the node "IF" outputs (index: 1 which is Output "false" of run 0 which is the first run)
 	allItems = _("IF").all(1, 0);
 	```
+<!-- vale Vale.Spelling = YES -->
 
 ## Accessing item data
 

@@ -25,7 +25,7 @@ On this page, you'll find the node parameters for the MultiQuery Retriever node,
 
 ## Related resources
 
-Refer to [LangChain's retriever conceptual documentation](https://js.langchain.com/docs/concepts/retrievers){:target=_blank .external-link} and [LangChain's multiquery retriever API documentation](https://v03.api.js.langchain.com/classes/langchain.retrievers_multi_query.MultiQueryRetriever.html){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's retriever conceptual documentation](https://js.langchain.com/docs/concepts/retrievers){:target=_blank .external-link} and [LangChain's MultiQuery retriever API documentation](https://v03.api.js.langchain.com/classes/langchain.retrievers_multi_query.MultiQueryRetriever.html){:target=_blank .external-link} for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

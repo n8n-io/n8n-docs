@@ -53,4 +53,4 @@ To register an existing community edition instance:
 
 Once you have a license key, activate it by clicking the button in the license email or by visiting **Options > Settings > Usage and plan** and selecting **Enter activation key**.
 
-Once activated, your license will not expire. We may change the unlocked features in the future. This will not impact previously unlocked features.
+Once activated, your license won't expire. We may change the unlocked features in the future. This won't impact previously unlocked features.

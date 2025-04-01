@@ -62,11 +62,11 @@ Enter the name of the binary properties that contain data to add as an attachmen
 
 ### CC Email
 
-Enter an email address for the cc: field.
+Enter an email address for the `cc:` field.
 
 ### BCC Email
 
-Enter an email address for the bcc: field.
+Enter an email address for the `bcc:` field.
 
 ### Ignore SSL Issues
 

@@ -30,7 +30,7 @@ To configure this credential, you'll need:
 - A **Client ID**: Generated when you create a Pushbullet app, also known as an OAuth client.
 - A **Client Secret**: Generated when you create a Pushbullet app, also known as an OAuth client.
 
-To generate the **Client ID** and **Client Secret**, go to the [create client](https://www.pushbullet.com/create-client) page. Copy the **OAuth Redirect URL** from n8n and add this as your **redirect_uri** for the app/client. Use the **client_id** and **client_secret** from the OAuth Client in your n8n credential.
+To generate the **Client ID** and **Client Secret**, go to the [create client](https://www.pushbullet.com/create-client) page. Copy the **OAuth Redirect URL** from n8n and add this as your **redirect URI** for the app/client. Use the **Client ID** and **Client Secret** from the OAuth Client in your n8n credential.
 
 Refer to Pushbullet's [OAuth2 Guide](https://docs.pushbullet.com/#oauth2) for more information.
 

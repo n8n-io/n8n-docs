@@ -24,7 +24,7 @@ Our documentation arranges information by type, to make it easier to find what y
 
 [**Reference**](/reference/index.md) is the section to browse when you want to find out more about node parameters, environment variables or other settings. Remember you can visit many of these pages directly through the user interface with the helpful links embedded in the editor.
 
-[**Tutorials and courses**](/tutorials/index.md). For structured learning or more hand-on learning of key topics, we have created two complete courses covering basic and advanced workflow generation. There is also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
+[**Tutorials and courses**](/tutorials/index.md). For structured learning or more hand-on learning of key topics, we've created two complete courses covering basic and advanced workflow generation. There's also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
 
 [**Understanding n8n**](/understanding/index.md) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
 

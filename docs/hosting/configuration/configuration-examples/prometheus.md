@@ -21,7 +21,7 @@ Both `main` and `worker` instances are able to expose metrics.
 
 ## Queue metrics
 
-To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
+To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` environment variable to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
 
 Queue metrics are only available for the `main` instance in single-main mode.
 

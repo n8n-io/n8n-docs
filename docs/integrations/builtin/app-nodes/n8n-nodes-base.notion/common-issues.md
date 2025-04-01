@@ -40,7 +40,7 @@ Enable **Send Body**, set the **Body Content Type** to **JSON**, and set **Speci
 
 ## Create toggle heading
 
-The Notion node allows you to create headings and toggles when adding blocks to **Page**, **Database Page**, or **Block** resources. Creating toggleable headings isn't yet supported by the Notion node itself.
+The Notion node allows you to create headings and toggles when adding blocks to **Page**, **Database Page**, or **Block** resources. Creating toggle headings isn't yet supported by the Notion node itself.
 
 You can work around this be creating a regular heading and then modifying it to enable the [`is_toggleable` property](https://developers.notion.com/reference/block#headings):
 

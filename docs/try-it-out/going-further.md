@@ -5,7 +5,7 @@ contentType: overview
 ---
 # Going further
 
-Now you've [got n8n running][] and built your [first workflow][], what's next? We have some suggestions on how to continue your journey:
+Now you've [got n8n running][] and built your [first workflow][], what's next? Here are some suggestions on how to continue your journey:
 
 ## Join the community!
 
@@ -16,7 +16,7 @@ n8n has an active community where you can get and offer help. Connect, share, an
 
 ## Build from one of over 1500 templates
 
-Particularly when you are starting out, whatever you need an n8n workflow for has probably be done before. n8n templates are the distilled wisdom of our community, giving you the building blocks to experiment, tweak and tune your own workflows or quickly automate a common task. They are also a great way to learn.
+Particularly when you're starting out, whatever you need an n8n workflow for has probably be done before. n8n templates are the distilled wisdom of our community, giving you the building blocks to experiment, tweak and tune your own workflows or quickly automate a common task. They're also a great way to learn.
 
 ![Screenshot of n8n templates](/_images/try-it-out/templates.png){ align=right : style="height:250px"; border="0px"}
 
@@ -26,7 +26,7 @@ When you open a template, you will be prompted to supply any required credential
 
 ## Follow our structured courses
 
-Everyone has a different learning style, so we have two sets of structured learning courses to follow:
+Everyone has a different learning style, so we've developed two sets of structured learning courses to follow:
 
 ### Video courses
 

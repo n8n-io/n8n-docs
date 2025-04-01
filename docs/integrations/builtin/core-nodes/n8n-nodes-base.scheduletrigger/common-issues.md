@@ -16,8 +16,10 @@ This error occurs when you set **Trigger Interval** to **Custom (Cron)** and n8n
 
 To debug, check that the following:
 
+<!-- vale off -->
 * That your cron expression follows the syntax used in the [cron examples](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#custom-cron-interval)
 * That your cron expression (after removing the [seconds column](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md#why-there-are-six-asterisks-in-the-cron-expression)) validates on [crontab guru](https://crontab.guru/)
+<!-- vale off -->
 
 ## Scheduled workflows run at the wrong time
 
@@ -41,7 +43,7 @@ To set the timezone for an individual workflow:
 
 ### Variables not working as expected
 
-While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. After activating the worfklow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then re-activate the workflow to apply the updated variable value.
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. After activating the workflow, you can alter a variable's value in the settings but it won't change how often the workflow runs. To work around this, you must stop and then re-activate the workflow to apply the updated variable value.
 
 ### Changing the trigger interval
 

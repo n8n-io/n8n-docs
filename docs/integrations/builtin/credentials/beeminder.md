@@ -30,5 +30,5 @@ To configure this credential, you'll need:
 - A **User** name: Should match the user who the Auth Token is generated for.
 - A personal **Auth Token** for that user. Generate this using either method below:
     - In the GUI: From the [Apps & API](https://help.beeminder.com/article/110-apps-and-api#API-token){:target=_blank .external-link} option within **Account Settings**
-    - In the API: From hitting the [`auth_token` API endpoint](https://api.beeminder.com/#auth){:target=_blank .external-link}
+    - In the API: From hitting the [`auth_token` API endpoint](https://api.beeminder.com/#auth)
 

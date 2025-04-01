@@ -21,7 +21,7 @@ n8n additionally supports two libraries:
 - [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
 
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/overview.md) for more information on working with data in your workflows.
 ///
 
 ## Writing expressions

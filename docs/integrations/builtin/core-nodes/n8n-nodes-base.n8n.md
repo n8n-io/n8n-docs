@@ -8,16 +8,16 @@ priority: medium
 
 # n8n
 
-A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/index.md) in your workflows.
+A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/overview.md) in your workflows.
 
-Refer to the [n8n REST API documentation](/api/index.md) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference.md) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](/api/overview.md) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference.md) for working with the API endpoints directly.
 
 /// note | Credentials
 You can find authentication information for this node in the [API authentication](/api/authentication.md) documentation.
 ///
 
 /// warning | SSL
-This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to call the [n8n API](/api/index.md).
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to call the [n8n API](/api/overview.md).
 The HTTP Request node has options to [provide the SSL certificate](/integrations/builtin/credentials/httprequest.md#provide-an-ssl-certificate).
 ///
 

@@ -1739,7 +1739,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0
 This release contains new features, node enhancements, bug fixes and updates to our API.
 
 ### API update
-Our [public REST API](/api/index.md) now supports additional operations:
+Our [public REST API](/api/overview.md) now supports additional operations:
 
 - Create, delete, and edit roles for users
 - Create, read, update and delete projects
@@ -1814,7 +1814,7 @@ Enhanced nodes:
 - [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md)
 
 ### API update
-Our [public REST API](/api/index.md) now supports additional operations:
+Our [public REST API](/api/overview.md) now supports additional operations:
 
 - Create, read, and delete for variables
 - Filtering workflows by project
@@ -2874,7 +2874,7 @@ This release includes a new version of the [OpenAI node](/integrations/builtin/a
 Other highlights:
 
 * Support for AI events in [log streaming](/log-streaming.md).
-* Added support for workflow tags in the [public API](/api/index.md).
+* Added support for workflow tags in the [public API](/api/overview.md).
 
 ### Contributors
 

@@ -17,7 +17,7 @@ There are two places in your workflows where you can use code:
 
 - __Expressions__
 
-	Use [expressions](/glossary.md#expression-n8n) to transform [data](/data/index.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/overview.md) and [Data transformation functions](/code/builtin/data-transformation-functions/index.md).
+	Use [expressions](/glossary.md#expression-n8n) to transform [data](/data/overview.md) in your nodes. You can use JavaScript in expressions, as well as n8n's [Built-in methods and variables](/code/builtin/overview.md) and [Data transformation functions](/code/builtin/data-transformation-functions/index.md).
 
 	[:octicons-arrow-right-24: Expressions](/code/expressions.md)
 
@@ -64,7 +64,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 	n8n provides an API, where you can programmatically perform many of the same tasks as you can in the GUI. There's an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to access the API in your workflows.
 
-	[:octicons-arrow-right-24: API](/api/index.md)
+	[:octicons-arrow-right-24: API](/api/overview.md)
 
 - __Self-host__
 

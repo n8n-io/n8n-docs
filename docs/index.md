@@ -18,15 +18,15 @@ This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://fair
 
 Our documentation arranges information by type, to make it easier to find what you are looking for, when you need it. 
 
-[**Getting Started**](/) details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
+[**Getting Started**](/try-it-out/getn8n.md) details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
 
-[**Using n8n**](/) has step-by-step instructions for all sorts of common tasks and operations.
+[**Using n8n**](/using-n8n/index.md) has step-by-step instructions for all sorts of common tasks and operations.
 
-[**Reference**](/) is the section to browse when you want to find out more about node parameters, environment variables or other settings. Remember you can visit many of these pages directly through the user interface with the helpful links embedded in the editor.
+[**Reference**](/reference/index.md) is the section to browse when you want to find out more about node parameters, environment variables or other settings. Remember you can visit many of these pages directly through the user interface with the helpful links embedded in the editor.
 
-[**Tutorials and courses**](/). For structured learning or more hand-on learning of key topics, we have created two complete courses covering basic and advanced workflow generation. There is also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
+[**Tutorials and courses**](/tutorials/index.md). For structured learning or more hand-on learning of key topics, we have created two complete courses covering basic and advanced workflow generation. There is also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
 
-[**Understanding n8n**](/) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
+[**Understanding n8n**](/understanding/index.md) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
 
 /// note | Visiting docs from the n8n editor
 Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's edit panel.

@@ -167,7 +167,6 @@ plugins:
   # - info
   # Search is built in, but must be enabled when you add other plugins
   - search
-  - progress
   - exclude:
       glob:
       # - integrations/builtin/*

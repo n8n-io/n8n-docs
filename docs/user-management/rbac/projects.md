@@ -56,7 +56,16 @@ To delete a project:
 
 Workflow and credential owners can move workflows or credentials (changing ownership) to other users or projects they have access to.
 
+/// warning | Moving revokes sharing
+Moving workflows or credentials removes all existing sharing. Be aware that this could impact other workflows currently sharing these resources.
+///
+
 1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
+
+	/// info | Moving workflows with credentials
+	When moving a workflow with credentials you have permission to share, you can choose to share the credentials as well. This ensures that the workflow continues to have access to the credentials it needs to execute. n8n will note any credentials that can't be moved (credentials you don't have permission to share).
+	///
+
 1. Select the project or user you want to move to.
 1. Select **Next**.
 1. Confirm you understand the impact of the move: workflows may stop working if the credentials they need aren't available in the target project, and n8n removes any current individual sharing.

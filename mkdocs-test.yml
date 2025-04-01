@@ -1,0 +1,174 @@
+site_name: n8n Docs
+site_url: https://docs.n8n.io/
+site_description: Documentation for n8n, a workflow automation platform.
+# Must be the docs repo for the edit page buttons to work
+repo_url: https://github.com/n8n-io/n8n-docs
+edit_uri: edit/main/docs/
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: ignore
+  links:
+    not_found: warn
+    absolute_links: relative_to_docs
+    unrecognized_links: info
+theme:
+  name: material
+  custom_dir: _overrides
+  favicon: _images/favicon.ico
+  font: false
+  language: custom
+  logo: _images/n8n-docs-icon.svg
+  palette:
+    scheme: light
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/#announcement-bar
+    - announce.dismiss
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    - content.action.edit
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations
+    - content.code.annotate
+    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#linked-content-tabs
+    - content.tabs.link
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
+    - content.code.copy
+    # https://squidfunk.github.io/mkdocs-material/reference/tooltips/#improved-tooltips
+    - content.tooltips
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=footer#navigation
+    - navigation.footer
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
+    - navigation.path
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
+    - navigation.sections
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#navigation-tabs
+    - navigation.tabs
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    - navigation.top
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
+    - navigation.tracking
+copyright: >
+  <a href="#__consent">Change cookie settings</a>
+extra:
+  analytics:
+    provider: google
+    property: G-0SC4FF2FH9
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies and other tracking technologies to improve your browsing experience,
+      to analyze our website traffic, assist our marketing efforts and to understand where
+      our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
+  # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
+  status:
+    beta: This feature is in beta
+# https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
+extra_css:
+  - _extra/css/extra.css
+  - _extra/css/macro-styles.css
+  - _extra/css/templates-widget.css
+  - _extra/css/workflow-demo.css
+  - _extra/css/feedback.css
+# https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
+extra_javascript:
+  - _extra/javascript/extra.js
+watch:
+  - _glossary
+  - _snippets
+markdown_extensions:
+  # used for https://squidfunk.github.io/mkdocs-material/reference/tooltips/
+  - abbr
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=attr#attribute-lists
+  # attr_list is required for several other features. Always enable.
+  - attr_list
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#automatic-previews
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+  - md_in_html
+  - meta
+  - pymdownx.blocks.admonition:
+      types:
+        - note
+        - info
+        - tip
+        - question
+        - warning
+        - danger
+        # custom types
+        - details
+  - pymdownx.details
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
+  - pymdownx.highlight:
+      linenums: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.inlinehilite
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#keys
+  - pymdownx.keys
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
+  - pymdownx.snippets:
+      auto_append:
+        - _glossary/main.md
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences Superfences is required for several other features. Always enable.
+  - pymdownx.superfences:
+      # https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format
+      # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#preserve-tabs
+      preserve_tabs: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
+  - sane_lists
+  - tables
+  # https://www.mkdocs.org/user-guide/writing-your-docs/#linking-to-pages
+  - toc:
+      permalink: "#"
+plugins:
+  # You need the info plugin for bug reports to Material theme
+  # But DO NOT ENABLE IT NORMALLY
+  # It causes Netlify builds to fail
+  # - info
+  # Search is built in, but must be enabled when you add other plugins
+  - search
+  - exclude:
+      glob:
+      # - integrations/builtin/*
+  # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
+  - glightbox:
+      touchNavigation: false
+      loop: false
+      effect: zoom
+      slide_effect: none
+      width: auto
+      height: auto
+      zoomable: false
+      draggable: false
+      auto_caption: false
+      caption_position: bottom
+  # https://mkdocs-macros-plugin.readthedocs.io/en/latest/
+  - macros:
+      # https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#including-external-yaml-files
+      include_yaml:
+        - _yaml/data-functions.yml
+      j2_block_start_string: "[[%"
+      j2_block_end_string: "%]]"
+      j2_variable_start_string: "[["
+      j2_variable_end_string: "]]"
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
+  - tags:
+      enabled: true
+  # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+  # This is enabled to automatically add `target="_blank"` to external links.
+  # Specifically, we needed some way to open nav links to external locations
+  # (like the main site) in new tabs
+  - privacy:
+      assets: false
+INHERIT: ./nav.yml

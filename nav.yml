@@ -68,6 +68,7 @@ nav:
           - Hardening task runners: hosting/securing/hardening-task-runners.md
       - n8n Embed:
         - embed/index.md
+        - Deployment: embed/deployment.md
         - Manage configuration: embed/configuration.md
         - Workflow management: embed/managing-workflows.md
         - Workflows templates: embed/workflow-templates.md
@@ -80,6 +81,7 @@ nav:
         - Role-based access control:
           - user-management/rbac/index.md
           - Projects: user-management/rbac/projects.md
+        - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
         - SAML:
@@ -113,6 +115,7 @@ nav:
       - Create custom variables: code/variables.md
       - Manage executions:
         - workflows/executions/index.md
+        - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
         - Workflow-level executions: workflows/executions/single-workflow-executions.md
         - All executions: workflows/executions/all-executions.md
         - Custom executions data: workflows/executions/custom-executions-data.md
@@ -151,6 +154,7 @@ nav:
       - Data editing: data/data-editing.md
       - Data filtering: data/data-filtering.md
       - Data mocking: data/data-mocking.md
+      - Schema preview: data/schema-preview.md
       - Data mapping:
         - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
         - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
@@ -442,6 +446,7 @@ nav:
         - AWS SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
         - AWS Textract: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
         - AWS Transcribe: integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md
+        - Azure Storage: integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md
         - BambooHR: integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md
         - Bannerbear: integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md
         - Baserow: integrations/builtin/app-nodes/n8n-nodes-base.baserow.md
@@ -845,7 +850,8 @@ nav:
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
-          - In-Memory Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
@@ -885,7 +891,7 @@ nav:
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md
           - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
           - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
-          - Window Buffer Memory: 
+          - Simple Memory: 
             - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md
           - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
@@ -933,6 +939,7 @@ nav:
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
+        - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
         - integrations/builtin/credentials/baserow.md
@@ -960,6 +967,7 @@ nav:
         - integrations/builtin/credentials/coda.md
         - integrations/builtin/credentials/cohere.md
         - integrations/builtin/credentials/contentful.md
+        - integrations/builtin/credentials/convertapi.md
         - integrations/builtin/credentials/convertkit.md
         - integrations/builtin/credentials/copper.md
         - integrations/builtin/credentials/cortex.md
@@ -1249,6 +1257,11 @@ nav:
         - Numbers: code/builtin/data-transformation-functions/numbers.md
         - Objects: code/builtin/data-transformation-functions/objects.md
         - Strings: code/builtin/data-transformation-functions/strings.md
+      - Examples:
+        - execution: code/cookbook/builtin/execution.md
+        - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+        - (node-name).all: code/cookbook/builtin/all.md
+        - vars: code/cookbook/builtin/vars.md
     - API:
       - Overview: api/overview.md
       - API reference: api/api-reference.md

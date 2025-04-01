@@ -62,6 +62,7 @@ n8n commits the following to Git:
 * Credential stubs (ID, name, type)
 * Variable stubs (ID and name)
 * Projects
+* Folders
 
 You can programmatically [Manage variables](/source-control-environments/using/manage-variables.md) using the n8n API.
 

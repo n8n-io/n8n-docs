@@ -277,6 +277,8 @@ nav:
 #    - Execution: understanding/executions.md
 #        - Pinning and mocking
 #        - Debugging executions
+    - Credentials: 
+      - What are credentials?: understanding/credentials.md
     - Data mapping and transformation: 
         - Data structure: data/data-structure.md
         - Data item linking: data/data-mapping/data-item-linking/item-linking-concepts.md
@@ -286,8 +288,6 @@ nav:
 #        - Code in n8n
 #        - Handling dates
 #        - Query JSON with JMESPath
-    - Credentials: 
-      - What are credentials?: understanding/credentials.md
     - AI:
       - advanced-ai/index.md
       - AI concepts:

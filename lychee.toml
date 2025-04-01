@@ -9,7 +9,7 @@ no_progress = true
 
 # Path to summary output file.
 output = ".config.dummy.report.md"
-format = "Markdown"
+format = "markdown"
 
 #############################  Cache  ###############################
 
@@ -53,7 +53,7 @@ retry_wait_time = 10
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-accept = ["200", "429"]
+accept = ["200", "429", "403"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = false

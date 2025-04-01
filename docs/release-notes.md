@@ -34,29 +34,394 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
-## n8n@1.81.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.0...n8n@1.81.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2025-02-24
+## n8n@1.86.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.86.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-31
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-This release contains bug fixes, a core update, editor improvements, and a node update.
+This release contains API updates, core updates, editor improvements, node updates, and bug fixes.
+
+### Contributors
+
+[Aijeyomah](https://github.com/Aijeyomah){:target=_blank .external-link}  
+[ownerer](https://github.com/ownerer){:target=_blank .external-link}  
+[ulevitsky](https://github.com/ulevitsky){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 
 
-## n8n@1.80.3
+## n8n@1.85.4
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.2...n8n@1.80.3){:target=_blank .external-link} for this version.<br />
-**Release date:** 2025-02-21
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.3...n8n@1.85.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-27
 
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.84.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.2...n8n@1.84.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-27
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.84.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.1...n8n@1.84.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-26
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.85.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.2...n8n@1.85.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-26
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.85.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.1...n8n@1.85.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-25
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.85.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.85.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-25
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.85.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.0...n8n@1.85.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-24
+
+This release contains a new node, a new credential, core updates, editor updates, node updates, and bug fixes.
+
+### Folders
+What can we say about folders? Well, they’re super handy for categorizing just about everything and they’re finally available for your n8n workflows. Tidy up your workspace with unlimited folders and nested folders. Search for workflows within folders. It’s one of the ways we’re making it easier to organize your n8n instances more effectively.  
+
+**How to use it:** 
+
+Create and manage folders within your personal space or within projects. You can also create workflows from within a folder. You may need to restart your instance in order to activate folders.
+
+<figure markdown="span">
+    ![Folders](/_images/release-notes/Folders.png
+)
+    <figcaption>It's a folder alright</figcaption>
+</figure>
+<br>
+
+Folders are available for all [registered](/hosting/community-edition-features.md#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+
+### Enhancements to Form Trigger Node
+
+Recent updates to the Form Trigger node have made it a more powerful tool for building business solutions. These enhancements provide more flexibility and customization, enabling teams to create visually engaging and highly functional workflows with forms.
+
+- **HTML customization:** Add custom HTML to forms, including embedded images and videos, for richer user experiences.  
+- **Custom CSS support**: Apply custom styles to user-facing components to align forms with your brand’s look and feel. Adjust fonts, colors, and spacing for a seamless visual identity.
+- **Form previews:** Your form’s description and title will pull into previews of your form when sharing on social media or messaging apps, providing a more polished look.  
+- **Hidden fields:** Use query parameters to add hidden fields, allowing you to pass data—such as a referral source—without exposing it to the user.  
+- **New responses options:** Respond to user submissions in multiple ways including text, HTML, or a downloadable file (binary format). This enables forms to display rich webpages or deliver digital assets such as dynamically generated invoices or personalized certificates.  
+
+<figure markdown="span">
+    ![Form with custom CSS applied](/_images/release-notes/Forms_with_custom_CSS_and_HTML.png)
+    <figcaption>Form with custom CSS applied</figcaption>
+</figure>
+<br>
+
+These improvements elevate the Form Trigger node beyond a simple workflow trigger, transforming it into a powerful tool for addressing use cases from data collection and order processing to custom content creation.
+
+
+
+### Contributors
+
+[Fank](https://github.com/Fank){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.84.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.0...n8n@1.84.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-18
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.84.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.0...n8n@1.84.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-17
+
+This release contains a new node, node updates, editor updates, and bug fixes.
+
+### Contributors
+
+[Pash10g](https://github.com/Pash10g){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.83.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.1...n8n@1.83.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-14
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.82.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.3...n8n@1.82.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-14
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.82.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.2...n8n@1.82.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-13
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.83.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.0...n8n@1.83.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-12
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.83.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.0...n8n@1.83.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-12
+
+This release contains bug fixes and an editor update.
+
+### Schema Preview
+
+Schema Preview lets you view and work with a node’s expected output without executing it or adding credentials, keeping you in flow while building.
+
+- **See expected node outputs instantly.** View schemas for over 100+ nodes to help you design workflows efficiently without extra steps.  
+- **Define workflow logic first, take care of credentials later.** Build your end-to-end workflow without getting sidetracked by credential setup.  
+- **Avoid unwanted executions when building.** Prevent unnecessary API calls, unwanted data changes, or potential third-party service costs by viewing outputs without executing nodes.  
+
+**How to use it:**
+
+- Add a node with Schema Preview support to your workflow.
+- Open the next node in the sequence - Schema Preview data appears in the Node Editor where you would typically find it in the Schema View.
+- Use Schema Preview fields just like other schema data - drag and drop them into parameters and settings as needed.
+
+<br>
+<video src="/_video/release-notes/Schema_preview.mp4" controls width="100%"></video>
+<br>
+
+Don’t forget to add the required credentials before putting your workflow into production.
+
+### Contributors
+
+[pemontto](https://github.com/pemontto){:target=_blank .external-link}  
+[Haru922](https://github.com/Haru922){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.82.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.1...n8n@1.82.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-12
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.82.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.0...n8n@1.82.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-04
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.82.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.82.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-03
+
+This release contains core updates, editor updates, new nodes, node updates, new credentials, credential updates, and bug fixes.
+
+### Tidy up
+Tidy up instantly aligns nodes, centers stickies, untangles connections, and brings structure to your workflows. Whether you're preparing to share a workflow or just want to improve readability, this feature saves you time and makes your logic easier to follow. Clean, well-organized workflows aren't just nicer to look at—they’re also quicker to understand.
+
+**How to:** 
+
+Open the workflow you want to tidy, then choose one of these options:
+
+- Click the **Tidy up** button in the bottom-left corner of the canvas (it looks like a broom 🧹)
+- Press **Shift + Alt + T** on your keyboard
+- Right-click anywhere on the canvas and select **Tidy up workflow**
+
+Want to tidy up just part of your workflow? Select the specific nodes you want to clean up first - Tidy up will only adjust those, along with any stickies behind them.
+
+<br>
+<video src="/_video/release-notes/tidy_up.mp4" controls width="100%"></video>
+<br>
+
+
+### Multiple API keys
+n8n now supports multiple API keys, allowing users to generate and manage separate keys for different workflows or integrations. This improves security by enabling easier key rotation and isolation of credentials. Future updates will introduce more granular controls. <br>
+
+<figure markdown="span">
+    ![Multiple API keys](/_images/release-notes/Multiple-API-keys.png)
+    <figcaption>Multiple API keys</figcaption>
+</figure>
+<br>
+
+### Contributors
+
+[Rostammahabadi](https://github.com/Rostammahabadi){:target=_blank .external-link}  
+[Lanhild](https://github.com/Lanhild){:target=_blank .external-link}  
+[matthiez](https://github.com/matthiez){:target=_blank .external-link}  
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+[adina-hub](https://github.com/adina-hub){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.81.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.3...n8n@1.81.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-03
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.81.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.2...n8n@1.81.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-03
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.81.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.1...n8n@1.81.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-28
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.80.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.4...n8n@1.80.5){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-28
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.80.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.3...n8n@1.80.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-27
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.81.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.81.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-27
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.81.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.0...n8n@1.81.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-24
+
+This release contains bug fixes, a core update, editor improvements, and a node update.
+
+### Improved partial executions
+The new execution engine for partial executions ensures that testing parts of a workflow in the builder closely mirrors production behaviour. This makes iterating with updated run-data faster and more reliable, particularly for complex workflows.
+
+Before, user would test parts of a workflow in the builder that didn't consistently reflect production behaviour, leading to unexpected results during development.
+
+This update aligns workflow execution in the builder with production behavior.
+
+Here is an example for loops:
+
+Before
+<br>
+
+<video src="/_video/release-notes/Partial-execution-loop-before.mp4" controls width="100%"></video>
+<br>
+After
+<br>
+
+<video src="/_video/release-notes/Partial-execution-loop-after.mp4" controls width="100%"></video>
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.80.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.2...n8n@1.80.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-02-21
 
 This release contains a bug fix.
 
@@ -71,14 +436,10 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.80.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.1...n8n@1.80.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-21
-
-
 
 This release contains a bug fix.
 
@@ -89,20 +450,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.79.2...n8n@1.79.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-21
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.80.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.80.0...n8n@1.80.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-20
-
-
 
 This release contains bug fixes.
 
@@ -112,8 +467,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.79.1...n8n@1.79.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-20
-
-
 
 This release contains bug fixes.
 
@@ -151,8 +504,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.79.0...n8n@1.79.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-15
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -161,8 +512,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.78.0...n8n@1.78.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-15
-
-
 
 This release contains a bug fix.
 
@@ -223,8 +572,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.77.1...n8n@1.77.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-04
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -233,8 +580,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.76.2...n8n@1.76.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-02-04
-
-
 
 This release contains bug fixes.
 
@@ -333,6 +678,32 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.0...n8n@1.75.0
 
 This release contains bug fixes and editor updates.
 
+### Improved consistency across environments
+We added new UX and automatic changes improvements resulting in a better consistency between your staging and production instances.
+
+Previously, users faced issues like:  
+
+- Lack of visibility into required credential updates when pulling changes  
+- Incomplete synchronization, where changes — such as deletions — weren’t always applied across environments  
+- Confusing commit process, making it unclear what was being pushed or pulled  
+
+We addressed these by:
+
+- Clearly indicating required credential updates when pulling changes  
+- Ensuring deletions and other modifications sync correctly across environments  
+- Improving commit selection to provide better visibility into what’s being pushed  
+<br>
+<figure markdown="span">
+    ![Commit modal](/_images/release-notes/Commit-modal.png)
+    <figcaption>Commit modal</figcaption>
+</figure>
+<br>
+<figure markdown="span">
+    ![Pull notification](/_images/release-notes/Pull-notification.png)
+    <figcaption>Pull notification</figcaption>
+</figure>
+<br>
+
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.74.1
@@ -343,7 +714,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.74.0...n8n@1.74.1
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.74.0
 
@@ -406,14 +776,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.73.0...n8n@1.73.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2024-12-19
 
-
-
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.73.0
 
@@ -1734,7 +2099,7 @@ This release adds the HTTP request tool. You can use it with an AI agent as a to
 [ekadin-mtc](https://github.com/ekadin-mtc){:target=_blank .external-link}  
 [Eric Francis](https://github.com/EricFrancis12){:target=_blank .external-link}  
 [Josh Sorenson](https://github.com/joshsorenson){:target=_blank .external-link}  
-[Mohammad Alsmadi](https://github.com/smadixd){:target=_blank .external-link}  
+Mohammad Alsmadi 
 [Nikolai T. Jensen](https://github.com/ch0wm3in){:target=_blank .external-link}  
 [n8n-ninja](https://github.com/n8n-ninja){:target=_blank .external-link}  
 [pebosi](https://github.com/pebosi){:target=_blank .external-link}  
@@ -3323,8 +3688,6 @@ Read more:
 * This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
 * Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
-* If you want to take a look at the code, it's available on the [ai-beta](https://github.com/n8n-io/n8n/tree/ai-beta){:target=_blank .external-link} in the n8n repository. Note that it may move in the future.
-
 
 ## n8n@1.9.0
 
@@ -3333,8 +3696,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.8.2...n8n@1.9.0){
 
 
 This release contains new features, performance improvements, and bug fixes.
-
---8<-- "_snippets/code/tournament-notes.md"
 
 <div class="n8n-new-features" markdown>
 

@@ -3,6 +3,7 @@
 contentType: tutorial
 ---
 
+<!-- vale off -->
 # Automating a (Real-world) Use Case
 
 Meet Nathan 🙋. Nathan works as an Analytics Manager at ABCorp. His job is to support the ABCorp team with reporting and analytics. Being a true jack of all trades, he also handles several miscellaneous initiatives.
@@ -17,7 +18,7 @@ Some things that Nathan does are repetitive and mind-numbing. He wants to automa
 
 I have to collect sales data from our legacy data warehouse, which manages data from the main business processes of an organization, such as sales or production. Now, each sales order can have the status Processing or Booked. I have to calculate the sum of all the Booked orders and announce them in the company Discord every Monday. Then I have to create a spreadsheet of all the Processing sales so that the Sales Managers can review them and check if they need to follow up with customers.
 
-This manual work is tough and requires high attention to detail to make sure that all the numbers are right. Inevitably, I lose my focus and mistype a number or I don't get to do it on time. I've been criticized once by my manager for miscalculating the data.
+This manual work is tough and requires high attention to detail to make sure that all the numbers are right. Inevitably, I lose my focus and mistype a number or I don't get it done on time. I've been criticized once by my manager for miscalculating the data.
 
 **You 👩‍🔧:** Oh no! Doesn't the data warehouse have a way to export the data?
 

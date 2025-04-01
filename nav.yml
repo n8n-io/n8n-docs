@@ -117,6 +117,7 @@ nav:
         - Data filtering: data/data-filtering.md
         - Data mocking: data/data-mocking.md
         - Binary data: data/binary-data.md
+        - Schema preview: data/schema-preview.md
       - Glossary: glossary.md
     - n8n Cloud:
       - Overview: manage-cloud/overview.md
@@ -687,6 +688,7 @@ nav:
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md

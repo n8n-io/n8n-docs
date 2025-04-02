@@ -18,4 +18,4 @@ In [queue mode](/hosting/scaling/queue-mode.md), you must specify the encryption
 ```bash
 export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables.md#deployment) for more information on this variable.

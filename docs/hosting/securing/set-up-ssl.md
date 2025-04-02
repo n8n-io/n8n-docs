@@ -21,4 +21,4 @@ You can also choose to pass certificates into n8n directly. To do so, set the `N
 
 You'll need to make sure the certificate stays renewed and up to date.
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) for more information on these variables and [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.
+Refer to [Deployment environment variables](/hosting/configuration/environment-variables.md#deployment) for more information on these variables and [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.

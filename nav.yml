@@ -26,12 +26,14 @@ nav:
     - using-n8n/index.md
     - Configuration:
       - n8n Cloud:
+        - manage-cloud/index.md
         - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
         - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
         - Set the timezone: manage-cloud/set-cloud-timezone.md
         - Cloud data management: manage-cloud/cloud-data-management.md
         - Change ownership or username: manage-cloud/change-ownership-or-username.md
       - Self-hosted n8n:
+        - hosting/index.md
         - Configuration methods: hosting/configuration/configuration-methods.md
         - Configuration examples:
           - hosting/configuration/configuration-examples/index.md
@@ -157,9 +159,11 @@ nav:
       - Data mocking: data/data-mocking.md
       - Schema preview: data/schema-preview.md
       - Data mapping:
+        - data/data-mapping/index.md
         - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
         - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
         - Item linking:
+          - data/data-mapping/data-item-linking/index.md
           - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
           - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
           - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
@@ -183,6 +187,7 @@ nav:
       - Pagination: api/pagination.md
       - Using the API playground: api/using-api-playground.md
     - Creating nodes:
+      - Install n8n with npm: hosting/installation/npm.md
       - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
       - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
       - Item linking: integrations/creating-nodes/build/reference/paired-items.md
@@ -1281,8 +1286,7 @@ nav:
 
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md
-#exclude_docs: |
-not_in_nav: |
+exclude_docs: |
   /learning-path.md
   /placeholder.md
   /code/index.md
@@ -1291,9 +1295,6 @@ not_in_nav: |
   /code/cookbook/http-node/index.md
   /courses/index.md
   /data/code.md
-  /data/data-mapping/index.md
-  /data/data-mapping/data-item-linking/index.md
-  /hosting/index.md
   /hosting/community-edition-features.md
   /hosting/configuration/environment-variables/binary-data.md
   /hosting/configuration/environment-variables/credentials.md
@@ -1315,9 +1316,9 @@ not_in_nav: |
   /hosting/configuration/environment-variables/timezone-localization.md
   /hosting/configuration/environment-variables/user-management-smtp-2fa.md
   /hosting/configuration/environment-variables/workflows.md
-  /hosting/installation/npm.md
-  /hosting/installation/updating.md
   /integrations/builtin/trigger-nodes/index.md
-  /manage-cloud/overview.md
-  /understanding/nodes.md
   /workflows/components/index.md
+  /understanding/nodes.md
+  /hosting/installation/updating.md
+
+  #not_in_nav: |

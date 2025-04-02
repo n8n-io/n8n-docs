@@ -149,7 +149,7 @@ Create and manage folders within your personal space or within projects. You can
 </figure>
 <br>
 
-Folders are available for all [registered](/hosting/community-edition-features.md#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+Folders are available for all [registered](/choose-n8n.md#registered-community-edition-license) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
 
 ### Enhancements to Form Trigger Node
 
@@ -918,7 +918,7 @@ The Task runner comes in two modes:
 - Internal mode (default): Perfect for getting started, automatically managing task runners as child processes  
 - External mode: For advanced hosting scenarios requiring maximum isolation and security
 
-Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables/task-runners.md). Once stable, it will become the default execution method for Code nodes.
+Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables.md#task-runners). Once stable, it will become the default execution method for Code nodes.
 
 To start using Task runners today, [check out the docs](/hosting/configuration/task-runners.md).
 
@@ -1433,11 +1433,11 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
+You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables.md#endpoints).
 
 </div>
 
-You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints.md) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables.md#endpoints) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates
 Enhanced nodes:
@@ -1691,7 +1691,7 @@ We now also prevent npm downloading community packages from a compromised npm re
 
 #### New node: AI Transform
 
-This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview.md).
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/index.md).
 
 </div>
 
@@ -2341,7 +2341,7 @@ You can now ask AI to help create API requests in the HTTP Request node:
 1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
 1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
-Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/overview.md)
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables.md)
 
 </div>
 
@@ -4117,7 +4117,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 

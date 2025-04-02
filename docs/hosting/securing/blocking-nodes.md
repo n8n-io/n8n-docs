@@ -34,6 +34,6 @@ The nodes that can pose security risks vary based on your use case and user prof
 
 ## Related resources
 
-Refer to [Nodes environment variables](/hosting/configuration/environment-variables/nodes.md) for more information on this environment variable.
+Refer to [Nodes environment variables](/hosting/configuration/environment-variables.md#nodes) for more information on this environment variable.
 
 Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.

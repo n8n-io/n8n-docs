@@ -15,7 +15,7 @@ All data transformation functions are only available in the expressions editor.
 ///		
 
 
-The [Cookbook](/code/index.md) contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/index.md) functions.
+The [using n8n](/using-n8n/index.md) section contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/index.md) functions and information on [working with expressions](/code/expressions.md).
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

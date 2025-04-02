@@ -18,7 +18,7 @@ This guide will show you how to construct a [workflow](/glossary.md#workflow-n8n
 
 !["Screenshot of the completed workflow"](/_images/try-it-out/tutorial-first.png)
 
-This quickstart uses [n8n Cloud](/manage-cloud/overview.md), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
+This quickstart uses [n8n Cloud](/manage-cloud/index.md), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
 
 ## Step one: Create a new workflow
 
@@ -164,5 +164,5 @@ There are plenty of things you could add to this (perhaps add some more credenti
 ## Next steps
 
 - Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
-- Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
+- Take n8n's [tutorials](/tutorials/index.md) or [video courses](/video-courses.md).
 - Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.

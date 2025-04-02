@@ -82,7 +82,7 @@ n8n takes care to keep self-hosted data anonymous and avoids collecting sensitiv
         - DB_TYPE
         - N8N_VERSION_NOTIFICATIONS_ENABLED
         - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
-        - [Execution variables](/hosting/configuration/environment-variables/executions.md)
+        - [Execution variables](/hosting/configuration/environment-variables.md#executions)
     - OS, RAM, and CPUs
     - Anonymous instance ID
  - IP address

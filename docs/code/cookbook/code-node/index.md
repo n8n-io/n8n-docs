@@ -15,4 +15,4 @@ This section contains examples and recipes for tasks you can do with the Code no
 ## Related resources
 
 * [Built-in methods and variables reference](/code/builtin/overview.md)
-* [Code node](/code/code-node.md)
+* [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md)

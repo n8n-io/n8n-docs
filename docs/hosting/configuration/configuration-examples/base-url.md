@@ -16,4 +16,4 @@ You can configure the Base URL that the front end uses to connect to the back en
 ```bash
 export VUE_APP_URL_BASE_API=https://n8n.example.com/
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables.md#deployment) for more information on this variable.

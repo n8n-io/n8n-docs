@@ -75,6 +75,30 @@ n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENS
 
 For a detailed explanation of the license, refer to [Sustainable Use License](/sustainable-use-license.md).
 
+### Registered Community edition license
+
+If you're using the community edition, you can unlock extra features by registering. You register with your email and receive a license key.
+
+Registering unlocks these features for the community edition:
+
+* [Folders](/release-notes.md#folders): Organize your workflows into tidy folders
+* [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
+* One day of [workflow history](/workflows/history.md): 24 hours of workflow history so you can revert back to previous workflow versions
+* [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
+
+To register a new community edition instance, select the option during your initial account creation.
+
+To register an existing community edition instance:
+
+1. Select the **three dots icon** <span class="inline-image">![three dots icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> in the lower-left corner.
+1. Select **Settings** and then **Usage and plan**.
+1. Select **Unlock** to enter your email and then select **Send me a free license key**.
+1. Check your email for the account you entered.
+
+Once you have a license key, activate it by clicking the button in the license email or by visiting **Options > Settings > Usage and plan** and selecting **Enter activation key**.
+
+Once activated, your license won't expire. We may change the unlocked features in the future. This won't impact previously unlocked features.
+
 [see website]: https://n8n.io/pricing/
-[hosting]: /hosting/index.md
+[hosting]: /hosting/installation/docker.md
 [enterprise]: https://n8n.io/enterprise/

@@ -390,7 +390,7 @@ n8n uses Git-based source control to support environments. Refer to [Source cont
 
 | Variable                                 | Type   | Default                 | Description                                                                                                                             |
 |:-----------------------------------------|:-------|:------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| `GENERIC_TIMEZONE`                       | *      | `America/New_York`      | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization.md).  |
+| `GENERIC_TIMEZONE`                       | *      | `America/New_York`      | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables.md#timezone-and-localization).  |
 | `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT`      | Number | `15`                    | The number of seconds to wait before shutting down an idle runner.                                                                      |
 | `N8N_RUNNERS_GRANT_TOKEN`                | String | Random string           | Token the runner uses to authenticate with the task broker. This is automatically provided by the launcher.                             |
 | `N8N_RUNNERS_LAUNCHER_HEALTH_CHECK_PORT` | Number | `5680`                  | Port for the launcher's health check server.                                                                                            |

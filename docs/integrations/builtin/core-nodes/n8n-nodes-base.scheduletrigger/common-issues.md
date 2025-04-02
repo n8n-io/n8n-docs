@@ -27,9 +27,9 @@ If the Schedule Trigger node runs at the wrong time, it may mean that you need t
 
 ### Adjust the timezone globally
 
-If you're using [n8n Cloud](/manage-cloud/overview.md), follow the instructions on the [set the Cloud instance timezone](/manage-cloud/set-cloud-timezone.md) page to ensure that n8n executes in sync with your local time.
+If you're using [n8n Cloud](/manage-cloud/index.md), follow the instructions on the [set the Cloud instance timezone](/manage-cloud/set-cloud-timezone.md) page to ensure that n8n executes in sync with your local time.
 
-If you're [self hosting](/hosting/index.md), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables/timezone-localization.md).
+If you're [self hosting](/hosting/index.md), set your global timezone using the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables.md#timezone-and-localization).
 
 ### Adjust the timezone for an individual workflow
 

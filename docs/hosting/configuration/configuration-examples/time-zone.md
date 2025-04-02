@@ -15,4 +15,4 @@ export GENERIC_TIMEZONE=Europe/Berlin
 
 You can find the name of your timezone [here](https://momentjs.com/timezone/){:target="_blank" .external-link}.
 
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/timezone-localization.md) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables.md#timezone-and-localization) for more information on this variable.

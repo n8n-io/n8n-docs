@@ -121,6 +121,7 @@ exclude = [
   '^https://support\.onfleet\.com/hc/en-us/.*',
   '^https://help\.shopify\.com/.*',
   '^https://www\.goto\.com/.*',
+  '^https://(developer|docs)\.rocket\.chat/.*',			 # Added to avoid too many CDN redirects
   ]
 
 # Exclude these filesystem paths from getting checked.

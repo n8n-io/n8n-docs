@@ -5,20 +5,15 @@ description: Documentation for the Airtop credentials. Use these credentials to 
 contentType: [integration, reference]
 ---
 
-<!-- 
-The title should be the name of the integration.
-Match the brand name exactly. For example, GitHub NOT Github
--->
 # Airtop credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Airtop](/integrations/builtin/app-nodes/n8n-nodes-base.airtop/index.md)
-
+- [Airtop](/integrations/builtin/app-nodes/n8n-nodes-base.airtop.md)
 
 ## Prerequisites
 
-* Create an [Airtop](https://portal.airtop.ai/sign-up){:target=_blank .external-link} account
+Create an [Airtop](https://portal.airtop.ai/sign-up) account.
 
 ## Supported authentication methods
 
@@ -26,17 +21,17 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Airtop's documentation](https://docs.airtop.ai/){:target=_blank .external-link} for more information about the service.
+Refer to [Airtop's API documentation](https://docs.airtop.ai/api-reference/airtop-api) for more information about the service.
 
 ## Using API key
 
-To configure this credential, you'll need an [Airtop](https://portal.airtop.ai/sign-up){:target=_blank .external-link} account and:
+To configure this credential, you'll need an [Airtop](https://portal.airtop.ai/sign-up) account and an **API key**. To generate a new key:
 
-1. Login into the [Airtop Portal](https://portal.airtop.ai){:target=_blank .external-link}
-2. Go to [API Keys](https://portal.airtop.ai/api-keys){:target=_blank .external-link}
-3. Click **+ Create new key** button
-4. Enter a name for the API key in the modal
-5. Click the generated key to copy the key
-6. Enter this as the **API Key** in your n8n credential
+1. Log in to the [Airtop Portal](https://portal.airtop.ai).
+2. Go to [API Keys](https://portal.airtop.ai/api-keys).
+3. Select the **+ Create new key** button.
+4. Enter a name for the API key.
+5. Select the generated key to copy the key.
+6. Enter this as the **API Key** in your n8n credential.
 
-Refer to [Airtop's Support](https://docs.airtop.ai/guides/misc/support){:target=_blank .external-link} for assistance if you have any issues creating your API key.
+Refer to [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assistance if you have any issues creating your API key.

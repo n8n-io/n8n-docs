@@ -460,8 +460,7 @@ nav:
         - Airtable:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
-        - Airtop:
-          - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop/index.md
+        - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md

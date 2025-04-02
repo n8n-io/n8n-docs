@@ -5,11 +5,6 @@ description: Learn how to use the Airtop node in n8n. Follow technical documenta
 contentType: [integration, reference]
 ---
 
-<!-- 
-The title should be the name of the integration 
-Match the brand name exactly. For example, GitHub NOT Github
-When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
--->
 # Airtop node
 
 Use the Airtop node to automate work in Airtop, and integrate Airtop with other applications. n8n has built-in support for a wide range of Airtop features, enabling you to control a cloud-based web browser for tasks like querying, scraping, and interacting with web pages.
@@ -50,7 +45,7 @@ Refer to [Airtop credentials](/integrations/builtin/credentials/airtop.md) for g
 
 ## Related resources
 
-Refer to [Airtop's documentation](https://docs.airtop.ai/){:target=_blank .external-link} for more information about the service.
+Refer to [Airtop's documentation](https://docs.airtop.ai/api-reference/airtop-api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
@@ -60,15 +55,15 @@ Contact [Airtop's Support](https://docs.airtop.ai/guides/misc/support) for assis
 
 ### Create a session and window
 
-Create an Airtop browser session to get a Session ID, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
+Create an Airtop browser session to get a **Session ID**, then use it to create a new browser window. After this, you can use any extraction or interaction operation.
 
-### Content extraction
+### Extract content
 
 Extract content from a web browser using these operations:
 
-- Query page: Extract information from the current window
-- Query page with pagination: Extract information from pages with pagination or infinite scrolling
-- Smart scrape: Get window content as markdown
+- **Query page**: Extract information from the current window.
+- **Query page with pagination**: Extract information from pages with pagination or infinite scrolling.
+- **Smart scrape page**: Get the window content as markdown.
 
 Get JSON responses by using the **JSON Output Schema** parameter in query operations.
 
@@ -76,6 +71,6 @@ Get JSON responses by using the **JSON Output Schema** parameter in query operat
 
 Click, hover, or type on elements by describing the element you want to interact with.
 
-### Terminate session
+### Terminate a session
 
-End your session to save resources. Sessions are automatically terminated based on the _Idle Timeout_ in the **Create Session** operation or can be manually terminated using the **Terminate Session** operation.
+End your session to save resources. Sessions are automatically terminated based on the **Idle Timeout** set in the **Create Session** operation or can be manually terminated using the **Terminate Session** operation.

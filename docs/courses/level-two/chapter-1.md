@@ -206,17 +206,17 @@ return items[0].json.workEmail.map(item => {
 
 ### Exercise
 
-1. Use the **HTTP Request node** to make a GET request to the Quotable API `https://api.quotable.io/quotes`. (This API requires no authentication).
+1. Use the **HTTP Request node** to make a GET request to the PokéAPI `https://pokeapi.co/api/v2/pokemon`. (This API requires no authentication).
 2. Transform the data in the `results` field with the **Split Out node**.
 3. Transform the data in the `results` field with the **Code node**.
 
 
 ??? note "Show me the solution"
 
-	1. To get the quotes from the Quotable API, execute the **HTTP Request node** with the following parameters:
+	1. To get the pokemon from the PokéAPI, execute the **HTTP Request node** with the following parameters:
 		- **Authentication**: None
 		- **Request Method**: GET
-		- **URL**: https://api.quotable.io/quotes
+		- **URL**: https://pokeapi.co/api/v2/pokemon
 	2. To transform the data with the **Split Out node**, connect this node to the **HTTP Request node** and set the following parameters:
 		- **Field To Split Out**: results
 		- **Include**: No Other Fields

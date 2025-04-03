@@ -16,3 +16,11 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Acuity Scheduling Trigger integrations](https://n8n.io/integrations/acuity-scheduling-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* Appointment canceled
+* Appointment changed
+* Appointment rescheduled
+* Appointment scheduled
+* Order completed

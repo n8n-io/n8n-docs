@@ -17,3 +17,40 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [ClickUp Trigger integrations](https://n8n.io/integrations/clickup-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* Key result
+  * Created
+  * Deleted
+  * Updated
+* List
+  * Created
+  * Deleted
+  * Updated
+* Space
+  * Created
+  * Deleted
+  * Updated
+* Task
+  * Assignee updated
+  * Comment
+    * Posted
+    * Updated
+  * Created
+  * Deleted
+  * Due date updated
+  * Moved
+  * Status updated
+  * Tag updated
+  * Time estimate updated
+  * Time tracked updated
+  * Updated
+
+## Related resources
+
+n8n provides an app node for ClickUp. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.clickup.md).
+
+View [example workflows and related content](https://n8n.io/integrations/clickup-trigger/) on n8n's website.
+
+Refer to [ClickUp's documentation](https://developer.clickup.com/docs/index) for details about their API.

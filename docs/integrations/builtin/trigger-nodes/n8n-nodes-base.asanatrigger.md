@@ -16,3 +16,15 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Asana Trigger integrations](https://n8n.io/integrations/asana-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* New Asana event
+
+## Related resources
+
+n8n provides an app node for Asana. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.asana.md).
+
+View [example workflows and related content](https://n8n.io/integrations/asana-trigger/) on n8n's website.
+
+Refer to [Asana's documentation](https://developers.asana.com/reference/rest-api-reference) for details about their API.

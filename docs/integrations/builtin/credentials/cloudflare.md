@@ -13,8 +13,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a [Cloudflare account](https://developers.cloudflare.com/fundamentals/setup/account/).
-- [Add a domain](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/).
+- Create a [Cloudflare account](https://developers.cloudflare.com/fundamentals/setup/account/){:target=_blank .external-link}.
+- [Add a domain](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/){:target=_blank .external-link}.
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/) for more information about the service.
+Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/){:target=_blank .external-link} for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
+- An **API Key**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/){:target=_blank .external-link}.
 

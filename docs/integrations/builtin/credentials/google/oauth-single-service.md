@@ -14,7 +14,7 @@ This document contains instructions for creating a Google credential for a singl
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/) account.
+* Create a [Google Cloud](https://cloud.google.com/){:target=_blank .external-link} account.
 
 ## Set up OAuth
 
@@ -40,15 +40,15 @@ With your project created, enable the APIs you'll need access to:
 
 ### Configure your OAuth consent screen
 
-If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent):
+If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
 
-1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
 	<figure markdown="span">
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
 1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
-2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal) for more information on user types.
+2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
 3. Select **Create**.
 4. Enter the essential information:
 	- **App name**

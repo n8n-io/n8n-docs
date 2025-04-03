@@ -13,7 +13,7 @@ This document contains instructions for creating a generic OAuth2 Google credent
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/) account.
+* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
 
 ## Set up OAuth
 
@@ -29,8 +29,8 @@ There are five steps to connecting your n8n credential to Google services:
 
 First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
-1. Log in to the [Google Cloud Console](https://console.cloud.google.com) using your Google credentials.
-2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate) page.
+1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
+2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
 3. Enter a **Project name** and select the **Location** for your project.
 4. Select **Create**.
 5. Check the top navigation and make sure the **Select a project** dropdown has your project selected. If not, select the project you just created.
@@ -48,15 +48,15 @@ With your project created, enable the APIs you'll need access to:
 
 ### Configure your OAuth consent screen
 
-If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent):
+If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
 
-1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
 	<figure markdown="span">
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
 1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
-2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal) for more information on user types.
+2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
 3. Select **Create**.
 4. Enter the essential information:
 	- **App name**
@@ -102,7 +102,7 @@ The following video demonstrates the steps described above:
 
 ## Scopes
 
-Google services have one or more possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) for a list of scopes for all services.
+Google services have one or more possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for a list of scopes for all services.
 
 n8n doesn't support all scopes. When creating a generic Google OAuth2 API credential, you can enter scopes from the **Supported scopes** list below. If you enter a scope that n8n doesn't already support, it won't work.
 

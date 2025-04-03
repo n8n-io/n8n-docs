@@ -32,8 +32,8 @@ Everyone has a different learning style, so we've developed two sets of structur
 
 Learn key concepts and n8n features, while building examples as you go.
 
-- The [Beginner](https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI) course covers the basics of n8n.
-- The [Advanced](https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG) course covers more complex workflows, more technical nodes, and enterprise features
+- The [Beginner](https://www.youtube.com/playlist?list=PLlET0GsrLUL59YbxstZE71WszP3pVnZfI){:target=_blank .external-link} course covers the basics of n8n.
+- The [Advanced](https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_OtOPYZIEG){:target=_blank .external-link} course covers more complex workflows, more technical nodes, and enterprise features
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4BVTkqbn_tY?si=o4zabk80dQo9sbGZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

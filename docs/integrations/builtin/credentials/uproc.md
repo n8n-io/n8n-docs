@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [uProc](https://uproc.io) account.
+Create a [uProc](https://uproc.io){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [uProc](https://uproc.io) account.
 
 ## Related resources
 
-Refer to [uProc's API documentation](https://docs.uproc.io/api/) for more information about the service.
+Refer to [uProc's API documentation](https://docs.uproc.io/api/){:target=_blank .external-link} for more information about the service.
 
 ## Using API Key
 

@@ -1,6 +1,8 @@
 ### THESE REDIRECTS ARE HANDLED BY NETLIFY, SEE DOC FOR DETAILS ###
 ### https://docs.netlify.com/routing/redirects/redirect-options/ ###
 
+## Remove item lists (hidden for over a year)
+/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/
 
 ## tutorials refresh
 

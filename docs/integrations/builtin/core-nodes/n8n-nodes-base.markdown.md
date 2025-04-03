@@ -91,7 +91,7 @@ Some of the options depend on each other or can interact. We recommend testing o
 
 n8n uses the following parsers:
 
-* To convert from HTML to Markdown: [node-html-markdown](https://www.npmjs.com/package/node-html-markdown){:target=_blank .external-link}.
-* To convert from Markdown to HTML: [Showdown](https://www.npmjs.com/package/showdown){:target=_blank .external-link}. Some options allow you to extend your Markdown with [GitHub Flavored Markdown](https://github.github.com/gfm/){:target=_blank .external-link}.
+* To convert from HTML to Markdown: [node-html-markdown](https://www.npmjs.com/package/node-html-markdown).
+* To convert from Markdown to HTML: [Showdown](https://www.npmjs.com/package/showdown). Some options allow you to extend your Markdown with [GitHub Flavored Markdown](https://github.github.com/gfm/).
 
 

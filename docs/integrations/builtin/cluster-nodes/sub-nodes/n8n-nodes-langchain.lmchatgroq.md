@@ -20,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* **Model**: Select the model which will generate the completion. n8n dynamically loads available models from the Groq API. Learn more in the [Groq model documentation](https://console.groq.com/docs/models){:target=_blank .external-link}.
+* **Model**: Select the model which will generate the completion. n8n dynamically loads available models from the Groq API. Learn more in the [Groq model documentation](https://console.groq.com/docs/models).
 
 ## Node options
 
@@ -34,7 +34,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [Groq's API documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information about the service.
+Refer to [Groq's API documentation](https://console.groq.com/docs/quickstart) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

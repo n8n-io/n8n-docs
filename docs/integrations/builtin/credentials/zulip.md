@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Zulip](https://zulip.com/){:target=_blank .external-link} account.
+Create a [Zulip](https://zulip.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Zulip](https://zulip.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Zulip's API documentation](https://zulip.com/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Zulip's API documentation](https://zulip.com/api/) for more information about the service.
 
 ## Using API key
 
@@ -29,5 +29,5 @@ To configure this credential, you'll need:
 
 - A **URL**: Enter the URL of your Zulip domain.
 - An **Email** address: Enter the email address you use to log in to Zulip.
-- An **API Key**: Get your API key in the **Gear cog > Personal Settings > Account & privacy > API Key**. Refer to [API Keys](https://zulip.com/api/api-keys){:target=_blank .external-link} for more information.
+- An **API Key**: Get your API key in the **Gear cog > Personal Settings > Account & privacy > API Key**. Refer to [API Keys](https://zulip.com/api/api-keys) for more information.
 

@@ -25,7 +25,7 @@ You can use the linter in a community package or in the main n8n repository.
 
 ### Linting
 
-In a community package, the linter runs automatically after installing dependencies and before publishing the package to npm. In the [main n8n repository](https://github.com/n8n-io/n8n){:target=_blank .external-link}, the linter runs automatically using GitHub Actions whenever you push to your pull request.
+In a community package, the linter runs automatically after installing dependencies and before publishing the package to npm. In the [main n8n repository](https://github.com/n8n-io/n8n), the linter runs automatically using GitHub Actions whenever you push to your pull request.
 
 In both cases, VS Code lints in the background as you work on your project. Hover over a detected issue to see a full description of the linting and a link to further information.
 

@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Eventbrite Trigger node
 
-[Eventbrite](https://www.eventbrite.com/){:target=_blank .external-link} is an event management and ticketing website. The service allows users to browse, create, and promote local events.
+[Eventbrite](https://www.eventbrite.com/) is an event management and ticketing website. The service allows users to browse, create, and promote local events.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/eventbrite.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Eventbrite Trigger integrations](https://n8n.io/integrations/eventbrite-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Eventbrite Trigger integrations](https://n8n.io/integrations/eventbrite-trigger/) page.
 ///

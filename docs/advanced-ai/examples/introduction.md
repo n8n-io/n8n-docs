@@ -48,7 +48,7 @@ This section provides explanations of important AI concepts, and workflow templa
 
 	You can browse AI templates, included community contributions, on the n8n website. 
 
-    [:octicons-arrow-right-24: Browse all AI templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
+    [:octicons-arrow-right-24: Browse all AI templates](https://n8n.io/workflows/?categories=25)
 
 
    

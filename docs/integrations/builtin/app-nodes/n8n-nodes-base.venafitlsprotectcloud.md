@@ -35,7 +35,7 @@ Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credential
 
 ## Related resources
 
-Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/){:target=_blank .external-link} for more information on this service.
+Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/) for more information on this service.
 
 n8n also provides:
 <!-- vale off -->

@@ -56,7 +56,7 @@ You can find authentication information for this node [here](/integrations/built
 
 n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md).
 
-Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} for more information about the service.
+Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

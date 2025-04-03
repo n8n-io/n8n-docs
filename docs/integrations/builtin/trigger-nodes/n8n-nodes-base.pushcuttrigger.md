@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Pushcut Trigger node
 
-[Pushcut](https://pushcut.io){:target=_blank .external-link} is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
+[Pushcut](https://pushcut.io) is an app for iOS that lets you create smart notifications to kick off shortcuts, URLs, and online automation.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/pushcut.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Pushcut Trigger integrations](https://n8n.io/integrations/pushcut-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Pushcut Trigger integrations](https://n8n.io/integrations/pushcut-trigger/) page.
 ///
 
 ## Configure a Pushcut action

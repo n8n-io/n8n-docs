@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Salesmate](https://salesmate.io/){:target=_blank .external-link} account.
+Create a [Salesmate](https://salesmate.io/) account.
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [Salesmate](https://salesmate.io/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Salesmate's API documentation](https://apidocs.salesmate.io/?version=latest){:target=_blank .external-link} for more information about the service.
+Refer to [Salesmate's API documentation](https://apidocs.salesmate.io/?version=latest) for more information about the service.
 
 
 ## Using API token
 
 To configure this credential, you'll need:
 
-- A **Session Token**: An **Access Key**. Generate an access key in **My Account > Access Key**. Refer to [Access Rights and Keys](https://apidocs.salesmate.io/?version=latest#ac8296ec-cb44-4937-a860-5ae032397ca0){:target=_blank .external-link} for more information.
+- A **Session Token**: An **Access Key**. Generate an access key in **My Account > Access Key**. Refer to [Access Rights and Keys](https://apidocs.salesmate.io/?version=latest#ac8296ec-cb44-4937-a860-5ae032397ca0) for more information.
 - A **URL**: Your Salesmate domain name/base URL, for example `n8n.salesmate.io`.
 

@@ -32,7 +32,7 @@ Configure this operation with these parameters:
 		- `?`: Matches any character except for path separators one time.
 		- `[]`: Matches any characters inside the brackets. For example, `[abc]` would match the characters `a`, `b`, or `c`, and nothing else.
 
-Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing){:target=_blank .external-link} documentation for more information on these characters and their expected behavior.
+Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing) documentation for more information on these characters and their expected behavior.
 
 ### Read File(s) From Disk options
 
@@ -40,7 +40,7 @@ You can also configure this operation with these **Options**:
 
 * **File Extension**: Enter the extension for the file in the node output.
 * **File Name**: Enter the name for the file in the node output.
-* **MIME Type**: Enter the file's MIME type in the node output. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of file extensions and their MIME types.
+* **MIME Type**: Enter the file's MIME type in the node output. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a list of file extensions and their MIME types.
 * **Put Output File in Field**: Enter the name of the field in the output data to contain the file.
 
 ## Write File to Disk

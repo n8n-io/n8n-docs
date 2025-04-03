@@ -10,7 +10,7 @@ priority: medium
 
 <!-- vale off -->
 /// warning | Deprecated: End of service
-LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce){:target=_blank .external-link} for more information.
+LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce) for more information.
 ///
 <!-- vale on -->
 

@@ -25,7 +25,7 @@ The question you want to ask.
 
 ## Related resources
 
-Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/){:target=_blank .external-link} for examples of how LangChain can use a vector store as a retriever.
+Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/) for examples of how LangChain can use a vector store as a retriever.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

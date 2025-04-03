@@ -19,11 +19,11 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Generate Audio**.
-- **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts){:target=_blank .external-link} for more information.
+- **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts) for more information.
     - **TTS-1**: Use this to optimize for speed.
     - **TTS-1-HD**:	Use this to optimize for quality.
 - **Text Input**: Enter the text to generate the audio for. The maximum length is 4096 characters.
-- **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart){:target=_blank .external-link}.
+- **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart).
 
 ### Options
 
@@ -31,7 +31,7 @@ Enter these parameters:
 - **Audio Speed**: Enter the speed for the generated audio from a value from `0.25` to `4.0`. Defaults to `1`.
 - **Put Output in Field**: Defaults to `data`. Enter the name of the output field to put the binary file data in. 
 
-Refer to [Create speech | OpenAI](https://platform.openai.com/docs/api-reference/audio/createSpeech){:target=_blank .external-link} documentation for more information.
+Refer to [Create speech | OpenAI](https://platform.openai.com/docs/api-reference/audio/createSpeech) documentation for more information.
 
 ## Transcribe a Recording
 
@@ -46,10 +46,10 @@ Enter these parameters:
 
 ### Options
 
-- **Language of the Audio File**: Enter the language of the input audio in  [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){:target=_blank .external-link}. Use this option to improve accuracy and latency.
+- **Language of the Audio File**: Enter the language of the input audio in  [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). Use this option to improve accuracy and latency.
 - **Output Randomness (Temperature)**: Defaults to `1.0`. Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. 
 
-Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription){:target=_blank .external-link} documentation for more information.
+Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription) documentation for more information.
 
 ## Translate a Recording
 
@@ -66,7 +66,7 @@ Enter these parameters:
 
 - **Output Randomness (Temperature)**: Defaults to `1.0`. Adjust the randomness of the response. The range is between `0.0` (deterministic) and `1.0` (maximum randomness). We recommend altering this or **Output Randomness (Top P)** but not both. Start with a medium temperature (around 0.7) and adjust based on the outputs you observe. If the responses are too repetitive or rigid, increase the temperature. If they’re too chaotic or off-track, decrease it. 
 
-Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription){:target=_blank .external-link} documentation for more information.
+Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-reference/audio/createTranscription) documentation for more information.
 
 ## Common issues
 

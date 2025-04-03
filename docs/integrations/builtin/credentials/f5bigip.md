@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services){:target=_blank .external-link} account.
+Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services) account.
 
 ## Authentication methods
 
@@ -20,9 +20,9 @@ Create an [F5 Big-IP](https://www.f5.com/products/big-ip-services){:target=_blan
 
 ## Related resources
 
-Refer to [F5 Big-IP's API documentation](https://clouddocs.f5.com/products/big-iq/mgmt-api/v0.0/){:target=_blank .external-link} for more information about the service.
+Refer to [F5 Big-IP's API documentation](https://clouddocs.f5.com/products/big-iq/mgmt-api/v0.0/) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/f5-big-ip/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/f5-big-ip/) on n8n's website.
 
 ## Using account login
 

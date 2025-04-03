@@ -14,7 +14,7 @@ hide:
 
 # Webhook node
 
-Use the Webhook node to create [webhooks](https://en.wikipedia.org/wiki/Webhook){:target=_blank .external-link}, which can receive data from apps and services when an event occurs. It's a trigger node, which means it can start an n8n workflow. This allows services to connect to n8n and run a workflow.
+Use the Webhook node to create [webhooks](https://en.wikipedia.org/wiki/Webhook), which can receive data from apps and services when an event occurs. It's a trigger node, which means it can start an n8n workflow. This allows services to connect to n8n and run a workflow.
 
 You can use the Webhook node as a trigger for a workflow when you want to receive data and run a workflow based on the data. The Webhook node also supports returning the data generated at the end of a workflow. This makes it useful for building a workflow to process data and return the results, like an API endpoint.
 
@@ -44,7 +44,7 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 ### HTTP Method
 
-The Webhook node supports standard [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods){:target=_blank .external-link}:
+The Webhook node supports standard [HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods):
 
 * DELETE
 * GET
@@ -91,7 +91,7 @@ Refer to [Webhook credentials](/integrations/builtin/credentials/webhook.md) for
 
 ### Response Code
 
-Customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} that the Webhook node returns upon successful execution. Select from common response codes or create a custom code.
+Customize the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) that the Webhook node returns upon successful execution. Select from common response codes or create a custom code.
 
 ### Response Data
 
@@ -116,7 +116,7 @@ Select **Add Option** to view more configuration options. The available options 
 * **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: Choose the format for the webhook body.
 * **Response Data**: Send custom data with the response.
-* **Response Headers**: Send extra headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
+* **Response Headers**: Send extra headers in the Webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) to learn more about response headers.
 * **Property Name**: by default, n8n returns all available data. You can choose to return a specific JSON key, so that n8n returns the value.
 
 | Option | Required node configuration |

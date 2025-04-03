@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Metabase](https://www.metabase.com/){:target=_blank .external-link} account with access to a Metabase instance.
+Create a [Metabase](https://www.metabase.com/) account with access to a Metabase instance.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Metabase](https://www.metabase.com/){:target=_blank .external-link} ac
 
 ## Related resources
 
-Refer to [Metabase's API documentation](https://www.metabase.com/docs/latest/api-documentation){:target=_blank .external-link} for more information about the service.
+Refer to [Metabase's API documentation](https://www.metabase.com/docs/latest/api-documentation) for more information about the service.
 
 ## Using basic auth
 

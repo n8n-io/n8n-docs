@@ -8,7 +8,7 @@ priority: medium
 
 # Slack Trigger node
 
-Use the Slack Trigger node to respond to events in [Slack](https://slack.com/){:target=_blank .external-link} and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions, and new channels.
+Use the Slack Trigger node to respond to events in [Slack](https://slack.com/) and integrate Slack with other applications. n8n has built-in support for a wide range of Slack events, including new messages, reactions, and new channels.
 
 On this page, you'll find a list of events the Slack Trigger node can respond to and links to more resources.
 
@@ -16,19 +16,19 @@ On this page, you'll find a list of events the Slack Trigger node can respond to
 You can find authentication information for this node [here](/integrations/builtin/credentials/slack.md).
 ///
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Slack integrations](https://n8n.io/integrations/slack-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Slack integrations](https://n8n.io/integrations/slack-trigger/) page.
 ///
 
 ## Events
 
 * **Any Event**: The node triggers on any event in Slack.
-* **Bot / App Mention**: The node triggers when your bot or app is [mentioned](https://slack.com/help/articles/205240127-Use-mentions-in-Slack){:target=_blank .external-link} in a channel the app is in.
-* **File Made Public**: The node triggers when a file is [made public](https://slack.com/help/articles/4412651915539-Manage-public-file-sharing){:target=_blank .external-link}.
-* **File Shared**: The node triggers when a file is [shared](https://slack.com/help/articles/201330736-Add-files-to-Slack){:target=_blank .external-link} in a channel the app is in.
+* **Bot / App Mention**: The node triggers when your bot or app is [mentioned](https://slack.com/help/articles/205240127-Use-mentions-in-Slack) in a channel the app is in.
+* **File Made Public**: The node triggers when a file is [made public](https://slack.com/help/articles/4412651915539-Manage-public-file-sharing).
+* **File Shared**: The node triggers when a file is [shared](https://slack.com/help/articles/201330736-Add-files-to-Slack) in a channel the app is in.
 * **New Message Posted to Channel**: The node triggers when a new message is posted to a channel the app is in.
-* **New Public Channel Created**: The node triggers when a new [public channel](https://slack.com/help/articles/360017938993-What-is-a-channel){:target=_blank .external-link} is created.
+* **New Public Channel Created**: The node triggers when a new [public channel](https://slack.com/help/articles/360017938993-What-is-a-channel) is created.
 * **New User**: The node triggers when a new user is added to Slack.
-* **Reaction Added**: The node triggers when a [reaction](https://slack.com/help/articles/202931348-Use-emoji-and-reactions){:target=_blank .external-link} is added to a message the app is added to.
+* **Reaction Added**: The node triggers when a [reaction](https://slack.com/help/articles/202931348-Use-emoji-and-reactions) is added to a message the app is added to.
 
 ## Parameters
 
@@ -57,9 +57,9 @@ You can further refine the node's behavior when you **Add Option**s:
 
 n8n provides an app node for Slack. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md).
 
-View [example workflows and related content](https://n8n.io/integrations/slack-trigger/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/slack-trigger/) on n8n's website.
 
-Refer to [Slack's documentation](https://api.slack.com/apis/connections/events-api){:target=_blank .external-link} for details about their API.
+Refer to [Slack's documentation](https://api.slack.com/apis/connections/events-api) for details about their API.
 
 ## Required scopes
 
@@ -67,7 +67,7 @@ To use this node, you need to create an application in Slack and enable event su
 
 You must add the appropriate scopes to your Slack app for this trigger node to work.
 
-The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack.md#scopes) list for a more complete list of scopes.
+The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list) and [users.list](https://api.slack.com/methods/users.list) methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack.md#scopes) list for a more complete list of scopes.
 
 ## Common issues
 

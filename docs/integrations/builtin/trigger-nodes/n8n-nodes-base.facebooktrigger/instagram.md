@@ -15,7 +15,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/) page.
 ///
 
 ## Trigger configuration
@@ -37,4 +37,4 @@ To configure the trigger with this Object:
 
 ## Related resources
 
-Refer to [Webhooks for Instagram](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-instagram){:target=_blank .external-link} and Meta's [Instagram](https://developers.facebook.com/docs/graph-api/webhooks/reference/instagram/){:target=_blank .external-link} Graph API reference for more information.
+Refer to [Webhooks for Instagram](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-instagram) and Meta's [Instagram](https://developers.facebook.com/docs/graph-api/webhooks/reference/instagram/) Graph API reference for more information.

@@ -32,4 +32,4 @@ Create a chart by selecting the chart type:
 
 ## Related resources
 
-Refer to [QuickChart's API documentation](https://quickchart.io/documentation/){:target=_blank .external-link} for more information about the service.
+Refer to [QuickChart's API documentation](https://quickchart.io/documentation/) for more information about the service.

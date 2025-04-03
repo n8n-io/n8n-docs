@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-link} account.
+Create an [APITemplate.io](https://apitemplate.io/) account.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ Create an [APITemplate.io](https://apitemplate.io/){:target=_blank .external-lin
 
 ## Related resources
 
-Refer to [APITemplate.io's API documentation](https://apitemplate.io/apiv2/){:target=_blank .external-link} for more information about the service.
+Refer to [APITemplate.io's API documentation](https://apitemplate.io/apiv2/) for more information about the service.
 
 ## Using API key
 

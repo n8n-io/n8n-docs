@@ -21,9 +21,9 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [ERPNext's documentation](https://docs.erpnext.com/docs/user/manual/en/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [ERPNext's documentation](https://docs.erpnext.com/docs/user/manual/en/introduction) for more information about the service.
 
-Refer to [ERPNext's developer documentation](https://frappeframework.com/docs/user/en/introduction){:target=_blank .external-link} for more information about working with the framework.
+Refer to [ERPNext's developer documentation](https://frappeframework.com/docs/user/en/introduction) for more information about working with the framework.
 
 
 ## Using API key
@@ -40,7 +40,7 @@ To configure this credential, you'll need:
         - The fully qualified **Domain** where you host ERPNext
 - Choose whether to **Ignore SSL Issues**: When selected, n8n will connect even if SSL certificate validation is unavailable.
 
-If you are an ERPNext System Manager, you can also generate API keys and secrets for other users. Refer to the [ERPNext Adding Users documentation](https://docs.erpnext.com/docs/user/manual/en/adding-users){:target=_blank .external-link} for more information.
+If you are an ERPNext System Manager, you can also generate API keys and secrets for other users. Refer to the [ERPNext Adding Users documentation](https://docs.erpnext.com/docs/user/manual/en/adding-users) for more information.
 
 ## How to find the subdomain of an ERPNext cloud-hosted account
 

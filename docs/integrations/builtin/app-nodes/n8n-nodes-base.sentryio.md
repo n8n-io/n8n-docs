@@ -56,6 +56,6 @@ Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio.md) 
 
 ## Related resources
 
-Refer to [Sentry.io's documentation](https://docs.sentry.io/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Sentry.io's documentation](https://docs.sentry.io/api/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

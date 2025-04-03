@@ -11,7 +11,7 @@ It's also your responsibility as a customer to ensure you are securing your code
 
 ## All users
 
-* Report security issues and [terms of service](https://n8n.io/legal/#terms){:target=_blank .external-link} violations to security@n8n.io.
+* Report security issues and [terms of service](https://n8n.io/legal/#terms) violations to security@n8n.io.
 * If more than one person uses your n8n instance, set up [User management](/user-management/index.md) and follow the [Best practices](/user-management/best-practices.md).
 * Use OAuth to connect integrations whenever possible.
 

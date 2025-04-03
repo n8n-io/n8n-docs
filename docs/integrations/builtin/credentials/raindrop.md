@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Raindrop](https://raindrop.io/){:target=_blank .external-link} account.
+Create a [Raindrop](https://raindrop.io/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Raindrop](https://raindrop.io/){:target=_blank .external-link} account
 
 ## Related resources
 
-Refer to [Raindrop's API documentation](https://developer.raindrop.io/){:target=_blank .external-link} for more information about the service.
+Refer to [Raindrop's API documentation](https://developer.raindrop.io/) for more information about the service.
 
 ## Using OAuth
 
@@ -32,7 +32,7 @@ To configure this credential, you'll need:
 
 Generate both by creating a Raindrop app.
 
-To create an app, go to **Settings >** [**Integrations**](https://app.raindrop.io/settings/integrations){:target=_blank .external-link} and select **+ Create new app** in the **For Developers** section.
+To create an app, go to **Settings >** [**Integrations**](https://app.raindrop.io/settings/integrations) and select **+ Create new app** in the **For Developers** section.
 
 Use these settings for your app:
 

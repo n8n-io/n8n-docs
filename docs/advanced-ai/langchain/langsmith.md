@@ -7,7 +7,7 @@ description: How to enable LangSmith for your self-hosted n8n instance.
 
 # Use LangSmith with n8n
 
-[LangSmith](https://www.langchain.com/langsmith){:target=_blank .external-link} is a developer platform created by the LangChain team. You can connect your n8n instance to LangSmith to record and monitor runs in n8n, just as you can in a LangChain application.
+[LangSmith](https://www.langchain.com/langsmith) is a developer platform created by the LangChain team. You can connect your n8n instance to LangSmith to record and monitor runs in n8n, just as you can in a LangChain application.
 
 /// info | Feature availability
 Self-hosted n8n only.
@@ -15,7 +15,7 @@ Self-hosted n8n only.
 
 ## Connect your n8n instance to LangSmith
 
-1. [Log in to LangSmith](https://smith.langchain.com/settings){:target=_blank .external-link} and get your API key.
+1. [Log in to LangSmith](https://smith.langchain.com/settings) and get your API key.
 1. Set the LangSmith environment variables:
 
 	| Variable | Value |
@@ -28,4 +28,4 @@ Self-hosted n8n only.
 
 1. Restart n8n.
 
-For information on using LangSmith, refer to [LangSmith's documentation](https://docs.smith.langchain.com/){:target=_blank .external-link}.
+For information on using LangSmith, refer to [LangSmith's documentation](https://docs.smith.langchain.com/).

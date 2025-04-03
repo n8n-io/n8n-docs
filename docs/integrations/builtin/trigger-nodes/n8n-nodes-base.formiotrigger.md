@@ -8,12 +8,12 @@ priority: medium
 
 # Form.io Trigger node
 
-[Form.io](https://www.form.io/){:target=_blank .external-link} is an enterprise class combined form and API data management platform for building complex form-based business process applications.
+[Form.io](https://www.form.io/) is an enterprise class combined form and API data management platform for building complex form-based business process applications.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/formiotrigger.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Form.io Trigger integrations](https://n8n.io/integrations/formio-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Form.io Trigger integrations](https://n8n.io/integrations/formio-trigger/) page.
 ///

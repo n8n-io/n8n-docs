@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [HighLevel developer](https://marketplace.gohighlevel.com/){:target=_blank .external-link} account.
+Create a [HighLevel developer](https://marketplace.gohighlevel.com/) account.
 
 ## Supported authentication methods
 
@@ -26,15 +26,15 @@ HighLevel deprecated API v1.0 and no longer maintains it. Use OAuth2 to set up n
 
 ## Related resources
 
-Refer to [HighLevel's API 2.0 documentation](https://highlevel.stoplight.io/docs/integrations/0443d7d1a4bd0-overview){:target=_blank .external-link} for more information about the service.
+Refer to [HighLevel's API 2.0 documentation](https://highlevel.stoplight.io/docs/integrations/0443d7d1a4bd0-overview) for more information about the service.
 
-For existing integrations with the API v1.0, refer to [HighLevel's API 1.0 documentation](https://public-api.gohighlevel.com/){:target=_blank .external-link}.
+For existing integrations with the API v1.0, refer to [HighLevel's API 1.0 documentation](https://public-api.gohighlevel.com/).
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [HighLevel API 1.0 Welcome documentation](https://public-api.gohighlevel.com/){:target=_blank .external-link} for instructions on getting your API key.
+- An **API Key**: Refer to the [HighLevel API 1.0 Welcome documentation](https://public-api.gohighlevel.com/) for instructions on getting your API key.
 
 ## Using OAuth2
 
@@ -59,5 +59,5 @@ To generate both, create an app in **My Apps > Create App**. Use these settings:
 
     ```locations.readonly contacts.readonly contacts.write opportunities.readonly opportunities.write users.readonly```
 
-Refer to HighLevel's [API Authorization documentation](https://highlevel.stoplight.io/docs/integrations/a04191c0fabf9-authorization){:target=_blank .external-link} for more details. Refer to HighLevel's [API Scopes documentation](https://highlevel.stoplight.io/docs/integrations/vcctp9t1w8hja-scopes){:target=_blank .external-link} for more information about available scopes.
+Refer to HighLevel's [API Authorization documentation](https://highlevel.stoplight.io/docs/integrations/a04191c0fabf9-authorization) for more details. Refer to HighLevel's [API Scopes documentation](https://highlevel.stoplight.io/docs/integrations/vcctp9t1w8hja-scopes) for more information about available scopes.
 

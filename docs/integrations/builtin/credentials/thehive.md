@@ -17,7 +17,7 @@ n8n provides two nodes for TheHive. Use these credentials with TheHive node for 
 
 ## Prerequisites
 
-Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md){:target=_blank .external-link} on your server.
+Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md) on your server.
 
 ## Supported authentication methods
 
@@ -25,13 +25,13 @@ Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/ins
 
 ## Related resources
 
-Refer to [TheHive 3's API documentation](https://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link} and [TheHive 4's API documentation](https://docs.thehive-project.org/thehive/){:target=_blank .external-link} for more information about the services.
+Refer to [TheHive 3's API documentation](https://docs.thehive-project.org/thehive/legacy/thehive3/api/) and [TheHive 4's API documentation](https://docs.thehive-project.org/thehive/) for more information about the services.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Create an API key from **Organization > Create API Key**. Refer to [API Authentication](https://docs.thehive-project.org/thehive/legacy/thehive3/api/authentication/){:target=_blank .external-link} for more information.
+- An **API Key**: Create an API key from **Organization > Create API Key**. Refer to [API Authentication](https://docs.thehive-project.org/thehive/legacy/thehive3/api/authentication/) for more information.
 - Your **URL**: The URL of your TheHive server.
 - An **API Version**: Choose between:
     - **TheHive 3 (api v0)**

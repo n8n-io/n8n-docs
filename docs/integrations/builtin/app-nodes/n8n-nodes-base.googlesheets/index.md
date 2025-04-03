@@ -39,7 +39,7 @@ Refer to [Google Sheets credentials](/integrations/builtin/credentials/google/in
 
 ## Related resources
 
-Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api){:target=_blank .external-link} for more information about the service.
+Refer to [Google Sheet's API documentation](https://developers.google.com/sheets/api) for more information about the service.
 
 <!-- ## Examples
 This example uses the Customer Datastore node to provide sample data to load into Google Sheets. It assumes you've already set up your [credentials](/integrations/builtin/credentials/google/index.md).	

@@ -26,4 +26,4 @@ Refer to [Environment variables](/hosting/configuration/configuration-methods.md
 
 ## Allowlist the license server IP addresses
 
-n8n uses Cloudflare to host the license server. As the specific IP addresses can change, you need to allowlist the [full range of Cloudflare IPs](https://www.cloudflare.com/ips/){:target=_blank .external-link} to ensure n8n can always reach the license server.
+n8n uses Cloudflare to host the license server. As the specific IP addresses can change, you need to allowlist the [full range of Cloudflare IPs](https://www.cloudflare.com/ips/) to ensure n8n can always reach the license server.

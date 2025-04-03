@@ -102,7 +102,7 @@ You need to add an extra configuration option to support dragging and dropping d
 * `requiresDataPath: 'single'`: for fields that require a single string.
 * `requiresDataPath: 'multiple'`: for fields that can accept a comma-separated list of string.
 
-The [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/CompareDatasets/CompareDatasets.node.ts){:target=_blank .external-link} has examples.
+The [Compare Datasets node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/CompareDatasets/CompareDatasets.node.ts) has examples.
 
 ## Number
 
@@ -399,7 +399,7 @@ Use the drag and drop component when you want users to pre-fill name and value p
 },
 ```
 
-You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2){:target=_blank .external-link}:
+You can see an example in n8n's [Edit Fields (Set) node](https://github.com/n8n-io/n8n/tree/0faeab1228e26d69a2a93bdb2f89523cca1e4036/packages/nodes-base/nodes/Set/v2):
 
 ![A GIF showing the drag and drop action, as well as changing a field to fixed](/_images/integrations/builtin/core-nodes/set/drag-drop-fixed-toggle.gif)
 
@@ -553,8 +553,8 @@ Example:
 
 Refer to the following for live examples:
 
-* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts){:target=_blank .external-link} and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts){:target=_blank .external-link}  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
-* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts){:target=_blank .external-link} for an example where users can browse the list or search.
+* Refer to [`CardDescription.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/CardDescription.ts) and [`Trello.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Trello/Trello.node.ts)  in n8n's Trello node for an example of a list with search that includes `searchFilterRequired: true`.
+* Refer to [`GoogleDrive.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Drive/GoogleDrive.node.ts) for an example where users can browse the list or search.
 
 ## Resource mapper
 
@@ -599,9 +599,9 @@ Mapping is the process of setting the input data to use as values when updating 
 },
 ```
 
-Refer to the [Postgres node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postgres/v2){:target=_blank .external-link} for a live example using a database schema.
+Refer to the [Postgres node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Postgres/v2) for a live example using a database schema.
 
-Refer to the [Google Sheets node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google/Sheet/v2){:target=_blank .external-link} for a live example using a schema-less service.
+Refer to the [Google Sheets node (version 2)](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Google/Sheet/v2) for a live example using a schema-less service.
 
 ### Resource mapper type options interface
 
@@ -673,7 +673,7 @@ interface ResourceMapperField {
 }
 ```
 
-Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Postgres/v2/methods/resourceMapping.ts){:target=_blank .external-link} and [Google Sheets resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Sheet/v2/methods/resourceMapping.ts){:target=_blank .external-link} for live examples.
+Refer to the [Postgres resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Postgres/v2/methods/resourceMapping.ts) and [Google Sheets resource mapping method](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Google/Sheet/v2/methods/resourceMapping.ts) for live examples.
 
 ## JSON
 
@@ -718,7 +718,7 @@ The HTML editor allows users to create HTML templates in their workflows. The ed
 },
 ```
 
-Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts){:target=_blank .external-link} for a live example.
+Refer to [`Html.node.ts`](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Html/Html.node.ts) for a live example.
 
 
 ## Notice
@@ -802,4 +802,4 @@ if (operation === 'select' && items.length > 1 && !node.executeOnce) {
 return [returnData];
 ```
 
-For a live example of a dynamic hint in a programmatic-style node, view the [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266){:target=_blank .external-link}.
+For a live example of a dynamic hint in a programmatic-style node, view the [Split Out node code](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/Transform/SplitOut/SplitOut.node.ts#L266).

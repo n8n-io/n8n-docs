@@ -11,7 +11,7 @@ priority: medium
 Use the Sort node to organize lists of items in a desired ordering, or generate a random selection.
 
 /// note | Array sort behavior
-The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. Refer to [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){:target=_blank .external-link} to learn more.
+The Sort operation uses the default JavaScript operation where the elements to be sorted are converted into strings and their values compared. Refer to [Mozilla's guide to Array sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) to learn more.
 ///
 
 ## Node parameters

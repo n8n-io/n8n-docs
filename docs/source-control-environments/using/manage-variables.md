@@ -21,7 +21,7 @@ Managing variables using the API has several advantages:
 * You can automatically update variable values using a CI (continuous integration) tool. 
 * You may also be able to protect the values. 
 
-For example, you can store values in [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets){:target=_blank .external-link}, then populate the variables in n8n using an API call from a [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions){:target=_blank .external-link}.
+For example, you can store values in [GitHub secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets), then populate the variables in n8n using an API call from a [GitHub Action](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
 
 To manage variables using an API call, make a `POST` request to `/source-control/pull`:
 

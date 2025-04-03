@@ -9,7 +9,7 @@ contentType: explanation
 
 Vector databases store information as numbers:
 
-> A vector database is a type of database that stores data as high-dimensional vectors, which are mathematical representations of features or attributes. ([source](https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db){:target=_blank .external-link})
+> A vector database is a type of database that stores data as high-dimensional vectors, which are mathematical representations of features or attributes. ([source](https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db))
 
 This enables fast and accurate similarity searches. With a vector database, instead of using conventional database queries, you can search for relevant data based on semantic and contextual meaning.
 
@@ -33,11 +33,11 @@ In practice, vectors are far more complex. A vector can range in size from tens 
 
 ## Demonstrating the power of similarity search
 
-Qdrant provides [vector search demos](https://qdrant.tech/demo/){:target=_blank .external-link} to help users understand the power of vector databases. The [food discovery demo](https://food-discovery.qdrant.tech/){:target=_blank .external-link} shows how a vector store can help match pictures based on visual similarities.
+Qdrant provides [vector search demos](https://qdrant.tech/demo/) to help users understand the power of vector databases. The [food discovery demo](https://food-discovery.qdrant.tech/) shows how a vector store can help match pictures based on visual similarities.
 
-> This demo uses data from Delivery Service. Users may like or dislike the photo of a dish, and the app will recommend more similar meals based on how they look. It's also possible to choose to view results from the restaurants within the delivery radius. ([source](https://qdrant.tech/demo/){:target=_blank .external-link})
+> This demo uses data from Delivery Service. Users may like or dislike the photo of a dish, and the app will recommend more similar meals based on how they look. It's also possible to choose to view results from the restaurants within the delivery radius. ([source](https://qdrant.tech/demo/))
 
-For full technical details, refer to the [Qdrant demo-food-discovery GitHub repository](https://github.com/qdrant/demo-food-discovery){:target=_blank .external-link}.
+For full technical details, refer to the [Qdrant demo-food-discovery GitHub repository](https://github.com/qdrant/demo-food-discovery).
 
 ## Embeddings, retrievers, text splitters, and document loaders
 

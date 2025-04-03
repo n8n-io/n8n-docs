@@ -13,7 +13,7 @@ The n8n node linter provides automatic checking for many of the node-building st
 
 ## Use the starter
 
-The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link}.
+The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter).
 
 ## Write in TypeScript
 
@@ -109,6 +109,6 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 );
 ```
 
-This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
+This uses the npm package [Axios](https://www.npmjs.com/package/axios).
 
 Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers.md) for more information, and for migration instructions for the removed `this.helpers.request`.

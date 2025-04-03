@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Lemlist Trigger node
 
-[Lemlist](https://Lemlist.com){:target=_blank .external-link} is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
+[Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Lemlist Trigger integrations](https://n8n.io/integrations/lemlist-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Lemlist Trigger integrations](https://n8n.io/integrations/lemlist-trigger/) page.
 ///
 
 ## Events

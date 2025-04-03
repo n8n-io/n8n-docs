@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a [Rocket.Chat](https://rocket.chat/){:target=_blank .external-link} account.
+- Create a [Rocket.Chat](https://rocket.chat/) account.
 - Your account must have the `create-personal-access-tokens` permission to generate personal access tokens.
 
 ## Supported authentication methods

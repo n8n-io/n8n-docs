@@ -31,7 +31,7 @@ Refer to [AWS Certificate Manager credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html){:target=_blank .external-link} for more information on this service.
+Refer to [AWS Certificate Manager's documentation](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) for more information on this service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

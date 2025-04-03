@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Emelia Trigger node
 
-[Emelia](https://emelia.io){:target=_blank .external-link} is a cold-mailing tool.
+[Emelia](https://emelia.io) is a cold-mailing tool.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/emelia.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Emelia Trigger integrations](https://n8n.io/integrations/emelia-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Emelia Trigger integrations](https://n8n.io/integrations/emelia-trigger/) page.
 ///
 
 ## Events

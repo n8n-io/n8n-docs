@@ -53,7 +53,7 @@ As an example, say you want to add versioning to the NasaPics node from the [Dec
 
 This isn't available for declarative-style nodes.
 
-As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}.
+As an example, refer to the [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost).
 
 Full versioning summary:
 

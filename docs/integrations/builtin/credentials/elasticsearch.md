@@ -18,11 +18,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Elasticsearch's documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [Elasticsearch's documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information about the service.
 
 ## Using basic auth
 
-To configure this credential, you'll need an [Elasticsearch](https://www.elastic.co/){:target=_blank .external-link} account with a [deployment](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html){:target=_blank .external-link} and:
+To configure this credential, you'll need an [Elasticsearch](https://www.elastic.co/) account with a [deployment](https://www.elastic.co/guide/en/cloud/current/ec-create-deployment.html) and:
 
 - A **Username**
 - A **Password**
@@ -40,5 +40,5 @@ To set up the credential:
 8. By default, n8n connects only if SSL certificate validation succeeds. If you'd like to connect even if SSL certificate validation fails, turn on **Ignore SSL Issues**.
 
 /// note | Custom endpoint aliases
-If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html){:target=_blank .external-link} to a deployment, update your n8n credential **Base URL** with the new endpoint.
+If you add a [custom endpoint alias](https://www.elastic.co/guide/en/cloud/current/ec-regional-deployment-aliases.html) to a deployment, update your n8n credential **Base URL** with the new endpoint.
 ///

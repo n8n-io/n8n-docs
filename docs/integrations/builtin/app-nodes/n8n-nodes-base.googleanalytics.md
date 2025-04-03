@@ -33,6 +33,6 @@ Refer to [Google Analytics credentials](/integrations/builtin/credentials/google
 
 ## Related resources
 
-Refer to [Google Analytics' documentation](https://developers.google.com/analytics){:target=_blank .external-link} for more information about the service.
+Refer to [Google Analytics' documentation](https://developers.google.com/analytics) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

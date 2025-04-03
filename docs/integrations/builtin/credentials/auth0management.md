@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an [Auth0](https://auth0.com){:target=_blank .external-link} account.
+Create an [Auth0](https://auth0.com) account.
 
 ## Supported authentication methods
 
@@ -20,9 +20,9 @@ Create an [Auth0](https://auth0.com){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Auth0 Management's documentation](https://auth0.com/docs/api/management/v2){:target=_blank .external-link} for more information about the service.
+Refer to [Auth0 Management's documentation](https://auth0.com/docs/api/management/v2) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/auth0-management-api/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/auth0-management-api/) on n8n's website.
 
 ## Using API client secret
 
@@ -32,4 +32,4 @@ To configure this credential, you'll need:
 - A **Client ID**
 - A **Client Secret**
 
-Refer to the [Auth0 Management API Get Access Tokens documentation](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens){:target=_blank .external-link} for instructions on obtaining the Client ID and Client Secret from the application's **Settings** tab.
+Refer to the [Auth0 Management API Get Access Tokens documentation](https://auth0.com/docs/secure/tokens/access-tokens/get-access-tokens) for instructions on obtaining the Client ID and Client Secret from the application's **Settings** tab.

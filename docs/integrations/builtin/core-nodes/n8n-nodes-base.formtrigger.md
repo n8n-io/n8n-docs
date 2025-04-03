@@ -29,14 +29,14 @@ When working with a production URL, ensure that you have saved and activated the
 
 ## Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) receives the same query parameters sent to the n8n Form Trigger URL.
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms) with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) receives the same query parameters sent to the n8n Form Trigger URL.
 
 /// note | Only for production
 Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
 ///
 
 <!-- vale from-microsoft.Percentages = NO -->
-When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding) any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
 
 As an example, imagine you have a form with the following properties:
 

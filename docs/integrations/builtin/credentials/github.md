@@ -16,7 +16,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [GitHub](https://github.com/){:target=_blank .external-link} account.
+Create a [GitHub](https://github.com/) account.
 
 ## Supported authentication methods
 
@@ -25,11 +25,11 @@ Create a [GitHub](https://github.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [GitHub's API documentation](https://docs.github.com/en/rest){:target=_blank .external-link} for more information about the service.
+Refer to [GitHub's API documentation](https://docs.github.com/en/rest) for more information about the service.
 
 ## Using API access token
 
-To configure this credential, you'll need a [GitHub](https://github.com/){:target=_blank .external-link} account.
+To configure this credential, you'll need a [GitHub](https://github.com/) account.
 
 There are two steps to setting up this credential:
 
@@ -46,9 +46,9 @@ n8n recommends using a personal access token (classic). GitHub's fine-grained pe
 
 To generate your personal access token:
 
-1. If you haven't done so already, verify your email address with GitHub. Refer to [Verifying your email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/verifying-your-email-address){:target=_blank .external-link} for more information.
-2. Open your GitHub profile [Settings](https://github.com/settings/profile){:target=_blank .external-link}.
-3. In the left navigation, select [**Developer settings**](https://github.com/settings/apps){:target=_blank .external-link}.
+1. If you haven't done so already, verify your email address with GitHub. Refer to [Verifying your email address](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/verifying-your-email-address) for more information.
+2. Open your GitHub profile [Settings](https://github.com/settings/profile).
+3. In the left navigation, select [**Developer settings**](https://github.com/settings/apps).
 4. In the left navigation, under **Personal access tokens**, select **Tokens (classic)**.
 5. Select **Generate new token > Generate new token (classic)**.
 6. Enter a descriptive name for your token in the **Note** field, like `n8n integration`.
@@ -59,14 +59,14 @@ To generate your personal access token:
 9. Select **Generate token**.
 10. Copy the token.
 
-Refer to [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic){:target=_blank .external-link} for more information. Refer to [Scopes for OAuth apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes){:target=_blank .external-link} for more information on GitHub scopes.
+Refer to [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) for more information. Refer to [Scopes for OAuth apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes) for more information on GitHub scopes.
 
 ### Set up the credential
 
 Then, in your n8n credential:
 
 1. If you aren't using GitHub Enterprise Server, don't change the **GitHub server** URL.
-    - If you're using [GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@3.9/admin/overview/about-github-enterprise-server){:target=_blank .external-link}, update **GitHub server** to match the URL for your server.
+    - If you're using [GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@3.9/admin/overview/about-github-enterprise-server), update **GitHub server** to match the URL for your server.
 2. Enter your **User** name as it appears in your GitHub profile.
 3. Enter the **Access Token** you generated above.
 
@@ -74,10 +74,10 @@ Then, in your n8n credential:
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting n8n](/hosting/index.md), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps){:target=_blank .external-link}:
+If you're [self-hosting n8n](/hosting/index.md), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps):
 
-1. Open your GitHub profile [Settings](https://github.com/settings/profile){:target=_blank .external-link}.
-2. In the left navigation, select [**Developer settings**](https://github.com/settings/apps){:target=_blank .external-link}.
+1. Open your GitHub profile [Settings](https://github.com/settings/profile).
+2. In the left navigation, select [**Developer settings**](https://github.com/settings/apps).
 3. In the left navigation, select **OAuth apps**.
 4. Select **New OAuth App**.
     - If you haven't created an app before, you may see **Register a new application** instead. Select it.
@@ -88,4 +88,4 @@ If you're [self-hosting n8n](/hosting/index.md), create a new GitHub [OAuth app]
 9. Select **Register application**.
 10. Copy the **Client ID** and **Client Secret** this generates and add them to your n8n credential.
 
-Refer to the [GitHub Authorizing OAuth apps documentation](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps){:target=_blank .external-link} for more information on the authorization process.
+Refer to the [GitHub Authorizing OAuth apps documentation](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps) for more information on the authorization process.

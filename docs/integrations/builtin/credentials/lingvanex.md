@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [LingvaNex](https://lingvanex.com){:target=_blank .external-link} account.
+Create a [LingvaNex](https://lingvanex.com) account.
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [LingvaNex](https://lingvanex.com){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Lingvanex's Cloud API documentation](https://docs.lingvanex.com/reference/overview){:target=_blank .external-link} for more information about the service.
+Refer to [Lingvanex's Cloud API documentation](https://docs.lingvanex.com/reference/overview) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Generate an API key from your **Account** page. Refer to [Where can I get the authorization key?](https://docs.lingvanex.com/reference/translator-service-faq#where-can-i-get-the-authorization-key){:target=_blank .external-link} for more detailed instructions.
+- An **API Key**: Generate an API key from your **Account** page. Refer to [Where can I get the authorization key?](https://docs.lingvanex.com/reference/translator-service-faq#where-can-i-get-the-authorization-key) for more detailed instructions.
 
 

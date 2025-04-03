@@ -38,6 +38,6 @@ Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/
 
 n8n provides a trigger node for Google Calendar. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md).
 
-Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for more information about the service.
+Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference) for more information about the service.
 
-View [example workflows and related content](https://n8n.io/integrations/google-calendar/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/google-calendar/) on n8n's website.

@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an [Onfleet](https://onfleet.com/){:target=_blank .external-link} administrator account.
+Create an [Onfleet](https://onfleet.com/) administrator account.
 
 # Supported authentication methods
 
@@ -22,7 +22,7 @@ Create an [Onfleet](https://onfleet.com/){:target=_blank .external-link} adminis
 
 ## Related resources
 
-Refer to [Onfleet's API documentation](https://docs.onfleet.com/reference/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [Onfleet's API documentation](https://docs.onfleet.com/reference/introduction) for more information about the service.
 
 ## Using API key
 

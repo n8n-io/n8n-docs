@@ -44,7 +44,7 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 ## Related resources
 
-Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link} for more information about the service.
+Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/) for more information about the service.
 
 ## Find the folder ID
 

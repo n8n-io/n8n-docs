@@ -38,6 +38,6 @@ You will build this workflow in eight steps:
 7. [Scheduling the workflow](/courses/level-one/chapter-5/chapter-5.7.md)
 8. [Activating and examining the workflow](/courses/level-one/chapter-5/chapter-5.8.md)
 
-To build this workflow, you will need the credentials found in the email you received from n8n when you signed up for this course. If you haven't signed up already, you can do it [here](https://n8n-community.typeform.com/to/PDEMrevI?typeform-source=127.0.0.1){:target="_blank" .external-link}. If you haven't received a confirmation email after signing up, [contact us](mailto:help@n8n.io).
+To build this workflow, you will need the credentials found in the email you received from n8n when you signed up for this course. If you haven't signed up already, you can do it [here](https://n8n-community.typeform.com/to/PDEMrevI?typeform-source=127.0.0.1). If you haven't received a confirmation email after signing up, [contact us](mailto:help@n8n.io).
 
 [Start building!](/courses/level-one/chapter-5/chapter-5.1.md){ .md-button }

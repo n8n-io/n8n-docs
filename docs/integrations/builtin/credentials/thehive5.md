@@ -17,7 +17,7 @@ n8n provides two nodes for TheHive. Use these credentials with TheHive 5 node. I
 
 ## Prerequisites
 
-Install [TheHive 5](https://docs.strangebee.com/thehive/download/){:target=_blank .external-link} on your server.
+Install [TheHive 5](https://docs.strangebee.com/thehive/download/) on your server.
 
 ## Supported authentication methods
 
@@ -25,7 +25,7 @@ Install [TheHive 5](https://docs.strangebee.com/thehive/download/){:target=_blan
 
 ## Related resources
 
-Refer to [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/){:target=_blank .external-link} for more information about the service.
+Refer to [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/) for more information about the service.
 
 ## Using API key
 
@@ -34,7 +34,7 @@ To configure this credential, you'll need:
 - An **API Key**: Users with `orgAdmin` and `superAdmin` accounts can generate API keys:
     - `orgAdmin` account: Go to **Organization > Create API Key** for the user you wish to generate a key for.
     - `superAdmin` account: Go to **Users > Create API Key** for the user you wish to generate a key for.
-    - Refer to [API Authentication](https://docs.strangebee.com/cortex/api/api-guide/?h=api+key#authentication){:target=_blank .external-link} for more information.
+    - Refer to [API Authentication](https://docs.strangebee.com/cortex/api/api-guide/?h=api+key#authentication) for more information.
 - A **URL**: The URL of your TheHive server.
 - **Ignore SSL Issues**: When turned on, n8n will connect even if SSL certificate validation fails.
 

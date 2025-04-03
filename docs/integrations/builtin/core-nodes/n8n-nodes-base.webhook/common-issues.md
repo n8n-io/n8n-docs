@@ -33,7 +33,7 @@ The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/i
 
 ## Use curl to trigger the Webhook node
 
-You can use [curl](https://curl.se/){:target=_blank .external-link} to make HTTP requests that trigger the Webhook node. 
+You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node. 
 
 /// note
 In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  

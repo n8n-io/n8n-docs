@@ -86,4 +86,4 @@ Refer to [TheHive credentials](/integrations/builtin/credentials/thehive5.md) fo
 
 n8n provides a trigger node for TheHive. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md).
 
-Refer to TheHive's [documentation](https://docs.strangebee.com/){:target=_blank .external-link} for more information about the service.
+Refer to TheHive's [documentation](https://docs.strangebee.com/) for more information about the service.

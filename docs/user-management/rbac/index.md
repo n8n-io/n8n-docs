@@ -8,7 +8,7 @@ description: Set up and use role-based access control (RBAC) in n8n.
 # Role-based access control (RBAC)
 
 /// info | Feature availability
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
+RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 ///
 
 /// note | Role types and account types

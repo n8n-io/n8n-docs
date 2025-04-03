@@ -11,9 +11,9 @@ There are two methods to support TLS/SSL in n8n.
 
 ## Use a reverse proxy (recommended)
 
-Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/){:target=_blank .external-link} or a Network Load Balancer (NLB) in front of the n8n instance. This should also take care of certificate renewals.
+Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/) or a Network Load Balancer (NLB) in front of the n8n instance. This should also take care of certificate renewals.
 
-Refer to [Security | Data encryption](https://n8n.io/legal/#security){:target=_blank .external-link} for more information.
+Refer to [Security | Data encryption](https://n8n.io/legal/#security) for more information.
 
 ## Pass certificates into n8n directly
 

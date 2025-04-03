@@ -22,7 +22,7 @@ Create a [PayPal developer](https://developer.paypal.com/home) account.
 
 ## Related resources
 
-Refer to [Paypal's API documentation](https://developer.paypal.com/api/rest/) for more information about the service.
+Refer to [PayPal's API documentation](https://developer.paypal.com/api/rest/) for more information about the service.
 
 ## Using API client and secret
 

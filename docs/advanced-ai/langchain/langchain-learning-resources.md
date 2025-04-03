@@ -12,6 +12,8 @@ The [LangChain documentation](https://docs.langchain.com/docs/) includes introdu
 
 [What Product People Need To Know About LangChain](https://www.commandbar.com/blog/langchain-guide) provides a list of terminology and concepts, explained with helpful metaphors. Aimed at a wide audience.
 
+<!-- vale Vale.Spelling = NO -->
 If you prefer video, this [YouTube series by Greg Kamradt](https://youtu.be/_v_fgW2SkkQ?si=8Z2tfAoXnN3lXU9s) works through the LangChain documentation, providing code examples as it goes.
+<!-- vale Vale.Spelling = YES -->
 
 n8n offers space to discuss LangChain on the [Discord](https://discord.gg/bAt54txhHg). Join to share your projects and discuss ideas with the community.

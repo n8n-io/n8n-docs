@@ -79,4 +79,4 @@ The Code node does this using the following code:
 	return _input.all();
 	```
 
-You can view and download the example workflow from [n8n website | itemMatchin usage example ](https://n8n.io/workflows/1966-itemmatching-usage-example/).
+You can view and download the example workflow from [`itemMatching` usage example | n8n website](https://n8n.io/workflows/1966-itemmatching-usage-example/).

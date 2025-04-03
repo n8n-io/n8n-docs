@@ -6,6 +6,7 @@ contentType: [integration, reference]
 priority: medium
 ---
 
+<!-- vale from-microsoft.Avoid["app developer"] = NO -->
 # HubSpot credentials
 
 You can use these credentials to authenticate the following nodes:

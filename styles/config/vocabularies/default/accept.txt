@@ -20,6 +20,7 @@ Axios
 Backblaze
 [Bb]ackend
 balancer's
+Balsamiq
 Bannerbear
 [Bb]asename
 Baserow
@@ -56,17 +57,20 @@ ConvertKit
 CPU
 CPython
 CRMs?
-Cron
+Cron(tab)?
 [Cc]rypto
 [Cc]ryptocurrenc(y|ies)
 [Cc]ybersecurity
+[Dd]atacenter
 Datadog
 Datastore
 datetime
+DBeaver
 [Dd]edupe
 [Dd]eduplication
 DeepL
 Demio
+DHL('s)?
 disabled
 Disqus
 Dockerfile
@@ -77,6 +81,7 @@ eksctl
 Emelia
 Entra
 [Ee]num
+ePolicy
 ERPNext
 [Ee]rroring
 ESLint
@@ -90,6 +95,7 @@ Firestore
 Formhub
 Formstack
 Fortinet
+Freebusy
 Freshdesk
 Freshservice
 Freshworks
@@ -98,6 +104,7 @@ geocoded
 geocodes
 [Gg]eospatial
 GIMP
+[Gg]lob(bing)?
 Gotify
 Grafana
 Groq
@@ -114,6 +121,7 @@ indexable
 invalid
 Infisical
 Intuit
+IPAM('s)?
 IPs?
 [Ii]terable
 Jira
@@ -126,8 +134,10 @@ kubectl
 Kafka
 Lemlist
 Lenovo
+Linear's
 [Ll]inter
 LLMs?
+LLMChain
 Luhn
 Luxon
 Magento
@@ -147,8 +157,10 @@ Metabase
 [Mm]illicore
 Mindee
 [Mm]inimum
+MISP('s)?
 Mocean
 Motorhead
+MQTT('s)?
 [Mm]ultimodal
 n8n
 nanoids
@@ -160,6 +172,7 @@ Nextcloud
 [Nn]ginx
 ngrok
 Nodelinter
+Notify's
 npm
 NPM
 npx
@@ -173,10 +186,12 @@ Onfleet
 Ortto
 Oura
 PDFs?
+[Pp]asswordless
 Peekalink
 [Pp]erformant
 PGVector
 PhantomBuster
+Picomatch('s)?
 Pinterest
 Pipedrive
 Pinecone
@@ -201,6 +216,7 @@ Rekognition
 requester
 reusability
 Rundeck
+SaaS('s)?
 Salesmate
 [Ss]andboxed
 Sekoia
@@ -233,6 +249,7 @@ Supabase
 Tapfiliate
 Textract
 There are
+[Tt]imescale('s)?
 [Tt]imesheet
 Todoist
 Toggl
@@ -260,6 +277,7 @@ uProc
 URI
 URIs
 URL
+[Uu]serpass
 [Vv]alidator
 VCert
 Venafi
@@ -267,7 +285,9 @@ VERO
 Vhost
 VMs?
 Vonage
+Vue
 Vuex
+WAF('s)?
 Wasabi's
 Webex
 Webflow
@@ -275,15 +295,19 @@ Webflow
 WeKan
 [Ww]ireframe
 WordPress
+Workable
 Wufoo
 Xata
 Xero
 Yourls
+Yourls
+YouTube
 Zabbix
 Zammad
 Zapier
 Zendesk
 Zep
+ZIA
 Zoho
 Zscaler
 Zulip

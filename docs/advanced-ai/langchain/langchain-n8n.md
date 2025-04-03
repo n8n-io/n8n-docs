@@ -148,7 +148,7 @@ Available nodes:
 * [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md)
 * [Token Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md)
 
-n8n's text splitter nodes implements parts of [LangChain's text_splitter API](https://js.langchain.com/docs/concepts/text_splitters/).
+n8n's text splitter nodes implements parts of [LangChain's `text_splitter` API](https://js.langchain.com/docs/concepts/text_splitters/).
 
 #### Tools
 

@@ -17,7 +17,7 @@ Create a server directory using Lightweight Directory Access Protocol (LDAP).
 
 Some common LDAP providers include:
 
-* [Jumpcloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap)
+* [JumpCloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap)
 * [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps)
 * [Okta](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-connection-settings.htm)
 

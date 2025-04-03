@@ -16,13 +16,13 @@ On this page, you'll find the node parameters for the Embeddings Google Vertex n
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/service-account.md).
 ///
 
---8<-- "\_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
 - **Model**: Select the model to use to generate the embedding.
 
-Learn more about available embedding models in [Google VertexAI embeddings API documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api){:target=\_blank .external-link}.
+Learn more about available embedding models in [Google VertexAI embeddings API documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api).
 
 ## Templates and examples
 
@@ -32,7 +32,7 @@ Learn more about available embedding models in [Google VertexAI embeddings API d
 
 ## Related resources
 
-Refer to [Langchain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai){:target=\_blank .external-link} for more information about the service.
+Refer to [LangChain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) for more information about the service.
 
---8<-- "\_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "\_glossary/ai-glossary.md"
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

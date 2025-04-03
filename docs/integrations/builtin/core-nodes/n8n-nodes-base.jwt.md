@@ -54,25 +54,19 @@ Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/r
 
 The **Issuer** or `iss` claim identifies the principal that issued the JWT.
 
-<!-- vale Vale.Spelling = NO -->
 Refer to ["iss" (Issuer) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.1) for more information.
-<!-- vale Vale.Spelling = YES -->
 
 ### JWT ID
 
 The **JWT ID** or `jti` claim provides a unique identifier for the JWT.
 
-<!-- vale Vale.Spelling = NO -->
 Refer to ["jti" (JWT ID) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.7) for more information.
-<!-- vale Vale.Spelling = YES -->
 
 ### Not Before
 
 The **Not Before** or `nbf` claim identifies the time before which the JWT must not be accepted for processing.
 
-<!-- vale Vale.Spelling = NO -->
 Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5) for more information.
-<!-- vale Vale.Spelling = YES -->
 
 ### Subject
 
@@ -98,9 +92,7 @@ This operation includes several node options:
 
 * **Return Additional Info**: This toggle controls how much information the node returns. When turned on, the node returns the complete decoded token with information about the header and signature. When turned off, the node only returns the payload.
 * **Ignore Expiration**: This toggle controls whether the node should ignore the token's expiration time claim (`exp`). Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4) for more information.
-<!-- vale Vale.Spelling = NO -->
 * **Ignore Not Before Claim**: This toggle controls whether to ignore the token's not before claim (`nbf`). Refer to ["nbf" (Not Before) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.5) for more information.
-<!-- vale Vale.Spelling = YES -->
 * **Clock Tolerance**: Enter the number of seconds to tolerate when checking the `nbf` and `exp` claims. This allows you to deal with small clock differences among different servers. Refer to ["exp" (Expiration Time) Claim](https://datatracker.ietf.org/doc/html/rfc7519#section-4.1.4) for more information.
 * **Override Algorithm**: The algorithm to use for verifying the token. This algorithm will override the algorithm selected in the credentials.
 

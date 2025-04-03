@@ -21,7 +21,7 @@ Create a [Travis CI](https://travis-ci.org/) account.
 
 ## Related resources
 
-Refer to the [Travis CI API documentation](https://docs.travis-ci.com/user/developer/) for more information about the service.
+Refer to [Travis CI's API documentation](https://docs.travis-ci.com/user/developer/) for more information about the service.
 
 ## Using API token
 

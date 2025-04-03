@@ -14,9 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-<!-- vale Vale.Spelling = NO -->
 - Create a user account on a [FileMaker Server](https://www.claris.com/filemaker/) with the `fmrest` extended privilege to [Access the FileMaker Data API](https://help.claris.com/en/data-api-guide/content/enable-access.html).
-<!-- vale Vale.Spelling = YES -->
 - Ensure the FileMaker Server can use the [FileMaker Data API](https://help.claris.com/en/data-api-guide/content/index.html):
     1. Prepare your database for FileMaker Data API access using FileMaker Pro. You can create a database or prepare an existing database.
         - Refer to [Prepare databases for FileMaker Data API access](https://help.claris.com/en/data-api-guide/content/prepare-databases-for-access.html) for more information.

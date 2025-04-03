@@ -58,9 +58,7 @@ Enter these parameters:
 
 - **Use Stable Model**: Turn on to use the stable version of the model instead of the latest version, accuracy may be slightly lower.
 
-<!-- vale Vale.Spelling = NO -->
 Refer to [Moderations | OpenAI](https://platform.openai.com/docs/api-reference/moderations) documentation for more information.
-<!-- vale Vale.Spelling = YES -->
 
 ## Common issues
 

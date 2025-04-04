@@ -9,7 +9,7 @@ contentType: howto
 
 To get access to certain features, you need to activate your license key. You can do this through the UI, or using environment variables.
 
-## Add a license key via the UI
+## Add a license key using the UI
 
 In your n8n instance:
 
@@ -19,7 +19,7 @@ In your n8n instance:
 1. Paste in your license key.
 1. Select **Activate**.
 
-## Add a license key via environment variables
+## Add a license key using an environment variables
 
 In your n8n configuration, set `N8N_LICENSE_ACTIVATION_KEY` to your license key. If the instance already has an activated license, this variable will have no effect.
 

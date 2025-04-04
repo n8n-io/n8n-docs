@@ -53,6 +53,12 @@ Data pinning allows you to temporarily freeze the output data of a node during w
 
 The n8n editor UI allows you to create and manage workflows. The main area is the canvas, where you can compose workflows by adding, configuring, and connecting nodes. The side and top panels allow you to access other areas of the UI like credentials, templates, variables, executions, and more.
 
+#### entitlement (n8n)
+
+In n8n, entitlements grant n8n instances access to plan-restricted features for a specific period of time.
+
+Floating entitlements are a pool of entitlements that you can distribute among various n8n instances. You can re-assign a floating entitlement to transfer its access to a different n8n instance.
+
 #### evaluation (n8n)
 
 In n8n, evaluation allows you to tag and organize execution history and compare it against new executions. You can use this to understand how your workflow performs over time as you make changes. In particular, this is useful while developing AI-centered workflows.

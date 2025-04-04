@@ -101,7 +101,7 @@ const express = require("express");
 This error occurs if you try to use `require` in the Code node and n8n can't find the module.
 
 /// warning | Only for self-hosted
-n8n doesn't support importing modules in the [Cloud](/manage-cloud/overview.md) version.
+n8n doesn't support importing modules in the [Cloud](/manage-cloud/index.md) version.
 ///
 
 If you're [self-hosting](/hosting/index.md) n8n, follow these steps:

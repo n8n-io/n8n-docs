@@ -6,7 +6,7 @@ contentType: reference
 # Cloud IP addresses
 
 /// warning | Cloud IP addresses change without warning
-n8n can't guarantee static source IPs, as Cloud operates in a dynamic cloud provider environment and scales its infrastructure to meet demand. You should use strong authentication and secure transport protocols when connecting into and out of n8n.
+n8n can't guarantee static source IP addresses, as Cloud operates in a dynamic cloud provider environment and scales its infrastructure to meet demand. You should use strong authentication and secure transport protocols when connecting into and out of n8n.
 ///
 
 Outbound traffic may appear to originate from any of:

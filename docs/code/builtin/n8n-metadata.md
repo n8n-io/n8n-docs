@@ -22,7 +22,7 @@ You can use Python in the Code node. It isn't available in expressions.
 === "JavaScript"
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
-	| `$env` | Contains n8n instance configuration [environment variables](/hosting/configuration/environment-variables/index.md). | :white_check_mark: |
+	| `$env` | Contains n8n instance configuration [environment variables](/hosting/configuration/environment-variables.md). | :white_check_mark: |
 	| `$execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information. | :white_check_mark: | 
 	| `$execution.id` | The unique ID of the current workflow execution. | :white_check_mark: |
 	| `$execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | :white_check_mark: |
@@ -44,7 +44,7 @@ You can use Python in the Code node. It isn't available in expressions.
 === "Python"
 	| Method | Description |
 	| ------ | ----------- |
-	| `_env` | Contains n8n instance configuration [environment variables](/hosting/configuration/environment-variables/index.md). |
+	| `_env` | Contains n8n instance configuration [environment variables](/hosting/configuration/environment-variables.md). |
 	| `_execution.customData` | Set and get custom execution data. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information. | 
 	| `_execution.id` | The unique ID of the current workflow execution. | 
 	| `_execution.mode` | Whether the execution was triggered automatically, or by manually running the workflow. Possible values are `test` and `production`. | 

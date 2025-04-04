@@ -33,5 +33,5 @@ If you need to connect to a service where n8n doesn't have a node, or a credenti
 
 * If you want to create your own node, head over to the [Creating Nodes](/integrations/creating-nodes/overview.md) section.
 * Check out [Community nodes](/integrations/community-nodes/usage.md) to learn about installing and managing community-built nodes.
-* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](/integrations/builtin/core-nodes/index.md), [Actions](/integrations/builtin/app-nodes/index.md), and [Triggers](/integrations/builtin/trigger-nodes/index.md).
-* If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/integrations/builtin/credentials/index.md) section.
+* If you'd like to learn more about the different nodes in n8n, their functionalities and example usage, check out n8n's node libraries: [Core nodes](/integrations/builtin/core-nodes/index.md) and [App nodes](/integrations/builtin/app-nodes/index.md).
+* If you'd like to learn how to add the credentials for the different nodes, head over to the [Credentials](/integrations/builtin/credentials/overview.md) section.

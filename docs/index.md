@@ -10,45 +10,32 @@ hide:
 # Welcome to n8n Docs
 
 
-This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](https://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
+This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation platform that uniquely combines AI capabilities with business process automation, giving technical teams the flexibility of code with the speed of no-code.
 
-It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
+[Get started with n8n here »](/try-it-out/getn8n.md){ .md-button }
 
+## How to use this documentation
 
-## Where to start
+Our documentation arranges information by type, to make it easier to find what you are looking for, when you need it. 
 
-<div class="grid cards" markdown>
+[**Getting Started**](/try-it-out/getn8n.md) details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
 
--   __Quickstarts__
+[**Using n8n**](/using-n8n/index.md) has step-by-step instructions for all sorts of common tasks and operations.
 
-    Jump in with n8n's quickstart guides.
+[**Reference**](/reference/index.md) is the section to browse when you want to find out more about node parameters, environment variables or other settings. Remember you can visit many of these pages directly through the user interface with the helpful links embedded in the editor.
 
-    [:octicons-arrow-right-24: Try it out](/try-it-out/index.md)
+[**Tutorials and courses**](/tutorials/index.md). For structured learning or more hand-on learning of key topics, we've created two complete courses covering basic and advanced workflow generation. There's also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
 
--   __Choose the right n8n for you__
+[**Understanding n8n**](/understanding/index.md) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
 
-	Cloud, npm, self-host . . . 
+/// note | Visiting docs from the n8n editor
+Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's edit panel.
+///
 
-    [:octicons-arrow-right-24: Options](/choose-n8n.md)
+## Contributing
 
+We welcome contributions from the community. Please see the [contributing guide](/help-community/contributing.md).
 
--   __Explore integrations__
+## Licensing
 
-    Browse n8n's integrations library.
-
-    [:octicons-arrow-right-24: Find your apps](/integrations/index.md)
-
--   __Build AI functionality__
-
-    n8n supports building AI functionality and tools.
-
-    [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)    
-</div>
-
-## About n8n
-
-n8n (pronounced n-eight-n) helps you to connect any app with an API with any other, and manipulate its data with little or no code.
-
-* Customizable: highly flexible workflows and the option to build custom nodes.
-* Convenient: use the npm or Docker to try out n8n, or the Cloud hosting option if you want us to handle the infrastructure.
-* Privacy-focused: self-host n8n for privacy and security.
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](https://faircode.io/) model. For more details, see the [license explanation](sustainable-use-license.md).

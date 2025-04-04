@@ -5,7 +5,13 @@ contentType: tutorial
 
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js 18 or above.
+npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires Node.js 18 or above.
+
+/// warning | Recommended for development only
+n8n recommends using [Docker](/hosting/installation/docker.md), [Docker Compose](/hosting/installation/server-setups/docker-compose.md), or other [container-based deployments](https://github.com/n8n-io/n8n-hosting) for most self-hosted deployments. These methods offer improved security, isolation from the host's packages and environment, straightforward version control and rollbacks, and more. Most users have fewer issues and an easier time debugging when deploying with these methods.
+
+Installing with npm is still necessary if you want to develop nodes or make changes to n8n itself.
+///
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
@@ -19,7 +25,7 @@ From the terminal, run:
 npx n8n
 ```
 
-This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678){:target=_blank .external-link}.
+This command will download everything that's needed to start n8n. You can then access n8n and start building workflows by opening [http://localhost:5678](http://localhost:5678).
 
 ## Install globally with npm
 
@@ -52,7 +58,7 @@ n8n start
 
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/index.md).
+Try out n8n using the [Tutorials](/tutorials/index.md).
 
 ## Updating
 
@@ -87,4 +93,4 @@ If the upgrade involved a database migration:
 
 ## Windows troubleshooting
 
-If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows){:target=_blank .external-link}.
+If you are experiencing issues running n8n on Windows, make sure your Node.js environment is correctly set up. Follow Microsoft's guide to [Install NodeJS on Windows](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).

@@ -81,7 +81,9 @@ For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day
 
 Enter a custom cron **Expression** to set the schedule for the trigger.
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
+<!-- vale off -->
+To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using the site in the **Expression** field in n8n.
+<!-- vale on -->
 
 #### Examples
 

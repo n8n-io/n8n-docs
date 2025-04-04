@@ -18,7 +18,7 @@ This guide will show you how to construct a [workflow](/glossary.md#workflow-n8n
 
 !["Screenshot of the completed workflow"](/_images/try-it-out/tutorial-first.png)
 
-This quickstart uses [n8n Cloud](/manage-cloud/overview.md), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
+This quickstart uses [n8n Cloud](/manage-cloud/index.md), which is recommended for new users. A free trial is available - if you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
 
 ## Step one: Create a new workflow
 
@@ -120,7 +120,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 1. In n8n, paste your Postbin ID into **Bin ID**.
 1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
-1. You can now click and drag the correct field from the If Node output into the expressions editor to automatically create a reference for this label. In this case the input we want is 'classType'.
+1. You can now click and drag the correct field from the If Node output into the expressions editor to automatically create a reference for this label. In this case the input we want is `classType`.
 1. Once dropped into the expressions editor it will transform into this reference: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
 
     ```js
@@ -164,5 +164,5 @@ There are plenty of things you could add to this (perhaps add some more credenti
 ## Next steps
 
 - Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
-- Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
+- Take n8n's [tutorials](/tutorials/index.md) or [video courses](/video-courses.md).
 - Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.

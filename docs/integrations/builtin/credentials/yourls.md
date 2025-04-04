@@ -21,7 +21,7 @@ Install [Yourls](https://github.com/YOURLS/YOURLS){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Yourl's documentation](https://yourls.org/docs){:target=_blank .external-link} for more information about the service.
+Refer to [Yourls' documentation](https://yourls.org/docs){:target=_blank .external-link} for more information about the service.
 
 ## Using API key
 

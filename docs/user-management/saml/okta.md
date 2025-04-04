@@ -5,7 +5,7 @@ description: Use Okta Workforce Identity with n8n.
 contentType: tutorial
 ---
 
-# Okta Workforce Identity SAML setup
+# Set up SAML with Okta Workforce Identity
 
 Set up SAML SSO in n8n with Okta.
 
@@ -38,10 +38,10 @@ Read the [Set up SAML](/user-management/saml/setup.md) guide first.
 	
 	| **Name** | **Name format** | **Value** |
 	| -------- | --------------- | --------- |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname | URI Reference | user.firstName |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname | URI Reference | user.lastName |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn | URI Reference | user.login |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress | URI Reference | user.email |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname` | URI Reference | user.firstName |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname` | URI Reference | user.lastName |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn` | URI Reference | user.login |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` | URI Reference | user.email |
 	
 1. Select **Next**. Okta may prompt you to complete a marketing form, or may take you directly to your new n8n Okta app.
 1. Assign the n8n app to people:

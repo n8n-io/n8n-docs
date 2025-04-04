@@ -43,5 +43,5 @@ If you need to configure OAuth2 from scratch, [register an application](https://
 
 Mailchimp suggests using an API key if you're only accessing your own Mailchimp account's data:
 
-> Use an API key if you're writing code that tightly couples _your_ application's data to _your_ Mailchimp account's data. If you ever need to access _someone else's_ Mailchimp account's data, you should be using OAuth 2 ([source](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#when-not-to-use-oauth-2){:target=_blank .external-link})
+> Use an API key if you're writing code that tightly couples _your_ application's data to _your_ Mailchimp account's data. If you ever need to access _another person's_ Mailchimp account's data, you should be using OAuth 2 ([source](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#when-not-to-use-oauth-2){:target=_blank .external-link})
 

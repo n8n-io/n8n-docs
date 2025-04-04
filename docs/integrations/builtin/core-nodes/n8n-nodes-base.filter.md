@@ -26,7 +26,7 @@ You can choose to keep items:
 * When they meet all conditions: Create two or more conditions and select **AND** in the dropdown between them.
 * When they meet any of the conditions: Create two or more conditions and select **OR** in the dropdown between them.
 
-You can't create a mix of AND and OR rules.
+You can't create a mix of `AND` and `OR` rules.
 
 ## Node options
 

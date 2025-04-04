@@ -13,6 +13,12 @@ The following environment variables get used by all databases:
 
  - `DB_TABLE_PREFIX` (default: -) - Prefix for table names
 
+## SQLite
+
+This is the default database that gets used if nothing is defined.
+
+The database file is located at `~/.n8n/database.sqlite`.
+
 ## PostgresDB
 
 To use PostgresDB as the database, you can provide the following environment variables:
@@ -64,10 +70,3 @@ You can choose between these configurations:
 - Not declaring (default): Connect with `SSL=off`
 - Declaring only the CA and unauthorized flag: Connect with `SSL=on` and verify the server's signature
 - Declaring `_{CERT,KEY}` and the above: Use the certificate and key for client TLS authentication
-
-## SQLite
-
-This is the default database that gets used if nothing is defined.
-
-The database file is located at:
-`~/.n8n/database.sqlite`

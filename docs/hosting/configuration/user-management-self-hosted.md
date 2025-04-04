@@ -67,7 +67,7 @@ To set up SMTP with n8n, configure the SMTP environment variables for your n8n i
 If your n8n instance is already running, you need to restart it to enable the new SMTP settings.
 
 /// note | More configuration options
-There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
+There are more configuration options available as environment variables. Refer to [Environment variables](/hosting/configuration/environment-variables.md) for a list. These include options to disable tags, workflow templates, and the personalization survey, if you don't want your users to see them.
 ///
 
 /// note | New to SMTP?

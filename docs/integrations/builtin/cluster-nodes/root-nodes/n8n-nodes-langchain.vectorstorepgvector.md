@@ -7,7 +7,7 @@ priority: medium
 
 # PGVector Vector Store node
 
-PGVector is an extension of Postgresql. Use this node to interact with the PGVector tables in your Postgresql database. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
+PGVector is an extension of PostgreSQL. Use this node to interact with the PGVector tables in your PostgreSQL database. You can insert documents into a vector table, get documents from a vector table, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
 
 On this page, you'll find the node parameters for the PGVector node, and links to more resources.
 

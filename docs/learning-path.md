@@ -20,11 +20,7 @@ If you don't have an account yet, sign up to a [free trial on n8n Cloud](https:/
 
 ## Try it out
 
-Start with the quickstart guides to help you get up and running with building basic workflows. 
-
-- [A very quick quickstart](/try-it-out/quickstart.md)
-- [A longer introduction](/try-it-out/tutorial-first-workflow.md)
-- [Build an AI workflow in n8n](/advanced-ai/intro-tutorial.md)
+Start with the [first workflow tutorial](/try-it-out/tutorial-first-workflow.md) to help you get up and running with building basic workflows.
 
 ## Structured Courses
 

@@ -55,7 +55,7 @@ for item in previousNodeData:
 	print(itemDict)
 ```
 
-Refer to the Pyodide documentation on [JsProxy](https://pyodide.org/en/stable/usage/api/python-api/ffi.html#pyodide.ffi.JsProxy){:target=_blank .external-link} for more information on this class.
+Refer to the Pyodide documentation on [JsProxy](https://pyodide.org/en/stable/usage/api/python-api/ffi.html#pyodide.ffi.JsProxy) for more information on this class.
 
 
 

@@ -22,7 +22,7 @@ Or:
 
 You can also create new credential in the credential drop down when editing a node on the workflow editor.
 
-Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](/integrations/builtin/credentials/index.md) for guidance.
+Once in the credential modal, enter the details required by your service. Refer to your service's page in the [credentials library](/integrations/builtin/credentials/overview.md) for guidance.
 
 When you save a credential, n8n tests it to confirm it works.
 

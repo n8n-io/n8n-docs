@@ -88,7 +88,7 @@ As a longer example, consider a scenario where the current node has the followin
 ]
 ```
 
-To extract the name, you'd normally use drag-and-drop [Data mapping](/data/data-mapping/index.md), but you could also write the following expression:
+To extract the name, you'd normally use drag-and-drop [Data mapping](/data/data-mapping/data-mapping-ui.md), but you could also write the following expression:
 
 ```js
 {{$input.item.json.name}}

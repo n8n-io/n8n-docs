@@ -50,7 +50,9 @@ Node parameters depend on the action you select.
 	* **BASE64**
 	* **HEX**
 
+<!-- vale off -->
 ### Hmac parameters
+<!-- vale on -->
 
 * **Binary File**: Turn this parameter on if the data you want to encrypt is from a binary file.
 	* **Value**: If you turn off **Binary File**, enter the value you want to encrypt.

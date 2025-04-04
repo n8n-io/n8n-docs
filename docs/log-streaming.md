@@ -24,7 +24,7 @@ To use log streaming, you have to add a streaming destination.
 6. Select **Save**.
 
 /// note | Self-hosted users
-If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables/logs.md#log-streaming).
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](/hosting/configuration/environment-variables.md#log-streaming).
 ///
 ## Events
 

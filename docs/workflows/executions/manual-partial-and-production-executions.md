@@ -11,7 +11,7 @@ There are some important differences in how n8n executes workflows manually (by 
 
 ## Manual executions
 
-Manual executions allow you to run workflows directly from the [canvas](/glossary.md#canvas-n8n) to test your workflow logic. These executions are "ad-hoc" — they run only when you manually select the **Test workflow** button.
+Manual executions allow you to run workflows directly from the [canvas](/glossary.md#canvas-n8n) to test your workflow logic. These executions are "ad-hoc"—they run only when you manually select the **Test workflow** button.
 
 Manual executions make building workflows easier by allowing you to iteratively test as you go, following the flow logic and seeing data transformations. You can test conditional branching, data formatting changes, and loop behavior by providing different input items and modifying node options.
 

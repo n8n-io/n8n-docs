@@ -1,20 +1,21 @@
 Use the Code node to write custom JavaScript or Python and run it as a step in your workflow.
 
 /// note | Coding in n8n
-This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/index.md) section. It includes:
+This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the following resources:
 
 * Reference documentation on [Built-in methods and variables](/code/builtin/overview.md)
 * Guidance on [Handling dates](/code/cookbook/luxon.md) and [Querying JSON](/code/cookbook/jmespath.md)
-* A growing collection of examples in the [Cookbook](/code/cookbook/code-node/index.md)
+* A collection of examples for the [Code node](/code/cookbook/code-node/index.md)
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Code integrations](https://n8n.io/integrations/code/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Code integrations](https://n8n.io/integrations/code/) page.
 ///
 
 /// note | Function and Function Item nodes
-The Code node replaces the Function and Function Item nodes from version 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md){:target=_blank .external-link} and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md){:target=_blank .external-link}.
+The Code node replaces the Function and Function Item nodes from version 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md) and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md).
 ///
+
 ## Usage
 
 How to use the Code node.
@@ -43,8 +44,8 @@ If you self-host n8n, you can import and use built-in and external npm modules i
 
 If you use n8n Cloud, you can't import external npm modules. n8n makes two modules available for you:
 
-* [crypto Node.js module](https://nodejs.org/docs/latest-v18.x/api/crypto.html){:target=_blank .external-link}
-* [moment npm package](https://www.npmjs.com/package/moment){:target=_blank .external-link}
+* [crypto Node.js module](https://nodejs.org/docs/latest-v18.x/api/crypto.html)
+* [moment npm package](https://www.npmjs.com/package/moment)
 
 ### Built-in methods and variables
 
@@ -58,7 +59,7 @@ The Code node editing environment supports time-saving and useful keyboard short
 
 ## Python
 
-n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/){:target=_blank .external-link}, which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external-link}. n8n downloads the package automatically the first time you use it.
+n8n added Python support in version 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.
 
 /// note | Slower than JavaScript
 The Code node takes longer to process Python than JavaScript. This is due to the extra compilation steps.

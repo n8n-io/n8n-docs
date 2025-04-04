@@ -25,7 +25,7 @@ createChat({
 });
 ```
 
-The `metadata` field can contain arbitrary data that will appear in the Chat Trigger output alongside other output data. From there, you can query and process the data from downstream nodes as usual using	n8n's [data processing features](/data/index.md).
+The `metadata` field can contain arbitrary data that will appear in the Chat Trigger output alongside other output data. From there, you can query and process the data from downstream nodes as usual using	n8n's [data processing features](/data/overview.md).
 
 ## Chat Trigger node doesn't fetch previous messages
 

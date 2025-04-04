@@ -4,7 +4,7 @@ description: n8n's built-in custom methods and variables.
 contentType: overview
 ---
 
-# Built-in methods and variables
+# Methods and variables
 
 n8n provides built-in methods and variables for working with data and accessing n8n data. This section provides a reference of available methods and variables for use in [expressions](/glossary.md#expression-n8n), with a short description. 
 
@@ -15,7 +15,7 @@ All data transformation functions are only available in the expressions editor.
 ///		
 
 
-The [Cookbook](/code/index.md) contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/index.md) functions.
+The [using n8n](/using-n8n/index.md) section contains examples for some common tasks, including some [Code node only](/code/cookbook/code-node/index.md) functions and information on [working with expressions](/code/expressions.md).
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

@@ -3,7 +3,7 @@
 contentType: explanation
 ---
 
-# AI Assistant
+# AI assistant
 
 The n8n AI Assistant helps you build, debug, and optimize your workflows seamlessly. From answering questions about n8n to providing help with coding and [expressions](/glossary.md#expression-n8n), the AI Assistant can streamline your workflow-building process and support you as you navigate n8n's capabilities.
 
@@ -15,7 +15,7 @@ The AI Assistant offers a range of tools to support you:
 - **Answer n8n questions**: Get instant answers to your n8n-related questions, whether they're about specific features or general functionality.
 - **Coding support**: Receive guidance on coding, including SQL and JSON, to optimize your nodes and data processing.
 - **Expression assistance**: Learn how to create and refine [expressions](/code/expressions.md) to get the most out of your workflows.
-- **Credential setup tips**: Find out how to set up and manage node [credentials](/integrations/builtin/credentials/index.md) securely and efficiently.
+- **Credential setup tips**: Find out how to set up and manage node [credentials](/integrations/builtin/credentials/overview.md) securely and efficiently.
 
 ## Tips for getting the most out of the Assistant
 

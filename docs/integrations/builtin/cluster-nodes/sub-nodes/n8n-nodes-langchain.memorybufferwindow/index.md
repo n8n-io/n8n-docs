@@ -32,7 +32,7 @@ Configure these parameters to configure the node:
 
 ## Related resources
 
-Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

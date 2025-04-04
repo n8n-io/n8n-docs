@@ -53,7 +53,7 @@ When enabled, you can adjust the reset conditions by switching the parameter rep
 
 This workflow allows you to read an RSS feed from two different sources using the Loop Over Items node. You need the Loop Over Items node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/){:target=_blank .external-link} on n8n.io.
 
-The example walks through building the workflow, but assumes you are already familiar with n8n. To build your first workflow, including learning how to add nodes to a workflow, refer to [Try it out](/try-it-out/index.md).
+The example walks through building the workflow, but assumes you are already familiar with n8n. To build your first workflow, including learning how to add nodes to a workflow, try the ["first workflow" tutorial](/try-it-out/tutorial-first-workflow.md).
 
 The final workflow looks like this:
 

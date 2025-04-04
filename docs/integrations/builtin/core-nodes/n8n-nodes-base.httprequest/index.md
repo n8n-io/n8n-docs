@@ -88,7 +88,9 @@ If you need to send a body with your API request, turn this option on.
 
 Then select the **Body Content Type** that best matches the format for the body content you wish to send.
 
+<!-- vale off -->
 #### Form URLencoded
+<!-- vale on -->
 
 Use this option to send your body as `application/x-www-form-urlencoded`.
 

@@ -21,7 +21,7 @@ This section provides explanations of important AI concepts, and workflow templa
     [:octicons-arrow-right-24: What's an agent in AI?](/advanced-ai/examples/understand-agents.md)  
 	[:octicons-arrow-right-24: Demonstration of key differences between agents and chains](/advanced-ai/examples/agent-chain-comparison.md) 
 
--   __Custom n8n Workflow Tool__
+-   __Call n8n Workflow Tool__
 
     Learn about [tools](/glossary.md#ai-tool) in AI, then explore examples that use n8n workflows as custom tools to give your AI workflow access to more data.
 

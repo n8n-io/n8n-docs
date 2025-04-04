@@ -7,7 +7,7 @@ contentType: howto
 
 # License Key
 
-To get access to certain features, you need to activate your license key. You can do this through the UI, or using environment variables.
+To enable certain licensed features, you must first activate your license. You can do this either through the UI or by setting environment variables.
 
 ## Add a license key using the UI
 

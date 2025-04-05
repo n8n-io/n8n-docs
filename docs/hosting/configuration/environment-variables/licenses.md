@@ -24,5 +24,4 @@ To enable enterprise features, you need to add your enterprise license key. You 
 | `N8N_LICENSE_AUTO_RENEW_OFFSET` | Number | `60 * 60 * 72` (72 hours) | Time in seconds before expiry a license should automatically renew. |
 | `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |
 | `N8N_LICENSE_TENANT_ID` | Number | `1` | Tenant ID associated with the license. Only set this variable if explicitly instructed by n8n. |
-| `http_proxy_license_server` | String | `http://user:pass@proxy:port`| Proxy server URL for HTTP requests to retrieve license. This variable name needs to be lowercase. |
 | `https_proxy_license_server` | String | `https://user:pass@proxy:port` | Proxy server URL for HTTPS requests to retrieve license. This variable name needs to be lowercase. |

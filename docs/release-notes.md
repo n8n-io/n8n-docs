@@ -40,7 +40,7 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.86.0...n8n@1.87.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-07
 
-This release contains bug fixes.
+This release contains new nodes, node updates, API updates, core updates, editor updates, and bug fixes.
 
 ### Contributors
 

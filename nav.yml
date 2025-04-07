@@ -146,7 +146,7 @@ nav:
         - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
       - External secrets: external-secrets.md
       - Log streaming: log-streaming.md
-      - Enterprise license key: enterprise-key.md
+      - License key: license-key.md
     - Releases:
       - Release notes:
         - 1.x: release-notes.md

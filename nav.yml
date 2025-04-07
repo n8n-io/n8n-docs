@@ -734,6 +734,7 @@ nav:
             - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md
           - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
+          - MongoDB Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md
           - Redis Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - Postgres Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
           - Xata: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md

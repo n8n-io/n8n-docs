@@ -86,7 +86,7 @@ Available in **Insert Documents** mode. Deletes all data from the collection bef
 
 ## Related resources
 
-Refer to [LangChain's Milvus documentation](https://js.langchain.com/docs/integrations/vectorstores/milvus/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Milvus documentation](https://js.langchain.com/docs/integrations/vectorstores/milvus/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

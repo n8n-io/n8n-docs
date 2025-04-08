@@ -14,6 +14,10 @@ In n8n, the term "execution" refers to the process of carrying out the instructi
 
 ## Manual Executions
 
+Instead of being triggered by an external event (like a webhook, schedule, or application node), a manual execution occurs when a user selects “Test Workflow” while editing in the [canvas](/glossary/#canvas-n8n){ data-preview }, and the workflow runs using either predefined test data or real inputs configured in the nodes.
+
+Manual executions are an essential part of creating, editing, testing and debugging workflows.
+
 ### Partial executions
 
 Partial executions are manual executions that only run a subset of your workflow nodes. Running only part of the workflow has a number of advantages when actively editing or troubleshooting:
@@ -24,15 +28,18 @@ Partial executions are manual executions that only run a subset of your workflow
 
 **Avoid repeating unwanted actions**: For example, sending messages, accessing external websites.
 
-To perform a partial execution, either select the 'test step' icon above the node or open its detail view, and select 'Test step'. This executes the specific node and any preceding nodes required to fill in its input data. You can also temporarily disable specific nodes in the workflow chain to avoid interacting with those services while building.
-
+To perform a partial execution, either select the 'test step' icon above the node or open its detail view, and select 'Test step'. This executes the specific node and any preceding nodes required to fill in its input data. You can also temporarily deactivate specific nodes in the workflow chain to avoid interacting with those services while building.
+<figure markdown="span">
+  !["image showing a test step icon"](/_images/workflows/executions/partial-test.png){ width="400" }
+  <figcaption>Start a partial execution direct from the canvas.</figcaption>
+</figure>
 During a partial execution, n8n follows the path from the initial trigger and moves forward along the path of nodes until it finds one which is either un-executed, has an error, or is labeled as dirty (see [next section](#dirty-nodes)). The workflow execution is then started from that node using existing data.
 
 For errors encountered when running partial executions, see the [troubleshooting section](#resolving-manual-execution-errors).
 
 ### Dirty nodes
 
-A 'dirty' node is simply one which has executed successfully in the past, but the resulting output is considered stale or unreliable. It is labeled in this way for information purposes, as if the node were executed again, the output may be different. It is also potentially the point at which a [partial execution](#partial-executions)starts from.
+A 'dirty' node is simply one which has executed successfully in the past, but the resulting output is considered stale or unreliable. It is labeled in this way for information purposes, as if the node were executed again, the output may be different. It is also potentially the point at which a [partial execution](#partial-executions) starts from.
 
 #### How to recognize 'dirty' node data
 
@@ -51,7 +58,7 @@ There are a number of ways that execution data can be flagged as stale, dependin
 - Inserting or deleting a node: labels the first node that follows the inserted node.
 - Modifying node parameters: labels the node being modified.
 - Adding a connector: labels the destination node of the new connector.
-- Disabling a node: labels the first node that follows the disabled node.
+- Deactivating a node: labels the first node that follows the deactivated node.
 
 ??? explanation "List of other ways a node can become dirty..."
     - Unpinning a node: labels the node that was unpinned.
@@ -63,8 +70,8 @@ There are a number of ways that execution data can be flagged as stale, dependin
     - Editing an executed sub-node
     - Adding a new sub-node
     - Disconnecting or deleting a sub-node
-    - Disabling a sub-node
-    - Enabling a sub-node
+    - Deactivating a sub-node
+    - Activating a sub-node
 
 <div class="grid cards" markdown>
 
@@ -93,16 +100,15 @@ The 'dirty' status of a node can be cleared by executing the node again. This ca
    - Sub-workflows
 
 ## Execution logs
-   - Execution history
-   - Inspecting node data
-   - Debugging Failures
-
-## Execution Status and Lifecycle
+### Execution history
+### Execution Status and Lifecycle
    - Queued
    - Running
    - Completed
    - Failed
    - Canceled
+### Inspecting node data
+### Debugging failures
 
 ## Queuing executions
    - Execution modes
@@ -127,7 +133,7 @@ Error messages for a workflow are displayed in the bottom right corner of the ed
 
 ??? "Please execute the whole workflow, rather than just the node. (Existing execution data is too large.)"
     This error can appear when performing partial executions on workflows with large numbers of branches. Partial executions involve sending data and workflow logic to the n8n backend in a way that isn't required for full executions. This error occurs when your workflow exceeds the maximum size allowed for these messages.
-    To work around this, consider using the [limit node][] to limit node output while running partial executions. Once the workflow is running as intended, you can disable or delete the limit node before enabling production execution.
+    To work around this, consider using the [limit node][] to limit node output while running partial executions. Once the workflow is running as intended, you can deactivate or delete the limit node before re-activating production execution.
 
 <!-- LINKS -->
 

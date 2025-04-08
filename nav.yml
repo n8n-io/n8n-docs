@@ -272,6 +272,7 @@ nav:
     - understanding/index.md
     - Workflows: 
       -  Learn about workflows: understanding/workflows.md
+      -  Executions: understanding/executions.md
 #Workflow settings - Tags - Workflow history - Export/import - Workflow ID
     - Nodes:
       - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md

@@ -122,8 +122,6 @@ The 'dirty' status of a node can be cleared by executing the node again. This ca
 
 Error messages for a workflow are displayed in the bottom right corner of the editor window.
 
-For partial executions:
-
 ??? "Connect a trigger to run this node"
     This error message appears when you try to perform a partial execution without connecting the workflow to a trigger. Manual executions use the same execution logic as production executions when possible. Part of this includes requiring a trigger node to determine from what point the workflow logic should execute.
 

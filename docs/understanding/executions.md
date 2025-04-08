@@ -26,7 +26,7 @@ Partial executions are manual executions that only run a subset of your workflow
 
 To perform a partial execution, either select the 'test step' icon above the node or open its detail view, and select 'Test step'. This executes the specific node and any preceding nodes required to fill in its input data. You can also temporarily disable specific nodes in the workflow chain to avoid interacting with those services while building.
 
-During a partial execution, n8n follows the path from the initial trigger and moves forward along the path of nodes until it finds one which is either un-executed, has an error, or is labeled as dirty (see [next section](#dirty-nodes)). The workflow execution is than started from that node using existing data.
+During a partial execution, n8n follows the path from the initial trigger and moves forward along the path of nodes until it finds one which is either un-executed, has an error, or is labeled as dirty (see [next section](#dirty-nodes)). The workflow execution is then started from that node using existing data.
 
 For errors encountered when running partial executions, see the [troubleshooting section](Resolving-manual-execution-errors).
 

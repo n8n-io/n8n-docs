@@ -49,6 +49,10 @@ In n8n, credentials store authentication information to connect with specific ap
 
 Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.
 
+#### dirty node (n8n)
+
+A 'dirty' node is one which has executed successfully in the past, but the resulting output is now considered stale or unreliable. It is denoted on the canvas with a yellow outline and a triangle symbol.
+
 #### editor (n8n)
 
 The n8n editor UI allows you to create and manage workflows. The main area is the canvas, where you can compose workflows by adding, configuring, and connecting nodes. The side and top panels allow you to access other areas of the UI like credentials, templates, variables, executions, and more.

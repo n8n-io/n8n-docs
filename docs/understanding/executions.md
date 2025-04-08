@@ -92,17 +92,17 @@ The 'dirty' status of a node can be cleared by executing the node again. This ca
    - Loops
    - Sub-workflows
 
+## Execution logs
+   - Execution history
+   - Inspecting node data
+   - Debugging Failures
+
 ## Execution Status and Lifecycle
    - Queued
    - Running
    - Completed
    - Failed
    - Canceled
-
-## Execution logs
-   - Viewing execution history
-   - Inspecting node data
-   - Debugging Failures
 
 ## Queuing executions
    - Execution modes

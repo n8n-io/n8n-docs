@@ -28,7 +28,7 @@ To perform a partial execution, either select the 'test step' icon above the nod
 
 During a partial execution, n8n follows the path from the initial trigger and moves forward along the path of nodes until it finds one which is either un-executed, has an error, or is labeled as dirty (see [next section](#dirty-nodes)). The workflow execution is then started from that node using existing data.
 
-For errors encountered when running partial executions, see the [troubleshooting section](Resolving-manual-execution-errors).
+For errors encountered when running partial executions, see the [troubleshooting section](#resolving-manual-execution-errors).
 
 ### Dirty nodes
 

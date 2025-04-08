@@ -39,7 +39,7 @@ For errors encountered when running partial executions, see the [troubleshooting
 
 ### Dirty nodes
 
-A 'dirty' node is simply one which has executed successfully in the past, but the resulting output is considered stale or unreliable. It is labeled in this way for information purposes, as if the node were executed again, the output may be different. It is also potentially the point at which a [partial execution](#partial-executions) starts from.
+A 'dirty' node is simply one which has executed successfully in the past, but the resulting output is considered stale or unreliable. It is labeled in this way for information purposes, since if the node were executed again, the output may be different. It is also potentially the point at which a [partial execution](#partial-executions) starts from.
 
 #### How to recognize 'dirty' node data
 
@@ -93,7 +93,8 @@ In the case of a loop (using the [Loop over Items][] node), when any node within
 
 The 'dirty' status of a node can be cleared by executing the node again. This can be done by manually triggering the whole workflow, or by running a partial execution (as described in the [preceding section](#partial-executions)) by running 'test step' on the individual node or any node which follows it.
 
-### Execution Flow
+
+## Execution Flow
    - Execution order
    - Logic and branching
    - Loops

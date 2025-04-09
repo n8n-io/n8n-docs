@@ -65,8 +65,8 @@ The **Path** field can take the following formats:
 
 ## Related resources
 
-n8n also provides an tool node that allows you to connect to MCP servers as a client. You can find the node docs [here](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md).
+n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect to MCP servers and use external tools as a client.
 
-View [example workflows and related content](https://n8n.io/integrations/mcptrigger/) on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/mcp-server-trigger/) on n8n's website.
 
 Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.

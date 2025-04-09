@@ -1,13 +1,13 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MCP Tool node documentation
-description: Learn how to use the MCP Tool node in n8n. Follow technical documentation to integrate MCP Tool node into your workflows.
+title: MCP Client Tool node documentation
+description: Learn how to use the MCP Client Tool node in n8n. Follow technical documentation to integrate MCP Client Tool node into your workflows.
 contentType: [integration, reference]
 ---
 
-# MCP Tool node
+# MCP Client Tool node
 
-The MCP Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools and capabilities exposed by an external MCP server. You can connect the MCP Tool node to your models to call external tools with n8n agents.
+The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools and capabilities exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents.
 
 ///  note  | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/httprequest.md).

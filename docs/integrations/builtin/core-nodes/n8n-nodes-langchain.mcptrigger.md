@@ -15,17 +15,15 @@ You can find authentication information for this node [here](/integrations/built
 
 ## How the MCP Server Trigger node works
 
-The MCP Server Trigger node acts as an entry point into n8n for MCP clients.
+The MCP Server Trigger node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools.
 
-Unlike conventional [trigger nodes](/glossary.md#trigger-node-n8n), the MCP Server Trigger node doesn't respond to specific events. Instead, it exposes a webhook that MCP client messages can send messages to. You can secure access to your MCP Server endpoint by configuring [HTTP bearer authentication](/integrations/builtin/credentials/httprequest.md#using-header-auth).
+Unlike conventional [trigger nodes](/glossary.md#trigger-node-n8n), which respond to events and pass their output to the next [connected node](/workflows/components/connections.md), the MCP Server Trigger node only connects to and executes [tool](/advanced-ai/examples/understand-tools.md) nodes. Clients can list the available tools and call individual tools to perform work.
+
+You can expose n8n workflows to clients by attaching them with the [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node.
 
 /// note | Server-Sent Events (SSE) support
 The MCP Server Trigger node supports [Server-Sent Events (SSE)](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-events-sse), a long-lived transport built on top of HTTP, for connections between clients and the server. It currently doesn't support [standard input/output (stdio)](https://modelcontextprotocol.io/docs/concepts/transports#standard-input%2Foutput-stdio) transport.
 ///
-
-Another important difference from typical trigger nodes is how it connects to different components. Rather than connecting directly to other workflow nodes, the MCP Server Trigger node has a tools connector. The server interface exposes each tool you connect to MCP clients.
-
-You can expose n8n workflows to clients by attaching them with the [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node.
 
 ## Node parameters
 
@@ -44,8 +42,8 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
 You can require authentication for clients connecting to your MCP URL. Choose from these authentication methods:
 
-- Header auth
 - Bearer auth
+- Header auth
 
 Refer to the [HTTP request credentials](/integrations/builtin/credentials/httprequest.md) for more information on setting up each credential type.
 
@@ -67,6 +65,32 @@ The **Path** field can take the following formats:
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
 [[ templatesWidget(page.title, 'mcp-server-trigger') ]]
+
+### Integrating with Claude Desktop
+
+You can connect to the MCP Server Trigger node from [Claude Desktop](https://claude.ai/download) by running a gateway to proxy SSE messages to stdio-based servers.
+
+To do so, add the following to your Claude Desktop configuration:
+
+```json
+{
+  "mcpServers": {
+    "n8n": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "<MCP_URL>",
+        "--header",
+        "Authorization: Bearer <MCP_BEARER_TOKEN>"
+      ]
+    }
+  }
+}
+```
+
+Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with the values from your MCP Server Trigger node parameters and credentials.
 
 ## Related resources
 

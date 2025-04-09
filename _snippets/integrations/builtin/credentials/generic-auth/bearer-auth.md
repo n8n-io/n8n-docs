@@ -1,6 +1,6 @@
 ## Using bearer auth
 
-Use this generic authentication if your app or service supports bearer authentication.
+Use this generic authentication if your app or service supports bearer authentication. This authentication type is actually just header authentication with the `Name` set to `Authorization` and the `Value` set to `Bearer <token>`.
 
 To configure this credential, enter:
 

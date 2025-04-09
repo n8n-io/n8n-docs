@@ -20,9 +20,9 @@ Configure the node with the following parameters.
 * **SSE Endpoint**: The SSE endpoint for the MCP server you want to connect to.
 * **Authentication**: The authentication method for authentication to your MCP server. The MCP tool supports [header](/integrations/builtin/credentials/httprequest.md#using-header-auth) and [bearer](/integrations/builtin/credentials/httprequest.md#using-bearer-auth) authentication. Select **None** to attempt to connect without authentication.
 * **Tools to Include**: Choose which tools you want to expose to the AI Agent:
-	* **All**: Expose all of the tools given by the MCP server.
+	* **All**: Expose all the tools given by the MCP server.
 	* **Selected**: Activates a **Tools to Include** parameter where you can select the tools you want to expose to the AI Agent.
-	* **All Except**: Activates a **Tools to Exclude** parameter where you can select the tools you want to avoid sharing with the AI Agent. The AI Agent will have access to all of the MCP server's tools that aren't selected.
+	* **All Except**: Activates a **Tools to Exclude** parameter where you can select the tools you want to avoid sharing with the AI Agent. The AI Agent will have access to all MCP server's tools that aren't selected.
 
 ## Templates and examples
 

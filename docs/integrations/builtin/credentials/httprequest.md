@@ -26,6 +26,7 @@ If you need to secure the authentication with an SSL certificate, refer to [Prov
 - Custom auth (generic credential type)
 - Digest auth (generic credential type)
 - Header auth (generic credential type)
+- Bearer auth (generic credential type)
 - OAuth1 (generic credential type)
 - OAuth2 (generic credential type)
 - Query auth (generic credential type)
@@ -49,6 +50,8 @@ Refer to [Custom API operations](/integrations/custom-operations.md) for more in
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/digest-auth.md"
 
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/header-auth.md"
+
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/bearer-auth.md"
 
 ## Using OAuth1
 

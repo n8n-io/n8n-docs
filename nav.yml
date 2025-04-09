@@ -212,6 +212,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
+        - MCP Server Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
         - n8n Form: integrations/builtin/core-nodes/n8n-nodes-base.form.md
@@ -754,6 +755,7 @@ nav:
           - Calculator: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
           - HTTP Request Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
+          - MCP Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
           - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
           - Think Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolthink.md        
           - Vector Store Question Answer Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md

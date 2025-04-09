@@ -63,10 +63,13 @@ The **Path** field can take the following formats:
 - `/:variable1/path/:variable2`
 - `/:variable1/:variable2`
 
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'mcp-server-trigger') ]]
+
 ## Related resources
 
 n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect to MCP servers and use external tools as a client.
-
-View [example workflows and related content](https://n8n.io/integrations/mcp-server-trigger/) on n8n's website.
 
 Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.

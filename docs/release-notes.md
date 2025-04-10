@@ -46,16 +46,16 @@ This release contains new features, new nodes, performance improvements, and bug
 
 
 ### Model Context Protocol (MCP) nodes
-MCP aims to standardise how LLMs like Claude, ChatGPT, or Cursor can interact with tools or integrate data for their agents. Many providers - both established or new - are adopting MCP as a standard way to build agentic systems. It is an easy way to either expose your own app as a server, making capabilities available to a model as tools, or as a client that can call on tools outside of your own system. 
+MCP aims to standardise how LLMs like Claude, ChatGPT, or Cursor can interact with tools or integrate data for their agents. Many providers - both established or new - are adopting MCP as a standard way to build agentic systems. It is an easy way to either expose your own app as a server, making capabilities available to a model as tools, or as a client that can call on tools outside of your own system. <br>
 
-While it’s still early in the development process, we want to give you access to our new MCP nodes. This will help us understand your requirements better and will also let us converge on a great general solution quicker.
+While it’s still early in the development process, we want to give you access to our new MCP nodes. This will help us understand your requirements better and will also let us converge on a great general solution quicker. <br>
 
 We are adding two new nodes: 
 
 - a MCP [Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) for any workflow  
 - a MCP [Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) for the AI Agent  
 
-The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. You can run multiple MCP servers from your n8n instance. The MCP Client Tool connects LLMs - and other intelligent agents - to any MCP-enabled service through a single interface. 
+The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. You can run multiple MCP servers from your n8n instance. The MCP Client Tool connects LLMs - and other intelligent agents - to any MCP-enabled service through a single interface. <br>
 
 Max from our DevRel team created an official walkthrough for you to get started: 
 
@@ -66,7 +66,6 @@ Max from our DevRel team created an official walkthrough for you to get started:
     <figcaption>[Studio Update #04](https://youtu.be/45WPU7P-1QQ?feature=shared)</figcaption>
 </figure>
 
-<br><br>
 
 ### MCP Server Trigger
 The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. The node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools. This means your n8n workflows and integrations are now available to models run elsewhere. Pretty neat. 
@@ -75,7 +74,6 @@ The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to mode
     ![MCP Server Trigger](/_images/release-notes/MCP-Server-Trigger.png)
     <figcaption>MCP Server Trigger</figcaption>
 </figure>
-<br>
 
 [Explore the MCP Server Trigger docs](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
 
@@ -86,7 +84,6 @@ The MCP Client Tool node is a MCP client, allowing you to use the tools exposed 
     ![MCP Client Tool](/_images/release-notes/MCP-Client-Tool.png)
     <figcaption>MCP Client Tools</figcaption>
 </figure>
-<br>
 
 [Explore the MCP Client Tool docs](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
 

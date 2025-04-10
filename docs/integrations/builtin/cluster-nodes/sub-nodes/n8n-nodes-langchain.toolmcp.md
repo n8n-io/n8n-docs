@@ -10,7 +10,7 @@ contentType: [integration, reference]
 The MCP Client Tool node is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/httprequest.md).
+You can find authentication information for this node [here](/integrations/builtin/credentials/httprequest.md). The MCP Client Tool node supports both Bearer and generic header authentication methods.
 ///
 
 ## Node parameters
@@ -31,7 +31,7 @@ Configure the node with the following parameters.
 
 ## Related resources
 
-n8n also has an [MCP Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) node that allows you to expose n8n tools to clients.
+n8n also has an [MCP Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) node that allows you to connect external tools to your n8n AI Agents.
 
 Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.
 

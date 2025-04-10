@@ -12,7 +12,7 @@
 	1. Change the **This workflow can be called by** setting.	Refer to [Workflow settings](/workflows/settings.md) for more information on configuring your workflows.
 1. Add the **Execute Sub-workflow** trigger node (if you are searching under trigger nodes, this is also titled **When Executed by Another Workflow**).
 1. Set the **Input data mode** to choose how you will define the sub-workflow's input data:
-	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide.
+	* **Define using fields below**: Choose this mode to define individual input names and data types that the calling workflow needs to provide. The [Execute Sub-workflow node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) or [Call n8n Workflow Tool node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) in the calling workflow will automatically pull in the fields defined here.
 	* **Define using JSON example**: Choose this mode to provide an example JSON object that demonstrates the expected input items and their types.
 	* **Accept all data**: Choose this mode to accept all data unconditionally. The sub-workflow won't define any required input items. This sub-workflow must handle any input inconsistencies or missing values.
 1. Add other nodes as needed to build your sub-workflow functionality.

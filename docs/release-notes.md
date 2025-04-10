@@ -40,7 +40,61 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.88.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-10
 
-This release contains bug fixes.
+This release contains a new features, new nodes, performance improvements, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+
+
+### Model Context Protocol (MCP) nodes
+MCP aims to standardise how LLMs like Claude, ChatGPT, or Cursor can interact with tools or integrate data for their agents. Many providers - both established or new - are adopting MCP as a standard way to build agentic systems. It is an easy way to either expose your own app as a server, making capabilities available to a model as tools, or as a client that can call on tools outside of your own system. 
+
+While it’s still early in the development process, we want to give you access to our new MCP nodes. This will help us understand your requirements better and will also let us converge on a great general solution quicker.
+
+We are adding two new nodes: 
+
+- a MCP [Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger/) for any workflow  
+- a MCP [Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/) for the AI Agent  
+
+The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. You can run multiple MCP servers from your n8n instance. The MCP Client Tool connects LLMs - and other intelligent agents - to any MCP-enabled service through a single interface. 
+
+Max from our DevRel team created an official walkthrough for you to get started: 
+
+<br>
+
+[![Studio](/_images/release-notes/MCP-YouTube-thumb.jpg)](https://youtu.be/45WPU7P-1QQ?feature=shared)
+<figure markdown="span">
+    <figcaption>[Studio Update #04](https://youtu.be/45WPU7P-1QQ?feature=shared)</figcaption>
+</figure>
+
+<br><br>
+
+### MCP Server Trigger
+The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. The node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools. This means your n8n workflows and integrations are now available to models run elsewhere. Pretty neat. 
+
+<figure markdown="span">
+    ![MCP Server Trigger](/_images/release-notes/MCP-Server-Trigger.png)
+    <figcaption>MCP Server Trigger</figcaption>
+</figure>
+<br>
+
+[Explore the MCP Server Trigger docs](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger/)
+
+### MCP Client Tool
+The MCP Client Tool node is a MCP client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents. In this regard it is similar to using a n8n tool with your AI agent. One advantage is that the MCP Client Tool can access multiple tools on the MCP server at once, keeping your canvas cleaner and easier to understand. 
+
+<figure markdown="span">
+    ![MCP Client Tool](/_images/release-notes/MCP-Client-Tool.png)
+    <figcaption>MCP Client Tools</figcaption>
+</figure>
+<br>
+
+</div>
+
+### Node updates
+
+- Added a node for Azure Cosmos DB  
+- Added a node for Milvus Vector Store  
+- Updated the Email Trigger (IMAP) node  
 
 ### Contributors
 
@@ -48,8 +102,6 @@ This release contains bug fixes.
 [umanamente](https://github.com/umanamente){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.87.1
 
@@ -59,8 +111,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.87.1
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.87.0
 
@@ -76,8 +126,6 @@ This release contains new nodes, node updates, API updates, core updates, editor
 [Pash10g](https://github.com/Pash10g){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.86.0
 
@@ -98,8 +146,6 @@ This release contains API updates, core updates, editor improvements, node updat
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.85.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.3...n8n@1.85.4){:target=_blank .external-link} for this version.<br />
@@ -108,8 +154,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.3...n8n@1.85.4
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
-
-
 
 This release contains a bug fix.
 
@@ -120,13 +164,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.2...n8n@1.84.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-27
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.84.2
 
@@ -146,27 +186,19 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.85.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.1...n8n@1.85.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-25
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.85.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.85.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-25
-
-
 
 This release contains bug fixes.
 
@@ -213,22 +245,16 @@ Recent updates to the Form Trigger node have made it a more powerful tool for bu
 
 These improvements elevate the Form Trigger node beyond a simple workflow trigger, transforming it into a powerful tool for addressing use cases from data collection and order processing to custom content creation.
 
-
-
 ### Contributors
 
 [Fank](https://github.com/Fank){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.84.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.0...n8n@1.84.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-18
-
-
 
 This release contains bug fixes.
 

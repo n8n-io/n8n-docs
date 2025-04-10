@@ -24,5 +24,4 @@ To enable certain licensed features, you must first activate your license. You c
 | `N8N_LICENSE_DETACH_FLOATING_ON_SHUTDOWN` | Boolean | `true` | Controls whether the instance releases [floating entitlements](/glossary.md#entitlement-n8n) back to the pool upon shutdown. Set to `true` to allow other instances to reuse the entitlements, or `false` to retain them. <br> For production instances that must always keep their licensed features, set this to `false`. |
 | `N8N_LICENSE_SERVER_URL` | String | `http://license.n8n.io/v1` | Server URL to retrieve license. |
 | `N8N_LICENSE_TENANT_ID` | Number | `1` | Tenant ID associated with the license. Only set this variable if explicitly instructed by n8n. |
-| `http_proxy_license_server` | String | `http://user:pass@proxy:port`| Proxy server URL for HTTP requests to retrieve license. This variable name needs to be lowercase. |
 | `https_proxy_license_server` | String | `https://user:pass@proxy:port` | Proxy server URL for HTTPS requests to retrieve license. This variable name needs to be lowercase. |

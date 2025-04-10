@@ -33,12 +33,15 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 	* Create
 	* Get
 	* Get Many
+	* Send and Wait for Response
 * Task
     * Create
     * Delete
     * Get
     * Get Many
     * Update
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 

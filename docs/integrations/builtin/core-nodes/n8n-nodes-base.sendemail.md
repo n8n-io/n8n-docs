@@ -24,6 +24,15 @@ Configure this node using the following parameters.
 
 Select or create an [SMTP account credential](/integrations/builtin/credentials/sendemail/index.md) for the node to use.
 
+### Operation
+
+The Send Email node supports the following operations:
+
+* **Send**: Send an email.
+* **Send and Wait for Response**: Send an email and wait for a response from the receiver. This operation pauses the workflow execution until the user submits a response.
+
+Choosing **Send and Wait for Response** will activate parameters and options as discussed in [waiting for a response](#waiting-for-a-response).
+
 ### From Email
 
 Enter the email address you want to send the email from. You can also include a name using this format: `Name Name <email@sample.com>`, for example: `Nathan Doe <nate@n8n.io>`.
@@ -38,7 +47,7 @@ Enter the subject line for the email.
 
 ### Email Format
 
-Select the format to send the email in. Choose from:
+Select the format to send the email in. This parameter is available when using the **Send** operation. Choose from:
 
 * **Text**: Send the email in plain-text format.
 * **HTML**: Send the email in HTML format.
@@ -62,11 +71,11 @@ Enter the name of the binary properties that contain data to add as an attachmen
 
 ### CC Email
 
-Enter an email address for the cc: field.
+Enter an email address for the `cc:` field.
 
 ### BCC Email
 
-Enter an email address for the bcc: field.
+Enter an email address for the `bcc:` field.
 
 ### Ignore SSL Issues
 
@@ -75,6 +84,59 @@ Set whether n8n should ignore failures with TLS/SSL certificate validation (turn
 ### Reply To
 
 Enter an email address for the Reply To field.
+
+## Waiting for a response
+
+By choosing the **Send and Wait for a Response** operation, you can send an email message and pause the workflow execution until a person confirms the action or provides more information.
+
+### Response Type
+
+You can choose between the following types of waiting and approval actions:
+
+* **Approval**: Users can approve or disapprove from within the message.
+* **Free Text**: Users can submit a response with a form.
+* **Custom Form**: Users can submit a response with a custom form.
+
+Different options are available depending on which type you choose.
+
+### Approval parameters and options
+
+When using the Approval response type, the following options are available:
+
+* **Type of Approval**: Whether to present only an approval button or both an approval and disapproval buttons.
+* **Button Label**: The label for the approval or disapproval button. The default choice is `Approve` and `Decline` for approval and disapproval actions respectively.
+* **Button Style**: The style (primary or secondary) for the button.
+
+This mode also offers the following options:
+
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+* **Append n8n Attribution**: Set whether to include the phrase `This email was sent automatically with n8n` at the end of the email (turned on) or not (turned off).
+
+### Free Text parameters and options
+
+When using the Free Text response type, the following options are available:
+
+* **Message Button Label**: The label to use for message button. The default choice is `Respond`.
+* **Response Form Title**: The title of the form where users provide their response.
+* **Response Form Description**: A description for the form where users provide their response.
+* **Response Form Button Label**: The label for the button on the form to submit their response. The default choice is `Submit`.
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+* **Append n8n Attribution**: Set whether to include the phrase `This email was sent automatically with n8n` at the end of the email (turned on) or not (turned off).
+
+### Custom Form parameters and options
+
+When using the Custom Form response type, you build a form using the fields and options you want.
+
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
+
+The following options are also available:
+
+* **Message Button Label**: The label to use for message button. The default choice is `Respond`.
+* **Response Form Title**: The title of the form where users provide their response.
+* **Response Form Description**: A description for the form where users provide their response.
+* **Response Form Button Label**: The label for the button on the form to submit their response. The default choice is `Submit`.
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+* **Append n8n Attribution**: Set whether to include the phrase `This email was sent automatically with n8n` at the end of the email (turned on) or not (turned off).
 
 ## Templates and examples
 

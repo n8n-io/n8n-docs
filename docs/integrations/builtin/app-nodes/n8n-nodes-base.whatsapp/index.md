@@ -20,11 +20,14 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 * Message
 	* Send
+	* Send and Wait for Response
 	* Send Template
 * Media
 	* Upload
 	* Download
 	* Delete
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 

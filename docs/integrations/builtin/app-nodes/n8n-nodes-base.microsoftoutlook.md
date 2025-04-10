@@ -59,12 +59,15 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 	* Move
 	* Reply
 	* Send
+	* Send and Wait for Response
 	* Update
 * Message Attachment
 	* Add
 	* Download
 	* Get
 	* Get Many
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 

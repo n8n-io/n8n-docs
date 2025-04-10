@@ -34,10 +34,13 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for
 	- Get Many
 	- React with Emoji
 	- Send
+	* Send and Wait for Response
 - Member
 	- Get Many
 	- Role Add
 	- Role Remove
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 <!-- vale on -->
 

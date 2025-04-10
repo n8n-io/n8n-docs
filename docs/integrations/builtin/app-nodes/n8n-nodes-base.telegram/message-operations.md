@@ -292,6 +292,68 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 <!-- vale on -->
 
+## Send and Wait for Response
+
+Use this operation to send a message to the chat using the Bot API [`sendMessage`](https://core.telegram.org/bots/api#sendmessage) method and pause the workflow execution until the user confirms the operation.
+
+Enter these parameters:
+
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
+* **Resource**: Select **Message**.
+* **Operation**: Select **Send and Wait for Response**.
+* **Chat ID**: Enter the Chat ID or username of the channel you wish to send the message to in the format `@channelusername`.
+    * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
+* **Message**: Enter the text to send.
+* **Response Type**: The approval or response type to use:
+	* **Approval**: Users can approve or disapprove from within the message.
+	* **Free Text**: Users can submit a response with a form.
+	* **Custom Form**: Users can submit a response with a custom form.
+
+Refer to Telegram's Bot API [`sendMessage`](https://core.telegram.org/bots/api#sendmessage) documentation for more information.
+
+/// warning | Send Message limits
+Telegram limits the number of messages you can send to 30 per second. If you expect to hit this limit, refer to [Send more than 30 messages per second](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#send-more-than-30-messages-per-second) for a suggested workaround.
+///
+
+<!-- vale off -->
+### Send and Wait for Response additional fields
+
+The additional fields depend on which **Response Type** you choose.
+
+#### Approval
+
+The **Approval** response type adds these options:
+
+* **Type of Approval**: Whether to present only an approval button or both an approval and disapproval buttons.
+* **Button Label**: The label for the approval or disapproval button. The default choice is `✅ Approve` and `❌ Decline` for approval and disapproval actions respectively.
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+
+#### Free Text
+
+When using the Free Text response type, the following options are available:
+
+* **Message Button Label**: The label to use for message button. The default choice is `Respond`.
+* **Response Form Title**: The title of the form where users provide their response.
+* **Response Form Description**: A description for the form where users provide their response.
+* **Response Form Button Label**: The label for the button on the form to submit their response. The default choice is `Submit`.
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+
+#### Custom Form
+
+When using the Custom Form response type, you build a form using the fields and options you want.
+
+You can customize each form element with the settings outlined in the [n8n Form trigger's form elements](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md#form-elements). To add more fields, select the **Add Form Element** button.
+
+The following options are also available:
+
+* **Message Button Label**: The label to use for message button. The default choice is `Respond`.
+* **Response Form Title**: The title of the form where users provide their response.
+* **Response Form Description**: A description for the form where users provide their response.
+* **Response Form Button Label**: The label for the button on the form to submit their response. The default choice is `Submit`.
+* **Limit Wait Time**: Whether the workflow will automatically resume execution after a specified time limit. This can be an interval or a specific wall time.
+
+<!-- vale on -->
+
 ## Send Photo
 
 Use this operation to send a photo to the chat using the Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} method.

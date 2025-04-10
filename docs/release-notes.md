@@ -53,7 +53,7 @@ While it’s still early in the development process, we want to give you access 
 We are adding two new nodes: 
 
 - a MCP [Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) for any workflow  
-- a MCP [Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/) for the AI Agent  
+- a MCP [Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) for the AI Agent  
 
 The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. You can run multiple MCP servers from your n8n instance. The MCP Client Tool connects LLMs - and other intelligent agents - to any MCP-enabled service through a single interface. 
 

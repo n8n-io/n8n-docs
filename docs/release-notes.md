@@ -35,6 +35,7 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+
 ## n8n@1.88.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.88.0){:target=_blank .external-link} for this version.<br />
@@ -99,6 +100,15 @@ The MCP Client Tool node is a MCP client, allowing you to use the tools exposed 
 
 [adina-hub](https://github.com/adina-hub){:target=_blank .external-link}  
 [umanamente](https://github.com/umanamente){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.86.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.86.0...n8n@1.86.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-09
+
+This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

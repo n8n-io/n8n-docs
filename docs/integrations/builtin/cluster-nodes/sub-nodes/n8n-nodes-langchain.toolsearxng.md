@@ -58,14 +58,16 @@ To use the SearXNG node in a workflow:
 
 ## Considerations
 - This node requires you to run the SearXNG service on the same network as your n8n instance. **Ensure your n8n instance has network access to the SearXNG service.**
-- SearXNG service is not configured by default to output results in a JSON format, which is a requirement for this node to function as a tool to the n8n AI Agent node. To enable json output, you need to explicitely mention "json" in "formats" section of your "search:" section in the settings.yml file of your SearXNG instance. 
+- SearXNG service isn't configured by default to output results in a JSON format, which is a requirement for this node to function as a tool to the n8n AI Agent node. To enable json output, you need to explicitely mention "json" in "formats" section of your "search:" section in the settings.yml file of your SearXNG instance. 
+```yaml
 	example:
 	search:
       # options available for formats: [html, csv, json, rss]
 	  formats:
 	    - html
 	    - json
-  If the formats section isnt there, add it.
+```
+  If the formats section isn't there, add it.
   The exact location of the settings file will depend on how you installed SearXNG; go to SearXNG documentation [here] for more detail (https://docs.searxng.org/admin/installation-searxng.html#id5)  
 - The quality and availability of search results depend on the configuration and health of the SearXNG instance you are using.
 

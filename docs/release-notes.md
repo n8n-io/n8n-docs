@@ -88,6 +88,8 @@ The MCP Client Tool node is a MCP client, allowing you to use the tools exposed 
 </figure>
 <br>
 
+[Explore the MCP Client Tool docs](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/)
+
 </div>
 
 ### Node updates

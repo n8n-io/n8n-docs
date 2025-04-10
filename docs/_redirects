@@ -1,6 +1,12 @@
 ### THESE REDIRECTS ARE HANDLED BY NETLIFY, SEE DOC FOR DETAILS ###
 ### https://docs.netlify.com/routing/redirects/redirect-options/ ###
 
+## Redirect from initial path used in product
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/
+
+## Follow up to https://github.com/n8n-io/n8n-docs/pull/3033
+/enterprise-key/ /license-key/
+
 ## Remove item lists (hidden for over a year)
 /integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/
 

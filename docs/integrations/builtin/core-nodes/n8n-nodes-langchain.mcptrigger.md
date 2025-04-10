@@ -92,8 +92,12 @@ To do so, add the following to your Claude Desktop configuration:
 
 Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with the values from your MCP Server Trigger node parameters and credentials.
 
+## Limitations
+
+The MCP Server Trigger node doesn't yet support n8n instances running in [queue mode](/hosting/scaling/queue-mode.md) mode.
+
 ## Related resources
 
-n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect to MCP servers and use external tools as a client.
+n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect your n8n AI agents to external tools.
 
 Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.

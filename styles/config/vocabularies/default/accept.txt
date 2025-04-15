@@ -101,6 +101,7 @@ Gumroad
 Hetzner
 Homeserver
 [Hh]ostname
+howto
 HubSpot
 Humantic
 Imperva

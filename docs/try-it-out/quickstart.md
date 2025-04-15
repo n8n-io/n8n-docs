@@ -23,8 +23,8 @@ This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is ava
 n8n provides a quickstart template using training nodes. You can use this to work with fake data and avoid setting up [credentials](/glossary.md#credential-n8n).
 
 1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/).
-1. Select **Use workflow** to view the options for using the template.
-1. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
+1. Select **Use for free** to view the options for using the template.
+1. Select **Get started free with n8n cloud** to load the template into your Cloud instance.
 
 This workflow:
 

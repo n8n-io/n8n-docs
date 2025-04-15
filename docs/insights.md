@@ -6,16 +6,15 @@ contentType: howto
 
 # Insights
 
-/// info | Feature availability
-The insights summary banner displays activity from the last 7 days for all plans. The Insights dashboard is only available on Pro (with limited date ranges) and Enterprise plans. 
-///
-
 Insights gives instance owners and admins visibility into how workflows perform over time. This feature consists of three parts:
 
 - [**Insights summary banner**](#insights-summary-banner): shows key metrics about your instance from the last 7 days at the top of the overview space
 - [**Insights dashboard**](#insights-dashboard): a more detailed visual breakdown with per-workflow metrics and historical comparisons
-- **Workflow ROI**: For each workflow, you can set the number of minutes saved for each production execution.
+- **Time saved (Workflow ROI)**: For each workflow, you can set the number of minutes saved for each production execution.
 
+/// info | Feature availability
+The insights summary banner displays activity from the last 7 days for all plans. The Insights dashboard is only available on Pro (with limited date ranges) and Enterprise plans. 
+///
 
 ## Insights summary banner
 
@@ -37,6 +36,8 @@ The insights dashboard also has a table showing individual insights from each wo
 
 Currently, the insights summary banner and dashboard always shows a rolling 7 day window with a comparison to the previous period to show increases or decreases for each metric.
 
-## Disable metrics collection for insights
+## Disable metrics collection for insights 
 
-It's possible to disable the insights feature and metrics collection by setting the environment variable `N8N_DISABLED_MODULES['insights']`
+/// note | Self-hosted users
+If you self-host n8n, it's possible to disable insights and metrics collection using [Environment variables](/hosting/configuration/environment-variables/insights.md).
+///

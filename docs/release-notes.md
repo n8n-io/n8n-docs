@@ -62,7 +62,7 @@ This release contains API updates, core updates, editor updates, a new node, nod
 We're rolling out [Insights](INSERT LINK), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of your most important workflow metrics and help you troubleshoot potential issues and improvements. <br> 
 <br>
 
-In this first release, we’re introducing a summary banner, the insights dashboard and time saved per execution. <br>
+In this first release, we’re introducing a summary banner, the insights dashboard and time saved per execution. <br> <br>
 
 #### 1. Summary banner
 A new banner on the overview page that gives instance admins and owners a birds eye view of key metrics over the last 7 days.

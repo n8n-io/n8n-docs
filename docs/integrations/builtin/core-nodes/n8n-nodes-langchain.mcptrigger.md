@@ -94,15 +94,15 @@ Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with th
 
 ## Limitations
 
-**MCP Trigger and Webhook Replicas**  
-The MCP Trigger node relies on Server-Sent Events (SSE), which require the same server instance to handle persistent connections.
+### Configuring the MCP Server Trigger node with webhook replicas
 
-* If you run n8n in [queue mode](/hosting/scaling/queue-mode.md) with only a **single webhook replica**, MCP Trigger will work as expected.
-* If you run **multiple webhook replicas**, make sure that you route all `/mcp*` requests to a single, dedicated webhook replica.
-* To achieve this, create a separate replica set with one webhook container for MCP requests, and update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.
+The MCP Server Trigger node relies on Server-Sent Events (SSE), which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](/hosting/scaling/queue-mode.md) depending on your [webhook processor](/hosting/scaling/queue-mode.md#webhook-processors) configuration:
 
-/// warning | MCP Trigger with Multiple Webhook Replicas
-If you run MCP Trigger with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, SSE connections will frequently break or fail to deliver events reliably.  
+* If you use queue mode with a **single webhook replica**, the MCP Server Trigger node works as expected.
+* If you run **multiple webhook replicas**, you need to route all `/mcp*` requests to a single, dedicated webhook replica. Create a separate replica set with one webhook container for MCP requests. Afterward, update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.
+
+/// warning | Caution when running with multiple webhook replicas
+If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE connections will frequently break or fail to reliably deliver events.
 ///
 
 ## Related resources

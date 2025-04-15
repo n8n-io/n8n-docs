@@ -101,7 +101,7 @@ The MCP Server Trigger node relies on Server-Sent Events (SSE), which require th
 * If you use queue mode with a **single webhook replica**, the MCP Server Trigger node works as expected.
 * If you run **multiple webhook replicas**, you need to route all `/mcp*` requests to a single, dedicated webhook replica. Create a separate replica set with one webhook container for MCP requests. Afterward, update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.
 
-/// warning | Caution running MCP Server Trigger nodes with multiple webhook replicas
+/// warning | Caution when running with multiple webhook replicas
 If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE connections will frequently break or fail to reliably deliver events.
 ///
 

@@ -59,9 +59,10 @@ This release contains API updates, core updates, editor updates, a new node, nod
 
 ### Insights 
 
-We're rolling out [Insights](INSERT LINK), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of your most important workflow metrics and help you troubleshoot potential issues and improvements. 
+We're rolling out [Insights](INSERT LINK), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of your most important workflow metrics and help you troubleshoot potential issues and improvements. <br> 
+<br>
 
-In this first release, we’re introducing a summary banner, the insights dashboard and time saved per execution. 
+In this first release, we’re introducing a summary banner, the insights dashboard and time saved per execution. <br>
 
 #### 1. Summary banner
 A new banner on the overview page that gives instance admins and owners a birds eye view of key metrics over the last 7 days.
@@ -78,7 +79,7 @@ Available metrics:
 - Average runtime of all workflows
 - Estimated time saved
 
-This overview is designed to help you stay on top of workflow activity at a glance. It is available for all plans and editions.
+This overview is designed to help you stay on top of workflow activity at a glance. It is available for all plans and editions. <br> <br>
 
 #### 2. Insights dashboard
 On Pro and Enterprise plans, a new dashboard offers a deeper view into workflow performance and activity. 
@@ -98,9 +99,7 @@ The dashboard includes:
 #### 3. Time saved per execution
 Within workflow settings, you can now assign a “time saved per execution” value to any workflow. This makes it possible to track the impact of your workflows and make it easier to share this visually with other teams and stakeholders.
 
-This is just the beginning for Insights: the next phase will introduce more advanced filtering and comparisons, custom date ranges and additional monitoring capabilities.
-
-Look for the new "Insights" tab in your main navigation.
+This is just the beginning for Insights: the next phase will introduce more advanced filtering and comparisons, custom date ranges and additional monitoring capabilities. 
 
 </div>
 

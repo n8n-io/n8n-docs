@@ -59,10 +59,10 @@ This release contains API updates, core updates, editor updates, a new node, nod
 
 ### Insights 
 
-We're rolling out [Insights](INSERT LINK), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of your most important workflow metrics and help you troubleshoot potential issues and improvements. <br> 
+We're rolling out [Insights](/insights.md), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of their most important workflow metrics and help troubleshoot potential issues and improvements. <br> 
 <br>
 
-In this first release, we’re introducing a summary banner, the insights dashboard and time saved per execution. <br> <br>
+In this first release, we’re introducing a summary banner, the insights dashboard, and time saved per execution. <br> <br>
 
 #### 1. Summary banner
 A new banner on the overview page that gives instance admins and owners a birds eye view of key metrics over the last 7 days.
@@ -73,6 +73,7 @@ A new banner on the overview page that gives instance admins and owners a birds 
 </figure>
 
 Available metrics:
+
 - Total production executions
 - Total failed executions
 - Failure rate
@@ -89,17 +90,17 @@ On Pro and Enterprise plans, a new dashboard offers a deeper view into workflow 
     <figcaption>Insights dashboard</figcaption>
 </figure>
 
-The dashboard includes: 
+The dashboard includes:
 
-- Total production executions over time, including comparison of successful / failed executions
-- Per-workflow break down of key metrics
+- Total production executions over time, including a comparison of successful and failed executions
+- Per-workflow breakdowns of key metrics
 - Comparisons with previous periods to help spot changes in usage or behavior
-- Runtime average and failure rate over time.
+- Runtime average and failure rate over time
 
 #### 3. Time saved per execution
-Within workflow settings, you can now assign a “time saved per execution” value to any workflow. This makes it possible to track the impact of your workflows and make it easier to share this visually with other teams and stakeholders.
+Within workflow settings, you can now assign a “time saved per execution” value to any workflow. This makes it possible to track the impact of your workflows and make it easier to share this visually with other teams and stakeholders.<br><br>
 
-This is just the beginning for Insights: the next phase will introduce more advanced filtering and comparisons, custom date ranges and additional monitoring capabilities. 
+This is just the beginning for Insights: the next phase will introduce more advanced filtering and comparisons, custom date ranges, and additional monitoring capabilities. 
 
 </div>
 

@@ -94,7 +94,16 @@ Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with th
 
 ## Limitations
 
-The MCP Server Trigger node doesn't yet support n8n instances running in [queue mode](/hosting/scaling/queue-mode.md) mode.
+### Configuring the MCP Server Trigger node with webhook replicas
+
+The MCP Server Trigger node relies on Server-Sent Events (SSE), which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](/hosting/scaling/queue-mode.md) depending on your [webhook processor](/hosting/scaling/queue-mode.md#webhook-processors) configuration:
+
+* If you use queue mode with a **single webhook replica**, the MCP Server Trigger node works as expected.
+* If you run **multiple webhook replicas**, you need to route all `/mcp*` requests to a single, dedicated webhook replica. Create a separate replica set with one webhook container for MCP requests. Afterward, update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.
+
+/// warning | Caution when running with multiple webhook replicas
+If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE connections will frequently break or fail to reliably deliver events.
+///
 
 ## Related resources
 

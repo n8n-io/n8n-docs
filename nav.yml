@@ -1154,6 +1154,7 @@ nav:
         - External data storage: hosting/configuration/environment-variables/external-data-storage.md
         - External hooks: hosting/configuration/environment-variables/external-hooks.md
         - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Insights: hosting/configuration/environment-variables/insights.md
         - Logs: hosting/configuration/environment-variables/logs.md
         - License: hosting/configuration/environment-variables/licenses.md
         - Nodes: hosting/configuration/environment-variables/nodes.md

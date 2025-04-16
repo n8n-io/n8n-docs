@@ -27,7 +27,7 @@ n8n uses the node name (select the name to edit) and **Description of Data** par
 
 > Useful for when you need to answer questions about [node name]. Whenever you need information about [Description of Data], you should ALWAYS use this. Input should be a fully formed question.
 
-Spaces in the node name are converted to underscores in the tool description. Special characters aren't allowed.
+Spaces in the node name are converted to underscores in the tool description. Special characters aren't allowed and will result in errors when the agent runs.
 
 ### Limit
 

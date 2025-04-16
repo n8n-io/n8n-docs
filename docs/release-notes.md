@@ -55,6 +55,61 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.88.0...n8n@1.89.0
 
 This release contains API updates, core updates, editor updates, a new node, node updates, and bug fixes.
 
+<div class="n8n-new-features" markdown> 
+
+### Insights 
+
+We're rolling out [Insights](/insights.md), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of their most important workflow metrics and help troubleshoot potential issues and improvements. <br> 
+<br>
+
+In this first release, we’re introducing a summary banner, the insights dashboard, and time saved per execution. <br> <br>
+
+#### 1. Summary banner
+A new banner on the overview page that gives instance admins and owners a birds eye view of key metrics over the last 7 days.
+
+<figure markdown="span">
+    ![Summary banner](/_images/release-notes/Insights-summary-banner.png)
+    <figcaption>Insights summary banner</figcaption>
+</figure>
+
+Available metrics:
+
+- Total production executions
+- Total failed executions
+- Failure rate
+- Average runtime of all workflows
+- Estimated time saved
+
+This overview is designed to help you stay on top of workflow activity at a glance. It is available for all plans and editions. <br> <br>
+
+#### 2. Insights dashboard
+On Pro and Enterprise plans, a new dashboard offers a deeper view into workflow performance and activity. 
+
+<figure markdown="span">
+    ![Insights dashboard](/_images/release-notes/Insights-dashboard.png)
+    <figcaption>Insights dashboard</figcaption>
+</figure>
+
+The dashboard includes:
+
+- Total production executions over time, including a comparison of successful and failed executions
+- Per-workflow breakdowns of key metrics
+- Comparisons with previous periods to help spot changes in usage or behavior
+- Runtime average and failure rate over time
+
+#### 3. Time saved per execution
+Within workflow settings, you can now assign a “time saved per execution” value to any workflow. This makes it possible to track the impact of your workflows and make it easier to share this visually with other teams and stakeholders.<br><br>
+
+This is just the beginning for Insights: the next phase will introduce more advanced filtering and comparisons, custom date ranges, and additional monitoring capabilities. 
+
+</div>
+
+### Node updates
+- We added a credential check for the Salesforce node
+- We added SearXNG as a tool for AI agents
+
+We also added nested search for folders. With this update, the search now includes all descendant records of the current level, when a filter is applied. 
+
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.88.0
@@ -65,8 +120,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.88.0
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
-
-
 
 This release contains new features, new nodes, performance improvements, and bug fixes.
 
@@ -144,8 +197,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.86.0...n8n@1.86.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-09
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -178,8 +229,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.86.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-31
-
-
 
 This release contains API updates, core updates, editor improvements, node updates, and bug fixes.
 

@@ -23,15 +23,25 @@ For usage examples and templates to help you get started, refer to n8n's [Vector
 
 Enter a description of the data in the vector store.
 
+### Limit
+
+The maximum number of results to return.
+
+## How n8n populates the tool description
+
 n8n uses the node name (select the name to edit) and **Description of Data** parameter to populate the tool description for AI agents using the following format:
 
 > Useful for when you need to answer questions about [node name]. Whenever you need information about [Description of Data], you should ALWAYS use this. Input should be a fully formed question.
 
-Spaces in the node name are converted to underscores in the tool description. Special characters aren't allowed and will result in errors when the agent runs.
+Spaces in the node name are converted to underscores in the tool description.
 
-### Limit
+/// warning | Avoid special characters in node names
+Using special characters in the node name will cause errors when the agent runs:
 
-The maximum number of results to return.
+![model errors from special characters](/_images/integrations/builtin/cluster-nodes/toolvectorstore/name-characters-error.png)
+
+Use only alphanumeric characters, spaces, dashes, and underscores in node names.
+///
 
 ## Related resources
 

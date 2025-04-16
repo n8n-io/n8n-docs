@@ -23,7 +23,7 @@ For usage examples and templates to help you get started, refer to n8n's [Vector
 
 Enter a description of the data in the vector store.
 
-n8n uses the **Node Name** and **Description of Data** parameters to populate the tool description for AI agents using the following format:
+n8n uses the node name (select the name to edit) and **Description of Data** parameter to populate the tool description for AI agents using the following format:
 
 > Useful for when you need to answer questions about [Node Name]. Whenever you need information about [Description of Data], you should ALWAYS use this. Input should be a fully formed question.
 

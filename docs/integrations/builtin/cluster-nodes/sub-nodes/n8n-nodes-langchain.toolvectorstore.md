@@ -19,17 +19,15 @@ For usage examples and templates to help you get started, refer to n8n's [Vector
 
 ## Node parameters
 
-### Data Name
-
-Enter the name of the data in the vector store.
-
 ### Description of Data
 
 Enter a description of the data in the vector store.
 
-n8n uses the **Data Name** and **Description of Data** parameters to populate the tool description for AI agents using the following format:
+n8n uses the **Node Name** and **Description of Data** parameters to populate the tool description for AI agents using the following format:
 
-> Useful for when you need to answer questions about [Data Name]. Whenever you need information about [Description of Data], you should ALWAYS use this. Input should be a fully formed question.
+> Useful for when you need to answer questions about [Node Name]. Whenever you need information about [Description of Data], you should ALWAYS use this. Input should be a fully formed question.
+
+Spaces in **Node Name** are converted to underscores on the tool description, and special characters are not allowed.
 
 ### Limit
 

@@ -16,10 +16,6 @@ On this page, you'll find the node parameters for the Custom Code Tool node and 
 
 ## Node parameters
 
-### Name
-
-Give your custom code a name. It can't contain whitespace.
-
 ### Description
 
 Give your custom code a description. This tells the agent when to use this tool. For example:

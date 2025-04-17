@@ -16,10 +16,6 @@ On this page, you'll find the node parameters for the Workflow Tool node, and li
 
 ## Node parameters
 
-### Name
-
-Enter a name for your custom code. It can't contain whitespace or special characters.
-
 ### Description
 
 Enter a custom code a description. This tells the agent when to use this tool. For example:

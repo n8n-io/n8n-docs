@@ -17,4 +17,4 @@ The [community forum](https://community.n8n.io/) can help with various issues. I
 
 ## Russia and Belarus
 
-n8n Embed isn't available in Russia and Belarus. Refer to n8n's blog post [Update on n8n cloud accounts in Russia and Belarus](https://n8n.io/blog/update-on-n8n-cloud-accounts-in-russia-and-belarus/){:target=_blank .external-link} for more information.
+n8n Embed isn't available in Russia and Belarus. Refer to n8n's blog post [Update on n8n cloud accounts in Russia and Belarus](https://blog.n8n.io/update-on-n8n-cloud-accounts-in-russia-and-belarus/){:target=_blank .external-link} for more information.

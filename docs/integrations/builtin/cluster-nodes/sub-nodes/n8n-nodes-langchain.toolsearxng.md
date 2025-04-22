@@ -1,79 +1,55 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SearXNG Node
-description: The SearXNG node allows you to integrate search capabilities into your workflows using SearXNG. SearXNG aggregates results from multiple search engines without tracking you.
+title: SearXNG Tool node documentation
+description: Learn how to use the SearXNG Tool node in n8n. Follow technical documentation to integrate SearXNG Tool node into your workflows.
 contentType: [integration, reference]
 ---
 
-## Node Operations
+# SearXNG Tool node
 
-- **Search**
-  - Runs a search query and returns the results.
+The SearXNG Tool node allows you to integrate search capabilities into your workflows using SearXNG. SearXNG aggregates results from multiple search engines without tracking you.
 
-## Parameters
+On this page, you'll find the node options for the SearXNG Tool node, and links to more resources.
 
-- **Query** (`string`)
-  - The search term or phrase you want to query.
+/// note | Credentials
+You can find authentication information for this node [here](/integrations/builtin/credentials/searxng.md).
+///
 
-- **Categories** (`string`, optional)
-  - Comma-separated list of categories to search within, (for example: `general`, `images`).
-  - Options available are: **`general`, `files`, `images`, `IT`, `map`, `music`, `news`, `science`, `social media`, `videos`**
-  - If left empty, the default categories configured in your SearXNG instance will be used.
-
-- **Language** (`string`, optional)
-  - Two-letter language code to filter search results by language (for example: `en` for English, `fr` for French).
-  - Look [here](https://docs.searxng.org/user/search-syntax.html#select-language) for exhaustive list of language codes
-
-- **Time Range** (`string`, optional)
-  - Set a time range if needed; format is XXX
-
-- **Safe Search** (`number`, optional)
-  - Enables or disables filtering (None, Moderate, or Strict) of explicit content in the search results.
-
-- **Results Per Page** (`number`, optional)
-  - Specify the number of results to retrieve per page.​
-
-- **Page Number** (`number`, optional)
-  - Specify the page from the results you would like to retrieve.
+--8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node Options
-You can further configure the node using these options:
-- **API URL** (`string`, optional)
-  - Provide a custom URL for a SearXNG instance if you aren't using the default instance.​
 
-## Example Usage
+* **Number of Results**: The number of results to retrieve. The default is 10.
+* **Page Number**: The page number of the search results to retrieve. The default is 1.
+* **Language**: A two-letter [language code](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) to filter search results by language. For example: `en` for English, `fr` for French. The default is `en`.
+* **Safe Search**: Enables or disables filtering explicit content in the search results. Can be None, Moderate, or Strict. The default is None.
 
-To use the SearXNG node in a workflow:
+## Running a SearXNG instance
 
-1. Add the **SearXNG** node to your workflow.
-2. Set the **Query** parameter to your desired search term.
-3. Optionally, specify **Categories**, **Language**, **Time Range**, and **Safe Search** parameters to refine your search.
-4. Connect the node to subnodes to process the search results as needed.
+This node requires running the SearXNG service on the same network as your n8n instance. Ensure your n8n instance has network access to the SearXNG service.
 
-## Practical Applications
+This node requires results in JSON format, which isn't enabled in the default SearXNG configuration. To enable JSON output, add `json` to the `search.formats` section of your SearXNG instance's `settings.yml` file:
 
-- **Content Aggregation**: Collect the latest articles or posts on a specific topic.
-- **Data Enrichment**: Enhance records with up-to-date information from the web.
-- **Monitoring**: Keep track of new developments or mentions of particular keywords.
-
-## Considerations
-- This node requires you to run the SearXNG service on the same network as your n8n instance. **Ensure your n8n instance has network access to the SearXNG service.**
-- SearXNG service isn't configured by default to output results in a JSON format, which is a requirement for this node to function as a tool to the n8n AI Agent node. To enable json output, you need to explicitely mention "json" in "formats" section of your "search:" section in the settings.yml file of your SearXNG instance. 
 ```yaml
-	example:
-	search:
-      # options available for formats: [html, csv, json, rss]
-	  formats:
-	    - html
-	    - json
+search:
+  # options available for formats: [html, csv, json, rss]
+  formats:
+    - html
+    - json
 ```
-  If the formats section isn't there, add it.
-  The exact location of the settings file will depend on how you installed SearXNG; go to SearXNG documentation [here] for more detail (https://docs.searxng.org/admin/installation-searxng.html#id5)  
-- The quality and availability of search results depend on the configuration and health of the SearXNG instance you are using.
 
-For more information on setting up and configuring SearXNG, refer to the [SearXNG documentation](https://docs.searxng.org/).
+If the `formats` section isn't there, add it. The exact location of the `settings.yml` file depends on how you installed SearXNG. You can find more by visiting the [SearXNG configuration documentation](https://docs.searxng.org/admin/installation-searxng.html#configuration).
 
-## Additional Resources
+The quality and availability of search results depend on the configuration and health of the SearXNG instance you use. 
 
-- [SearXNG Official Documentation](https://docs.searxng.org/)
-- [n8n Documentation on Integrations](https://docs.n8n.io/integrations/)
+## Templates and examples
+
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'searxng') ]]
+
+## Related resources
+
+Refer to [SearXNG's documentation](https://docs.searxng.org/) for more information about the service. You can also view [LangChain's documentation on their SearXNG integration](https://python.langchain.com/docs/integrations/tools/searx_search/).
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "_glossary/ai-glossary.md"

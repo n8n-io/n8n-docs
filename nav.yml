@@ -758,6 +758,7 @@ nav:
           - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
           - HTTP Request Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - MCP Client Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
+          - SearXNG Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md
           - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
           - Think Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolthink.md        
           - Vector Store Question Answer Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
@@ -991,6 +992,7 @@ nav:
         - integrations/builtin/credentials/s3.md
         - integrations/builtin/credentials/salesforce.md
         - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/searxng.md
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md

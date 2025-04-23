@@ -19,3 +19,15 @@ To make your node available to the n8n community node repository, you must:
 * Check your node using the [linter](/integrations/creating-nodes/test/node-linter.md) and test it locally to ensure it works.
 * Submit the package to the npm registry. Refer to npm's documentation on [Contributing packages to the registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry){:target=_blank .external-link} for more information.
 
+## Submit your node for verification by n8n
+
+Verified community nodes are vetted by n8n and can be discovered and installed from the nodes panel within n8n. These nodes need to adhere to certain technical and UX standards and constraints.
+
+Before submitting your node for review by n8n, you must:
+
+* Make sure that your node follows the [technical guidelines for verified community nodes]() and that all automated checks pass. Specifically, verified community nodes are currently not allowed to use any run-time dependencies.
+* Make sure that your node follows the [UX guidelines]().
+* Make sure that you have provided appropriate documentation in the form of a readme on npm or a related public repository.
+* Submit your node to npm as n8n will fetch it from there for final vetting.
+
+If your node meets all of the above requirements, [click here to submit your node for verification]().

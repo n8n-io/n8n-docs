@@ -25,9 +25,9 @@ Verified community nodes are vetted by n8n and can be discovered and installed f
 
 Before submitting your node for review by n8n, you must:
 
-* Make sure that your node follows the [technical guidelines for verified community nodes]() and that all automated checks pass. Specifically, verified community nodes are currently not allowed to use any run-time dependencies.
-* Make sure that your node follows the [UX guidelines]().
-* Make sure that you have provided appropriate documentation in the form of a readme on npm or a related public repository.
+* Make sure that your node follows the [technical guidelines for verified community nodes](/integrations/community-nodes/creating-nodes/build/reference/verification-guidelines.md) and that all automated checks pass. Specifically, verified community nodes are currently not allowed to use any run-time dependencies.
+* Make sure that your node follows the [UX guidelines](/integrations/community-nodes/creating-nodes/build/reference/ux-guidelines.md).
+* Make sure that you have provided appropriate documentation in the form of a README on npm or a related public repository.
 * Submit your node to npm as n8n will fetch it from there for final vetting.
 
-If your node meets all of the above requirements, [click here to submit your node for verification]().
+If your node meets all of the above requirements, [click here to submit your node for verification](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).

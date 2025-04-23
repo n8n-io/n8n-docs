@@ -44,8 +44,6 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.90.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.0...n8n@1.90.0){:target=_blank .external-link} for this version.<br />
@@ -57,13 +55,51 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains core updates, editor updates, node updates, performance improvements, and bug fixes.
 
+### Scoped API keys
+Users on the Enterprise plan can now create API keys with specific scopes to control exactly what each key can access.
+
+<figure markdown="span">
+    ![Scoped API keys](/_images/release-notes/scoped-API-keys.png)
+    <figcaption>Scoped API keys</figcaption>
+</figure>
+
+Previously, API keys had full read/write access across all endpoints. While sometimes necessary, this level of access can be excessive and too powerful for most use cases.  Scoped API keys allow you to limit access to only the resources and actions a service or user actually needs.
+
+**What’s new**
+
+When creating a new API key, you can now:
+
+- Select whether the key has read, write, or both types of access.  
+- Specify which resources the key can interact with.  
+
+Supported scopes include:
+
+- Variables — list, create, delete  
+- Security audit — generate reports  
+- Projects — list, create, update, delete  
+- Executions — list, read, delete  
+- Credentials — list, create, update, delete, move  
+- Workflows — list, create, update, delete, move, add/remove tags  
+
+Scoped API keys give you more control and security. You can limit access to only what’s needed, making it safer to work with third parties and easier to manage internal API usage.
+
+### Drag and Drop in Folders
+
+Folders just got friendlier. With this release, you can now **drag and drop workflows and folders** — making it even easier to keep things tidy.
+
+Need to reorganize? Just select a workflow or folder and drag it into another folder or breadcrumb location. It’s a small change that makes a big difference when managing a growing collection of workflows.
+
+<br>
+<video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
+<br>
+
+📁 Folders are available to all [registered](/hosting/community-edition-features/#registered-community-edition) users—jump in and get your workspace in order!
+
 ### Contributors
 
 [Zordrak](https://github.com/Zordrak){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.89.2
 
@@ -74,20 +110,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.1...n8n@1.89.2
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.89.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.0...n8n@1.89.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-15
-
-
 
 This release contains bug fixes.
 
@@ -153,7 +183,7 @@ This is just the beginning for Insights: the next phase will introduce more adva
 - We added a credential check for the Salesforce node
 - We added SearXNG as a tool for AI agents
 
-We also added nested search for folders. With this update, the search now includes all descendant records of the current level, when a filter is applied. 
+You can now search within subfolders, making it easier to find workflows across all folder levels. Just type in the search bar and go. 
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
@@ -161,10 +191,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.88.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-10
-
-
-
-
 
 This release contains new features, new nodes, performance improvements, and bug fixes.
 
@@ -289,8 +315,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.3...n8n@1.85.4){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-27
-
-
 
 This release contains a bug fix.
 

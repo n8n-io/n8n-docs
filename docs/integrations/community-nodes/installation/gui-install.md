@@ -8,6 +8,7 @@ contentType: howto
 /// note | Limited to n8n instance owners
 Only the n8n instance owner can install and manage community nodes from npm. The instance owner is the person who sets up and manages user management.
 ///
+
 ## Install a community node
 
 To install a community node from npm:

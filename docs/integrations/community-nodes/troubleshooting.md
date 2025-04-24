@@ -18,4 +18,4 @@ The second option might increase startup time and may cause health checks to fai
 
 ## Prevent loading community nodes on n8n cloud
 
-If your n8n cloud instance has crashed and is failing to start, you can try to prevent installed community nodes from being loaded on instance startup. Visit the [Cloud Admin Panel](https://app.n8n.cloud/dashboard) > Manage and toggle **Disable all community nodes** to **`true`**. This toggle is only visible when you allow community node installation.
+If your n8n cloud instance crashes and fails to start, you can prevent installed community nodes from loading on instance startup. Visit the [Cloud Admin Panel](/manage-cloud/cloud-admin-dashboard.md) > **Manage** and toggle **Disable all community nodes** to **`true`**. This toggle is only visible when you allow community node installation.

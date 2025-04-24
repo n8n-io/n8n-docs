@@ -225,7 +225,7 @@ There are
 [Tt]imesheet
 Todoist
 Toggl
-[Tt]ooltip
+[Tt]ooltips?
 [Tt]ouchpad
 Traefik
 Trellix

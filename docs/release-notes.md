@@ -71,7 +71,7 @@ This update also includes support for the `$fromAI` function to dynamically gene
 - In the **Tools panel**, select HTTP **Request Tool.**
 - Configure it just like you would a regular **HTTP Request node** — including advanced options
 
-👉 Learn more about configuring the [HTTP Request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest/).
+👉 Learn more about configuring the [HTTP Request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md).
 
 
 ### Scoped API keys
@@ -112,7 +112,7 @@ Need to reorganize? Just select a workflow or folder and drag it into another fo
 <video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
 <br>
 
-📁 Folders are available to all [registered](/hosting/community-edition-features/#registered-community-edition) users—jump in and get your workspace in order!
+📁 Folders are available to all [registered](/hosting/community-edition-features/#registered-community-edition.md) users—jump in and get your workspace in order!
 
 ### Contributors
 

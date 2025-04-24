@@ -55,6 +55,25 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains core updates, editor updates, node updates, performance improvements, and bug fixes.
 
+### Extended HTTP Request tool functionality
+We’ve brought the full power of the HTTP Request node to the HTTP Request tool in AI workflows. That means your AI Agents now have access to all the advanced configuration options—like Pagination, Batching, Timeout, Redirects, Proxy support, and even cURL import.
+
+<br>
+<video src="/_video/release-notes/http-request-tool.mp4" controls width="100%"></video>
+<br>
+
+This update also includes support for the `$fromAI` function to dynamically generate the right parameters based on the context of your prompt — making API calls smarter, faster, and more flexible than ever.
+
+**How to:**
+
+- Open your AI Agent node in the canvas.
+- Click the **‘+’ icon** to add a new tool connection.
+- In the **Tools panel**, select HTTP **Request Tool.**
+- Configure it just like you would a regular **HTTP Request node** — including advanced options
+
+👉 Learn more about configuring the [HTTP Request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md).
+
+
 ### Scoped API keys
 Users on the Enterprise plan can now create API keys with specific scopes to control exactly what each key can access.
 
@@ -93,7 +112,7 @@ Need to reorganize? Just select a workflow or folder and drag it into another fo
 <video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
 <br>
 
-📁 Folders are available to all [registered](/hosting/community-edition-features/#registered-community-edition) users—jump in and get your workspace in order!
+📁 Folders are available to all [registered](/hosting/community-edition-features.md#registered-community-edition) users—jump in and get your workspace in order!
 
 ### Contributors
 

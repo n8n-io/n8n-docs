@@ -112,7 +112,7 @@ Need to reorganize? Just select a workflow or folder and drag it into another fo
 <video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
 <br>
 
-📁 Folders are available to all [registered](/hosting/community-edition-features/#registered-community-edition.md) users—jump in and get your workspace in order!
+📁 Folders are available to all [registered](/hosting/community-edition-features.md#registered-community-edition) users—jump in and get your workspace in order!
 
 ### Contributors
 

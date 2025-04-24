@@ -6,7 +6,7 @@ contentType: howto
 # Install verified community nodes in the n8n app
 
 /// note | Limited to n8n instance owners and admins
-Only the n8n instance owner and admin users can install and manage verified community nodes. The instance owner is the person who sets up and manages user management. All members of an n8n instance can use already installed community nodes in their workflows.
+Only the n8n instance owner can install and manage verified community nodes. The instance owner is the person who sets up and manages user management. All members of an n8n instance can use already installed community nodes in their workflows.
 ///
 
 ## Install a community node

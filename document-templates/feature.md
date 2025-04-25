@@ -131,3 +131,20 @@ For each issue:
 The goal of this section is to unblock the user, so try to remain solution-oriented.
 
 -->
+
+<!--
+
+## Related resources
+
+Use this section to link to additional resource. This may include related features, example templates, related nodes, or off-site resources.
+
+Usually a bulleted list works pretty well using one of the following formats:
+
+* Bare link:
+	* [Resource one](https://example.com)
+* Link with explanation:
+	* [Resource one](https://example.com): Learn more about what authentication methods Service X supports.
+* Sentence with link:
+	* To learn more about the available modules, check out [service X's supported module list](http://example.com).
+
+-->

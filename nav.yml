@@ -732,6 +732,7 @@ nav:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md
           - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
+          - Novita AI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatnovita.md
           - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
           - Simple Memory: 
             - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
@@ -1077,6 +1078,7 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
+        - integrations/builtin/credentials/novita.md
       - Custom API actions for existing nodes: integrations/custom-operations.md
       - Handle rate limits: integrations/builtin/rate-limits.md
     - Community nodes:

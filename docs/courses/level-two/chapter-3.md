@@ -35,9 +35,9 @@ In n8n, you can merge data from two different nodes using the [Merge node](/inte
 	- [Combine all possible combinations](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-all-possible-combinations){:target="_blank"}
 - [Choose Branch](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#choose-branch){:target="_blank"}
 
-Notice that Combine > Merge by Fields requires you enter input fields to match on. These fields should contain identical values between the data sources so n8n can properly match data together. In the **Merge node**, they're called `Input 1 Field` and `Input 2 Field`.
+Notice that when using the Combine mode and the Matching Fields "Combine By" method and toggling on "Fields to Match" requires you enter input fields to match on. These fields should contain identical values between the data sources so n8n can properly match data together. In the **Merge node**, they're called `Input 1 Field` and `Input 2 Field`.
 
-<figure><img src="/_images/courses/level-two/chapter-three/explanation_mergepropertyinput.png" alt="Property Input fields in the Merge node" style="width:100%"><figcaption align = "center"><i>Property Input fields in the Merge node</i></figcaption></figure>
+https://share.tsell.link/v3D1876C
 
 /// warning | Property Input in dot notation
 If you want to reference nested values in the **Merge node** parameters `Input 1 Field` and `Input 2 Field`, you need to enter the property key in dot-notation format (as text, not as an expression).

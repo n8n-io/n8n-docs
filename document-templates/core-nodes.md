@@ -23,7 +23,7 @@ contentType: [integration, reference]
 The title should be the name of the node. Add "Trigger" if it's a core trigger node. For example:
 Item Lists
 Local File Trigger
-When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
+When you add this node to nav.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
 -->
 -->
 # _Name_ node

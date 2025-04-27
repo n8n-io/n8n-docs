@@ -91,6 +91,7 @@ If you're creating an app for use with the [HubSpot Trigger](/integrations/built
 | CRM | Contacts schemas | Read | `crm.schemas.contacts.read` |
 | CRM | Deals | Read | `crm.objects.deals.read` |
 | CRM | Deals schemas| Read | `crm.schemas.deals.read` |
+| n/a | Tickets | n/a | `tickets` |
 
 /// warning | HubSpot old accounts
 Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating accounts gradually. If you can't find all the scopes in your current HubSpot developer account, try creating a fresh developer account.

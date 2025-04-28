@@ -30,7 +30,7 @@ First, let's add an If node in between the connection from the HTTP Request node
 
 ## Configure the If node
 
-Clicking the plus removes the connection to the Airtable node to the HTTP request. Now, let's add an If node connected to the HTTP Request node:
+Selecting the plus removes the connection to the Airtable node to the HTTP request. Now, let's add an If node connected to the HTTP Request node:
 
 1. Search for the If node.
 2. Select it when it appears in the search.

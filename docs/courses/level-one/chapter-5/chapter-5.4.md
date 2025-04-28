@@ -21,7 +21,7 @@ The Edit Fields node can set completely new data as well as overwrite data that 
 
 ## Add another node before the Airtable node
 
-In your workflow, add another node before the **Airtable node** from the **If node** in the same way we did it in the [Filtering Orders](/courses/level-one/chapter-5/chapter-5.3.md#remove-the-connection-to-the-airtable-node) lesson on on the If node's `true` connector. Feel free to drag the Airtable node further away if your canvas feels crowded.
+In your workflow, add another node before the **Airtable node** from the **If node** in the same way we did it in the [Filtering Orders](/courses/level-one/chapter-5/chapter-5.3.md#add-if-node-before-the-airtable-node) lesson on the If node's `true` connector. Feel free to drag the Airtable node further away if your canvas feels crowded.
 
 ## Configure the Edit Fields node
 

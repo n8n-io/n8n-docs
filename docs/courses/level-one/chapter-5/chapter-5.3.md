@@ -23,10 +23,10 @@ If you need to filter data on more than boolean values (true and false), use the
 
 ## Add If node before the Airtable node
 
-First, let's add an If node in between the connection from the HTTP Request node to the Airtable node:
+First, let's add an If node between the connection from the HTTP Request node to the Airtable node:
 
 1. Hover over the arrow connection the **HTTP Request** node and the **Airtable** node.
-2. Select the **+** sign in between the HTTP Request node and the Airtable node.
+2. Select the **+** sign between the HTTP Request node and the Airtable node.
 
 ## Configure the If node
 

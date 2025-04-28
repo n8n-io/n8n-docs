@@ -7,6 +7,10 @@ contentType: [integration, reference]
 
 # HTTP Request Tool node
 
+/// warning | Stand-alone tool deprecated
+The stand alone HTTP Request tool is deprecated and its functionality is now incorporated in the standard [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node. You can now attach the standard HTTP Request node to AI agents to use it as a tool.
+///
+
 The HTTP Request tool works just like the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, but it's designed to be used with an [AI agent](/glossary.md#ai-agent) as a tool to collect information from a website or API.
 
 On this page, you'll find a list of operations the HTTP Request node supports and links to more resources.

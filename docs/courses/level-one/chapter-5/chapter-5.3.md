@@ -21,20 +21,19 @@ This if-then-else command is conditional logic. In n8n workflows, you can add co
 If you need to filter data on more than boolean values (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md). The Switch node is similar to the If node, but supports multiple output connectors.
 ///
 
-## Remove the connection to the Airtable node
+## Add If node before the Airtable node
 
-First, let's remove the connection between the HTTP Request node and the Airtable node:
+First, let's add an If node between the connection from the HTTP Request node to the Airtable node:
 
 1. Hover over the arrow connection the **HTTP Request** node and the **Airtable** node.
-2. Select the trash icon to remove the connection.
+2. Select the **+** sign between the HTTP Request node and the Airtable node.
 
 ## Configure the If node
 
-With the connection to the Airtable node removed, add an If node connected to the HTTP Request node:
+Selecting the plus removes the connection to the Airtable node to the HTTP request. Now, let's add an If node connected to the HTTP Request node:
 
-1. Select the **+** sign coming off the HTTP Request node.
-2. Search for the If node.
-3. Select it when it appears in the search.
+1. Search for the If node.
+2. Select it when it appears in the search.
 
 For the If node, we'll use an expression.
 

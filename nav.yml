@@ -756,7 +756,6 @@ nav:
           - Token Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
           - Calculator: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
-          - HTTP Request Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
           - MCP Client Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
           - SearXNG Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md
           - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
@@ -1297,3 +1296,6 @@ nav:
       - White labelling: embed/white-labelling.md
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md
+#
+not_in_nav: |
+  /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md

@@ -11,7 +11,7 @@ priority: critical
 You can use these credentials to authenticate the following nodes:
 
 - [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
-- [HTTP Request Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
+- [HTTP Request Tool (legacy)](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
 
 ## Prerequisites
 

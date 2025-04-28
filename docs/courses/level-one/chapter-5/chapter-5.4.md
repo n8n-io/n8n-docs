@@ -25,7 +25,7 @@ In your workflow, add another node before the **Airtable node** from the **If no
 
 ## Configure the Edit Fields node
 
-Now search for the **Edit Fields (Set) node** after you've clicked the **+** sign coming off the If node's `true` connector.
+Now search for the **Edit Fields (Set) node** after you've selected the **+** sign coming off the If node's `true` connector.
 
 With the Edit Fields node window open, configure these parameters:
 

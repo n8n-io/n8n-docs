@@ -21,11 +21,11 @@ Here are a couple of other ways of expressing it:
 
 n8n provides tool [sub-nodes](/glossary.md#sub-node-n8n) that you can connect to your [AI agent](/glossary.md#ai-agent). As well as providing some popular tools, such as [Wikipedia](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md) and [SerpAPI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md), n8n provides three especially powerful tools:
 
-* [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md): use this to load any n8n workflow as a tool.
+* [Call n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md): use this to load any n8n workflow as a tool.
 * [Custom Code Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md): write code that your agent can run.
 * [HTTP Request Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md): make calls to fetch a website or data from an API.
 
-The next three examples highlight the Custom n8n Workflow Tool:
+The next three examples highlight the Call n8n Workflow Tool:
 
 - [Chat with Google Sheets](/advanced-ai/examples/data-google-sheets.md)
 - [Call an API to fetch data](/advanced-ai/examples/api-workflow-tool.md)

@@ -24,8 +24,8 @@ This quickstart uses [n8n Cloud](/manage-cloud/overview.md), which is recommende
 
 When you open n8n, you'll see either:
 
-* A window with a welcome message and two large buttons: Choose "Start from Scratch" to create a new workflow.
-* The **Workflows** list on the **Overview** page. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** to create a new workflow.
+* A window with a welcome message and two large buttons: Choose **Start from Scratch** to create a new workflow.
+* The **Workflows** list on the **Overview** page. Select the **Create Workflow** to create a new workflow.
 
 ## Step two: Add a trigger node
 
@@ -57,7 +57,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
 1. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
 1. To access the NASA APIs, you need to set up credentials:
     1. Select the  **Credential for NASA API** dropdown.
-    1. Select **- Create New -**. n8n opens the credentials view.
+    1. Select **Create new credential**. n8n opens the credentials view.
     1. Go to [NASA APIs](https://api.nasa.gov/){:target=_blank .external-link} and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
     1. Check your email account for the API key. Copy the key, and paste it into **API Key** in n8n.
     1. Select **Save**.

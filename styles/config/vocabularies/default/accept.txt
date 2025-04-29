@@ -4,6 +4,7 @@ Adalo
 [Aa]gent
 [Aa]ggregate
 Airtable
+Airtop
 [Aa]llowlist
 Anthropic
 APIs
@@ -11,6 +12,7 @@ ARNs
 Asana
 Atlassian
 Authentik
+[Aa]utodetect(ion)?
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
@@ -100,6 +102,7 @@ Gumroad
 Hetzner
 Homeserver
 [Hh]ostname
+howto
 HubSpot
 Humantic
 Imperva
@@ -137,6 +140,7 @@ Meraki
 Metabase
 [Mm]iddleware
 [Mm]illicore
+Milvus('s)?
 Mindee
 [Mm]inimum
 Mocean

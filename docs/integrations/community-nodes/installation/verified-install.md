@@ -5,15 +5,15 @@ contentType: howto
 
 # Install verified community nodes in the n8n app
 
-/// note | Limited to n8n instance owners and admins
+/// note | Limited to n8n instance owners
 Only the n8n instance owner can install and manage verified community nodes. The instance owner is the person who sets up and manages user management. All members of an n8n instance can use already installed community nodes in their workflows.
 ///
 
 ## Install a community node
 
-To install a verified community node:
+To install a [verified community node](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n):
 
-1. Go to the **Canvas** and open the **nodes panel** (by selecting '+' or pressing ++tab++).
+1. Go to the **Canvas** and open the **nodes panel** (either by selecting '+' or pressing ++tab++).
 2. **Search** for the node that you're looking for. If there is a matching verified community node, you will see a **More from the community** section at the bottom of the nodes panel.
 3. Select the node you want to install. This takes you to a detailed view of the node, showing all the supported actions.
 4. Select **install**. This will install the node for your instance and enable all members to use it in their workflows.

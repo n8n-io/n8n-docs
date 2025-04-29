@@ -5,7 +5,7 @@ contentType: reference
 
 # UX guidelines for community nodes
 
-Your node's UI must conform to these guidelines to be a verified community node candidate.
+Your node's UI must conform to these guidelines to be a [verified community node](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n) candidate.
 
 ## Credentials
 

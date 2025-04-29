@@ -13,7 +13,7 @@ Consider following these guidelines while building your node if you want to subm
 
 * Verify that your npm package repository URL matches the expected GitHub (or other platform) repository.
 * Confirm that the package author / maintainer matches between npm and the repository.
-* Confirm that the git link in npm works.
+* Confirm that the git link in npm works and that the repository is public.
 * Make sure your package has proper documentation (README, usage examples, etc.).
 * Make sure your package license is MIT.
 

@@ -110,3 +110,31 @@ If you run an MCP Server Trigger node with multiple webhook replicas and don't r
 n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect your n8n AI agents to external tools.
 
 Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.
+
+## Common issues
+
+Here are some common errors and issues with the MCP Server Trigger node and steps to resolve or troubleshoot them.
+
+### No transport found for session
+
+This error may occur when running n8n behind a reverse proxy like nginx. Specifically, you must disable some common settings on the MCP endpoint for the SSE transport to work as expected: gzip compression and proxy buffering.
+
+An example nginx location block for serving MCP traffic with this disabled may look like this:
+
+```
+location /mcp/ {
+    proxy_http_version          1.1;
+    gzip                        off;
+    proxy_buffering             off;
+    chunked_transfer_encoding   off;
+
+    proxy_set_header            Connection '';
+    proxy_set_header            Host $host;
+    proxy_set_header            Origin $http_origin;
+    proxy_set_header            X-Real-IP $remote_addr;
+    proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header            X-Forwarded-Proto $scheme;
+
+    proxy_pass                  http://<YOUR_N8N_IP>:<YOUR_N8N_PORT>/mcp/;
+}
+```

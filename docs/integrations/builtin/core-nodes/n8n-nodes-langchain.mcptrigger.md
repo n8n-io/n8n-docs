@@ -110,3 +110,29 @@ If you run an MCP Server Trigger node with multiple webhook replicas and don't r
 n8n also provides an [MCP Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) node that allows you to connect your n8n AI agents to external tools.
 
 Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) and [MCP specification](https://modelcontextprotocol.io/specification/) for more details about the protocol, servers, and clients.
+
+## Common issues
+
+Here are some common errors and issues with the MCP Server Trigger node and steps to resolve or troubleshoot them.
+
+### Running the MCP Server Trigger node with a reverse proxy
+
+When running n8n behind a reverse proxy like nginx, you may experience problems if the MCP endpoint isn't configured for SSE.
+
+Specifically, you need to disable proxy buffering for the endpoint. Other items you might want to adjust include disabling gzip compression (n8n handles this itself), disabling chunked transfer encoding, and setting the `Connection` to an empty string to remove it from the forwarded headers. Explicitly disabling these in the MCP endpoint ensures they're not inherited from other places in your nginx configuration.
+
+An example nginx location block for serving MCP traffic with these settings may look like this:
+
+```
+location /mcp/ {
+    proxy_http_version          1.1;
+    proxy_buffering             off;
+    gzip                        off;
+    chunked_transfer_encoding   off;
+
+    proxy_set_header            Connection '';
+
+    # The rest of your proxy headers and settings
+    # . . .
+}
+```

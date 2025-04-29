@@ -99,6 +99,7 @@ Grafana
 Groq
 GSuite
 Gumroad
+[Gg]zip
 Hetzner
 Homeserver
 [Hh]ostname

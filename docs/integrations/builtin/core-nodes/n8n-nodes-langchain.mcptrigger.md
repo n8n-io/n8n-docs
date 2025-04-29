@@ -119,7 +119,7 @@ Here are some common errors and issues with the MCP Server Trigger node and step
 
 When running n8n behind a reverse proxy like nginx, you may experience problems if the MCP endpoint isn't configured for SSE.
 
-Specifically, you need to disable proxy buffering for the endpoint. Other items you might want to adjust include disabling gzip compression, disabling chunked transfer encoding, and setting the `Connection` to an empty string to remove it from the forwarded headers. Explicitly disabling these in the MCP endpoint ensures they are not inherited from other places in your nginx configuration.
+Specifically, you need to disable proxy buffering for the endpoint. Other items you might want to adjust include disabling gzip compression, disabling chunked transfer encoding, and setting the `Connection` to an empty string to remove it from the forwarded headers. Explicitly disabling these in the MCP endpoint ensures they're not inherited from other places in your nginx configuration.
 
 An example nginx location block for serving MCP traffic with these settings may look like this:
 

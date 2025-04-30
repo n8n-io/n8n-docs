@@ -3,7 +3,7 @@
 
 This list shows all the versions which include breaking changes and how to upgrade.
 
-# 1.65.0
+## 1.65.0
 
 ### What changed?
 
@@ -13,7 +13,7 @@ Queue polling via the env var `QUEUE_RECOVERY_INTERVAL` has been removed.
 
 If you have set the env var `QUEUE_RECOVERY_INTERVAL`, so you can remove it as it no longer has any effect.
 
-# 1.63.0
+## 1.63.0
 
 ### What changed?
 
@@ -580,14 +580,14 @@ If you have been using MongoDB as a database for n8n. Please note that this is n
 
 ### How to upgrade:
 
-Before upgrading, you can [export](/reference/start-workflows-via-cli.html#export-workflows-and-credentials) all your credentials and workflows using the CLI.
+Before upgrading, you can [export](/hosting/cli-commands.md#export-workflows-and-credentials) all your credentials and workflows using the CLI.
 
 ```
 n8n export:workflow --backup --output=backups/latest/
 n8n export:credentials --backup --output=backups/latest/
 ```
 
-You can then change the database to one of the supported databases mentioned [here](/reference/data/database.html). Finally, you can upgrade n8n and [import](/reference/start-workflows-via-cli.html#import-workflows-and-credentials) all your credentials and workflows back into n8n.
+You can then change the database to one of the supported databases mentioned [here](/hosting/configuration/supported-databases-settings.md). Finally, you can upgrade n8n and [import](/hosting/cli-commands.md#import-workflows-and-credentials) all your credentials and workflows back into n8n.
 
 ```
 n8n import:workflow --separate --input=backups/latest/

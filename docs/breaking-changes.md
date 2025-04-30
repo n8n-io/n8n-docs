@@ -9,7 +9,5 @@ hide:
 contentType: reference
 ---
 
-<!-- vale off -->
-
 <!-- The actual changes are copied to a snippet to make updating easier through a workflow -->
 --8<-- "_snippets/breaking-changes.md"

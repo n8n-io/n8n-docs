@@ -1,3 +1,4 @@
+<!-- vale off -->
 # n8n Breaking Changes
 
 This list shows all the versions which include breaking changes and how to upgrade.

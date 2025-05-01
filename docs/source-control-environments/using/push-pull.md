@@ -16,7 +16,7 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 ## Fetch other people's work
 
 /// note | Restricted feature
-Ordinary users can't fetch work from Git. You must be an n8n instance owner, admin, or project owner to fetch work from Git.
+Not all users can fetch changes from Git. You must be an n8n instance owner or admin to push or pull changes.
 ///
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 

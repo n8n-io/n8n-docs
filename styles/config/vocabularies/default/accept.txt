@@ -12,6 +12,7 @@ ARNs
 Asana
 Atlassian
 Authentik
+[Aa]utodetect(ion)?
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
@@ -98,6 +99,7 @@ Grafana
 Groq
 GSuite
 Gumroad
+[Gg]zip
 Hetzner
 Homeserver
 [Hh]ostname

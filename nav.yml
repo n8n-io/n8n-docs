@@ -142,7 +142,6 @@ nav:
           - source-control-environments/using/index.md
           - Push and pull: source-control-environments/using/push-pull.md
           - Copy work between environments: source-control-environments/using/copy-work.md
-          - Manage variables: source-control-environments/using/manage-variables.md
         - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
       - External secrets: external-secrets.md
       - Log streaming: log-streaming.md

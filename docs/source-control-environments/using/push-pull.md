@@ -64,8 +64,6 @@ n8n commits the following to Git:
 * Projects
 * Folders
 
-You can programmatically [Manage variables](/source-control-environments/using/manage-variables.md) using the n8n API.
-
 ## Merge behaviors and conflicts
 
 n8n's implementation of source control is opinionated. It resolves merge conflicts for credentials and variables automatically. n8n can't detect conflicts on workflows.

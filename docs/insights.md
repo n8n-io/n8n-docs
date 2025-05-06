@@ -10,7 +10,7 @@ Insights gives instance owners and admins visibility into how workflows perform 
 
 - [**Insights summary banner**](#insights-summary-banner): Shows key metrics about your instance from the last 7 days at the top of the overview space.
 - [**Insights dashboard**](#insights-dashboard): A more detailed visual breakdown with per-workflow metrics and historical comparisons.
-- [**Time saved (Workflow ROI)**](#setting-time-saved-on-a-workflow): For each workflow, you can set the number of minutes saved for each production execution.
+- [**Time saved (Workflow ROI)**](#setting-the-time-saved-by-a-workflow): For each workflow, you can set the number of minutes of work that each production execution saves you.
 
 /// info | Feature availability
 The insights summary banner displays activity from the last 7 days for all plans. The insights dashboard is only available on Pro (with limited date ranges) and Enterprise plans. 
@@ -34,24 +34,28 @@ The insights dashboard also has a table showing individual insights from each wo
 
 ## Insights time periods
 
-By default, the insights summary banner and dashboard shows a rolling 7 day window with a comparison to the previous period to show increases or decreases for each metric. Once on the dashboard, additional date ranges are available on paid plans:
+By default, the insights summary banner and dashboard show a rolling 7 day window with a comparison to the previous period to identify increases or decreases for each metric. On the dashboard, paid plans also display data for other date ranges:
 
 - Pro: 7 and 14 days
 - Enterprise: 24 hours, 7 days, 14 days, 30 days, 90 days, 6 months, 1 year
 
-## Setting time saved on a workflow
-For each workflow, you can set a figure in minutes for how much time a workflow saves each time it runs. This can be configured by navigating to the workflow, clicking on the three dots menu in the top right and selecting settings. There you will see an "Estimated time saved" input. Update as required and save. 
+## Setting the time saved by a workflow
 
-This is intended to be a calculation of how much time is saved automating a process vs the manual effort to complete the same task or process. Once this is set, we calculate the amount of time saved, based on the number of production executions and display this in the summary banner and dashboard for the selected time period.
+For each workflow, you can set the number of minutes of work a workflow saves you each time it runs. You can configure this by navigating to the workflow, selecting the three dots menu in the top right and selecting settings. There you can update the **Estimated time saved** value and save. 
+
+This setting helps you calculate how much time automating a process saves over time vs the manual effort to complete the same task or process. Once set, n8n calculates the amount of time the workflow saves you based on the number of production executions and displays it on the summary banner and dashboard.
 
 ## Disable or configure insights metrics collection
 
 If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](/hosting/configuration/environment-variables/insights.md).
 
 ## Insights FAQs
+<!-- vale from-microsoft.HeadingPunctuation = NO -->
 
-1. **Which executions are included in the insights banner and dashboard?**
-Currently, we only collect production executions (e.g those from active workflows triggered on a schedule or a webhook) from the main (parent) workflow. This means that we do not count manual (test) executions or executions from sub-workflows or error workflows.
+### Which executions do n8n use to calculate the values in the insights banner and dashboard?
 
-2. **Do insights include historical executions if I'm updating from a version before it was available?**
-The data collection for insights only starts happening once you update to the first supported version (1.89.0). This means we only report on executions from that point forward and you will not see execution data included in insights prior to that.
+n8n insights only collects data from production executions (for example, those from active workflows triggered on a schedule or a webhook) from the main (parent) workflow. This means that it doesn't count manual (test) executions or executions from sub-workflows or error workflows.
+
+### Does n8n use historic execution data when upgrading to a version with insights?
+
+n8n only starts collecting data for insights once you update to the first supported version (1.89.0). This means it only reports on executions from that point forward and you won't see execution data in insights from prior periods.

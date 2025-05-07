@@ -56,21 +56,25 @@ This release contains core updates, editor improvements, node updates, and bug f
 
 ### Insights enhancements for Enterprise
 
-Two weeks after the launch of Insights, we’re releasing some enhancements designed for enterprise users.
+Two weeks after the launch of [Insights](/insights.md), we’re releasing some enhancements designed for enterprise users.
 
-- **Expanded time ranges**. You can now filter insights over a variety of time periods, from the last 24 hours up to 1 year. Pro users are limited to 7 day and 14 day views.
-- **Hourly granularity**. Drill down into the last 24 hours of production executions with hourly granularity, making it easier to analyze workflows and quickly identify issues.
+- **Expanded time ranges**. You can now filter insights over a variety of time periods, from the last 24 hours up to 1 year. Pro users are limited to 7 day and 14 day views.  
+- **Hourly granularity**. Drill down into the last 24 hours of production executions with hourly granularity, making it easier to analyze workflows and quickly identify issues.  
 
 These updates provide deeper visibility into workflow history, helping you uncover trends over longer periods and detect problems sooner with more precise reporting.
 
-docs/_images/release-notes/Insights-drill-down.png
+<br> 
+<figure markdown="span">
+    ![Filter insights](/_images/release-notes/Insights-drill-down.png)
+    <figcaption>Filter insights</figcaption>
+</figure>
+<br>
 
 ### Contributors
 
 [Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.91.2
 

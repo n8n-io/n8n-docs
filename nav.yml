@@ -274,6 +274,7 @@ nav:
         - AWS SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
         - AWS Textract: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
         - AWS Transcribe: integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md
+        - Azure Cosmos DB: integrations/builtin/app-nodes/n8n-nodes-base.azurecosmosdb.md
         - Azure Storage: integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md
         - BambooHR: integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md
         - Bannerbear: integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md
@@ -783,6 +784,7 @@ nav:
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
+        - integrations/builtin/credentials/azurecosmosdb.md
         - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md

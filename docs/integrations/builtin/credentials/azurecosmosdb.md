@@ -22,7 +22,9 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
+<!-- vale Vale.Spelling = NO -->
 Refer to [Azure Cosmos DB's API documentation](https://learn.microsoft.com/en-us/rest/api/cosmos-db/) for more information about the service.
+<!-- vale Vale.Spelling = YES -->
 
 ## Using API Key
 

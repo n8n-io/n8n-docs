@@ -38,6 +38,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
+<!-- vale Vale.Spelling = NO -->
 Refer to [Azure Cosmos DB's documentation](https://learn.microsoft.com/en-us/rest/api/cosmos-db/) for more information about the service.
+<!-- vale Vale.Spelling = YES -->
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

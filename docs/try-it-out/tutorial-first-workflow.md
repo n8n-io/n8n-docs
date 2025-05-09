@@ -135,6 +135,16 @@ The last step of the workflow is to send the two reports about solar flares. For
     1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** to duplicate the first Postbin node.
     1. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
+    /// note | PostBin content visibility
+    Using the built‑in **PostBin** node only displays the request headers. To send and view your custom body content on PostBin website, use an **HTTP Request** node with **Method** `POST`, **URL** `https://www.postb.in/<YOUR_BIN_ID>`, then enable **Send Body**, set **Body Content Type** to **JSON**, choose **Using JSON** under Specify Body, then paste the following JSON into the editor:
+    ```js
+    {
+    "message":"There was a solar flare of class {{$json["classType"]}}"
+    }
+    ```
+    ///
+
+
 ## Step six: Test the workflow
 
 1. You can now test the entire workflow. Select **Test Workflow**. n8n runs the workflow, showing each stage in progress.

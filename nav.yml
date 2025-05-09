@@ -726,6 +726,7 @@ nav:
             - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md
           - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
+          - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
@@ -1064,6 +1065,7 @@ nav:
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
         - integrations/builtin/credentials/twitter.md
+        - integrations/builtin/credentials/xai.md
         - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md

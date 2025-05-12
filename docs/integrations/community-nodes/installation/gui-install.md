@@ -7,6 +7,8 @@ contentType: howto
 
 /// note | Only for instance owners of self-hosted n8n instances
 Only the n8n instance owner of a self-hosted n8n instance can install and manage community nodes from npm. The instance owner is the person who sets up and manages user management.
+
+Admin accounts can also uninstall any community node, verified or unverified. This helps them remove problematic nodes that may affect the instance's health and functionality.
 ///
 
 ## Install a community node

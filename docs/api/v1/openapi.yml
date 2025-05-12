@@ -928,6 +928,31 @@ paths:
                 $ref: '#/components/schemas/variableList'
         '401':
           $ref: '#/components/responses/unauthorized'
+    put:
+      x-eov-operation-id: updateVariable
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Update a variable
+      description: Update a variable from your instance.
+      requestBody:
+        description: Payload for variable to update.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/variable'
+        required: true
+      responses:
+        '204':
+          description: Operation successful.
+        '400':
+            $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /variables/{id}:
     delete:
       x-eov-operation-id: deleteVariable
@@ -939,7 +964,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/variableId'
       responses:
-        '204':
+        '201':
           description: Operation successful.
         '401':
           $ref: '#/components/responses/unauthorized'

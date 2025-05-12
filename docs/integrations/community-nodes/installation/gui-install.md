@@ -3,14 +3,17 @@
 contentType: howto
 ---
 
-# Install community nodes in the n8n app
+# Install community nodes from npm in the n8n app
 
-/// note | Limited to n8n instance owners
-Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management.
+/// note | Only for instance owners of self-hosted n8n instances
+Only the n8n instance owner of a self-hosted n8n instance can install and manage community nodes from npm. The instance owner is the person who sets up and manages user management.
+
+Admin accounts can also uninstall any community node, verified or unverified. This helps them remove problematic nodes that may affect the instance's health and functionality.
 ///
+
 ## Install a community node
 
-To install a community node:
+To install a community node from npm:
 
 1. Go to **Settings** > **Community Nodes**.
 2. Select **Install**.

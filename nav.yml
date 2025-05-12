@@ -1084,6 +1084,7 @@ nav:
     - Community nodes:
       - Installation and management:
         - integrations/community-nodes/installation/index.md
+        - Install verified community nodes: integrations/community-nodes/installation/verified-install.md
         - GUI installation: integrations/community-nodes/installation/gui-install.md
         - Manual installation: integrations/community-nodes/installation/manual-install.md
       - Risks: integrations/community-nodes/risks.md
@@ -1121,6 +1122,8 @@ nav:
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
           - Item linking: integrations/creating-nodes/build/reference/paired-items.md
+          - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
+          - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
       - Test your node:
         - integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md

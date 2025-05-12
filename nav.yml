@@ -128,6 +128,7 @@ nav:
       - Cloud data management: manage-cloud/cloud-data-management.md
       - Change ownership or username: manage-cloud/change-ownership-or-username.md
       - Concurrency: manage-cloud/concurrency.md
+      - Download workflows: manage-cloud/download-workflows.md
       - AI Assistant: manage-cloud/ai-assistant.md
     - Enterprise features:
       - Source control and environments:

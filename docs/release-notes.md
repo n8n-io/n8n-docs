@@ -35,6 +35,23 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.93.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-12
+
+This release contains bug fixes.
+
+### Contributors
+
+[LeaDevelop](https://github.com/LeaDevelop){:target=_blank .external-link}  
+[ayhandoslu](https://github.com/ayhandoslu){:target=_blank .external-link}  
+[valentina98](https://github.com/valentina98){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.92.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.1...n8n@1.92.2){:target=_blank .external-link} for this version.<br />

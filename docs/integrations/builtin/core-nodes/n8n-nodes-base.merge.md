@@ -186,7 +186,7 @@ Now try different options in **Mode** to see how it affects the output data.
 
 #### Append
 
-Select **Mode** > **Append**, then select **Test step**.
+Select **Mode** > **Append**, then select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->
@@ -206,7 +206,7 @@ You can merge these two data inputs so that each person gets the correct greetin
 1. Select **Mode** > **Combine**.
 2. Select **Combine by** > **Matching Fields**.
 3. In both **Input 1 Field** and **Input 2 Field**, enter `language`. This tells n8n to combine the data by matching the values in the `language` field in each data set.
-4. Select **Test step**.
+4. Select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->
@@ -220,7 +220,7 @@ Your output in table view should look like this:
 
 #### Combine by Position
 
-Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Test step**.
+Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->
@@ -245,7 +245,7 @@ Your output in table view should look like this:
 
 #### Combine by All Possible Combinations 
 
-Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, then select **Test step**.
+Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, then select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->

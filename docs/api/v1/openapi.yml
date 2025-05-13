@@ -928,6 +928,23 @@ paths:
                 $ref: '#/components/schemas/variableList'
         '401':
           $ref: '#/components/responses/unauthorized'
+  /variables/{id}:
+    delete:
+      x-eov-operation-id: deleteVariable
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Delete a variable
+      description: Delete a variable from your instance.
+      parameters:
+        - $ref: '#/components/parameters/variableId'
+      responses:
+        '204':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '404':
+          $ref: '#/components/responses/notFound'
     put:
       x-eov-operation-id: updateVariable
       x-eov-operation-handler: v1/handlers/variables/variables.handler
@@ -936,7 +953,7 @@ paths:
       summary: Update a variable
       description: Update a variable from your instance.
       requestBody:
-        description: Payload for variable to update.
+        description: Updated variable object.
         content:
           application/json:
             schema:
@@ -951,23 +968,6 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '403':
           $ref: '#/components/responses/forbidden'
-        '404':
-          $ref: '#/components/responses/notFound'
-  /variables/{id}:
-    delete:
-      x-eov-operation-id: deleteVariable
-      x-eov-operation-handler: v1/handlers/variables/variables.handler
-      tags:
-        - Variables
-      summary: Delete a variable
-      description: Delete a variable from your instance.
-      parameters:
-        - $ref: '#/components/parameters/variableId'
-      responses:
-        '201':
-          description: Operation successful.
-        '401':
-          $ref: '#/components/responses/unauthorized'
         '404':
           $ref: '#/components/responses/notFound'
   /projects:

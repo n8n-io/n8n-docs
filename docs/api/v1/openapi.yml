@@ -952,6 +952,8 @@ paths:
         - Variables
       summary: Update a variable
       description: Update a variable from your instance.
+      parameters:
+        - $ref: '#/components/parameters/variableId'
       requestBody:
         description: Updated variable object.
         content:

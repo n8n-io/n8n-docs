@@ -96,9 +96,11 @@ geocodes
 GIMP
 Gotify
 Grafana
+Grok('s)?
 Groq
 GSuite
 Gumroad
+[Gg]zip
 Hetzner
 Homeserver
 [Hh]ostname
@@ -226,7 +228,7 @@ There are
 [Tt]imesheet
 Todoist
 Toggl
-[Tt]ooltip
+[Tt]ooltips?
 [Tt]ouchpad
 Traefik
 Trellix
@@ -264,6 +266,7 @@ WeKan
 [Ww]ireframe
 WordPress
 Wufoo
+xAI
 Xata
 Xero
 Zabbix

@@ -35,27 +35,31 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
-## n8n@1.91.0
+## n8n@1.93.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.0...n8n@1.91.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2025-04-28
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-12
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-This release contains core updates, editor improvements, node updates, and bug fixes.
+This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
 
+### Contributors
 
+[LeaDevelop](https://github.com/LeaDevelop){:target=_blank .external-link}  
+[ayhandoslu](https://github.com/ayhandoslu){:target=_blank .external-link}  
+[valentina98](https://github.com/valentina98){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 
 
-## n8n@1.90.2
+## n8n@1.92.2
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.1...n8n@1.90.2){:target=_blank .external-link} for this version.<br />
-**Release date:** 2025-04-25
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.1...n8n@1.92.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-08
 
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
@@ -67,7 +71,104 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
+## n8n@1.91.3
 
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.2...n8n@1.91.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-08
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.92.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.92.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-06
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.92.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.0...n8n@1.92.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-05
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Insights enhancements for Enterprise
+
+Two weeks after the launch of [Insights](/insights.md), we’re releasing some enhancements designed for enterprise users.
+
+- **Expanded time ranges**. You can now filter insights over a variety of time periods, from the last 24 hours up to 1 year. Pro users are limited to 7 day and 14 day views.  
+- **Hourly granularity**. Drill down into the last 24 hours of production executions with hourly granularity, making it easier to analyze workflows and quickly identify issues.  
+
+These updates provide deeper visibility into workflow history, helping you uncover trends over longer periods and detect problems sooner with more precise reporting.
+
+<br> 
+<figure markdown="span">
+    ![Filter insights](/_images/release-notes/Insights-drill-down.png)
+    <figcaption>Filter insights</figcaption>
+</figure>
+<br>
+
+### Contributors
+
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.1...n8n@1.91.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-05
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.90.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.2...n8n@1.90.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-05
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.0...n8n@1.91.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-01
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.0...n8n@1.91.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-28
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.90.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.1...n8n@1.90.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-25
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.90.1
 
@@ -82,8 +183,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.0...n8n@1.90.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-22
-
-
 
 This release contains core updates, editor updates, node updates, performance improvements, and bug fixes.
 
@@ -156,10 +255,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.1...n8n@1.89.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-04-16
-
-
-
-
 
 This release contains a bug fix.
 

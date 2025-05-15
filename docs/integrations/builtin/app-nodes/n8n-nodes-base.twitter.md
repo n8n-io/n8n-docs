@@ -28,6 +28,8 @@ Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guida
     * Search tweets
     * Like a tweet
     * Retweet a tweet
+* User
+  	* Get a user
 
 ## Templates and examples
 

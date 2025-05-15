@@ -46,6 +46,39 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
 
+### Faster ways to open sub-workflows
+
+We’ve added several new ways to navigate your multi-workflow automations faster.
+
+From any workflow with a sub-workflow node:
+
+🖱️ Right-click on a sub-workflow node and select `Open sub-workflow` from the context menu
+
+⌨️ Keyboard shortcuts
+
+- **Windows:** `CTRL + SHIFT + O` or `CTRL + Double Click`
+- **Mac:** `CMD + SHIFT + O` or `CMD + Double Click`
+
+These options will bring your sub-workflow up in a new tab.
+
+### Archive workflows
+
+If you’ve ever accidentally removed a workflow, you’ll appreciate the new archiving feature. Instead of permanently deleting workflows with the Remove action, workflows are now archived by default. This allows you to recover them if needed.
+
+**How to:**
+
+- **Archive a workflow** - Select **Archive** from the Editor UI menu. It has replaced the **Remove** action.
+- **Find archived workflows** - Archived workflows are hidden by default. To find your archived workflows, select the option for **Show archived workflows** in the workflow filter menu.
+- **Permanently delete a workflow** - Once a workflow is archived, you can **Delete** it from the  options menu.
+- **Recover a workflow** - Select **Unarchive** from the options menu.
+
+**Keep in mind:** 
+
+- Workflows archival requires the same permissions as required previously for removal.
+- You cannot select archived workflows as sub-workflows to execute
+- Active workflows are deactivated when they are archived
+- Archived workflows can not be edited
+
 ### Contributors
 
 [LeaDevelop](https://github.com/LeaDevelop){:target=_blank .external-link}  
@@ -53,8 +86,6 @@ This release contains core updates, editor improvements, new nodes, node updates
 [valentina98](https://github.com/valentina98){:target=_blank .external-link}  
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.92.2
 
@@ -65,8 +96,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.1...n8n@1.92.2
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -76,19 +105,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.2...n8n@1.91.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-08
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.92.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.92.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-06
-
-
 
 This release contains a bug fix.
 
@@ -100,6 +124,27 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.0...n8n@1.92.0
 **Release date:** 2025-05-05
 
 This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Partial Execution for AI Tools
+
+We’ve made it easier to build and iterate on AI agents in n8n. You can now run and test specific tools without having to execute the entire agent workflow.
+
+Partial execution is especially useful when refining or troubleshooting parts of your agent logic. It allows you to test changes incrementally, without triggering full agent runs, reducing unnecessary AI calls, token usage, and downstream activity. This makes iteration faster, more cost-efficient, and more precise when working with complex or multi-step AI workflows.
+
+Partial execution for AI tools is available now for all tools - making it even easier to build, test, and fine-tune AI agents in n8n.
+
+<br>
+<video src="/_video/release-notes/AI-agent-partial-execution.mp4" controls width="100%"></video>
+<br>
+
+**How to:**
+
+To use this feature you can either:
+
+- Click the **Play** button on the tool you want to execute directly from the canvas view.
+- Open the tool’s **Node Details View** and select **"Test step"** to run it from there.
+
+If you have previously run the workflow, the input and output will be prefilled with data from the last execution. A pop-up form will open where you can manually fill in the parameters before executing your test.
 
 ### Insights enhancements for Enterprise
 
@@ -127,8 +172,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.1...n8n@1.91.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-05
-
-
 
 This release contains a bug fix.
 
@@ -158,6 +201,10 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.0...n8n@1.91.0
 **Release date:** 2025-04-28
 
 This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Breadcrumb view from the canvas
+
+We’ve added **breadcrumb navigation directly on the canvas**, so you can quickly navigate to any of a workflow’s parent folders right from the canvas.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

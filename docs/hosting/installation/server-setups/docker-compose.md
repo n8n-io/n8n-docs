@@ -120,15 +120,14 @@ The Docker Compose file below can automatically create this directory, but doing
 
 ## 6. Create Docker Compose file
 
-Create a `docker-compose.yml` file. Paste the following in the file:
+Create a `compose.yaml` file. Paste the following in the file:
 
-```yaml title="docker-compose.yml file"
+```yaml title="compose.yaml file"
 services:
   traefik:
     image: "traefik"
     restart: always
     command:
-      - "--api=true"
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"

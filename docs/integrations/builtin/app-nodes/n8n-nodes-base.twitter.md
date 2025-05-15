@@ -28,7 +28,8 @@ Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guida
     * Search tweets
     * Like a tweet
     * Retweet a tweet
-
+* User
+  	* Get a user
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

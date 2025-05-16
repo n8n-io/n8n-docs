@@ -30,6 +30,10 @@ This page tells you how to enable SAML SSO (single sign-on) in n8n. It assumes y
 1. Select **Test settings** to check your SAML setup is working.
 1. Set SAML 2.0 to **Activated**.
 
+/// note | SAML Request Type
+Please note, n8n currently does not support `POST` binding. Please configure your IdP to use `HTTP` request binding instead. 
+///
+
 ## Generic IdP setup
 
 The steps to configure the IdP vary depending on your chosen IdP. These are some common setup tasks:

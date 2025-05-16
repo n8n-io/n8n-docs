@@ -55,5 +55,5 @@ To perform operations on folders, you need to supply the ID. You can find this:
 	1. Select **Resource** > **Folder**.
 	2. Select **Operation** > **Search**.
 	3. In **Query**, enter the folder name.
-	4. Select **Test step**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
+	4. Select **Execute step**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
 

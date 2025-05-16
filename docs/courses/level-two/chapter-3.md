@@ -102,7 +102,7 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 		{
 		"parameters": {},
 		"id": "71aa5aad-afdf-4f8a-bca0-34450eee8acc",
-		"name": "When clicking \"Test workflow\"",
+		"name": "When clicking \"Execute workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
@@ -138,7 +138,7 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 		}
 	],
 	"connections": {
-		"When clicking \"Test workflow\"": {
+		"When clicking \"Execute workflow\"": {
 		"main": [
 			[
 			{
@@ -253,7 +253,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 		{
 		"parameters": {},
 		"id": "ed8dc090-ae8c-4db6-a93b-0fa873015c25",
-		"name": "When clicking \"Test workflow\"",
+		"name": "When clicking \"Execute workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
@@ -303,7 +303,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 		}
 	],
 	"connections": {
-		"When clicking \"Test workflow\"": {
+		"When clicking \"Execute workflow\"": {
 		"main": [
 			[
 			{

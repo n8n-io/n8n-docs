@@ -102,7 +102,7 @@ return [{ json: {totalBooked, bookedSum} }]
 If you don't use the correct data structure, you will get an error message: `Error: Always an Array of items has to be returned!`
 ///
 
-Now select **Test step** and you should see the following results:
+Now select **Execute step** and you should see the following results:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png" alt="Code node output" style="width:100%"><figcaption align = "center"><i>Code node output</i></figcaption></figure>
 

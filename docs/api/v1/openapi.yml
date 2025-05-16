@@ -945,6 +945,33 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateVariable
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Update a variable
+      description: Update a variable from your instance.
+      parameters:
+        - $ref: '#/components/parameters/variableId'
+      requestBody:
+        description: Updated variable object.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/variable'
+        required: true
+      responses:
+        '204':
+          description: Operation successful.
+        '400':
+            $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /projects:
     post:
       x-eov-operation-id: createProject

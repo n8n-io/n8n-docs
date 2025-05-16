@@ -4,6 +4,7 @@ Adalo
 [Aa]gent
 [Aa]ggregate
 Airtable
+Airtop
 [Aa]llowlist
 Anthropic
 APIs
@@ -12,6 +13,7 @@ Asana
 Atlassian
 Authentik
 [Aa]uthkeys?
+[Aa]utodetect(ion)?
 [Aa]uto-fixing
 [Aa]utomations
 Automizy
@@ -100,12 +102,15 @@ geocodes
 GIMP
 Gotify
 Grafana
+Grok('s)?
 Groq
 GSuite
 Gumroad
+[Gg]zip
 Hetzner
 Homeserver
 [Hh]ostname
+howto
 HubSpot
 Humantic
 iCalendar
@@ -145,6 +150,7 @@ Meraki
 Metabase
 [Mm]iddleware
 [Mm]illicore
+Milvus('s)?
 Mindee
 [Mm]inimum
 Mocean
@@ -276,6 +282,7 @@ WeKan
 [Ww]ireframe
 WordPress
 Wufoo
+xAI
 Xata
 Xero
 Yourls

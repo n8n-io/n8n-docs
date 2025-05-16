@@ -32,6 +32,7 @@ nav:
         - Set the timezone: manage-cloud/set-cloud-timezone.md
         - Cloud data management: manage-cloud/cloud-data-management.md
         - Change ownership or username: manage-cloud/change-ownership-or-username.md
+        - Download workflows: manage-cloud/download-workflows.md
       - Self-hosted n8n:
         - hosting/index.md
         - Configuration methods: hosting/configuration/configuration-methods.md
@@ -75,6 +76,7 @@ nav:
         - Workflow management: embed/managing-workflows.md
         - Workflows templates: embed/workflow-templates.md
         - White labelling: embed/white-labelling.md
+      - License key: license-key.md
     - Paid Cloud features (enterprise + Cloud):
       - Manage users and access:
         - user-management/index.md
@@ -99,10 +101,9 @@ nav:
           - source-control-environments/using/index.md
           - Push and pull: source-control-environments/using/push-pull.md
           - Copy work between environments: source-control-environments/using/copy-work.md
-          - Manage variables: source-control-environments/using/manage-variables.md
       - External secrets: external-secrets.md
       - Log streaming: log-streaming.md
-      - Enterprise license key: enterprise-key.md
+      - Insights: insights.md
     - Using workflows:
       - workflows/index.md
       - Create: workflows/create.md
@@ -143,6 +144,7 @@ nav:
       - Using community nodes:
         - Installation and management:
           - integrations/community-nodes/installation/index.md
+          - Install verified community nodes: integrations/community-nodes/installation/verified-install.md
           - GUI installation: integrations/community-nodes/installation/gui-install.md
           - Manual installation: integrations/community-nodes/installation/manual-install.md
         - Using community nodes: integrations/community-nodes/usage.md
@@ -266,6 +268,8 @@ nav:
           - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+          - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
+          - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
     - Enterprise:
       - Create environments with source control: source-control-environments/create-environments.md
   - Understanding n8n:
@@ -383,6 +387,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
         - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
+        - MCP Server Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md
         - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
         - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
         - n8n Form: integrations/builtin/core-nodes/n8n-nodes-base.form.md
@@ -430,6 +435,7 @@ nav:
           - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md
+        - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - AMQP Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
@@ -451,6 +457,7 @@ nav:
         - AWS SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
         - AWS Textract: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
         - AWS Transcribe: integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md
+        - Azure Cosmos DB: integrations/builtin/app-nodes/n8n-nodes-base.azurecosmosdb.md
         - Azure Storage: integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md
         - BambooHR: integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md
         - Bannerbear: integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md
@@ -856,6 +863,7 @@ nav:
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
@@ -871,6 +879,7 @@ nav:
           - Embeddings Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
           - Embeddings Google Gemini: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
           - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
+          - Embeddings Google Vertex: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
           - Embeddings HuggingFace Inference: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
@@ -890,6 +899,7 @@ nav:
             - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md
           - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
+          - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
@@ -900,6 +910,7 @@ nav:
             - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md
           - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
+          - MongoDB Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md
           - Redis Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
           - Postgres Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
           - Xata: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
@@ -918,12 +929,14 @@ nav:
           - Token Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
           - Calculator: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
-          - HTTP Request Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md
+          - MCP Client Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
+          - SearXNG Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md
           - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+          - Think Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolthink.md        
           - Vector Store Question Answer Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
           - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
-          - Custom n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
+          - Call n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
     - Credentials:
       - Overview: integrations/builtin/credentials/overview.md
       - Built-in credentials:
@@ -934,6 +947,7 @@ nav:
         - integrations/builtin/credentials/affinity.md
         - integrations/builtin/credentials/agilecrm.md
         - integrations/builtin/credentials/airtable.md
+        - integrations/builtin/credentials/airtop.md
         - integrations/builtin/credentials/alienvault.md
         - integrations/builtin/credentials/amqp.md
         - integrations/builtin/credentials/anthropic.md
@@ -944,6 +958,7 @@ nav:
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
+        - integrations/builtin/credentials/azurecosmosdb.md
         - integrations/builtin/credentials/azurestorage.md
         - integrations/builtin/credentials/bamboohr.md
         - integrations/builtin/credentials/bannerbear.md
@@ -1087,6 +1102,7 @@ nav:
         - integrations/builtin/credentials/microsoftazuremonitor.md
         - integrations/builtin/credentials/microsoftentra.md
         - integrations/builtin/credentials/microsoftsql.md
+        - integrations/builtin/credentials/milvus.md
         - integrations/builtin/credentials/mindee.md
         - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md
@@ -1150,6 +1166,7 @@ nav:
         - integrations/builtin/credentials/s3.md
         - integrations/builtin/credentials/salesforce.md
         - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/searxng.md
         - integrations/builtin/credentials/seatable.md
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md
@@ -1223,6 +1240,7 @@ nav:
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
         - integrations/builtin/credentials/twitter.md
+        - integrations/builtin/credentials/xai.md
         - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md
@@ -1291,4 +1309,5 @@ nav:
 #exclude_docs: |
 
 # Pages to build but not include in the nav
-#not_in_nav: |
+not_in_nav: |
+  /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md

@@ -1,3 +1,11 @@
+---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Light evaluations
+description: Use light evaluations during development to build reliable LLM-based workflows by measuring the performance of known test cases.
+description: Use light evaluations during development to build reliable LLM-based workflows by checking the results of executing against known test cases.
+contentType: howto
+---
+
 # Light evaluations
 
 /// note | Available on registered community and paid plans
@@ -25,9 +33,9 @@ Steps:
 3. Write workflow outputs back to dataset
 4. Run evaluation
 
-The following explanation will use a [sample workflow]() that assigns a category and priority to incoming support tickets.
+The following explanation will use a sample workflow that assigns a category and priority to incoming support tickets.
 
-![Example AI workflow ](_images/advanced-ai/evaluations/example-ai-workflow.png)
+![Example AI workflow ](/_images/advanced-ai/evaluations/example-ai-workflow.png)
 
 ### 1. Create a dataset
 

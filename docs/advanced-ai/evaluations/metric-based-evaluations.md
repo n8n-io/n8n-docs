@@ -1,4 +1,11 @@
-# Metric-based evaluation
+---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Metric-based evaluations
+description: Use metric-based evaluations to measure, score, and improve production AI-based workflow performance over time.
+contentType: howto
+---
+
+# Metric-based evaluations
 
 /// note | Available on Pro and Enterprise plans
 Metric-based evaluation is available on Pro and Enterprise plans. Registered community and Starter plan users can also use it for a single workflow.
@@ -33,7 +40,7 @@ Follow the [setup instructions](/advanced-ai/evaluations/light-evaluations.md) t
 
 We'll illustrate the following steps with the same support ticket classification workflow from the light evaluation docs:
 
-![Light evaluation workflow](_images/advanced-ai/evaluations/light-evaluation-workflow.png)
+![Light evaluation workflow](/_images/advanced-ai/evaluations/light-evaluation-workflow.png)
 
 ### 2. Calculate metrics
 
@@ -52,7 +59,7 @@ Examples:
 
 Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a 'check if evaluating' operation.
 
-![Check if evaluating node](_images/advanced-ai/evaluations/check-if-evaluating.png)
+![Check if evaluating node](/_images/advanced-ai/evaluations/check-if-evaluating.png)
 
 ### 3. Write metrics back to evaluation
 

@@ -1,3 +1,10 @@
+---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Evaluations
+description: Use n8n evaluations to build reliable AI workflows. Build confidence in your LLM-powered workflows by comparing the output from known test cases.
+contentType: overview
+---
+
 # Overview
 
 ## What are evaluations?
@@ -32,11 +39,11 @@ The quality of the outputs is measured using a metric, a numeric value represent
 
 ### Comparison of evaluation types
 
-|                                                  | Light evaluation (pre-deployment)       | Metric-based evaluation (post-deployment)      |
-|--------------------------------------------------|-----------------------------------------|------------------------------------------------|
-| **Performance improvements with each iteration** | Large                                   | Small                                          |
-| **Dataset size**                                 | Small                                   | Large                                          |
-| **Dataset sources**                              | Hand-generated<br>AI-generated<br>Other | Production executions<br>AI-generated<br>Other |
-| **Actual outputs**                               | Required                                | Required                                       |
-| **Expected outputs**                             | Optional                                | Required (usually)                             |
-| **Evaluation** **metric**                        | Optional                                | Required                                       |
+|                                                     | Light evaluation (pre-deployment)       | Metric-based evaluation (post-deployment)      |
+|-----------------------------------------------------|-----------------------------------------|------------------------------------------------|
+| **Performance improvements<br>with each iteration** | Large                                   | Small                                          |
+| **Dataset size**                                    | Small                                   | Large                                          |
+| **Dataset sources**                                 | Hand-generated<br>AI-generated<br>Other | Production executions<br>AI-generated<br>Other |
+| **Actual outputs**                                  | Required                                | Required                                       |
+| **Expected outputs**                                | Optional                                | Required (usually)                             |
+| **Evaluation** **metric**                           | Optional                                | Required                                       |

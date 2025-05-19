@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Tips and common issues
-description: Details of how to implement specific use cases and address common issues with workflow evaluations.
+description: Details of how to set up specific use cases and address common issues with workflow evaluations.
 contentType: reference
 ---
 
@@ -9,7 +9,7 @@ contentType: reference
 
 ## Combining multiple triggers
 
-If you have another trigger in the workflow already, you have two potential starting points: that trigger and the evaluation trigger. In order to make sure your workflow works as expected no matter which trigger is executed, you will need to merge these branches together.
+If you have another trigger in the workflow already, you have two potential starting points: that trigger and the evaluation trigger. To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
 
 <figure markdown="span">
 ![Merging trigger branches](/_images/advanced-ai/evaluations/merging-trigger-branches.png)
@@ -38,11 +38,11 @@ n8n's internal chat reads the output data of the last executed node in the workf
 
 ![Add second output branch](/_images/advanced-ai/evaluations/add-second-output-branch.png)
 
-The solution is to add an extra branch coming out of your agent. [Lower branches are executed later](/flow-logic/execution-order.md) in n8n, which means any node you attach to this branch will be executed last. You can use a no-op node here since it only needs to pass the agent output through.
+The solution is to add an extra branch coming out of your agent. [Lower branches execute later](/flow-logic/execution-order.md) in n8n, which means any node you attach to this branch will execute last. You can use a no-op node here since it only needs to pass the agent output through.
 
 ## Accessing tool data when calculating metrics
 
-Sometimes you need to know what happened in executed sub-nodes of an agent, for example to check whether a tool was executed. You can't reference these nodes directly with expressions, but you can enable the **Return intermediate steps** option in the agent. This will add an extra output field called `intermediateSteps` which you can use in later nodes:
+Sometimes you need to know what happened in executed sub-nodes of an agent, for example to check whether it executed a tool. You can't reference these nodes directly with expressions, but you can enable the **Return intermediate steps** option in the agent. This will add an extra output field called `intermediateSteps` which you can use in later nodes:
 
 ![Enable return intermediate steps](/_images/advanced-ai/evaluations/enable-return-intermediate-steps.png)
 
@@ -50,10 +50,10 @@ Sometimes you need to know what happened in executed sub-nodes of an agent, for 
 
 You can only have one evaluation set up per workflow. In other words, you can only have one evaluation trigger per workflow.
 
-However, you can still test different parts of your workflow with different evaluations by putting those parts in [sub-workflows](/flow-logic/subworkflows.md) and evaluating each sub-workflow.
+Even so, you can still test different parts of your workflow with different evaluations by putting those parts in [sub-workflows](/flow-logic/subworkflows.md) and evaluating each sub-workflow.
 
 ## Dealing with inconsistent results
 
 Metrics can often have noise: they may be different across evaluation runs of the exact same workflow. This is because the workflow itself may return different results, or any LLM-based metrics might have natural variation in them.
 
-You can compensate for this by duplicating the rows of your dataset, so that each row appears more than once in the dataset. Since this means that each input will effectively be running multiple times, any variation will be smoothed out.
+You can compensate for this by duplicating the rows of your dataset, so that each row appears more than once in the dataset. Since this means that each input will effectively be running multiple times, it will smooth out any variations.

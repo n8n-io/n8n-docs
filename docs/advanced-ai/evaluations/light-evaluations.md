@@ -7,12 +7,13 @@ contentType: howto
 ---
 
 # Light evaluations
+<!-- vale from-microsoft.HeadingPunctuation = NO -->
 
 /// note | Available on registered community and paid plans
 Light evaluations are available to registered community users and on all paid plans.
 ///
 
-## What it is
+## What are light evaluations?
 
 When building your workflow, you often want to test it with a handful of examples to get a sense of how it performs and make improvements. At this stage of workflow development, looking over workflow outputs for each example is often enough. The benefits of setting up more [formal scoring or metrics](/advanced-ai/evaluations/metric-based-evaluations.md) don't yet justify the effort.
 
@@ -49,7 +50,7 @@ Leave the actual output column or columns blank, since you'll be filling them du
 
 <figure markdown="span">
 ![Sample dataset for a support ticket classification workflow](/_images/advanced-ai/evaluations/sample-dataset.png)
-<figcaption>A [sample dataset](https://docs.google.com/spreadsheets/d/1uuPS5cHtSNZ6HNLOi75A2m8nVWZrdBZ_Ivf58osDAS8/edit?gid=294497137#gid=294497137) for the support ticket classification workflow.</figcaption>
+<figcaption>A <a href="https://docs.google.com/spreadsheets/d/1uuPS5cHtSNZ6HNLOi75A2m8nVWZrdBZ_Ivf58osDAS8/edit?gid=294497137#gid=294497137">sample dataset</a> for the support ticket classification workflow.</figcaption>
 </figure>
 
 ### 2. Wire the dataset up to your workflow
@@ -81,7 +82,7 @@ If you have multiple triggers in your workflow you will need to [merge their bra
 To populate the output column(s) of your dataset when the evaluation runs:
 
 - Insert the 'Set outputs' action of the evaluation node
-- Wire it up to your workflow at a point after the outputs you're evaluating have been produced
+- Wire it up to your workflow at a point after it has produced the outputs you're evaluating
 - In the node's parameters, map the workflow outputs into the correct dataset column
 
 <figure markdown="span">

@@ -116,6 +116,7 @@ IP
 [Ii]terable
 Jira
 JMESPath
+JumpCloud
 Keap
 Keycloak
 Kibana

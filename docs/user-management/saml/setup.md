@@ -43,10 +43,10 @@ The steps to configure the IdP vary depending on your chosen IdP. These are some
 
 	| Name | Name format | Value (IdP side) |
 	| ---- | ----------- | ---------------- |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress | URI Reference | User email       |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname    | URI Reference | User First Name  |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname     | URI Reference | User Last Name   |
-	| http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn          | URI Reference | User Email       |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` | URI Reference | User email       |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname`    | URI Reference | User First Name  |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname`     | URI Reference | User Last Name   |
+	| `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`          | URI Reference | User Email       |
 
 ## Setup resources for common IdPs
 

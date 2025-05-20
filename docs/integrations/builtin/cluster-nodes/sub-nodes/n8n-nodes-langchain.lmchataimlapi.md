@@ -12,7 +12,7 @@ Use the AI/ML API Chat Model node to use AI/ML API's chat models with conversati
 On this page, you'll find the node parameters for the AI/ML API Chat Model node and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/openrouter.md).
+You can find authentication information for this node [here](/integrations/builtin/credentials/aimlapi.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

@@ -632,6 +632,7 @@ nav:
         - Mautic Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
         - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
         - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+        - Microsoft Teams Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
         - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
         - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md

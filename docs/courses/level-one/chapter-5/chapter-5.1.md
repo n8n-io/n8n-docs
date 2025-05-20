@@ -71,7 +71,7 @@ Once you save, exit out of the Credentials window to return to the HTTP Request 
 
 ## Get the data
 
-Select the **Test step** button in the HTTP Request node window. The table view of the HTTP request results should look like this:
+Select the **Execute step** button in the HTTP Request node window. The table view of the HTTP request results should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node output" style="width:100%"><figcaption align = "center"><i>HTTP Request node output</i></figcaption></figure>
 

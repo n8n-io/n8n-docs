@@ -13,7 +13,7 @@ This document contains instructions for creating a generic OAuth2 Google credent
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* Create a [Google Cloud](https://cloud.google.com/) account.
 
 ## Set up OAuth
 
@@ -27,18 +27,9 @@ There are five steps to connecting your n8n credential to Google services:
 
 ### Create a Google Cloud Console project
 
-First, create a Google Cloud Console project. If you already have a project, jump to the next section:
+First, create a Google Cloud Console project. If you already have a project, jump to the [next section](#enable-apis):
 
-1. Log in to the [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} using your Google credentials.
-2. In the top menu, select the project dropdown in the top navigation and select **New project** or go directly to the [New Project](https://console.cloud.google.com/projectcreate){:target=_blank .external-link} page.
-3. Enter a **Project name** and select the **Location** for your project.
-4. Select **Create**.
-5. Check the top navigation and make sure the **Select a project** dropdown has your project selected. If not, select the project you just created.
-
-	<figure markdown="span">
-	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
-	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
-	</figure>
+--8<-- "_snippets/integrations/builtin/credentials/google/create-google-cloud-project.md"
 
 ### Enable APIs
 
@@ -48,35 +39,35 @@ With your project created, enable the APIs you'll need access to:
 
 ### Configure your OAuth consent screen
 
-If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent){:target=_blank .external-link}:
+If you haven't used OAuth in your Google Cloud project before, you'll need to [configure the OAuth consent screen](https://developers.google.com/workspace/guides/configure-oauth-consent):
 
-1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library). Make sure you're in the correct project.
 	<figure markdown="span">
 	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
 1. Open the left navigation menu and go to **APIs & Services > OAuth consent screen**.
-2. For **User Type**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/10311615#user-type&zippy=%2Cexternal%2Cinternal){:target=_blank .external-link} for more information on user types.
-3. Select **Create**.
-4. Enter the essential information:
-	- **App name**
-	- **User support email**
-	- **Email addresses** field in **Developer contact information**
-5. In the **Authorized domains** section, add `n8n.cloud` if using n8n's Cloud service. If you're [self-hosting](/hosting/index.md), add the domain of your n8n instance.
-7. Select **SAVE AND CONTINUE** to go to the **Data Access** page and open **Add or remove scopes**.
-8. You don't need to set any scopes. Select **SAVE AND CONTINUE** again to go to the **Summary** page.
-9. On the **Summary** page, review the information for accuracy.
+1. Select **Get started** to begin configuring OAuth consent.
+1. Enter an **App name** and **User support email** to include on the Oauth screen.
+1. For the **Audience**, select **Internal** for user access within your organization's Google workspace or **External** for any user with a Google account. Refer to Google's [User type documentation](https://support.google.com/cloud/answer/15549945?sjid=17061891731152303663-EU#user-type) for more information on user types.
+1. Select the **Email addresses** Google should use to contact you about changes to your project.
+1. Read and accept the Google's User Data Policy and select **Create**.
+1. In the left-hand menu, select **Branding**.
+1. In the **Authorized domains** section, select **Add domain**:
+	* If you're using n8n's Cloud service, add `n8n.cloud`
+	* If you're [self-hosting](/hosting/index.md), add the domain of your n8n instance.
+1. Select **Save** at the bottom of the page.
 
 ### Create your Google OAuth client credentials
 
 Next, create the OAuth client credentials in Google:
 
-1. In the **APIs & Services** section, select **Credentials**.
-2. Select **+ CREATE CREDENTIALS > OAuth client ID**.
+1. In the **APIs & Services** section, select [**Credentials**](https://console.cloud.google.com/apis/credentials).
+2. Select **+ Create credentials** > **OAuth client ID**.
 3. In the **Application type** dropdown, select **Web application**.
 4. Google automatically generates a **Name**. Update the **Name** to something you'll recognize in your console.
 5. From your n8n credential, copy the **OAuth Redirect URL**. Paste it into the **Authorized redirect URIs** in Google Console.
-6. Select **CREATE**.
+6. Select **Create**.
 
 ### Finish your n8n credential
 
@@ -102,32 +93,32 @@ The following video demonstrates the steps described above:
 
 ## Scopes
 
-Google services have one or more possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for a list of scopes for all services.
+Google services have one or more possible access scopes. A scope limits what a user can do. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes) for a list of scopes for all services.
 
 n8n doesn't support all scopes. When creating a generic Google OAuth2 API credential, you can enter scopes from the **Supported scopes** list below. If you enter a scope that n8n doesn't already support, it won't work.
 
 ??? Details "Supported scopes"
-	| Service | Available scopes |
-	| ------- | ---------------- |
-	| Gmail | 	https://www.googleapis.com/auth/gmail.labels <br /> https://www.googleapis.com/auth/gmail.addons.current.action.compose <br />	https://www.googleapis.com/auth/gmail.addons.current.message.action <br /> https://mail.google.com/ <br /> https://www.googleapis.com/auth/gmail.modify <br />	https://www.googleapis.com/auth/gmail.compose |
-	| Google Ads | https://www.googleapis.com/auth/adwords |
-	| Google Analytics | https://www.googleapis.com/auth/analytics <br /> https://www.googleapis.com/auth/analytics.readonly |
-	| Google BigQuery | https://www.googleapis.com/auth/bigquery |
-	| Google Books | https://www.googleapis.com/auth/books |
-	| Google Calendar | 	https://www.googleapis.com/auth/calendar <br /> https://www.googleapis.com/auth/calendar.events |
-	| Google Cloud Natural Language | https://www.googleapis.com/auth/cloud-language <br /> https://www.googleapis.com/auth/cloud-platform |
-	| Google Cloud Storage | https://www.googleapis.com/auth/cloud-platform <br /> https://www.googleapis.com/auth/cloud-platform.read-only <br /> https://www.googleapis.com/auth/devstorage.full_control <br /> https://www.googleapis.com/auth/devstorage.read_only <br /> https://www.googleapis.com/auth/devstorage.read_write |
-	| Google Contacts | https://www.googleapis.com/auth/contacts |
-	| Google Docs | https://www.googleapis.com/auth/documents <br /> https://www.googleapis.com/auth/drive <br /> https://www.googleapis.com/auth/drive.file |
-	| Google Drive | https://www.googleapis.com/auth/drive <br /> https://www.googleapis.com/auth/drive.appdata <br /> https://www.googleapis.com/auth/drive.photos.readonly |
-	| Google Firebase Cloud Firestore | https://www.googleapis.com/auth/datastore <br /> https://www.googleapis.com/auth/firebase |
-	| Google Firebase Realtime Database | https://www.googleapis.com/auth/userinfo.email <br /> https://www.googleapis.com/auth/firebase.database <br /> https://www.googleapis.com/auth/firebase |
-	| Google Perspective | https://www.googleapis.com/auth/userinfo.email |
-	| Google Sheets | https://www.googleapis.com/auth/drive.file <br /> https://www.googleapis.com/auth/spreadsheets |
-	| Google Slide | https://www.googleapis.com/auth/drive.file <br /> https://www.googleapis.com/auth/presentations |
-	| Google Tasks | https://www.googleapis.com/auth/tasks |
-	| Google Translate | https://www.googleapis.com/auth/cloud-translation |
-	| GSuite Admin | https://www.googleapis.com/auth/admin.directory.group <br /> https://www.googleapis.com/auth/admin.directory.user <br /> https://www.googleapis.com/auth/admin.directory.domain.readonly <br /> https://www.googleapis.com/auth/admin.directory.userschema.readonly |
+	| Service                              | Available scopes                                                                                                                                                                                                                                                                                                                                                               |
+	|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+	| Gmail                                | <ul><li>`https://www.googleapis.com/auth/gmail.labels`</li><li>`https://www.googleapis.com/auth/gmail.addons.current.action.compose`</li><li>`https://www.googleapis.com/auth/gmail.addons.current.message.action`</li><li>`https://mail.google.com/`</li><li>`https://www.googleapis.com/auth/gmail.modify`</li><li>`https://www.googleapis.com/auth/gmail.compose`</li></ul> |
+	| Google Ads                           | <ul><li>`https://www.googleapis.com/auth/adwords`</li></ul>                                                                                                                                                                                                                                                                                                                    |
+	| Google Analytics                     | <ul><li>`https://www.googleapis.com/auth/analytics`</li><li>`https://www.googleapis.com/auth/analytics.readonly`</li></ul>                                                                                                                                                                                                                                                     |
+	| Google BigQuery                      | <ul><li>`https://www.googleapis.com/auth/bigquery`</li></ul>                                                                                                                                                                                                                                                                                                                   |
+	| Google Books                         | <ul><li>`https://www.googleapis.com/auth/books`</li></ul>                                                                                                                                                                                                                                                                                                                      |
+	| Google Calendar                      | <ul><li>`https://www.googleapis.com/auth/calendar`</li><li>`https://www.googleapis.com/auth/calendar.events`</li></ul>                                                                                                                                                                                                                                                         |
+	| Google Cloud<br> Natural Language    | <ul><li>`https://www.googleapis.com/auth/cloud-language`</li><li>`https://www.googleapis.com/auth/cloud-platform`</li></ul>                                                                                                                                                                                                                                                    |
+	| Google Cloud<br>Storage              | <ul><li>`https://www.googleapis.com/auth/cloud-platform`</li><li>`https://www.googleapis.com/auth/cloud-platform.read-only`</li><li>`https://www.googleapis.com/auth/devstorage.full_control`</li><li>`https://www.googleapis.com/auth/devstorage.read_only`</li><li>`https://www.googleapis.com/auth/devstorage.read_write`</li></ul>                                         |
+	| Google Contacts                      | <ul><li>`https://www.googleapis.com/auth/contacts`</li></ul>                                                                                                                                                                                                                                                                                                                   |
+	| Google Docs                          | <ul><li>`https://www.googleapis.com/auth/documents`</li><li>`https://www.googleapis.com/auth/drive`</li><li>`https://www.googleapis.com/auth/drive.file`</li></ul>                                                                                                                                                                                                             |
+	| Google Drive                         | <ul><li>`https://www.googleapis.com/auth/drive`</li><li>`https://www.googleapis.com/auth/drive.appdata`</li><li>`https://www.googleapis.com/auth/drive.photos.readonly`</li></ul>                                                                                                                                                                                              |
+	| Google Firebase<br>Cloud Firestore   | <ul><li>`https://www.googleapis.com/auth/datastore`</li><li>`https://www.googleapis.com/auth/firebase`</li></ul>                                                                                                                                                                                                                                                               |
+	| Google Firebase<br>Realtime Database | <ul><li>`https://www.googleapis.com/auth/userinfo.email`</li><li>`https://www.googleapis.com/auth/firebase.database`</li><li>`https://www.googleapis.com/auth/firebase`</li></ul>                                                                                                                                                                                              |
+	| Google Perspective                   | <ul><li>`https://www.googleapis.com/auth/userinfo.email`</li></ul>                                                                                                                                                                                                                                                                                                             |
+	| Google Sheets                        | <ul><li>`https://www.googleapis.com/auth/drive.file`</li><li>`https://www.googleapis.com/auth/spreadsheets`</li></ul>                                                                                                                                                                                                                                                          |
+	| Google Slide                         | <ul><li>`https://www.googleapis.com/auth/drive.file`</li><li>`https://www.googleapis.com/auth/presentations`</li></ul>                                                                                                                                                                                                                                                         |
+	| Google Tasks                         | <ul><li>`https://www.googleapis.com/auth/tasks`</li></ul>                                                                                                                                                                                                                                                                                                                      |
+	| Google Translate                     | <ul><li>`https://www.googleapis.com/auth/cloud-translation`</li></ul>                                                                                                                                                                                                                                                                                                          |
+	| GSuite Admin                         | <ul><li>`https://www.googleapis.com/auth/admin.directory.group`</li><li>`https://www.googleapis.com/auth/admin.directory.user`</li><li>`https://www.googleapis.com/auth/admin.directory.domain.readonly`</li><li>`https://www.googleapis.com/auth/admin.directory.userschema.readonly`</li></ul>                                                                               |
 
 ## Troubleshooting
 

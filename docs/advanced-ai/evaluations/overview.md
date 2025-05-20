@@ -20,6 +20,12 @@ Evaluation allows you to:
 * **Make changes with confidence** without inadvertently making things worse elsewhere
 * **Compare performance** across different models or prompts
 
+The following video explains what evaluations are, why they're useful, and how they work:
+
+<div class="video-container">
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/5LlF196PKaE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Why is evaluation needed?
 
 AI models are fundamentally different than code. Code is deterministic and you can reason about it. This is difficult to do with LLMs, since they're black boxes. Instead, you must *measure* LLM output by running data through them and observing the output. 

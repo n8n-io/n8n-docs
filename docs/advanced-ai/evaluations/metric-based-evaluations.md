@@ -51,12 +51,13 @@ You need to add the logic to calculate the metrics for your workflow, at a point
 
 Examples:
 
-* Correctness: whether the output is consistent with a reference output
-* Helpfulness: whether the answer addresses the question
-* String similarity: how close the output is to a reference output, measured character-by-character
-* Tool calling: whether the agent called the right tool
-* RAG document relevance: when working with a vector database, whether the documents retrieved are relevant to the question
-* RAG answer groundedness: when working with a vector database, whether the answer is ["grounded"](https://www.deepset.ai/blog/rag-llm-evaluation-groundedness) in the documents retrieved
+* [Correctness](https://n8n.io/workflows/4271): whether the output is consistent with a reference output.
+* Helpfulness: whether the answer addresses the question.
+* [String similarity](https://n8n.io/workflows/4274): how close the output is to a reference output, measured character-by-character.
+* [Categorization](https://n8n.io/workflows/4269): whether the output exactly matches the expected output.
+* [Tool calling](https://n8n.io/workflows/4268): whether the agent called the right tool.
+* [RAG document relevance](https://n8n.io/workflows/4273): when working with a vector database, whether the documents retrieved are relevant to the question.
+* RAG answer groundedness: when working with a vector database, whether the answer is ["grounded"](https://www.deepset.ai/blog/rag-llm-evaluation-groundedness) in the documents retrieved.
 
 Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a 'check if evaluating' operation.
 

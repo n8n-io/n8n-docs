@@ -98,6 +98,7 @@ Gotify
 Grafana
 Grok('s)?
 Groq
+[Gg]roundedness
 GSuite
 Gumroad
 [Gg]zip

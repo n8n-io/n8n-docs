@@ -53,8 +53,6 @@ This release contains editor improvements, an API update, node updates, new node
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.93.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
@@ -63,8 +61,6 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0
 /// note | Latest version
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
-
-
 
 This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
 
@@ -113,8 +109,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.1...n8n@1.92.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-08
-
-
 
 This release contains a bug fix.
 
@@ -165,6 +159,29 @@ To use this feature you can either:
 - Open the tool’s **Node Details View** and select **"Test step"** to run it from there.
 
 If you have previously run the workflow, the input and output will be prefilled with data from the last execution. A pop-up form will open where you can manually fill in the parameters before executing your test.
+
+### Extended logs view
+
+When workflows get complex, debugging can get... clicky. That’s where an extended **Logs View** comes in. Now you can get a clearer path to trace executions, troubleshoot issues, and understand the behavior of a complete workflow — without bouncing between node detail views. 
+
+This update brings a unified, always-accessible panel to the bottom of the canvas, showing you each step of the execution as it happens. Whether you're working with loops, sub-workflows, or AI agents, you’ll see a structured view of everything that ran, in the order it ran—with input, output, and status info right where you need it.
+
+You can jump into node details when you want to dig deeper, or follow a single item through every step it touched. Real-time highlighting shows you which nodes are currently running or have failed, and you’ll see total execution time for any workflow—plus token usage for AI workflows to help monitor performance. And if you're debugging across multiple screens? Just pop the logs out and drag them wherever you’d like.
+
+⚙️**What it does**
+
+- Adds a **Logs view** to the bottom of the canvas that can be opened or collapsed. (Chat also appears here if your workflow uses it).
+- Displays a **hierarchical list of nodes** in the order they were executed—including expanded views of sub-workflows.
+- Allows you to **click a node in hierarchy** to preview inputs and outputs directly, or jump into the full Node Details view with a link.
+- Provides ability to **toggle** input and output data on and off.
+- Highlights each node **live as it runs**, showing when it starts, completes, or fails.
+- Includes **execution history** view to explore past execution data in a similar way.
+- Shows **roll-up stats** like total execution time and total AI tokens used (for AI-enabled workflows).
+- Includes a  **“pop out”** button to open the logs as a floating window—perfect for dragging to another screen while debugging.
+
+🛠️**How to**
+
+To access the expanded logs view, click on the Logs bar at the bottom of the canvas. The view is also opens up when you open the chat window on the bottom of the page.
 
 ### Insights enhancements for Enterprise
 

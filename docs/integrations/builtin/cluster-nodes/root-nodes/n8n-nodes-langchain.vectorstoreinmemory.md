@@ -22,7 +22,7 @@ This node creates a [vector database](/glossary.md#ai-vector-store) in the app m
 
 
 /// warning | For development use only
-This node stores data in memory only and isn't recommended for production use. All data is lost when n8n restarts and may also be purged in low-memory conditions.
+This node stores data in memory only and isn't recommended for production use. All data is lost when n8n restarts and may also be purged in low-memory conditions. Data stored on the vector database is accessible to all users of the instance.
 ///
 
 ## Node usage patterns

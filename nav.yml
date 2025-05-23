@@ -420,6 +420,7 @@ nav:
         - Microsoft Graph Security: integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity.md
         - Microsoft OneDrive: integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md
         - Microsoft Outlook: integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md
+        - Microsoft SharePoint: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md
         - Microsoft SQL: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md
         - Microsoft Teams: integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
         - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md

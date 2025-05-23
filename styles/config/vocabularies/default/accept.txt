@@ -115,6 +115,7 @@ Intuit
 IP
 [Ii]terable
 Jira
+Jina
 JMESPath
 JumpCloud
 Keap

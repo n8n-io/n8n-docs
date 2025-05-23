@@ -388,6 +388,7 @@ nav:
         - Invoice Ninja: integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md
         - Iterable: integrations/builtin/app-nodes/n8n-nodes-base.iterable.md
         - Jenkins: integrations/builtin/app-nodes/n8n-nodes-base.jenkins.md
+        - Jina AI: integrations/builtin/app-nodes/n8n-nodes-base.jinaai.md
         - Jira Software: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
         - Kafka: integrations/builtin/app-nodes/n8n-nodes-base.kafka.md
         - Keap: integrations/builtin/app-nodes/n8n-nodes-base.keap.md
@@ -897,6 +898,7 @@ nav:
         - integrations/builtin/credentials/invoiceninja.md
         - integrations/builtin/credentials/iterable.md
         - integrations/builtin/credentials/jenkins.md
+        - integrations/builtin/credentials/jinaai.md
         - integrations/builtin/credentials/jira.md
         - integrations/builtin/credentials/jotform.md
         - integrations/builtin/credentials/jwt.md

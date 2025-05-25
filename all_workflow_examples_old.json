@@ -1,0 +1,6366 @@
+
+
+// docs/_workflows/try-it-out/quickstart/tutorial.json
+{
+  "name": "Tutorial-workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -680,
+        100
+      ],
+      "id": "ef14445c-2f5f-4c78-96c8-66732feb7a8f",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "donkiSolarFlare",
+        "additionalFields": {
+          "startDate": "={{ $today.minus(7, 'days') }}"
+        }
+      },
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        100
+      ],
+      "id": "52c58b93-c780-4aff-a216-d67b28195a45",
+      "name": "NASA",
+      "credentials": {
+        "nasaApi": {
+          "id": "sSVnxV9AcBmBOYn8",
+          "name": "NASA account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "2f469c8e-12b3-4ee5-95fc-ff81508d0b43",
+              "leftValue": "={{ $json.classType }}",
+              "rightValue": "C",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -240,
+        100
+      ],
+      "id": "b54e3289-9ebb-451f-8bac-87edeeeced13",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "resource": "request",
+        "operation": "send",
+        "binId": "1741914338605-0907339996192",
+        "binContent": "=There was a solar flare of class {{$json[\"classType\"]}}",
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.postBin",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        0
+      ],
+      "id": "a8b602b6-17b1-4274-8d33-73344b6bb8fb",
+      "name": "PostBin(true)"
+    },
+    {
+      "parameters": {
+        "resource": "request",
+        "operation": "send",
+        "binId": "1741914338605-0907339996192",
+        "binContent": "=There was a solar flare of class {{$json[\"classType\"]}}",
+        "requestOptions": {}
+      },
+      "type": "n8n-nodes-base.postBin",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        200
+      ],
+      "id": "09c2c7a4-c229-430d-a5b0-8d7491515d9f",
+      "name": "PostBin(false)"
+    },
+    {
+      "parameters": {
+        "content": "## Setup required\n\nYou need to create a NASA account and create credentials, and create a bin with Postbin and enter the ID - see [the documentation](https://docs.n8n.io/try-it-out/longer-introduction/)",
+        "height": 120,
+        "width": 600
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        -60
+      ],
+      "id": "08e0b8f9-c90e-4c9c-a663-01aca805b9be",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "NASA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NASA": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "PostBin(true)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PostBin(false)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "37de4877-e4f6-4b9a-b6f0-9b7e7aea0163",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  },
+  "id": "DPzMzTIyDrYohiw4",
+  "tags": [
+    {
+      "createdAt": "2021-06-25T07:47:07.640Z",
+      "updatedAt": "2021-06-25T07:47:07.640Z",
+      "id": "1",
+      "name": "docs"
+    }
+  ]
+}
+
+// docs/_workflows/try-it-out/quickstart/very-quick-quickstart-workflow.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAllPeople",
+        "returnAll": true
+      },
+      "id": "ed1fd9cd-cc4f-4e0e-ba73-9f842db382c3",
+      "name": "Customer Datastore",
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "position": [
+        540,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Get fake sample data**",
+        "height": 300,
+        "width": 220
+      },
+      "id": "5ddf393f-62b8-4240-adf8-f9a8f539df4b",
+      "name": "Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        480,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Extract data and prepare it for use in the next node**",
+        "height": 300,
+        "width": 220
+      },
+      "id": "6ad194ea-9821-40eb-ae2c-f50cc030300b",
+      "name": "Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        760,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "5af4b83b-31b6-4c29-aa55-3449f3851e2a",
+      "name": "When clicking \"Test Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        300,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "df041e3c-fc09-4ba2-8e6b-37f2c6a02526",
+              "name": "customer_id",
+              "type": "string",
+              "value": "={{ $json.id }}"
+            },
+            {
+              "id": "bf288953-4fef-4f55-a45f-c223714919c0",
+              "name": "customer_name",
+              "type": "string",
+              "value": "={{ $json.name }}"
+            },
+            {
+              "id": "1cff0b21-6740-4697-9d2c-9bcb045af0be",
+              "name": "customer_description",
+              "type": "string",
+              "value": "={{ $json.notes }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5dcd5776-5137-4f97-8b76-9f38e1d9ff9e",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        820,
+        280
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "customerId": "={{ $json.customer_id }}",
+        "message": "=Hi {{ $json.customer_name }}. Your description is: {{  $json.customer_description }}"
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerMessenger",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        280
+      ],
+      "id": "a726dcfd-f491-440f-ad64-6ba17472352f",
+      "name": "Customer Messenger (n8n training)"
+    }
+  ],
+  "connections": {
+    "Customer Datastore": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Test Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Customer Messenger (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-2.json
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "5738d1d8-ae7d-4e04-bca4-885c59e1d9e8",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "resource": "all",
+        "limit": 10,
+        "additionalFields": {
+          "keyword": "automation"
+        }
+      },
+      "type": "n8n-nodes-base.hackerNews",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "65e9d0a6-5261-4c7d-8d85-6ff49de04dee",
+      "name": "Hacker News",
+      "notesInFlow": true,
+      "notes": "Get the 10 latest articles."
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Hacker News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/finished.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "4d259ec5241587a0d2820670fc048f0d"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        -40
+      ],
+      "id": "e1fb70b3-0212-4e78-9976-cb77c69f1a92",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app9nOVsRxdypoknP",
+          "mode": "list",
+          "cachedResultName": "beginner course"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblTIOsm4BLJD9Tql",
+          "mode": "list",
+          "cachedResultName": "processingOrders"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        880,
+        -140
+      ],
+      "id": "5cef2ef7-98a6-4dc6-bc30-667eba06fd7b",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "UT32NHUYnp4pn1H3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "526cb30c-0f90-4f66-8f98-b64ceb2e52f2",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        440,
+        -40
+      ],
+      "id": "448b2e3c-569d-42e6-a4b9-57c08b2cac1a",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20d37948-763a-4d7b-b725-e65f3802af03",
+              "name": "orderID",
+              "value": "={{ $json.orderID }}",
+              "type": "number"
+            },
+            {
+              "id": "9df108a7-6b13-42ab-a6dd-9ca582ba8b49",
+              "name": "employeeName",
+              "value": "={{ $json.employeeName }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        -140
+      ],
+      "id": "7e2a8092-fb0f-4260-84e8-d796cf14d309",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nlet totalBooked = items.length;\nlet bookedSum = 0;\n\nfor (let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;\n}\n\nreturn [{ json: {totalBooked, bookedSum} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        60
+      ],
+      "id": "26ce1d53-794b-4457-9aa8-0ecf9093b838",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=This week we've {{$json[\"totalBooked\"]}} booked orders with a total value of {{$json[\"bookedSum\"]}}. My Unique ID: {{ $('HTTP Request').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        880,
+        60
+      ],
+      "id": "d8c0b4b6-3bf1-4055-a03f-f0023337777c",
+      "name": "Discord",
+      "webhookId": "eff0b651-f0be-4cae-8f18-7d831385be3c",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lOieo0mIb6h1Wi9R",
+          "name": "Discord Webhook account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                1
+              ],
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        -40
+      ],
+      "id": "15f0b179-6a43-483b-a522-2b8ba834b795",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-5/chapter-5.1.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "<YOUR_UNIQUE_ID_HERE>"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        340,
+        -680
+      ],
+      "id": "ada6becf-c320-41a7-bdca-a842ea3ee769",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        140,
+        -680
+      ],
+      "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {
+    "HTTP Request1": {
+      "main": [
+        []
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-5/chapter-5.2.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "<YOUR_UNIQUE_ID_HERE>"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        340,
+        -680
+      ],
+      "id": "ada6becf-c320-41a7-bdca-a842ea3ee769",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app9nOVsRxdypoknP",
+          "mode": "list",
+          "cachedResultName": "beginner course"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblo2KuMyn5X4jU0s",
+          "mode": "list",
+          "cachedResultName": "orders"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "customerID",
+              "displayName": "customerID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderPrice",
+              "displayName": "orderPrice",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderStatus",
+              "displayName": "orderStatus",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        560,
+        -680
+      ],
+      "id": "5e60ca72-d773-439c-b39a-4b14c54f795b",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "UT32NHUYnp4pn1H3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        140,
+        -680
+      ],
+      "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-5/chapter-5.3.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "<YOUR_UNIQUE_ID_HERE>"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        340,
+        -680
+      ],
+      "id": "ada6becf-c320-41a7-bdca-a842ea3ee769",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app9nOVsRxdypoknP",
+          "mode": "list",
+          "cachedResultName": "beginner course"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblo2KuMyn5X4jU0s",
+          "mode": "list",
+          "cachedResultName": "orders"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "customerID",
+              "displayName": "customerID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderPrice",
+              "displayName": "orderPrice",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "orderStatus",
+              "displayName": "orderStatus",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        800,
+        -680
+      ],
+      "id": "5e60ca72-d773-439c-b39a-4b14c54f795b",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "UT32NHUYnp4pn1H3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "526cb30c-0f90-4f66-8f98-b64ceb2e52f2",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        -680
+      ],
+      "id": "70e4db65-f827-4e4f-8673-b405b7986d6e",
+      "name": "If1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        140,
+        -680
+      ],
+      "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-5/chapter-5.4.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "<YOUR_UNIQUE_ID_HERE>"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        -520
+      ],
+      "id": "ada6becf-c320-41a7-bdca-a842ea3ee769",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app9nOVsRxdypoknP",
+          "mode": "list",
+          "cachedResultName": "beginner course"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblTIOsm4BLJD9Tql",
+          "mode": "list",
+          "cachedResultName": "processingOrders"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        1020,
+        -600
+      ],
+      "id": "5e60ca72-d773-439c-b39a-4b14c54f795b",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "UT32NHUYnp4pn1H3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "526cb30c-0f90-4f66-8f98-b64ceb2e52f2",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        -520
+      ],
+      "id": "70e4db65-f827-4e4f-8673-b405b7986d6e",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20d37948-763a-4d7b-b725-e65f3802af03",
+              "name": "orderID",
+              "value": "={{ $json.orderID }}",
+              "type": "number"
+            },
+            {
+              "id": "9df108a7-6b13-42ab-a6dd-9ca582ba8b49",
+              "name": "employeeName",
+              "value": "={{ $json.employeeName }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        -600
+      ],
+      "id": "a3d3dc53-32f1-4f44-bf95-50bc5450d601",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        -520
+      ],
+      "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-5/chapter-5.5.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "<YOUR_UNIQUE_ID_HERE>"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        -520
+      ],
+      "id": "ada6becf-c320-41a7-bdca-a842ea3ee769",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app9nOVsRxdypoknP",
+          "mode": "list",
+          "cachedResultName": "beginner course"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblTIOsm4BLJD9Tql",
+          "mode": "list",
+          "cachedResultName": "processingOrders"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        1020,
+        -600
+      ],
+      "id": "5e60ca72-d773-439c-b39a-4b14c54f795b",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "UT32NHUYnp4pn1H3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "526cb30c-0f90-4f66-8f98-b64ceb2e52f2",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        -520
+      ],
+      "id": "70e4db65-f827-4e4f-8673-b405b7986d6e",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20d37948-763a-4d7b-b725-e65f3802af03",
+              "name": "orderID",
+              "value": "={{ $json.orderID }}",
+              "type": "number"
+            },
+            {
+              "id": "9df108a7-6b13-42ab-a6dd-9ca582ba8b49",
+              "name": "employeeName",
+              "value": "={{ $json.employeeName }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        -600
+      ],
+      "id": "a3d3dc53-32f1-4f44-bf95-50bc5450d601",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nlet totalBooked = items.length;\nlet bookedSum = 0;\n\nfor (let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;\n}\n\nreturn [{ json: {totalBooked, bookedSum} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        -420
+      ],
+      "id": "d24ea5e9-c9e6-4d06-b6ee-8db1abd42bc0",
+      "name": "Code1"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        -520
+      ],
+      "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        []
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/courses/level-one/chapter-5/chapter-5.6.json
+{
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://internal.users.n8n.cloud/webhook/custom-erp",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "unique_id",
+              "value": "<YOUR_UNIQUE_ID_HERE>"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        -520
+      ],
+      "id": "ada6becf-c320-41a7-bdca-a842ea3ee769",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "sMuanZ4xGobAurzY",
+          "name": "Nathan's ABCorp data warehouse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app9nOVsRxdypoknP",
+          "mode": "list",
+          "cachedResultName": "beginner course"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblTIOsm4BLJD9Tql",
+          "mode": "list",
+          "cachedResultName": "processingOrders"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "orderID",
+              "displayName": "orderID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "employeeName",
+              "displayName": "employeeName",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        1020,
+        -600
+      ],
+      "id": "5e60ca72-d773-439c-b39a-4b14c54f795b",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "UT32NHUYnp4pn1H3",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "526cb30c-0f90-4f66-8f98-b64ceb2e52f2",
+              "leftValue": "={{ $json.orderStatus }}",
+              "rightValue": "processing",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        -520
+      ],
+      "id": "70e4db65-f827-4e4f-8673-b405b7986d6e",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20d37948-763a-4d7b-b725-e65f3802af03",
+              "name": "orderID",
+              "value": "={{ $json.orderID }}",
+              "type": "number"
+            },
+            {
+              "id": "9df108a7-6b13-42ab-a6dd-9ca582ba8b49",
+              "name": "employeeName",
+              "value": "={{ $json.employeeName }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        -600
+      ],
+      "id": "a3d3dc53-32f1-4f44-bf95-50bc5450d601",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "jsCode": "let items = $input.all();\nlet totalBooked = items.length;\nlet bookedSum = 0;\n\nfor (let i=0; i < items.length; i++) {\n  bookedSum = bookedSum + items[i].json.orderPrice;\n}\n\nreturn [{ json: {totalBooked, bookedSum} }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        -420
+      ],
+      "id": "d24ea5e9-c9e6-4d06-b6ee-8db1abd42bc0",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=This week we've {{$json[\"totalBooked\"]}} booked orders with a total value of {{$json[\"bookedSum\"]}}. My Unique ID: {{ $('HTTP Request1').params[\"headerParameters\"][\"parameters\"][0][\"value\"] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        -420
+      ],
+      "id": "ed380465-c655-4c38-8eb3-2008b9e7869f",
+      "name": "Discord1",
+      "webhookId": "eff0b651-f0be-4cae-8f18-7d831385be3c",
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lOieo0mIb6h1Wi9R",
+          "name": "Discord Webhook account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        -520
+      ],
+      "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
+      "name": "When clicking ‘Execute workflow’"
+    }
+  ],
+  "connections": {
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Discord1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "24789c4d5aa56ca018d140332e7a43fd37dd7af0409453314fff12dc1aeebfa8"
+  }
+}
+
+
+// docs/_workflows/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/rss-feed-example.json
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e6e1cfe6-eff1-48bd-b21c-6ba83d4244d9",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n\t{\n\t\tjson: {\n\t\t\turl: 'https://medium.com/feed/n8n-io',\n\t\t}\n\t},\n\t{\n\t\tjson: {\n\t\t\turl: 'https://dev.to/feed/n8n',\n\t\t}\n\t}\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "137f1128-45b6-4bc4-a9fb-8660baa652a9",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        440,
+        0
+      ],
+      "id": "3449a953-49c2-4a36-ba3d-cbc0573f3f6c",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        100
+      ],
+      "id": "cc2e59d7-0a9b-4640-8052-d8f7f8d8c9fe",
+      "name": "RSS Read"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  }
+}
+
+
+// docs/_workflows/integrations/builtin/core-nodes/n8n-nodes-base.form/multiple-branch-execution.json
+{
+  "name": "Form that can execute multiple branches",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Form that may execute multiple branches",
+        "formDescription": "This form contains multiple branches. Depending on the user's responses, more than one branch may execute sequentially.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What are your favorite film genres",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Documentary"
+                  },
+                  {
+                    "option": "Action"
+                  },
+                  {
+                    "option": "Romance"
+                  },
+                  {
+                    "option": "Comedy"
+                  },
+                  {
+                    "option": "Drama"
+                  }
+                ]
+              },
+              "multiselect": true,
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -300,
+        60
+      ],
+      "id": "ad3f0e0a-a1e9-4504-8711-508bd29bd745",
+      "name": "On form submission",
+      "webhookId": "b3e1c86f-ae45-421e-9045-f19873b7a73e"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e3d995dd-d555-4e7a-b744-a3434ed602ad",
+                    "leftValue": "={{ $json['What are your favorite film genres'] }}",
+                    "rightValue": "Documentary",
+                    "operator": {
+                      "type": "array",
+                      "operation": "contains",
+                      "rightType": "any"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Documentary"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "ae94981b-1273-4830-ac2a-991bb25f41d8",
+                    "leftValue": "={{ $json['What are your favorite film genres'] }}",
+                    "rightValue": "Action",
+                    "operator": {
+                      "type": "array",
+                      "operation": "contains",
+                      "rightType": "any"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Action"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b9545089-4054-484d-9e6c-98f4872e7e9e",
+                    "leftValue": "={{ $json['What are your favorite film genres'] }}",
+                    "rightValue": "Romance",
+                    "operator": {
+                      "type": "array",
+                      "operation": "contains",
+                      "rightType": "any"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Romance"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "71ae5a41-0927-40e3-a583-e569bcebfd1f",
+                    "leftValue": "={{ $json['What are your favorite film genres'] }}",
+                    "rightValue": "Comedy",
+                    "operator": {
+                      "type": "array",
+                      "operation": "contains",
+                      "rightType": "any"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Comedy"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5bfe5981-203a-457a-bfaa-36846d7b79a8",
+                    "leftValue": "={{ $json['What are your favorite film genres'] }}",
+                    "rightValue": "Drama",
+                    "operator": {
+                      "type": "array",
+                      "operation": "contains",
+                      "rightType": "any"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Drama"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "adb1bfc5-08fd-4653-abe0-6f12aedda16a",
+                    "leftValue": "={{ $json['What are your favorite film genres'] }}",
+                    "rightValue": 1,
+                    "operator": {
+                      "type": "array",
+                      "operation": "lengthGt",
+                      "rightType": "number"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Final page"
+            }
+          ]
+        },
+        "options": {
+          "allMatchingOutputs": true
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        100,
+        0
+      ],
+      "id": "df96da7b-c7dc-43c6-8941-973842603e0c",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "content": "## Form that may execute multiple branches\nThis form contains branching where more than one path may execute, depending on the user's selections.",
+        "width": 380
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -160,
+        -260
+      ],
+      "typeVersion": 1,
+      "id": "c51af5ad-8f6c-4f2a-8974-65c4abc4fcbf",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "This Switch node determines which branches will execute.\n\nMultiple conditions may be true, resulting in more than one branch being executed. When this happens, n8n executes the first branch completely before returning to execute the next branch.",
+        "height": 220,
+        "width": 260,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        20,
+        320
+      ],
+      "typeVersion": 1,
+      "id": "eab3ff17-5030-4556-a0c7-2571345e8cdf",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What is your favorite documentary?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        700,
+        -500
+      ],
+      "id": "dc55c82f-7d4f-4368-8ab5-69a673e92027",
+      "name": "Documentary questions",
+      "webhookId": "0c72f06e-4cc0-41eb-931c-7bf82bb1927e"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What is your favorite action film?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        700,
+        -280
+      ],
+      "id": "3f76b5df-561b-4159-9e14-33a43d8c45a8",
+      "name": "Action questions",
+      "webhookId": "bea04786-25cc-477e-aaf1-ab68159cbe28"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for answering our documentary questions!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -500
+      ],
+      "id": "16660e2e-a047-45d2-ba54-12d573633ece",
+      "name": "Documentary thanks",
+      "webhookId": "0238f2c2-8984-4adc-aade-308bb458c16e"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for answering our action film questions!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -280
+      ],
+      "id": "1853276a-3ba6-4315-b772-fbeb0c68a477",
+      "name": "Action thanks",
+      "webhookId": "2e47b563-bd17-466c-86b7-9237be55d226"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What is your favorite romance film?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        700,
+        -20
+      ],
+      "id": "cd7bc8d0-a143-4733-be84-320c88ef241b",
+      "name": "Romance questions",
+      "webhookId": "3f77a665-fc03-46ba-a58f-6d9bd7099028"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for answering our romance film questions!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -20
+      ],
+      "id": "42d7c8b5-f66f-4b34-821c-0df91bbaa9ea",
+      "name": "Romance thanks",
+      "webhookId": "eee896c5-d116-4586-972d-3fe02073ed11"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What is your favorite comedy film?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        700,
+        220
+      ],
+      "id": "b9422abf-1ad5-44e4-941d-692f72bc2fef",
+      "name": "Comedy questions",
+      "webhookId": "97b56894-28fb-47d1-b729-754e43f1ac09"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for answering our comedy film questions!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        920,
+        220
+      ],
+      "id": "1db70bda-0752-41b7-a930-b90f6e64b3e7",
+      "name": "Comedy thanks",
+      "webhookId": "b021494a-5a35-4ade-b7c0-ca43a309268d"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What is your favorite drama film?"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        700,
+        480
+      ],
+      "id": "2bef931a-12d2-4873-ad19-9bdb0b5fe78f",
+      "name": "Drama questions",
+      "webhookId": "8d801d97-1103-42ee-a0c1-c1f1153727d9"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for answering our drama film questions!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        920,
+        480
+      ],
+      "id": "1fd7fa2f-d1be-430a-bb98-ded89ad8fca0",
+      "name": "Drama thanks",
+      "webhookId": "46a782bc-21b2-4fcd-9c52-82a7bb20ec2c"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for answering our film questions!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        700,
+        720
+      ],
+      "id": "7b0aeed0-0e13-4fcb-a3e9-c5ff4d6a77ca",
+      "name": "Multi-selection thank you",
+      "webhookId": "67fcd1f3-e5a6-4bf6-b17e-37b2a87f4c3d"
+    },
+    {
+      "parameters": {
+        "content": "n8n Form nodes using the **Form Ending** page type are only executed if they are the last node in the execution path.\n\nThese endings specific to a genre are only executed if this is the only valid branch.",
+        "height": 1400,
+        "width": 280,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        840,
+        -740
+      ],
+      "typeVersion": 1,
+      "id": "7bda913a-d75c-4b20-8be6-a767c008a8f6",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe switch includes this **Form Ending** node whenever more than one branch is executed.\n\nBecause this is the [final branch](https://docs.n8n.io/flow-logic/execution-order/) that will be executed, this is the final display whenever multiple branches are executed.",
+        "height": 400,
+        "width": 300,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        740,
+        800
+      ],
+      "typeVersion": 1,
+      "id": "9c3f93a5-5248-4ba1-99b5-9df6d21416c2",
+      "name": "Sticky Note3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Documentary questions",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Action questions",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Romance questions",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Comedy questions",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Drama questions",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Multi-selection thank you",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Documentary questions": {
+      "main": [
+        [
+          {
+            "node": "Documentary thanks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Action questions": {
+      "main": [
+        [
+          {
+            "node": "Action thanks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Romance questions": {
+      "main": [
+        [
+          {
+            "node": "Romance thanks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Comedy questions": {
+      "main": [
+        [
+          {
+            "node": "Comedy thanks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drama questions": {
+      "main": [
+        [
+          {
+            "node": "Drama thanks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b1d38757-38ea-4ee8-a352-990185b17e31",
+  "meta": {
+    "instanceId": "1f94e052868811125a74dc63385a38f60e7a14ab6e00497af83e8b68412ec251"
+  },
+  "id": "kl3goXzWrfrWHpYv",
+  "tags": []
+}
+
+// docs/_workflows/integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json
+{
+  "name": "Form with mutually exclusive branching",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Form with mutually exclusive branching",
+        "formDescription": "This form contains branches, but only one branch will ever be executed.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Would you recommend this site?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Yes"
+                  },
+                  {
+                    "option": "No"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1adce353-28c9-48b8-8326-c1f41d9311fd",
+      "name": "On form submission",
+      "webhookId": "d869b846-111d-4f53-96e4-2c4a533d9ed6"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['Would you recommend this site?'] }}",
+                    "rightValue": "Yes",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Yes"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "1dd9b1f5-6f48-4182-ae04-f47c37e3fa98",
+                    "leftValue": "={{ $json['Would you recommend this site?'] }}",
+                    "rightValue": "No",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "No"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "c0d3e3f1-76c5-4bac-8382-c3d70a57ee8a",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "What can we do to improve?",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        440,
+        200
+      ],
+      "id": "615cf27a-658c-43be-aff9-c5fda8a04c51",
+      "name": "If not recommended",
+      "webhookId": "3579ba77-7ba2-4a97-8a29-a228aac297d5"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for your review!",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        660,
+        -200
+      ],
+      "id": "13423b3f-0380-429d-92bf-460cc8b409a3",
+      "name": "Thanks for the review",
+      "webhookId": "bce3f77b-3005-4989-bd61-b9c5ff19e59e"
+    },
+    {
+      "parameters": {
+        "operation": "completion",
+        "completionTitle": "Thank you for your feedback",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        660,
+        200
+      ],
+      "id": "0848a392-41f2-47e8-be17-124fef3d9a63",
+      "name": "Thanks for the feedback",
+      "webhookId": "8b1a34e2-aa24-4c12-841c-79f6491cb779"
+    },
+    {
+      "parameters": {
+        "content": "## Form with mutually exclusive branching\nThis form contains a branch where only one of the two paths will execute, depending on your selections.",
+        "width": 380
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -160,
+        -260
+      ],
+      "typeVersion": 1,
+      "id": "57c5e1cd-7dda-4bfb-8bfa-8c9f91110249",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "This Switch node determines which branch will execute.\n\nThe switch uses data from a dropdown field with single selection enforced, so only one path will execute.",
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        440,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "9bde0398-7021-4ec6-b950-d836979c973b",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Leave your review below",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 1,
+      "position": [
+        440,
+        -200
+      ],
+      "id": "9956a49e-964d-4269-910f-28ad8393548e",
+      "name": "If recommended",
+      "webhookId": "f8298b40-1f61-465b-b228-30a659075f30"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "If recommended",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "If not recommended",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If not recommended": {
+      "main": [
+        [
+          {
+            "node": "Thanks for the feedback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If recommended": {
+      "main": [
+        [
+          {
+            "node": "Thanks for the review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6797e22c-1b2b-421a-b16d-869f636d0790",
+  "meta": {
+    "instanceId": "1f94e052868811125a74dc63385a38f60e7a14ab6e00497af83e8b68412ec251"
+  },
+  "id": "DCotkGqkv0VfT6QT",
+  "tags": []
+}
+
+// docs/_workflows/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/webhook-example.json
+{
+  "name": "Extract from file example",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "06696ea7-9dc7-464a-873b-3feb095b0874",
+        "options": {
+          "rawBody": true
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -380,
+        -80
+      ],
+      "id": "dfbd51af-6050-47c5-a26c-74cba77f65f7",
+      "name": "Webhook",
+      "webhookId": "06696ea7-9dc7-464a-873b-3feb095b0874"
+    },
+    {
+      "parameters": {
+        "options": {
+          "headerRow": false
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        -80
+      ],
+      "id": "1b1e4643-8269-402b-83af-dfd90fd6a0b5",
+      "name": "Extract from File"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "dd2bf7f1-692a-41a8-9c2e-7931de57fa13",
+  "meta": {
+    "instanceId": "1060f46e51fc7902c377ab29d7cbfb87696ddf6b3c5c27cbbb65c3cb36e21baf"
+  },
+  "id": "9i3iDZf5MpjlJ2sh",
+  "tags": []
+}
+
+// docs/_workflows/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/get-most-recent-file.json
+{
+  "meta": {
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "45b53bcd-7dcf-4266-8b6e-bfc12008f9e2",
+      "name": "Google Drive1",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1500,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ba223e7c-4fed-41dd-8c80-2e8fd742629f",
+      "name": "When clicking ‘Execute workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        620,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "searchMethod": "query",
+        "returnAll": true,
+        "filter": {
+          "whatToSearch": "files"
+        },
+        "options": {
+          "fields": [
+            "*"
+          ]
+        }
+      },
+      "id": "42799909-16f3-4f0a-9ad9-4dd0375814a0",
+      "name": "Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        840,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "modifiedTime",
+              "order": "descending"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bfb8baa6-1b8c-4540-9ad6-b5d7c3f7521b",
+      "name": "Sort",
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "2883d39a-f7d9-4244-bf7d-b06878678ccc",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Sort",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sort": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Google Drive1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {}
+}
+
+
+// docs/_workflows/advanced-ai/examples/agents_vs_chains.json
+{
+  "name": "Agents vs chains",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "9e1d8f35-e1ba-4600-977d-e54a919c2c62",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1,
+      "position": [
+        520,
+        420
+      ],
+      "webhookId": "84bfdbd0-e2ce-4bfa-b746-985e64a14484"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "4b89df4b-4f78-4f52-a51d-eeb66a7948e5",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        420
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "a0045df2-d212-4e6a-a2d4-722136dcb8b5",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        980,
+        880
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "d702f647-1fa7-4b4f-91b1-e0152326ea11",
+      "name": "Simple Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.2,
+      "position": [
+        1280,
+        460
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "76cc359a-5ec8-446a-a8e0-9035d18247cb",
+      "name": "Wikipedia",
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "01d1785f-f7c4-47d2-97b7-76eeff68002d",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.5,
+      "position": [
+        1060,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Every time you respond, start your response with the sentence: \"This message came from the chain\"."
+            }
+          ]
+        }
+      },
+      "id": "bcdcd704-13f5-4906-b337-7ec4629b9781",
+      "name": "Basic LLM Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.4,
+      "position": [
+        1040,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Try it out\n\nSelect **Chat**, and try out these queries:\n\n- Please show me a Wikipedia article about cats (agent)\n- Please show me a Wikipedia article about cats (chain)\n- What was my last question? (chain)\n- What was my last question? (agent)\n",
+        "height": 343.8587887368956,
+        "color": 4
+      },
+      "id": "f08e231b-739a-4b9d-b738-139b7e3bd60b",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 193,
+        "width": 167,
+        "color": 2
+      },
+      "id": "5421fd4d-c82f-483a-8238-869b9a10000d",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 193,
+        "width": 167,
+        "color": 2
+      },
+      "id": "23fac3a8-a220-40a5-8d3d-4a3013b0f1da",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Memory allows the agent to access previous parts of the chat**\n",
+        "height": 244,
+        "color": 5
+      },
+      "id": "08397bde-06e4-4bff-b130-cbc4408a0ecc",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**The agent can use the Wikipedia tool to access articles from Wikipedia**",
+        "height": 238,
+        "color": 5
+      },
+      "id": "a53ff4f2-9d06-4166-9ad6-760cd8fe4a54",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "agent",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "248f4a34-89c1-4d1e-867a-daa024c8635a",
+                    "leftValue": "={{ $json.chatInput }}",
+                    "rightValue": "chain",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "id": "ab2bff8d-e914-421d-9aa3-9d0ad815cea6",
+      "name": "Check user input for \"chain\" or \"agent\"",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        740,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)"
+      },
+      "id": "f077f8e6-789a-4db1-8402-fb173c296017",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        840
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check user input for \"chain\" or \"agent\"",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check user input for \"chain\" or \"agent\"": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "59784a0f-0601-4456-b48d-9a191e203461",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  },
+  "id": "qK43vJw6dRZkXo6h",
+  "tags": [
+    {
+      "createdAt": "2021-06-25T07:47:07.640Z",
+      "updatedAt": "2021-06-25T07:47:07.640Z",
+      "id": "1",
+      "name": "docs"
+    },
+    {
+      "createdAt": "2023-02-22T12:06:03.372Z",
+      "updatedAt": "2023-02-22T12:06:03.372Z",
+      "id": "63",
+      "name": "createdBy:Debs"
+    }
+  ]
+}
+
+// docs/_workflows/advanced-ai/examples/ask_a_human.json
+{
+  "name": "Ask a human",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a60c8572-56c1-4bf3-8352-a6419a475887",
+      "name": "Simple Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.1,
+      "position": [
+        900,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "name": "dont_know_tool",
+        "description": "Use this tool if you don't know the answer to the user's question, or if you're not very confident about your answer.",
+        "workflowId": "={{ $workflow.id}}",
+        "fields": {
+          "values": [
+            {
+              "name": "chatInput",
+              "stringValue": "={{ $('Chat Trigger').item.json.chatInput }}"
+            }
+          ]
+        }
+      },
+      "id": "b4f2e26c-903b-46b8-bd8b-110fd64de9e4",
+      "name": "Not sure?",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        760
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "951cc691-b422-4ce6-901f-b7feb3afd1ad",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1,
+      "position": [
+        540,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Sub-workflow: Custom tool\nThe agent above can call this workflow. It checks if the user has supplied an email address. If they haven't it prompts them to provide one. If they have, it messages a customer support channel for help.",
+        "height": 775.3931210698682,
+        "width": 1118.3459011229047,
+        "color": 7
+      },
+      "id": "194ba9c0-e256-449a-8da7-ac5339123a99",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        500,
+        1020
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Main workflow: AI agent using custom tool",
+        "height": 486.5625,
+        "width": 927.5,
+        "color": 7
+      },
+      "id": "38c6b363-45a7-4e72-9e40-8c0df3cc480f",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        500,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**This tool calls the sub-workflow below**",
+        "height": 179.21380662202682,
+        "width": 197.45572294791873,
+        "color": 5
+      },
+      "id": "0389315b-e48d-4b00-b9a1-899302b1b094",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1060,
+        700
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 213.44323866265472,
+        "width": 150,
+        "color": 2
+      },
+      "id": "fb11064a-4cf5-4110-9e39-af24a3225164",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        700,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials and Slack details**",
+        "height": 250.57252651663197,
+        "width": 178.0499248677781,
+        "color": 2
+      },
+      "id": "d689021d-0a46-4dff-a01a-0b01ecdd198b",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Try it out\n\nSelect **Chat** at the bottom and enter:\n\n_Hi! Please respond to this as if you don't know the answer to my query._",
+        "height": 214.8397420554627,
+        "width": 185.9375,
+        "color": 4
+      },
+      "id": "0926cd61-c0b8-4bae-ae65-9afd130d17cd",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        340,
+        520
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)",
+        "height": 144.50520156238127
+      },
+      "id": "cde69dfe-252e-4a05-8d56-fa79431df5d8",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        1600
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "927b775a-47f6-4067-a1a5-5f13dea28e45",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1,
+      "position": [
+        600,
+        520
+      ],
+      "webhookId": "785e0c0c-12e5-4249-9abe-47bb131975cb"
+    },
+    {
+      "parameters": {
+        "jsCode": "response = {\"response\":\"I'm sorry I don't know the answer. Please repeat your question and include your email address so I can request help.\"};\nreturn response;"
+      },
+      "id": "971e7b90-c2d8-4292-9da8-732d7d399f04",
+      "name": "Prompt the user to provide an email",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "response = {\"response\": \"Thank you for getting in touch. I've messaged a human to help.\"}\nreturn response;"
+      },
+      "id": "6f5a21b3-c145-46c8-8e69-660100c4a6fc",
+      "name": "Confirm that we've messaged a human",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Try to answer the user's question. When you can't answer, or you're not confident of the answer, use the appropriate tool. When you use the dont_know_tool, respond with the message from the tool."
+        }
+      },
+      "id": "8b17da5e-e392-4028-91b0-bc02d34e46ed",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.2,
+      "position": [
+        820,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "5e21e7c5-db60-4111-bb17-c289ae0fc159",
+              "leftValue": "={{ $('Execute Workflow Trigger').item.json.chatInput }}",
+              "rightValue": "/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z0-9_-]+)/gi",
+              "operator": {
+                "type": "string",
+                "operation": "regex"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "990ecd3b-6aa0-4b17-8d01-d606b9164fa8",
+      "name": "Check if user has provided email",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        760,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "",
+          "mode": "name"
+        },
+        "text": "={{ \"A user had a question the bot couldn't answer. Here's their message: \" + $('Execute Workflow Trigger').item.json.chatInput }}",
+        "otherOptions": {}
+      },
+      "id": "d14da0ae-06ca-422b-b5b6-e7759e74c787",
+      "name": "Message Slack for help",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.1,
+      "position": [
+        1060,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "id": "278391c7-6945-495e-a4f1-74fb8fcc3549",
+      "name": "GPT4",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        740,
+        740
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Not sure?": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check if user has provided email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check if user has provided email": {
+      "main": [
+        [
+          {
+            "node": "Message Slack for help",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prompt the user to provide an email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message Slack for help": {
+      "main": [
+        [
+          {
+            "node": "Confirm that we've messaged a human",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+// docs/_workflows/advanced-ai/examples/chat_with_google_sheets_docs_version.json
+{
+  "name": "Chat with Google Sheets (docs version)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "e96a5e41-f0d6-49c1-977e-ff724a857212",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        540,
+        1240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Sub-workflow: Custom tool\nThe agent above can call this workflow. It returns three different types of data from the Google Sheet, which can be used together for more complex queries without returning the whole sheet (which might be too big for GPT to handle).",
+        "height": 612.0936015224503,
+        "width": 1449.2963504228514,
+        "color": 7
+      },
+      "id": "67facef0-e9c6-4280-8232-78f654b420d5",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        461.9740563285368,
+        970.616715060075
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Main workflow: AI agent using custom tool",
+        "height": 486.5625,
+        "width": 927.5,
+        "color": 7
+      },
+      "id": "bc448102-954b-451e-9bf7-bcadbc53bdbc",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        460,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Try it out\n\nSelect **Chat** at the bottom and enter:\n\n_Which is our biggest customer?_",
+        "height": 183.85014518022527,
+        "width": 185.9375,
+        "color": 4
+      },
+      "id": "afb2da2f-8da2-4ee8-bff9-55a99eeecc5c",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        300,
+        540
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "5d56d128-9a83-45ee-a34c-bc1190d59322",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "position": [
+        600,
+        560
+      ],
+      "webhookId": "e3f23177-c7c1-417b-a513-1c1090dda0a2",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ $json.sheetUrl }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "url",
+          "value": "={{ $json.sheetUrl }}"
+        },
+        "options": {}
+      },
+      "id": "3c0e4b48-a27b-472f-948e-9aa001c49149",
+      "name": "Get Google sheet contents",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        980,
+        1240
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "sheetUrl"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "67f9c172-e70f-4a0f-afd3-513cfeae09db",
+      "name": "Set Google Sheet URL",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        760,
+        1240
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "response",
+              "stringValue": "={{ Object.keys($json) }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "d49223eb-2927-4ddd-bd2c-cd439f927341",
+      "name": "Get column names",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1440,
+        1060
+      ],
+      "executeOnce": true,
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "jsCode": "return {\n  'response': JSON.stringify($input.all().map(x => x.json))\n}"
+      },
+      "id": "37ceba7a-1f0b-4de7-ae4a-d29a18dabaf6",
+      "name": "Prepare output",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1720,
+        1240
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "name": "list_columns_tool",
+        "description": "=### List all column names in customer data\nThis is useful to find out what data is available for each customer. Returns a JSON array containing all the column names.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "operation",
+              "stringValue": "column_names"
+            }
+          ]
+        }
+      },
+      "id": "94516eb1-89fc-4d3f-8000-d0fa43cd71cd",
+      "name": "List columns tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        940,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "name": "get_customer_tool",
+        "description": "=### Get all columns for a given customer\nTo use this mode, pass the row number of the customer. Returns a JSON object with all the column names and their values.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "operation",
+              "stringValue": "row"
+            }
+          ]
+        }
+      },
+      "id": "006745a1-3df7-4de9-9483-c6e133272c55",
+      "name": "Get customer tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        1220,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "c3d20569-1374-4f8d-8779-23b98952d124",
+      "name": "Simple Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        800,
+        780
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "name": "column_values_tool",
+        "description": "=### Get the specified column value for all customers\nThis is useful if you want to find out which customers have a certain value for a given column. Returns an array of JSON objects, one per customer. Each JSON object includes the column being requested, plus the row_number column. (The row_number column can be used to request the full customer data in a second step.). To use this mode, pass the name of the column to fetch.\n\nYou may want to call the 'list columns' tool first to find out which columns you could be fetching.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "operation",
+              "stringValue": "column_values"
+            }
+          ]
+        }
+      },
+      "id": "3a370ae9-eaf8-4e84-948b-848c461ac9eb",
+      "name": "Get column values tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        1080,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "maxIterations": 10
+        }
+      },
+      "id": "8f2a4854-2177-4ac8-9501-fa36cf2a3d73",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        820,
+        560
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "content": "**These tools all call the sub-workflow below**",
+        "height": 179.21380662202682,
+        "width": 432.3271051132649,
+        "color": 5
+      },
+      "id": "2576563b-a104-4d99-b3c8-b53bff4c740c",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        900,
+        740.8693557231958
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Change the URL of the Google Sheet**",
+        "height": 226.64416053838073,
+        "width": 179.99762227826224,
+        "color": 2
+      },
+      "id": "5b623d9e-e188-403d-a702-9ece6172a487",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        723,
+        1172
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "id": "2b8c8a67-a4df-4f5c-8c13-3cb2d25d2c5f",
+      "name": "GPT4 Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        660,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 171,
+        "width": 150,
+        "color": 2
+      },
+      "id": "f39d0c9b-4055-4331-83c8-3dbffb43478e",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        620,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 237,
+        "width": 176,
+        "color": 2
+      },
+      "id": "a8e09ef8-4dc6-4918-9194-047de402a8fa",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1172
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)",
+        "height": 126.0084096222716,
+        "width": 291.1204551358572
+      },
+      "id": "a391dfb1-f408-4498-99cd-d35a258d6c9a",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "column_names",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "col names"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "9fe58592-72e2-4379-9bdb-10da19c8218b",
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "column_values",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "col values"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "c1836f93-7874-43a4-98ff-cc487b276600",
+                    "leftValue": "={{ $('Execute Workflow Trigger').item.json.operation }}",
+                    "rightValue": "row",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "rows"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "907deea9-26cc-427e-93fc-52ce6b67e5e1",
+      "name": "Check operations",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        1220,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "={{ $('Execute Workflow Trigger').item.json.query }}",
+              "stringValue": "={{ $json[$('Execute Workflow Trigger').item.json.query] }}"
+            },
+            {
+              "name": "row_number",
+              "stringValue": "={{ $json.row_number }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "f2ebcae6-3cfb-4862-a927-dc66bd24f197",
+      "name": "Prepare column data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1440,
+        1240
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "bf712098-97e4-42cb-8e08-2ee32d19d3e7",
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.row_number }}",
+              "rightValue": "={{ $('Execute Workflow Trigger').item.json.query }}"
+            }
+          ]
+        },
+        "options": {
+          "looseTypeValidation": true
+        }
+      },
+      "id": "f40acb04-ef06-4670-b8b1-86b04f066af8",
+      "name": "Filter out other rows",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        1440,
+        1420
+      ],
+      "typeVersion": 2
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "GPT4 Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get column names": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get customer tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List columns tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Google Sheet URL": {
+      "main": [
+        [
+          {
+            "node": "Get Google sheet contents",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get column values tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Google Sheet URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Google sheet contents": {
+      "main": [
+        [
+          {
+            "node": "Check operations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check operations": {
+      "main": [
+        [
+          {
+            "node": "Get column names",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare column data",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Filter out other rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare column data": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter out other rows": {
+      "main": [
+        [
+          {
+            "node": "Prepare output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+
+// docs/_workflows/advanced-ai/examples/let_your_ai_call_an_api.json
+{
+  "name": "Let your AI call an API",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "35ce49a9-eda1-4da5-a6cb-39a39680111b",
+      "name": "Execute Workflow Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        520,
+        1140
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Sub-workflow: Custom tool\nThe agent above can call this workflow. It calls an example API called \"Bored API\" and returns a string with an activity idea.",
+        "height": 775.3931210698682,
+        "width": 1180.0825159534493,
+        "color": 7
+      },
+      "id": "ec6e261b-922f-401c-9392-12ff73488a5f",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        460,
+        960
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### Main workflow: AI agent using custom tool",
+        "height": 486.5625,
+        "width": 927.5,
+        "color": 7
+      },
+      "id": "25780e87-0ae0-4bee-9582-75f98bf66635",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        460,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "f262f04b-964c-47c0-b7dc-a86b82b0184b",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "position": [
+        600,
+        560
+      ],
+      "webhookId": "e3f23177-c7c1-417b-a513-1c1090dda0a2",
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "29678c05-9a48-41ec-9c5c-af36ee0d7fc6",
+      "name": "Simple Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "position": [
+        860,
+        780
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "content": "**This tool calls the sub-workflow below**",
+        "height": 179.21380662202682,
+        "width": 197.45572294791873,
+        "color": 5
+      },
+      "id": "e078f88b-489c-42ea-9544-6bdaeae213a0",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1020,
+        720
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 171,
+        "width": 150,
+        "color": 2
+      },
+      "id": "1d1d1a4e-0d1d-4094-81c7-e01f2674df0d",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        620,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 170.10898979087855,
+        "width": 152.85917676941358,
+        "color": 2
+      },
+      "id": "8c83d554-bf1f-4b3c-abb9-a6bb76846698",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        1540.2624287261167
+      ]
+    },
+    {
+      "parameters": {
+        "name": "activity_tool",
+        "description": "=Suggest an activity for a person to do. Use this tool if someone is bored, or asking for ideas of things to do.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "chatInput",
+              "stringValue": "={{ $('Chat Trigger').item.json.chatInput }}"
+            }
+          ]
+        }
+      },
+      "id": "82a3c606-0d7a-4b45-aae7-df35525615f7",
+      "name": "Activity tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "position": [
+        1080,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "maxIterations": 10
+        }
+      },
+      "id": "716dea0d-a987-4cf7-ae4a-bf0f7c7d7da9",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        820,
+        560
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {},
+      "id": "f469fba8-07ae-4c79-a79c-2c49946d94e2",
+      "name": "Auto-fixing Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "typeVersion": 1,
+      "position": [
+        920,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 189.79768930311286,
+        "width": 150,
+        "color": 2
+      },
+      "id": "e6d252d3-d78e-4827-b911-0528c3b80794",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        648.9502850955331,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "options": {}
+      },
+      "id": "f65054a9-771c-47f8-94cc-4ed766f89d19",
+      "name": "GPT4 Model 1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        660,
+        780
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "options": {}
+      },
+      "id": "94c2a6d8-cab9-48c2-8801-4306f0957f50",
+      "name": "GPT4 Model 2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        700,
+        1420
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "options": {}
+      },
+      "id": "5f423800-2eaf-43f5-bd59-dc1212cb55ad",
+      "name": "GPT4 Model 3",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        920,
+        1600
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Try it out\n\nSelect **Chat** at the bottom and enter:\n\n_Hi! Please suggest something to do. I feel like learning something new._",
+        "height": 214.8397420554627,
+        "width": 185.9375,
+        "color": 4
+      },
+      "id": "8ba60ef6-c375-41d9-bf79-1f19f1495adb",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        300,
+        540
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)",
+        "height": 144.50520156238127
+      },
+      "id": "4bbd5942-4f2a-4a9a-a26c-61f95ad57549",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"type\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"data\": {\n          \"enum\": [\"education\", \"recreational\",\"social\",\"diy\",\"charity\",\"cooking\",\"relaxation\",\"music\",\"busywork\"]\n        }\n      }\n    },\n    \"participants\": {\n      \"type\": \"number\"\n    }\n  }\n}"
+      },
+      "id": "a50c7858-b0fd-44d6-898d-452ffc5cbd72",
+      "name": "Structure as JSON",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://www.boredapi.com/api/activity/",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "type",
+              "value": "={{ $json.output.type.data }}"
+            },
+            {
+              "name": "participants",
+              "value": "={{ $json.output.participants }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "340c2536-6e79-4af6-9cd0-5cbf6eae1983",
+      "name": "Call the API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1120,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "prompt": "={{ $('Execute Workflow Trigger').item.json.chatInput }}"
+      },
+      "id": "d7d5455c-2e46-4896-853c-6b527e9403e4",
+      "name": "Work out activity type and number of people",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.3,
+      "position": [
+        740,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e37e64f6-64e7-4fbd-9ea1-e9d3ef99b39c",
+              "name": "response",
+              "value": "={{ $json.activity }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "83f9ac05-4583-4cc4-bcc8-29ae450c95cb",
+      "name": "Set 'response' value",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1340,
+        1140
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "Work out activity type and number of people",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Activity tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Auto-fixing Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Work out activity type and number of people",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT4 Model 1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT4 Model 2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Work out activity type and number of people",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT4 Model 3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structure as JSON": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Auto-fixing Output Parser",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call the API": {
+      "main": [
+        [
+          {
+            "node": "Set 'response' value",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Work out activity type and number of people": {
+      "main": [
+        [
+          {
+            "node": "Call the API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+// docs/_workflows/advanced-ai/examples/populate_a_pinecone_vector_database_from_a_website.json
+{
+  "name": "Populate a Pinecone vector database from a website",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "856f2426-b4b5-4180-a422-d26692844afb",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        80,
+        1040
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "1e702984-6f79-416e-981a-6728d4b3c233",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        260,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "splitCode": "markdown"
+        },
+        "requestOptions": {}
+      },
+      "id": "2d1f30fd-f251-4389-8f6d-2c950018a91f",
+      "name": "Recursive Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        300,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 10,
+        "options": {}
+      },
+      "id": "4e8a9d4c-6009-4d9b-b603-0438c65ba9df",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -840,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "gpt-4o"
+        },
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "e7967355-41b4-4bc5-b192-c8bc0699e925",
+      "name": "OpenAI Model",
+      "type": "@n8n/n8n-nodes-langchain.lmOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -1320,
+        1680
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://n8n-io.github.io/n8n-demo-website/sitemap.xml",
+        "options": {}
+      },
+      "id": "5fb88663-f28b-4da2-acd9-1cbb0c5d28e7",
+      "name": "Get sitemap",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1480,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "explicitRoot": false,
+          "ignoreAttrs": true
+        }
+      },
+      "id": "0e6287b8-9a65-4af0-8e69-3aae3648fd13",
+      "name": "Turn XML sitemap into JSON",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        -1260,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "url",
+        "options": {}
+      },
+      "id": "acd3e717-99f5-4238-aa4d-795caef660b1",
+      "name": "Turn the URL array into multiple items",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        740
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "f3b4ad5e-b261-4b97-9077-3b9259d5b37d",
+      "name": "Wait 5 seconds",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -320,
+        1060
+      ],
+      "webhookId": "f4e7dead-77ad-4216-a5a0-ef95914bf3ab"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.loc }}",
+        "options": {}
+      },
+      "id": "361b2a70-d0c5-4498-8a70-0688710e76e6",
+      "name": "Get pages listed in the sitemap",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -580,
+        1060
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "14ddd282-9bf0-459f-9595-5154e16f9cc0",
+      "name": "Chat Trigger",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1620,
+        1420
+      ],
+      "webhookId": "4b338d3c-b03f-42f2-94c1-9353d0f1fbc2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('Chat Trigger').item.json.chatInput }}"
+      },
+      "id": "263585e6-02bb-4940-9bb3-15f32b0f8079",
+      "name": "Question and Answer Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "typeVersion": 1.3,
+      "position": [
+        -1280,
+        1420
+      ]
+    },
+    {
+      "parameters": {
+        "topK": 10,
+        "requestOptions": {}
+      },
+      "id": "91ad53ec-a761-43f6-a6f1-835263222e0c",
+      "name": "Vector Store Retriever",
+      "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "typeVersion": 1,
+      "position": [
+        -1080,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {},
+        "requestOptions": {}
+      },
+      "id": "5c55cb38-be26-405d-bd39-d29e0a33b683",
+      "name": "Embeddings OpenAI2",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        2040
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "tW3bkXa0SAK0OzvR",
+          "name": "OpenAi account Debs"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "content"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "48dbd7f7-1ca1-41e2-9fd5-e916ea76589b",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Aggregate into one item**\n\nThe Pinecone node loops over each input item. This is standard n8n node behavior.\n\nThis means if you want to use the **Clear namespace** setting in the Pinecone node, you need to input a single item.",
+        "height": 381.66422439067196,
+        "color": 5
+      },
+      "id": "5b70d4ae-1889-43d3-b92d-bf73e43236bd",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Workflow to scrape data and send it to Pinecone",
+        "height": 878.8927796727229,
+        "width": 2382.6739342193496,
+        "color": 7
+      },
+      "id": "e9b5d557-51af-48d1-af33-8783f9ca3718",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1856.703373323493,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### Workflow to chat and get answers from the Pinecone vector database",
+        "height": 825.9872504327399,
+        "width": 1181.407211476183,
+        "color": 7
+      },
+      "id": "7efa097b-d4f2-49a4-9da5-4fcf6b83be3b",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Try it out \n\n1. Set credentials and choose your Pinecone vector database. See the notes on individual nodes for details.\n2. Select **Execute workflow** to run the main workflow and load data into Pinecone.\n3. Select **Chat** and try asking:\n\n_What is the purpose of the n8n demo website?_",
+        "height": 326.49681260818465,
+        "color": 4
+      },
+      "id": "f21bc32b-a405-4d71-b6c9-7bffbb6faed9",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2040,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Setup**\n\n1. In Pinecone, create a vector database. Set **Dimensions** to `3072` and **Metric** to `cosine`. You can use the free starter plan.\n2. In the Pinecone node, set your credentials.\n3. Select your Pinecone index.",
+        "height": 381.3701016273242,
+        "width": 304.1011298750183,
+        "color": 2
+      },
+      "id": "4be87782-f811-418f-b4b5-9e12c4cf7970",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        140,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+        },
+        "options": {
+          "clearNamespace": true,
+          "pineconeNamespace": "test-web-scraper"
+        }
+      },
+      "id": "94035a97-5a09-493c-aaae-dcba7bbf8526",
+      "name": "Pinecone Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        160,
+        740
+      ],
+      "credentials": {
+        "pineconeApi": {
+          "id": "lruA9GaKZSEY8dky",
+          "name": "Debs Pinecone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Next steps\n\nLearn more about [Advanced AI in n8n](https://docs.n8n.io/advanced-ai/)",
+        "width": 331.8066536811489
+      },
+      "id": "2be1433b-0488-4c7e-8c10-e771d4dd4686",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 206.68134932939768,
+        "width": 182.42633582707612,
+        "color": 2
+      },
+      "id": "fffbb04d-6d61-4dfa-bfd3-46b8c92a36d5",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        20,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 184.89671964234537,
+        "width": 173.09006596119673,
+        "color": 2
+      },
+      "id": "810ac5e1-d730-47af-9282-64ab0b4fca16",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1369.107685156473,
+        1620.2285847094058
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**",
+        "height": 192.67694453057842,
+        "width": 221.3274602682409,
+        "color": 2
+      },
+      "id": "2cecc8ac-3c65-4294-8a5d-2842bc07d10a",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -860,
+        1980
+      ]
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "debs-test",
+          "mode": "list",
+          "cachedResultName": "debs-test"
+        },
+        "options": {
+          "pineconeNamespace": "test-web-scraper"
+        }
+      },
+      "id": "e673c46e-0815-4b58-9a8f-2fb86445b578",
+      "name": "Pinecone Vector Store2",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        -980,
+        1840
+      ],
+      "credentials": {
+        "pineconeApi": {
+          "id": "lruA9GaKZSEY8dky",
+          "name": "Debs Pinecone"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "**Set your credentials**\n\n**Select your Pinecone index***",
+        "width": 367.59568816702017,
+        "color": 2
+      },
+      "id": "ca4499ae-4e27-4848-9654-f7e744c081e7",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1080,
+        1760
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b43ddbd1-adfd-4bba-bee5-4b81229e88dd",
+      "name": "Start the workflow by clicking \"Execute workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1700,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "content",
+              "cssSelector": ".md-content",
+              "returnValue": "html"
+            }
+          ]
+        },
+        "options": {
+          "trimValues": true,
+          "cleanUpText": true
+        }
+      },
+      "id": "d39624d7-93c0-4452-81b1-ffa04b216ceb",
+      "name": "Extract main content",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        -380,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "content": "**Batch the calls to the website**\n\nFor the small demo website in this example, this is not essential. If you want to use this example with a larger website, batching like this helps avoid timeouts. Using the Wait node between batches avoids hitting the website with too many requests too fast.",
+        "height": 298.48800301054644,
+        "width": 316.2462039046831,
+        "color": 5
+      },
+      "id": "9825926d-ce6d-429e-9006-6ff5fd1f46ca",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1220,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## How to scrape a different website\n\nThis workflow uses a small example website provided by n8n. To use a different site:\n\n1. Change the sitemap URL in **Get sitemap**.\n2. Update **Extract main content** according to the HTML structure of the website you're scraping.",
+        "height": 356.06166718347
+      },
+      "id": "7c2e4bde-3900-49b0-9bee-704e34664163",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2040,
+        960
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Extract main content",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get pages listed in the sitemap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get sitemap": {
+      "main": [
+        [
+          {
+            "node": "Turn XML sitemap into JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Turn XML sitemap into JSON": {
+      "main": [
+        [
+          {
+            "node": "Turn the URL array into multiple items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Turn the URL array into multiple items": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 5 seconds": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get pages listed in the sitemap": {
+      "main": [
+        [
+          {
+            "node": "Wait 5 seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Retriever": {
+      "ai_retriever": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_retriever",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI2": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store2",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store2": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Retriever",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start the workflow by clicking \"Execute workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Get sitemap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract main content": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+
+// docs/_workflows/advanced-ai/tutorials/chat_01.json
+{
+    "name": "AI tutorial",
+    "nodes": [
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          -200,
+          -40
+        ],
+        "id": "a2d42e1f-36df-4a6a-a3b4-99a162074d11",
+        "name": "When chat message received",
+        "webhookId": "97c1a41f-8ef0-4d63-a924-92eb634384d3"
+      }
+    ],
+    "pinData": {},
+    "connections": {},
+    "active": false,
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "versionId": "b1641385-c6b0-48a8-8e26-20d1f6bd7fda",
+    "meta": {
+      "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+    },
+    "id": "l05TkWXXYbOiuL4o",
+    "tags": []
+  }
+
+// docs/_workflows/advanced-ai/tutorials/chat_02.json
+{
+    "name": "AI tutorial",
+    "nodes": [
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          -300,
+          -40
+        ],
+        "id": "a2d42e1f-36df-4a6a-a3b4-99a162074d11",
+        "name": "When chat message received",
+        "webhookId": "97c1a41f-8ef0-4d63-a924-92eb634384d3"
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 1.7,
+        "position": [
+          -80,
+          -40
+        ],
+        "id": "0f61a10f-668f-42f7-b835-cf3efb60082a",
+        "name": "AI Agent"
+      }
+    ],
+    "pinData": {},
+    "connections": {
+      "When chat message received": {
+        "main": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "active": false,
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "versionId": "b1641385-c6b0-48a8-8e26-20d1f6bd7fda",
+    "meta": {
+      "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+    },
+    "id": "l05TkWXXYbOiuL4o",
+    "tags": []
+  }
+
+// docs/_workflows/advanced-ai/tutorials/chat_complete.json
+{
+    "name": "AI tutorial",
+    "nodes": [
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "typeVersion": 1.1,
+        "position": [
+          -300,
+          -40
+        ],
+        "id": "a2d42e1f-36df-4a6a-a3b4-99a162074d11",
+        "name": "When chat message received",
+        "webhookId": "97c1a41f-8ef0-4d63-a924-92eb634384d3"
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 1.7,
+        "position": [
+          -80,
+          -40
+        ],
+        "id": "0f61a10f-668f-42f7-b835-cf3efb60082a",
+        "name": "AI Agent"
+      },
+      {
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4o-mini"
+          },
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "typeVersion": 1.2,
+        "position": [
+          -100,
+          160
+        ],
+        "id": "b8129c6d-f201-4378-8f66-ce9a6cfd5f3b",
+        "name": "OpenAI Chat Model",
+        "credentials": {
+          "openAiApi": {
+            "id": "jiPPcYV9I70iKapN",
+            "name": "OpenAi account 37"
+          }
+        }
+      },
+      {
+        "parameters": {},
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "typeVersion": 1.3,
+        "position": [
+          20,
+          180
+        ],
+        "id": "afbab05c-1e87-4f7a-9d66-c86f9db1ec64",
+        "name": "Simple Memory"
+      }
+    ],
+    "pinData": {},
+    "connections": {
+      "When chat message received": {
+        "main": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Simple Memory": {
+        "ai_memory": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_memory",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "active": false,
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "versionId": "b1641385-c6b0-48a8-8e26-20d1f6bd7fda",
+    "meta": {
+      "templateCredsSetupCompleted": true,
+      "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+    },
+    "id": "l05TkWXXYbOiuL4o",
+    "tags": []
+  }
+
+// docs/_workflows/credentials/dynamic_credentials_using_expressions.json
+{
+  "name": "Dynamic credentials using expressions",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "da4071f2-7550-4dae-aa48-8bced4291643",
+        "formTitle": "Test dynamic credentials",
+        "formDescription": "This form is for testing an n8n workflow that demonstrates setting credentials with expressions.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Enter your NASA API key",
+              "requiredField": true
+            }
+          ]
+        },
+        "responseMode": "responseNode"
+      },
+      "id": "cc6f2b1e-0ed0-4d22-8a44-d7223ba283b4",
+      "name": "n8n Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2,
+      "position": [
+        560,
+        520
+      ],
+      "webhookId": "da4071f2-7550-4dae-aa48-8bced4291643"
+    },
+    {
+      "parameters": {
+        "additionalFields": {}
+      },
+      "id": "ef336bae-3d4f-419c-ab5c-b9f0de89f170",
+      "name": "NASA",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        900,
+        520
+      ],
+      "credentials": {
+        "nasaApi": {
+          "id": "QDDBOZOD6k3ijL5t",
+          "name": "NASA account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "redirect",
+        "redirectURL": "={{ $json.url }}",
+        "options": {}
+      },
+      "id": "143bcdb6-aca0-4dd8-9204-9777271cd230",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "content": "This workflow shows how to set credentials dynamically using expressions.\n\n\nFirst, set up your NASA credential: \n\n1. Create a new NASA credential.\n1. Hover over **API Key**.\n1. Toggle **Expression** on.\n1. In the **API Key** field, enter `{{ $json[\"Enter your NASA API key\"] }}`.\n\n\nThen, test the workflow:\n\n1. Get an [API key from NASA](https://api.nasa.gov/)\n2. Select **Execute workflow**\n3. Enter your key using the form.\n4. The workflow runs and sends you to the NASA picture of the day.\n\n\nFor more information on expressions, refer to [n8n documentation | Expressions](https://docs.n8n.io/code/expressions/).",
+        "height": 564,
+        "width": 322,
+        "color": 4
+      },
+      "id": "0a0dee23-fa16-4f09-b5e0-856f47fb53d0",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        120,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "content": "User submits an API key using the form",
+        "height": 319
+      },
+      "id": "dd766e32-334d-4e46-9daa-7800b134a3a5",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        500,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "content": "The workflow passes the key to the NASA node. You can reference the value using the expression `$json[\"Enter your NASA API key\"]`. This is also available to the node credential. ",
+        "height": 319,
+        "color": 5
+      },
+      "id": "3d8f02e6-e029-41dc-89ad-0f5cffe09348",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        820,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "content": "The Respond to Webhook node controls the form response (in this example, redirecting the user to an image)",
+        "height": 319
+      },
+      "id": "096eb6ab-c276-4687-9dc0-50e16a8f709a",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        380
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "n8n Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "NASA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NASA": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
+
+
+// docs/_workflows/ai-code/data-transformation.json
+{
+  "name": "Data transformation",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "3ada6076-1cfb-4c2d-a421-4fce5466fc2d",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n{\n\"user_id\":\n\"0001\",\n\"username\":\n\"nathan\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"0002\",\n\"username\":\n\"natalie\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"TRUE\"\n},\n{\n\"user_id\":\n\"0003\",\n\"username\":\n\"nadia\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"naomi\",\n\"username\":\n\"hkhjk\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n},\n{\n\"user_id\":\n\"0005\",\n\"username\":\n\"nolan\",\n\"date\":\n\"2023-08-10\",\n\"variant\":\n\"control\",\n\"data_exec_success\":\n\"FALSE\"\n}\n]"
+      },
+      "id": "08e4d878-01ab-4f01-ab27-84ef5afbf581",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        840
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "57a9330b-9e46-42a6-b432-681e906de93a",
+      "name": "Join items",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1780,
+        840
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Join items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d7409102-d3af-4ddf-bead-2df008554458",
+  "id": "B4K5I5pN4nqu85ac",
+  "meta": {
+    "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"
+  },
+  "tags": []
+}
+
+// docs/_workflows/ai-code/find-a-piece-of-data.json
+{
+  "name": "Find a piece of data",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5319a081-f4f9-44ac-a91e-a57270e6eaa8",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n{\n\"title\":\n\"\",\n\"phone\":\n\"\",\n\"skype\":\n\"\",\n\"real_name\":\n\"Nathan Berlin\",\n\"email\": \"nathan@example.io\",\n\"real_name_normalized\":\n\"Nathan Berlin\",\n\"display_name\":\n\"Nathan Berlin\",\n\"display_name_normalized\":\n\"Nathan Berlin\",\n\"fields\":\n{\n},\n\"status_text\":\n\"\",\n\"status_emoji\":\n\"\",\n\"status_emoji_display_info\":\n[\n],\n\"status_expiration\":\n0,\n\"avatar_hash\":\n\"0856f5fbbd43\",\n\"image_original\":\n\"https://example.png\",\n\"is_custom_image\":\ntrue,\n\"huddle_state\":\n\"default_unset\",\n\"huddle_state_expiration_ts\":\n0,\n\"first_name\":\n\"Nathan\",\n\"last_name\":\n\"Berlin\",\n\"image_24\":\n\"https://example.png\",\n\"image_32\":\n\"https://example.png\",\n\"image_48\":\n\"https://example.png\",\n\"image_72\":\n\"https://example.png\",\n\"image_192\":\n\"https://example.png\",\n\"image_512\":\n\"https://example.png\",\n\"image_1024\":\n\"https://example.png\",\n\"status_text_canonical\":\n\"\"\n}\n]"
+      },
+      "id": "3ec439bc-7e3f-4ec2-b724-092466efaa18",
+      "name": "Mock Slack",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        680,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n{\n\"object\":\n\"user\",\n\"id\":\n\"1234\",\n\"name\":\n\"Nathan Berlin\",\n\"avatar_url\":\n\"https://example.jpeg\",\n\"type\":\n\"person\",\n\"person\":\n{\n\"email\":\n\"nathan@example.io\"\n}\n},\n{\n\"object\":\n\"user\",\n\"id\":\n\"5678\",\n\"name\":\n\"Natalie Berlin\",\n\"avatar_url\":\n\"https://example.jpeg\",\n\"type\":\n\"person\",\n\"person\":\n{\n\"email\":\n\"natalie@example.io\"\n}\n}\n]"
+      },
+      "id": "4bb97ec6-c73a-4f01-b935-a94ffbf15d23",
+      "name": "Mock Notion",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        900,
+        460
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "330ecf72-cff0-4ada-9b04-b1c99bb0f4de",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        460
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Mock Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock Slack": {
+      "main": [
+        [
+          {
+            "node": "Mock Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock Notion": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "81cabd2b-2854-4afb-b656-90a0cb77fa96",
+  "id": "3Brrdjs5aRHo57EX",
+  "meta": {
+    "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"
+  },
+  "tags": []
+}
+
+// docs/_workflows/ai-code/reference-incoming-data-explicitly.json
+{
+  "name": "Reference incoming data explicitly",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "0abbe7f6-f8a0-4f71-8229-f4fd1a3c2683",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        620,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n   \"id\": 0001,\n   \"personal_info\": {\n    \"first_name\": \"Natalie\",\n    \"surname\": \"Berlin\"\n   },\n   \"work_info\": {\n    \"job_title\": \"Automation engineer\"\n   }\n  },\n  {\n    \"id\": 0002,\n    \"personal_info\": {\n     \"first_name\": \"Nathan\",\n     \"surname\": \"Berlin\"\n    },\n    \"work_info\": {\n     \"job_title\": \"Automation designer\"\n    }\n   }\n]"
+      },
+      "id": "e19f11cd-c868-4aca-b88e-04b4ee6f0187",
+      "name": "Mock data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        840,
+        520
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "ef54d477-0596-441a-98e5-1ab005e9a268",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        520
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Mock data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock data": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4e3a0a21-c993-4851-848b-01bd5c090b6b",
+  "id": "EipyYyqKKQm7siq4",
+  "meta": {
+    "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"
+  },
+  "tags": []
+}
+
+// docs/_workflows/ai-code/summarize-data.json
+{
+  "name": "Summarize data and prepare Slack message",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5d4bd82f-24e9-484e-a17e-c5de889087d9",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        860,
+        540
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "0d73c3df-300a-4397-8f53-fb0750dbf97f",
+      "name": "Summarize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n{\n\"id\":\n\"0001\",\n\"name\":\n\"Example feature 1\",\n\"url\": \"example.com\",\n\"property_tags\":\n[\n],\n\"property_type\":\n[\n\"Feature\"\n],\n\"property_votes\":\n2\n},\n{\n\"id\":\n\"0002\",\n\"name\":\n\"Example feature 2\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Feature\"\n],\n\"property_votes\":\n3\n},\n{\n\"id\":\n\"0003\",\n\"name\":\n\"Example feature 3\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Feature\"\n],\n\"property_votes\":\n1\n},\n{\n\"id\":\n\"0004\",\n\"name\":\n\"Example bug 1\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Bug\"\n],\n\"property_votes\":\n0\n},\n{\n\"id\":\n\"0005\",\n\"name\":\n\"Example idea 1\",\n\"url\": \"example.com\",\n\"property_type\":\n[\n\"Idea\"\n],\n\"property_votes\":\n4\n}\n]"
+      },
+      "id": "fda17968-61a5-4c0b-ab83-adb4e0bbf7c5",
+      "name": "Mock Ideas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1080,
+        540
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Mock Ideas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mock Ideas": {
+      "main": [
+        [
+          {
+            "node": "Summarize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "077fe5dc-2214-4149-9f1b-ef6342e45dec",
+  "id": "5IoF8z4YUoSUpBUk",
+  "meta": {
+    "instanceId": "c5aabef739d71e3d0ceb8b6078a241aaf1b145fa71cbbe36ecfb2c8c3fd64f5f"
+  },
+  "tags": []
+}

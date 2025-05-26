@@ -4,13 +4,24 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
 
 <!--
-Redoc doesn't change outer page styles
+Scalar doesn't change outer page styles
 -->
 <style>
-
+  /* Mkdocs style reset */
   body {
     margin: 0;
     padding: 0;
+  }
+
+  .md-content__button {
+    position: absolute;
+    right: 4px;
+    top: 88px;
+    z-index: 1;
+  }
+
+  .md-typeset svg {
+    border: none;
   }
 
   .md-main__inner  {
@@ -18,13 +29,15 @@ Redoc doesn't change outer page styles
       margin-top: 0;
   }
 
-  .md-grid {
-      max-width: 100%;
+  .md-typeset .grid {
+    grid-gap: 0;
+    margin: 0;
   }
 
   .md-content__inner {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    position: relative;
   }
 
   .md-content__inner > p {
@@ -39,14 +52,37 @@ Redoc doesn't change outer page styles
     margin-bottom: invalid;
   }
 
-  [dir=ltr] .md-typeset ol li, [dir=ltr] .md-typeset ul li {
-    margin-left: 0;
+  [dir=ltr] .md-typeset ol li, [dir=ltr] .md-typeset ul li,
+  [dir=ltr] .md-typeset ol, [dir=ltr] .md-typeset ul,
+  [dir=ltr] .md-typeset ul li ul {
+    margin: 0;
   }
 
-  [dir=ltr] .md-typeset ol, [dir=ltr] .md-typeset ul {
-    margin-left: 0;
-  }
+  /* Scalar API Reference style reset */
+  .scalar-api-reference {
+    --scalar-custom-header-height: 48px;
 
+    h1,
+    h2,
+    h3,
+    table,
+    li,
+    kbd {
+      all: unset;
+    }
+
+    .sidebar-search {
+      border-style: solid;
+    }
+
+    .section-container {
+      padding-right: 4px!important;
+    }
+
+    .section-container:has(.show-more) {
+      background-color: transparent!important;
+    }
+  }
 </style>
 
 {% endblock %}

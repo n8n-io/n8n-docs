@@ -8,23 +8,14 @@ description: API reference for n8n's public REST API.
 contentType: reference
 ---
 
+<!-- Load the Script -->
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
 
-<redoc
-  spec-url="/api/v1/openapi.yml"
-  disable-search
-  hide-hostname
-  theme='{
-    "typography": {
-      "fontSize": "14px",
-      "lineHeight": "1.2em",
-      "fontFamily": "\"Open sans\", Helvetica, sans-serif",
-      "headings": {
-        "fontFamily": "\"Open sans\", Helvetica, sans-serif"
-      }
-    },
-    "sidebar": {
-      "backgroundColor": "#eaeaea",
-      "width": "280px"
-    }
-  }' />
-<script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"> </script>
+<!-- Initialize the Scalar API Reference -->
+<script>
+	Scalar.createApiReference('#app', {
+		url: '/api/v1/openapi.yml',
+		forceDarkModeState: 'light',
+		hideDarkModeToggle: true,
+	})
+</script>

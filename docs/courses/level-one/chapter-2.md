@@ -28,7 +28,7 @@ Then:
 1. Search for the **Manual Trigger** node.
 2. Select it when it appears in the search.
 
-This will add the [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node to your canvas, which allows you to run the workflow at any time by selecting the **Test workflow** button.
+This will add the [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node to your canvas, which allows you to run the workflow at any time by selecting the **Execute workflow** button.
 
 /// note | Manual triggers
 For faster workflow creation, you can skip this step in the future. Adding any other node without a trigger will add the Manual Trigger node to the workflow.
@@ -114,9 +114,9 @@ To find the original node name (the type of node), open the node window and sele
 
 ## 4. Execute the node
 
-Select the **Test step** button in the node details window. You should see 10 results in the Output **Table** view.
+Select the **Execute step** button in the node details window. You should see 10 results in the Output **Table** view.
 
-<!--This screenshot needs updating now that the button says "Test step" rather than "Execute node"-->
+<!--This screenshot needs updating now that the button says "Execute step" rather than "Test node"-->
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-results-in-table-view-for-the-hacker-news-node.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
 
 ### Node executions

@@ -35,16 +35,90 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
-## n8n@1.93.0
+## n8n@1.94.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2025-05-12
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.93.0...n8n@1.94.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-19
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
+This release contains editor improvements, an API update, node updates, new nodes, and bug fixes.
+
+### Extended logs view
+
+When workflows get complex, debugging can get... clicky. That’s where an extended **Logs View** comes in. Now you can get a clearer path to trace executions, troubleshoot issues, and understand the behavior of a complete workflow — without bouncing between node detail views. 
+
+This update brings a unified, always-accessible panel to the bottom of the canvas, showing you each step of the execution as it happens. Whether you're working with loops, sub-workflows, or AI agents, you’ll see a structured view of everything that ran, in the order it ran—with input, output, and status info right where you need it.
+
+You can jump into node details when you want to dig deeper, or follow a single item through every step it touched. Real-time highlighting shows you which nodes are currently running or have failed, and you’ll see total execution time for any workflow—plus token usage for AI workflows to help monitor performance. And if you're debugging across multiple screens? Just pop the logs out and drag them wherever you’d like.
+
+⚙️**What it does**
+
+- Adds a **Logs view** to the bottom of the canvas that can be opened or collapsed. (Chat also appears here if your workflow uses it).
+- Displays a **hierarchical list of nodes** in the order they were executed—including expanded views of sub-workflows.
+- Allows you to **click a node in hierarchy** to preview inputs and outputs directly, or jump into the full Node Details view with a link.
+- Provides ability to **toggle** input and output data on and off.
+- Highlights each node **live as it runs**, showing when it starts, completes, or fails.
+- Includes **execution history** view to explore past execution data in a similar way.
+- Shows **roll-up stats** like total execution time and total AI tokens used (for AI-enabled workflows).
+- Includes a  **“pop out”** button to open the logs as a floating window—perfect for dragging to another screen while debugging.
+
+🛠️**How to**
+
+To access the expanded logs view, click on the Logs bar at the bottom of the canvas. The view is also opens up when you open the chat window on the bottom of the page.
+
+### Contributors
+
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.93.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-12
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
 This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
+
+### Faster ways to open sub-workflows
+
+We’ve added several new ways to navigate your multi-workflow automations faster.
+
+From any workflow with a sub-workflow node:
+
+🖱️ Right-click on a sub-workflow node and select `Open sub-workflow` from the context menu
+
+⌨️ Keyboard shortcuts
+
+- **Windows:** `CTRL + SHIFT + O` or `CTRL + Double Click`
+- **Mac:** `CMD + SHIFT + O` or `CMD + Double Click`
+
+These options will bring your sub-workflow up in a new tab.
+
+### Archive workflows
+
+If you’ve ever accidentally removed a workflow, you’ll appreciate the new archiving feature. Instead of permanently deleting workflows with the Remove action, workflows are now archived by default. This allows you to recover them if needed.
+
+**How to:**
+
+- **Archive a workflow** - Select **Archive** from the Editor UI menu. It has replaced the **Remove** action.
+- **Find archived workflows** - Archived workflows are hidden by default. To find your archived workflows, select the option for **Show archived workflows** in the workflow filter menu.
+- **Permanently delete a workflow** - Once a workflow is archived, you can **Delete** it from the  options menu.
+- **Recover a workflow** - Select **Unarchive** from the options menu.
+
+**Keep in mind:** 
+
+- Workflows archival requires the same permissions as required previously for removal.
+- You cannot select archived workflows as sub-workflows to execute
+- Active workflows are deactivated when they are archived
+- Archived workflows can not be edited
 
 ### Contributors
 
@@ -54,18 +128,10 @@ This release contains core updates, editor improvements, new nodes, node updates
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.92.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.1...n8n@1.92.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-08
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
 
 This release contains a bug fix.
 
@@ -76,19 +142,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.2...n8n@1.91.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-08
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
 
 ## n8n@1.92.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.92.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-06
-
-
 
 This release contains a bug fix.
 
@@ -100,6 +161,50 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.0...n8n@1.92.0
 **Release date:** 2025-05-05
 
 This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Partial Execution for AI Tools
+
+We’ve made it easier to build and iterate on AI agents in n8n. You can now run and test specific tools without having to execute the entire agent workflow.
+
+Partial execution is especially useful when refining or troubleshooting parts of your agent logic. It allows you to test changes incrementally, without triggering full agent runs, reducing unnecessary AI calls, token usage, and downstream activity. This makes iteration faster, more cost-efficient, and more precise when working with complex or multi-step AI workflows.
+
+Partial execution for AI tools is available now for all tools - making it even easier to build, test, and fine-tune AI agents in n8n.
+
+<br>
+<video src="/_video/release-notes/AI-agent-partial-execution.mp4" controls width="100%"></video>
+<br>
+
+**How to:**
+
+To use this feature you can either:
+
+- Click the **Play** button on the tool you want to execute directly from the canvas view.
+- Open the tool’s **Node Details View** and select **"Test step"** to run it from there.
+
+If you have previously run the workflow, the input and output will be prefilled with data from the last execution. A pop-up form will open where you can manually fill in the parameters before executing your test.
+
+### Extended logs view
+
+When workflows get complex, debugging can get... clicky. That’s where an extended **Logs View** comes in. Now you can get a clearer path to trace executions, troubleshoot issues, and understand the behavior of a complete workflow — without bouncing between node detail views. 
+
+This update brings a unified, always-accessible panel to the bottom of the canvas, showing you each step of the execution as it happens. Whether you're working with loops, sub-workflows, or AI agents, you’ll see a structured view of everything that ran, in the order it ran—with input, output, and status info right where you need it.
+
+You can jump into node details when you want to dig deeper, or follow a single item through every step it touched. Real-time highlighting shows you which nodes are currently running or have failed, and you’ll see total execution time for any workflow—plus token usage for AI workflows to help monitor performance. And if you're debugging across multiple screens? Just pop the logs out and drag them wherever you’d like.
+
+⚙️**What it does**
+
+- Adds a **Logs view** to the bottom of the canvas that can be opened or collapsed. (Chat also appears here if your workflow uses it).
+- Displays a **hierarchical list of nodes** in the order they were executed—including expanded views of sub-workflows.
+- Allows you to **click a node in hierarchy** to preview inputs and outputs directly, or jump into the full Node Details view with a link.
+- Provides ability to **toggle** input and output data on and off.
+- Highlights each node **live as it runs**, showing when it starts, completes, or fails.
+- Includes **execution history** view to explore past execution data in a similar way.
+- Shows **roll-up stats** like total execution time and total AI tokens used (for AI-enabled workflows).
+- Includes a  **“pop out”** button to open the logs as a floating window—perfect for dragging to another screen while debugging.
+
+🛠️**How to**
+
+To access the expanded logs view, click on the Logs bar at the bottom of the canvas. The view is also opens up when you open the chat window on the bottom of the page.
 
 ### Insights enhancements for Enterprise
 
@@ -127,8 +232,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.1...n8n@1.91.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-05
-
-
 
 This release contains a bug fix.
 
@@ -158,6 +261,10 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.0...n8n@1.91.0
 **Release date:** 2025-04-28
 
 This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Breadcrumb view from the canvas
+
+We’ve added **breadcrumb navigation directly on the canvas**, so you can quickly navigate to any of a workflow’s parent folders right from the canvas.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

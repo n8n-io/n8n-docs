@@ -11,7 +11,7 @@ There are two ways to work around this issue:
         {
             "parameters": {},
             "id": "35d05920-ad75-402a-be3c-3277bff7cc67",
-            "name": "When clicking ‘Test workflow’",
+            "name": "When clicking ‘Execute workflow’",
             "type": "n8n-nodes-base.manualTrigger",
             "typeVersion": 1,
             "position": [
@@ -64,7 +64,7 @@ There are two ways to work around this issue:
         }
         ],
         "connections": {
-        "When clicking ‘Test workflow’": {
+        "When clicking ‘Execute workflow’": {
             "main": [
             [
                 {

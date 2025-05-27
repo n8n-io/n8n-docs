@@ -108,6 +108,10 @@ Make sure you're on **n8n version 1.94.0** or later and the instance Owner has e
 - Search for the Node. Verified nodes are indicated by a shield 🛡️
 - Select the node and click **Install**
 
+<br>
+<video src="/_video/release-notes/Community-nodes-node-panel.mp4" controls width="100%"></video>
+<br>
+
 Once an Owner installs a node, everyone on the instance can start using it—just drag, drop, and connect like any other node in your workflow.
 
 <br>

@@ -86,6 +86,65 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.93.0...n8n@1.94.0
 
 This release contains editor improvements, an API update, node updates, new nodes, and bug fixes.
 
+<div class="n8n-new-features" markdown> 
+
+### Verified community nodes on Cloud
+
+We’ve expanded the n8n ecosystem and unlocked a new level of flexibility for all users including those on n8n Cloud! Now you can access a select set of community nodes and partner integrations without leaving the canvas. This means you install and automate with a wider range of integrations without leaving your workspace. The power of the community is now built-in.
+
+This update focuses on three major improvements:
+
+- **Cloud availability**: Community nodes are no longer just for self-hosted users. A select set of nodes is now available on n8n Cloud.
+- **Built-in discovery**: You can find and explore these nodes right from the Nodes panel without leaving the editor or searching on npm.
+- **Trust and verification**: Nodes that appear in the editor have been manually vetted for quality and security. These verified nodes are marked with a checkmark.
+
+We’re starting with a selection of around 25 nodes, including some of the most-used community-built packages and partner-supported integrations. For this phase, we focused on nodes that don’t include external package dependencies - helping streamline the review process and ensure a smooth rollout.
+<br>
+<br>
+
+This is just the start. We plan to expand the library gradually, bringing even more verified nodes into the editor along with the powerful and creative use cases they unlock. In time, our criteria will evolve, opening the door to a wider range of contributions while keeping quality and security in focus.
+<br>
+<br>
+
+Learn more about this update and find out which nodes are already installable from the editor in our [blog](http://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
+
+<br>
+
+ 💻 **Use a verified node**
+
+Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables/nodes.md). In both cases, verified nodes are enabled by default.
+
+- Open the **Nodes panel** from the editor
+- Search for the Node. Verified nodes are indicated by a shield 🛡️
+- Select the node and click **Install**
+
+<br>
+<video src="/_video/release-notes/Community-nodes-node-panel.mp4" controls width="100%"></video>
+<br>
+
+Once an Owner installs a node, everyone on the instance can start using it—just drag, drop, and connect like any other node in your workflow.
+
+<br>
+
+🛠️ **Build a node and get it verified**
+
+Want your node to be verified and discoverable from the editor? Here’s how to get involved:
+
+1. Review the [community node verification guidelines](/integrations/creating-nodes/build/reference/verification-guidelines.md).
+2. If you’re building something new, follow the recommendations for [creating nodes](/integrations/creating-nodes/overview.md).
+3. Check your design against the [UX guidelines](/integrations/creating-nodes/build/reference/ux-guidelines.md).
+4. [Submit your node](/integrations/creating-nodes/deploy/submit-community-nodes.md) to npm.
+5. Request verification by filling out [this form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
+
+<br>
+
+**Already built a node? Raise your hand!**
+
+If you’ve already published a community node and want it considered for verification, make sure it meets the requirements noted above, then let us know by submitting the interest [form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b). We’re actively curating the next batch and would love to include your work.
+
+</div> 
+
+
 ### Extended logs view
 
 When workflows get complex, debugging can get... clicky. That’s where an extended **Logs View** comes in. Now you can get a clearer path to trace executions, troubleshoot issues, and understand the behavior of a complete workflow — without bouncing between node detail views. 

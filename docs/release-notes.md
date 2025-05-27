@@ -98,6 +98,8 @@ This is just the start. We plan to expand the library gradually, bringing even m
 
 Learn more about this update and find out which nodes are already installable from the editor in our [blog](http://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
 
+<br>
+
  💻 **Use a verified node**
 
 Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables/nodes.md). In both cases, verified nodes are enabled by default.
@@ -108,6 +110,8 @@ Make sure you're on **n8n version 1.94.0** or later and the instance Owner has e
 
 Once an Owner installs a node, everyone on the instance can start using it—just drag, drop, and connect like any other node in your workflow.
 
+<br>
+
 🛠️ **Build a node and get it verified**
 
 Want your node to be verified and discoverable from the editor? Here’s how to get involved:
@@ -117,6 +121,8 @@ Want your node to be verified and discoverable from the editor? Here’s how to 
 3. Check your design against the [UX guidelines](/integrations/creating-nodes/build/reference/ux-guidelines.md).
 4. [Submit your node](/integrations/creating-nodes/deploy/submit-community-nodes.md) to npm.
 5. Request verification by filling out [this form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
+
+<br>
 
 **Already built a node? Raise your hand!**
 

@@ -93,8 +93,12 @@ This update focuses on three major improvements:
 - **Trust and verification**: Nodes that appear in the editor have been manually vetted for quality and security. These verified nodes are marked with a checkmark.
 
 We’re starting with a selection of around 25 nodes, including some of the most-used community-built packages and partner-supported integrations. For this phase, we focused on nodes that don’t include external package dependencies - helping streamline the review process and ensure a smooth rollout.
+<br>
+<br>
 
 This is just the start. We plan to expand the library gradually, bringing even more verified nodes into the editor along with the powerful and creative use cases they unlock. In time, our criteria will evolve, opening the door to a wider range of contributions while keeping quality and security in focus.
+<br>
+<br>
 
 Learn more about this update and find out which nodes are already installable from the editor in our [blog](http://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
 

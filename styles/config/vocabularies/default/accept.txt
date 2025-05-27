@@ -152,7 +152,7 @@ Motorhead
 [Mm]ultiple
 n8n
 nanoids
-namespace
+namespaces?
 NASA
 Netlify
 Netscaler
@@ -179,6 +179,7 @@ PhantomBuster
 Pinterest
 Pipedrive
 Pinecone
+[Pp]laintext
 Plivo
 Pluralsight
 Postbin

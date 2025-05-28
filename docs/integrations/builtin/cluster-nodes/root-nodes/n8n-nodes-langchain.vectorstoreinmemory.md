@@ -36,7 +36,7 @@ This node stores data in memory only. All data is lost when n8n restarts and may
 
 Memory keys for the Simple Vector Store node are global, not scoped to individual workflows.
 
-This means that all user of the instance can access vector store data by adding a Simple Vector Store node and selecting the memory key, regardless of the access controls set for the original workflow. Take care not to expose sensitive information when ingesting data with the Simple Vector Store node.
+This means that all users of the instance can access vector store data by adding a Simple Vector Store node and selecting the memory key, regardless of the access controls set for the original workflow. Take care not to expose sensitive information when ingesting data with the Simple Vector Store node.
 
 ## Node usage patterns
 

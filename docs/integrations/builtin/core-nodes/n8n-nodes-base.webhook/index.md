@@ -111,7 +111,7 @@ Select **Add Option** to view more configuration options. The available options 
 * **Allowed Origins (CORS)**: Set the permitted cross-origin domains. Enter a comma-separated list of URLs allowed for cross-origin non-preflight requests. Use `*` (default) to allow all origins.
 * **Binary Property**: Enabling this setting allows the Webhook node to receive binary data, such as an image or audio file. Enter the name of the binary property to write the data of the received file to.
 * **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
-* **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IPs outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
+* **IP(s) Whitelist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IP addresses outside the whitelist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
 * **No Response Body**: Enable this to prevent n8n sending a body with the response.
 * **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: Choose the format for the webhook body.

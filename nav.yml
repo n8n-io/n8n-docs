@@ -190,6 +190,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Evaluation: integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md
+        - Evaluation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md
         - Execute Command:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md

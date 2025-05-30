@@ -59,13 +59,13 @@ Examples:
 * [RAG document relevance](https://n8n.io/workflows/4273): when working with a vector database, whether the documents retrieved are relevant to the question.
 * RAG answer groundedness: when working with a vector database, whether the answer is ["grounded"](https://www.deepset.ai/blog/rag-llm-evaluation-groundedness) in the documents retrieved.
 
-Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a 'check if evaluating' operation.
+Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a ['check if evaluating' operation](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md#check-if-evaluating).
 
 ![Check if evaluating node](/_images/advanced-ai/evaluations/check-if-evaluating.png)
 
 ### 3. Write metrics back to evaluation
 
-n8n needs to know how to extract the metrics you calculated in step 2. Do this by adding a 'Set metrics' node and mapping your metrics into it.
+n8n needs to know how to extract the metrics you calculated in step 2. Do this by adding an evaluation node with the ['Set metrics' operation](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md#set-metrics) and mapping your metrics into it.
 
 ![Add set metrics node](/_images/advanced-ai/evaluations/add-set-metrics.png)
 

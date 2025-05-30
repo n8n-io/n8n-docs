@@ -57,7 +57,7 @@ Leave the actual output column or columns blank, since you'll be filling them du
 
 #### Insert an evaluation trigger to pull in your dataset
 
-Each time the evaluation trigger runs, it will output a single item representing one row of your dataset.
+Each time the [evaluation trigger](/integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md) runs, it will output a single item representing one row of your dataset.
 
 Clicking the 'Evaluate all' button to the left of the evaluation trigger will run your workflow multiple times in sequence, once for each row in your dataset. This is a special behavior of the evaluation trigger.
 
@@ -81,7 +81,7 @@ If you have multiple triggers in your workflow you will need to [merge their bra
 
 To populate the output column(s) of your dataset when the evaluation runs:
 
-- Insert the 'Set outputs' action of the evaluation node
+- Insert the 'Set outputs' action of the [evaluation node](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md)
 - Wire it up to your workflow at a point after it has produced the outputs you're evaluating
 - In the node's parameters, map the workflow outputs into the correct dataset column
 

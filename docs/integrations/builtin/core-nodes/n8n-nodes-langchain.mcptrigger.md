@@ -78,13 +78,14 @@ To do so, add the following to your Claude Desktop configuration:
     "n8n": {
       "command": "npx",
       "args": [
-        "-y",
-        "supergateway",
-        "--sse",
+        "mcp-remote",
         "<MCP_URL>",
         "--header",
-        "Authorization: Bearer <MCP_BEARER_TOKEN>"
-      ]
+        "Authorization: Bearer ${AUTH_TOKEN}"
+      ],
+	  "env": {
+	    "AUTH_TOKEN": "<MCP_BEARER_TOKEN>"
+	  }
     }
   }
 }

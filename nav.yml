@@ -190,6 +190,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Evaluation: integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md
+        - Evaluation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md
         - Execute Command:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
@@ -1278,6 +1280,11 @@ nav:
           - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
           - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
           - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
+      - Evaluations:
+          - Overview: advanced-ai/evaluations/overview.md
+          - Light evaluations: advanced-ai/evaluations/light-evaluations.md
+          - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
+          - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
       - Examples and concepts:
           - Introduction: advanced-ai/examples/introduction.md
           - What is a chain?: advanced-ai/examples/understand-chains.md

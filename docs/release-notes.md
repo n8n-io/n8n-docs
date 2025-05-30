@@ -117,7 +117,7 @@ This is just the start. We plan to expand the library gradually, bringing even m
 <br>
 <br>
 
-Learn more about this update and find out which nodes are already installable from the editor in our [blog](http://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
+Learn more about this update and find out which nodes are already installable from the editor in our [blog](https://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
 
 <br>
 

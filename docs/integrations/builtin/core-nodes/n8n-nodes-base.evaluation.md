@@ -17,15 +17,13 @@ The Evaluation node's **Set Outputs** operation uses Google Sheets to record eva
 
 The Evaluation node offers the following operations:
 
-* **Set Outputs**: Write the results of an evaluation back to a Google Sheet dataset.
-* **Set Metrics**: Record metrics scoring the evaluation performance to n8n's **Evaluations** tab.
-* **Check If Evaluation**: Branches the workflow execution logic depending on whether the current execution is an evaluation.
+* [**Set Outputs**](#set-outputs): Write the results of an evaluation back to a Google Sheet dataset.
+* [**Set Metrics**](#set-metrics): Record metrics scoring the evaluation performance to n8n's **Evaluations** tab.
+* [**Check If Evaluating**](#check-if-evaluating): Branches the workflow execution logic depending on whether the current execution is an evaluation.
 
-## Node parameters
+The parameters and options available depend on the operation you select.
 
-The parameters available depend on the operation you select.
-
-### Set Outputs parameters
+### Set Outputs
 
 The **Set Outputs** operation has the following parameters:
 
@@ -42,7 +40,7 @@ You define the items to write to the Google Sheet in the **Outputs** section. Fo
 * **Name**: The Google Sheet column name to write the evaluation results to.
 * **Value**: The value to write to the Google Sheet.
 
-### Set Metrics parameters
+### Set Metrics
 
 The **Set Metrics** operation includes a **Metrics to Return** section where you define the metrics to record and track for your evaluations. You can see the metric results in your workflow's **Evaluations** tab.
 
@@ -51,7 +49,7 @@ For each metric you wish to record, you set the following details:
 * **Name**: The name to use for the metric.
 * **Value**: The numeric value to record. Once you run your evaluation, you can drag and drop values from previous nodes here. Metric values must be numeric.
 
-### Check If Evaluating parameters
+### Check If Evaluating
 
 The **Check If Evaluating** operation does not have any parameters. This operation provides branching output connectors so that you can conditionally execute logic depending on whether the current execution is an evaluation or not.
 
@@ -65,3 +63,5 @@ The **Check If Evaluating** operation does not have any parameters. This operati
 To learn more about n8n evaluations, check out the [evaluations documentation](/advanced-ai/evaluations/overview.md)
 
 n8n provides a trigger node for evaluations. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md).
+
+For common questions or issues and suggested solutions, refer to the evaluations [tips and common issues](/advanced-ai/evaluations/tips-and-common-issues.md) page.

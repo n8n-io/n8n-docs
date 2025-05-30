@@ -44,3 +44,5 @@ Optionally filter the evaluation dataset based on column values.
 To learn more about n8n evaluations, check out the [evaluations documentation](/advanced-ai/evaluations/overview.md)
 
 n8n provides an app node for evaluations. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md).
+
+For common questions or issues and suggested solutions, refer to the evaluations [tips and common issues](/advanced-ai/evaluations/tips-and-common-issues.md) page.

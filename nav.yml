@@ -190,6 +190,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Evaluation: integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md
+        - Evaluation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md
         - Execute Command:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
@@ -738,7 +740,7 @@ nav:
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md
           - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
           - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
-          - Simple Memory: 
+          - Simple Memory:
             - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md
           - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
@@ -764,7 +766,7 @@ nav:
           - MCP Client Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
           - SearXNG Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md
           - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
-          - Think Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolthink.md        
+          - Think Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolthink.md
           - Vector Store Question Answer Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
           - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
@@ -1149,6 +1151,7 @@ nav:
         - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
         - Heroku: hosting/installation/server-setups/heroku.md
         - Hetzner: hosting/installation/server-setups/hetzner.md
+        - Sealos: hosting/installation/server-setups/sealos.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md

@@ -9,7 +9,7 @@ contentType: reference
 
 ## Combining multiple triggers
 
-If you have another trigger in the workflow already, you have two potential starting points: that trigger and the evaluation trigger. To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
+If you have another trigger in the workflow already, you have two potential starting points: that trigger and the [evaluation trigger](/integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md). To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
 
 <figure markdown="span">
 ![Merging trigger branches](/_images/advanced-ai/evaluations/merging-trigger-branches.png)
@@ -34,7 +34,7 @@ To do so:
 
 ## Avoiding evaluation breaking the chat
 
-n8n's internal chat reads the output data of the last executed node in the workflow. After adding a 'set outputs' node, this data may not be in the expected format, or even contain the chat response.
+n8n's internal chat reads the output data of the last executed node in the workflow. After adding an evaluation node with the ['set outputs' operation](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md#set-outputs), this data may not be in the expected format, or even contain the chat response.
 
 ![Add second output branch](/_images/advanced-ai/evaluations/add-second-output-branch.png)
 

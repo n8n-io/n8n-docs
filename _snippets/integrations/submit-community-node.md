@@ -31,4 +31,4 @@ Before submitting your node for review by n8n, you must:
 * Make sure that the node has appropriate documentation in the form of a README in the [npm package](https://docs.npmjs.com/about-package-readme-files) or a related public repository.
 * Submit your node to npm as n8n will fetch it from there for final vetting.
 
-If your node meets all the above requirements, [click here to submit your node for verification](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
+If your node meets all the above requirements, [click here to submit your node for verification](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b). Note that n8n reserves the right to reject nodes that compete with any of n8n's paid features, especially enterprise functionality.

@@ -9,7 +9,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 ### Prerequisites
 
-* Python 3.8 or above
+* Python 3.12 or above
 * Pip
 * n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 * Follow the [recommended configuration and auto-complete](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) guidance for the theme. This will help when working with the `mkdocs.yml` file.
@@ -27,10 +27,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	```bash
 	git clone --recurse-submodules git@github.com:n8n-io/n8n-docs.git
 	cd n8n-docs
- 	# Set up virtual environment if using one (steps depend on your system)
- 	# Install dependencies
-	pip install -r requirements.txt
-	pip install _submodules/insiders
+ 	make run
 	```
 
 #### For external contributors:
@@ -42,14 +39,13 @@ Fork the repository, then:
 ```
 git clone https://github.com/<your-username>/n8n-docs.git
 cd n8n-docs
-pip install -r requirements.txt
-pip install mkdocs-material
+make run
 ```
 
 #### To serve a local preview:
 
 ```
-mkdocs serve
+make run
 ```
 
 ## Contributing

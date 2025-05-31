@@ -38,18 +38,18 @@ Once the cluster is created, eksctl automatically sets the kubectl context to th
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link}. The following steps tell you what each file does, and what settings you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-hosting/tree/main){:target=_blank .external-link}. The following steps tell you what each file does, and what settings you need to change.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b aws
+git clone https://github.com/n8n-io/n8n-hosting.git
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd n8n-kubernetes-hosting
+cd kubernetes
 ```
 
 ## Configure Postgres

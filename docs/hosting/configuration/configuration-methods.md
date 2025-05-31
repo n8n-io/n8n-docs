@@ -18,6 +18,11 @@ For npm, set your desired environment variables in terminal using the `export` c
 ```bash
 export <variable>=<value>
 ```
+If `export` command doesn't work, try use `set` instead as shown below.
+
+```bash
+set <variable>=<value>
+```
 
 ### Docker
 

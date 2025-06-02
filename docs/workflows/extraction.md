@@ -9,7 +9,7 @@ contentType: howto
 
 Use sub-workflow extraction to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as `ExecuteWorkflow` parameters.
 
-See [Sub-workflows](flow-logic/subworkflows.md) for a general introduction to the concept.
+See [Sub-workflows](/flow-logic/subworkflows.md) for a general introduction to the concept.
 
 ## How to
 

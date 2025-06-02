@@ -9,7 +9,7 @@ contentType: howto
 
 Use sub-workflow extraction to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as `ExecuteWorkflow` parameters.
 
-See [Sub-workflows](/flow-logic/subworkflows.md) for a general introduction to the concept.
+See [sub-workflows](/flow-logic/subworkflows.md) for a general introduction to the concept.
 
 ## How to
 
@@ -17,11 +17,13 @@ Select nodes in the canvas, right-click the canvas background and click `Extract
 
 ## Valid selections
 
-Not all selection make for valid sub-workflows. The selection needs to fulfil these conditions:
+Not all selection make for valid sub-workflows. The selection needs to be continuous and must only connect to the rest of the workflow from at most one start node and one end node in the selection, since this is how our sub-workflows work when you call them. 
+
+In other terms, the selection needs to fulfil these conditions:
 
 - No triggers are selected 
-- At most one node has incoming connection from nodes outside the selection, and it has at most one input branch
-- At most one node has outgoing connections to nodes outside of the selection, and it has at most one output branch
+- At most one node has incoming connection from nodes outside the selection. That node has at most one input branch, and no incoming connections from nodes selected for extraction.
+- At most one node has outgoing connections to nodes outside of the selection. That node has at most one output branch, and no outgoing connections to nodes selected for extraction.
 - All nodes between two selected nodes are also selected
 
 ## Limitations and shortcomings

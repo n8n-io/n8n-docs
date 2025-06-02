@@ -7,7 +7,11 @@ contentType: howto
 
 # Sub-workflow Extraction
 
-Use sub-workflow extraction to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as `ExecuteWorkflow` parameters.
+/// info | Feature availability
+Available on all plans from n8n version 1.96.0.
+///
+
+Use sub-workflow extraction to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) node.
 
 See [sub-workflows](/flow-logic/subworkflows.md) for a general introduction to the concept.
 

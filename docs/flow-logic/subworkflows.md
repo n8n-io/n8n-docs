@@ -20,4 +20,4 @@ This section walks through setting up both the parent workflow and sub-workflow.
 
 ## Sub-workflow Extraction
 
-To make sub-workflows more accessible, we offer [Sub-workflow Extraction](/workflows/subworkflow-extraction.md) to help you refactor your workflows into sub-workflows.
+See [Sub-workflow Extraction](/workflows/subworkflow-extraction.md) for how to easily divide your existing workflows into sub-workflows.

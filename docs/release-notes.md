@@ -35,6 +35,21 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.97.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.96.0...n8n@1.97.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-02
+
+This release contains bug fixes.
+
+### Contributors
+
+[maatthc](https://github.com/maatthc){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.95.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.1...n8n@1.95.2){:target=_blank .external-link} for this version.<br />

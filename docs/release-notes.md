@@ -53,6 +53,15 @@ This release contains API updates, core changes, editor improvements, node updat
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
+# n8n@1.95.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.1...n8n@1.95.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-29
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 
 
 ## n8n@1.95.1
@@ -126,7 +135,7 @@ This is just the start. We plan to expand the library gradually, bringing even m
 <br>
 <br>
 
-Learn more about this update and find out which nodes are already installable from the editor in our [blog](http://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
+Learn more about this update and find out which nodes are already installable from the editor in our [blog](https://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
 
 <br>
 

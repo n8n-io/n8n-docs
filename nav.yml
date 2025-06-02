@@ -63,6 +63,7 @@ nav:
         - Settings: workflows/settings.md
         - Workflow history: workflows/history.md
         - Workflow ID: workflows/workflow-id.md
+        - Extraction: workflows/extraction.md
       - Manage credentials:
         - credentials/index.md
         - Create and edit: credentials/add-edit-credentials.md

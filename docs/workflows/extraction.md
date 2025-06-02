@@ -7,7 +7,9 @@ contentType: howto
 
 # Sub-workflow Extraction
 
-Use sub-workflow extraction to refactor your workflows into reusable parts. 
+Use sub-workflow extraction to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as `ExecuteWorkflow` parameters.
+
+See [Sub-workflows](flow-logic/subworkflows.md) for a general introduction to the concept.
 
 ## How to
 
@@ -28,8 +30,8 @@ Our aim with Sub-workflow Extraction is to enable most workflows to continue wor
 
 There are also a few cosmetic limitations you should be aware of.
 
-
+- We cannot determine the types of the referenced expressions. You'll need to update these on the `ExecuteWorkflowTrigger` and the `Set/Edit Fields` called `Return` we add at the start and end of the created sub-workflow. The `Return` node is omitted if no outputs are needed.
 - While we support most ways of accessing node data, the `$('nodeName').itemMatching(index)` function is only supported with numeric argument values.
 - Other accessors like `first()`, `last()` and `all()` will add post-fixes to the determined workflow parameter names to avoid confusion with your inputs not changing.
-- `$('nodeName').all()` in particular will be translated as `$('nodeName').first().json.nodeName_all` as there is no other way to provide the output of `all()` within our row-based world. This means that we'll transfer all data for each row, which may lead to a lot more stored data.
-- New workflows are created with execution order v1 regardless of the parent workflow's settings - this can be changed back in the settings.
+- `$('nodeName').all()` is turned into `$('nodeName').first().json.nodeName_all` as there is no other way to provide the output of `all()` within our row-based world. This means that we'll transfer all data for each row, which may lead to a lot more stored data.
+- New workflows are created with execution order `v1` regardless of the parent workflow's settings - this can be changed back in the settings.

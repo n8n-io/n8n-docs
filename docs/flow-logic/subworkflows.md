@@ -17,3 +17,7 @@ This section walks through setting up both the parent workflow and sub-workflow.
 ## How data passes between workflows
 
 --8<-- "_snippets/flow-logic/subworkflow-data-flow.md"
+
+## Sub-workflow Extraction
+
+To make sub-workflows more accessible, we offer [Sub-workflow Extraction](/workflows/extraction.md) to help you refactor your workflows into sub-workflows.

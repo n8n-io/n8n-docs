@@ -1,0 +1,35 @@
+---
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Sub-workflow Extraction
+description: Select nodes in your workflow and extract them into a sub-workflow.
+contentType: howto
+---
+
+# Sub-workflow Extraction
+
+Use sub-workflow extraction to refactor your workflows into reusable parts. 
+
+## How to
+
+Select nodes in the canvas, right-click the canvas background and click `Extract to sub-workflow`.
+
+## Valid selections
+
+Not all selection make for valid sub-workflows. The selection needs to fulfil these conditions:
+
+- No triggers are selected 
+- At most one node has incoming connection from nodes outside the selection, and it has at most one input branch
+- At most one node has outgoing connections to nodes outside of the selection, and it has at most one output branch
+- All nodes between two selected nodes are also selected
+
+## Limitations and shortcomings
+
+Our aim with Sub-workflow Extraction is to enable most workflows to continue working without any modification, but this is not generally guaranteed.
+
+There are also a few cosmetic limitations you should be aware of.
+
+
+- While we support most ways of accessing node data, the `$('nodeName').itemMatching(index)` function is only supported with numeric argument values.
+- Other accessors like `first()`, `last()` and `all()` will add post-fixes to the determined workflow parameter names to avoid confusion with your inputs not changing.
+- `$('nodeName').all()` in particular will be translated as `$('nodeName').first().json.nodeName_all` as there is no other way to provide the output of `all()` within our row-based world. This means that we'll transfer all data for each row, which may lead to a lot more stored data.
+- New workflows are created with execution order v1 regardless of the parent workflow's settings - this can be changed back in the settings.

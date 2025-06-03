@@ -22,6 +22,7 @@ This page outlines environment variables to configure your chosen database for y
 | :------- | :---- | :------- | :---------- |
 | `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
+| `DB_PING_INTERVAL_SECONDS` | Number | `2` | The interval, in seconds, between pings to the database to check if the connection is still alive. |
 
 ## PostgreSQL
 
@@ -34,6 +35,7 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_POSTGRESDB_PASSWORD`<br>/`_FILE` | String | - | The PostgreSQL password. |
 | `DB_POSTGRESDB_POOL_SIZE`<br>/`_FILE` | Number | `2` | Control how many parallel open Postgres connections n8n should have. Increasing it may help with resource utilization, but too many connections may degrade performance. |
 | `DB_POSTGRESDB_CONNECTION_TIMEOUT`<br>/`_FILE` | Number | `20000` | Postgres connection timeout (ms).
+| `DB_POSTGRESDB_IDLE_CONNECTION_TIMEOUT`<br>/`_FILE` | Number | `30000` | Amount of time before an idle connection is eligible for eviction for being idle.
 | `DB_POSTGRESDB_SCHEMA`<br>/`_FILE` | String | `public` | The PostgreSQL schema. |
 | `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | Whether to enable SSL. Automatically enabled if `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` or `DB_POSTGRESDB_SSL_KEY` is defined. |
 | `DB_POSTGRESDB_SSL_CA`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate authority. |

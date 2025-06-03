@@ -15,26 +15,31 @@ On this page, you'll find the node parameters for the GitHub Document Loader nod
 You can find authentication information for this node [here](/integrations/builtin/credentials/github.md). This node doesn't support OAuth for authentication.
 ///
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
+--8<-- "\_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-* **Repository Link**: Enter the URL of your GitHub repository.
-* **Branch**: Enter the branch name to use.
+-   **Text Splitting**: Choose from:
+    -   **Simple**: Uses the [**Recursive Character Text Splitter**](n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md) with a chunk size of **1000** and an overlap of **200**
+    -   **Custom**: Allows you to connect a Text Splitter of your choice
+
+*   **Repository Link**: Enter the URL of your GitHub repository.
+*   **Branch**: Enter the branch name to use.
 
 ## Node options
 
-* **Recursive**: Select whether to include sub-folders and files (turned on) or not (turned off).
-* **Ignore Paths**: Enter directories to ignore.
+-   **Recursive**: Select whether to include sub-folders and files (turned on) or not (turned off).
+-   **Ignore Paths**: Enter directories to ignore.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'github-document-loader') ]]
+
+[[templatesWidget(page.title, 'github-document-loader')]]
 
 ## Related resources
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
+--8<-- "\_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+--8<-- "\_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+--8<-- "\_glossary/ai-glossary.md"

@@ -22,7 +22,7 @@ This page outlines environment variables to configure your chosen database for y
 | :------- | :---- | :------- | :---------- |
 | `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
-| `DB_PING_INTERVAL_SECONDS` | Number | `2` | The interval in seconds to ping the database to check if the connection is still alive. |
+| `DB_PING_INTERVAL_SECONDS` | Number | `2` | The interval, in seconds, between pings to the database to check if the connection is still alive. |
 
 ## PostgreSQL
 

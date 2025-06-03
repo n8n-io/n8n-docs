@@ -30,10 +30,6 @@ n8n dynamically loads models from OpenRouter and you'll only see the models avai
 
 Use these options to further refine the node's behavior.
 
-### Base URL
-
-Enter a URL here to override the default URL for the API.
-
 ### Frequency Penalty
 
 Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.

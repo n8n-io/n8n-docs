@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Sub-workflow Extraction
+title: Sub-workflow extraction
 description: Select nodes in your workflow and extract them into a sub-workflow.
 contentType: howto
 ---
 
-# Sub-workflow Extraction
+# Sub-workflow extraction
 
 /// info | Feature availability
 Available on all plans from n8n version 1.97.0.
@@ -15,29 +15,37 @@ Use sub-workflow extraction to refactor your workflows into reusable parts. Expr
 
 See [sub-workflows](/flow-logic/subworkflows.md) for a general introduction to the concept.
 
-## How to
+## How to extract sub-workflows
 
-Select nodes in the canvas, right-click the canvas background and click `Extract to sub-workflow`.
+Select the desired nodes on the canvas. Right-click the canvas background and select **Extract to sub-workflow**.
 
 ## Valid selections
 
-Not all selections are valid sub-workflows. The selection needs to be continuous and must connect to the rest of the workflow from at most one start node and one end node in the selection, since this is how our sub-workflows work when you call them. 
+Not all selections are valid sub-workflows.
 
-In other terms, the selection needs to fulfil these conditions:
+The selection must be continuous and must connect to the rest of the workflow from at most one start node and one end node in the selection, since this is how sub-workflows work when you call them. 
 
-- No triggers are selected 
-- At most one node has incoming connection from nodes outside the selection. That node has at most one input branch, and no incoming connections from nodes selected for extraction.
-- At most one node has outgoing connections to nodes outside of the selection. That node has at most one output branch, and no outgoing connections to nodes selected for extraction.
-- All nodes between two selected nodes are also selected
+In other words, the selection must fulfill these conditions:
+
+- Doesn't include trigger nodes.
+- Selection input:
+	- Only a single node in the selection can have incoming connections from nodes outside of the selection.
+	- That node can have multiple incoming connections, but only a single input *branch* (which means it can't be a [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md) for example).
+	- That node can't have incoming connections from other nodes in the selection.
+- Selection output:
+	- Only a single node in the selection can have outgoing connections to nodes outside of the selection.
+	- That node can have multiple outgoing connections, but only a single output branch (it can't be an [If node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) for example).
+	- That node can't have outgoing connections to other nodes in the selection.
+- All nodes between the two selected nodes are also selected.
 
 ## Limitations and shortcomings
 
-Sub-workflow extraction will keep most workflows functional, but this is not guaranteed.
-There are also a few cosmetic limitations you should be aware of.
+Sub-workflow extraction keeps most workflows functional, but this isn't guaranteed.
+There are also some cosmetic limitations you should be aware of:
 
-- We cannot determine the types of the referenced expressions. You'll need to update these on the `ExecuteWorkflowTrigger` and the `Set/Edit Fields` called `Return` we add at the start and end of the created sub-workflow. (The `Return` node is omitted if no outputs are needed.)
-- While we support most ways of accessing node data, the `$('nodeName').itemMatching(index)` function is only supported with numeric argument values, not general code.
-- Other accessors like `first()`, `last()` and `all()` will add post-fixes like `myVariableName_firstItem` to the determined workflow parameter names to avoid confusion with your inputs not changing.
-- `$('nodeName').all()` is turned into `$('nodeName').first().json.nodeName_all` as there is no other way to provide the output of `all()` to a sub-workflow. This means that we'll transfer all data for each row, which may lead to a lot more stored data. You can likely find a better solution for your specific case here.
-- Handling of sub-nodes like AI Tools is currently limited. You'll want to select them all, and may need to duplicate any nodes shared with other AI Agents before extraction.
-- New workflows are created with execution order `v1` regardless of the parent workflow's settings - this can be changed back in the settings.
+- **n8n can't determine the types of referenced expressions:** You'll need to update these in the [Execute Sub-workflow Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) at the start of the sub-workflow and the [Edit Fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) (named **Return**) added to the end of the sub-workflow (n8n only includes the **Return** node if the sub-workflow includes outputs).
+- **`$('nodeName').itemMatching(index)` only works with numbers:** While n8n supports most ways of accessing node data, the `$('nodeName').itemMatching(index)` function only works with numeric argument values, not general code.
+- **Swaps `first()`, `last()`, and `all()` with post-fix versions:** Other accessors like `first()`, `last()` and `all()` transition into a post-fix format that looks like `myVariableName_firstItem` to the determined workflow parameter names to avoid confusion with your inputs not changing.
+- **Swaps `$('nodeName').all()` with `$('nodeName').first().json.nodeName_all`:** n8n turns all cases of `$('nodeName').all()` into `$('nodeName').first().json.nodeName_all` as this is the only way to provide the output of `all()` to a sub-workflow. This means that n8n transfers all data for each row, which may lead to a lot more stored data. It's possible that you can find a better solution for your specific use case.
+- **Limited support for sub-nodes:** n8n has support for handling sub-nodes like AI Tools. You need to select them all, and may need to duplicate any nodes shared with other AI Agents before extraction.
+- **Uses v1 execution ordering:** New workflows use [`v1` execution ordering](/flow-logic/execution-order.md) regardless of the parent workflow's settings - you can change this back in the settings.

@@ -18,6 +18,6 @@ This section walks through setting up both the parent workflow and sub-workflow.
 
 --8<-- "_snippets/flow-logic/subworkflow-data-flow.md"
 
-## Sub-workflow Extraction
+## Sub-workflow conversion
 
-See [Sub-workflow Extraction](/workflows/subworkflow-extraction.md) for how to divide your existing workflows into sub-workflows.
+See [sub-workflow conversion](/workflows/subworkflow-conversion.md) for how to divide your existing workflows into sub-workflows.

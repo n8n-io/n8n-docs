@@ -1,23 +1,23 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Sub-workflow extraction
-description: Select nodes in your workflow and extract them into a sub-workflow.
+title: Sub-workflow conversion
+description: Select nodes in your workflow and convert them into a sub-workflow.
 contentType: howto
 ---
 
-# Sub-workflow extraction
+# Sub-workflow conversion
 
 /// info | Feature availability
 Available on all plans from n8n version 1.97.0.
 ///
 
-Use sub-workflow extraction to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) node.
+Use sub-workflow conversion to refactor your workflows into reusable parts. Expressions referencing other nodes are automatically updated and added as parameters in the [Execute Workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) node.
 
 See [sub-workflows](/flow-logic/subworkflows.md) for a general introduction to the concept.
 
-## How to extract sub-workflows
+## How to convert sub-workflows
 
-Select the desired nodes on the canvas. Right-click the canvas background and select **Extract to sub-workflow**.
+Select the desired nodes on the canvas. Right-click the canvas background and select **Convert to sub-workflow**.
 
 ## Valid selections
 
@@ -40,12 +40,12 @@ In other words, the selection must fulfill these conditions:
 
 ## Limitations and shortcomings
 
-Sub-workflow extraction keeps most workflows functional, but this isn't guaranteed.
+Sub-workflow conversion keeps most workflows functional, but this isn't guaranteed.
 There are also some cosmetic limitations you should be aware of:
 
 - **n8n can't determine the types of referenced expressions:** You'll need to update these in the [Execute Sub-workflow Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) at the start of the sub-workflow and the [Edit Fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) (named **Return**) added to the end of the sub-workflow (n8n only includes the **Return** node if the sub-workflow includes outputs).
 - **`$('nodeName').itemMatching(index)` only works with numbers:** While n8n supports most ways of accessing node data, the `$('nodeName').itemMatching(index)` function only works with numeric argument values, not general code.
 - **Swaps `first()`, `last()`, and `all()` with post-fix versions:** Other accessors like `first()`, `last()` and `all()` transition into a post-fix format that looks like `myVariableName_firstItem` to the determined workflow parameter names to avoid confusion with your inputs not changing.
 - **Swaps `$('nodeName').all()` with `$('nodeName').first().json.nodeName_all`:** n8n turns all cases of `$('nodeName').all()` into `$('nodeName').first().json.nodeName_all` as this is the only way to provide the output of `all()` to a sub-workflow. This means that n8n transfers all data for each row, which may lead to a lot more stored data. It's possible that you can find a better solution for your specific use case.
-- **Limited support for sub-nodes:** n8n has support for handling sub-nodes like AI Tools. You need to select them all, and may need to duplicate any nodes shared with other AI Agents before extraction.
+- **Limited support for sub-nodes:** n8n has support for handling sub-nodes like AI Tools. You need to select them all, and may need to duplicate any nodes shared with other AI Agents before conversion.
 - **Uses v1 execution ordering:** New workflows use [`v1` execution ordering](/flow-logic/execution-order.md) regardless of the parent workflow's settings - you can change this back in the settings.

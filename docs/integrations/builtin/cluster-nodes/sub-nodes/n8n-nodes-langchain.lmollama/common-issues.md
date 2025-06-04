@@ -77,3 +77,9 @@ If Ollama and n8n are running in the same Docker container, the `localhost` addr
 This error occurs when your computer has IPv6 enabled, but Ollama is listening to an IPv4 address.
 
 To fix this, change the base URL in your [Ollama credentials](/integrations/builtin/credentials/ollama.md) to connect to `127.0.0.1`, the IPv4-specific local address, instead of the `localhost` alias that can resolve to either IPv4 or IPv6: `http://127.0.0.1:11434`.
+
+## Ollama and HTTP/HTTPS proxies
+
+Ollama does not support custom HTTP agents in its configuration. This makes it hard to use Ollama behind custom HTTP/HTTPS proxies and might now work, depending on your proxy configuration, despite setting the `HTTP_PROXY` or `HTTPS_PROXY` environment variables.
+
+Refer to Ollama's [FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-use-ollama-behind-a-proxy){:target=_blank .external-link} for more information.

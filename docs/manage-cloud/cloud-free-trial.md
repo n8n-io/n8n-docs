@@ -14,7 +14,7 @@ When you create a new n8n cloud trial, you have 14 days to try all the features 
 - Execution search
 - 5 days workflow history to rollback
 
-This free trial is similar to the [Pro plan](https://n8n.io/pricing/), with `1000` executions and `5` active workflows.
+This free trial gives you the [Pro plan](https://n8n.io/pricing/) features, with limits of `1000` executions, `5` active workflows, and the same computing power as the [Starter plan](https://n8n.io/pricing/).
 
 ## Upgrade to a paid account
 
@@ -24,10 +24,6 @@ You can upgrade anytime to a paid n8n account. To upgrade:
 2. Click the **Upgrade** button
 3. Select your plan, yearly or monthly payment
 4. Select payment method 
-
-## Trial extensions
-
-The free trial lasts for 14 days. If you need more time, you can [contact our support](https://zapier.com/app/contact-us) to request a trial extension before you trial expires.
 
 ## Trial expiration
 

@@ -41,7 +41,7 @@ You can download [your workflows](/manage-cloud/download-workflows.md) to reuse 
 
 You don’t need to cancel your trial. You trial will automatically expire at the end of the trial period and you won’t be charged. All your data be deleted shortly after.
 
-## Entreprise trial
+## Enterprise trial
 
 You can [contact](https://n8n.io/pricing/) the sales team if you want to test the [Enterprise plan](https://n8n.io/pricing/), which includes features such as:
 

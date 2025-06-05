@@ -201,6 +201,7 @@ Rekognition
 requester
 Rundeck
 Salesmate
+SambaNova
 [Ss]andboxed
 Sekoia
 Sendy

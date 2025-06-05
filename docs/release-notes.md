@@ -48,8 +48,6 @@ This release contains backports.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.95.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.2...n8n@1.95.3){:target=_blank .external-link} for this version.<br />
@@ -59,22 +57,14 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.2...n8n@1.95.3
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.97.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.96.0...n8n@1.97.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-06-02
-
-
-
-
 
 This release contains performance improvements and bug fixes.
 
@@ -95,6 +85,22 @@ This release failed to build. Please use `1.97.0` instead.
 
 This release contains API updates, core changes, editor improvements, node updates, and bug fixes.
 
+### API support for assigning users to projects
+
+You can now use the API to add and update users within projects. This includes:
+
+- Assigning existing or pending users to a project with a specific role
+- Updating a user’s role within a project
+- Removing users from one or more projects
+
+This update now allows you to use the API to add users to both the instance and specific projects, removing the need to manually assign them in the UI. 
+
+### Add pending users to project member assignment
+
+You can now add **pending users,** those who have been invited but haven't completed sign-up, to projects as members.
+
+This change lets you configure a user's project access upfront, without waiting for them to finish setting up their account. It eliminates the back-and-forth of managing access post-sign-up, ensuring users have the right project roles immediately upon joining.
+
 ### Contributors
 
 [matthabermehl](https://github.com/matthabermehl){:target=_blank .external-link}  
@@ -107,20 +113,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.1...n8n@1.95.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-29
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.95.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.95.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-27
-
-
 
 This release contains bug fixes.
 
@@ -130,8 +130,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.94.0...n8n@1.94.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-27
-
-
 
 This release contains bug fixes.
 
@@ -151,14 +149,10 @@ This release contains core updates, editor improvements, node updates, and bug f
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.94.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.93.0...n8n@1.94.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-19
-
-
 
 This release contains editor improvements, an API update, node updates, new nodes, and bug fixes.
 
@@ -255,8 +249,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-12
-
-
 
 This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
 

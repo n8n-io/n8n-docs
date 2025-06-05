@@ -467,6 +467,7 @@ nav:
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
         - PayPal: integrations/builtin/app-nodes/n8n-nodes-base.paypal.md
         - Peekalink: integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md
+        - Perplexity: integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity.md
         - PhantomBuster: integrations/builtin/app-nodes/n8n-nodes-base.phantombuster.md
         - Philips Hue: integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md
         - Pipedrive: integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md
@@ -971,6 +972,7 @@ nav:
         - integrations/builtin/credentials/pagerduty.md
         - integrations/builtin/credentials/paypal.md
         - integrations/builtin/credentials/peekalink.md
+        - integrations/builtin/credentials/perplexity.md
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
         - integrations/builtin/credentials/pinecone.md

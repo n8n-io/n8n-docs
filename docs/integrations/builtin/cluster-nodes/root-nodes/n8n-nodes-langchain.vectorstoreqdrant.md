@@ -30,7 +30,7 @@ You can see an example of this in the first part of [this template](https://n8n.
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Qdrant Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use vector store as a resource when answering queries.
+You can connect the Qdrant Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Qdrant Vector Store node.
 

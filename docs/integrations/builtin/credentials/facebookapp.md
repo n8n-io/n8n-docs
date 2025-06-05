@@ -93,7 +93,7 @@ Now that you have a token, you can configure the Facebook Trigger node:
 1. In your Meta app, copy the **App ID** from the top navigation bar.
 1. In n8n, open your Facebook Trigger node.
 2. Paste the **App ID** into the **APP ID** field.
-3. Select **Test step** to shift the trigger into listening mode.
+3. Select **Execute step** to shift the trigger into listening mode.
 6. Return to the tab or window where your Meta app's **Webhooks** product configuration is open.
 7. **Subscribe** to the objects you want to receive Facebook Trigger notifications about. For each subscription:
     1. Copy the **Webhook URL** from n8n and enter it as the **Callback URL** in your Meta App.

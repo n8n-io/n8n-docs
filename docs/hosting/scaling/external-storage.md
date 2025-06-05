@@ -71,6 +71,11 @@ export N8N_AVAILABLE_BINARY_DATA_MODES=filesystem,s3
 export N8N_DEFAULT_BINARY_DATA_MODE=s3
 ```
 
+
+/// note | Auth autodetection
+To automatically detect credentials to authenticate your S3 calls, set `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` to `true`. This will use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain).
+///
+
 Restart the server to load the new configuration.
 
 ### Usage

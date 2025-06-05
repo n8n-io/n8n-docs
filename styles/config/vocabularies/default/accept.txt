@@ -12,6 +12,7 @@ ARNs
 Asana
 Atlassian
 Authentik
+[Aa]utodetect(ion)?
 [Aa]uto-fixing
 Automizy
 [Aa]utorenew
@@ -95,12 +96,16 @@ geocodes
 GIMP
 Gotify
 Grafana
+Grok('s)?
 Groq
+[Gg]roundedness
 GSuite
 Gumroad
+[Gg]zip
 Hetzner
 Homeserver
 [Hh]ostname
+howto
 HubSpot
 Humantic
 Imperva
@@ -111,7 +116,9 @@ Intuit
 IP
 [Ii]terable
 Jira
+Jina
 JMESPath
+JumpCloud
 Keap
 Keycloak
 Kibana
@@ -138,6 +145,7 @@ Meraki
 Metabase
 [Mm]iddleware
 [Mm]illicore
+Milvus('s)?
 Mindee
 [Mm]inimum
 Mocean
@@ -145,7 +153,7 @@ Motorhead
 [Mm]ultiple
 n8n
 nanoids
-namespace
+namespaces?
 NASA
 Netlify
 Netscaler
@@ -172,6 +180,7 @@ PhantomBuster
 Pinterest
 Pipedrive
 Pinecone
+[Pp]laintext
 Plivo
 Pluralsight
 Postbin
@@ -223,7 +232,7 @@ There are
 [Tt]imesheet
 Todoist
 Toggl
-[Tt]ooltip
+[Tt]ooltips?
 [Tt]ouchpad
 Traefik
 Trellix
@@ -261,6 +270,7 @@ WeKan
 [Ww]ireframe
 WordPress
 Wufoo
+xAI
 Xata
 Xero
 Zabbix

@@ -71,7 +71,7 @@ The top bar of the **Editor UI** contains the following information:
 The **canvas** is the gray dotted grid background in the Editor UI. It displays several icons and a node with different functionalities:
 
 - Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, and tidy up the nodes on screen.
-- A button to **Test workflow** once you add your first node. When you click on it, n8n executes all nodes on the canvas in sequence.
+- A button to **Execute workflow** once you add your first node. When you click on it, n8n executes all nodes on the canvas in sequence.
 - A button with a **+** sign inside. This button opens the nodes panel.
 - A button with a note icon inside. This button adds a [sticky note](/workflows/components/sticky-notes.md) to the canvas (visible when hovering on the top right + icon).
 - A dotted square with the text "Add first step." This is where you add your first node.

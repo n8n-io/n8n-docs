@@ -8,23 +8,18 @@ description: API reference for n8n's public REST API.
 contentType: reference
 ---
 
+<script
+  id="api-reference"
+  data-url="/api/v1/openapi.yml"></script>
 
-<redoc
-  spec-url="/api/v1/openapi.yml"
-  disable-search
-  hide-hostname
-  theme='{
-    "typography": {
-      "fontSize": "14px",
-      "lineHeight": "1.2em",
-      "fontFamily": "\"Open sans\", Helvetica, sans-serif",
-      "headings": {
-        "fontFamily": "\"Open sans\", Helvetica, sans-serif"
-      }
-    },
-    "sidebar": {
-      "backgroundColor": "#eaeaea",
-      "width": "280px"
-    }
-  }' />
-<script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"> </script>
+<script>
+  var configuration = {
+    forceDarkModeState: 'light',
+    hideDarkModeToggle: true,
+  }
+
+  document.getElementById('api-reference').dataset.configuration =
+    JSON.stringify(configuration)
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>

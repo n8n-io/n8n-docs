@@ -52,6 +52,8 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
 
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->

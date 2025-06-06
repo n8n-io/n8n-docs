@@ -17,6 +17,9 @@ AI chains allow you to interact with large language models (LLMs) and other reso
 
 Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
 
+#### AI reranking
+Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. It's used in Retrieval-Augmented Generation (RAG) and other applications to ensure the most relevant information is prioritized for generation or downstream tasks.
+
 #### AI memory
 
 In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.

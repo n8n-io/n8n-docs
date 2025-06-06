@@ -121,7 +121,7 @@ nav:
       - Glossary: glossary.md
     - n8n Cloud:
       - Overview: manage-cloud/overview.md
-      - Get stared with the Cloud free trial: manage-cloud/cloud-free-trial.md
+      - Cloud free trial: manage-cloud/cloud-free-trial.md
       - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
       - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
       - Set the timezone: manage-cloud/set-cloud-timezone.md

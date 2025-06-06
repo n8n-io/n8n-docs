@@ -77,7 +77,7 @@ Until now, creating sub-workflows required copying and pasting nodes manually, s
 <video src="/_video/release-notes/convert_to_sub-workflow.mp4" controls width="100%"></video>
 <br>
 
-### How it works
+**How it works**
 
 1. Highlight the nodes you want to convert to a sub-workflow. These must:
     - Be fully connected, meaning no missing steps in between them
@@ -182,11 +182,11 @@ When you're building with AI, a small prompt tweak or model swap might improve r
 By implementing **Evaluations for AI workflows** in n8n, you can assess how your AI performs across a range of inputs by adding a dedicated path in your workflow for running test cases and applying custom metrics to track results. This helps you build viable proof-of-concepts quickly, iterate more effectively, catch regressions early, and make more confident decisions when your AI is in production.<br><br>
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5LlF196PKaE?si=TcwM0JyhjsRKDb3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LlF196PKaE?si=TcwM0JyhjsRKDb3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
 
 #### Evaluation node and tab
 
-The Evaluation node includes several operations that, when used together, enable end-to-end AI evaluation.
+The **Evaluation node** includes several operations that, when used together, enable end-to-end AI evaluation.
 
 <br> 
 <figure markdown="span">
@@ -202,7 +202,7 @@ Use this node to:
 - Score the results using your own metrics or LLM-as-judge logic
 - Isolate a testing path to only include the nodes and logic you want to evaluate <br>
 
-The Evaluations tab enables you to review test results in the n8n UI, perfect for comparing runs, spotting regressions, and viewing performance over time.
+The **Evaluations tab** enables you to review test results in the n8n UI, perfect for comparing runs, spotting regressions, and viewing performance over time.
 <br><br>
 
 #### 🛠 How evaluations work
@@ -217,21 +217,22 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
+
     > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations/#2-calculate-metrics.md). 
     
 <br>
-<br> 
+
 <figure markdown="span">
     ![Evaluation workflow](/_images/release-notes/Evaluations_workflow.png)
     <figcaption>Evaluation workflow</figcaption>
 </figure>
 <br>
 
-When the **Evaluation** trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the **Evaluation** trigger node to compare results. If you’ve added metrics, they’ll appear in the **Evaluations tab**. <br><br>
+When the Evaluation trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the Evaluation trigger node to compare results. If you’ve added metrics, they’ll appear in the Evaluations tab. <br><br>
 
-In some instances, you may want to isolate your testing path to make iteration faster or to avoid executing downstream logic.  In this case, you can add an **Evaluation** node with the **Check If Evaluating** operation to ensure only the expected nodes run when performing evaluations. <br>
+In some instances, you may want to isolate your testing path to make iteration faster or to avoid executing downstream logic.  In this case, you can add an Evaluation node with the `Check If Evaluating` operation to ensure only the expected nodes run when performing evaluations. <br>
 
-### Things to keep in mind
+#### Things to keep in mind
 
 Evaluations for AI Workflows are designed to fit  into your development flow, with more enhancements on the way. For now, here are a few things to note:
 
@@ -242,11 +243,10 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 
 You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br>
 
-<div>
-💡
-Learn more about the AI evaluation strategies and practical implementation techniques during a livestream on July 2nd, 2025 at 5:00 p.m GMT+2. [Sign up](https://lu.ma/rfniiq2c).
 
-</div>
+💡
+    > Learn more about the AI evaluation strategies and practical implementation techniques during a livestream on July 2nd, 2025 at 5:00 p.m GMT+2. [Sign up](https://lu.ma/rfniiq2c).
+
 
 </div> 
 

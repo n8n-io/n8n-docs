@@ -84,11 +84,13 @@ Until now, creating sub-workflows required copying and pasting nodes manually, s
     - Start from a single starting node
     - End with a single node
 2. Right-click to open the context menu and select **Convert to sub-workflow**
-    - Or use the shortcut: `Ctrl + G` / `Cmd + G`
+    - Or use the shortcut: `Alt + X`
 3. n8n will:
     - Open a new tab containing the selected nodes
     - Preserve all node parameters as-is
     - Replace the selected nodes in the original workflow with a **Call My Sub-workflow** node
+
+*Note*: You will need to manually adjust the field types in the Start and Return nodes in the new sub-workflow.
 
 This makes it easier to keep workflows modular, performant, and easier to maintain.
 

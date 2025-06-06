@@ -8,6 +8,10 @@ contentType: overview
 # Overview
 <!-- vale from-microsoft.HeadingPunctuation = NO -->
 
+/// info | Not available in queue mode
+Evaluations aren't yet supported for n8n instances running in [queue mode](/hosting/scaling/queue-mode.md).
+///
+
 ## What are evaluations?
 
 Evaluation is a crucial technique for checking that your AI workflow is reliable. It can be the difference between a flaky proof of concept and a solid production workflow. It's important both in the building phase and after deploying to production. 
@@ -25,6 +29,7 @@ The following video explains what evaluations are, why they're useful, and how t
 <div class="video-container">
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/5LlF196PKaE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
 
 ## Why is evaluation needed?
 

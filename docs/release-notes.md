@@ -94,6 +94,9 @@ This makes it easier to keep workflows modular, performant, and easier to mainta
 
 Learn more about [sub-workflows](/flow-logic/subworkflows.md).
 
+This release contains performance improvements and bug fixes.
+
+
 ### Contributors
 
 [maatthc](https://github.com/maatthc){:target=_blank .external-link}  
@@ -110,6 +113,22 @@ This release failed to build. Please use `1.97.0` instead.
 ///
 
 This release contains API updates, core changes, editor improvements, node updates, and bug fixes.
+
+### API support for assigning users to projects
+
+You can now use the API to add and update users within projects. This includes:
+
+- Assigning existing or pending users to a project with a specific role
+- Updating a user’s role within a project
+- Removing users from one or more projects
+
+This update now allows you to use the API to add users to both the instance and specific projects, removing the need to manually assign them in the UI. 
+
+### Add pending users to project member assignment
+
+You can now add **pending users,** those who have been invited but haven't completed sign-up, to projects as members.
+
+This change lets you configure a user's project access upfront, without waiting for them to finish setting up their account. It eliminates the back-and-forth of managing access post-sign-up, ensuring users have the right project roles immediately upon joining.
 
 ### Contributors
 

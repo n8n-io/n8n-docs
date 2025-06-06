@@ -244,8 +244,8 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 - AI Evaluations are not enabled for instances in scaling mode at this time. <br>
 
 You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
-    
-    > 💡  Learn more about the AI evaluation strategies and practical implementation techniques during a livestream on July 2nd, 2025 at 5:00 p.m GMT+2. [Sign up](https://lu.ma/rfniiq2c).
+
+ 👉 Learn more about the AI evaluation strategies and practical implementation techniques during a **livestream on July 2nd, 2025 at 5:00 p.m GMT+2**. [Sign up](https://lu.ma/rfniiq2c). 
 
 </div> 
 

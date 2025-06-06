@@ -42,7 +42,7 @@ Enter the email address you want to send the email from. You can also include a 
 Enter the email address you want to send the email to. You can also include a name using this format: `Name Name <email@sample.com>`, for example: `Nathan Doe <nate@n8n.io>`. Use a comma to separate multiple email addresses: `first@sample.com, "Name" <second@sample.com>`.
 
 /// note | Email Format
-The aforementioned email format also applies to the CC and BCC fields.
+This email format also applies to the CC and BCC fields.
 ///
 
 ### Subject

@@ -182,7 +182,9 @@ When you're building with AI, a small prompt tweak or model swap might improve r
 By implementing **Evaluations for AI workflows** in n8n, you can assess how your AI performs across a range of inputs by adding a dedicated path in your workflow for running test cases and applying custom metrics to track results. This helps you build viable proof-of-concepts quickly, iterate more effectively, catch regressions early, and make more confident decisions when your AI is in production.<br><br>
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5LlF196PKaE?si=TcwM0JyhjsRKDb3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LlF196PKaE?si=TcwM0JyhjsRKDb3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br><br>
 
 #### Evaluation node and tab
 
@@ -213,12 +215,12 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 
 1. Add an **Evaluation** node with the **On new Evaluation event** operation. This node will act as an additional trigger you’ll run only when testing. Configure it to read your dataset from Google Sheets, with each row representing a test input.<br>
     
-    > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations/#1-create-a-dataset.md).
+    > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations.md/#1-create-a-dataset.md).
 
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations/#2-calculate-metrics.md). 
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics.md). 
     
 <br>
 
@@ -230,7 +232,7 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 
 When the Evaluation trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the Evaluation trigger node to compare results. If you’ve added metrics, they’ll appear in the Evaluations tab. <br><br>
 
-In some instances, you may want to isolate your testing path to make iteration faster or to avoid executing downstream logic.  In this case, you can add an Evaluation node with the `Check If Evaluating` operation to ensure only the expected nodes run when performing evaluations. <br>
+In some instances, you may want to isolate your testing path to make iteration faster or to avoid executing downstream logic.  In this case, you can add an Evaluation node with the `Check If Evaluating` operation to ensure only the expected nodes run when performing evaluations. <br><br>
 
 #### Things to keep in mind
 
@@ -241,12 +243,9 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 - Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
 - AI Evaluations are not enabled for instances in scaling mode at this time. <br>
 
-You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br>
+You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
 
-
-💡
-    > Learn more about the AI evaluation strategies and practical implementation techniques during a livestream on July 2nd, 2025 at 5:00 p.m GMT+2. [Sign up](https://lu.ma/rfniiq2c).
-
+    > 💡  Learn more about the AI evaluation strategies and practical implementation techniques during a livestream on July 2nd, 2025 at 5:00 p.m GMT+2. [Sign up](https://lu.ma/rfniiq2c).
 
 </div> 
 

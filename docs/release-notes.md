@@ -214,7 +214,7 @@ The evaluation path runs alongside your normal execution logic and only activate
 Get started by selecting an AI workflow you want to evaluate that includes one or more LLM or Agent nodes. <br>
 
 1. Add an **Evaluation** node with the **On new Evaluation event** operation. This node will act as an additional trigger you’ll run only when testing. Configure it to read your dataset from Google Sheets, with each row representing a test input.<br>
-    
+
     > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations.md/#1-create-a-dataset.md).
 
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
@@ -244,7 +244,7 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 - AI Evaluations are not enabled for instances in scaling mode at this time. <br>
 
 You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
-
+    
     > 💡  Learn more about the AI evaluation strategies and practical implementation techniques during a livestream on July 2nd, 2025 at 5:00 p.m GMT+2. [Sign up](https://lu.ma/rfniiq2c).
 
 </div> 

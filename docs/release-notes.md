@@ -34,7 +34,6 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
-
 ## n8n@1.97.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.97.0...n8n@1.97.1){:target=_blank .external-link} for this version.<br />
@@ -48,8 +47,6 @@ This release contains backports.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.95.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.2...n8n@1.95.3){:target=_blank .external-link} for this version.<br />
@@ -59,24 +56,43 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.2...n8n@1.95.3
 This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.97.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.96.0...n8n@1.97.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-06-02
 
+This release contains new features, performance improvements and bug fixes.
 
+### Convert to sub-workflow
 
+Large, monolithic workflows can slow things down. They’re harder to maintain, tougher to debug, and more difficult to scale. With sub-workflows, you can take a more modular approach, breaking up big workflows into smaller, manageable parts that are easier to reuse, test, understand, and explain.
 
+Until now, creating sub-workflows required copying and pasting nodes manually, setting up a new workflow from scratch, and reconnecting everything by hand. **Convert to sub-workflow** allows you to simplify this process into a single action, so you can spend more time building and less time restructuring.
 
-This release contains performance improvements and bug fixes.
+<br>
+<video src="/_video/release-notes/convert_to_sub-workflow.mp4" controls width="100%"></video>
+<br>
+
+### How it works
+
+1. Highlight the nodes you want to convert to a sub-workflow. These must:
+    - Be fully connected, meaning no missing steps in between them
+    - Start from a single starting node
+    - End with a single node
+2. Right-click to open the context menu and select **Convert to sub-workflow**
+    - Or use the shortcut: `Ctrl + G` / `Cmd + G`
+3. n8n will:
+    - Open a new tab containing the selected nodes
+    - Preserve all node parameters as-is
+    - Replace the selected nodes in the original workflow with a **Call My Sub-workflow** node
+
+This makes it easier to keep workflows modular, performant, and easier to maintain.
+
+Learn more about [sub-workflows](/flow-logic/subworkflows.md).
 
 ### Contributors
 
@@ -107,20 +123,14 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.1...n8n@1.95.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-29
 
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.95.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.95.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-27
-
-
 
 This release contains bug fixes.
 
@@ -130,8 +140,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.94.0...n8n@1.94.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-27
-
-
 
 This release contains bug fixes.
 
@@ -151,14 +159,10 @@ This release contains core updates, editor improvements, node updates, and bug f
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.94.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.93.0...n8n@1.94.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-19
-
-
 
 This release contains editor improvements, an API update, node updates, new nodes, and bug fixes.
 
@@ -255,8 +259,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-12
-
-
 
 This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
 

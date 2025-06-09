@@ -1,7 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n Glossary
-description: A glossary of terms commonly used when working with n8n and releated software.
+description: A glossary of terms commonly used when working with n8n and related software.
 contentType: reference
 ---
 
@@ -18,7 +18,8 @@ AI chains allow you to interact with large language models (LLMs) and other reso
 Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
 
 #### AI reranking
-Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. It's used in Retrieval-Augmented Generation (RAG) and other applications to ensure the most relevant information is prioritized for generation or downstream tasks.
+
+Reranking is a technique that refines the order of a list of candidate documents to improve the relevance of search results. Retrieval-Augmented Generation (RAG) and other applications use reranking to prioritize the most relevant information for generation or downstream tasks.
 
 #### AI memory
 

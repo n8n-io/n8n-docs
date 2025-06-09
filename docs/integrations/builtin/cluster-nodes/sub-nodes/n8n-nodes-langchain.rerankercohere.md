@@ -1,15 +1,15 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Reranker Cohere
-description: Learn how to use the Reranker Cohere node in n8n. Follow technical documentation to integrate Cohere reraking into your workflows.
+description: Learn how to use the Reranker Cohere node in n8n. Follow technical documentation to integrate Cohere reranking into your workflows.
 contentType: [integration, reference]
 ---
 
 # Reranker Cohere
 
-The Reranker Cohere node allows to rerank the resulting chunks from a [vector store](/glossary.md#ai-vector-store) based on Cohere. This node can be connected to a vector store.
+The Reranker Cohere node allows you to [rerank](/glossary.md#ai-reranking) the resulting chunks from a [vector store](/glossary.md#ai-vector-store). You can connect this node to a vector store.
 
-The reranker will reorder the list of documents retrieved from a vector store with descending relevance to the given query.
+The reranker reorders the list of documents retrieved from a vector store for a given query in order of descending relevance.
 
 On this page, you'll find the node parameters for the Reranker Cohere node, and links to more resources.
 
@@ -23,8 +23,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ### Model
 
-Cohere offers three different models to choose from to perform the reranking operation.
-More about the models available for reranking can be found [here](https://docs.cohere.com/docs/models)
+Choose the reranking model to use. You can find out more about the available models in [Cohere's model documentation](https://docs.cohere.com/docs/models#rerank).
 
 ## Related resources
 

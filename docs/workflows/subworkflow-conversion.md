@@ -47,4 +47,6 @@ Most sub-workflow conversions work without issues, but there are some caveats an
 	n8n adds suffixes like `_firstItem`, `_lastItem`, and `_allItems` to variable names accessed by these functions. This helps preserve information about the original expression, since item ordering may be different in the sub-workflow context.
 	///
 
+<!-- vale Vale.Spelling = NO -->
 * **The `itemMatching` function requires a fixed index**: You can't use expressions for the index value when using the [`itemMatching` function](/code/builtin/output-other-nodes.md). You must pass it a fixed number.
+<!-- vale Vale.Spelling = YES -->

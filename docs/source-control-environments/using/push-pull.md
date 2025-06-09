@@ -15,9 +15,11 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 ## Fetch other people's work
 
-/// note | Restricted feature
-Not all users can fetch changes from Git. You must be an n8n instance owner or admin to push or pull changes.
+/// note | n8n Roles control which users can pull (fetch) changes
+* Not all users can pull changes from Git. 
+* You must be an instance owner or instance admin to pull changes from git.
 ///
+
 To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
@@ -48,8 +50,9 @@ If you pull changes to an active workflow, n8n sets the workflow to inactive whi
 
 ## Send your work to Git
 
-/// note | Restricted feature
-Ordinary users can't send work to Git. You must be an n8n instance owner, admin, or project owner to send work to Git.
+/// note | n8n Roles control which users can push changes
+* Not all users can push changes to Git. 
+* You must be an instance owner, instance admin or project admin to push changes to git.
 ///
 
 --8<-- "_snippets/source-control-environments/push.md"

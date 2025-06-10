@@ -64,7 +64,7 @@ To set up your database connection credential:
     SHOW VARIABLES WHERE Variable_name = 'port';
     ```
 
-6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `1000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 100 before entering it in n8n:
+6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `10000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 1000 before entering it in n8n:
 
     ```
     SHOW VARIABLES WHERE Variable_name = 'connect_timeout';

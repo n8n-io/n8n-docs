@@ -34,15 +34,124 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+## n8n@1.97.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.97.0...n8n@1.97.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-04
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains backports.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.95.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.2...n8n@1.95.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-03
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.97.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.96.0...n8n@1.97.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-02
+
+This release contains new features, performance improvements and bug fixes.
+
+### Convert to sub-workflow
+
+Large, monolithic workflows can slow things down. They’re harder to maintain, tougher to debug, and more difficult to scale. With sub-workflows, you can take a more modular approach, breaking up big workflows into smaller, manageable parts that are easier to reuse, test, understand, and explain.
+
+Until now, creating sub-workflows required copying and pasting nodes manually, setting up a new workflow from scratch, and reconnecting everything by hand. **Convert to sub-workflow** allows you to simplify this process into a single action, so you can spend more time building and less time restructuring.
+
+<br>
+<video src="/_video/release-notes/convert_to_sub-workflow.mp4" controls width="100%"></video>
+<br>
+
+**How it works**
+
+1. Highlight the nodes you want to convert to a sub-workflow. These must:
+    - Be fully connected, meaning no missing steps in between them
+    - Start from a single starting node
+    - End with a single node
+2. Right-click to open the context menu and select **Convert to sub-workflow**
+    - Or use the shortcut: `Alt + X`
+3. n8n will:
+    - Open a new tab containing the selected nodes
+    - Preserve all node parameters as-is
+    - Replace the selected nodes in the original workflow with a **Call My Sub-workflow** node
+
+*Note*: You will need to manually adjust the field types in the Start and Return nodes in the new sub-workflow.
+
+This makes it easier to keep workflows modular, performant, and easier to maintain.
+
+Learn more about [sub-workflows](/flow-logic/subworkflows.md).
+
+This release contains performance improvements and bug fixes.
+
+
+### Contributors
+
+[maatthc](https://github.com/maatthc){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.96.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.96.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-02
+
+/// warning | Build failure
+This release failed to build. Please use `1.97.0` instead.
+///
+
+This release contains API updates, core changes, editor improvements, node updates, and bug fixes.
+
+### API support for assigning users to projects
+
+You can now use the API to add and update users within projects. This includes:
+
+- Assigning existing or pending users to a project with a specific role
+- Updating a user’s role within a project
+- Removing users from one or more projects
+
+This update now allows you to use the API to add users to both the instance and specific projects, removing the need to manually assign them in the UI. 
+
+### Add pending users to project member assignment
+
+You can now add **pending users,** those who have been invited but haven't completed sign-up, to projects as members.
+
+This change lets you configure a user's project access upfront, without waiting for them to finish setting up their account. It eliminates the back-and-forth of managing access post-sign-up, ensuring users have the right project roles immediately upon joining.
+
+### Contributors
+
+[matthabermehl](https://github.com/matthabermehl){:target=_blank .external-link}  
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.95.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.1...n8n@1.95.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-29
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.95.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.95.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-27
-
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains bug fixes.
 
@@ -52,10 +161,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.94.0...n8n@1.94.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-27
-
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
 
 This release contains bug fixes.
 
@@ -68,6 +173,84 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.94.0...n8n@1.95.0
 
 This release contains core updates, editor improvements, node updates, and bug fixes.
 
+<div class="n8n-new-features" markdown> 
+
+### Evaluations for AI workflows
+
+We’ve added a feature to help you iterate, test, and compare changes to your AI automations before pushing them to production so you can achieve more predictability and make better decisions.<br><br>
+
+When you're building with AI, a small prompt tweak or model swap might improve results with some inputs, while quietly degrading performance with others. But without a way to evaluate performance across many inputs, you’re left guessing whether your AI is actually getting better when you make a change.  <br><br>
+
+By implementing **Evaluations for AI workflows** in n8n, you can assess how your AI performs across a range of inputs by adding a dedicated path in your workflow for running test cases and applying custom metrics to track results. This helps you build viable proof-of-concepts quickly, iterate more effectively, catch regressions early, and make more confident decisions when your AI is in production.<br><br>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LlF196PKaE?si=TcwM0JyhjsRKDb3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br><br>
+
+#### Evaluation node and tab
+
+The **Evaluation node** includes several operations that, when used together, enable end-to-end AI evaluation.
+
+<br> 
+<figure markdown="span">
+    ![Evaluation node](/_images/release-notes/Evaluations_node.png)
+    <figcaption>Evaluation node</figcaption>
+</figure>
+<br>
+
+Use this node to:
+
+- Run your AI logic against a wide range of test cases in the same execution
+- Capture the outputs of those test cases
+- Score the results using your own metrics or LLM-as-judge logic
+- Isolate a testing path to only include the nodes and logic you want to evaluate <br>
+
+The **Evaluations tab** enables you to review test results in the n8n UI, perfect for comparing runs, spotting regressions, and viewing performance over time.
+<br><br>
+
+#### 🛠 How evaluations work
+
+The evaluation path runs alongside your normal execution logic and only activates when you want—making it ideal for testing and iteration. <br><br>
+
+Get started by selecting an AI workflow you want to evaluate that includes one or more LLM or Agent nodes. <br>
+
+1. Add an **Evaluation** node with the **On new Evaluation event** operation. This node will act as an additional trigger you’ll run only when testing. Configure it to read your dataset from Google Sheets, with each row representing a test input.<br>
+
+    > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations.md/#1-create-a-dataset.md).
+
+2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
+3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
+
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics.md). 
+    
+<br>
+
+<figure markdown="span">
+    ![Evaluation workflow](/_images/release-notes/Evaluations_workflow.png)
+    <figcaption>Evaluation workflow</figcaption>
+</figure>
+<br>
+
+When the Evaluation trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the Evaluation trigger node to compare results. If you’ve added metrics, they’ll appear in the Evaluations tab. <br><br>
+
+In some instances, you may want to isolate your testing path to make iteration faster or to avoid executing downstream logic.  In this case, you can add an Evaluation node with the `Check If Evaluating` operation to ensure only the expected nodes run when performing evaluations. <br><br>
+
+#### Things to keep in mind
+
+Evaluations for AI Workflows are designed to fit  into your development flow, with more enhancements on the way. For now, here are a few things to note:
+
+- Test datasets are currently managed through Google Sheets. You’ll need a Google Sheets credential to run evaluations.
+- Each workflow supports one evaluation at a time. If you’d like to test multiple segments, consider splitting them into sub-workflows for more flexibility.
+- Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
+- AI Evaluations are not enabled for instances in scaling mode at this time. <br>
+
+You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
+
+ 👉 Learn more about the AI evaluation strategies and practical implementation techniques during a **livestream on July 2nd, 2025 at 5:00 p.m GMT+2**. [Sign up](https://lu.ma/rfniiq2c). 
+
+</div> 
+
 ### Contributors
 
 [Phiph](https://github.com/Phiph){:target=_blank .external-link}  
@@ -75,14 +258,10 @@ This release contains core updates, editor improvements, node updates, and bug f
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.94.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.93.0...n8n@1.94.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-19
-
-
 
 This release contains editor improvements, an API update, node updates, new nodes, and bug fixes.
 
@@ -106,7 +285,7 @@ This is just the start. We plan to expand the library gradually, bringing even m
 <br>
 <br>
 
-Learn more about this update and find out which nodes are already installable from the editor in our [blog](http://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
+Learn more about this update and find out which nodes are already installable from the editor in our [blog](https://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
 
 <br>
 
@@ -179,8 +358,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-05-12
-
-
 
 This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
 

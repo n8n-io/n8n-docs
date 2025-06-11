@@ -240,7 +240,7 @@ You can reset the LDAP settings using the command below.
 n8n ldap:reset
 ```
 
-## Community nodes
+## Uninstall community nodes and credentials
 
 You can manage [community nodes](/integrations/community-nodes/installation/index.md) using the n8n CLI. For now, you can only uninstall community nodes and credentials, which is useful if a community node causes instability.
 

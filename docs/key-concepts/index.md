@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: "Understanding n8n"
+title: "Key concepts"
 description: A deeper dive into how n8n works.
 contentType: overview
 ---

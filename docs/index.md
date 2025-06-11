@@ -26,7 +26,7 @@ Our documentation arranges information by type, to make it easier to find what y
 
 [**Tutorials and courses**](/tutorials/index.md). For structured learning or more hand-on learning of key topics, we've created two complete courses covering basic and advanced workflow generation. There's also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
 
-[**Understanding n8n**](/understanding/index.md) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
+[**Key concepts**](/key-concepts/index.md) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
 
 /// note | Visiting docs from the n8n editor
 Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's edit panel.

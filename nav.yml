@@ -1,11 +1,11 @@
 nav:
   - Getting started:
     - Welcome: index.md
-    - Hello World:
+    - Start here:
       - Get n8n: try-it-out/getn8n.md
       - Your first workflow: try-it-out/tutorial-first-workflow.md
       - Going further: try-it-out/going-further.md
-    - Choose your n8n:
+    - Flavors of n8n:
       - Choose a plan: choose-n8n.md
       - Install n8n:
         - Docker: hosting/installation/docker.md
@@ -272,10 +272,10 @@ nav:
           - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
     - Enterprise:
       - Create environments with source control: source-control-environments/create-environments.md
-  - Understanding n8n:
-    - understanding/index.md
+  - Key concepts:
+    - key-concepts/index.md
     - Workflows: 
-      -  Learn about workflows: understanding/workflows.md
+      -  Learn about workflows: key-concepts/workflows.md
 #Workflow settings - Tags - Workflow history - Export/import - Workflow ID
     - Nodes:
       - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
@@ -289,11 +289,11 @@ nav:
       - Community nodes:
         - Risks: integrations/community-nodes/risks.md
         - Blocklist: integrations/community-nodes/blocklist.md
-#    - Execution: understanding/executions.md
+#    - Execution: key-concepts/executions.md
 #        - Pinning and mocking
 #        - Debugging executions
     - Credentials: 
-      - What are credentials?: understanding/credentials.md
+      - What are credentials?: key-concepts/credentials.md
     - Data mapping and transformation: 
         - Data structure: data/data-structure.md
         - Data item linking: data/data-mapping/data-item-linking/item-linking-concepts.md
@@ -325,7 +325,7 @@ nav:
       - Concurrency control: hosting/scaling/concurrency-control.md
       - Memory-related errors: hosting/scaling/memory-errors.md
     - Self-hosted:
-      - Why self host?: understanding/self-hosting.md
+      - Why self host?: key-concepts/self-hosting.md
     - Enterprise: 
       - Source control: source-control-environments/understand/index.md
       - Environments: source-control-environments/understand/environments.md

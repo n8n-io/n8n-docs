@@ -200,6 +200,7 @@ Qualys
 Realtime
 Rekognition
 requester
+[Rr]erank(er|ing|ed)?
 Rundeck
 Salesmate
 [Ss]andboxed

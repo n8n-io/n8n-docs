@@ -118,7 +118,7 @@ To opt out of checking for new versions of n8n:
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
-Disable templates feature (to prevent background health check calls):
+To disable the templates feature (prevents background health check calls):
 
 ```bash
 export N8N_TEMPLATES_ENABLED=false

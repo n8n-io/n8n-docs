@@ -2,7 +2,7 @@ If you run n8n using a Docker Compose file, follow these steps to update n8n:
 
 ```sh
 # Navigate to the directory containing your docker compose file
-cd </path/to/your/compose/directory>
+cd </path/to/your/compose/file/directory>
 
 # Pull latest version
 docker compose pull

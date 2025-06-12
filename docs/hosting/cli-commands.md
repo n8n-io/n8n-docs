@@ -240,6 +240,48 @@ You can reset the LDAP settings using the command below.
 n8n ldap:reset
 ```
 
+## Uninstall community nodes and credentials
+
+You can manage [community nodes](/integrations/community-nodes/installation/index.md) using the n8n CLI. For now, you can only uninstall community nodes and credentials, which is useful if a community node causes instability.
+
+Command flags:
+
+ | Flag         | Description                                                                                                                      |
+ |--------------|----------------------------------------------------------------------------------------------------------------------------------|
+ | --help       | Show CLI help.                                                                                                                   |
+ | --credential | The credential type. Get this value by visiting the node's `<NODE>.credential.ts` file and getting the value of `name`.            |
+ | --package    | Package name of the community node.                                                                                              |
+ | --uninstall  | Uninstalls the node.                                                                                                             |
+ | --userId     | The ID of the user who owns the credential. On self-hosted, query the database. On cloud, query the API with your API key. |
+
+### Nodes
+
+Uninstall a community node by package name:
+
+```sh
+n8n community-node --uninstall --package <COMMUNITY_NODE_NAME>
+```
+
+For example, to uninstall the [Evolution API community node](https://www.npmjs.com/package/n8n-nodes-evolution-api), type:
+
+```sh
+n8n community-node --uninstall --package n8n-nodes-evolution-api
+```
+
+### Credentials
+
+Uninstall a community node credential:
+
+```sh
+n8n community-node --uninstall --credential <CREDENTIAL_TYPE> --userId <ID>
+```
+
+For example, to uninstall the [Evolution API community node credential](https://www.npmjs.com/package/n8n-nodes-evolution-api), visit the [repository](https://github.com/oriondesign2015/n8n-nodes-evolution-api) and navigate to the [`credentials.ts` file](https://github.com/oriondesign2015/n8n-nodes-evolution-api/blob/main/credentials/EvolutionApi.credentials.ts) to find the `name`:
+
+```sh
+n8n community-node --uninstall --credential evolutionApi --userId 1234
+```
+
 ## Security audit
 
 You can run a [security audit](/hosting/securing/security-audit.md) on your n8n instance, to detect common security issues.

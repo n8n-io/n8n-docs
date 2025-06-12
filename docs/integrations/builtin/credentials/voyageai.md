@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Voyage AI](https://dashboard.voyageai.com/sign-up){:target=_blank .external-link} account.
+Create a [Voyage AI](https://voyageai.com){:target=_blank .external-link} account.
 
 ## Supported authentication methods
 

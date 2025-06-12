@@ -30,7 +30,7 @@ To configure this credential, you'll need an **API Key**.
 
 To generate your API Key:
 
-1. Login to your Voyage AI account or [create](https://dashboard.voyageai.com/sign-up){:target=_blank .external-link} an account.
-2. Open your [API keys](https://dashboard.voyageai.com/organization/api-keys){:target=_blank .external-link} page.
+1. Login to your Voyage AI account or [create](https://voyageai.com){:target=_blank .external-link} an account.
+2. Open your API keys page.
 3. Select **Create new secret key** to create an API key, optionally naming the key.
 4. Copy your key and add it as the **API Key** in n8n.

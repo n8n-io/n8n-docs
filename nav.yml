@@ -721,6 +721,7 @@ nav:
           - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
           - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
           - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
+          - Embeddings Voyage AI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsvoyageai.md
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
@@ -1067,6 +1068,7 @@ nav:
         - integrations/builtin/credentials/vero.md
         - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md
+        - integrations/builtin/credentials/voyageai.md
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/webflow.md
         - integrations/builtin/credentials/webhook.md

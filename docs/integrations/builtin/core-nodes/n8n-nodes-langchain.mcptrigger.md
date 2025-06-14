@@ -83,9 +83,9 @@ To do so, add the following to your Claude Desktop configuration:
         "--header",
         "Authorization: Bearer ${AUTH_TOKEN}"
       ],
-	  "env": {
-	    "AUTH_TOKEN": "<MCP_BEARER_TOKEN>"
-	  }
+      "env": {
+        "AUTH_TOKEN": "<MCP_BEARER_TOKEN>"
+      }
     }
   }
 }

@@ -220,6 +220,7 @@ Stackshare
 Storyblok
 Strapi
 Strava
+[Ss]treamable
 strikethrough
 [Ss]ubfolder
 sublist

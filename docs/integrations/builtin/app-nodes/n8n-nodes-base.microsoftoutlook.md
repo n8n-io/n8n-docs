@@ -53,6 +53,7 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 * Folder Message
     * Get Many
 * Message
+	* Create Forward Draft 
 	* Delete
 	* Get
 	* Get Many

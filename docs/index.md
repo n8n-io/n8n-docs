@@ -12,13 +12,15 @@ hide:
 
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation platform that uniquely combines AI capabilities with business process automation, giving technical teams the flexibility of code with the speed of no-code.
 
-[Get started with n8n here »](/try-it-out/getn8n.md){ .md-button }
+[Get started with n8n here »](/start-here/index.md){ .md-button }
 
 ## How to use this documentation
 
 Our documentation arranges information by type, to make it easier to find what you are looking for, when you need it. 
 
-[**Getting Started**](/try-it-out/getn8n.md) details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
+[**Getting Started**](/start-here/index.md) details how to get up an running with n8n and takes you through setting up your first workflows, explaining key concepts along the way.
+
+[**Managing n8n**](/managing-n8n/index.md) is a section which covers how to configure and administer your n8n instance.
 
 [**Using n8n**](/using-n8n/index.md) has step-by-step instructions for all sorts of common tasks and operations.
 
@@ -26,7 +28,6 @@ Our documentation arranges information by type, to make it easier to find what y
 
 [**Tutorials and courses**](/tutorials/index.md). For structured learning or more hand-on learning of key topics, we've created two complete courses covering basic and advanced workflow generation. There's also a collection of targeted tutorials to guide you through discovering what n8n can do for you.
 
-[**Key concepts**](/key-concepts/index.md) is a section which covers higher-level concepts and deeper explanations of topics such as using AI in n8n. Expand your knowledge and get the most out of n8n.
 
 /// note | Visiting docs from the n8n editor
 Most elements of the n8n user-interface include links to the relevant parts of the documentation. If you are ever looking for more details about a specific node for example, you will find a link to the relevant documentation in the top right of that node's edit panel.

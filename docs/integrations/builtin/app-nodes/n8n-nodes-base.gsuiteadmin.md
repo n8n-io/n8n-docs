@@ -46,7 +46,7 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 
 ## How to control which custom fields to fetch for a user
 
-There are three different ways to control which custom fields to retrieve when getting a user's information. These are controlled by the **Custom Fields** parameter:
+There are three different ways to control which custom fields to retrieve when getting a user's information. Use the **Custom Fields** parameter to select one of the following:
 
 - **Don't Include**: Doesn't include any custom fields.
 - **Custom**: Includes the custom fields from schemas in **Custom Schema Names or IDs**.

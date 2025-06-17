@@ -44,6 +44,7 @@ Capterra
 cartesian
 Chargebee
 [Cc]hatbot
+ChromeOS
 Citrix
 Clearbit
 Clockify

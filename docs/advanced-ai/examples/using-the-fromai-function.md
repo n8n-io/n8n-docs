@@ -37,7 +37,7 @@ Activating this feature will overwrite any manual definition you may have alread
 
 The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).
 
-/// note | Only for the node tools
+/// note | Only for tools
 The `$fromAI()` function is only available for tools connected to the AI Agent node. The `$fromAI()` function doesn't work with the [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md) tool or with [other non-tool cluster sub-nodes](/integrations/builtin/cluster-nodes/sub-nodes/index.md).
 ///
 

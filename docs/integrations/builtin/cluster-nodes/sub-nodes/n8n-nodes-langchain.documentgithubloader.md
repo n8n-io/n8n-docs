@@ -19,6 +19,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
+* **Text Splitting**: Choose from:
+	* **Simple**: Uses the [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md) with a chunk size of 1000 and an overlap of 200.
+    * **Custom**: Allows you to connect a text splitter of your choice.
 * **Repository Link**: Enter the URL of your GitHub repository.
 * **Branch**: Enter the branch name to use.
 

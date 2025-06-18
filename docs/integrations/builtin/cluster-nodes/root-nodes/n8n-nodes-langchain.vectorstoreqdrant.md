@@ -30,7 +30,7 @@ You can see an example of this in the first part of [this template](https://n8n.
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Qdrant Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use vector store as a resource when answering queries.
+You can connect the Qdrant Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Qdrant Vector Store node.
 
@@ -49,6 +49,8 @@ The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitc
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters

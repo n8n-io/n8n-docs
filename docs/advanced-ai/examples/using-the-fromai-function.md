@@ -14,7 +14,7 @@ hide:
 
 # Let AI specify the tool parameters
 
-When configuring [app node](/integrations/builtin/app-nodes/index.md) [tools](/glossary.md#ai-tool) connected to the Tools Agent, many parameters can be filled in by the AI model itself. The AI model will use the context from the task and information from other connected tools to fill in the appropriate details.
+When configuring [tools](/glossary.md#ai-tool) connected to the Tools Agent, many parameters can be filled in by the AI model itself. The AI model will use the context from the task and information from other connected tools to fill in the appropriate details.
 
 There are two ways to do this, and you can switch between them.
 
@@ -35,10 +35,10 @@ Activating this feature will overwrite any manual definition you may have alread
 
 ## Use the `$fromAI()` function 
 
-The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).  You can use the `$fromAI()` function in expressions within [app nodes](/integrations/builtin/app-nodes/index.md) (like [Gmail](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md), [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md), or [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md)) which are connected to the **AI Agent** as tools.
+The `$fromAI()` function uses AI to dynamically fill in parameters for tools connected to the [Tools AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).
 
-/// note | Only for the Node Tools
-The `$fromAI()` function is only available for [app node](/integrations/builtin/app-nodes/index.md) tools connected to the Tools Agent. It isn't possible to use the `$fromAI()` function with the [Call n8n Workflow](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md), [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md), [HTTP Request](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md), or [other cluster sub-nodes](/integrations/builtin/cluster-nodes/sub-nodes/index.md).
+/// note | Only for tools
+The `$fromAI()` function is only available for tools connected to the AI Agent node. The `$fromAI()` function doesn't work with the [Code](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md) tool or with [other non-tool cluster sub-nodes](/integrations/builtin/cluster-nodes/sub-nodes/index.md).
 ///
 
 To use the `$fromAI()` function, call it with the required `key` parameter:

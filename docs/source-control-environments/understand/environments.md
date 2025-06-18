@@ -32,7 +32,7 @@ In n8n, an environment comprises two parts, an n8n instance and a Git branch:
 * The n8n instance is where you build and run workflows.
 * The Git branch stores copies of the workflows, as well as tags, and variable and credential stubs.
 
-n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance. For more information, refer to [Push and pull | What gets committed](/source-control-environments/using/push-pull.md#what-gets-committed) and [Manage variables](/source-control-environments/using/manage-variables.md).
+n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance. For more information, refer to [Push and pull | What gets committed](/source-control-environments/using/push-pull.md#what-gets-committed).
 
 How you copy work between environments depends on your branch and n8n instance configuration:
 

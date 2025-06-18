@@ -118,4 +118,3 @@ Learn more about:
 
 * [Environments in n8n](/source-control-environments/understand/environments.md) and [Git and n8n](/source-control-environments/understand/git.md)
 * [Source control patterns](/source-control-environments/understand/patterns.md)
-* Reusable [Variables](/code/variables.md) and [Managing variables using the API](/source-control-environments/using/manage-variables.md) when using source control.

@@ -169,7 +169,7 @@
         -680
       ],
       "id": "ffa1a8ce-1a1e-48c4-8a0d-6af28c0447a5",
-      "name": "When clicking ‘Test workflow’"
+      "name": "When clicking ‘Execute workflow’"
     }
   ],
   "connections": {
@@ -196,7 +196,7 @@
         []
       ]
     },
-    "When clicking ‘Test workflow’": {
+    "When clicking ‘Execute workflow’": {
       "main": [
         [
           {

@@ -28,7 +28,7 @@ Then:
 1. Search for the **Manual Trigger** node.
 2. Select it when it appears in the search.
 
-This will add the [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node to your canvas, which allows you to run the workflow at any time by selecting the **Test workflow** button.
+This will add the [Manual Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) node to your canvas, which allows you to run the workflow at any time by selecting the **Execute workflow** button.
 
 /// note | Manual triggers
 For faster workflow creation, you can skip this step in the future. Adding any other node without a trigger will add the Manual Trigger node to the workflow.
@@ -105,7 +105,7 @@ You can rename the node with a name that's more descriptive for your use case. T
 
 - Select the node you want to rename and at the same time press the F2 key on your keyboard.
 - Double-click on the node to open the node window. Click on the name of the node in the top left corner of the window, rename it as you like, then click **Rename** to save the node under the new name.
-- Right-click on the node and select the **Rename** option, or select the node and press F2 on your keyboard.
+- Right-click on the node and select the **Rename** option.
 
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-renaming-a-node-from-the-keyboard.png" alt="Renaming a node" style="width:100%"><figcaption align = "center"><i>Renaming a node from the keyboard</i></figcaption></figure>
 
@@ -114,9 +114,9 @@ To find the original node name (the type of node), open the node window and sele
 
 ## 4. Execute the node
 
-Select the **Test step** button in the node details window. You should see 10 results in the Output **Table** view.
+Select the **Execute step** button in the node details window. You should see 10 results in the Output **Table** view.
 
-<!--This screenshot needs updating now that the button says "Test step" rather than "Execute node"-->
+<!--This screenshot needs updating now that the button says "Execute step" rather than "Test node"-->
 <figure><img src="/_images/courses/level-one/chapter-two/l1-c2-results-in-table-view-for-the-hacker-news-node.png" alt="Results in Table view for the Hacker News node" style="width:100%"><figcaption align = "center"><i>Results in Table view for the Hacker News node</i></figcaption></figure>
 
 ### Node executions

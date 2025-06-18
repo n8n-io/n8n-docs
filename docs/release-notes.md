@@ -34,6 +34,871 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 ///
 
 
+## n8n@1.99.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.98.0...n8n@1.99.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-16
+
+This release contains performance improvements, core updates, editor changes, node updates, and bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.98.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.98.0...n8n@1.98.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-12
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.98.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.97.0...n8n@1.98.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-11
+
+
+
+This release contains performance improvements, core updates, editor changes, node updates, a new node, and bug fixes.
+
+### Contributors
+
+[luka-mimi](https://github.com/luka-mimi){:target=_blank .external-link}  
+[Alexandero89](https://github.com/Alexandero89){:target=_blank .external-link}  
+[khoazero123](https://github.com/khoazero123){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.97.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.97.0...n8n@1.97.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-04
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+
+
+This release contains backports.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.95.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.2...n8n@1.95.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-03
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.97.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.96.0...n8n@1.97.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-02
+
+This release contains new features, performance improvements and bug fixes.
+
+### Convert to sub-workflow
+
+Large, monolithic workflows can slow things down. They’re harder to maintain, tougher to debug, and more difficult to scale. With sub-workflows, you can take a more modular approach, breaking up big workflows into smaller, manageable parts that are easier to reuse, test, understand, and explain.
+
+Until now, creating sub-workflows required copying and pasting nodes manually, setting up a new workflow from scratch, and reconnecting everything by hand. **Convert to sub-workflow** allows you to simplify this process into a single action, so you can spend more time building and less time restructuring.
+
+<br>
+<video src="/_video/release-notes/convert_to_sub-workflow.mp4" controls width="100%"></video>
+<br>
+
+**How it works**
+
+1. Highlight the nodes you want to convert to a sub-workflow. These must:
+    - Be fully connected, meaning no missing steps in between them
+    - Start from a single starting node
+    - End with a single node
+2. Right-click to open the context menu and select **Convert to sub-workflow**
+    - Or use the shortcut: `Alt + X`
+3. n8n will:
+    - Open a new tab containing the selected nodes
+    - Preserve all node parameters as-is
+    - Replace the selected nodes in the original workflow with a **Call My Sub-workflow** node
+
+*Note*: You will need to manually adjust the field types in the Start and Return nodes in the new sub-workflow.
+
+This makes it easier to keep workflows modular, performant, and easier to maintain.
+
+Learn more about [sub-workflows](/flow-logic/subworkflows.md).
+
+This release contains performance improvements and bug fixes.
+
+
+### Contributors
+
+[maatthc](https://github.com/maatthc){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.96.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.96.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-02
+
+/// warning | Build failure
+This release failed to build. Please use `1.97.0` instead.
+///
+
+This release contains API updates, core changes, editor improvements, node updates, and bug fixes.
+
+### API support for assigning users to projects
+
+You can now use the API to add and update users within projects. This includes:
+
+- Assigning existing or pending users to a project with a specific role
+- Updating a user’s role within a project
+- Removing users from one or more projects
+
+This update now allows you to use the API to add users to both the instance and specific projects, removing the need to manually assign them in the UI. 
+
+### Add pending users to project member assignment
+
+You can now add **pending users,** those who have been invited but haven't completed sign-up, to projects as members.
+
+This change lets you configure a user's project access upfront, without waiting for them to finish setting up their account. It eliminates the back-and-forth of managing access post-sign-up, ensuring users have the right project roles immediately upon joining.
+
+### Contributors
+
+[matthabermehl](https://github.com/matthabermehl){:target=_blank .external-link}  
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.95.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.1...n8n@1.95.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-29
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.95.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.95.0...n8n@1.95.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-27
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.94.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.94.0...n8n@1.94.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-27
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.95.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.94.0...n8n@1.95.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-26
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+
+### Evaluations for AI workflows
+
+We’ve added a feature to help you iterate, test, and compare changes to your AI automations before pushing them to production so you can achieve more predictability and make better decisions.<br><br>
+
+When you're building with AI, a small prompt tweak or model swap might improve results with some inputs, while quietly degrading performance with others. But without a way to evaluate performance across many inputs, you’re left guessing whether your AI is actually getting better when you make a change.  <br><br>
+
+By implementing **Evaluations for AI workflows** in n8n, you can assess how your AI performs across a range of inputs by adding a dedicated path in your workflow for running test cases and applying custom metrics to track results. This helps you build viable proof-of-concepts quickly, iterate more effectively, catch regressions early, and make more confident decisions when your AI is in production.<br><br>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LlF196PKaE?si=TcwM0JyhjsRKDb3x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br><br>
+
+#### Evaluation node and tab
+
+The **Evaluation node** includes several operations that, when used together, enable end-to-end AI evaluation.
+
+<br> 
+<figure markdown="span">
+    ![Evaluation node](/_images/release-notes/Evaluations_node.png)
+    <figcaption>Evaluation node</figcaption>
+</figure>
+<br>
+
+Use this node to:
+
+- Run your AI logic against a wide range of test cases in the same execution
+- Capture the outputs of those test cases
+- Score the results using your own metrics or LLM-as-judge logic
+- Isolate a testing path to only include the nodes and logic you want to evaluate <br>
+
+The **Evaluations tab** enables you to review test results in the n8n UI, perfect for comparing runs, spotting regressions, and viewing performance over time.
+<br><br>
+
+#### 🛠 How evaluations work
+
+The evaluation path runs alongside your normal execution logic and only activates when you want—making it ideal for testing and iteration. <br><br>
+
+Get started by selecting an AI workflow you want to evaluate that includes one or more LLM or Agent nodes. <br>
+
+1. Add an **Evaluation** node with the **On new Evaluation event** operation. This node will act as an additional trigger you’ll run only when testing. Configure it to read your dataset from Google Sheets, with each row representing a test input.<br>
+
+    > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations.md/#1-create-a-dataset).
+
+2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
+3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
+
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics). 
+    
+<br>
+
+<figure markdown="span">
+    ![Evaluation workflow](/_images/release-notes/Evaluations_workflow.png)
+    <figcaption>Evaluation workflow</figcaption>
+</figure>
+<br>
+
+When the Evaluation trigger node is executed, it runs each input in our dataset through your AI logic. This continues until all test cases are processed, a limit is reached, or you manually stop the execution. Once your evaluation path is set up, you can update your prompt, model, or workflow logic—and re-run the Evaluation trigger node to compare results. If you’ve added metrics, they’ll appear in the Evaluations tab. <br><br>
+
+In some instances, you may want to isolate your testing path to make iteration faster or to avoid executing downstream logic.  In this case, you can add an Evaluation node with the `Check If Evaluating` operation to ensure only the expected nodes run when performing evaluations. <br><br>
+
+#### Things to keep in mind
+
+Evaluations for AI Workflows are designed to fit  into your development flow, with more enhancements on the way. For now, here are a few things to note:
+
+- Test datasets are currently managed through Google Sheets. You’ll need a Google Sheets credential to run evaluations.
+- Each workflow supports one evaluation at a time. If you’d like to test multiple segments, consider splitting them into sub-workflows for more flexibility.
+- Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
+- AI Evaluations are not enabled for instances in scaling mode at this time. <br>
+
+You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
+
+ 👉 Learn more about the AI evaluation strategies and practical implementation techniques during a **livestream on July 2nd, 2025 at 5:00 p.m GMT+2**. [Sign up](https://lu.ma/rfniiq2c). 
+
+</div> 
+
+### Contributors
+
+[Phiph](https://github.com/Phiph){:target=_blank .external-link}  
+[cesars-gh](https://github.com/cesars-gh){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.94.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.93.0...n8n@1.94.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-19
+
+This release contains editor improvements, an API update, node updates, new nodes, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+
+### Verified community nodes on Cloud
+
+We’ve expanded the n8n ecosystem and unlocked a new level of flexibility for all users including those on n8n Cloud! Now you can access a select set of community nodes and partner integrations without leaving the canvas. This means you install and automate with a wider range of integrations without leaving your workspace. The power of the community is now built-in.
+
+This update focuses on three major improvements:
+
+- **Cloud availability**: Community nodes are no longer just for self-hosted users. A select set of nodes is now available on n8n Cloud.
+- **Built-in discovery**: You can find and explore these nodes right from the Nodes panel without leaving the editor or searching on npm.
+- **Trust and verification**: Nodes that appear in the editor have been manually vetted for quality and security. These verified nodes are marked with a checkmark.
+
+We’re starting with a selection of around 25 nodes, including some of the most-used community-built packages and partner-supported integrations. For this phase, we focused on nodes that don’t include external package dependencies - helping streamline the review process and ensure a smooth rollout.
+<br>
+<br>
+
+This is just the start. We plan to expand the library gradually, bringing even more verified nodes into the editor along with the powerful and creative use cases they unlock. In time, our criteria will evolve, opening the door to a wider range of contributions while keeping quality and security in focus.
+<br>
+<br>
+
+Learn more about this update and find out which nodes are already installable from the editor in our [blog](https://blog.n8n.io/community-nodes-available-on-n8n-cloud/) post. 
+
+<br>
+
+ 💻 **Use a verified node**
+
+Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables/nodes.md). In both cases, verified nodes are enabled by default.
+
+- Open the **Nodes panel** from the editor
+- Search for the Node. Verified nodes are indicated by a shield 🛡️
+- Select the node and click **Install**
+
+<br>
+<video src="/_video/release-notes/Community-nodes-node-panel.mp4" controls width="100%"></video>
+<br>
+
+Once an Owner installs a node, everyone on the instance can start using it—just drag, drop, and connect like any other node in your workflow.
+
+<br>
+
+🛠️ **Build a node and get it verified**
+
+Want your node to be verified and discoverable from the editor? Here’s how to get involved:
+
+1. Review the [community node verification guidelines](/integrations/creating-nodes/build/reference/verification-guidelines.md).
+2. If you’re building something new, follow the recommendations for [creating nodes](/integrations/creating-nodes/overview.md).
+3. Check your design against the [UX guidelines](/integrations/creating-nodes/build/reference/ux-guidelines.md).
+4. [Submit your node](/integrations/creating-nodes/deploy/submit-community-nodes.md) to npm.
+5. Request verification by filling out [this form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
+
+<br>
+
+**Already built a node? Raise your hand!**
+
+If you’ve already published a community node and want it considered for verification, make sure it meets the requirements noted above, then let us know by submitting the interest [form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b). We’re actively curating the next batch and would love to include your work.
+
+</div> 
+
+
+### Extended logs view
+
+When workflows get complex, debugging can get... clicky. That’s where an extended **Logs View** comes in. Now you can get a clearer path to trace executions, troubleshoot issues, and understand the behavior of a complete workflow — without bouncing between node detail views. 
+
+This update brings a unified, always-accessible panel to the bottom of the canvas, showing you each step of the execution as it happens. Whether you're working with loops, sub-workflows, or AI agents, you’ll see a structured view of everything that ran, in the order it ran—with input, output, and status info right where you need it.
+
+You can jump into node details when you want to dig deeper, or follow a single item through every step it touched. Real-time highlighting shows you which nodes are currently running or have failed, and you’ll see total execution time for any workflow—plus token usage for AI workflows to help monitor performance. And if you're debugging across multiple screens? Just pop the logs out and drag them wherever you’d like.
+
+⚙️**What it does**
+
+- Adds a **Logs view** to the bottom of the canvas that can be opened or collapsed. (Chat also appears here if your workflow uses it).
+- Displays a **hierarchical list of nodes** in the order they were executed—including expanded views of sub-workflows.
+- Allows you to **click a node in hierarchy** to preview inputs and outputs directly, or jump into the full Node Details view with a link.
+- Provides ability to **toggle** input and output data on and off.
+- Highlights each node **live as it runs**, showing when it starts, completes, or fails.
+- Includes **execution history** view to explore past execution data in a similar way.
+- Shows **roll-up stats** like total execution time and total AI tokens used (for AI-enabled workflows).
+- Includes a  **“pop out”** button to open the logs as a floating window—perfect for dragging to another screen while debugging.
+
+🛠️**How to**
+
+To access the expanded logs view, click on the Logs bar at the bottom of the canvas. The view is also opens up when you open the chat window on the bottom of the page.
+
+### Contributors
+
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+[feelgood-interface](https://github.com/feelgood-interface){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.93.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.93.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-12
+
+This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
+
+### Faster ways to open sub-workflows
+
+We’ve added several new ways to navigate your multi-workflow automations faster.
+
+From any workflow with a sub-workflow node:
+
+🖱️ Right-click on a sub-workflow node and select `Open sub-workflow` from the context menu
+
+⌨️ Keyboard shortcuts
+
+- **Windows:** `CTRL + SHIFT + O` or `CTRL + Double Click`
+- **Mac:** `CMD + SHIFT + O` or `CMD + Double Click`
+
+These options will bring your sub-workflow up in a new tab.
+
+### Archive workflows
+
+If you’ve ever accidentally removed a workflow, you’ll appreciate the new archiving feature. Instead of permanently deleting workflows with the Remove action, workflows are now archived by default. This allows you to recover them if needed.
+
+**How to:**
+
+- **Archive a workflow** - Select **Archive** from the Editor UI menu. It has replaced the **Remove** action.
+- **Find archived workflows** - Archived workflows are hidden by default. To find your archived workflows, select the option for **Show archived workflows** in the workflow filter menu.
+- **Permanently delete a workflow** - Once a workflow is archived, you can **Delete** it from the  options menu.
+- **Recover a workflow** - Select **Unarchive** from the options menu.
+
+**Keep in mind:** 
+
+- Workflows archival requires the same permissions as required previously for removal.
+- You cannot select archived workflows as sub-workflows to execute
+- Active workflows are deactivated when they are archived
+- Archived workflows can not be edited
+
+### Contributors
+
+[LeaDevelop](https://github.com/LeaDevelop){:target=_blank .external-link}  
+[ayhandoslu](https://github.com/ayhandoslu){:target=_blank .external-link}  
+[valentina98](https://github.com/valentina98){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.92.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.1...n8n@1.92.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-08
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.2...n8n@1.91.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-08
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.92.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.92.0...n8n@1.92.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-06
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.92.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.0...n8n@1.92.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-05
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Partial Execution for AI Tools
+
+We’ve made it easier to build and iterate on AI agents in n8n. You can now run and test specific tools without having to execute the entire agent workflow.
+
+Partial execution is especially useful when refining or troubleshooting parts of your agent logic. It allows you to test changes incrementally, without triggering full agent runs, reducing unnecessary AI calls, token usage, and downstream activity. This makes iteration faster, more cost-efficient, and more precise when working with complex or multi-step AI workflows.
+
+Partial execution for AI tools is available now for all tools - making it even easier to build, test, and fine-tune AI agents in n8n.
+
+<br>
+<video src="/_video/release-notes/AI-agent-partial-execution.mp4" controls width="100%"></video>
+<br>
+
+**How to:**
+
+To use this feature you can either:
+
+- Click the **Play** button on the tool you want to execute directly from the canvas view.
+- Open the tool’s **Node Details View** and select **"Test step"** to run it from there.
+
+If you have previously run the workflow, the input and output will be prefilled with data from the last execution. A pop-up form will open where you can manually fill in the parameters before executing your test.
+
+### Extended logs view
+
+When workflows get complex, debugging can get... clicky. That’s where an extended **Logs View** comes in. Now you can get a clearer path to trace executions, troubleshoot issues, and understand the behavior of a complete workflow — without bouncing between node detail views. 
+
+This update brings a unified, always-accessible panel to the bottom of the canvas, showing you each step of the execution as it happens. Whether you're working with loops, sub-workflows, or AI agents, you’ll see a structured view of everything that ran, in the order it ran—with input, output, and status info right where you need it.
+
+You can jump into node details when you want to dig deeper, or follow a single item through every step it touched. Real-time highlighting shows you which nodes are currently running or have failed, and you’ll see total execution time for any workflow—plus token usage for AI workflows to help monitor performance. And if you're debugging across multiple screens? Just pop the logs out and drag them wherever you’d like.
+
+⚙️**What it does**
+
+- Adds a **Logs view** to the bottom of the canvas that can be opened or collapsed. (Chat also appears here if your workflow uses it).
+- Displays a **hierarchical list of nodes** in the order they were executed—including expanded views of sub-workflows.
+- Allows you to **click a node in hierarchy** to preview inputs and outputs directly, or jump into the full Node Details view with a link.
+- Provides ability to **toggle** input and output data on and off.
+- Highlights each node **live as it runs**, showing when it starts, completes, or fails.
+- Includes **execution history** view to explore past execution data in a similar way.
+- Shows **roll-up stats** like total execution time and total AI tokens used (for AI-enabled workflows).
+- Includes a  **“pop out”** button to open the logs as a floating window—perfect for dragging to another screen while debugging.
+
+🛠️**How to**
+
+To access the expanded logs view, click on the Logs bar at the bottom of the canvas. The view is also opens up when you open the chat window on the bottom of the page.
+
+### Insights enhancements for Enterprise
+
+Two weeks after the launch of [Insights](/insights.md), we’re releasing some enhancements designed for enterprise users.
+
+- **Expanded time ranges**. You can now filter insights over a variety of time periods, from the last 24 hours up to 1 year. Pro users are limited to 7 day and 14 day views.  
+- **Hourly granularity**. Drill down into the last 24 hours of production executions with hourly granularity, making it easier to analyze workflows and quickly identify issues.  
+
+These updates provide deeper visibility into workflow history, helping you uncover trends over longer periods and detect problems sooner with more precise reporting.
+
+<br> 
+<figure markdown="span">
+    ![Filter insights](/_images/release-notes/Insights-drill-down.png)
+    <figcaption>Filter insights</figcaption>
+</figure>
+<br>
+
+### Contributors
+
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.1...n8n@1.91.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-05
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.90.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.2...n8n@1.90.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-05
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.91.0...n8n@1.91.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-05-01
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.91.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.0...n8n@1.91.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-28
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Breadcrumb view from the canvas
+
+We’ve added **breadcrumb navigation directly on the canvas**, so you can quickly navigate to any of a workflow’s parent folders right from the canvas.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.90.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.1...n8n@1.90.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-25
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.90.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.90.0...n8n@1.90.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-22
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.90.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.0...n8n@1.90.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-22
+
+This release contains core updates, editor updates, node updates, performance improvements, and bug fixes.
+
+### Extended HTTP Request tool functionality
+We’ve brought the full power of the HTTP Request node to the HTTP Request tool in AI workflows. That means your AI Agents now have access to all the advanced configuration options—like Pagination, Batching, Timeout, Redirects, Proxy support, and even cURL import.
+
+<br>
+<video src="/_video/release-notes/http-request-tool.mp4" controls width="100%"></video>
+<br>
+
+This update also includes support for the `$fromAI` function to dynamically generate the right parameters based on the context of your prompt — making API calls smarter, faster, and more flexible than ever.
+
+**How to:**
+
+- Open your AI Agent node in the canvas.
+- Click the **‘+’ icon** to add a new tool connection.
+- In the **Tools panel**, select HTTP **Request Tool.**
+- Configure it just like you would a regular **HTTP Request node** — including advanced options
+
+👉 Learn more about configuring the [HTTP Request tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md).
+
+
+### Scoped API keys
+Users on the Enterprise plan can now create API keys with specific scopes to control exactly what each key can access.
+
+<figure markdown="span">
+    ![Scoped API keys](/_images/release-notes/scoped-API-keys.png)
+    <figcaption>Scoped API keys</figcaption>
+</figure>
+
+Previously, API keys had full read/write access across all endpoints. While sometimes necessary, this level of access can be excessive and too powerful for most use cases.  Scoped API keys allow you to limit access to only the resources and actions a service or user actually needs.
+
+**What’s new**
+
+When creating a new API key, you can now:
+
+- Select whether the key has read, write, or both types of access.  
+- Specify which resources the key can interact with.  
+
+Supported scopes include:
+
+- Variables — list, create, delete  
+- Security audit — generate reports  
+- Projects — list, create, update, delete  
+- Executions — list, read, delete  
+- Credentials — list, create, update, delete, move  
+- Workflows — list, create, update, delete, move, add/remove tags  
+
+Scoped API keys give you more control and security. You can limit access to only what’s needed, making it safer to work with third parties and easier to manage internal API usage.
+
+### Drag and Drop in Folders
+
+Folders just got friendlier. With this release, you can now **drag and drop workflows and folders** — making it even easier to keep things tidy.
+
+Need to reorganize? Just select a workflow or folder and drag it into another folder or breadcrumb location. It’s a small change that makes a big difference when managing a growing collection of workflows.
+
+<br>
+<video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
+<br>
+
+📁 Folders are available to all [registered](/hosting/community-edition-features.md#registered-community-edition) users—jump in and get your workspace in order!
+
+### Contributors
+
+[Zordrak](https://github.com/Zordrak){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.89.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.1...n8n@1.89.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-16
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.89.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.89.0...n8n@1.89.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-15
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.89.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.88.0...n8n@1.89.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-14
+
+This release contains API updates, core updates, editor updates, a new node, node updates, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+
+### Insights 
+
+We're rolling out [Insights](/insights.md), a new dashboard to monitor how your workflows are performing over time. It's designed to give admins (and owners) better visibility of their most important workflow metrics and help troubleshoot potential issues and improvements. <br> 
+<br>
+
+In this first release, we’re introducing a summary banner, the insights dashboard, and time saved per execution. <br> <br>
+
+#### 1. Summary banner
+A new banner on the overview page that gives instance admins and owners a birds eye view of key metrics over the last 7 days.
+
+<figure markdown="span">
+    ![Summary banner](/_images/release-notes/Insights-summary-banner.png)
+    <figcaption>Insights summary banner</figcaption>
+</figure>
+
+Available metrics:
+
+- Total production executions
+- Total failed executions
+- Failure rate
+- Average runtime of all workflows
+- Estimated time saved
+
+This overview is designed to help you stay on top of workflow activity at a glance. It is available for all plans and editions. <br> <br>
+
+#### 2. Insights dashboard
+On Pro and Enterprise plans, a new dashboard offers a deeper view into workflow performance and activity. 
+
+<figure markdown="span">
+    ![Insights dashboard](/_images/release-notes/Insights-dashboard.png)
+    <figcaption>Insights dashboard</figcaption>
+</figure>
+
+The dashboard includes:
+
+- Total production executions over time, including a comparison of successful and failed executions
+- Per-workflow breakdowns of key metrics
+- Comparisons with previous periods to help spot changes in usage or behavior
+- Runtime average and failure rate over time
+
+#### 3. Time saved per execution
+Within workflow settings, you can now assign a “time saved per execution” value to any workflow. This makes it possible to track the impact of your workflows and make it easier to share this visually with other teams and stakeholders.<br><br>
+
+This is just the beginning for Insights: the next phase will introduce more advanced filtering and comparisons, custom date ranges, and additional monitoring capabilities. 
+
+</div>
+
+### Node updates
+- We added a credential check for the Salesforce node
+- We added SearXNG as a tool for AI agents
+
+You can now search within subfolders, making it easier to find workflows across all folder levels. Just type in the search bar and go. 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.88.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.88.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-10
+
+This release contains new features, new nodes, performance improvements, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+
+
+### Model Context Protocol (MCP) nodes
+MCP aims to standardise how LLMs like Claude, ChatGPT, or Cursor can interact with tools or integrate data for their agents. Many providers - both established or new - are adopting MCP as a standard way to build agentic systems. It is an easy way to either expose your own app as a server, making capabilities available to a model as tools, or as a client that can call on tools outside of your own system. <br>
+
+While it’s still early in the development process, we want to give you access to our new MCP nodes. This will help us understand your requirements better and will also let us converge on a great general solution quicker. <br>
+
+We are adding two new nodes: 
+
+- a MCP [Server Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md) for any workflow  
+- a MCP [Client Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md) for the AI Agent  
+
+The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. You can run multiple MCP servers from your n8n instance. The MCP Client Tool connects LLMs - and other intelligent agents - to any MCP-enabled service through a single interface. <br>
+
+Max from our DevRel team created an official walkthrough for you to get started: 
+
+<br>
+
+[![Studio](/_images/release-notes/MCP-YouTube-thumb.jpg)](https://youtu.be/45WPU7P-1QQ?feature=shared)
+<figure markdown="span">
+    <figcaption>[Studio Update #04](https://youtu.be/45WPU7P-1QQ?feature=shared)</figcaption>
+</figure>
+
+
+### MCP Server Trigger
+The MCP Server Trigger turns n8n into an MCP server, providing n8n tools to models running outside of n8n. The node acts as an entry point into n8n for MCP clients. It operates by exposing a URL that MCP clients can interact with to access n8n tools. This means your n8n workflows and integrations are now available to models run elsewhere. Pretty neat. 
+
+<figure markdown="span">
+    ![MCP Server Trigger](/_images/release-notes/MCP-Server-Trigger.png)
+    <figcaption>MCP Server Trigger</figcaption>
+</figure>
+
+[Explore the MCP Server Trigger docs](/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md)
+
+### MCP Client Tool
+The MCP Client Tool node is a MCP client, allowing you to use the tools exposed by an external MCP server. You can connect the MCP Client Tool node to your models to call external tools with n8n agents. In this regard it is similar to using a n8n tool with your AI agent. One advantage is that the MCP Client Tool can access multiple tools on the MCP server at once, keeping your canvas cleaner and easier to understand. 
+
+<figure markdown="span">
+    ![MCP Client Tool](/_images/release-notes/MCP-Client-Tool.png)
+    <figcaption>MCP Client Tools</figcaption>
+</figure>
+
+[Explore the MCP Client Tool docs](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md)
+
+</div>
+
+### Node updates
+
+- Added a node for Azure Cosmos DB  
+- Added a node for Milvus Vector Store  
+- Updated the Email Trigger (IMAP) node  
+
+### Contributors
+
+[adina-hub](https://github.com/adina-hub){:target=_blank .external-link}  
+[umanamente](https://github.com/umanamente){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.87.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.1...n8n@1.87.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-09
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.86.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.86.0...n8n@1.86.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-09
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.87.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.87.0...n8n@1.87.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-08
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.87.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.86.0...n8n@1.87.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-04-07
+
+This release contains new nodes, node updates, API updates, core updates, editor updates, and bug fixes.
+
+### Contributors
+
+[cesars-gh](https://github.com/cesars-gh){:target=_blank .external-link}  
+[Stamsy](https://github.com/Stamsy){:target=_blank .external-link}  
+[Pash10g](https://github.com/Pash10g){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.86.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.86.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-31
+
+This release contains API updates, core updates, editor improvements, node updates, and bug fixes.
+
+### Contributors
+
+[Aijeyomah](https://github.com/Aijeyomah){:target=_blank .external-link}  
+[ownerer](https://github.com/ownerer){:target=_blank .external-link}  
+[ulevitsky](https://github.com/ulevitsky){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.85.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.3...n8n@1.85.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-27
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.84.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.2...n8n@1.84.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-03-27
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
 ## n8n@1.84.2
 
@@ -53,29 +918,19 @@ This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.85.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.1...n8n@1.85.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-25
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.85.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.85.0...n8n@1.85.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-25
-
-
 
 This release contains bug fixes.
 
@@ -86,9 +941,41 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.0...n8n@1.85.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-24
 
-
-
 This release contains a new node, a new credential, core updates, editor updates, node updates, and bug fixes.
+
+### Folders
+What can we say about folders? Well, they’re super handy for categorizing just about everything and they’re finally available for your n8n workflows. Tidy up your workspace with unlimited folders and nested folders. Search for workflows within folders. It’s one of the ways we’re making it easier to organize your n8n instances more effectively.  
+
+**How to use it:** 
+
+Create and manage folders within your personal space or within projects. You can also create workflows from within a folder. You may need to restart your instance in order to activate folders.
+
+<figure markdown="span">
+    ![Folders](/_images/release-notes/Folders.png
+)
+    <figcaption>It's a folder alright</figcaption>
+</figure>
+<br>
+
+Folders are available for all [registered](/hosting/community-edition-features.md#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+
+### Enhancements to Form Trigger Node
+
+Recent updates to the Form Trigger node have made it a more powerful tool for building business solutions. These enhancements provide more flexibility and customization, enabling teams to create visually engaging and highly functional workflows with forms.
+
+- **HTML customization:** Add custom HTML to forms, including embedded images and videos, for richer user experiences.  
+- **Custom CSS support**: Apply custom styles to user-facing components to align forms with your brand’s look and feel. Adjust fonts, colors, and spacing for a seamless visual identity.
+- **Form previews:** Your form’s description and title will pull into previews of your form when sharing on social media or messaging apps, providing a more polished look.  
+- **Hidden fields:** Use query parameters to add hidden fields, allowing you to pass data—such as a referral source—without exposing it to the user.  
+- **New responses options:** Respond to user submissions in multiple ways including text, HTML, or a downloadable file (binary format). This enables forms to display rich webpages or deliver digital assets such as dynamically generated invoices or personalized certificates.  
+
+<figure markdown="span">
+    ![Form with custom CSS applied](/_images/release-notes/Forms_with_custom_CSS_and_HTML.png)
+    <figcaption>Form with custom CSS applied</figcaption>
+</figure>
+<br>
+
+These improvements elevate the Form Trigger node beyond a simple workflow trigger, transforming it into a powerful tool for addressing use cases from data collection and order processing to custom content creation.
 
 ### Contributors
 
@@ -96,35 +983,19 @@ This release contains a new node, a new credential, core updates, editor updates
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 
-
-
 ## n8n@1.84.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.84.0...n8n@1.84.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-18
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
-
-
-
-
-
-
-
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
-
-
 
 ## n8n@1.84.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.0...n8n@1.84.0){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-17
-
-
 
 This release contains a new node, node updates, editor updates, and bug fixes.
 
@@ -138,10 +1009,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.1...n8n@1.83.2){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-14
-
-
-
-
 
 This release contains bug fixes.
 
@@ -161,8 +1028,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.2...n8n@1.82.3){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-13
 
-
-
 This release contains a bug fix.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
@@ -171,8 +1036,6 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.83.0...n8n@1.83.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-03-12
-
-
 
 This release contains bug fixes.
 
@@ -184,6 +1047,26 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.82.0...n8n@1.83.0
 **Release date:** 2025-03-12
 
 This release contains bug fixes and an editor update.
+
+### Schema Preview
+
+Schema Preview lets you view and work with a node’s expected output without executing it or adding credentials, keeping you in flow while building.
+
+- **See expected node outputs instantly.** View schemas for over 100+ nodes to help you design workflows efficiently without extra steps.  
+- **Define workflow logic first, take care of credentials later.** Build your end-to-end workflow without getting sidetracked by credential setup.  
+- **Avoid unwanted executions when building.** Prevent unnecessary API calls, unwanted data changes, or potential third-party service costs by viewing outputs without executing nodes.  
+
+**How to use it:**
+
+- Add a node with Schema Preview support to your workflow.
+- Open the next node in the sequence - Schema Preview data appears in the Node Editor where you would typically find it in the Schema View.
+- Use Schema Preview fields just like other schema data - drag and drop them into parameters and settings as needed.
+
+<br>
+<video src="/_video/release-notes/Schema_preview.mp4" controls width="100%"></video>
+<br>
+
+Don’t forget to add the required credentials before putting your workflow into production.
 
 ### Contributors
 
@@ -216,6 +1099,24 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.81.0...n8n@1.82.0
 **Release date:** 2025-03-03
 
 This release contains core updates, editor updates, new nodes, node updates, new credentials, credential updates, and bug fixes.
+
+### Tidy up
+Tidy up instantly aligns nodes, centers stickies, untangles connections, and brings structure to your workflows. Whether you're preparing to share a workflow or just want to improve readability, this feature saves you time and makes your logic easier to follow. Clean, well-organized workflows aren't just nicer to look at—they’re also quicker to understand.
+
+**How to:** 
+
+Open the workflow you want to tidy, then choose one of these options:
+
+- Click the **Tidy up** button in the bottom-left corner of the canvas (it looks like a broom 🧹)
+- Press **Shift + Alt + T** on your keyboard
+- Right-click anywhere on the canvas and select **Tidy up workflow**
+
+Want to tidy up just part of your workflow? Select the specific nodes you want to clean up first - Tidy up will only adjust those, along with any stickies behind them.
+
+<br>
+<video src="/_video/release-notes/tidy_up.mp4" controls width="100%"></video>
+<br>
+
 
 ### Multiple API keys
 n8n now supports multiple API keys, allowing users to generate and manage separate keys for different workflows or integrations. This improves security by enabling easier key rotation and isolation of credentials. Future updates will introduce more granular controls. <br>

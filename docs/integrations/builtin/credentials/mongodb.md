@@ -12,6 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md)
 - [MongoDB Atlas Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md)
+- [MongoDB Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md)
 
 ## Prerequisites
 

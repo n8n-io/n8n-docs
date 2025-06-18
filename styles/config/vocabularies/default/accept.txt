@@ -100,7 +100,6 @@ Gotify
 Grafana
 Grok('s)?
 Groq
-[Gg]roundedness
 GSuite
 Gumroad
 [Gg]zip
@@ -249,6 +248,7 @@ Typeform
 [Uu]narchive
 [Uu]ncomment
 [Uu]nformatted
+([Uu]n)?[Gg]rounded(ness)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare

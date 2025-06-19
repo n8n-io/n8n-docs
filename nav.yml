@@ -1280,6 +1280,7 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+      - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:
           - Overview: advanced-ai/langchain/overview.md
           - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md

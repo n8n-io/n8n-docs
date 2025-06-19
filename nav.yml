@@ -775,6 +775,7 @@ nav:
           - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - Call n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
           - Reranker Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md
+          - Model Selector: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md
       - Credentials:
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md

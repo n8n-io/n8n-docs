@@ -35,6 +35,8 @@ Control when data meets your criteria:
 * **All conditions must be met**: Create multiple conditions and select **AND** between them
 * **Any condition can be met**: Create multiple conditions and select **OR** between them
 
+--8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
+
 ## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"

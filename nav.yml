@@ -396,6 +396,7 @@ nav:
         - Jira Software: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
         - Kafka: integrations/builtin/app-nodes/n8n-nodes-base.kafka.md
         - Keap: integrations/builtin/app-nodes/n8n-nodes-base.keap.md
+        - Keboola: integrations/builtin/app-nodes/n8n-nodes-base.keboola.md
         - Kitemaker: integrations/builtin/app-nodes/n8n-nodes-base.kitemaker.md
         - KoboToolbox: integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md
         - Lemlist: integrations/builtin/app-nodes/n8n-nodes-base.lemlist.md
@@ -911,6 +912,7 @@ nav:
         - integrations/builtin/credentials/jwt.md
         - integrations/builtin/credentials/kafka.md
         - integrations/builtin/credentials/keap.md
+        - integrations/builtin/credentials/keboola.md
         - integrations/builtin/credentials/kibana.md
         - integrations/builtin/credentials/kitemaker.md
         - integrations/builtin/credentials/kobotoolbox.md

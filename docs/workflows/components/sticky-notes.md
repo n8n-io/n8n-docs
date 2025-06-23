@@ -79,3 +79,13 @@ You can force images to be 100% width of the sticky note by appending `#full-wid
 ```markdown
 ![Source example](https://<IMAGE-URL>/<IMAGE-NAME>.png#full-width)
 ```
+
+## Embed a YouTube video
+
+To display a YouTube video (as long as the creator allows embedding), use the `@[youtube]<video-id>` directive with the video’s ID:
+
+```markdown
+@[youtube](ZCuL2e4zC_4)
+```
+
+Replace "ZCuL2e4zC_4" with the video ID—the string that follows v= in the YouTube URL.

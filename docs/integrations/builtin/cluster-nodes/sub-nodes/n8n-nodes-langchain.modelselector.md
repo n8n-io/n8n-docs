@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Model Selector
-description: Learn how to use the Model selector node in n8n. Follow technical documentation to integrate Model Selector node into your workflows.
+description: Learn how to use the Model Selector node in n8n. Follow technical documentation to integrate Model Selector node into your workflows.
 contentType: [integration, reference]
 priority: high
 ---
 
 # Model Selector
 
-The Model Selector node dynamically selects one of the connected language model nodes based on defined conditions during workflow execution. This enables implementing fallback mechanisms for error handling or choosing the optimal model for specific tasks.
+The Model Selector node dynamically selects one of the connected language models during workflow execution based on a set of defined conditions. This enables implementing fallback mechanisms for error handling or choosing the optimal model for specific tasks.
 
 This page covers node parameters for the Model Selector node and includes links to related resources.
 
@@ -17,25 +17,19 @@ This page covers node parameters for the Model Selector node and includes links 
 ## Node parameters
 
 ### Number of Inputs
-Specifies the number of input connections available for connecting language model nodes.
+
+Specifies the number of input connections available for attaching language models.
 
 ### Rules
-Each rule defines which Model Input to use when specified conditions match. The node evaluates rules sequentially, starting from the first input. When multiple conditions match, the node returns the first matching model.
 
-#### Add conditions
-Create comparison conditions to control model selection:
+Each rule defines the model to use when specific conditions match.
 
-- Select the appropriate data type and comparison operation from the dropdown (for example, **Date & Time > is after** for date-based filtering)
-- Configure the required fields and values based on your selected data type and comparison. See [Available data type comparisons](#available-data-type-comparisons) for the complete list of comparisons by data type
-- Select **Add condition** to create conditions
+The Model Selector node evaluates rules sequentially, starting from the first input, and stops evaluation as soon as it finds a match. This means that if multiple rules would match, n8n will only use the model defined by the first matching rule.
 
-#### Combining conditions
-Control when data meets your criteria:
+## Templates and examples
 
-* **All conditions must be met**: Create multiple conditions and select **AND** between them
-* **Any condition can be met**: Create multiple conditions and select **OR** between them
-
---8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ templatesWidget(page.title, 'model-selector') ]]
 
 ## Related resources
 

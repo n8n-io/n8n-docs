@@ -7,6 +7,7 @@ description: Call workflows from other workflows, and split large workflows into
 # Sub-workflows
 
 You can call one workflow from another workflow. This allows you to build modular, microservice-like workflows. It can also help if your workflow grows large enough to encounter [memory issues](/hosting/scaling/memory-errors.md). Creating sub-workflows uses the [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) and [Execute Sub-workflow Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md) nodes.
+Sub-wokflow executions do not count towards your monthly execution or active workflow limits.
 
 ## Set up and use a sub-workflow
 

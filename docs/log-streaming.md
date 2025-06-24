@@ -73,6 +73,15 @@ The following events are available. You can choose which events to stream in **S
 	* Vector store searched
 	* LLM generated
 	* Vector store populated
+* Runner
+	* Task requested
+	* Response received
+* Queue
+	* Job enqueued
+	* Job dequeued
+	* Job completed
+	* Job failed
+	* Job stalled
 
 ## Destinations
 

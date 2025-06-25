@@ -298,6 +298,7 @@ nav:
         - ClickUp: integrations/builtin/app-nodes/n8n-nodes-base.clickup.md
         - Clockify: integrations/builtin/app-nodes/n8n-nodes-base.clockify.md
         - Cloudflare: integrations/builtin/app-nodes/n8n-nodes-base.cloudflare.md
+        - Cloudinary: integrations/builtin/app-nodes/n8n-nodes-base.cloudinary.md
         - Cockpit: integrations/builtin/app-nodes/n8n-nodes-base.cockpit.md
         - Coda: integrations/builtin/app-nodes/n8n-nodes-base.coda.md
         - CoinGecko: integrations/builtin/app-nodes/n8n-nodes-base.coingecko.md
@@ -821,6 +822,7 @@ nav:
         - integrations/builtin/credentials/clickup.md
         - integrations/builtin/credentials/clockify.md
         - integrations/builtin/credentials/cloudflare.md
+        - integrations/builtin/credentials/cloudinary.md
         - integrations/builtin/credentials/cockpit.md
         - integrations/builtin/credentials/coda.md
         - integrations/builtin/credentials/cohere.md

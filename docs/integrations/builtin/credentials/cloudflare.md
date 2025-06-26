@@ -18,15 +18,15 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods
 
-- API key
+- API token
 
 ## Related resources
 
 Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/){:target=_blank .external-link} for more information about the service.
 
-## Using API key
+## Using API token
 
 To configure this credential, you'll need:
 
-- An **API Key**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/){:target=_blank .external-link}.
+- An **API token**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/){:target=_blank .external-link}.
 

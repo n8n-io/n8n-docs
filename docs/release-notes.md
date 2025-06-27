@@ -127,7 +127,7 @@ This adds clarity to your canvas and saves time renaming nodes manually.
 Don’t worry, automatic naming won’t break references. And, and if you’ve renamed a node yourself, we’ll leave it just the way you wrote it.
 
 <br>
-<video src="_video/release-notes/automatic_node_naming.mp4" controls width="100%"></video>video>
+<video src="/_video/release-notes/automatic_node_naming.mp4" controls width="100%"></video>
 <br>
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.

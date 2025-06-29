@@ -102,6 +102,10 @@ When using the **Get a task** operation, you can enable the **Include Subtasks**
 - **Include Subtasks**: (Boolean, default: false) - When enabled, the node will also fetch and include subtasks for the specified task.
 ///
 
+/// note | Include Markdown Description parameter
+- **Include Markdown Description**: (Boolean, default: false) - When enabled, the node will include the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
+///
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

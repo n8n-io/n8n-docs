@@ -92,6 +92,16 @@ Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for
     * Get all time entry tags
     * Remove tag from time entry
 
+## Operation details
+
+### Get a task
+
+When using the **Get a task** operation, you can enable the **Include Subtasks** option to also fetch and include subtasks for the specified task in the response.
+
+/// note | Include Subtasks parameter
+- **Include Subtasks**: (Boolean, default: false) - When enabled, the node will also fetch and include subtasks for the specified task.
+///
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

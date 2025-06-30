@@ -5,7 +5,7 @@ contentType: tutorial
 
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js following version range: >=20.19 <= 24.x.
+npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 

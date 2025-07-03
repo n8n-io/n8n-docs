@@ -18,6 +18,7 @@ Create a [Metabase](https://www.metabase.com/){:target=_blank .external-link} ac
 ## Supported authentication methods
 
 - Basic auth
+- API Key
 
 ## Related resources
 
@@ -30,3 +31,10 @@ To configure this credential, you'll need:
 - A **URL**: Enter the base URL of your Metabase instance. If you're using a custom domain, use that URL.
 - A **Username**: Enter your Metabase username.
 - A **Password**: Enter your Metabase password.
+
+## Using API key
+
+To configure this credential, you'll need:
+
+- A **URL**: Enter the base URL of your Metabase instance. If you're using a custom domain, use that URL.
+- A **API Key**: Enter your API Key.

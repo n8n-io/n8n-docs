@@ -6,6 +6,8 @@ hide:
   - toc
 ---
 
+<!-- vale off -->
+
 # Reference output of other nodes
 
 To access items from nodes earlier in the execution chain, use the `$("<name_of_node>")` syntax. You can use this to access the items from any nodes that have been executed before the current node.

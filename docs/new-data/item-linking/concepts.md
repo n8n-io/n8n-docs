@@ -3,6 +3,8 @@
 contentType: explanation
 ---
 
+<!-- vale off -->
+
 # Item linking concepts
 
 Item linking allows n8n to track which item or items in earlier nodes were used to generate each item in the current node.

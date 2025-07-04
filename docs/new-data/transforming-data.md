@@ -1,3 +1,4 @@
+<!-- vale off -->
 # Transforming data in n8n
 
 Data transformation allows you to change the number, composition, and structure of items as data moves through your workflow. For example, you can transform data to make it more more consistent, flatten complex nesting, add, edit, or remove properties.
@@ -17,7 +18,7 @@ You can transform data in n8n using a number of different mechanisms.
 n8n provides a number of nodes meant to make transforming data simple. These can manipulate data to make it easier for other nodes to process them, split larger items into pieces, remove layers of data, edit existing content, etc.
 
 * [Aggregate](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md): take separate items, or portions of them, and group them together into individual items.
-* [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set/): add or overwrite existing item data.
+* [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md): add or overwrite existing item data.
 * [Limit](/integrations/builtin/core-nodes/n8n-nodes-base.limit.md): remove items beyond a defined maximum number.
 * [Remove Duplicates](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md): identify and delete items that are identical across all fields or a subset of fields.
 * [Sort](/integrations/builtin/core-nodes/n8n-nodes-base.sort.md): organize lists of in a desired ordering, or generate a random selection.

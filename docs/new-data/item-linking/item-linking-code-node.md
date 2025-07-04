@@ -3,6 +3,8 @@
 contentType: howto
 ---
 
+<!-- vale off -->
+
 # Linking items in the Code node
 
 When using the Code node, there are some scenarios where you need to manually supply item linking information if you want to use `$("<node-name>").item` later in the workflow. n8n automatically handles item linking for single items, so these scenarios only apply if you have more than one incoming item.

@@ -4,6 +4,8 @@ description: How to reference previous node items using `.item` and `.itemMatchi
 contentType: howto
 ---
 
+<!-- vale off -->
+
 # Reference linked items in previous nodes
 
 Every item in a node's input data links back to the items used in previous nodes to generate it. This is useful if you need to reference linked items from further back than the immediate previous node.

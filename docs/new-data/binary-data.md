@@ -9,6 +9,7 @@ hide:
   - tags
 ---
 
+<!-- vale off -->
 # Binary data
 
 Binary data is any file-type data, such as image files or documents.

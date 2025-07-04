@@ -19,7 +19,7 @@ This course is for you if you:
 - Are looking for some extra help creating your first workflow.
 - Want to automate processes in your personal or working life.
 
-This course introduces n8n concepts and demonstrates practical workflow building without assuming any prior familiarity with n8n. If you'd like to get a feel for the basics without as much explanation, consult our [quickstart guide](/try-it-out/tutorial-first-workflow.md).
+This course introduces n8n concepts and demonstrates practical workflow building without assuming any prior familiarity with n8n. If you'd like to get a feel for the basics without as much explanation, consult our [quickstart guide](/tutorials/tutorial-first-workflow.md).
 
 ## What will I learn in this course?
 

@@ -6,6 +6,8 @@ hide:
   - toc
 ---
 
+<!-- vale off -->
+
 # Reference current node input
 
 The most common pattern is to reference items from the previous node: the current node's input data. You can access all of the previous node's items with the `$input` object. It contains the following properties and accessor methods:

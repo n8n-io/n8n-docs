@@ -1,3 +1,4 @@
+<!-- vale off -->
 # How n8n structures data
 
 To use n8n effectively, it's important to understand the structure that uses to represent and transfer data throughout your workflows.
@@ -143,6 +144,8 @@ If you open a node on the canvas, the **Input pane** displays the items a node r
 
 While nodes primarily operate on their input data, they also have access to the output of all nodes in the chain leading back to the initial trigger node. These are accessible through the input panel and can be referenced using expressions.
 
+<!--
+
 ## Referencing items with expressions
 
 You can find out how to reference node data generally in the [reference data]() page. This section includes some basic examples of how to reference the `items` array, individual items, and data properties using expressions.
@@ -153,3 +156,5 @@ You can find out how to reference node data generally in the [reference data]() 
 | Reference an individual item in the array by index.             | `$input.all()[0]` (to reference the first item)                                           |
 | Reference the individual input item linked to the current item. | `$input.item`                                                                             |
 | Reference an individual item's list of properties.              | By index: `$input.all()[0]`<br>For the current item: `$input.item.json` or simply `$json` |
+
+-->

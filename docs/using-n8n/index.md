@@ -7,4 +7,4 @@ contentType: overview
 
 This section contains step-by-step instructions for common tasks and operations in n8n. This includes configuring n8n instances, using workflows, nodes, and credentials, working with data and expressions, and more.
 
-Many of the topics in this section link to supporting material in the [key concepts](/key-concepts/index.md) and [reference](/reference/index.md) sections. Check out those resources for more context around the features used, and for details about specific parameters and options.
+Many of the topics in this section link to supporting material in the [reference](/reference/index.md) section. Check out those resources for more context around the features used, and for details about specific parameters and options.

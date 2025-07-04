@@ -3,6 +3,8 @@
 contentType: reference
 ---
 
+<!-- vale off -->
+
 # Item linking errors
 
 In n8n, you can [reference data](/new-data/referencing-data/index.md) from the previous node with `$input.item` or nodes further back in the execution chain with `$("<node-name>").item` expression syntax. In most cases, n8n can automatically add `pairedItem` data to link corresponding items across nodes as described in [data linking concepts](/new-data/item-linking/concepts.md).

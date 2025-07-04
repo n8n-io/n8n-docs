@@ -42,7 +42,7 @@ n8n automatically manages `pairedItems` in the following scenarios:
 
 You may have to manually link items when n8n can't determine which input item generated the current item. This occurs most frequently when you are adding completely new items in the node or splitting multiple items up.
 
-You can find out more about manually linking items on the following pages:
+You can find out more about manually linking your items on the following pages:
 
 * [Item linking in the Code node](/new-data/item-linking/item-linking-code-node.md): learn how to handle item linking in the Code node.
 * [Item linking errors](/new-data/item-linking/item-linking-errors.md), to understand the errors you may encounter in the editor UI.

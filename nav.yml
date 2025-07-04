@@ -183,13 +183,15 @@ nav:
       - Credential sharing: credentials/credential-sharing.md
     - NEW Working with data:
       - How n8n structures data: new-data/how-n8n-structures-data.md
-      - Data linking:
-        - Concepts: new-data/item-linking/concepts.md
-        - Reference linked items from previous nodes: new-data/item-linking/itemmatching.md
       - Referencing data:
         - new-data/referencing-data/index.md
+        - Reference linked items in previous nodes: new-data/referencing-data/itemmatching.md
         - Current node input: new-data/referencing-data/current-node-input.md
         - Output of other nodes: new-data/referencing-data/output-other-nodes.md
+      - Data linking:
+        - Concepts: new-data/item-linking/concepts.md
+        - Item linking in the Code node: new-data/item-linking/item-linking-code-node.md
+        - Item linking errors: new-data/item-linking/item-linking-errors.md
       - Transforming data: new-data/transforming-data.md
       - Binary data: new-data/binary-data.md
       - Pinning and mocking data: new-data/pinning-and-mocking-data.md

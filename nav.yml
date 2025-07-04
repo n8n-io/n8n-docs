@@ -706,6 +706,7 @@ nav:
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
+          - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
         - Sub-nodes:
           - integrations/builtin/cluster-nodes/sub-nodes/index.md
@@ -1011,6 +1012,7 @@ nav:
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md
         - integrations/builtin/credentials/sekoia.md
+        - integrations/builtin/credentials/weaviate.md
         - Send Email:
           - integrations/builtin/credentials/sendemail/index.md
           - integrations/builtin/credentials/sendemail/gmail.md

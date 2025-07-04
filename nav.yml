@@ -453,6 +453,12 @@ nav:
         - Odoo: integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
         - Okta: integrations/builtin/app-nodes/n8n-nodes-base.okta.md
         - One Simple API: integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
+        - ONLYOFFICE DocSpace:
+          - ONLYOFFICE DocSpace: integrations/builtin/app-nodes/n8n-nodes-base.onlyofficedocspace/index.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-base.onlyofficedocspace/file-operations.md
+          - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.onlyofficedocspace/folder-operations.md
+          - Room operations: integrations/builtin/app-nodes/n8n-nodes-base.onlyofficedocspace/room-operations.md
+          - User operations: integrations/builtin/app-nodes/n8n-nodes-base.onlyofficedocspace/user-operations.md
         - Onfleet: integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
         - OpenAI:
           - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
@@ -644,6 +650,7 @@ nav:
         - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
         - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
         - Onfleet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
+        - ONLYOFFICE DocSpace Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.onlyofficedocspacetrigger.md
         - PayPal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
         - Pipedrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md
         - Postgres Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md
@@ -967,6 +974,7 @@ nav:
         - integrations/builtin/credentials/ollama.md
         - integrations/builtin/credentials/onesimpleapi.md
         - integrations/builtin/credentials/onfleet.md
+        - integrations/builtin/credentials/onlyofficedocspace.md
         - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md

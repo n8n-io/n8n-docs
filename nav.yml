@@ -181,6 +181,18 @@ nav:
       - credentials/index.md
       - Create and edit: credentials/add-edit-credentials.md
       - Credential sharing: credentials/credential-sharing.md
+    - NEW Working with data:
+      - How n8n structures data: new-data/how-n8n-structures-data.md
+      - Data linking:
+        - Concepts: new-data/item-linking/concepts.md
+        - Reference linked items from previous nodes: new-data/item-linking/itemmatching.md
+      - Referencing data:
+        - new-data/referencing-data/index.md
+        - Current node input: new-data/referencing-data/current-node-input.md
+        - Output of other nodes: new-data/referencing-data/output-other-nodes.md
+      - Transforming data: new-data/transforming-data.md
+      - Binary data: new-data/binary-data.md
+      - Pinning and mocking data: new-data/pinning-and-mocking-data.md
     - Working with data:
       - Concepts:
         - Data structure: data/data-structure.md

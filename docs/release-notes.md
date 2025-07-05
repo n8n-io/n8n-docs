@@ -35,16 +35,64 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
-## n8n@1.100.0
+## n8n@1.101.0
 
-View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.0...n8n@1.100.0){:target=_blank .external-link} for this version.<br />
-**Release date:** 2025-06-23
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.100.0...n8n@1.101.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-30
 
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
 ///
 
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Contributors
+
+[luka-mimi](https://github.com/luka-mimi){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.100.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.100.0...n8n@1.100.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-25
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+This release contains a bug fix.
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.100.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.0...n8n@1.100.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-23
+
+
+
 This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
+
+### Support for OIDC (OpenID Connect) authentication
+
+You can now use OIDC (OpenID Connect) as an authentication method for Single Sign-On (SSO).
+
+This gives enterprise teams more flexibility to integrate n8n with their existing identity providers using a widely adopted and easy-to-manage standard. OIDC is now available alongside SAML, giving Enterprises the choice to select what best fits their internal needs.
+
+### Project admins can now commit to Git within environments
+
+Project admins now have the ability to commit workflow and credential changes directly to Git through the environments feature. This update streamlines the workflow deployment process by giving project-level admins direct control over committing their changes. It also ensures that the those who know their workflows best can review and commit updates themselves, without needing to involve instance-level admins.
+
+[Learn more about source control environments](/source-control-environments/index.md)
+
 
 ### Contributors
 
@@ -59,9 +107,9 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.0...n8n@1.99.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-06-19
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
+
+
 
 
 
@@ -88,6 +136,18 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.98.0...n8n@1.99.0
 **Release date:** 2025-06-16
 
 This release contains performance improvements, core updates, editor changes, node updates, and bug fixes.
+
+### Automatically name nodes
+
+Default node names now update automatically based on the resource and operation selected, so you’ll always know what a node does at a glance.
+
+This adds clarity to your canvas and saves time renaming nodes manually.
+
+Don’t worry, automatic naming won’t break references. And, and if you’ve renamed a node yourself, we’ll leave it just the way you wrote it.
+
+<br>
+<video src="/_video/release-notes/automatic_node_naming.mp4" controls width="100%"></video>
+<br>
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

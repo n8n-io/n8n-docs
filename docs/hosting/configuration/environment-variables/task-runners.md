@@ -30,7 +30,7 @@ hide:
 | `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `5` | The number of concurrent tasks a task runner can execute at a time. |
 | `N8N_RUNNERS_TASK_TIMEOUT` | Number | `60` | How long (in seconds) a task can take to complete before the task aborts and the runner restarts. Must be greater than 0. |
 | `N8N_RUNNERS_HEARTBEAT_INTERVAL` | Number | `30` | How often (in seconds) the runner must send a heartbeat to the broker, else the task aborts and the runner restarts. Must be greater than 0. |
-| `N8N_RUNNERS_INSECURE_MODE` | Boolean | `false` | Whether to disable all security measures in the task runner, for for compatibility with modules that rely on insecure JS features. **Discouraged for production use.** |
+| `N8N_RUNNERS_INSECURE_MODE` | Boolean | `false` | Whether to disable all security measures in the task runner, for compatibility with modules that rely on insecure JS features. **Discouraged for production use.** |
 
 
 ## Task runner launcher environment variables

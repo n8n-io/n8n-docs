@@ -38,7 +38,7 @@ Here is an example of an items array:
 
 ```json
 [ // (1)!
-  {
+  { // (2)!
     "name": "Jane Doe",
     "age": 43,
     "position": "engineer",
@@ -47,7 +47,7 @@ Here is an example of an items array:
       "personal": "jane.doe@example.com"
     }
   },
-  {
+  { // (3)!
     "name": "Pedro Nguyen",
     "age": 26,
     "position": "accountant",
@@ -60,6 +60,8 @@ Here is an example of an items array:
 ```
 
 1. You can access the array of items in expressions as `.items`.
+2. This is the first item in the items array.
+3. This is the second item.
 
 To continue the earlier analogy, you can think of these structures as database or spreadsheet tables, each of which can contain multiple rows of data.
 
@@ -71,8 +73,8 @@ The n8n UI simplifies the data when displaying items. The actual data passed bet
 
 ```json
 [
-  {
-    "json": { // (1)!
+  { // (1)!
+    "json": { // (2)!
       "name": "Jane Doe",
       "age": 43,
       "position": "engineer",
@@ -82,7 +84,7 @@ The n8n UI simplifies the data when displaying items. The actual data passed bet
       }
     }
   },
-  {
+  { // (3)!
     "json": {
       "name": "Pedro Nguyen",
       "age": 26,
@@ -96,7 +98,9 @@ The n8n UI simplifies the data when displaying items. The actual data passed bet
 ]
 ```
 
-1. n8n hides this `json` layer when displaying items in input and output panels.
+1. This is the first item.
+2. n8n hides this `json` layer when displaying items in input and output panels.
+3. This is the second item.
 
 A more complete illustration of the earlier `items` array might look like this:
 
@@ -106,7 +110,7 @@ By putting the item's properties in the `json` object, n8n can also bundle other
 
 ```json
 [
-  {
+  { // (1)!
     "json": {
       "name": "Jane Doe",
       "age": 43,
@@ -116,10 +120,10 @@ By putting the item's properties in the `json` object, n8n can also bundle other
         "personal": "jane.doe@example.com"
       }
     },
-    "binary": { // (1)!
+    "binary": { // (2)!
       . . .
     },
-    "pairedItem": { // (2)!
+    "pairedItem": { // (3)!
       "item": 0
     }
   },
@@ -129,8 +133,9 @@ By putting the item's properties in the `json` object, n8n can also bundle other
 ]
 ```
 
-1. Learn more about how n8n manages [binary data](/new-data/binary-data.md).
-2. n8n uses `pairedItem` metadata to [track which input items generated each item](/new-data/item-linking/concepts.md).
+1. The item encapsulates the item's properties, as well as any binary data and metadata.
+2. Learn more about how n8n manages [binary data](/new-data/binary-data.md).
+3. n8n uses `pairedItem` metadata to [track which input items generated each item](/new-data/item-linking/concepts.md).
 
 Not all items will include these same sibling keys. You won't have to worry about this extra layer of nesting during normal processing, but you might need to be aware of these when performing [manual data linking](/new-data/item-linking/concepts.md) or working with [binary data](/new-data/binary-data.md).
 

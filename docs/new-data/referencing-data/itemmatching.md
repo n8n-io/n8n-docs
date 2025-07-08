@@ -26,6 +26,12 @@ You'll usually want to drill down to reference specific properties within the `j
 {{ $("Customer data").item.json.id }}
 ```
 
+To access the linked items from the node immediately before the current node, you can use the `$input` shorthand instead:
+
+```javascript
+{{ $input.item }}
+```
+
 ## In the Code node
 
 To access the linked items from earlier in the workflow in the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node, use the `itemMatching()` function, which has the following syntax:

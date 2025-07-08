@@ -29,9 +29,9 @@ In the input pane, you can drill down and expand properties to find specific pie
 
 You can find more specifics about how to reference specific types of data on the following pages:
 
+* [Reference linked items in previous nodes](/new-data/referencing-data/itemmatching.md)
 * [Reference current node input](/new-data/referencing-data/current-node-input.md)
 * [Reference output of other nodes](/new-data/referencing-data/output-other-nodes.md)
-* [Reference linked items in previous nodes](/new-data/referencing-data/itemmatching.md)
 
 <!--
 

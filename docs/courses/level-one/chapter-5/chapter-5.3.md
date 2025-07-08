@@ -59,7 +59,7 @@ In the If node window, configure the parameters:
 Make sure to select the correct data type (boolean, date & time, number, or string) when you select the **Operation**.
 ///
 
-Select **Test step** to test the If node.
+Select **Execute step** to test the If node.
 
 Your results should look like this:
 
@@ -79,7 +79,7 @@ Since Nathan only needs the `processing` orders in the table, we'll connect the 
 
 In this case, since the Airtable node is already on our canvas, select the **If node** `true` connector and drag it to the Airtable node.
 
-It's a good idea at this point to retest the Airtable node. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Test step**.
+It's a good idea at this point to retest the Airtable node. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Execute step**.
 
 Review your data in Airtable to be sure your workflow only added the correct orders (those with `orderStatus` of `processing`). There should be 14 records now instead of 30.
 

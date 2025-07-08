@@ -10,6 +10,7 @@ contentType: [integration, reference]
 You can use these credentials to authenticate the following nodes:
 
 * [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md)
+* [Reranker Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md)
 * [Embeddings Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md)
 
 ## Prerequisites

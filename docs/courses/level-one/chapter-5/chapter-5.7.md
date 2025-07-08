@@ -55,7 +55,7 @@ Your full workflow should look like this:
 
 ## What's next?
 
-**You 👩‍🔧**: That was it for the workflow! I've added and configured all necessary nodes. Now every time you click on **Test workflow**, n8n will execute all the nodes: getting, filtering, calculating, and transferring the sales data.
+**You 👩‍🔧**: That was it for the workflow! I've added and configured all necessary nodes. Now every time you click on **Execute workflow**, n8n will execute all the nodes: getting, filtering, calculating, and transferring the sales data.
 
 **Nathan 🙋**: This is just what I needed! My workflow will run automatically every Monday morning, correct?
 

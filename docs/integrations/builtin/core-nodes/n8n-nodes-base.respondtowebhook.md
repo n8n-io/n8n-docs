@@ -31,9 +31,10 @@ Configure the node behavior using these parameters.
 Choose what data to send in the webhook response.
 
 - **All Incoming Items**: Respond with all the JSON items from the input.
-- **Binary**: Respond with a binary file defined in **Response Data Source**.
+- **Binary File**: Respond with a binary file defined in **Response Data Source**.
 - **First Incoming Item**: Respond with the first incoming item's JSON.
 - **JSON**: Respond with a JSON object defined in **Response Body**.
+- **JWT Token**: Respond with a JSON Web Token (JWT).
 - **No Data**: No response payload.
 - **Redirect**: Redirect to a URL set in **Redirect URL**.
 - **Text**: Respond with text set in **Response Body**.
@@ -42,7 +43,7 @@ Choose what data to send in the webhook response.
 
 Select **Add Option** to view and set the options.
 
-- **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status){:target=_blank .external-link} to use.
+- **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to use.
 - **Response Headers**: Define the response headers to send.
 - **Put Response in Field**: Available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
 
@@ -59,6 +60,17 @@ When using the Respond to Webhook node, workflows behave as follows:
 - The workflow errors before the first Respond to Webhook node executes: the workflow returns an error message with a 500 status.
 - A second Respond to Webhook node executes after the first one: the workflow ignores it.
 - A Respond to Webhook node executes but there was no webhook: the workflow ignores the Respond to Webhook node.
+
+## Output the response sent to the webhook
+
+By default, the Respond to Webhook node has a single output branch that contains the node's input data.
+
+You can optionally enable a second output branch containing the response sent to the webhook. To enable this secondary output, open the Respond to Webhook node on the canvas and select the **Settings** tab. Activate the **Enable Response Output Branch** option.
+
+The node will now have two outputs:
+
+* **Input Data**: The original output, passing on the node's input.
+* **Response**: The response object sent to the webhook.
 
 ## Return more than one data item (deprecated)
 

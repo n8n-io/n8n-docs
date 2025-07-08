@@ -21,8 +21,8 @@ Unlike conventional [trigger nodes](/glossary.md#trigger-node-n8n), which respon
 
 You can expose n8n workflows to clients by attaching them with the [Custom n8n Workflow Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md) node.
 
-/// note | Server-Sent Events (SSE) support
-The MCP Server Trigger node supports [Server-Sent Events (SSE)](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-events-sse), a long-lived transport built on top of HTTP, for connections between clients and the server. It currently doesn't support [standard input/output (stdio)](https://modelcontextprotocol.io/docs/concepts/transports#standard-input%2Foutput-stdio) transport.
+/// note | Server-Sent Events (SSE) and streamable HTTP support
+The MCP Server Trigger node supports both [Server-Sent Events (SSE)](https://modelcontextprotocol.io/docs/concepts/transports#server-sent-events-sse), a long-lived transport built on top of HTTP, and [streamable HTTP](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#streamable-http) for connections between clients and the server. It currently doesn't support [standard input/output (stdio)](https://modelcontextprotocol.io/docs/concepts/transports#standard-input%2Foutput-stdio) transport.
 ///
 
 ## Node parameters
@@ -35,7 +35,7 @@ The MCP Server Trigger node has two **MCP URLs**: test and production. n8n displ
 
 Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 
-* **Test**: n8n registers a test MCP URL when you select **Listen for Test Event** or **Test workflow**, if the workflow isn't active. When you call the MCP URL, n8n displays the data in the workflow.
+* **Test**: n8n registers a test MCP URL when you select **Listen for Test Event** or **Execute workflow**, if the workflow isn't active. When you call the MCP URL, n8n displays the data in the workflow.
 * **Production**: n8n registers a production MCP URL when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution: select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
 ### Authentication
@@ -78,13 +78,14 @@ To do so, add the following to your Claude Desktop configuration:
     "n8n": {
       "command": "npx",
       "args": [
-        "-y",
-        "supergateway",
-        "--sse",
+        "mcp-remote",
         "<MCP_URL>",
         "--header",
-        "Authorization: Bearer <MCP_BEARER_TOKEN>"
-      ]
+        "Authorization: Bearer ${AUTH_TOKEN}"
+      ],
+      "env": {
+        "AUTH_TOKEN": "<MCP_BEARER_TOKEN>"
+      }
     }
   }
 }
@@ -96,13 +97,13 @@ Be sure to replace the `<MCP_URL>` and `<MCP_BEARER_TOKEN>` placeholders with th
 
 ### Configuring the MCP Server Trigger node with webhook replicas
 
-The MCP Server Trigger node relies on Server-Sent Events (SSE), which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](/hosting/scaling/queue-mode.md) depending on your [webhook processor](/hosting/scaling/queue-mode.md#webhook-processors) configuration:
+The MCP Server Trigger node relies on Server-Sent Events (SSE) or streamable HTTP, which require the same server instance to handle persistent connections. This can cause problems when running n8n in [queue mode](/hosting/scaling/queue-mode.md) depending on your [webhook processor](/hosting/scaling/queue-mode.md#webhook-processors) configuration:
 
 * If you use queue mode with a **single webhook replica**, the MCP Server Trigger node works as expected.
 * If you run **multiple webhook replicas**, you need to route all `/mcp*` requests to a single, dedicated webhook replica. Create a separate replica set with one webhook container for MCP requests. Afterward, update your ingress or load balancer configuration to direct all `/mcp*` traffic to that instance.
 
 /// warning | Caution when running with multiple webhook replicas
-If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE connections will frequently break or fail to reliably deliver events.
+If you run an MCP Server Trigger node with multiple webhook replicas and don't route all `/mcp*` requests to a single, dedicated webhook replica, your SSE and streamable HTTP connections will frequently break or fail to reliably deliver events.
 ///
 
 ## Related resources
@@ -117,7 +118,7 @@ Here are some common errors and issues with the MCP Server Trigger node and step
 
 ### Running the MCP Server Trigger node with a reverse proxy
 
-When running n8n behind a reverse proxy like nginx, you may experience problems if the MCP endpoint isn't configured for SSE.
+When running n8n behind a reverse proxy like nginx, you may experience problems if the MCP endpoint isn't configured for SSE or streamable HTTP.
 
 Specifically, you need to disable proxy buffering for the endpoint. Other items you might want to adjust include disabling gzip compression (n8n handles this itself), disabling chunked transfer encoding, and setting the `Connection` to an empty string to remove it from the forwarded headers. Explicitly disabling these in the MCP endpoint ensures they're not inherited from other places in your nginx configuration.
 

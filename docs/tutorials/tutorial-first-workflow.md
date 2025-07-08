@@ -79,7 +79,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
         n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md).
 
 1. Close the **Edit Expression** modal to return to the NASA node.
-1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
+1. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
 1. Close the NASA node to return to the workflow canvas.
 
 ## Step four: Add logic with the If node
@@ -100,7 +100,7 @@ Add the If node:
 
     1. Change the comparison operation to **String > Contains**.
     1. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
-1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
+1. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
     /// note | Weeks without large solar flares
     In this tutorial, you are working with live data. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**.

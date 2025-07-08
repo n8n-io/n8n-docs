@@ -15,7 +15,9 @@ You can use these credentials to authenticate the following nodes:
 - [Microsoft Graph Security](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity.md)
 - [Microsoft OneDrive](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md)
 - [Microsoft Outlook](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md)
+- [Microsoft SharePoint](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md)
 - [Microsoft Teams](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md)
+- [Microsoft Teams Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 - [Microsoft To Do](/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md)
 
 ## Prerequisites

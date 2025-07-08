@@ -35,7 +35,7 @@ With the Edit Fields node window open, configure these parameters:
     - Drag **If** > **employeeName** as the second field.
 - Ensure that **Include Other Input Fields** is set to false.
 
-Select **Test step**. You should see the following results:
+Select **Execute step**. You should see the following results:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-4-set-node.png" alt="Edit Fields (Set) node" style="width:100%"><figcaption align = "center"><i>Edit Fields (Set) node</i></figcaption></figure>
 

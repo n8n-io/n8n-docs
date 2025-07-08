@@ -14,7 +14,7 @@ Data is the information that n8n nodes receive and process. For basic usage of n
 This section covers: 
 
 * [Data structure](/data/data-structure.md)
-* [Binary data](/data/binary-data.md)
+* [Binary data](/data/data-structure.md)
 
 ## Related resources
 

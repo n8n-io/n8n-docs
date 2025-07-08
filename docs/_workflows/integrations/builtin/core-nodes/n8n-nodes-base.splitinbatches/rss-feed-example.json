@@ -9,7 +9,7 @@
         0
       ],
       "id": "e6e1cfe6-eff1-48bd-b21c-6ba83d4244d9",
-      "name": "When clicking ‘Test workflow’"
+      "name": "When clicking ‘Execute workflow’"
     },
     {
       "parameters": {
@@ -53,7 +53,7 @@
     }
   ],
   "connections": {
-    "When clicking ‘Test workflow’": {
+    "When clicking ‘Execute workflow’": {
       "main": [
         [
           {

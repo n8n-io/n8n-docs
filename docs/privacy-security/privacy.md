@@ -118,6 +118,12 @@ To opt out of checking for new versions of n8n:
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
+To disable the templates feature (prevents background health check calls):
+
+```bash
+export N8N_TEMPLATES_ENABLED=false
+```
+
 See [configuration](/hosting/configuration/configuration-methods.md) for more info on how to set environment variables.
 
 ### Data collection in n8n Cloud

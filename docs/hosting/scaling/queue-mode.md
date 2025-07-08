@@ -216,7 +216,6 @@ n8n recommends setting concurrency to 5 or higher for your worker instances. Set
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 ///
 
 In queue mode you can run more than one `main` process for high availability.

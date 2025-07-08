@@ -24,6 +24,7 @@ nav:
     - License key: license-key.md
     - n8n Cloud:
       - manage-cloud/index.md
+      - Cloud free trial: manage-cloud/cloud-free-trial.md
       - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
       - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
       - Set the timezone: manage-cloud/set-cloud-timezone.md
@@ -127,6 +128,7 @@ nav:
       - Workflow history: workflows/history.md
       - Workflow templates: workflows/templates.md
       - Workflow ID: workflows/workflow-id.md
+      - Sub-workflow conversion: workflows/subworkflow-conversion.md
       - Create custom variables: code/variables.md
       - Manage executions:
         - workflows/executions/index.md
@@ -196,6 +198,7 @@ nav:
       - Binary data: new-data/binary-data.md
       - Pinning and mocking data: new-data/pinning-and-mocking-data.md
     - Working with data:
+      - Overview: data/overview.md
       - Concepts:
         - Data structure: data/data-structure.md
         - Data item linking: data/data-mapping/data-item-linking/item-linking-concepts.md
@@ -226,6 +229,7 @@ nav:
       - Common issues:  code/cookbook/expressions/common-issues.md
     - Using AI:
       - advanced-ai/index.md
+      - RAG in n8n: advanced-ai/rag-in-n8n.md
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
       - AI coding: code/ai-code.md
       - AI concepts:
@@ -240,6 +244,11 @@ nav:
         - advanced-ai/langchain/overview.md
         - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
         - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+      - Evaluations:
+        - Overview: advanced-ai/evaluations/overview.md
+        - Light evaluations: advanced-ai/evaluations/light-evaluations.md
+        - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
+        - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
       - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
       - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
       - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
@@ -364,6 +373,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Evaluation: integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md
+        - Evaluation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md
         - Execute Command:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
@@ -620,6 +631,7 @@ nav:
         - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
         - Iterable: integrations/builtin/app-nodes/n8n-nodes-base.iterable.md
         - Jenkins: integrations/builtin/app-nodes/n8n-nodes-base.jenkins.md
+        - Jina AI: integrations/builtin/app-nodes/n8n-nodes-base.jinaai.md
         - Jira Software: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
         - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
         - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
@@ -665,8 +677,10 @@ nav:
         - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
         - Microsoft Outlook: integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md
         - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+        - Microsoft SharePoint: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md
         - Microsoft SQL: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md
         - Microsoft Teams: integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
+        - Microsoft Teams Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
         - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
@@ -714,6 +728,7 @@ nav:
         - PayPal: integrations/builtin/app-nodes/n8n-nodes-base.paypal.md
         - PayPal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
         - Peekalink: integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md
+        - Perplexity: integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity.md
         - PhantomBuster: integrations/builtin/app-nodes/n8n-nodes-base.phantombuster.md
         - Philips Hue: integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md
         - Pipedrive: integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md
@@ -937,6 +952,8 @@ nav:
           - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - Call n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
+          - Reranker Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md
+          - Model Selector: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md
     - Credentials:
       - Overview: integrations/builtin/credentials/overview.md
       - Built-in credentials:
@@ -1068,6 +1085,7 @@ nav:
         - integrations/builtin/credentials/invoiceninja.md
         - integrations/builtin/credentials/iterable.md
         - integrations/builtin/credentials/jenkins.md
+        - integrations/builtin/credentials/jinaai.md
         - integrations/builtin/credentials/jira.md
         - integrations/builtin/credentials/jotform.md
         - integrations/builtin/credentials/jwt.md
@@ -1137,6 +1155,7 @@ nav:
         - integrations/builtin/credentials/pagerduty.md
         - integrations/builtin/credentials/paypal.md
         - integrations/builtin/credentials/peekalink.md
+        - integrations/builtin/credentials/perplexity.md
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
         - integrations/builtin/credentials/pinecone.md

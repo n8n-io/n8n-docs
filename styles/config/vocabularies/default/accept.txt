@@ -1,4 +1,5 @@
 ABCorp
+accessors?
 Adalo
 [Aa]ddons?
 [Aa]gent
@@ -45,6 +46,7 @@ Capterra
 cartesian
 Chargebee
 [Cc]hatbots?
+ChromeOS
 Citrix
 Clearbit
 Clockify
@@ -69,6 +71,7 @@ datetime
 [Dd]eduplication
 DeepL
 Demio
+[Dd]equeued?
 disabled
 Disqus
 Dockerfile
@@ -77,6 +80,7 @@ Dynatrace
 eksctl
 [Ee]mbeddable
 Emelia
+[Ee]nqueued?
 Entra
 [Ee]num
 ERPNext
@@ -122,7 +126,9 @@ Intuit
 IPs?
 [Ii]terable
 Jira
+Jina
 JMESPath
+JumpCloud
 Keap
 Keycloak
 Kibana
@@ -156,6 +162,7 @@ Mindee
 Mocean
 Motorhead
 [Mm]ultimodal
+[Mm]ultiple
 n8n
 nanoids
 [Nn]amespaces?
@@ -186,6 +193,7 @@ PhantomBuster
 Pinterest
 Pipedrive
 Pinecone
+[Pp]laintext
 Plivo
 Pluralsight
 [Pp]ollers?
@@ -205,6 +213,7 @@ Qualys
 Realtime
 Rekognition
 requester
+[Rr]erank(er|ing|ed)?
 reusability
 Rundeck
 Salesmate
@@ -226,6 +235,7 @@ Stackshare
 Storyblok
 Strapi
 Strava
+[Ss]treamable
 strikethrough
 [Ss]ubaccounts?
 [Ss]ubfolders?
@@ -255,6 +265,7 @@ Typeform
 [Uu]narchive
 [Uu]ncomment
 [Uu]nformatted
+([Uu]n)?[Gg]rounded(ness)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare

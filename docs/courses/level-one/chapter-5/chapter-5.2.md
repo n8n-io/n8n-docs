@@ -78,7 +78,7 @@ In the Airtable node window, configure the following parameters:
 
 ## Test the Airtable node
 
-Once you've finished configuring the Airtable node, execute it by selecting **Test step**. This might take a moment to process, but you can follow the progress by viewing the base in Airtable.
+Once you've finished configuring the Airtable node, execute it by selecting **Execute step**. This might take a moment to process, but you can follow the progress by viewing the base in Airtable.
 
 Your results should look like this:
 

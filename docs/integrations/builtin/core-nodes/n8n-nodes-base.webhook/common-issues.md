@@ -94,8 +94,17 @@ While building or testing a workflow, use the **Test URL**. Once you're ready to
 
 Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information.
 
-## IPs in Whitelist are failing to connect
+## IP addresses in whitelist are failing to connect
 
-If you're unable to connect from IPs in your IP Whitelist, check if you are running n8n behind a reverse proxy.
+If you're unable to connect from IP addresses in your IP whitelist, check if you are running n8n behind a reverse proxy.
 
 If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables.md) to the number of reverse-proxies n8n is running behind.
+
+## Only one webhook per path and method
+
+n8n only permits registering one webhook for each path and HTTP method combination (for example, a `GET` request for `/my-request`). This avoids ambiguity over which webhook should receive requests.
+
+If you receive a message that the path and method you chose are already in use, you can either:
+
+* Deactivate the workflow with the conflicting webhook.
+* Change the webhook path and/or method for one of the conflicting webhooks.

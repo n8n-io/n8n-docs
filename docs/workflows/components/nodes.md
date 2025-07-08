@@ -44,12 +44,12 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Test step** <span class="inline-image">![Test step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
+* **Execute step** <span class="inline-image">![Execute step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
 * **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
 * **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
 * **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
 	* Open node
-	* Test step
+	* Execute step
 	* Rename node
 	* Deactivate node
 	* Pin node

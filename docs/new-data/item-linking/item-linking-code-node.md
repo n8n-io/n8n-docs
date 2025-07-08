@@ -170,7 +170,7 @@ The following workflow implements item linking:
 The workflow is exactly the same as the previous one, except that the **Extract emails** Code node adds a `pairedItem` key that matches each output item with the input item that produced it:
 
 === "Code"
-	```javascript
+	```javascript hl_lines="8 14"
 	emails = [];
 
 	for (let i=0; i<items.length; i++) {

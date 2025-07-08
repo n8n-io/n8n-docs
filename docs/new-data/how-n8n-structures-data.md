@@ -21,7 +21,7 @@ Here is an example of an item:
 }
 ```
 
-1. This JSON object represents a single item
+1. This JSON object represents a single item.
 2. The item's data is defined with JSON properties — key-value pairs.
 3. Items can encode data using native JSON data types.
 4. Items can include nested data structures to represent more complex information.
@@ -37,7 +37,7 @@ n8n workflows and the nodes within them process groups of items. These are repre
 Here is an example of an items array:
 
 ```json
-[
+[ // (1)!
   {
     "name": "Jane Doe",
     "age": 43,
@@ -59,6 +59,8 @@ Here is an example of an items array:
 ]
 ```
 
+1. You can access the array of items in expressions as `.items`.
+
 To continue the earlier analogy, you can think of these structures as database or spreadsheet tables, each of which can contain multiple rows of data.
 
 This array of items is the data format that nodes expect as input and produce as output.
@@ -70,7 +72,7 @@ The n8n UI simplifies the data when displaying items. The actual data passed bet
 ```json
 [
   {
-    "json": {
+    "json": { // (1)!
       "name": "Jane Doe",
       "age": 43,
       "position": "engineer",
@@ -94,6 +96,8 @@ The n8n UI simplifies the data when displaying items. The actual data passed bet
 ]
 ```
 
+1. n8n hides this `json` layer when displaying items in input and output panels.
+
 A more complete illustration of the earlier `items` array might look like this:
 
 ![Illustration of data structure in n8n](/_images/courses/level-two/chapter-one/explanation_datastructure.png)
@@ -112,10 +116,10 @@ By putting the item's properties in the `json` object, n8n can also bundle other
         "personal": "jane.doe@example.com"
       }
     },
-    "binary": {
+    "binary": { // (1)!
       . . .
     },
-    "pairedItem": {
+    "pairedItem": { // (2)!
       "item": 0
     }
   },
@@ -125,7 +129,10 @@ By putting the item's properties in the `json` object, n8n can also bundle other
 ]
 ```
 
-Not all items will include these same sibling keys. You won't have to worry about this extra layer of nesting during normal processing, but you might need to be aware of these when performing [manual data linking]() or working with [binary data]().
+1. Learn more about how n8n manages [binary data](/new-data/binary-data.md).
+2. n8n uses `pairedItem` metadata to [track which input items generated each item](/new-data/item-linking/concepts.md).
+
+Not all items will include these same sibling keys. You won't have to worry about this extra layer of nesting during normal processing, but you might need to be aware of these when performing [manual data linking](/new-data/item-linking/concepts.md) or working with [binary data](/new-data/binary-data.md).
 
 ## How workflows process data
 

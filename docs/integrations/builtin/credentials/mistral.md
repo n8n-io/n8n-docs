@@ -10,6 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
+* [Mistral AI](/integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md)
 * [Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md)
 * [Embeddings Mistral Cloud](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md)
 

@@ -22,7 +22,7 @@ To install a [verified community node](/integrations/creating-nodes/deploy/submi
 5. You can now add the node to your workflows.
 
 /// note | Enable installation of verified community nodes
-Some users may not want to show verified community nodes in the nodes panel of their instances. On n8n cloud, instance owners can toggle this in the [Cloud Admin Panel](/manage-cloud/cloud-admin-dashboard.md). Self-hosted users can use [environment variables](/hosting/configuration/environment-variables/nodes.md) to control the availability of this feature.
+Some users may not want to show verified community nodes in the nodes panel of their instances. On n8n cloud, instance owners can toggle this in the [Cloud Admin Panel](/manage-cloud/cloud-admin-dashboard.md). Self-hosted users can use [environment variables](/hosting/configuration/environment-variables.md#nodes) to control the availability of this feature.
 ///
 
 ## Uninstall a community node

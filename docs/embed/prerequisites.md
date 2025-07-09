@@ -41,4 +41,4 @@ For Postgres, the database must already exist on the DB-instance. The database u
 
 An n8n instance doesn't typically require large amounts of available memory. For example an n8n Cloud instance at idle requires ~100MB. It's the nature of your workflows and the data being processed that determines your memory requirements.
 
-For example, while most nodes just pass data to the next node in the workflow, the [Code node](/code/code-node.md) creates a pre-processing and post-processing copy of the data. When dealing will large binary files, this can consume all available resources.
+For example, while most nodes just pass data to the next node in the workflow, the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) creates a pre-processing and post-processing copy of the data. When dealing will large binary files, this can consume all available resources.

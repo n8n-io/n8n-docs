@@ -10,7 +10,7 @@ contentType: [integration, reference]
 Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types.
 
 /// info | Feature availability
-Available only on [Cloud plans](/manage-cloud/overview.md).
+Available only on [Cloud plans](/manage-cloud/index.md).
 ///
 
 ## Node parameters

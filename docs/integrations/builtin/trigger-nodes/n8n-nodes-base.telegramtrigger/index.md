@@ -24,17 +24,17 @@ For usage examples and templates to help you get started, refer to n8n's [Telegr
 - **Business Connection**: Trigger when the bot is connected to or disconnected from a business account, or a user edited an existing connection with the bot.
 - **Business Message**: Trigger on a new message from a connected business account.
 - **Callback Query**: Trigger on new incoming callback query.
-- **Channel Post**: Trigger on new incoming channel post of any kind — including text, photo, sticker, and so on.
+- **Channel Post**: Trigger on new incoming channel post of any kind—including text, photo, sticker, and so on.
 - **Chat Boost**: Trigger when a chat boost is added or changed. The bot must be an administrator in the chat to receive these updates.
 - **Chat Join Request**: Trigger when a request to join the chat is sent. The bot must have the `can_invite_users` administrator right in the chat to receive these updates.
 - **Chat Member**: Trigger when a chat member's status is updated. The bot must be an administrator in the chat.
 - **Chosen Inline Result**: Trigger when the result of an inline query chosen by a user is sent. Please see Telegram's API documentation on [feedback collection](https://core.telegram.org/bots/inline#collecting-feedback) for details on how to enable these updates for your bot.
 - **Deleted Business Messages**: Trigger when messages are deleted from a connected business account.
 - **Edited Business Message**: Trigger on new version of a message from a connected business account.
-- **Edited Channel Post**: Trigger on new version of a channel post that is known to the bot is edited.
-- **Edited Message**: Trigger on new version of a channel post that is known to the bot is edited.
+- **Edited Channel Post**: Trigger on new version of a channel post that's known to the bot is edited.
+- **Edited Message**: Trigger on new version of a channel post that's known to the bot is edited.
 - **Inline Query**: Trigger on new incoming inline query.
-- **Message**: Trigger on new incoming message of any kind — text, photo, sticker, and so on.
+- **Message**: Trigger on new incoming message of any kind—text, photo, sticker, and so on.
 - **Message Reaction**: Trigger when a reaction to a message is changed by a user. The bot must be an administrator in the chat. The update isn't received for reactions set by bots.
 - **Message Reaction Count**: Trigger when reactions to a message with anonymous reactions are changed. The bot must be an administrator in the chat. The updates are grouped and can be sent with delay up to a few minutes.
 - **My Chat Member**: Trigger when the bot's chat member status is updated in a chat. For private chats, this update is received only when the bot is blocked or unblocked by the user.

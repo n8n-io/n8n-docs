@@ -430,6 +430,7 @@ nav:
         - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
+        - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
         - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
         - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
         - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md

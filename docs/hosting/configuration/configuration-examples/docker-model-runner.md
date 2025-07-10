@@ -6,7 +6,7 @@ Docker Model Runner allows you to run AI models locally on your machine, providi
 
 ## Prerequisites
 
-- Docker Desktop 4.40+ with Model Runner enabled
+- Docker Desktop 4.40+ with [Model Runner enabled](https://docs.docker.com/ai/model-runner/#enable-docker-model-runner)
 - At least one AI model downloaded
 - Self-hosted n8n instance
 

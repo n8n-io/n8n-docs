@@ -65,6 +65,7 @@ Datastore
 [Dd]eduplication
 DeepL
 Demio
+[Dd]equeued?
 disabled
 Disqus
 Dockerfile
@@ -73,6 +74,7 @@ Dynatrace
 eksctl
 [Ee]mbeddable
 Emelia
+[Ee]nqueued?
 Entra
 [Ee]num
 ERPNext

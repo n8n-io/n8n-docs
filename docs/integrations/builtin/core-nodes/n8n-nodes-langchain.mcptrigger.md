@@ -49,17 +49,7 @@ Refer to the [HTTP request credentials](/integrations/builtin/credentials/httpre
 
 ### Path
 
-By default, this field contains a randomly generated MCP URL path, to avoid conflicts with other MCP Server Trigger nodes. 
-
-You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
-
-The **Path** field can take the following formats:
-
-- `/:variable`
-- `/path/:variable`
-- `/:variable/path`
-- `/:variable1/path/:variable2`
-- `/:variable1/:variable2`
+By default, each trigger comes with a randomly generated MCP URL path, to avoid conflicts with other MCP Server Trigger nodes. 
 
 ## Templates and examples
 

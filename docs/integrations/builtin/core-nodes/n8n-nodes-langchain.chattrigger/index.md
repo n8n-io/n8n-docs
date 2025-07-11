@@ -81,6 +81,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (e.g.. [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md))
 
 #### Require Button Click to Start Chat
 
@@ -113,6 +114,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 
 * **When Last Node Finishes**: The Chat Trigger node returns the response code and the data output from the last node executed in the workflow.
 * **Using 'Respond to Webhook' Node**: The Chat Trigger node responds as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support enabled.
 
 ## Templates and examples
 

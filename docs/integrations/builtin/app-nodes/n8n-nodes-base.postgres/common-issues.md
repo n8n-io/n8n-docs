@@ -56,4 +56,4 @@ To work around this, use the [Postgres `TO_CHAR` function](https://www.postgresq
 SELECT TO_CHAR(date_col, 'YYYY-MM-DD') AS date_col_as_date FROM table_with_date_col
 ```
 
-This will produce the date as a string without the time or timezone components. To continue the earlier example, with this casting, a date of `2025-12-25` would produce the string `2025-12-25`.
+This will produce the date as a string without the time or timezone components. To continue the earlier example, with this casting, a date of `2025-12-25` would produce the string `2025-12-25`. You can find out more in the [`pg` package documentation on dates](https://node-postgres.com/features/types#date--timestamp--timestamptz).

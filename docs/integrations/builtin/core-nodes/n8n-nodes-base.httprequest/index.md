@@ -226,7 +226,7 @@ n8n provides built-in variables for working with HTTP node requests and response
 
 Use this option if you need to specify an HTTP proxy.
 
-Enter the **Proxy** the request should use.
+Enter the **Proxy** the request should use. This takes precedence over global settings defined with the [`HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables](/hosting/configuration/environment-variables/deployment.md).
 
 ### Timeout
 

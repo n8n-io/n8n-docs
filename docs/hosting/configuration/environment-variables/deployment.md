@@ -18,6 +18,10 @@ This page lists the deployment configuration options for your self-hosted n8n in
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
+| `HTTP_PROXY` | String | - | A URL where to proxy unencrypted HTTP requests. When set, n8n proxies all unencrypted HTTP traffic from nodes through the proxy URL. |
+| `HTTPS_PROXY` | String | - | A URL where to proxy TLS/SSL encrypted HTTP requests. When set, n8n proxies all TLS/SSL encrypted HTTP traffic from nodes through the proxy URL. |
+| `ALL_PROXY` | String | - | A URL where to proxy both unencrypted and encrypted HTTP requests. When set, n8n proxies all HTTP traffic from nodes, both encrypted and unencrypted, through the proxy URL. |
+| `NO_PROXY` | String | - | A comma-separted list of hostnames or URLs that should bypass the proxy. When using `HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY`, n8n will connect directly to the URLs or hostnames defined here instead of using the proxy. |
 | `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n and the redirect URL for SAML based authentication. |
 | `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/configuration/configuration-methods.md). |
 | `N8N_DISABLE_UI` | Boolean | `false` | Set to `true` to disable the UI. |

@@ -80,6 +80,10 @@ nav:
         - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
+        - OIDC:
+          - user-management/oidc/index.md
+          - Set up OIDC: user-management/oidc/setup.md
+          - Troubleshooting & FAQs: user-management/oidc/troubleshooting.md
         - SAML:
           - user-management/saml/index.md
           - Set up SAML: user-management/saml/setup.md

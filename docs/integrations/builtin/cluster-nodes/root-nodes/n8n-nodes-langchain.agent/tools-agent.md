@@ -181,6 +181,14 @@ Refine the Tools Agent node's behavior using these options:
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/binary-images.md"
 
+### Enable Streaming
+
+When enabled, the AI Agent can send data back to the user in real-time as it processes. This is useful for long-running tasks or when you want to provide immediate feedback to users. This is enabled by default for node version 2.1 and above.
+
+/// info | Streaming requirements
+For streaming to work, your workflow must use a trigger that supports streaming responses, such as the Chat Trigger or Webhook node with **Response Mode** set to **Streaming response**.
+///
+
 ## Templates and examples
 
 Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.

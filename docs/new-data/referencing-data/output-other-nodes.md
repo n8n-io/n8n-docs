@@ -8,9 +8,17 @@ hide:
 
 <!-- vale off -->
 
-# Reference output of other nodes
+# Reference output from already executed nodes
 
 To access items from nodes earlier in the execution chain, use the `$("<name_of_node>")` syntax. You can use this to access the items from any nodes that have been executed before the current node.
+
+The most common method for accessing a node's output are:
+
+* `$("<node-name>").item.json`: Access the given node's data properties.
+* `$("<node-name>").first()`: access the given node's first input item. This is most useful when working around [item linking problems]().
+* `$("<node-name>").last()`: access the given node's last input item. This is most useful when working around [item linking problems]().
+
+The following table lists the `$("<node-name")` accessor's methods and properties:
 
 /// note | Python support
 You can use Python in the Code node. It isn't available in expressions.

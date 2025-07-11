@@ -16,7 +16,7 @@ However, `.item` lookup fails if information is missing or ambiguous. n8n displa
 
 To solve these errors, you can either:
 
-* **Avoid using `.item`**: You may be able to reference specific items with the `.first()`, `.last()` or `.all()[index]` accessor methods instead of using `.item`. They require you to know the position of the item that you’re targeting within the target node's output. Refer to [output of other nodes](/new-data/referencing-data/output-other-nodes.md) for more detail on these methods.
+* **Avoid using `.item`**: You may be able to reference specific items with the `.first()`, `.last()` or `.all()[index]` accessor methods instead of using `.item`. They require you to know the position of the item that you’re targeting within the target node's output. Consult the [reference output from already executed nodes](/new-data/referencing-data/output-other-nodes.md) page for more detail on these methods.
 * **Manually set item linking**: This fixes the root of the problem by restoring the correct link information for all items in the execution chain. The specific way to do this depends on the context.
 
 ## Error types
@@ -56,5 +56,5 @@ This error occurs when n8n can't trace back the item lineage back to the referen
 
 When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
 
-- Use `.first()`, `.last()` or `.all()[index]` instead. Refer to [Built in methods and variables | Output of other nodes](/code/builtin/output-other-nodes.md) for more detail on these methods.
+- Use `.first()`, `.last()` or `.all()[index]` instead. Consult the [reference output from already executed nodes](/new-data/referencing-data/output-other-nodes.md) page for more detail on these methods.
 - Reference a different node that contains the same information, but doesn't have multiple matching items.

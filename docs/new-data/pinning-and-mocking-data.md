@@ -88,6 +88,8 @@ The [Customer Datastore](/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrain
 
 These nodes are helpful if you need data for testing but don't yet have a real dataset or use-case to work with. The Debug Helper node in particular can output various types of data like user data, emails, credit card numbers, IP addresses, and URLs.
 
+<!-- 
+
 ## Use schema previews
 
 Another feature that helps integrate with external services without pulling data from production systems is schema preview.
@@ -99,3 +101,5 @@ Schema preview exposes expected schema data from the previous node in the Node E
 1. There must be a node with schema preview available in your workflow.
 1. When clicking on the details of the next node in the sequence, the schema preview data will show up in the Node Editor where schema data would typically be exposed.
 1. Use data from the schema preview just as you would other schemas - drag and drop fields as input into your node parameters and settings.
+
+-->

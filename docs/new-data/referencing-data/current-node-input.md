@@ -10,7 +10,15 @@ hide:
 
 # Reference current node input
 
-The most common pattern is to reference items from the previous node: the current node's input data. You can access all of the previous node's items with the `$input` object. It contains the following properties and accessor methods:
+The most common pattern is to reference items from the previous node: the current node's input data. You can access all of the previous node's items with the `$input` object.
+
+The most common method for accessing node input are:
+
+* `$json` to access properties of the previous node.
+* `$input.first()` to access the first input item from the previous node. This is most useful when working around [item linking problems]().
+* `$input.last()` to access the last input item from the previous node, useful in the same situation as above.
+
+The following table lists the `$input` object's accessor methods and properties:
 
 /// note | Python support
 You can use Python in the Code node. It isn't available in expressions.

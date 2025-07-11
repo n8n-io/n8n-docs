@@ -7,15 +7,17 @@ n8n expressions are JavaScript code that evaluate to a specific value. They allo
 
 Expressions allow you to reference:
 
-* data directly connected to a node's input
-* the output from any of the other nodes executed in the chain leading back to the initial trigger node
-* other data specific to the execution, the workflow, or the environment such as information about your n8n instance or the current time
+* Data directly connected to a node's input. For example you can a property called `first_name` sent to the node's input with `{{ $input.item.json.first_name }}` or just `{{ $json.first_name }}`.
+* The output from any of the other nodes that have already executed. For example, to reference a property called `first_name` in the output of a node called "Get user data", you could use `{{ $("Get user data").item.json.first_name }}`.
+* Other data specific to the execution, the workflow, or the environment such as information about your n8n instance or the current time. For example, you could use `{{ $execution.id }}` to get the current execution ID or `{{ $now }}` to output a datetime object for the current time.
 
 ## How to use expressions
 
 In n8n, you can use expressions inside of node parameters by toggling the value field from **Fixed** to **Expression**. You delineate expressions by wrapping them in double curly brackets, like this: `{{ <my-expression> }}`.
 
 Expression fields can include a mixture of expressions and fixed values.
+
+Visit the [transforming data](/new-data/transforming-data.md#expressions) page to learn more about modifying data with expressions, 
 
 ### Building expressions with drag and drop
 
@@ -31,7 +33,7 @@ You can find more specifics about how to reference specific types of data on the
 
 * [Reference linked items in previous nodes](/new-data/referencing-data/itemmatching.md)
 * [Reference current node input](/new-data/referencing-data/current-node-input.md)
-* [Reference output of other nodes](/new-data/referencing-data/output-other-nodes.md)
+* [Reference output from already executed nodes](/new-data/referencing-data/output-other-nodes.md)
 
 <!--
 

@@ -145,7 +145,7 @@ When building workflows, you connect the output of one node to the input of the 
 
 These workflow connections determine:
 
-* **Data flow**: A connection between two nodes passes data from one node's output to another node's input.
+* **Data flow**: A connection between two nodes passes data from one node's output to another node's input. This affects the default data available to a node. Note that you can still access data from any previous nodes by [referencing the node by name](/new-data/referencing-data/output-other-nodes.md).
 * **Execution control**: Once a node finishes executing, n8n follows the connection to execute the next node in the chain. In cases where the workflow branches, the [execution order](/flow-logic/execution-order.md) determines which branch executes first.
 
 By default, nodes perform their actions on each of the items they receive as input in sequence, similar to how a `for` loop works in many programming languages. This means that you don't typically have to add any looping constructs to your workflow to process the multiple items.

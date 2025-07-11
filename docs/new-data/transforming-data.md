@@ -11,7 +11,7 @@ For example, the image below shows the output of an [HTTP Request](/integrations
 
 ## Ways of transforming data
 
-You can transform data in n8n using a number of different mechanisms.
+You can transform data in n8n using a number of different mechanisms. The following sections introduce them, ordered from the least technically involved to the most.
 
 ### Dedicated data transformation nodes
 
@@ -25,16 +25,10 @@ n8n provides a number of nodes meant to make transforming data simple. These can
 * [Split Out](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md): separate a single data item containing a list into multiple items.
 * [Summarize](/integrations/builtin/core-nodes/n8n-nodes-base.summarize.md): aggregate items together, in a manner similar to Excel pivot tables. 
 
-### The Code node
-
-The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) allows you to perform generic, flexible data manipulation with JavaScript or Python in an editor window. You can access all of the input data you'd reference with expressions, using a complete programming language. You just need to return data in the [expected format]() and may need to [manually link items]() so n8n can follow item lineage correctly.
-
-This is the most powerful and flexible option, but also requires the most technical knowledge and time to implement. Use this if there isn't an obvious way to transform your data with existing nodes or if the operations you want to perform are easier for you to express in code.
-
-
 ### Expressions
 
 Expressions also play a role in transforming data. They can be used to set dynamic parameter values based on your existing data and can transform data using [many functions and operators](/code/builtin/data-transformation-functions/index.md).
+
 
 You call data transformation function inside of functions using the dot notation:
 
@@ -57,3 +51,11 @@ The following pages contain functions for working with various types of data:
 * [Numbers](/code/builtin/data-transformation-functions/numbers.md)
 * [Objects](/code/builtin/data-transformation-functions/objects.md)
 * [Strings](/code/builtin/data-transformation-functions/strings.md)
+
+Visit the [referencing data](/new-data/referencing-data/index.md) section to learn more about referencing data with expressions.
+
+### The Code node
+
+The [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) allows you to perform generic, flexible data manipulation with JavaScript or Python in an editor window. You can access all of the input data you'd reference with expressions, using a complete programming language. You just need to return data in the [expected format]() and may need to [manually link items]() so n8n can follow item lineage correctly.
+
+This is the most powerful and flexible option, but also requires the most technical knowledge and time to implement. Use this if there isn't an obvious way to transform your data with existing nodes or if the operations you want to perform are easier for you to express in code.

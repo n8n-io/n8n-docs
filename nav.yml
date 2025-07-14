@@ -1013,7 +1013,6 @@ nav:
         - integrations/builtin/credentials/securityscorecard.md
         - integrations/builtin/credentials/segment.md
         - integrations/builtin/credentials/sekoia.md
-        - integrations/builtin/credentials/weaviate.md
         - Send Email:
           - integrations/builtin/credentials/sendemail/index.md
           - integrations/builtin/credentials/sendemail/gmail.md
@@ -1071,6 +1070,7 @@ nav:
         - integrations/builtin/credentials/vero.md
         - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md
+        - integrations/builtin/credentials/weaviate.md        
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/webflow.md
         - integrations/builtin/credentials/webhook.md

@@ -18,25 +18,27 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Weaviate's documentation](https://weaviate.io/developers/weaviate){:target=_blank .external-link} for more information.
+Refer to [Weaviate's connection documentation](https://docs.weaviate.io/weaviate/connections){:target=_blank .external-link} for more information on how to connect to Weaviate.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
-## Connection type: Weaviate Cloud
+## Using API key
 
-Create your [Weaviate Cloud Database](https://weaviate.io/developers/wcs/quickstart) and provide the following parameters:
+### Connection type: Weaviate Cloud
+
+Create your [Weaviate Cloud Database](https://docs.weaviate.io/cloud/quickstart) and [follow this instruction on how to get both parameters](https://docs.weaviate.io/cloud/quickstart#13-connect-to-your-weaviate-cloud-instance) from your Weaviate Cloud Database:
 
 - **Weaviate Cloud Endpoint**
 - **Weaviate Api Key**
 
 Note: Weaviate provides a free sandbox option for testing.
 
-## Connection type: Weaviate Custom Connection
+### Connection type: Custom Connection
 
-For this Connection Type, you will need to [install Weaviate](https://weaviate.io/developers/weaviate/installation){:target=_blank .external-link} on your own server, and correctly expose it to N8N.
+For this Connection Type, you will need to [deploy Weaviate](https://docs.weaviate.io/deploy){:target=_blank .external-link} on your own server, and correctly expose it to N8N.
 
-You can then provide all the arguments for your custom connection. This configuration is the equivalent to a [Weaviate Custom Connection](https://weaviate.io/developers/weaviate/connections/connect-custom) directly from the client.
+You can then provide all the arguments for your custom connection. This configuration is the equivalent to a [Weaviate Custom Connection](https://docs.weaviate.io/weaviate/connections/connect-custom) directly from the client.
 
-Refer to [Weaviate's authentication documentation](https://weaviate.io/developers/weaviate/configuration/authentication#api-key-authentication){:target=_blank .external-link} for more information on creating and using API keys.
+Refer to [Weaviate's authentication documentation](https://docs.weaviate.io/deploy/configuration/authentication#api-key-authentication){:target=_blank .external-link} for more information on creating and using API keys.
 
 For community support, refer to [Weaviate Forums](https://forum.weaviate.io/).

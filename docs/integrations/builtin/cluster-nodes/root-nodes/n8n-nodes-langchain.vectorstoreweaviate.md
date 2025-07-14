@@ -46,7 +46,7 @@ Another pattern uses the [Vector Store Question Answer Tool](/integrations/built
 ## Node parameters
 
 /// note | Multi Tenancy
-You can separate your data into isolated tenants for the same collection (eg different customers). For that, you must always provide a `Tenant` both for inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs.](https://weaviate.io/developers/weaviate/manage-data/multi-tenancy)
+You can separate your data into isolated tenants for the same collection (eg different customers). For that, you must always provide a `Tenant` both for inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs.](https://docs.weaviate.io/weaviate/manage-collections/multi-tenancy)
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
@@ -58,34 +58,34 @@ You can separate your data into isolated tenants for the same collection (eg dif
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->
 
-* **Weaviate collection**: Enter the name of the Weaviate collection to use.
+* **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 * **Prompt**: Enter the search query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter).
+This Operation Mode includes one **Node option**, the [Search Filter](#search-filter).
 
 ### Insert Documents parameters
 
-* **Weaviate collection**: Enter the name of the Weaviate collection to use.
+* **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 
-This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter).
+This Operation Mode includes one **Node option**, the [Search Filter](#search-filter).
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
-* **Name**: The name of the vector store.
+* **Weaviate Collection**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes one **Node option**, the [Metadata Filter](#metadata-filter).
+This Operation Mode includes one **Node option**, the [Search Filter](#search-filter).
 
 ## Node options
 
-### Metadata Filter
+### Search Filter
 
 When searching for data, use this to match with metadata associated with the document.
 
@@ -124,6 +124,16 @@ All current operators:
 
 When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
+### Connection Timeout and Initial Checks
+You change `init`, `insert`, `query` [timeouts](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#timeout-values), as well as to wether to [skip initial checks](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#initial-connection-checks) when the client is instantiated.
+
+### Multi tenancy
+Define a the `tenant` option in order to insert or query content from a specific tenant. 
+
+Note: Once the collection is created, you cannot enable or disable multi tenancy. A tenant must be passed at the first ingestion in order to enable multi tenancy on a collection.
+
+### Metadata Keys
+You can define which metadata keys you want Weaviate to return on your queries. This can reduce network load, as you will only get properties you have defined. By default, all properties are returned from server.
 
 <!-- temporarily disabled
 ## Templates and examples
@@ -134,7 +144,7 @@ When inserting data, the metadata is set using the document loader. Refer to [De
 
 Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/integrations/vectorstores/weaviate/){:target=_blank .external-link} for more information about the service.
 
-Refer to [Weaviate Installation](https://weaviate.io/developers/weaviate/installation) for a self hosted Weaviate Cluster.
+Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self hosted Weaviate Cluster.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

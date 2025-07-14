@@ -61,6 +61,7 @@ Cron
 [Cc]rypto
 Datadog
 Datastore
+[Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
 DeepL

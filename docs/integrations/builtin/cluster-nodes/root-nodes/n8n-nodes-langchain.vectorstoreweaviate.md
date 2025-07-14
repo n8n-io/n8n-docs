@@ -8,8 +8,7 @@ priority: medium
 
 # Weaviate Vector Store node
 
-Use the Weaviate node to interact with your Weaviate collection as a [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain) or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
-
+Use the Weaviate node to interact with your Weaviate collection as a [vector store](/glossary.md#ai-vector-store). You can insert documents into or retrieve documents from a vector database. You can also retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain) or connect this node directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
 On this page, you'll find the node parameters for the Weaviate node, and links to more resources.
 
 /// note | Credentials
@@ -62,17 +61,20 @@ You can separate your data into isolated tenants for the same collection (eg dif
 * **Prompt**: Enter the search query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes one **Node option**, the [Search Filter](#search-filter).
+This Operation Mode also includes **options**: [Search Filter](#search-filter), [Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks), [Multi Tenancy](#multi-tenancy) and [Metadata Keys](#metadata-keys)
 
 ### Insert Documents parameters
 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 
+This Operation Mode also includes **options**:[Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks) and [Multi Tenancy](#multi-tenancy)
+
+
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 
-This Operation Mode includes one **Node option**, the [Search Filter](#search-filter).
+This Operation Mode also includes **options**: [Search Filter](#search-filter), [Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks), [Multi Tenancy](#multi-tenancy) and [Metadata Keys](#metadata-keys)
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
@@ -81,7 +83,8 @@ This Operation Mode includes one **Node option**, the [Search Filter](#search-fi
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode includes one **Node option**, the [Search Filter](#search-filter).
+This Operation Mode also includes **options**: [Search Filter](#search-filter), [Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks), [Multi Tenancy](#multi-tenancy) and [Metadata Keys](#metadata-keys)
+
 
 ## Node options
 
@@ -127,7 +130,7 @@ When inserting data, the metadata is set using the document loader. Refer to [De
 ### Connection Timeout and Initial Checks
 You change `init`, `insert`, `query` [timeouts](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#timeout-values), as well as to wether to [skip initial checks](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#initial-connection-checks) when the client is instantiated.
 
-### Multi tenancy
+### Multi Tenancy 
 Define a the `tenant` option in order to insert or query content from a specific tenant. 
 
 Note: Once the collection is created, you cannot enable or disable multi tenancy. A tenant must be passed at the first ingestion in order to enable multi tenancy on a collection.

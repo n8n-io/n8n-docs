@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Weaviate's connection documentation](https://docs.weaviate.io/weaviate/connections){:target=_blank .external-link} for more information on how to connect to Weaviate.
+Refer to [Weaviate's connection documentation](https://docs.weaviate.io/weaviate/connections)for more information on how to connect to Weaviate.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -34,11 +34,8 @@ Create your [Weaviate Cloud Database](https://docs.weaviate.io/cloud/quickstart)
 Note: Weaviate provides a free sandbox option for testing.
 
 ### Connection type: Custom Connection
+For this Connection Type, you need to [deploy Weaviate](https://docs.weaviate.io/deploy) on your own server, configured so n8n can access it.
 
-For this Connection Type, you will need to [deploy Weaviate](https://docs.weaviate.io/deploy){:target=_blank .external-link} on your own server, and correctly expose it to N8N.
-
-You can then provide all the arguments for your custom connection. This configuration is the equivalent to a [Weaviate Custom Connection](https://docs.weaviate.io/weaviate/connections/connect-custom) directly from the client.
-
-Refer to [Weaviate's authentication documentation](https://docs.weaviate.io/deploy/configuration/authentication#api-key-authentication){:target=_blank .external-link} for more information on creating and using API keys.
+Refer to [Weaviate's authentication documentation](https://docs.weaviate.io/deploy/configuration/authentication#api-key-authentication) for more information on creating and using API keys.
 
 For community support, refer to [Weaviate Forums](https://forum.weaviate.io/).

@@ -44,14 +44,11 @@ Another pattern uses the [Vector Store Question Answer Tool](/integrations/built
 	
 ## Node parameters
 
-/// note | Multi Tenancy
-You can separate your data into isolated tenants for the same collection (eg different customers). For that, you must always provide a `Tenant` both for inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs.](https://docs.weaviate.io/weaviate/manage-collections/multi-tenancy)
+/// note | Multitenancy
+You can separate your data into isolated tenants for the same collection (for example, for different customers). For that, you must always provide a [Tenant Name](#tenant-name) both when inserting and retrieving objects. [Read more about multi tenancy in Weaviate docs](https://docs.weaviate.io/weaviate/manage-collections/multi-tenancy).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
-
 
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
@@ -61,20 +58,14 @@ You can separate your data into isolated tenants for the same collection (eg dif
 * **Prompt**: Enter the search query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode also includes **options**: [Search Filter](#search-filter), [Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks), [Multi Tenancy](#multi-tenancy) and [Metadata Keys](#metadata-keys)
-
 ### Insert Documents parameters
 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
-
-This Operation Mode also includes **options**:[Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks) and [Multi Tenancy](#multi-tenancy)
-
+* **Embedding Batch Size**: The number of documents to embed in a single batch. The default is 200 documents.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
-
-This Operation Mode also includes **options**: [Search Filter](#search-filter), [Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks), [Multi Tenancy](#multi-tenancy) and [Metadata Keys](#metadata-keys)
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
@@ -83,16 +74,23 @@ This Operation Mode also includes **options**: [Search Filter](#search-filter), 
 * **Weaviate Collection**: Enter the name of the Weaviate collection to use.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
-This Operation Mode also includes **options**: [Search Filter](#search-filter), [Connection Timeout and Initial Checks](#connection-timeout-and-initial-checks), [Multi Tenancy](#multi-tenancy) and [Metadata Keys](#metadata-keys)
+### Include Metadata
 
+Whether to include document metadata.
+
+You can use this with the [Get Many](#get-many) and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) modes.
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 ## Node options
 
-### Search Filter
+### Search Filters
 
-When searching for data, use this to match with metadata associated with the document.
+Available for the [Get Many](#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent) operation modes.
 
-You can use both `AND` and `OR` with different operators. Operators are case insensitive.
+When searching for data, use this to match metadata associated with documents. You can learn more about the operators and query structure in [Weaviate's conditional filters documentation](https://docs.weaviate.io/weaviate/api/graphql/filters#filter-structure).
+
+You can use both `AND` and `OR` with different operators. Operators are case insensitive:
 
 ```json
 {
@@ -111,37 +109,68 @@ You can use both `AND` and `OR` with different operators. Operators are case ins
 }
 ```
 
-All current operators:
+Supported operators:
 
-| Operator           | Required Field(s)                            | Description                                                             |
-| ------------------ | -------------------------------------------- | ----------------------------------------------------------------------- |
-| `'equal'`          | `valueString` or `valueNumber`               | Checks if the property is equal to the given string or number.          |
-| `'like'`           | `valueString`                                | Checks if the string property matches a pattern (e.g. substring match). |
-| `'containsAny'`    | `valueTextArray` (string\[])                 | Checks if the property contains **any** of the given values.      |
-| `'containsAll'`    | `valueTextArray` (string\[])                 | Checks if the property contains **all** of the given values.      |
-| `'greaterThan'`    | `valueNumber`                                | Checks if the property value is greater than the given number.          |
-| `'lessThan'`       | `valueNumber`                                | Checks if the property value is less than the given number.             |
-| `'isNull'`         | `valueBoolean` (true/false)                  | Checks if the property is null or not. ([must enable before ingestion](https://weaviate.io/developers/weaviate/manage-data/collections#set-inverted-index-parameters))                                  |
-| `'withinGeoRange'` | `valueGeoCoordinates` (object with geo data) | Filters by proximity to geographic coordinates.                         |
+| Operator           | Required Field(s)                                    | Description                                                                                                                                                                       |
+|--------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `'equal'`          | `valueString` or `valueNumber`                       | Checks if the property is equal to the given string or number.                                                                                                                    |
+| `'like'`           | `valueString`                                        | Checks if the string property matches a pattern (for example, sub-string match).                                                                                                  |
+| `'containsAny'`    | `valueTextArray` (string\[])                         | Checks if the property contains **any** of the given values.                                                                                                                      |
+| `'containsAll'`    | `valueTextArray` (string\[])                         | Checks if the property contains **all** of the given values.                                                                                                                      |
+| `'greaterThan'`    | `valueNumber`                                        | Checks if the property value is greater than the given number.                                                                                                                    |
+| `'lessThan'`       | `valueNumber`                                        | Checks if the property value is less than the given number.                                                                                                                       |
+| `'isNull'`         | `valueBoolean` (true/false)                          | Checks if the property is null or not. ([must enable before ingestion](https://docs.weaviate.io/weaviate/manage-collections/collection-operations#set-inverted-index-parameters)) |
+| `'withinGeoRange'` | `valueGeoCoordinates` (object with geolocation data) | Filters by proximity to geographic coordinates.                                                                                                                                   |
 
-
-When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
-
-### Connection Timeout and Initial Checks
-You change `init`, `insert`, `query` [timeouts](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#timeout-values), as well as to wether to [skip initial checks](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#initial-connection-checks) when the client is instantiated.
-
-### Multi Tenancy 
-Define a the `tenant` option in order to insert or query content from a specific tenant. 
-
-Note: Once the collection is created, you cannot enable or disable multi tenancy. A tenant must be passed at the first ingestion in order to enable multi tenancy on a collection.
+When inserting data, the document loader sets the metadata. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
 ### Metadata Keys
-You can define which metadata keys you want Weaviate to return on your queries. This can reduce network load, as you will only get properties you have defined. By default, all properties are returned from server.
 
-<!-- temporarily disabled
+You can define which metadata keys you want Weaviate to return on your queries. This can reduce network load, as you will only get properties you have defined. Returns all properties from the server by default.
+
+Available for the [Get Many](#get-many), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent) operation modes.
+
+### Tenant Name
+
+The specific tenant to store or retrieve documents for.
+
+/// note | Must enable at creation
+You must pass a tenant name at first ingestion to enable multitenancy for a collection. You can't enable or disable multitenancy after creation.
+///
+
+### Text Key
+
+The key in the document that contains the embedded text.
+
+### Skip Init Checks
+
+Whether to [skip initialization checks](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#initial-connection-checks) when instantiating the client.
+
+### Init Timeout
+
+Number of seconds to wait before [timing out](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#timeout-values) during initial checks.
+
+### Insert Timeout
+
+Number of seconds to wait before [timing out](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#timeout-values) during inserts.
+
+### Query Timeout
+
+Number of seconds to wait before [timing out](https://docs.weaviate.io/weaviate/client-libraries/typescript/notes-best-practices#timeout-values) during queries.
+
+### GRPC Proxy
+
+A proxy to use for gRPC requests.
+
+### Clear Data
+
+Available for the [Insert Documents](#insert-documents) operation mode.
+
+Whether to clear the collection or tenant before inserting new data.
+
 ## Templates and examples
 
-[[ templatesWidget(page.title, 'weaviate-vector-store') ]] -->
+[[ templatesWidget(page.title, 'weaviate-vector-store') ]]
 
 ## Related resources
 
@@ -150,5 +179,3 @@ Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/inte
 Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self hosted Weaviate Cluster.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
-
-<!-- --8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md" -->

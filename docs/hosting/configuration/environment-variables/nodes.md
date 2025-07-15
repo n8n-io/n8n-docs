@@ -21,7 +21,7 @@ This page lists the environment variables configuration options for managing [no
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
 | `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
 | `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
-| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
+| `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. **Note:** You must specify the exact module names, separated by commas. Using `*` (wildcard) will **not** work for this variable. |
 | `NODES_ERROR_TRIGGER_TYPE` | String | `n8n-nodes-base.errorTrigger` | Specify which node type to use as Error Trigger. |
 | `N8N_CUSTOM_EXTENSIONS` | String | - | Specify the path to directories containing your custom nodes. |
 | `N8N_COMMUNITY_PACKAGES_ENABLED` | Boolean | `true` | Enables (true) or disables (false) the functionality to install and load community nodes. If set to false, neither verified nor unverified community packages will be available, regardless of their individual settings. |

@@ -65,7 +65,7 @@ This release contains core updates, editor improvements, new nodes, node improve
 
 ### Webhook HTML responses
 
-If your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
+Starting with this release, if your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
 
 This has the following implications:
 

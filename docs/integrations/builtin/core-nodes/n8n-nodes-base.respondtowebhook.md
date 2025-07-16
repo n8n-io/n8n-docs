@@ -55,7 +55,8 @@ This has the following implications:
 
 - Your HTML will not be rendered directly in the parent document but in a sandboxed iframe.
 - JavaScript code that accesses the top-level window or local storage will fail.
-- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth).
+- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth). You need to use an alternative approach, like embedding a short-lived access token in the HTML.
+- Any relative url's (e.g. `<form action="/">`) won't work. They need to be absolute.
 
 ## Templates and examples
 
@@ -88,7 +89,7 @@ The node will now have two outputs:
 n8n 1.22.0 added support for returning all data items using the **All Incoming Items** option. n8n recommends upgrading to the latest version of n8n, instead of using the workarounds described in this section.
 ///
 
-The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions.md). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution. 
+The Respond to Webhook node runs once, using the first incoming data item. This includes when using [expressions](/code/expressions.md). You can't force looping using the Loop node: the workflow will run, but the webhook response will still only contain the results of the first execution.
 
 If you need to return more than one data item, choose one of these options:
 

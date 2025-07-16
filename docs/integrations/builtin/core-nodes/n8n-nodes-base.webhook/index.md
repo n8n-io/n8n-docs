@@ -141,8 +141,8 @@ This has the following implications:
 
 - Your HTML will not be rendered directly in the parent document but in a sandboxed iframe.
 - JavaScript code that accesses the top-level window or local storage will fail.
-- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth).
-
+- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth). You need to use an alternative approach, like embedding a short-lived access token in the HTML.
+- Any relative url's (e.g. `<form action="/">`) won't work. They need to be absolute.
 
 ## Templates and examples
 

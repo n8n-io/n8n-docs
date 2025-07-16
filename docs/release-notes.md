@@ -63,16 +63,16 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
 
-## Webhook HTML responses
+### Webhook HTML responses
 
-If your workflow sends an HTML response to a webhook, the content is automatically wrapped in an `<iframe>`. This is a security mechanism to protect the instance users.
+If your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
 
 This has the following implications:
 
-- Your HTML will not be rendered directly in the parent document but in a sandboxed iframe.
-- JavaScript code that accesses the top-level window or local storage will fail.
-- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth). You need to use an alternative approach, like embedding a short-lived access token in the HTML.
-- Any relative url's (e.g. `<form action="/">`) won't work. They need to be absolute.
+- HTML renders in a sandboxed iframe instead of directly in the parent document.
+- JavaScript code that attempts to access the top-level window or local storage will fail.
+- Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
+- Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
 
 ### Contributors
 

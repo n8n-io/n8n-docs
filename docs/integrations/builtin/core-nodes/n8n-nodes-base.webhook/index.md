@@ -135,14 +135,14 @@ Select **Add Option** to view more configuration options. The available options 
 
 ## How n8n secures HTML responses
 
-If your workflow sends an HTML response to a webhook, starting from version `1.103.0`, the content is automatically wrapped in an `<iframe>`. This is a security mechanism to protect the instance users.
+Starting with [n8n version 1.103.0](/release-notes.md#n8n11030), n8n automatically wraps HTML responses to webhooks in `<iframe>` tags. This is a security mechanism to protect the instance users.
 
 This has the following implications:
 
-- Your HTML will not be rendered directly in the parent document but in a sandboxed iframe.
-- JavaScript code that accesses the top-level window or local storage will fail.
-- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth). You need to use an alternative approach, like embedding a short-lived access token in the HTML.
-- Any relative url's (e.g. `<form action="/">`) won't work. They need to be absolute.
+- HTML renders in a sandboxed iframe instead of directly in the parent document.
+- JavaScript code that attempts to access the top-level window or local storage will fail.
+- Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
+- Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
 
 ## Templates and examples
 

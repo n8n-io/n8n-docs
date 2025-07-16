@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Webhook node documentation 
+title: Webhook node documentation
 description: Learn how to use the Webhook node in n8n. Follow technical documentation to integrate Webhook node into your workflows.
 priority: critical
 contentType: [integration, reference]
@@ -132,6 +132,17 @@ Select **Add Option** to view more configuration options. The available options 
 | Response Content-Type | Both: <br /> Respond > When Last Node Finishes <br /> Response Data > First Entry JSON |
 | Response Data | Respond > Immediately |
 | Response Headers | Any |
+
+## How n8n secures HTML responses
+
+If your workflow sends an HTML response to a webhook, starting from version `1.103.0`, the content is automatically wrapped in an `<iframe>`. This is a security mechanism to protect the instance users.
+
+This has the following implications:
+
+- Your HTML will not be rendered directly in the parent document but in a sandboxed iframe.
+- JavaScript code that accesses the top-level window or local storage will fail.
+- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth).
+
 
 ## Templates and examples
 

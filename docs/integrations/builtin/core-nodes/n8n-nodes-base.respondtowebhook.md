@@ -37,7 +37,7 @@ Choose what data to send in the webhook response.
 - **JWT Token**: Respond with a JSON Web Token (JWT).
 - **No Data**: No response payload.
 - **Redirect**: Redirect to a URL set in **Redirect URL**.
-- **Text**: Respond with text set in **Response Body**.
+- **Text**: Respond with text set in **Response Body**. By default the text is sent as HTML (content-type text/html)
 
 ## Node options
 
@@ -46,6 +46,16 @@ Select **Add Option** to view and set the options.
 - **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to use.
 - **Response Headers**: Define the response headers to send.
 - **Put Response in Field**: Available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
+
+## How n8n secures HTML responses
+
+If your workflow sends an HTML response to a webhook, starting from version `1.103.0`, the content is automatically wrapped in an `<iframe>`. This is a security mechanism to protect the instance users.
+
+This has the following implications:
+
+- Your HTML will not be rendered directly in the parent document but in a sandboxed iframe.
+- JavaScript code that accesses the top-level window or local storage will fail.
+- Authentication headers won't be available in the sandboxed iframe (e.g. basic auth).
 
 ## Templates and examples
 

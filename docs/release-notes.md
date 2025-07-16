@@ -63,6 +63,17 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
 
+### Webhook HTML responses
+
+Starting with this release, if your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
+
+This has the following implications:
+
+- HTML renders in a sandboxed iframe instead of directly in the parent document.
+- JavaScript code that attempts to access the top-level window or local storage will fail.
+- Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
+- Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
+
 ### Contributors
 
 [ksg97031](https://github.com/ksg97031){:target=_blank .external-link}  

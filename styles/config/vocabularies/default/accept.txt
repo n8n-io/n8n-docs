@@ -49,6 +49,7 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+Cognito('s)?
 commenters?
 Cohere
 Combinator

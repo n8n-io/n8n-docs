@@ -366,6 +366,7 @@ nav:
           - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
           - Shared drive operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
+        - Google Gemini: integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md

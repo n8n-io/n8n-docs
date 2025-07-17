@@ -137,7 +137,7 @@ By putting the item's properties in the `json` object, n8n can also bundle other
 2. Learn more about how n8n manages [binary data](/new-data/binary-data.md).
 3. n8n uses `pairedItem` metadata to [track which input items generated each item](/new-data/item-linking/concepts.md).
 
-Not all items will include these same sibling keys. You won't have to worry about this extra layer of nesting during normal processing, but you might need to be aware of these when performing [manual data linking](/new-data/item-linking/concepts.md) or working with [binary data](/new-data/binary-data.md).
+Not all items will include these same sibling keys. You won't have to worry about this extra layer of nesting during normal processing, but you might need to be aware of these when performing [manual item linking](/new-data/item-linking/concepts.md) or working with [binary data](/new-data/binary-data.md).
 
 ## How workflows process data
 

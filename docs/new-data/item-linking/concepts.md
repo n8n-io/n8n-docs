@@ -18,7 +18,7 @@ This creates a link between an item and its original source item or items that p
 Item linking works by performing the following techniques:
 
 * **Tracking item origin**: Each item carries hidden metadata that tracks its lineage—which item(s) from the immediately preceding node(s) it originated from. n8n stores this data in `pairedItem` property, a sibling to the main `json` data property.
-* **Backwards calculation**: When n8n evaluates an expression that uses paired items (like `$('Node name').pairedItem(0)`, `$('Node name').itemMatching(0)`, or `$('Node name').item)`), it uses this lineage information to trace back through the execution path (node by node, including handling loops and merges) to find the corresponding item in the given ancestor node.
+* **Backwards calculation**: When n8n evaluates an expression that uses item linking (like `$('Node name').pairedItem(0)`, `$('Node name').itemMatching(0)`, or `$('Node name').item)`), it uses this lineage information to trace back through the execution path (node by node, including handling loops and merges) to find the corresponding item in the given ancestor node.
 * **Internal information**: n8n automatically injects information about the previous node, the specific output used, and the run ID into the data flow. It uses this internal information to help the linked items navigate the workflow structure correctly.
 * **Merge handling**: In cases like merge nodes where an output item might originate from multiple input items (for example, when merging two branches), the `pairedItem` can store the data as an array, allowing n8n to trace back multiple paths if necessary.
 

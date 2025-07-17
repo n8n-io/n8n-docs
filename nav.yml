@@ -190,11 +190,8 @@ nav:
         - Reference linked items in previous nodes: new-data/referencing-data/itemmatching.md
         - Current node input: new-data/referencing-data/current-node-input.md
         - Output of other nodes: new-data/referencing-data/output-other-nodes.md
-      - Data linking:
-        - Concepts: new-data/item-linking/concepts.md
-        - Item linking in the Code node: new-data/item-linking/item-linking-code-node.md
-        - Item linking errors: new-data/item-linking/item-linking-errors.md
       - Transforming data: new-data/transforming-data.md
+      - Date and time data: new-data/date-and-time-data.md
       - Binary data: new-data/binary-data.md
       - Pinning and mocking data: new-data/pinning-and-mocking-data.md
     - Working with data:
@@ -1274,6 +1271,11 @@ nav:
     - User management:
       - Account types: user-management/account-types.md
       - Role types: user-management/rbac/role-types.md
+    - Item linking:
+      - Concepts: new-data/item-linking/concepts.md
+      - Item linking in the Code node: new-data/item-linking/item-linking-code-node.md
+      - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
+      - Item linking errors: new-data/item-linking/item-linking-errors.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md

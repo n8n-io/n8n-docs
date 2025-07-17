@@ -35,6 +35,20 @@ You can find more specifics about how to reference specific types of data on the
 * [Reference current node input](/new-data/referencing-data/current-node-input.md)
 * [Reference output from already executed nodes](/new-data/referencing-data/output-other-nodes.md)
 
+## What to know about item linking
+
+Item linking allows n8n to track items in earlier nodes were used to generate each item in the current node. This makes it easier to associate items across nodes and recombine their data in useful ways.
+
+n8n does this by keeping track of which item or items it used to generate each item for the current node and storing this information with the item in a metadata property called `pairedItem`. Following the `pairedItem` data, it trace the lineage for items back through the workflow. The page on [referencing linked items in previous nodes](/new-data/referencing-data/itemmatching.md) covers how to access linked items in your workflows.
+
+In most cases, n8n can link items automatically. However, when you generate completely new items, split up multiple items, or create your own nodes, you may have to add this information manually. You can find more information in the follow reference pages:
+
+* [Item linking concepts](/new-data/item-linking/concepts.md): A more complete introduction to item linking in n8n.
+* [Item linking in the Code node](/new-data/item-linking/item-linking-code-node.md): learn how to handle item linking in the Code node.
+* [Item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md): learn how to implement item linking when creating your own nodes.
+* [Item linking errors](/new-data/item-linking/item-linking-errors.md): understand the errors you may encounter in the editor UI.
+
+
 <!--
 
 

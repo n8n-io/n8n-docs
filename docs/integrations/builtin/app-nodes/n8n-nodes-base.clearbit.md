@@ -18,7 +18,7 @@ Refer to [Clearbit credentials](/integrations/builtin/credentials/clearbit.md) f
 ## Operations
 
 * Company
-    * Auto-complete company names and retrieve logo and domain
+    * Autocomplete company names and retrieve logo and domain
     * Look up person and company data based on an email or domain
 * Person
     * Look up a person and company data based on an email or domain

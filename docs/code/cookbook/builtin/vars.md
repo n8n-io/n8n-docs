@@ -25,5 +25,5 @@ contentType: reference
 	```
 
 /// note | `vars` and `env`
-`vars` gives access to user-created variables. It's part of the [Environments](/source-control-environments/index.md) feature. `env` gives access to the [configuration environment variables](/hosting/configuration/environment-variables/index.md) for your n8n instance. 
+`vars` gives access to user-created variables. It's part of the [Environments](/source-control-environments/index.md) feature. `env` gives access to the [configuration environment variables](/hosting/configuration/environment-variables.md) for your n8n instance. 
 ///

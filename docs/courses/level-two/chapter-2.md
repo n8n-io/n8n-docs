@@ -115,7 +115,7 @@ To begin:
 2. Add the **Date & Time node** to Round Up the created Date from the datastore to End of Month. Output this to field new-date. Include all input fields.
 3. Add the **If node** to check if that new rounded date is after `1960-01-01 00:00:00`.
 4. Add the **Wait node** to the True output of that node and set it to wait for one minute.
-5. Add the **Edit Fields (Set) node** to set a new field called outputValue to a String containing new-date. Include all input fields.
+5. Add the **Edit Fields (Set) node** to set a new field called `outputValue` to a String containing new-date. Include all input fields.
 6. Add the **Schedule Trigger node** at the beginning of the workflow to trigger it every 30 minutes. (You can keep the [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) for testing!)
 
 ??? note "Show me the solution"

@@ -107,7 +107,7 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 
 ### Optional: Use a GitHub Action to automate pulls
 
-If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} and the [n8n API](/api/index.md) to automatically pull every time you push new work to your production or main branch.
+If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} and the [n8n API](/api/overview.md) to automatically pull every time you push new work to your production or main branch.
 
 --8<-- "_snippets/source-control-environments/github-action.md"
 

@@ -112,7 +112,7 @@ nano .env
 
 The file contains inline comments to help you know what to change.
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
+Refer to [Environment variables](/hosting/configuration/environment-variables.md) for n8n environment variables details.
 
 ## The Docker Compose file
 

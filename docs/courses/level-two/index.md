@@ -31,7 +31,7 @@ You will learn all this by completing short practical exercises after the theore
 
 To follow along this course (at a comfortable pace) you will need the following:
 
-- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm.md) or [n8n Cloud](/manage-cloud/overview.md).
+- **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm.md) or [n8n Cloud](/manage-cloud/index.md).
 - **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg){:target="_blank" .external-link} to get your unique ID and other credentials you will need in the course.
 - **Basic n8n skills**: We strongly recommend taking the [Level 1 course](/courses/level-one/index.md) before this one.
 - **Basic JavaScript understanding**

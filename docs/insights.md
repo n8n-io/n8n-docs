@@ -47,7 +47,7 @@ This setting helps you calculate how much time automating a process saves over t
 
 ## Disable or configure insights metrics collection
 
-If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](/hosting/configuration/environment-variables/insights.md).
+If you self-host n8n, you can disable or configure insights and metrics collection using [environment variables](/hosting/configuration/environment-variables.md#insights).
 
 ## Insights FAQs
 <!-- vale from-microsoft.HeadingPunctuation = NO -->

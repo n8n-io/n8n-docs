@@ -7,7 +7,7 @@ contentType: howto
 
 # Configuration
 
-You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/configuration/environment-variables/index.md).
+You can change n8n's settings using environment variables. For a full list of available configurations see [Environment Variables](/hosting/configuration/environment-variables.md).
 
 ## Set environment variables by command line
 
@@ -69,7 +69,7 @@ Example file:
 ```
 
 /// note | Formatting as JSON
-You can't always work out the correct JSON from the [Environment variables reference](/hosting/configuration/environment-variables/index.md). For example, to set `N8N_METRICS` to `true`, you need to do:
+You can't always work out the correct JSON from the [Environment variables reference](/hosting/configuration/environment-variables.md). For example, to set `N8N_METRICS` to `true`, you need to do:
 
 ```json
 {
@@ -101,7 +101,7 @@ n8n:
 
 You can append `_FILE` to individual environment variables to provide their configuration in a separate file, enabling you to avoid passing sensitive details using environment variables. n8n loads the data from the file with the given name, making it possible to load data from [Docker-Secrets](https://docs.docker.com/engine/swarm/secrets/){:target=_blank .external-link} and [Kubernetes-Secrets](https://kubernetes.io/docs/concepts/configuration/secret/){:target=_blank .external-link}. 
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for details on each variable.
+Refer to [Environment variables](/hosting/configuration/environment-variables.md) for details on each variable.
 
 While most environment variables can use the `_FILE` suffix, it's more beneficial for sensitive data such as [credentials](/glossary.md#credential-n8n) and database configuration. Here are some examples: 
 

@@ -9,7 +9,7 @@ description: How LangChain concepts map to n8n, and which n8n nodes to use.
 
 This page explains how LangChain concepts and features map to n8n nodes.
 
-This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/index.md).
+This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/root-nodes/index.md).
 
 
 /// note | n8n implements LangChain JS

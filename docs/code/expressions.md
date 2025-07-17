@@ -21,7 +21,7 @@ n8n additionally supports two libraries:
 - [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
 
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/overview.md) for more information on working with data in your workflows.
 ///
 
 ## Writing expressions
@@ -74,7 +74,7 @@ This expression:
 
 ### Example: Writing longer JavaScript
 
-An expression contains one line of JavaScript. This means you cannot do things like variable assignments or multiple standalone operations.
+An expression contains one line of JavaScript. This means you can't do things like variable assignments or multiple standalone operations.
 
 To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression.
 

@@ -466,3 +466,16 @@
 .bottom-link .footer-link {
 	color: #20b69e;
 }
+
+#__nav_1_label,
+#__nav_2_label,
+#__nav_3_label,
+#__nav_4_label,
+#__nav_5_label,
+.md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav__container {
+	color: rgb(144, 146, 152);
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}

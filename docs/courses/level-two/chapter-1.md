@@ -171,7 +171,7 @@ The two most common operations for data transformation are:
 
 There are several ways to transform data for the purposes mentioned above:
 
-- Use n8n's [data transformation nodes](/data/index.md#data-transformation-nodes). Use these nodes to modify the structure of incoming data that contain lists (arrays) without needing to use JavaScript code in the **Code node**:
+- Use n8n's [data transformation nodes](/data/overview.md#data-transformation-nodes). Use these nodes to modify the structure of incoming data that contain lists (arrays) without needing to use JavaScript code in the **Code node**:
 	- Use the [**Split Out node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitout.md) to separate a single data item containing a list into multiple items.
 	- Use the [**Aggregate node**](/integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md) to take separate items, or portions of them, and group them together into individual items.
 - Use the **Code node** to write JavaScript functions to modify the data structure of incoming data using the **Run Once for All Items** mode:
@@ -194,7 +194,8 @@ There are several ways to transform data for the purposes mentioned above:
       ];
 	```
 
-These JavaScript examples assume your entire input is what you want to transform. As in the exercise above, you can also execute either operation on a specific field by identifying that in the items list, for example, if our workEmail example had multiple emails in a single field, we could run some code like this:
+These JavaScript examples assume your entire input is what you want to transform. As in the exercise above, you can also execute either operation on a specific field by identifying that in the items list, for example, if our `workEmail` example had multiple emails in a single field, we could run some code like this:
+
 ```javascript
 let items = $input.all();
 return items[0].json.workEmail.map(item => {

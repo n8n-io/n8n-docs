@@ -12,7 +12,7 @@ n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming.md), in 
 ///
 ## Setup
 
-To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/index.md))
+To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables.md))
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|

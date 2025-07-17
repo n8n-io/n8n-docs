@@ -62,11 +62,11 @@ CPython
 CRMs?
 Cron
 [Cc]rypto
-[Cc]ryptocurrenc(y|ies)
+[Cc]ryptocurnc(y|ies)
 [Cc]ybersecurity
 Datadog
 Datastore
-datetime
+[Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
 DeepL
@@ -163,6 +163,7 @@ Mocean
 Motorhead
 [Mm]ultimodal
 [Mm]ultiple
+[Mm]ultitenan(cy|t)
 n8n
 nanoids
 [Nn]amespaces?
@@ -286,6 +287,7 @@ VMs?
 Vonage
 Vuex
 Wasabi's
+Weaviate('s)?
 Webex
 Webflow
 [Ww]ebsockets?

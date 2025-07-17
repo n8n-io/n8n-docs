@@ -11,6 +11,7 @@ priority: high
 You can use these credentials to authenticate the following nodes:
 
 * [Embeddings Google Gemini](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md)
+* [Google Gemini](/integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md)
 * [Google Gemini Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md)
 * [Embeddings Google PaLM](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md)
 

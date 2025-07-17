@@ -59,6 +59,7 @@ CPython
 CRM
 Cron
 [Cc]rypto
+[Dd]atacenters?
 Datadog
 Datastore
 [Dd]atetimes?

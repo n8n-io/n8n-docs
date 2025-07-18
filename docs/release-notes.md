@@ -98,7 +98,7 @@ This has the following implications:
 <div class="n8n-new-features" markdown> 
 ### Built-in Metrics for AI Evaluations
 
-Using evaluations is a best practice for any AI solution, and a must if reliability and predictability are business-critical. With this release, we’ve made it easier to set up evaluations in n8n by introducing a set of built-in metrics. These metrics can review AI responses and assign scores based on factors like correctness, helpfulness, and more.
+Using evaluations is a best practice for any AI solution, and a must if reliability and predictability are business-critical. With this release, we’ve made it easier to set up evaluations in n8n by introducing a set of built-in metrics. These metrics can review AI responses and assign scores based on factors like correctness, helpfulness, and more.<br><br>
 
 
 You can run regular evaluations and review scores over time as a way to monitor your AI workflow's performance. You can also compare results across different models to help guide model selection, or run evaluations before and after a prompt change to support data-driven, iterative building.

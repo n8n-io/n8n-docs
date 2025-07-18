@@ -133,7 +133,7 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 </figure>
 <br>
 
-[Learn more](/advanced-ai/evaluations/overview/index.md) about setting up and customizing evaluations.
+[Learn more](/advanced-ai/evaluations/overview.md) about setting up and customizing evaluations.
 </div> 
 
 ### AI Agent Tool node
@@ -159,7 +159,7 @@ This setup is especially useful for building complex systems that function like 
 <br>
 <figure markdown="span">
     ![](/_images/release-notes/AI_Agent_Tool.png)
-    <figcaption>Evaluation workflow</figcaption>
+    <figcaption>AI Agent Tool node</figcaption>
 </figure>
 <br>
 
@@ -309,8 +309,8 @@ The Model Selector node is especially useful in evaluation or production scenari
 
 <br>
 <figure markdown="span">
-    ![Model Selector node](/_images/release-notes/Model_selector.node.png)
-    <figcaption>Evaluation workflow</figcaption>
+    ![Model Selector node](/_images/release-notes/Model_selector_node.png)
+    <figcaption>Model Selector node</figcaption>
 </figure>
 <br>
 
@@ -404,7 +404,7 @@ Learn more about implementing RAG in n8n [here](/advanced-ai/rag-in-n8n.md).
 <br>
 <figure markdown="span">
     ![RAG starter template](/_images/release-notes/RAG_starter_template.png)
-    <figcaption>Evaluation workflow</figcaption>
+    <figcaption>RAG starter template</figcaption>
 </figure>
 <br>
 

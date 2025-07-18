@@ -21,7 +21,7 @@ The message to send to the chat.
 
 ### Wait for User Reply
 
-Set whether the workflow execution should wait for a response from the user (turned on) or continue immediately after sending the message (turned off).
+Set whether the workflow execution should wait for a response from the user (enabled) or continue immediately after sending the message (disabled).
 
 ## Node options
 

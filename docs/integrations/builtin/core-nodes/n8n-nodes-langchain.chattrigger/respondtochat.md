@@ -17,7 +17,7 @@ The Respond to Chat node requires a [Chat Trigger](/integrations/builtin/core-no
 
 ### Message
 
-This is the message that will be sent into the chat.
+The message to send to the chat.
 
 ### Wait for User Reply
 

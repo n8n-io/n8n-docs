@@ -126,6 +126,13 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 
 - Registered Community Edition enables analysis of one evaluation in the **Evaluations** tab which allows easy comparison of evaluation runs over time. Pro and Enterprise plans allow unlimited evaluations in the **Evaluations** tab.
 
+<br>
+<figure markdown="span">
+    ![Built-in Metrics](/_images/release-notes/Built-in_metrics.png)
+    <figcaption>Evaluation workflow</figcaption>
+</figure>
+<br>
+
 [Learn more](/advanced-ai/evaluations/overview/index.md) about setting up and customizing evaluations.
 </div> 
 
@@ -148,6 +155,13 @@ This setup is especially useful for building complex systems that function like 
 - The orchestrating agent does not pass full execution context by default. Any necessary context must be included in the prompt.
 
 **AI Agent Tool** nodes makes it easier to build layered, agent-to-agent workflows without relying on sub-workflows, helping you move faster when building and debugging multi-agent systems.
+
+<br>
+<figure markdown="span">
+    ![AI Agent Tool](/_images/release-notes/AI_Agent_Tool.png)
+    <figcaption>Evaluation workflow</figcaption>
+</figure>
+<br>
 
 ### Contributors
 
@@ -278,20 +292,27 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.0...n8n@1.100.
 
 This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
 
-### Model Selector Node
+### Model Selector node
 
-The [Model Selector Node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md) gives you more control when working with multiple LLMs in your workflows.
+The [Model Selector node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md) gives you more control when working with multiple LLMs in your workflows.
 
 Use it to determine which connected model should handle a given input, based on conditions like expressions or global variables. This makes it easier to implement model routing strategies, such as switching models based on performance, task type, cost, or availability.
 
-🛠️ **How to:** Connect multiple model nodes to the Model Selector Node, then configure routing conditions in the node’s settings.
+🛠️ **How to:** Connect multiple model nodes to the Model Selector node, then configure routing conditions in the node’s settings.
 
 🧠 **Keep in mind:** 
 
 - Rules are evaluated in order. The first matching rule determines which model is used even if others would also match.
 - As a sub-node, expressions behave differently here: they always resolves to the first item rather than resolving for each item in turn.
 
-The Model Selector Node is especially useful in evaluation or production scenarios where routing logic between models needs to adapt based on performance, cost, availability, or dataset-specific needs.
+The Model Selector node is especially useful in evaluation or production scenarios where routing logic between models needs to adapt based on performance, cost, availability, or dataset-specific needs.
+
+<br>
+<figure markdown="span">
+    ![Model Selector node](/_images/release-notes/Model_selector.node.png)
+    <figcaption>Evaluation workflow</figcaption>
+</figure>
+<br>
 
 
 ### Support for OIDC (OpenID Connect) authentication
@@ -380,6 +401,13 @@ Enable semantic search and the retrieval of unstructured data  for increased qua
 - Search for **RAG starter template** in the search bar of the Nodes panel to insert it into your workflow.
 
 Learn more about implementing RAG in n8n [here](/advanced-ai/rag-in-n8n.md).
+<br>
+<figure markdown="span">
+    ![RAG starter template](/_images/release-notes/RAG_starter_template.png)
+    <figcaption>Evaluation workflow</figcaption>
+</figure>
+<br>
+
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
 

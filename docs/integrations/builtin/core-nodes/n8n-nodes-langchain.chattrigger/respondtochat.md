@@ -31,7 +31,7 @@ Choose whether you want to commit the messages from the Respond to Chat node to 
 
 ### Limit Wait Time
 
-When Wait for User Reply is turned on, this option decides whether the workflow will automatically resume execution after a specific limit (turned on) or not (turned off).
+When you enable **Wait for User Reply**, this option decides whether the workflow automatically resumes execution after a specific limit (enabled) or not (disabled).
 
 ## Related resources
 

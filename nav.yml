@@ -52,6 +52,7 @@ nav:
         - Executions:
           - workflows/executions/index.md
           - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
+          - Dirty nodes: workflows/executions/dirty-nodes.md
           - Workflow-level executions: workflows/executions/single-workflow-executions.md
           - All executions: workflows/executions/all-executions.md
           - Custom executions data: workflows/executions/custom-executions-data.md
@@ -268,6 +269,7 @@ nav:
         - Automizy: integrations/builtin/app-nodes/n8n-nodes-base.automizy.md
         - Autopilot: integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md
         - AWS Certificate Manager: integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md
+        - AWS Cognito: integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md
         - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
         - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
         - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
@@ -365,6 +367,7 @@ nav:
           - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
           - Shared drive operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
+        - Google Gemini: integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md

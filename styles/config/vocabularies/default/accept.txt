@@ -49,6 +49,7 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+Cognito('s)?
 commenters?
 Cohere
 Combinator
@@ -59,6 +60,7 @@ CPython
 CRM
 Cron
 [Cc]rypto
+[Dd]atacenters?
 Datadog
 Datastore
 [Dd]atetimes?

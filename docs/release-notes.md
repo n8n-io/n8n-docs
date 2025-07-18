@@ -35,6 +35,17 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.99.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.1...n8n@1.99.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-18
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.102.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.3...n8n@1.102.4){:target=_blank .external-link} for this version.<br />

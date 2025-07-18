@@ -158,7 +158,7 @@ This setup is especially useful for building complex systems that function like 
 
 <br>
 <figure markdown="span">
-    ![AI Agent Tool](/_images/release-notes/AI_Agent_Tool.png)
+    ![](/_images/release-notes/AI_Agent_Tool.png)
     <figcaption>Evaluation workflow</figcaption>
 </figure>
 <br>

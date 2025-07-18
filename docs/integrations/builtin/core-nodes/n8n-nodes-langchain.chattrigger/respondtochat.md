@@ -27,7 +27,7 @@ Set whether the workflow execution should wait for a response from the user (tur
 
 ### Add Memory Input Connection
 
-Choose whether you want to commit the messages from the Respond to Chat node into a connected memory. Using a shared memory between an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/index.md) and the Respond to Chat node will attach the same session key to these messages and let you capture the full message history.
+Choose whether you want to commit the messages from the Respond to Chat node to a connected memory. Using a shared memory between an agent or chain [root node](/integrations/builtin/cluster-nodes/root-nodes/index.md) and the Respond to Chat node attaches the same session key to these messages and lets you capture the full message history.
 
 ### Limit Wait Time
 

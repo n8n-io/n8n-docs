@@ -102,10 +102,10 @@ Using evaluations is a best practice for any AI solution, and a must if reliabil
 
 
 You can run regular evaluations and review scores over time as a way to monitor your AI workflow's performance. You can also compare results across different models to help guide model selection, or run evaluations before and after a prompt change to support data-driven, iterative building.
+<br><br>
+As with all evaluations in n8n, you’ll need a dataset that includes the inputs you want to test. For some evaluations, the dataset must also include expected outputs (ground truth) to compare against. The evaluation workflow runs each input through the portion you're testing to generate a response. The built-in metric scores each response based on the aspect you're measuring, allowing you to compare results before and after changes or track trends over time in the Evaluations tab. <br><br>
 
-As with all evaluations in n8n, you’ll need a dataset that includes the inputs you want to test. For some evaluations, the dataset must also include expected outputs (ground truth) to compare against. The evaluation workflow runs each input through the portion you're testing to generate a response. The built-in metric scores each response based on the aspect you're measuring, allowing you to compare results before and after changes or track trends over time in the Evaluations tab.
-
-You can still define your own custom metrics, but for common use cases, the built-in options make it much faster to implement.
+You can still define your own custom metrics, but for common use cases, the built-in options make it much faster to implement. <br><br>
 
 🛠️ **How to:** 
 
@@ -129,7 +129,7 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 <br>
 <figure markdown="span">
     ![Built-in Metrics](/_images/release-notes/Built-in_metrics.png)
-    <figcaption>Evaluation workflow</figcaption>
+    <figcaption>Built-in Metrics</figcaption>
 </figure>
 <br>
 

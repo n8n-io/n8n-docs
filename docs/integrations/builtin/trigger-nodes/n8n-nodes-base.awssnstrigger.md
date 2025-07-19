@@ -16,3 +16,15 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [AWS SNS Trigger integrations](https://n8n.io/integrations/aws-sns-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* New AWS SNS event
+
+## Related resources
+
+n8n provides an app node for AWS SNS. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.awssns.md).
+
+View [example workflows and related content](https://n8n.io/integrations/aws-sns-trigger/) on n8n's website.
+
+Refer to [AWS SNS's documentation](https://docs.aws.amazon.com/sns/latest/api/welcome.html) for details about their API.

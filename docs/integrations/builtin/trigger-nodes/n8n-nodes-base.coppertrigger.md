@@ -16,3 +16,17 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Copper Trigger integrations](https://n8n.io/integrations/copper-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* Delete
+* New
+* Update
+
+## Related resources
+
+n8n provides an app node for Copper. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.copper.md).
+
+View [example workflows and related content](https://n8n.io/integrations/copper-trigger/) on n8n's website.
+
+Refer to [Copper's documentation](https://developer.copper.com/) for details about their API.

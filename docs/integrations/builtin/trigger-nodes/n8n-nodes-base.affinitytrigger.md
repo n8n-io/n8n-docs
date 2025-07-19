@@ -16,3 +16,48 @@ You can find authentication information for this node [here](/integrations/built
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Affinity Trigger integrations](https://n8n.io/integrations/affinity-trigger/){:target=_blank .external-link} page.
 ///
+
+## Events
+
+* Field value
+  * Created
+  * Deleted
+  * Updated
+* Field
+  * Created
+  * Deleted
+  * Updated
+* File
+  * Created
+  * Deleted
+* List entry
+  * Created
+  * Deleted
+* List
+  * Created
+  * Deleted
+  * Updated
+* Note
+  * Created
+  * Deleted
+  * Updated
+* Opportunity
+  * Created
+  * Deleted
+  * Updated
+* Organization
+  * Created
+  * Deleted
+  * Updated
+* Person
+  * Created
+  * Deleted
+  * Updated
+
+## Related resources
+
+n8n provides an app node for Affinity. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.affinity.md).
+
+View [example workflows and related content](https://n8n.io/integrations/affinity-trigger/) on n8n's website.
+
+Refer to [Affinity's documentation](https://api-docs.affinity.co/) for details about their API.

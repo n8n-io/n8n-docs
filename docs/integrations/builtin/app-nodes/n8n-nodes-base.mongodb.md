@@ -8,7 +8,7 @@ priority: medium
 
 # MongoDB node
 
-Use the MongoDB node to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents. 
+Use the MongoDB node to automate work in MongoDB, and integrate MongoDB with other applications. n8n has built-in support for a wide range of MongoDB features, including aggregating, updating, finding, deleting, and getting documents.  All operations in this Node make use of the [MongoDB Node driver](https://www.mongodb.com/docs/drivers/node/current/).
 
 On this page, you'll find a list of operations the MongoDB node supports and links to more resources.
 
@@ -27,6 +27,10 @@ Refer to [MongoDB credentials](/integrations/builtin/credentials/mongodb.md) for
 * Find and update documents
 * Insert documents
 * Update documents
+* Create search indexes
+* Update search indexes
+* Delete search indexes
+* List search indexes
 
 ## Templates and examples
 

@@ -44,18 +44,18 @@ The rest of the steps in this guide require you to set the GCP instance as the K
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-hosting/tree/main){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b gcp
+git clone https://github.com/n8n-io/n8n-hosting.git
 ```
 
 And change directory to the root of the repository you cloned:
 
 ```shell
-cd n8n-kubernetes-hosting
+cd kubernetes
 ```
 
 ## Configure Postgres

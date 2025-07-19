@@ -11,6 +11,8 @@ To accomplish this task, you first need to make a copy of this table in your Air
 
 <iframe class="airtable-embed" src="https://airtable.com/embed/shrNX9tjPkVLABbNz?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
+> **Important:** When setting up your Airtable, ensure that the `customerSince` column is configured as a Date type field with the **Include time** option enabled. Without this setting, you may encounter errors in step 4 when updating the table.
+
 Next, build a small workflow that merges data from Airtable and a REST Countries API:
 
 1. Use the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md) to list the data in the Airtable table named `customers`.

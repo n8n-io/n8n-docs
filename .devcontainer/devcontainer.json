@@ -1,0 +1,7 @@
+git clone https://github.com/<your-username>/n8n-docs.git
+cd n8n-docs
+pip install -r requirements.txt
+pip install mkdocs-material{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {}
+}

@@ -729,6 +729,7 @@ nav:
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - Cerebras Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcerebras.md
           - Cohere Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md
           - DeepSeek Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
@@ -818,6 +819,7 @@ nav:
         - integrations/builtin/credentials/cal.md
         - integrations/builtin/credentials/calendly.md
         - integrations/builtin/credentials/carbonblack.md
+        - integrations/builtin/credentials/cerebras.md
         - integrations/builtin/credentials/chargebee.md
         - integrations/builtin/credentials/circleci.md
         - integrations/builtin/credentials/ciscomeraki.md

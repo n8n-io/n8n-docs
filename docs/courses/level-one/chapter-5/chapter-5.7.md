@@ -11,7 +11,7 @@ In this step of the workflow, you will learn how to schedule your workflow so th
 
 [[ workflowDemo("file:////courses/level-one/finished.json") ]]
 
-The workflow you've built so far executes only when you click on **Test Workflow**. But Nathan needs it to run automatically every Monday morning. You can do this with the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
+The workflow you've built so far executes only when you click on **Execute Workflow**. But Nathan needs it to run automatically every Monday morning. You can do this with the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md), which allows you to schedule workflows to run periodically at fixed dates, times, or intervals.
 
 To achieve this, we'll remove the Manual Trigger node we started with and replace it with a Schedule Trigger node instead.
 

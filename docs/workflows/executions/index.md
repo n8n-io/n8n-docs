@@ -12,7 +12,7 @@ An execution is a single run of a workflow.
 
 There are two execution modes:
 
-* Manual: run workflows manually when testing. Select **Test Workflow** to start a manual execution. You can do manual executions of active workflows, but n8n recommends keeping your workflow set to **Inactive** while developing and testing.
+* Manual: run workflows manually when testing. Select **Execute Workflow** to start a manual execution. You can do manual executions of active workflows, but n8n recommends keeping your workflow set to **Inactive** while developing and testing.
 * Production: a production workflow is one that runs automatically. To enable this, set the workflow to **Active**.
 
 

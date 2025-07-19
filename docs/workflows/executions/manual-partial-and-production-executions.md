@@ -7,7 +7,7 @@ contentType: explanation
 
 # Manual, partial, and production executions
 
-There are some important differences in how n8n executes workflows manually (by clicking the **Test Workflow** button) and automatically (when the workflow is **Active** and triggered by an event or schedule).
+There are some important differences in how n8n executes workflows manually (by clicking the **Execute Workflow** button) and automatically (when the workflow is **Active** and triggered by an event or schedule).
 
 ## Manual executions
 

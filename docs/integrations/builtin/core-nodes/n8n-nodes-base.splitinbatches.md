@@ -81,9 +81,9 @@ Copy the workflow file above and paste into your instance, or manually build it 
 4. Add the Loop Over Items node.
 5. Configure Loop Over Items: set the batch size to `1` in the **Batch Size** field.
 6. Add the RSS Feed Read node.
-7. Select **Test Workflow**. This runs the workflow to load data into the RSS Feed Read node.
+7. Select **Execute Workflow**. This runs the workflow to load data into the RSS Feed Read node.
 8. Configure RSS Feed Read: map `url` from the input to the **URL** field. You can do this by dragging and dropping from the **INPUT** panel, or using this expression: `{{ $json.url }}`.
-9. Select **Test Workflow** to run the workflow and see the resulting data.
+9. Select **Execute Workflow** to run the workflow and see the resulting data.
 
 ### Check that the node has processed all items
 

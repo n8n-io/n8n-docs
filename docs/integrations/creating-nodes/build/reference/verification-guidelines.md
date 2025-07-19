@@ -6,7 +6,7 @@ contentType: reference
 # Community node verification guidelines
 
 /// note | Do you want n8n to verify your node?
-Consider following these guidelines while building your node if you want to submit it for verification by n8n. Any user with verified community nodes enabled can discover and install verified nodes from n8n's nodes panel.
+Consider following these guidelines while building your node if you want to submit it for verification by n8n. Any user with verified community nodes enabled can discover and install verified nodes from n8n's nodes panel across all deployment types (self-hosted and n8n Cloud).
 ///
 
 ## Package source verification

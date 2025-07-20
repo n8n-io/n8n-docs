@@ -1167,6 +1167,7 @@ nav:
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Oracle Cloud: hosting/installation/server-setups/oracle.md
         - Docker Compose: hosting/installation/server-setups/docker-compose.md
       - Updating: hosting/installation/updating.md
     - Configuration:

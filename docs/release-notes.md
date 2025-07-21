@@ -35,6 +35,23 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.104.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.104.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-21
+
+This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
+
+### Contributors
+
+[nunulk](https://github.com/nunulk){:target=_blank .external-link}  
+[iaptsiauri](https://github.com/iaptsiauri){:target=_blank .external-link}  
+[KGuillaume-chaps](https://github.com/KGuillaume-chaps){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
 ## n8n@1.101.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.101.2...n8n@1.101.3){:target=_blank .external-link} for this version.<br />

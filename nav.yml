@@ -229,6 +229,7 @@ nav:
           - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md
           - Templates and examples: integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
+        - Respond to Chat: integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - RSS Feed Trigger: integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md

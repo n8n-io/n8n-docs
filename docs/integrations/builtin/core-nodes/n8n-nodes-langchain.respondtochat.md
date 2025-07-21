@@ -7,7 +7,7 @@ priority: critical
 
 # Respond to Chat node
 
-Use the Respond to Chat node in correspondence with the Chat Trigger node to send a response into the chat and optionally wait for a response from the user. This allows you to have multiple chat interactions within a single execution and enables human-in-the-loop use cases in the chat.
+Use the Respond to Chat node in correspondence with the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to send a response into the chat and optionally wait for a response from the user. This allows you to have multiple chat interactions within a single execution and enables human-in-the-loop use cases in the chat.
 
 /// note | Chat Trigger node
 The Respond to Chat node requires a [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) node to be present in the workflow, with the [Response Mode](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md#response-mode) set to 'Using Response Nodes'.

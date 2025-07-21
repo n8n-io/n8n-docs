@@ -236,6 +236,7 @@ Supabase
 [Ss]ysdig
 [Ss]yslog
 Tapfiliate
+[Tt]emplatiz(e|ed|ing)
 Textract
 There are
 [Tt]imesheet

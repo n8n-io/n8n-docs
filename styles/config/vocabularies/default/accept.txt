@@ -110,7 +110,7 @@ Gumroad
 [Gg]zip
 Hetzner
 Homeserver
-[Hh]ostname
+[Hh]ostnames?
 howto
 HubSpot
 Humantic
@@ -253,6 +253,7 @@ Twilio
 Typeform
 [Uu]narchive
 [Uu]ncomment
+[Uu]nencrypted
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
 [Uu]noptimized

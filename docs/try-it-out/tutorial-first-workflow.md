@@ -69,7 +69,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
     1. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
     1. In the **Expression** field, enter the following expression:
     ```js
-    {{ $today.minus({days: 7}).toFormat('yyyy-MM-dd') }}
+    {{ $today.minus(7, 'days') }}
     ```
     This generates a date in the correct format, seven days before the current date.
 

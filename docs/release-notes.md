@@ -740,7 +740,7 @@ Partial execution for AI tools is available now for all tools - making it even e
 To use this feature you can either:
 
 - Click the **Play** button on the tool you want to execute directly from the canvas view.
-- Open the tool’s **Node Details View** and select **"Test step"** to run it from there.
+- Open the tool’s **Node Details View** and select **"Execute Step"** to run it from there.
 
 If you have previously run the workflow, the input and output will be prefilled with data from the last execution. A pop-up form will open where you can manually fill in the parameters before executing your test.
 

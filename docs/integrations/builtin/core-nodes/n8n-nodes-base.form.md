@@ -197,7 +197,7 @@ While building or testing a workflow, use the **Test URL** in the [n8n Form Trig
 
 There are two ways to test:
 
-- Select **Test Step**. n8n opens the form. When you submit the form, n8n runs the node and any previous nodes, but not the rest of the workflow.
+- Select **Execute Step**. n8n opens the form. When you submit the form, n8n runs the node and any previous nodes, but not the rest of the workflow.
 - Select **Execute Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
 
 ### Production workflows

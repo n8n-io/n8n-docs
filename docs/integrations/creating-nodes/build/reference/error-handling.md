@@ -3,22 +3,30 @@
 contentType: reference
 ---
 
-# Error Handling in n8n Nodes
+# Error handling in n8n nodes
 
 Proper error handling is crucial for creating robust n8n nodes that provide clear feedback to users when things go wrong. n8n provides two specialized error classes to handle different types of failures in node implementations:
 
--   **`NodeApiError`** - For API-related errors and external service failures
--   **`NodeOperationError`** - For operational errors, validation failures, and configuration issues
+- [**`NodeApiError`**](#nodeapierror): For API-related errors and external service failures
+- [**`NodeOperationError`**](#nodeoperationerror): For operational errors, validation failures, and configuration issues
 
 ## NodeApiError
 
-Use `NodeApiError` when dealing with external API calls and HTTP requests. This error class is specifically designed to handle API response errors and provides enhanced features for parsing and presenting API-related failures such as HTTP request failures, external API errors, authentication/authorization failures, rate limiting errors, and service unavailable errors.
+Use `NodeApiError` when dealing with external API calls and HTTP requests. This error class is specifically designed to handle API response errors and provides enhanced features for parsing and presenting API-related failures such as:
+
+ * HTTP request failures
+ * external API errors
+ * authentication/authorization failures
+ * rate limiting errors
+ * service unavailable errors
+ 
+Initialize new `NodeApiError` instances using the following pattern:
 
 ```typescript
 new NodeApiError(node: INode, errorResponse: JsonObject, options?: NodeApiErrorOptions)
 ```
 
-### Common Usage Patterns
+### Common usage patterns
 
 For basic API request failures, catch the error and wrap it in `NodeApiError`:
 
@@ -75,13 +83,23 @@ try {
 
 ## NodeOperationError
 
-Use `NodeOperationError` for operational errors, validation failures, configuration issues that aren't related to external API calls, input validation errors, missing required parameters, data transformation errors, and workflow logic errors.
+Use `NodeOperationError` for:
+
+ * operational errors
+ * validation failures
+ * configuration issues that aren't related to external API calls
+ * input validation errors
+ * missing required parameters
+ * data transformation errors
+ * workflow logic errors
+ 
+ Initialize new `NodeOperationError` instances using the following pattern:
 
 ```typescript
 new NodeOperationError(node: INode, error: Error | string | JsonObject, options?: NodeOperationErrorOptions)
 ```
 
-### Common Usage Patterns
+### Common usage patterns
 
 Use `NodeOperationError` for validating user inputs:
 

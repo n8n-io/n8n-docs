@@ -1129,6 +1129,7 @@ nav:
           - integrations/creating-nodes/build/reference/index.md
           - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - Error handling: integrations/creating-nodes/build/reference/error-handling.md
           - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
           - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
           - Base files:

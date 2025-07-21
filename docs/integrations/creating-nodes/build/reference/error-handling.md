@@ -75,7 +75,7 @@ try {
 
 ## NodeOperationError
 
-Use `NodeOperationError` for operational errors, validation failures, configuration issues that are not related to external API calls, input validation errors, missing required parameters, data transformation errors, and workflow logic errors.
+Use `NodeOperationError` for operational errors, validation failures, configuration issues that aren't related to external API calls, input validation errors, missing required parameters, data transformation errors, and workflow logic errors.
 
 ```typescript
 new NodeOperationError(node: INode, error: Error | string | JsonObject, options?: NodeOperationErrorOptions)
@@ -94,18 +94,6 @@ if (email.indexOf("@") === -1) {
 		description,
 		itemIndex, // for multiple items, this will link the error to the specific item
 	});
-}
-```
-
-Validate node configuration and dependencies:
-
-```typescript
-const requiredCredential = this.getCredentials("myCredential");
-if (!requiredCredential) {
-	throw new NodeOperationError(
-		this.getNode(),
-		"No credentials found. Please configure your credentials first."
-	);
 }
 ```
 

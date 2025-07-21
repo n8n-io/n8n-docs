@@ -37,3 +37,8 @@ Consider following these guidelines while building your node if you want to subm
 * Use **TypeScript** and follow n8n's [**node development guidelines**](/integrations/creating-nodes/overview.md).
 * Ensure proper error handling and validation.
 * Make sure the linter passes (in other words, make sure running `npx @n8n/scan-community-package n8n-nodes-PACKAGE` passes).
+
+## Use English language only
+
+* Both the node interface and all documentation must be in **English** only.
+* This includes parameter names, descriptions, help text, error messages and **README** content.

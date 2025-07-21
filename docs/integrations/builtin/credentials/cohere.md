@@ -10,19 +10,20 @@ contentType: [integration, reference]
 You can use these credentials to authenticate the following nodes:
 
 * [Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md)
+* [Cohere Chat](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md)
 * [Reranker Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md)
 * [Embeddings Cohere](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md)
 
 ## Prerequisites
 
-Create a [Cohere account](https://cohere.com/){:target=_blank .external-link}.
+Create a [Cohere account](https://cohere.com/).
 
 You'll need an account with the following access:
 
 - For the Trial API, you need User or Owner permissions.
 - For Production API, you need Owner permissions.
 
-Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/reference/teams-and-roles){:target=_blank .external-link} for more information.
+Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/reference/teams-and-roles) for more information.
 
 ## Supported authentication methods
 
@@ -30,7 +31,7 @@ Refer to [Cohere Teams and Roles documentation](https://docs.cohere.com/referenc
 
 ## Related resources
 
-Refer to [Cohere's documentation](https://docs.cohere.com/reference/about){:target=_blank .external-link} for more information about the service.
+Refer to [Cohere's documentation](https://docs.cohere.com/reference/about) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -38,4 +39,4 @@ Refer to [Cohere's documentation](https://docs.cohere.com/reference/about){:targ
 
 To configure this credential, you'll need:
 
-- An **API Key**: To generate a Cohere API key, go to the [API Keys section of your Cohere dashboard](https://dashboard.cohere.com/api-keys){:target=_blank .external-link}.
+- An **API Key**: To generate a Cohere API key, go to the [API Keys section of your Cohere dashboard](https://dashboard.cohere.com/api-keys).

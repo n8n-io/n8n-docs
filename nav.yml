@@ -264,6 +264,7 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
+        - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
         - Automizy: integrations/builtin/app-nodes/n8n-nodes-base.automizy.md
@@ -729,6 +730,7 @@ nav:
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - Cohere Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md
           - DeepSeek Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
@@ -1128,6 +1130,7 @@ nav:
           - integrations/creating-nodes/build/reference/index.md
           - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - Error handling: integrations/creating-nodes/build/reference/error-handling.md
           - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
           - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
           - Base files:

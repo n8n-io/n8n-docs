@@ -3,7 +3,7 @@
 contentType: overview
 ---
 
-# Security Assertion Markup Language (SAML)
+# OpenID Connect (OIDC)
 
---8<-- "_snippets/user-management/sso-saml-overview.md"
+--8<-- "_snippets/user-management/sso-oidc-overview.md"
 

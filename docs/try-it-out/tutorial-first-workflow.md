@@ -31,7 +31,7 @@ When you open n8n, you'll see either:
 
 n8n provides two ways to start a workflow:
 
-* Manually, by selecting **Test Workflow**.
+* Manually, by selecting **Execute Workflow**.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
 For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md). This allows you to run the workflow on a schedule:
@@ -137,7 +137,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 
 ## Step six: Test the workflow
 
-1. You can now test the entire workflow. Select **Test Workflow**. n8n runs the workflow, showing each stage in progress.
+1. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 1. Go back to your Postbin bin. Refresh the page to see the output.
 1. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
 

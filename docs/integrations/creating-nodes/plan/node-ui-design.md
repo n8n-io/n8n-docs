@@ -106,6 +106,8 @@ Add validation rules to fields if possible. For example, check for valid email p
 
 When displaying errors, make sure only the main error message displays in the red error title. More information should go in **Details**.
 
+Refer to [Node Error Handling](/integrations/creating-nodes/build/reference/error-handling.md) for more information.
+
 #### Toggles
 
 * Tooltips for binary states should start with something like **Whether to . . . **.

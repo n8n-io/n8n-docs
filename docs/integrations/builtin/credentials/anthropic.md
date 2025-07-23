@@ -10,6 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
+- [Anthropic](/integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md)
 - [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
 
 ## Supported authentication methods

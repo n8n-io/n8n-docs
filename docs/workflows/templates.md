@@ -25,10 +25,6 @@ If you use n8n's template library, this takes you to browse [Workflows on the n8
 
 --8<-- "_snippets/workflows/templates/submit-templates.md"
 
-## Self-hosted n8n: Disable templates
-
---8<-- "_snippets/workflows/templates/disable-templates.md"
-
 ## Self-hosted n8n: Use your own library
 
 --8<-- "_snippets/workflows/templates/custom-templates-library.md"

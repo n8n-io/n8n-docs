@@ -8,10 +8,6 @@ contentType: overview
 # Overview
 <!-- vale from-microsoft.HeadingPunctuation = NO -->
 
-/// info | Not available in queue mode
-Evaluations aren't yet supported for n8n instances running in [queue mode](/hosting/scaling/queue-mode.md).
-///
-
 ## What are evaluations?
 
 Evaluation is a crucial technique for checking that your AI workflow is reliable. It can be the difference between a flaky proof of concept and a solid production workflow. It's important both in the building phase and after deploying to production. 
@@ -64,4 +60,4 @@ Since there are too many test cases to check individually, evaluations measure t
 
 * [Light evaluations](/advanced-ai/evaluations/light-evaluations.md): Perfect for evaluating your AI workflows against hand-selected test cases during development.
 * [Metric-based evaluations](/advanced-ai/evaluations/metric-based-evaluations.md): Advanced evaluations to maintain performance and correctness in production by using scoring and metrics with large datasets.
-* [Tips and common issues](/advanced-ai/evaluations/metric-based-evaluations.md): Learn how to set up specific evaluation use cases and work around common issues.
+* [Tips and common issues](/advanced-ai/evaluations/tips-and-common-issues.md): Learn how to set up specific evaluation use cases and work around common issues.

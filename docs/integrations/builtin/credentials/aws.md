@@ -12,6 +12,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [AWS Bedrock Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md)
 - [AWS Certificate Manager](/integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md)
+- [AWS Cognito](/integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md)
+- [AWS Comprehend](/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md)
 - [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md)
 - [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb.md)
 - [AWS Lambda](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md)

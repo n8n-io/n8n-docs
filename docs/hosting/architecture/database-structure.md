@@ -70,7 +70,7 @@ Describes the relationship between a user and a [project](/user-management/rbac/
 
 ### role
 
-Not currently used. Foruse in future work on custom roles. 
+Not currently used. For use in future work on custom roles. 
 
 ### settings
 

@@ -35,14 +35,446 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.104.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.104.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-23
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.103.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.1...n8n@1.103.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-22
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.104.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.104.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-21
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+///
+
+
+
+This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
+
+### Contributors
+
+[nunulk](https://github.com/nunulk){:target=_blank .external-link}  
+[iaptsiauri](https://github.com/iaptsiauri){:target=_blank .external-link}  
+[KGuillaume-chaps](https://github.com/KGuillaume-chaps){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.101.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.101.2...n8n@1.101.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-18
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.102.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.3...n8n@1.102.4){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-17
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.103.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.103.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-17
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.102.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.2...n8n@1.102.3){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-14
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.103.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.0...n8n@1.103.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-14
+
+
+This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
+
+### Webhook HTML responses
+
+Starting with this release, if your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
+
+This has the following implications:
+
+- HTML renders in a sandboxed iframe instead of directly in the parent document.
+- JavaScript code that attempts to access the top-level window or local storage will fail.
+- Authentication headers aren't available in the sandboxed iframe (for example, basic auth). You need to use an alternative approach, like embedding a short-lived access token within the HTML.
+- Relative URLs (for example, `<form action="/">`) won't work. Use absolute URLs instead.
+
+<div class="n8n-new-features" markdown> 
+### Built-in Metrics for AI Evaluations
+
+Using evaluations is a best practice for any AI solution, and a must if reliability and predictability are business-critical. With this release, we’ve made it easier to set up evaluations in n8n by introducing a set of built-in metrics. These metrics can review AI responses and assign scores based on factors like correctness, helpfulness, and more.<br><br>
+
+
+You can run regular evaluations and review scores over time as a way to monitor your AI workflow's performance. You can also compare results across different models to help guide model selection, or run evaluations before and after a prompt change to support data-driven, iterative building.
+<br><br>
+As with all evaluations in n8n, you’ll need a dataset that includes the inputs you want to test. For some evaluations, the dataset must also include expected outputs (ground truth) to compare against. The evaluation workflow runs each input through the portion you're testing to generate a response. The built-in metric scores each response based on the aspect you're measuring, allowing you to compare results before and after changes or track trends over time in the Evaluations tab. <br><br>
+
+You can still define your own custom metrics, but for common use cases, the built-in options make it much faster to implement. <br><br>
+
+🛠️ **How to:** 
+
+1. Set up your evaluation as described [here](https://docs.n8n.io/advanced-ai/evaluations/metric-based-evaluations/#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
+2. In the **Set Metrics** node, choose a metric from the dropdown list.
+3. Define any additional parameters required for your selected metric. In most cases, this includes mapping the dataset columns to the appropriate fields.
+
+📏 **Available built-in metrics:**
+
+- **Correctness (AI-based):** Compares AI workflow-generated responses to expected answers. Another LLM acts as a judge, scoring the responses based on guidance you provide in the prompt.
+- **Helpfulness (AI-based):** Evaluates how helpful a response is in relation to a user query, using an LLM and prompt-defined scoring criteria.
+- **String Similarity:** Measures how closely the response matches the expected output by comparing strings. Useful for command generation or when output needs to follow a specific structure.
+- **Categorization:** Checks whether a response matches an expected label, such as assigning items to the correct category.
+- **Tools Used:** Verifies whether the AI agent called the tools you specified in your dataset. 
+To enable this, make sure **Return Intermediate Steps** is turned on in your agent so the evaluation can access the tools it actually called.
+
+🧠 Keep in mind
+
+- Registered Community Edition enables analysis of one evaluation in the **Evaluations** tab which allows easy comparison of evaluation runs over time. Pro and Enterprise plans allow unlimited evaluations in the **Evaluations** tab.
+
+<br>
+<figure markdown="span">
+    ![Built-in Metrics](/_images/release-notes/Built-in_metrics.png)
+    <figcaption>Built-in Metrics</figcaption>
+</figure>
+<br>
+
+[Learn more](/advanced-ai/evaluations/overview.md) about setting up and customizing evaluations.
+</div> 
+
+### AI Agent Tool node
+
+With the **AI Agent Tool** node we are introducing a simplified pattern for multi-agent orchestration that can be run in a single execution and stay entirely on one canvas. You can now connect multiple **AI Agent Tool** nodes to a primary **AI Agent** node, allowing it to supervise and delegate work across other specialized agents. 
+
+This setup is especially useful for building complex systems that function like real-world teams, where a lead agent assigns parts of a task to specialists. It also helps with prompt management by letting you split long, complex instructions into smaller, focused tasks across multiple agents. While similar orchestration was already possible using sub-workflows, AI Agent Tool nodes are a good choice when you want the interaction to happen within a single execution or prefer to manage and debug everything from a single canvas.
+
+🛠️ **How to:**
+
+- Add an **AI Agent** node to your workflow and click **+** to create a Tools connection.
+- Search for and select the **AI Agent Tool** node from the Nodes Panel.
+- Name the node clearly so the primary agent can reference it, then add a short description and prompt.
+- Connect any LLMs, memory, and tools the agent needs to perform its role.
+- Instruct the primary **AI Agent** on when to use the **AI Agent Tool** and to pass along relevant context in its prompt.
+
+🧠 **Keep in mind:**
+
+- The orchestrating agent does not pass full execution context by default. Any necessary context must be included in the prompt.
+
+**AI Agent Tool** nodes makes it easier to build layered, agent-to-agent workflows without relying on sub-workflows, helping you move faster when building and debugging multi-agent systems.
+
+<br>
+<figure markdown="span">
+    ![](/_images/release-notes/AI_Agent_Tool.png)
+    <figcaption>AI Agent Tool node</figcaption>
+</figure>
+<br>
+
+### Contributors
+
+[ksg97031](https://github.com/ksg97031){:target=_blank .external-link}  
+[israelshenkar](https://github.com/israelshenkar){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.102.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.1...n8n@1.102.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-11
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.101.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.101.1...n8n@1.101.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-11
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.102.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.0...n8n@1.102.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-09
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.102.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.101.0...n8n@1.102.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-07
+
+
+
+This release contains core updates, editor improvements, new nodes, node updates, and bug fixes.
+
+### Enforce 2FA across your instance
+
+Enterprise Instance owners can now enforce two-factor authentication (2FA) for all users in their instance.
+
+Once enabled, any user who hasn’t set up 2FA will be redirected to complete the setup before they can continue using n8n. This helps organizations meet internal security policies and ensures stronger protection across the workspace.
+
+This feature is available only on the Enterprise plan.
+
+### Contributors
+
+[marty-sullivan](https://github.com/marty-sullivan){:target=_blank .external-link}  
+[cesars-gh](https://github.com/cesars-gh){:target=_blank .external-link}  
+[dudanogueira](https://github.com/dudanogueira){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+## n8n@1.101.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.101.0...n8n@1.101.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-07-03
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.101.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.100.0...n8n@1.101.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-30
+
+
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### Contributors
+
+[luka-mimi](https://github.com/luka-mimi){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.100.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.100.0...n8n@1.100.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-25
+
+
+
+
+
+
+
+This release contains a bug fix.
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.100.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.0...n8n@1.100.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-23
+
+
+
+This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
+
+### Model Selector node
+
+The [Model Selector node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md) gives you more control when working with multiple LLMs in your workflows.
+
+Use it to determine which connected model should handle a given input, based on conditions like expressions or global variables. This makes it easier to implement model routing strategies, such as switching models based on performance, task type, cost, or availability.
+
+🛠️ **How to:** Connect multiple model nodes to the Model Selector node, then configure routing conditions in the node’s settings.
+
+🧠 **Keep in mind:** 
+
+- Rules are evaluated in order. The first matching rule determines which model is used even if others would also match.
+- As a sub-node, expressions behave differently here: they always resolves to the first item rather than resolving for each item in turn.
+
+The Model Selector node is especially useful in evaluation or production scenarios where routing logic between models needs to adapt based on performance, cost, availability, or dataset-specific needs.
+
+<br>
+<figure markdown="span">
+    ![Model Selector node](/_images/release-notes/Model_selector_node.png)
+    <figcaption>Model Selector node</figcaption>
+</figure>
+<br>
+
+
+### Support for OIDC (OpenID Connect) authentication
+
+You can now use OIDC (OpenID Connect) as an authentication method for Single Sign-On (SSO).
+
+This gives enterprise teams more flexibility to integrate n8n with their existing identity providers using a widely adopted and easy-to-manage standard. OIDC is now available alongside SAML, giving Enterprises the choice to select what best fits their internal needs.
+
+### Project admins can now commit to Git within environments
+
+Project admins now have the ability to commit workflow and credential changes directly to Git through the environments feature. This update streamlines the workflow deployment process by giving project-level admins direct control over committing their changes. It also ensures that the those who know their workflows best can review and commit updates themselves, without needing to involve instance-level admins.
+
+[Learn more about source control environments](/source-control-environments/index.md)
+
+
+### Contributors
+
+[aliou](https://github.com/aliou){:target=_blank .external-link}  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+
+## n8n@1.99.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.99.0...n8n@1.99.1){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-19
+
+
+
+
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.98.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.98.1...n8n@1.98.2){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-18
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
+
+## n8n@1.99.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.98.0...n8n@1.99.0){:target=_blank .external-link} for this version.<br />
+**Release date:** 2025-06-16
+
+This release contains performance improvements, core updates, editor changes, node updates, and bug fixes.
+
+### Automatically name nodes
+
+Default node names now update automatically based on the resource and operation selected, so you’ll always know what a node does at a glance.
+
+This adds clarity to your canvas and saves time renaming nodes manually.
+
+Don’t worry, automatic naming won’t break references. And, and if you’ve renamed a node yourself, we’ll leave it just the way you wrote it.
+
+<br>
+<video src="/_video/release-notes/automatic_node_naming.mp4" controls width="100%"></video>
+<br>
+
+### Support for RAG extended with built-in templates
+
+Retrieval-Augmented Generation (RAG) can improve AI responses by providing language models access to data sources with up-to-date, domain-specific, or proprietary knowledge. RAG workflows typically rely on vector stores to manage and search this data efficiently.
+
+To get the benefits of using vector stores, such as returning results based on semantic meaning rather than just keyword matches, you need a way to upload your data to the vector store and a way to query it. 
+
+In n8n, uploading and querying vectors stores happens in two workflows. Now, you have an example to get your started and make implementation easier with the **RAG starter template**. 
+
+- The **Load Data** workflow shows how to add data with the appropriate embedding model, split it into chunks with the [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md), and add metadata as desired.
+- The **Retriever** workflow for querying data, shows how  agents and vector stores work together to help you define highly relevant results and save tokens using the **Question and Answer** tool.
+
+Enable semantic search and the retrieval of unstructured data  for increased quality and relevance of AI responses. 
+
+🛠️ **How to:** 
+
+- Search for **RAG starter template** in the search bar of the Nodes panel to insert it into your workflow.
+
+Learn more about implementing RAG in n8n [here](/advanced-ai/rag-in-n8n.md).
+<br>
+<figure markdown="span">
+    ![RAG starter template](/_images/release-notes/RAG_starter_template.png)
+    <figcaption>RAG starter template</figcaption>
+</figure>
+<br>
+
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases){:target=_blank .external-link} on GitHub.
+
 ## n8n@1.98.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.98.0...n8n@1.98.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-06-12
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains a bug fix.
 
@@ -73,9 +505,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.97.0...n8n@1.97.1){:target=_blank .external-link} for this version.<br />
 **Release date:** 2025-06-04
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 
 
@@ -253,12 +683,12 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 
 1. Add an **Evaluation** node with the **On new Evaluation event** operation. This node will act as an additional trigger you’ll run only when testing. Configure it to read your dataset from Google Sheets, with each row representing a test input.<br>
 
-    > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations.md/#1-create-a-dataset.md).
+    > 💡  Better datasets mean better evaluations. Craft your dataset from a variety of test cases, including edge cases and typical inputs, to get meaningful feedback on how your AI performs. Learn more and access sample datasets [here](/advanced-ai/evaluations/light-evaluations.md/#1-create-a-dataset).
 
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics.md). 
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics). 
     
 <br>
 
@@ -283,7 +713,7 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 
 You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
 
- 👉 Learn more about the AI evaluation strategies and practical implementation techniques during a **livestream on July 2nd, 2025 at 5:00 p.m GMT+2**. [Sign up](https://lu.ma/rfniiq2c). 
+ 👉 Learn more about the AI evaluation strategies and practical implementation techniques. [Watch now](https://www.youtube.com/live/QkciQpotQBQ?feature=shared).
 
 </div> 
 
@@ -489,7 +919,7 @@ Partial execution for AI tools is available now for all tools - making it even e
 To use this feature you can either:
 
 - Click the **Play** button on the tool you want to execute directly from the canvas view.
-- Open the tool’s **Node Details View** and select **"Test step"** to run it from there.
+- Open the tool’s **Node Details View** and select **"Execute Step"** to run it from there.
 
 If you have previously run the workflow, the input and output will be prefilled with data from the last execution. A pop-up form will open where you can manually fill in the parameters before executing your test.
 

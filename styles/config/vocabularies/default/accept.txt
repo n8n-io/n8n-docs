@@ -44,10 +44,12 @@ Capterra
 cartesian
 Chargebee
 [Cc]hatbot
+ChromeOS
 Citrix
 Clearbit
 Clockify
 Codecademy
+Cognito('s)?
 commenters?
 Cohere
 Combinator
@@ -58,12 +60,15 @@ CPython
 CRM
 Cron
 [Cc]rypto
+[Dd]atacenters?
 Datadog
 Datastore
+[Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
 DeepL
 Demio
+[Dd]equeued?
 disabled
 Disqus
 Dockerfile
@@ -72,6 +77,7 @@ Dynatrace
 eksctl
 [Ee]mbeddable
 Emelia
+[Ee]nqueued?
 Entra
 [Ee]num
 ERPNext
@@ -99,13 +105,12 @@ Gotify
 Grafana
 Grok('s)?
 Groq
-[Gg]roundedness
 GSuite
 Gumroad
 [Gg]zip
 Hetzner
 Homeserver
-[Hh]ostname
+[Hh]ostnames?
 howto
 HubSpot
 Humantic
@@ -152,6 +157,7 @@ Mindee
 Mocean
 Motorhead
 [Mm]ultiple
+[Mm]ultitenan(cy|t)
 n8n
 nanoids
 namespaces?
@@ -220,6 +226,7 @@ Stackshare
 Storyblok
 Strapi
 Strava
+[Ss]treamable
 strikethrough
 [Ss]ubfolder
 sublist
@@ -229,6 +236,7 @@ Supabase
 [Ss]ysdig
 [Ss]yslog
 Tapfiliate
+[Tt]emplatiz(e|ed|ing)
 Textract
 There are
 [Tt]imesheet
@@ -246,7 +254,9 @@ Twilio
 Typeform
 [Uu]narchive
 [Uu]ncomment
+[Uu]nencrypted
 [Uu]nformatted
+([Uu]n)?[Gg]rounded(ness)?
 [Uu]noptimized
 [Uu]npublish
 [Uu]nshare
@@ -265,6 +275,7 @@ VM
 Vonage
 Vuex
 Wasabi's
+Weaviate('s)?
 Webex
 Webflow
 [Ww]ebsockets?

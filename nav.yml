@@ -1166,6 +1166,7 @@ nav:
         - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
         - Heroku: hosting/installation/server-setups/heroku.md
         - Hetzner: hosting/installation/server-setups/hetzner.md
+        - Hostinger: hosting/installation/server-setups/hostinger.md
         - Amazon Web Services: hosting/installation/server-setups/aws.md
         - Azure: hosting/installation/server-setups/azure.md
         - Google Cloud: hosting/installation/server-setups/google-cloud.md

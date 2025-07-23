@@ -35,7 +35,7 @@ Your existing workflows will use the legacy order, while new workflows will exec
 
 ### MySQL and MariaDB
 
-n8n has removed support for MySQL and MariaDB as storage backends for n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
+n8n has deprecated support for MySQL and MariaDB as storage backends for n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
 
 [PR #6189](https://github.com/n8n-io/n8n/pull/6189){:target=_blank .external link}
 

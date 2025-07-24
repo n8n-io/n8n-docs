@@ -1,23 +1,27 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n trigger
-description: Documentation for the n8n trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+title: n8n Trigger node documentation
+description: Learn how to use the n8n Trigger node in n8n. Follow technical documentation to integrate n8n Trigger node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# n8n trigger
+# n8n Trigger node
 
-The n8n trigger node gets triggered when the n8n instance starts or restarts. You can use the n8n trigger node to notify when the n8n instance starts.
-
+The n8n Trigger node triggers when the current workflow updates or activates, or when the n8n instance starts or restarts. You can use the n8n Trigger node to notify when these events occur.
 
 ## Node parameters
 
-- Events
-    - **Instance started**: Triggers when the n8n instance starts or restarts.
+The node includes a single parameter to identify the **Events** that should trigger it. Choose from these events:
+
+- **Active Workflow Updated**: If you select this event, the node triggers when this workflow is updated.
+- **Instance started**: If you select this event, the node triggers when the n8n instance starts or restarts.
+- **Workflow Activated**: If you select this event, the node triggers when this workflow is activated.
+
+You can select one or more of these events.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'n8n-trigger') ]]
+[[ templatesWidget(page.title, 'n8n-trigger') ]]
 

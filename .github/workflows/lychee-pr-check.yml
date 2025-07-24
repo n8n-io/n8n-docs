@@ -1,0 +1,37 @@
+name: Lychee PR external linkcheck
+on:
+  pull_request:
+    branches:
+      - main
+permissions:  
+  contents: read 
+  pull-requests: write
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Get all changed markdown files
+        id: changed-markdown-files
+        uses: step-security/changed-files@3dbe17c78367e7d60f00d78ae6781a35be47b4a1 # v45.0.1
+        with:
+          # Avoid using single or double quotes for multiline patterns
+          files: |
+            docs/**/*.md
+      - name: Run Lychee Link Checker
+        id: lychee
+        if: steps.changed-markdown-files.outputs.any_changed == 'true'
+        uses: lycheeverse/lychee-action@a99389aeff3c193ffb6f0741178e519569d3f404 # v2.3.0
+        with:
+          args: --config lychee.toml ${{  steps.changed-markdown-files.outputs.all_changed_files }}
+      - name: PR comment with file
+        uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # v3.0.1
+        with:
+          file-path: _lychee/out.md
+          comment-tag: execution
+          mode: recreate
+      - name: Report Status
+        if: failure()
+        run: echo "❌ Broken links detected. Please fix them!"

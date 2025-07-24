@@ -11,7 +11,7 @@ This document provides design guidance and standards to follow. These guidelines
 
 ## Design guidance
 
-All node's use n8n's [node UI elements](/integrations/creating-nodes/build/reference/ui-elements/), so you don't need to consider style details such as colors, borders, and so on. However, it's still useful to go through a basic design process:
+All node's use n8n's [node UI elements](/integrations/creating-nodes/build/reference/ui-elements.md), so you don't need to consider style details such as colors, borders, and so on. However, it's still useful to go through a basic design process:
 
 * Review the documentation for the API you're integrating. Ask yourself:
     * What can you leave out? 
@@ -87,10 +87,10 @@ Order fields by:
 
 There are five types of help built in to the GUI:
 
-* Info boxes: yellow boxes that appear between fields. Refer to [UI elements | Notice](/integrations/creating-nodes/build/reference/ui-elements/#notice) for more information.
+* Info boxes: yellow boxes that appear between fields. Refer to [UI elements | Notice](/integrations/creating-nodes/build/reference/ui-elements.md#notice) for more information.
   * Use info boxes for essential information. Don't over-use them. By making them rare, they stand out more and grab the user's attention.
 * Parameter hints: lines of text displayed beneath a user input field. Use this when there's something the user needs to know, but an info box would be excessive.
-* Node hints: provide help in the input panel, output panel, or node details view. Refer to [UI elements | Hints](/integrations/creating-nodes/build/reference/ui-elements/#hints) for more information.
+* Node hints: provide help in the input panel, output panel, or node details view. Refer to [UI elements | Hints](/integrations/creating-nodes/build/reference/ui-elements.md#hints) for more information.
 * Tooltips: callouts that appear when the user hovers over the tooltip icon !["Screenshot of the tooltip icon. The icon is a ? in a grey circle"](/_images/common-icons/help-tooltip.png). Use tooltips for extra information that the user might need.
   * You don't have to provide a tooltip for every field. Only add one if it contains useful information. 
   * When writing tooltips, think about what the user needs. Don't just copy-paste API parameter descriptions. If the description doesn't make sense, or has errors, improve it.
@@ -105,6 +105,8 @@ Make it clear which fields are required.
 Add validation rules to fields if possible. For example, check for valid email patterns if the field expects an email.
 
 When displaying errors, make sure only the main error message displays in the red error title. More information should go in **Details**.
+
+Refer to [Node Error Handling](/integrations/creating-nodes/build/reference/error-handling.md) for more information.
 
 #### Toggles
 
@@ -140,9 +142,9 @@ subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 When performing an operation on a specific record, such as "update a task comment" you need a way to specify which record you want to change.
 
 * Wherever possible, provide two ways to specify a record:
-    * By choosing from a pre-populated list. You can generate this list using the `loadOptions` parameter. Refer to [Base files](/integrations/creating-nodes/build/reference/node-base-files/) for more information.
+    * By choosing from a pre-populated list. You can generate this list using the `loadOptions` parameter. Refer to [Base files](/integrations/creating-nodes/build/reference/node-base-files/index.md) for more information.
     * By entering an ID.
-* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/code/expressions/) documentation.
+* Name the field `<Record name> name or ID`. For example, **Workspace Name or ID**. Add a tooltip saying "Choose a name from the list, or specify an ID using an expression." Link to n8n's [Expressions](/code/expressions.md) documentation.
 * Build your node so that it can handle users providing more information than required. For example:
     * If you need a relative path, handle the user pasting in the absolute path.
     * If the user needs to get an ID from a URL, handle the user pasting in the entire URL.

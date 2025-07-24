@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Philips Hue
-description: Documentation for the Philips Hue node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Philips Hue node documentation
+description: Learn how to use the Philips Hue node in n8n. Follow technical documentation to integrate Philips Hue node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Philips Hue
+# Philips Hue node
 
 Use the Philips Hue node to automate work in Philips Hue, and integrate Philips Hue with other applications. n8n has built-in support for a wide range of Philips Hue features, including deleting, retrieving, and updating lights. 
 
 On this page, you'll find a list of operations the Philips Hue node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/) for guidance on setting up authentication. 
+Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -26,7 +26,7 @@ Refer to [Philips Hue credentials](/integrations/builtin/credentials/philipshue/
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'philips-hue') ]]
+[[ templatesWidget(page.title, 'philips-hue') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

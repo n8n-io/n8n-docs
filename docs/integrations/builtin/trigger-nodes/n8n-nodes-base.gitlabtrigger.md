@@ -1,17 +1,17 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: GitLab trigger
-description: Documentation for the GitLab trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: GitLab Trigger node documentation
+description: Learn how to use the GitLab Trigger node in n8n. Follow technical documentation to integrate GitLab Trigger node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# GitLab trigger
+# GitLab Trigger node
 
-[GitLab](https://gitlab.com/) is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
+[GitLab](https://gitlab.com/){:target=_blank .external-link} is a web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking, and continuous integration/continuous installation pipeline features.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/gitlab.md).
 ///
 
 ///  note  | Examples and templates

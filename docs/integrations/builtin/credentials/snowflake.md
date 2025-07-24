@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Snowflake credentials
 description: Documentation for Snowflake credentials. Use these credentials to authenticate Snowflake in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Snowflake credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Snowflake](/integrations/builtin/app-nodes/n8n-nodes-base.snowflake/)
+- [Snowflake](/integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md)
 
 ## Prerequisites
 

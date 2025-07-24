@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Iterable credentials
 description: Documentation for Iterable credentials. Use these credentials to authenticate Iterable in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Iterable credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Iterable](/integrations/builtin/app-nodes/n8n-nodes-base.iterable/)
+- [Iterable](/integrations/builtin/app-nodes/n8n-nodes-base.iterable.md)
 
 ## Prerequisites
 

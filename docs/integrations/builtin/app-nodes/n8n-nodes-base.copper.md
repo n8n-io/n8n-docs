@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Copper
-description: Documentation for the Copper node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Copper node documentation
+description: Learn how to use the Copper node in n8n. Follow technical documentation to integrate Copper node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Copper
+# Copper node
 
 Use the Copper node to automate work in Copper, and integrate Copper with other applications. n8n has built-in support for a wide range of Copper features, including getting, updating, deleting, and creating companies, customer sources, leads, projects and tasks.
 
 On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
+Refer to [Copper credentials](/integrations/builtin/credentials/copper.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -61,4 +61,4 @@ Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'copper') ]]
+[[ templatesWidget(page.title, 'copper') ]]

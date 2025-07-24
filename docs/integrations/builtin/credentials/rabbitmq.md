@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: RabbitMQ credentials
 description: Documentation for RabbitMQ credentials. Use these credentials to authenticate RabbitMQ in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,12 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [RabbitMQ](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/)
-- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/)
-
-## Prerequisites
-
-Install a [RabbitMQ broker](https://www.rabbitmq.com/).
+- [RabbitMQ](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md)
+- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md)
 
 ## Supported authentication methods
 
@@ -26,22 +22,22 @@ Install a [RabbitMQ broker](https://www.rabbitmq.com/).
 Refer to [RabbitMQ's Connections documentation](https://www.rabbitmq.com/docs/connections){:target=_blank .external-link} for more information about the service.
 
 ## Using user connection
-<!--vale off-->
 
-To configure this credential, you'll need:
+To configure this credential, you'll need to have a [RabbitMQ broker](https://www.rabbitmq.com/){:target=_blank .external-link} installed and:
 
-- A **Hostname**: The hostname for the RabbitMQ broker.
-- A **Port**: The port the connection should use.
-- A **User**: The user to log in as for the connection. The default is `guest`. RabbitMQ recommends using a different user in production environments. Refer to [Access Control | The Basics](https://www.rabbitmq.com/docs/access-control#basics) for more information. If you're using the `guest` account with a non-localhost connection, refer to [`guest` user issues](#guest-user-issues) below for troubleshooting tips.
-- A **Password**: The password for the user. The default password for the `guest` user is `guest`.
-- A **Vhost**: Enter the [virtual host](https://www.rabbitmq.com/docs/vhosts){:target=_blank .external-link} the connection should use. The default virtual host is `/`.
-- **SSL**: Select whether the connection should use SSL. If turned on, also set:
-    - **Passwordless**: Select whether the SSL certificate connection is passwordless or uses SASL mechanism EXTERNAL. If turned on, you'll also need to enter:
+1. Enter the **Hostname** for the RabbitMQ broker.
+2. Enter the **Port** the connection should use.
+3. Enter a **User** the connection should use to log in as.
+    - The default is `guest`. RabbitMQ recommends using a different user in production environments. Refer to [Access Control | The Basics](https://www.rabbitmq.com/docs/access-control#basics){:target=_blank .external-link} for more information. If you're using the `guest` account with a non-localhost connection, refer to [`guest` user issues](#guest-user-issues) below for troubleshooting tips.
+4. Enter the user's **Password**.
+    - The default password for the `guest` user is `guest`.
+5. Enter the [virtual host](https://www.rabbitmq.com/docs/vhosts){:target=_blank .external-link} the connection should use as the **Vhost**. The default virtual host is `/`.
+6. Select whether the connection should use **SSL**. If turned on, also set:
+    - **Passwordless**: Select whether the SSL certificate connection users SASL mechanism EXTERNAL (turned off) or doesn't use a password (turned on). If turned on, you'll also need to enter:
         - The **Client Certificate**: Paste the text of the SSL client certificate to use.
         - The **Client Key**: Paste the SSL client key to use.
         - The **Passphrase**: Paste the SSL passphrase to use.
     - **CA Certificates**: Paste the text of the SSL CA certificates to use.
-<!--vale on-->
 
 ## guest user issues
 

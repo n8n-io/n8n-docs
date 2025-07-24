@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Postmark credentials
 description: Documentation for Postmark credentials. Use these credentials to authenticate Postmark in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Postmark credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger/)
+- [Postmark Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md)
 
 ## Prerequisites
 

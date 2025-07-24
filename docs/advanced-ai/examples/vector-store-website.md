@@ -3,28 +3,24 @@
 contentType: howto
 title: Populate a Pinecone vector database from a website
 description: Scrape a website, load the data into Pinecone, then query it using a chat workflow.
-workflowFile: advanced-ai/examples/populate_a_pinecone_vector_database_from_a_website.json
 ---
 
 # Populate a Pinecone vector database from a website
 
-Use n8n to scrape a website, load the data into Pinecone, then query it using a chat workflow. This workflow uses the [HTTP node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to get website data, extracts the relevant content using the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/), then uses the [Pinecone Vector Store node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/) to send it to Pinecone. 
+Use n8n to scrape a website, load the data into Pinecone, then query it using a chat workflow. This workflow uses the [HTTP node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to get website data, extracts the relevant content using the [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html.md), then uses the [Pinecone Vector Store node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md) to send it to Pinecone. 
 
-<figure markdown>
-!["Screenshot of the two workflows in this example"](/_images/advanced-ai/examples/vector-store-website.png)
-<figcaption markdown>[Download the example workflow](/_workflows/[[ page.meta.workflowFile ]])</figcaption>
-</figure>
+[[ workflowDemo("file:///advanced-ai/examples/populate_a_pinecone_vector_database_from_a_website.json") ]]
 
 ## Key features
 
 This workflow uses:
 
-* [HTTP node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): fetches website data.
-* [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html/): simplifies the data by extracting the main content from the page.
-* [Pinecone Vector Store node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/) and [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai/): transform the data into vectors and store it in Pinecone.
-* [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/) and [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/) to query the vector database.
+* [HTTP node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md): fetches website data.
+* [HTML node](/integrations/builtin/core-nodes/n8n-nodes-base.html.md): simplifies the data by extracting the main content from the page.
+* [Pinecone Vector Store node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md) and [Embeddings OpenAI](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md): transform the data into vectors and store it in Pinecone.
+* [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) and [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) to query the vector database.
 
 
 ## Using the example
 
-[[% include "_includes/examples-color-key.html" %]]
+--8<-- "_snippets/examples-color-key.md"

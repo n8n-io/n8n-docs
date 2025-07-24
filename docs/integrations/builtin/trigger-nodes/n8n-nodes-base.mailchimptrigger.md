@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailchimp trigger
-description: Documentation for the Mailchimp trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Mailchimp Trigger node documentation
+description: Learn how to use the Mailchimp Trigger node in n8n. Follow technical documentation to integrate Mailchimp Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Mailchimp trigger
+# Mailchimp Trigger node
 
-[Mailchimp](https://mailchimp.com/) is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
+[Mailchimp](https://mailchimp.com/){:target=_blank .external-link} is an integrated marketing platform that allows business owners to automate their email campaigns and track user engagement.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mailchimp/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/mailchimp.md).
 ///
 
 ///  note  | Examples and templates

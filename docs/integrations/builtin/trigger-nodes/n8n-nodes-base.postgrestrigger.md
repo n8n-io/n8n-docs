@@ -1,17 +1,17 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Postgres trigger
-description: Documentation for the Postgres trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Postgres Trigger node documentation
+description: Learn how to use the Postgres Trigger node in n8n. Follow technical documentation to integrate Postgres Trigger node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# Postgres trigger
+# Postgres Trigger node
 
-Use the Postgres trigger node to respond to events in Postgres and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events
+Use the Postgres Trigger node to respond to events in [Postgres](https://www.postgresql.org/){:target=_blank .external-link} and integrate Postgres with other applications. n8n has built-in support responding to insert, update, and delete events.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/postgres/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/postgres.md).
 ///
 
 /// note | Examples and templates
@@ -30,12 +30,6 @@ You can configure how the node listens for events.
 
 ## Related resources
 
-<!-- provide a link to the app node docs, if there is a trigger node for this service -->
-n8n provides an app node for Postgres. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/).
+n8n provides an app node for Postgres. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md).
 
 View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/){:target=_blank .external-link} on n8n's website.
-
-
-
-
-

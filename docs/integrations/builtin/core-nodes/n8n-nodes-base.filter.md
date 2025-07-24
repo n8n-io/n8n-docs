@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Filter
 description: Documentation for the Filter node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -31,11 +31,11 @@ You can't create a mix of AND and OR rules.
 ## Node options
 
 - **Ignore Case**: Whether to ignore letter case (turned on) or be case sensitive (turned off).
-- **Less Strict Type Validation**: Whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off).
+- **Less Strict Type Validation**: Whether you want n8n to attempt to convert value types based on the operator you choose (turned on) or not (turned off). Turn this on when facing a "wrong type:" error in your node.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'filter') ]]
+[[ templatesWidget(page.title, 'filter') ]]
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"

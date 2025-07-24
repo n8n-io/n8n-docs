@@ -33,7 +33,7 @@ In practice, vectors are far more complex. A vector can range in size from tens 
 
 ## Demonstrating the power of similarity search
 
-Qdrant provide [vector search demos](https://qdrant.tech/demo/){:target=_blank .external-link} to help users understand the power of vector databases. The [food discovery demo](https://food-discovery.qdrant.tech/){:target=_blank .external-link} shows how a vector store can help match pictures based on visual similarities.
+Qdrant provides [vector search demos](https://qdrant.tech/demo/){:target=_blank .external-link} to help users understand the power of vector databases. The [food discovery demo](https://food-discovery.qdrant.tech/){:target=_blank .external-link} shows how a vector store can help match pictures based on visual similarities.
 
 > This demo uses data from Delivery Service. Users may like or dislike the photo of a dish, and the app will recommend more similar meals based on how they look. It's also possible to choose to view results from the restaurants within the delivery radius. ([source](https://qdrant.tech/demo/){:target=_blank .external-link})
 
@@ -43,7 +43,7 @@ For full technical details, refer to the [Qdrant demo-food-discovery GitHub repo
 
 Vector databases require other tools to function:
 
-- Document loaders and text splitters: document loaders pull in documents and data, and prepare them for embedding. Document loaders can use text splitters to break documents into chunks.
+- Document loaders and text splitters: document loaders pull in documents and data, and prepare them for [embedding](/glossary.md#ai-embedding). Document loaders can use text splitters to break documents into chunks.
 - Embeddings: these are the tools that turn the data (text, images, and so on) into vectors, and back into raw data. Note that n8n only supports text embeddings.
 - Retrievers: retrievers fetch documents from vector databases. You need to pair them with an embedding to translate the vectors back into data.
 

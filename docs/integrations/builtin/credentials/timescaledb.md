@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: TimescaleDB credentials
 description: Documentation for TimescaleDB credentials. Use these credentials to authenticate TimescaleDB in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # TimescaleDB credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/)
+- [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md)
 
 ## Prerequisites
 
@@ -36,8 +36,6 @@ To configure this credential, you'll need:
     - **Allow**: Sets the `ssl-mode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
     - **Disable**: Sets the `ssl-mode` parameter to `disable`. Only try a non-SSL connection.
     - **Require**: Sets the `ssl-mode` parameter to `require`, which is the default for TimescaleDB connection strings. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
-    - **Verify**: Sets the `ssl-mode` parameter to `verify-ca`. Only try an SSL connection and verify that a trusted certificate authority (CA) issued the server certificate.
-    - **Verify-Full**: Sets the `ssl-mode` parameter to `verify-full`. Only try an SSL connection, verify that a trusted certificate authority (CA) issued the server certificate and that the requested server host name matches that in the certificate.
 - **Port**: The port number of the TimescaleDB server.
 
 Refer to [Timescale's connection settings documentation](https://docs.timescale.com/use-timescale/latest/integrations/query-admin/qstudio/#connection-settings){:target=_blank .external-link} for more information about the non-SSL fields. Refer to [Connect with a stricter SSL](https://docs.timescale.com/use-timescale/latest/security/strict-ssl/){:target=_blank .external-link} for more information about the SSL options.

@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Grist
-description: Documentation for the Grist node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Grist node documentation
+description: Learn how to use the Grist node in n8n. Follow technical documentation to integrate Grist node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Grist
+# Grist node
 
 Use the Grist node to automate work in Grist, and integrate Grist with other applications. n8n has built-in support for a wide range of Grist features, including creating, updating, deleting, and reading rows in a table. 
 
 On this page, you'll find a list of operations the Grist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Grist credentials](/integrations/builtin/credentials/grist/) for guidance on setting up authentication. 
+Refer to [Grist credentials](/integrations/builtin/credentials/grist.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -25,7 +25,7 @@ Refer to [Grist credentials](/integrations/builtin/credentials/grist/) for guida
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'grist') ]]
+[[ templatesWidget(page.title, 'grist') ]]
 
 ## Get the Row ID
 

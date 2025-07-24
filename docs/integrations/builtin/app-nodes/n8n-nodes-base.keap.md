@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Keap
-description: Documentation for the Keap node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Keap node documentation
+description: Learn how to use the Keap node in n8n. Follow technical documentation to integrate Keap node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Keap
+# Keap node
 
 Use the Keap node to automate work in Keap, and integrate Keap with other applications. n8n has built-in support for a wide range of Keap features, including creating, updating, deleting, and getting companies, products, ecommerce orders, emails, and files. 
 
 On this page, you'll find a list of operations the Keap node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Keap credentials](/integrations/builtin/credentials/keap/) for guidance on setting up authentication. 
+Refer to [Keap credentials](/integrations/builtin/credentials/keap.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -57,6 +57,6 @@ Refer to [Keap credentials](/integrations/builtin/credentials/keap/) for guidanc
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'keap') ]]
+[[ templatesWidget(page.title, 'keap') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -1,5 +1,40 @@
+### THESE REDIRECTS ARE HANDLED BY NETLIFY, SEE DOC FOR DETAILS ###
+### https://docs.netlify.com/routing/redirects/redirect-options/ ###
+
+## Redirect from initial path used in product
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/
+
+## Follow up to https://github.com/n8n-io/n8n-docs/pull/3033
+/enterprise-key/ /license-key/
+
+## Remove item lists (hidden for over a year)
+/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/
+
+## tutorials refresh
+
+/try-it-out/longer-introduction/ /try-it-out/tutorial-first-workflow/
+
+## DOC-994
+/privacy-security/security/ https://n8n.io/legal/#security
+
+## DOC-979
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/
+
+# Remove Ask AI
+/hosting/configuration/environment-variables/ai/ /hosting/configuration/environment-variables/
+
+## DOC-993
+/faircode-license/  /sustainable-use-license/
+
+# NODE-1462
+/integrations/builtin/credentials/citrixadc/ /integrations/builtin/credentials/netscaleradc/
+/integrations/builtin/app-nodes/n8n-nodes-base.citrixadc/ /integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc/
+/integrations/builtin/app-nodes/n8n-nodes-base.orbit/ /integrations/
 /hosting/logging-monitoring/security-audit/     /hosting/securing/security-audit/
 /integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/
+/integrations/builtin/credentials/orbit/ /integrations/
 
 # 2024 SEO audit
 /nodes/nodes.html    /integrations/builtin/node-types/
@@ -11,7 +46,7 @@
 /reference/security/   /privacy-security/security/
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-/reference/security.html    /privacy-security/security/ 
+/reference/security.html    /privacy-security/security/
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/
@@ -26,8 +61,8 @@
 /getting-started/whats-next.html    /try-it-out/quickstart/#next-steps
 /getting-started/installation/advanced/server-setup.html#docker-compose-examples    /hosting/installation/server-setups/docker-compose/
 /reference/faq.html#Integrations    /integrations/
-/reference/faq.html     /faircode-license/
-/reference/faq.html#License     /faircode-license/
+/reference/faq.html     /sustainable-use-license/
+/reference/faq.html#License     /sustainable-use-license/
 /reference/faq.html#n8n-cloud   /manage-cloud/overview/
 /nodes/expressions.html#expressions     /code/expressions/
 /editor-ui/workflows    /workflows/
@@ -43,7 +78,7 @@
 
 
 /integrations/builtin/core-nodes/n8n-nodes-base.interval/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/
-/integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/google/googleai/
+/integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/googleai/
 
 /n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/
 /n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/
@@ -77,7 +112,7 @@
 
 
 /choose-n8n/cloud/   /manage-cloud/overview/
-/choose-n8n/faircode-license/   /faircode-license/
+/choose-n8n/faircode-license/   /sustainable-use-license/
 /cloud-admin-dashboard/   /manage-cloud/cloud-admin-dashboard/
 /hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/
 
@@ -89,8 +124,9 @@
 /integrations/builtin/core-nodes/n8n-nodes-base.ical/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/
 /integrations/builtin/core-nodes/n8n-nodes-base.readpdf/   /integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
-/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/
@@ -175,14 +211,14 @@
 /security-audit/   /hosting/logging-monitoring/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
-/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 
 /reference/release-notes/   /release-notes/
 /integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/
 
 # License release 2022/2023
 
-/reference/license/   /faircode-license/
+/reference/license/   /sustainable-use-license/
 
 # Workflows refactor 2022
 
@@ -309,8 +345,8 @@
 /reference/telemetry.html                            /privacy-security/privacy/data-collection/
 /reference/troubleshooting.html                      /hosting/installation/npm/
 /reference/contributing.html                         /help-community/contributing/
-/reference/release-notes.html                        /reference/release-notes/	
-/reference/server-setup.html                         /hosting/installation/server-setups/  
+/reference/release-notes.html                        /reference/release-notes/
+/reference/server-setup.html                         /hosting/installation/server-setups/
 
 # The nodes library . . . may the odds be ever in your favour
 
@@ -544,7 +580,7 @@
 /nodes/n8n-nodes-base.googlefirebaserealtimedatabase/		/integrations/builtin/app-nodes/n8n-nodes-base.googlefirebaserealtimedatabase/
 /nodes/n8n-nodes-base.googlePerspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/
 /nodes/n8n-nodes-base.googleperspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/
-/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/	
+/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/
 /nodes/n8n-nodes-base.googlesheets/     /integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/
 /nodes/n8n-nodes-base.googleSlides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/
 /nodes/n8n-nodes-base.googleslides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/
@@ -750,10 +786,10 @@
 /nodes/n8n-nodes-base.rabbitmqTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/
 /nodes/n8n-nodes-base.rabbitmqtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/
 /nodes/n8n-nodes-base.raindrop/		/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/
-/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /nodes/n8n-nodes-base.readPDF/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /nodes/n8n-nodes-base.readpdf/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/
 /nodes/n8n-nodes-base.reddit/		/integrations/builtin/app-nodes/n8n-nodes-base.reddit/
@@ -881,8 +917,8 @@
 /nodes/n8n-nodes-base.workflowTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
 /nodes/n8n-nodes-base.workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
 /nodes/n8n-nodes-base.Workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/
-/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
-/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/
+/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
+/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
 /nodes/n8n-nodes-base.wufooTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/
 /nodes/n8n-nodes-base.wufootrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/
 /nodes/n8n-nodes-base.xero/		/integrations/builtin/app-nodes/n8n-nodes-base.xero/

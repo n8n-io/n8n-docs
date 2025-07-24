@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Anthropic credentials
 description: Documentation for the Anthropic credentials. Use these credentials to authenticate Anthropic in n8n, a workflow automation platform.
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -9,11 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic/)
-
-## Prerequisites
-
-[Request access to Claude](https://docs.anthropic.com/claude/docs/getting-access-to-claude){:target=_blank .external-link} from Anthropic.
+- [Anthropic](/integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md)
+- [Anthropic Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md)
 
 ## Supported authentication methods
 
@@ -27,7 +25,14 @@ Refer to [Anthropic's documentation](https://docs.anthropic.com/claude/reference
 
 ## Using API key
 
-To configure this credential, you'll need:
+To configure this credential, you'll need an [Anthropic Console account](https://console.anthropic.com){:target=_blank .external-link} with access to Claude.
 
-- An **API Key**: Refer to the Anthropic documentation to [generate an API key](https://docs.anthropic.com/claude/docs/getting-access-to-claude#step-3-generate-an-api-key){:target=_blank .external-link}.
+Then:
 
+1. In the Anthropic Console, open **Settings >** [**API Keys**](https://console.anthropic.com/settings/keys){:target=_blank .external-link}.
+2. Select **+ Create Key**.
+3. Give your key a **Name**, like `n8n-integration`.
+4. Select **Copy Key** to copy the key.
+5. Enter this as the **API Key** in your n8n credential.
+
+Refer to Anthropic's [Intro to Claude](https://docs.anthropic.com/en/docs/intro-to-claude){:target=_blank .external-link} and [Quickstart](https://docs.anthropic.com/en/docs/quickstart){:target=_blank .external-link} for more information.

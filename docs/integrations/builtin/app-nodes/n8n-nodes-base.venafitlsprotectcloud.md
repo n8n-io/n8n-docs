@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Venafi TLS Protect Cloud
-description: Documentation for the Venafi TLS Protect Cloud node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Venafi TLS Protect Cloud node documentation
+description: Learn how to use the Venafi TLS Protect Cloud node in n8n. Follow technical documentation to integrate Venafi TLS Protect Cloud node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Venafi TLS Protect Cloud
+# Venafi TLS Protect Cloud node
 
 Use the Venafi TLS Protect Cloud node to automate work in Venafi TLS Protect Cloud, and integrate Venafi TLS Protect Cloud with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Cloud features, including deleting and downloading certificates, as well as creating certificates requests. 
 
 On this page, you'll find a list of operations the Venafi TLS Protect Cloud node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
+Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -31,7 +31,7 @@ Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credential
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'venafi-tls-protect-cloud') ]]
+[[ templatesWidget(page.title, 'venafi-tls-protect-cloud') ]]
 
 ## Related resources
 
@@ -39,8 +39,8 @@ Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-re
 
 n8n also provides:
 <!-- vale off -->
-* A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) for Venafi TLS Protect Cloud.
-* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/) for Venafi TLS Protect Datacenter.
+* A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) for Venafi TLS Protect Cloud.
+* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter.md) for Venafi TLS Protect Datacenter.
 <!-- vale on -->
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

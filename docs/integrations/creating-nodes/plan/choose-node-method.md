@@ -5,7 +5,7 @@ contentType: explanation
 
 # Choose your node building approach
 
-n8n has two node-building styles, declarative and programmatic. 
+n8n has two node-building styles, declarative and programmatic.
 
 You should use the declarative style for most nodes. This style:
 
@@ -18,11 +18,11 @@ The programmatic style is more verbose. You must use the programmatic style for:
 * Trigger nodes
 * Any node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
 * Any node that needs to transform incoming data.
-* Full versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information on types of versioning.
+* Full versioning. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information on types of versioning.
 
 ## Data handling differences
 
-The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/) for more information on node parameters and the `execute()` method.
+The main difference between the declarative and programmatic styles is how they handle incoming data and build API requests. The programmatic style requires an `execute()` method, which reads incoming data and parameters, then builds a request. The declarative style handles this using the `routing` key in the `operations` object. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for more information on node parameters and the `execute()` method.
 
 ## Syntax differences
 
@@ -31,8 +31,13 @@ To understand the difference between the declarative and programmatic styles, co
 In programmatic style:
 
 ```js
-import { IExecuteFunctions } from 'n8n-core';
-import { INodeExecutionData, INodeType, INodeTypeDescription } from 'n8n-workflow';
+import {
+	IExecuteFunctions,
+	INodeExecutionData,
+	INodeType,
+	INodeTypeDescription,
+	IRequestOptions,
+} from 'n8n-workflow';
 
 // Create the FriendGrid class
 export class FriendGrid implements INodeType {
@@ -46,36 +51,36 @@ export class FriendGrid implements INodeType {
         . . .
       },
       {
-      displayName: 'Operation',
-      name: 'operation',
-      type: 'options',
-      displayOptions: {
-        show: {
-            resource: [
-            'contact',
-            ],
+        displayName: 'Operation',
+        name: 'operation',
+        type: 'options',
+        displayOptions: {
+          show: {
+              resource: [
+              'contact',
+              ],
+          },
         },
+        options: [
+          {
+            name: 'Create',
+            value: 'create',
+            description: 'Create a contact',
+          },
+        ],
+        default: 'create',
+        description: 'The operation to perform.',
       },
-      options: [
-        {
-          name: 'Create',
-          value: 'create',
-          description: 'Create a contact',
-        },
-      ],
-      default: 'create',
-      description: 'The operation to perform.',
-    },
-    {
-      displayName: 'Email',
-      name: 'email',
-      . . .
-    },
-    {
-      displayName: 'Additional Fields',
-      // Sets up optional fields
-    },
-  ],
+      {
+        displayName: 'Email',
+        name: 'email',
+        . . .
+      },
+      {
+        displayName: 'Additional Fields',
+        // Sets up optional fields
+      },
+    ],
 };
 
   async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
@@ -98,7 +103,7 @@ export class FriendGrid implements INodeType {
       Object.assign(data, additionalFields);
 
       // Make HTTP request as defined in https://sendgrid.com/docs/api-reference/
-      const options: OptionsWithUri = {
+      const options: IRequestOptions = {
         headers: {
             'Accept': 'application/json',
             'Authorization': `Bearer ${credentials.apiKey}`,
@@ -134,21 +139,21 @@ export class FriendGrid implements INodeType {
     . . .
     // Set up the basic request configuration
     requestDefaults: {
-        baseURL: 'https://api.sendgrid.com/v3/marketing'
+      baseURL: 'https://api.sendgrid.com/v3/marketing'
     },
     properties: [
-        {
+      {
         displayName: 'Resource',
         . . .
-        },
-        {
+      },
+      {
         displayName: 'Operation',
         name: 'operation',
         type: 'options',
         displayOptions: {
           show: {
             resource: [
-                'contact',
+              'contact',
             ],
           },
         },
@@ -158,42 +163,42 @@ export class FriendGrid implements INodeType {
             value: 'create',
             description: 'Create a contact',
             // Add the routing object
-            routing: { 
-                request: {
+            routing: {
+              request: {
                 method: 'POST',
                 url: '=/contacts',
                 send: {
-                    type: 'body',
-                    properties: {
+                  type: 'body',
+                  properties: {
                     email: {{$parameter["email"]}}
-                    }
+                  }
                 }
-                }
+              }
             },
             // Handle the response to contact creation
             output: {
-                postReceive: [
+              postReceive: [
                 {
-                    type: 'set',
-                    properties: {
+                  type: 'set',
+                  properties: {
                     value: '={{ { "success": $response } }}'
-                    }
+                  }
                 }
-                ]
+              ]
             }
-            },
+          },
         ],
         default: 'create',
         description: 'The operation to perform.',
-        },
-        {
+      },
+      {
         displayName: 'Email',
         . . .
-        },
-        {
+      },
+      {
         displayName: 'Additional Fields',
         // Sets up optional fields
-        },
+      },
     ],
   }
   // No execute method needed

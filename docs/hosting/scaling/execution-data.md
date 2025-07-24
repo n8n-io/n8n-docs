@@ -9,12 +9,12 @@ Depending on your executions settings and volume, your n8n database can grow in 
 
 To avoid this, n8n recommends that you don't save unnecessary data, and enable pruning of old executions data.
 
-To do this, configure the corresponding [environment variables](/hosting/configuration/environment-variables/executions).
+To do this, configure the corresponding [environment variables](/hosting/configuration/environment-variables/executions.md).
 
 ## Reduce saved data
 
 /// note | Configuration at workflow level
-You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/workflows/#workflow-settings).
+You can also configure these settings on an individual workflow basis using the [workflow settings](/workflows/settings.md).
 ///
 You can select which executions data n8n saves. For example, you can save only executions that result in an `Error`.
 
@@ -41,8 +41,8 @@ docker run -it --rm \
  -p 5678:5678 \
  -e EXECUTIONS_DATA_SAVE_ON_ERROR=all \
  -e EXECUTIONS_DATA_SAVE_ON_SUCCESS=none \
-    -e EXECUTIONS_DATA_SAVE_ON_PROGRESS=true \
-    -e EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false \
+ -e EXECUTIONS_DATA_SAVE_ON_PROGRESS=true \
+ -e EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false \
  docker.n8n.io/n8nio/n8n
 ```
 
@@ -51,7 +51,7 @@ docker run -it --rm \
 n8n:
     environment:
       - EXECUTIONS_DATA_SAVE_ON_ERROR=all
-   - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
       - EXECUTIONS_DATA_SAVE_ON_PROGRESS=true
       - EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 ```
@@ -94,7 +94,7 @@ n8n:
 ```
 
 /// note | SQLite
-If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database/#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
+If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database.md#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
 ///
 
 --8<-- "_snippets/self-hosting/scaling/binary-data-pruning.md"

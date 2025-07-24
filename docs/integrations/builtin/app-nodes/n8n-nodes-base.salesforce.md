@@ -1,20 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Salesforce
-description: Documentation for the Salesforce node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Salesforce node documentation
+description: Learn how to use the Salesforce node in n8n. Follow technical documentation to integrate Salesforce node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# Salesforce
+# Salesforce node
 
 Use the Salesforce node to automate work in Salesforce, and integrate Salesforce with other applications. n8n has built-in support for a wide range of Salesforce features, including creating, updating, deleting, and getting accounts, attachments, cases, and leads, as well as uploading documents. 
 
 On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce/) for guidance on setting up authentication. 
+Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -99,7 +101,7 @@ Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce/)
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'salesforce') ]]
+[[ templatesWidget(page.title, 'salesforce') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

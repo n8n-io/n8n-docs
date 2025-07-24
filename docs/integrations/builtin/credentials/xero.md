@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Xero credentials
 description: Documentation for Xero credentials. Use these credentials to authenticate Xero in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Xero credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero/)
+- [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md)
 
 ## Prerequisites
 
@@ -36,14 +36,14 @@ Use these settings for your app:
 
 /// note | Xero App Name
 
-Please be advised that Xero does not support app instances within the Xero Developer Centre that contain _"n8n"_ in their name.
+Xero doesn't support app instances within the Xero Developer Centre that contain `n8n` in their name.
 
 ///
 
 - Select **Web app** as the **Integration Type**.
-- As the **Company or Application URL** enter the URL of your n8n server or reverse proxy address. For our cloud users this would be e.g. `https://your-username.app.n8n.cloud/`
+- For the **Company or Application URL**, enter the URL of your n8n server or reverse proxy address. For cloud users, for example, this is: `https://your-username.app.n8n.cloud/`.
 - Copy the **OAuth Redirect URL** from n8n and add it as an **OAuth 2.0 redirect URI** in your app.
 - Select appropriate **scopes** for your app. Refer to [OAuth2 Scopes](https://developer.xero.com/documentation/guides/oauth2/scopes/){:target=_blank .external-link} for more information.
-    - To use all functionality in the [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero/) node, add the `accounting.contacts` and `accounting.transactions` scopes.
+    - To use all functionality in the [Xero](/integrations/builtin/app-nodes/n8n-nodes-base.xero.md) node, add the `accounting.contacts` and `accounting.transactions` scopes.
 
 Refer to Xero's [OAuth Custom Connections](https://developer.xero.com/documentation/guides/oauth2/custom-connections){:target=_blank .external-link} documentation for more information.

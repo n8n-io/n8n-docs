@@ -1,11 +1,11 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Autopilot
-description: Documentation for the Autopilot node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Autopilot node documentation
+description: Learn how to use the Autopilot node in n8n. Follow technical documentation to integrate Autopilot node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Autopilot
+# Autopilot node
 
 Use the Autopilot node to automate work in Autopilot, and integrate Autopilot with other applications. n8n has built-in support for a wide range of Autopilot features, including creating, deleting, and updating contacts, as well as adding contacts to a list.
 
@@ -15,7 +15,7 @@ On this page, you'll find a list of operations the Autopilot node supports and l
 Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
 ///
 /// note | Credentials
-Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 
+Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -39,5 +39,5 @@ Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'autopilot') ]]
+[[ templatesWidget(page.title, 'autopilot') ]]
 

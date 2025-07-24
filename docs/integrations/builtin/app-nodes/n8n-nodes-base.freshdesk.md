@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Freshdesk
-description: Documentation for the Freshdesk node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Freshdesk node documentation
+description: Learn how to use the Freshdesk node in n8n. Follow technical documentation to integrate Freshdesk node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Freshdesk
+# Freshdesk node
 
 Use the Freshdesk node to automate work in Freshdesk and integrate Freshdesk with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting contacts and tickets.
 
 On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk/) for guidance on setting up authentication. 
+Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -33,4 +33,4 @@ Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'freshdesk') ]]
+[[ templatesWidget(page.title, 'freshdesk') ]]

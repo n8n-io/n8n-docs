@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Magento 2 credentials
 description: Documentation for Magento 2 credentials. Use these credentials to authenticate Magento 2 in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Magento 2 credentials
 
 You can use these credentials to authenticate the following node:
 
-- [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2/)
+- [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2.md)
 
 ## Prerequisites
 

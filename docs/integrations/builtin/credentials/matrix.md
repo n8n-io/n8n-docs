@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Matrix credentials
 description: Documentation for Matrix credentials. Use these credentials to authenticate Matrix in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Matrix credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Matrix](/integrations/builtin/app-nodes/n8n-nodes-base.matrix/)
+- [Matrix](/integrations/builtin/app-nodes/n8n-nodes-base.matrix.md)
 
 ## Prerequisites
 

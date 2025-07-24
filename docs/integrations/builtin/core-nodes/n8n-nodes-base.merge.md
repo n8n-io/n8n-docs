@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Merge
 description: Documentation for the Merge node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -114,7 +114,7 @@ The node outputs the data from the chosen input, without changing it.
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'merge') ]]
+[[ templatesWidget(page.title, 'merge') ]]
 
 ## Merging data streams with uneven numbers of items
 
@@ -186,7 +186,7 @@ Now try different options in **Mode** to see how it affects the output data.
 
 #### Append
 
-Select **Mode** > **Append**, then select **Test step**.
+Select **Mode** > **Append**, then select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->
@@ -206,7 +206,7 @@ You can merge these two data inputs so that each person gets the correct greetin
 1. Select **Mode** > **Combine**.
 2. Select **Combine by** > **Matching Fields**.
 3. In both **Input 1 Field** and **Input 2 Field**, enter `language`. This tells n8n to combine the data by matching the values in the `language` field in each data set.
-4. Select **Test step**.
+4. Select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->
@@ -220,7 +220,7 @@ Your output in table view should look like this:
 
 #### Combine by Position
 
-Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Test step**.
+Select **Mode** > **Combine**, **Combine by** > **Position**, then select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->
@@ -245,7 +245,7 @@ Your output in table view should look like this:
 
 #### Combine by All Possible Combinations 
 
-Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, then select **Test step**.
+Select **Mode** > **Combine**, **Combine by** > **All Possible Combinations**, then select **Execute step**.
 
 Your output in table view should look like this:
 <!-- vale off -->

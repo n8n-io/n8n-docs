@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Rename Keys
 description: Documentation for the Rename Keys node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -36,4 +36,4 @@ Using a regular expression can affect any keys that match the expression, includ
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'rename-keys') ]]
+[[ templatesWidget(page.title, 'rename-keys') ]]

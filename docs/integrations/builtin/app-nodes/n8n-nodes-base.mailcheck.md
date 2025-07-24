@@ -1,19 +1,21 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mailcheck
-description: Documentation for the Mailcheck node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Mailcheck node documentation
+description: Learn how to use the Mailcheck node in n8n. Follow technical documentation to integrate Mailcheck node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Mailcheck
+# Mailcheck node
 
 Use the Mailcheck node to automate work in Mailcheck, and integrate Mailcheck with other applications. n8n has built-in support for a wide range of Mailcheck features, including checking emails. 
 
 On this page, you'll find a list of operations the Mailcheck node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailcheck credentials](/integrations/builtin/credentials/mailcheck/) for guidance on setting up authentication. 
+Refer to [Mailcheck credentials](/integrations/builtin/credentials/mailcheck.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -23,4 +25,4 @@ Refer to [Mailcheck credentials](/integrations/builtin/credentials/mailcheck/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'mailcheck') ]]
+[[ templatesWidget(page.title, 'mailcheck') ]]

@@ -59,7 +59,7 @@
     {
       "parameters": {},
       "id": "29678c05-9a48-41ec-9c5c-af36ee0d7fc6",
-      "name": "Window Buffer Memory",
+      "name": "Simple Memory",
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "position": [
         860,
@@ -343,7 +343,7 @@
         ]
       ]
     },
-    "Window Buffer Memory": {
+    "Simple Memory": {
       "ai_memory": [
         [
           {

@@ -2,7 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: JWT
 description: Documentation for the JWT node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # JWT
@@ -10,7 +11,7 @@ contentType: integration
 Work with JSON web tokens in your n8n workflows.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/jwt/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/jwt.md).
 ///
 
 ## Operations
@@ -21,7 +22,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
-* **Credential to connect with**: Select or create a [JWT credential](/integrations/builtin/credentials/jwt/) to connect with.
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
+* **Credential to connect with**: Select or create a [JWT credential](/integrations/builtin/credentials/jwt.md) to connect with.
 * **Token**: Enter the token to **Verify** or **Decode**.
 * If you select the **Sign** operation, you'll also have this parameter:
     * **Use JSON to Build Payload**: When turned on, the node uses JSON to build the claims. The selection here influences what appears in the Payload Claims section.
@@ -96,4 +99,4 @@ This operation includes several node options:
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'jwt') ]]
+[[ templatesWidget(page.title, 'jwt') ]]

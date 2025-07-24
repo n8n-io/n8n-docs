@@ -1,30 +1,33 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Embeddings Google Gemini
-description: Documentation for the Embeddings Google Gemini node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+title: Embeddings Google Gemini node documentation
+description: Learn how to use the Embeddings Google Gemini node in n8n. Follow technical documentation to integrate Embeddings Google Gemini node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# Embeddings Google Gemini
+# Embeddings Google Gemini node
 
-Use the Embeddings Google Gemini node to generate embeddings for a given text.
+Use the Embeddings Google Gemini node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Google Gemini node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/googleai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-**Model**: the model to use to generate the embedding. Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}.
+* **Model**: Select the model to use to generate the embedding.
+
+Learn more about available models in [Google Gemini's models documentation](https://ai.google.dev/models/gemini){:target=_blank .external-link}.
 
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'embeddings-google-gemini') ]]
+[[ templatesWidget(page.title, 'embeddings-google-gemini') ]]
 
 ## Related resources
 

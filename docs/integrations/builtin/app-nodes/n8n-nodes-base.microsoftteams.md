@@ -1,20 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Microsoft Teams
-description: Documentation for the Microsoft Teams node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Microsoft Teams node documentation
+description: Learn how to use the Microsoft Teams node in n8n. Follow technical documentation to integrate Microsoft Teams node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# Microsoft Teams
+# Microsoft Teams node
 
 Use the Microsoft Teams node to automate work in Microsoft Teams, and integrate Microsoft Teams with other applications. n8n has built-in support for a wide range of Microsoft Teams features, including creating and deleting, channels, messages, and tasks. 
 
 On this page, you'll find a list of operations the Microsoft Teams node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication. 
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -31,6 +33,7 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
 	* Create
 	* Get
 	* Get Many
+	* Send and Wait for Response
 * Task
     * Create
     * Delete
@@ -38,10 +41,12 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
     * Get Many
     * Update
 
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'microsoft-teams') ]]
+[[ templatesWidget(page.title, 'microsoft-teams') ]]
 
 ## Related resources
 

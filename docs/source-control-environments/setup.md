@@ -9,7 +9,7 @@ contentType: howto
 
 Link a Git repository to an n8n instance and configure your source control.
 
-n8n uses source control to provide environments. Refer to [Environments in n8n](/source-control-environments/understand/environments/) for more information.
+n8n uses source control to provide environments. Refer to [Environments in n8n](/source-control-environments/understand/environments.md) for more information.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ For a new setup:
 1. Create a new repository for use with n8n. 
 1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
 
-To help decide what branches you need for your use case, refer to [Branch patterns](/source-control-environments/understand/patterns/).
+To help decide what branches you need for your use case, refer to [Branch patterns](/source-control-environments/understand/patterns.md).
 
 ## Step 2: Configure Git in n8n
 

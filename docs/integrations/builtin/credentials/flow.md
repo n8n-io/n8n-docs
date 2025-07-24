@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Flow credentials
 description: Documentation for Flow credentials. Use these credentials to authenticate Flow in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Flow credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow/)
-- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/)
+- [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow.md)
+- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md)
 
 ## Prerequisites
 

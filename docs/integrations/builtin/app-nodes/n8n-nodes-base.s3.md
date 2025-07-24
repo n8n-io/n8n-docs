@@ -1,14 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: S3
-description: Documentation for the S3 node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: S3 node documentation
+description: Learn how to use the S3 node in n8n. Follow technical documentation to integrate S3 node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
-# S3
+# S3 node
 
-Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. For AWS S3, use [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3/).
+Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. For AWS S3, use [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3.md).
 
 Use the S3 node for non-AWS S3 solutions like:
 
@@ -19,8 +19,10 @@ Use the S3 node for non-AWS S3 solutions like:
 On this page, you'll find a list of operations the S3 node supports and links to more resources.
 
 /// note | Credentials
-Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on setting up authentication. 
+Refer to [S3 credentials](/integrations/builtin/credentials/s3.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -35,9 +37,9 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on
     * Download a file
     * Get all files
     * Upload a file
-    
+
     /// note | Attach file for upload
-    To attach a file for upload, use another node to pass the file as a data property. Nodes like the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) work well.
+    To attach a file for upload, use another node to pass the file as a data property. Nodes like the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) work well.
     ///
 
 * Folder
@@ -48,7 +50,7 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 's3') ]]
+[[ templatesWidget(page.title, 's3') ]]
 
 ## Node reference
 
@@ -57,4 +59,3 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on
 When uploading files to [Wasabi](https://wasabi.com/){:target="_blank" .external-link}, you must set permissions for the files using the **ACL** dropdown and not the toggles.
 
 ![File permissions when using the S3 node with Wasabi](/_images/integrations/builtin/app-nodes/s3/acl_dropdown.png)
-

@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Asana trigger
-description: Documentation for the Asana trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Asana Trigger node documentation
+description: Learn how to use the Asana Trigger node in n8n. Follow technical documentation to integrate Asana Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Asana trigger
+# Asana Trigger node
 
-[Asana](https://asana.com/) is a web and mobile application designed to help teams organize, track, and manage their work.
+[Asana](https://asana.com/){:target=_blank .external-link} is a web and mobile application designed to help teams organize, track, and manage their work.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/asana/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/asana.md).
 ///
 
 ///  note  | Examples and templates

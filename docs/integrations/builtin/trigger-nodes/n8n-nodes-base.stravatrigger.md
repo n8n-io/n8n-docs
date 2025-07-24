@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Strava trigger
-description: Documentation for the Strava trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Strava Trigger node documentation
+description: Learn how to use the Strava Trigger node in n8n. Follow technical documentation to integrate Strava Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Strava trigger
+# Strava Trigger node
 
-[Strava](https://www.strava.com/) is an internet service for tracking human exercise which incorporates social network features.
+[Strava](https://www.strava.com/){:target=_blank .external-link} is an internet service for tracking human exercise which incorporates social network features.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/strava/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/strava.md).
 ///
 
 ///  note  | Examples and templates
@@ -19,24 +19,19 @@ For usage examples and templates to help you get started, refer to n8n's [Strava
 
 ## Events
 
-*
-- `*`
-- Created
-- Deleted
-- Updated
-
-
-**Activity**
-- `*`
-- Created
-- Deleted
-- Updated
-
-
-**Athlete**
-- `*`
-- Created
-- Deleted
-- Updated
-
+- **\[All\]**
+    - \[All\]
+    - Created
+    - Deleted
+    - Updated
+- **Activity**
+    - \[All\]
+    - Created
+    - Deleted
+    - Updated
+- **Athlete**
+    - \[All\]
+    - Created
+    - Deleted
+    - Updated
 

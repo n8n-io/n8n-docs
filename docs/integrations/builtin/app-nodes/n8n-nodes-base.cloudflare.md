@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Cloudflare
-description: Documentation for the Cloudflare node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Cloudflare node documentation
+description: Learn how to use the Cloudflare node in n8n. Follow technical documentation to integrate Cloudflare node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Cloudflare
+# Cloudflare node
 
 Use the Cloudflare node to automate work in Cloudflare, and integrate Cloudflare with other applications. n8n has built-in support for a wide range of Cloudflare features, including deleting, getting, and uploading zone certificates.
 
 On this page, you'll find a list of operations the Cloudflare node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/) for guidance on setting up authentication. 
+Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -26,7 +26,7 @@ Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'cloudflare') ]]
+[[ templatesWidget(page.title, 'cloudflare') ]]
 
 ## Related resources
 

@@ -2,76 +2,81 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Service Account
 description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Google: Service Account
 
 Using service accounts is more complex than OAuth2. Before you begin:
 
-* Check if your node is [compatible](/integrations/builtin/credentials/google/#compatible-nodes) with Service Account.
-* Make sure you need to use Service Account. For most use cases, OAuth2 is a better option.
+* Check if your node is [compatible](/integrations/builtin/credentials/google/index.md#compatible-nodes) with Service Account.
+* Make sure you need to use Service Account. For most use cases, [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts){:target=_blank .external-link}.
-
 
 ## Prerequisites
 
-* [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account
-* [Google Cloud Platform project](https://developers.google.com/workspace/marketplace/create-gcp-project){:targe=_blank .external-link}
+* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
 
 ## Set up Service Account
 
-### Create a new credential in n8n
+There are four steps to connecting your n8n credential to a Google Service Account:
 
-1. Follow the steps to [Create a credential](/credentials/add-edit-credentials/). 
+1. [Create a Google Cloud Console project](#create-a-google-cloud-console-project).
+1. [Enable APIs](#enable-apis).
+1. [Set up Google Cloud Service Account](#set-up-google-cloud-service-account).
+1. [Finish your n8n credential](#finish-your-n8n-credential).
 
-    /// note | Generic and specific credentials
-    If you create a credential by selecting **Create new** in the credentials dropdown in a node, n8n automatically creates the correct credential type for that node. If you select **Credentials > New**, you must browse for the credential type:
+### Create a Google Cloud Console project
 
-	* To connect with a specific service, using resources and operations supported by n8n, choose that service. For example, to create a credential for use in the Gmail node, search for `Gmail`.
-	* To create a credential for a [custom API call](/integrations/custom-operations/), select **Google API**.
-    ///
+First, create a Google Cloud Console project. If you already have a project, jump to the next section:
 
+--8<-- "_snippets/integrations/builtin/credentials/google/create-google-cloud-project.md"
 
+### Enable APIs
 
-2. Note the **Private Key** from the node credential modal. You'll need this in the next section.
+With your project created, enable the APIs you'll need access to:
 
-### Set up service account in Google Cloud
+--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
-In your [Google Cloud Console](https://console.cloud.google.com){:target=_blank .external-link} dashboard:
+### Set up Google Cloud Service Account
+
+1. Access your [Google Cloud Console - Library](https://console.cloud.google.com/apis/library){:target=_blank .external-link}. Make sure you're in the correct project.
+
+	<figure markdown="span">
+	![The project dropdown in the Google Cloud top navigation](/_images/integrations/builtin/credentials/google/google-cloud-project-dropdown.png)
+	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
+	</figure>
 
 1. Select the hamburger menu **> APIs & Services > Credentials**. Google takes you to your **Credentials** page.
-
-	??? Details "View screenshot"
-		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-api-services-credentials.png)
-
 2. Select **+ CREATE CREDENTIALS > Service account**.
-
-	??? Details "View screenshot"
-		![Access the Credentials page for APIs and services](/_images/integrations/builtin/credentials/google/service-account-create-credentials.png)
-
 3. Enter a name in **Service account name** and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating){:target=_blank .external-link} for more information.
 4. Select **CREATE AND CONTINUE**.
 5. Based on your use-case, you may want to **Select a role** and **Grant users access to this service account**  using the corresponding sections.
 6. Select **DONE**.
 7. Select your newly created service account under the **Service Accounts** section. Open the **KEYS** tab.
 8. Select **ADD KEY > Create new key**.
-
-	??? Details "View screenshot"
-		![Create a new key](/_images/integrations/builtin/credentials/google/service-account-create-key.png)
-
 9. In the modal that appears, select **JSON**, then select **CREATE**. Google saves the file to your computer.
-10. Enable each Google service API that you want to use:
-	--8<-- "_snippets/integrations/builtin/credentials/google/enable-apis.md"
 
-### Create and test your connection
+### Finish your n8n credential
 
-In n8n:
+With the Google project and credentials fully configured, finish the n8n credential:
 
-1. In the **Service Account Email** field, enter the email associated with your new Service Account (you can find this in the **Details** tab in Google Cloud).
-2. Enter the **Private Key** from the downloaded JSON file. If you're running an n8n version older than 0.156.0: replace all instances of `\n` in the JSON file with new lines.
-3. **Optional**: Click the toggle to enable [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} and enter the email.
-4. **Save** your credentials.
+1. Open the downloaded JSON file.
+2. Copy the `client_email` and enter it in your n8n credential as the **Service Account Email**.
+3. Copy the `private_key`. Don't include the surrounding `"` marks. Enter this as the **Private Key** in your n8n credential.
+
+	///warning | Older versions of n8n
+	If you're running an n8n version older than 0.156.0, replace all instances of `\n` in the JSON file with new lines.
+	///
+
+4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} (turned on).
+    1. To use this option, you must [Enable domain-wide delegation](#enable-domain-wide-delegation) for the service account as a Google Workspace super admin.
+	1. Enter the **Email** of the user you want to impersonate.
+5. If you plan to use this credential with the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, turn on **Set up for use in HTTP Request node**.
+	1. With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for more information.
+6. **Save** your credentials.
+
+## Video
 
 The following video demonstrates the steps described above.
 
@@ -91,3 +96,23 @@ A Service Account can't access Google Drive files and folders that weren't share
 4. Paste your Service Account email into **Add People and groups**.
 5. Select **Editor** for read-write access or **Viewer** for read-only access.
 
+### Enable domain-wide delegation
+
+To impersonate a user with a service account, you must enable domain-wide delegation for the service account.
+
+/// warning | Not recommended
+Google recommends you [avoid using domain-wide delegation](https://cloud.google.com/iam/docs/best-practices-service-accounts#domain-wide-delegation){:target=_blank .external-link}, as it allows impersonation of any user (including super admins) and can pose a security risk.
+///
+
+To delegate domain-wide authority to a service account, you must be a super administrator for the Google Workspace domain. Then:
+
+1. From your Google Workspace domain's [Admin console](https://admin.google.com/){:target=_blank .external-link}, select the hamburger menu, then select **Security > Access and data control > API Controls**.
+2. In the **Domain wide delegation** pane, select **Manage Domain Wide Delegation**.
+3. Select **Add new**.
+4. In the **Client ID** field, enter the service account's **Client ID**. To get the Client ID:
+    * Open your Google Cloud Console project, then open the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts){:target=_blank .external-link} page.
+    * Copy the **OAuth 2 Client ID** and use this as the **Client ID** for the **Domain Wide Delegation**.
+5. In the **OAuth scopes** field, enter a list of comma-separate scopes to grant your application access. For example, if your application needs domain-wide full access to the Google Drive API and the Google Calendar API, enter: `https://www.googleapis.com/auth/drive, https://www.googleapis.com/auth/calendar`.
+6. Select **Authorize**.
+
+It can take from 5 minutes up to 24 hours before you can impersonate all users in your Workspace.

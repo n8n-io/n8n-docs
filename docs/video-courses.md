@@ -33,7 +33,7 @@ The [Advanced](https://www.youtube.com/playlist?list=PLlET0GsrLUL5bxmx5c1H1Ms_Ot
 - [Introduction and complex data flows](https://youtu.be/TFTLMQLozCI?si=vX0ooIH1RmbsgAkC){:target=_blank .external-link}
 - [Advanced technical nodes](https://youtu.be/JM4jqYs4Fxo?si=YSNMeSay3C29C8HS){:target=_blank .external-link}
 - [Pinning and editing output data](https://youtu.be/zcNB8L4_9mA?si=LZJ9DlYDQQxL7eeP){:target=_blank .external-link}
-- [Subworkflows](https://youtu.be/xr05Ie_Hkyg?si=rqqP8llttZPBjBeD){:target=_blank .external-link}
+- [Sub-workflows](https://youtu.be/xr05Ie_Hkyg?si=rqqP8llttZPBjBeD){:target=_blank .external-link}
 - [Error workflows](https://youtu.be/77Ewdaby47M?si=6YRlC4nMgG4hVQPV){:target=_blank .external-link}
 - [Building a full example](https://youtu.be/wOKLEfeJLVE?si=YMW5t-PzPq7QKbPY){:target=_blank .external-link}
 - [Handling files](https://youtu.be/2RAZYNigqOY?si=9x4vLX2Qo08xx8vC){:target=_blank .external-link}

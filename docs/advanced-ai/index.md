@@ -1,8 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-contentType: overview
-title: Advanced AI
+title: n8n Advanced AI Documentation and Guides
 description: Use n8n's LangChain integrations to build AI-powered functionality within your workflows. Connect your LangChain functionality to other data sources and services.
+contentType: overview
 ---
 
 # Advanced AI
@@ -19,20 +19,25 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     Work through the short tutorial to learn the basics of building AI workflows in n8n.
 
-    [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial/)
+    [:octicons-arrow-right-24: Tutorial](/advanced-ai/intro-tutorial.md)
+
+-   __Use a Starter Kit__
+
+    Try n8n's Self-hosted AI Starter Kit to quickly start building AI workflows.
+
+    [:octicons-arrow-right-24: Self-hosted AI Starter Kit](/hosting/starter-kits/ai-starter-kit.md)
 
 -   __Explore examples and concepts__
 
 	Browse examples and workflow templates to help you build. Includes explanations of important AI concepts.
 
-    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/introduction/)
-
+    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/introduction.md)
 
 -   __How n8n uses LangChain__
 
     Learn more about how n8n builds on LangChain.
 
-    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/overview/)
+    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/overview.md)
 
 -   __Browse AI templates__
 
@@ -40,7 +45,6 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
 
-   
 </div>
 
 ## Related resources
@@ -49,19 +53,19 @@ Related documentation and tools.
 
 ### Node types
 
-This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/): groups of [root](/integrations/builtin/cluster-nodes/root-nodes/) and [sub](/integrations/builtin/cluster-nodes/sub-nodes/) nodes that work together.
+This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/index.md): groups of [root](/integrations/builtin/cluster-nodes/root-nodes/index.md) and [sub](/integrations/builtin/cluster-nodes/sub-nodes/index.md) nodes that work together.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/cluster-nodes-summary.md"
 
 ### Workflow templates
 
-You can browse workflow templates in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
+You can browse [workflow templates](/glossary.md#template-n8n) in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
 
-Refer to [Templates](/workflows/templates/) for information on accessing templates in-app.
+Refer to [Templates](/workflows/templates.md) for information on accessing templates in-app.
 
 ### Chat trigger
 
-Use the [n8n Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/) to trigger a workflow based on chat interactions.
+Use the [n8n Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) to trigger a workflow based on chat interactions.
 
 ### Chatbot widget
 

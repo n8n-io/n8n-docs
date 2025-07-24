@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Perspective
-description: Documentation for the Google Perspective node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Google Perspective node documentation
+description: Learn how to use the Google Perspective node in n8n. Follow technical documentation to integrate Google Perspective node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Google Perspective
+# Google Perspective node
 
 Use the Google Perspective node to automate work in Google Perspective, and integrate Google Perspective with other applications. n8n has built-in support for a wide range of Google Perspective features, including analyzing comments.
 
 On this page, you'll find a list of operations the Google Perspective node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Perspective credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Perspective credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -22,6 +22,6 @@ Refer to [Google Perspective credentials](/integrations/builtin/credentials/goog
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'google-perspective') ]]
+[[ templatesWidget(page.title, 'google-perspective') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

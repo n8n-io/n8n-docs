@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: QuestDB
-description: Documentation for the QuestDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: QuestDB node documentation
+description: Learn how to use the QuestDB node in n8n. Follow technical documentation to integrate QuestDB node into your workflows.
+contentType: [integration, reference]
 ---
 
-# QuestDB
+# QuestDB node
 
 Use the QuestDB node to automate work in QuestDB, and integrate QuestDB with other applications. n8n supports executing an SQL query and inserting rows in a database with QuestDB.
 
 On this page, you'll find a list of operations the QuestDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb/) for guidance on setting up authentication. 
+Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -23,7 +23,7 @@ Refer to [QuestDB credentials](/integrations/builtin/credentials/questdb/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'questdb') ]]
+[[ templatesWidget(page.title, 'questdb') ]]
 
 ## Node reference
 

@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Copper trigger
-description: Documentation for the Copper trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Copper Trigger node documentation
+description: Learn how to use the Copper Trigger node in n8n. Follow technical documentation to integrate Copper Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Copper trigger
+# Copper Trigger node
 
-[Copper](https://www.copper.com/) is a CRM that focuses on strong integration with Google's G Suite. It's mainly targeted towards small and medium-sized businesses.
+[Copper](https://www.copper.com/){:target=_blank .external-link} is a CRM that focuses on strong integration with Google Workspace. It's mainly targeted towards small and medium-sized businesses.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/copper/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/copper.md).
 ///
 
 ///  note  | Examples and templates

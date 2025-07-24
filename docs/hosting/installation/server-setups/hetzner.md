@@ -7,7 +7,7 @@ contentType: tutorial
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
 
-* [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Server from the internet.
+* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Server from the internet.
 * [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
 
 --8<-- "_snippets/self-hosting/warning.md"
@@ -105,7 +105,7 @@ nano .env
 
 The file contains inline comments to help you know what to change.
 
-Refer to [Environment variables](/hosting/configuration/environment-variables/) for n8n environment variables details.
+Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
 
 ## The Docker Compose file
 

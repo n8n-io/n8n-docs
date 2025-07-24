@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Split Out
 description: Documentation for the Split Out node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -47,7 +48,7 @@ Choose whether to include binary data from the input in the new output (turned o
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'split-out') ]]
+[[ templatesWidget(page.title, 'split-out') ]]
 
 ## Related resources
 

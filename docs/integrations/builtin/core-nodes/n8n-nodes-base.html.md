@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HTML
 description: Documentation for the HTML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -36,7 +36,7 @@ You can include:
 * JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
 * Expressions, wrapped in `{{}}`.
 
-You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview/). 
+You can use [Expressions](/code/expressions.md) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview.md). 
 
 ## Extract HTML Content
 
@@ -86,4 +86,4 @@ This operation expects data from another node. It has no parameters. It includes
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'html') ]]
+[[ templatesWidget(page.title, 'html') ]]

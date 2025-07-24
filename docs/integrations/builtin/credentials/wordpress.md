@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: WordPress credentials
 description: Documentation for WordPress credentials. Use these credentials to authenticate WordPress in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,12 +10,11 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/)
+- [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md)
 
 ## Prerequisites
 
 - Create a [WordPress](https://wordpress.com/){:target=_blank .external-link} account or deploy WordPress on a server.
-- [Enable two-factor authentication](https://wordpress.com/support/security/two-step-authentication/){:target=_blank .external-link} for your WordPress user account. (Required to create an app password.)
 
 ## Supported authentication methods
 
@@ -29,7 +28,45 @@ Refer to [WordPress's API documentation](https://developer.wordpress.com/docs/ap
 
 To configure this credential, you'll need:
 
-- A **Username**: Enter your WordPress username.
-- A **Password**: Do not enter your WordPress password. Instead, go to your **Profile > Security > Application Passwords** and add a new application password for n8n. Copy that password and enter it in your n8n credential. Refer to [Add a New Application Password](https://wordpress.com/support/security/two-step-authentication/application-specific-passwords/#add-a-new-application-password){:target=_blank .external-link} for more information.
-- Your **WordPress URL**: Enter your WordPress site's URL.
-- **Ignore SSL Issues**: When turned on, n8n will connect even if SSL certificate validation fails.
+- Your WordPress **Username**
+- A WordPress application **Password**
+- Your **WordPress URL**
+- Decide whether to **Ignore SSL Issues**
+
+Using this credential involves three steps:
+
+1. [Enable two-step authentication](#enable-two-step-authentication).
+2. [Create an application password](#create-an-application-password).
+3. [Set up the credential](#set-up-the-credential).
+
+Refer to the detailed instructions below for each step.
+
+### Enable two-step authentication
+
+To generate an application password, you must first enable Two-Step Authentication in WordPress. If you've already done this, [skip to the next section](#create-an-application-password).
+
+1. Open your WordPress [profile](https://wordpress.com/me){:target=_blank .external-link}.
+2. Select **Security** from the left menu.
+3. Select **Two-Step Authentication**. The **Two-Step Authentication** page opens.
+4. If Two-Step Authentication isn't enabled, you must enable it.
+5. Choose whether to enable it using an authenticator app or SMS codes and follow the on-screen instructions.
+
+Refer to WordPress's [Enable Two-Step Authentication](https://wordpress.com/support/security/two-step-authentication/){:target=_blank .external-link} for detailed instructions.
+
+### Create an application password
+
+With Two-Step Authentication enabled, you can now generate an application password:
+
+1. From the WordPress **Security >** [**Two-Step Authentication**](https://wordpress.com/me/security/two-step) page, select **+ Add new application password** in the **Application passwords** section.
+5. Enter an **Application name**, like `n8n integration`.
+6. Select **Generate Password**.
+7. Copy the password it generates. You'll use this in your n8n credential.
+
+### Set up the credential
+
+Congratulations! You're now ready to set up your n8n credential:
+
+1. Enter your WordPress **Username** in your n8n credential.
+2. Enter the application password you copied above as the **Password** in your n8n credential.
+3. Enter the URL of your WordPress site as the **WordPress URL**.
+4. Optional: Use the **Ignore SSL Issues** to choose whether you want the n8n credential to connect even if SSL certificate validation fails (turned on) or whether to respect SSL certificate validation (turned off).

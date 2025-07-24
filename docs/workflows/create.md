@@ -26,7 +26,7 @@ If it's your first time building a workflow, you may want to use the [tutorial](
 
 You may need to run your workflow manually when building and testing, or if your workflow doesn't have a trigger node. 
 
-To run manually, select **Test Workflow**.
+To run manually, select **Execute Workflow**.
 
 ## Run workflows automatically
 

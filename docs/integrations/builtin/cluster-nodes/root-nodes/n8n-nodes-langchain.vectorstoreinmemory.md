@@ -88,6 +88,8 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale from-write-good.Weasel = NO -->

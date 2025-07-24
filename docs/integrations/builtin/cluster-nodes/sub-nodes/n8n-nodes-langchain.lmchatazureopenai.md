@@ -33,6 +33,10 @@ You can find authentication information for this node [here](/integrations/built
 * **Max Retries**: Enter the maximum number of times to retry a request.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 
+## Proxy limitations
+
+This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables.md#deployment).
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

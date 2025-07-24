@@ -53,14 +53,6 @@ By default, this field contains a randomly generated MCP URL path, to avoid conf
 
 You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
 
-The **Path** field can take the following formats:
-
-- `/:variable`
-- `/path/:variable`
-- `/:variable/path`
-- `/:variable1/path/:variable2`
-- `/:variable1/:variable2`
-
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

@@ -133,6 +133,7 @@ nav:
       - Manage executions:
         - workflows/executions/index.md
         - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
+        - Dirty nodes: workflows/executions/dirty-nodes.md
         - Workflow-level executions: workflows/executions/single-workflow-executions.md
         - All executions: workflows/executions/all-executions.md
         - Custom executions data: workflows/executions/custom-executions-data.md
@@ -324,6 +325,7 @@ nav:
           - integrations/creating-nodes/build/reference/index.md
           - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - Error handling: integrations/creating-nodes/build/reference/error-handling.md
           - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
           - Base files:
             - integrations/creating-nodes/build/reference/node-base-files/index.md
@@ -446,6 +448,7 @@ nav:
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
         - AMQP Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
+        - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
         - Asana Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
@@ -453,6 +456,7 @@ nav:
         - Autopilot: integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md
         - Autopilot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
         - AWS Certificate Manager: integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md
+        - AWS Cognito: integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md
         - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
         - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
         - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
@@ -594,6 +598,7 @@ nav:
         - Google Drive Trigger:
           - Google Drive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md
           - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md
+        - Google Gemini: integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
@@ -681,6 +686,7 @@ nav:
         - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
+        - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
         - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
         - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
         - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md
@@ -881,6 +887,7 @@ nav:
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
+          - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
         - Sub-nodes:
           - integrations/builtin/cluster-nodes/sub-nodes/index.md
@@ -899,6 +906,7 @@ nav:
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - Cohere Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md
           - DeepSeek Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
@@ -1244,6 +1252,7 @@ nav:
         - integrations/builtin/credentials/vero.md
         - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md
+        - integrations/builtin/credentials/weaviate.md        
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/webflow.md
         - integrations/builtin/credentials/webhook.md

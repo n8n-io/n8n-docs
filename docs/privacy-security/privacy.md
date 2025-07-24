@@ -159,9 +159,7 @@ Data is only sent to AI services if workspaces have opted in to use the assistan
 
 ### Documentation telemetry
 
-n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of n8n's documentation and whether users find what they're searching for. With your consent, you're helping n8n to make our documentation better.
-
-[Change cookie settings](#__consent){ .md-button }
+n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of n8n's documentation and whether users find what they're searching for. With your consent, you're helping n8n to make our documentation better. You can control cookie consent using the cookie widget.
 
 ## Retention and deletion of personal identifiable data
 

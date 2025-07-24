@@ -53,6 +53,8 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 ### Insert Documents parameters
@@ -85,8 +87,6 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 Must be the same when embedding the data and when querying it.
 
 This sets the size of the array of floats used to represent the semantic meaning of a text document.
-
-Read more about Zep embeddings in [Zep's embeddings documentation](https://docs.getzep.com/deployment/embeddings/).
 
 ### Is Auto Embedded
 

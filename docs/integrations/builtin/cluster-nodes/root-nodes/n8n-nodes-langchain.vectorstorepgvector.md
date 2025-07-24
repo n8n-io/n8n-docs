@@ -49,6 +49,8 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale off -->

@@ -50,6 +50,8 @@ The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitc
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale from-write-good.Weasel = NO -->

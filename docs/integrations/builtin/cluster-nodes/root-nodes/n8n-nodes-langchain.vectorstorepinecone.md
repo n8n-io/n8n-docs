@@ -53,14 +53,6 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 
 ### Operation Mode
 
-Pinecone Vector Store node in n8n have four modes: **Get Many**, **Insert Documents**, **Retrieve Documents** and **Update Documents**. The mode you select determines the operations you can perform with the node and what inputs and outputs are available.
-
---8<-- "_snippets/integrations/builtin/cluster-nodes/common-vector-store-modes.md"
-
-#### Update Documents
-
-Use Update Documents mode to update existing items in vector database by ID.
-
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"

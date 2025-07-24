@@ -19,7 +19,7 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/azure-monitor-rest-api-index){:target=_blank .external-link} for more information about the service.
+Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/azure-monitor-rest-api-index) for more information about the service.
 
 ## Using OAuth2
 
@@ -30,4 +30,4 @@ To configure this credential, you'll need a Microsoft Azure account and:
 - A **Tenant ID**
 - The **Resource** you plan to access
 
-Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/api/access-api?tabs=rest#set-up-authentication){:target=_blank .external-link} for more information about authenticating to the service.
+Refer to [Microsoft Azure Monitor's API documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/api/access-api?tabs=rest#set-up-authentication) for more information about authenticating to the service.

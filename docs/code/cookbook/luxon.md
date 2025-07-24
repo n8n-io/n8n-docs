@@ -7,7 +7,7 @@ contentType: howto
 
 # Date and time with Luxon
 
-[Luxon](https://github.com/moment/luxon/){:target=_blank .external-link} is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon){:target=_blank .external-link}. 
+[Luxon](https://github.com/moment/luxon/) is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon). 
 
 n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier.
 
@@ -230,7 +230,7 @@ For example, get the number of months between two dates:
 
 	This returns `{"months":1}`.
 
-Refer to Luxon's [Diffs](https://moment.github.io/luxon/#/math?id=diffs){:target=_blank .external-link} for more information.
+Refer to Luxon's [Diffs](https://moment.github.io/luxon/#/math?id=diffs) for more information.
 
 ### A longer example: How many days to Christmas?
 

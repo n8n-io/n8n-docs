@@ -176,7 +176,7 @@ Whether to clear the collection or tenant before inserting new data.
 
 ## Related resources
 
-Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/integrations/vectorstores/weaviate/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/integrations/vectorstores/weaviate/) for more information about the service.
 
 Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self hosted Weaviate Cluster.
 

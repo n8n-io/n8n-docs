@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Chargebee Trigger node
 
-[Chargebee](https://www.chargebee.com/){:target=_blank .external-link} is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
+[Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Chargebee Trigger integrations](https://n8n.io/integrations/chargebee-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Chargebee Trigger integrations](https://n8n.io/integrations/chargebee-trigger/) page.
 ///
 
 ## Add webhook URL in Chargebee

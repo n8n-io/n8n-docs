@@ -7,13 +7,13 @@ contentType: [integration, reference]
 
 # Brevo Trigger node
 
-[Brevo](https://www.brevo.com/){:target=_blank .external-link} is a digital marketing platform to help users grow their business.
+[Brevo](https://www.brevo.com/) is a digital marketing platform to help users grow their business.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/brevo.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Brevo Trigger integrations](https://n8n.io/integrations/brevo-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Brevo Trigger integrations](https://n8n.io/integrations/brevo-trigger/) page.
 ///
 

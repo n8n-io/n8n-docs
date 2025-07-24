@@ -29,7 +29,7 @@ jobs:
       - name: PR comment with file
         uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # v3.0.1
         with:
-          file-path: lychee/out.md
+          file-path: _lychee/out.md
           comment-tag: execution
           mode: recreate
       - name: Report Status

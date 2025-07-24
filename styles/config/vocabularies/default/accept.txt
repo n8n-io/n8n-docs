@@ -63,7 +63,7 @@ CPython
 CRMs?
 Cron
 [Cc]rypto
-[Cc]ryptocurnc(y|ies)
+[Cc]ryptocurrenc(y|ies)
 [Cc]ybersecurity
 Datadog
 [Dd]atacenters?

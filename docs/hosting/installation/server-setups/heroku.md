@@ -45,7 +45,7 @@ Refer to the [Heroku documentation](https://devcenter.heroku.com/categories/netw
 ///
 ## Changing the deployment template
 
-You can make changes to the deployment template by forking the [repository](https://github.com/n8n-io/n8n-heroku){:target=_blank .external-link} and deploying from you fork.
+You can make changes to the deployment template by forking the [repository](https://github.com/n8n-io/n8n-heroku) and deploying from you fork.
 
 ### The Dockerfile
 

@@ -10,18 +10,18 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-An accessible instance of [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_started/){:target=_blank .external-link}.
+An accessible instance of [DFIR-IRIS](https://docs.dfir-iris.org/latest/getting_started/).
 
 ## Related resources
 
-Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for more information about authenticating with the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dfir-iris/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dfir-iris/) on n8n's website.
 
 
 ## Using API Key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/){:target=_blank .external-link} for instructions on getting your API key.
+- An **API Key**: Refer to [DFIR-IRIS's API documentation](https://docs.dfir-iris.org/operations/api/) for instructions on getting your API key.
 - The **Base URL** of your DFIR-IRIS instance.

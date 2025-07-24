@@ -17,7 +17,7 @@ There are different ways to set up n8n depending on how you intend to use it:
 	* [npm](/hosting/installation/npm.md)
 	* [Docker](/hosting/installation/docker.md)
 	* [Server setup guides](/hosting/installation/server-setups/index.md) for popular platforms
-* [Embed](/embed/index.md): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/){:target=_blank .external-link} for pricing and support.
+* [Embed](/embed/index.md): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/) for pricing and support.
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -42,5 +42,5 @@ n8n has two paid versions:
 * n8n Cloud: choose from a range of paid plans to suit your usage and feature needs.
 * Self-hosted: there are both free and paid versions of self-hosted.
 
-For details of the Cloud plans and contact details for Enterprise Self-hosted, refer to [Pricing](https://n8n.io/pricing/){:target=_blank .external-link} on the n8n website.
+For details of the Cloud plans and contact details for Enterprise Self-hosted, refer to [Pricing](https://n8n.io/pricing/) on the n8n website.
 

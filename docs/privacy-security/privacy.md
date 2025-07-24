@@ -21,11 +21,11 @@ This page describes n8n's data privacy practices.
 
 ### Data processing agreement
 
-For Cloud versions of n8n, n8n is considered both a Controller and a Processor as defined by the GDPR. As a Processor, n8n implements policies and practices that secure the personal data you send to the platform, and includes a [Data Processing Agreement](https://n8n.io/legal/#data){:target=_blank .external-link} as part of the company's standard [Terms of Service](https://n8n.io/legal/#terms){:target=_blank .external-link}.
+For Cloud versions of n8n, n8n is considered both a Controller and a Processor as defined by the GDPR. As a Processor, n8n implements policies and practices that secure the personal data you send to the platform, and includes a [Data Processing Agreement](https://n8n.io/legal/#data) as part of the company's standard [Terms of Service](https://n8n.io/legal/#terms).
 
-The n8n Data Processing Agreement includes the [Standard Contractual Clauses (SCCs)](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en){:target=_blank .external-link}. These clarify how n8n handles your data, and they update n8n's GDPR policies to cover the latest standards set by the European Commission.
+The n8n Data Processing Agreement includes the [Standard Contractual Clauses (SCCs)](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en). These clarify how n8n handles your data, and they update n8n's GDPR policies to cover the latest standards set by the European Commission.
 
-You can find a list of n8n sub-processors [here](https://n8n.io/legal/#subprocessors){:target=_blank .external-link}.
+You can find a list of n8n sub-processors [here](https://n8n.io/legal/#subprocessors).
 
 /// note | Self-hosted n8n
 For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data
@@ -43,7 +43,7 @@ This is a list of sub-processors authorized to process customer data for n8n's s
 | Microsoft Azure | Microsoft Azure <br /> 1 Microsoft Way <br /> Redmond <br /> WA 98052 <br /> USA <br /> Contact information: https://privacy.microsoft.com/en-GB/privacystatement#mainhowtocontactusmodule | Germany (West Central Region) |
 | Hetzner Online | Hetzner Online GmbH <br /> Industriestr. 25 <br /> 91710 Gunzenhausen <br /> Germany <br /> data-protection@hetzner.com | Germany |
 
-Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=n8n.io){:target=_blank .external-link} to receive updates when n8n adds or changes a sub-processor.
+Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=n8n.io) to receive updates when n8n adds or changes a sub-processor.
 
 ### GDPR for self-hosted users
 
@@ -53,7 +53,7 @@ Subscribe [here](https://n8n-community.typeform.com/to/FdeRxSkH?typeform-source=
 
 ## Data collection 
 
-n8n collects selected usage and performance data to help diagnose problems and improve the platform. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/#privacy){:target=_blank .external-link}.
+n8n collects selected usage and performance data to help diagnose problems and improve the platform. Read about how n8n stores and processes this information in the [privacy policy](https://n8n.io/legal/#privacy).
 
 The data gathered is different in self-hosted n8n and n8n Cloud.
 
@@ -130,7 +130,7 @@ See [configuration](/hosting/configuration/configuration-methods.md) for more in
 
 n8n Cloud collects everything listed in [Data collection in self-hosted n8n](#data-collection-in-self-hosted-n8n).
 
-Additionally, in n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to track events and visualise usage, including using session recordings. Session recordings comprise the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
+Additionally, in n8n Cloud, n8n uses [PostHog](https://posthog.com/) to track events and visualise usage, including using session recordings. Session recordings comprise the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
 
 ### AI in n8n
 

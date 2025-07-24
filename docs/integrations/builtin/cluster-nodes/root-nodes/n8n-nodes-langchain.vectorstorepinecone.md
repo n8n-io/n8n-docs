@@ -96,7 +96,7 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 ## Related resources
 
-Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

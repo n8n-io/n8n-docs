@@ -32,6 +32,6 @@ Refer to [npm credentials](/integrations/builtin/credentials/npm.md) for guidanc
 
 ## Related resources
 
-Refer to [npm's documentation](https://docs.npmjs.com/){:target=_blank .external-link} for more information about the service.
+Refer to [npm's documentation](https://docs.npmjs.com/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

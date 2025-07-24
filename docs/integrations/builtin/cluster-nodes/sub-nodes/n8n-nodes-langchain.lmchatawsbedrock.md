@@ -28,6 +28,10 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 
+## Proxy limitations
+
+This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables/deployment.md).
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

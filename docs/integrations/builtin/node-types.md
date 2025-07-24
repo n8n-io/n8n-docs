@@ -31,4 +31,4 @@ To learn more about creating, managing, and sharing credentials, refer to [Manag
 
 n8n supports custom nodes built by the community. Refer to [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on installing and using these nodes.
 
-For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}, refer to [Creating nodes](/integrations/creating-nodes/overview.md) for more information.
+For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/), refer to [Creating nodes](/integrations/creating-nodes/overview.md) for more information.

@@ -37,6 +37,6 @@ Refer to [Google Cloud Storage credentials](/integrations/builtin/credentials/go
 
 ## Related resources
 
-Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis){:target=_blank .external-link} for detailed information about the API that this node integrates with.
+Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis) for detailed information about the API that this node integrates with.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

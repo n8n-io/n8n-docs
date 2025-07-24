@@ -128,7 +128,7 @@ Each worker process runs a server that exposes optional endpoints:
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 ///
 
 You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.

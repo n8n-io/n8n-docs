@@ -8,7 +8,7 @@ priority: medium
 
 # Airtable Trigger node
 
-[Airtable](https://airtable.com/){:target=_blank .external-link} is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
+[Airtable](https://airtable.com/) is a spreadsheet-database hybrid, with the features of a database but applied to a spreadsheet. The fields in an Airtable table are similar to cells in a spreadsheet, but have types such as 'checkbox', 'phone number', and 'drop-down list', and can reference file attachments like images.
 
 On this page, you'll find a list of events the Airtable Trigger node can respond to and links to more resources.
 

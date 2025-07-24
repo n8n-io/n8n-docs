@@ -8,14 +8,14 @@ priority: medium
 
 # Google Drive Trigger node
 
-[Google Drive](https://drive.google.com){:target=_blank .external-link} is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
+[Google Drive](https://drive.google.com) is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google Drive Trigger integrations](https://n8n.io/integrations/google-drive-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Google Drive Trigger integrations](https://n8n.io/integrations/google-drive-trigger/) page.
 ///
 
 /// note | Manual Executions vs. Activation

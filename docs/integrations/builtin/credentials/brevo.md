@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Brevo](https://www.brevo.com/){:target=_blank .external-link} developer account.
+Create a [Brevo](https://www.brevo.com/) developer account.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ Create a [Brevo](https://www.brevo.com/){:target=_blank .external-link} develope
 
 ## Related resources
 
-Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1) for more information about authenticating with the service.
 
 ## API key
 

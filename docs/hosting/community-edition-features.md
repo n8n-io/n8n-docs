@@ -30,7 +30,7 @@ The community edition doesn't include these features:
 
 These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
-See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.
+See [pricing](https://n8n.io/pricing/) for reference.
 
 ## Registered Community Edition
 

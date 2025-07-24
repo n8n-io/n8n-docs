@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following node:
 
 ## Prerequisites
 
-Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} account.
+Create a [Clearbit](https://www.clearbit.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Clearbit](https://www.clearbit.com/){:target=_blank .external-link} ac
 
 ## Related resources
 
-Refer to [Clearbit's API documentation](https://dashboard.clearbit.com/docs){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Clearbit's API documentation](https://dashboard.clearbit.com/docs) for more information about authenticating with the service.
 
 ## Using API key
 

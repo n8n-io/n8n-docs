@@ -88,7 +88,6 @@ Must be the same when embedding the data and when querying it.
 
 This sets the size of the array of floats used to represent the semantic meaning of a text document.
 
-Read more about Zep embeddings in [Zep's embeddings documentation](https://docs.getzep.com/deployment/embeddings/){:target=_blank .external-link}.
 
 ### Is Auto Embedded
 

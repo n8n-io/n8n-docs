@@ -8,7 +8,7 @@ verbose = "warn"
 no_progress = true
 
 # Path to summary output file.
-output = ".config.dummy.report.md"
+output = "_lychee/output.md"
 format = "markdown"
 
 #############################  Cache  ###############################

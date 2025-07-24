@@ -40,7 +40,8 @@
         {{ feedback.title }}
       </legend>
       <div class="md-feedback__inner">
-        <textarea id="feedback-input" name="feedback-details" placeholder="{{ feedback.details }}"></textarea>
+        <!-- n8n CUSTOM: add a text field to capture comments -->
+        <textarea id="feedback-comment" name="feedback-comment" placeholder="{{ feedback.details }}"></textarea>
         <!-- Feedback ratings -->
         <div class="md-feedback__list">
           {% for rating in feedback.ratings %}

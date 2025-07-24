@@ -53,12 +53,10 @@ copyright: >
   <a href="#__consent">Change cookie settings</a>
 extra:
   analytics:
-    provider: google
-    property: G-0SC4FF2FH9
     feedback:
       title: Was this page helpful?
       # TODO: is this useful?
-      details: Explain your rating
+      details: Explain your rating (optional)
       ratings:
         - icon: material/emoticon-happy-outline
           name: This page was helpful
@@ -166,7 +164,7 @@ plugins:
   - search
   - exclude:
       glob:
-       - integrations/builtin/*
+     #  - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

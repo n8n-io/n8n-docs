@@ -38,4 +38,4 @@ To configure this credential, you'll need:
     - **Require**: Sets the `ssl-mode` parameter to `require`, which is the default for TimescaleDB connection strings. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
 - **Port**: The port number of the TimescaleDB server.
 
-Refer to the [Timescale connection settings documentation](https://docs.timescale.com/use-timescale/latest/integrations/query-admin/qstudio/#connection-settings) for more information about the non-SSL fields. Refer to [Connect with a stricter SSL](https://docs.timescale.com/use-timescale/latest/security/strict-ssl/) for more information about the SSL options.
+Refer to the [Timescale connection settings documentation](https://docs.tigerdata.com/integrations/latest/find-connection-details/) for more information about the non-SSL fields. Refer to [Connect with a stricter SSL](https://docs.tigerdata.com/use-timescale/latest/security/strict-ssl/) for more information about the SSL options.

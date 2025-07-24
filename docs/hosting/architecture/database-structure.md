@@ -58,7 +58,7 @@ Details of npm community nodes packages installed in your n8n instance. [install
 
 ### migrations
 
-A log of all database migrations. Read more about [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) in TypeORM's documentation.
+A log of all database migrations. Read more about [Migrations](https://typeorm.io/docs/advanced-topics/migrations/) in TypeORM's documentation.
 
 ### project
 

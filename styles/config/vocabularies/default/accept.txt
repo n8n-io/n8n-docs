@@ -93,6 +93,7 @@ Eventbrite
 Fargate
 [Ff]avicon
 Figma
+Filescan
 FileMaker
 Firestore
 Formhub
@@ -180,6 +181,7 @@ npm
 NPM
 npx
 [Nn]ullish
+nvm
 OAuth
 Odoo
 Okta

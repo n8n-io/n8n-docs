@@ -8,7 +8,11 @@ priority: medium
 
 # Supabase Vector Store node
 
-Use the Supabase Vector Store to interact with your Supabase database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
+
+Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain. 
+
+Use the Supabase Vector Store to interact with your Supabase database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool). You can also update an item in a vector store by its ID.
+
 
 On this page, you'll find the node parameters for the Supabase node, and links to more resources.
 
@@ -50,7 +54,12 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 ## Node parameters
 
+
+### Operation Mode
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
+
+### Rerank Results
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
@@ -65,6 +74,7 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 ### Insert Documents parameters
 
 * **Table Name**: Enter the Supabase table to use.
+
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
@@ -81,6 +91,10 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 * **Table Name**: Enter the Supabase table to use.
 * **ID**: The ID of an embedding entry.
+
+Parameters for **Update Documents**
+
+* ID
 
 ## Node options
 

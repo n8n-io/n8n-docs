@@ -134,9 +134,9 @@ In the following example add the `_brand.name` translation key to white label n8
 To change n8n's window title to your brand name, edit the following:
 
 - [packages/frontend/editor-ui/index.html](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/index.html){:target=_blank .external-link}
-- [packages/frontend/editor-ui/src/components/mixins/titleChange.ts](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/components/mixins/titleChange.ts){:target=_blank .external-link}
+- [packages/frontend/editor-ui/src/composables/useDocumentTitle.ts](https://github.com/n8n-io/n8n/blob/master/packages/frontend/editor-ui/src/composables/useDocumentTitle.ts){:target=_blank .external-link}
 
-The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand` in `index.html` and `titleChange.ts`.
+The following example replaces all occurrences of `n8n` and `n8n.io` with `My Brand` in `index.html` and `useDocumentTitle.ts`.
 
 ```html
 <!DOCTYPE html>
@@ -148,15 +148,11 @@ The following example replaces all occurrences of `n8n` and `n8n.io` with `My Br
 ```
 
 ```typescript
-$titleSet(workflow: string, status: WorkflowTitleStatus) {
-	// replace n8n prefix
-	window.document.title = `My Brand - ${icon} ${workflow}`;
-},
+import { useSettingsStore } from '@/stores/settings.store';
 
-$titleReset() {
-	// replace n8n prefix
-	document.title = `My Brand - Workflow Automation`;
-},
+// replace n8n
+const DEFAULT_TITLE = 'My Brand';
+const DEFAULT_TAGLINE = 'Workflow Automation';
 ```
 
 ![Example Window Title Localization](/_images/embed/white-label/window-title.png)

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zoom node documentation
 description: Learn how to use the Zoom node in n8n. Follow technical documentation to integrate Zoom node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zoom node
@@ -12,8 +12,10 @@ Use the Zoom node to automate work in Zoom, and integrate Zoom with other applic
 On this page, you'll find a list of operations the Zoom node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zoom credentials](/integrations/builtin/credentials/zoom/) for guidance on setting up authentication. 
+Refer to [Zoom credentials](/integrations/builtin/credentials/zoom.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

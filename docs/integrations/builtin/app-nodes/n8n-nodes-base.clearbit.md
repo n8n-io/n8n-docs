@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Clearbit node documentation
 description: Learn how to use the Clearbit node in n8n. Follow technical documentation to integrate Clearbit node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Clearbit node
@@ -12,7 +12,7 @@ Use the Clearbit node to automate work in Clearbit, and integrate Clearbit with 
 On this page, you'll find a list of operations the Clearbit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Clearbit credentials](/integrations/builtin/credentials/clearbit/) for guidance on setting up authentication. 
+Refer to [Clearbit credentials](/integrations/builtin/credentials/clearbit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

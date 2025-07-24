@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HubSpot credentials
 description: Documentation for HubSpot credentials. Use these credentials to authenticate HubSpot in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,14 +10,14 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/)
-- [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/)
+- [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md)
+- [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md)
 
 ## Supported authentication methods
 
-- App token: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node.
-- Developer API key: Use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node.
-- OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node.
+- App token: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
+- Developer API key: Use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node.
+- OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
 
 /// warning | API key deprecated
 HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app){:target=_blank .external-link} guide and set up an app token.
@@ -25,7 +25,7 @@ HubSpot deprecated the regular **API Key** authentication method. The option sti
 
 ## Related resources
 
-Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks){:target=_blank .external-link} for more information about that service.
+Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks){:target=_blank .external-link} for more information about that service.
 
 ## Using App token
 
@@ -80,7 +80,7 @@ To create the public app and set up the credential:
 
 ### Required scopes for HubSpot Trigger node
 
-If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/) node, n8n recommends starting with these scopes:
+If you're creating an app for use with the [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node, n8n recommends starting with these scopes:
 
 | **Element** | **Object** | **Permission** | **Scope name** |
 | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating 
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
 
 1. Log into your [HubSpot app developer account](https://developers.hubspot.com/){:target=_blank .external-link}.
 2. Select **Apps** from the main navigation bar.
@@ -120,7 +120,7 @@ Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/
 
 ## Required scopes for HubSpot node
 
-If you're creating an app for use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/) node, n8n recommends starting with these scopes:
+If you're creating an app for use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node, n8n recommends starting with these scopes:
 
 | **Element** | **Object** | **Permission** | **Scope name(s)** |
 | --- | --- | --- | --- |

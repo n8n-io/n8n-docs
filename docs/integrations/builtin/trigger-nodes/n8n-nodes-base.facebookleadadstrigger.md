@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Lead Ads Trigger node documentation
 description: Learn how to use the Facebook Lead Ads Trigger node in n8n. Follow technical documentation to integrate Facebook Lead Ads Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,7 +13,7 @@ Use the Facebook Lead Ads Trigger node to respond to events in [Facebook Lead Ad
 On this page, you'll find a list of events the Facebook Lead Ads Trigger node can respond to, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/facebookleadads.md).
 ///
 
 /// note | Examples and templates

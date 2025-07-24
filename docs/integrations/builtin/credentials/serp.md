@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Serp credentials
 description: Documentation for the Serp credentials. Use these credentials to authenticate Serp in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-* [Serp](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi/)
+* [Serp](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md)
 
 ## Prerequisites
 

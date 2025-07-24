@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Transcribe node documentation
 description: Learn how to use the AWS Transcribe node in n8n. Follow technical documentation to integrate AWS Transcribe node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # AWS Transcribe node
@@ -12,8 +12,10 @@ Use the AWS Transcribe node to automate work in AWS Transcribe, and integrate AW
 On this page, you'll find a list of operations the AWS Transcribe node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Transcribe credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

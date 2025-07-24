@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mocean node documentation
 description: Learn how to use the Mocean node in n8n. Follow technical documentation to integrate Mocean node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mocean node
@@ -12,7 +12,7 @@ Use the Mocean node to automate work in Mocean, and integrate Mocean with other 
 On this page, you'll find a list of operations the Mocean node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mocean credentials](/integrations/builtin/credentials/mocean/) for guidance on setting up authentication. 
+Refer to [Mocean credentials](/integrations/builtin/credentials/mocean.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

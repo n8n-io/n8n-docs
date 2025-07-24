@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MSG91 credentials
 description: Documentation for MSG91 credentials. Use these credentials to authenticate MSG91 in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MSG91 credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [MSG91](/integrations/builtin/app-nodes/n8n-nodes-base.msg91/)
+- [MSG91](/integrations/builtin/app-nodes/n8n-nodes-base.msg91.md)
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ To configure this credential, you'll need:
 
 MSG91 enables [IP Security](https://msg91.com/help/what-do-you-mean-by-api-security){:target=_blank .external-link} by default for authkeys.
 
-For the n8n credentials to function with this setting enabled, add all the [n8n IP addresses](/choose-n8n/cloud/#cloud-ip-addresses) as whitelisted IPs in MSG91. You can add them in one of two places, depending on your desired security level:
+For the n8n credentials to function with this setting enabled, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) as whitelisted IPs in MSG91. You can add them in one of two places, depending on your desired security level:
 
 - To allow any/all authkeys in the account to work with n8n, add the n8n IP addresses in the **Company's whitelisted IPs** section of the **Authkey** page.
 - To allow only specific authkeys to work with n8n, add the n8n IP addresses in the **Whitelisted IPs** section of an authkey's details.

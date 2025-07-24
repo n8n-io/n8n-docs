@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Bedrock Chat Model node documentation
 description: Learn how to use the AWS Bedrock Chat Model node in n8n. Follow technical documentation to integrate AWS Bedrock Chat Model node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # AWS Bedrock Chat Model node
@@ -12,7 +12,7 @@ The AWS Bedrock Chat Model node allows you use LLM models utilising AWS Bedrock 
 On this page, you'll find the node parameters for the AWS Bedrock Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -27,6 +27,10 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+
+## Proxy limitations
+
+This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables/deployment.md).
 
 ## Templates and examples
 

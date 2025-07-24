@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Freshservice node documentation
 description: Learn how to use the Freshservice node in n8n. Follow technical documentation to integrate Freshservice node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Freshservice node
@@ -12,7 +12,7 @@ Use the Freshservice node to automate work in Freshservice and integrate Freshse
 On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice/) for guidance on setting up authentication. 
+Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

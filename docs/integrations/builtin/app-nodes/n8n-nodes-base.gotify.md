@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gotify node documentation
 description: Learn how to use the Gotify node in n8n. Follow technical documentation to integrate Gotify node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Gotify node
@@ -12,8 +12,10 @@ Use the Gotify node to automate work in Gotify, and integrate Gotify with other 
 On this page, you'll find a list of operations the Gotify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Gotify credentials](/integrations/builtin/credentials/gotify/) for guidance on setting up authentication. 
+Refer to [Gotify credentials](/integrations/builtin/credentials/gotify.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

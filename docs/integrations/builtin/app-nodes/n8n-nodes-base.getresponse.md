@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GetResponse node documentation
 description: Learn how to use the GetResponse node in n8n. Follow technical documentation to integrate GetResponse node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # GetResponse node
@@ -12,7 +12,7 @@ Use the GetResponse node to automate work in GetResponse, and integrate GetRespo
 On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GetResponse credentials](/integrations/builtin/credentials/getresponse/) for guidance on setting up authentication. 
+Refer to [GetResponse credentials](/integrations/builtin/credentials/getresponse.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

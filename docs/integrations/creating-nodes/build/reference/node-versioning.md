@@ -24,7 +24,7 @@ One node can contain more than one version, allowing small version increments wi
 1. Change the main `version` parameter to an array, and add your version numbers, including your existing version. 
 2. You can then access the version parameter with `@version` in your `displayOptions` in any object (to control which versions n8n displays the object with). You can also query the version from a function using `const nodeVersion = this.getNode().typeVersion;`.
 
-As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node/), then configure a resource so that n8n only displays it in version 2 of the node. In your base `NasaPics.node.ts` file:
+As an example, say you want to add versioning to the NasaPics node from the [Declarative node tutorial](/integrations/creating-nodes/build/declarative-style-node.md), then configure a resource so that n8n only displays it in version 2 of the node. In your base `NasaPics.node.ts` file:
 
 ```js
 {

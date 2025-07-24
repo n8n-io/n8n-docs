@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Notion credentials
 description: Documentation for Notion credentials. Use these credentials to authenticate Notion in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/)
-- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/)
+- [Notion](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md)
+- [Notion Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md)
 
 ## Prerequisites
 

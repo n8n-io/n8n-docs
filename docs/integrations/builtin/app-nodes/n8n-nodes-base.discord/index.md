@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Discord node documentation
 description: Learn how to use the Discord node in n8n. Follow technical documentation to integrate Discord node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -13,8 +13,10 @@ Use the Discord node to automate work in Discord, and integrate Discord with oth
 On this page, you'll find a list of operations the Discord node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for guidance on setting up authentication. 
+Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 <!-- vale off -->
@@ -32,10 +34,13 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for g
 	- Get Many
 	- React with Emoji
 	- Send
+	* Send and Wait for Response
 - Member
 	- Get Many
 	- Role Add
-	- Roll Remove
+	- Role Remove
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 <!-- vale on -->
 
@@ -52,4 +57,4 @@ Refer to [Discord's documentation](https://discord.com/developers/docs/intro){:t
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md).

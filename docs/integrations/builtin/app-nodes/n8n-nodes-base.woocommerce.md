@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: WooCommerce node documentation
 description: Learn how to use the WooCommerce node in n8n. Follow technical documentation to integrate WooCommerce node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the WooCommerce node to automate work in WooCommerce, and integrate WooComme
 On this page, you'll find a list of operations the WooCommerce node supports and links to more resources.
 
 /// note | Credentials
-Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce/) for guidance on setting up authentication. 
+Refer to [WooCommerce credentials](/integrations/builtin/credentials/woocommerce.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

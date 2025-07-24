@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: UpLead node documentation
 description: Learn how to use the UpLead node in n8n. Follow technical documentation to integrate UpLead node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # UpLead node
@@ -12,7 +12,7 @@ Use the UpLead node to automate work in UpLead, and integrate UpLead with other 
 On this page, you'll find a list of operations the UpLead node supports and links to more resources.
 
 /// note | Credentials
-Refer to [UpLead credentials](/integrations/builtin/credentials/uplead/) for guidance on setting up authentication. 
+Refer to [UpLead credentials](/integrations/builtin/credentials/uplead.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

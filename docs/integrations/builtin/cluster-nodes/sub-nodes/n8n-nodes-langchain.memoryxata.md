@@ -2,17 +2,16 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Xata node documentation
 description: Learn how to use the Xata node in n8n. Follow technical documentation to integrate Xata node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Xata node
 
-Use the Xata node to use Xata as a memory server.
-
+Use the Xata node to use Xata as a [memory](/glossary.md#ai-memory) server.
 On this page, you'll find a list of operations the Xata node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/xata/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/xata.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

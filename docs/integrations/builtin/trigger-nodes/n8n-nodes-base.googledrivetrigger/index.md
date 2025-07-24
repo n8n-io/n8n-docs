@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Drive Trigger node documentation
 description: Learn how to use the Google Drive Trigger node in n8n. Follow technical documentation to integrate Google Drive Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -11,7 +11,7 @@ priority: medium
 [Google Drive](https://drive.google.com){:target=_blank .external-link} is a file storage and synchronization service developed by Google. It allows users to store files on their servers, synchronize files across devices, and share files.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
 ///
 
 ///  note  | Examples and templates
@@ -24,4 +24,4 @@ On manual executions this node will return the last event matching its search cr
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md).

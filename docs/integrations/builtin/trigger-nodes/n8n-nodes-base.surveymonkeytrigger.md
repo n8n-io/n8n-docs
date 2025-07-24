@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SurveyMonkey Trigger node documentation
 description: Learn how to use the SurveyMonkey Trigger node in n8n. Follow technical documentation to integrate SurveyMonkey Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SurveyMonkey Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [SurveyMonkey](https://www.surveymonkey.com/){:target=_blank .external-link} is an online cloud-based SaaS survey platform that also provides a suite of paid back-end programs.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/surveymonkey.md).
 ///
 
 ///  note  | Examples and templates

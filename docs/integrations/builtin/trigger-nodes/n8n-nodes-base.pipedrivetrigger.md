@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pipedrive Trigger node documentation
 description: Learn how to use the Pipedrive Trigger node in n8n. Follow technical documentation to integrate Pipedrive Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Pipedrive Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Pipedrive](https://www.pipedrive.com/){:target=_blank .external-link} is a cloud-based sales software company that aims to improve the productivity of businesses through the use of their software.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/pipedrive/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/pipedrive.md).
 ///
 
 ///  note  | Examples and templates

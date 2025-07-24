@@ -2,14 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: APITemplate.io credentials
 description: Documentation for APITemplate.io credentials. Use these credentials to authenticate APITemplate.io in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # APITemplate.io credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [APITemplate.io](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/)
+- [APITemplate.io](/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md)
 
 ## Prerequisites
 

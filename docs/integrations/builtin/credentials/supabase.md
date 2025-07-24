@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Supabase credentials
 description: Documentation for Supabase credentials. Use these credentials to authenticate Supabase in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/)
-- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/)
+- [Supabase](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/index.md)
+- [Supabase Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md)
 
 ## Prerequisites
 

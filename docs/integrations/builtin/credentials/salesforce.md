@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Salesforce credentials
 description: Documentation for Salesforce credentials. Use these credentials to authenticate Salesforce in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/)
-- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger/)
+- [Salesforce](/integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md)
+- [Salesforce trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md)
 
 ## Supported authentication methods
 
@@ -45,15 +45,14 @@ To set things up, first you'll create a private key and certificate, then a conn
 7. Check the box to **Use digital signatures**.
 8. Select **Choose File** and upload the file that contains your digital certificate, such as `server.crt`.
 9. Add these **OAuth scopes**:
-    - **Manage user data via APIs (api)**
-    - **Manage user data via Web browsers (web)**
-    - **Perform requests at any time (refresh_token, offline_access)**
+	- **Full access (full)**
+	- **Perform requests at any time (refresh_token, offline_access)**
 10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
 11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
 12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.
 13. Enter the contents of the private key file in n8n as **Private Key**.
-    - Use the multi-line editor in n8n.
-    - Enter the private key in standard PEM key format:
+	- Use the multi-line editor in n8n.
+	- Enter the private key in standard PEM key format:
         ```
         -----BEGIN PRIVATE KEY-----
         KEY DATA GOES HERE
@@ -83,7 +82,7 @@ To configure this credential, you'll need a [Salesforce](https://www.salesforce.
 
 Cloud and hosted users will need to select your **Environment Type**. Choose between **Production** and **Sandbox**.
 
-If you're [self-hosting](/hosting) n8n, you'll need to configure OAuth2 from scratch by creating a connected app:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a connected app:
 
 1. In n8n, select the **Environment Type** for your connection. Choose the option that best describes your environment from **Production** or **Sandbox**.
 2. Enter your Salesforce **Username**.
@@ -94,13 +93,12 @@ If you're [self-hosting](/hosting) n8n, you'll need to configure OAuth2 from scr
 5. Check the box to **Enable OAuth Settings**.
 6. For the **Callback URL**, enter `http://localhost:1717/OauthRedirect`.
 9. Add these **OAuth scopes**:
-    - **Manage user data via APIs (api)**
-    - **Manage user data via Web browsers (web)**
-    - **Perform requests at any time (refresh_token, offline_access)**
+	- **Full access (full)**
+	- **Perform requests at any time (refresh_token, offline_access)**
 10. Make sure the following settings are unchecked:
-    - **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**
-    - **Require Secret for Web Server Flow**
-    - **Require Secret for Refresh Token Flow**
+	- **Require Proof Key for Code Exchange (PKCE) Extension for Supported Authorization Flows**
+	- **Require Secret for Web Server Flow**
+	- **Require Secret for Refresh Token Flow**
 10. Select **Save**, then **Continue**. The **Manage Connected Apps** page should open to the app you just created.
 11. In the **API (Enable OAuth Settings)** section, select **Manage Consumer Details**.
 12. Copy the **Consumer Key** and add it to your n8n credential as the **Client ID**.

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mandrill node documentation
 description: Learn how to use the Mandrill node in n8n. Follow technical documentation to integrate Mandrill node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mandrill node
@@ -12,7 +12,7 @@ Use the Mandrill node to automate work in Mandrill, and integrate Mandrill with 
 On this page, you'll find a list of operations the Mandrill node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mandrill credentials](/integrations/builtin/credentials/mandrill/) for guidance on setting up authentication. 
+Refer to [Mandrill credentials](/integrations/builtin/credentials/mandrill.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

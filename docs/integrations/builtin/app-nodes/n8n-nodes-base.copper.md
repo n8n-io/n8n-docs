@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Copper node documentation
 description: Learn how to use the Copper node in n8n. Follow technical documentation to integrate Copper node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Copper node
@@ -12,7 +12,7 @@ Use the Copper node to automate work in Copper, and integrate Copper with other 
 On this page, you'll find a list of operations the Copper node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Copper credentials](/integrations/builtin/credentials/copper/) for guidance on setting up authentication. 
+Refer to [Copper credentials](/integrations/builtin/credentials/copper.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Structured Output Parser node documentation
 description: Learn how to use the Structured Output Parser node in n8n. Follow technical documentation to integrate Structured Output Parser node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -33,6 +33,6 @@ Refer to [LangChain's output parser documentation](https://js.langchain.com/docs
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

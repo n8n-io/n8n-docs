@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grafana node documentation
 description: Learn how to use the Grafana node in n8n. Follow technical documentation to integrate Grafana node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Grafana node
@@ -12,8 +12,10 @@ Use the Grafana node to automate work in Grafana, and integrate Grafana with oth
 On this page, you'll find a list of operations the Grafana node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Grafana credentials](/integrations/builtin/credentials/grafana/) for guidance on setting up authentication. 
+Refer to [Grafana credentials](/integrations/builtin/credentials/grafana.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

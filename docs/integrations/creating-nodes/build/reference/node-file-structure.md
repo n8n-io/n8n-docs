@@ -19,10 +19,10 @@ Your node must include:
 
 * A `package.json` file at the root of the project. This is required for any npm module.
 * A `nodes` directory, containing the code for your node:
-    * This directory must contain the [base file](/integrations/creating-nodes/build/reference/node-base-files/), in the format `<node-name>.node.ts`. For example, `MyNode.node.ts`.
-    * n8n recommends including a [codex file](/integrations/creating-nodes/build/reference/node-codex-files/), containing metadata for your node. The codex filename must match the node base filename. For example, given a node base file named `MyNode.node.ts`, the codex name is `MyNode.node.json`.
+    * This directory must contain the [base file](/integrations/creating-nodes/build/reference/node-base-files/index.md), in the format `<node-name>.node.ts`. For example, `MyNode.node.ts`.
+    * n8n recommends including a [codex file](/integrations/creating-nodes/build/reference/node-codex-files.md), containing metadata for your node. The codex filename must match the node base filename. For example, given a node base file named `MyNode.node.ts`, the codex name is `MyNode.node.json`.
     * The `nodes` directory can contain other files and subdirectories, including directories for versions, and node code split across more than one file to create a modular structure.
-* A `credentials` directory, containing your credentials code. This code lives in a single [credentials file](/integrations/creating-nodes/build/reference/credentials-files/). The filename format is `<node-name>.credentials.ts`. For example, `MyNode.credentials.ts`.
+* A `credentials` directory, containing your credentials code. This code lives in a single [credentials file](/integrations/creating-nodes/build/reference/credentials-files.md). The filename format is `<node-name>.credentials.ts`. For example, `MyNode.credentials.ts`.
 
 ## Modular structure
 <!-- vale off -->
@@ -43,7 +43,7 @@ For more complex nodes, n8n recommends a directory structure. Refer to the [Airt
 
 ## Versioning
 
-If your node has more than one version, and you're using full versioning, this makes the file structure more complex. You need a directory for each version, along with a base file that sets the default version. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning/) for more information on working with versions, including types of versioning.
+If your node has more than one version, and you're using full versioning, this makes the file structure more complex. You need a directory for each version, along with a base file that sets the default version. Refer to [Node versioning](/integrations/creating-nodes/build/reference/node-versioning.md) for more information on working with versions, including types of versioning.
 
 ## Decide how many nodes to include in a package
 

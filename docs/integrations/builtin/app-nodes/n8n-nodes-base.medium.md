@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Medium node documentation
 description: Learn how to use the Medium node in n8n. Follow technical documentation to integrate Medium node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Medium node
@@ -11,9 +11,14 @@ Use the Medium node to automate work in Medium, and integrate Medium with other 
 
 On this page, you'll find a list of operations the Medium node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Medium credentials](/integrations/builtin/credentials/medium/) for guidance on setting up authentication. 
+/// warning | Medium API no longer supported
+Medium has stopped supporting the Medium API. The Medium node still appears within n8n, but you won't be able to configure new API keys to authenticate with.
+
+Refer to [Medium credentials](/integrations/builtin/credentials/medium.md) for guidance on setting up existing API keys.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 
 ## Operations
 

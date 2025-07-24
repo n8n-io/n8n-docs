@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: CrateDB node documentation
 description: Learn how to use the CrateDB node in n8n. Follow technical documentation to integrate CrateDB node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # CrateDB node
@@ -12,7 +12,7 @@ Use the CrateDB node to automate work in CrateDB, and integrate CrateDB with oth
 On this page, you'll find a list of operations the CrateDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
+Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI node documentation
 description: Learn how to use the OpenAI node in n8n. Follow technical documentation to integrate OpenAI node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 search:
     boost: 3
@@ -19,31 +19,31 @@ The OpenAI node replaces the OpenAI assistant node from version 1.29.0 on.
 ///
 
 /// note | Credentials
-Refer to [OpenAI credentials](/integrations/builtin/credentials/openai/) for guidance on setting up authentication. 
+Refer to [OpenAI credentials](/integrations/builtin/credentials/openai.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
 
 - **Assistant** 
-	- [**Create an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#create-an-assistant)
-	- [**Delete an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#delete-an-assistant)
-	- [**List Assistants**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#list-assistants)
-	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#message-an-assistant)
-	- [**Update an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#update-an-assistant)
+	- [**Create an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#create-an-assistant)
+	- [**Delete an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#delete-an-assistant)
+	- [**List Assistants**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#list-assistants)
+	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#message-an-assistant)
+	- [**Update an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#update-an-assistant)
 - **Text**
-	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#message-a-model)
-	- [**Classify Text for Violations**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#classify-text-for-violations)
+	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md#message-a-model)
+	- [**Classify Text for Violations**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md#classify-text-for-violations)
 - **Image**
-	- [**Analyze Image**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations/#analyze-image)
-	- [**Generate an Image**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations/#generate-an-image)
+	- [**Analyze Image**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md#analyze-image)
+	- [**Generate an Image**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md#generate-an-image)
 - **Audio**
-	- [**Generate Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations/#generate-audio)
-	- [**Transcribe Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations/#transcribe-audio)
-	- [**Translate Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations/#translate-audio)
+	- [**Generate Audio**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md#generate-audio)
+	- [**Transcribe a Recording**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md#transcribe-a-recording)
+	- [**Translate a Recording**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md#translate-a-recording)
 - **File**
-	- [**Delete a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#delete-a-file)
-	- [**List Files**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#list-files)
-	- [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#upload-a-file)
+	- [**Delete a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md#delete-a-file)
+	- [**List Files**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md#list-files)
+	- [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md#upload-a-file)
 
 ## Templates and examples
 
@@ -56,7 +56,7 @@ Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction){:ta
 
 Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.
 
-For help dealing with rate limits, refer to [Handling rate limits](/integrations/builtin/rate-limits/).
+For help dealing with rate limits, refer to [Handling rate limits](/integrations/builtin/rate-limits.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
@@ -66,15 +66,15 @@ Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced
 
 Select the **Tools** connector to browse the available tools and add them.
 
-Once you add a tool connection, the OpenAI node becomes a root node, allowing it to form a cluster node with the tools sub-nodes. See [Node types](/integrations/builtin/node-types/#cluster-nodes) for more information on cluster nodes and root nodes.
+Once you add a tool connection, the OpenAI node becomes a [root node](/glossary.md#root-node-n8n), allowing it to form a [cluster node](/glossary.md#cluster-node-n8n) with the tools [sub-nodes](/glossary.md#sub-node-n8n). See [Node types](/integrations/builtin/node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
 
 ### Operations that support tool connectors
 
 - **Assistant**
-	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations/#message-an-assistant)
+	- [**Message an Assistant**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md#message-an-assistant)
 - **Text**
-	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations/#message-a-model)
+	- [**Message a Model**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md#message-a-model)
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

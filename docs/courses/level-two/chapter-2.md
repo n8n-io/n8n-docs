@@ -5,7 +5,7 @@ contentType: tutorial
 
 # Processing different data types
 
-In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/components/nodes/).
+In this chapter, you will learn how to process different types of data using [n8n core nodes](/workflows/components/nodes.md).
 
 
 ## HTML and XML data
@@ -15,7 +15,7 @@ You're most likely familiar with HTML and XML.
 /// note | HTML vs. XML
 HTML is a markup language used to describe the structure and semantics of a web page. XML looks similar to HTML, but the tag names are different, as they describe the kind of data they hold.
 ///
-If you need to process HTML or XML data in your n8n workflows, use the [**HTML node**](/integrations/builtin/core-nodes/n8n-nodes-base.html/) or the [**XML node**](/integrations/builtin/core-nodes/n8n-nodes-base.xml/).
+If you need to process HTML or XML data in your n8n workflows, use the [**HTML node**](/integrations/builtin/core-nodes/n8n-nodes-base.html.md) or the [**XML node**](/integrations/builtin/core-nodes/n8n-nodes-base.xml.md).
 
 Use the **HTML node** to extract HTML content of a webpage by referencing CSS selectors. This is useful if you want to collect structured information from a website (web-scraping).
 
@@ -25,7 +25,7 @@ Let's get the title of the latest n8n blog post:
 
 1. Use the **HTTP Request node** to make a GET request to the URL `https://blog.n8n.io/` (this endpoint requires no authentication).
 2. Connect an **HTML node** and configure it to extract the title of the first blog post on the page.
-	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.item-title  a` should help!
+	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.post .item-title  a` should help!
 
 ??? note "Show me the solution"
 
@@ -43,7 +43,7 @@ Let's get the title of the latest n8n blog post:
 		- **JSON Property**: data
 		- **Extraction Values**:
 			- **Key**: title
-			- **CSS Selector**: `.item-title  a`
+			- **CSS Selector**: `.post .item-title  a`
 			- **Return Value**: HTML
 
 	You can add more values to extract more data.
@@ -57,17 +57,17 @@ Use the **XML node** to convert XML to JSON and JSON to XML. This operation is u
 
 ### XML Exercise
 
-In the [final exercise of Chapter 1](/courses/level-two/chapter-1/#exercise_2), you used an **HTTP Request node** to make a request to the Quotable API. In this exercise, we'll return to that same API but we'll convert the output to XML:
+In the [final exercise of Chapter 1](/courses/level-two/chapter-1.md#exercise_2), you used an **HTTP Request node** to make a request to the PokéAPI. In this exercise, we'll return to that same API but we'll convert the output to XML:
 
-1. Add an **HTTP Request node** that makes the same request to the Quotable API at `https://api.quotable.io/quotes`.
+1. Add an **HTTP Request node** that makes the same request to the PokéAPI at `https://pokeapi.co/api/v2/pokemon`.
 2. Use the XML node to convert the JSON output to XML.
 
 ??? note "Show me the solution"
 
-	1. To get the quotes from the Quotable API, execute the **HTTP Request node** with the following parameters:
+	1. To get the pokemon from the PokéAPI, execute the **HTTP Request node** with the following parameters:
 		- **Authentication**: None
 		- **Request Method**: GET
-		- **URL**: https://api.quotable.io/quotes
+		- **URL**: https://pokeapi.co/api/v2/pokemon
 	2. Connect an **XML node** to it with the following parameters:
 		- **Mode**: JSON to XML
 		- **Property name**: data
@@ -91,12 +91,12 @@ Date and time data types include `DATE`, `TIME`, `DATETIME`, `TIMESTAMP`, and `Y
 <!-- vale on -->
 There are a few ways you can work with dates and times:
 
-- Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime/) to convert date and time data to different formats and calculate dates.
-- Use [**Schedule Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) to schedule workflows to run at a specific time, interval, or duration.
+- Use the [**Date & Time node**](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) to convert date and time data to different formats and calculate dates.
+- Use [**Schedule Trigger node**](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) to schedule workflows to run at a specific time, interval, or duration.
 
 Sometimes, you might need to pause the workflow execution. This might be necessary if you know that a service doesn't process the data instantly or it's slow to return all the results. In these cases, you don't want n8n to pass incomplete data to the next node.
 
-If you run into situations like this, use the [**Wait node**](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) after the node that you want to delay. The **Wait node** pauses the workflow execution and will resume execution:
+If you run into situations like this, use the [**Wait node**](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) after the node that you want to delay. The **Wait node** pauses the workflow execution and will resume execution:
 
 - At a specific time.
 - After a specified time interval.
@@ -106,7 +106,7 @@ If you run into situations like this, use the [**Wait node**](/integrations/buil
 
 ### Date Exercise
 
-Build a workflow that adds five days to an input date from the Customer Datastore node that you used before. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set/) the calculated date as a value. The workflow should be triggered every 30 minutes.
+Build a workflow that adds five days to an input date from the Customer Datastore node that you used before. Then, if the calculated date occurred after 1959, the workflow waits 1 minute before [setting](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) the calculated date as a value. The workflow should be triggered every 30 minutes.
 
 
 To begin:
@@ -116,7 +116,7 @@ To begin:
 3. Add the **If node** to check if that new rounded date is after `1960-01-01 00:00:00`.
 4. Add the **Wait node** to the True output of that node and set it to wait for one minute.
 5. Add the **Edit Fields (Set) node** to set a new field called outputValue to a String containing new-date. Include all input fields.
-6. Add the **Schedule Trigger node** at the beginning of the workflow to trigger it every 30 minutes. (You can keep the [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/) for testing!)
+6. Add the **Schedule Trigger node** at the beginning of the workflow to trigger it every 30 minutes. (You can keep the [Manual Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md) for testing!)
 
 ??? note "Show me the solution"
 
@@ -149,7 +149,7 @@ To begin:
 
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_datetime.png" alt="Workflow for transforming dates" style="width:100%"><figcaption align = "center"><i>Workflow for transforming dates</i></figcaption></figure>
 
-	To check the configuration of each node, you can copy the JSON code of this workflow and either paste it into the Editor UI or save it as a file and import from file into a new workflow. See [Export and import workflows](/workflows/export-import/) for more information.
+	To check the configuration of each node, you can copy the JSON code of this workflow and either paste it into the Editor UI or save it as a file and import from file into a new workflow. See [Export and import workflows](/workflows/export-import.md) for more information.
 
 	```json
 	{
@@ -158,7 +158,7 @@ To begin:
 		{
 		"parameters": {},
 		"id": "6bf64d5c-4b00-43cf-8439-3cbf5e5f203b",
-		"name": "When clicking \"Test workflow\"",
+		"name": "When clicking \"Execute workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
@@ -293,7 +293,7 @@ To begin:
 	],
 	"pinData": {},
 	"connections": {
-		"When clicking \"Test workflow\"": {
+		"When clicking \"Execute workflow\"": {
 		"main": [
 			[
 			{
@@ -370,10 +370,10 @@ Up to now, you have mainly worked with text data. But what if you want to proces
 
 In n8n, you can process binary data with the following nodes:
 
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to request and send files from/to web resources and APIs.
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) to read and write files from/to the machine where n8n is running.
-- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
-- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to request and send files from/to web resources and APIs.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) to get data from a binary format and convert it to JSON.
 
 /// note | Reading and writing files is only available on self-hosted n8n
 Reading and writing files to disk isn't available on n8n Cloud. You'll read and write to the machine where you installed n8n. If you run n8n in Docker, your command runs in the n8n container and not the Docker host. The Read/Write Files From Disk node looks for files relative to the n8n install path. n8n recommends using absolute file paths to prevent any errors.

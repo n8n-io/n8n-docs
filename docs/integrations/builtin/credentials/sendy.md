@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sendy credentials
 description: Documentation for Sendy credentials. Use these credentials to authenticate Sendy in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Sendy credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy/)
+- [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy.md)
 
 ## Prerequisites
 

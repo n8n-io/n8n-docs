@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: PayPal credentials
 description: Documentation for PayPal credentials. Use these credentials to authenticate PayPal in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # PayPal credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal/)
-- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger/)
+- [PayPal](/integrations/builtin/app-nodes/n8n-nodes-base.paypal.md)
+- [PayPal Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md)
 
 ## Prerequisites
 

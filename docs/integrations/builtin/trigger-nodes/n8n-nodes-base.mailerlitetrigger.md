@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MailerLite Trigger node documentation
 description: Learn how to use the MailerLite Trigger node in n8n. Follow technical documentation to integrate MailerLite Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MailerLite Trigger node
@@ -12,7 +12,7 @@ contentType: integration
 On this page, you'll find a list of events the MailerLite Trigger node can respond to and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/mailerlite/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/mailerlite.md).
 ///
 
 ///  note  | Examples and templates

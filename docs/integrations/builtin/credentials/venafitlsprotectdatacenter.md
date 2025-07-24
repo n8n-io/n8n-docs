@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Venafi TLS Protect Datacenter credentials
 description: Documentation for Venafi TLS Protect Datacenter credentials. Use these credentials to authenticate Venafi TLS Protect Datacenter in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 <!-- vale off -->
 # Venafi TLS Protect Datacenter credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Venafi TLS Protect Datacenter node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/)
+* [Venafi TLS Protect Datacenter node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter.md)
 
 ## Prerequisites
 

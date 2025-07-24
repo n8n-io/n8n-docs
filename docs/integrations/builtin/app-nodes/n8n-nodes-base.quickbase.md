@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Quick Base node documentation
 description: Learn how to use the Quick Base node in n8n. Follow technical documentation to integrate Quick Base node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Quick Base node
@@ -12,7 +12,7 @@ Use the Quick Base node to automate work in Quick Base, and integrate Quick Base
 On this page, you'll find a list of operations the Quick Base node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Quick Base credentials](/integrations/builtin/credentials/quickbase/) for guidance on setting up authentication. 
+Refer to [Quick Base credentials](/integrations/builtin/credentials/quickbase.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

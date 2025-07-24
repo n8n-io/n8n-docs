@@ -12,10 +12,10 @@ RBAC is available on all plans except the Community edition. Different plans hav
 ///
 
 /// note | Role types and account types
-Role types and [account types](/user-management/account-types/) are different things. Every account has one type. The account can have different role types for different [projects](/user-management/rbac/projects/).
+Role types and [account types](/user-management/account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](/user-management/rbac/projects.md).
 ///
 
-RBAC is a way of managing access to workflows and credentials based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
+RBAC is a way of managing access to workflows and [credentials](/glossary.md#credential-n8n) based on user roles and projects. You group workflows into projects, and user access depends on the user's project role. This section provides guidance on using RBAC in n8n.
 
 [[% import "_macros/section-toc.html" as sectionToc %]]
 

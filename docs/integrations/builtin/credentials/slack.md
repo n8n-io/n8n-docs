@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Slack credentials
 description: Documentation for Slack credentials. Use these credentials to authenticate Slack in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,17 +10,17 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/)
-- [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/)
+- [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md)
+- [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md)
 
 ## Supported authentication methods
 
 - API access token:
-    - Required for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) node.
-    - Works with the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node, but not recommended.
+    - Required for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
+    - Works with the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) node, but not recommended.
 - OAuth2:
-    - Recommended method for the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack/) node.
-    - Doesn't work with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) node.
+    - Recommended method for the [Slack](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md) node.
+    - Doesn't work with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node.
 
 ## Related resources
 
@@ -44,13 +44,13 @@ To generate an access token, create a Slack app:
 9. After you've added scopes, go up to the **OAuth Tokens** section and select **Install to Workspace**. You must be a Slack workspace admin to complete this action.
 10. Select **Allow**.
 12. Copy the **Bot User OAuth Token** and enter it as the **Access Token** in your n8n credential.
-13. If you're using this credential for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
+13. If you're using this credential for the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md), follow the steps in [Slack Trigger configuration](#slack-trigger-configuration) to finish setting up your app.
 
 Refer to the Slack API [Quickstart](https://api.slack.com/quickstart){:target=_blank .external-link} for more information.
 
 ### Slack Trigger configuration
 
-To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger/) node:
+To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node:
 
 1. Go to **Features** > **Event Subscriptions**.
 2. Turn on the **Enable Events** control.
@@ -72,7 +72,7 @@ Refer to [Quickstart | Configuring the app for event listening](https://api.slac
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting n8n](/hosting/) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/){:target=_blank .external-link} account and:
+If you're [self-hosting n8n](/hosting/index.md) and need to configure OAuth2 from scratch, you'll need a [Slack](https://slack.com/){:target=_blank .external-link} account and:
 
 - A **Client ID**
 - A **Client Secret**

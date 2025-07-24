@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Service Account
 description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Google: Service Account
 
 Using service accounts is more complex than OAuth2. Before you begin:
 
-* Check if your node is [compatible](/integrations/builtin/credentials/google/#compatible-nodes) with Service Account.
-* Make sure you need to use Service Account. For most use cases, [OAuth2](/integrations/builtin-credentials/google/oauth-single-service/) is a better option.
+* Check if your node is [compatible](/integrations/builtin/credentials/google/index.md#compatible-nodes) with Service Account.
+* Make sure you need to use Service Account. For most use cases, [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) is a better option.
 * Read the Google documentation on [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts){:target=_blank .external-link}.
 
 ## Prerequisites
@@ -72,7 +72,7 @@ With the Google project and credentials fully configured, finish the n8n credent
 4. **Optional**: Choose if you want to [**Impersonate a User**](https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority){:target=_blank .external-link} (turned on).
     1. To use this option, you must [Enable domain-wide delegation](#enable-domain-wide-delegation) for the service account as a Google Workspace super admin.
 	1. Enter the **Email** of the user you want to impersonate.
-5. If you plan to use this credential with the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node, turn on **Set up for use in HTTP Request node**.
+5. If you plan to use this credential with the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, turn on **Set up for use in HTTP Request node**.
 	1. With this setting turned on, you'll need to add **Scope(s)** for the node. n8n prepopulates some scopes. Refer to [OAuth 2.0 Scopes for Google APIs](https://developers.google.com/identity/protocols/oauth2/scopes){:target=_blank .external-link} for more information.
 6. **Save** your credentials.
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Lemlist node documentation
 description: Learn how to use the Lemlist node in n8n. Follow technical documentation to integrate Lemlist node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Lemlist node
@@ -12,7 +12,7 @@ Use the Lemlist node to automate work in Lemlist, and integrate Lemlist with oth
 On this page, you'll find a list of operations the Lemlist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist/) for guidance on setting up authentication. 
+Refer to [Lemlist credentials](/integrations/builtin/credentials/lemlist.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

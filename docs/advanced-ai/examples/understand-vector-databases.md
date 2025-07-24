@@ -43,7 +43,7 @@ For full technical details, refer to the [Qdrant demo-food-discovery GitHub repo
 
 Vector databases require other tools to function:
 
-- Document loaders and text splitters: document loaders pull in documents and data, and prepare them for embedding. Document loaders can use text splitters to break documents into chunks.
+- Document loaders and text splitters: document loaders pull in documents and data, and prepare them for [embedding](/glossary.md#ai-embedding). Document loaders can use text splitters to break documents into chunks.
 - Embeddings: these are the tools that turn the data (text, images, and so on) into vectors, and back into raw data. Note that n8n only supports text embeddings.
 - Retrievers: retrievers fetch documents from vector databases. You need to pair them with an embedding to translate the vectors back into data.
 

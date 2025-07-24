@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sentry.io node documentation
 description: Learn how to use the Sentry.io node in n8n. Follow technical documentation to integrate Sentry.io node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Sentry.io node
@@ -12,7 +12,7 @@ Use the Sentry.io node to automate work in Sentry.io, and integrate Sentry.io wi
 On this page, you'll find a list of operations the Sentry.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio/) for guidance on setting up authentication. 
+Refer to [Sentry.io credentials](/integrations/builtin/credentials/sentryio.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sendy node documentation
 description: Learn how to use the Sendy node in n8n. Follow technical documentation to integrate Sendy node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Sendy node
@@ -12,7 +12,7 @@ Use the Sendy node to automate work in Sendy, and integrate Sendy with other app
 On this page, you'll find a list of operations the Sendy node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Sendy credentials](/integrations/builtin/credentials/sendy/) for guidance on setting up authentication. 
+Refer to [Sendy credentials](/integrations/builtin/credentials/sendy.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

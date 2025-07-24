@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: E-goi credentials
 description: Documentation for E-goi credentials. Use these credentials to authenticate E-goi in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # E-goi credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [E-goi](/integrations/builtin/app-nodes/n8n-nodes-base.egoi/)
+- [E-goi](/integrations/builtin/app-nodes/n8n-nodes-base.egoi.md)
 
 ## Prerequisites
 

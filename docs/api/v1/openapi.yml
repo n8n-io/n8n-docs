@@ -99,7 +99,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/credential'
+                $ref: '#/components/schemas/create-credential-response'
         '401':
           $ref: '#/components/responses/unauthorized'
         '415':
@@ -455,6 +455,13 @@ paths:
           schema:
             type: string
             example: VmwOO9HeTEj20kxM
+        - name: excludePinnedData
+          in: query
+          required: false
+          description: Set this to avoid retrieving pinned data
+          schema:
+            type: boolean
+            example: true
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/cursor'
       responses:
@@ -475,6 +482,13 @@ paths:
       summary: Retrieves a workflow
       description: Retrieves a workflow.
       parameters:
+        - name: excludePinnedData
+          in: query
+          required: false
+          description: Set this to avoid retrieving pinned data
+          schema:
+            type: boolean
+            example: true
         - $ref: '#/components/parameters/workflowId'
       responses:
         '200':
@@ -850,7 +864,7 @@ paths:
   /source-control/pull:
     post:
       x-eov-operation-id: pull
-      x-eov-operation-handler: v1/handlers/sourceControl/sourceControl.handler
+      x-eov-operation-handler: v1/handlers/source-control/source-control.handler
       tags:
         - SourceControl
       summary: Pull changes from the remote repository
@@ -931,6 +945,31 @@ paths:
           $ref: '#/components/responses/unauthorized'
         '404':
           $ref: '#/components/responses/notFound'
+    put:
+      x-eov-operation-id: updateVariable
+      x-eov-operation-handler: v1/handlers/variables/variables.handler
+      tags:
+        - Variables
+      summary: Update a variable
+      description: Update a variable from your instance.
+      requestBody:
+        description: Payload for variable to update.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/variable'
+        required: true
+      responses:
+        '204':
+          description: Operation successful.
+        '400':
+          $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
   /projects:
     post:
       x-eov-operation-id: createProject
@@ -938,7 +977,7 @@ paths:
       tags:
         - Projects
       summary: Create a project
-      description: Create a project in your instance.
+      description: Create a project on your instance.
       requestBody:
         description: Payload for project to create.
         content:
@@ -981,7 +1020,12 @@ paths:
       summary: Delete a project
       description: Delete a project from your instance.
       parameters:
-        - $ref: '#/components/parameters/projectId'
+        - in: path
+          name: projectId
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
       responses:
         '204':
           description: Operation successful.
@@ -995,9 +1039,16 @@ paths:
       x-eov-operation-id: updateProject
       x-eov-operation-handler: v1/handlers/projects/projects.handler
       tags:
-        - Project
+        - Projects
       summary: Update a project
-      description: Update a project.
+      description: Update a project on your instance.
+      parameters:
+        - in: path
+          name: projectId
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
       requestBody:
         description: Updated project object.
         content:
@@ -1010,6 +1061,128 @@ paths:
           description: Operation successful.
         '400':
           $ref: '#/components/responses/badRequest'
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /projects/{projectId}/users:
+    post:
+      x-eov-operation-id: addUsersToProject
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: Add one or more users to a project
+      description: Add one or more users to a project on your instance.
+      parameters:
+        - name: projectId
+          in: path
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Payload containing an array of one or more users to add to the project.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                relations:
+                  type: array
+                  description: A list of userIds and roles to add to the project.
+                  items:
+                    type: object
+                    properties:
+                      userId:
+                        type: string
+                        description: The unique identifier of the user.
+                        example: 91765f0d-3b29-45df-adb9-35b23937eb92
+                      role:
+                        type: string
+                        description: The role assigned to the user in the project.
+                        example: project:viewer
+                    required:
+                      - userId
+                      - role
+              required:
+                - relations
+      responses:
+        '201':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+  /projects/{projectId}/users/{userId}:
+    delete:
+      x-eov-operation-id: deleteUserFromProject
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: Delete a user from a project
+      description: Delete a user from a project on your instance.
+      parameters:
+        - name: projectId
+          in: path
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: The ID of the user.
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Operation successful.
+        '401':
+          $ref: '#/components/responses/unauthorized'
+        '403':
+          $ref: '#/components/responses/forbidden'
+        '404':
+          $ref: '#/components/responses/notFound'
+    patch:
+      x-eov-operation-id: changeUserRoleInProject
+      x-eov-operation-handler: v1/handlers/projects/projects.handler
+      tags:
+        - Projects
+      summary: Change a user's role in a project
+      description: Change a user's role in a project.
+      parameters:
+        - name: projectId
+          in: path
+          description: The ID of the project.
+          required: true
+          schema:
+            type: string
+        - name: userId
+          in: path
+          description: The ID of the user.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Payload containing the new role to assign to the project user.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                role:
+                  type: string
+                  description: The role assigned to the user in the project.
+                  example: project:viewer
+              required:
+                - role
+      responses:
+        '204':
+          description: Operation successful.
         '401':
           $ref: '#/components/responses/unauthorized'
         '403':
@@ -1113,6 +1286,35 @@ components:
           writeOnly: true
           example:
             token: ada612vad6fa5df4adf5a5dsf4389adsf76da7s
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          example: '2022-04-29T11:02:29.842Z'
+    create-credential-response:
+      required:
+        - id
+        - name
+        - type
+        - createdAt
+        - updatedAt
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+          example: vHxaz5UaCghVYl9C
+        name:
+          type: string
+          example: John's Github account
+        type:
+          type: string
+          example: github
         createdAt:
           type: string
           format: date-time
@@ -1756,13 +1958,6 @@ components:
       name: id
       in: path
       description: The ID of the variable.
-      required: true
-      schema:
-        type: string
-    projectId:
-      name: projectId
-      in: path
-      description: The ID of the project.
       required: true
       schema:
         type: string

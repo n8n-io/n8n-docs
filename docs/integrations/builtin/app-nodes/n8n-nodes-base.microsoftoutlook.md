@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Outlook node documentation
 description: Learn how to use the Microsoft Outlook node in n8n. Follow technical documentation to integrate Microsoft Outlook node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -13,8 +13,10 @@ Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integr
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -57,12 +59,15 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
 	* Move
 	* Reply
 	* Send
+	* Send and Wait for Response
 	* Update
 * Message Attachment
 	* Add
 	* Download
 	* Get
 	* Get Many
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 

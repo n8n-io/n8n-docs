@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Dynatrace credentials
 description: Documentation for the Dynatrace credentials. Use these credentials to authenticate Dynatrace in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 # Dynatrace credentials
 
@@ -16,7 +16,7 @@ Create a [Dynatrace](https://www.dynatrace.com/signup/){:target=_blank .external
 
 Refer to [Dynatrace's API documentation](https://docs.dynatrace.com/docs/dynatrace-api){:target=_blank .external-link} for more information about authenticating with the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/dynatrace-api/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/dynatrace-api/){:target=_blank .external-link} on n8n's website.
 
 
 ## Using Access Token

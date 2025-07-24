@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Snowflake node documentation
 description: Learn how to use the Snowflake node in n8n. Follow technical documentation to integrate Snowflake node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Snowflake node
@@ -12,7 +12,7 @@ Use the Snowflake node to automate work in Snowflake, and integrate Snowflake wi
 On this page, you'll find a list of operations the Snowflake node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake/) for guidance on setting up authentication. 
+Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

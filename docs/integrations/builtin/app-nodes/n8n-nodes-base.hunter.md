@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Hunter node documentation
 description: Learn how to use the Hunter node in n8n. Follow technical documentation to integrate Hunter node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Hunter node
@@ -12,7 +12,7 @@ Use the Hunter node to automate work in Hunter, and integrate Hunter with other 
 On this page, you'll find a list of operations the Hunter node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Hunter credentials](/integrations/builtin/credentials/hunter/) for guidance on setting up authentication. 
+Refer to [Hunter credentials](/integrations/builtin/credentials/hunter.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

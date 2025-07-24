@@ -16,14 +16,14 @@ You can find more info on working with the docs project in the README: https://g
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: _Name_ node documentation
 description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 <!-- 
 The title should be the name of the node. Add "Trigger" if it's a core trigger node. For example:
 Item Lists
 Local File Trigger
-When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
+When you add this node to nav.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
 -->
 -->
 # _Name_ node
@@ -31,7 +31,7 @@ When you add this node to mkdocs.yml in the navigation, prepend it with the `_Na
 _Briefly summarize the functionality._
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_.md).
 ///
 
 
@@ -64,6 +64,6 @@ Here are some common errors and issues with the _Name_ node and steps to resolve
 <!-- 
 If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_filepath_.md).
 
 -->

@@ -6,7 +6,7 @@
 3. Copy the template into the file (don't copy this comment).
 4. Placeholder text is in _italic_ or between <>. Make sure to replace it! 
 5. Before publishing, delete any comments.
-6. Add this page to the mkdocs.yml with a title of "Common Issues".
+6. Add this page to the nav.yml with a title of "Common Issues".
 
 Use the style guide: https://github.com/n8n-io/n8n-docs/wiki
 You can find more info on working with the docs project in the README: https://github.com/n8n-io/n8n-docs/blob/main/README.md
@@ -21,13 +21,13 @@ Set the meta title and meta description in the frontmatter
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: _Name_ node common issues 
 description: Documentation for common issues and questions in the _Name_ node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: _priority-from-main-node_
 ---
 
 # _Name_ node common issues
 
-Here are some common errors and issues with the [_Name_ node](/integrations/builtin/_relativepathtonode_) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [_Name_ node](/integrations/builtin/_filepathtonode_.md) and steps to resolve or troubleshoot them.
 
 <!--
 Create a subheading for each error code, issue, or tip.

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grist node documentation
 description: Learn how to use the Grist node in n8n. Follow technical documentation to integrate Grist node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Grist node
@@ -12,7 +12,7 @@ Use the Grist node to automate work in Grist, and integrate Grist with other app
 On this page, you'll find a list of operations the Grist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Grist credentials](/integrations/builtin/credentials/grist/) for guidance on setting up authentication. 
+Refer to [Grist credentials](/integrations/builtin/credentials/grist.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

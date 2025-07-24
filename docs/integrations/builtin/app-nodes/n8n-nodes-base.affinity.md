@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Affinity node documentation
 description: Learn how to use the Affinity node in n8n. Follow technical documentation to integrate Affinity node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Affinity node
@@ -12,8 +12,10 @@ Use the Affinity node to automate work in Affinity, and integrate Affinity with 
 On this page, you'll find a list of operations the Affinity node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Affinity credentials](/integrations/builtin/credentials/affinity/) for guidance on setting up authentication.
+Refer to [Affinity credentials](/integrations/builtin/credentials/affinity.md) for guidance on setting up authentication.
 ///	
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

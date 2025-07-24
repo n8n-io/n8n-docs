@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Assistant operations 
 description: Documentation for the Assistant operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # OpenAI Assistant operations
 
-Use this operation to create, delete, list, message, or update an assistant in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
+Use this operation to create, delete, list, message, or update an assistant in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
 ## Create an Assistant
 
@@ -16,7 +16,7 @@ Use this operation to create a new assistant.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **Create an Assistant**.
 - **Model**: Select the model that the assistant will use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
@@ -47,7 +47,7 @@ Use this operation to delete an existing assistant from your account.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **Delete an Assistant**.
 - **Assistant**: Select the assistant you want to delete **From list** or **By ID**.
@@ -58,7 +58,7 @@ Refer to [Delete assistant | OpenAI](https://platform.openai.com/docs/api-refere
 
 Use this operation to retrieve a list of assistants in your organization.
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **List Assistants**.
 
@@ -74,7 +74,7 @@ Use this operation to send a message to an assistant and receive a response.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **Message an Assistant**.
 - **Assistant**: Select the assistant you want to message.
@@ -97,7 +97,7 @@ Use this operation to update the details of an existing assistant.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Assistant**.
 - **Operation**: Select **Update an Assistant**.
 - **Assistant**: Select the assistant you want to update.
@@ -114,7 +114,7 @@ Enter these parameters:
   Always respond in a friendly and engaging manner. When a user asks a question, provide a concise answer first, followed by a brief explanation or additional context if necessary. If the question is open-ended, offer a suggestion or ask a clarifying question to guide the conversation. Keep the tone positive and supportive, and avoid technical jargon unless specifically requested by the user.
   ```
 - **Knowledge Retrieval**: Turn on to enable knowledge retrieval for the assistant, allowing it to access external sources or a connected knowledge base. Refer to [File Search | OpenAI Platform](https://platform.openai.com/docs/assistants/tools/file-search){:target=_blank .external-link} for more information. 
-- **Files**: Select a file to upload for your external knowledge source. Use [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations/#upload-a-file) operation to add more files. Note that this only updates the [Code Interpreter](https://platform.openai.com/docs/assistants/tools/code-interpreter) tool, not the [File Search](https://platform.openai.com/docs/assistants/tools/file-search) tool.
+- **Files**: Select a file to upload for your external knowledge source. Use [**Upload a File**](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md#upload-a-file) operation to add more files. Note that this only updates the [Code Interpreter](https://platform.openai.com/docs/assistants/tools/code-interpreter) tool, not the [File Search](https://platform.openai.com/docs/assistants/tools/file-search) tool.
 - **Model**: Select the model that the assistant will use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
 - **Name**: Enter the name of the assistant. The maximum length is 256 characters.
 - **Remove All Custom Tools (Functions)**: Turn on to remove all custom tools (functions) from the assistant. 
@@ -125,4 +125,4 @@ Refer to [Modify assistant | OpenAI](https://platform.openai.com/docs/api-refere
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

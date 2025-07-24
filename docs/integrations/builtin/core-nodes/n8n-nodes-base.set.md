@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Edit Fields (Set)
 description: Documentation for the Edit Fields node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -12,7 +12,7 @@ Use the Edit Fields node to set workflow data. This node can set new data as wel
 
 ## Node parameters
 
-The are the settings and options available in the Edit Fields node.
+These are the settings and options available in the Edit Fields node.
 
 ### Mode
 

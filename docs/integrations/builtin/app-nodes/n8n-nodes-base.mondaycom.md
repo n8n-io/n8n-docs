@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: monday.com node documentation
 description: Learn how to use the monday.com node in n8n. Follow technical documentation to integrate monday.com node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -17,8 +17,10 @@ This node requires n8n version 1.22.6 or above.
 ///
 
 /// note | Credentials
-Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom/) for guidance on setting up authentication. 
+Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

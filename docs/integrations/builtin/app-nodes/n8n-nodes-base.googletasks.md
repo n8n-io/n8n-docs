@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Tasks node documentation
 description: Learn how to use the Google Tasks node in n8n. Follow technical documentation to integrate Google Tasks node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Google Tasks node
@@ -12,8 +12,10 @@ Use the Google Tasks node to automate work in Google Tasks, and integrate Google
 On this page, you'll find a list of operations the Google Tasks node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Tasks credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Tasks credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

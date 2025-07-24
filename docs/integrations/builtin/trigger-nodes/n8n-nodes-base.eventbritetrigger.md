@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Eventbrite Trigger node documentation
 description: Learn how to use the Eventbrite Trigger node in n8n. Follow technical documentation to integrate Eventbrite Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Eventbrite Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Eventbrite](https://www.eventbrite.com/){:target=_blank .external-link} is an event management and ticketing website. The service allows users to browse, create, and promote local events.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/eventbrite/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/eventbrite.md).
 ///
 
 ///  note  | Examples and templates

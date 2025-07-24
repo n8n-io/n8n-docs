@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zammad credentials
 description: Documentation for Zammad credentials. Use these credentials to authenticate Zammad in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zammad credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad/)
+- [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad.md)
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ To configure this credential, you'll need:
 
 - A **Base URL**: Enter the URL of your Zammad instance.
 - An **Access Token**: Once **API Token Access** is enabled for the Zammad instance, any user with the `user_preferences.access_token` permission can generate an **Access Token** by going to your **avatar > Profile > Token Access** and **Create** a new token.
-    - The access token permissions depend on what actions you'd like to complete with this credential. For all functionality within the [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad/) node, select:
+    - The access token permissions depend on what actions you'd like to complete with this credential. For all functionality within the [Zammad](/integrations/builtin/app-nodes/n8n-nodes-base.zammad.md) node, select:
         - `admin.group`
         - `admin.organization`
         - `admin.user`

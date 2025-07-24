@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Disqus node documentation
 description: Learn how to use the Disqus node in n8n. Follow technical documentation to integrate Disqus node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Disqus node
@@ -12,7 +12,7 @@ Use the Disqus node to automate work in Disqus, and integrate Disqus with other 
 On this page, you'll find a list of operations the Disqus node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Disqus credentials](/integrations/builtin/credentials/disqus/) for guidance on setting up authentication. 
+Refer to [Disqus credentials](/integrations/builtin/credentials/disqus.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

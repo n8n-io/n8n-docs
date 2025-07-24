@@ -8,11 +8,11 @@ contentType: howto
 Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.
 
 /// note | Log streaming
-n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming/), in addition to the logging options described in this document.
+n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming.md), in addition to the logging options described in this document.
 ///
 ## Setup
 
-To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/))
+To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/index.md))
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|
@@ -59,11 +59,11 @@ During development, adding log messages is a good practice. It assists in debugg
 
 n8n uses the `LoggerProxy` class, located in the `workflow` package. Calling the `LoggerProxy.init()` by passing in an instance of `Logger`, initializes the class before the usage.
 
-The initialization process happens only once. The [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/commands/start.ts) file already does this process for you. If you are creating a new command from scratch, you need to initialize the `LoggerProxy` class.
+The initialization process happens only once. The [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) file already does this process for you. If you are creating a new command from scratch, you need to initialize the `LoggerProxy` class.
 
 Once the `Logger` implementation gets created in the `cli` package, it can be obtained by calling the `getInstance` convenience method from the exported module.
 
-Check the [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/commands/start.ts) file to learn more about how this process works.
+Check the [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) file to learn more about how this process works.
 
 ### Adding logs
 

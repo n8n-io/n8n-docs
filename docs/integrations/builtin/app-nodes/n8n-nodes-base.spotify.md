@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Spotify node documentation
 description: Learn how to use the Spotify node in n8n. Follow technical documentation to integrate Spotify node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,7 +13,7 @@ Use the Spotify node to automate work in Spotify, and integrate Spotify with oth
 On this page, you'll find a list of operations the Spotify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Spotify credentials](/integrations/builtin/credentials/spotify/) for guidance on setting up authentication. 
+Refer to [Spotify credentials](/integrations/builtin/credentials/spotify.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Twake node documentation
 description: Learn how to use the Twake node in n8n. Follow technical documentation to integrate Twake node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Twake node
@@ -12,7 +12,7 @@ Use the Twake node to automate work in Twake, and integrate Twake with other app
 On this page, you'll find a list of operations the Twake node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twake credentials](/integrations/builtin/credentials/twake/) for guidance on setting up authentication. 
+Refer to [Twake credentials](/integrations/builtin/credentials/twake.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

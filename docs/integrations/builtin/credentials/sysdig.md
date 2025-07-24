@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sysdig credentials
 description: Documentation for the Sysdig credentials. Use these credentials to authenticate Sysdig in n8n, a workflow automation platform.
+contentType: [integration, reference]
 ---
 
 # Sysdig Management credentials
@@ -20,7 +21,7 @@ Create a [Sysdig](https://sysdig.com){:target=_blank .external-link} account or 
 
 Refer to [Sysdig's documentation](https://docs.sysdig.com/en/docs/developer-tools/sysdig-api/){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more.
 
 ## Using API access key
 

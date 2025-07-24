@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Hacker News node documentation
 description: Learn how to use the Hacker News node in n8n. Follow technical documentation to integrate Hacker News node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Hacker News node supports and
 /// note | Credentials
 This node doesn't require authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

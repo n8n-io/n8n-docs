@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mindee node documentation
 description: Learn how to use the Mindee node in n8n. Follow technical documentation to integrate Mindee node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mindee node
@@ -12,7 +12,7 @@ Use the Mindee node to automate work in Mindee, and integrate Mindee with other 
 On this page, you'll find a list of operations the Mindee node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mindee credentials](/integrations/builtin/credentials/mindee/) for guidance on setting up authentication. 
+Refer to [Mindee credentials](/integrations/builtin/credentials/mindee.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,17 +2,17 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings AWS Bedrock node documentation
 description: Learn how to use the Embeddings AWS Bedrock node in n8n. Follow technical documentation to integrate Embeddings AWS Bedrock node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Embeddings AWS Bedrock node
 
-Use the Embeddings AWS Bedrock node to generate embeddings for a given text.
+Use the Embeddings AWS Bedrock node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings AWS Bedrock node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/aws/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/aws.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SIGNL4 credentials
 description: Documentation for SIGNL4 credentials. Use these credentials to authenticate SIGNL4 in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SIGNL4 credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4/)
+- [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4.md)
 
 ## Prerequisites
 

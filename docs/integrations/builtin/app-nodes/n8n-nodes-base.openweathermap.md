@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenWeatherMap node documentation
 description: Learn how to use the OpenWeatherMap node in n8n. Follow technical documentation to integrate OpenWeatherMap node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the OpenWeatherMap node to automate work in OpenWeatherMap, and integrate Op
 On this page, you'll find a list of operations the OpenWeatherMap node supports and links to more resources.
 
 /// note | Credentials
-Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap/) for guidance on setting up authentication. 
+Refer to [OpenWeatherMap credentials](/integrations/builtin/credentials/openweathermap.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

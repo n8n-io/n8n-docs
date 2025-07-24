@@ -1,0 +1,1335 @@
+nav:
+  - Using n8n:
+    - Welcome: index.md
+    - Getting started:
+      - Learning path: learning-path.md
+      - Choose your n8n: choose-n8n.md
+      - Quickstarts:
+        - try-it-out/index.md
+        - A very quick quickstart: try-it-out/quickstart.md
+        - A longer introduction: try-it-out/tutorial-first-workflow.md
+      - Video courses: video-courses.md
+      - Text courses:
+        - courses/index.md
+        - Level one:
+          - courses/level-one/index.md
+          - Navigating the editor UI: courses/level-one/chapter-1.md
+          - Building a mini-workflow: courses/level-one/chapter-2.md
+          - Automating a (real-world) use case: courses/level-one/chapter-3.md
+          - Designing the workflow: courses/level-one/chapter-4.md
+          - Building the workflow:
+            - Getting data from the data warehouse: courses/level-one/chapter-5/chapter-5.1.md
+            - Inserting data into airtable: courses/level-one/chapter-5/chapter-5.2.md
+            - Filtering orders: courses/level-one/chapter-5/chapter-5.3.md
+            - Setting values for processing orders: courses/level-one/chapter-5/chapter-5.4.md
+            - Calculating booked orders: courses/level-one/chapter-5/chapter-5.5.md
+            - Notifying the team: courses/level-one/chapter-5/chapter-5.6.md
+            - Scheduling the workflow: courses/level-one/chapter-5/chapter-5.7.md
+            - Activating and examining the workflow: courses/level-one/chapter-5/chapter-5.8.md
+          - Exporting and importing workflows: courses/level-one/chapter-6.md
+          - Test your knowledge: courses/level-one/chapter-7.md
+        - Level two:
+          - courses/level-two/index.md
+          - Understanding the data structure: courses/level-two/chapter-1.md
+          - Processing different data types: courses/level-two/chapter-2.md
+          - Merging and splitting data: courses/level-two/chapter-3.md
+          - Dealing with errors in workflows: courses/level-two/chapter-4.md
+          - Automating a business workflow:
+            - Use case: courses/level-two/chapter-5/chapter-5.0.md
+            - Workflow 1: courses/level-two/chapter-5/chapter-5.1.md
+            - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
+            - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
+          - Test your knowledge: courses/level-two/chapter-6.md
+    - Using the app:
+      - Understand workflows:
+        - workflows/index.md
+        - Create and run: workflows/create.md
+        - Components:
+          - workflows/components/index.md
+          - Nodes: workflows/components/nodes.md
+          - Connections: workflows/components/connections.md
+          - Sticky Notes: workflows/components/sticky-notes.md
+        - Executions:
+          - workflows/executions/index.md
+          - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
+          - Dirty nodes: workflows/executions/dirty-nodes.md
+          - Workflow-level executions: workflows/executions/single-workflow-executions.md
+          - All executions: workflows/executions/all-executions.md
+          - Custom executions data: workflows/executions/custom-executions-data.md
+          - Debug executions: workflows/executions/debug.md
+        - Tags: workflows/tags.md
+        - Export and import: workflows/export-import.md
+        - Templates: workflows/templates.md
+        - Sharing: workflows/sharing.md
+        - Settings: workflows/settings.md
+        - Workflow history: workflows/history.md
+        - Workflow ID: workflows/workflow-id.md
+        - Sub-workflow conversion: workflows/subworkflow-conversion.md
+      - Manage credentials:
+        - credentials/index.md
+        - Create and edit: credentials/add-edit-credentials.md
+        - Credential sharing: credentials/credential-sharing.md
+      - Manage users and access:
+        - user-management/index.md
+        - Cloud setup: user-management/cloud-setup.md
+        - Manage users: user-management/manage-users.md
+        - Account types: user-management/account-types.md
+        - Role-based access control:
+          - user-management/rbac/index.md
+          - Role types: user-management/rbac/role-types.md
+          - Projects: user-management/rbac/projects.md
+        - Best practices: user-management/best-practices.md
+        - 2FA: user-management/two-factor-auth.md
+        - LDAP: user-management/ldap.md
+        - SAML:
+          - user-management/saml/index.md
+          - Set up SAML: user-management/saml/setup.md
+          - Okta Workforce Identity SAML setup: user-management/saml/okta.md
+          - Troubleshooting: user-management/saml/troubleshooting.md
+          - Manage users with SAML: user-management/saml/managing.md
+      - Keyboard shortcuts: keyboard-shortcuts.md
+    - Key concepts:
+      - Flow logic:
+        - flow-logic/index.md
+        - Splitting with conditionals: flow-logic/splitting.md
+        - Merging data: flow-logic/merging.md
+        - Looping: flow-logic/looping.md
+        - Waiting: flow-logic/waiting.md
+        - Sub-workflows: flow-logic/subworkflows.md
+        - Error handling: flow-logic/error-handling.md
+        - Execution order in multi-branch workflows: flow-logic/execution-order.md
+      - Data:
+        - data/index.md
+        - Data structure: data/data-structure.md
+        - Data flow within nodes: data/data-flow-nodes.md
+        - Transforming data: data/transforming-data.md
+        - Process data using code: data/code.md
+        - Data mapping:
+          - data/data-mapping/index.md
+          - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
+          - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
+          - Data item linking:
+            - data/data-mapping/data-item-linking/index.md
+            - Item linking concepts: data/data-mapping/data-item-linking/item-linking-concepts.md
+            - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
+            - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
+            - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
+        - Data pinning: data/data-pinning.md
+        - Data editing: data/data-editing.md
+        - Data filtering: data/data-filtering.md
+        - Data mocking: data/data-mocking.md
+        - Binary data: data/binary-data.md
+        - Schema preview: data/schema-preview.md
+      - Glossary: glossary.md
+    - n8n Cloud:
+      - Overview: manage-cloud/overview.md
+      - Cloud free trial: manage-cloud/cloud-free-trial.md
+      - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
+      - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
+      - Set the timezone: manage-cloud/set-cloud-timezone.md
+      - Cloud IP addresses: manage-cloud/cloud-ip.md
+      - Cloud data management: manage-cloud/cloud-data-management.md
+      - Change ownership or username: manage-cloud/change-ownership-or-username.md
+      - Concurrency: manage-cloud/concurrency.md
+      - Download workflows: manage-cloud/download-workflows.md
+      - AI Assistant: manage-cloud/ai-assistant.md
+    - Enterprise features:
+      - Source control and environments:
+        - source-control-environments/index.md
+        - Understand:
+          - source-control-environments/understand/index.md
+          - Environments: source-control-environments/understand/environments.md
+          - Git in n8n: source-control-environments/understand/git.md
+          - Branch patterns: source-control-environments/understand/patterns.md
+        - Set up: source-control-environments/setup.md
+        - Using:
+          - source-control-environments/using/index.md
+          - Push and pull: source-control-environments/using/push-pull.md
+          - Copy work between environments: source-control-environments/using/copy-work.md
+        - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
+      - External secrets: external-secrets.md
+      - Log streaming: log-streaming.md
+      - Insights: insights.md
+      - License key: license-key.md
+    - Releases:
+      - Release notes:
+        - 1.x: release-notes.md
+        - 0.x: release-notes/0-x.md
+      - v1.0 migration guide: 1-0-migration-checklist.md
+    - Help and community:
+      - Where to get help: help-community/help.md
+      - Contributing: help-community/contributing.md
+    - Licenses and privacy:
+      - Privacy and security:
+          - privacy-security/index.md
+          - Privacy: privacy-security/privacy.md
+          - Security: https://n8n.io/legal/#security
+          - Incident response: privacy-security/incident-response.md
+          - What you can do: privacy-security/what-you-can-do.md
+      - Sustainable use license: sustainable-use-license.md
+  - Integrations:
+    - integrations/index.md
+    - Built-in nodes:
+      - Node types: integrations/builtin/node-types.md
+      - Core nodes:
+        - integrations/builtin/core-nodes/index.md
+        - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aggregate.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md
+        - Code:
+          - Code: integrations/builtin/core-nodes/n8n-nodes-base.code/index.md
+          - Keyboard shortcuts: integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
+        - Chat Trigger:
+          - Chat Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.set.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
+        - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
+        - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Evaluation: integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md
+        - Evaluation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md
+        - Execute Command:
+          - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md
+        - Execute Sub-workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.executiondata.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.filter.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.ftp.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.git.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.graphql.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.html.md
+        - HTTP Request:
+          - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.if.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.ldap.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.limit.md
+        - Local File Trigger: integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md
+        - Manual Trigger: integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
+        - MCP Server Trigger: integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.merge.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
+        - n8n Form: integrations/builtin/core-nodes/n8n-nodes-base.form.md
+        - n8n Form Trigger: integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md
+        - n8n Trigger: integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.noop.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md
+        - Remove Duplicates:
+          - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md
+          - Templates and examples: integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
+        - RSS Feed Trigger: integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
+        - Schedule Trigger:
+          - Schedule Trigger: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.sort.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.splitout.md
+        - SSE Trigger: integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.ssh.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.summarize.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.switch.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.totp.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.wait.md
+        - Webhook:
+          - integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md
+          - Workflow development: integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md
+          - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.webhook/common-issues.md
+        - Workflow Trigger: integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.xml.md
+      - Actions:
+        - integrations/builtin/app-nodes/index.md
+        - Action Network: integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork.md
+        - ActiveCampaign: integrations/builtin/app-nodes/n8n-nodes-base.activecampaign.md
+        - Adalo: integrations/builtin/app-nodes/n8n-nodes-base.adalo.md
+        - Affinity: integrations/builtin/app-nodes/n8n-nodes-base.affinity.md
+        - Agile CRM: integrations/builtin/app-nodes/n8n-nodes-base.agilecrm.md
+        - Airtable:
+          - Airtable: integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
+        - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
+        - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
+        - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
+        - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
+        - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
+        - Automizy: integrations/builtin/app-nodes/n8n-nodes-base.automizy.md
+        - Autopilot: integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md
+        - AWS Certificate Manager: integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md
+        - AWS Cognito: integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md
+        - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
+        - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
+        - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
+        - AWS Lambda: integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md
+        - AWS Rekognition: integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition.md
+        - AWS S3: integrations/builtin/app-nodes/n8n-nodes-base.awss3.md
+        - AWS SES: integrations/builtin/app-nodes/n8n-nodes-base.awsses.md
+        - AWS SNS: integrations/builtin/app-nodes/n8n-nodes-base.awssns.md
+        - AWS SQS: integrations/builtin/app-nodes/n8n-nodes-base.awssqs.md
+        - AWS Textract: integrations/builtin/app-nodes/n8n-nodes-base.awstextract.md
+        - AWS Transcribe: integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe.md
+        - Azure Cosmos DB: integrations/builtin/app-nodes/n8n-nodes-base.azurecosmosdb.md
+        - Azure Storage: integrations/builtin/app-nodes/n8n-nodes-base.azurestorage.md
+        - BambooHR: integrations/builtin/app-nodes/n8n-nodes-base.bamboohr.md
+        - Bannerbear: integrations/builtin/app-nodes/n8n-nodes-base.bannerbear.md
+        - Baserow: integrations/builtin/app-nodes/n8n-nodes-base.baserow.md
+        - Beeminder: integrations/builtin/app-nodes/n8n-nodes-base.beeminder.md
+        - Bitly: integrations/builtin/app-nodes/n8n-nodes-base.bitly.md
+        - Bitwarden: integrations/builtin/app-nodes/n8n-nodes-base.bitwarden.md
+        - Box: integrations/builtin/app-nodes/n8n-nodes-base.box.md
+        - Brandfetch: integrations/builtin/app-nodes/n8n-nodes-base.brandfetch.md
+        - Brevo: integrations/builtin/app-nodes/n8n-nodes-base.brevo.md
+        - Bubble: integrations/builtin/app-nodes/n8n-nodes-base.bubble.md
+        - Chargebee: integrations/builtin/app-nodes/n8n-nodes-base.chargebee.md
+        - CircleCI: integrations/builtin/app-nodes/n8n-nodes-base.circleci.md
+        - Webex by Cisco: integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex.md
+        - Clearbit: integrations/builtin/app-nodes/n8n-nodes-base.clearbit.md
+        - ClickUp: integrations/builtin/app-nodes/n8n-nodes-base.clickup.md
+        - Clockify: integrations/builtin/app-nodes/n8n-nodes-base.clockify.md
+        - Cloudflare: integrations/builtin/app-nodes/n8n-nodes-base.cloudflare.md
+        - Cockpit: integrations/builtin/app-nodes/n8n-nodes-base.cockpit.md
+        - Coda: integrations/builtin/app-nodes/n8n-nodes-base.coda.md
+        - CoinGecko: integrations/builtin/app-nodes/n8n-nodes-base.coingecko.md
+        - Contentful: integrations/builtin/app-nodes/n8n-nodes-base.contentful.md
+        - ConvertKit: integrations/builtin/app-nodes/n8n-nodes-base.convertkit.md
+        - Copper: integrations/builtin/app-nodes/n8n-nodes-base.copper.md
+        - Cortex: integrations/builtin/app-nodes/n8n-nodes-base.cortex.md
+        - CrateDB: integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md
+        - crowd.dev: integrations/builtin/app-nodes/n8n-nodes-base.crowddev.md
+        - Customer.io: integrations/builtin/app-nodes/n8n-nodes-base.customerio.md
+        - DeepL: integrations/builtin/app-nodes/n8n-nodes-base.deepl.md
+        - Demio: integrations/builtin/app-nodes/n8n-nodes-base.demio.md
+        - DHL: integrations/builtin/app-nodes/n8n-nodes-base.dhl.md
+        - Discord:
+          - Discord: integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md
+        - Discourse: integrations/builtin/app-nodes/n8n-nodes-base.discourse.md
+        - Disqus: integrations/builtin/app-nodes/n8n-nodes-base.disqus.md
+        - Drift: integrations/builtin/app-nodes/n8n-nodes-base.drift.md
+        - Dropbox: integrations/builtin/app-nodes/n8n-nodes-base.dropbox.md
+        - Dropcontact: integrations/builtin/app-nodes/n8n-nodes-base.dropcontact.md
+        - E-goi: integrations/builtin/app-nodes/n8n-nodes-base.egoi.md
+        - Elasticsearch: integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch.md
+        - Elastic Security: integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity.md
+        - Emelia: integrations/builtin/app-nodes/n8n-nodes-base.emelia.md
+        - ERPNext: integrations/builtin/app-nodes/n8n-nodes-base.erpnext.md
+        - Facebook Graph API: integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md
+        - FileMaker: integrations/builtin/app-nodes/n8n-nodes-base.filemaker.md
+        - Flow: integrations/builtin/app-nodes/n8n-nodes-base.flow.md
+        - Freshdesk: integrations/builtin/app-nodes/n8n-nodes-base.freshdesk.md
+        - Freshservice: integrations/builtin/app-nodes/n8n-nodes-base.freshservice.md
+        - Freshworks CRM: integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm.md
+        - GetResponse: integrations/builtin/app-nodes/n8n-nodes-base.getresponse.md
+        - Ghost: integrations/builtin/app-nodes/n8n-nodes-base.ghost.md
+        - GitHub: integrations/builtin/app-nodes/n8n-nodes-base.github.md
+        - GitLab: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
+        - Gmail:
+          - Gmail: integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md
+          - Draft operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/draft-operations.md
+          - Label operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/label-operations.md
+          - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md
+          - Thread operations: integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md
+        - Gong: integrations/builtin/app-nodes/n8n-nodes-base.gong.md
+        - Google Ads: integrations/builtin/app-nodes/n8n-nodes-base.googleads.md
+        - Google Analytics: integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics.md
+        - Google BigQuery: integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery.md
+        - Google Books: integrations/builtin/app-nodes/n8n-nodes-base.googlebooks.md
+        - Google Business Profile: integrations/builtin/app-nodes/n8n-nodes-base.googlebusinessprofile.md
+        - Google Calendar:
+          - Google Calendar: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md
+          - Calendar operations: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md
+          - Event operations: integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md
+        - Google Chat: integrations/builtin/app-nodes/n8n-nodes-base.googlechat.md
+        - Google Cloud Firestore: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore.md
+        - Google Cloud Natural Language: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudnaturallanguage.md
+        - Google Cloud Realtime Database: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudrealtimedatabase.md
+        - Google Cloud Storage: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage.md
+        - Google Contacts: integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts.md
+        - Google Docs: integrations/builtin/app-nodes/n8n-nodes-base.googledocs.md
+        - Google Drive:
+          - Google Drive: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-operations.md
+          - File and folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/file-folder-operations.md
+          - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
+          - Shared drive operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
+        - Google Gemini: integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md
+        - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
+        - Google Sheets:
+          - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
+          - Document operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/document-operations.md
+          - Sheet within Document operations: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/sheet-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/common-issues.md
+        - Google Slides: integrations/builtin/app-nodes/n8n-nodes-base.googleslides.md
+        - Google Tasks: integrations/builtin/app-nodes/n8n-nodes-base.googletasks.md
+        - Google Translate: integrations/builtin/app-nodes/n8n-nodes-base.googletranslate.md
+        - Google Workspace Admin: integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin.md
+        - Gotify: integrations/builtin/app-nodes/n8n-nodes-base.gotify.md
+        - GoToWebinar: integrations/builtin/app-nodes/n8n-nodes-base.gotowebinar.md
+        - Grafana: integrations/builtin/app-nodes/n8n-nodes-base.grafana.md
+        - Grist: integrations/builtin/app-nodes/n8n-nodes-base.grist.md
+        - Hacker News: integrations/builtin/app-nodes/n8n-nodes-base.hackernews.md
+        - HaloPSA: integrations/builtin/app-nodes/n8n-nodes-base.halopsa.md
+        - Harvest: integrations/builtin/app-nodes/n8n-nodes-base.harvest.md
+        - Help Scout: integrations/builtin/app-nodes/n8n-nodes-base.helpscout.md
+        - HighLevel: integrations/builtin/app-nodes/n8n-nodes-base.highlevel.md
+        - Home Assistant: integrations/builtin/app-nodes/n8n-nodes-base.homeassistant.md
+        - HubSpot: integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md
+        - Humantic AI: integrations/builtin/app-nodes/n8n-nodes-base.humanticai.md
+        - Hunter: integrations/builtin/app-nodes/n8n-nodes-base.hunter.md
+        - Intercom: integrations/builtin/app-nodes/n8n-nodes-base.intercom.md
+        - Invoice Ninja: integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md
+        - Iterable: integrations/builtin/app-nodes/n8n-nodes-base.iterable.md
+        - Jenkins: integrations/builtin/app-nodes/n8n-nodes-base.jenkins.md
+        - Jina AI: integrations/builtin/app-nodes/n8n-nodes-base.jinaai.md
+        - Jira Software: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
+        - Kafka: integrations/builtin/app-nodes/n8n-nodes-base.kafka.md
+        - Keap: integrations/builtin/app-nodes/n8n-nodes-base.keap.md
+        - Kitemaker: integrations/builtin/app-nodes/n8n-nodes-base.kitemaker.md
+        - KoboToolbox: integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md
+        - Lemlist: integrations/builtin/app-nodes/n8n-nodes-base.lemlist.md
+        - Line: integrations/builtin/app-nodes/n8n-nodes-base.line.md
+        - Linear: integrations/builtin/app-nodes/n8n-nodes-base.linear.md
+        - LingvaNex: integrations/builtin/app-nodes/n8n-nodes-base.lingvanex.md
+        - LinkedIn: integrations/builtin/app-nodes/n8n-nodes-base.linkedin.md
+        - LoneScale: integrations/builtin/app-nodes/n8n-nodes-base.lonescale.md
+        - Magento 2: integrations/builtin/app-nodes/n8n-nodes-base.magento2.md
+        - Mailcheck: integrations/builtin/app-nodes/n8n-nodes-base.mailcheck.md
+        - Mailchimp: integrations/builtin/app-nodes/n8n-nodes-base.mailchimp.md
+        - MailerLite: integrations/builtin/app-nodes/n8n-nodes-base.mailerlite.md
+        - Mailgun: integrations/builtin/app-nodes/n8n-nodes-base.mailgun.md
+        - Mailjet: integrations/builtin/app-nodes/n8n-nodes-base.mailjet.md
+        - Mandrill: integrations/builtin/app-nodes/n8n-nodes-base.mandrill.md
+        - marketstack: integrations/builtin/app-nodes/n8n-nodes-base.marketstack.md
+        - Matrix: integrations/builtin/app-nodes/n8n-nodes-base.matrix.md
+        - Mattermost: integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md
+        - Mautic: integrations/builtin/app-nodes/n8n-nodes-base.mautic.md
+        - Medium: integrations/builtin/app-nodes/n8n-nodes-base.medium.md
+        - MessageBird: integrations/builtin/app-nodes/n8n-nodes-base.messagebird.md
+        - Metabase: integrations/builtin/app-nodes/n8n-nodes-base.metabase.md
+        - Microsoft Dynamics CRM: integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm.md
+        - Microsoft Entra ID: integrations/builtin/app-nodes/n8n-nodes-base.microsoftentra.md
+        - Microsoft Excel 365: integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel.md
+        - Microsoft Graph Security: integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity.md
+        - Microsoft OneDrive: integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md
+        - Microsoft Outlook: integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md
+        - Microsoft SharePoint: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md
+        - Microsoft SQL: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md
+        - Microsoft Teams: integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
+        - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md
+        - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
+        - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
+        - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
+        - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
+        - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
+        - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md
+        - Monica CRM: integrations/builtin/app-nodes/n8n-nodes-base.monicacrm.md
+        - MQTT: integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md
+        - MSG91: integrations/builtin/app-nodes/n8n-nodes-base.msg91.md
+        - MySQL:
+          - MySQL: integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md
+        - Customer Datastore (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore.md
+        - Customer Messenger (n8n Training): integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger.md
+        - NASA: integrations/builtin/app-nodes/n8n-nodes-base.nasa.md
+        - Netlify: integrations/builtin/app-nodes/n8n-nodes-base.netlify.md
+        - Netscaler ADC: integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc.md
+        - Nextcloud: integrations/builtin/app-nodes/n8n-nodes-base.nextcloud.md
+        - NocoDB: integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md
+        - Notion:
+          - Notion: integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues.md
+        - npm: integrations/builtin/app-nodes/n8n-nodes-base.npm.md
+        - Odoo: integrations/builtin/app-nodes/n8n-nodes-base.odoo.md
+        - Okta: integrations/builtin/app-nodes/n8n-nodes-base.okta.md
+        - One Simple API: integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md
+        - Onfleet: integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md
+        - OpenAI:
+          - OpenAI: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md
+          - Assistant operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/assistant-operations.md
+          - Audio operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/audio-operations.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/file-operations.md
+          - Image operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
+          - Text operations: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/text-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md
+        - OpenThesaurus: integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus.md
+        - OpenWeatherMap: integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md
+        - Oura: integrations/builtin/app-nodes/n8n-nodes-base.oura.md
+        - Paddle: integrations/builtin/app-nodes/n8n-nodes-base.paddle.md
+        - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
+        - PayPal: integrations/builtin/app-nodes/n8n-nodes-base.paypal.md
+        - Peekalink: integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md
+        - Perplexity: integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity.md
+        - PhantomBuster: integrations/builtin/app-nodes/n8n-nodes-base.phantombuster.md
+        - Philips Hue: integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md
+        - Pipedrive: integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md
+        - Plivo: integrations/builtin/app-nodes/n8n-nodes-base.plivo.md
+        - PostBin: integrations/builtin/app-nodes/n8n-nodes-base.postbin.md
+        - Postgres:
+          - Postgres: integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues.md
+        - PostHog: integrations/builtin/app-nodes/n8n-nodes-base.posthog.md
+        - ProfitWell: integrations/builtin/app-nodes/n8n-nodes-base.profitwell.md
+        - Pushbullet: integrations/builtin/app-nodes/n8n-nodes-base.pushbullet.md
+        - Pushcut: integrations/builtin/app-nodes/n8n-nodes-base.pushcut.md
+        - Pushover: integrations/builtin/app-nodes/n8n-nodes-base.pushover.md
+        - QuestDB: integrations/builtin/app-nodes/n8n-nodes-base.questdb.md
+        - Quick Base: integrations/builtin/app-nodes/n8n-nodes-base.quickbase.md
+        - QuickBooks Online: integrations/builtin/app-nodes/n8n-nodes-base.quickbooks.md
+        - QuickChart: integrations/builtin/app-nodes/n8n-nodes-base.quickchart.md
+        - RabbitMQ: integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md
+        - Raindrop: integrations/builtin/app-nodes/n8n-nodes-base.raindrop.md
+        - Reddit: integrations/builtin/app-nodes/n8n-nodes-base.reddit.md
+        - Redis: integrations/builtin/app-nodes/n8n-nodes-base.redis.md
+        - Rocket.Chat: integrations/builtin/app-nodes/n8n-nodes-base.rocketchat.md
+        - Rundeck: integrations/builtin/app-nodes/n8n-nodes-base.rundeck.md
+        - S3: integrations/builtin/app-nodes/n8n-nodes-base.s3.md
+        - Salesforce: integrations/builtin/app-nodes/n8n-nodes-base.salesforce.md
+        - Salesmate: integrations/builtin/app-nodes/n8n-nodes-base.salesmate.md
+        - SeaTable: integrations/builtin/app-nodes/n8n-nodes-base.seatable.md
+        - SecurityScorecard: integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard.md
+        - Segment: integrations/builtin/app-nodes/n8n-nodes-base.segment.md
+        - SendGrid: integrations/builtin/app-nodes/n8n-nodes-base.sendgrid.md
+        - Sendy: integrations/builtin/app-nodes/n8n-nodes-base.sendy.md
+        - Sentry.io: integrations/builtin/app-nodes/n8n-nodes-base.sentryio.md
+        - ServiceNow: integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md
+        - seven: integrations/builtin/app-nodes/n8n-nodes-base.sms77.md
+        - Shopify: integrations/builtin/app-nodes/n8n-nodes-base.shopify.md
+        - SIGNL4: integrations/builtin/app-nodes/n8n-nodes-base.signl4.md
+        - Slack: integrations/builtin/app-nodes/n8n-nodes-base.slack.md
+        - Snowflake: integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md
+        - Splunk: integrations/builtin/app-nodes/n8n-nodes-base.splunk.md
+        - Spontit: integrations/builtin/app-nodes/n8n-nodes-base.spontit.md
+        - Spotify: integrations/builtin/app-nodes/n8n-nodes-base.spotify.md
+        - Stackby: integrations/builtin/app-nodes/n8n-nodes-base.stackby.md
+        - Storyblok: integrations/builtin/app-nodes/n8n-nodes-base.storyblok.md
+        - Strapi: integrations/builtin/app-nodes/n8n-nodes-base.strapi.md
+        - Strava: integrations/builtin/app-nodes/n8n-nodes-base.strava.md
+        - Stripe: integrations/builtin/app-nodes/n8n-nodes-base.stripe.md
+        - Supabase:
+          - Supabase: integrations/builtin/app-nodes/n8n-nodes-base.supabase/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues.md
+        - SyncroMSP: integrations/builtin/app-nodes/n8n-nodes-base.syncromsp.md
+        - Taiga: integrations/builtin/app-nodes/n8n-nodes-base.taiga.md
+        - Tapfiliate: integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md
+        - Telegram:
+          - integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md
+          - Chat operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md
+          - Callback operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md
+          - File operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md
+          - Message operations: integrations/builtin/app-nodes/n8n-nodes-base.telegram/message-operations.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md
+        - TheHive: integrations/builtin/app-nodes/n8n-nodes-base.thehive.md
+        - TheHive 5: integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md
+        - TimescaleDB: integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md
+        - Todoist: integrations/builtin/app-nodes/n8n-nodes-base.todoist.md
+        - Travis CI: integrations/builtin/app-nodes/n8n-nodes-base.travisci.md
+        - Trello: integrations/builtin/app-nodes/n8n-nodes-base.trello.md
+        - Twake: integrations/builtin/app-nodes/n8n-nodes-base.twake.md
+        - Twilio: integrations/builtin/app-nodes/n8n-nodes-base.twilio.md
+        - Twist: integrations/builtin/app-nodes/n8n-nodes-base.twist.md
+        - Unleashed Software: integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware.md
+        - UpLead: integrations/builtin/app-nodes/n8n-nodes-base.uplead.md
+        - uProc: integrations/builtin/app-nodes/n8n-nodes-base.uproc.md
+        - UptimeRobot: integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot.md
+        - urlscan.io: integrations/builtin/app-nodes/n8n-nodes-base.urlscanio.md
+        - Venafi TLS Protect Cloud: integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md
+        - Venafi TLS Protect Datacenter: integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter.md
+        - Vero: integrations/builtin/app-nodes/n8n-nodes-base.vero.md
+        - Vonage: integrations/builtin/app-nodes/n8n-nodes-base.vonage.md
+        - Webflow: integrations/builtin/app-nodes/n8n-nodes-base.webflow.md
+        - Wekan: integrations/builtin/app-nodes/n8n-nodes-base.wekan.md
+        - WhatsApp Business Cloud:
+          - WhatsApp Business Cloud: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md
+          - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md
+        - Wise: integrations/builtin/app-nodes/n8n-nodes-base.wise.md
+        - WooCommerce: integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md
+        - WordPress: integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md
+        - X (Formerly Twitter): integrations/builtin/app-nodes/n8n-nodes-base.twitter.md
+        - Xero: integrations/builtin/app-nodes/n8n-nodes-base.xero.md
+        - Yourls: integrations/builtin/app-nodes/n8n-nodes-base.yourls.md
+        - YouTube: integrations/builtin/app-nodes/n8n-nodes-base.youtube.md
+        - Zammad: integrations/builtin/app-nodes/n8n-nodes-base.zammad.md
+        - Zendesk: integrations/builtin/app-nodes/n8n-nodes-base.zendesk.md
+        - Zoho CRM: integrations/builtin/app-nodes/n8n-nodes-base.zohocrm.md
+        - Zoom: integrations/builtin/app-nodes/n8n-nodes-base.zoom.md
+        - Zulip: integrations/builtin/app-nodes/n8n-nodes-base.zulip.md
+      - Triggers:
+        - integrations/builtin/trigger-nodes/index.md
+        - ActiveCampaign Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger.md
+        - Acuity Scheduling Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger.md
+        - Affinity Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger.md
+        - Airtable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md
+        - AMQP Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger.md
+        - Asana Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
+        - Autopilot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
+        - AWS SNS Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger.md
+        - Bitbucket Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger.md
+        - Box Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md
+        - Brevo Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md
+        - Calendly Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger.md
+        - Cal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger.md
+        - Chargebee Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md
+        - ClickUp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md
+        - Clockify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md
+        - ConvertKit Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger.md
+        - Copper Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger.md
+        - crowd.dev Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md
+        - Customer.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md
+        - Emelia Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger.md
+        - Eventbrite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger.md
+        - Facebook Lead Ads Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebookleadadstrigger.md
+        - Facebook Trigger:
+          - Facebook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md
+          - Ad Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/ad-account.md
+          - Application: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/application.md
+          - Certificate Transparency: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/certificate-transparency.md
+          - Group: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/group.md
+          - Instagram: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/instagram.md
+          - Link: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/link.md
+          - Page: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/page.md
+          - Permissions: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/permissions.md
+          - User: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/user.md
+          - WhatsApp Business Account: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/whatsapp.md
+          - Workplace Security: integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/workplace-security.md
+        - Figma Trigger (Beta): integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger.md
+        - Flow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md
+        - Form.io Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md
+        - Formstack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md
+        - GetResponse Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger.md
+        - GitHub Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md
+        - GitLab Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md
+        - Gmail Trigger:
+          - integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/index.md
+          - Poll Mode options: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/poll-mode-options.md
+          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/common-issues.md
+        - Google Calendar Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md
+        - Google Drive Trigger:
+          - Google Drive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md
+          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/common-issues.md
+        - Google Business Profile Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md
+        - Google Sheets Trigger:
+          - Google Sheets Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md
+          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md
+        - Gumroad Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger.md
+        - Help Scout Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md
+        - Hubspot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md
+        - Invoice Ninja Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md
+        - Jira Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger.md
+        - JotForm Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger.md
+        - Kafka Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger.md
+        - Keap Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md
+        - KoboToolbox Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md
+        - Lemlist Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md
+        - Linear Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger.md
+        - LoneScale Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md
+        - Mailchimp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger.md
+        - MailerLite Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md
+        - Mailjet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger.md
+        - Mautic Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
+        - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
+        - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+        - Microsoft Teams Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
+        - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
+        - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
+        - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
+        - Onfleet Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md
+        - PayPal Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger.md
+        - Pipedrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md
+        - Postgres Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md
+        - Postmark Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger.md
+        - Pushcut Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md
+        - RabbitMQ Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md
+        - Redis Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger.md
+        - Salesforce Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.salesforcetrigger.md
+        - SeaTable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md
+        - Shopify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md
+        - Slack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
+        - Strava Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md
+        - Stripe Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger.md
+        - SurveyMonkey Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md
+        - Taiga Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger.md
+        - Telegram Trigger:
+          - Telegram Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md
+          - Common issues: integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues.md
+        - TheHive 5 Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md
+        - TheHive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
+        - Toggl Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger.md
+        - Trello Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md
+        - Twilio Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md
+        - Typeform Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger.md
+        - Venafi TLS Protect Cloud Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md
+        - Webex by Cisco Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md
+        - Webflow Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md
+        - WhatsApp Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.whatsapptrigger.md
+        - Wise Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger.md
+        - WooCommerce Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md
+        - Workable Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger.md
+        - Wufoo Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger.md
+        - Zendesk Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger.md
+      - Cluster nodes:
+        - integrations/builtin/cluster-nodes/index.md
+        - Root nodes:
+          - integrations/builtin/cluster-nodes/root-nodes/index.md
+          - AI Agent:
+            - AI Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md
+            - Conversational Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/conversational-agent.md
+            - OpenAI Functions Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/openai-functions-agent.md
+            - Plan and Execute Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/plan-execute-agent.md
+            - ReAct Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/react-agent.md
+            - SQL Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/sql-agent.md
+            - Tools Agent: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md
+            - Common issues: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md
+          - Basic LLM Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md
+          - Question and Answer Chain:
+            - Question and Answer Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md
+            - Common issues: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md
+          - Summarization Chain: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainsummarization.md
+          - Information Extractor: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor.md
+          - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
+          - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
+          - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
+          - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
+          - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
+          - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
+          - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
+          - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
+          - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
+          - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
+        - Sub-nodes:
+          - integrations/builtin/cluster-nodes/sub-nodes/index.md
+          - Default Data Loader: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md
+          - GitHub Document Loader: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md
+          - Embeddings AWS Bedrock: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsawsbedrock.md
+          - Embeddings Azure OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md
+          - Embeddings Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingscohere.md
+          - Embeddings Google Gemini: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglegemini.md
+          - Embeddings Google PaLM: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglepalm.md
+          - Embeddings Google Vertex: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
+          - Embeddings HuggingFace Inference: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md
+          - Embeddings Mistral Cloud: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsmistralcloud.md
+          - Embeddings Ollama: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md
+          - Embeddings OpenAI: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsopenai.md
+          - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
+          - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
+          - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - Cohere Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md
+          - DeepSeek Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md
+          - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
+          - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
+          - Groq Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgroq.md
+          - Mistral Cloud Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatmistralcloud.md
+          - Ollama Chat Model:
+            - Ollama Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/index.md
+            - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md
+          - OpenAI Chat Model:
+            - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md
+            - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md
+          - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
+          - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
+          - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
+          - Ollama Model:
+            - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
+            - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md
+          - Hugging Face Inference Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md
+          - Chat Memory Manager: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md
+          - Simple Memory: 
+            - integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md
+            - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md
+          - Motorhead: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md
+          - MongoDB Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md
+          - Redis Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md
+          - Postgres Chat Memory: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md
+          - Xata: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md
+          - Zep: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md
+          - Auto-fixing Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing.md
+          - Item List Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparseritemlist.md
+          - Structured Output Parser:
+            - Structured Output Parser: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/index.md
+            - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues.md
+          - Contextual Compression Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievercontextualcompression.md
+          - MultiQuery Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievermultiquery.md
+          - Vector Store Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md
+          - Workflow Retriever: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrieverworkflow.md
+          - Character Text Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittercharactertextsplitter.md
+          - Recursive Character Text Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md
+          - Token Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
+          - Calculator: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
+          - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
+          - MCP Client Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
+          - SearXNG Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolsearxng.md
+          - SerpApi (Google Search): integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md
+          - Think Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolthink.md        
+          - Vector Store Question Answer Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md
+          - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
+          - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
+          - Call n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
+          - Reranker Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md
+          - Model Selector: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md
+      - Credentials:
+        - integrations/builtin/credentials/index.md
+        - integrations/builtin/credentials/actionnetwork.md
+        - integrations/builtin/credentials/activecampaign.md
+        - integrations/builtin/credentials/acuityscheduling.md
+        - integrations/builtin/credentials/adalo.md
+        - integrations/builtin/credentials/affinity.md
+        - integrations/builtin/credentials/agilecrm.md
+        - integrations/builtin/credentials/airtable.md
+        - integrations/builtin/credentials/airtop.md
+        - integrations/builtin/credentials/alienvault.md
+        - integrations/builtin/credentials/amqp.md
+        - integrations/builtin/credentials/anthropic.md
+        - integrations/builtin/credentials/apitemplateio.md
+        - integrations/builtin/credentials/asana.md
+        - integrations/builtin/credentials/auth0management.md
+        - integrations/builtin/credentials/automizy.md
+        - integrations/builtin/credentials/autopilot.md
+        - integrations/builtin/credentials/aws.md
+        - integrations/builtin/credentials/azureopenai.md
+        - integrations/builtin/credentials/azurecosmosdb.md
+        - integrations/builtin/credentials/azurestorage.md
+        - integrations/builtin/credentials/bamboohr.md
+        - integrations/builtin/credentials/bannerbear.md
+        - integrations/builtin/credentials/baserow.md
+        - integrations/builtin/credentials/beeminder.md
+        - integrations/builtin/credentials/bitbucket.md
+        - integrations/builtin/credentials/bitly.md
+        - integrations/builtin/credentials/bitwarden.md
+        - integrations/builtin/credentials/box.md
+        - integrations/builtin/credentials/brandfetch.md
+        - integrations/builtin/credentials/brevo.md
+        - integrations/builtin/credentials/bubble.md
+        - integrations/builtin/credentials/cal.md
+        - integrations/builtin/credentials/calendly.md
+        - integrations/builtin/credentials/carbonblack.md
+        - integrations/builtin/credentials/chargebee.md
+        - integrations/builtin/credentials/circleci.md
+        - integrations/builtin/credentials/ciscomeraki.md
+        - integrations/builtin/credentials/ciscosecureendpoint.md
+        - integrations/builtin/credentials/ciscoumbrella.md
+        - integrations/builtin/credentials/clearbit.md
+        - integrations/builtin/credentials/clickup.md
+        - integrations/builtin/credentials/clockify.md
+        - integrations/builtin/credentials/cloudflare.md
+        - integrations/builtin/credentials/cockpit.md
+        - integrations/builtin/credentials/coda.md
+        - integrations/builtin/credentials/cohere.md
+        - integrations/builtin/credentials/contentful.md
+        - integrations/builtin/credentials/convertapi.md
+        - integrations/builtin/credentials/convertkit.md
+        - integrations/builtin/credentials/copper.md
+        - integrations/builtin/credentials/cortex.md
+        - integrations/builtin/credentials/cratedb.md
+        - integrations/builtin/credentials/crowddev.md
+        - integrations/builtin/credentials/crowdstrike.md
+        - integrations/builtin/credentials/customerio.md
+        - integrations/builtin/credentials/datadog.md
+        - integrations/builtin/credentials/deepl.md
+        - integrations/builtin/credentials/deepseek.md
+        - integrations/builtin/credentials/demio.md
+        - integrations/builtin/credentials/dfiriris.md
+        - integrations/builtin/credentials/dhl.md
+        - integrations/builtin/credentials/discord.md
+        - integrations/builtin/credentials/discourse.md
+        - integrations/builtin/credentials/disqus.md
+        - integrations/builtin/credentials/drift.md
+        - integrations/builtin/credentials/dropbox.md
+        - integrations/builtin/credentials/dropcontact.md
+        - integrations/builtin/credentials/dynatrace.md
+        - integrations/builtin/credentials/egoi.md
+        - integrations/builtin/credentials/elasticsearch.md
+        - integrations/builtin/credentials/elasticsecurity.md
+        - integrations/builtin/credentials/emelia.md
+        - integrations/builtin/credentials/erpnext.md
+        - integrations/builtin/credentials/eventbrite.md
+        - integrations/builtin/credentials/f5bigip.md
+        - integrations/builtin/credentials/facebookapp.md
+        - integrations/builtin/credentials/facebookgraph.md
+        - integrations/builtin/credentials/facebookleadads.md
+        - integrations/builtin/credentials/figma.md
+        - integrations/builtin/credentials/filemaker.md
+        - integrations/builtin/credentials/filescan.md
+        - integrations/builtin/credentials/flow.md
+        - integrations/builtin/credentials/formiotrigger.md
+        - integrations/builtin/credentials/formstacktrigger.md
+        - integrations/builtin/credentials/fortigate.md
+        - integrations/builtin/credentials/freshdesk.md
+        - integrations/builtin/credentials/freshservice.md
+        - integrations/builtin/credentials/freshworkscrm.md
+        - integrations/builtin/credentials/ftp.md
+        - integrations/builtin/credentials/getresponse.md
+        - integrations/builtin/credentials/ghost.md
+        - integrations/builtin/credentials/git.md
+        - integrations/builtin/credentials/github.md
+        - integrations/builtin/credentials/gitlab.md
+        - integrations/builtin/credentials/gong.md
+        - Google:
+          - integrations/builtin/credentials/google/index.md
+          - integrations/builtin/credentials/google/oauth-single-service.md
+          - integrations/builtin/credentials/google/oauth-generic.md
+          - integrations/builtin/credentials/google/service-account.md
+        - integrations/builtin/credentials/googleai.md
+        - integrations/builtin/credentials/gotify.md
+        - integrations/builtin/credentials/gotowebinar.md
+        - integrations/builtin/credentials/grafana.md
+        - integrations/builtin/credentials/grist.md
+        - integrations/builtin/credentials/groq.md
+        - integrations/builtin/credentials/gumroad.md
+        - integrations/builtin/credentials/halopsa.md
+        - integrations/builtin/credentials/harvest.md
+        - integrations/builtin/credentials/helpscout.md
+        - integrations/builtin/credentials/highlevel.md
+        - integrations/builtin/credentials/homeassistant.md
+        - integrations/builtin/credentials/httprequest.md
+        - integrations/builtin/credentials/hubspot.md
+        - integrations/builtin/credentials/huggingface.md
+        - integrations/builtin/credentials/humanticai.md
+        - integrations/builtin/credentials/hunter.md
+        - integrations/builtin/credentials/hybridanalysis.md
+        - IMAP:
+          - integrations/builtin/credentials/imap/index.md
+          - integrations/builtin/credentials/imap/gmail.md
+          - integrations/builtin/credentials/imap/outlook.md
+          - integrations/builtin/credentials/imap/yahoo.md
+        - integrations/builtin/credentials/impervawaf.md
+        - integrations/builtin/credentials/intercom.md
+        - integrations/builtin/credentials/invoiceninja.md
+        - integrations/builtin/credentials/iterable.md
+        - integrations/builtin/credentials/jenkins.md
+        - integrations/builtin/credentials/jinaai.md
+        - integrations/builtin/credentials/jira.md
+        - integrations/builtin/credentials/jotform.md
+        - integrations/builtin/credentials/jwt.md
+        - integrations/builtin/credentials/kafka.md
+        - integrations/builtin/credentials/keap.md
+        - integrations/builtin/credentials/kibana.md
+        - integrations/builtin/credentials/kitemaker.md
+        - integrations/builtin/credentials/kobotoolbox.md
+        - integrations/builtin/credentials/ldap.md
+        - integrations/builtin/credentials/lemlist.md
+        - integrations/builtin/credentials/line.md
+        - integrations/builtin/credentials/linear.md
+        - integrations/builtin/credentials/lingvanex.md
+        - integrations/builtin/credentials/linkedin.md
+        - integrations/builtin/credentials/lonescale.md
+        - integrations/builtin/credentials/magento2.md
+        - integrations/builtin/credentials/mailcheck.md
+        - integrations/builtin/credentials/mailchimp.md
+        - integrations/builtin/credentials/mailerlite.md
+        - integrations/builtin/credentials/mailgun.md
+        - integrations/builtin/credentials/mailjet.md
+        - integrations/builtin/credentials/malcore.md
+        - integrations/builtin/credentials/mandrill.md
+        - integrations/builtin/credentials/marketstack.md
+        - integrations/builtin/credentials/matrix.md
+        - integrations/builtin/credentials/mattermost.md
+        - integrations/builtin/credentials/mautic.md
+        - integrations/builtin/credentials/medium.md
+        - integrations/builtin/credentials/messagebird.md
+        - integrations/builtin/credentials/metabase.md
+        - integrations/builtin/credentials/microsoft.md
+        - integrations/builtin/credentials/microsoftazuremonitor.md
+        - integrations/builtin/credentials/microsoftentra.md
+        - integrations/builtin/credentials/microsoftsql.md
+        - integrations/builtin/credentials/milvus.md
+        - integrations/builtin/credentials/mindee.md
+        - integrations/builtin/credentials/miro.md
+        - integrations/builtin/credentials/misp.md
+        - integrations/builtin/credentials/mist.md
+        - integrations/builtin/credentials/mistral.md
+        - integrations/builtin/credentials/mocean.md
+        - integrations/builtin/credentials/mondaycom.md
+        - integrations/builtin/credentials/mongodb.md
+        - integrations/builtin/credentials/monicacrm.md
+        - integrations/builtin/credentials/motorhead.md
+        - integrations/builtin/credentials/mqtt.md
+        - integrations/builtin/credentials/msg91.md
+        - integrations/builtin/credentials/mysql.md
+        - integrations/builtin/credentials/nasa.md
+        - integrations/builtin/credentials/netlify.md
+        - integrations/builtin/credentials/netscaleradc.md
+        - integrations/builtin/credentials/nextcloud.md
+        - integrations/builtin/credentials/nocodb.md
+        - integrations/builtin/credentials/notion.md
+        - integrations/builtin/credentials/npm.md
+        - integrations/builtin/credentials/odoo.md
+        - integrations/builtin/credentials/okta.md
+        - integrations/builtin/credentials/ollama.md
+        - integrations/builtin/credentials/onesimpleapi.md
+        - integrations/builtin/credentials/onfleet.md
+        - integrations/builtin/credentials/openai.md
+        - integrations/builtin/credentials/opencti.md
+        - integrations/builtin/credentials/openrouter.md
+        - integrations/builtin/credentials/openweathermap.md
+        - integrations/builtin/credentials/oura.md
+        - integrations/builtin/credentials/paddle.md
+        - integrations/builtin/credentials/pagerduty.md
+        - integrations/builtin/credentials/paypal.md
+        - integrations/builtin/credentials/peekalink.md
+        - integrations/builtin/credentials/perplexity.md
+        - integrations/builtin/credentials/phantombuster.md
+        - integrations/builtin/credentials/philipshue.md
+        - integrations/builtin/credentials/pinecone.md
+        - integrations/builtin/credentials/pipedrive.md
+        - integrations/builtin/credentials/plivo.md
+        - integrations/builtin/credentials/postgres.md
+        - integrations/builtin/credentials/posthog.md
+        - integrations/builtin/credentials/postmark.md
+        - integrations/builtin/credentials/profitwell.md
+        - integrations/builtin/credentials/pushbullet.md
+        - integrations/builtin/credentials/pushcut.md
+        - integrations/builtin/credentials/pushover.md
+        - integrations/builtin/credentials/qradar.md
+        - integrations/builtin/credentials/qdrant.md
+        - integrations/builtin/credentials/qualys.md
+        - integrations/builtin/credentials/questdb.md
+        - integrations/builtin/credentials/quickbase.md
+        - integrations/builtin/credentials/quickbooks.md
+        - integrations/builtin/credentials/rabbitmq.md
+        - integrations/builtin/credentials/raindrop.md
+        - integrations/builtin/credentials/rapid7insightvm.md
+        - integrations/builtin/credentials/recordedfuture.md
+        - integrations/builtin/credentials/reddit.md
+        - integrations/builtin/credentials/redis.md
+        - integrations/builtin/credentials/rocketchat.md
+        - integrations/builtin/credentials/rundeck.md
+        - integrations/builtin/credentials/s3.md
+        - integrations/builtin/credentials/salesforce.md
+        - integrations/builtin/credentials/salesmate.md
+        - integrations/builtin/credentials/searxng.md
+        - integrations/builtin/credentials/seatable.md
+        - integrations/builtin/credentials/securityscorecard.md
+        - integrations/builtin/credentials/segment.md
+        - integrations/builtin/credentials/sekoia.md
+        - Send Email:
+          - integrations/builtin/credentials/sendemail/index.md
+          - integrations/builtin/credentials/sendemail/gmail.md
+          - integrations/builtin/credentials/sendemail/outlook.md
+          - integrations/builtin/credentials/sendemail/yahoo.md
+        - integrations/builtin/credentials/sendgrid.md
+        - integrations/builtin/credentials/sendy.md
+        - integrations/builtin/credentials/sentryio.md
+        - integrations/builtin/credentials/serp.md
+        - integrations/builtin/credentials/servicenow.md
+        - integrations/builtin/credentials/sms77.md
+        - integrations/builtin/credentials/shopify.md
+        - integrations/builtin/credentials/shuffler.md
+        - integrations/builtin/credentials/signl4.md
+        - integrations/builtin/credentials/slack.md
+        - integrations/builtin/credentials/snowflake.md
+        - integrations/builtin/credentials/solarwindsipam.md
+        - integrations/builtin/credentials/solarwindsobservability.md
+        - integrations/builtin/credentials/splunk.md
+        - integrations/builtin/credentials/spontit.md
+        - integrations/builtin/credentials/spotify.md
+        - integrations/builtin/credentials/ssh.md
+        - integrations/builtin/credentials/stackby.md
+        - integrations/builtin/credentials/storyblok.md
+        - integrations/builtin/credentials/strapi.md
+        - integrations/builtin/credentials/strava.md
+        - integrations/builtin/credentials/stripe.md
+        - integrations/builtin/credentials/supabase.md
+        - integrations/builtin/credentials/surveymonkey.md
+        - integrations/builtin/credentials/syncromsp.md
+        - integrations/builtin/credentials/sysdig.md
+        - integrations/builtin/credentials/taiga.md
+        - integrations/builtin/credentials/tapfiliate.md
+        - integrations/builtin/credentials/telegram.md
+        - integrations/builtin/credentials/thehive.md
+        - integrations/builtin/credentials/thehive5.md
+        - integrations/builtin/credentials/timescaledb.md
+        - integrations/builtin/credentials/todoist.md
+        - integrations/builtin/credentials/toggl.md
+        - integrations/builtin/credentials/totp.md
+        - integrations/builtin/credentials/travisci.md
+        - integrations/builtin/credentials/trellixepo.md
+        - integrations/builtin/credentials/trello.md
+        - integrations/builtin/credentials/twake.md
+        - integrations/builtin/credentials/twilio.md
+        - integrations/builtin/credentials/twist.md
+        - integrations/builtin/credentials/typeform.md
+        - integrations/builtin/credentials/unleashedsoftware.md
+        - integrations/builtin/credentials/uplead.md
+        - integrations/builtin/credentials/uproc.md
+        - integrations/builtin/credentials/uptimerobot.md
+        - integrations/builtin/credentials/urlscanio.md
+        - integrations/builtin/credentials/venafitlsprotectcloud.md
+        - integrations/builtin/credentials/venafitlsprotectdatacenter.md
+        - integrations/builtin/credentials/vero.md
+        - integrations/builtin/credentials/virustotal.md
+        - integrations/builtin/credentials/vonage.md
+        - integrations/builtin/credentials/weaviate.md        
+        - integrations/builtin/credentials/ciscowebex.md
+        - integrations/builtin/credentials/webflow.md
+        - integrations/builtin/credentials/webhook.md
+        - integrations/builtin/credentials/wekan.md
+        - integrations/builtin/credentials/whatsapp.md
+        - integrations/builtin/credentials/wise.md
+        - integrations/builtin/credentials/wolframalpha.md
+        - integrations/builtin/credentials/woocommerce.md
+        - integrations/builtin/credentials/wordpress.md
+        - integrations/builtin/credentials/workable.md
+        - integrations/builtin/credentials/wufoo.md
+        - integrations/builtin/credentials/twitter.md
+        - integrations/builtin/credentials/xai.md
+        - integrations/builtin/credentials/xata.md
+        - integrations/builtin/credentials/xero.md
+        - integrations/builtin/credentials/yourls.md
+        - integrations/builtin/credentials/zabbix.md
+        - integrations/builtin/credentials/zammad.md
+        - integrations/builtin/credentials/zendesk.md
+        - integrations/builtin/credentials/zep.md
+        - integrations/builtin/credentials/zoho.md
+        - integrations/builtin/credentials/zoom.md
+        - integrations/builtin/credentials/zscalerzia.md
+        - integrations/builtin/credentials/zulip.md
+      - Custom API actions for existing nodes: integrations/custom-operations.md
+      - Handle rate limits: integrations/builtin/rate-limits.md
+    - Community nodes:
+      - Installation and management:
+        - integrations/community-nodes/installation/index.md
+        - Install verified community nodes: integrations/community-nodes/installation/verified-install.md
+        - GUI installation: integrations/community-nodes/installation/gui-install.md
+        - Manual installation: integrations/community-nodes/installation/manual-install.md
+      - Risks: integrations/community-nodes/risks.md
+      - Blocklist: integrations/community-nodes/blocklist.md
+      - Using community nodes: integrations/community-nodes/usage.md
+      - Troubleshooting: integrations/community-nodes/troubleshooting.md
+      - Building community nodes: integrations/community-nodes/build-community-nodes.md
+    - Creating nodes:
+      - Overview: integrations/creating-nodes/overview.md
+      - Plan your node:
+        - integrations/creating-nodes/plan/index.md
+        - Choose a node type: integrations/creating-nodes/plan/node-types.md
+        - Choose a node building style: integrations/creating-nodes/plan/choose-node-method.md
+        - Node UI design: integrations/creating-nodes/plan/node-ui-design.md
+        - Choose node file structure: integrations/creating-nodes/build/reference/node-file-structure.md
+      - Build your node:
+        - integrations/creating-nodes/build/index.md
+        - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
+        - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
+        - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
+        - Reference:
+          - integrations/creating-nodes/build/reference/index.md
+          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
+          - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - Error handling: integrations/creating-nodes/build/reference/error-handling.md
+          - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
+          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
+          - Base files:
+            - integrations/creating-nodes/build/reference/node-base-files/index.md
+            - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
+            - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
+            - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
+            - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
+            - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
+          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
+          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
+          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+          - Item linking: integrations/creating-nodes/build/reference/paired-items.md
+          - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
+          - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
+      - Test your node:
+        - integrations/creating-nodes/test/index.md
+        - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
+        - Node linter: integrations/creating-nodes/test/node-linter.md
+        - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
+      - Deploy your node:
+        - integrations/creating-nodes/deploy/index.md
+        - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
+        - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
+  - Hosting n8n:
+    - Overview: hosting/index.md
+    - Community vs Enterprise: hosting/community-edition-features.md
+    - Installation:
+      - npm: hosting/installation/npm.md
+      - Docker: hosting/installation/docker.md
+      - Server setups:
+        - hosting/installation/server-setups/index.md
+        - Digital Ocean: hosting/installation/server-setups/digital-ocean.md
+        - Heroku: hosting/installation/server-setups/heroku.md
+        - Hetzner: hosting/installation/server-setups/hetzner.md
+        - Amazon Web Services: hosting/installation/server-setups/aws.md
+        - Azure: hosting/installation/server-setups/azure.md
+        - Google Cloud: hosting/installation/server-setups/google-cloud.md
+        - Docker Compose: hosting/installation/server-setups/docker-compose.md
+      - Updating: hosting/installation/updating.md
+    - Configuration:
+      - Environment variables:
+        - Environment variables overview : hosting/configuration/environment-variables/index.md
+        - Binary data: hosting/configuration/environment-variables/binary-data.md
+        - Credentials: hosting/configuration/environment-variables/credentials.md
+        - Database: hosting/configuration/environment-variables/database.md
+        - Deployment: hosting/configuration/environment-variables/deployment.md
+        - Endpoints: hosting/configuration/environment-variables/endpoints.md
+        - Executions: hosting/configuration/environment-variables/executions.md
+        - External data storage: hosting/configuration/environment-variables/external-data-storage.md
+        - External hooks: hosting/configuration/environment-variables/external-hooks.md
+        - External secrets: hosting/configuration/environment-variables/external-secrets.md
+        - Insights: hosting/configuration/environment-variables/insights.md
+        - Logs: hosting/configuration/environment-variables/logs.md
+        - License: hosting/configuration/environment-variables/licenses.md
+        - Nodes: hosting/configuration/environment-variables/nodes.md
+        - Queue mode: hosting/configuration/environment-variables/queue-mode.md
+        - Security: hosting/configuration/environment-variables/security.md
+        - Source control: hosting/configuration/environment-variables/source-control.md
+        - Task runners: hosting/configuration/environment-variables/task-runners.md
+        - Timezone and localization: hosting/configuration/environment-variables/timezone-localization.md
+        - User management and 2FA: hosting/configuration/environment-variables/user-management-smtp-2fa.md
+        - Workflows: hosting/configuration/environment-variables/workflows.md
+      - Configuration methods: hosting/configuration/configuration-methods.md
+      - Configuration examples:
+        - hosting/configuration/configuration-examples/index.md
+        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
+        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
+        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
+        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
+        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
+        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
+        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
+        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
+        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
+        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
+      - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - Task runners: hosting/configuration/task-runners.md
+      - User management: hosting/configuration/user-management-self-hosted.md
+    - Logging and monitoring:
+      - Logging: hosting/logging-monitoring/logging.md
+      - Monitoring: hosting/logging-monitoring/monitoring.md
+      - Security audit: hosting/securing/security-audit.md
+    - Scaling and performance:
+      - Overview: hosting/scaling/overview.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
+      - Configuring queue mode: hosting/scaling/queue-mode.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
+      - Execution data: hosting/scaling/execution-data.md
+      - Binary data: hosting/scaling/binary-data.md
+      - External storage for binary data: hosting/scaling/external-storage.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
+    - Securing n8n:
+      - Overview: hosting/securing/overview.md
+      - Set up SSL: hosting/securing/set-up-ssl.md
+      - Set up SSO: hosting/securing/set-up-sso.md
+      - Security audit: hosting/securing/security-audit.md
+      - Disable the API: hosting/securing/disable-public-api.md
+      - Opt out of data collection: hosting/securing/telemetry-opt-out.md
+      - Blocking nodes: hosting/securing/blocking-nodes.md
+      - Hardening task runners: hosting/securing/hardening-task-runners.md
+    - Starter Kits:
+      - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
+    - Architecture:
+      - Overview: hosting/architecture/overview.md
+      - Database structure: hosting/architecture/database-structure.md
+    - Using the CLI:
+      - CLI commands: hosting/cli-commands.md
+  - Code in n8n:
+      - code/index.md
+      - Expressions: code/expressions.md
+      - Using the Code node: code/code-node.md
+      - AI coding: code/ai-code.md
+      - Built in methods and variables:
+          - Overview: code/builtin/overview.md
+          - Current node input: code/builtin/current-node-input.md
+          - Output of other nodes: code/builtin/output-other-nodes.md
+          - Date and time: code/builtin/date-time.md
+          - JMESPath: code/builtin/jmespath.md
+          - HTTP node: code/builtin/http-node-variables.md
+          - LangChain Code node: code/builtin/langchain-methods.md
+          - n8n metadata: code/builtin/n8n-metadata.md
+          - Convenience methods: code/builtin/convenience.md
+          - Data transformation functions:
+              - code/builtin/data-transformation-functions/index.md
+              - Arrays: code/builtin/data-transformation-functions/arrays.md
+              - Booleans: code/builtin/data-transformation-functions/booleans.md
+              - Dates: code/builtin/data-transformation-functions/dates.md
+              - Numbers: code/builtin/data-transformation-functions/numbers.md
+              - Objects: code/builtin/data-transformation-functions/objects.md
+              - Strings: code/builtin/data-transformation-functions/strings.md
+      - Custom variables:
+          - Create custom variables: code/variables.md
+      - Cookbook:
+          - Handling dates: code/cookbook/luxon.md
+          - Query JSON with JMESPath: code/cookbook/jmespath.md
+          - Built-in methods and variables examples:
+              - code/cookbook/builtin/index.md
+              - execution: code/cookbook/builtin/execution.md
+              - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
+              - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
+              - (node-name).all: code/cookbook/builtin/all.md
+              - vars: code/cookbook/builtin/vars.md
+          - Expressions:
+              - code/cookbook/expressions/index.md
+              - Check incoming data: code/cookbook/expressions/check-incoming-data.md
+              - Common issues:  code/cookbook/expressions/common-issues.md
+          - Code node:
+              - code/cookbook/code-node/index.md
+              - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
+              - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
+              - Output to the browser console: code/cookbook/code-node/console-log.md
+          - HTTP Request node:
+              - code/cookbook/http-node/index.md
+              - Pagination: code/cookbook/http-node/pagination.md
+  - Advanced AI:
+      - advanced-ai/index.md
+      - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+      - RAG in n8n: advanced-ai/rag-in-n8n.md
+      - LangChain in n8n:
+          - Overview: advanced-ai/langchain/overview.md
+          - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+          - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+          - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
+      - Evaluations:
+          - Overview: advanced-ai/evaluations/overview.md
+          - Light evaluations: advanced-ai/evaluations/light-evaluations.md
+          - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
+          - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
+      - Examples and concepts:
+          - Introduction: advanced-ai/examples/introduction.md
+          - What is a chain?: advanced-ai/examples/understand-chains.md
+          - What is an agent?: advanced-ai/examples/understand-agents.md
+          - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
+          - What is memory?: advanced-ai/examples/understand-memory.md
+          - What is a tool?: advanced-ai/examples/understand-tools.md
+          - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
+          - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+          - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+          - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
+          - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
+          - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
+  - API:
+      - api/index.md
+      - Authentication: api/authentication.md
+      - Pagination: api/pagination.md
+      - Using the API playground: api/using-api-playground.md
+      - API reference: api/api-reference.md
+  - Embed:
+      - embed/index.md
+      - Prerequisites: embed/prerequisites.md
+      - Deployment: embed/deployment.md
+      - Configuration: embed/configuration.md
+      - Workflow management: embed/managing-workflows.md
+      - Workflows templates: embed/workflow-templates.md
+      - White labelling: embed/white-labelling.md
+#  - Feature tests:
+#      - Main features: docs-site-feature-tests/index.md
+#
+not_in_nav: |
+  /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md

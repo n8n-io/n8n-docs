@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: NocoDB credentials
 description: Documentation for NocoDB credentials. Use these credentials to authenticate NocoDB in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/)
+- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md)
 
 ## Supported authentication methods
 

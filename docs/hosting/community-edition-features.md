@@ -16,17 +16,17 @@ The community edition includes almost the complete feature set of n8n, except fo
 
 The community edition doesn't include these features:
 
-- [Custom Variables](/code/variables/)
-- [Environments](/source-control-environments/)
-- [External secrets](/external-secrets/)
-- [External storage for binary data](/hosting/scaling/external-storage/)
-- [Log streaming](/log-streaming/) ([Logging](/hosting/logging-monitoring/logging/) _is_ included) 
-- [Multi-main mode](/hosting/scaling/queue-mode/#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode/) _is_ included)
-- [Projects](/user-management/rbac/projects/)
-- SSO ([SAML](/hosting/securing/set-up-sso/), [LDAP](/user-management/ldap/))
-- Sharing ([workflows](/workflows/sharing/), [credentials](/credentials/credential-sharing/)) (Only the instance owner and the user who creates them can access workflows and credentials)
-- [Version control using Git](/source-control-environments/)
-- [Workflow history](/workflows/history/) (You can get one day of workflow history with the community edition by [registering](#registered-community-edition))
+- [Custom Variables](/code/variables.md)
+- [Environments](/source-control-environments/index.md)
+- [External secrets](/external-secrets.md)
+- [External storage for binary data](/hosting/scaling/external-storage.md)
+- [Log streaming](/log-streaming.md) ([Logging](/hosting/logging-monitoring/logging.md) _is_ included) 
+- [Multi-main mode](/hosting/scaling/queue-mode.md#multi-main-setup) ([Queue mode](/hosting/scaling/queue-mode.md) _is_ included)
+- [Projects](/user-management/rbac/projects.md)
+- SSO ([SAML](/hosting/securing/set-up-sso.md), [LDAP](/user-management/ldap.md))
+- Sharing ([workflows](/workflows/sharing.md), [credentials](/credentials/credential-sharing.md)) (Only the instance owner and the user who creates them can access workflows and credentials)
+- [Version control using Git](/source-control-environments/index.md)
+- [Workflow history](/workflows/history.md) (You can get one day of workflow history with the community edition by [registering](#registered-community-edition))
 
 These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
@@ -38,9 +38,10 @@ You can unlock extra features by registering your n8n community edition. You reg
 
 Registering unlocks these features for the community edition:
 
-* [Debug in editor](/workflows/executions/debug/): Copy and pin execution data when working on a workflow
-* One day of [workflow history](/workflows/history/): 24 hours of workflow history so you can revert back to previous workflow versions
-* [Custom execution data](/workflows/executions/custom-executions-data/): Save, find, and annotate execution metadata
+* [Folders](/release-notes.md#folders): Organize your workflows into tidy folders
+* [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
+* One day of [workflow history](/workflows/history.md): 24 hours of workflow history so you can revert back to previous workflow versions
+* [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
 
 To register a new community edition instance, select the option during your initial account creation.
 

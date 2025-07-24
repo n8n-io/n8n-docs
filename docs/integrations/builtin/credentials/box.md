@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Box credentials
 description: Documentation for Box credentials. Use these credentials to authenticate Box in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Box credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box/)
-- [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger/)
+- [Box](/integrations/builtin/app-nodes/n8n-nodes-base.box.md)
+- [Box Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger.md)
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Netlify node documentation
 description: Learn how to use the Netlify node in n8n. Follow technical documentation to integrate Netlify node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Netlify node
@@ -12,7 +12,7 @@ Use the Netlify node to automate work in Netlify, and integrate Netlify with oth
 On this page, you'll find a list of operations the Netlify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Netlify credentials](/integrations/builtin/credentials/netlify/) for guidance on setting up authentication. 
+Refer to [Netlify credentials](/integrations/builtin/credentials/netlify.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

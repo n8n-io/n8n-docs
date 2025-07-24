@@ -2,18 +2,18 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Chat Model node documentation
 description: Learn how to use the OpenAI Chat Model node in n8n. Follow technical documentation to integrate OpenAI Chat Model node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # OpenAI Chat Model node
 
-Use the OpenAI Chat Model node to use OpenAI's chat models with conversational agents.
+Use the OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the OpenAI Chat Model node and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/openai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -79,6 +79,6 @@ Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integ
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

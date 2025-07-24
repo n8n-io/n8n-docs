@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GitHub node documentation
 description: Learn how to use the GitHub node in n8n. Follow technical documentation to integrate GitHub node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the GitHub node to automate work in GitHub, and integrate GitHub with other 
 On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for guidance on setting up authentication. 
+Refer to [GitHub credentials](/integrations/builtin/credentials/github.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

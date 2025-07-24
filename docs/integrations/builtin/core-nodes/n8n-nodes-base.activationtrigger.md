@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Activation Trigger node documentation
 description: Learn how to use the Activation Trigger node in n8n. Follow technical documentation to integrate Activation Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Activation Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 The Activation Trigger node gets triggered when an event gets fired by n8n or a workflow.
 
 /// warning
-n8n has deprecated the Activation Trigger node and replaced it with two new nodes: the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger/) and the [Workflow Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/). For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
+n8n has deprecated the Activation Trigger node and replaced it with two new nodes: the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md) and the [Workflow Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger.md). For more details, check out the entry in the [breaking changes](https://github.com/n8n-io/n8n/blob/master/packages/cli/BREAKING-CHANGES.md#01170) page.
 ///
 
 /// note | Keep in mind

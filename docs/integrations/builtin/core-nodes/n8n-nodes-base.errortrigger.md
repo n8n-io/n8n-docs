@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Error Trigger node documentation
 description: Learn how to use the Error Trigger node in n8n. Follow technical documentation to integrate Error Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -28,9 +28,9 @@ Note the following:
 
 ## Related resources
 
-You can use the [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror/) node to send custom messages to the Error Trigger.
+You can use the [Stop And Error](/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror.md) node to send custom messages to the Error Trigger.
 
-Read more about [Error workflows](/flow-logic/error-handling/) in n8n workflows. 
+Read more about [Error workflows](/flow-logic/error-handling.md) in n8n workflows. 
 
 ## Error data
 

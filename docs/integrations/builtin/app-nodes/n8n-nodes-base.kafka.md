@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Kafka node documentation
 description: Learn how to use the Kafka node in n8n. Follow technical documentation to integrate Kafka node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Kafka node to automate work in Kafka, and integrate Kafka with other app
 On this page, you'll find a list of operations the Kafka node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Kafka credentials](/integrations/builtin/credentials/kafka/) for guidance on setting up authentication. 
+Refer to [Kafka credentials](/integrations/builtin/credentials/kafka.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

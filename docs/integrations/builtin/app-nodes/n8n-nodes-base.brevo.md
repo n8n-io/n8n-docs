@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Brevo node documentation
 description: Learn how to use the Brevo node in n8n. Follow technical documentation to integrate Brevo node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Brevo node
@@ -12,7 +12,7 @@ Use the Brevo node to automate work in Brevo, and integrate Brevo with other app
 On this page, you'll find a list of operations the Brevo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Brevo credentials](/integrations/builtin/credentials/brevo/) for guidance on setting up authentication. 
+Refer to [Brevo credentials](/integrations/builtin/credentials/brevo.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

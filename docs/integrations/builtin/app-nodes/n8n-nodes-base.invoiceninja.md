@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Invoice Ninja node documentation
 description: Learn how to use the Invoice Ninja node in n8n. Follow technical documentation to integrate Invoice Ninja node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Invoice Ninja node
@@ -12,7 +12,7 @@ Use the Invoice Ninja node to automate work in Invoice Ninja, and integrate Invo
 On this page, you'll find a list of operations the Invoice Ninja node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja/) for guidance on setting up authentication. 
+Refer to [Invoice Ninja credentials](/integrations/builtin/credentials/invoiceninja.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

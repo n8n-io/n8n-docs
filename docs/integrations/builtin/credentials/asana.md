@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Asana credentials
 description: Documentation for Asana credentials. Use these credentials to authenticate Asana in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Asana](/integrations/builtin/app-nodes/n8n-nodes-base.asana/)
-- [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger/)
+- [Asana](/integrations/builtin/app-nodes/n8n-nodes-base.asana.md)
+- [Asana Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md)
 
 ## Supported authentication methods
 
@@ -45,7 +45,7 @@ To configure this credential, you'll need an [Asana](https://asana.com/){:target
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need to register an application to set up OAuth:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need to register an application to set up OAuth:
 
 1. Open the Asana [developer console](https://app.asana.com/0/my-apps){:target=_blank .external-link}.
 2. In the **My apps** section, select **Create new app**.

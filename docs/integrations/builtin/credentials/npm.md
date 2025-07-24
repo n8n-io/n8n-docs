@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: npm credentials
 description: Documentation for the npm credentials. Use these credentials to authenticate npm in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # npm credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm/)
+- [npm](/integrations/builtin/app-nodes/n8n-nodes-base.npm.md)
 
 ## Prerequisites
 

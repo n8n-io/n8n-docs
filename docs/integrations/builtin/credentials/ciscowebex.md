@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webex by Cisco credentials
 description: Documentation for Webex by Cisco credentials. Use these credentials to authenticate Webex by Cisco in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Webex by Cisco credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Webex by Cisco](/integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex/)
-- [Webex by Cisco Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger/)
+- [Webex by Cisco](/integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex.md)
+- [Webex by Cisco Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger.md)
 
 ## Prerequisites
 

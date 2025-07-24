@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Metabase node documentation
 description: Learn how to use the Metabase node in n8n. Follow technical documentation to integrate Metabase node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Metabase node
@@ -12,7 +12,7 @@ Use the Metabase node to automate work in Metabase, and integrate Metabase with 
 On this page, you'll find a list of operations the Metabase node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Metabase credentials](/integrations/builtin/credentials/metabase/) for guidance on setting up authentication. 
+Refer to [Metabase credentials](/integrations/builtin/credentials/metabase.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

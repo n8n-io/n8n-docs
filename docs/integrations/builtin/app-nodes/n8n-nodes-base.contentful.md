@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Contentful node documentation
 description: Learn how to use the Contentful node in n8n. Follow technical documentation to integrate Contentful node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Contentful node
@@ -12,7 +12,7 @@ Use the Contentful node to automate work in Contentful, and integrate Contentful
 On this page, you'll find a list of operations the Contentful node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Contentful credentials](/integrations/builtin/credentials/contentful/) for guidance on setting up authentication. 
+Refer to [Contentful credentials](/integrations/builtin/credentials/contentful.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

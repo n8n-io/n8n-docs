@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Brevo Trigger node documentation
 description: Learn how to use the Brevo Trigger node in n8n. Follow technical documentation to integrate Brevo Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Brevo Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Brevo](https://www.brevo.com/){:target=_blank .external-link} is a digital marketing platform to help users grow their business.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/brevo/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/brevo.md).
 ///
 
 ///  note  | Examples and templates

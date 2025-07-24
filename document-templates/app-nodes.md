@@ -20,13 +20,13 @@ Set the meta title and meta description in the frontmatter
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: _Name_ node documentation
 description: Learn how to use the _Name_ node in n8n. Follow technical documentation to integrate _Name_ node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 <!-- 
 The title should be the name of the integration 
 Match the brand name exactly. For example, GitHub NOT Github
-When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
+When you add this node to nav.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
 -->
 # _Name_ node
 
@@ -37,7 +37,7 @@ Use the _Name_ node to automate work in _Name_ and integrate _Name_ with other a
 On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_.md).
 ///
 
 
@@ -54,11 +54,11 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
-n8n provides a trigger node for _Name_. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base._Name_trigger/).
+n8n provides a trigger node for _Name_. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base._Name_trigger.md).
 
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->
-Refer to [_Name_'s documentation](){:target=_blank .external-link} for more information about the service.
+Refer to [_Name_'s documentation]() for more information about the service.
 
 <!-- IF THE NODE SUPPORTS PREDEFINED CREDS
 let users know they can use the HTTP node if their operation isn't supported 
@@ -74,6 +74,6 @@ Here are some common errors and issues with the _Name_ node and steps to resolve
 <!-- 
 If the node is large enough to warrant subpages, create a separate Common issues page using the common-issues.md template and link to it here using this text:
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_relativepath_).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/_filepath_.md).
 
 -->

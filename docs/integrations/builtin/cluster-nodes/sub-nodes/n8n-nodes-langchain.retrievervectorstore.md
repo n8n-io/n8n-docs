@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Vector Store Retriever node documentation
 description: Learn how to use the Vector Store Retriever node in n8n. Follow technical documentation to integrate Vector Store Retriever node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Vector Store Retriever node
 
-Use the Vector Store Retriever node to retrieve documents from a vector store.
+Use the Vector Store Retriever node to retrieve documents from a [vector store](/glossary.md#ai-vector-store).
 
 On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Strapi node documentation
 description: Learn how to use the Strapi node in n8n. Follow technical documentation to integrate Strapi node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Strapi node
@@ -12,7 +12,7 @@ Use the Strapi node to automate work in Strapi, and integrate Strapi with other 
 On this page, you'll find a list of operations the Strapi node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
+Refer to [Strapi credentials](/integrations/builtin/credentials/strapi.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

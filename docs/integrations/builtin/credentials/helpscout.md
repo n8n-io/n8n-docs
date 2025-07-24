@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Help Scout credentials
 description: Documentation for Help Scout credentials. Use these credentials to authenticate Help Scout in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Help Scout credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout/)
-- [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger/)
+- [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout.md)
+- [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md)
 
 ## Prerequisites
 

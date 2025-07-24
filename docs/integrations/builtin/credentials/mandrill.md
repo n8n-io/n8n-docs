@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mandrill credentials
 description: Documentation for Mandrill credentials. Use these credentials to authenticate Mandrill in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mandrill credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mandrill](/integrations/builtin/app-nodes/n8n-nodes-base.mandrill/)
+- [Mandrill](/integrations/builtin/app-nodes/n8n-nodes-base.mandrill.md)
 
 ## Prerequisites
 

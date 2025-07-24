@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ProfitWell node documentation
 description: Learn how to use the ProfitWell node in n8n. Follow technical documentation to integrate ProfitWell node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # ProfitWell node
@@ -12,7 +12,7 @@ Use the ProfitWell node to automate work in ProfitWell, and integrate ProfitWell
 On this page, you'll find a list of operations the ProfitWell node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell/) for guidance on setting up authentication. 
+Refer to [ProfitWell credentials](/integrations/builtin/credentials/profitwell.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

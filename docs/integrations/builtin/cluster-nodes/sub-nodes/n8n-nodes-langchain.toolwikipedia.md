@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wikipedia node documentation
 description: Learn how to use the Wikipedia node in n8n. Follow technical documentation to integrate Wikipedia node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Wikipedia node
 
-The Wikipedia node is a tool that allows an agent to search and return information from Wikipedia.
+The Wikipedia node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to search and return information from Wikipedia.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 

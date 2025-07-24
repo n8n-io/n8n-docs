@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Rocket.Chat credentials
 description: Documentation for Rocket.Chat credentials. Use these credentials to authenticate Rocket.Chat in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Rocket.Chat credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Rocket.Chat](/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat/)
+- [Rocket.Chat](/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat.md)
 
 ## Prerequisites
 
@@ -34,5 +34,5 @@ To configure this credential, you'll need:
 - An **Auth Key**: Your personal access token. To generate an access token, go to your **avatar > Account > Personal Access Tokens**. Copy the token and add it as the n8n **Auth Key**.
 - Your Rocket.Chat **Domain**: Also known as your default URL or workspace URL.
 
-Refer to [Personal Access Tokens](https://docs.rocket.chat/use-rocket.chat/user-guides/user-panel/account#personal-access-tokens){:target=_blank .external-link} for more information.
+Refer to [Personal Access Tokens](https://docs.rocket.chat/docs/manage-your-account-settings#personal-access-tokens){:target=_blank .external-link} for more information.
 

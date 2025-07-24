@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: uProc node documentation
 description: Learn how to use the uProc node in n8n. Follow technical documentation to integrate uProc node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # uProc node
@@ -12,7 +12,7 @@ Use the uProc node to automate work in uProc, and integrate uProc with other app
 On this page, you'll find a list of operations the uProc node supports and links to more resources.
 
 /// note | Credentials
-Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guidance on setting up authentication. 
+Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

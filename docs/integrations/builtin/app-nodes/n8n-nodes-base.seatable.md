@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SeaTable node documentation
 description: Learn how to use the SeaTable node in n8n. Follow technical documentation to integrate SeaTable node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SeaTable node
@@ -12,7 +12,7 @@ Use the SeaTable node to automate work in SeaTable, and integrate SeaTable with 
 On this page, you'll find a list of operations the SeaTable node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SeaTable credentials](/integrations/builtin/credentials/seatable/) for guidance on setting up authentication. 
+Refer to [SeaTable credentials](/integrations/builtin/credentials/seatable.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

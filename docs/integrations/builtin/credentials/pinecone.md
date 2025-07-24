@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pinecone credentials
 description: Documentation for the Pinecone credentials. Use these credentials to authenticate Pinecone in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-* [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/)
+* [Pinecone Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md)
 
 ## Supported authentication methods
 

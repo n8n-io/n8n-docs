@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Trello credentials
 description: Documentation for Trello credentials. Use these credentials to authenticate Trello in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello/)
-- [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger/)
+- [Trello](/integrations/builtin/app-nodes/n8n-nodes-base.trello.md)
+- [Trello Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger.md)
 
 ## Supported authentication methods
 
@@ -41,8 +41,9 @@ To generate both the API Key and API Token, create a Trello Power-Up:
 9. Select **Generate a new API Key**.
 10. Copy the **API key** from Trello and enter it in your n8n credential.
 11. In your Trello API key page, enter your n8n base URL as an **Allowed origin**.
-12. Select the **Token** link next to your Trello **API Key**.
-13. When prompted, select **Allow** to grant all th epermissions it asks for.
-14. Copy the Trello **Token** and enter it as the n8n **API Token**.
+12. In **Capabilities** make sure to select the necessary options.
+13. Select the **Token** link next to your Trello **API Key**.
+14. When prompted, select **Allow** to grant all the permissions asked for.
+15. Copy the Trello **Token** and enter it as the n8n **API Token**.
 
 Refer to Trello's [API Introduction](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#api-introduction){:target=_blank .external-link} for more information on API keys and tokens. Refer to Trello's [Power-Up Admin Portal](https://developer.atlassian.com/cloud/trello/guides/power-ups/managing-power-ups/#power-up-admin-portal){:target=_blank .external-link} for more information on creating Power-Ups.

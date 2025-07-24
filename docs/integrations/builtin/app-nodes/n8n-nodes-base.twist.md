@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Twist node documentation
 description: Learn how to use the Twist node in n8n. Follow technical documentation to integrate Twist node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Twist node
@@ -12,7 +12,7 @@ Use the Twist node to automate work in Twist, and integrate Twist with other app
 On this page, you'll find a list of operations the Twist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twist credentials](/integrations/builtin/credentials/twist/) for guidance on setting up authentication. 
+Refer to [Twist credentials](/integrations/builtin/credentials/twist.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

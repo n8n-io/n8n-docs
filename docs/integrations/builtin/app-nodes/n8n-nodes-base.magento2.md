@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Magento 2 node documentation
 description: Learn how to use the Magento 2 node in n8n. Follow technical documentation to integrate Magento 2 node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Magento 2 node
@@ -12,7 +12,7 @@ Use the Magento 2 node to automate work in Magento 2, and integrate Magento 2 wi
 On this page, you'll find a list of operations the Magento 2 node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Magento 2 credentials](/integrations/builtin/credentials/magento2/) for guidance on setting up authentication. 
+Refer to [Magento 2 credentials](/integrations/builtin/credentials/magento2.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

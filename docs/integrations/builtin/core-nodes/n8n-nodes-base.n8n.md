@@ -2,23 +2,23 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n
 description: Documentation for the n8n node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # n8n
 
-A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/) in your workflows.
+A node to integrate with n8n itself. This node allows you to consume the [n8n API](/api/index.md) in your workflows.
 
-Refer to the [n8n REST API documentation](/api/) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference/) for working with the API endpoints directly.
+Refer to the [n8n REST API documentation](/api/index.md) for more information on using the n8n API. Refer to [API endpoint reference](/api/api-reference.md) for working with the API endpoints directly.
 
 /// note | Credentials
-You can find authentication information for this node in the [API authentication](/api/authentication/) documentation.
+You can find authentication information for this node in the [API authentication](/api/authentication.md) documentation.
 ///
 
 /// warning | SSL
-This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to call the [n8n API](/api/).
-The HTTP Request node has options to [provide the SSL certificate](/integrations/builtin/credentials/httprequest/#provide-an-ssl-certificate).
+This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to call the [n8n API](/api/index.md).
+The HTTP Request node has options to [provide the SSL certificate](/integrations/builtin/credentials/httprequest.md#provide-an-ssl-certificate).
 ///
 
 ## Operations
@@ -136,7 +136,7 @@ Configure this operation with this parameter:
 	* `connections`
 	* `settings`
 
-Refer to the [n8n API | Create a workflow documentation](/api/api-reference/#tag/Workflow/paths/~1workflows/post) for more information.
+Refer to the [n8n API | Create a workflow documentation](/api/api-reference.md/#tag/Workflow/paths/~1workflows/post) for more information.
 
 ## Get many workflows
 

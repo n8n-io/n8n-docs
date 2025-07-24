@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: LDAP credentials
 description: Documentation for the LDAP credentials. Use these credentials to authenticate LDAP in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # LDAP credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [LDAP](/integrations/builtin/core-nodes/n8n-nodes-base.ldap/)
+* [LDAP](/integrations/builtin/core-nodes/n8n-nodes-base.ldap.md)
 
 ## Prerequisites
 

@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI File operations 
 description: Documentation for the File operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # OpenAI File operations
 
-Use this operation to create, delete, list, message, or update a file in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
+Use this operation to create, delete, list, message, or update a file in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
 ## Delete a File
 
@@ -16,7 +16,7 @@ Use this operation to delete a file from the server.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Delete a File**.
 - **File**: Enter the ID of the file to use for this operation or select the file name from the dropdown.
@@ -29,7 +29,7 @@ Use this operation to list files that belong to the user's organization.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **List Files**.
 
@@ -45,7 +45,7 @@ Use this operation to upload a file. This can be used across various operations.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Upload a File**.
 - **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property which contains the file. The size of individual files can be a maximum of 512 MB or 2 million tokens for Assistants.
@@ -58,4 +58,4 @@ Refer to [Upload file | OpenAI](https://platform.openai.com/docs/api-reference/f
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ReAct AI Agent node documentation
 description: Learn how to use the ReAct Agent of the AI Agent node in n8n. Follow technical documentation to integrate the ReAct Agent into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -12,7 +12,7 @@ The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_bl
 
 The ReAct Agent reasons about a given task, determines the necessary actions, and then executes them. It follows the cycle of reasoning and acting until it completes the task. The ReAct agent can break down complex tasks into smaller sub-tasks, prioritise them, and execute them one after the other.
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/) for more information on the AI Agent node itself.
+Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
 
 /// note | No memory
 The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts or simulate an ongoing conversation.
@@ -68,10 +68,10 @@ Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/agent
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

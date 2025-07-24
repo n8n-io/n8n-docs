@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Reddit node documentation
 description: Learn how to use the Reddit node in n8n. Follow technical documentation to integrate Reddit node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Reddit node
@@ -12,8 +12,10 @@ Use the Reddit node to automate work in Reddit, and integrate Reddit with other 
 On this page, you'll find a list of operations the Reddit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Reddit credentials](/integrations/builtin/credentials/reddit/) for guidance on setting up authentication. 
+Refer to [Reddit credentials](/integrations/builtin/credentials/reddit.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

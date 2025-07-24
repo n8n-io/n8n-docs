@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft OneDrive node documentation
 description: Learn how to use the Microsoft OneDrive node in n8n. Follow technical documentation to integrate Microsoft OneDrive node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Microsoft OneDrive node to automate work in Microsoft OneDrive, and inte
 On this page, you'll find a list of operations the Microsoft OneDrive node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -53,5 +55,5 @@ To perform operations on folders, you need to supply the ID. You can find this:
 	1. Select **Resource** > **Folder**.
 	2. Select **Operation** > **Search**.
 	3. In **Query**, enter the folder name.
-	4. Select **Test step**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
+	4. Select **Execute step**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
 

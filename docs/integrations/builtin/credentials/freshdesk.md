@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Freshdesk credentials
 description: Documentation for Freshdesk credentials. Use these credentials to authenticate Freshdesk in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Freshdesk credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshdesk](/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk/)
+- [Freshdesk](/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk.md)
 
 ## Prerequisites
 

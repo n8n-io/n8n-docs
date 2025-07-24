@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Shopify credentials
 description: Documentation for Shopify credentials. Use these credentials to authenticate Shopify in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes with Shopify.
 
-- [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/)
-- [Shopify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger/)
+- [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md)
+- [Shopify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger.md)
 
 ## Supported authentication methods
 
@@ -47,7 +47,7 @@ To set up the credential, you'll need to create and install a custom app:
 6. Select an **App developer**. The app developer can be the store owner or any account with the **Develop apps** permission.
 7. Select **Create app**.
 8. Select **Select scopes**. In the **Admin API access scopes** section, select the API scopes you want for your app.
-    - To use all functionality in the [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify/) node, add the `read_orders`, `write_orders`, `read_products`, and `write_products` scopes.
+    - To use all functionality in the [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md) node, add the `read_orders`, `write_orders`, `read_products`, and `write_products` scopes.
     - Refer to [Shopify API Access Scopes](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} for more information on the available scopes.
 9. Select **Save**.
 10. Select **Install app**.

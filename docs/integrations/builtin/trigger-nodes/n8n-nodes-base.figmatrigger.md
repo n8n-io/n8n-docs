@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Figma Trigger (Beta) node documentation
 description: Learn how to use the Figma Trigger node in n8n. Follow technical documentation to integrate Figma Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Figma Trigger (Beta) node
@@ -14,7 +14,7 @@ Figma doesn't support webhooks on the free "Starter" plan. Your team needs to be
 ///
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/figma/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/figma.md).
 ///
 
 ///  note  | Examples and templates

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Onfleet node documentation
 description: Learn how to use the Onfleet node in n8n. Follow technical documentation to integrate Onfleet node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Onfleet node
@@ -12,7 +12,7 @@ Use the Onfleet node to automate work in Onfleet, and integrate Onfleet with oth
 On this page, you'll find a list of operations the Onfleet node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Onfleet credentials](/integrations/builtin/credentials/onfleet/) for guidance on setting up authentication. 
+Refer to [Onfleet credentials](/integrations/builtin/credentials/onfleet.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

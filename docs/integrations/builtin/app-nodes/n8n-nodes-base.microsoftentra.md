@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Entra ID node documentation
 description: Learn how to use the Microsoft Entra ID node in n8n. Follow technical documentation to integrate Microsoft Entra ID node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Microsoft Entra ID node
@@ -12,7 +12,7 @@ Use the Microsoft Entra ID node to automate work in Microsoft Entra ID and integ
 On this page, you'll find a list of operations the Microsoft Entra ID node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/microsoftentra/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/microsoftentra.md).
 ///
 
 
@@ -54,4 +54,4 @@ Here are some common errors and issues with the Microsoft Entra ID node and step
 
 You can't update the **Allow External Senders** and **Auto Subscribe New Members** options directly after creating a new group. You must wait after creating a group before you can change the values of these options.
 
-When designing workflows that use multiple Microsoft Entra ID nodes to first create groups and then update these options, add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) node between the two operations. A Wait node configured to pause for at least two seconds allows time for the group to fully initialize. After the wait, the update operation can complete without erroring.
+When designing workflows that use multiple Microsoft Entra ID nodes to first create groups and then update these options, add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node between the two operations. A Wait node configured to pause for at least two seconds allows time for the group to fully initialize. After the wait, the update operation can complete without erroring.

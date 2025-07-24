@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Comprehend node documentation
 description: Learn how to use the AWS Comprehend node in n8n. Follow technical documentation to integrate AWS Comprehend node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # AWS Comprehend node
@@ -12,7 +12,7 @@ Use the AWS Comprehend node to automate work in AWS Comprehend, and integrate AW
 On this page, you'll find a list of operations the AWS Comprehend node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Comprehend credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Comprehend credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

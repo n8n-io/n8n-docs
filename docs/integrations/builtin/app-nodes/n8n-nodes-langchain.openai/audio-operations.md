@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Audio operations 
 description: Documentation for the Audio operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # OpenAI Audio operations
 
-Use this operation to generate an audio, or transcribe or translate a recording in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
+Use this operation to generate an audio, or transcribe or translate a recording in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
 ## Generate Audio
 
@@ -16,7 +16,7 @@ Use this operation to create audio from a text prompt.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Generate Audio**.
 - **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts){:target=_blank .external-link} for more information.
@@ -39,7 +39,7 @@ Use this operation to transcribe audio into text. OpenAI API limits the size of 
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Transcribe a Recording**.
 - **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
@@ -57,7 +57,7 @@ Use this operation to translate audio into English. OpenAI API limits the size o
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Translate a Recording**.
 - **Input Data Field Name**: Defaults to `data`. Enter the name of the binary property that contains the audio file in one of these formats: `.flac`, `.mp3`, `.mp4`, `.mpeg`, `.mpga`, `.m4a`, `.ogg`, `.wav`, or `.webm`. 
@@ -70,4 +70,4 @@ Refer to [Create transcription | OpenAI](https://platform.openai.com/docs/api-re
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

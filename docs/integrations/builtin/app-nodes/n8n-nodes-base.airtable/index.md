@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Airtable node documentation
 description: Learn how to use the Airtable node in n8n. Follow technical documentation to integrate Airtable node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -13,7 +13,7 @@ Use the Airtable node to automate work in Airtable, and integrate Airtable with 
 On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for guidance on setting up authentication. 
+Refer to [Airtable credentials](/integrations/builtin/credentials/airtable.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -31,7 +31,7 @@ Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for
 
 ## Related resources
 
-n8n provides a trigger node for Airtable. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/).
+n8n provides a trigger node for Airtable. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md).
 
 Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction){:target=_blank .external-link} for more information about the service.
 
@@ -67,4 +67,4 @@ Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/arti
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md).

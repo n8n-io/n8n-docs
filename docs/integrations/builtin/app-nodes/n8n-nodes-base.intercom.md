@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Intercom node documentation
 description: Learn how to use the Intercom node in n8n. Follow technical documentation to integrate Intercom node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Intercom node
@@ -12,7 +12,7 @@ Use the Intercom node to automate work in Intercom, and integrate Intercom with 
 On this page, you'll find a list of operations the Intercom node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Intercom credentials](/integrations/builtin/credentials/intercom/) for guidance on setting up authentication. 
+Refer to [Intercom credentials](/integrations/builtin/credentials/intercom.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

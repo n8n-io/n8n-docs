@@ -2,14 +2,16 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: JWT credentials
 description: Documentation for the JWT credentials. Use these credentials to authenticate JWT in n8n, a workflow automation platform.
+contentType: [integration, reference]
+priority: medium
 ---
 
 # JWT credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [JWT](/integrations/builtin/core-nodes/n8n-nodes-base.jwt/)
-- [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/)
+- [JWT](/integrations/builtin/core-nodes/n8n-nodes-base.jwt.md)
+- [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md)
 
 ## Supported authentication methods
 

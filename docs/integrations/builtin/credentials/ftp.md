@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: FTP credentials
 description: Documentation for FTP credentials. Use these credentials to authenticate FTP in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,11 +10,11 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/)
+- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
 
 ## Prerequisites
 
-Create an account on a File Transfer Protocol (FTP) server like [JSCAPE](https://mft.jscape.com/lp/ftp-server){:target=_blank .external-link}, [OpenSSH](http://www.openssh.com/){:target=_blank .external-link}, or [FileZilla Server](https://filezilla-project.org/){:target=_blank .external-link}.
+Create an account on a File Transfer Protocol (FTP) server like [JSCAPE](https://mft.jscape.com/lp/ftp-server){:target=_blank .external-link}, [OpenSSH](https://www.openssh.com/){:target=_blank .external-link}, or [FileZilla Server](https://filezilla-project.org/){:target=_blank .external-link}.
 
 ## Supported authentication methods
 

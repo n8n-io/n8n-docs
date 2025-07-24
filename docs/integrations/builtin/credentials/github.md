@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GitHub credentials
 description: Documentation for GitHub credentials. Use these credentials to authenticate GitHub in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,9 +10,9 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/)
-- [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/)
-- [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader): this node doesn't support OAuth.
+- [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github.md)
+- [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md)
+- [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md): this node doesn't support OAuth.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Create a [GitHub](https://github.com/){:target=_blank .external-link} account.
 ## Supported authentication methods
 
 - API access token: Use this method with any GitHub nodes.
-- OAuth2: Use this method with [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github/) and [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/) nodes only; don't use with [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader).
+- OAuth2: Use this method with [GitHub](/integrations/builtin/app-nodes/n8n-nodes-base.github.md) and [GitHub Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger.md) nodes only; don't use with [GitHub Document Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentgithubloader.md).
 
 ## Related resources
 
@@ -74,7 +74,7 @@ Then, in your n8n credential:
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting n8n](/hosting/), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps){:target=_blank .external-link}:
+If you're [self-hosting n8n](/hosting/index.md), create a new GitHub [OAuth app](https://docs.github.com/en/apps/oauth-apps){:target=_blank .external-link}:
 
 1. Open your GitHub profile [Settings](https://github.com/settings/profile){:target=_blank .external-link}.
 2. In the left navigation, select [**Developer settings**](https://github.com/settings/apps){:target=_blank .external-link}.

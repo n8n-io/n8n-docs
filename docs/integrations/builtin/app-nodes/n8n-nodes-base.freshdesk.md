@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Freshdesk node documentation
 description: Learn how to use the Freshdesk node in n8n. Follow technical documentation to integrate Freshdesk node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Freshdesk node
@@ -12,7 +12,7 @@ Use the Freshdesk node to automate work in Freshdesk and integrate Freshdesk wit
 On this page, you'll find a list of operations the Freshdesk node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk/) for guidance on setting up authentication. 
+Refer to [Freshdesk credentials](/integrations/builtin/credentials/freshdesk.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

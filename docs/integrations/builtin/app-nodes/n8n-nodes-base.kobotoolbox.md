@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: KoboToolbox node documentation
 description: Learn how to use the KoboToolbox node in n8n. Follow technical documentation to integrate KoboToolbox node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # KoboToolbox node
@@ -12,7 +12,7 @@ Use the KoboToolbox node to automate work in KoboToolbox, and integrate KoboTool
 On this page, you'll find a list of operations the KoboToolbox node supports and links to more resources.
 
 /// note | Credentials
-Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox/) for guidance on setting up authentication. 
+Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

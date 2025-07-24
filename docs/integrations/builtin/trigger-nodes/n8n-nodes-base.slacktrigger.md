@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Slack Trigger node documentation
 description: Learn how to use the Slack Trigger node in n8n. Follow technical documentation to integrate Slack Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,7 +13,7 @@ Use the Slack Trigger node to respond to events in [Slack](https://slack.com/){:
 On this page, you'll find a list of events the Slack Trigger node can respond to and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/slack/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/slack.md).
 ///
 ///  note  | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Slack integrations](https://n8n.io/integrations/slack-trigger/){:target=_blank .external-link} page.
@@ -51,11 +51,11 @@ Once you've set the events to trigger on, use the remaining parameters to furthe
 You can further refine the node's behavior when you **Add Option**s:
 
 * **Resolve IDs**: Whether to resolve the IDs to their respective names and return them (turned on) or not (turned off, default).
-* **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/code/expressions/).
+* **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/code/expressions.md).
 
 ## Related resources
 
-n8n provides an app node for Slack. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.slack/).
+n8n provides an app node for Slack. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.slack.md).
 
 View [example workflows and related content](https://n8n.io/integrations/slack-trigger/){:target=_blank .external-link} on n8n's website.
 
@@ -63,11 +63,11 @@ Refer to [Slack's documentation](https://api.slack.com/apis/connections/events-a
 
 ## Required scopes
 
-To use this node, you need to create an application in Slack and enable event subscriptions. Refer to [Slack credentials | Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) for more information.
+To use this node, you need to create an application in Slack and enable event subscriptions. Refer to [Slack credentials | Slack Trigger configuration](/integrations/builtin/credentials/slack.md#slack-trigger-configuration) for more information.
 
 You must add the appropriate scopes to your Slack app for this trigger node to work.
 
-The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack/#scopes) list for a more complete list of scopes.
+The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list){:target=blank .external-link} and [users.list](https://api.slack.com/methods/users.list){:target=blank .external-link} methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack.md#scopes) list for a more complete list of scopes.
 
 ## Common issues
 
@@ -87,9 +87,9 @@ This temporarily disables your production workflow for testing. Your workflow wi
 
 1. Go to your workflow page.
 2. Toggle the **Active** switch in the top panel to disable the workflow temporarily.
-3. Edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) to use the testing webhook URL instead of the production webhook URL.
+3. Edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack.md#slack-trigger-configuration) to use the testing webhook URL instead of the production webhook URL.
 4. Test your workflow using the test webhook URL.
-5. When you finish testing, edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack/#slack-trigger-configuration) to use the production webhook URL instead of the testing webhook URL.
+5. When you finish testing, edit the **Request URL** in your the [Slack Trigger configuration](/integrations/builtin/credentials/slack.md#slack-trigger-configuration) to use the production webhook URL instead of the testing webhook URL.
 6. Toggle the **Inactive** toggle to enable the workflow again. The production webhook URL should resume working.
 
 ### Token expired

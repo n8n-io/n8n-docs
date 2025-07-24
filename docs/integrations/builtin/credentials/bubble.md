@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Bubble credentials
 description: Documentation for Bubble credentials. Use these credentials to authenticate Bubble in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble/)
+- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble.md)
 
 /// note | API access
 You need a paid plan to access the Bubble APIs.

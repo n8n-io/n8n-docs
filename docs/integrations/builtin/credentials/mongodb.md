@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MongoDB credentials
 description: Documentation for MongoDB credentials. Use these credentials to authenticate MongoDB in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,12 +10,14 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/)
+- [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md)
+- [MongoDB Atlas Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md)
+- [MongoDB Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md)
 
 ## Prerequisites
 
 - Create a user account with the appropriate permissions on a [MongoDB](https://www.mongodb.com/){:target=_blank .external-link} server.
-- As a Project Owner, add all the [n8n IP addresses](/manage-cloud/cloud-ip/) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries){:target=_blank .external-link} for detailed instructions.
+- As a Project Owner, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) to the IP Access List Entries in the project's **Network Access**. Refer to [Add IP Access List entries](https://www.mongodb.com/docs/atlas/security/ip-access-list/#add-ip-access-list-entries){:target=_blank .external-link} for detailed instructions.
 
 If you are setting up MongoDB from scratch, create a cluster and a database. Refer to the [MongoDB Atlas documentation](https://www.mongodb.com/docs/atlas/){:target=_blank .external-link} for more detailed instructions on these steps.
 

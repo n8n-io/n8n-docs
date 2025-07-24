@@ -6,7 +6,7 @@ contentType: howto
 
 # Nodes
 
-Nodes are the key building blocks of a workflow. They perform a range of actions, including:
+[Nodes](/glossary.md#node-n8n) are the key building blocks of a [workflow](/glossary.md#workflow-n8n). They perform a range of actions, including:
 
 * Starting the workflow.
 * Fetching and sending data.
@@ -14,16 +14,16 @@ Nodes are the key building blocks of a workflow. They perform a range of actions
 
 n8n provides a collection of built-in nodes, as well as the ability to create your own nodes. Refer to:
 
-* [Built-in integrations](/integrations/builtin/node-types/) to browse the node library.
-* [Community nodes](/integrations/community-nodes/installation/) for guidance on finding and installing community-created nodes.
-* [Creating nodes](/integrations/creating-nodes/overview/) to start building your own nodes.
+* [Built-in integrations](/integrations/builtin/node-types.md) to browse the node library.
+* [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on finding and installing community-created nodes.
+* [Creating nodes](/integrations/creating-nodes/overview.md) to start building your own nodes.
 
 
 ## Add a node to your workflow
 
 ### Add a node to an empty workflow
 
-1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse trigger nodes.
+1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse [trigger nodes](/glossary.md#trigger-node-n8n).
 2. Select the trigger you want to use.
 
     /// note | Choose the correct app event
@@ -44,12 +44,12 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Test step** <span class="inline-image">![Test step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
+* **Execute step** <span class="inline-image">![Execute step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
 * **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
 * **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
 * **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
 	* Open node
-	* Test step
+	* Execute step
 	* Rename node
 	* Deactivate node
 	* Pin node

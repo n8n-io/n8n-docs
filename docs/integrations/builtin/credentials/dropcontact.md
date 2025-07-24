@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Dropcontact credentials
 description: Documentation for Dropcontact credentials. Use these credentials to authenticate Dropcontact in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Dropcontact credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Dropcontact](/integrations/builtin/app-nodes/n8n-nodes-base.dropcontact/)
+- [Dropcontact](/integrations/builtin/app-nodes/n8n-nodes-base.dropcontact.md)
 
 ## Prerequisites
 

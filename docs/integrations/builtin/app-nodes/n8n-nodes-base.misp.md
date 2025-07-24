@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MISP node documentation
 description: Learn how to use the MISP node in n8n. Follow technical documentation to integrate MISP node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MISP node
@@ -12,7 +12,7 @@ Use the MISP node to automate work in MISP, and integrate MISP with other applic
 On this page, you'll find a list of operations the MISP node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MISP credentials](/integrations/builtin/credentials/misp/) for guidance on setting up authentication. 
+Refer to [MISP credentials](/integrations/builtin/credentials/misp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

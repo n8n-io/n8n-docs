@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Workflow Trigger node documentation
 description: Learn how to use the Workflow Trigger node in n8n. Follow technical documentation to integrate Workflow Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -11,7 +11,7 @@ priority: high
 The Workflow Trigger node gets triggered when a workflow is updated or activated.
 
 /// warning | Deprecated
-n8n has deprecated the Workflow Trigger node and moved its functionality to the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger/).
+n8n has deprecated the Workflow Trigger node and moved its functionality to the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md).
 ///
 
 /// note | Keep in mind

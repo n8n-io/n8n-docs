@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gong node documentation
 description: Learn how to use the Gong node in n8n. Follow technical documentation to integrate Gong node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Gong node
@@ -12,7 +12,7 @@ Use the Gong node to automate work in Gong and integrate Gong with other applica
 On this page, you'll find a list of operations the Gong node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gong/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/gong.md).
 ///
 
 

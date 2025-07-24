@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: urlscan.io node documentation
 description: Learn how to use the urlscan.io node in n8n. Follow technical documentation to integrate urlscan.io node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # urlscan.io node
@@ -12,8 +12,10 @@ Use the urlscan.io node to automate work in urlscan.io, and integrate urlscan.io
 On this page, you'll find a list of operations the urlscan.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio/) for guidance on setting up authentication. 
+Refer to [urlscan.io credentials](/integrations/builtin/credentials/urlscanio.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

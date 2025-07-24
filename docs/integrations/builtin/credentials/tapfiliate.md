@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Tapfiliate credentials
 description: Documentation for Tapfiliate credentials. Use these credentials to authenticate Tapfiliate in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Tapfiliate credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Tapfiliate](/integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate/)
+- [Tapfiliate](/integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md)
 
 ## Prerequisites
 

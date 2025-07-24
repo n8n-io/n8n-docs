@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Git
 description: Documentation for the Git node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Git
@@ -10,7 +10,7 @@ contentType: integration
 [Git](https://git-scm.com/) is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/git/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/git.md).
 ///
 
 ## Operations
@@ -59,7 +59,7 @@ Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Authentication**: Select **Authenticate** to pass credentials in. Select **None** to not use authentication.
-    * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
+    * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git.md) for more information.
 * **New Repository Path**: Enter the local path where you'd like to locate the cloned repository.
 * **Source Repository**: Enter the URL or path of the repository you want to clone.
 
@@ -111,7 +111,7 @@ Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Authentication**: Select **Authenticate** to pass credentials in or **None** to not use authentication.
-    * If you select **Authenticate**, you must select or create **Credential for Git** for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
+    * If you select **Authenticate**, you must select or create **Credential for Git** for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git.md) for more information.
 
 ### Push options
 

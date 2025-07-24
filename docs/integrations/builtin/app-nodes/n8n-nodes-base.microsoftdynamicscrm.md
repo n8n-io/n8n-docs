@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Dynamics CRM node documentation
 description: Learn how to use the Microsoft Dynamics CRM node in n8n. Follow technical documentation to integrate Microsoft Dynamics CRM node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Microsoft Dynamics CRM node
@@ -12,7 +12,7 @@ Use the Microsoft Dynamics CRM node to automate work in Microsoft Dynamics CRM, 
 On this page, you'll find a list of operations the Microsoft Dynamics CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 
 ## Operations

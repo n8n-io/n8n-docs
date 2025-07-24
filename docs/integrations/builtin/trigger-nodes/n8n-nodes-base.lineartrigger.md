@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Linear Trigger node documentation
 description: Learn how to use the Linear Trigger node in n8n. Follow technical documentation to integrate Linear Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Linear Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Linear](https://linear.app/){:target=_blank .external-link} is a SaaS issue tracking tool.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/linear/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/linear.md).
 ///
 
 ///  note  | Examples and templates

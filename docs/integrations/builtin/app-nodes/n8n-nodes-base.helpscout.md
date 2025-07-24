@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Help Scout node documentation
 description: Learn how to use the Help Scout node in n8n. Follow technical documentation to integrate Help Scout node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Help Scout node
@@ -12,7 +12,7 @@ Use the Help Scout node to automate work in Help Scout, and integrate Help Scout
 On this page, you'll find a list of operations the Help Scout node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Help Scout credentials](/integrations/builtin/credentials/helpscout/) for guidance on setting up authentication. 
+Refer to [Help Scout credentials](/integrations/builtin/credentials/helpscout.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

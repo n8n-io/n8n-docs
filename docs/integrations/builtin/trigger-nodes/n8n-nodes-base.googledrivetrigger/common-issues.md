@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Drive Trigger node common issues
 description: Documentation for common issues and questions in the Google Drive Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Google Drive Trigger node common issues
 
-Here are some common errors and issues with the [Google Drive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Drive Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/index.md) and steps to resolve or troubleshoot them.
 
 
 ## 401 unauthorized error
@@ -24,9 +24,9 @@ This error occurs when there's an issue with the credential you're using and its
 
 To resolve:
 
-1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service/) credentials, make sure you've enabled the Google Drive API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service/#enable-apis) for more information.
-2. For [Service Account](/integrations/builtin/credentials/google/service-account/) credentials:
-    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
+1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) credentials, make sure you've enabled the Google Drive API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service.md#enable-apis) for more information.
+2. For [Service Account](/integrations/builtin/credentials/google/service-account.md) credentials:
+    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account.md#enable-domain-wide-delegation).
     2. Make sure you add the Google Drive API as part of the domain-wide delegation configuration.
 
 ## Handling more than one file change
@@ -35,4 +35,4 @@ The Google Drive Trigger node polls Google Drive for changes at a set interval (
 
 If multiple changes to the **Watch For** criteria occur during the polling interval, a single Google Drive Trigger event occurs containing the changes as items. To handle this, your workflow must account for times when the data might contain more than one item.
 
-You can use an [if node](/integrations/builtin/core-nodes/n8n-nodes-base.if/) or a [switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/) to change your workflow's behavior depending on whether the data from the Google Drive Trigger node contains a single item or multiple items.
+You can use an [if node](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) or a [switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md) to change your workflow's behavior depending on whether the data from the Google Drive Trigger node contains a single item or multiple items.

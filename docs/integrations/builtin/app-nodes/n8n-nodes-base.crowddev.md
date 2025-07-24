@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: crowd.dev node documentation
 description: Learn how to use the crowd.dev node in n8n. Follow technical documentation to integrate crowd.dev node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # crowd.dev node
@@ -12,7 +12,7 @@ Use the crowd.dev node to automate work in crowd.dev and integrate crowd.dev wit
 On this page, you'll find a list of operations the crowd.dev node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/crowddev.md).
 ///
 
 ## Operations
@@ -54,7 +54,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger/).
+n8n provides a trigger node for crowd.dev. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.crowddevtrigger.md).
 
 Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api){:target=_blank .external-link} for more information about the service.
 

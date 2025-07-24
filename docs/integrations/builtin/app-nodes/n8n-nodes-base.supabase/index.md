@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Supabase node documentation
 description: Learn how to use the Supabase node in n8n. Follow technical documentation to integrate Supabase node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -13,8 +13,10 @@ Use the Supabase node to automate work in Supabase, and integrate Supabase with 
 On this page, you'll find a list of operations the Supabase node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Supabase credentials](/integrations/builtin/credentials/supabase/) for guidance on setting up authentication. 
+Refer to [Supabase credentials](/integrations/builtin/credentials/supabase.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -34,4 +36,4 @@ Refer to [Supabase credentials](/integrations/builtin/credentials/supabase/) for
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.supabase/common-issues.md).

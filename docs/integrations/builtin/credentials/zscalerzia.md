@@ -2,6 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zscaler ZIA credentials
 description: Documentation for the Zscaler ZIA credentials. Use these credentials to authenticate Zscaler ZIA in n8n, a workflow automation platform.
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Zscaler ZIA credentials
@@ -20,7 +22,7 @@ Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler
 
 Refer to [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link} on n8n's website.
 
 ## Using basic auth and API key combo
 

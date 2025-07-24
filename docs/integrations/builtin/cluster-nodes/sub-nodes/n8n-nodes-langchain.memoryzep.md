@@ -2,18 +2,18 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zep node documentation
 description: Learn how to use the Zep node in n8n. Follow technical documentation to integrate Zep node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Zep node
 
-Use the Zep node to use Zep as a memory server.
+Use the Zep node to use Zep as a [memory](/glossary.md#ai-memory) server.
 
 On this page, you'll find a list of operations the Zep node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/zep/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/zep.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

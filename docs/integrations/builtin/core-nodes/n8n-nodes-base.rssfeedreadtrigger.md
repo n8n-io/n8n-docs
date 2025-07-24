@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: RSS Feed Trigger node documentation
 description: Learn how to use the RSS Feed Trigger node in n8n. Follow technical documentation to integrate RSS Feed Trigger node into your workflows.
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -25,4 +26,4 @@ On this page, you'll find a list of operations the RSS Feed Trigger node support
 
 ## Related resources
 
-n8n provides an app node for RSS Feeds. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/).
+n8n provides an app node for RSS Feeds. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md).

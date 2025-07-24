@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Okta node documentation
 description: Learn how to use the Okta node in n8n. Follow technical documentation to integrate Okta node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Okta node
@@ -12,7 +12,7 @@ Use the Okta node to automate work in Okta and integrate Okta with other applica
 On this page, you'll find a list of operations the Okta node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/okta/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/okta.md).
 ///
 
 ## Operations

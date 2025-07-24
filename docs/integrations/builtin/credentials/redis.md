@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Redis credentials
 description: Documentation for Redis credentials. Use these credentials to authenticate Redis in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/)
-- [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat/)
+- [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md)
+- [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md)
 
 ## Supported authentication methods
 

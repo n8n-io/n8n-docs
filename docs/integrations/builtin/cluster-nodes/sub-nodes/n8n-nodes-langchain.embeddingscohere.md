@@ -2,17 +2,17 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Cohere node documentation
 description: Learn how to use the Embeddings Cohere node in n8n. Follow technical documentation to integrate Embeddings Cohere node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Embeddings Cohere node
 
-Use the Embeddings Cohere node to generate embeddings for a given text.
+Use the Embeddings Cohere node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Cohere node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/cohere.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

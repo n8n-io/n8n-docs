@@ -2,17 +2,17 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Sheets Trigger node common issues
 description: Documentation for common issues and questions in the Google Sheets Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Google Sheets Trigger node common issues
 
-Here are some common errors and issues with the [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md) and steps to resolve or troubleshoot them.
 
 ## Stuck waiting for trigger event
 
-When testing the Google Sheets Trigger node with the **Test step** or or **Test workflow** buttons, the execution may appear stuck and unable to stop listening for events. If this occurs, you may need to exit the workflow and open it again to reset the canvas.
+When testing the Google Sheets Trigger node with the **Execute step** or **Execute workflow** buttons, the execution may appear stuck and unable to stop listening for events. If this occurs, you may need to exit the workflow and open it again to reset the canvas.
 
 Stuck listening events often occur due to issues with your network configuration outside of n8n. Specifically, this behavior often occurs when you run n8n behind a reverse proxy without configuring websocket proxying.
 

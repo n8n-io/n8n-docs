@@ -2,17 +2,17 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail node common issues 
 description: Documentation for common issues and questions in the Gmail node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # Gmail node common issues
 
-Here are some common errors and issues with the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) and steps to resolve or troubleshoot them.
 
 ## Remove the n8n attribution from sent messages
 
-If you're using the node to [send a message](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#send-a-message) or [reply to a message](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#reply-to-a-message), the node appends this statement to the end of the email:
+If you're using the node to [send a message](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#send-a-message) or [reply to a message](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#reply-to-a-message), the node appends this statement to the end of the email:
 
 > This email was sent automatically with n8n
 
@@ -22,7 +22,7 @@ To remove this attribution:
 2. Select **Append n8n attribution**.
 3. Turn the toggle off.
 
-Refer to [Send options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#send-options) and [Reply options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations/#reply-options) for more information.
+Refer to [Send options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#send-options) and [Reply options](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/message-operations.md#reply-options) for more information.
 
 ## Forbidden - perhaps check your credentials
 
@@ -34,7 +34,7 @@ There was a problem loading the parameter options from server: "Forbidden - perh
 
 The error most often displays when you're using a Google Service Account as the credential and the credential doesn't have **Impersonate a User** turned on.
 
-Refer to [Google Service Account: Finish your n8n credential](/integrations/builtin/credentials/google/service-account/#finish-your-n8n-credential) for more information.
+Refer to [Google Service Account: Finish your n8n credential](/integrations/builtin/credentials/google/service-account.md#finish-your-n8n-credential) for more information.
 
 ## 401 unauthorized error
 
@@ -49,9 +49,9 @@ This error occurs when there's an issue with the credential you're using and its
 
 To resolve:
 
-1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service/) credentials, make sure you've enabled the Gmail API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service/#enable-apis) for more information.
-2. For [Service Account](/integrations/builtin/credentials/google/service-account/) credentials:
-    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account/#enable-domain-wide-delegation).
+1. For [OAuth2](/integrations/builtin/credentials/google/oauth-single-service.md) credentials, make sure you've enabled the Gmail API in **APIs & Services > Library**. Refer to [Google OAuth2 Single Service - Enable APIs](/integrations/builtin/credentials/google/oauth-single-service.md#enable-apis) for more information.
+2. For [Service Account](/integrations/builtin/credentials/google/service-account.md) credentials:
+    1. [Enable domain-wide delegation](/integrations/builtin/credentials/google/service-account.md#enable-domain-wide-delegation).
     2. Make sure you add the Gmail API as part of the domain-wide delegation configuration.
 
 ## Bad request - please check your parameters

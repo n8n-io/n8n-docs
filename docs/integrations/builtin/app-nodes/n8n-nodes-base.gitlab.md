@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GitLab node documentation
 description: Learn how to use the GitLab node in n8n. Follow technical documentation to integrate GitLab node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the GitLab node to automate work in GitLab, and integrate GitLab with other 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab/) for guidance on setting up authentication. 
+Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -51,7 +53,7 @@ Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab/) for gui
 
 Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/){:target=_blank .external-link} for more information about the service.
 
-n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/).
+n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

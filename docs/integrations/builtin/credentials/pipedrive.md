@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pipedrive credentials
 description: Documentation for Pipedrive credentials. Use these credentials to authenticate Pipedrive in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/)
-- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/)
+- [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md)
+- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md)
 
 ## Supported authentication methods
 
@@ -74,7 +74,7 @@ Refer to [Registering a public app](https://pipedrive.readme.io/docs/marketplace
 
 The scopes you add to your app depend on which node(s) you want to use it for in n8n and what actions you want to complete with those.
 
-Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) node:
+Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md) node:
 
 | **Object** | **Node action** | **UI scope** | **Actual scope** |
 | --- | --- | --- | --- |
@@ -111,4 +111,4 @@ Refer to [Scopes and permissions explanations](https://pipedrive.readme.io/docs/
 
 ### Pipedrive Trigger node scopes
 
-The [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/) node requires the **Webhooks: Full access** (`webhooks:full`) scope.
+The [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md) node requires the **Webhooks: Full access** (`webhooks:full`) scope.

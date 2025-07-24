@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ERPNext node documentation
 description: Learn how to use the ERPNext node in n8n. Follow technical documentation to integrate ERPNext node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # ERPNext node
@@ -12,8 +12,10 @@ Use the ERPNext node to automate work in ERPNext, and integrate ERPNext with oth
 On this page, you'll find a list of operations the ERPNext node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext/) for guidance on setting up authentication. 
+Refer to [ERPNext credentials](/integrations/builtin/credentials/erpnext.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS DynamoDB node documentation
 description: Learn how to use the AWS DynamoDB node in n8n. Follow technical documentation to integrate AWS DynamoDB node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # AWS DynamoDB node
@@ -12,7 +12,7 @@ Use the AWS DynamoDB node to automate work in AWS DynamoDB, and integrate AWS Dy
 On this page, you'll find a list of operations the AWS DynamoDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

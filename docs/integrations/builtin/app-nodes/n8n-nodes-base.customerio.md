@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Customer.io node documentation
 description: Learn how to use the Customer.io node in n8n. Follow technical documentation to integrate Customer.io node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Customer.io node
@@ -12,7 +12,7 @@ Use the Customer.io node to automate work in Customer.io, and integrate Customer
 On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio/) for guidance on setting up authentication. 
+Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

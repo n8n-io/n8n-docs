@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: LingvaNex node documentation
 description: Learn how to use the LingvaNex node in n8n. Follow technical documentation to integrate LingvaNex node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # LingvaNex node
@@ -12,7 +12,7 @@ Use the LingvaNex node to automate work in LingvaNex, and integrate LingvaNex wi
 On this page, you'll find a list of operations the LingvaNex node supports and links to more resources.
 
 /// note | Credentials
-Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex/) for guidance on setting up authentication. 
+Refer to [LingvaNex credentials](/integrations/builtin/credentials/lingvanex.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

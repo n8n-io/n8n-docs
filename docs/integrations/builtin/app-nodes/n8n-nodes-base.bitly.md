@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Bitly node documentation
 description: Learn how to use the Bitly node in n8n. Follow technical documentation to integrate Bitly node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Bitly node
@@ -12,7 +12,7 @@ Use the Bitly node to automate work in Bitly, and integrate Bitly with other app
 On this page, you'll find a list of operations the Bitly node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Bitly credentials](/integrations/builtin/credentials/bitly/) for guidance on setting up authentication. 
+Refer to [Bitly credentials](/integrations/builtin/credentials/bitly.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Text operations 
 description: Documentation for the Text operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # OpenAI Text operations
 
-Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
+Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
 ## Message a Model
 
@@ -16,7 +16,7 @@ Use this operation to send a message or prompt to an OpenAI model and receive a 
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Text**.
 - **Operation**: Select **Message a Model**.
 - **Model**: Select the model you want to use. If you’re not sure which model to use, try `gpt-4o` if you need high intelligence or `gpt-4o-mini` if you need the fastest speed and lowest cost. Refer to [Models overview | OpenAI Platform](https://platform.openai.com/docs/models){:target=_blank .external-link} for more information. 
@@ -48,7 +48,7 @@ Use this operation to identify and flag content that might be harmful. OpenAI mo
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Text**.
 - **Operation**: Select **Classify Text for Violations**.
 - **Text Input**: Enter text to classify if it violates the moderation policy. 
@@ -62,4 +62,4 @@ Refer to [Moderations | OpenAI](https://platform.openai.com/docs/api-reference/m
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

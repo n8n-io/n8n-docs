@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Schedule Trigger node documentation
 description: Learn how to use the Schedule Trigger node in n8n. Follow technical documentation to integrate Schedule Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -100,6 +100,10 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 |Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
 <!-- vale from-write-good.Weasel = YES -->
 
+/// warning | Using variables in the Cron expression
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. If you alter a variable's value in the settings after a workflow is activated, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
+/// 
+
 #### Why there are six asterisks in the Cron expression
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
@@ -115,4 +119,4 @@ The sixth asterisk in the Cron expression represents seconds. Setting this is op
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md).

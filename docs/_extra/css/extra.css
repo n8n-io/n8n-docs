@@ -53,6 +53,20 @@
   }
   
   
+  .md-typeset .admonition.explanation,
+  .md-typeset details.explanation {
+    border-color: var(--color-primary);
+  }
+  .md-typeset .explanation > .admonition-title,
+  .md-typeset .explanation > summary {
+    background-color: var(--color-background-light);
+  }
+  .md-typeset .explanation > .admonition-title::before,
+  .md-typeset .explanation > summary::before {
+    background-color: rgb(43, 155, 70);
+    -webkit-mask-image: var(--md-admonition-icon--info);
+            mask-image: var(--md-admonition-icon--info);
+  }
   
   
   /* light mode */

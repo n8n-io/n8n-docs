@@ -21,7 +21,7 @@ For example, setting the variable this way:
 NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"
 ```
 
-Blocks the [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/) and [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) nodes.
+Blocks the [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md) and [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) nodes.
 
 Your n8n users won't be able to search for or use these nodes.
 
@@ -29,11 +29,11 @@ Your n8n users won't be able to search for or use these nodes.
 
 The nodes that can pose security risks vary based on your use case and user profile. Here are some nodes you might want to start with:
 
-* [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/)
-* [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/)
+* [Execute Command](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md)
+* [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
 
 ## Related resources
 
-Refer to [Nodes environment variables](/hosting/configuration/environment-variables/nodes/) for more information on this environment variable.
+Refer to [Nodes environment variables](/hosting/configuration/environment-variables/nodes.md) for more information on this environment variable.
 
-Refer to [Configuration](/hosting/configuration/configuration-methods/) for more information on setting environment variables.
+Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Calendly Trigger node documentation
 description: Learn how to use the Calendly Trigger node in n8n. Follow technical documentation to integrate Calendly Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -11,7 +11,7 @@ priority: medium
 [Calendly](https://calendly.com/){:target=_blank .external-link} is an automated scheduling software that's designed to help find meeting times.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/calendly/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/calendly.md).
 ///
 
 ///  note  | Examples and templates

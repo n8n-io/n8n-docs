@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Strava credentials
 description: Documentation for Strava credentials. Use these credentials to authenticate Strava in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Strava credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava/)
-- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger/)
+- [Strava](/integrations/builtin/app-nodes/n8n-nodes-base.strava.md)
+- [Strava Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger.md)
 
 ## Prerequisites
 

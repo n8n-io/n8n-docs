@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Customer.io credentials
 description: Documentation for Customer.io credentials. Use these credentials to authenticate Customer.io in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Customer.io credentials
 
 You can use these credentials to authenticate the following nodes with Customer.io.
 
-- [Customer.io](/integrations/builtin/app-nodes/n8n-nodes-base.customerio/)
-- [Customer.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger/)
+- [Customer.io](/integrations/builtin/app-nodes/n8n-nodes-base.customerio.md)
+- [Customer.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger.md)
 
 ## Prerequisites
 

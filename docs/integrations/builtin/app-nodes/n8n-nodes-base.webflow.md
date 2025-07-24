@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webflow node documentation
 description: Learn how to use the Webflow node in n8n. Follow technical documentation to integrate Webflow node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Webflow node
@@ -12,8 +12,10 @@ Use the Webflow node to automate work in Webflow, and integrate Webflow with oth
 On this page, you'll find a list of operations the Webflow node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Webflow credentials](/integrations/builtin/credentials/webflow/) for guidance on setting up authentication. 
+Refer to [Webflow credentials](/integrations/builtin/credentials/webflow.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

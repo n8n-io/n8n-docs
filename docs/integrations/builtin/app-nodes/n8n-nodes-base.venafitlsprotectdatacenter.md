@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Venafi TLS Protect Datacenter node documentation
 description: Learn how to use the Venafi TLS Protect Datacenter node in n8n. Follow technical documentation to integrate Venafi TLS Protect Datacenter node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 <!-- vale off -->
 <!-- disabled vale because of "Datacenter" Don't want to general approve it, but it's the brand name -->
@@ -13,7 +13,7 @@ Use the Venafi TLS Protect Datacenter node to automate work in Venafi TLS Protec
 On this page, you'll find a list of operations the Venafi TLS Protect Datacenter node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter/) for guidance on setting up authentication. 
+Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -37,7 +37,7 @@ Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/crede
 
 n8n also provides:
 
-* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud/) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) node for Venafi TLS Protect Cloud.
+* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) node for Venafi TLS Protect Cloud.
 
 <!-- vale on -->
 

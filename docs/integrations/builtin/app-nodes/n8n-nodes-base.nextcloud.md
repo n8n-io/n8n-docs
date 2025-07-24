@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Nextcloud node documentation
 description: Learn how to use the Nextcloud node in n8n. Follow technical documentation to integrate Nextcloud node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Nextcloud node to automate work in Nextcloud, and integrate Nextcloud wi
 On this page, you'll find a list of operations the Nextcloud node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Nextcloud credentials](/integrations/builtin/credentials/nextcloud/) for guidance on setting up authentication. 
+Refer to [Nextcloud credentials](/integrations/builtin/credentials/nextcloud.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

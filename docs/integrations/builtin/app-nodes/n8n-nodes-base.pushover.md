@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pushover node documentation
 description: Learn how to use the Pushover node in n8n. Follow technical documentation to integrate Pushover node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Pushover node
@@ -12,8 +12,10 @@ Use the Pushover node to automate work in Pushover, and integrate Pushover with 
 On this page, you'll find a list of operations the Pushover node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pushover credentials](/integrations/builtin/credentials/pushover/) for guidance on setting up authentication. 
+Refer to [Pushover credentials](/integrations/builtin/credentials/pushover.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

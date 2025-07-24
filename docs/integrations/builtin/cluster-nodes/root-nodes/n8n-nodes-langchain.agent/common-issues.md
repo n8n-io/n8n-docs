@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AI Agent node common issues 
 description: Documentation for common issues and questions in the AI Agent node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # AI Agent node common issues
 
-Here are some common errors and issues with the [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [AI Agent node](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) and steps to resolve or troubleshoot them.
 
 ## Internal error: 400 Invalid value for 'content'
 
@@ -29,13 +29,13 @@ You might see this in one of two scenarios:
 2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has null values.
     * To resolve, remove any null values from the `chatInput` field of the input node.
 
-## Error in sub-node Window Buffer Memory
+## Error in sub-node Simple Memory
 
-This error displays when n8n runs into an issue with the [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/) sub-node.
+This error displays when n8n runs into an issue with the [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) sub-node.
 
-It most often occurs when your workflow or the workflow template you copied uses an older version of the Window Buffer Memory node.
+It most often occurs when your workflow or the workflow template you copied uses an older version of the Simple memory node (previously known as "Window Buffer Memory").
 
-Try removing the Window Buffer Memory node from your workflow and re-adding it, which will guarantee you're using the latest version of the node.
+Try removing the Simple Memory node from your workflow and re-adding it, which will guarantee you're using the latest version of the node.
 
 ## A Chat Model sub-node must be connected error
 

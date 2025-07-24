@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Todoist credentials
 description: Documentation for Todoist credentials. Use these credentials to authenticate Todoist in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist/)
+- [Todoist](/integrations/builtin/app-nodes/n8n-nodes-base.todoist.md)
 
 ## Supported authentication methods
 
@@ -39,7 +39,7 @@ Refer to [Find your API token](https://todoist.com/help/articles/find-your-api-t
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you're [self-hosting](/hosting/) n8n, you'll need a [Todoist](https://todoist.com/){:target=_blank .external-link} account and:
+If you're [self-hosting](/hosting/index.md) n8n, you'll need a [Todoist](https://todoist.com/){:target=_blank .external-link} account and:
 
 - A **Client ID**
 - A **Client Secret**

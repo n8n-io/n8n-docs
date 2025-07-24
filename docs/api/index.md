@@ -13,14 +13,14 @@ search:
 The n8n API isn't available during the free trial. Please upgrade to access this feature.  
 ///
 
-Using n8n's public API, you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
+Using n8n's public [API](/glossary.md#api), you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
-* How to [authenticate](/api/authentication/)
-* [Paginating](/api/pagination/) results
-* Using the [built-in API playground](/api/using-api-playground/) (self-hosted n8n only)
-* [Endpoint reference](/api/api-reference/)
+* How to [authenticate](/api/authentication.md)
+* [Paginating](/api/pagination.md) results
+* Using the [built-in API playground](/api/using-api-playground.md) (self-hosted n8n only)
+* [Endpoint reference](/api/api-reference.md)
 
-n8n provides an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n/) to access the API in your workflows.
+n8n provides an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to access the API in your workflows.
 
 ## Learn about REST APIs
 
@@ -32,5 +32,5 @@ The API documentation assumes you are familiar with REST APIs. If you're not, th
 * [MDN web docs - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview){:target=_blank .external-link}: REST APIs work over HTTP and use HTTP verbs, or methods, to specify the action to perform.
 
 /// tip | Use the API playground (self-hosted n8n only)
-Trying out the API in the [playground](/api/using-api-playground/) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
+Trying out the API in the [playground](/api/using-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
 ///

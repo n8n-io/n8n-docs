@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ConvertKit node documentation
 description: Learn how to use the ConvertKit node in n8n. Follow technical documentation to integrate ConvertKit node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # ConvertKit node
@@ -12,7 +12,7 @@ Use the ConvertKit node to automate work in ConvertKit, and integrate ConvertKit
 On this page, you'll find a list of operations the ConvertKit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit/) for guidance on setting up authentication. 
+Refer to [ConvertKit credentials](/integrations/builtin/credentials/convertkit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

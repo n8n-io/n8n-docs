@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pushbullet node documentation
 description: Learn how to use the Pushbullet node in n8n. Follow technical documentation to integrate Pushbullet node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Pushbullet node
@@ -12,7 +12,7 @@ Use the Pushbullet node to automate work in Pushbullet, and integrate Pushbullet
 On this page, you'll find a list of operations the Pushbullet node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet/) for guidance on setting up authentication. 
+Refer to [Pushbullet credentials](/integrations/builtin/credentials/pushbullet.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

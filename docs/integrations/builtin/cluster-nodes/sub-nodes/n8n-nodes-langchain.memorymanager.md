@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Chat Memory Manager node documentation
 description: Learn how to use the Chat Memory Manager node in n8n. Follow technical documentation to integrate Chat Memory Manager node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Chat Memory Manager node
 
-The Chat Memory Manager node manages chat message memories within your workflows. Use this node to load, insert, and delete chat messages in an in-memory vector store.
+The Chat Memory Manager node manages chat message [memories](/glossary.md#ai-memory) within your workflows. Use this node to load, insert, and delete chat messages in an in-memory [vector store](/glossary.md#ai-vector-store).
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-sub-nodes/chat-memory-manager-purpose.md"
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Airtable credentials
 description: Documentation for Airtable credentials. Use these credentials to authenticate Airtable in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/)
-- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/)
+- [Airtable](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md)
+- [Airtable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md)
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Create an [Airtable](https://airtable.com/){:target=_blank .external-link} accou
 - OAuth2
 
 /// note | API Key deprecation
-n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/docs/airtable-api-key-deprecation-notice){:target=_blank .external-link} as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
+n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines){:target=_blank .external-link} as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
 ///
 
 ## Related resources
@@ -49,7 +49,7 @@ To create your PAT:
 1. Select **Create token**.
 1. Airtable opens a modal with your token displayed. Copy this token and enter it in your n8n credential as the **Access Token**.
 
-Refer to Airtable's [Find/create PATs documentation](https://support.airtable.com/docs/creating-personal-access-tokens#understanding-the-basics-of-personal-access-tokens){:target=_blank .external-link} for more information.
+Refer to Airtable's [Find/create PATs documentation](https://support.airtable.com/v1/docs/creating-personal-access-tokens){:target=_blank .external-link} for more information.
 
 ## Using OAuth2
 

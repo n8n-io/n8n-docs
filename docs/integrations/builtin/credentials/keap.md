@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Keap credentials
 description: Documentation for Keap credentials. Use these credentials to authenticate Keap in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Keap credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap/)
-- [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger/)
+- [Keap](/integrations/builtin/app-nodes/n8n-nodes-base.keap.md)
+- [Keap Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger.md)
 
 ## Prerequisites
 

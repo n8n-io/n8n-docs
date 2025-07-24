@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: TimescaleDB node documentation
 description: Learn how to use the TimescaleDB node in n8n. Follow technical documentation to integrate TimescaleDB node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # TimescaleDB node
@@ -12,7 +12,7 @@ Use the TimescaleDB node to automate work in TimescaleDB, and integrate Timescal
 On this page, you'll find a list of operations the TimescaleDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb/) for guidance on setting up authentication. 
+Refer to [TimescaleDB credentials](/integrations/builtin/credentials/timescaledb.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

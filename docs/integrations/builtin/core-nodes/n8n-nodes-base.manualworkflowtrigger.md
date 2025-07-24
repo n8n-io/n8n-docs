@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Manual Trigger node documentation
 description: Learn how to use the Manual Trigger node in n8n. Follow technical documentation to integrate Manual Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # Manual Trigger node
 
-Use this node if you want to start a workflow by selecting **Test Workflow** and don't want any option for the workflow to run automatically.
+Use this node if you want to start a workflow by selecting **Execute Workflow** and don't want any option for the workflow to run automatically.
 
-Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/) firing on a set schedule.
+Workflows always need a trigger, or start point. Most workflows start with a trigger node firing in response to an external event or the [Schedule Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md) firing on a set schedule.
 
 The Manual Trigger node serves as the workflow trigger for workflows that don't have an automatic trigger.
 

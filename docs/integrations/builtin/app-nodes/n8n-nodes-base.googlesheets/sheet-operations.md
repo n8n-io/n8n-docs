@@ -2,13 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Sheets Sheet Within Document operations
 description: Documentation for the Sheet operations in Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # Google Sheets Sheet Within Document operations
 
-Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/) for more information on the Google Sheets node itself.
+Use this operation to create, update, clear or delete a sheet in a Google spreadsheet from Google Sheets. Refer to [Google Sheets](/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md) for more information on the Google Sheets node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Append or Update Row
 
@@ -16,7 +18,7 @@ Use this operation to update an existing row or add a new row at the end of the 
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Append or Update Row**.
 - **Document**: Choose a spreadsheet that contains the sheet you want to append or update row(s) to. 
@@ -27,7 +29,7 @@ Enter these parameters:
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
 - **Mapping Column Mode**: 
 	- **Map Each Column Manually**: Enter **Values to Send** for each column.
-	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node before this node to change them if required.)
     - **Nothing**: Don't map any data.
 
 ### Options
@@ -41,7 +43,7 @@ Use this operation to append a new row at the end of the data in a sheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Append Row**.
 - **Document**: Choose a spreadsheet with the sheet you want to append a row to. 
@@ -52,7 +54,7 @@ Enter these parameters:
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`. 
 - **Mapping Column Mode**: 
 	- **Map Each Column Manually**: Select the **Column to Match On** when finding the rows to update. Enter **Values to Send** for each column.
-	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node before this node to change them if required.)
     - **Nothing**: Don't map any data.
 
 ### Options
@@ -66,7 +68,7 @@ Use this operation to clear all data from a sheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Clear**.
 - **Document**: Choose a spreadsheet with the sheet you want to clear data from.
@@ -93,7 +95,7 @@ Use this operation to create a new sheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Create**.
 - **Document**: Choose a spreadsheet in which you want to create a new sheet. 
@@ -118,7 +120,7 @@ Use this operation to permanently delete a sheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Delete**.
 - **Document**: Choose a spreadsheet that contains the sheet you want to delete. 
@@ -136,7 +138,7 @@ Use this operation to delete rows or columns in a sheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Delete Rows or Columns**.
 - **Document**: Choose a spreadsheet that contains the sheet you want to delete rows or columns from. 
@@ -156,7 +158,7 @@ Use this operation to read one or more rows from a sheet.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Get Row(s)**.
 - **Document**: Choose a spreadsheet that contains the sheet you want to get rows from. 
@@ -197,7 +199,7 @@ Use this operation to update existing row in a sheet. This operation only update
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Sheets credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Sheet Within Document**.
 - **Operation**: Select **Update Row**.
 - **Document**: Choose a spreadsheet with the sheet you want to update. 
@@ -208,7 +210,7 @@ Enter these parameters:
     - You can find the `sheetId` in a Google Sheets URL: `https://docs.google.com/spreadsheets/d/aBC-123_xYz/edit#gid=sheetId`.
 - **Mapping Column Mode**: 
 	- **Map Each Column Manually**: Enter **Values to Send** for each column.
-	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node before this node to change them if required.)
+	- **Map Automatically**: n8n looks for incoming data that matches the columns in Google Sheets automatically. In this mode, make sure the incoming data fields are the same as the columns in Google Sheets. (Use an [Edit Fields](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node before this node to change them if required.)
     - **Nothing**: Don't map any data.
 
 ### Options

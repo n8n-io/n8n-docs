@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ActiveCampaign node documentation
 description: Learn how to use the ActiveCampaign node in n8n. Follow technical documentation to integrate ActiveCampaign node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the ActiveCampaign node to automate work in ActiveCampaign, and integrate Ac
 On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign/) for guidance on setting up authentication. 
+Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

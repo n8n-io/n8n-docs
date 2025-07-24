@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Segment node documentation
 description: Learn how to use the Segment node in n8n. Follow technical documentation to integrate Segment node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Segment node
@@ -12,7 +12,7 @@ Use the Segment node to automate work in Segment, and integrate Segment with oth
 On this page, you'll find a list of operations the Segment node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Segment credentials](/integrations/builtin/credentials/segment/) for guidance on setting up authentication. 
+Refer to [Segment credentials](/integrations/builtin/credentials/segment.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

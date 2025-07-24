@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SeaTable credentials
 description: Documentation for SeaTable credentials. Use these credentials to authenticate SeaTable in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # SeaTable credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [SeaTable](/integrations/builtin/app-nodes/n8n-nodes-base.seatable/)
-- [SeaTable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger/)
+- [SeaTable](/integrations/builtin/app-nodes/n8n-nodes-base.seatable.md)
+- [SeaTable Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger.md)
 
 ## Prerequisites
 

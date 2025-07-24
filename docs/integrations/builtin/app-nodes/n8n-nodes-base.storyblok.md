@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Storyblok node documentation
 description: Learn how to use the Storyblok node in n8n. Follow technical documentation to integrate Storyblok node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Storyblok node
@@ -12,7 +12,7 @@ Use the Storyblok node to automate work in Storyblok, and integrate Storyblok wi
 On this page, you'll find a list of operations the Storyblok node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok/) for guidance on setting up authentication. 
+Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

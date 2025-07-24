@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Line credentials
 description: Documentation for Line credentials. Use these credentials to authenticate the Line node in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -16,7 +16,7 @@ LINE Notify is discontinuing service as of April 1st 2025 and this node will no 
 
 You can use these credentials to authenticate the following nodes:
 
-- [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line/)
+- [Line](/integrations/builtin/app-nodes/n8n-nodes-base.line.md)
 
 ## Supported authentication methods
 

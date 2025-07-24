@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Dropbox node documentation
 description: Learn how to use the Dropbox node in n8n. Follow technical documentation to integrate Dropbox node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Dropbox node to automate work in Dropbox, and integrate Dropbox with oth
 On this page, you'll find a list of operations the Dropbox node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox/) for guidance on setting up authentication. 
+Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

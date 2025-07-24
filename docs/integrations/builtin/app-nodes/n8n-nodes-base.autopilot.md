@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Autopilot node documentation
 description: Learn how to use the Autopilot node in n8n. Follow technical documentation to integrate Autopilot node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Autopilot node
@@ -15,7 +15,7 @@ On this page, you'll find a list of operations the Autopilot node supports and l
 Autopilot has become Ortto. The Autopilot credentials and nodes are only compatible with Autopilot, not the new Ortto API.
 ///
 /// note | Credentials
-Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot/) for guidance on setting up authentication. 
+Refer to [Autopilot credentials](/integrations/builtin/credentials/autopilot.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

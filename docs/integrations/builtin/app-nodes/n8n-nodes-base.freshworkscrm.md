@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Freshworks CRM node documentation
 description: Learn how to use the Freshworks CRM node in n8n. Follow technical documentation to integrate Freshworks CRM node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Freshworks CRM node
@@ -12,7 +12,7 @@ Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Fr
 On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm/) for guidance on setting up authentication. 
+Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

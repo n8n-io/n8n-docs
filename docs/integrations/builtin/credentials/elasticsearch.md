@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Elasticsearch credentials
 description: Documentation for Elasticsearch credentials. Use these credentials to authenticate Elasticsearch in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Elasticsearch](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/)
+- [Elasticsearch](/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch.md)
 
 ## Supported authentication methods
 

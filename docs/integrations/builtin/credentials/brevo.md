@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Brevo credentials
 description: Documentation for Brevo credentials. Use these credentials to authenticate Brevo in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Brevo credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo/)
-* [Brevo Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/)
+* [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo.md)
+* [Brevo Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md)
 
 ## Prerequisites
 

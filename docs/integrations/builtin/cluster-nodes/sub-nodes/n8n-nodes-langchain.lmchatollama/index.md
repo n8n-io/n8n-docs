@@ -2,18 +2,18 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Ollama Chat Model node documentation
 description: Learn how to use the Ollama Chat Model node in n8n. Follow technical documentation to integrate Ollama Chat Model node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Ollama Chat Model node
 
-The Ollama Chat Model node allows you use local Llama 2 models with conversational agents.
+The Ollama Chat Model node allows you use local Llama 2 models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the Ollama Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -47,7 +47,7 @@ Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"
 

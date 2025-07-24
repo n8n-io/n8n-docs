@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Question and Answer Chain node documentation
 description: Learn how to use the Question and Answer Chain node in n8n. Follow technical documentation to integrate Question and Answer Chain node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Question and Answer Chain node
 
-Use the Question and Answer Chain node to use a vector store as a retriever.
+Use the Question and Answer Chain node to use a [vector store](/glossary.md#ai-vector-store) as a retriever.
 
 On this page, you'll find the node parameters for the Question and Answer Chain node, and links to more resources.
 
@@ -31,6 +31,6 @@ Refer to [LangChain's documentation on retrieval chains](https://js.langchain.co
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

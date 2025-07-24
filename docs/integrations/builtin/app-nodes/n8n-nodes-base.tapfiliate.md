@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Tapfiliate node documentation
 description: Learn how to use the Tapfiliate node in n8n. Follow technical documentation to integrate Tapfiliate node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Tapfiliate node
@@ -12,7 +12,7 @@ Use the Tapfiliate node to automate work in Tapfiliate, and integrate Tapfiliate
 On this page, you'll find a list of operations the Tapfiliate node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate/) for guidance on setting up authentication. 
+Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Venafi TLS Protect Cloud credentials
 description: Documentation for Venafi TLS Protect Cloud credentials. Use these credentials to authenticate Venafi TLS Protect Cloud in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Venafi TLS Protect Cloud credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Venafi TLS Protect Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud/)
-* [Venafi TLS Protect Cloud Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/)
+* [Venafi TLS Protect Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md)
+* [Venafi TLS Protect Cloud Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md)
 
 ## Prerequisites
 

@@ -34,7 +34,7 @@ n8n typically handles the iteration for all incoming items. However, there are c
 
 ### Loop until a condition is met
 
-To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Add an [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node to check when to stop the loop. 
+To create a loop in an n8n workflow, connect the output of one node to the input of a previous node. Add an [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node to check when to stop the loop. 
 
 Here is an [example workflow](https://n8n.io/workflows/1130) that implements a loop with an `IF` node:
 
@@ -42,7 +42,7 @@ Here is an [example workflow](https://n8n.io/workflows/1130) that implements a l
 
 ### Loop until all items are processed
 
-Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
+Use the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node when you want to loop until all items are processed. To process each item individually, set **Batch Size** to `1`.
 
 You can batch the data in groups and process these batches. This approach is useful for avoiding API rate limits when processing large incoming data or when you want to process a specific group of returned items.
 
@@ -52,13 +52,14 @@ The Loop Over Items node stops executing after all the incoming items get divide
 
 Nodes and operations where you need to design a loop into your workflow:
 
-* [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/) executes once for `insert` and `update`.
-* [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node in **Run Once for All Items** mode: processes all the items based on the entered code snippet.
-* [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/) node in **Run Once for All Items** mode.
-* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/): you must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
-* [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/) executes once for `insert`, `update`, and `delete`.
-* [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/) executes once for `insert` and `update`.
-* [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb/) executes once for `insert`.
-* [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis/):
+* [CrateDB](/integrations/builtin/app-nodes/n8n-nodes-base.cratedb.md) executes once for `insert` and `update`.
+* [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node in **Run Once for All Items** mode: processes all the items based on the entered code snippet.
+* [Execute Workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node in **Run Once for All Items** mode.
+* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md): you must handle pagination yourself. If your API call returns paginated results you must create a loop to fetch one page at a time.
+* [Microsoft SQL](/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md) executes once for `insert`, `update`, and `delete`.
+* [MongoDB](/integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md) executes once for `insert` and `update`.
+* [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md) executes once for `insert`.
+* [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md):
 	* Info: this operation executes only once, regardless of the number of items in the incoming data.
-* [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/) executes once for `insert` and `update`.
+* [RSS Read](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md) executes once for the requested URL.
+* [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md) executes once for `insert` and `update`.

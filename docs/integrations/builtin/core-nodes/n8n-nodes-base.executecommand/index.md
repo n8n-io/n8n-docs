@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Execute Command
 description: Documentation for the Execute Command node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -51,7 +51,7 @@ Use one of two methods to run multiple commands in one Execute Command node:
 
 #### Run cURL command
 
-You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to make a cURL request.
+You can also use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to make a cURL request.
 
 If you want to run the curl command in the Execute Command node, you will have to build a Docker image based on the existing n8n image. The default n8n Docker image uses Alpine Linux. You will have to install the curl package.
 
@@ -81,4 +81,4 @@ If you want to run the curl command in the Execute Command node, you will have t
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md).

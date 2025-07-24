@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: IMAP credentials
 description: Documentation for IMAP credentials. Use these credentials to authenticate IMAP in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [IMAP Email](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/)
+- [IMAP Email](/integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md)
 
 ## Prerequisites
 
@@ -41,15 +41,15 @@ Refer to the quickstart guides for these common email providers.
 
 #### Gmail
 
-Refer to [Gmail](/integrations/builtin/credentials/imap/gmail).
+Refer to [Gmail](/integrations/builtin/credentials/imap/gmail.md).
 
 #### Outlook.com
 
-Refer to [Outlook.com](/integrations/builtin/credentials/imap/outlook).
+Refer to [Outlook.com](/integrations/builtin/credentials/imap/outlook.md).
 
 #### Yahoo
 
-Refer to [Yahoo](/integrations/builtin/credentials/imap/yahoo).
+Refer to [Yahoo](/integrations/builtin/credentials/imap/yahoo.md).
 
 ### My provider isn't listed
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Contacts node documentation
 description: Learn how to use the Google Contacts node in n8n. Follow technical documentation to integrate Google Contacts node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Google Contacts node
@@ -12,8 +12,10 @@ Use the Google Contacts node to automate work in Google Contacts, and integrate 
 On this page, you'll find a list of operations the Google Contacts node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Contacts credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Contacts credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -2,17 +2,17 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Azure OpenAI node documentation
 description: Learn how to use the Embeddings Azure OpenAI node in n8n. Follow technical documentation to integrate Embeddings Azure OpenAI node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Embeddings Azure OpenAI node
 
-Use the Embeddings Azure OpenAI node to generate embeddings for a given text.
+Use the Embeddings Azure OpenAI node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Azure OpenAI node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/azureopenai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

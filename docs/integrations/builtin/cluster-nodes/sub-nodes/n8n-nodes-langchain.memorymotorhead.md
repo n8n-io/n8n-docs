@@ -2,18 +2,18 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Motorhead node documentation
 description: Learn how to use the Motorhead node in n8n. Follow technical documentation to integrate Motorhead node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Motorhead node
 
-Use the Motorhead node to use Motorhead as a memory server.
+Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory) server.
 
 On this page, you'll find a list of operations the Motorhead node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/motorhead.md).
 ///
 
 ## Node parameters

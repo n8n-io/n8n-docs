@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zoho CRM node documentation
 description: Learn how to use the Zoho CRM node in n8n. Follow technical documentation to integrate Zoho CRM node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zoho CRM node
@@ -12,8 +12,10 @@ Use the Zoho CRM node to automate work in Zoho CRM, and integrate Zoho CRM with 
 On this page, you'll find a list of operations the Zoho CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho/) for guidance on setting up authentication. 
+Refer to [Zoho CRM credentials](/integrations/builtin/credentials/zoho.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

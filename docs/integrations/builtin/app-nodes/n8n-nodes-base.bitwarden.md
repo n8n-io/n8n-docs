@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Bitwarden node documentation
 description: Learn how to use the Bitwarden node in n8n. Follow technical documentation to integrate Bitwarden node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Bitwarden node
@@ -12,7 +12,7 @@ Use the Bitwarden node to automate work in Bitwarden, and integrate Bitwarden wi
 On this page, you'll find a list of operations the Bitwarden node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden/) for guidance on setting up authentication. 
+Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ServiceNow node documentation
 description: Learn how to use the ServiceNow node in n8n. Follow technical documentation to integrate ServiceNow node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # ServiceNow node
@@ -12,7 +12,7 @@ Use the ServiceNow node to automate work in ServiceNow, and integrate ServiceNow
 On this page, you'll find a list of operations the ServiceNow node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ServiceNow credentials](/integrations/builtin/credentials/servicenow/) for guidance on setting up authentication. 
+Refer to [ServiceNow credentials](/integrations/builtin/credentials/servicenow.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

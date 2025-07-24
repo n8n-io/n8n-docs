@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Linear node documentation
 description: Learn how to use the Linear node in n8n. Follow technical documentation to integrate Linear node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Linear node
@@ -12,7 +12,7 @@ Use the Linear node to automate work in Linear, and integrate Linear with other 
 On this page, you'll find a list of operations the Linear node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Linear credentials](/integrations/builtin/credentials/linear/) for guidance on setting up authentication. 
+Refer to [Linear credentials](/integrations/builtin/credentials/linear.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

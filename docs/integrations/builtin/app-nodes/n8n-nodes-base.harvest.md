@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Harvest node documentation
 description: Learn how to use the Harvest node in n8n. Follow technical documentation to integrate Harvest node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Harvest node
@@ -12,7 +12,7 @@ Use the Harvest node to automate work in Harvest, and integrate Harvest with oth
 On this page, you'll find a list of operations the Harvest node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Harvest credentials](/integrations/builtin/credentials/harvest/) for guidance on setting up authentication. 
+Refer to [Harvest credentials](/integrations/builtin/credentials/harvest.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook App credentials
 description: Documentation for Facebook App credentials. Use these credentials to authenticate Facebook App in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,10 +10,10 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/)
+- [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md)
 
 /// note | Facebook Graph API credentials
-If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) documentation.
+If you want to create credentials for the [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md) node, follow the instructions in the [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) documentation.
 ///
 
 ## Supported authentication methods
@@ -93,7 +93,7 @@ Now that you have a token, you can configure the Facebook Trigger node:
 1. In your Meta app, copy the **App ID** from the top navigation bar.
 1. In n8n, open your Facebook Trigger node.
 2. Paste the **App ID** into the **APP ID** field.
-3. Select **Test step** to shift the trigger into listening mode.
+3. Select **Execute step** to shift the trigger into listening mode.
 6. Return to the tab or window where your Meta app's **Webhooks** product configuration is open.
 7. **Subscribe** to the objects you want to receive Facebook Trigger notifications about. For each subscription:
     1. Copy the **Webhook URL** from n8n and enter it as the **Callback URL** in your Meta App.
@@ -102,7 +102,7 @@ Now that you have a token, you can configure the Facebook Trigger node:
     1. Some webhook subscriptions, like **User**, prompt you to subscribe to individual events. Subscribe to the events you're interested in.
     1. You can send some **Test** events from Meta to confirm things are working. If you send a test event, verify its receipt in n8n.
 
-Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) documentation for more information.
+Refer to the [Facebook Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) documentation for more information.
 
 ### Optional: Add an App Secret
 

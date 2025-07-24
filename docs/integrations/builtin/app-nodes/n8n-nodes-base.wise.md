@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wise node documentation
 description: Learn how to use the Wise node in n8n. Follow technical documentation to integrate Wise node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Wise node
@@ -12,7 +12,7 @@ Use the Wise node to automate work in Wise, and integrate Wise with other applic
 On this page, you'll find a list of operations the Wise node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidance on setting up authentication. 
+Refer to [Wise credentials](/integrations/builtin/credentials/wise.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

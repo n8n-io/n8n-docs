@@ -2,18 +2,18 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Google Gemini node documentation
 description: Learn how to use the Embeddings Google Gemini node in n8n. Follow technical documentation to integrate Embeddings Google Gemini node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Embeddings Google Gemini node
 
-Use the Embeddings Google Gemini node to generate embeddings for a given text.
+Use the Embeddings Google Gemini node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Google Gemini node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/googleai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

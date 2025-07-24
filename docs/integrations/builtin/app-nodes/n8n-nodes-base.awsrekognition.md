@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Rekognition node documentation
 description: Learn how to use the AWS Rekognition node in n8n. Follow technical documentation to integrate AWS Rekognition node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # AWS Rekognition node
@@ -12,7 +12,7 @@ Use the AWS Rekognition node to automate work in AWS Rekognition, and integrate 
 On this page, you'll find a list of operations the AWS Rekognition node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Rekognition credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Rekognition credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

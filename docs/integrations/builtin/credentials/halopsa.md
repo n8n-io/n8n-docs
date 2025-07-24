@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HaloPSA credentials
 description: Documentation for HaloPSA credentials. Use these credentials to authenticate HaloPSA in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # HaloPSA credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa/)
+- [HaloPSA](/integrations/builtin/app-nodes/n8n-nodes-base.halopsa.md)
 
 ## Prerequisites
 

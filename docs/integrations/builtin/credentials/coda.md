@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Coda credentials
 description: Documentation for Coda credentials. Use these credentials to authenticate Coda in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Coda credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda/)
+- [Coda](/integrations/builtin/app-nodes/n8n-nodes-base.coda.md)
 
 ## Prerequisites
 

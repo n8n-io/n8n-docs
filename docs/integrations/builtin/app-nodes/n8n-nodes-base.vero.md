@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Vero node documentation
 description: Learn how to use the Vero node in n8n. Follow technical documentation to integrate Vero node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Vero node
@@ -12,7 +12,7 @@ Use the Vero node to automate work in Vero and integrate Vero with other applica
 On this page, you'll find a list of operations the Vero node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Vero credentials](/integrations/builtin/credentials/vero/) for guidance on setting up authentication. 
+Refer to [Vero credentials](/integrations/builtin/credentials/vero.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

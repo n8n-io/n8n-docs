@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MessageBird node documentation
 description: Learn how to use the MessageBird node in n8n. Follow technical documentation to integrate MessageBird node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MessageBird node
@@ -12,7 +12,7 @@ Use the MessageBird node to automate work in MessageBird, and integrate MessageB
 On this page, you'll find a list of operations the MessageBird node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MessageBird credentials](/integrations/builtin/credentials/messagebird/) for guidance on setting up authentication. 
+Refer to [MessageBird credentials](/integrations/builtin/credentials/messagebird.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

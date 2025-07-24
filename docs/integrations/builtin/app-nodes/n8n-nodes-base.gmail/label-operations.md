@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail node Label Operations documentation
 description: Learn how to use the Label Operations of the Gmail node in n8n. Follow technical documentation to integrate Label Operations into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Gmail node Label Operations
 
-Use the Label operations to create, delete, or get a label or list labels in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) for more information on the Gmail node itself.
+Use the Label operations to create, delete, or get a label or list labels in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
 
 ## Create a label
 
@@ -77,4 +77,4 @@ Refer to the [Gmail API Method: users.labels.list](https://developers.google.com
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Cal Trigger node documentation
 description: Learn how to use the Cal Trigger node in n8n. Follow technical documentation to integrate Cal Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Cal Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Cal](https://cal.com/) is the event-juggling scheduler for everyone. Focus on meeting, not making meetings.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cal/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/cal.md).
 ///
 
 ///  note  | Examples and templates

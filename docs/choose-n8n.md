@@ -12,21 +12,21 @@ This section contains information on n8n's range of platforms, pricing plans, an
 
 There are different ways to set up n8n depending on how you intend to use it:
 
-* [n8n Cloud](/manage-cloud/overview/): hosted solution, no need to install anything.
-* [Self-host](/hosting/): recommended method for production or customized use cases.
-	* [npm](/hosting/installation/npm/)
-	* [Docker](/hosting/installation/docker/)
-	* [Server setup guides](/hosting/installation/server-setups/) for popular platforms
-* [Embed](/embed/): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/){:target=_blank .external-link} for pricing and support.
+* [n8n Cloud](/manage-cloud/overview.md): hosted solution, no need to install anything.
+* [Self-host](/hosting/index.md): recommended method for production or customized use cases.
+	* [npm](/hosting/installation/npm.md)
+	* [Docker](/hosting/installation/docker.md)
+	* [Server setup guides](/hosting/installation/server-setups/index.md) for popular platforms
+* [Embed](/embed/index.md): n8n Embed allows you to white label n8n and build it into your own product. Contact n8n on the [Embed website](https://n8n.io/embed/){:target=_blank .external-link} for pricing and support.
 
 --8<-- "_snippets/self-hosting/warning.md"
 
 
 ## Licenses
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](http://faircode.io) model.
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](https://faircode.io/) model.
 
-For a detailed explanation of the license, refer to [Sustainable Use License](/sustainable-use-license/).
+For a detailed explanation of the license, refer to [Sustainable Use License](/sustainable-use-license.md).
 
 ## Free versions
 

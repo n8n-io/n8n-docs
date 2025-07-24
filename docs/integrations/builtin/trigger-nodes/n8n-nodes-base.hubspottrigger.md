@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HubSpot Trigger node documentation
 description: Learn how to use the HubSpot Trigger node in n8n. Follow technical documentation to integrate HubSpot Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -15,7 +15,7 @@ If you activate a second trigger, the previous trigger stops working. This is be
 ///
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/hubspot.md).
 ///
 
 /// note | Examples and templates
@@ -50,7 +50,7 @@ For usage examples and templates to help you get started, refer to n8n's [HubSpo
 
 ## Related resources
 
-n8n provides an app node for HubSpot. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/).
+n8n provides an app node for HubSpot. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md).
 
 View [example workflows and related content](https://n8n.io/integrations/hubspot-trigger/){:target=_blank .external-link} on n8n's website.
 

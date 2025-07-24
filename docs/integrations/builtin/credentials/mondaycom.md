@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: monday.com credentials
 description: Documentation for monday.com credentials. Use these credentials to authenticate monday.com in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/)
+- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md)
 
 /// info | Minimum required version
 The monday.com node requires n8n version 1.22.6 or above.

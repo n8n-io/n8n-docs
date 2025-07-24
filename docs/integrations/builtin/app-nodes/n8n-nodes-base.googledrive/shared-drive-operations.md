@@ -2,13 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Drive Shared Drive operations
 description: Documentation for the Shared Drive operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Google Drive Shared Drive operations
 
-Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Create a shared drive
 
@@ -16,7 +18,7 @@ Use this operation to create a new shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Create**.
 - **Name**: The name to use for the new shared drive.
@@ -57,7 +59,7 @@ Use this operation to delete a shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Delete**.
 - **Shared Drive**: Choose the shared drive want to delete. 
@@ -72,7 +74,7 @@ Use this operation to get a shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Get**.
 - **Shared Drive**: Choose the shared drive want to get. 
@@ -93,7 +95,7 @@ Use this operation to get many shared drives.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Get Many**.
 - **Return All**: Choose whether to return all results or only up to a given limit.
@@ -115,7 +117,7 @@ Use this operation to update a shared drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Shared Drive**.
 - **Operation**: Select **Update**.
 - **Shared Drive**: Choose the shared drive you want to update. 

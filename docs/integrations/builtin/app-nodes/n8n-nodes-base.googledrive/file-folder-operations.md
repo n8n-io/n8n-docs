@@ -2,13 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Drive File and Folder operations
 description: Documentation for the File and Folder operations in Google Drive node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Google Drive File and Folder operations
 
-Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Search files and folders
 
@@ -16,7 +18,7 @@ Use this operation to search for files and folders in a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File/Folder**.
 - **Operation**: Select **Search**.
 - **Search Method**: Choose how you want to search:

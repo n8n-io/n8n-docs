@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pushcut credentials
 description: Documentation for Pushcut credentials. Use these credentials to authenticate Pushcut in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Pushcut credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut/)
-- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger/)
+- [Pushcut](/integrations/builtin/app-nodes/n8n-nodes-base.pushcut.md)
+- [Pushcut Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger.md)
 
 ## Prerequisites
 

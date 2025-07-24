@@ -5,31 +5,26 @@ contentType: howto
 
 # Expressions
 
---8<-- "_snippets/code/tournament-notes.md"
+Expressions are a powerful feature implemented in all n8n nodes. They allow node parameters to be set dynamically based on data from:
 
-Use expressions to set node parameters dynamically based on data from:
-
-- Previous nodes
+- Previous node executions
 - The workflow
 - Your n8n environment
 
-You can execute JavaScript within an expression. 
+You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data into useful parameter values without writing extensive extra code.
 
-n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code-examples/methods-variables-reference/) and [data transformation functions](/code-examples/expressions/data-transformation-functions/) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
+n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
 
-n8n supports two libraries:
+n8n additionally supports two libraries:
 
-- [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, for working with data and time.
+- [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, for working with dates and time.
 - [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
 
-/// note | No Python support
-Expressions must use JavaScript.
-///
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/) for more information on working with data in your workflows.
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
 ///
-## Writing expressions
 
+## Writing expressions
 
 To use an expression to set a parameter value:
 
@@ -81,6 +76,7 @@ This expression:
 
 You can do things like variable assignments or multiple statements in an expression, but you need to wrap your code using the syntax for an IIFE (Immediately Invoked Function Expression).
 
+
 The following code use the Luxon date and time library to find the time between two dates in months. We surround the code in both the handlebar brackets for an expression and the IIFE syntax.
 
 
@@ -95,4 +91,4 @@ The following code use the Luxon date and time library to find the time between 
 
 ## Common issues
 
-For common errors or issues with expressions and suggested resolution steps, refer to [Common Issues](/code/cookbook/expressions/common-issues/).
+For common errors or issues with expressions and suggested resolution steps, refer to [Common Issues](/code/cookbook/expressions/common-issues.md).

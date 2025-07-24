@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mailjet node documentation
 description: Learn how to use the Mailjet node in n8n. Follow technical documentation to integrate Mailjet node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mailjet node
@@ -12,7 +12,7 @@ Use the Mailjet node to automate work in Mailjet, and integrate Mailjet with oth
 On this page, you'll find a list of operations the Mailjet node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailjet credentials](/integrations/builtin/credentials/mailjet/) for guidance on setting up authentication. 
+Refer to [Mailjet credentials](/integrations/builtin/credentials/mailjet.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

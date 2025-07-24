@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Box node documentation
 description: Learn how to use the Box node in n8n. Follow technical documentation to integrate Box node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Box node
@@ -12,7 +12,7 @@ Use the Box node to automate work in Box, and integrate Box with other applicati
 On this page, you'll find a list of operations the Box node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Box credentials](/integrations/builtin/credentials/box/) for guidance on setting up authentication. 
+Refer to [Box credentials](/integrations/builtin/credentials/box.md) for guidance on setting up authentication. 
 ///
  
 

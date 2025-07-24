@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Vonage node documentation
 description: Learn how to use the Vonage node in n8n. Follow technical documentation to integrate Vonage node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Vonage node
@@ -12,7 +12,7 @@ Use the Vonage node to automate work in Vonage, and integrate Vonage with other 
 On this page, you'll find a list of operations the Vonage node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Vonage credentials](/integrations/builtin/credentials/vonage/) for guidance on setting up authentication. 
+Refer to [Vonage credentials](/integrations/builtin/credentials/vonage.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

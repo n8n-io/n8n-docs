@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: XML
 description: Documentation for the XML node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -11,7 +11,7 @@ priority: medium
 Use the XML node to convert data from and to XML.
 
 /// note | Binary files
-If your XML is within a binary file, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) node to convert it to text first.
+If your XML is within a binary file, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node to convert it to text first.
 ///
 
 ## Node parameters

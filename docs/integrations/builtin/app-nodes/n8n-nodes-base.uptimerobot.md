@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: UptimeRobot node documentation
 description: Learn how to use the UptimeRobot node in n8n. Follow technical documentation to integrate UptimeRobot node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # UptimeRobot node
@@ -12,7 +12,7 @@ Use the UptimeRobot node to automate work in UptimeRobot, and integrate UptimeRo
 On this page, you'll find a list of operations the UptimeRobot node supports and links to more resources.
 
 /// note | Credentials
-Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot/) for guidance on setting up authentication. 
+Refer to [UptimeRobot credentials](/integrations/builtin/credentials/uptimerobot.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

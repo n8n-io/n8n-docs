@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: PhantomBuster node documentation
 description: Learn how to use the PhantomBuster node in n8n. Follow technical documentation to integrate PhantomBuster node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # PhantomBuster node
@@ -12,7 +12,7 @@ Use the PhantomBuster node to automate work in PhantomBuster, and integrate Phan
 On this page, you'll find a list of operations the PhantomBuster node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PhantomBuster credentials](/integrations/builtin/credentials/phantombuster/) for guidance on setting up authentication. 
+Refer to [PhantomBuster credentials](/integrations/builtin/credentials/phantombuster.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

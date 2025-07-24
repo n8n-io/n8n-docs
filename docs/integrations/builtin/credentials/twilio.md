@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Twilio credentials
 description: Documentation for Twilio credentials. Use these credentials to authenticate Twilio in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio/)
-- [Twilio trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger/)
+- [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio.md)
+- [Twilio trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md)
 
 ## Supported authentication methods
 

@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MailerLite credentials
 description: Documentation for MailerLite credentials. Use these credentials to authenticate MailerLite in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MailerLite credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/)
-- [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger/)
+- [MailerLite](/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite.md)
+- [MailerLite Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger.md)
 
 ## Prerequisites
 

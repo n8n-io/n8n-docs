@@ -6,8 +6,8 @@ contentType: overview
 
 # Try it out
 
-This section gets you up and running with building workflows in n8n.
+The best way to learn n8n is by using our tutorials to get familiar with the user interface and the many different types of nodes and integrations available. Here is a selection of material to get you started:
 
-* Want a fast taster of n8n? Try the [Very quick quickstart](/try-it-out/quickstart/).
-* Looking for a more detailed introduction? Check out the [Slightly longer introduction](/try-it-out/longer-introduction/).
-* Prefer to work through extensive examples? Maybe the [courses](/courses/) are for you.
+- Looking for a quick introduction? Check out the ["First Workflow" tutorial](/try-it-out/tutorial-first-workflow.md).
+- Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
+- Prefer to work through extensive examples? Maybe the [courses](/courses/index.md) are for you.

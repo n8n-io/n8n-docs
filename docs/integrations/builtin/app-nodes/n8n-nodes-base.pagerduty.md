@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: PagerDuty node documentation
 description: Learn how to use the PagerDuty node in n8n. Follow technical documentation to integrate PagerDuty node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # PagerDuty node
@@ -12,7 +12,7 @@ Use the PagerDuty node to automate work in PagerDuty, and integrate PagerDuty wi
 On this page, you'll find a list of operations the PagerDuty node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty/) for guidance on setting up authentication. 
+Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

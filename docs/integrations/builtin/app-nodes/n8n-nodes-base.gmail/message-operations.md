@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail node Message Operations documentation
 description: Learn how to use the Message Operations of the Gmail node in n8n. Follow technical documentation to integrate Message Operations into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Gmail node Message Operations
 
-Use the Message operations to send, reply to, delete, mark read or unread, add a label to, remove a label from, or get a message or get a list of messages in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) for more information on the Gmail node itself.
+Use the Message operations to send, reply to, delete, mark read or unread, add a label to, remove a label from, or get a message or get a list of messages in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
 
 ## Add Label to a message
 
@@ -31,7 +31,7 @@ Refer to the [Gmail API Method: users.messages.modify](https://developers.google
 Use this operation to immediately and permanently delete a message.
 
 /// note | Permanent deletion
-This operation can't be undone. For recoverable deletions, use the [Thread Trash operation](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations/#trash-a-thread) instead.
+This operation can't be undone. For recoverable deletions, use the [Thread Trash operation](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/thread-operations.md#trash-a-thread) instead.
 ///
 
 Enter these parameters:
@@ -197,7 +197,7 @@ Refer to the [Gmail API Method: users.messages.send](https://developers.google.c
 Use this operation to send a message and wait for approval from the recipient before continuing the workflow execution.
 
 /// info | Use Wait for complex approvals
-The **Send and Wait for Approval** operation is well-suited for simple approval processes. For more complex approvals, consider using the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait/).
+The **Send and Wait for Approval** operation is well-suited for simple approval processes. For more complex approvals, consider using the [Wait node](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md).
 ///
 
 Enter these parameters:
@@ -223,4 +223,4 @@ Refer to the [Gmail API Method: users.messages.send](https://developers.google.c
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Home Assistant node documentation
 description: Learn how to use the Home Assistant node in n8n. Follow technical documentation to integrate Home Assistant node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Home Assistant node to automate work in Home Assistant, and integrate Ho
 On this page, you'll find a list of operations the Home Assistant node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant/) for guidance on setting up authentication. 
+Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

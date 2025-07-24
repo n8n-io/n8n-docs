@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Lemlist Trigger node documentation
 description: Learn how to use the Lemlist Trigger node in n8n. Follow technical documentation to integrate Lemlist Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Lemlist Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Lemlist](https://Lemlist.com){:target=_blank .external-link} is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist.md).
 ///
 
 ///  note  | Examples and templates

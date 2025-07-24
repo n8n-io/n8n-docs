@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GoToWebinar node documentation
 description: Learn how to use the GoToWebinar node in n8n. Follow technical documentation to integrate GoToWebinar node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # GoToWebinar node
@@ -12,7 +12,7 @@ Use the GoToWebinar node to automate work in GoToWebinar, and integrate GoToWebi
 On this page, you'll find a list of operations the GoToWebinar node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GoToWebinar credentials](/integrations/builtin/credentials/gotowebinar/) for guidance on setting up authentication. 
+Refer to [GoToWebinar credentials](/integrations/builtin/credentials/gotowebinar.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

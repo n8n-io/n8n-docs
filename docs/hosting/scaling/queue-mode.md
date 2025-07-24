@@ -8,7 +8,7 @@ contentType: howto
 You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
 /// note | Binary data storage
-n8n doesn't support queue mode with binary data storage. If your workflows need to persist binary data, you can't use queue mode.
+n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](./external-storage.md).
 ///
 
 ## How it works
@@ -39,11 +39,11 @@ Workers are n8n instances that do the actual work. They receive information from
 
 ### Set encryption key
 
-n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/) if desired.
+n8n automatically generates an encryption key upon first startup. You can also provide your own custom key using [environment variable](/hosting/configuration/environment-variables/index.md) if desired.
 
 The encryption key of the main n8n instance must be shared with all worker and webhooks processor nodes to ensure these worker nodes are able to access credentials stored in the database.
 
-Set the encryption key for each worker node in a [configuration file](/hosting/configuration/configuration-methods/) or by setting the corresponding environment variable:
+Set the encryption key for each worker node in a [configuration file](/hosting/configuration/configuration-methods.md) or by setting the corresponding environment variable:
 
 ```bash
 export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
@@ -55,13 +55,13 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
 ///
 
-Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
+Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.
 
 ```bash
 export EXECUTIONS_MODE=queue
 ```
 
-Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/environment-variables/).
+Alternatively, you can set `executions.mode` to `queue` in the [configuration file](/hosting/configuration/environment-variables/index.md).
 
 ### Start Redis
 
@@ -140,13 +140,13 @@ When running n8n with queues, all the production workflow executions get process
 Redis acts as the message broker, and the database persists data, so access to both is required. Running a distributed system with this setup over SQLite isn't supported.
 
 /// note | Migrate data
-If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands/#export-workflows-and-credentials) documentation to learn how to use these commands.
+If you want to migrate data from one database to another, you can use the Export and Import commands. Refer to the [CLI commands for n8n](/hosting/cli-commands.md#export-workflows-and-credentials) documentation to learn how to use these commands.
 ///
 
 ## Webhook processors
 
 /// note | Keep in mind
-Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+Webhook processes rely on Redis and need the `EXECUTIONS_MODE` environment variable set too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
 ///
 
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
@@ -164,7 +164,7 @@ You can start the webhook processor by executing the following command from the 
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n webhook
+docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n webhook
 ```
 
 ### Configure webhook URL
@@ -208,11 +208,14 @@ You can define the number of jobs a worker can run in parallel by using the `con
 n8n worker --concurrency=5
 ```
 
+## Concurrency and scaling recommendations
+
+n8n recommends setting concurrency to 5 or higher for your worker instances. Setting low concurrency values with a large numbers of workers can exhaust your database's connection pool, leading to processing delays and failures.
+
 ## Multi-main setup
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 ///
 
 In queue mode you can run more than one `main` process for high availability.
@@ -247,6 +250,4 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
-/// note | Keep in mind
-In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Running `webhook` processes is neither needed nor allowed in multi-main setup.
-///
+

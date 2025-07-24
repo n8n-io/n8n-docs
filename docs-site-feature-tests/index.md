@@ -24,6 +24,14 @@ This is some info contents.
 This is some warning contents.
 ///
 
+/// tip | This is a tip
+This is some tip contents.
+///
+
+/// danger | This is a danger box
+This is some danger box contents.
+///
+
 ??? Details "This is an expanding details box"
 	This is some expanding details contents.
 
@@ -39,19 +47,19 @@ If it expands on click, first check that the `off-glb` class has been applied. R
 
 Other images like this should expand on click:
 
-![Screenshot of completed quickstart workflow](/_images/try-it-out/quickstart/very-quick-quickstart-workflow.png)
+![Screenshot of completed quickstart workflow](/_images/try-it-out/tutorial-first.png)
 
 ## Links
 
-[This link should open in a new tab](https://example.com/){:target=_blank .external-link}
+[This link should open in a new tab](https://example.com/)
 
-[This link should open in the same tab](/try-it-out/quickstart/)
+[This link should open in the same tab](/try-it-out/quickstart.md)
 
 ## Instant previews
 
-[This link should show a preview of the quickstart on hover](/try-it-out/quickstart/){ data-preview }
+[This link should show a preview of the quickstart on hover](/try-it-out/quickstart.md){ data-preview }
 
-[This link should NOT show a preview on hover](/try-it-out/quickstart/)
+[This link should NOT show a preview on hover](/try-it-out/quickstart.md)
 
 ## Embed Workflow
 
@@ -74,3 +82,5 @@ You should see a list of 5 HTTP Request templates
 You should see the AI Glossary below
 
 --8<-- "_glossary/ai-glossary.md"
+
+Link to [workflows](/glossary.md#workflow-n8n) glossary definition with preview.

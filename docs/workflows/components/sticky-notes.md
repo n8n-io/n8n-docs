@@ -8,7 +8,7 @@ contentType: howto
 
 Sticky Notes allow you to annotate and comment on your workflows.
 
-n8n recommends using Sticky Notes heavily, especially on template workflows, to help other users understand your workflow.
+n8n recommends using Sticky Notes heavily, especially on [template workflows](/glossary.md#template-n8n), to help other users understand your workflow.
 
 ![Screenshot of a basic workflow with an example sticky note](/_images/workflows/components/stickies/example-sticky-note.png)
 
@@ -79,3 +79,15 @@ You can force images to be 100% width of the sticky note by appending `#full-wid
 ```markdown
 ![Source example](https://<IMAGE-URL>/<IMAGE-NAME>.png#full-width)
 ```
+
+## Embed a YouTube video
+
+To display a YouTube video in a note, use the `@[youtube](<video-id>)` directive with the video's ID. For this to work, the video's creator must allow embedding.
+
+For example:
+
+```markdown
+@[youtube](ZCuL2e4zC_4)
+```
+
+To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with your video ID. The YouTube video ID is the string that follows `v=` in the YouTube URL.

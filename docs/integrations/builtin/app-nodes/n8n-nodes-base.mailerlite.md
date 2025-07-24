@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MailerLite node documentation
 description: Learn how to use the MailerLite node in n8n. Follow technical documentation to integrate MailerLite node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # MailerLite node
@@ -12,7 +12,7 @@ Use the MailerLite node to automate work in MailerLite, and integrate MailerLite
 On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite/) for guidance on setting up authentication. 
+Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

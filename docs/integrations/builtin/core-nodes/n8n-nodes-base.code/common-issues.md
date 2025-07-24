@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Code node common issues 
 description: Documentation for common issues and questions in the Code node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # Code node common issues
 
-Here are some common errors and issues with the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and steps to resolve or troubleshoot them.
 
 <!-- vale off -->
 ## Code doesn't return items properly
@@ -30,8 +30,8 @@ In n8n, all data passed between nodes is an array of objects. Each of these obje
 
 To troubleshoot this error, check the following:
 
-* Read the [data structure](/data/data-structure/) to understand the data you receive in the Code node and the requirements for outputting data from the node.
-* Understand how data items work and how to connect data items from previous nodes with [item linking](/data/data-mapping/data-item-linking/).
+* Read the [data structure](/data/data-structure.md) to understand the data you receive in the Code node and the requirements for outputting data from the node.
+* Understand how data items work and how to connect data items from previous nodes with [item linking](/data/data-mapping/data-item-linking/index.md).
 
 <!-- vale off -->
 ## A 'json' property isn't an object
@@ -67,7 +67,7 @@ To resolve this, ensure that the `json` key references an object in your return 
 
 This error may occur when your Code node doesn't return anything or if it returns an unexpected result.
 
-To resolve this, ensure that your Code node returns the [expected data structure](/data/data-structure/):
+To resolve this, ensure that your Code node returns the [expected data structure](/data/data-structure.md):
 
 ```javascript
 [
@@ -101,22 +101,22 @@ const express = require("express");
 This error occurs if you try to use `require` in the Code node and n8n can't find the module.
 
 /// warning | Only for self-hosted
-n8n doesn't support importing modules in the [Cloud](/manage-cloud/overview/) version.
+n8n doesn't support importing modules in the [Cloud](/manage-cloud/overview.md) version.
 ///
 
-If you're [self-hosting](/hosting) n8n, follow these steps:
+If you're [self-hosting](/hosting/index.md) n8n, follow these steps:
 
 * Install the module into your n8n environment.
-	* If you are running n8n with [npm](/hosting/installation/npm/), install the module in the same environment as n8n.
-	* If you are running n8n with [Docker](/hosting/installation/docker/), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your module.
-* Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](/hosting/configuration/configuration-examples/modules-in-code-node/) to allow importing modules.
+	* If you are running n8n with [npm](/hosting/installation/npm.md), install the module in the same environment as n8n.
+	* If you are running n8n with [Docker](/hosting/installation/docker.md), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your module.
+* Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](/hosting/configuration/configuration-examples/modules-in-code-node.md) to allow importing modules.
 
 ## Using global variables
 
 Sometimes you may wish to set and retrieve simple global data related to a workflow across and within executions. For example, you may wish to include the date of the previous report when compiling a report with a list of project updates.
 
-To set, update, and retrieve data directly to a workflow, use the [static data](/code/cookbook/builtin/get-workflow-static-data/) functions within your code. You can manage data either globally or tied to specific nodes.
+To set, update, and retrieve data directly to a workflow, use the [static data](/code/cookbook/builtin/get-workflow-static-data.md) functions within your code. You can manage data either globally or tied to specific nodes.
 
 /// info | Use Remove Duplicates when possible
-If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
+If you're interested in using variables to avoid processing the same data items more than once, consider using the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md) instead. The Remove Duplicates node can save information across executions to avoid processing the same items multiple times.
 ///

@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: WhatsApp Business Cloud node common issues
 description: Documentation for common issues and questions in the WhatsApp Business Cloud node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
 # WhatsApp Business Cloud node common issues
 
-Here are some common errors and issues with the [WhatsApp Business Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [WhatsApp Business Cloud node](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md) and steps to resolve or troubleshoot them.
 
 ## Bad request - please check your parameters
 
@@ -16,7 +16,7 @@ This error occurs when WhatsApp Business Cloud rejects your request because of a
 
 To resolve this issue, review the parameters in your [message template](https://www.facebook.com/business/help/2055875911147364?id=2129163877102343). Pay attention to each parameter's data type and the order they're defined in the template.
 
-Check the data that n8n is mapping to the template parameters. If you're using expressions to set parameter values, check the input data to make sure each item resolves to a valid value. You may want to use the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set/) or [set a fallback value](/code/cookbook/expressions/check-incoming-data/) to ensure you send a value with the correct format.
+Check the data that n8n is mapping to the template parameters. If you're using expressions to set parameter values, check the input data to make sure each item resolves to a valid value. You may want to use the [Edit Fields (Set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) or [set a fallback value](/code/cookbook/expressions/check-incoming-data.md) to ensure you send a value with the correct format.
 
 ## Working with non-text media
 

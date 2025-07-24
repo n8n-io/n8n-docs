@@ -2,18 +2,18 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Anthropic Chat Model node documentation
 description: Learn how to use the Anthropic Chat Model node in n8n. Follow technical documentation to integrate Anthropic Chat Model node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Anthropic Chat Model node
 
-Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational agents.
+Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the Anthropic Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

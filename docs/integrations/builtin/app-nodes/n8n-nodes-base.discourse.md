@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Discourse node documentation
 description: Learn how to use the Discourse node in n8n. Follow technical documentation to integrate Discourse node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Discourse node
@@ -12,7 +12,7 @@ Use the Discourse node to automate work in Discourse, and integrate Discourse wi
 On this page, you'll find a list of operations the Discourse node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Discourse credentials](/integrations/builtin/credentials/discourse/) for guidance on setting up authentication. 
+Refer to [Discourse credentials](/integrations/builtin/credentials/discourse.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

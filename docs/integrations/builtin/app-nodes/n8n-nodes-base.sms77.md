@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: seven node documentation
 description: Learn how to use the seven node in n8n. Follow technical documentation to integrate seven node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # seven node
@@ -12,7 +12,7 @@ Use the seven node to automate work in seven, and integrate seven with other app
 On this page, you'll find a list of operations the seven node supports and links to more resources.
 
 /// note | Credentials
-Refer to [seven credentials](/integrations/builtin/credentials/sms77/) for guidance on setting up authentication. 
+Refer to [seven credentials](/integrations/builtin/credentials/sms77.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Iterable node documentation
 description: Learn how to use the Iterable node in n8n. Follow technical documentation to integrate Iterable node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Iterable node
@@ -12,7 +12,7 @@ Use the Iterable node to automate work in Iterable, and integrate Iterable with 
 On this page, you'll find a list of operations the Iterable node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Iterable credentials](/integrations/builtin/credentials/iterable/) for guidance on setting up authentication. 
+Refer to [Iterable credentials](/integrations/builtin/credentials/iterable.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

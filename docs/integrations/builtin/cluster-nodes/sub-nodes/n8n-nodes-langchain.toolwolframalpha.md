@@ -2,16 +2,16 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wolfram|Alpha tool node documentation
 description: Learn how to use the Wolfram|Alpha tool node in n8n. Follow technical documentation to integrate Wolfram|Alpha tool node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
 # Wolfram|Alpha tool node
 
-Use the Wolfram|Alpha tool node to connect your agents and chains to Wolfram|Alpha's computational intelligence engine.
+Use the Wolfram|Alpha tool node to connect your [agents](/glossary.md#ai-agent) and [chains](/glossary.md#ai-chain) to Wolfram|Alpha's computational intelligence engine.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/wolframalpha/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/wolframalpha.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

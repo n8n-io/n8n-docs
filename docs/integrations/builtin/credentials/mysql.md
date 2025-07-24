@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MySQL credentials
 description: Documentation for MySQL credentials. Use these credentials to authenticate MySQL in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,8 +10,8 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/)
-- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent)
+- [MySQL](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/index.md)
+- [Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
 
 /// note | Agent node users
 The Agent node doesn't support SSH tunnels.
@@ -64,7 +64,7 @@ To set up your database connection credential:
     SHOW VARIABLES WHERE Variable_name = 'port';
     ```
 
-6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `1000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 100 before entering it in n8n:
+6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `10000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 1000 before entering it in n8n:
 
     ```
     SHOW VARIABLES WHERE Variable_name = 'connect_timeout';

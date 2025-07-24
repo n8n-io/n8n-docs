@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Switch
 description: Documentation for the Switch node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # Switch
 
-Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node, but supports multiple output routes.
+Use the Switch node to route a workflow conditionally based on comparison operations. It's similar to the [IF](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node, but supports multiple output routes.
 
 ## Node parameters
 
@@ -56,7 +56,7 @@ To configure the node with this operation, use these parameters:
 
 ## Related resources
 
-Refer to [Splitting with conditionals](/flow-logic/splitting/) for more information on using conditionals to create complex logic in n8n.
+Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Ollama Model node documentation
 description: Learn how to use the Ollama Model node in n8n. Follow technical documentation to integrate Ollama Model node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -12,8 +12,10 @@ The Ollama Model node allows you use local Llama 2 models.
 
 On this page, you'll find the node parameters for the Ollama Model node, and links to more resources.
 
+This node lacks tools support, so it won't work with the [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) node. Instead, connect it with the [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md) node.
+
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -47,7 +49,7 @@ Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/integ
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"
 

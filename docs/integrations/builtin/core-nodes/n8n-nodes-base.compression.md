@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Compression
 description: Documentation for the Compression node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -11,6 +11,8 @@ priority: medium
 Use the Compression node to compress and decompress files. Supports Zip and Gzip formats.
 
 ## Node parameters
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 The node parameters depend on which **Operation** you select. Choose to:
 

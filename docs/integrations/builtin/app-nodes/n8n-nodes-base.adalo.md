@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Adalo node documentation
 description: Learn how to use the Adalo node in n8n. Follow technical documentation to integrate Adalo node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,7 +13,7 @@ Use the Adalo node to automate work in Adalo, and integrate Adalo with other app
 On this page, you'll find a list of operations the Adalo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
+Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for guidance on setting up authentication. 
 ///	
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenCTI credentials
 description: Documentation for the OpenCTI credentials. Use these credentials to authenticate OpenCTI in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # OpenCTI credentials
@@ -21,7 +21,7 @@ Create an [OpenCTI](https://filigran.io/solutions/open-cti/){:target=_blank .ext
 
 Refer to [OpenCTI's documentation](https://docs.opencti.io/latest/){:target=_blank .external-link} for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/opencti/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/opencti/){:target=_blank .external-link} on n8n's website.
 
 ## Using API key
 

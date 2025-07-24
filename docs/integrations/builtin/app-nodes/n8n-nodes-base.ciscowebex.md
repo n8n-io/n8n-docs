@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Webex by Cisco node documentation
 description: Learn how to use the Webex by Cisco node in n8n. Follow technical documentation to integrate Webex by Cisco node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Webex by Cisco node
@@ -12,7 +12,7 @@ Use the Webex by Cisco node to automate work in Webex, and integrate Webex with 
 On this page, you'll find a list of operations the Webex node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Webex credentials](/integrations/builtin/credentials/ciscowebex/) for guidance on setting up authentication. 
+Refer to [Webex credentials](/integrations/builtin/credentials/ciscowebex.md) for guidance on setting up authentication. 
 ///
 /// note | Examples and Templates
 For usage examples and templates to help you get started, take a look at n8n's [Webex integrations](https://n8n.io/integrations/webex-by-cisco/){:target=_blank .external-link} list.

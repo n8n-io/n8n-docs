@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Cloudflare node documentation
 description: Learn how to use the Cloudflare node in n8n. Follow technical documentation to integrate Cloudflare node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Cloudflare node
@@ -12,7 +12,7 @@ Use the Cloudflare node to automate work in Cloudflare, and integrate Cloudflare
 On this page, you'll find a list of operations the Cloudflare node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/) for guidance on setting up authentication. 
+Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

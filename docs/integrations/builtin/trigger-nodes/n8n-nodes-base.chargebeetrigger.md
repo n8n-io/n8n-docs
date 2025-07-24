@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Chargebee Trigger node documentation
 description: Learn how to use the Chargebee Trigger node in n8n. Follow technical documentation to integrate Chargebee Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Chargebee Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Chargebee](https://www.chargebee.com/){:target=_blank .external-link} is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee.md).
 ///
 
 ///  note  | Examples and templates

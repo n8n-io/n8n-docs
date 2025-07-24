@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mautic node documentation
 description: Learn how to use the Mautic node in n8n. Follow technical documentation to integrate Mautic node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Mautic node to automate work in Mautic, and integrate Mautic with other 
 On this page, you'll find a list of operations the Mautic node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mautic credentials](/integrations/builtin/credentials/mautic/) for guidance on setting up authentication. 
+Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

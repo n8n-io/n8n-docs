@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mailchimp node documentation
 description: Learn how to use the Mailchimp node in n8n. Follow technical documentation to integrate Mailchimp node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Mailchimp node
@@ -12,7 +12,7 @@ Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp wi
 On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp/) for guidance on setting up authentication. 
+Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

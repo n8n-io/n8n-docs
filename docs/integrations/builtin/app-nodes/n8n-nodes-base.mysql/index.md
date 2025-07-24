@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MySQL node documentation
 description: Learn how to use the MySQL node in n8n. Follow technical documentation to integrate MySQL node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -13,8 +13,10 @@ Use the MySQL node to automate work in MySQL, and integrate MySQL with other app
 On this page, you'll find a list of operations the MySQL node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
+Refer to [MySQL credentials](/integrations/builtin/credentials/mysql.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -72,4 +74,4 @@ users, {{ $json.email }}
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md).

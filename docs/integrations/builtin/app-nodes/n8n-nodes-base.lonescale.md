@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: LoneScale node documentation
 description: Learn how to use the LoneScale node in n8n. Follow technical documentation to integrate LoneScale node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # LoneScale node
@@ -12,7 +12,7 @@ Use the LoneScale node to automate work in LoneScale and integrate LoneScale wit
 On this page, you'll find a list of operations the LoneScale node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/lonescale.md).
 ///
 
 ## Operations
@@ -31,6 +31,6 @@ You can find authentication information for this node [here](/integrations/built
 
 Refer to [LoneScales documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api){:target=_blank .external-link} for more information about the service.
 
-n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger/).
+n8n provides a trigger node for LoneScale. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.lonescaletrigger.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

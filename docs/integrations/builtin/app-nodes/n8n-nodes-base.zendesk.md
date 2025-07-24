@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zendesk node documentation
 description: Learn how to use the Zendesk node in n8n. Follow technical documentation to integrate Zendesk node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Zendesk node
@@ -12,8 +12,10 @@ Use the Zendesk node to automate work in Zendesk, and integrate Zendesk with oth
 On this page, you'll find a list of operations the Zendesk node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk/) for guidance on setting up authentication. 
+Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

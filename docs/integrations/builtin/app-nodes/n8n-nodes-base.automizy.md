@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Automizy node documentation
 description: Learn how to use the Automizy node in n8n. Follow technical documentation to integrate Automizy node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Automizy node
@@ -12,7 +12,7 @@ Use the Automizy node to automate work in Automizy, and integrate Automizy with 
 On this page, you'll find a list of operations the Automizy node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Automizy credentials](/integrations/builtin/credentials/automizy/) for guidance on setting up authentication. 
+Refer to [Automizy credentials](/integrations/builtin/credentials/automizy.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Spontit node documentation
 description: Learn how to use the Spontit node in n8n. Follow technical documentation to integrate Spontit node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Spontit node
@@ -12,7 +12,7 @@ Use the Spontit node to automate work in Spontit, and integrate Spontit with oth
 On this page, you'll find a list of operations the Spontit node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Spontit credentials](/integrations/builtin/credentials/spontit/) for guidance on setting up authentication. 
+Refer to [Spontit credentials](/integrations/builtin/credentials/spontit.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

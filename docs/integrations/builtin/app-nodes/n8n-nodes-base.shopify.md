@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Shopify node documentation
 description: Learn how to use the Shopify node in n8n. Follow technical documentation to integrate Shopify node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,7 +13,7 @@ Use the Shopify node to automate work in Shopify, and integrate Shopify with oth
 On this page, you'll find a list of operations the Shopify node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Shopify credentials](/integrations/builtin/credentials/shopify/) for guidance on setting up authentication. 
+Refer to [Shopify credentials](/integrations/builtin/credentials/shopify.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

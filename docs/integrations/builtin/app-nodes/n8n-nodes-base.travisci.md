@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Travis CI node documentation
 description: Learn how to use the Travis CI node in n8n. Follow technical documentation to integrate Travis CI node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Travis CI node
@@ -12,7 +12,7 @@ Use the Travis CI node to automate work in Travis CI, and integrate Travis CI wi
 On this page, you'll find a list of operations the Travis CI node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Travis CI credentials](/integrations/builtin/credentials/travisci/) for guidance on setting up authentication. 
+Refer to [Travis CI credentials](/integrations/builtin/credentials/travisci.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

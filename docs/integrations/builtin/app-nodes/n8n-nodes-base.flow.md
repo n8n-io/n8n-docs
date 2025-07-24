@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Flow node documentation
 description: Learn how to use the Flow node in n8n. Follow technical documentation to integrate Flow node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Flow node
@@ -12,7 +12,7 @@ Use the Flow node to automate work in Flow, and integrate Flow with other applic
 On this page, you'll find a list of operations the Flow node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Flow credentials](/integrations/builtin/credentials/flow/) for guidance on setting up authentication. 
+Refer to [Flow credentials](/integrations/builtin/credentials/flow.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

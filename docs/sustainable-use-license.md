@@ -13,13 +13,13 @@ contentType: explanation
 Proprietary licenses are available for enterprise customers. [Get in touch](mailto:license@n8n.io) for more information.
 ///
 
-n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](http://faircode.io) model.
+n8n's [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md){:target=\_blank .external-link} and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=\_blank .external-link} are based on the [fair-code](https://faircode.io/) model.
 
 ## License FAQs
 
 ### What license do you use?
 
-n8n uses the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}. These licenses are based on the [fair-code](http://faircode.io) model.
+n8n uses the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md){:target=_blank .external-link}. These licenses are based on the [fair-code](https://faircode.io/) model.
 
 
 ### What source code is covered by the Sustainable Use License? 

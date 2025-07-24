@@ -31,5 +31,5 @@ From the top navigation bar, select the three dots in the upper right <img alt="
 
 ## From the command line
 
-* Export: See the [full list of commands ](/hosting/cli-commands/#export-workflows-and-credentials){:target="_blank" .external} for exporting workflows or credentials.
-* Import: See the [full list of commands ](/hosting/cli-commands/#import-workflows-and-credentials){:target="_blank" .external} for importing workflows or credentials.
+* Export: See the [full list of commands ](/hosting/cli-commands.md#export-workflows-and-credentials){:target="_blank" .external} for exporting workflows or credentials.
+* Import: See the [full list of commands ](/hosting/cli-commands.md#import-workflows-and-credentials){:target="_blank" .external} for importing workflows or credentials.

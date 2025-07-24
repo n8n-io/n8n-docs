@@ -2,13 +2,13 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Image operations 
 description: Documentation for the Image operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # OpenAI Image operations
 
-Use this operation to analyze or generate an image in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-base.openai/) for more information on the OpenAI node itself.
+Use this operation to analyze or generate an image in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
 
 ## Analyze Image
 
@@ -16,7 +16,7 @@ Use this operation to take in images and answer questions about them.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Analayze Image**.
 - **Model**: Select the model you want to use to generate an image. 
@@ -38,7 +38,7 @@ Use this operation to create an image from a text prompt.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai/).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Generate an Image**.
 - **Model**: Select the model you want to use to generate an image. 
@@ -58,4 +58,4 @@ Refer to [Create image | OpenAI](https://platform.openai.com/docs/api-reference/
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).

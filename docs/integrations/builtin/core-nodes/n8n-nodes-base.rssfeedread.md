@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: RSS Read
 description: Documentation for the RSS Read node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -25,5 +25,5 @@ Use the RSS Read node to read data from RSS feeds published on the internet.
 
 ## Related resources
 
-n8n provides a trigger node for RSS Read. You can find the trigger node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger/).
+n8n provides a trigger node for RSS Read. You can find the trigger node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md).
 

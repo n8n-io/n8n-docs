@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ServiceNow credentials
 description: Documentation for ServiceNow credentials. Use these credentials to authenticate ServiceNow in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # ServiceNow credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/)
+- [ServiceNow](/integrations/builtin/app-nodes/n8n-nodes-base.servicenow.md)
 
 ## Prerequisites
 

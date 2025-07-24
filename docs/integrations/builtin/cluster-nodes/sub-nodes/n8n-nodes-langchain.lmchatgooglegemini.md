@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Gemini Chat Model node documentation
 description: Learn how to use the Google Gemini Chat Model node in n8n. Follow technical documentation to integrate Google Gemini Chat Model node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -13,7 +13,7 @@ Use the Google Gemini Chat Model node to use Google's Gemini chat models with co
 On this page, you'll find the node parameters for the Google Gemini Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/googleai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"

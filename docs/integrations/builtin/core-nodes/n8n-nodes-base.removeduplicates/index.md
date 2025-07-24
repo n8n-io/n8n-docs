@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Remove Duplicates node documentation
 description: Documentation for the Remove Duplicates node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -100,7 +100,7 @@ When using the **Clear Deduplication History** operation, the following option i
 
 ## Templates and examples
 
-For templates using the Remove Duplicates node and examples of how to use it, refer to [Templates and examples](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples/).
+For templates using the Remove Duplicates node and examples of how to use it, refer to [Templates and examples](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md).
 
 ## Related resources
 

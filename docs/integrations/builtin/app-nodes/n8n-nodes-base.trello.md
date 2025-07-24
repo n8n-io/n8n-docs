@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Trello node documentation
 description: Learn how to use the Trello node in n8n. Follow technical documentation to integrate Trello node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: medium
 ---
 
@@ -13,8 +13,10 @@ Use the Trello node to automate work in Trello, and integrate Trello with other 
 On this page, you'll find a list of operations the Trello node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
+Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Strava Trigger node documentation
 description: Learn how to use the Strava Trigger node in n8n. Follow technical documentation to integrate Strava Trigger node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Strava Trigger node
@@ -10,7 +10,7 @@ contentType: integration
 [Strava](https://www.strava.com/){:target=_blank .external-link} is an internet service for tracking human exercise which incorporates social network features.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/strava/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/strava.md).
 ///
 
 ///  note  | Examples and templates

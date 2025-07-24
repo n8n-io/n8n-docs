@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: E-goi node documentation
 description: Learn how to use the E=goi node in n8n. Follow technical documentation to integrate E=goi node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # E-goi node
@@ -12,7 +12,7 @@ Use the E-goi node to automate work in E-goi, and integrate E-goi with other app
 On this page, you'll find a list of operations the E-goi node supports and links to more resources.
 
 /// note | Credentials
-Refer to [E-goi credentials](/integrations/builtin/credentials/egoi/) for guidance on setting up authentication. 
+Refer to [E-goi credentials](/integrations/builtin/credentials/egoi.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

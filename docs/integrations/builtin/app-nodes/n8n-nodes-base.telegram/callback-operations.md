@@ -2,13 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Telegram node Callback operations documentation
 description: Documentation for the Callback operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Callback operations.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
 # Telegram node Callback operations
 
-Use these operations to respond to callback queries sent from the in-line keyboard or in-line queries. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/) for more information on the Telegram node itself.
+Use these operations to respond to callback queries sent from the in-line keyboard or in-line queries. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Answer Query
 
@@ -16,11 +18,11 @@ Use this operation to send answers to callback queries sent from [inline keyboar
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
 * **Resource**: Select **Callback**.
 * **Operation**: Select **Answer Query**.
 * **Query ID**: Enter the unique identifier of the query you want to answer.
-    * To feed a Query ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node triggered on the **Callback Query**.
+    * To feed a Query ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node triggered on the **Callback Query**.
 * **Results**: Enter a JSON-serialized array of results you want to use as answers to the query. Refer to the Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult){:target=_blank .external-link} documentation for more information on formatting your array.
 
 Refer to the Telegram Bot API [answerCallbackQuery](https://core.telegram.org/bots/api#answercallbackquery){:target=_blank .external-link} documentation for more information.
@@ -42,11 +44,11 @@ Use this operation to send answers to callback queries sent from inline queries 
 
 Enter these parameters:
 
-* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram/).
+* **Credential to connect with**: Create or select an existing [Telegram credential](/integrations/builtin/credentials/telegram.md).
 * **Resource**: Select **Callback**.
 * **Operation**: Select **Answer Inline Query**.
 * **Query ID**: Enter the unique identifier of the query you want to answer.
-    * To feed a Query ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/) node triggered on the **Inline Query**.
+    * To feed a Query ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node triggered on the **Inline Query**.
 * **Results**: Enter a JSON-serialized array of results you want to use as answers to the query. Refer to the Telegram [InlineQueryResults](https://core.telegram.org/bots/api#inlinequeryresult){:target=_blank .external-link} documentation for more information on formatting your array.
 
 Telegram allows a maximum of 50 results per query.

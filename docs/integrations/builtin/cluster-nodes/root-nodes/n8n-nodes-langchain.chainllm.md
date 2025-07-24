@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Basic LLM Chain node documentation
 description: Learn how to use the Basic LLM Chain node in n8n. Follow technical documentation to integrate Basic LLM Chain node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -83,4 +83,4 @@ You might see this error in one of two scenarios:
 1. When you've set the **Prompt** to **Define below** and haven't entered anything in the **Text** field.
     * To resolve, enter a valid prompt in the **Text** field.
 2. When you've set the **Prompt** to **Connected Chat Trigger Node** and the incoming data has no field called `chatInput`. 
-    * The node expects the `chatInput` field. If your previous node doesn't have this field, add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node to edit an incoming field name to `chatInput`.
+    * The node expects the `chatInput` field. If your previous node doesn't have this field, add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node to edit an incoming field name to `chatInput`.

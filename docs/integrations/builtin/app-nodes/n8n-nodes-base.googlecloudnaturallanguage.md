@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Cloud Natural Language node documentation
 description: Learn how to use the Google Cloud Natural Language node in n8n. Follow technical documentation to integrate Google Cloud Natural Language node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Google Cloud Natural Language node
@@ -12,7 +12,7 @@ Use the Google Cloud Natural Language node to automate work in Google Cloud Natu
 On this page, you'll find a list of operations the Google Cloud Natural Language node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Cloud Natural Language credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

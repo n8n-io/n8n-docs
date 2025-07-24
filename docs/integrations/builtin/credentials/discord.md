@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Discord credentials
 description: Documentation for Discord credentials. Use these credentials to authenticate Discord in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/)
+- [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md)
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ To create an application with a bot and generate the **Bot Token**:
     - Refer to Discord's [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts){:target=_blank .external-link} documentation for more information about these installation contexts.
 9. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
 10. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes){:target=_blank .external-link} documentation for more information about these and other scopes.
-11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions){:target=_blank .external-link} documentation for more information. n8n recommends selecting these permissions for the [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/) node:
+11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions){:target=_blank .external-link} documentation for more information. n8n recommends selecting these permissions for the [Discord](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) node:
     - Manage Roles
     - Manage Channels
     - Read Messages/View Channels

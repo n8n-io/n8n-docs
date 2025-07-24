@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS Elastic Load Balancing node documentation
 description: Learn how to use the AWS Elastic Load Balancing node in n8n. Follow technical documentation to integrate AWS Elastic Load Balancing node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # AWS Elastic Load Balancing node
@@ -12,7 +12,7 @@ Use the AWS Elastic Load Balancing node to automate work in AWS ELB, and integra
 On this page, you'll find a list of operations the AWS ELB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws/){:target=_blank .external-link} for guidance on setting up authentication. 
+Refer to [AWS ELB credentials](/integrations/builtin/credentials/aws.md){:target=_blank .external-link} for guidance on setting up authentication. 
 ///
 
 ## Operations

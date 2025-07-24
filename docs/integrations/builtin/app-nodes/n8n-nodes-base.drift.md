@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Drift node documentation
 description: Learn how to use the Drift node in n8n. Follow technical documentation to integrate Drift node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Drift node
@@ -12,7 +12,7 @@ Use the Drift node to automate work in Drift, and integrate Drift with other app
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Drift credentials](/integrations/builtin/credentials/drift/) for guidance on setting up authentication. 
+Refer to [Drift credentials](/integrations/builtin/credentials/drift.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Functions Agent node documentation
 description: Learn how to use the OpenAI Functions Agent of the AI Agent node in n8n. Follow technical documentation to integrate the OpenAI Functions Agent into your workflows.
-contentType: integration
+contentType: [integration, reference]
 priority: critical
 ---
 
@@ -10,12 +10,12 @@ priority: critical
 
 Use the OpenAI Functions Agent node to use an [OpenAI functions model](https://platform.openai.com/docs/guides/function-calling){:target=_blank .external-link}. These are models that detect when a function should be called and respond with the inputs that should be passed to the function.
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/) for more information on the AI Agent node itself.
+Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/use-with-chat-trigger.md"
 
 /// note | OpenAI Chat Model required
-You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/) with this agent.
+You must use the [OpenAI Chat Model](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md) with this agent.
 ///
 
 ## Node parameters
@@ -48,10 +48,10 @@ Refine the OpenAI Functions Agent node's behavior using these options:
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

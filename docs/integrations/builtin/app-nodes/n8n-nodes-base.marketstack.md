@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: marketstack node documentation
 description: Learn how to use the marketstack node in n8n. Follow technical documentation to integrate marketstack node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 <!-- marketstack is not a typo. The brand name is all lowercase, so we match it -->
 # marketstack node
@@ -12,7 +12,7 @@ Use the marketstack node to automate work in marketstack, and integrate marketst
 On this page, you'll find a list of operations the marketstack node supports and links to more resources.
 
 /// note | Credentials
-Refer to [marketstack credentials](/integrations/builtin/credentials/marketstack/) for guidance on setting up authentication. 
+Refer to [marketstack credentials](/integrations/builtin/credentials/marketstack.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

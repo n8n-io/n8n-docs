@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: urlscan.io credentials
 description: Documentation for urlscan.io credentials. Use these credentials to authenticate urlscan.io in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # urlscan.io credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [urlscan.io](/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio/)
+- [urlscan.io](/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio.md)
 
 ## Prerequisites
 

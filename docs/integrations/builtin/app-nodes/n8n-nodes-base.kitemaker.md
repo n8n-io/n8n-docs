@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Kitemaker node documentation
 description: Learn how to use the Kitemaker node in n8n. Follow technical documentation to integrate Kitemaker node into your workflows.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Kitemaker node
@@ -12,7 +12,7 @@ Use the Kitemaker node to automate work in Kitemaker, and integrate Kitemaker wi
 On this page, you'll find a list of operations the Kitemaker node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker/) for guidance on setting up authentication. 
+Refer to [Kitemaker credentials](/integrations/builtin/credentials/kitemaker.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -2,7 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Send Email credentials
 description: Documentation for Send Email credentials. Use these credentials to authenticate Send Email in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 priority: high
 ---
 
@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md)
 
 ## Prerequisites
 
@@ -43,15 +43,15 @@ Refer to the quickstart guides for these common email providers.
 
 #### Gmail
 
-Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail).
+Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail.md).
 
 #### Outlook.com
 
-Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook).
+Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook.md).
 
 #### Yahoo
 
-Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo).
+Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo.md).
 
 ### My provider isn't listed
 

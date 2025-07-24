@@ -2,6 +2,7 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: If
 description: Documentation for the If node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: [integration, reference]
 priority: critical
 tags:
   - if
@@ -43,9 +44,9 @@ You can choose to keep data:
 
 ## Related resources
 
-Refer to [Splitting with conditionals](/flow-logic/splitting/) for more information on using conditionals to create complex logic in n8n.
+Refer to [Splitting with conditionals](/flow-logic/splitting.md) for more information on using conditionals to create complex logic in n8n.
 
-If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch/).
+If you need more than two conditional outputs, use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md).
 
 --8<-- "_snippets/integrations/builtin/core-nodes/data-types.md"
 

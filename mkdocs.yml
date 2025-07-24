@@ -57,6 +57,8 @@ extra:
     property: G-0SC4FF2FH9
     feedback:
       title: Was this page helpful?
+      # TODO: is this useful?
+      details: Explain your rating
       ratings:
         - icon: material/emoticon-happy-outline
           name: This page was helpful
@@ -82,6 +84,7 @@ extra_css:
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
   - _extra/javascript/extra.js
+  - _extra/javascript/feedback.js
 watch:
   - _glossary
   - _snippets
@@ -163,7 +166,7 @@ plugins:
   - search
   - exclude:
       glob:
-      # - integrations/builtin/*
+       - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

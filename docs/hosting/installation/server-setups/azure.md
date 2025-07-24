@@ -39,7 +39,7 @@ The remainder of the steps in this guide require you to set the Azure instance a
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/azure){:target=_blank .external-link}. The following steps tell you which file configures what and what you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/azure). The following steps tell you which file configures what and what you need to change.
 
 Clone the repository with the following command:
 

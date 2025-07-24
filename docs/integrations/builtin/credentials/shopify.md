@@ -21,11 +21,11 @@ You can use these credentials to authenticate the following nodes with Shopify.
 
 ## Related resources
 
-Refer to [Shopify's authentication documentation](https://shopify.dev/docs/apps/auth){:target=_blank .external-link} for more information about the service.
+Refer to [Shopify's authentication documentation](https://shopify.dev/docs/apps/auth) for more information about the service.
 
 ## Using access token
 
-To configure this credential, you'll need a [Shopify](https://shopify.com/){:target=_blank .external-link} admin account and:
+To configure this credential, you'll need a [Shopify](https://shopify.com/) admin account and:
 
 - Your **Shop Subdomain**
 - An **Access Token**: Generated when you create a custom app.
@@ -35,7 +35,7 @@ To set up the credential, you'll need to create and install a custom app:
 
 1. Enter your **Shop Subdomain**.
     - Your subdomain is within the URL: `https://<subdomain>.myshopify.com`. For example, if the full URL is `https://n8n.myshopify.com`, the Shop Subdomain is `n8n`.
-2. In Shopify, go to **Admin > Settings >** [**Apps and sales channels**](https://admin.shopify.com/settings/apps){:target=_blank .external-link}.
+2. In Shopify, go to **Admin > Settings >** [**Apps and sales channels**](https://admin.shopify.com/settings/apps).
 3. Select **Develop apps**.
 4. Select **Create a custom app**.
 
@@ -48,7 +48,7 @@ To set up the credential, you'll need to create and install a custom app:
 7. Select **Create app**.
 8. Select **Select scopes**. In the **Admin API access scopes** section, select the API scopes you want for your app.
     - To use all functionality in the [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md) node, add the `read_orders`, `write_orders`, `read_products`, and `write_products` scopes.
-    - Refer to [Shopify API Access Scopes](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} for more information on the available scopes.
+    - Refer to [Shopify API Access Scopes](https://shopify.dev/docs/api/usage/access-scopes) for more information on the available scopes.
 9. Select **Save**.
 10. Select **Install app**.
 11. In the modal window, select **Install app**.
@@ -56,11 +56,11 @@ To set up the credential, you'll need to create and install a custom app:
 13. Copy the **Admin API Access Token**. Enter this in your n8n credential as the **Access Token**.
 14. Copy the **API Secret Key**. Enter this in your n8n credential as the **APP Secret Key**.
 
-Refer to [Creating a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps){:target=_blank .external-link} and [Generate access tokens for custom apps in the Shopify admin](https://shopify.dev/docs/apps/build/authentication-authorization/access-token-types/generate-app-access-tokens-admin){:target=_blank .external-link} for more information on these steps.
+Refer to [Creating a custom app](https://help.shopify.com/en/manual/apps/app-types/custom-apps) and [Generate access tokens for custom apps in the Shopify admin](https://shopify.dev/docs/apps/build/authentication-authorization/access-token-types/generate-app-access-tokens-admin) for more information on these steps.
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Shopify partner](https://www.shopify.com/partners){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Shopify partner](https://www.shopify.com/partners) account and:
 
 - A **Client ID**: Generated when you create a custom app.
 - A **Client Secret**: Generated when you create a custom app.
@@ -69,10 +69,10 @@ To configure this credential, you'll need a [Shopify partner](https://www.shopif
 To set up the credential, you'll need to create and install a custom app:
 
 /// note | Custom app development
-Shopify provides templates for creating new apps. The instructions below only cover the elements necessary to set up your n8n credential. Refer to Shopify's [Build dev docs](https://shopify.dev/docs/apps/build){:target=_blank .external-link} for more information on building apps and working with app templates.
+Shopify provides templates for creating new apps. The instructions below only cover the elements necessary to set up your n8n credential. Refer to the [Shopify Build developer documentation](https://shopify.dev/docs/apps/build) for more information on building apps and working with app templates.
 ///
 
-1. Open your [Shopify Partner dashboard](https://partners.shopify.com/){:target=_blank .external-link}.
+1. Open your [Shopify Partner dashboard](https://partners.shopify.com/).
 2. Select **Apps** from the left navigation.
 3. Select **Create app**.
 4. In the **Use Shopify Partners** section, enter an **App name**.
@@ -110,7 +110,7 @@ If you don't see the option to **Create a custom app**, no one's enabled custom 
 
 To enable custom app development, you must log in either as a store owner or as a user with the **Enable app development** permission:
 
-1. In Shopify, go to **Admin > Settings >** [**Apps and sales channels**](https://admin.shopify.com/settings/apps){:target=_blank .external-link}.
+1. In Shopify, go to **Admin > Settings >** [**Apps and sales channels**](https://admin.shopify.com/settings/apps).
 2. Select **Develop apps**.
 3. Select **Allow custom app development**.
 4. Read the warning and information provided and select **Allow custom app development**.
@@ -118,5 +118,5 @@ To enable custom app development, you must log in either as a store owner or as 
 ### Forbidden credentials error
 
 <!-- vale off -->
-If you get a **Couldn't connect with these settings / Forbidden - perhaps check your credentials** warning when you test the credentials, this may be due to your app's [access scope](https://shopify.dev/docs/api/usage/access-scopes){:target=_blank .external-link} dependencies. For example, the `read_orders` scope also requires `read_products` scope. Review the scopes you have assigned and the action you're trying to complete.
+If you get a **Couldn't connect with these settings / Forbidden - perhaps check your credentials** warning when you test the credentials, this may be due to your app's [access scope](https://shopify.dev/docs/api/usage/access-scopes) dependencies. For example, the `read_orders` scope also requires `read_products` scope. Review the scopes you have assigned and the action you're trying to complete.
 <!-- vale on -->

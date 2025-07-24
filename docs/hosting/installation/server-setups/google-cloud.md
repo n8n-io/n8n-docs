@@ -36,7 +36,7 @@ Select **ENABLE** to enable the Kubernetes Engine API for this project.
 
 ## Create a cluster
 
-From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview){:target=_blank .external-link}, select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
+From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview), select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
 
 ## Set Kubectl context
 
@@ -44,7 +44,7 @@ The rest of the steps in this guide require you to set the GCP instance as the K
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp) locally. The following steps explain the file configuration and how to add your information.
 
 Clone the repository with the following command:
 

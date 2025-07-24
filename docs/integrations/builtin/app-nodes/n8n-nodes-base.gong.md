@@ -34,6 +34,6 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [Gong's documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} for more information about the service.
+Refer to [Gong's documentation](https://gong.app.gong.io/settings/api/documentation) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Mailchimp](https://www.mailchimp.com/){:target=_blank .external-link} account.
+Create a [Mailchimp](https://www.mailchimp.com/) account.
 
 ## Supported authentication methods
 
@@ -25,23 +25,22 @@ Refer to [Selecting an authentication method](#selecting-an-authentication-metho
 
 ## Related resources
 
-Refer to [Mailchimp's API documentation](https://mailchimp.com/developer/marketing/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Mailchimp's API documentation](https://mailchimp.com/developer/marketing/api/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Generate an API key in the [API keys section](https://us1.admin.mailchimp.com/account/api/){:target=_blank .external-link} of your Mailchimp account. Refer to [Mailchimp's Generate your API key documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key){:target=_blank .external-link} for more detailed instructions.
+- An **API Key**: Generate an API key in the [API keys section](https://us1.admin.mailchimp.com/account/api/) of your Mailchimp account. Refer to [Mailchimp's Generate your API key documentation](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) for more detailed instructions.
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register an application](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#register-your-application){:target=_blank .external-link}. Refer to the [Mailchimp OAuth2 documentation](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/){:target=_blank .external-link} for more information.
+If you need to configure OAuth2 from scratch, [register an application](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#register-your-application). Refer to the [Mailchimp OAuth2 documentation](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) for more information.
 
 ## Selecting an authentication method
 
 Mailchimp suggests using an API key if you're only accessing your own Mailchimp account's data:
 
-> Use an API key if you're writing code that tightly couples _your_ application's data to _your_ Mailchimp account's data. If you ever need to access _another person's_ Mailchimp account's data, you should be using OAuth 2 ([source](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#when-not-to-use-oauth-2){:target=_blank .external-link})
-
+> Use an API key if you're writing code that tightly couples _your_ application's data to _your_ Mailchimp account's data. If you ever need to access _another person's_ Mailchimp account's data, you should be using OAuth 2 ([source](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/#when-not-to-use-oauth-2))

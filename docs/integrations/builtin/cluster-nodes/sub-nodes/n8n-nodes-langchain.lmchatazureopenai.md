@@ -44,7 +44,7 @@ This node doesn't support the [`NO_PROXY` environment variable](/hosting/configu
 
 ## Related resources
 
-Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

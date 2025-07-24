@@ -62,6 +62,7 @@ CPU
 CPython
 CRMs?
 Cron
+crontab
 [Cc]rypto
 [Cc]ryptocurrenc(y|ies)
 [Cc]ybersecurity
@@ -69,6 +70,7 @@ Datadog
 [Dd]atacenters?
 Datastore
 [Dd]atetimes?
+DBeaver
 [Dd]edupe
 [Dd]eduplication
 DeepL
@@ -85,6 +87,7 @@ Emelia
 [Ee]nqueued?
 Entra
 [Ee]num
+ePolicy
 ERPNext
 [Ee]rroring
 ESLint
@@ -107,6 +110,7 @@ geocoded
 geocodes
 [Gg]eospatial
 GIMP
+[Gg]lob(bing)?
 Gotify
 Grafana
 Grok('s)?
@@ -142,6 +146,7 @@ Lemlist
 Lenovo
 [Ll]inter
 LLMs?
+LLMChain
 Luhn
 Luxon
 Magento
@@ -190,11 +195,13 @@ onboarding
 Onfleet
 Ortto
 Oura
+[Pp]asswordless
 PDFs?
 Peekalink
 [Pp]erformant
 PGVector
 PhantomBuster
+[Pp]icomatch
 Pinterest
 Pipedrive
 Pinecone
@@ -291,6 +298,7 @@ VERO
 Vhost
 VMs?
 Vonage
+Vue
 Vuex
 Wasabi's
 Weaviate('s)?

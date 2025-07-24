@@ -19,13 +19,13 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Odoo's External API documentation](https://www.odoo.com/documentation/17.0/developer/reference/external_api.html){:target=_blank .external-link} for more information about the service.
+Refer to [Odoo's External API documentation](https://www.odoo.com/documentation/17.0/developer/reference/external_api.html) for more information about the service.
 
-Refer to the Odoo [Getting Started tutorial](https://www.odoo.com/slides/getting-started-15){:target=_blank .external-link} if you're new to Odoo.
+Refer to the Odoo [Getting Started tutorial](https://www.odoo.com/slides/getting-started-15) if you're new to Odoo.
 
 ## Using API key
 
-To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/){:target=_blank .external-link} database and:
+To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/) database and:
 
 - Your **Site URL**
 - Your **Username**
@@ -44,11 +44,11 @@ To set up the credential with an API key:
 8. Copy the key and enter it as the **Password or API key** in your n8n credential.
 9. Enter your Odoo **Database name**, also known as the instance name.
 
-Refer to [Odoo API Keys](https://www.odoo.com/documentation/15.0/developer/reference/external_api.html?#api-keys){:target=_blank .external-link} for more information.
+Refer to [Odoo API Keys](https://www.odoo.com/documentation/15.0/developer/reference/external_api.html?#api-keys) for more information.
 
 ## Using password
 
-To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/){:target=_blank .external-link} database and:
+To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/) database and:
 
 - Your **Site URL**
 - Your **Username**
@@ -71,5 +71,5 @@ If you try a password credential and it doesn't work for a specific node functio
 /// note | Required plan type
 Access to the external API is only available on a **Custom** Odoo plan. (The One App Free or Standard plans won't give you access.)
 
-Refer to [Odoo Pricing Plans](https://www.odoo.com/pricing-plan){:target=_blank .external-link} for more information.
+Refer to [Odoo Pricing Plans](https://www.odoo.com/pricing-plan) for more information.
 ///

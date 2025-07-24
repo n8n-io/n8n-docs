@@ -16,7 +16,7 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 ## Create a server
 
-1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} to the Hetzner Cloud Console.
+1. [Log in](https://console.hetzner.cloud/) to the Hetzner Cloud Console.
 2. Select the project to host the server, or create a new project by selecting **+ NEW PROJECT**.
 3. Select **+ CREATE SERVER** on the project tile you want to add it to.
 
@@ -43,7 +43,7 @@ apt install docker-compose-plugin
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy) into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 

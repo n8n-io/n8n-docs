@@ -18,7 +18,7 @@ and links to more resources.
 * Use **Schema Type** to choose how you want to describe the desired output data format. You can choose between:
     * **From Attribute Descriptions**: This option allows you to define the schema by specifying the list of attributes and their descriptions.
     * **Generate From JSON Example**: Input an example JSON object to automatically generate the schema. The node uses the object property types and names. It ignores the actual values. n8n treats every field as mandatory when generating schemas from JSON examples.
-    * **Define using JSON Schema**: Manually input the JSON schema. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples){:target=_blank .external-link} for help creating a valid JSON schema.
+    * **Define using JSON Schema**: Manually input the JSON schema. Read the JSON Schema [guides and examples](https://json-schema.org/learn/miscellaneous-examples) for help creating a valid JSON schema.
 
 ## Node options
 

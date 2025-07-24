@@ -5,7 +5,7 @@ contentType: tutorial
 
 # Docker Installation
 
-[Docker](https://www.docker.com/){:target=_blank .external-link} offers the following advantages:
+[Docker](https://www.docker.com/) offers the following advantages:
 
 * Installs n8n in a clean environment.
 * Easier setup for your preferred database.
@@ -19,7 +19,7 @@ You can also use n8n in Docker with [Docker Compose](/hosting/installation/serve
 
 ## Prerequisites
 
-Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/){:target=_blank .external-link}.
+Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/).
 
 /// note | Linux Users
 Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.

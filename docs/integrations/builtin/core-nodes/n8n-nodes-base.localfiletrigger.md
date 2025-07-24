@@ -6,6 +6,7 @@ contentType: [integration, reference]
 priority: high
 ---
 
+<!-- vale Vale.Spelling["anymatch"] = NO -->
 # Local File Trigger node
 
 The Local File Trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed, or deleted.
@@ -39,7 +40,7 @@ Configure these parameters:
 Use the node **Options** to include or exclude files and folders.
 
 - **Include Linked Files/Folders**: also watch for changes to linked files or folders.
-- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch){:target=_blank .external-link} syntax.
+- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [anymatch](https://github.com/micromatch/anymatch) syntax.
 - **Max Folder Depth**: how deep into the folder structure to watch for changes.
 
 ### Examples for Ignore

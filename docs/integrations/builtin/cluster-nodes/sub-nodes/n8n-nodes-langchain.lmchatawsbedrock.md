@@ -21,7 +21,7 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Model**: Select the model that generates the completion.
 
-Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html){:target=_blank .external-link}.
+Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).
 
 ## Node options
 
@@ -39,7 +39,7 @@ This node doesn't support the [`NO_PROXY` environment variable](/hosting/configu
 
 ## Related resources
 
-Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

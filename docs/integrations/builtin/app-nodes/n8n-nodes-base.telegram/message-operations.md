@@ -6,6 +6,8 @@ contentType: [integration, reference]
 priority: critical
 ---
 
+<!-- vale Vale.Spelling["deleteMessage", "sendAnimation", "sendAudio", "sendDocument", "sendLocation", "sendMessage", "sendPhoto", "sendSticker", "sendVideo"] = NO -->
+
 # Telegram node Message operations
 
 Use these operations to send, edit, and delete messages in a chat; send files to a chat; and pin/unpin message from a chat. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
@@ -18,7 +20,7 @@ To use most of these operations, you must add your bot to a channel so that it c
 s
 ## Delete Chat Message
 
-Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} method.
+Use this operation to delete a message from chat using the Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage) method.
 
 Enter these parameters:
 
@@ -29,11 +31,11 @@ Enter these parameters:
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to delete.
 
-Refer to the Telegram Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [deleteMessage](https://core.telegram.org/bots/api#deletemessage) documentation for more information.
 
 ## Edit Message Text
 
-Use this operation to edit the text of an existing message using the Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext){:target=_blank .external-link} method.
+Use this operation to edit the text of an existing message using the Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext) method.
 
 Enter these parameters:
 
@@ -43,23 +45,23 @@ Enter these parameters:
 * **Chat ID**: Enter the Chat ID or username of the channel you wish to leave in the format `@channelusername`.
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to edit.
-* **Reply Markup**: Select whether to use the **Inline Keyboard** to display the InlineKeyboardMarkup **None** not to. This sets the `reply_markup` parameter. Refer to the [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup){:target=_blank .external-link} documentation for more information.
+* **Reply Markup**: Select whether to use the **Inline Keyboard** to display the InlineKeyboardMarkup **None** not to. This sets the `reply_markup` parameter. Refer to the [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) documentation for more information.
 * **Text**: Enter the text you want to edit the message to.
 
-Refer to the Telegram Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [editMessageText](https://core.telegram.org/bots/api#editmessagetext) documentation for more information.
 
 <!-- vale off -->
 ### Edit Message Text additional fields
 
 Use the **Additional Fields** to further refine the behavior of the node. Select **Add Field** to add any of the following:
 
-* **Disable WebPage Preview**: Select whether you want to enable link previews for links in this message (turned off) or disable link previews for links in this message (turned on). This sets the `link_preview_options` parameter for `is_disabled`. Refer to the [LinkPreviewOptions](https://core.telegram.org/bots/api#linkpreviewoptions){:target=_blank .external-link} documentation for more information.
+* **Disable WebPage Preview**: Select whether you want to enable link previews for links in this message (turned off) or disable link previews for links in this message (turned on). This sets the `link_preview_options` parameter for `is_disabled`. Refer to the [LinkPreviewOptions](https://core.telegram.org/bots/api#linkpreviewoptions) documentation for more information.
 * **Parse Mode**: Choose whether the message should be parsed using **HTML** (default), **Markdown (Legacy)**, or **MarkdownV2**. This sets the `parse_mode` parameter.
 <!-- vale on -->
 
 ## Pin Chat Message
 
-Use this operation to pin a message for the chat using the Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage){:target=_blank .external-link} method.
+Use this operation to pin a message for the chat using the Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage) method.
 
 Enter these parameters:
 
@@ -70,7 +72,7 @@ Enter these parameters:
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to pin.
 
-Refer to the Telegram Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [pinChatMessage](https://core.telegram.org/bots/api#pinchatmessage) documentation for more information.
 
 <!-- vale off -->
 ### Pin Chat Message additional fields
@@ -82,7 +84,7 @@ Use the **Additional Fields** to further refine the behavior of the node. Select
 
 ## Send Animation
 
-Use this operation to send GIFs or H.264/MPEG-4 AVC videos without sound up to 50 MB in size to the chat using the Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} method.
+Use this operation to send GIFs or H.264/MPEG-4 AVC videos without sound up to 50 MB in size to the chat using the Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation) method.
 
 Enter these parameters:
 
@@ -95,7 +97,7 @@ Enter these parameters:
 * **Animation**: If you aren't using the **Binary File**, enter the animation to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to the Telegram Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [sendAnimation](https://core.telegram.org/bots/api#sendanimation) documentation for more information.
 
 <!-- vale off -->
 ### Send Animation additional fields
@@ -106,7 +108,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Duration**: Enter the animation's duration in seconds.
 * **Height**: Enter the height of the animation.
-* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
@@ -119,7 +121,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ### Send Audio
 
-Use this operation to send an audio file to the chat and display it in the music player using the Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} method.
+Use this operation to send an audio file to the chat and display it in the music player using the Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio) method.
 
 Enter these parameters:
 
@@ -132,7 +134,7 @@ Enter these parameters:
 * **Audio**: If you aren't using the **Binary File**, enter the audio to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to the Telegram Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [sendAudio](https://core.telegram.org/bots/api#sendaudio) documentation for more information.
 
 <!-- vale off -->
 ### Send Audio additional fields
@@ -142,7 +144,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Caption**: Enter a caption text for the audio, max of 1024 characters.
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Duration**: Enter the audio's duration in seconds.
-* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 * **Performer**: Enter the name of the performer.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
@@ -155,7 +157,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ## Send Chat Action
 
-Use this operation when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less using the Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} method.
+Use this operation when you need to tell the user that something is happening on the bot's side. The status is set for 5 seconds or less using the Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction) method.
 
 Enter these parameters:
 
@@ -166,11 +168,11 @@ Enter these parameters:
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
 * **Action**: Select the action you'd like to broadcast the bot as taking. The options here include: **Find Location**, **Typing**, **Recording** audio or video, and **Uploading** file types.
 
-Refer to Telegram's Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendChatAction](https://core.telegram.org/bots/api#sendchataction) documentation for more information.
 
 ## Send Document
 
-Use this operation to send a document to the chat using the Bot API [sendDocument](https://core.telegram.org/bots/api#senddocument){:target=_blank .external-link} method.
+Use this operation to send a document to the chat using the Bot API [sendDocument](https://core.telegram.org/bots/api#senddocument) method.
 
 Enter these parameters:
 
@@ -183,7 +185,7 @@ Enter these parameters:
 * **Document**: If you aren't using the **Binary File**, enter the document to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to Telegram's Bot API [sendDocument](https://core.telegram.org/bots/api#sendchataction){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendDocument](https://core.telegram.org/bots/api#sendchataction) documentation for more information.
 
 <!--vale off-->
 ### Send Document additional fields
@@ -192,7 +194,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 * **Caption**: Enter a caption text for the file, max of 1024 characters.
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
-* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
@@ -203,7 +205,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ## Send Location
 
-Use this operation to send a geolocation to the chat using the Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} method.
+Use this operation to send a geolocation to the chat using the Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation) method.
 
 Enter these parameters:
 
@@ -216,7 +218,7 @@ Enter these parameters:
 * **Longitude**: Enter the longitude of the location.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to Telegram's Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendLocation](https://core.telegram.org/bots/api#sendlocation) documentation for more information.
 
 <!-- vale off -->
 ### Send Location additional fields
@@ -231,7 +233,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ## Send Media Group
 
-Use this operation to send a group of photos and/or videos using the Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} method.
+Use this operation to send a group of photos and/or videos using the Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup) method.
 
 Enter these parameters:
 
@@ -245,9 +247,9 @@ Enter these parameters:
     * **Media File**: Enter the media file to send. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
     * **Additional Fields**: For each media file, you can choose to add these fields:
         * **Caption**: Enter a caption text for the file, max of 1024 characters.
-        * **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+        * **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 
-Refer to Telegram's Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendMediaGroup](https://core.telegram.org/bots/api#sendmediagroup) documentation for more information.
 
 <!-- vale off -->
 ### Send Media Group additional fields
@@ -261,7 +263,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ## Send Message
 
-Use this operation to send a message to the chat using the Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage){:target=_blank .external-link} method.
+Use this operation to send a message to the chat using the Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage) method.
 
 Enter these parameters:
 
@@ -272,7 +274,7 @@ Enter these parameters:
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
 * **Text**: Enter the text to send, max 4096 characters after entities parsing.
 
-Refer to Telegram's Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendMessage](https://core.telegram.org/bots/api#sendmessage) documentation for more information.
 
 /// warning | Send Message limits
 Telegram limits the number of messages you can send to 30 per second. If you expect to hit this limit, refer to [Send more than 30 messages per second](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#send-more-than-30-messages-per-second) for a suggested workaround.
@@ -285,8 +287,8 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 * **Append n8n Attribution**: Choose whether to include the phrase `This message was sent automatically with n8n` to the end of the message (turned on, default) or not (turned off).
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
-* **Disable WebPage Preview**: Select whether you want to enable link previews for links in this message (turned off) or disable link previews for links in this message (turned on). This sets the `link_preview_options` parameter for `is_disabled`. Refer to the [LinkPreviewOptions](https://core.telegram.org/bots/api#linkpreviewoptions){:target=_blank .external-link} documentation for more information.
-* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+* **Disable WebPage Preview**: Select whether you want to enable link previews for links in this message (turned off) or disable link previews for links in this message (turned on). This sets the `link_preview_options` parameter for `is_disabled`. Refer to the [LinkPreviewOptions](https://core.telegram.org/bots/api#linkpreviewoptions) documentation for more information.
+* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 
@@ -356,7 +358,7 @@ The following options are also available:
 
 ## Send Photo
 
-Use this operation to send a photo to the chat using the Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} method.
+Use this operation to send a photo to the chat using the Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto) method.
 
 Enter these parameters:
 
@@ -369,7 +371,7 @@ Enter these parameters:
 * **Photo**: If you aren't using the **Binary File**, enter the photo to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to Telegram's Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendPhoto](https://core.telegram.org/bots/api#sendphoto) documentation for more information.
 
 <!-- vale off -->
 ### Send Photo additional fields
@@ -378,14 +380,14 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 * **Caption**: Enter a caption text for the file, max of 1024 characters.
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
-* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 <!-- vale on -->
 
 ## Send Sticker
 
-Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers using the Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} method.
+Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers using the Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker) method.
 
 Enter these parameters:
 
@@ -398,7 +400,7 @@ Enter these parameters:
 * **Sticker**: If you aren't using the **Binary File**, enter the photo to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to Telegram's Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendSticker](https://core.telegram.org/bots/api#sendsticker) documentation for more information.
 
 <!-- vale off -->
 ### Send Sticker additional fields
@@ -412,7 +414,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ## Send Video
 
-Use this operation to send a video to the chat using the Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} method.
+Use this operation to send a video to the chat using the Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo) method.
 
 Enter these parameters:
 
@@ -425,7 +427,7 @@ Enter these parameters:
 * **Video**: If you aren't using the **Binary File**, enter the video to send here. Pass a `file_id` to send a file that exists on the Telegram servers (recommended) or an HTTP URL for Telegram to get a file from the internet.
 * **Reply Markup**: Use this parameter to set more interface options. Refer to [Reply Markup parameters](#reply-markup-parameters) for more information on these options and how to use them.
 
-Refer to Telegram's Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo){:target=_blank .external-link} documentation for more information.
+Refer to Telegram's Bot API [sendVideo](https://core.telegram.org/bots/api#sendvideo) documentation for more information.
 
 <!-- vale off -->
 ### Send Video additional fields
@@ -436,7 +438,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 * **Disable Notification**: Choose whether to send the notification silently (turned on) or with a standard notification (turned off).
 * **Duration**: Enter the video's duration in seconds.
 * **Height**: Enter the height of the video.
-* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options){:target=_blank .external-link} for more information on these options.
+* **Parse Mode**: Enter the parser to use for any related text. Options include **HTML** (default), **Markdown (Legacy)**, **MarkdownV2**. Refer to Telegram's [Formatting options](https://core.telegram.org/bots/api#formatting-options) for more information on these options.
 * **Reply To Message ID**: If the message is a reply, enter the ID of the message it's replying to.
 * **Message Thread ID**: Enter a unique identifier for the target message thread (topic) of the forum; for forum supergroups only.
 * **Thumbnail**: Add the thumbnail of the file sent. Ignore this field if thumbnail generation for the file is supported server-side. The thumbnail should meet these specs:
@@ -449,7 +451,7 @@ Use the **Additional Fields** to further refine the behavior of the node using o
 
 ## Unpin Chat Message
 
-Use this operation to unpin a message from the chat using the Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage){:target=_blank .external-link} method.
+Use this operation to unpin a message from the chat using the Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage) method.
 
 Enter these parameters:
 
@@ -460,7 +462,7 @@ Enter these parameters:
     * To feed a Chat ID directly into this node, use the [Telegram Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) node. Refer to [Common Issues | Get the Chat ID](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/common-issues.md#get-the-chat-id) for more information.
 * **Message ID**: Enter the unique identifier of the message you want to unpin.
 
-Refer to the Telegram Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [unpinChatMessage](https://core.telegram.org/bots/api#unpinchatmessage) documentation for more information.
 
 ## Reply Markup parameters
 
@@ -490,13 +492,13 @@ If you select **Reply Markup > Force Reply**, choose from these **Force Reply** 
     * Users that are `@mentioned` in the text of the message.
     * The sender of the original message, if this Send Animation message is a reply to a message.
 
-Refer to [ForceReply](https://core.telegram.org/bots/api#forcereply){:target=_blank .external-link} for more information.
+Refer to [ForceReply](https://core.telegram.org/bots/api#forcereply) for more information.
 
 ### Inline Keyboard parameters
 
 If you select **Reply Markup > Inline Keyboard**, define the inline keyboard buttons you want to display using the **Add Button** option. To add more rows to your keyboard, use **Add Keyboard Row**.
 
-Refer to [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup){:target=_blank .external-link} and [InlineKeyboardButtons](https://core.telegram.org/bots/api#inlinekeyboardbutton){:target=_blank .external-link} for more information.
+Refer to [InlineKeyboardMarkup](https://core.telegram.org/bots/api#inlinekeyboardmarkup) and [InlineKeyboardButtons](https://core.telegram.org/bots/api#inlinekeyboardbutton) for more information.
 
 ### Reply Keyboard parameters
 
@@ -510,7 +512,7 @@ Use the **Reply Keyboard Options** to further refine the keyboard's behavior:
     * Users that are `@mentioned` in the text of the message.
     * The sender of the original message, if this Send Animation message is a reply to a message.
 
-Refer to [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup){:target=_blank .external-link} for more information.
+Refer to [ReplyKeyboardMarkup](https://core.telegram.org/bots/api#replykeyboardmarkup) for more information.
 
 ### Reply Keyboard Remove parameters
 
@@ -521,4 +523,4 @@ If you select **Reply Markup > Reply Keyboard Remove**, choose from these **Repl
     * Users that are `@mentioned` in the text of the message.
     * The sender of the original message, if this Send Animation message is a reply to a message.
 
-Refer to [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove){:target=_blank .external-link} for more information.
+Refer to [ReplyKeyboardRemove](https://core.telegram.org/bots/api#replykeyboardremove) for more information.

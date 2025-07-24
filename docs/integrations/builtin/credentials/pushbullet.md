@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Pushbullet](https://www.pushbullet.com/){:target=_blank .external-link} account.
+Create a [Pushbullet](https://www.pushbullet.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Pushbullet](https://www.pushbullet.com/){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Pushbullet's API documentation](https://docs.pushbullet.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Pushbullet's API documentation](https://docs.pushbullet.com/) for more information about the service.
 
 ## Using OAuth2
 

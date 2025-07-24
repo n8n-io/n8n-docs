@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-An available instance of [TimescaleDB](https://www.timescale.com/){:target=_blank .external-link}.
+An available instance of [TimescaleDB](https://www.timescale.com/).
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ An available instance of [TimescaleDB](https://www.timescale.com/){:target=_blan
 
 ## Related resources
 
-Refer to [Timescale's documentation](https://docs.timescale.com/){:target=_blank .external-link} for more information about the service.
+Refer to the [Timescale documentation](https://docs.timescale.com/) for more information about the service.
 
 ## Using database connection
 
@@ -38,4 +38,4 @@ To configure this credential, you'll need:
     - **Require**: Sets the `ssl-mode` parameter to `require`, which is the default for TimescaleDB connection strings. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
 - **Port**: The port number of the TimescaleDB server.
 
-Refer to [Timescale's connection settings documentation](https://docs.timescale.com/use-timescale/latest/integrations/query-admin/qstudio/#connection-settings){:target=_blank .external-link} for more information about the non-SSL fields. Refer to [Connect with a stricter SSL](https://docs.timescale.com/use-timescale/latest/security/strict-ssl/){:target=_blank .external-link} for more information about the SSL options.
+Refer to the [Timescale connection settings documentation](https://docs.timescale.com/use-timescale/latest/integrations/query-admin/qstudio/#connection-settings) for more information about the non-SSL fields. Refer to [Connect with a stricter SSL](https://docs.timescale.com/use-timescale/latest/security/strict-ssl/) for more information about the SSL options.

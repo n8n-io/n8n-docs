@@ -6,6 +6,7 @@ contentType: [integration, reference]
 priority: critical
 ---
 
+<!-- vale Vale.Spelling["getFile"] = NO -->
 # Telegram node File operations
 
 Use this operation to get a file from Telegram. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.
@@ -14,7 +15,7 @@ Use this operation to get a file from Telegram. Refer to [Telegram](/integration
 
 ## Get File
 
-Use this operation to get a file from Telegram using the Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} method.
+Use this operation to get a file from Telegram using the Bot API [getFile](https://core.telegram.org/bots/api#getfile) method.
 
 Enter these parameters:
 
@@ -24,4 +25,4 @@ Enter these parameters:
 * **File ID**: Enter the ID of the file you want to get.
 * **Download**: Choose whether you want the node to download the file (turned on) or not (turned off).
 
-Refer to the Telegram Bot API [getFile](https://core.telegram.org/bots/api#getfile){:target=_blank .external-link} documentation for more information.
+Refer to the Telegram Bot API [getFile](https://core.telegram.org/bots/api#getfile) documentation for more information.

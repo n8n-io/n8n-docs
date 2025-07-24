@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Matrix
-description: Documentation for the Matrix node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Matrix node documentation
+description: Learn how to use the Matrix node in n8n. Follow technical documentation to integrate Matrix node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Matrix
+# Matrix node
 
 Use the Matrix node to automate work in Matrix, and integrate Matrix with other applications. n8n has built-in support for a wide range of Matrix features, including getting current user's account information, sending media and messages to a room, and getting room members and messages.
 
 On this page, you'll find a list of operations the Matrix node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Matrix credentials](/integrations/builtin/credentials/matrix/) for guidance on setting up authentication. 
+Refer to [Matrix credentials](/integrations/builtin/credentials/matrix.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -38,5 +38,5 @@ Refer to [Matrix credentials](/integrations/builtin/credentials/matrix/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'matrix') ]]
+[[ templatesWidget(page.title, 'matrix') ]]
 

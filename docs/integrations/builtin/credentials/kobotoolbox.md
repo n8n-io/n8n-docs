@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: KoboToolbox credentials
 description: Documentation for KoboToolbox credentials. Use these credentials to authenticate KoboToolbox in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # KoboToolbox credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [KoboToolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger/)
-* [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/)
+* [KoboToolbox trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger.md)
+* [KoboToolbox](/integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox.md)
 
 ## Prerequisites
 

@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Git credentials
 description: Documentation for Git credentials. Use these credentials to authenticate Git in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Git credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git/)
+- [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git.md)
 
 ## Prerequisites
 

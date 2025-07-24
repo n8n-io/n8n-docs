@@ -21,7 +21,7 @@ This hosting guide shows you how to self-host n8n on Heroku. It uses:
 
 The quickest way to get started with deploying n8n to Heroku is using the **Deploy to Heroku** button:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/n8n-io/n8n-heroku/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/n8n-io/n8n-heroku/tree/main)
 
 This opens the **Create New App** page on Heroku. Set a name for the project, and choose the region to deploy the project to.
 
@@ -31,7 +31,7 @@ Heroku pre-fills the configuration options defined in the `env` section of the `
 
 You can change any of these values to suit your needs. You must change the following values:
 
-- **N8N_ENCRYPTION_KEY**, which n8n uses to [encrypt user account details](/hosting/configuration/environment-variables/deployment/) before saving to the database.
+- **N8N_ENCRYPTION_KEY**, which n8n uses to [encrypt user account details](/hosting/configuration/environment-variables/deployment.md) before saving to the database.
 - **WEBHOOK_URL** should match the application name you create to ensure that webhooks have the correct URL.
 
 ### Deploy n8n

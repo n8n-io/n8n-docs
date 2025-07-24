@@ -1,12 +1,12 @@
 Use the Code node to write custom JavaScript or Python and run it as a step in your workflow.
 
 /// note | Coding in n8n
-This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/) section. It includes:
+This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/index.md) section. It includes:
 
-* Reference documentation on [Built-in methods and variables](/code/builtin/overview/)
-* Guidance on [Handling dates](/code/cookbook/luxon/) and [Querying JSON](/code/cookbook/jmespath/)
-* A growing collection of examples in the [Cookbook](/code/cookbook/)
-/// 
+* Reference documentation on [Built-in methods and variables](/code/builtin/overview.md)
+* Guidance on [Handling dates](/code/cookbook/luxon.md) and [Querying JSON](/code/cookbook/jmespath.md)
+* A growing collection of examples in the [Cookbook](/code/cookbook/code-node/index.md)
+///
 
 /// note | Examples and templates
 For usage examples and templates to help you get started, refer to n8n's [Code integrations](https://n8n.io/integrations/code/){:target=_blank .external-link} page.
@@ -39,7 +39,7 @@ The Code node supports:
 
 ### External libraries
 
-If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer to the [Enable modules in Code node](/hosting/configuration/configuration-examples/modules-in-code-node/) guide.
+If you self-host n8n, you can import and use built-in and external npm modules in the Code node. To learn how to enable external modules, refer to the [Enable modules in Code node](/hosting/configuration/configuration-examples/modules-in-code-node.md) guide.
 
 If you use n8n Cloud, you can't import external npm modules. n8n makes two modules available for you:
 
@@ -48,10 +48,13 @@ If you use n8n Cloud, you can't import external npm modules. n8n makes two modul
 
 ### Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview/) for more information.
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview.md) for more information.
 
 The syntax to use the built-in methods and variables is `$variableName` or `$methodName()`. Type `$` in the Code node or expressions editor to see a list of suggested methods and variables.
 
+### Keyboard shortcuts
+
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. A full list can be found in the [list of keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md).
 
 ## Python
 
@@ -62,16 +65,20 @@ The Code node takes longer to process Python than JavaScript. This is due to the
 ///
 ### Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview/) for more information.
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview.md) for more information.
 
 The syntax to use the built-in methods and variables is `_variableName` or `_methodName()`. Type `_` in the Code node to see a list of suggested methods and variables.
+
+### Keyboard shortcuts
+
+The Code node editing environment supports time-saving and useful keyboard shortcuts for a range of operations from autocompletion to code-folding and using multiple-cursors. A full list can be found in the [list of keyboard shortcuts](/integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md).
 
 ## File system and HTTP requests
 
 You can't access the file system or make HTTP requests. Use the following nodes instead:
 
-* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) 
-* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
+* [Read/Write File From Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)
+* [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
 
 ## Coding in n8n
 
@@ -81,8 +88,8 @@ There are two places where you can use code in n8n: the Code node and the expres
 
 When working with the Code node, you need to understand the following concepts:
 
-* [Data structure](/data/data-structure/): understand the data you receive in the Code node, and requirements for outputting data from the node.
-* [Item linking](/data/data-mapping/data-item-linking/): learn how data items work, and how to link to items from previous nodes. You need to handle item linking in your code when the number of input and output items doesn't match.
+* [Data structure](/data/data-structure.md): understand the data you receive in the Code node, and requirements for outputting data from the node.
+* [Item linking](/data/data-mapping/data-item-linking/index.md): learn how data items work, and how to link to items from previous nodes. You need to handle item linking in your code when the number of input and output items doesn't match.
 
 ### Built-in methods and variables
 
@@ -92,7 +99,7 @@ n8n includes built-in methods and variables. These provide support for:
 * Accessing data about workflows, executions, and your n8n environment
 * Convenience variables to help with data and time
 
-Refer to [Built-in methods and variables](/code/builtin/overview) for more information.
+Refer to [Built-in methods and variables](/code/builtin/overview.md) for more information.
 
 
 

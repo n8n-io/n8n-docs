@@ -3,9 +3,9 @@
 contentType: howto
 ---
 
-# Manually install community nodes
+# Manually install community nodes from npm
 
-You can manually install community nodes on self-hosted n8n.
+You can manually install community nodes from the npm registry on self-hosted n8n.
 
 You need to manually install community nodes in the following circumstances:
 
@@ -51,7 +51,7 @@ npm uninstall n8n-nodes-nodeName
 ## Upgrade a community node
 
 /// warning | Breaking changes in versions
-Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#downgrade-a-community-node).
+Node developers may introduce breaking changes in new versions of their nodes. A breaking change is an update that breaks previous functionality. Depending on the node versioning approach that a node developer chooses, upgrading to a version with a breaking change could cause all workflows using the node to break. Be careful when upgrading your nodes. If you find that an upgrade causes issues, you can [downgrade](#upgrade-or-downgrade-to-a-specific-version).
 ///
 ### Upgrade to the latest version
 

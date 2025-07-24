@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: SyncroMSP
-description: Documentation for the SyncroMSP node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: SyncroMSP node documentation
+description: Learn how to use the SyncroMSP node in n8n. Follow technical documentation to integrate SyncroMSP node into your workflows.
+contentType: [integration, reference]
 ---
 
-# SyncroMSP
+# SyncroMSP node
 
 Use the SyncroMSP node to automate work in SyncroMSP, and integrate SyncroMSP with other applications. n8n has built-in support for a wide range of SyncroMSP features, including creating and deleting new customers, tickets, and contacts. 
 
 On this page, you'll find a list of operations the SyncroMSP node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp/) for guidance on setting up authentication. 
+Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -45,4 +45,4 @@ Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp/) f
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'syncromsp') ]]
+[[ templatesWidget(page.title, 'syncromsp') ]]

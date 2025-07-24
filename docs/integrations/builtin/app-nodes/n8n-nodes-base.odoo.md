@@ -1,19 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Odoo
-description: Documentation for the Odoo node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Odoo node documentation
+description: Learn how to use the Odoo node in n8n. Follow technical documentation to integrate Odoo node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Odoo
+# Odoo node
 
 Use the Odoo node to automate work in Odoo, and integrate Odoo with other applications. n8n has built-in support for a wide range of Odoo features, including creating, updating, deleting, and getting contracts, resources, and opportunities. 
 
 On this page, you'll find a list of operations the Odoo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Odoo credentials](/integrations/builtin/credentials/odoo/) for guidance on setting up authentication. 
+Refer to [Odoo credentials](/integrations/builtin/credentials/odoo.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -45,5 +48,5 @@ Refer to [Odoo credentials](/integrations/builtin/credentials/odoo/) for guidanc
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'odoo') ]]
+[[ templatesWidget(page.title, 'odoo') ]]
 

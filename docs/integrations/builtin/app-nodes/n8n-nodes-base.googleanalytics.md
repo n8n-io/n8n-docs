@@ -1,11 +1,12 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Google Analytics
-description: Documentation for the Google Analytics node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Google Analytics node documentation
+description: Learn how to use the Google Analytics node in n8n. Follow technical documentation to integrate Google Analytics node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Google Analytics
+# Google Analytics node
 
 Use the Google Analytics node to automate work in Google Analytics, and integrate Google Analytics with other applications. n8n has built-in support for a wide range of Google Analytics features, including returning reports and user activities.
 
@@ -13,8 +14,10 @@ Use the Google Analytics node to automate work in Google Analytics, and integrat
 On this page, you'll find a list of operations the Google Analytics node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Analytics credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Analytics credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -26,7 +29,7 @@ Refer to [Google Analytics credentials](/integrations/builtin/credentials/google
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'google-analytics') ]]
+[[ templatesWidget(page.title, 'google-analytics') ]]
 
 ## Related resources
 

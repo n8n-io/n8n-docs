@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: CrateDB
-description: Documentation for the CrateDB node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: CrateDB node documentation
+description: Learn how to use the CrateDB node in n8n. Follow technical documentation to integrate CrateDB node into your workflows.
+contentType: [integration, reference]
 ---
 
-# CrateDB
+# CrateDB node
 
 Use the CrateDB node to automate work in CrateDB, and integrate CrateDB with other applications. n8n has built-in support for a wide range of CrateDB features, including executing, inserting, and updating rows in the database.
 
 On this page, you'll find a list of operations the CrateDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb/) for guidance on setting up authentication. 
+Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -24,7 +24,7 @@ Refer to [CrateDB credentials](/integrations/builtin/credentials/cratedb/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'cratedb') ]]
+[[ templatesWidget(page.title, 'cratedb') ]]
 
 ## Node reference
 

@@ -58,18 +58,15 @@ Open the cloned repository in your code editor, and create a new folder called `
 
 ```ts
 import {
-	IExecuteFunctions,
-} from 'n8n-core';
-import {
 	IDataObject,
+	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	IRequestOptions,
 	NodeApiError,
 	NodeOperationError,
 } from 'n8n-workflow';
-
-import { OptionsWithUri } from 'request';
 
 export class Weather implements INodeType {
 	description: INodeTypeDescription = {
@@ -328,7 +325,7 @@ export class Weather implements INodeType {
 					throw new NodeOperationError(this.getNode(), `The operation "${operation}" is not known!`);
 				}
 
-				const options: OptionsWithUri = {
+				const options: IRequestOptions = {
 					method: 'GET',
 					qs,
 					uri: `https://api.openweathermap.org/data/2.5/${endpoint}`,
@@ -487,7 +484,7 @@ If you're running n8n via Docker, you will have to create a Docker image with th
 4. Build your Docker image:
 
 	```Dockerfile
-	# Replace <n8n-version-number> with the n8n release version number. 
+	# Replace <n8n-version-number> with the n8n release version number.
 	# For example, N8N_VERSION=0.177.0
 	docker build --build-arg N8N_VERSION=<n8n-version-number> --tag=customizedn8n .
 	```

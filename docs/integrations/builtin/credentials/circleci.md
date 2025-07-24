@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: CircleCI credentials
 description: Documentation for CircleCI credentials. Use these credentials to authenticate CircleCI in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # CircleCI credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [CircleCI](/integrations/builtin/app-nodes/n8n-nodes-base.circleci/)
+- [CircleCI](/integrations/builtin/app-nodes/n8n-nodes-base.circleci.md)
 
 ## Prerequisites
 

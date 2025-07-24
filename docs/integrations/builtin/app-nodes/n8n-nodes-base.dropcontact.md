@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Dropcontact
-description: Documentation for the Dropcontact node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Dropcontact node documentation
+description: Learn how to use the Dropcontact node in n8n. Follow technical documentation to integrate Dropcontact node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Dropcontact
+# Dropcontact node
 
 Use the Dropcontact node to automate work in Dropcontact, and integrate Dropcontact with other applications. n8n has built-in support for a wide range of Dropcontact features, including  fetching contacts. 
 
 On this page, you'll find a list of operations the Dropcontact node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact/) for guidance on setting up authentication. 
+Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -24,7 +24,7 @@ Refer to [Dropcontact credentials](/integrations/builtin/credentials/dropcontact
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'dropcontact') ]]
+[[ templatesWidget(page.title, 'dropcontact') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

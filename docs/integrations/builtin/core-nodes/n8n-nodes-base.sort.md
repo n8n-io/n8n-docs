@@ -2,6 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Sort
 description: Documentation for the Sort node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Sort
@@ -44,7 +46,7 @@ Enter your custom JavaScript code in the **Code** input field.
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'sort') ]]
+[[ templatesWidget(page.title, 'sort') ]]
 
 ## Related resources
 

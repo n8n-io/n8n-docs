@@ -1,19 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: ActiveCampaign
-description: Documentation for the ActiveCampaign node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: ActiveCampaign node documentation
+description: Learn how to use the ActiveCampaign node in n8n. Follow technical documentation to integrate ActiveCampaign node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# ActiveCampaign
+# ActiveCampaign node
 
 Use the ActiveCampaign node to automate work in ActiveCampaign, and integrate ActiveCampaign with other applications. n8n has built-in support for a wide range of ActiveCampaign features, including creating, getting, updating, and deleting accounts, contact, orders, e-commerce customers, connections, lists, tags, and deals.
 
 On this page, you'll find a list of operations the ActiveCampaign node supports and links to more resources.
 
 /// note | Credentials
-Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign/) for guidance on setting up authentication. 
+Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -81,7 +84,7 @@ Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activeca
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'activecampaign') ]]
+[[ templatesWidget(page.title, 'activecampaign') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

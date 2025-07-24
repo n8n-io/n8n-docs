@@ -82,7 +82,7 @@ n8n takes care to keep self-hosted data anonymous and avoids collecting sensitiv
         - DB_TYPE
         - N8N_VERSION_NOTIFICATIONS_ENABLED
         - N8N_DISABLE_PRODUCTION_MAIN_PROCESS
-        - [Execution variables](/hosting/configuration/environment-variables/executions)
+        - [Execution variables](/hosting/configuration/environment-variables/executions.md)
     - OS, RAM, and CPUs
     - Anonymous instance ID
  - IP address
@@ -118,7 +118,13 @@ To opt out of checking for new versions of n8n:
 export N8N_VERSION_NOTIFICATIONS_ENABLED=false
 ```
 
-See [configuration](/hosting/configuration/configuration-methods/) for more info on how to set environment variables.
+To disable the templates feature (prevents background health check calls):
+
+```bash
+export N8N_TEMPLATES_ENABLED=false
+```
+
+See [configuration](/hosting/configuration/configuration-methods.md) for more info on how to set environment variables.
 
 ### Data collection in n8n Cloud
 
@@ -126,11 +132,34 @@ n8n Cloud collects everything listed in [Data collection in self-hosted n8n](#da
 
 Additionally, in n8n Cloud, n8n uses [PostHog](https://posthog.com/){:target=_blank .external-link} to track events and visualise usage, including using session recordings. Session recordings comprise the data seen by a user on screen, with the exception of credential values. n8n's product team uses this data to improve the product. All recordings are deleted after 21 days.
 
+### AI in n8n
+
+To provide enhanced assistance, n8n integrates AI-powered features that leverage Large Language Models (LLMs).
+
+#### How n8n uses AI
+
+To assist and improve user experience, n8n may send specific context data to LLMs. This context data is strictly limited to information about the current workflow. n8n does not send any values from credential fields or actual output data to AI services. The data will not be incorporated, used, or retained to train the models of the AI services. Any data will be deleted after 30 days.
+
+#### When n8n shares data
+
+Data is only sent to AI services if workspaces have opted in to use the assistant. The Assistant is enabled by default for n8n Cloud users. When a workspace opts in to use the assistant, node-specific data is transmitted only during direct interactions and active sessions with the AI assistant, ensuring no unnecessary data sharing occurs.
+
+#### What n8n shares
+
+- **General Workflow Information**: This includes details about which nodes are present in your workflow, the number of items currently in the workflow, and whether the workflow is active.
+- **Input & Output Schemas of Nodes**: This includes the schema of all nodes with incoming data and the output schema of a node in question. We do not send the actual data value of the schema.
+- **Node Configuration**: This includes the operations, options, and settings chosen in the referenced node.
+- **Code and Expressions**: This includes any code or expressions in the node in question to help with debugging potential issues and optimizations.
+
+#### What n8n doesn't share
+
+- **Credentials**: Any values of the credential fields of your nodes.
+- **Output Data**: The actual data processed by your workflows.
+- **Sensitive Information**: Any personally identifiable information or other sensitive data that could compromise your privacy or security that you have not explicitly mentioned in node parameters or your code of a [Code Node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
+
 ### Documentation telemetry
 
-n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of n8n's documentation and whether users find what they're searching for. With your consent, you're helping n8n to make our documentation better.
-
-[Change cookie settings](#__consent){ .md-button }
+n8n's documentation (this website) uses cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of n8n's documentation and whether users find what they're searching for. With your consent, you're helping n8n to make our documentation better. You can control cookie consent using the cookie widget.
 
 ## Retention and deletion of personal identifiable data
 
@@ -152,7 +181,7 @@ If you choose to delete your n8n account, n8n deletes all customer data and even
 
 ### Self-hosted
 
-Self-hosted users should have their own PID policy and data deletion processes. Refer to [What you can do](/privacy-security/what-you-can-do/) for more information.
+Self-hosted users should have their own PID policy and data deletion processes. Refer to [What you can do](/privacy-security/what-you-can-do.md) for more information.
 
 ## Payment processor
 

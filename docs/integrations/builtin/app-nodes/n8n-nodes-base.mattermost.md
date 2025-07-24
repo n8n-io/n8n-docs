@@ -1,19 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mattermost
-description: Documentation for the Mattermost node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Mattermost node documentation
+description: Learn how to use the Mattermost node in n8n. Follow technical documentation to integrate Mattermost node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Mattermost
+# Mattermost node
 
 Use the Mattermost node to automate work in Mattermost, and integrate Mattermost with other applications. n8n has built-in support for a wide range of Mattermost features, including creating, deleting, and getting channels, and users, as well as posting messages, and adding reactions.
 
 On this page, you'll find a list of operations the Mattermost node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost/) for guidance on setting up authentication. 
+Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -45,7 +48,7 @@ Refer to [Mattermost credentials](/integrations/builtin/credentials/mattermost/)
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'mattermost') ]]
+[[ templatesWidget(page.title, 'mattermost') ]]
 
 ## Related resources
 

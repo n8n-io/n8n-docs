@@ -21,7 +21,7 @@ N8N_HOST:N8N_PORT/N8N_PATH/api/v<api-version-number>/docs
 The API version number is `1`. There may be multiple versions available in the future.
 
 /// warning | Real data
-If you click **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. Be aware you can change or delete real data.
+If you select **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. Be aware you can change or delete real data.
 ///
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 

@@ -2,15 +2,15 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Onfleet credentials
 description: Documentation for Onfleet credentials. Use these credentials to authenticate Onfleet in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Onfleet credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Onfleet](/integrations/builtin/app-nodes/n8n-nodes-base.onfleet/)
-- [Onfleet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger/)
+- [Onfleet](/integrations/builtin/app-nodes/n8n-nodes-base.onfleet.md)
+- [Onfleet Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger.md)
 
 ## Prerequisites
 

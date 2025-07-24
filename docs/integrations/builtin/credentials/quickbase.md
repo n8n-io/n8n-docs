@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Quick Base credentials
 description: Documentation for Quick Base credentials. Use these credentials to authenticate Quick Base in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Quick Base credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase/)
+- [Quick Base](/integrations/builtin/app-nodes/n8n-nodes-base.quickbase.md)
 
 ## Prerequisites
 

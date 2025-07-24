@@ -2,7 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Markdown
 description: Documentation for the Markdown node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Markdown
@@ -84,7 +85,7 @@ Some of the options depend on each other or can interact. We recommend testing o
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'markdown') ]]
+[[ templatesWidget(page.title, 'markdown') ]]
 
 ## Parsers
 

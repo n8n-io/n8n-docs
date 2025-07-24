@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Paddle credentials
 description: Documentation for Paddle credentials. Use these credentials to authenticate Paddle in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Paddle credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Paddle](/integrations/builtin/app-nodes/n8n-nodes-base.paddle/)
+- [Paddle](/integrations/builtin/app-nodes/n8n-nodes-base.paddle.md)
 
 ## Prerequisites
 

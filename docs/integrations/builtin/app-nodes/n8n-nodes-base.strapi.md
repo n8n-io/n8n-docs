@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Strapi
-description: Documentation for the Strapi node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Strapi node documentation
+description: Learn how to use the Strapi node in n8n. Follow technical documentation to integrate Strapi node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Strapi
+# Strapi node
 
 Use the Strapi node to automate work in Strapi, and integrate Strapi with other applications. n8n has built-in support for a wide range of Strapi features, including creating and deleting entries. 
 
 On this page, you'll find a list of operations the Strapi node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for guidance on setting up authentication. 
+Refer to [Strapi credentials](/integrations/builtin/credentials/strapi.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -27,7 +27,7 @@ Refer to [Strapi credentials](/integrations/builtin/credentials/strapi/) for gui
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'strapi') ]]
+[[ templatesWidget(page.title, 'strapi') ]]
 
 ## Related resources
 

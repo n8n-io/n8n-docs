@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: DeepL credentials
 description: Documentation for DeepL credentials. Use these credentials to authenticate DeepL in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # DeepL credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [DeepL](/integrations/builtin/app-nodes/n8n-nodes-base.deepl/)
+- [DeepL](/integrations/builtin/app-nodes/n8n-nodes-base.deepl.md)
 
 
 ## Prerequisites

@@ -1,13 +1,14 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Local File trigger
-description: Documentation for the Local File trigger node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+title: Local File Trigger node documentation
+description: Learn how to use the Local File Trigger node in n8n. Follow technical documentation to integrate Local File Trigger node into your workflows.
+contentType: [integration, reference]
+priority: high
 ---
 
-# Local File trigger
+# Local File Trigger node
 
-The Local File trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed, or deleted.
+The Local File Trigger node starts a workflow when it detects changes on the file system. These changes involve a file or folder getting added, changed, or deleted.
 
 /// note | Self-hosted n8n only
 This node isn't available on n8n Cloud.
@@ -60,4 +61,4 @@ Ignore a sub-directory of a directory you're watching:
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'local-file-trigger') ]]
+[[ templatesWidget(page.title, 'local-file-trigger') ]]

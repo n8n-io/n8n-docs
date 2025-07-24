@@ -1,18 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Facebook Graph API
-description: Documentation for the Facebook Graph API node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Facebook Graph API node documentation
+description: Learn how to use the Facebook Graph API node in n8n. Follow technical documentation to integrate Facebook Graph API node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# Facebook Graph API
+# Facebook Graph API node
 
 Use the Facebook Graph API node to automate work in Facebook Graph API, and integrate Facebook Graph API with other applications. n8n has built-in support for a wide range of Facebook Graph API features, including using queries GET POST DELETE for several parameters like host URL, request methods and much more.
 
 On this page, you'll find a list of operations the Facebook Graph API node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph/) for guidance on setting up authentication. 
+Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/facebookgraph.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -28,6 +29,8 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 
 
 ### Parameters
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 * **Host URL**: The host URL for the request. The following options are available:
     * **Default**: Requests are passed to the `graph.facebook.com` host URL. Used for the majority of requests.
@@ -46,4 +49,4 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'facebook-graph-api') ]]
+[[ templatesWidget(page.title, 'facebook-graph-api') ]]

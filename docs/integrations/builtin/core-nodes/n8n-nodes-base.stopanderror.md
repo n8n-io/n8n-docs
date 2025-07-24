@@ -2,7 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Stop And Error
 description: Documentation for the Stop And Error node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
+priority: high
 ---
 
 # Stop And Error
@@ -31,11 +32,11 @@ The Error Object Error Type adds one parameter, the **Error Object**. Enter a JS
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'stop-and-error') ]]
+[[ templatesWidget(page.title, 'stop-and-error') ]]
 
 ## Related resources
 
-You can use the Stop And Error node with the [Error trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/) node.
+You can use the Stop And Error node with the [Error trigger](/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md) node.
 
-Read more about [Error workflows](/flow-logic/error-handling/) in n8n workflows.
+Read more about [Error workflows](/flow-logic/error-handling.md) in n8n workflows.
 

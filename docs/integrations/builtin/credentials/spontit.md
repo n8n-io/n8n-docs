@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Spontit credentials
 description: Documentation for Spontit credentials. Use these credentials to authenticate Spontit in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Spontit credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit/)
+- [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit.md)
 
 ## Prerequisites
 

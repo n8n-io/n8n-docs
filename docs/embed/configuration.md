@@ -1,5 +1,7 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: n8n Embed Configuration
+description: Learn how to configure your n8n Embed.
 contentType: howto
 ---
 
@@ -9,13 +11,13 @@ contentType: howto
 
 ## Authentication
 
-You can secure n8n by setting up [User management](/user-management/), n8n's built-in authentication feature.
+You can secure n8n by setting up [User management](/user-management/index.md), n8n's built-in authentication feature.
 
-n8n supports [LDAP](/user-management/ldap/) and [SAML](/user-management/saml/).
+n8n supports [LDAP](/user-management/ldap.md) and [SAML](/user-management/saml/index.md).
 
 ### Credential overwrites
 
-To offer OAuth login to users, it's possible to overwrite credentials on a global basis. This credential data isn't visible to users but the backend uses it automatically.
+To offer OAuth login to users, it's possible to overwrite [credentials](/glossary.md#credential-n8n) on a global basis. This credential data isn't visible to users but the backend uses it automatically.
 
 In the Editor UI, n8n hides all overwritten fields by default. This means that users are able to authenticate using  OAuth by pressing the "connect" button on the credentials.
 
@@ -23,7 +25,7 @@ n8n offers two ways to apply credential overwrites: using Environment Variable a
 
 #### Using environment variables
 
-Credential overwrites can be set using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
+You can set credential overwrites using environment variable by setting the `CREDENTIALS_OVERWRITE_DATA` to `{ CREDENTIAL_NAME: { PARAMETER: VALUE }}`.
 
 /// warning
 Even though this is possible, it isn't recommended. Environment variables aren't protected in n8n, so the data can leak to users.
@@ -67,13 +69,13 @@ For example:
     ```
 
 /// note
-There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`. 
-In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) which will be used by all child-credentials (`googleSheetsOAuth2Api`).
+There are cases when credentials are based on others. For example, the `googleSheetsOAuth2Api` extends the `googleOAuth2Api`.
+In this case, you can set parameters on the parent credentials (`googleOAuth2Api`) for all child-credentials (`googleSheetsOAuth2Api`) to use.
 ///
 
 ## Environment variables
 
-There are many [environment variables configurable in n8n](https://docs.n8n.io/reference/environment-variables.html). The following are most relevant for your hosted solution:
+n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
@@ -81,10 +83,10 @@ There are many [environment variables configurable in n8n](https://docs.n8n.io/r
 | `EXECUTIONS_DATA_PRUNE` | Boolean | `true` | Whether to delete data of past executions on a rolling basis. |
 | `EXECUTIONS_DATA_MAX_AGE` | Number | `336` | The execution age (in hours) before it's deleted. |
 | `EXECUTIONS_DATA_PRUNE_MAX_COUNT` | Number | `10000` | Maximum number of executions to keep in the database. 0 = no limit |
-| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.filesreadwrite\"]"` |
+| `NODES_EXCLUDE` | Array of strings | - | Specify which nodes not to load. For example, to block nodes that can be a security risk if users aren't trustworthy: `NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.readWriteFile\"]"` |
 | `NODES_INCLUDE` | Array of strings | - | Specify which nodes to load. |
-| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable workflow templates (true) or disable (false). |
-| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates/) for more information. |
+| `N8N_TEMPLATES_ENABLED` | Boolean | `true` | Enable [workflow templates](/glossary.md#template-n8n) (true) or disable (false). |
+| `N8N_TEMPLATES_HOST` | String | `https://api.n8n.io` | Change this if creating your own workflow template library. Note that to use your own workflow templates library, your API must provide the same endpoints and response structure as n8n's. Refer to [Workflow templates](/workflows/templates.md) for more information. |
 
 ## Backend hooks
 
@@ -94,18 +96,18 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 
 | Hook     | Arguments | Description |
 | :------- | :---------| :---------- |
-| `credentials.create` | `[credentialData: ICredentialsDb]` | Called before new credentials get created. Can be used to restrict the number of credentials. |
+| `credentials.create` | `[credentialData: ICredentialsDb]` | Called before new credentials get created. Use to restrict the number of credentials. |
 | `credentials.delete` | `[id: credentialId]` | Called before credentials get deleted. |
 | `credentials.update` | `[credentialData: ICredentialsDb]` | Called before existing credentials are saved. |
 | `frontend.settings` | `[frontendSettings: IN8nUISettings]` | Gets called on n8n startup. Allows you to, for example, overwrite frontend data like the displayed OAuth URL. |
-| `n8n.ready` | `[app: App]` | Called once n8n is ready. Can be used to, for example, register custom API endpoints. |
+| `n8n.ready` | `[app: App]` | Called once n8n is ready. Use to, for example, register custom API endpoints. |
 | `n8n.stop` |  | Called when an n8n process gets stopped. Allows you to save some process data. |
-| `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Can be used to overwrite an OAuth callback URL. |
-| `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Can be used to overwrite an OAuth callback URL. |
-| `workflow.activate` | `[workflowData: IWorkflowDb]` | Called before a workflow gets activated. Can be used to restrict the number of active workflows. |
+| `oauth1.authenticate` | `[oAuthOptions: clientOAuth1.Options, oauthRequestData: {oauth_callback: string}]` | Called before an OAuth1 authentication. Use to overwrite an OAuth callback URL. |
+| `oauth2.callback` | `[oAuth2Parameters: {clientId: string, clientSecret: string \| undefined, accessTokenUri: string, authorizationUri: string, redirectUri: string, scopes: string[]}]` | Called in an OAuth2 callback. Use to overwrite an OAuth callback URL. |
+| `workflow.activate` | `[workflowData: IWorkflowDb]` | Called before a workflow gets activated. Use to restrict the number of active workflows. |
 | `workflow.afterDelete` | `[workflowId: string]` | Called after a workflow gets deleted. |
 | `workflow.afterUpdate` | `[workflowData: IWorkflowBase]` | Called after an existing workflow gets saved. |
-| `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Can be used to restrict the number of saved workflows. |
+| `workflow.create` | `[workflowData: IWorkflowBase]` | Called before a workflow gets created. Use to restrict the number of saved workflows. |
 | `workflow.delete` | `[workflowId: string]` | Called before a workflow gets delete. |
 | `workflow.postExecute` | `[run: IRun, workflowData: IWorkflowBase]` | Called after a workflow gets executed. |
 | `workflow.preExecute` | `[workflow: Workflow: mode: WorkflowExecuteMode]` | Called before a workflow gets executed. Allows you to count or limit the number of workflow executions. |
@@ -113,18 +115,18 @@ It's possible to define external hooks that n8n executes whenever a specific ope
 
 ### Registering hooks
 
-Hooks are set by registering a hook file that contains the hook functions. 
-Hook registration is done using the environment variable `EXTERNAL_HOOK_FILES`. 
+Set hooks by registering a hook file that contains the hook functions.
+To register a hook, set the environment variable `EXTERNAL_HOOK_FILES`.
 
-The variable can be set to a single file: 
+You can set the variable to a single file:
 
-`EXTERNAL_HOOK_FILES=/data/hook.js` 
+`EXTERNAL_HOOK_FILES=/data/hook.js`
 
-Or to contain multiple files separated by a semicolon: 
+Or to contain multiple files separated by a semicolon:
 
 `EXTERNAL_HOOK_FILES=/data/hook1.js;/data/hook2.js`
 
-### Hook files
+### Backend hook files
 
 Hook files are regular JavaScript files that have the following format:
 
@@ -142,7 +144,7 @@ module.exports = {
         "activate": [
             async function (workflowData) {
                 const activeWorkflows = await this.dbCollections.Workflow.count({ active: true });
- 
+
                 if (activeWorkflows > 1) {
                     throw new Error(
                         'Active workflow limit reached.'
@@ -154,31 +156,33 @@ module.exports = {
 }
 ```
 
-### Hook functions
+### Backend hook functions
 
 A hook or a hook file can contain multiple hook functions, with all functions executed one after another.
+
 If the parameters of the hook function are objects, it's possible to change the data of that parameter to change the behavior of n8n.
-Additionally, the database can also be accessed in any hook function using `this.dbCollections` (see above).
+
+You can also access the database in any hook function using `this.dbCollections` (refer to the code sample in [Backend hook files](#backend-hook-files).
 
 ## Frontend external hooks
 
-Like backend external hooks, it's possible to define external hooks in the frontend code that get executed by n8n whenever a specific operation is performed. They can be used, for example, to log data and change data.
+Like backend external hooks, it's possible to define external hooks in the frontend code that get executed by n8n whenever a user performs a specific operation. You can use them, for example, to log data and change data.
 
 ### Available hooks
 
 | Hook     | Description |
 | :------- | :---------- |
-| `credentialsEdit.credentialTypeChanged` | Called when an existing credential's type is changed. |
-| `credentials.create` | Called when a new credential is created. |
+| `credentialsEdit.credentialTypeChanged` | Called when an existing credential's type changes. |
+| `credentials.create` | Called when someone creates a new credential. |
 | `credentialsList.dialogVisibleChanged` |  |
 | `dataDisplay.nodeTypeChanged` |  |
-| `dataDisplay.onDocumentationUrlClick` | Called when the help documentation link is selected. |
-| `execution.open` | Called when an existing execution is opened. |
-| `executionsList.openDialog` | Called when the an execution is selected from existing Workflow Executions. |
+| `dataDisplay.onDocumentationUrlClick` | Called when someone selects the help documentation link. |
+| `execution.open` | Called when an existing execution opens. |
+| `executionsList.openDialog` | Called when someone selects an execution from existing Workflow Executions. |
 | `expressionEdit.itemSelected` |  |
 | `expressionEdit.dialogVisibleChanged` |  |
 | `nodeCreateList.filteredNodeTypesComputed` |  |
-| `nodeCreateList.nodeFilterChanged` | Called when a new entry has been made in the node panel filter. |
+| `nodeCreateList.nodeFilterChanged` | Called when someone makes any changes to the node panel filter. |
 | `nodeCreateList.selectedTypeChanged` |  |
 | `nodeCreateList.mounted` |  |
 | `nodeCreateList.destroyed` |  |
@@ -193,24 +197,24 @@ Like backend external hooks, it's possible to define external hooks in the front
 | `runData.displayModeChanged` |  |
 | `workflow.activeChange` |  |
 | `workflow.activeChangeCurrent` |  |
-| `workflow.afterUpdate` | Called when an existing workflow is updated. |
+| `workflow.afterUpdate` | Called when someone updates an existing workflow. |
 | `workflow.open` |  |
 | `workflowRun.runError` |  |
-| `workflowRun.runWorkflow` | Called when a workflow is executed. |
+| `workflowRun.runWorkflow` | Called when a workflow executes. |
 | `workflowSettings.dialogVisibleChanged` |  |
-| `workflowSettings.saveSettings` | Called when the settings of a workflow are saved. |
+| `workflowSettings.saveSettings` | Called when someone saves the settings of a workflow. |
 
 ### Registering hooks
 
-Hooks can be set by loading the hooks script on the page. One way to do this is by creating a hooks file in the project and adding a script tag in your `editor-ui/public/index.html` file:
+You can set hooks by loading the hooks script on the page. One way to do this is by creating a hooks file in the project and adding a script tag in your `editor-ui/public/index.html` file:
 
 ```html
 <script src="frontend-hooks.js"></script>
 ```
 
-### Hook files
+### Frontend hook files
 
-Hook files are regular JavaScript files which have the following format:
+Frontend external hook files are regular JavaScript files which have the following format:
 
 ```js
 window.n8nExternalHooks = {
@@ -237,9 +241,9 @@ window.n8nExternalHooks = {
 };
 ```
 
-### Hook functions
+### Frontend hook functions
 
-Multiple hook functions can be defined per hook. Each hook function is invoked with the following arguments arguments:
+You can define multiple hook functions per hook. Each hook function is invoked with the following arguments arguments:
 
-* `store`: The Vuex store object. Can be used to change or get data from the store.
-* `metadata`: Object that contains any data provided by the hook. To see exactly what's passed, search for the hook in the `editor-ui` package.
+* `store`: The Vuex store object. You can use this to change or get data from the store.
+* `metadata`: The object that contains any data provided by the hook. To see what's passed, search for the hook in the `editor-ui` package.

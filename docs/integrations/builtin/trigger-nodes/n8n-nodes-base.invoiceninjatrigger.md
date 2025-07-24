@@ -1,16 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Invoice Ninja trigger
-description: Documentation for the Invoice Ninja trigger node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Invoice Ninja Trigger node documentation
+description: Learn how to use the Invoice Ninja Trigger node in n8n. Follow technical documentation to integrate Invoice Ninja Trigger node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Invoice Ninja trigger
+# Invoice Ninja Trigger node
 
-[Invoice Ninja](https://www.invoiceninja.com/) is a free open-source online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking, & time-tasks.
+[Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .external-link} is a free open-source online invoicing app for freelancers & businesses. It offers invoicing, payments, expense tracking, & time-tasks.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/invoiceninja/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/invoiceninja.md).
 ///
 
 ///  note  | Examples and templates

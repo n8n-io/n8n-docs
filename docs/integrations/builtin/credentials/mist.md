@@ -2,6 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mist credentials
 description: Documentation for the Mist credentials. Use these credentials to authenticate Mist in n8n, a workflow automation platform.
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Mist credentials
@@ -20,7 +22,7 @@ Create a [Mist](https://www.mist.com/){:target=_blank .external-link} account an
 
 Refer to [Mist's documentation](https://www.mist.com/documentation/mist-api-introduction/){:target=_blank .external-link} for more information about the service. If you're logged in to your Mist account, go to [https://api.mist.com/api/v1/docs/Home](https://api.mist.com/api/v1/docs/Home){:target=_blank .external-link} to view the full API documentation.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/mist/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/mist/){:target=_blank .external-link} on n8n's website.
 
 ## Using API token
 

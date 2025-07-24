@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Automizy
-description: Documentation for the Automizy node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Automizy node documentation
+description: Learn how to use the Automizy node in n8n. Follow technical documentation to integrate Automizy node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Automizy
+# Automizy node
 
 Use the Automizy node to automate work in Automizy, and integrate Automizy with other applications. n8n has built-in support for a wide range of Automizy features, including creating, reading, listing, updating, deleting contacts, and lists.
 
 On this page, you'll find a list of operations the Automizy node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Automizy credentials](/integrations/builtin/credentials/automizy/) for guidance on setting up authentication. 
+Refer to [Automizy credentials](/integrations/builtin/credentials/automizy.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -33,4 +33,4 @@ Refer to [Automizy credentials](/integrations/builtin/credentials/automizy/) for
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'automizy') ]]
+[[ templatesWidget(page.title, 'automizy') ]]

@@ -8,15 +8,15 @@ contentType: howto
 Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.
 
 /// note | Log streaming
-n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming/), in addition to the logging options described in this document.
+n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming.md), in addition to the logging options described in this document.
 ///
 ## Setup
 
-To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/))
+To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/index.md))
 
 | Setting in the configuration file | Using environment variables | Description |
 |-----------------------------------|-----------------------------|-------------|
-| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, verbose, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
+| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
 | n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
 | n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
 | n8n.log.file.maxsize | N8N_LOG_FILE_SIZE_MAX | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
@@ -48,7 +48,6 @@ n8n uses standard log levels to report:
 - `error`: outputs only errors and nothing else
 - `warn`: outputs errors and warning messages
 - `info`: contains useful information about progress
-- `verbose`: make n8n output additional information about progress that allows you to further understand what's happening
 - `debug`: the most verbose output. n8n outputs a lot of information to help you debug issues.
 
 
@@ -60,11 +59,11 @@ During development, adding log messages is a good practice. It assists in debugg
 
 n8n uses the `LoggerProxy` class, located in the `workflow` package. Calling the `LoggerProxy.init()` by passing in an instance of `Logger`, initializes the class before the usage.
 
-The initialization process happens only once. The [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/commands/start.ts) file already does this process for you. If you are creating a new command from scratch, you need to initialize the `LoggerProxy` class.
+The initialization process happens only once. The [`start.ts`](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) file already does this process for you. If you are creating a new command from scratch, you need to initialize the `LoggerProxy` class.
 
 Once the `Logger` implementation gets created in the `cli` package, it can be obtained by calling the `getInstance` convenience method from the exported module.
 
-Check the [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/commands/start.ts) file to learn more about how this process works.
+Check the [start.ts](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/commands/start.ts) file to learn more about how this process works.
 
 ### Adding logs
 
@@ -84,10 +83,6 @@ import {
 // Info-level logging of a trigger function, with workflow name and workflow ID as additional metadata properties
 
 Logger.info(`Polling trigger initiated for workflow "${workflow.name}"`, {workflowName: workflow.name, workflowId: workflow.id});
-
-// Verbose-level logging of hook function execution, with execution ID, workflow ID, and session ID as metadata properties
-
-Logger.verbose(`Executing hook (workflowExecuteBefore, hookFunctionsPush)`, {executionId: this.executionId, workflowId: this.workflowData.id, sessionId: this.sessionId});
 ```
 
 When creating new loggers, some useful standards to keep in mind are:

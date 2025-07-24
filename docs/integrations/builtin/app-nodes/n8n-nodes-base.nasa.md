@@ -1,19 +1,22 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: NASA
-description: Documentation for the NASA node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: NASA node documentation
+description: Learn how to use the NASA node in n8n. Follow technical documentation to integrate NASA node into your workflows.
+contentType: [integration, reference]
+priority: medium
 ---
 
-# NASA
+# NASA node
 
 Use the NASA node to automate work in NASA, and integrate NASA with other applications. n8n has built-in support for a wide range of NASA features, including retrieving imagery and data. 
 
 On this page, you'll find a list of operations the NASA node supports and links to more resources.
 
 /// note | Credentials
-Refer to [NASA credentials](/integrations/builtin/credentials/nasa/) for guidance on setting up authentication. 
+Refer to [NASA credentials](/integrations/builtin/credentials/nasa.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -51,4 +54,4 @@ Refer to [NASA credentials](/integrations/builtin/credentials/nasa/) for guidanc
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'nasa') ]]
+[[ templatesWidget(page.title, 'nasa') ]]

@@ -36,7 +36,7 @@ The following video demonstrates the steps of sharing workflows on the community
 
 ## Build a node
 
-Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/overview/) for guidance on how to create and publish a community node.
+Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/overview.md) for guidance on how to create and publish a community node.
 
 ## Contribute to the code
 
@@ -52,53 +52,20 @@ You can contribute to the n8n documentation, for example by documenting nodes or
 
 The repository for the docs is [here](https://github.com/n8n-io/n8n-docs){:target=_blank class=.external-link} and the guidelines for contributing to the docs are [here](https://github.com/n8n-io/n8n-docs/blob/master/CONTRIBUTING.md){:target=_blank class=.external-link}.
 
-## Write a blog post
+## Contribute to the blog
 
-You can write an article for the [n8n blog](https://n8n.io/blog/){:target=_blank class=.external-link}. Your article can be, for example, a [workflow tutorial](https://n8n.io/blog/tag/tutorial/){:target=_blank class=.external-link}, an opinion piece on automation, or some domain-specific [automation ideas](https://n8n.io/blog/tag/ideas/){:target=_blank class=.external-link}. 
+You can write an article for the [n8n blog](https://blog.n8n.io/){:target=_blank class=.external-link}. Your article can be, for example, a [workflow tutorial](https://blog.n8n.io/tag/tutorial/){:target=_blank class=.external-link}, an opinion piece on automation, or some domain-specific [automation guides](https://blog.n8n.io/tag/guide/){:target=_blank class=.external-link}.
 
-### Process to submit a post
+### How to submit a post
 
-n8n appreciates all contributions. Publishing a tutorial on your own site that supports the community is a great contribution. However, if you want n8n to highlight your post on our blog, you need to go through this process.
+n8n appreciates all contributions. Publishing a tutorial on your own site that supports the community is a great contribution. If you want n8n to highlight your post on the blog, follow these steps: 
 
-#### 1. Submit your idea
-
-Submit your idea to n8n's [contributor board](https://github.com/orgs/n8n-io/projects/3){:target=_blank /external-link}. You can either:
-
-* Offer to write a post for an idea in the **Blog posts** column. To do this, comment on the ticket and tag the ticket owner.
-* Propose a new idea. To do this, comment on a **Submit your idea here** ticket (make sure to choose one that isn't already being used).
-
-When commenting, include as much detail as you can. If possible, provide an outline for your proposed post.
-
-#### 2. Approval
-
-n8n reviews your comment and responds. This includes a review and feedback on your outline.
-
-#### 3. Submit your draft
-
-Write your post in a Google Doc, following the [style guide](https://n8n.notion.site/n8n-blog-writing-style-97dc73436a624933b75ddc941a361b70){:target=_blank .external-link}.
-
-When your draft is ready, share it in the GitHub ticket. Make sure the sharing link gives permission for anyone to comment.
-
-If your blog post includes example workflows, export your workflow and copy the JSON into a separate section at the end of your blog post doc.
-
-If you want to have ownership of the article, submit a second Google Doc link with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
-
-#### 4. Review and edit
-
-Someone from n8n reviews your draft. They'll check the following:
-
-* Is the information accurate and up to date?
-* Do the workflows or other examples function?
-* Is the product information relevant?
-* Grammar and structure
-
-After the review, you'll have a chance to review any suggested changes and implement them. You can then notify the reviewer that your final draft is ready.
-
-#### 5. Publishing
-
-n8n will let you know an estimated publication date. 
-
-When the article is published, n8n will also promote it through social media. You're encouraged to share it on your own channels.
+1. Email your idea to [marketing@n8n.io](mailto:marketing@n8n.io) with the subject "Blog contribution: [Your Topic]."
+2. Submit your draft:
+      - Write your post in a Google Doc following the [style guide](https://www.notion.so/97dc73436a624933b75ddc941a361b70?pvs=21){:target=_blank class=.external-link}.
+      - If your blog post includes example workflows, include the workflow JSON in a separate section at the end.
+      - For author credit, provide a second Google Doc with your full name, a short byline, and your image. n8n will use this to create your author page and credit you as the author of the post.
+3. Wait for feedback. We will respond if your draft fits with the blog's strategy and requirements. If you don't hear back within 30 days, it means we won't be moving forward with your blog post.
 
 ## Refer a candidate
 

@@ -2,15 +2,16 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HTTP Request credentials
 description: Documentation for HTTP Request credentials. Use these credentials to authenticate HTTP Request in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
+priority: critical
 ---
 
 # HTTP Request credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- [HTTP Request Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
+- [HTTP Request Tool (legacy)](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
 
 ## Prerequisites
 
@@ -25,6 +26,7 @@ If you need to secure the authentication with an SSL certificate, refer to [Prov
 - Custom auth (generic credential type)
 - Digest auth (generic credential type)
 - Header auth (generic credential type)
+- Bearer auth (generic credential type)
 - OAuth1 (generic credential type)
 - OAuth2 (generic credential type)
 - Query auth (generic credential type)
@@ -34,40 +36,28 @@ Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP
 /// note | Predefined credential types
 n8n recommends using predefined credential types whenever there's a credential type available for the service you want to connect to. It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
 
-You can use [Predefined credential types](/integrations/custom-operations/#predefined-credential-types) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom operations](/integrations/custom-operations/) for more information.
+You can use [Predefined credential types](/integrations/custom-operations.md#predefined-credential-types) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom operations](/integrations/custom-operations.md) for more information.
 ///
 
 ## Using predefined credential type
 
 --8<-- "_snippets/integrations/predefined-credential-type-how-to.md"
 
-Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+Refer to [Custom API operations](/integrations/custom-operations.md) for more information.
 
-## Using basic auth or digest auth
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/basic-auth.md"
 
-Use one of these generic authentications if your app or service supports basic or digest authentication.
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/digest-auth.md"
 
-To configure this credential, you'll need:
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/header-auth.md"
 
-- The **Username** you use to access the app or service your HTTP Request is targeting
-- The **Password** that goes with that username
-
-## Using header auth
-
-Use this generic authentication if your app or service supports header authentication.
-
-To configure this credential, you'll need:
-
-- The header **Name** you need to pass to the app or service your HTTP request is targeting
-- The **Value** for the header 
-
-Read more about [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#authentication){:target=_blank .external-link}.
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/bearer-auth.md"
 
 ## Using OAuth1
 
 Use this generic authentication if your app or service supports OAuth1 authentication.
 
-To configure this credential, you'll need:
+To configure this credential, enter:
 
 - An **Authorization URL**: Also known as the Resource Owner Authorization URI. This URL typically ends in `/oauth1/authorize`. The temporary credentials are sent here to prompt a user to complete authorization.
 - An **Access Token URL**: This is the URI used for the initial request for temporary credentials. This URL typically ends in `/oauth1/request` or `/oauth1/token`.
@@ -89,7 +79,7 @@ Use this generic authentication if your app or service supports OAuth2 authentic
 
 Requirements to configure this credential depend on the **Grant Type** selected. Refer to [OAuth Grant Types](https://oauth.net/2/grant-types/) for more information on each grant type.
 
-For most OAuth2 integrations, you'll need to configure an app, service, or integration to generate the values for most of these fields. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
+For most OAuth2 integrations, you'll need to configure an app, service, or integration. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
 
 Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
 
@@ -99,7 +89,7 @@ Use Authorization Code grant type to exchange an authorization code for an acces
 
 To configure this credential, select **Authorization Code** as the **Grant Type**.
 
-Then you'll need:
+Then enter:
 
 - An **Authorization URL**
 - An **Access Token URL**
@@ -108,8 +98,8 @@ Then you'll need:
 - _Optional:_ Enter one or more **Scope**s for the credential. If unspecified, the credential will request all scopes available to the client.
 - _Optional:_ Some services require more query parameters. If your service does, add them as **Auth URI Query Parameters**.
 - An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Will send the credentials as a basic auth header
-	- **Body**: Will send credentials in the body of the request
+	- **Header**: Send the credentials as a basic auth header.
+	- **Body**: Send the credentials in the body of the request.
 - _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
 
 ### Client Credentials grant type
@@ -118,15 +108,15 @@ Use the Client Credentials grant type when applications request an access token 
 
 To configure this credential, select **Client Credentials** as the **Grant Type**.
 
-Then you'll need:
+Then enter:
 
 - An **Access Token URL**: The URL to hit to begin the OAuth2 flow. Typically this URL ends in `/token`.
 - A **Client ID**: The ID or username to use to log in to the client.
 - A **Client Secret**: The secret or password used to log in to the client.
 - _Optional:_ Enter one or more **Scope**s for the credential. Most services don't support scopes for Client Credentials grant types; only enter scopes here if yours does.
 - An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Will send the credentials as a basic auth header
-	- **Body**: Will send credentials in the body of the request
+	- **Header**: Send the credentials as a basic auth header.
+	- **Body**: Send the credentials in the body of the request.
 - _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
 
 ### PKCE grant type
@@ -135,7 +125,7 @@ Proof Key for Code Exchange (PKCE) grant type is an extension to the Authorizati
 
 To configure this credential, select **PKCE** as the **Grant Type**.
 
-Then you'll need:
+Then enter:
 
 - An **Authorization URL**
 - An **Access Token URL**
@@ -144,15 +134,15 @@ Then you'll need:
 - _Optional:_ Enter one or more **Scope**s for the credential. If unspecified, the credential will request all scopes available to the client.
 - _Optional:_ Some services require more query parameters. If your service does, add them as **Auth URI Query Parameters**.
 - An **Authentication** type: Select the option that best suits your use case. Options include:
-	- **Header**: Will send the credentials as a basic auth header
-	- **Body**: Will send credentials in the body of the request
+	- **Header**: Send the credentials as a basic auth header.
+	- **Body**: Send the credentials in the body of the request.
 - _Optional:_ Choose whether to **Ignore SSL Issues**. If turned on, n8n will connect even if SSL validation fails.
 
 ## Using query auth
 
 Use this generic authentication if your app or service supports passing authentication as a single key/value query parameter. (For multiple query parameters, use [Custom Auth](#using-custom-auth).)
 
-To configure this credential, you'll need:
+To configure this credential, enter:
 
 - A query parameter key or **Name**
 - A query parameter **Value**
@@ -161,7 +151,7 @@ To configure this credential, you'll need:
 
 Use this generic authentication if your app or service supports passing authentication as multiple key/value query parameters or you need more flexibility than the other generic auth options.
 
-The **Custom Auth** credential expects JSON data to define your credential. You can use `headers`, `qs`, `body` or a mix. See the examples below to get started.
+The **Custom Auth** credential expects JSON data to define your credential. You can use `headers`, `qs`, `body` or a mix. Review the examples below to get started.
 
 ### Sending two headers
 ```

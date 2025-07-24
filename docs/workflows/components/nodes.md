@@ -6,7 +6,7 @@ contentType: howto
 
 # Nodes
 
-Nodes are the key building blocks of a workflow. They perform a range of actions, including:
+[Nodes](/glossary.md#node-n8n) are the key building blocks of a [workflow](/glossary.md#workflow-n8n). They perform a range of actions, including:
 
 * Starting the workflow.
 * Fetching and sending data.
@@ -14,20 +14,20 @@ Nodes are the key building blocks of a workflow. They perform a range of actions
 
 n8n provides a collection of built-in nodes, as well as the ability to create your own nodes. Refer to:
 
-* [Built-in integrations](/integrations/builtin/node-types/) to browse the node library.
-* [Community nodes](/integrations/community-nodes/installation/) for guidance on finding and installing community-created nodes.
-* [Creating nodes](/integrations/creating-nodes/overview/) to start building your own nodes.
+* [Built-in integrations](/integrations/builtin/node-types.md) to browse the node library.
+* [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on finding and installing community-created nodes.
+* [Creating nodes](/integrations/creating-nodes/overview.md) to start building your own nodes.
 
 
 ## Add a node to your workflow
 
 ### Add a node to an empty workflow
 
-1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse trigger nodes.
+1. Select **Add first step**. n8n opens the nodes panel, where you can search or browse [trigger nodes](/glossary.md#trigger-node-n8n).
 2. Select the trigger you want to use.
 
     /// note | Choose the correct app event
-	If you select **On App Event**, n8n shows a list of all the supported services. This allows you to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. However, not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see it at the top of the available operations list.
+	If you select **On App Event**, n8n shows a list of all the supported services. Use this list to browse n8n's integrations and trigger a workflow in response to an event in your chosen service. Not all integrations have triggers. To see which ones you can use as a trigger, select the node. If a trigger is available, you'll see it at the top of the available operations list.
 
 	For example, this is the trigger for Asana:
 
@@ -44,10 +44,12 @@ Select the **Add node** <span class="inline-image">![Add node icon](/_images/try
 
 To view node controls, hover over the node on the canvas:
 
-* **Play** <span class="inline-image">![Run node icon](/_images/common-icons/play-node.png){.off-glb}</span> : run the node.
-* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: select node actions. Available actions:
+* **Execute step** <span class="inline-image">![Execute step icon](/_images/common-icons/play-node.png){.off-glb}</span>: Run the node.
+* **Deactivate** <span class="inline-image">![Deactivate node icon](/_images/common-icons/power-off.png){.off-glb}</span>: Deactivate the node.
+* **Delete** <span class="inline-image">![Delete node icon](/_images/common-icons/delete-node.png){.off-glb}</span>: Delete the node.
+* **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span>: Select node actions. Available actions:
 	* Open node
-	* Execute node
+	* Execute step
 	* Rename node
 	* Deactivate node
 	* Pin node
@@ -59,16 +61,24 @@ To view node controls, hover over the node on the canvas:
 
 ## Node settings
 
-The node settings allow you to control node behaviors and add node notes.
+The node settings under the **Settings** tab allow you to control node behaviors and add node notes.
 
-There are four toggles. When active, they do the following:
+When active or set, they do the following:
 
-* **Always Output Data**: the node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
-* **Execute Once**: the node executes once, with data from the first item it receives. It doesn't process any additional items.
-* **Retry On Fail**: when an execution fails, the node reruns until it succeeds. 
-* **Continue On Fail**: the workflow continues even if the execution of the node fails. When this happens, the node passes along input data from previous nodes, so if you enable this setting, the workflow design must handle unexpected output data.
+* **Request Options**: Select **Add Option** to view and select these options. 
+	- **Batching**: Control how to batch large numbers of input items.
+	- **Ignore SSL Issues**: Download the response even if SSL validation isn't possible.
+	- **Proxy**: Use this if you need to specify an HTTP proxy.
+	- **Timeout**: Set a timeout for the request in ms. 
+* **Always Output Data**: The node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
+* **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
+* **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 
+* **On Error**: 
+    - **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
+    - **Continue**: Proceeds to the next node despite the error, using the last valid data.
+    - **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
 
 You can document your workflow using node notes:
 
-* **Notes**: note to save with the node.
-* **Display note in flow**: if active, n8n displays the note in the workflow as a subtitle.
+* **Notes**: Note to save with the node.
+* **Display note in flow**: If active, n8n displays the note in the workflow as a subtitle.

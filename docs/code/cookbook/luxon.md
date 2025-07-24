@@ -1,7 +1,8 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-contentType: howto
+title: Date and time with Luxon
 description: Use Luxon to work with date and time in n8n.
+contentType: howto
 ---
 
 # Date and time with Luxon
@@ -14,7 +15,7 @@ n8n passes dates between nodes as strings, so you need to parse them. Luxon make
 Luxon is a JavaScript library. The two convenience [variables](#variables) created by n8n are available when using Python in the Code node, but their functionality is limited:
 
 * You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`.
-* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-Luxon), isn't available for Python users.
+* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-luxon), isn't available for Python users.
 ///	
 
 
@@ -58,7 +59,7 @@ Note that these variables can return different time formats when cast as a strin
 	# For example "Today's date is 1646834498755"
 	```
 
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates/) for more information.
+n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
 
 ## Date and time behavior in n8n
 
@@ -253,7 +254,7 @@ The scenario: you want a countdown to 25th December. Every day, it should tell y
 	* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
 	* `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
 	* `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
-	* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code/cookbook/jmespath/) documentation. This gives you the number of days to Christmas, as a negative number.
+	* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code/cookbook/jmespath.md) documentation. This gives you the number of days to Christmas, as a negative number.
 	* `.toString().substring(1)` turns the number into a string and removes the `-`.
 	* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.
 	* `}}`: indicates the end of the expression.
@@ -273,6 +274,6 @@ The scenario: you want a countdown to 25th December. Every day, it should tell y
 	* `$today.diff()`: This is similar to the example in [Get the time between two dates](#get-the-time-between-two-dates), but it uses n8n's custom `$today` variable.
 	* `DateTime.fromISO($today.year + '-12-25'), 'days'`: this part gets the current year using `$today.year`, turns it into an ISO string along with the month and date, and then takes the whole ISO string and converts it to a Luxon DateTime data structure. It also tells Luxon that you want the duration in days.
 	* `toObject()` turns the result of diff() into a more usable object. At this point, the expression returns `[Object: {"days":-<number-of-days>}]`. For example, on 9th March, `[Object: {"days":-291}]`.
-	* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code/cookbook/jmespath/) documentation. This gives you the number of days to Christmas, as a negative number.
+	* `.days` uses JMESPath syntax to retrieve just the number of days from the object. For more information on using JMESPath with n8n, refer to our [JMESpath](/code/cookbook/jmespath.md) documentation. This gives you the number of days to Christmas, as a negative number.
 	* `.toString().substring(1)` turns the number into a string and removes the `-`.
 	* `+ " days to Christmas!"`: another string, with a `+` to join it to the previous string.

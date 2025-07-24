@@ -5,13 +5,14 @@ contentType: tutorial
 
 # npm
 
-npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/){:target=_blank .external-link} installed. n8n requires Node.js 18 or above.
+npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Try n8n with npx
 
 You can try n8n without installing it using npx.
+
 
 From the terminal, run:
 
@@ -49,12 +50,10 @@ n8n
 n8n start
 ```
 
-/// note | Keep in mind
-Windows users remember to change into the `.n8n` directory of your Home folder (`~/.n8n`) before running `n8n start`.
-///
+
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/).
+Try out n8n using the [Quickstarts](/try-it-out/index.md).
 
 ## Updating
 

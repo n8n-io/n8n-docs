@@ -17,40 +17,40 @@ This page collects resources relating to binary data in n8n.
 
 ## Working with binary data in your workflows
 
-You can process binary data in n8n workflows. n8n provides nodes to help you work with binary data. You can also use code. 
+You can process binary data in n8n workflows. n8n provides nodes to help you work with binary data. You can also use code.
 
 ### Nodes
 
 There are three key nodes dedicated to handling binary data files:
 
-- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/) to read and write files from/to the machine where n8n is running.
-- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/) to take input data and output it as a file.
-- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) to get data from a binary format and convert it to JSON.
+- [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) to read and write files from/to the machine where n8n is running.
+- [Convert to File](/integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md) to take input data and output it as a file.
+- [Extract From File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) to get data from a binary format and convert it to JSON.
 
 There are separate nodes for working with XML and HTML data:
 
-* [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html/)
-* [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml/)
+* [HTML](/integrations/builtin/core-nodes/n8n-nodes-base.html.md)
+* [XML](/integrations/builtin/core-nodes/n8n-nodes-base.xml.md)
 
 And nodes for performing common tasks:
 
-* [Compression](/integrations/builtin/core-nodes/n8n-nodes-base.compression/)
-* [Edit Image](/integrations/builtin/core-nodes/n8n-nodes-base.editimage/)
-* [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/)
+* [Compression](/integrations/builtin/core-nodes/n8n-nodes-base.compression.md)
+* [Edit Image](/integrations/builtin/core-nodes/n8n-nodes-base.editimage.md)
+* [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
 
-You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/).
+You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md).
 
-To split or concatenate binary data items, use the [data transformation nodes](/data/#data-transformation-nodes).
+To split or concatenate binary data items, use the [data transformation nodes](/data/index.md#data-transformation-nodes).
 
 ### Code
 
-You can use the [Code node](/code/code-node/) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer/): get the binary data available in your workflow.
+You can use the [Code node](/code/code-node.md) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer.md): get the binary data available in your workflow.
 
 
 ## Configure binary data mode when self-hosting
 
-You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables/binary-data). This includes tasks such as setting the storage path and choosing how to store binary data.
+You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables/binary-data.md). This includes tasks such as setting the storage path and choosing how to store binary data.
 
-Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data/).
+Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data.md).
 
-Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables/nodes/) for more information.
+Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables/nodes.md) for more information.

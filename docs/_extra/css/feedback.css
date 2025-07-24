@@ -1,0 +1,39 @@
+/* form itself */
+.md-feedback {
+	background-color: var(--color-primary-tint-1);
+	padding: 10px;
+}
+
+.md-feedback fieldset {
+}
+
+/* form title */
+.md-feedback__title {
+	color: var(--color-primary);
+	font-size: 1.3rem;
+}
+
+/* container for vote buttons and note */
+.md-feedback__inner {
+}
+
+/* list of rating buttons */
+.md-feedback__list {
+}
+
+/* rating button icons */
+.md-feedback__icon {
+}
+
+.md-feedback__icon:enabled.md-icon[data-md-value="0"]:hover {
+	color: var(--color-feedback-negative);
+}
+
+.md-feedback__icon svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/* post-submission note */
+.md-feedback__note {
+}

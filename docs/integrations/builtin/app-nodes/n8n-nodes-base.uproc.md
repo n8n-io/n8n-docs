@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: uProc
-description: Documentation for the uProc node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: uProc node documentation
+description: Learn how to use the uProc node in n8n. Follow technical documentation to integrate uProc node into your workflows.
+contentType: [integration, reference]
 ---
 
-# uProc
+# uProc node
 
 Use the uProc node to automate work in uProc, and integrate uProc with other applications. n8n has built-in support for a wide range of uProc features, including getting advanced human audio file, communication data, company, finance and product information. 
 
 On this page, you'll find a list of operations the uProc node supports and links to more resources.
 
 /// note | Credentials
-Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guidance on setting up authentication. 
+Refer to [uProc credentials](/integrations/builtin/credentials/uproc.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -497,7 +497,7 @@ Refer to [uProc credentials](/integrations/builtin/credentials/uproc/) for guida
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'uproc') ]]
+[[ templatesWidget(page.title, 'uproc') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

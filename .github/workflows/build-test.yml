@@ -1,0 +1,39 @@
+name: Internal PR linkcheck
+on:
+  pull_request:
+    branches:
+      - main
+permissions:  
+  contents: read 
+  pull-requests: write
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12
+      - name: Install dependencies
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+          pip install mkdocs-material
+      - name: Run mkdocs in strict mode
+        id: mkdocs
+        run: |
+          source venv/bin/activate
+          mkdocs build --config-file mkdocs-test.yml --strict 2>&1 | tee mkdocs.out
+          [[ $(tail -n 1 mkdocs.out) =~ ^Aborted ]] && exit 1 || exit 0
+
+      - name: PR comment with file
+        if: failure()
+        uses: thollander/actions-comment-pull-request@e4a76dd2b0a3c2027c3fd84147a67c22ee4c90fa # v3.0.1
+        with:
+          file-path: mkdocs.out
+          comment-tag: execution
+          mode: recreate

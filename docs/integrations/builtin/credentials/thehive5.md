@@ -2,17 +2,17 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: TheHive 5 credentials
 description: Documentation for TheHive 5 credentials. Use these credentials to authenticate TheHive in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # TheHive 5 credentials
 
 You can use these credentials to authenticate the following nodes with TheHive 5.
 
-- [TheHive 5](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5/)
+- [TheHive 5](/integrations/builtin/app-nodes/n8n-nodes-base.thehive5.md)
 
 /// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use these credentials with TheHive 5 node. If you're using TheHive node for TheHive 3 or TheHive 4, use [TheHive credentials](/integrations/builtin/credentials/thehive/).
+n8n provides two nodes for TheHive. Use these credentials with TheHive 5 node. If you're using TheHive node for TheHive 3 or TheHive 4, use [TheHive credentials](/integrations/builtin/credentials/thehive.md).
 ///
 
 ## Prerequisites

@@ -2,7 +2,8 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wait
 description: Documentation for the Wait node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: integration
+contentType: [integration, reference]
+priority: critical
 ---
 
 # Wait
@@ -61,12 +62,12 @@ Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` sho
 * **None**: Don't use authentication.
 
 /// note | Auth reference
-Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#authentication) for more information on each auth type.
+Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#supported-authentication-methods) for more information on each auth type.
 ///
 
 #### HTTP Method
 
-Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#http-method) for more information.
+Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#http-method) for more information.
 
 #### Response Code
 
@@ -83,7 +84,7 @@ Set when and how to respond to the webhook from these options:
 		* **First Entry JSON**: Return the JSON data of the first entry of the last node in a JSON object.
 		* **First Entry Binary**: Return the binary data of the first entry of the last node in a binary file.
 		* **No Response Body**: Return with no body.
-* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
 
 #### Limit Wait Time
 
@@ -112,7 +113,6 @@ Set whether the workflow will automatically resume execution after a specific li
 There are some limitations to keep in mind when using On Webhook Call:
 
 * Partial executions of your workflow changes the `$resumeWebhookUrl`, so be sure that the node sending this URL to your desired third-party runs in the same execution as the Wait node.
-* When testing your workflow using the Editor UI, you can't see the rest of the execution following the Wait node. To inspect the execution results, enable **Save Manual Executions** in your [Workflow settings](/workflows/settings/) so you can review the execution results there.
 
 ### On Form Submitted
 
@@ -147,7 +147,7 @@ Set when to respond to the form submission. Choose from:
 
 * **Form Is Submitted**: Respond as soon as this node receives the form submission.
 * **Workflow Finishes**: Respond when the last node of this workflow finishes.
-* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node executes.
+* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node executes.
 
 #### Limit Wait Time
 
@@ -171,11 +171,11 @@ If turned on, also set:
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'wait') ]]
+[[ templatesWidget(page.title, 'wait') ]]
 
 ## Time-based operations
 
 For the time-based resume operations, note that:
 
-* For wait times less than 65 seconds, the workflow doesn't offload execution data offloaded to the database. Instead, the process continues to run and execution resumes after the specified interval passes.
+* For wait times less than 65 seconds, the workflow doesn't offload execution data to the database. Instead, the process continues to run and the execution resumes after the specified interval passes.
 * The n8n server time is always used regardless of the timezone setting. Workflow timezone settings, and any changes made to them, don't affect the Wait node interval or specified time. 

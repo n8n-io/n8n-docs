@@ -13,7 +13,8 @@ contentType: reference
 This gives access to the static workflow data.
 
 /// note | Experimental feature
-Static data isn't available when testing workflows. The workflow must be active and called by a trigger or webhook to save static data.
+- Static data isn't available when testing workflows. The workflow must be active and called by a [trigger](/glossary.md#trigger-node-n8n) or webhook to save static data.
+- This feature may behave unreliably under high-frequency workflow executions.
 ///
 You can save data directly in the workflow. This data should be small.
 
@@ -87,4 +88,7 @@ Example with node data:
 	delete nodeStaticData.lastExecution
 	```
 
+## Templates and examples
 
+<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+[[ workflowDemo("https://api.n8n.io/workflows/templates/2538") ]]

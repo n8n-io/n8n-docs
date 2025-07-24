@@ -15,18 +15,17 @@ n8n uses Git-based source control to support environments. Linking your n8n inst
 
 In this section:
 
-* [Understand](/source-control-environments/understand/):
-	* [Environments in n8n](/source-control-environments/understand/environments/): The purpose of environments, and how they work in n8n.
-	* [Git and n8n](/source-control-environments/understand/git/): How n8n uses Git. 
-	* [Branch patterns](/source-control-environments/understand/patterns/): The possible relationships between n8n instances and Git branches.
-* [Set up source control for environments](/source-control-environments/setup/): How to connect your n8n instance to Git.
-* [Using](/source-control-environments/using/):
-	* [Push and pull](/source-control-environments/using/push-pull/): Send work to Git, and fetch work from Git to your instance.
-	* [Copy work between environments](/source-control-environments/using/copy-work/): How to copy work between different n8n instances.
-	* [Manage variables](/source-control-environments/using/manage-variables/): Manage variable values using the n8n API and source control.
-* [Tutorial: Create environments with source control](/source-control-environments/create-environments/): An end-to-end tutorial, setting up environments using n8n's recommended configurations.
+* [Understand](/source-control-environments/understand/index.md):
+	* [Environments in n8n](/source-control-environments/understand/environments.md): The purpose of environments, and how they work in n8n.
+	* [Git and n8n](/source-control-environments/understand/git.md): How n8n uses Git. 
+	* [Branch patterns](/source-control-environments/understand/patterns.md): The possible relationships between n8n instances and Git branches.
+* [Set up source control for environments](/source-control-environments/setup.md): How to connect your n8n instance to Git.
+* [Using](/source-control-environments/using/index.md):
+	* [Push and pull](/source-control-environments/using/push-pull.md): Send work to Git, and fetch work from Git to your instance.
+	* [Copy work between environments](/source-control-environments/using/copy-work.md): How to copy work between different n8n instances.
+* [Tutorial: Create environments with source control](/source-control-environments/create-environments.md): An end-to-end tutorial, setting up environments using n8n's recommended configurations.
 
 Related sections:
 
-* [Variables](/code/variables/): reusable values.
-* [External secrets](/external-secrets/): manage credentials with an external secrets vault.
+* [Variables](/code/variables.md): reusable values.
+* [External secrets](/external-secrets.md): manage [credentials](/glossary.md#credential-n8n) with an external secrets vault.

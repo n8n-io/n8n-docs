@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Grist credentials
 description: Documentation for Grist credentials. Use these credentials to authenticate Grist in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Grist credentials
 
 You can use these credentials to authenticate the following nodes:
 
-* [Grist](/integrations/builtin/app-nodes/n8n-nodes-base.grist/)
+* [Grist](/integrations/builtin/app-nodes/n8n-nodes-base.grist.md)
 
 ## Prerequisites
 

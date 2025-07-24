@@ -2,14 +2,14 @@
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Medium credentials
 description: Documentation for Medium credentials. Use these credentials to authenticate Medium in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Medium credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium/)
+- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium.md)
 
 /// warning | Medium API no longer supported
 Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you can't configure new integrations using them.

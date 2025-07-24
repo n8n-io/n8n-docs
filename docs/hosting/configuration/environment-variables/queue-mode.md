@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode/) for more information.
+You can run n8n in different modes depending on your needs. Queue mode provides the best scalability. Refer to [Queue mode](/hosting/scaling/queue-mode.md) for more information.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
@@ -27,7 +27,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | `QUEUE_BULL_REDIS_TIMEOUT_THRESHOLD` | Number | `10000` | The Redis timeout threshold (in ms). |
 | `QUEUE_BULL_REDIS_CLUSTER_NODES` | String | - | Expects a comma-separated list of Redis Cluster nodes in the format `host:port`, for the Redis client to initially connect to. If running in queue mode (`EXECUTIONS_MODE = queue`), setting this variable will create a Redis Cluster client instead of a Redis client, and n8n will ignore `QUEUE_BULL_REDIS_HOST` and `QUEUE_BULL_REDIS_PORT`. |
 | `QUEUE_BULL_REDIS_TLS` | Boolean | `false` | Enable TLS on Redis connections. |
-| `QUEUE_RECOVERY_INTERVAL` | Number | `60` | Interval (in seconds) for active polling to the queue to recover from Redis crashes. `0` disables recovery. May increase Redis traffic. |
+| `QUEUE_BULL_REDIS_DUALSTACK` | Boolean | `false` | Enable dual-stack support (IPv4 and IPv6) on Redis connections. |
 | `QUEUE_WORKER_TIMEOUT` (**deprecated**) | Number | `30` | **Deprecated** Use `N8N_GRACEFUL_SHUTDOWN_TIMEOUT` instead.<br/><br/>How long should n8n wait (seconds) for running executions before exiting worker process on shutdown. |
 | `QUEUE_HEALTH_CHECK_ACTIVE` | Boolean | `false` | Whether to enable health checks (true) or disable (false). |
 | `QUEUE_HEALTH_CHECK_PORT` | Number | - | The port to serve health checks on. |
@@ -38,7 +38,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 
 ## Multi-main setup
 
-Refer to [Configuring multi-main setup](/hosting/scaling/queue-mode/#configuring-multi-main-setup) for details.
+Refer to [Configuring multi-main setup](/hosting/scaling/queue-mode.md#configuring-multi-main-setup) for details.
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |

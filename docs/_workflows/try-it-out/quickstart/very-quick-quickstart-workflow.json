@@ -1,0 +1,147 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAllPeople",
+        "returnAll": true
+      },
+      "id": "ed1fd9cd-cc4f-4e0e-ba73-9f842db382c3",
+      "name": "Customer Datastore",
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "position": [
+        540,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Get fake sample data**",
+        "height": 300,
+        "width": 220
+      },
+      "id": "5ddf393f-62b8-4240-adf8-f9a8f539df4b",
+      "name": "Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        480,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "**Extract data and prepare it for use in the next node**",
+        "height": 300,
+        "width": 220
+      },
+      "id": "6ad194ea-9821-40eb-ae2c-f50cc030300b",
+      "name": "Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        760,
+        180
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {},
+      "id": "5af4b83b-31b6-4c29-aa55-3449f3851e2a",
+      "name": "When clicking \"Execute Workflow\"",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        300,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "df041e3c-fc09-4ba2-8e6b-37f2c6a02526",
+              "name": "customer_id",
+              "type": "string",
+              "value": "={{ $json.id }}"
+            },
+            {
+              "id": "bf288953-4fef-4f55-a45f-c223714919c0",
+              "name": "customer_name",
+              "type": "string",
+              "value": "={{ $json.name }}"
+            },
+            {
+              "id": "1cff0b21-6740-4697-9d2c-9bcb045af0be",
+              "name": "customer_description",
+              "type": "string",
+              "value": "={{ $json.notes }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5dcd5776-5137-4f97-8b76-9f38e1d9ff9e",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        820,
+        280
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "customerId": "={{ $json.customer_id }}",
+        "message": "=Hi {{ $json.customer_name }}. Your description is: {{  $json.customer_description }}"
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerMessenger",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        280
+      ],
+      "id": "a726dcfd-f491-440f-ad64-6ba17472352f",
+      "name": "Customer Messenger (n8n training)"
+    }
+  ],
+  "connections": {
+    "Customer Datastore": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking \"Execute Workflow\"": {
+      "main": [
+        [
+          {
+            "node": "Customer Datastore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Customer Messenger (n8n training)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  }
+}

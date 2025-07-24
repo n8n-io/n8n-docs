@@ -1,29 +1,47 @@
 ---
-title: Vector Store Tool
-description: Documentation for the Vector Store Tool node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
+#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+title: Vector Store Question Answer Tool node documentation
+description: Learn how to use the Vector Store Question Answer Tool node in n8n. Follow technical documentation to integrate Vector Store Question Answer Tool node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Vector Store Tool
+# Vector Store Question Answer Tool node
 
-The Vector Store node is a tool that allows an agent to access content from a vector store. 
+The Vector Store Question Answer node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glossary.md#ai-agent) to summarize results and answer questions based on chunks from a [vector store](/glossary.md#ai-vector-store). 
 
-On this page, you'll find the node parameters for the Vector Store node, and links to more resources.
+On this page, you'll find the node parameters for the Vector Store Question Answer node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Vector Store Tool integrations](https://n8n.io/integrations/vector-store-tool/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Vector Store Question Answer Tool integrations](https://n8n.io/integrations/vector-store-tool/){:target=_blank .external-link} page.
 ///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
 
-### Name
+### Description of Data
 
-The name of the tool for the agent to use.
+Enter a description of the data in the vector store.
 
-### Description
+### Limit
 
-A description of what the vector store contains.
+The maximum number of results to return.
+
+## How n8n populates the tool description
+
+n8n uses the node name (select the name to edit) and **Description of Data** parameter to populate the tool description for AI agents using the following format:
+
+> Useful for when you need to answer questions about [node name]. Whenever you need information about [Description of Data], you should ALWAYS use this. Input should be a fully formed question.
+
+Spaces in the node name are converted to underscores in the tool description.
+
+/// warning | Avoid special characters in node names
+Using special characters in the node name will cause errors when the agent runs:
+
+![model errors from special characters](/_images/integrations/builtin/cluster-nodes/toolvectorstore/name-characters-error.png)
+
+Use only alphanumeric characters, spaces, dashes, and underscores in node names.
+///
 
 ## Related resources
 

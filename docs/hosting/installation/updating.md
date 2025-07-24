@@ -20,5 +20,5 @@ Some tips when updating:
 
 For instructions on how to update, refer to the documentation for your installation method:
 
-* [Installed with npm](/hosting/installation/npm/)
-* [Installed with Docker](/hosting/installation/docker/)
+* [Installed with npm](/hosting/installation/npm.md)
+* [Installed with Docker](/hosting/installation/docker.md)

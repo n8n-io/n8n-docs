@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: MailerLite
-description: Documentation for the MailerLite node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: MailerLite node documentation
+description: Learn how to use the MailerLite node in n8n. Follow technical documentation to integrate MailerLite node into your workflows.
+contentType: [integration, reference]
 ---
 
-# MailerLite
+# MailerLite node
 
 Use the MailerLite node to automate work in MailerLite, and integrate MailerLite with other applications. n8n has built-in support for a wide range of MailerLite features, including creating, updating, deleting, and getting subscribers.
 
 On this page, you'll find a list of operations the MailerLite node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite/) for guidance on setting up authentication. 
+Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -26,4 +26,4 @@ Refer to [MailerLite credentials](/integrations/builtin/credentials/mailerlite/)
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'mailerlite') ]]
+[[ templatesWidget(page.title, 'mailerlite') ]]

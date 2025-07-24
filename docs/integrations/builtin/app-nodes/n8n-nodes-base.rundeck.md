@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Rundeck
-description: Documentation for the Rundeck node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: integration
+title: Rundeck node documentation
+description: Learn how to use the Rundeck node in n8n. Follow technical documentation to integrate Rundeck node into your workflows.
+contentType: [integration, reference]
 ---
 
-# Rundeck
+# Rundeck node
 
 Use the Rundeck node to automate work in Rundeck, and integrate Rundeck with other applications. n8n has built-in support for executing jobs and getting metadata.
 
 On this page, you'll find a list of operations the Rundeck node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for guidance on setting up authentication. 
+Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -24,7 +24,7 @@ Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for g
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(title, 'rundeck') ]]
+[[ templatesWidget(page.title, 'rundeck') ]]
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

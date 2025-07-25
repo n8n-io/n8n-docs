@@ -30,4 +30,4 @@ n8n provides an app node for crowd.dev. You can find the node docs [here](/integ
 
 View [example workflows and related content](https://n8n.io/integrations/crowddev/) on n8n's website.
 
-Refer to [crowd.dev's documentation](https://docs.crowd.dev/reference/getting-started-with-crowd-dev-api) for more information about the service.
+Refer to [crowd.dev's documentation](https://docs.crowd.dev/docs) for more information about the service.

@@ -75,7 +75,7 @@ Refer to [Slack credentials](/integrations/builtin/credentials/slack.md) for gui
 
 ## Related resources
 
-Refer to [Slack's documentation](https://api.slack.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Slack's documentation](https://api.slack.com/) for more information about the service.
 
 ## Required scopes
 

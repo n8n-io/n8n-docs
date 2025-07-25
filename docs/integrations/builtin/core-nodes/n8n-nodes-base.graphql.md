@@ -8,6 +8,7 @@ priority: medium
 
 # GraphQL
 
+
 [GraphQL](https://graphql.org/){:target=_blank .external-link} is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. Use the GraphQL node to query a GraphQL endpoint using either HTTP requests or WebSocket connections for real-time subscriptions.
 
 ## Connection Mode
@@ -19,6 +20,8 @@ Standard HTTP requests for one-time GraphQL queries and mutations. This is the d
 
 ### WebSocket Mode
 WebSocket connections for real-time GraphQL subscriptions. Use this mode when you need to receive continuous updates from a GraphQL subscription.
+=======
+[GraphQL](https://graphql.org/) is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. Use the GraphQL node to query a GraphQL endpoint.
 
 ## Node parameters
 
@@ -148,7 +151,7 @@ The node collects all subscription messages and returns them as an array. Each m
 
 ## Related resources
 
-To use the GraphQL node, you need to understand GraphQL query language. GraphQL have their own [Introduction to GraphQL](https://graphql.org/learn/){:target=_blank .external-link} tutorial.
+To use the GraphQL node, you need to understand GraphQL query language. GraphQL have their own [Introduction to GraphQL](https://graphql.org/learn/) tutorial.
 
 For WebSocket subscriptions, refer to the [GraphQL over WebSocket Protocol](https://github.com/enisdenjo/graphql-ws){:target=_blank .external-link} documentation.
 

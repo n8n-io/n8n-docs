@@ -32,7 +32,7 @@ Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for gui
 
 ## Related resources
 
-Refer to [Adalo's documentation](https://help.adalo.com/){:target=_blank .external-link} for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis){:target=_blank .external-link} page gives more detail about what you can do with Adalo collections.
+Refer to [Adalo's documentation](https://help.adalo.com/) for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis) page gives more detail about what you can do with Adalo collections.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

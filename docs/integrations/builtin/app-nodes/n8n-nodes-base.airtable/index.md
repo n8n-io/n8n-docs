@@ -33,7 +33,7 @@ Refer to [Airtable credentials](/integrations/builtin/credentials/airtable.md) f
 
 n8n provides a trigger node for Airtable. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md).
 
-Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
@@ -46,7 +46,7 @@ To fetch data for a particular record, you need the Record ID. There are two way
 
 ### Create a Record ID column in Airtable
 
-To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/docs/finding-airtable-ids){:target=_blank .external-link}. You can then use this Record ID in your Airtable node.
+To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/docs/finding-airtable-ids). You can then use this Record ID in your Airtable node.
 
 ### Use the List operation
 

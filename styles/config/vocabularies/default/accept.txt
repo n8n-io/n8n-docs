@@ -171,6 +171,7 @@ Nodelinter
 npm
 NPM
 npx
+nvm
 OAuth
 Odoo
 Okta

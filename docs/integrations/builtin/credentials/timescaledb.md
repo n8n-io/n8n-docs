@@ -21,7 +21,7 @@ An available instance of [TimescaleDB](https://www.timescale.com/).
 
 ## Related resources
 
-Refer to [Timescale's documentation](https://docs.timescale.com/) for more information about the service.
+Refer to the [Timescale documentation](https://docs.timescale.com/) for more information about the service.
 
 ## Using database connection
 

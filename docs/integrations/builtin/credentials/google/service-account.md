@@ -15,7 +15,7 @@ Using service accounts is more complex than OAuth2. Before you begin:
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* Create a [Google Cloud](https://cloud.google.com/) account.
 
 ## Set up Service Account
 

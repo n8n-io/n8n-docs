@@ -41,7 +41,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.104
 **Release date:** 2025-07-23
 
 /// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 ///
 
 This release contains bug fixes.
@@ -4934,7 +4934,7 @@ This release contains new features, performance improvements, and bug fixes.
 
 #### Tournament
 
-This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-linmk}. You can now use arrow functions in expressions.<br />
+This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament). You can now use arrow functions in expressions.<br />
 
 </div>
 
@@ -5350,7 +5350,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 

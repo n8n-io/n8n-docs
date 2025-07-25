@@ -28,5 +28,5 @@ Refer to [Brevo's API documentation](https://developers.brevo.com/reference/gett
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Brevo API Quick Start documentation](https://developers.brevo.com/docs/getting-started#quick-start){:target=_blank .external-class} for instructions on creating a new API key.
+- An **API Key**: Refer to the [Brevo API Quick Start documentation](https://developers.brevo.com/docs/getting-started#quick-start) for instructions on creating a new API key.
 

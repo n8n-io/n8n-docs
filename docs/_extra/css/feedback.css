@@ -17,6 +17,13 @@
 .md-feedback__inner {
 }
 
+/* style the comment input */
+.md-feedback__inner > #feedback-comment {
+	border: none;
+	height: 5em;
+	width: 20em;
+}
+
 /* list of rating buttons */
 .md-feedback__list {
 }

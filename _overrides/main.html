@@ -58,6 +58,15 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 
 {% block scripts %}
   <!-- Add scripts that need to run before here -->
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SC4FF2FH9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0SC4FF2FH9');
+</script>
   {{ super() }}
   <!-- Add scripts that need to run afterwards here -->
   <script>

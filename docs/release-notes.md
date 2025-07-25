@@ -72,10 +72,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.104.0) for this version.<br />
 **Release date:** 2025-07-21
 
-
 /// note | Next version
 This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
 ///
+
 =======
 
 
@@ -151,6 +151,25 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.0...n8n@1.103
 
 This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
 
+### Improved instance user list with more visibility
+
+The instance user list has been updated with a new table layout and additional details to help admins manage access more easily.
+
+You can now:
+
+- See total users and filter by name or email
+- View which projects each user has access to
+- Whether a user has enabled 2FA and sort based on that
+- See the last active date for each user
+
+This makes it easier to audit user activity, identify inactive accounts, and understand how access is distributed across your instance.
+<br> 
+<figure markdown="span">
+    ![Improved instance user list with more visbility screenshot](/_images/release-notes/instance_user_list.png)
+</figure>
+<br>
+
+
 ### Webhook HTML responses
 
 Starting with this release, if your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
@@ -207,7 +226,7 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 
 With the **AI Agent Tool** node we are introducing a simplified pattern for multi-agent orchestration that can be run in a single execution and stay entirely on one canvas. You can now connect multiple **AI Agent Tool** nodes to a primary **AI Agent** node, allowing it to supervise and delegate work across other specialized agents. 
 
-This setup is especially useful for building complex systems that function like real-world teams, where a lead agent assigns parts of a task to specialists. It also helps with prompt management by letting you split long, complex instructions into smaller, focused tasks across multiple agents. While similar orchestration was already possible using sub-workflows, AI Agent Tool nodes are a good choice when you want the interaction to happen within a single execution or prefer to manage and debug everything from a single canvas.
+This setup is especially useful for building complex systems that function like real-world teams, where a lead agent assigns parts of a task to specialists. You can even add multiple layers of agents directing other agents, just like you would have in a real multi-tiered organizational structure.  It also helps with prompt management by letting you split long, complex instructions into smaller, focused tasks across multiple agents. While similar orchestration was already possible using sub-workflows, AI Agent Tool nodes are a good choice when you want the interaction to happen within a single execution or prefer to manage and debug everything from a single canvas.
 
 🛠️ **How to:**
 

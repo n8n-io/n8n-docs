@@ -31,7 +31,7 @@ Enter these parameters:
     - `en` (639-1)
     - `fil` (639-2 if no 639-1 format exists)
     - `en_US` (combination of ISO language and country).
-    - Refer to [List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){:target=_blank .external link} and [List of ISO 3166 country codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes){:target=_blank .external link} for language and country codes. Note that Google doesn't support all locales/languages.
+    - Refer to [List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) and [List of ISO 3166 country codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) for language and country codes. Note that Google doesn't support all locales/languages.
 - **Recalculation Interval**: Enter the desired recalculation interval for the spreadsheet functions. This affects how often `NOW`, `TODAY`, `RAND`, and `RANDBETWEEN` are updated. Select **On Change** for recalculating whenever there is a change in the spreadsheet, **Minute** for recalculating every minute, or **Hour** for recalculating every hour. Refer to [Set a spreadsheet’s location & calculation settings](https://support.google.com/docs/answer/58515) for more information about these options. 
 
 Refer to the [Method: spreadsheets.create | Google Sheets](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/create) API documentation for more information.

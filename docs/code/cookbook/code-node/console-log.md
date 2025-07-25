@@ -4,6 +4,7 @@ description: How to use console.log() or print()
 contentType: howto
 ---
 
+<!-- vale Vale.Spelling["Balsamiq"] = NO -->
 # Output to the browser console with `console.log()` or `print()` in the Code node
 
 You can use `console.log()` or `print()` in the Code node to help when writing and debugging your code.

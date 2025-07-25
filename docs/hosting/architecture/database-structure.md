@@ -14,7 +14,7 @@ By default, n8n uses SQLite as the database. If you are using another database t
 
 n8n uses [TypeORM](https://github.com/typeorm/typeorm) for queries and migrations.
 
-To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), which is an open-source universal database tool.
+To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), an open-source universal database tool.
 
 ## Tables
 
@@ -58,7 +58,7 @@ Details of npm community nodes packages installed in your n8n instance. [install
 
 ### migrations
 
-A log of all database migrations. Read more about [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) in TypeORM's documentation.
+A log of all database migrations. Read more about [Migrations](https://typeorm.io/docs/advanced-topics/migrations/) in TypeORM's documentation.
 
 ### project
 

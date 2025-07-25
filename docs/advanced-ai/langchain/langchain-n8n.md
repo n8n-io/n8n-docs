@@ -9,7 +9,7 @@ description: How LangChain concepts map to n8n, and which n8n nodes to use.
 
 This page explains how LangChain concepts and features map to n8n nodes.
 
-This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/index.md).
+This page includes lists of the LangChain-focused nodes in n8n. You can use any n8n node in a workflow where you interact with LangChain, to link LangChain to other services. The LangChain features uses n8n's [Cluster nodes](/integrations/builtin/cluster-nodes/root-nodes/index.md).
 
 
 /// note | n8n implements LangChain JS
@@ -148,7 +148,7 @@ Available nodes:
 * [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md)
 * [Token Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md)
 
-n8n's text splitter nodes implements parts of [LangChain's text_splitter API](https://js.langchain.com/docs/concepts/text_splitters/).
+n8n's text splitter nodes implements parts of the [LangChain text splitter API](https://js.langchain.com/docs/concepts/text_splitters/).
 
 #### Tools
 

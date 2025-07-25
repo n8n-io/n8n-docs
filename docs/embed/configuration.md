@@ -75,7 +75,7 @@ In this case, you can set parameters on the parent credentials (`googleOAuth2Api
 
 ## Environment variables
 
-n8n has many [environment variables](/hosting/configuration/environment-variables/index.md) you can configure. Here are the most relevant environment variables for your hosted solution:
+n8n has many [environment variables](/hosting/configuration/environment-variables.md) you can configure. Here are the most relevant environment variables for your hosted solution:
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

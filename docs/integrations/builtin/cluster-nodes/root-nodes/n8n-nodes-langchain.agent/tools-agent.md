@@ -183,10 +183,10 @@ Refine the Tools Agent node's behavior using these options:
 
 ### Enable Streaming
 
-When enabled, the AI Agent can send data back to the user in real-time as it processes. This is useful for long-running tasks or when you want to provide immediate feedback to users. This is enabled by default for node version 2.1 and above.
+When enabled, the AI Agent sends data back to the user in real-time as it generates the answer. This is useful for long-running generations. This is enabled by default.
 
 /// info | Streaming requirements
-For streaming to work, your workflow must use a trigger that supports streaming responses, such as the Chat Trigger or Webhook node with **Response Mode** set to **Streaming response**.
+For streaming to work, your workflow must use a trigger that supports streaming responses, such as the Chat Trigger or Webhook node with **Response Mode** set to **Streaming**.
 ///
 
 ## Templates and examples

@@ -9,28 +9,28 @@ contentType: howto
 # Streaming responses
 
 /// info | Feature availability
-Available on all plans from n8n version 1.101.0.
+Available on all plans from n8n version 1.105.2.
 ///
 
-Streaming responses let you send data back to users in real-time as your workflow processes it. This is perfect for long-running tasks or when you want to provide immediate feedback.
+Streaming responses let you send data back to users as an AI Agent node generates it. This is useful for chatbots, where you want to show the user the answer as it's generated to provide a better user experience.
 
 You can enable streaming using either:
 - The [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) 
-- The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook.md) with **Response Mode** set to **Streaming response**
+- The [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook.md) 
+with **Response Mode** set to **Streaming**
 
-With streaming enabled, your workflows can handle large datasets or complex operations without making users wait for the entire process to complete.
 
 ## Configure nodes for streaming
 
-To stream data, you need nodes that support streaming output. Not all nodes currently support this feature.
+To stream data, you need to add nodes to the workflow that support streaming output. Not all nodes currently support this feature.
 
 1. Choose a node that supports streaming, such as:
    - [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md)
    - [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md)
-2. You can disable streaming in the options of these nodes, by default they are set to stream data when the `Response Mode` is set to `Streaming response`.
+2. You can disable streaming in the options of these nodes, by default they will stream data when the `Response Mode` in the executed trigger is set to `Streaming response`.
 
 
-## Important considerations
+## Important
 
-- **Trigger requirement**: Your trigger node must be configured for streaming. Without this, the workflow behaves normally based on your response mode settings.
-- **Node configuration**: Even with streaming enabled on the trigger, you need at least one node configured to stream data. Otherwise, no real-time data will be sent to users.
+- **Trigger**: Your trigger node must be configured for streaming. Without this, the workflow behaves normally based on your response mode settings.
+- **Node configuration**: Even with streaming enabled on the trigger, you need at least one node configured to stream data. Otherwise, no data will be sent from the workflow.

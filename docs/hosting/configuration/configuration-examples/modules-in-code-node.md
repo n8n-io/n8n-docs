@@ -25,4 +25,8 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 # Allow usage of external npm modules.
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
+**Important:**
+
+- The value of `NODE_FUNCTION_ALLOW_EXTERNAL` must contain the exact name(s) of the external module(s) you wish to allow for import in the Code node, separated by commas. Using `*` (wildcard) does **not** work for `NODE_FUNCTION_ALLOW_EXTERNAL` (unlike `NODE_FUNCTION_ALLOW_BUILTIN`, which does support `*`). You must list each allowed module by name.
+F
 Refer to [Environment variables reference](/hosting/configuration/environment-variables/nodes.md) for more information on these variables.

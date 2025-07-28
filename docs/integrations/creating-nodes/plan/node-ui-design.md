@@ -151,7 +151,7 @@ When performing an operation on a specific record, such as "update a task commen
 
 #### Dates and timestamps
 
-n8n uses [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank class=.external-link} for dates and times. Make sure that any date or timestamp field you add supports all ISO 8601 formats.
+n8n uses [ISO timestamp strings](https://en.wikipedia.org/wiki/ISO_8601) for dates and times. Make sure that any date or timestamp field you add supports all ISO 8601 formats.
 
 #### JSON
 

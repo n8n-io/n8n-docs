@@ -8,7 +8,7 @@ priority: high
 
 # Google Sheets Trigger node
 
-[Google Sheets](https://www.google.com/sheets){:target=_blank} is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
+[Google Sheets](https://www.google.com/sheets) is a web-based spreadsheet program that's part of Google's office software suite within its Google Drive service.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).

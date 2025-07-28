@@ -36,7 +36,7 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
+Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) for details about the operations.
 
 ## Common issues
 

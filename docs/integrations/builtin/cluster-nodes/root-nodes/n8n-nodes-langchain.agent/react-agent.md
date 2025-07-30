@@ -9,7 +9,7 @@ priority: critical
 # ReAct AI Agent node
 
 /// note | Feature removed
-This functionality was removed in February 2025.
+n8n removed this functionality in February 2025.
 ///
 
 The ReAct Agent node implements [ReAct](https://react-lm.github.io/) logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.

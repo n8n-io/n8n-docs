@@ -1,0 +1,52 @@
+<!-- n8n CUSTOM
+ This is a custom partial created by n8n (it isn't part of Material for MkDocs)
+
+ We add it to the site by including it in _overrides/main.html
+ It relies on docs/_extra/javascript/feedback.js to handle the behavior
+ And docs/_extra/css/feedback.css to handle the styling
+ -->
+
+<!-- Determine feedback configuration -->
+{% if config.n8n_extra.feedback %}
+  {% set feedback = config.n8n_extra.feedback %}
+{% endif %}
+
+<!-- Determine whether to show feedback -->
+{% if page.meta and page.meta.hide %}
+  {% if "feedback" in page.meta.hide %}
+    {% set feedback = None %}
+  {% endif %}
+{% endif %}
+
+<!-- Was this page helpful? -->
+{% if feedback %}
+  <div class="feedback-buttons" style="margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee;">
+        <div id="initial-feedback" style="display: flex; gap: 1em; align-items: center;">
+            <span>{{ feedback.question }}</span>
+            <button onclick="handleRating('positive')" style="padding: 0.5em 1em; background: #90EE90; color: #333; border: none; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 0.5em;">
+                <img src="/_images/assets/thumb_up.png" alt="Thumbs up" style="width: 20px; height: 20px; border: none !important;">{{ feedback.positive_button_text }}
+            </button>
+            <button onclick="handleRating('negative')" style="padding: 0.5em 1em; background: #FFB6C1; color: #333; border: none; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 0.5em;">
+                <img src="/_images/assets/thumb_down.png" alt="Thumbs down" style="width: 20px; height: 20px; border: none !important;">{{ feedback.negative_button_text }}
+            </button>
+        </div>
+        
+        <div id="thank-you-message" style="display: none; color: #666">
+            {{ feedback.thankyou_message }}
+        </div>
+        
+        <div id="feedback-form" style="display: none;">
+            <div style="display: flex; flex-direction: column; gap: 0.4em; width: 100%;">
+                <div style="display: flex; gap: 1em; align-items: center; width: 100%;">
+                    <input type="text" id="feedback-input" placeholder="{{ feedback.comment_input_placeholder }}" 
+                        style="flex: 1; font-size: 1em; padding: 0.5em; border: 1px solid #ddd; border-radius: 4px;">
+                    <button onclick="submitFeedback()" 
+                        style="padding: 0.5em 1em; background: #1C9782; color: white; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap;">
+                        Submit
+                    </button>
+                </div>
+                <div style="font-size: 0.75em; color: #666;">{{ feedback.comment_input_hint }}</div>
+            </div>
+        </div>
+    </div>
+{% endif %}

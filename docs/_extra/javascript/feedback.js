@@ -7,17 +7,17 @@ function showElement(id) {{
     document.getElementById('n8n-feedback-thank-you-message').style.display = 'none';
     document.getElementById('n8n-feedback-comment').style.display = 'none';
     document.getElementById(id).style.display = 'flex';
-    
+
     // Focus the input if showing the feedback form
     if (id === 'n8n-feedback-comment') {{
         setTimeout(() => {{
             const input = document.getElementById('n8n-feedback-input');
             input.focus();
-            input.addEventListener('keypress', function(e) {{
+            input.onkeydown = function(e) {
                 if (e.key === 'Enter') {{
                     submitFeedback();
                 }}
-            }});
+            };
         }}, 0);
     }}
 }}

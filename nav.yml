@@ -145,6 +145,7 @@ nav:
         - Using:
           - source-control-environments/using/index.md
           - Push and pull: source-control-environments/using/push-pull.md
+          - Compare workflow changes: source-control-environments/using/compare-changes.md
           - Copy work between environments: source-control-environments/using/copy-work.md
         - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
       - External secrets: external-secrets.md

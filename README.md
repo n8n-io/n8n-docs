@@ -11,13 +11,30 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 * Python 3.8 or above
 * Pip
-* n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 * Follow the [recommended configuration and auto-complete](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) guidance for the theme. This will help when working with the `mkdocs.yml` file.
 * The repo includes a `.editorconfig` file. Make sure your local editor settings **do not override** these settings. In particular:
 	- Don't allow your editor to replace tabs with spaces. This can affect our code samples (which must retain tabs for people building nodes).
 	- One tab must be equivalent to four spaces.
+* n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 
-### Steps
+To create a virtual environment, type:
+
+```plaintext
+python -m venv venv
+```
+
+To activate it, on Windows, run:
+
+```plaintext
+venvScriptsactivate
+```
+
+Equivalently, on macOS and Linux, execute:
+
+```plaintext
+source venv/bin/activate
+```
+### Procedure
 
 #### For members of the n8n GitHub organization:
 
@@ -27,8 +44,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	```bash
 	git clone --recurse-submodules git@github.com:n8n-io/n8n-docs.git
 	cd n8n-docs
- 	# Set up virtual environment if using one (steps depend on your system)
- 	# Install dependencies
+ 	# In the activated virtual env, install dependencies
 	pip install -r requirements.txt
 	pip install _submodules/insiders
 	```
@@ -42,8 +58,24 @@ Fork the repository, then:
 ```
 git clone https://github.com/<your-username>/n8n-docs.git
 cd n8n-docs
+# In the activated virtual env, install dependencies
 pip install -r requirements.txt
 pip install mkdocs-material
+```
+Note that, as is, if you try to show a local preview of the documentation you will obtain an error due to the `material.extensions.preview` extension. To fix this, comment the following code into the `mkdocs.yml` file:
+```yaml
+- material.extensions.preview:
+      configurations:
+        - sources:
+            include:
+              - release-notes.md
+        - targets:
+            include:
+              - glossary.md
+```
+Update the `.gitignore` file adding:
+```plaintext
+mkdocs.yml
 ```
 
 #### To serve a local preview:

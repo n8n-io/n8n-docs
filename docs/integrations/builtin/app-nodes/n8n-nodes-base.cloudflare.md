@@ -30,7 +30,7 @@ Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties){:target=_blank .external-link} for more information on this service.
+Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties) for more information on this service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

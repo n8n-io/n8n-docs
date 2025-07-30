@@ -43,7 +43,7 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
     Explore a wide range of AI workflow templates on the n8n website.
 
-    [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}
+    [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25)
 
 </div>
 
@@ -59,7 +59,7 @@ This feature uses [Cluster nodes](/integrations/builtin/cluster-nodes/index.md):
 
 ### Workflow templates
 
-You can browse [workflow templates](/glossary.md#template-n8n) in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26){:target=_blank .external-link} page.
+You can browse [workflow templates](/glossary.md#template-n8n) in-app or on the n8n website [Workflows](https://n8n.io/workflows/?categories=25,26) page.
 
 Refer to [Templates](/workflows/templates.md) for information on accessing templates in-app.
 
@@ -69,4 +69,4 @@ Use the [n8n Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.
 
 ### Chatbot widget
 
-n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat){:target=_blank .external-link} for usage information.
+n8n provides a chatbot widget that you can use as a frontend for AI-powered chat workflows. Refer to the [@n8n/chat npm page](https://www.npmjs.com/package/@n8n/chat) for usage information.

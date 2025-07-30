@@ -49,8 +49,6 @@ theme:
     - navigation.top
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
-copyright: >
-  <a href="#__consent">Change cookie settings</a>
 extra:
   analytics:
     provider: google

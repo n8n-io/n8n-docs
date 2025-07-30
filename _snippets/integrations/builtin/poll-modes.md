@@ -35,7 +35,7 @@ Enter a custom **Cron Expression** to trigger the poll. Use these values and ran
 * Months: `0` - `11` (Jan - Dec)
 * Day of Week: `0` - `6` (Sun - Sat)
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Cron Expression** field in n8n.
+To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the **Cron Expression** field in n8n.
 
 #### Examples
 

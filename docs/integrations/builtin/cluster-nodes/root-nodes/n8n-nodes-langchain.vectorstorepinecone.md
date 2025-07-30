@@ -8,7 +8,9 @@ priority: medium
 
 # Pinecone Vector Store node
 
-Use the Pinecone node to interact with your Pinecone database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool).
+
+Use the Pinecone node to interact with your Pinecone database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool). You can also update an item in a vector database by its ID.
+
 
 On this page, you'll find the node parameters for the Pinecone node, and links to more resources.
 
@@ -48,9 +50,15 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 	
 ## Node parameters
 
+
+### Operation Mode
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+
 
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
@@ -75,6 +83,10 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 * **Pinecone Index**: Select or enter the Pinecone Index to use.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
+### Parameters for **Update Documents**
+
+* ID
+
 ## Node options
 
 ### Pinecone Namespace 
@@ -96,7 +108,7 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 ## Related resources
 
-Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

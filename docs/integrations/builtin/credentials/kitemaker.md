@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Kitemaker](https://www.kitemaker.co/){:target=_blank .external-link} account.
+Create a [Kitemaker](https://www.kitemaker.co/) account.
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Kitemaker](https://www.kitemaker.co/){:target=_blank .external-link} a
 
 ## Related resources
 
-Refer to [Kitemaker's API documentation](https://kitemakerhq.github.io/rest-docs/){:target=_blank .external-link} for more information about the service.
+Refer to [Kitemaker's API documentation](https://kitemakerhq.github.io/rest-docs/) for more information about the service.
 
 ## Using API access token
 
 To configure this credential, you'll need:
 
-- A **Personal Access Token**: Generate a personal access token from **Manage > Developer settings**. Refer to [API Authentication](https://kitemakerhq.github.io/rest-docs/#documentationauthentication){:target=_blank .external-link} for more detailed instructions.
+- A **Personal Access Token**: Generate a personal access token from **Manage > Developer settings**. Refer to [API Authentication](https://kitemakerhq.github.io/rest-docs/#documentationauthentication) for more detailed instructions.
 

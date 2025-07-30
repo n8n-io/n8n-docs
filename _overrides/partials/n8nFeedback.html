@@ -20,33 +20,29 @@
 
 <!-- Was this page helpful? -->
 {% if feedback %}
-  <div class="feedback-buttons" style="margin-top: 2em; padding-top: 1em; border-top: 1px solid #eee;">
-        <div id="initial-feedback" style="display: flex; gap: 1em; align-items: center;">
+  <div class="n8n-feedback-container">
+        <div id="n8n-ratings-feedback" style="display: flex; gap: 1em; align-items: center;">
             <span>{{ feedback.question }}</span>
-            <button onclick="handleRating('positive')" style="padding: 0.5em 1em; background: #90EE90; color: #333; border: none; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 0.5em;">
+            <button class="n8n-feedback-button-positive" onclick="handleRating('positive')" >
                 <img src="/_images/assets/thumb_up.png" alt="Thumbs up" style="width: 20px; height: 20px; border: none !important;">{{ feedback.positive_button_text }}
             </button>
-            <button onclick="handleRating('negative')" style="padding: 0.5em 1em; background: #FFB6C1; color: #333; border: none; border-radius: 4px; cursor: pointer; display: flex; align-items: center; gap: 0.5em;">
+            <button class="n8n-feedback-button-negative" onclick="handleRating('negative')">
                 <img src="/_images/assets/thumb_down.png" alt="Thumbs down" style="width: 20px; height: 20px; border: none !important;">{{ feedback.negative_button_text }}
             </button>
         </div>
         
-        <div id="thank-you-message" style="display: none; color: #666">
+        <div id="n8n-feedback-thank-you-message" style="display: none;">
             {{ feedback.thankyou_message }}
         </div>
         
-        <div id="feedback-form" style="display: none;">
-            <div style="display: flex; flex-direction: column; gap: 0.4em; width: 100%;">
-                <div style="display: flex; gap: 1em; align-items: center; width: 100%;">
-                    <input type="text" id="feedback-input" placeholder="{{ feedback.comment_input_placeholder }}" 
-                        style="flex: 1; font-size: 1em; padding: 0.5em; border: 1px solid #ddd; border-radius: 4px;">
-                    <button onclick="submitFeedback()" 
-                        style="padding: 0.5em 1em; background: #1C9782; color: white; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap;">
-                        Submit
-                    </button>
-                </div>
-                <div style="font-size: 0.75em; color: #666;">{{ feedback.comment_input_hint }}</div>
+        <div id="n8n-feedback-comment" style="display: none;">
+            <div class="n8n-feedback-comment-inner">
+                <input type="text" id="n8n-feedback-input" placeholder="{{ feedback.comment_input_placeholder }}">
+                <button class="n8n-feedback-submit-button" onclick="submitFeedback()">
+                    Submit
+                </button>
             </div>
+            <div class="n8n-feedback-comment-hint">{{ feedback.comment_input_hint }}</div>
         </div>
     </div>
 {% endif %}

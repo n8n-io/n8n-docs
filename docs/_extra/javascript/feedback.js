@@ -3,15 +3,15 @@ This script contains the functonality for the n8nFeedback.html partial
 */
 
 function showElement(id) {{
-    document.getElementById('initial-feedback').style.display = 'none';
-    document.getElementById('thank-you-message').style.display = 'none';
-    document.getElementById('feedback-form').style.display = 'none';
+    document.getElementById('n8n-ratings-feedback').style.display = 'none';
+    document.getElementById('n8n-feedback-thank-you-message').style.display = 'none';
+    document.getElementById('n8n-feedback-comment').style.display = 'none';
     document.getElementById(id).style.display = 'flex';
     
     // Focus the input if showing the feedback form
-    if (id === 'feedback-form') {{
+    if (id === 'n8n-feedback-comment') {{
         setTimeout(() => {{
-            const input = document.getElementById('feedback-input');
+            const input = document.getElementById('n8n-feedback-input');
             input.focus();
             input.addEventListener('keypress', function(e) {{
                 if (e.key === 'Enter') {{
@@ -41,14 +41,14 @@ function handleRating(rating) {{
     }}
     
     if (rating === 'positive') {{
-        showElement('thank-you-message');
+        showElement('n8n-feedback-thank-you-message');
     }} else {{
-        showElement('feedback-form');
+        showElement('n8n-feedback-comment');
     }}
 }}
 
 function submitFeedback() {{
-    const feedbackText = document.getElementById('feedback-input').value;
+    const feedbackText = document.getElementById('n8n-feedback-input').value;
     // Send feedback to Google Analytics
     if (typeof gtag !== 'undefined') {{
         try {{
@@ -66,5 +66,5 @@ function submitFeedback() {{
     }} else {{
         console.warn('Google Analytics (gtag) not found. Event not sent.');
     }}
-    showElement('thank-you-message');
+    showElement('n8n-feedback-thank-you-message');
 }}

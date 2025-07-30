@@ -28,4 +28,4 @@ To configure the Send Email credential to use Yahoo Mail:
     - Enter `587` for TLS.
 5. Turn on the **SSL/TLS** toggle.
 
-Refer to [IMAP server settings for Yahoo Mail](https://help.yahoo.com/kb/sln4075.html){:target=_blank .external-link} for more information. If the settings above don't work for you, check with your email administrator.
+Refer to [IMAP server settings for Yahoo Mail](https://help.yahoo.com/kb/sln4075.html) for more information. If the settings above don't work for you, check with your email administrator.

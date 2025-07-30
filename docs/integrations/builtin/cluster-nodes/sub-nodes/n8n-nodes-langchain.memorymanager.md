@@ -42,7 +42,7 @@ On this page, you'll find a list of operations that the Chat Memory Manager node
 
 ## Related resources
 
-Refer to [LangChain's Memory documentation](https://langchain-ai.github.io/langgraphjs/concepts/memory/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Memory documentation](https://langchain-ai.github.io/langgraphjs/concepts/memory/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

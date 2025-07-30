@@ -6,7 +6,7 @@ contentType: howto
 ---
 
 /// info | Feature availability
-RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/){:target=_blank .external-link} for plan details.
+RBAC is available on all plans except the Community edition. Different plans have different numbers of projects and roles. Refer to n8n's [pricing page](https://n8n.io/pricing/) for plan details.
 ///
 
 n8n uses projects to group workflows and [credentials](/glossary.md#credential-n8n), and assigns [roles](/user-management/rbac/role-types.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.

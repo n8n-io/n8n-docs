@@ -21,12 +21,16 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Model**: Select the model that generates the completion.
 
-Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html){:target=_blank .external-link}.
+Learn more about available models in the [Amazon Bedrock model documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html).
 
 ## Node options
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
+
+## Proxy limitations
+
+This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables/deployment.md).
 
 ## Templates and examples
 
@@ -35,7 +39,7 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 
 ## Related resources
 
-Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

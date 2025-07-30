@@ -26,6 +26,7 @@ The following video explains what evaluations are, why they're useful, and how t
 <iframe width="840" height="472.5" src="https://www.youtube.com/embed/5LlF196PKaE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+
 ## Why is evaluation needed?
 
 AI models are fundamentally different than code. Code is deterministic and you can reason about it. This is difficult to do with LLMs, since they're black boxes. Instead, you must *measure* LLM output by running data through them and observing the output. 
@@ -59,4 +60,4 @@ Since there are too many test cases to check individually, evaluations measure t
 
 * [Light evaluations](/advanced-ai/evaluations/light-evaluations.md): Perfect for evaluating your AI workflows against hand-selected test cases during development.
 * [Metric-based evaluations](/advanced-ai/evaluations/metric-based-evaluations.md): Advanced evaluations to maintain performance and correctness in production by using scoring and metrics with large datasets.
-* [Tips and common issues](/advanced-ai/evaluations/metric-based-evaluations.md): Learn how to set up specific evaluation use cases and work around common issues.
+* [Tips and common issues](/advanced-ai/evaluations/tips-and-common-issues.md): Learn how to set up specific evaluation use cases and work around common issues.

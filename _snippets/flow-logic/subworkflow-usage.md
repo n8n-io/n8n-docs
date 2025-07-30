@@ -5,6 +5,8 @@
 
     /// note | Create sub-workflows from existing workflows
     You can optionally create a sub-workflow directly from an existing parent workflow using the [Execute Sub-workflow](/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow.md) node. In the node, select the **Database** and **From list** options and select **Create a sub-workflow** in the list.
+
+	You can also extract selected nodes directly using [Sub-workflow conversion](/workflows/subworkflow-conversion.md) in the context menu.
     ///
 
 1. **Optional**: configure which workflows can call the sub-workflow:

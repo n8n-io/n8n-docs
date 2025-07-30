@@ -49,8 +49,6 @@ theme:
     - navigation.top
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
-copyright: >
-  <a href="#__consent">Change cookie settings</a>
 extra:
   analytics:
     provider: google
@@ -69,12 +67,6 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             submitting an issue or a fix in our <a href="https://github.com/n8n-io/n8n-docs" target="_blank" rel="noopener">GitHub repo</a>.
-  consent:
-    title: Cookie consent
-    description: >-
-      We use cookies and other tracking technologies to improve your browsing experience,
-      to analyze our website traffic, assist our marketing efforts and to understand where
-      our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
   # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
   status:
     beta: This feature is in beta

@@ -7,8 +7,8 @@ contentType: tutorial
 
 This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It uses:
 
-* [Caddy](https://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Droplet from the internet. Caddy will also automatically create and manage SSL / TLS certificates for your n8n instance.
-* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
+* [Caddy](https://caddyserver.com) (a reverse proxy) to allow access to the Droplet from the internet. Caddy will also automatically create and manage SSL / TLS certificates for your n8n instance.
+* [Docker Compose](https://docs.docker.com/compose/) to create and define the application components and how they work together.
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -16,10 +16,10 @@ This hosting guide shows you how to self-host n8n on a DigitalOcean droplet. It 
 
 ## Create a Droplet
 
-1. [Log in](https://cloud.digitalocean.com/login){:target=_blank .external-link} to DigitalOcean. 
-2. Select the project to host the Droplet, or [create a new project](https://docs.digitalocean.com/products/projects/how-to/create/){:target=_blank .external-link}.
+1. [Log in](https://cloud.digitalocean.com/login) to DigitalOcean. 
+2. Select the project to host the Droplet, or [create a new project](https://docs.digitalocean.com/products/projects/how-to/create/).
 3. In your project, select **Droplets** from the **Manage** menu. 
-4. [Create a new Droplet](https://docs.digitalocean.com/products/droplets/how-to/create/){:target=_blank .external-link} using the [Docker image](https://marketplace.digitalocean.com/apps/docker){:target="_blank" .external-link} available on the **Marketplace** tab.
+4. [Create a new Droplet](https://docs.digitalocean.com/products/droplets/how-to/create/) using the [Docker image](https://marketplace.digitalocean.com/apps/docker) available on the **Marketplace** tab.
 
 /// note | Droplet resources
 When creating the Droplet, DigitalOcean asks you to choose a plan. For most usage levels, a basic shared CPU plan is enough.
@@ -29,7 +29,7 @@ DigitalOcean lets you choose between SSH key and password-based authentication. 
 ///
 ## Log in to your Droplet and create new user
 
-The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/){:target="_blank" .external-link} for more information.
+The rest of this guide requires you to log in to the Droplet using a terminal with SSH. Refer to [How to Connect to Droplets with SSH](https://docs.digitalocean.com/products/droplets/how-to/connect-with-ssh/) for more information.
 
 You should create a new user, to avoid working as the root user:
 
@@ -44,13 +44,13 @@ You should create a new user, to avoid working as the root user:
 	usermod -aG sudo <username>
 	```
 	You can now run commands with superuser privileges by using `sudo` before the command.
-5. Follow the steps to set up SSH for the new user: [Add Public Key Authentication](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04#step-four-add-public-key-authentication-recommended){:target=_blank .external-link}.
+5. Follow the steps to set up SSH for the new user: [Add Public Key Authentication](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04#step-four-add-public-key-authentication-recommended).
 5. Log out of the droplet.
 6. Log in using SSH as the new user.
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the home folder of the logged-in user on your Droplet. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy) into the home folder of the logged-in user on your Droplet. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 
@@ -73,7 +73,7 @@ The host operating system (the DigitalOcean Droplet) copies the two folders you 
 
 ### Create Docker volumes
 
-To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
+To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/) that Docker reuses between restarts:
 
 ```shell
 sudo docker volume create caddy_data
@@ -87,7 +87,7 @@ sudo docker volume create n8n_data
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the Droplet. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts).
 
 ## Open ports
 

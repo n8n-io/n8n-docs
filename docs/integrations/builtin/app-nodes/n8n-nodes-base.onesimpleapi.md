@@ -40,6 +40,6 @@ Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpl
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+Refer to [One Simple API's documentation](https://onesimpleapi.com/docs) for more information about the service.
 
 <!-- vale on -->

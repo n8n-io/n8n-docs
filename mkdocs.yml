@@ -90,18 +90,18 @@ markdown_extensions:
   # attr_list is required for several other features. Always enable.
   - attr_list
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#automatic-previews
- # - material.extensions.preview:
+  - material.extensions.preview:
       # This is currently not documented (issue here https://github.com/squidfunk/mkdocs-material/issues/8001)
       # It is mentioned here though: https://github.com/squidfunk/mkdocs-material/issues/6704#issuecomment-1986840660
       # We use it to process these two settings independently. Otherwise, previews would only work
       # on links in source pages _to_ target pages
-#      configurations:
-#        - sources:
-#            include:
-#              - release-notes.md
-#        - targets:
-#            include:
-#              - glossary.md
+      configurations:
+        - sources:
+            include:
+              - release-notes.md
+        - targets:
+            include:
+              - glossary.md
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   - md_in_html
   - meta

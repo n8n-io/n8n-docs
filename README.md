@@ -17,23 +17,6 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	- One tab must be equivalent to four spaces.
 * n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 
-To create a virtual environment, type:
-
-```plaintext
-python -m venv venv
-```
-
-To activate it, on Windows, run:
-
-```plaintext
-venvScriptsactivate
-```
-
-Equivalently, on macOS and Linux, execute:
-
-```plaintext
-source venv/bin/activate
-```
 ### Procedure
 
 #### For members of the n8n GitHub organization:
@@ -62,7 +45,22 @@ cd n8n-docs
 pip install -r requirements.txt
 pip install mkdocs-material
 ```
-Note that, as is, if you try to show a local preview of the documentation you will obtain an error due to the `material.extensions.preview` extension. To fix this, comment the following code into the `mkdocs.yml` file:
+
+#### To serve a local preview:
+
+```
+mkdocs serve
+```
+
+**Note for external contributors**: You may receive an error like the following:
+	
+```plaintext
+ERROR   -  Config value 'markdown_extensions': Failed to load extension 'material.extensions.preview'.
+           ModuleNotFoundError: No module named 'material.extensions.preview'
+
+Aborted with a configuration error!
+```
+This is because the `material.extensions.preview` is managed by internal n8n contributors. If you receive such an error, go to the `mkdocs.yml` file and **temporarely** comment the following section of the file:
 ```yaml
 - material.extensions.preview:
       configurations:
@@ -73,16 +71,9 @@ Note that, as is, if you try to show a local preview of the documentation you wi
             include:
               - glossary.md
 ```
-Update the `.gitignore` file adding:
-```plaintext
-mkdocs.yml
-```
+After that, you should be able to display and use locally the preview of the documentation. 
 
-#### To serve a local preview:
-
-```
-mkdocs serve
-```
+Before committing any changes,please, remember to **uncomment this section** of the `mkdocs.yml` file.
 
 ## Contributing
 

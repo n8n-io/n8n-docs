@@ -21,12 +21,12 @@ n8n creates a new version when you:
 
  * Save your workflow.
  * Restore an old version. n8n saves the latest version before restoring.
- * Pull from a Git repository using [Source control](/source-control-environments/). Note that n8n saves versions to the instance database, not to Git.
+ * Pull from a Git repository using [Source control](/source-control-environments/index.md). Note that n8n saves versions to the instance database, not to Git.
 
 /// note | Workflow history and execution history
-Don't confuse workflow history with the [Workflow-level executions list](/workflows/executions/single-workflow-executions/).
+Don't confuse workflow history with the [Workflow-level executions list](/workflows/executions/single-workflow-executions.md).
 
-Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug/) in your current workflow.
+Executions are workflow runs. With the executions list, you can see previous runs of the current version of the workflow. You can copy previous executions into the editor to [Debug and re-run past executions](/workflows/executions/debug.md) in your current workflow.
 
 Workflow history is previous versions of the workflow: for example, a version with a different node, or different parameters set.
 ///

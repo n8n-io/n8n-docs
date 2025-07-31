@@ -10,14 +10,14 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [MQTT](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/)
-- [MQTT Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger/)
+- [MQTT](/integrations/builtin/app-nodes/n8n-nodes-base.mqtt.md)
+- [MQTT Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md)
 
 ## Prerequisites
 
-Install an [MQTT broker](https://mqtt.org/){:target=_blank .external-link}.
+Install an [MQTT broker](https://mqtt.org/).
 
-MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/software/){:target=_blank .external-link}.
+MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/software/).
 
 ## Supported authentication methods
 
@@ -25,7 +25,7 @@ MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/soft
 
 ## Related resources
 
-Refer to [MQTT's documentation](https://mqtt.org/){:target=_blank .external-link} for more information about the MQTT protocol.
+Refer to [MQTT's documentation](https://mqtt.org/) for more information about the MQTT protocol.
 
 Refer to your broker provider's documentation for more detailed configuration and details.
 

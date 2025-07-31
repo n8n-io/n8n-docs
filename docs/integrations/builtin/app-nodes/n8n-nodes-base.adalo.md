@@ -13,7 +13,7 @@ Use the Adalo node to automate work in Adalo, and integrate Adalo with other app
 On this page, you'll find a list of operations the Adalo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guidance on setting up authentication. 
+Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for guidance on setting up authentication. 
 ///	
 
 ## Operations
@@ -32,7 +32,7 @@ Refer to [Adalo credentials](/integrations/builtin/credentials/adalo/) for guida
 
 ## Related resources
 
-Refer to [Adalo's documentation](https://help.adalo.com/){:target=_blank .external-link} for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis){:target=_blank .external-link} page gives more detail about what you can do with Adalo collections.
+Refer to [Adalo's documentation](https://help.adalo.com/) for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis) page gives more detail about what you can do with Adalo collections.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

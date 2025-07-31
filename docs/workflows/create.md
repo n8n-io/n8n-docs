@@ -6,7 +6,7 @@ contentType: howto
 
 # Create a workflow
 
-A workflow is a collection of nodes connected together to automate a process. You build workflows on the workflow canvas.
+A [workflow](/glossary.md#workflow-n8n) is a collection of nodes connected together to automate a process. You build workflows on the [workflow canvas](/glossary.md#canvas-n8n).
 
 ## Create a workflow
 
@@ -20,13 +20,13 @@ Or:
 2. If you're doing this from the **Overview** page, you'll create the workflow inside your personal space. If you're doing this from inside a project, you'll create the workflow inside that specific project.
 3. Get started by adding a trigger node: select **Add first step...**
 
-If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/) to quickly try out n8n features.
+If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/index.md) to quickly try out n8n features.
 
 ## Run workflows manually
 
 You may need to run your workflow manually when building and testing, or if your workflow doesn't have a trigger node. 
 
-To run manually, select **Test Workflow**.
+To run manually, select **Execute Workflow**.
 
 ## Run workflows automatically
 

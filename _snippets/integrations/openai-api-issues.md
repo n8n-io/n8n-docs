@@ -1,17 +1,17 @@
 ## The service is receiving too many requests from you
 
-This error displays when you've exceeded [OpenAI's rate limits](https://platform.openai.com/docs/guides/rate-limits){:target=_blank .external-link}.
+This error displays when you've exceeded [OpenAI's rate limits](https://platform.openai.com/docs/guides/rate-limits).
 
 There are two ways to work around this issue:
 
-1. Split your data up into smaller chunks using the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/) node and add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait/) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
+1. Split your data up into smaller chunks using the [Loop Over Items](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md) node and add a [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node at the end for a time amount that will help. Copy the code below and paste it into a workflow to use as a template.
     ```
     {
         "nodes": [
         {
             "parameters": {},
             "id": "35d05920-ad75-402a-be3c-3277bff7cc67",
-            "name": "When clicking ‘Test workflow’",
+            "name": "When clicking ‘Execute workflow’",
             "type": "n8n-nodes-base.manualTrigger",
             "typeVersion": 1,
             "position": [
@@ -64,7 +64,7 @@ There are two ways to work around this issue:
         }
         ],
         "connections": {
-        "When clicking ‘Test workflow’": {
+        "When clicking ‘Execute workflow’": {
             "main": [
             [
                 {
@@ -113,24 +113,24 @@ There are two ways to work around this issue:
         "pinData": {}
     }
     ```
-2. Use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart){:target=_blank .external-link} instead of using the OpenAI node.
+2. Use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node with the built-in batch-limit option against the [OpenAI API](https://platform.openai.com/docs/quickstart) instead of using the OpenAI node.
 
 ## Insufficient quota
 
-This error displays when your OpenAI account doesn't have enough credits or capacity to fulfill your request. This may mean that your OpenAI trial period has ended, that your account needs more credit, or that you've gone over a usage limit.
-
-/// note | Zero balance issue
-If you create an API key when the account balance is zero, operations will always report "insufficient quota" even if funds are added later. To avoid this issue, ensure that there is credit in the account before issuing a new API key from the [API keys screen](https://platform.openai.com/settings/organization/api-keys).
+/// note | Quota issues
+There are a number of OpenAI issues surrounding quotas, including failures when quotas have been recently topped up. To avoid these issues, ensure that there is credit in the account and issue a new API key from the [API keys screen](https://platform.openai.com/settings/organization/api-keys).
 ///
 
-To troubleshoot this error, on your [OpenAI settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page:
+This error displays when your OpenAI account doesn't have enough credits or capacity to fulfill your request. This may mean that your OpenAI trial period has ended, that your account needs more credit, or that you've gone over a usage limit.
+
+To troubleshoot this error, on your [OpenAI settings](https://platform.openai.com/settings/organization/billing/overview) page:
 
 * Select the correct organization for your API key in the first selector in the upper-left corner.
 * Select the correct project for your API key in the second selector in the upper-left corner.
-* Check the organization-level [billing overview](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} page to ensure that the organization has enough credit. Double-check that you select the correct organization for this page.
-* Check the organization-level [usage limits](https://platform.openai.com/settings/organization/limits){:target=_blank .external-link} page. Double-check that you select the correct organization for this page and scroll to the **Usage limits** section to verify that you haven't exceeded your organization's usage limits.
+* Check the organization-level [billing overview](https://platform.openai.com/settings/organization/billing/overview) page to ensure that the organization has enough credit. Double-check that you select the correct organization for this page.
+* Check the organization-level [usage limits](https://platform.openai.com/settings/organization/limits) page. Double-check that you select the correct organization for this page and scroll to the **Usage limits** section to verify that you haven't exceeded your organization's usage limits.
 * Check your OpenAI project's usage limits. Double-check that you select the correct project in the second selector in the upper-left corner. Select **Project** > **Limits** to view or change the project limits.
-* Check that the [OpenAI API](https://status.openai.com/){:target=_blank .external-link} is operating as expected.
+* Check that the [OpenAI API](https://status.openai.com/) is operating as expected.
 
 /// note | Balance waiting period
 After topping up your balance, there may be a delay before your OpenAI account reflects the new balance.
@@ -138,13 +138,13 @@ After topping up your balance, there may be a delay before your OpenAI account r
 
 In n8n:
 
-* check that the [OpenAI credentials](/integrations/builtin/credentials/openai/) use a valid [OpenAI API key](https://platform.openai.com/api-keys){:target=_blank .external-link} for the account you've added money to
-* ensure that you connect the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/) to the correct [OpenAI credentials](/integrations/builtin/credentials/openai/)
+* check that the [OpenAI credentials](/integrations/builtin/credentials/openai.md) use a valid [OpenAI API key](https://platform.openai.com/api-keys) for the account you've added money to
+* ensure that you connect the [OpenAI node](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) to the correct [OpenAI credentials](/integrations/builtin/credentials/openai.md)
 
-If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview){:target=_blank .external-link} to automatically reload your account with credits when your balance reaches $0.
+If you find yourself frequently running out of account credits, consider turning on auto recharge in your [OpenAI billing settings](https://platform.openai.com/settings/organization/billing/overview) to automatically reload your account with credits when your balance reaches $0.
 
 ## Bad request - please check your parameters
 
 This error displays when the request results in an error but n8n wasn't able to interpret the error message from OpenAI.
 
-To begin troubleshooting, try running the same operation using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node, which should provide a more detailed error message.
+To begin troubleshooting, try running the same operation using the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node, which should provide a more detailed error message.

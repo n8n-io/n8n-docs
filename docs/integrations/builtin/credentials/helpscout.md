@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout/)
-- [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger/)
+- [Help Scout](/integrations/builtin/app-nodes/n8n-nodes-base.helpscout.md)
+- [Help Scout Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger.md)
 
 ## Prerequisites
 
@@ -22,10 +22,10 @@ Create a [Help Scout](https://www.helpscout.com/) account.
 
 ## Related resources
 
-Refer to [Help Scout's API documentation](https://developer.helpscout.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Help Scout's API documentation](https://developer.helpscout.com/) for more information about the service.
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to create a Help Scout app. Refer to the instructions in the [Help Scout OAuth documentation](https://developer.helpscout.com/mailbox-api/overview/authentication/#oauth2-application){:target=_blank .external-link} for more information.
+If you need to configure OAuth2 from scratch or need more detail on what's happening in the OAuth web flow, you'll need to create a Help Scout app. Refer to the instructions in the [Help Scout OAuth documentation](https://developer.helpscout.com/mailbox-api/overview/authentication/#oauth2-application) for more information.

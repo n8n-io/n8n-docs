@@ -12,7 +12,7 @@ Use the Wise node to automate work in Wise, and integrate Wise with other applic
 On this page, you'll find a list of operations the Wise node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Wise credentials](/integrations/builtin/credentials/wise/) for guidance on setting up authentication. 
+Refer to [Wise credentials](/integrations/builtin/credentials/wise.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

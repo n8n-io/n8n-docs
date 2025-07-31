@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twake](/integrations/builtin/app-nodes/n8n-nodes-base.twake/)
+- [Twake](/integrations/builtin/app-nodes/n8n-nodes-base.twake.md)
 
 ## Prerequisites
 
-Create a [Twake](https://twake.app/){:target=_blank .external-link} account.
+Create a [Twake](https://twake.app/) account.
 
 ## Supported authentication methods
 
@@ -22,13 +22,13 @@ Create a [Twake](https://twake.app/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference){:target=_blank .external-link} for more information about the service.
+Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference) for more information about the service.
 
 ## Using Cloud API key
 
 To configure this credential, you'll need:
 
-- A **Workspace Key**: Generated when you install the **n8n** application to your Twake Cloud environment and select **Configure**. Refer to [How to connect n8n to Twake](https://help.twake.app/en/latest/applications/connectors/index.html#how-to-connect-n8n-to-twake){:target=_blank .external-link} for more detailed instructions.
+- A **Workspace Key**: Generated when you install the **n8n** application to your Twake Cloud environment and select **Configure**. Refer to [How to connect n8n to Twake](https://help.twake.app/en/latest/applications/connectors/index.html#how-to-connect-n8n-to-twake) for more detailed instructions.
 
 ## Using Server API key
 
@@ -38,7 +38,7 @@ To configure this credential, you'll need:
 - A **Public ID**: Generated when you create an app.
 - A **Private API Key**: Generated when you create an app.
 
-To generate your **Public ID** and **Private API Key**, [create a Twake application](https://doc.twake.app/developers-api/get-started/create-your-first-application){:target=_blank .external-link}: 
+To generate your **Public ID** and **Private API Key**, [create a Twake application](https://doc.twake.app/developers-api/get-started/create-your-first-application): 
 
 1. Go to **Workspace Settings > Applications and connectors > Access your applications and connectors > Create an application**.
 2. Enter appropriate details.
@@ -46,4 +46,4 @@ To generate your **Public ID** and **Private API Key**, [create a Twake applicat
 4. Copy the **Public identifier** and add it as the n8n **Public ID**.
 5. Copy the **Private key** and add it as the n8n **Private API Key**.
 
-Refer to [API settings](https://doc.twake.app/developers-api/get-started/create-your-first-application#id-3.-api-settings){:target=_blank .external-link} for more information.
+Refer to [API settings](https://doc.twake.app/developers-api/get-started/create-your-first-application#id-3.-api-settings) for more information.

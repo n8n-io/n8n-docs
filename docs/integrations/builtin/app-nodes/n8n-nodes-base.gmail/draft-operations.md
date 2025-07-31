@@ -8,7 +8,7 @@ priority: high
 
 # Gmail node Draft Operations
 
-Use the Draft operations to create, delete, or get a draft or list drafts in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) for more information on the Gmail node itself.
+Use the Draft operations to create, delete, or get a draft or list drafts in Gmail. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
 
 ## Create a draft
 
@@ -36,7 +36,7 @@ Use these options to further refine the node's behavior:
 * **Thread ID**: If you want this draft attached to a thread, enter the ID for that thread.
 * **To Email**: Enter one or more email addresses for recipients. Separate multiple email addresses with a comma, for example `jay@gatsby.com, jon@smith.com`.
 
-Refer to the [Gmail API Method: users.drafts.create](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/create){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.drafts.create](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/create) documentation for more information.
 
 ## Delete a draft
 
@@ -49,7 +49,7 @@ Enter these parameters:
 * **Operation**: Select **Delete**.
 * **Draft ID**: Enter the ID of the draft you wish to delete.
 
-Refer to the [Gmail API Method: users.drafts.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/delete){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.drafts.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/delete) documentation for more information.
 
 ## Get a draft
 
@@ -69,7 +69,7 @@ Use these options to further refine the node's behavior:
 * **Attachment Prefix**: Enter a prefix for the name of the binary property the node should write any attachments to. n8n adds an index starting with `0` to the prefix. For example, if you enter `attachment_' as the prefix, the first attachment saves to 'attachment_0'.
 * **Download Attachments**: Select whether the node should download the draft's attachments (turned on) or not (turned off).
 
-Refer to the [Gmail API Method: users.drafts.get](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.drafts.get](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get) documentation for more information.
 
 <!-- vale off -->
 ## Get Many drafts
@@ -95,8 +95,8 @@ Use these options to further refine the node's behavior:
 * **Download Attachments**: Select whether the node should download the draft's attachments (turned on) or not (turned off).
 * **Include Spam and Trash**: Select whether the node should get drafts in the Spam and Trash folders (turned on) or not (turned off).
 
-Refer to the [Gmail API Method: users.drafts.list](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.drafts.list](https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list) documentation for more information.
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).

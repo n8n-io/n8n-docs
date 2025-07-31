@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble/)
+- [Bubble](/integrations/builtin/app-nodes/n8n-nodes-base.bubble.md)
 
 /// note | API access
 You need a paid plan to access the Bubble APIs.
@@ -22,11 +22,11 @@ You need a paid plan to access the Bubble APIs.
 
 ## Related resources
 
-Refer to [Bubble's API documentation](https://manual.bubble.io/help-guides/integrations/api){:target=_blank .external-link} for more information about the service.
+Refer to [Bubble's API documentation](https://manual.bubble.io/help-guides/integrations/api) for more information about the service.
 
 ## Using API key
 
-To configure this credential, you'll need a paid [Bubble](https://bubble.io){:target=_blank .external-link} account and:
+To configure this credential, you'll need a paid [Bubble](https://bubble.io) account and:
 
 - An **API Token**
 - An **App Name**
@@ -34,7 +34,7 @@ To configure this credential, you'll need a paid [Bubble](https://bubble.io){:ta
 
 To set it up, you'll need to create an app:
 
-1. Go to the [**Apps**](https://bubble.io/home/apps){:target=_blank .external-link} page in Bubble.
+1. Go to the [**Apps**](https://bubble.io/home/apps) page in Bubble.
 1. Select **Create an app**.
 1. Enter a **Name** for your app, like `n8n-integration`.
 1. Select **Get started**. The app's details open.
@@ -46,12 +46,12 @@ To set it up, you'll need to create an app:
 1. Select **Generate a new API token**.
 8. Enter an **API Token Label**, like `n8n integration`.
 1. Copy the **Private key** and enter it as the **API Token** in your n8n credential.
-    - Refer to [Data API | Authentication](https://manual.bubble.io/core-resources/api/the-bubble-api/the-data-api/authentication){:target=_blank .external-link} for more information on generating API tokens.
+    - Refer to [Data API | Authentication](https://manual.bubble.io/core-resources/api/the-bubble-api/the-data-api/authentication) for more information on generating API tokens.
 1. In n8n, select the **Environment** that best matches your app:
     - Select **Development** for an app that you haven't deployed, accessed at `https://appname.bubbleapps.io/version-test` or `https://www.mydomain.com/version-test`.
-    - Select **Live** for an app that you've [deployed](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/deploying-your-app){:target=_blank .external-link}, accessed at `https://appname.bubbleapps.io` or `https://www.mydomain.com`.
+    - Select **Live** for an app that you've [deployed](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/deploying-your-app), accessed at `https://appname.bubbleapps.io` or `https://www.mydomain.com`.
 1. In n8n, select your **Hosting**:
     - If you haven't set up a custom domain, select **Bubble Hosting**.
-    - If you've set up a [custom domain](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/tabs-and-sections/settings-tab/custom-domain-and-dns){:target=_blank .external-link}, select **Self Hosted** and enter your custom **Domain**.
+    - If you've set up a [custom domain](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/tabs-and-sections/settings-tab/custom-domain-and-dns), select **Self Hosted** and enter your custom **Domain**.
 
-Refer to Bubble's [Creating and managing apps](https://manual.bubble.io/help-guides/getting-started/creating-and-managing-apps){:target=_blank .external-link} documentation for more information.
+Refer to Bubble's [Creating and managing apps](https://manual.bubble.io/help-guides/getting-started/creating-and-managing-apps) documentation for more information.

@@ -12,7 +12,7 @@ Use the Wekan node to automate work in Wekan, and integrate Wekan with other app
 On this page, you'll find a list of operations the Wekan node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Wekan credentials](/integrations/builtin/credentials/wekan/) for guidance on setting up authentication. 
+Refer to [Wekan credentials](/integrations/builtin/credentials/wekan.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -57,5 +57,5 @@ Refer to [Wekan credentials](/integrations/builtin/credentials/wekan/) for guida
 
 ## Load all the parameters for the node
 
-To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only){:target=_blank .external-link} to learn how to change permissions.
+To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn how to change permissions.
 

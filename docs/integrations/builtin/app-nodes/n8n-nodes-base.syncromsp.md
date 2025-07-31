@@ -12,7 +12,7 @@ Use the SyncroMSP node to automate work in SyncroMSP, and integrate SyncroMSP wi
 On this page, you'll find a list of operations the SyncroMSP node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp/) for guidance on setting up authentication. 
+Refer to [SyncroMSP credentials](/integrations/builtin/credentials/syncromsp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

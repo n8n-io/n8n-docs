@@ -12,7 +12,7 @@ Use the Strava node to automate work in Strava, and integrate Strava with other 
 On this page, you'll find a list of operations the Strava node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Strava credentials](/integrations/builtin/credentials/strava/) for guidance on setting up authentication. 
+Refer to [Strava credentials](/integrations/builtin/credentials/strava.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

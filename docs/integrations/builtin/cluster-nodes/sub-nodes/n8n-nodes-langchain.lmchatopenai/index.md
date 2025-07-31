@@ -8,12 +8,12 @@ priority: high
 
 # OpenAI Chat Model node
 
-Use the OpenAI Chat Model node to use OpenAI's chat models with conversational agents.
+Use the OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the OpenAI Chat Model node and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/openai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/openai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -73,12 +73,12 @@ Use this option to set the probability the completion should use. Use a lower va
 
 ## Related resources
 
-Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

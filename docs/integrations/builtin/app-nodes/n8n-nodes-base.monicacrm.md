@@ -12,7 +12,7 @@ Use the Monica CRM node to automate work in Monica CRM, and integrate Monica CRM
 On this page, you'll find a list of operations the Monica CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Monica CRM credentials](/integrations/builtin/credentials/monicacrm/) for guidance on setting up authentication. 
+Refer to [Monica CRM credentials](/integrations/builtin/credentials/monicacrm.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -14,11 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-/// note | Experimental feature
-Task runners are currently in public beta testing and might contain undiscovered issues. We don't recommend using them with business critical workflows.
-///
-
-[Task runners](/hosting/configuration/task-runners/) execute code defined by the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/).
+[Task runners](/hosting/configuration/task-runners.md) execute code defined by the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
 ## n8n instance environment variables
 
@@ -34,6 +30,7 @@ Task runners are currently in public beta testing and might contain undiscovered
 | `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `5` | The number of concurrent tasks a task runner can execute at a time. |
 | `N8N_RUNNERS_TASK_TIMEOUT` | Number | `60` | How long (in seconds) a task can take to complete before the task aborts and the runner restarts. Must be greater than 0. |
 | `N8N_RUNNERS_HEARTBEAT_INTERVAL` | Number | `30` | How often (in seconds) the runner must send a heartbeat to the broker, else the task aborts and the runner restarts. Must be greater than 0. |
+| `N8N_RUNNERS_INSECURE_MODE` | Boolean | `false` | Whether to disable all security measures in the task runner, for compatibility with modules that rely on insecure JS features. **Discouraged for production use.** |
 
 
 ## Task runner launcher environment variables
@@ -62,4 +59,5 @@ Task runners are currently in public beta testing and might contain undiscovered
 | `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `5` | The number of concurrent tasks a task runner can execute at a time. |
 | `NODE_FUNCTION_ALLOW_BUILTIN` | String | - | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default. |
 | `NODE_FUNCTION_ALLOW_EXTERNAL` | String | - | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default. |
-| `GENERIC_TIMEZONE` | * | `America/New_York` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization/). |
+| `N8N_RUNNERS_ALLOW_PROTOTYPE_MUTATION` | Boolean | `false` | Whether to allow prototype mutation for external libraries. Set to `true` to allow modules that rely on runtime prototype mutation (for example, [`puppeteer`](https://pptr.dev/)) at the cost of relaxing security. | 
+| `GENERIC_TIMEZONE` | * | `America/New_York` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization.md). |

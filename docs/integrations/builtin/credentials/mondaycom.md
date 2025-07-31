@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/)
+- [monday.com](/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md)
 
 /// info | Minimum required version
 The monday.com node requires n8n version 1.22.6 or above.
@@ -23,11 +23,11 @@ The monday.com node requires n8n version 1.22.6 or above.
 
 ## Related resources
 
-Refer to [monday.com's API documentation](https://developer.monday.com/api-reference/docs/basics){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [monday.com's API documentation](https://developer.monday.com/api-reference/docs/basics) for more information about authenticating with the service.
 
 ## Using API token
 
-To configure this credential, you'll need a [monday.com](https://monday.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [monday.com](https://monday.com/) account and:
 
 - An API **Token V2**
 
@@ -38,11 +38,11 @@ To get your token:
 3. In the Developer Center, select **My Access Tokens > Show**.
 4. Copy your personal token and enter it in your n8n credential as the **Token V2**.
 
-Refer to [monday.com API Authentication](https://developer.monday.com/api-reference/docs/authentication){:target=_blank .external-link} for more information.
+Refer to [monday.com API Authentication](https://developer.monday.com/api-reference/docs/authentication) for more information.
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [monday.com](https://monday.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [monday.com](https://monday.com/) account and:
 
 - A **Client ID**
 - A **Client Secret**
@@ -63,6 +63,6 @@ To generate both these fields, register a new monday.com application:
 12. **Save** your changes in monday.com.
 13. In n8n, select **Connect my account** to finish the setup.
 
- Refer to [Create an app](https://developer.monday.com/apps/docs/create-an-app){:target=_blank .external-link} for more information on creating apps.
+ Refer to [Create an app](https://developer.monday.com/apps/docs/create-an-app) for more information on creating apps.
  
- Refer to [OAuth and permissions](https://developer.monday.com/apps/docs/oauth){:target=_blank .external-link} for more information on the available scopes and setting up the Redirect URL.
+ Refer to [OAuth and permissions](https://developer.monday.com/apps/docs/oauth) for more information on the available scopes and setting up the Redirect URL.

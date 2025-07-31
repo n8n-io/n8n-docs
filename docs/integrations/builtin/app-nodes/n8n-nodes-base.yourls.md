@@ -12,7 +12,7 @@ Use the Yourls node to automate work in Yourls, and integrate Yourls with other 
 On this page, you'll find a list of operations the Yourls node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Yourls credentials](/integrations/builtin/credentials/yourls/) for guidance on setting up authentication. 
+Refer to [Yourls credentials](/integrations/builtin/credentials/yourls.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

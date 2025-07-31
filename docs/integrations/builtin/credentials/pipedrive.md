@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/)
-- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/)
+- [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md)
+- [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md)
 
 ## Supported authentication methods
 
@@ -20,17 +20,17 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Pipedrive's developer documentation](https://pipedrive.readme.io/docs/getting-started){:target=_blank .external-link} for more information about the service.
+Refer to [Pipedrive's developer documentation](https://pipedrive.readme.io/docs/getting-started) for more information about the service.
 
 ## Using API token
 
-To configure this credential, you'll need a [Pipedrive](https://pipedrive.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Pipedrive](https://pipedrive.com/) account and:
 
 - An **API Token**
 
 To get your API token:
 
-1. Open your [**API Personal Preferences**](https://app.pipedrive.com/settings/api){:target=_blank .external-link}.
+1. Open your [**API Personal Preferences**](https://app.pipedrive.com/settings/api).
 2. Copy **Your personal API token** and enter it in your n8n credential.
 
 If you have multiple companies, you'll need to select the correct company first:
@@ -41,11 +41,11 @@ If you have multiple companies, you'll need to select the correct company first:
 3. Select the **API** tab.
 4. Copy **Your personal API token** and enter it in your n8n credential.
 
-Refer to [How to find the API token](https://pipedrive.readme.io/docs/how-to-find-the-api-token){:target=_blank .external-link} for more information.
+Refer to [How to find the API token](https://pipedrive.readme.io/docs/how-to-find-the-api-token) for more information.
 
 ## Using OAuth2
 
-To configure this credential, you'll need a [Pipedrive developer sandbox account](https://developers.pipedrive.com/){:target=_blank .external-link} and:
+To configure this credential, you'll need a [Pipedrive developer sandbox account](https://developers.pipedrive.com/) and:
 
 - A **Client ID**
 - A **Client Secret**
@@ -56,7 +56,7 @@ To get both, you'll need to register a new app:
 2. Find the company name of your sandbox account and select **Developer Hub**.
 
     /// note | No Developer Hub
-    If you don't see **Developer Hub** in your account dropdown, sign up for a [developer sandbox account](https://developers.pipedrive.com/){:target=_blank .external-link}.
+    If you don't see **Developer Hub** in your account dropdown, sign up for a [developer sandbox account](https://developers.pipedrive.com/).
     ///
 
 3. Select **Create an app**.
@@ -68,13 +68,13 @@ To get both, you'll need to register a new app:
 8. Copy the **Client ID** and enter it in your n8n credential.
 9. Copy the **Client Secret** and enter it in your n8n credential.
 
-Refer to [Registering a public app](https://pipedrive.readme.io/docs/marketplace-registering-the-app){:target=_blank .external-link} for more information.
+Refer to [Registering a public app](https://pipedrive.readme.io/docs/marketplace-registering-the-app) for more information.
 
 ### Pipedrive node scopes
 
 The scopes you add to your app depend on which node(s) you want to use it for in n8n and what actions you want to complete with those.
 
-Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/) node:
+Scopes you may need for the [Pipedrive](/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md) node:
 
 | **Object** | **Node action** | **UI scope** | **Actual scope** |
 | --- | --- | --- | --- |
@@ -107,8 +107,8 @@ Refer to those objects' scopes.
 
 The Pipedrive node also supports Custom API calls. Add relevant scopes for whatever custom API calls you intend to make.
 
-Refer to [Scopes and permissions explanations](https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations){:target=_blank .external-link} for more information.
+Refer to [Scopes and permissions explanations](https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations) for more information.
 
 ### Pipedrive Trigger node scopes
 
-The [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/) node requires the **Webhooks: Full access** (`webhooks:full`) scope.
+The [Pipedrive Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger.md) node requires the **Webhooks: Full access** (`webhooks:full`) scope.

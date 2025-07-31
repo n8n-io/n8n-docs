@@ -12,7 +12,7 @@ Use the MessageBird node to automate work in MessageBird, and integrate MessageB
 On this page, you'll find a list of operations the MessageBird node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MessageBird credentials](/integrations/builtin/credentials/messagebird/) for guidance on setting up authentication. 
+Refer to [MessageBird credentials](/integrations/builtin/credentials/messagebird.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

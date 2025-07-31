@@ -13,8 +13,10 @@ Use the Postgres node to automate work in Postgres, and integrate Postgres with 
 On this page, you'll find a list of operations the Postgres node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Postgres credentials](/integrations/builtin/credentials/postgres/) for guidance on setting up authentication. 
+Refer to [Postgres credentials](/integrations/builtin/credentials/postgres.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -31,7 +33,7 @@ Use this operation to delete an entire table or rows in a table.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres/).
+- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Delete**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
@@ -62,9 +64,9 @@ Use this operation to execute an SQL query.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres/).
+- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Execute Query**.
-- **Query**: The SQL query to execute. You can use n8n [expressions](/code/expressions/) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
+- **Query**: The SQL query to execute. You can use n8n [expressions](/code/expressions.md) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
 
 #### Execute Query options
 
@@ -86,7 +88,7 @@ Use this operation to insert rows in a table.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres/).
+- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Insert**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
@@ -102,7 +104,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions/).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -115,7 +117,7 @@ Use this operation to insert or update rows in a table.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres/).
+- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Insert or Update**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
@@ -131,7 +133,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions/).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -143,7 +145,7 @@ Use this operation to select rows in a table.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres/).
+- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Select**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
@@ -161,7 +163,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions/).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -172,7 +174,7 @@ Use this operation to update rows in a table.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres/).
+- **Credential to connect with**: Create or select an existing [Postgres credential](/integrations/builtin/credentials/postgres.md).
 - **Operation**: Select **Update**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
@@ -188,7 +190,7 @@ Enter these parameters:
 	- **Single Query**: A single query for all incoming items.
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
-- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions/).
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](/code/expressions.md).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -201,7 +203,7 @@ Enter these parameters:
 
 ## Related resources
 
-n8n provides a trigger node for Postgres. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger/).
+n8n provides a trigger node for Postgres. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.postgrestrigger.md).
 
 ## Use query parameters
 
@@ -234,9 +236,9 @@ Then in **Query Parameters**, provide the field values to use. You can provide f
 
 ```js
 // users is an example table name
-users, {{ $json.email }} 
+{{ [ 'users', $json.email ] }} 
 ```
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues.md).

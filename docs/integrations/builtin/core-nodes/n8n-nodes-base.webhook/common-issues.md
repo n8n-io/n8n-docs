@@ -8,7 +8,7 @@ priority: critical
 
 # Common issues and questions
 
-Here are some common issues and questions for the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/) and suggested solutions.
+Here are some common issues and questions for the [Webhook node](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) and suggested solutions.
 
 ## Listen for multiple HTTP methods
 
@@ -22,7 +22,7 @@ The Webhook node has an output for each method, so you can perform different act
 
 ## Use the HTTP Request node to trigger the Webhook node
 
-The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node makes HTTP requests to the URL you specify.
+The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node makes HTTP requests to the URL you specify.
 
 1. Create a new workflow.
 2. Add the HTTP Request node to the workflow.
@@ -33,7 +33,7 @@ The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
 
 ## Use curl to trigger the Webhook node
 
-You can use [curl](https://curl.se/){:target=_blank .external-link} to make HTTP requests that trigger the Webhook node. 
+You can use [curl](https://curl.se/) to make HTTP requests that trigger the Webhook node. 
 
 /// note
 In the examples, replace `<https://your-n8n.url/webhook/path>` with your webhook URL.  
@@ -73,7 +73,7 @@ By default, the response format is JSON or an array. To send a response of type 
 2. Select **Response Data** > **First Entry JSON**.
 3. Select **Add Option** > **Property Name**.
 4. Enter the name of the property that contains the response. This defaults to `data`.
-5. Connect an [Edit Fields node](/integrations/builtin/core-nodes/n8n-nodes-base.set/) to the Webhook node.
+5. Connect an [Edit Fields node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) to the Webhook node.
 6. In the Edit Fields node, select **Add Value** > **String**.
 7. Enter the name of the property in the **Name** field. The name should match the property name from step 4.
 8. Enter the string value in the **Value** field.
@@ -92,10 +92,19 @@ While building or testing a workflow, use the **Test URL**. Once you're ready to
 | Test URL | Select **Listen for test event** and trigger a test event from the source. | 120 seconds | :white_check_mark: |
 | Production URL | Activate the workflow | Until workflow deactivated | :x: |
 
-Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development/) for more information.
+Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md) for more information.
 
-## IPs in Whitelist are failing to connect
+## IP addresses in whitelist are failing to connect
 
-If you're unable to connect from IPs in your IP Whitelist, check if you are running n8n behind a reverse proxy.
+If you're unable to connect from IP addresses in your IP whitelist, check if you are running n8n behind a reverse proxy.
 
-If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables/) to the number of reverse-proxies n8n is running behind.
+If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables/index.md) to the number of reverse-proxies n8n is running behind.
+
+## Only one webhook per path and method
+
+n8n only permits registering one webhook for each path and HTTP method combination (for example, a `GET` request for `/my-request`). This avoids ambiguity over which webhook should receive requests.
+
+If you receive a message that the path and method you chose are already in use, you can either:
+
+* Deactivate the workflow with the conflicting webhook.
+* Change the webhook path and/or method for one of the conflicting webhooks.

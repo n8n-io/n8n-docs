@@ -12,7 +12,7 @@ Use the Storyblok node to automate work in Storyblok, and integrate Storyblok wi
 On this page, you'll find a list of operations the Storyblok node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok/) for guidance on setting up authentication. 
+Refer to [Storyblok credentials](/integrations/builtin/credentials/storyblok.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

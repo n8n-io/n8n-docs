@@ -12,7 +12,7 @@ Use the SeaTable node to automate work in SeaTable, and integrate SeaTable with 
 On this page, you'll find a list of operations the SeaTable node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SeaTable credentials](/integrations/builtin/credentials/seatable/) for guidance on setting up authentication. 
+Refer to [SeaTable credentials](/integrations/builtin/credentials/seatable.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

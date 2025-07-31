@@ -10,22 +10,22 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [FileMaker](/integrations/builtin/app-nodes/n8n-nodes-base.filemaker/)
+- [FileMaker](/integrations/builtin/app-nodes/n8n-nodes-base.filemaker.md)
 
 ## Prerequisites
 
-- Create a user account on a [FileMaker Server](https://www.claris.com/filemaker/){:target=_blank .external-link} with the `fmrest` extended privilege to [Access the FileMaker Data API](https://help.claris.com/en/data-api-guide/content/enable-access.html){:target=_blank .external-link}.
-- Ensure the FileMaker Server can use the [FileMaker Data API](https://help.claris.com/en/data-api-guide/content/index.html){:target=_blank .external-link}:
+- Create a user account on a [FileMaker Server](https://www.claris.com/filemaker/) with the `fmrest` extended privilege to [Access the FileMaker Data API](https://help.claris.com/en/data-api-guide/content/enable-access.html).
+- Ensure the FileMaker Server can use the [FileMaker Data API](https://help.claris.com/en/data-api-guide/content/index.html):
     1. Prepare your database for FileMaker Data API access using FileMaker Pro. You can create a database or prepare an existing database.
-        - Refer to [Prepare databases for FileMaker Data API access](https://help.claris.com/en/data-api-guide/content/prepare-databases-for-access.html){:target=_blank .external-link} for more information.
+        - Refer to [Prepare databases for FileMaker Data API access](https://help.claris.com/en/data-api-guide/content/prepare-databases-for-access.html) for more information.
     1. Write code that calls FileMaker Data API methods to find, create, edit, duplicate, and delete records in a hosted database.
-        - Refer to [Write FileMaker Data API calls](https://help.claris.com/en/data-api-guide/content/write-data-api-calls.html){:target=_blank .external-link} for more information.
+        - Refer to [Write FileMaker Data API calls](https://help.claris.com/en/data-api-guide/content/write-data-api-calls.html) for more information.
     1. Host your solution with FileMaker Data API access enabled.
-        - Refer to [Host a FileMaker Data API solution](https://help.claris.com/en/data-api-guide/content/host-data-api-app.html){:target=_blank .external-link} for more information.
+        - Refer to [Host a FileMaker Data API solution](https://help.claris.com/en/data-api-guide/content/host-data-api-app.html) for more information.
     1. Test that FileMaker Data API access is working.
-        - Refer to [Test the FileMaker Data API solution](https://help.claris.com/en/data-api-guide/content/test-data-api-app.html){:target=_blank .external-link} for more information.
+        - Refer to [Test the FileMaker Data API solution](https://help.claris.com/en/data-api-guide/content/test-data-api-app.html) for more information.
     1. Monitor your hosted solution using Admin Console.
-        - Refer to [Monitor FileMaker Data API solutions](https://help.claris.com/en/data-api-guide/content/monitor-data-api-app.html){:target=_blank .external-link} for more information.
+        - Refer to [Monitor FileMaker Data API solutions](https://help.claris.com/en/data-api-guide/content/monitor-data-api-app.html) for more information.
 
 ## Supported authentication methods
 
@@ -33,7 +33,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [FileMaker's Data API Guide](https://help.claris.com/en/data-api-guide/content/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [FileMaker's Data API Guide](https://help.claris.com/en/data-api-guide/content/index.html) for more information about the service.
 
 ## Using database connection
 

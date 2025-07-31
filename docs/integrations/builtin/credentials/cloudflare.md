@@ -9,24 +9,24 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [Cloudflare node](/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare/)
+* [Cloudflare node](/integrations/builtin/app-nodes/n8n-nodes-base.cloudflare.md)
 
 ## Prerequisites
 
-- Create a [Cloudflare account](https://developers.cloudflare.com/fundamentals/setup/account/){:target=_blank .external-link}.
-- [Add a domain](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/){:target=_blank .external-link}.
+- Create a [Cloudflare account](https://developers.cloudflare.com/fundamentals/setup/account/).
+- [Add a domain](https://developers.cloudflare.com/fundamentals/setup/manage-domains/add-site/).
 
 ## Supported authentication methods
 
-- API key
+- API token
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Cloudflare's API documentation](https://developers.cloudflare.com/fundamentals/api/) for more information about the service.
 
-## Using API key
+## Using API token
 
 To configure this credential, you'll need:
 
-- An **API Key**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/){:target=_blank .external-link}.
+- An **API token**: Follow the [Cloudflare documentation to create an API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/).
 

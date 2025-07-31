@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Form.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger/)
+- [Form.io Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger.md)
 
 ## Supported authentication methods
 
@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Form.io's API documentation](https://apidocs.form.io/){:target=_blank .external-link} for more information about the service.
+Refer to [Form.io's API documentation](https://apidocs.form.io/) for more information about the service.
 
 ## Using basic auth
 

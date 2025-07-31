@@ -12,8 +12,10 @@ Use the Google Cloud Realtime Database node to automate work in Google Cloud Rea
 On this page, you'll find a list of operations the Google Cloud Realtime Database node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Cloud Realtime Database credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Cloud Realtime Database credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

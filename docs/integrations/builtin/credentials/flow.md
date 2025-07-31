@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow/)
-- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/)
+- [Flow](/integrations/builtin/app-nodes/n8n-nodes-base.flow.md)
+- [Flow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger.md)
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Create a [Flow](https://www.getflow.com/) account.
 
 ## Related resources
 
-Refer to [Flow's API documentation](https://developer.getflow.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Flow's API documentation](https://developer.getflow.com/) for more information about the service.
 
 ## Using API key
 
@@ -31,4 +31,4 @@ To configure this credential, you'll need:
 - Your numeric **Organization ID**
 - An **Access Token**
 
-Refer to the [Flow API Getting Started documentation](https://developer.getflow.com/#getting-started){:target=_blank .external-link} for instructions on generating your Access Token and viewing your Organization ID.
+Refer to the [Flow API Getting Started documentation](https://developer.getflow.com/#getting-started) for instructions on generating your Access Token and viewing your Organization ID.

@@ -14,7 +14,7 @@ hide:
 
 --8<-- "_snippets/self-hosting/file-based-configuration.md"
 
-By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [removed support for MySQL and MariaDB](/1-0-migration-checklist/#mysql-and-mariadb) in v1.0.
+By default, n8n uses SQLite. n8n also supports PostgreSQL. n8n [deprecated support for MySQL and MariaDB](/1-0-migration-checklist.md#mysql-and-mariadb) in v1.0.
 
 This page outlines environment variables to configure your chosen database for your self-hosted n8n instance.
 
@@ -22,6 +22,7 @@ This page outlines environment variables to configure your chosen database for y
 | :------- | :---- | :------- | :---------- |
 | `DB_TYPE`<br>/`_FILE` | Enum string:<br> `sqlite`, `postgresdb` | `sqlite` | The database to use. |
 | `DB_TABLE_PREFIX` | * | - | Prefix to use for table names. |
+| `DB_PING_INTERVAL_SECONDS` | Number | `2` | The interval, in seconds, between pings to the database to check if the connection is still alive. |
 
 ## PostgreSQL
 
@@ -34,6 +35,7 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_POSTGRESDB_PASSWORD`<br>/`_FILE` | String | - | The PostgreSQL password. |
 | `DB_POSTGRESDB_POOL_SIZE`<br>/`_FILE` | Number | `2` | Control how many parallel open Postgres connections n8n should have. Increasing it may help with resource utilization, but too many connections may degrade performance. |
 | `DB_POSTGRESDB_CONNECTION_TIMEOUT`<br>/`_FILE` | Number | `20000` | Postgres connection timeout (ms).
+| `DB_POSTGRESDB_IDLE_CONNECTION_TIMEOUT`<br>/`_FILE` | Number | `30000` | Amount of time before an idle connection is eligible for eviction for being idle.
 | `DB_POSTGRESDB_SCHEMA`<br>/`_FILE` | String | `public` | The PostgreSQL schema. |
 | `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | Whether to enable SSL. Automatically enabled if `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` or `DB_POSTGRESDB_SSL_KEY` is defined. |
 | `DB_POSTGRESDB_SSL_CA`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate authority. |
@@ -46,4 +48,4 @@ This page outlines environment variables to configure your chosen database for y
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `DB_SQLITE_POOL_SIZE` | Number | `0` | Controls whether to open the SQLite file in [WAL mode](https://www.sqlite.org/wal.html) or [rollback journal mode](https://www.sqlite.org/lockingv3.html#rollback). Uses rollback journal mode when set to zero. When greater than zero, uses WAL mode with the value determining the number of parallel SQL read connections to configure. WAL mode is much more performant and reliable than the rollback journal mode. |
-| `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target="_blank" .external-link} operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |
+| `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |

@@ -8,7 +8,9 @@ priority: high
 
 # Google Drive File and Folder operations
 
-Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to search for files and folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Search files and folders
 
@@ -16,7 +18,7 @@ Use this operation to search for files and folders in a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File/Folder**.
 - **Operation**: Select **Search**.
 - **Search Method**: Choose how you want to search:
@@ -37,4 +39,4 @@ Enter these parameters:
 
 - **Fields**: Select the fields to return. Can be one or more of the following: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, or **webViewLink**.
 
-Refer to the [Method: files.list | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/list){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.list | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/list) API documentation for more information.

@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Philips Hue](/integrations/builtin/app-nodes/n8n-nodes-base.philipshue/)
+- [Philips Hue](/integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md)
 
 ## Prerequisites
 
-Create a [Philips Hue](https://www.philips-hue.com/en-us){:target=_blank .external-link} account.
+Create a [Philips Hue](https://www.philips-hue.com/en-us) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Philips Hue](https://www.philips-hue.com/en-us){:target=_blank .extern
 
 ## Related resources
 
-Refer to [Philips Hue's CLIP API documentation](https://developers.meethue.com/develop/hue-api-v2/api-reference/){:target=_blank .external-link} for more information about the service.
+Refer to [Philips Hue's CLIP API documentation](https://developers.meethue.com/develop/hue-api-v2/api-reference/) for more information about the service.
 
 ## Using OAuth2
 
@@ -29,7 +29,7 @@ Refer to [Philips Hue's CLIP API documentation](https://developers.meethue.com/d
 
 If you're using the built-in OAuth connection, you don't need to enter an **APP ID**.
 
-If you need to configure OAuth2 from scratch, you'll need a [Philips Hue developer](https://developers.meethue.com/){:target=_blank .external-link} account
+If you need to configure OAuth2 from scratch, you'll need a [Philips Hue developer](https://developers.meethue.com/) account
 
 Create a new remote app on the [Add new Hue Remote API app](https://developers.meethue.com/add-new-hue-remote-api-app/) page.
 

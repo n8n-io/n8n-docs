@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [UptimeRobot](/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot/)
+- [UptimeRobot](/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot.md)
 
 ## Prerequisites
 
-Create an [UptimeRobot](https://uptimerobot.com/){:target=_blank .external-link} account.
+Create an [UptimeRobot](https://uptimerobot.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create an [UptimeRobot](https://uptimerobot.com/){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [UptimeRobot's API documentation](https://uptimerobot.com/api/){:target=_blank .external-link} for more information about the service.
+Refer to [UptimeRobot's API documentation](https://uptimerobot.com/api/) for more information about the service.
 
 ## Using API key
 
@@ -37,4 +37,4 @@ UptimeRobot supports three API key types:
 - **Monitor-specific**: Pulls data for a single monitor.
 - **Read-only**: Only runs `GET` API calls.
 
-To complete all of the operations in the UptimeRobot node, use the **Main** or **Account-specific** API key type. Refer to [API authentication](https://uptimerobot.com/api/#auth){:target=_blank .external-link} for more information.
+To complete all of the operations in the UptimeRobot node, use the **Main** or **Account-specific** API key type. Refer to [API authentication](https://uptimerobot.com/api/#auth) for more information.

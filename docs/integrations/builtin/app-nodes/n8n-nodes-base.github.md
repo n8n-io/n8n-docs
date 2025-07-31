@@ -13,8 +13,10 @@ Use the GitHub node to automate work in GitHub, and integrate GitHub with other 
 On this page, you'll find a list of operations the GitHub node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GitHub credentials](/integrations/builtin/credentials/github/) for guidance on setting up authentication. 
+Refer to [GitHub credentials](/integrations/builtin/credentials/github.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

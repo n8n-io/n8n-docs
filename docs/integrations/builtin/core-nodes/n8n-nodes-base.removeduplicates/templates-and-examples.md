@@ -8,7 +8,7 @@ priority: medium
 
 # Templates and examples
 
-Here are some templates and examples for the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/).
+Here are some templates and examples for the [Remove Duplicates node](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md).
 
 /// note | Continuous examples
 The examples included in this section are a sequence. Follow from one to another to avoid unexpected results.
@@ -58,7 +58,7 @@ return {
 1. Add a Remove Duplicates node to the canvas and connect it to the Split Out node. Choose **Remove items repeated within current input** as the **Action** to start.
 2. Open the Remove Duplicates node and ensure that the **Operation** is set to **Remove Items Repeated Within Current Input**.
 3. Choose **All fields** in the **Compare** field.
-4. Select **Test step** to run the Remove Duplicates node, removing duplicated data in the current input.
+4. Select **Execute step** to run the Remove Duplicates node, removing duplicated data in the current input.
 
 n8n removes the items that have the same data across all fields. Your output in table view should look like this:
 
@@ -77,7 +77,7 @@ n8n removes the items that have the same data across all fields. Your output in 
 
 5. Open the Remove Duplicates node again and change the **Compare** parameter to **Selected Fields**.
 6. In the **Fields To Compare** field, enter `job`.
-7. Select **Test step** to run the Remove Duplicates node, removing duplicated data in the current input.
+7. Select **Execute step** to run the Remove Duplicates node, removing duplicated data in the current input.
 
 n8n removes the items in the current input that have the same `job` data. Your output in table view should look like this:
 
@@ -93,7 +93,7 @@ n8n removes the items in the current input that have the same `job` data. Your o
 1. Open the Remove Duplicates node and set the **Operation** to **Remove Items Processed in Previous Executions**.
 2. Set the **Keep Items Where** parameter to **Value Is New**.
 3. Set the **Value to Dedupe On** parameter to `{{ $json.name }}`.
-4. On the canvas, select **Test workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
+4. On the canvas, select **Execute workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
 
 n8n compares the current input data to the items stored from previous executions. Since this is the first time running the Remove Duplicates node with this operation, n8n processes all data items and places them into the **Kept** output tab. The order of the items may be different than the order in the input data:
 
@@ -118,7 +118,7 @@ The current input items are only compared against the stored items from previous
 ///
 
 5. Open the Code node and uncomment (remove the `//` from) the line for "Tom Hanks."
-6. On the canvas, select **Test workflow** again. Open the Remove Duplicates node again to examine the results.
+6. On the canvas, select **Execute workflow** again. Open the Remove Duplicates node again to examine the results.
 
 n8n compares the current input data to the items stored from previous executions. This time, the **Kept** tab contains the one new record from the Code node:
 
@@ -149,14 +149,14 @@ The **Discarded** tab contains the items processed by the previous execution:
 Before continuing, clear the duplication history to get ready for the next example:
 
 7. Open the Remove Duplicates node and set the **Operation** to **Clear Deduplication History**.
-8. Select **Test step** to clear the current duplication history.
+8. Select **Execute step** to clear the current duplication history.
 
 ## Keep items where the value is higher than any previous value
 
 1. Open the Remove Duplicates node and set the **Operation** to **Remove Items Processed in Previous Executions**.
 2. Set the **Keep Items Where** parameter to **Value Is Higher than Any Previous Value**.
 3. Set the **Value to Dedupe On** parameter to `{{ $json.id }}`.
-4. On the canvas, select **Test workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
+4. On the canvas, select **Execute workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
 
 n8n compares the current input data to the items stored from previous executions. Since this is the first time running the Remove Duplicates node after clearing the history, n8n processes all data items and places them into the **Kept** output tab. The order of the items may be different than the order in the input data:
 
@@ -178,7 +178,7 @@ n8n compares the current input data to the items stored from previous executions
 <!-- vale on -->
 
 5. Open the Code node and uncomment (remove the `//` from) the lines for "Madonna" and "Bob Dylan."
-6. On the canvas, select **Test workflow** again. Open the Remove Duplicates node again to examine the results.
+6. On the canvas, select **Execute workflow** again. Open the Remove Duplicates node again to examine the results.
 
 n8n compares the current input data to the items stored from previous executions. This time, the **Kept** tab contains a single entry for "Bob Dylan." n8n keeps this item because its `id` column value (15) is higher than any previous values (the previous maximum value was 9):
 
@@ -211,14 +211,14 @@ The **Discarded** tab contains the 13 items with an `id` column value equal to o
 Before continuing, clear the duplication history to get ready for the next example:
 
 7. Open the Remove Duplicates node and set the **Operation** to **Clear Deduplication History**.
-8. Select **Test step** to clear the current duplication history.
+8. Select **Execute step** to clear the current duplication history.
 
 ## Keep items where the value is a date later than any previous date
 
 1. Open the Remove Duplicates node and set the **Operation** to **Remove Items Processed in Previous Executions**.
 2. Set the **Keep Items Where** parameter to **Value Is a Date Later than Any Previous Date**.
 3. Set the **Value to Dedupe On** parameter to `{{ $json.last_updated }}`.
-4. On the canvas, select **Test workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
+4. On the canvas, select **Execute workflow** to run the workflow. Open the Remove Duplicates node to examine the results.
 
 n8n compares the current input data to the items stored from previous executions. Since this is the first time running the Remove Duplicates node after clearing the history, n8n processes all data items and places them into the **Kept** output tab. The order of the items may be different than the order in the input data:
 
@@ -244,7 +244,7 @@ n8n compares the current input data to the items stored from previous executions
 <!-- vale off -->
 5. Open the Code node and uncomment (remove the `//` from) the lines for "Harry Nilsson" and "Kylie Minogue."
 <!-- vale on -->
-6. On the canvas, select **Test workflow** again. Open the Remove Duplicates node again to examine the results.
+6. On the canvas, select **Execute workflow** again. Open the Remove Duplicates node again to examine the results.
 
 <!-- vale off -->
 n8n compares the current input data to the items stored from previous executions. This time, the **Kept** tab contains a single entry for "Kylie Minogue." n8n keeps this item because its `last_updated` column value (`2024-10-24T08:03:16.493Z`) is later than any previous values (the previous latest date was `2024-10-17T17:11:38.493Z`):

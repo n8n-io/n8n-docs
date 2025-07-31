@@ -10,26 +10,26 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter/)
+- [X (formerly Twitter)](/integrations/builtin/app-nodes/n8n-nodes-base.twitter.md)
 
 ## Prerequisites
 
-- Create an [X developer](https://developer.x.com/en){:target=_blank .external-link} account.
-- Create a [Twitter app](https://developer.x.com/en/docs/apps){:target=_blank .external-link} or use the default project and app created when you sign up for the developer portal. Refer to each supported authentication method below for more details on the app's configuration.
+- Create an [X developer](https://developer.x.com/en) account.
+- Create a [Twitter app](https://developer.x.com/en/docs/apps) or use the default project and app created when you sign up for the developer portal. Refer to each supported authentication method below for more details on the app's configuration.
 
 ## Supported authentication methods
 
 - OAuth2
 
 /// note | Deprecation warning
-n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a){:target=_blank .external-link} authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x/#n8n02360).
+n8n used to support an **OAuth** authentication method, which used X's [OAuth 1.0a](https://developer.x.com/en/docs/authentication/oauth-1-0a) authentication method. n8n deprecated this method with the release of V2 of the X node in n8n version [0.236.0](/release-notes/0-x.md#n8n02360).
 ///
 
 ## Related resources
 
-Refer to [X's API documentation](https://developer.x.com/en/docs/twitter-api){:target=_blank .external-link} for more information about the service. Refer to [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [X's API documentation](https://developer.x.com/en/docs/twitter-api) for more information about the service. Refer to [X's API authentication documentation](https://developer.x.com/en/docs/authentication/overview) for more information about authenticating with the service.
 
-Refer to [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only){:target=_blank .external-link} for more information about app-only authentication.
+Refer to [Application-only Authentication](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only) for more information about app-only authentication.
 
 ## Using OAuth2
 
@@ -42,7 +42,7 @@ To configure this credential, you'll need:
 
 To generate your Client ID and Client Secret:
 
-1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard){:target=_blank .external-link}, open your project.
+1. In the Twitter [developer portal](https://developer.x.com/en/portal/dashboard), open your project.
 2. On the project's **Overview** tab, find the **Apps** section and select **Add App**.
 3. Give your app a **Name** and select **Next**.
 1. Go to the **App Settings**.
@@ -55,7 +55,7 @@ To generate your Client ID and Client Secret:
 8. Save your changes.
 1. Copy the **Client ID** and **Client Secret** displayed in X and add them to the corresponding fields in your n8n credential.
 
-Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0){:target=_blank .external-link} for more information on working with this authentication method.
+Refer to X's [OAuth 2.0 Authentication documentation](https://developer.x.com/en/docs/authentication/oauth-2-0) for more information on working with this authentication method.
 
 /// note | X rate limits
 This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll be subject to app rate limits. Refer to [X rate limits](#x-rate-limits) below for more information.
@@ -63,7 +63,7 @@ This credential uses the OAuth 2.0 Bearer Token authentication method, so you'll
 
 ## X rate limits
 
-X has time-based rate limits per endpoint based on your developer access plan level. X calculates app rate limits and user rate limits independently. Refer to [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits){:target=_blank .external-link} for the access plan level rate limits and guidance on avoiding hitting them.
+X has time-based rate limits per endpoint based on your developer access plan level. X calculates app rate limits and user rate limits independently. Refer to [Rate limits](https://developer.x.com/en/docs/twitter-api/rate-limits) for the access plan level rate limits and guidance on avoiding hitting them.
 
 Use the guidance below for calculating rate limits:
 
@@ -72,4 +72,4 @@ Use the guidance below for calculating rate limits:
 
 X calculates user rate limits and app rate limits independently.
 
-Refer to X's [Rate limits and authentication methods](https://developer.x.com/en/docs/twitter-api/rate-limits#auth){:target=_blank .external-link} for more information about these rate limit types.
+Refer to X's [Rate limits and authentication methods](https://developer.x.com/en/docs/twitter-api/rate-limits#auth) for more information about these rate limit types.

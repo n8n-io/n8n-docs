@@ -12,7 +12,7 @@ Use the Netscaler ADC node to automate work in Netscaler ADC, and integrate Nets
 On this page, you'll find a list of operations the Netscaler ADC node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaleradc/) for guidance on setting up authentication. 
+Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaleradc.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -32,7 +32,7 @@ Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaler
 
 ## Related resources
 
-Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/){:target=_blank .external-link} for more information about the service.
+Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

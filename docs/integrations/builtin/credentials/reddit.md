@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit/)
+- [Reddit](/integrations/builtin/app-nodes/n8n-nodes-base.reddit.md)
 
 ## Prerequisites
 
-Create a [Reddit](https://reddit.com/){:target=_blank .external-link} account.
+Create a [Reddit](https://reddit.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Reddit](https://reddit.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Reddit's developer documentation](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data){:target=_blank .external-link} for more information about the service.
+Refer to [Reddit's developer documentation](https://support.reddithelp.com/hc/en-us/articles/14945211791892-Developer-Platform-Accessing-Reddit-Data) for more information about the service.
 
 ## Using OAuth2
 
@@ -34,7 +34,7 @@ To configure this credential, you'll need:
 Reddit's developer program is in a closed beta. The instructions below are for regular Reddit users, not members of the developer platform.
 ///
 
-Generate both by creating a [third-party app](https://www.reddit.com/prefs/apps){:target=_blank .external-link}. Visit the previous link or go to your **profile > Settings > Safety & Privacy > Manage third-party app authorization > are you a developer? create an app**.
+Generate both by creating a [third-party app](https://www.reddit.com/prefs/apps). Visit the previous link or go to your **profile > Settings > Safety & Privacy > Manage third-party app authorization > are you a developer? create an app**.
 
 Use these settings for your app:
 

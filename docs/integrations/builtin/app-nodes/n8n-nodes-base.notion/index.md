@@ -13,8 +13,10 @@ Use the Notion node to automate work in Notion, and integrate Notion with other 
 On this page, you'll find a list of operations the Notion node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Notion credentials](/integrations/builtin/credentials/notion/) for guidance on setting up authentication. 
+Refer to [Notion credentials](/integrations/builtin/credentials/notion.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -45,12 +47,12 @@ Refer to [Notion credentials](/integrations/builtin/credentials/notion/) for gui
 
 ## Related resources
 
-n8n provides an app node for Notion. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/).
+n8n provides an app node for Notion. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md).
 
-Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
+Refer to [Notion's documentation](https://developers.notion.com/) for details about their API.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.notion/common-issues.md).

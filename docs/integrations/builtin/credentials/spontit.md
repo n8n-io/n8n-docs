@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit/)
+- [Spontit](/integrations/builtin/app-nodes/n8n-nodes-base.spontit.md)
 
 ## Prerequisites
 
-Create a [Spontit](https://www.spontit.com/){:target=_blank .external-link} account.
+Create a [Spontit](https://www.spontit.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Spontit](https://www.spontit.com/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [Spontit's API documentation](https://api.spontit.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Spontit's API documentation](https://api.spontit.com/) for more information about the service.
 
 ## Using API key
 

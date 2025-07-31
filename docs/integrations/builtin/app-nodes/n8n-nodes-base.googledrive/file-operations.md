@@ -8,7 +8,9 @@ priority: high
 
 # Google Drive File operations
 
-Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/) for more information on the Google Drive node itself.
+Use this operation to create, delete, change, and manage files in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Copy a file
 
@@ -16,7 +18,7 @@ Use this operation to copy a file to a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Copy**.
 - **File**: Choose a file you want to copy. 
@@ -33,14 +35,14 @@ Enter these parameters:
 - **Copy Requires Writer Permissions**: Select whether to enable readers and commenters to copy, print, or download the new file.
 - **Description**: A short description of the file.
 
-Refer to the [Method: files.copy | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/copy){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.copy | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/copy) API documentation for more information.
 
 ## Create from text
 
 Use this operation to create a new file in a drive from provided text.
 
 Enter these parameters:
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Create From Text**.
 - **File Content**: Enter the file content to use to create the new file.
@@ -63,7 +65,7 @@ You can find the `driveId` and `folderID` by visiting the shared drive or folder
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Convert to Google Document**: Choose whether to create a Google Document instead of the default `.txt` format. You must enable the Google Docs API in the [Google API Console](https://console.cloud.google.com/apis/library/docs.googleapis.com) for this to work.
 
-Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert) API documentation for more information.
 
 ## Delete a file
 
@@ -71,7 +73,7 @@ Use this operation to delete a file from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Delete**.
 - **File**: Choose a file you want to delete. 
@@ -82,7 +84,7 @@ Enter these parameters:
 
 - **Delete Permanently**: Choose whether to delete the file now instead of moving it to the trash.
 
-Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete) API documentation for more information.
 
 ## Download a file
 
@@ -90,7 +92,7 @@ Use this operation to download a file from a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Download**.
 - **File**: Choose a file you want to download. 
@@ -107,7 +109,7 @@ Enter these parameters:
 	* **Google Sheets**: Choose the export format to use when downloading Google Sheets files: **CSV**, **MS Excel**, **Open Office Sheet**, or **PDF**.
 - **File Name**: The name to use for the downloaded file.
 
-Refer to the [Method: files.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/get){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/get) API documentation for more information.
 
 ## Move a file
 
@@ -115,7 +117,7 @@ Use this operation to move a file to a different location in a drive.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Move**.
 - **File**: Choose a file you want to move. 
@@ -126,7 +128,7 @@ Enter these parameters:
 
 You can find the `driveId` and `folderID` by visiting the shared drive or folder in your browser and copying the last URL component: `https://drive.google.com/drive/u/1/folders/driveId`.
 
-Refer to the [Method: parents.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/parents/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: parents.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/parents/insert) API documentation for more information.
 
 ## Share a file
 
@@ -134,7 +136,7 @@ Use this operation to add sharing permissions to a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Share**.
 - **File**: Choose a file you want to share. 
@@ -158,7 +160,7 @@ Enter these parameters:
 - **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
 - **Use Domain Admin Access**: Whether to perform the action as a domain administrator.
 
-Refer to the [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files){:target=_blank .external-link} API documentation for more information.
+Refer to the [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files) API documentation for more information.
 
 ## Update a file
 
@@ -166,7 +168,7 @@ Use this operation to update a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Update**.
 - **File to Update**: Choose a file you want to update. 
@@ -190,7 +192,7 @@ Enter these parameters:
 - **Move to Trash**: Whether to move the file to the trash. Only possible for the file owner.
 - **Return Fields**: Return metadata fields about the file. Can be one or more of the following: **[All]**, **explicitlyTrashed**, **exportLinks**, **hasThumbnail**, **iconLink**, **ID**, **Kind**, **mimeType**, **Name**, **Permissions**, **Shared**, **Spaces**, **Starred**, **thumbnailLink**, **Trashed**, **Version**, or **webViewLink**.
 
-Refer to the [Method: files.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/update){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/update) API documentation for more information.
 
 ## Upload a file
 
@@ -198,7 +200,7 @@ Use this operation to upload a file.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Drive credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **File**.
 - **Operation**: Select **Upload**.
 - **Input Data Field Name**: The name of the input field that contains the binary file data you wish to use.
@@ -221,4 +223,4 @@ You can find the `driveId` and `folderID` by visiting the shared drive or folder
 - **Use Content As Indexable Text**: Choose whether to mark the uploaded content as indexable text.
 - **Simplify Output**: Choose whether to return a simplified version of the response instead of including all fields.
 
-Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert) API documentation for more information.

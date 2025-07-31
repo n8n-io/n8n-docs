@@ -13,8 +13,10 @@ Use the Microsoft Outlook node to automate work in Microsoft Outlook, and integr
 On this page, you'll find a list of operations the Microsoft Outlook node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -57,12 +59,15 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
 	* Move
 	* Reply
 	* Send
+	* Send and Wait for Response
 	* Update
 * Message Attachment
 	* Add
 	* Download
 	* Get
 	* Get Many
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 
@@ -71,6 +76,6 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
 
 ## Related resources
 
-Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started){:target=_blank .external-link} for more information about the service.
+Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

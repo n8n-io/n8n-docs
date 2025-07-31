@@ -9,13 +9,13 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow/)
-- [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/)
+- [Webflow](/integrations/builtin/app-nodes/n8n-nodes-base.webflow.md)
+- [Webflow Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger.md)
 
 ## Prerequisites
 
-- Create a [Webflow](https://webflow.com/){:target=_blank .external-link} account.
-- [Create a site](https://developers.webflow.com/data/reference/structure-1#sites){:target=_blank .external-link}: Required for API access token authentication only.
+- Create a [Webflow](https://webflow.com/) account.
+- [Create a site](https://developers.webflow.com/data/reference/structure-1#sites): Required for API access token authentication only.
 
 ## Supported authentication methods
 
@@ -24,19 +24,19 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Webflow's API documentation](https://developers.webflow.com/data/reference/rest-introduction){:target=_blank .external-link} for more information about the service.
+Refer to [Webflow's API documentation](https://developers.webflow.com/data/reference/rest-introduction) for more information about the service.
 
 ## Using API access token
 
 To configure this credential, you'll need:
 
-- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Get a Site Token](https://developers.webflow.com/data/docs/get-a-site-token){:target=_blank .external-link} for more information.
+- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Get a Site Token](https://developers.webflow.com/data/docs/get-a-site-token) for more information.
 
 ## Using OAuth2
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register an application](https://developers.webflow.com/data/docs/register-an-app){:target=_blank .external-link} in your workspace.
+If you need to configure OAuth2 from scratch, [register an application](https://developers.webflow.com/data/docs/register-an-app) in your workspace.
 
 Use these settings for your application:
 
@@ -44,4 +44,4 @@ Use these settings for your application:
 - Once you've created your application, copy the **Client ID** and **Client Secret** and enter them in your n8n credential.
 - If you are using the Webflow Data API V1 (deprecated), enable the **Legacy** toggle. Otherwise, leave this inactive.
 
-Refer to [OAuth](https://developers.webflow.com/data/reference/oauth-app){:target=_blank .external-link} for more information on Webflow's OAuth web flow.
+Refer to [OAuth](https://developers.webflow.com/data/reference/oauth-app) for more information on Webflow's OAuth web flow.

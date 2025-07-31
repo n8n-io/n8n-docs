@@ -17,8 +17,10 @@ This node requires n8n version 1.22.6 or above.
 ///
 
 /// note | Credentials
-Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom/) for guidance on setting up authentication. 
+Refer to [monday.com credentials](/integrations/builtin/credentials/mondaycom.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

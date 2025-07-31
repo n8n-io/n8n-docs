@@ -9,12 +9,12 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-* [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo/)
-* [Brevo Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/)
+* [Brevo node](/integrations/builtin/app-nodes/n8n-nodes-base.brevo.md)
+* [Brevo Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md)
 
 ## Prerequisites
 
-Create a [Brevo](https://www.brevo.com/){:target=_blank .external-link} developer account.
+Create a [Brevo](https://www.brevo.com/) developer account.
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create a [Brevo](https://www.brevo.com/){:target=_blank .external-link} develope
 
 ## Related resources
 
-Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1) for more information about authenticating with the service.
 
 ## API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Brevo API Quick Start documentation](https://developers.brevo.com/docs/getting-started#quick-start){:target=_blank .external-class} for instructions on creating a new API key.
+- An **API Key**: Refer to the [Brevo API Quick Start documentation](https://developers.brevo.com/docs/getting-started#quick-start) for instructions on creating a new API key.
 

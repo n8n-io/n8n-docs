@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Embeddings Cohere node
 
-Use the Embeddings Cohere node to generate embeddings for a given text.
+Use the Embeddings Cohere node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings Cohere node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/cohere/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/cohere.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -24,7 +24,7 @@ You can find authentication information for this node [here](/integrations/built
 	* **Embed-English-Light-v2.0(1024 Dimensions)**
 	* **Embed-Multilingual-v2.0(768 Dimensions)**
 
-Learn more about available models in [Cohere's models documentation](https://docs.cohere.com/docs/models){:target=_blank .external-link}.
+Learn more about available models in [Cohere's models documentation](https://docs.cohere.com/docs/models).
 
 ## Templates and examples
 
@@ -33,7 +33,7 @@ Learn more about available models in [Cohere's models documentation](https://doc
 
 ## Related resources
 
-Refer to [Langchain's Cohere embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/cohere/){:target=_blank .external-link} for more information about the service.
+Refer to [Langchain's Cohere embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/cohere/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

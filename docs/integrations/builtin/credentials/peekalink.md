@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Peekalink](/integrations/builtin/app-nodes/n8n-nodes-base.peekalink/)
+- [Peekalink](/integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md)
 
 ## Prerequisites
 
-Create a [Peekalink](https://www.peekalink.io/){:target=_blank .external-link} account.
+Create a [Peekalink](https://www.peekalink.io/) account.
 
 ## Supported authentication methods
 
@@ -21,10 +21,10 @@ Create a [Peekalink](https://www.peekalink.io/){:target=_blank .external-link} a
 
 ## Related resources
 
-Refer to [Peekalink's API documentation](https://docs.peekalink.io/){:target=_blank .external-link} for more information about the service.
+Refer to [Peekalink's API documentation](https://docs.peekalink.io/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview){:target=_blank .external-link} and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/setup#get-your-api-key){:target=_blank .external-link} for more information.
+- An **API Key**: To get your API key, access your Peekalink [dashboard](https://www.peekalink.io/app/overview) and copy the key in the **Your API Key** section. Refer to [Get your API key](https://docs.peekalink.io/setup#get-your-api-key) for more information.

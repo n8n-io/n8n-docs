@@ -12,7 +12,7 @@ Use the Salesmate node to automate work in Salesmate, and integrate Salesmate wi
 On this page, you'll find a list of operations the Salesmate node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate/) for guidance on setting up authentication. 
+Refer to [Salesmate credentials](/integrations/builtin/credentials/salesmate.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

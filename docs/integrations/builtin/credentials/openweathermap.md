@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/)
+- [OpenWeatherMap](/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap.md)
 
 ## Supported authentication methods
 
@@ -18,11 +18,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [OpenWeatherMap's API documentation](https://openweathermap.org/api){:target=_blank .external-link} for more information about the service.
+Refer to [OpenWeatherMap's API documentation](https://openweathermap.org/api) for more information about the service.
 
 ## Using API access token
 
-To configure this credential, you'll need an [OpenWeatherMap](https://openweathermap.org/){:target=_blank .external-link} account and:
+To configure this credential, you'll need an [OpenWeatherMap](https://openweathermap.org/) account and:
 
 - An **Access Token**
 
@@ -33,7 +33,7 @@ To get your **Access Token**:
 
 If you'd prefer to create a new key:
 
-1. To create a new key, go to **Account >** [**API Keys**](https://home.openweathermap.org/api_keys){:target=_blank .external-link}.
+1. To create a new key, go to **Account >** [**API Keys**](https://home.openweathermap.org/api_keys).
 2. In the **Create Key** section, enter an **API Key Name**, like `n8n integration`.
 3. Select **Generate** to generate your key.
 4. Copy the generated key and enter it in your n8n credential.

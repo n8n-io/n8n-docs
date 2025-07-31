@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Wekan](/integrations/builtin/app-nodes/n8n-nodes-base.wekan/)
+- [Wekan](/integrations/builtin/app-nodes/n8n-nodes-base.wekan.md)
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Install [Wekan](https://github.com/wekan/wekan/wiki) on your server.
 
 ## Related resources
 
-Refer to [Wekan's API documentation](https://github.com/wekan/wekan/wiki/REST-API){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Wekan's API documentation](https://github.com/wekan/wekan/wiki/REST-API) for more information about authenticating with the service.
 
 ## Using basic auth
 

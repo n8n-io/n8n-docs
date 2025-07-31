@@ -9,12 +9,12 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twist](/integrations/builtin/app-nodes/n8n-nodes-base.twist/)
+- [Twist](/integrations/builtin/app-nodes/n8n-nodes-base.twist.md)
 
 ## Prerequisites
 
-- Create a [Twist](https://twist.com/){:target=_blank .external-link} account.
-- [Create a general integration](https://twist.com/app_console/create_app){:target=_blank .external-link} and configure a valid OAuth Redirect URL. Refer to [Using OAuth2](#using-oauth2) for more information.
+- Create a [Twist](https://twist.com/) account.
+- [Create a general integration](https://twist.com/app_console/create_app) and configure a valid OAuth Redirect URL. Refer to [Using OAuth2](#using-oauth2) for more information.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Twist's API documentation](https://developer.twist.com/v3/#authorization){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Twist's API documentation](https://developer.twist.com/v3/#authorization) for more information about authenticating with the service.
 
 ## Using OAuth2
 To configure this credential, you'll need:
@@ -30,7 +30,7 @@ To configure this credential, you'll need:
 - A **Client ID**: Generated once you create a general integration.
 - A **Client Secret**: Generated once you create a general integration.
 
-To generate your Client ID and Client Secret, [create a general integration](https://twist.com/app_console/create_app){:target=_blank .external-link}.
+To generate your Client ID and Client Secret, [create a general integration](https://twist.com/app_console/create_app).
 
 Use these settings for your integration's **OAuth Authentication**:
 

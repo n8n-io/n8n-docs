@@ -9,8 +9,8 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Clockify](/integrations/builtin/app-nodes/n8n-nodes-base.clockify/)
-- [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger/)
+- [Clockify](/integrations/builtin/app-nodes/n8n-nodes-base.clockify.md)
+- [Clockify Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger.md)
 
 ## Prerequisites
 
@@ -22,11 +22,11 @@ Create a [Clockify](https://www.clockify.com/) account.
 
 ## Related resources
 
-Refer to [Clockify's API documentation](https://docs.developer.clockify.me/){:target=_blank .external-link} for more information about the service.
+Refer to [Clockify's API documentation](https://docs.developer.clockify.me/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Access your API key from your [Clockify Profile Settings](https://clockify.me/help/users/profile-settings){:target=_blank .external-link}.
+- An **API Key**: Access your API key from your [Clockify Profile Settings](https://clockify.me/help/users/profile-settings).
 

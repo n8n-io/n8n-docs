@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb/)
+- [QuestDB](/integrations/builtin/app-nodes/n8n-nodes-base.questdb.md)
 
 ## Prerequisites
 
-Create a user account on an instance of [QuestDB](https://questdb.io/){:target=_blank .external-link}.
+Create a user account on an instance of [QuestDB](https://questdb.io/).
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a user account on an instance of [QuestDB](https://questdb.io/){:target=_
 
 ## Related resources
 
-Refer to [QuestDB's documentation](https://questdb.io/docs){:target=_blank .external-link} for more information about the service.
+Refer to [QuestDB's documentation](https://questdb.io/docs) for more information about the service.
 
 ## Using database connection
 
@@ -37,4 +37,4 @@ To configure this credential, you'll need:
     - **Require**
 - The **Port**: Enter the port number to use for the connection. Default is `8812`.
 
-Refer to [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties){:target=_blank .external-link} for more information.
+Refer to [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties) for more information.

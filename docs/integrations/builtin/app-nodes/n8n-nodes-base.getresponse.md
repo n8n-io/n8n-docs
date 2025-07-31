@@ -12,7 +12,7 @@ Use the GetResponse node to automate work in GetResponse, and integrate GetRespo
 On this page, you'll find a list of operations the GetResponse node supports and links to more resources.
 
 /// note | Credentials
-Refer to [GetResponse credentials](/integrations/builtin/credentials/getresponse/) for guidance on setting up authentication. 
+Refer to [GetResponse credentials](/integrations/builtin/credentials/getresponse.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

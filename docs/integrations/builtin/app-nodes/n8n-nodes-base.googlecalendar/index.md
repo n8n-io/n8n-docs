@@ -13,19 +13,21 @@ Use the Google Calendar node to automate work in Google Calendar, and integrate 
 On this page, you'll find a list of operations the Google Calendar node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
 * **Calendar**
-    * [**Availability**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations/#availability): If a time-slot is available in a calendar
+    * [**Availability**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/calendar-operations.md#availability): If a time-slot is available in a calendar
 * **Event**
-    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#create): Add an event to calendar
-    * [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#delete): Delete an event
-    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#get): Retrieve an event
-    * [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#get-many): Retrieve all events from a calendar
-    * [**Update**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations/#update): Update an event
+    * [**Create**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#create): Add an event to calendar
+    * [**Delete**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#delete): Delete an event
+    * [**Get**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#get): Retrieve an event
+    * [**Get Many**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#get-many): Retrieve all events from a calendar
+    * [**Update**](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/event-operations.md#update): Update an event
 
 ## Templates and examples
 
@@ -34,8 +36,8 @@ Refer to [Google Calendar credentials](/integrations/builtin/credentials/google/
 
 ## Related resources
 
-n8n provides a trigger node for Google Calendar. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger/).
+n8n provides a trigger node for Google Calendar. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger.md).
 
-Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for more information about the service.
+Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference) for more information about the service.
 
-View [example workflows and related content](https://n8n.io/integrations/google-calendar/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/google-calendar/) on n8n's website.

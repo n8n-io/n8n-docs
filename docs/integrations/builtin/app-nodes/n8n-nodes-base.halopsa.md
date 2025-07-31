@@ -12,7 +12,7 @@ Use the HaloPSA node to automate work in HaloPSA, and integrate HaloPSA with oth
 On this page, you'll find a list of operations the HaloPSA node supports and links to more resources.
 
 /// note | Credentials
-Refer to [HaloPSA credentials](/integrations/builtin/credentials/halopsa/) for guidance on setting up authentication. 
+Refer to [HaloPSA credentials](/integrations/builtin/credentials/halopsa.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

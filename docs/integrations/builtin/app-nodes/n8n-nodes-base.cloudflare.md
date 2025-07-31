@@ -12,7 +12,7 @@ Use the Cloudflare node to automate work in Cloudflare, and integrate Cloudflare
 On this page, you'll find a list of operations the Cloudflare node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/) for guidance on setting up authentication. 
+Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -30,7 +30,7 @@ Refer to [Cloudflare  credentials](/integrations/builtin/credentials/cloudflare/
 
 ## Related resources
 
-Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties){:target=_blank .external-link} for more information on this service.
+Refer to [Cloudflare's API documentation on zone-level authentication](https://api.cloudflare.com/#zone-level-authenticated-origin-pulls-properties) for more information on this service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

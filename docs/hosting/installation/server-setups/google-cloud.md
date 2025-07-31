@@ -9,8 +9,8 @@ This hosting guide shows you how to self-host n8n on Google Cloud (GCP). It uses
 
 ## Prerequisites
 
-- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link}
-- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke){:target="_blank" .external-link} (install the gcloud CLI first)
+- The [gcloud command line tool](https://cloud.google.com/sdk/gcloud/)
+- The [gke-gcloud-auth-plugin](https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke) (install the gcloud CLI first)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -22,7 +22,7 @@ Google Cloud offers several options suitable for hosting n8n, including Cloud Ru
 
 This guide uses the Google Kubernetes Engine (GKE) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
-Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/){:target="_blank" .external-link} instead to undertake all the steps.
+Most of the steps in this guide use the Google Cloud UI, but you can also use the [gcloud command line tool](https://cloud.google.com/sdk/gcloud/) instead to undertake all the steps.
 
 ## Create project
 
@@ -36,7 +36,7 @@ Select **ENABLE** to enable the Kubernetes Engine API for this project.
 
 ## Create a cluster
 
-From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview){:target=_blank .external-link}, select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
+From the [GKE service page](https://console.cloud.google.com/kubernetes/list/overview), select **Clusters** > **CREATE**. Make sure you select the "Standard" cluster option, n8n doesn't work with an "Autopilot" cluster. You can leave the cluster configuration on defaults unless there's anything specifically you need to change, such as location.
 
 ## Set Kubectl context
 
@@ -44,7 +44,7 @@ The rest of the steps in this guide require you to set the GCP instance as the K
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp){:target=_blank .external-link} locally. The following steps explain the file configuration and how to add your information.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/gcp) locally. The following steps explain the file configuration and how to add your information.
 
 Clone the repository with the following command:
 
@@ -64,7 +64,7 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Create a volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class. You can read [this guide](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke){:target="_blank" .external-link} for specifics, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to `us-central`.
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. Running Postgres on GCP requires a specific Kubernetes Storage Class. You can read [this guide](https://cloud.google.com/architecture/deploying-highly-available-postgresql-with-gke) for specifics, but the `storage.yaml` manifest creates it for you. You may want to change the regions to create the storage in under the `allowedTopologies` > `matchedLabelExpressions` > `values` key. By default, they're set to `us-central`.
 
 ```yaml
 …
@@ -91,7 +91,7 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 While not essential for running n8n, using persistent volumes is required for:
 
 * Using nodes that interact with files, such as the binary data node.
-* If you want to persist [manual n8n encryption keys](/hosting/configuration/environment-variables/deployment/) between restarts. This saves a file containing the key into file storage during startup.
+* If you want to persist [manual n8n encryption keys](/hosting/configuration/environment-variables/deployment.md) between restarts. This saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 
@@ -126,7 +126,7 @@ This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kube
 
 You can configure n8n settings and behaviors using environment variables.
 
-Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables/) for n8n environment variables details.
+Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
 
 ## Deployments
 
@@ -166,7 +166,7 @@ kubectl apply -f namespace.yaml
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & Ingress** menu item of the cluster you want to use under the **Endpoints** column.
 
 /// note | GKE and IP addresses
-[Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records){:target="_blank" .external-link} for more details on how reserved IP addresses work with GKE and Kubernetes resources.
+[Read this GKE tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#configuring_your_domain_name_records) for more details on how reserved IP addresses work with GKE and Kubernetes resources.
 ///
 ## Delete resources
 

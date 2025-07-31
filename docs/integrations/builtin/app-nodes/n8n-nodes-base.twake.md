@@ -12,7 +12,7 @@ Use the Twake node to automate work in Twake, and integrate Twake with other app
 On this page, you'll find a list of operations the Twake node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twake credentials](/integrations/builtin/credentials/twake/) for guidance on setting up authentication. 
+Refer to [Twake credentials](/integrations/builtin/credentials/twake.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

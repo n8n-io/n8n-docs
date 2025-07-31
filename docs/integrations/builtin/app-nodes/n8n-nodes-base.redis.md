@@ -13,8 +13,10 @@ Use the Redis node to automate work in Redis, and integrate Redis with other app
 On this page, you'll find a list of operations the Redis node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Redis credentials](/integrations/builtin/credentials/redis/) for guidance on setting up authentication. 
+Refer to [Redis credentials](/integrations/builtin/credentials/redis.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

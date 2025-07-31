@@ -12,7 +12,7 @@ Use the Mandrill node to automate work in Mandrill, and integrate Mandrill with 
 On this page, you'll find a list of operations the Mandrill node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mandrill credentials](/integrations/builtin/credentials/mandrill/) for guidance on setting up authentication. 
+Refer to [Mandrill credentials](/integrations/builtin/credentials/mandrill.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

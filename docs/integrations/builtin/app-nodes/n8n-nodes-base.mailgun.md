@@ -12,8 +12,10 @@ Use the Mailgun node to automate work in Mailgun, and integrate Mailgun with oth
 On this page, you'll find a list of operations the Mailgun node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailgun credentials](/integrations/builtin/credentials/mailgun/) for guidance on setting up authentication. 
+Refer to [Mailgun credentials](/integrations/builtin/credentials/mailgun.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

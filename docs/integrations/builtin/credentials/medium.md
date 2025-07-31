@@ -9,7 +9,7 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium/)
+- [Medium](/integrations/builtin/app-nodes/n8n-nodes-base.medium.md)
 
 /// warning | Medium API no longer supported
 Medium has stopped supporting the Medium API. These credentials still appear within n8n, but you can't configure new integrations using them.
@@ -17,7 +17,7 @@ Medium has stopped supporting the Medium API. These credentials still appear wit
 
 ## Prerequisites
 
-- Create an account on [Medium](https://www.medium.com/){:target=_blank .external-link}.
+- Create an account on [Medium](https://www.medium.com/).
 - For OAuth2, request access to credentials by emailing [yourfriends@medium.com](mailto:yourfriends@medium.com).
 
 ## Supported authentication methods
@@ -27,15 +27,15 @@ Medium has stopped supporting the Medium API. These credentials still appear wit
 
 ## Related resources
 
-Refer to [Medium's API documentation](https://github.com/Medium/medium-api-docs){:target=_blank .external-link} for more information about the service.
+Refer to [Medium's API documentation](https://github.com/Medium/medium-api-docs) for more information about the service.
 
 ## Using API access token
 
 To configure this credential, you'll need:
 
-- An API **Access Token**: Generate a token in **Settings >** [**Security and apps**](https://medium.com/me/settings/security){:target=_blank .external-link} **> Integration tokens**. Use the integration token this generates as your n8n **Access Token**.
+- An API **Access Token**: Generate a token in **Settings >** [**Security and apps**](https://medium.com/me/settings/security) **> Integration tokens**. Use the integration token this generates as your n8n **Access Token**.
 
-Refer to the Medium API [Self-issued access tokens documentation](https://github.com/Medium/medium-api-docs?tab=readme-ov-file#21-self-issued-access-tokens){:target=_blank .external-link} for more information.
+Refer to the Medium API [Self-issued access tokens documentation](https://github.com/Medium/medium-api-docs?tab=readme-ov-file#21-self-issued-access-tokens) for more information.
 
 ## Using OAuth2
 

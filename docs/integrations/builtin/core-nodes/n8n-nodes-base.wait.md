@@ -62,12 +62,12 @@ Select if and how incoming resume-webhook-requests to `$execution.resumeUrl` sho
 * **None**: Don't use authentication.
 
 /// note | Auth reference
-Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#authentication) for more information on each auth type.
+Refer to the [Webhook node | Authentication documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#supported-authentication-methods) for more information on each auth type.
 ///
 
 #### HTTP Method
 
-Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/#http-method) for more information.
+Select the HTTP method the webhook should use. Refer to the [Webhook node | HTTP Method documentation](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md#http-method) for more information.
 
 #### Response Code
 
@@ -84,7 +84,7 @@ Set when and how to respond to the webhook from these options:
 		* **First Entry JSON**: Return the JSON data of the first entry of the last node in a JSON object.
 		* **First Entry Binary**: Return the binary data of the first entry of the last node in a binary file.
 		* **No Response Body**: Return with no body.
-* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node.
+* **Using 'Respond to Webhook' Node**: Respond as defined in the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node.
 
 #### Limit Wait Time
 
@@ -105,7 +105,7 @@ Set whether the workflow will automatically resume execution after a specific li
 * **No Response Body**: Set whether n8n should send a body in the response (turned off) or prevent n8n from sending a body in the response (turned on).
 * **Raw Body**: Set whether to return the body in a raw format like JSON or XML (turned on) or not (turned off).
 * **Response Data**: Enter any custom data you want to send in the response.
-* **Response Headers**: Send more headers in the webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header){:target=_blank .external-link} to learn more about response headers.
+* **Response Headers**: Send more headers in the webhook response. Refer to [MDN Web Docs | Response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header) to learn more about response headers.
 * **Webhook Suffix**: Enter a suffix to append to the resume URL. This is useful for creating unique webhook URLs for each Wait node when a workflow contains multiple Wait nodes. Note that the generated `$resumeWebhookUrl` won't automatically include this suffix, you must manually append it to the webhook URL before exposing it.
 
 #### On Webhook Call limitations
@@ -147,7 +147,7 @@ Set when to respond to the form submission. Choose from:
 
 * **Form Is Submitted**: Respond as soon as this node receives the form submission.
 * **Workflow Finishes**: Respond when the last node of this workflow finishes.
-* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/) node executes.
+* **Using 'Respond to Webhook' Node**: Respond when the [Respond to Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md) node executes.
 
 #### Limit Wait Time
 

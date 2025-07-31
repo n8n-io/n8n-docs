@@ -13,11 +13,11 @@ Use the WhatsApp Trigger node to respond to events in WhatsApp and integrate Wha
 On this page, you'll find a list of events the WhatsApp Trigger node can respond to, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/whatsapp/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/whatsapp.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [WhatsApp integrations](https://n8n.io/integrations/whatsapp-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [WhatsApp integrations](https://n8n.io/integrations/whatsapp-trigger/) page.
 ///
 
 ## Events
@@ -35,11 +35,11 @@ For usage examples and templates to help you get started, refer to n8n's [WhatsA
 
 ## Related resources
 
-n8n provides an app node for WhatsApp. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/).
+n8n provides an app node for WhatsApp. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/index.md).
 
-View [example workflows and related content](https://n8n.io/integrations/whatsapp-trigger/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/whatsapp-trigger/) on n8n's website.
 
-Refer to [WhatsApp's documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank .external-link} for details about their API.
+Refer to [WhatsApp's documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) for details about their API.
 
 ## Common issues
 

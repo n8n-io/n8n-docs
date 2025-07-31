@@ -12,7 +12,7 @@ Use the Freshworks CRM node to automate work in Freshworks CRM, and integrate Fr
 On this page, you'll find a list of operations the Freshworks CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm/) for guidance on setting up authentication. 
+Refer to [Freshworks CRM credentials](/integrations/builtin/credentials/freshworkscrm.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

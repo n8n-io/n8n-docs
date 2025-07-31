@@ -3,14 +3,17 @@
 contentType: howto
 ---
 
-# Install community nodes in the n8n app
+# Install community nodes from npm in the n8n app
 
-/// note | Limited to n8n instance owners
-Only the n8n instance owner can install and manage community nodes. The instance owner is the person who sets up and manages user management.
+/// note | Only for instance owners of self-hosted n8n instances
+Only the n8n instance owner of a self-hosted n8n instance can install and manage community nodes from npm. The instance owner is the person who sets up and manages user management.
+
+Admin accounts can also uninstall any community node, verified or unverified. This helps them remove problematic nodes that may affect the instance's health and functionality.
 ///
+
 ## Install a community node
 
-To install a community node:
+To install a community node from npm:
 
 1. Go to **Settings** > **Community Nodes**.
 2. Select **Install**.
@@ -23,12 +26,12 @@ To install a community node:
     * To install the latest version of a package called n8n-node-weather: enter `n8n-nodes-storms` in **Enter npm package name**.
     * To install version 2.3: enter `n8n-node-storms@2.3` in **Enter npm package name**.
     <!-- vale off -->
-5. Agree to the [risks](/integrations/community-nodes/risks/) of using community nodes: select **I understand the risks of installing unverified code from a public source.**
+5. Agree to the [risks](/integrations/community-nodes/risks.md) of using community nodes: select **I understand the risks of installing unverified code from a public source.**
     <!-- vale on -->
 6. Select **Install**. n8n installs the node, and returns to the **Community Nodes** list in **Settings**.
 
 /// note | Nodes on the blocklist
-n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist/) for more information.
+n8n maintains a blocklist of community nodes that it prevents you from installing. Refer to [n8n community node blocklist](/integrations/community-nodes/blocklist.md) for more information.
 ///
 ## Uninstall a community node
 

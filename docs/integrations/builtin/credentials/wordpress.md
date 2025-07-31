@@ -10,11 +10,11 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/)
+- [WordPress](/integrations/builtin/app-nodes/n8n-nodes-base.wordpress.md)
 
 ## Prerequisites
 
-- Create a [WordPress](https://wordpress.com/){:target=_blank .external-link} account or deploy WordPress on a server.
+- Create a [WordPress](https://wordpress.com/) account or deploy WordPress on a server.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [WordPress's API documentation](https://developer.wordpress.com/docs/api/){:target=_blank .external-link} for more information about the service.
+Refer to [WordPress's API documentation](https://developer.wordpress.com/docs/api/) for more information about the service.
 
 ## Using basic auth
 
@@ -45,13 +45,13 @@ Refer to the detailed instructions below for each step.
 
 To generate an application password, you must first enable Two-Step Authentication in WordPress. If you've already done this, [skip to the next section](#create-an-application-password).
 
-1. Open your WordPress [profile](https://wordpress.com/me){:target=_blank .external-link}.
+1. Open your WordPress [profile](https://wordpress.com/me).
 2. Select **Security** from the left menu.
 3. Select **Two-Step Authentication**. The **Two-Step Authentication** page opens.
 4. If Two-Step Authentication isn't enabled, you must enable it.
 5. Choose whether to enable it using an authenticator app or SMS codes and follow the on-screen instructions.
 
-Refer to WordPress's [Enable Two-Step Authentication](https://wordpress.com/support/security/two-step-authentication/){:target=_blank .external-link} for detailed instructions.
+Refer to WordPress's [Enable Two-Step Authentication](https://wordpress.com/support/security/two-step-authentication/) for detailed instructions.
 
 ### Create an application password
 

@@ -12,8 +12,10 @@ Use the Jenkins node to automate work in Jenkins, and integrate Jenkins with oth
 On this page, you'll find a list of operations the Jenkins node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Jenkins credentials](/integrations/builtin/credentials/jenkins/) for guidance on setting up authentication. 
+Refer to [Jenkins credentials](/integrations/builtin/credentials/jenkins.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

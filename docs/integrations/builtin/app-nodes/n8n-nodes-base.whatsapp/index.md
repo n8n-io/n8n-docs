@@ -13,18 +13,21 @@ Use the WhatsApp Business Cloud node to automate work in WhatsApp Business, and 
 On this page, you'll find a list of operations the WhatsApp Business Cloud node supports and links to more resources.
 
 /// note | Credentials
-Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp/) for guidance on setting up authentication. 
+Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials/whatsapp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
 
 * Message
 	* Send
+	* Send and Wait for Response
 	* Send Template
 * Media
 	* Upload
 	* Download
 	* Delete
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 
@@ -33,10 +36,10 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
+Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) for details about the operations.
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp/common-issues.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

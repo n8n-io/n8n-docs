@@ -13,8 +13,10 @@ Use the Microsoft Teams node to automate work in Microsoft Teams, and integrate 
 On this page, you'll find a list of operations the Microsoft Teams node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) for guidance on setting up authentication.
+Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -31,12 +33,15 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
 	* Create
 	* Get
 	* Get Many
+	* Send and Wait for Response
 * Task
     * Create
     * Delete
     * Get
     * Get Many
     * Update
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 
@@ -45,6 +50,6 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft/) f
 
 ## Related resources
 
-Refer to [Microsoft Teams' API documentation](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0){:target=_blank .external-link} for more information about the service.
+Refer to [Microsoft Teams' API documentation](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -12,7 +12,7 @@ Use the Vonage node to automate work in Vonage, and integrate Vonage with other 
 On this page, you'll find a list of operations the Vonage node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Vonage credentials](/integrations/builtin/credentials/vonage/) for guidance on setting up authentication. 
+Refer to [Vonage credentials](/integrations/builtin/credentials/vonage.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

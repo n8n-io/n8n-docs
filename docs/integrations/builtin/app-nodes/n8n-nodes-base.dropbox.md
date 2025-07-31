@@ -13,8 +13,10 @@ Use the Dropbox node to automate work in Dropbox, and integrate Dropbox with oth
 On this page, you'll find a list of operations the Dropbox node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox/) for guidance on setting up authentication. 
+Refer to [Dropbox credentials](/integrations/builtin/credentials/dropbox.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

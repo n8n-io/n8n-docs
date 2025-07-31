@@ -12,7 +12,7 @@ Use the Snowflake node to automate work in Snowflake, and integrate Snowflake wi
 On this page, you'll find a list of operations the Snowflake node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake/) for guidance on setting up authentication. 
+Refer to [Snowflake credentials](/integrations/builtin/credentials/snowflake.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

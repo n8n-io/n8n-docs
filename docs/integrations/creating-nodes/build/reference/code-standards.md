@@ -5,15 +5,15 @@ contentType: reference
 
 # Code standards
 
-Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design/).
+Following defined code standards when building your node makes your code more readable and maintainable, and helps avoid errors. This document provides guidance on good code practices for node building. It focuses on code details. For UI standards and UX guidance, refer to [Node UI design](/integrations/creating-nodes/plan/node-ui-design.md).
 
 ## Use the linter
 
-The n8n node linter provides automatic checking for many of the node-building standards. You should ensure your node passes the linter's checks before publishing it. Refer to the [n8n node linter](/integrations/creating-nodes/test/node-linter/) documentation for more information.
+The n8n node linter provides automatic checking for many of the node-building standards. You should ensure your node passes the linter's checks before publishing it. Refer to the [n8n node linter](/integrations/creating-nodes/test/node-linter.md) documentation for more information.
 
 ## Use the starter
 
-The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter){:target=_blank .external-link}.
+The n8n node starter project includes a recommended setup, dependencies (including the linter), and examples to help you get started. Begin new projects with the [starter](https://github.com/n8n-io/n8n-nodes-starter).
 
 ## Write in TypeScript
 
@@ -84,7 +84,7 @@ When reusing the internal name, you must ensure that only one field is visible t
 
 ## Detailed guidelines for writing a programmatic-style node
 
-These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method/).
+These guidelines apply when building nodes using the programmatic node-building style. They aren't relevant when using the declarative style. For more information on different node-building styles, refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md).
 
 ### Don't change incoming data
 
@@ -109,6 +109,6 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 );
 ```
 
-This uses the npm package [Axios](https://www.npmjs.com/package/axios){:target=_blank .external-link}.
+This uses the npm package [Axios](https://www.npmjs.com/package/axios).
 
-Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers/) for more information, and for migration instructions for the removed `this.helpers.request`.
+Refer to [HTTP helpers](/integrations/creating-nodes/build/reference/http-helpers.md) for more information, and for migration instructions for the removed `this.helpers.request`.

@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git/)
+- [Git](/integrations/builtin/core-nodes/n8n-nodes-base.git.md)
 
 ## Prerequisites
 
-Create an account on [GitHub](https://github.com){:target=_blank .external-link}, [GitLab](https://about.gitlab.com/){:target=_blank .external-link}, or similar platforms for use with [Git](https://git-scm.com){:target=_blank .external-link}.
+Create an account on [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or similar platforms for use with [Git](https://git-scm.com).
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create an account on [GitHub](https://github.com){:target=_blank .external-link}
 
 ## Related resources
 
-Refer to [Git's documentation](https://git-scm.com/doc){:target=_blank .external-link} for more information about the service.
+Refer to [Git's documentation](https://git-scm.com/doc) for more information about the service.
 
 ## Using basic auth
 

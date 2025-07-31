@@ -10,11 +10,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/)
+- [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md)
 
 ## Prerequisites
 
-Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .external-link} account.
+Create a [One Simple API](https://onesimpleapi.com/register) account.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .ext
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+Refer to [One Simple API's documentation](https://onesimpleapi.com/docs) for more information about the service.
 
 ## Using API token
 

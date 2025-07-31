@@ -8,7 +8,7 @@ priority: high
 
 # Gmail node Thread Operations
 
-Use the Thread operations to delete, reply to, trash, untrash, add/remove labels, get one, or list threads. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/) for more information on the Gmail node itself.
+Use the Thread operations to delete, reply to, trash, untrash, add/remove labels, get one, or list threads. Refer to the [Gmail node](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) for more information on the Gmail node itself.
 
 ## Add Label to a thread
 
@@ -23,7 +23,7 @@ Enter these parameters:
 * **Label Names or IDs**: Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify) documentation for more information.
 <!-- vale on -->
 
 ## Delete a thread
@@ -41,7 +41,7 @@ Enter these parameters:
 * **Operation**: Select **Delete**.
 * **Thread ID**: Enter the ID of the thread you want to delete.
 
-Refer to the [Gmail API Method: users.threads.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/delete){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/delete) documentation for more information.
 
 ## Get a thread
 
@@ -62,7 +62,7 @@ Use these options to further refine the node's behavior:
 
 * **Return Only Messages**: Choose whether to return only thread messages (turned on).
 
-Refer to the [Gmail API Method: users.threads.get](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/get){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.get](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/get) documentation for more information.
 
 <!-- vale off -->
 ## Get Many threads
@@ -86,12 +86,12 @@ Use these filters to further refine the node's behavior:
 
 * **Include Spam and Trash**: Select whether the node should get threads in the Spam and Trash folders (turned on) or not (turned off).
 * **Label Names or IDs**: Only return threads with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
-* **Search**: Enter Gmail search refine filters, like `from:`, to filter the threads returned. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
+* **Search**: Enter Gmail search refine filters, like `from:`, to filter the threads returned. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en) for more information.
 * **Read Status**: Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
-* **Received After**: Return only those emails received after the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} for more information on formatting the string.
-* **Received Before**: Return only those emails received before the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} for more information on formatting the string.
+* **Received After**: Return only those emails received after the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) for more information on formatting the string.
+* **Received Before**: Return only those emails received before the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) for more information on formatting the string.
 
-Refer to the [Gmail API Method: users.threads.list](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/list){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.list](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/list) documentation for more information.
 
 ## Remove label from a thread
 
@@ -106,7 +106,7 @@ Enter these parameters:
 * **Label Names or IDs**: Select the Label names you want to remove or enter an expression to specify their IDs. The dropdown populates based on the **Credential** you selected.
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify) documentation for more information.
 <!-- vale on -->
 
 ## Reply to a message
@@ -134,7 +134,7 @@ Use these options to further refine the node's behavior:
 * **Sender Name**: Enter the name you want displayed in your recipients' email as the sender.
 * **Reply to Sender Only**: Choose whether to reply all (turned off) or reply to the sender only (turned on).
 
-Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
 ## Trash a thread
 
@@ -147,7 +147,7 @@ Enter these parameters:
 * **Operation**: Select **Trash**.
 * **Thread ID**: Enter the ID of the thread you want to move to the trash.
 
-Refer to the [Gmail API Method: users.threads.trash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/trash){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.trash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/trash) documentation for more information.
 
 ## Untrash a thread
 
@@ -160,8 +160,8 @@ Enter these parameters:
 * **Operation**: Select **Untrash**.
 * **Thread ID**: Enter the ID of the thread you want to move to the trash.
 
-Refer to the [Gmail API Method: users.threads.untrash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/untrash){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.threads.untrash](https://developers.google.com/gmail/api/reference/rest/v1/users.threads/untrash) documentation for more information.
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/common-issues.md).

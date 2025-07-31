@@ -24,7 +24,7 @@ You can filter the executions list:
 	* **Workflows**: choose all workflows, or a specific workflow name.
 	* **Status**: choose from **Failed**, **Running**, **Success**, or **Waiting**.
 	* **Execution start**: see executions that started in the given time.
-	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/executions/custom-executions-data/) for information on adding custom data.
+	* **Saved custom data**: this is data you create within the workflow using the Code node. Enter the key and value to filter. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for information on adding custom data.
 
 --8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
@@ -38,4 +38,4 @@ If your workflow execution fails, you can retry the execution. To retry a failed
 
 ## Load data from previous executions into your current workflow
 
-You can load data from a previous workflow back into the canvas. Refer to [Debug executions](/workflows/executions/debug/) for more information.
+You can load data from a previous workflow back into the canvas. Refer to [Debug executions](/workflows/executions/debug.md) for more information.

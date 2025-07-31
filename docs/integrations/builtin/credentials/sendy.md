@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy/)
+- [Sendy](/integrations/builtin/app-nodes/n8n-nodes-base.sendy.md)
 
 ## Prerequisites
 
-Host a [Sendy](https://sendy.co/get-started){:target=_blank .external-link} application.
+Host a [Sendy](https://sendy.co/get-started) application.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Host a [Sendy](https://sendy.co/get-started){:target=_blank .external-link} appl
 
 ## Related resources
 
-Refer to [Sendy's API documentation](https://sendy.co/api){:target=_blank .external-link} for more information about the service.
+Refer to [Sendy's API documentation](https://sendy.co/api) for more information about the service.
 
 ## Using API Key
 

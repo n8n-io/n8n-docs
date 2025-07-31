@@ -8,14 +8,14 @@ priority: medium
 
 # WooCommerce Trigger node
 
-[WooCommerce](https://woocommerce.com/){:target=_blank .external-link} is a customizable, open-source e-commerce plugin for WordPress.
+[WooCommerce](https://woocommerce.com/) is a customizable, open-source e-commerce plugin for WordPress.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/woocommerce.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [WooCommerce Trigger integrations](https://n8n.io/integrations/woocommerce-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [WooCommerce Trigger integrations](https://n8n.io/integrations/woocommerce-trigger/) page.
 ///
 
 ## Events

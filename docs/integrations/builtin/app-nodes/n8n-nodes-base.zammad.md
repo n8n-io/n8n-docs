@@ -12,7 +12,7 @@ Use the Zammad node to automate work in Zammad, and integrate Zammad with other 
 On this page, you'll find a list of operations the Zammad node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zammad credentials](/integrations/builtin/credentials/zammad/) for guidance on setting up authentication. 
+Refer to [Zammad credentials](/integrations/builtin/credentials/zammad.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

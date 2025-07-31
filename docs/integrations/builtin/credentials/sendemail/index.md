@@ -10,7 +10,7 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/)
+- [Send Email](/integrations/builtin/core-nodes/n8n-nodes-base.sendemail.md)
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ To configure this credential, you'll need:
 - The **Host**: The SMTP host address for your email provider, often formatted as `smtp.<provider>.com`. Check with your provider.
 - A **Port** number: The default is port `465`, commonly used for SSL. Other common ports are `587` for TLS or `25` for no encryption. Check with your provider.
 - **SSL/TLS**: When turned on, SMTP will use SSL/TLS.
-- **Disable STARTTLS**: When SSL/TLS is disabled, the SMTP server can still try to [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS){:target=_blank .external-link}. Turning this on prevents that behaviour.
+- **Disable STARTTLS**: When SSL/TLS is disabled, the SMTP server can still try to [upgrade the TCP connection using STARTTLS](https://en.wikipedia.org/wiki/Opportunistic_TLS). Turning this on prevents that behaviour.
 - **Client Host Name**: If needed by your provider, add a client host name. This name identifies the client to the server.
 
 ### Provider instructions
@@ -43,15 +43,15 @@ Refer to the quickstart guides for these common email providers.
 
 #### Gmail
 
-Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail).
+Refer to [Gmail](/integrations/builtin/credentials/sendemail/gmail.md).
 
 #### Outlook.com
 
-Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook).
+Refer to [Outlook.com](/integrations/builtin/credentials/sendemail/outlook.md).
 
 #### Yahoo
 
-Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo).
+Refer to [Yahoo](/integrations/builtin/credentials/sendemail/yahoo.md).
 
 ### My provider isn't listed
 

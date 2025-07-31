@@ -8,7 +8,7 @@ priority: high
 
 # Google Calendar Event operations
 
-Use these operations to create, delete, get, and update events in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/) for more information on the Google Calendar node itself.
+Use these operations to create, delete, get, and update events in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md) for more information on the Google Calendar node itself.
 
 ## Create
 
@@ -16,7 +16,7 @@ Use this operation to add an event to a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Create**.
 - **Calendar**: Choose a calendar you want to add an event to. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -49,7 +49,7 @@ Enter these parameters:
 - **Show Me As**: Whether the event blocks time on the calendar.
 - **Summary**: The title of the event.
 
-Refer to the [Events: insert | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: insert | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/insert) API documentation for more information.
 
 ## Delete
 
@@ -57,7 +57,7 @@ Use this operation to delete an event from a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Delete**.
 - **Calendar**: Choose a calendar you want to delete an event from. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -67,7 +67,7 @@ Enter these parameters:
 
 - **Send Updates**: Whether to send notifications about the deletion of the event.
 
-Refer to the [Events: delete | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/delete){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: delete | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/delete) API documentation for more information.
 
 ## Get
 
@@ -75,7 +75,7 @@ Use this operation to retrieve an event from a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Get**.
 - **Calendar**: Choose a calendar you want to get an event from. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -87,7 +87,7 @@ Enter these parameters:
 - **Return Next Instance of Recurrent Event**: Whether to return the next instance of a recurring event instead of the event itself.
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 
-Refer to the [Events: get | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/get){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: get | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/get) API documentation for more information.
 
 <!-- vale from-write-good.Weasel = NO -->
 ## Get Many
@@ -97,7 +97,7 @@ Use this operation to retrieve more than one event from a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Get Many**.
 - **Calendar**: Choose a calendar you want to get an event from. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -124,7 +124,7 @@ Enter these parameters:
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 - **Updated Min**: The lower bounds for an event's last modification time (as an [RFC 3339 timestamp](https://datatracker.ietf.org/doc/html/rfc3339))
 
-Refer to the [Events: list | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/list){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: list | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/list) API documentation for more information.
 
 ## Update
 
@@ -132,7 +132,7 @@ Use this operation to update an event in a Google Calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Event**.
 - **Operation**: Select **Update**.
 - **Calendar**: Choose a calendar you want to add an event to. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -173,4 +173,4 @@ Enter these parameters:
 		- **Public**: The event is public and the event details are visible to all readers of the calendar.
 		- **Private**: The event is private and only event attendees may view event details.
 
-Refer to the [Events: update | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/update){:target=_blank .external-link} API documentation for more information.
+Refer to the [Events: update | Google Calendar](https://developers.google.com/calendar/api/v3/reference/events/update) API documentation for more information.

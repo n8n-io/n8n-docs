@@ -8,11 +8,15 @@ priority: critical
 
 # ReAct AI Agent node
 
-The ReAct Agent node implements [ReAct](https://react-lm.github.io/){:target=_blank .external-link} logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
+/// note | Feature removed
+n8n removed this functionality in February 2025.
+///
+
+The ReAct Agent node implements [ReAct](https://react-lm.github.io/) logic. ReAct (reasoning and acting) brings together the reasoning powers of chain-of-thought prompting and action plan generation.
 
 The ReAct Agent reasons about a given task, determines the necessary actions, and then executes them. It follows the cycle of reasoning and acting until it completes the task. The ReAct agent can break down complex tasks into smaller sub-tasks, prioritise them, and execute them one after the other.
 
-Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/) for more information on the AI Agent node itself.
+Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
 
 /// note | No memory
 The ReAct agent doesn't support memory sub-nodes. This means it can't recall previous prompts or simulate an ongoing conversation.
@@ -64,14 +68,14 @@ Add text to append after the tools list at the start of the conversation when th
 
 ## Related resources
 
-Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/agents/){:target=_blank .external-link} documentation for more information.
+Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/agents/) documentation for more information.
 
 ## Templates and examples
 
-Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index/#templates-and-examples) section.
+Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

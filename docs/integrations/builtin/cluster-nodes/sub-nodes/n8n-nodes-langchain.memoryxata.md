@@ -7,12 +7,11 @@ contentType: [integration, reference]
 
 # Xata node
 
-Use the Xata node to use Xata as a memory server.
-
+Use the Xata node to use Xata as a [memory](/glossary.md#ai-memory) server.
 On this page, you'll find a list of operations the Xata node supports, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/xata/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/xata.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -29,7 +28,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChain's Xata documentation](https://js.langchain.com/docs/integrations/memory/xata){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Xata documentation](https://js.langchain.com/docs/integrations/memory/xata) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

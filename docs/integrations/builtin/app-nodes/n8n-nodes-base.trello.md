@@ -13,8 +13,10 @@ Use the Trello node to automate work in Trello, and integrate Trello with other 
 On this page, you'll find a list of operations the Trello node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Trello credentials](/integrations/builtin/credentials/trello/) for guidance on setting up authentication. 
+Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

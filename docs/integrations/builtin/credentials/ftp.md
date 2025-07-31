@@ -10,11 +10,11 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp/)
+- [FTP](/integrations/builtin/core-nodes/n8n-nodes-base.ftp.md)
 
 ## Prerequisites
 
-Create an account on a File Transfer Protocol (FTP) server like [JSCAPE](https://mft.jscape.com/lp/ftp-server){:target=_blank .external-link}, [OpenSSH](http://www.openssh.com/){:target=_blank .external-link}, or [FileZilla Server](https://filezilla-project.org/){:target=_blank .external-link}.
+Create an account on a File Transfer Protocol (FTP) server like [JSCAPE](https://mft.jscape.com/lp/ftp-server), [OpenSSH](https://www.openssh.com/), or [FileZilla Server](https://filezilla-project.org/).
 
 ## Supported authentication methods
 

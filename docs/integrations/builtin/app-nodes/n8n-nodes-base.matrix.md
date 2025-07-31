@@ -12,7 +12,7 @@ Use the Matrix node to automate work in Matrix, and integrate Matrix with other 
 On this page, you'll find a list of operations the Matrix node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Matrix credentials](/integrations/builtin/credentials/matrix/) for guidance on setting up authentication. 
+Refer to [Matrix credentials](/integrations/builtin/credentials/matrix.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

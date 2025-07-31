@@ -8,7 +8,7 @@ priority: high
 
 # Question and Answer Chain node
 
-Use the Question and Answer Chain node to use a vector store as a retriever.
+Use the Question and Answer Chain node to use a [vector store](/glossary.md#ai-vector-store) as a retriever.
 
 On this page, you'll find the node parameters for the Question and Answer Chain node, and links to more resources.
 
@@ -25,12 +25,12 @@ The question you want to ask.
 
 ## Related resources
 
-Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/){:target=_blank .external-link} for examples of how LangChain can use a vector store as a retriever.
+Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/) for examples of how LangChain can use a vector store as a retriever.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"

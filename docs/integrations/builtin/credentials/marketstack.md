@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Marketstack](/integrations/builtin/app-nodes/n8n-nodes-base.marketstack/)
+- [Marketstack](/integrations/builtin/app-nodes/n8n-nodes-base.marketstack.md)
 
 ## Prerequisites
 
-Create a [Marketstack](https://marketstack.com/){:target=_blank .external-link} account.
+Create a [Marketstack](https://marketstack.com/) account.
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [Marketstack](https://marketstack.com/){:target=_blank .external-link} 
 
 ## Related resources
 
-Refer to [Marketstack's API documentation](https://marketstack.com/documentation){:target=_blank .external-link} for more information about the service.
+Refer to [Marketstack's API documentation](https://marketstack.com/documentation) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: View and generate API keys in your Marketstack [account dashboard](https://marketstack.com/dashboard){:target=_blank .external-link}.
+- An **API Key**: View and generate API keys in your Marketstack [account dashboard](https://marketstack.com/dashboard).
 - Select whether to **Use HTTPS**: Make this selection based on your Marketstack account plan level:
     - Free plan: Turn off **Use HTTPS**
     - All other plans: Turn on **Use HTTPS**

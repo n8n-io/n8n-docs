@@ -9,12 +9,12 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/)
-- [Invoice Ninja Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/)
+- [Invoice Ninja](/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md)
+- [Invoice Ninja Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger.md)
 
 ## Prerequisites
 
-Create an [Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .external-link} account. Only the Pro and Enterprise plans support API integrations.
+Create an [Invoice Ninja](https://www.invoiceninja.com/) account. Only the Pro and Enterprise plans support API integrations.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ Create an [Invoice Ninja](https://www.invoiceninja.com/){:target=_blank .externa
 
 ## Related resources
 
-Refer to Invoice Ninja's [v4 API documentation](https://invoice-ninja.readthedocs.io/en/latest/api.html){:target=_blank .external-link} and [v5 API documentation](https://api-docs.invoicing.co/){:target=_blank .external-link} for more information about the APIs.
+Refer to Invoice Ninja's [v4 API documentation](https://invoice-ninja.readthedocs.io/en/latest/api.html) and [v5 API documentation](https://api-docs.invoicing.co/) for more information about the APIs.
 
 ## Using API key
 

@@ -10,7 +10,7 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/)
+- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md)
 
 ## Supported authentication methods
 
@@ -18,11 +18,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Mattermost's API documentation](https://api.mattermost.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Mattermost's API documentation](https://api.mattermost.com/) for more information about the service.
 
 ## Using API access token
 
-To configure this credential, you'll need a [Mattermost](https://www.mattermost.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Mattermost](https://www.mattermost.com/) account and:
 
 - A personal **Access Token**
 - Your Mattermost **Base URL**.
@@ -42,7 +42,7 @@ To set it up:
 6. Enter your Mattermost URL as the **Base URL**.
 7. By default, n8n connects only if SSL certificate validation succeeds. To connect even if SSL certificate validation fails, turn on **Ignore SSL Issues**.
 
-Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/){:target=_blank .external-link} for more information.
+Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/) for more information.
 
 ## Enable personal access tokens
 
@@ -61,4 +61,4 @@ To identify the root cause and resolve it:
 6. Select the **Actions** dropdown for the user and select **Manage roles**.
 7. Check the box for **Allow this account to generate personal access tokens** and **Save**.
 
-Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/){:target=_blank .external-link} for more information.
+Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/) for more information.

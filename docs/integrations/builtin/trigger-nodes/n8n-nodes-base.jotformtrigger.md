@@ -8,12 +8,12 @@ priority: medium
 
 # JotForm Trigger node
 
-[JotForm](https://www.jotform.com/){:target=_blank .external-link} is an online form building service. JotForm's software creates forms with a drag and drop creation tool and an option to encrypt user data.
+[JotForm](https://www.jotform.com/) is an online form building service. JotForm's software creates forms with a drag and drop creation tool and an option to encrypt user data.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/jotform/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/jotform.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [JotForm Trigger integrations](https://n8n.io/integrations/jotform-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [JotForm Trigger integrations](https://n8n.io/integrations/jotform-trigger/) page.
 ///

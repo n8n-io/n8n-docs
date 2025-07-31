@@ -12,7 +12,7 @@ Use the Zulip node to automate work in Zulip, and integrate Zulip with other app
 On this page, you'll find a list of operations the Zulip node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Zulip credentials](/integrations/builtin/credentials/zulip/) for guidance on setting up authentication. 
+Refer to [Zulip credentials](/integrations/builtin/credentials/zulip.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

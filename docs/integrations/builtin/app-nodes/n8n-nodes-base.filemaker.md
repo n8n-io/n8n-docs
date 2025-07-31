@@ -13,8 +13,10 @@ Use the FileMaker node to automate work in FileMaker, and integrate FileMaker wi
 On this page, you'll find a list of operations the FileMaker node supports and links to more resources.
 
 /// note | Credentials
-Refer to [FileMaker credentials](/integrations/builtin/credentials/filemaker/) for guidance on setting up authentication. 
+Refer to [FileMaker credentials](/integrations/builtin/credentials/filemaker.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

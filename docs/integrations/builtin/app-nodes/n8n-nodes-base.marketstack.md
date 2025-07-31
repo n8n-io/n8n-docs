@@ -12,7 +12,7 @@ Use the marketstack node to automate work in marketstack, and integrate marketst
 On this page, you'll find a list of operations the marketstack node supports and links to more resources.
 
 /// note | Credentials
-Refer to [marketstack credentials](/integrations/builtin/credentials/marketstack/) for guidance on setting up authentication. 
+Refer to [marketstack credentials](/integrations/builtin/credentials/marketstack.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

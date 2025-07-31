@@ -12,8 +12,10 @@ Use the AWS Lambda node to automate work in AWS Lambda, and integrate AWS Lambda
 On this page, you'll find a list of operations the AWS Lambda node supports and links to more resources.
 
 /// note | Credentials
-Refer to [AWS Lambda credentials](/integrations/builtin/credentials/aws/) for guidance on setting up authentication. 
+Refer to [AWS Lambda credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

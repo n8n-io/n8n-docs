@@ -8,12 +8,14 @@ priority: medium
 
 # Pinecone Vector Store node
 
-Use the Pinecone node to interact with your Pinecone database as vector store. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a chain, or connect directly to an agent as a tool.
+
+Use the Pinecone node to interact with your Pinecone database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect directly to an [agent](/glossary.md#ai-agent) as a [tool](/glossary.md#ai-tool). You can also update an item in a vector database by its ID.
+
 
 On this page, you'll find the node parameters for the Pinecone node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/pinecone/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/pinecone.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -30,25 +32,33 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Pinecone Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) to use vector store as a resource when answering queries.
+You can connect the Pinecone Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Pinecone Vector Store node.
 
 ### Use a retriever to fetch documents
 
-You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore/) node with the Pinecone Vector Store node to fetch documents from the Pinecone Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/) node to fetch documents from the vector store that match the given chat input.
+You can use the [Vector Store Retriever](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.retrievervectorstore.md) node with the Pinecone Vector Store node to fetch documents from the Pinecone Vector Store node. This is often used with the [Question and Answer Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainretrievalqa/index.md) node to fetch documents from the vector store that match the given chat input.
 
 An [example of the connection flow](https://n8n.io/workflows/1960-ask-questions-about-a-pdf-using-ai/) would be: Question and Answer Chain (Retriever connector) -> Vector Store Retriever (Vector Store connector) -> Pinecone Vector Store.
 
 ### Use the Vector Store Question Answer Tool to answer questions
 
-Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore/) to summarize results and answer questions from the Pinecone Vector Store node. Rather than connecting the Pinecone Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
+Another pattern uses the [Vector Store Question Answer Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolvectorstore.md) to summarize results and answer questions from the Pinecone Vector Store node. Rather than connecting the Pinecone Vector Store directly as a tool, this pattern uses a tool specifically designed to summarizes data in the vector store.
 
 The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-documentation-rag-powered-chatbot-with-pinecone-and-openai/) in this case would look like this: AI agent (tools connector) -> Vector Store Question Answer Tool (Vector Store connector) -> Pinecone Vector store.
 	
 ## Node parameters
 
+
+### Operation Mode
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
+
+### Rerank Results
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+
 
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
@@ -73,6 +83,10 @@ The [connections flow](https://n8n.io/workflows/2705-chat-with-github-api-docume
 * **Pinecone Index**: Select or enter the Pinecone Index to use.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
+### Parameters for **Update Documents**
+
+* ID
+
 ## Node options
 
 ### Pinecone Namespace 
@@ -94,7 +108,7 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 ## Related resources
 
-Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

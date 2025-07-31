@@ -12,7 +12,7 @@ Use the Segment node to automate work in Segment, and integrate Segment with oth
 On this page, you'll find a list of operations the Segment node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Segment credentials](/integrations/builtin/credentials/segment/) for guidance on setting up authentication. 
+Refer to [Segment credentials](/integrations/builtin/credentials/segment.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -11,10 +11,10 @@ priority: high
 The HTML node provides operations to help you work with HTML in n8n.
 
 /// note | HTML Extract node
-The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md){:target=_blank .external-link}.
+The HTML node replaces the HTML Extract node from version 0.213.0 on. If you're using an older version of n8n, you can still view the [HTML Extract node documentation](https://github.com/n8n-io/n8n-docs/blob/86fe33b681621e618e3adcab9a27e8605dbc23ad/docs/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract.md).
 ///
 /// warning | Cross-site scripting
-When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/){:target=_blank .external-link}. This is a security risk. Be careful with un-trusted inputs.
+When using the HTML node to generate an HTML template you can introduce [XSS (cross-site scripting)](https://owasp.org/www-community/attacks/xss/). This is a security risk. Be careful with un-trusted inputs.
 ///
 
 ## Operations
@@ -36,7 +36,7 @@ You can include:
 * JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
 * Expressions, wrapped in `{{}}`.
 
-You can use [Expressions](/code/expressions/) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview/). 
+You can use [Expressions](/code/expressions.md) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview.md). 
 
 ## Extract HTML Content
 

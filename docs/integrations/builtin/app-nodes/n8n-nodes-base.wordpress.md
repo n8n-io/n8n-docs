@@ -13,8 +13,10 @@ Use the WordPress node to automate work in WordPress, and integrate WordPress wi
 On this page, you'll find a list of operations the WordPress node supports and links to more resources.
 
 /// note | Credentials
-Refer to [WordPress credentials](/integrations/builtin/credentials/wordpress/) for guidance on setting up authentication. 
+Refer to [WordPress credentials](/integrations/builtin/credentials/wordpress.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

@@ -12,7 +12,7 @@ Use the Bitwarden node to automate work in Bitwarden, and integrate Bitwarden wi
 On this page, you'll find a list of operations the Bitwarden node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden/) for guidance on setting up authentication. 
+Refer to [Bitwarden credentials](/integrations/builtin/credentials/bitwarden.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

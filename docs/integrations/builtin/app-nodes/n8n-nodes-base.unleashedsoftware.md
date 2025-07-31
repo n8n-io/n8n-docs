@@ -12,7 +12,7 @@ Use the Unleashed Software node to automate work in Unleashed Software, and inte
 On this page, you'll find a list of operations the Unleashed Software node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware/) for guidance on setting up authentication. 
+Refer to [Unleashed Software credentials](/integrations/builtin/credentials/unleashedsoftware.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

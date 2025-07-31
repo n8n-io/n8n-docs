@@ -13,8 +13,10 @@ Use the Twilio node to automate work in Twilio, and integrate Twilio with other 
 On this page, you'll find a list of operations the Twilio node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twilio credentials](/integrations/builtin/credentials/twilio/) for guidance on setting up authentication. 
+Refer to [Twilio credentials](/integrations/builtin/credentials/twilio.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -30,6 +32,6 @@ Refer to [Twilio credentials](/integrations/builtin/credentials/twilio/) for gui
 
 ## Related resources
 
-Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api){:target=_blank .external-link} for more information about the service.
+Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

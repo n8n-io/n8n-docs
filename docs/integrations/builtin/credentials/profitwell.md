@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitwell/)
+- [ProfitWell](/integrations/builtin/app-nodes/n8n-nodes-base.profitwell.md)
 
 ## Prerequisites
 
-Create a [ProfitWell](https://www2.profitwell.com/signup/start){:target=_blank .external-link} account.
+Create a [ProfitWell](https://www2.profitwell.com/signup/start) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [ProfitWell](https://www2.profitwell.com/signup/start){:target=_blank .
 
 ## Related resources
 
-Refer to [Profitwell's API documentation](https://profitwellapiv2.docs.apiary.io/){:target=_blank .external-link} for more information about the service.
+Refer to [Profitwell's API documentation](https://profitwellapiv2.docs.apiary.io/) for more information about the service.
 
 ## Using API token
 

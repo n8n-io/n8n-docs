@@ -13,7 +13,7 @@ Use the Airtable node to automate work in Airtable, and integrate Airtable with 
 On this page, you'll find a list of operations the Airtable node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for guidance on setting up authentication. 
+Refer to [Airtable credentials](/integrations/builtin/credentials/airtable.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -31,9 +31,9 @@ Refer to [Airtable credentials](/integrations/builtin/credentials/airtable/) for
 
 ## Related resources
 
-n8n provides a trigger node for Airtable. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/).
+n8n provides a trigger node for Airtable. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger.md).
 
-Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [Airtable's documentation](https://airtable.com/developers/web/api/introduction) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
@@ -46,7 +46,7 @@ To fetch data for a particular record, you need the Record ID. There are two way
 
 ### Create a Record ID column in Airtable
 
-To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/docs/finding-airtable-ids){:target=_blank .external-link}. You can then use this Record ID in your Airtable node.
+To create a `Record ID` column in your table, refer to this [article](https://support.airtable.com/docs/finding-airtable-ids). You can then use this Record ID in your Airtable node.
 
 ### Use the List operation
 
@@ -63,8 +63,8 @@ To filter records from your Airtable base, use the **Filter By Formula** option.
 
 Similarly, if you want to return all the users that don't belong to the organization `n8n`, use the following formula: `NOT({Organization}='n8n')`.
 
-Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference){:target=_balnk .external-link} to learn more about the formulas.
+Refer to the Airtable [documentation](https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference) to learn more about the formulas.
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md).

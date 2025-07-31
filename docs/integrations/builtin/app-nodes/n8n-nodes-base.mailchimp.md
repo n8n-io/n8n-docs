@@ -12,7 +12,7 @@ Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp wi
 On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp/) for guidance on setting up authentication. 
+Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

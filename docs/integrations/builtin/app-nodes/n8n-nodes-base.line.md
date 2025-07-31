@@ -10,7 +10,7 @@ priority: medium
 
 <!-- vale off -->
 /// warning | Deprecated: End of service
-LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce){:target=_blank .external-link} for more information.
+LINE Notify is discontinuing service as of April 1st 2025 and this node will no longer work after that date. View LINE Notify's [end of service announement](https://notify-bot.line.me/closing-announce) for more information.
 ///
 <!-- vale on -->
 
@@ -19,8 +19,10 @@ Use the Line node to automate work in Line, and integrate Line with other applic
 On this page, you'll find a list of operations the Line node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Line credentials](/integrations/builtin/credentials/line/) for guidance on setting up authentication. 
+Refer to [Line credentials](/integrations/builtin/credentials/line.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

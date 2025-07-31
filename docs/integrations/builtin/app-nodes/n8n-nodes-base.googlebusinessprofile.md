@@ -12,7 +12,7 @@ Use the Google Business Profile node to automate work in Google Business Profile
 On this page, you'll find a list of operations the Google Business Profile node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/google/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
 ///
 
 
@@ -37,8 +37,8 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-n8n provides a trigger node for Google Business Profile. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger/).
+n8n provides a trigger node for Google Business Profile. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlebusinessprofiletrigger.md).
 
-Refer to [Google Business Profile's documentation](https://developers.google.com/my-business/reference/rest){:target=_blank .external-link} for more information about the service.
+Refer to [Google Business Profile's documentation](https://developers.google.com/my-business/reference/rest) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

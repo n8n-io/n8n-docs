@@ -10,9 +10,9 @@ hide:
 # Welcome to n8n Docs
 
 
-This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](http://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
+This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation tool that combines AI capabilities with business process automation.
 
-It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing/) are welcome.
+It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
 
 
 ## Where to start
@@ -23,26 +23,26 @@ It covers everything from setup to usage and development. It's a work in progres
 
     Jump in with n8n's quickstart guides.
 
-    [:octicons-arrow-right-24: Try it out](/try-it-out/)
+    [:octicons-arrow-right-24: Try it out](/try-it-out/index.md)
 
 -   __Choose the right n8n for you__
 
 	Cloud, npm, self-host . . . 
 
-    [:octicons-arrow-right-24: Options](/choose-n8n/)
+    [:octicons-arrow-right-24: Options](/choose-n8n.md)
 
 
 -   __Explore integrations__
 
     Browse n8n's integrations library.
 
-    [:octicons-arrow-right-24: Find your apps](/integrations/)
+    [:octicons-arrow-right-24: Find your apps](/integrations/index.md)
 
 -   __Build AI functionality__
 
     n8n supports building AI functionality and tools.
 
-    [:octicons-arrow-right-24: Advanced AI](/advanced-ai/)    
+    [:octicons-arrow-right-24: Advanced AI](/advanced-ai/index.md)    
 </div>
 
 ## About n8n

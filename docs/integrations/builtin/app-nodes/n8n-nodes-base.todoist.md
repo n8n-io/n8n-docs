@@ -13,8 +13,10 @@ Use the Todoist node to automate work in Todoist, and integrate Todoist with oth
 On this page, you'll find a list of operations the Todoist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Todoist credentials](/integrations/builtin/credentials/todoist/) for guidance on setting up authentication. 
+Refer to [Todoist credentials](/integrations/builtin/credentials/todoist.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

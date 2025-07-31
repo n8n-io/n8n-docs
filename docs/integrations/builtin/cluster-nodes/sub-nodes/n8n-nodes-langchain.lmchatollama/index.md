@@ -8,12 +8,12 @@ priority: high
 
 # Ollama Chat Model node
 
-The Ollama Chat Model node allows you use local Llama 2 models with conversational agents.
+The Ollama Chat Model node allows you use local Llama 2 models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the Ollama Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ollama/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ollama.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -26,7 +26,7 @@ You can find authentication information for this node [here](/integrations/built
 	* **Llama2 70B**
 	* **Llama2 Uncensored**
 
-Refer to the Ollama [Models Library documentation](https://ollama.com/library){:target=_blank .external-link} for more information about available models.
+Refer to the Ollama [Models Library documentation](https://ollama.com/library) for more information about available models.
 
 ## Node options
 
@@ -41,13 +41,13 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library){:
 
 ## Related resources
 
-Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md).
 
 --8<-- "_glossary/ai-glossary.md"
 

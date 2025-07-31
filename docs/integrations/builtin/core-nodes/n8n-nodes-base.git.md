@@ -10,23 +10,23 @@ contentType: [integration, reference]
 [Git](https://git-scm.com/) is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/git/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/git.md).
 ///
 
 ## Operations
 
-* [**Add**](#add) a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add){:target=_blank .external-link}.
-* [**Add Config**](#add-config): Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} set or add.
-* [**Clone**](#clone) a repository: Performs a [git clone](https://git-scm.com/docs/git-clone){:target=_blank .external-link}.
-* [**Commit**](#commit) files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit){:target=_blank .external-link}.
-* [**Fetch**](#fetch) from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch){:target=_blank .external-link}.
-* [**List Config**](#list-config): Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config){:target=_blank .external-link} query.
-* [**Log**](#log): Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log){:target=_blank .external-link}.
-* [**Pull**](#pull) from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull){:target=_blank .external-link}.
-* [**Push**](#push) to remote repository: Performs a [git push](https://git-scm.com/docs/git-push){:target=_blank .external-link}.
-* [**Push Tags**](#push-tags) to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags){:target=_blank .external-link}.
-* Return [**Status**](#status) of current repository: Performs a [git status](https://git-scm.com/docs/git-status){:target=_blank .external-link}.
-* Create a new [**Tag**](#tag): Performs a [git tag](https://git-scm.com/docs/git-tag){:target=_blank .external-link}.
+* [**Add**](#add) a file or folder to commit. Performs a [git add](https://git-scm.com/docs/git-add).
+* [**Add Config**](#add-config): Add configuration property. Performs a [git config](https://git-scm.com/docs/git-config) set or add.
+* [**Clone**](#clone) a repository: Performs a [git clone](https://git-scm.com/docs/git-clone).
+* [**Commit**](#commit) files or folders to git. Performs a [git commit](https://git-scm.com/docs/git-commit).
+* [**Fetch**](#fetch) from remote repository. Performs a [git fetch](https://git-scm.com/docs/git-fetch).
+* [**List Config**](#list-config): Return current configuration. Performs a [git config](https://git-scm.com/docs/git-config) query.
+* [**Log**](#log): Return git commit history. Performs a [git log](https://git-scm.com/docs/git-log).
+* [**Pull**](#pull) from remote repository: Performs a [git pull](https://git-scm.com/docs/git-pull).
+* [**Push**](#push) to remote repository: Performs a [git push](https://git-scm.com/docs/git-push).
+* [**Push Tags**](#push-tags) to remote repository: Performs a [git push --tags](https://git-scm.com/docs/git-push#Documentation/git-push.txt---tags).
+* Return [**Status**](#status) of current repository: Performs a [git status](https://git-scm.com/docs/git-status).
+* Create a new [**Tag**](#tag): Performs a [git tag](https://git-scm.com/docs/git-tag).
 * [**User Setup**](#user-setup): Set the user.
 
 Refer to the sections below for more details on the parameters and options for each operation.
@@ -59,7 +59,7 @@ Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Authentication**: Select **Authenticate** to pass credentials in. Select **None** to not use authentication.
-    * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
+    * **Credential for Git**: If you select **Authenticate**, you must select or create credentials for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git.md) for more information.
 * **New Repository Path**: Enter the local path where you'd like to locate the cloned repository.
 * **Source Repository**: Enter the URL or path of the repository you want to clone.
 
@@ -111,7 +111,7 @@ Configure this operation with these parameters:
 
 * **Repository Path**: Enter the local path of the git repository.
 * **Authentication**: Select **Authenticate** to pass credentials in or **None** to not use authentication.
-    * If you select **Authenticate**, you must select or create **Credential for Git** for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git/) for more information.
+    * If you select **Authenticate**, you must select or create **Credential for Git** for the node to use. Refer to [Git credential](/integrations/builtin/credentials/git.md) for more information.
 
 ### Push options
 

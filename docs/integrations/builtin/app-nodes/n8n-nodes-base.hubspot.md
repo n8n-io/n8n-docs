@@ -13,8 +13,10 @@ Use the HubSpot node to automate work in HubSpot, and integrate HubSpot with oth
 On this page, you'll find a list of operations the HubSpot node supports and links to more resources.
 
 /// note | Credentials
-Refer to [HubSpot credentials](/integrations/builtin/credentials/hubspot/) for guidance on setting up authentication. 
+Refer to [HubSpot credentials](/integrations/builtin/credentials/hubspot.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

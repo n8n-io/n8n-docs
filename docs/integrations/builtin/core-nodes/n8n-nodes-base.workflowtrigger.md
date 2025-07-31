@@ -11,7 +11,7 @@ priority: high
 The Workflow Trigger node gets triggered when a workflow is updated or activated.
 
 /// warning | Deprecated
-n8n has deprecated the Workflow Trigger node and moved its functionality to the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger/).
+n8n has deprecated the Workflow Trigger node and moved its functionality to the [n8n Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger.md).
 ///
 
 /// note | Keep in mind

@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4/)
+- [SIGNL4](/integrations/builtin/app-nodes/n8n-nodes-base.signl4.md)
 
 ## Prerequisites
 
-Create a [SIGNL4](https://www.signl4.com/){:target=_blank .external-link} account.
+Create a [SIGNL4](https://www.signl4.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [SIGNL4](https://www.signl4.com/){:target=_blank .external-link} accoun
 
 ## Related resources
 
-Refer to [SIGNL4's Inbound Webhook documentation](https://connect.signl4.com/webhook/docs/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [SIGNL4's Inbound Webhook documentation](https://connect.signl4.com/webhook/docs/index.html) for more information about the service.
 
 ## Using webhook secret
 

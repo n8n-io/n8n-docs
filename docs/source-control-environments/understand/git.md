@@ -17,14 +17,14 @@ If you're new to Git, don't panic. You don't need to learn Git to use n8n. This 
 If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that source control in n8n doesn't support a pull request-style review and merge process, unless you do this outside n8n in your Git provider.
 ///
 
-This page introduces the Git concepts and terminology used in n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control-environments/setup/) should have some familiarity with Git and with their Git hosting provider.
+This page introduces the Git concepts and terminology used in n8n. It doesn't cover everything you need to set up and manage a repository. The person doing the [Setup](/source-control-environments/setup.md) should have some familiarity with Git and with their Git hosting provider.
 
 /// note | This is a brief introduction
-Git is a complex topic. This section provides a brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources){:target=_blank .external-link}.
+Git is a complex topic. This section provides a brief introduction to the key terms you need when using environments in n8n. If you want to learn about Git in depth, refer to [GitHub | Git and GitHub learning resources](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
 ///
 ## Git overview
 
-[Git](https://git-scm.com/){:target=_blank .external-link} is a tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/){:target=_blank .external-link} and [GitLab](https://about.gitlab.com/){:target=_blank .external-link}.
+[Git](https://git-scm.com/) is a tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/).
 
 ## Branches: Multiple copies of a project
 
@@ -51,4 +51,4 @@ n8n uses three key Git processes:
 		
 * **Commit**: a commit in n8n is a single occurrence of pushing work to Git. In n8n, commit and push happen at the same time.
 
-Refer to [Push and pull](/source-control-environments/using/push-pull/) for detailed information about how n8n interacts with Git.
+Refer to [Push and pull](/source-control-environments/using/push-pull.md) for detailed information about how n8n interacts with Git.

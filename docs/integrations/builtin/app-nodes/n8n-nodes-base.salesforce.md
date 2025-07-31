@@ -13,8 +13,10 @@ Use the Salesforce node to automate work in Salesforce, and integrate Salesforce
 On this page, you'll find a list of operations the Salesforce node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce/) for guidance on setting up authentication. 
+Refer to [Salesforce credentials](/integrations/builtin/credentials/salesforce.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

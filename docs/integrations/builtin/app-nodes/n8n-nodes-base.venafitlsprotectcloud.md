@@ -12,7 +12,7 @@ Use the Venafi TLS Protect Cloud node to automate work in Venafi TLS Protect Clo
 On this page, you'll find a list of operations the Venafi TLS Protect Cloud node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud/) for guidance on setting up authentication. 
+Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credentials/venafitlsprotectcloud.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -35,12 +35,12 @@ Refer to [Venafi TLS Protect Cloud credentials](/integrations/builtin/credential
 
 ## Related resources
 
-Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/){:target=_blank .external-link} for more information on this service.
+Refer to [Venafi's REST API documentation](https://docs.venafi.cloud/api/vaas-rest-api/) for more information on this service.
 
 n8n also provides:
 <!-- vale off -->
-* A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger/) for Venafi TLS Protect Cloud.
-* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter/) for Venafi TLS Protect Datacenter.
+* A [trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) for Venafi TLS Protect Cloud.
+* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter.md) for Venafi TLS Protect Datacenter.
 <!-- vale on -->
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

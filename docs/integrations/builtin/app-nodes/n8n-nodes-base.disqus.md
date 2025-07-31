@@ -12,7 +12,7 @@ Use the Disqus node to automate work in Disqus, and integrate Disqus with other 
 On this page, you'll find a list of operations the Disqus node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Disqus credentials](/integrations/builtin/credentials/disqus/) for guidance on setting up authentication. 
+Refer to [Disqus credentials](/integrations/builtin/credentials/disqus.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -10,12 +10,12 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [WooCommerce](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/)
-- [WooCommerce Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger/)
+- [WooCommerce](/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce.md)
+- [WooCommerce Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger.md)
 
 ## Prerequisites
 
-- Install the [WooCommerce](https://woocommerce.com/){:target=_blank .external-link} plugin on your WordPress website.
+- Install the [WooCommerce](https://woocommerce.com/) plugin on your WordPress website.
 - In WordPress, go to **Settings > Permalinks** and set your WordPress permalinks to use something other than **Plain**.
 
 ## Supported authentication methods
@@ -24,7 +24,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [WooCommerce's REST API documentation](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/){:target=_blank .external-link} for more information about the service.
+Refer to [WooCommerce's REST API documentation](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/) for more information about the service.
 
 ## Using API key
 
@@ -42,7 +42,7 @@ To generate an API key and set up your credential:
 4. Enter your WordPress site URL as the **WooCommerce URL**.
 5. By default, n8n passes your credential details in the Authorization header. If you need to pass them as query string parameters instead, turn on **Include Credentials in Query**.
 
-Refer to [Generate Keys](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/#3-generate-keys){:target=_blank .external-link} for more information.
+Refer to [Generate Keys](https://developer.woocommerce.com/docs/getting-started-with-the-woocommerce-rest-api/#3-generate-keys) for more information.
 
 ## Resolve "Consumer key is missing" error
 

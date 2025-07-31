@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/)
+- [Zoho CRM](/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm.md)
 
 ## Prerequisites
 
-Create a [Zoho](https://www.zoho.com/){:target=_blank .external-link} account.
+Create a [Zoho](https://www.zoho.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Zoho](https://www.zoho.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Zoho's CRM API documentation](https://www.zoho.com/crm/developer/docs/api/v3/){:target=_blank .external-link} for more information about the service.
+Refer to [Zoho's CRM API documentation](https://www.zoho.com/crm/developer/docs/api/v3/) for more information about the service.
 
 ## Using OAuth2
 
@@ -34,11 +34,11 @@ To configure this credential, you'll need:
     - **IN**: Select this option for the India data center.
     - **US**: Select this option for the United States data center.
 
-Refer to [Multi DC](https://www.zoho.com/crm/developer/docs/api/v3/multi-dc.html){:target=_blank .external-link} for more information about selecting a data center.
+Refer to [Multi DC](https://www.zoho.com/crm/developer/docs/api/v3/multi-dc.html) for more information about selecting a data center.
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register an application](https://www.zoho.com/accounts/protocol/oauth-setup.html){:target=_blank .external-link} with Zoho.
+If you need to configure OAuth2 from scratch, [register an application](https://www.zoho.com/accounts/protocol/oauth-setup.html) with Zoho.
 
 Use these settings for your application:
 

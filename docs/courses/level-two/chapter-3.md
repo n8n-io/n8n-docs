@@ -22,18 +22,18 @@ In a one-way sync, data is synchronized in one direction. One system serves as t
 
 In a two-way sync, data is synchronized in both directions (between both systems). When information changes in either of the two systems, it automatically changes in the other one as well.
 
-[This blog tutorial](https://n8n.io/blog/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
+[This blog tutorial](https://blog.n8n.io/how-to-sync-data-between-two-systems/) explains how to sync data one-way and two-way between two CRMs.
 ///
 
 
-In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge/){:target="_blank"}, which provides several merging options:
+In n8n, you can merge data from two different nodes using the [Merge node](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md), which provides several merging options:
 
-- [Append](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#append){:target="_blank"}
-- [Combine](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#combine){:target="_blank"}
-	- [Merge by Fields](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#merge-by-fields){:target="_blank"}: requires input fields to match on
-	- [Merge by Position](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#merge-by-position){:target="_blank"}
-	- [Multiplex](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#multiplex){:target="_blank"}
-- [Choose Branch](/integrations/builtin/core-nodes/n8n-nodes-base.merge/#choose-branch){:target="_blank"}
+- [Append](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#append)
+- [Combine](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine)
+	- [Merge by Fields](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-matching-fields): requires input fields to match on
+	- [Merge by Position](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-position)
+	- [Combine all possible combinations](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#combine-by-all-possible-combinations)
+- [Choose Branch](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md#choose-branch)
 
 Notice that Combine > Merge by Fields requires you enter input fields to match on. These fields should contain identical values between the data sources so n8n can properly match data together. In the **Merge node**, they're called `Input 1 Field` and `Input 2 Field`.
 
@@ -102,7 +102,7 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 		{
 		"parameters": {},
 		"id": "71aa5aad-afdf-4f8a-bca0-34450eee8acc",
-		"name": "When clicking \"Test workflow\"",
+		"name": "When clicking \"Execute workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
@@ -138,7 +138,7 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 		}
 	],
 	"connections": {
-		"When clicking \"Test workflow\"": {
+		"When clicking \"Execute workflow\"": {
 		"main": [
 			[
 			{
@@ -188,15 +188,15 @@ In some cases, you might need to perform the same operation on each element of a
 
 n8n generally handles this repetitive processing automatically, as the nodes run once for each item, so you don't need to build loops into your workflows.
 
-However, there are some [exceptions of nodes and operations](/flow-logic/looping/#node-exceptions){:target="_blank"} that will require you to build a loop into your workflow.
+However, there are some [exceptions of nodes and operations](/flow-logic/looping.md#node-exceptions) that will require you to build a loop into your workflow.
 
-To [create a loop in an n8n workflow](/flow-logic/looping/#using-loops-in-n8n){:target="_blank"}, you need to connect the output of one node to the input of a previous node, and add an **If node** to check when to stop the loop.
+To [create a loop in an n8n workflow](/flow-logic/looping.md#using-loops-in-n8n), you need to connect the output of one node to the input of a previous node, and add an **If node** to check when to stop the loop.
 
 ## Splitting data in batches
 
 If you need to process large volumes of incoming data, execute the **Code node** multiple times, or avoid API rate limits, it's best to split the data into batches (groups) and process these batches.
 
-For these processes, use the [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/){:target="_blank"}. This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
+For these processes, use the [**Loop Over Items node**](/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches.md). This node splits input data into a specified batch size and, with each iteration, returns a predefined amount of data.
 
 /// warning | Execution of Loop Over Items node
 The **Loop Over Items node** stops executing after all the incoming items get divided into batches and passed on to the next node in the workflow, so it's not necessary to add an **If node** to stop the loop.
@@ -209,7 +209,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 1. A **Code node** that returns the URLs of the RSS feeds of Medium (`https://medium.com/feed/n8n-io`) and dev.to (`https://dev.to/feed/n8n`).
 2. A **Loop Over Items node** with `Batch Size: 1`, that takes in the inputs from the **Code node** and **RSS Read node** and iterates over the items.
 3. An **RSS Read node** that gets the URL of the Medium RSS feed, passed as an expression: `{{ $json.url }}`.
-	- The **RSS Read node** is one of the [exception nodes](/flow-logic/looping/#node-exceptions){:target="_blank"} which processes only the first item it receives, so the **Loop Over Items node** is necessary for iterating over multiple items.
+	- The **RSS Read node** is one of the [exception nodes](/flow-logic/looping.md#node-exceptions) which processes only the first item it receives, so the **Loop Over Items node** is necessary for iterating over multiple items.
 
 ??? note "Show me the solution"
 
@@ -253,7 +253,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 		{
 		"parameters": {},
 		"id": "ed8dc090-ae8c-4db6-a93b-0fa873015c25",
-		"name": "When clicking \"Test workflow\"",
+		"name": "When clicking \"Execute workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
@@ -303,7 +303,7 @@ Build a workflow that reads the RSS feed from Medium and dev.to. The workflow sh
 		}
 	],
 	"connections": {
-		"When clicking \"Test workflow\"": {
+		"When clicking \"Execute workflow\"": {
 		"main": [
 			[
 			{

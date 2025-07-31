@@ -8,12 +8,12 @@ priority: medium
 
 # Jira Trigger node
 
-[Jira](https://www.atlassian.com/software/jira){:target=_blank .external-link} is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
+[Jira](https://www.atlassian.com/software/jira) is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/jira/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/jira.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Jira trigger integrations](https://n8n.io/integrations/jira-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Jira trigger integrations](https://n8n.io/integrations/jira-trigger/) page.
 ///

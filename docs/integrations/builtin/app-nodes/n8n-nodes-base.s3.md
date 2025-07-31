@@ -8,19 +8,21 @@ priority: medium
 
 # S3 node
 
-Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. For AWS S3, use [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3/).
+Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with other applications. n8n has built-in support for a wide range of S3 features, including creating, deleting, and getting buckets, files, and folders. For AWS S3, use [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3.md).
 
 Use the S3 node for non-AWS S3 solutions like:
 
-* [MinIO](https://min.io/){:target="_blank" .external-link}
-* [Wasabi](https://wasabi.com/){:target="_blank" .external-link}
-* [Digital Ocean spaces](https://www.digitalocean.com/products/spaces){:target="_blank" .external-link}
+* [MinIO](https://min.io/)
+* [Wasabi](https://wasabi.com/)
+* [Digital Ocean spaces](https://www.digitalocean.com/products/spaces)
 
 On this page, you'll find a list of operations the S3 node supports and links to more resources.
 
 /// note | Credentials
-Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on setting up authentication.
+Refer to [S3 credentials](/integrations/builtin/credentials/s3.md) for guidance on setting up authentication.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -37,7 +39,7 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on
     * Upload a file
 
     /// note | Attach file for upload
-    To attach a file for upload, use another node to pass the file as a data property. Nodes like the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) work well.
+    To attach a file for upload, use another node to pass the file as a data property. Nodes like the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) work well.
     ///
 
 * Folder
@@ -54,6 +56,6 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3/) for guidance on
 
 ### Setting file permissions in Wasabi
 
-When uploading files to [Wasabi](https://wasabi.com/){:target="_blank" .external-link}, you must set permissions for the files using the **ACL** dropdown and not the toggles.
+When uploading files to [Wasabi](https://wasabi.com/), you must set permissions for the files using the **ACL** dropdown and not the toggles.
 
 ![File permissions when using the S3 node with Wasabi](/_images/integrations/builtin/app-nodes/s3/acl_dropdown.png)

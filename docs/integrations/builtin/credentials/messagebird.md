@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird/)
+- [MessageBird](/integrations/builtin/app-nodes/n8n-nodes-base.messagebird.md)
 
 ## Prerequisites
 
-Create a [Bird](https://bird.com/){:target=_blank .external-link} account.
+Create a [Bird](https://bird.com/) account.
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Bird](https://bird.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [MessageBird's API documentation](https://docs.bird.com/api){:target=_blank .external-link} for more information about the service.
+Refer to [MessageBird's API documentation](https://docs.bird.com/api) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: To generate an appropriate key, visit the [Access keys](https://app.bird.com/settings/access-keys){:target=_blank .external-link} page in MessageBird. Refer to the [API authorization documentation](https://docs.bird.com/api/api-access/api-authorization){:target=_blank .external-link} for detailed instructions. 
+- An **API Key**: To generate an appropriate key, visit the [Access keys](https://app.bird.com/settings/access-keys) page in MessageBird. Refer to the [API authorization documentation](https://docs.bird.com/api/api-access/api-authorization) for detailed instructions. 
 

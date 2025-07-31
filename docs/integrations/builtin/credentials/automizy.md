@@ -10,11 +10,11 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Automizy](/integrations/builtin/app-nodes/n8n-nodes-base.automizy/)
+- [Automizy](/integrations/builtin/app-nodes/n8n-nodes-base.automizy.md)
 
 ## Prerequisites
 
-Create an [Automizy](https://automizy.com/){:target=_blank .external-link} account.
+Create an [Automizy](https://automizy.com/) account.
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create an [Automizy](https://automizy.com/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Automizy's API documentation](https://developers.automizy.com/automizyrestapi/){:target=_blank .external-link} for more information about the service.
+Refer to [Automizy's API documentation](https://developers.automizy.com/automizyrestapi/) for more information about the service.
 
 ## Using API token
 
 To configure this credential, you'll need:
 
-- An **API Token**: Create new or access existing API tokens from your [**Automizy dashboard**](https://app.automizy.com/dashboard){:target=_blank .external-link} **> Settings > API Token**.
+- An **API Token**: Create new or access existing API tokens from your [**Automizy dashboard**](https://app.automizy.com/dashboard) **> Settings > API Token**.
 

@@ -12,7 +12,7 @@ Use the Tapfiliate node to automate work in Tapfiliate, and integrate Tapfiliate
 On this page, you'll find a list of operations the Tapfiliate node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate/) for guidance on setting up authentication. 
+Refer to [Tapfiliate credentials](/integrations/builtin/credentials/tapfiliate.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

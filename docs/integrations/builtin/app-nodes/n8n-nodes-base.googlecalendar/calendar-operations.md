@@ -12,7 +12,7 @@ priority: high
 <!-- vale from-write-good.Illusions = YES -->
 <!-- vale Vale.Repetition = YES -->
 
-Use this operation to check availability in a calendar in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/) for more information on the Google Calendar node itself.
+Use this operation to check availability in a calendar in Google Calendar. Refer to [Google Calendar](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md) for more information on the Google Calendar node itself.
 
 ## Availability
 
@@ -20,7 +20,7 @@ Use this operation to check if a time-slot is available in a calendar.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/).
+- **Credential to connect with**: Create or select an existing [Google Calendar credentials](/integrations/builtin/credentials/google/index.md).
 - **Resource**: Select **Calendar**.
 - **Operation**: Select **Availability**.
 - **Calendar**: Choose a calendar you want to check against. Select **From list** to choose the title from the dropdown list or **By ID** to enter a calendar ID.
@@ -35,4 +35,4 @@ Enter these parameters:
 	- **RAW**: Returns the RAW data from the API.
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 
-Refer to the [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query){:target=_blank .external-link} API documentation for more information.
+Refer to the [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query) API documentation for more information.

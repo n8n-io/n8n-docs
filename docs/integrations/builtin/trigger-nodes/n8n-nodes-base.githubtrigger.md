@@ -8,12 +8,12 @@ priority: medium
 
 # GitHub Trigger node
 
-[GitHub](https://github.com/){:target=_blank .external-link} provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+[GitHub](https://github.com/) provides hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/github/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/github.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [GitHub Trigger integrations](https://n8n.io/integrations/github-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [GitHub Trigger integrations](https://n8n.io/integrations/github-trigger/) page.
 ///

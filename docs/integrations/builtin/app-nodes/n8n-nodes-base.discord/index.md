@@ -13,8 +13,10 @@ Use the Discord node to automate work in Discord, and integrate Discord with oth
 On this page, you'll find a list of operations the Discord node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for guidance on setting up authentication. 
+Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 <!-- vale off -->
@@ -32,10 +34,13 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for g
 	- Get Many
 	- React with Emoji
 	- Send
+	* Send and Wait for Response
 - Member
 	- Get Many
 	- Role Add
-	- Roll Remove
+	- Role Remove
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 <!-- vale on -->
 
@@ -46,10 +51,10 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord/) for g
 
 ## Related resources
 
-Refer to [Discord's documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
+Refer to [Discord's documentation](https://discord.com/developers/docs/intro) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-base.discord/common-issues.md).

@@ -8,7 +8,7 @@ contentType: explanation
 n8n doesn't restrict the amount of data each node can fetch and process. While this gives you freedom, it can lead to errors when workflow executions require more memory than available. This page explains how to identify and avoid these errors.
 
 /// note | Only for self-hosted n8n
-This page describes memory-related errors when [self-hosting n8n](/hosting/). Visit [Cloud data management](/manage-cloud/cloud-data-management/) to learn about memory limits for [n8n Cloud](/manage-cloud/overview/).
+This page describes memory-related errors when [self-hosting n8n](/hosting/index.md). Visit [Cloud data management](/manage-cloud/cloud-data-management.md) to learn about memory limits for [n8n Cloud](/manage-cloud/overview.md).
 ///
 
 ## Identifying out of memory situations
@@ -25,10 +25,10 @@ On n8n Cloud, or when using n8n's Docker image, n8n restarts automatically when 
 
 Such problems occur when a workflow execution requires more memory than available to an n8n instance. Factors increasing the memory usage for a workflow execution include:
 
-- Amount of [JSON data](/data/data-structure/).
+- Amount of [JSON data](/data/data-structure.md).
 - Size of binary data.
 - Number of nodes in a workflow.
-- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/) node and the older Function node can increase memory consumption significantly.
+- Some nodes are memory-heavy: the [Code](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) node and the older Function node can increase memory consumption significantly.
 - Manual or automatic workflow executions: manual executions increase memory consumption as n8n makes a copy of the data for the frontend.
 - Additional workflows running at the same time.
 
@@ -50,4 +50,4 @@ This approach is more complex and means re-building the workflows causing the is
 
 ### Increase old memory
 
-This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it's often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes){:target=_blank .external-link} `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions){:target=_blank .external-link}.
+This applies to self-hosting n8n. When encountering **JavaScript heap out of memory** errors, it's often useful to allocate additional memory to the old memory section of the V8 JavaScript engine. To do this, set the appropriate [V8 option](https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes) `--max-old-space-size=SIZE` either through the CLI or through the `NODE_OPTIONS` [environment variable](https://nodejs.org/api/cli.html#node_optionsoptions).

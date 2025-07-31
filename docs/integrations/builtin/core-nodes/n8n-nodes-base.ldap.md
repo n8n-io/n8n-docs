@@ -10,7 +10,7 @@ contentType: [integration, reference]
 This node allows you to interact with your LDAP servers to create, find, and update objects.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ldap/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ldap.md).
 ///
 
 ## Operations
@@ -24,11 +24,13 @@ You can find authentication information for this node [here](/integrations/built
 
 Refer to the sections below for details on configuring the node for each operation.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Compare
 
 Configure this operation using these parameters:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
 * **DN**: Enter the Distinguished Name (DN) of the entry to compare.
 * **Attribute ID**: Enter the ID of the attribute to compare.
 * **Value**: Enter the value to compare.
@@ -37,7 +39,7 @@ Configure this operation using these parameters:
 
 Configure this operation using these parameters:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
 * **DN**: Enter the Distinguished Name (DN) of the entry to create.
 * **Attributes**: Add the **Attribute ID**/**Value** pairs you'd like to create.
 
@@ -45,14 +47,14 @@ Configure this operation using these parameters:
 
 Configure this operation using these parameters:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
 * **DN**: Enter the Distinguished Name (DN) of the entry to be deleted.
 
 ## Rename
 
 Configure this operation using these parameters:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
 * **DN**: Enter the current Distinguished Name (DN) of the entry to rename.
 * **New DN**: Enter the new Distinguished Name (DN) for the entry in this field.
 
@@ -60,7 +62,7 @@ Configure this operation using these parameters:
 
 Configure this operation using these parameters:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
 * **Base DN**: Enter the Distinguished Name (DN) of the subtree to search in.
 * **Search For**: Select the directory object class to search for.
 * **Attribute**: Select the attribute to search for.
@@ -79,13 +81,13 @@ You can also configure this operation using these options:
     * **Single Level**: Often referred to as "one," selecting this option will search only the immediate children of the **Base DN** entry.
     * **Whole Subtree**: Often referred to as "sub," selecting this option will search the **Base DN** entry and all its subordinates to any depth.
 
-Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/){:target="_blank" .external-link} for more information on search scopes.
+Refer to [The LDAP Search Operation](https://ldap.com/the-ldap-search-operation/) for more information on search scopes.
 
 ## Update
 
 Configure this operation using these parameters:
 
-* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap/) to connect with.
+* **Credential to connect with**: Select or create an [LDAP credential](/integrations/builtin/credentials/ldap.md) to connect with.
 * **DN**: Enter the Distinguished Name (DN) of the entry to update.
 * ***Update Attributes**: Select whether to **Add** new, **Remove** existing, or **Replace** existing attribute.
 * Then enter the **Attribute ID**/**Value** pair you'd like to update.

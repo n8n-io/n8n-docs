@@ -9,13 +9,13 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger/)
+- [SurveyMonkey Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger.md)
 
 
 ## Prerequisites
 
-- Create a [SurveyMonkey](https://www.surveymonkey.com){:target=_blank .external-link} account.
-- [Register an app](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app){:target=_blank .external-link} from your [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/){:target=_blank .external-link}.
+- Create a [SurveyMonkey](https://www.surveymonkey.com) account.
+- [Register an app](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app) from your [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/).
     - Refer to [Required app scopes](#required-app-scopes) for information on the scopes you must use.
 
 ## Supported authentication methods
@@ -25,7 +25,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api){:target=_blank .external-link} for more information about the service.
+Refer to [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api) for more information about the service.
 
 ## Using API access token
 

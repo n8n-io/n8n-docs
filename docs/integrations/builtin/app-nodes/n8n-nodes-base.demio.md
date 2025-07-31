@@ -12,7 +12,7 @@ Use the Demio node to automate work in Demio, and integrate Demio with other app
 On this page, you'll find a list of operations the Demio node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Demio credentials](/integrations/builtin/credentials/demio/) for guidance on setting up authentication. 
+Refer to [Demio credentials](/integrations/builtin/credentials/demio.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

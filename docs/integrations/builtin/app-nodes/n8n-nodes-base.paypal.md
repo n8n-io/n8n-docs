@@ -12,7 +12,7 @@ Use the PayPal node to automate work in PayPal, and integrate PayPal with other 
 On this page, you'll find a list of operations the PayPal node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PayPal credentials](/integrations/builtin/credentials/paypal/) for guidance on setting up authentication. 
+Refer to [PayPal credentials](/integrations/builtin/credentials/paypal.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -12,8 +12,10 @@ Use the Agile CRM node to automate work in Agile CRM, and integrate Agile CRM wi
 On this page, you'll find a list of operations the Agile CRM node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Agile CRM credentials](/integrations/builtin/credentials/agilecrm/) for guidance on setting up authentication. 
+Refer to [Agile CRM credentials](/integrations/builtin/credentials/agilecrm.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

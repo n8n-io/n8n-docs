@@ -10,11 +10,11 @@ priority: high
 
 You can use these credentials to authenticate the following nodes:
 
-* [Serp](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi/)
+* [Serp](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolserpapi.md)
 
 ## Prerequisites
 
-Create a [SerpApi](https://serpapi.com/){:target=_blank .external-link} account.
+Create a [SerpApi](https://serpapi.com/) account.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ Create a [SerpApi](https://serpapi.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Serp's API documentation](https://serpapi.com/search-api){:target=_blank .external-link} for more information about the service.
+Refer to [Serp's API documentation](https://serpapi.com/search-api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -34,5 +34,5 @@ To configure this credential, you'll need:
 
 To get your API key:
 
-1. Go to **Your Account >** [**API Key**](https://serpapi.com/manage-api-key){:target=_blank .external-link}.
+1. Go to **Your Account >** [**API Key**](https://serpapi.com/manage-api-key).
 2. Copy **Your Private API Key** and enter it as the **API Key** in your n8n credential.

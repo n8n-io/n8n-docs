@@ -8,7 +8,7 @@ priority: medium
 
 # Vector Store Retriever node
 
-Use the Vector Store Retriever node to retrieve documents from a vector store.
+Use the Vector Store Retriever node to retrieve documents from a [vector store](/glossary.md#ai-vector-store).
 
 On this page, you'll find the node parameters for the Vector Store Retriever node, and links to more resources.
 
@@ -25,7 +25,7 @@ On this page, you'll find the node parameters for the Vector Store Retriever nod
 
 ## Related resources
 
-Refer to [LangChain's vector store retriever documentation](https://js.langchain.com/docs/how_to/vectorstore_retriever/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's vector store retriever documentation](https://js.langchain.com/docs/how_to/vectorstore_retriever/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -10,8 +10,8 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference/)
-* [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference/)
+* [Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenhuggingfaceinference.md)
+* [Embeddings Hugging Face Inference](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingshuggingfaceinference.md)
 
 ## Supported authentication methods
 
@@ -19,20 +19,20 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Hugging Face's documentation](https://huggingface.co/docs/api-inference/quicktour){:target=_blank .external-link} for more information about the service.
+Refer to [Hugging Face's documentation](https://huggingface.co/docs/api-inference/quicktour) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need a [Hugging Face](https://huggingface.co/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Hugging Face](https://huggingface.co/) account and:
 
 - An **API Key**: Hugging Face calls these API tokens.
 
 To get your API token:
 
-1. Open your Hugging Face profile and go to the [**Tokens**](https://huggingface.co/settings/tokens){:target=_blank .external-link} section.
+1. Open your Hugging Face profile and go to the [**Tokens**](https://huggingface.co/settings/tokens) section.
 2. Copy the token listed there. It should begin with `hf_`.
 3. Enter this API token as your n8n credential **API Key**.
 
-Refer to [Get your API token](https://huggingface.co/docs/api-inference/quicktour#get-your-api-token){:target=_blank .external-link} for more information.
+Refer to [Get your API token](https://huggingface.co/docs/api-inference/quicktour#get-your-api-token) for more information.

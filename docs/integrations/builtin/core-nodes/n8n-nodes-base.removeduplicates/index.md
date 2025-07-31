@@ -18,7 +18,7 @@ This is helpful in situations where you can end up with duplicate data, such as 
 By comparing against data from previous executions, the Remove Duplicates node can  delete items seen in earlier executions. It can also ensure that new items have a later date or a higher value than previous values.
 
 /// note | Major changes in 1.64.0
-The n8n team overhauled this node in n8n 1.64.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/7a66308290e6e5b104fcb82a3beafa0d6987df36/docs/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md){:target=_blank .external-link}.
+The n8n team overhauled this node in n8n 1.64.0. This document reflects the latest version of the node. If you're using an older version of n8n, you can find the previous version of this document [here](https://github.com/n8n-io/n8n-docs/blob/7a66308290e6e5b104fcb82a3beafa0d6987df36/docs/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates.md).
 ///
 
 ## Operation modes
@@ -100,7 +100,7 @@ When using the **Clear Deduplication History** operation, the following option i
 
 ## Templates and examples
 
-For templates using the Remove Duplicates node and examples of how to use it, refer to [Templates and examples](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples/).
+For templates using the Remove Duplicates node and examples of how to use it, refer to [Templates and examples](/integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md).
 
 ## Related resources
 

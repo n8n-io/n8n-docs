@@ -12,7 +12,7 @@ Use the SecurityScorecard node to automate work in SecurityScorecard, and integr
 On this page, you'll find a list of operations the SecurityScorecard node supports and links to more resources.
 
 /// note | Credentials
-Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard/) for guidance on setting up authentication. 
+Refer to [SecurityScorecard credentials](/integrations/builtin/credentials/securityscorecard.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

@@ -10,10 +10,10 @@ priority: medium
 
 You can use these credentials to authenticate the following nodes:
 
-- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/)
+- [Facebook Graph API](/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi.md)
 
 /// note | Facebook Trigger credentials
-If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp/) documentation.
+If you want to create credentials for the [Facebook Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/index.md) node, follow the instructions mentioned in the [Facebook App credentials](/integrations/builtin/credentials/facebookapp.md) documentation.
 ///
 
 ## Supported authentication methods
@@ -22,11 +22,11 @@ If you want to create credentials for the [Facebook Trigger](/integrations/built
 
 ## Related resources
 
-Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview){:target=_blank .external-link} for more information about the service.
+Refer to [Meta's Graph API documentation](https://developers.facebook.com/docs/graph-api/overview) for more information about the service.
 
 ## Using app access token
 
-To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [Meta for Developers](https://developers.facebook.com/) account and:
 
 - An app **Access Token**
 
@@ -41,7 +41,7 @@ Refer to the detailed instructions below for each step.
 
 To create a Meta app:
 
-1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps){:target=_blank .external-link} and select **Create App**.
+1. Go to the Meta Developer [App Dashboard](https://developers.facebook.com/apps) and select **Create App**.
 2. If you have a business portfolio and you're ready to connect the app to it, select the business portfolio. If you don't have a business portfolio or you're not ready to connect the app to the portfolio, select **I don’t want to connect a business portfolio yet** and select **Next**. The **Use cases** page opens.
 3. Select the **Use case** that aligns with how you wish to use the Facebook Graph API. For example, for products in Meta's **Business** suite (like Messenger, Instagram, WhatsApp, Marketing API, App Events, Audience Network, Commerce API, Fundraisers, Jobs, Threat Exchange, and Webhooks), select **Other**, then select **Next**.
 4. Select **Business** and **Next**.
@@ -58,15 +58,15 @@ To create a Meta app:
 1. In the left menu, select **Add Product**.
 6. The **Add products to your app** page appears. Select the products that make sense for your app and configure them.
 
-Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app){:target=_blank .external-link} documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
+Refer to Meta's [Create an app](https://developers.facebook.com/docs/development/create-an-app) documentation for more information on creating an app, required fields like the Privacy Policy URL, and adding products.
 
-For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes){:target=_blank .external-link} and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types){:target=_blank .external-link}.
+For more information on the app modes and switching to **Live** mode, refer to [App Modes](https://developers.facebook.com/docs/development/build-and-test/app-modes) and [Publish | App Types](https://developers.facebook.com/docs/development/release#app-types).
 
 ### Generate an App Access Token
 
 Next, create an app access token to use with your n8n credential and the products you selected:
 
-1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link}.
+1. In a separate tab or window, open the [Graph API explorer](https://developers.facebook.com/tools/explorer/).
 2. Select the **Meta App** you just created in the **Access Token** section.
 3. In **User or Page**, select **Get App Token**.
 4. Select **Generate Access Token**.
@@ -78,4 +78,4 @@ Next, create an app access token to use with your n8n credential and the product
 
 5. Copy the token and enter it in your n8n credential as the **Access Token**.
 
-Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started){:target=_blank .external-link} for more information on generating the token.
+Refer to the Meta instructions for [Your First Request](https://developers.facebook.com/docs/graph-api/get-started#get-started) for more information on generating the token.

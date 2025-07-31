@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Tapfiliate](/integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate/)
+- [Tapfiliate](/integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate.md)
 
 ## Prerequisites
 
-Create a [Tapfiliate](https://tapfiliate.com/){:target=_blank .external-link} account.
+Create a [Tapfiliate](https://tapfiliate.com/) account.
 
 ## Supported authentication methods
 
@@ -21,12 +21,12 @@ Create a [Tapfiliate](https://tapfiliate.com/){:target=_blank .external-link} ac
 
 ## Related resources
 
-Refer to [Tapfiliate's API documentation](https://tapfiliate.com/docs/rest/){:target=_blank .external-link} for more information about the service.
+Refer to [Tapfiliate's API documentation](https://tapfiliate.com/docs/rest/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Get your API Key from your [**Profile Settings**](https://app.tapfiliate.com/a/profile/){:target=_blank .external-link} **> API Key**.
+- An **API Key**: Get your API Key from your [**Profile Settings**](https://app.tapfiliate.com/a/profile/) **> API Key**.
 
-Refer to [Your API key](https://support.tapfiliate.com/en/articles/1441950-your-api-key){:target=_blank .external-link} for more information.
+Refer to [Your API key](https://support.tapfiliate.com/en/articles/1441950-your-api-key) for more information.

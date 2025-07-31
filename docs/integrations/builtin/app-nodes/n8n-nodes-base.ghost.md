@@ -12,8 +12,10 @@ Use the Ghost node to automate work in Ghost, and integrate Ghost with other app
 On this page, you'll find a list of operations the Ghost node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Ghost credentials](/integrations/builtin/credentials/ghost/) for guidance on setting up authentication. 
+Refer to [Ghost credentials](/integrations/builtin/credentials/ghost.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

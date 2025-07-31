@@ -12,7 +12,7 @@ Use the Customer.io node to automate work in Customer.io, and integrate Customer
 On this page, you'll find a list of operations the Customer.io node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio/) for guidance on setting up authentication. 
+Refer to [Customer.io credentials](/integrations/builtin/credentials/customerio.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

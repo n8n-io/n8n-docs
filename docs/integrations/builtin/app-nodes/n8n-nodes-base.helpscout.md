@@ -12,7 +12,7 @@ Use the Help Scout node to automate work in Help Scout, and integrate Help Scout
 On this page, you'll find a list of operations the Help Scout node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Help Scout credentials](/integrations/builtin/credentials/helpscout/) for guidance on setting up authentication. 
+Refer to [Help Scout credentials](/integrations/builtin/credentials/helpscout.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

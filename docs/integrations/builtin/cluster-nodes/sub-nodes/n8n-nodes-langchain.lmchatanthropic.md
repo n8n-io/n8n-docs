@@ -8,12 +8,12 @@ priority: medium
 
 # Anthropic Chat Model node
 
-Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational agents.
+Use the Anthropic Chat Model node to use Anthropic's Claude family of chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the Anthropic Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/anthropic.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -24,7 +24,7 @@ You can find authentication information for this node [here](/integrations/built
 	* **Claude**
 	* **Claude Instant**
 
-Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}.
+Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model).
 
 ## Node options
 
@@ -40,7 +40,7 @@ Learn more in the [Anthropic model documentation](https://docs.anthropic.com/cla
 
 ## Related resources
 
-Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

@@ -12,7 +12,7 @@ Use the KoboToolbox node to automate work in KoboToolbox, and integrate KoboTool
 On this page, you'll find a list of operations the KoboToolbox node supports and links to more resources.
 
 /// note | Credentials
-Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox/) for guidance on setting up authentication. 
+Refer to [KoboToolbox credentials](/integrations/builtin/credentials/kobotoolbox.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

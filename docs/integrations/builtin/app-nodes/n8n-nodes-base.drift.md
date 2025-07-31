@@ -12,7 +12,7 @@ Use the Drift node to automate work in Drift, and integrate Drift with other app
 On this page, you'll find a list of operations the Drift node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Drift credentials](/integrations/builtin/credentials/drift/) for guidance on setting up authentication. 
+Refer to [Drift credentials](/integrations/builtin/credentials/drift.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

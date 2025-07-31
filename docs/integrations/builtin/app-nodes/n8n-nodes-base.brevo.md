@@ -12,7 +12,7 @@ Use the Brevo node to automate work in Brevo, and integrate Brevo with other app
 On this page, you'll find a list of operations the Brevo node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Brevo credentials](/integrations/builtin/credentials/brevo/) for guidance on setting up authentication. 
+Refer to [Brevo credentials](/integrations/builtin/credentials/brevo.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

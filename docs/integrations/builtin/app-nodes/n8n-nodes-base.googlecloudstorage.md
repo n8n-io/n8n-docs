@@ -12,7 +12,7 @@ Use the Google Cloud Storage node to automate work in Google Cloud Storage, and 
 On this page, you'll find a list of operations the Google Cloud Storage node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Google Cloud Storage credentials](/integrations/builtin/credentials/google/) for guidance on setting up authentication. 
+Refer to [Google Cloud Storage credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
 ## Operations
@@ -37,6 +37,6 @@ Refer to [Google Cloud Storage credentials](/integrations/builtin/credentials/go
 
 ## Related resources
 
-Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis){:target=_blank .external-link} for detailed information about the API that this node integrates with.
+Refer to Google's [Cloud Storage API documentation](https://cloud.google.com/storage/docs/apis) for detailed information about the API that this node integrates with.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

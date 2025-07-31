@@ -1,18 +1,18 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Window Buffer Memory node common issues 
-description: Documentation for common issues and questions in the Window Buffer Memory node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
+title: Simple Memory node common issues 
+description: Documentation for common issues and questions in the Simple Memory node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
 priority: high
 ---
 
-# Window Buffer Memory node common issues
+# Simple Memory node common issues
 
-Here are some common errors and issues with the [Window Buffer Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Simple Memory node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md) and steps to resolve or troubleshoot them.
 
 ## Single memory instance
 
-If you add more than one Window Buffer Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
+If you add more than one Simple Memory node to your workflow, all nodes access the same memory instance by default. Be careful when doing destructive actions that override existing memory contents, such as the override all messages operation in the [Chat Memory Manager](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager.md) node. If you want more than one memory instance in your workflow, set different session IDs in different memory nodes.
 
 ## Managing the Session ID
 

@@ -12,7 +12,7 @@ Use the Twist node to automate work in Twist, and integrate Twist with other app
 On this page, you'll find a list of operations the Twist node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Twist credentials](/integrations/builtin/credentials/twist/) for guidance on setting up authentication. 
+Refer to [Twist credentials](/integrations/builtin/credentials/twist.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

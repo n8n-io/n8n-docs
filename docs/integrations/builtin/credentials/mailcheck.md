@@ -9,11 +9,11 @@ contentType: [integration, reference]
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mailcheck](/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck/)
+- [Mailcheck](/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck.md)
 
 ## Prerequisites
 
-Create a [Mailcheck](https://mailcheck.co/){:target=_blank .external-link} account.
+Create a [Mailcheck](https://mailcheck.co/) account.
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Mailcheck](https://mailcheck.co/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Mailcheck's API documentation](https://app.mailcheck.co/docs?from=docs){:target=_blank .external-link} for more information about the service.
+Refer to [Mailcheck's API documentation](https://app.mailcheck.co/docs?from=docs) for more information about the service.
 
 ## Using API Key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Generate an API Key in the API section of your dashboard. Refer to [Mailcheck's How to create an API key documentation](https://mailcheck.co/create-api-key){:target=_blank .external-link} for detailed instructions.
+- An **API Key**: Generate an API Key in the API section of your dashboard. Refer to [Mailcheck's How to create an API key documentation](https://mailcheck.co/create-api-key) for detailed instructions.
 

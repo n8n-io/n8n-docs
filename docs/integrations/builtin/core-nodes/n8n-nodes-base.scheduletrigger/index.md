@@ -81,7 +81,7 @@ For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day
 
 Enter a custom cron **Expression** to set the schedule for the trigger.
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
+To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
 
 #### Examples
 
@@ -100,6 +100,10 @@ To generate a Cron expression, you can use [crontab guru](https://crontab.guru){
 |Quarterly|`0 0 1 1,4,7,10 *`|At midnight on the 1st of January, April, July, and October.|
 <!-- vale from-write-good.Weasel = YES -->
 
+/// warning | Using variables in the Cron expression
+While variables can be used in the scheduled trigger, their values only get evaluated when the workflow is activated. If you alter a variable's value in the settings after a workflow is activated, the changes won't alter the cron schedule. To re-evaluate the variable, set the workflow to **Inactive** and then back to **Active** again
+/// 
+
 #### Why there are six asterisks in the Cron expression
 
 The sixth asterisk in the Cron expression represents seconds. Setting this is optional. The node will execute even if you don't set the value for seconds.
@@ -115,4 +119,4 @@ The sixth asterisk in the Cron expression represents seconds. Setting this is op
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/common-issues.md).

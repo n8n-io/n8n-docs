@@ -19,4 +19,4 @@ search:
 
 ## Common issues
 
-For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues/).
+For common questions or issues and suggested solutions, refer to [Common Issues](/integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md).

@@ -12,7 +12,7 @@ Use the Rundeck node to automate work in Rundeck, and integrate Rundeck with oth
 On this page, you'll find a list of operations the Rundeck node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck/) for guidance on setting up authentication. 
+Refer to [Rundeck credentials](/integrations/builtin/credentials/rundeck.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

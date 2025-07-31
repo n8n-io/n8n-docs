@@ -10,8 +10,8 @@ priority: critical
 
 You can use these credentials to authenticate the following nodes:
 
-- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)
-- [HTTP Request Tool](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest)
+- [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md)
+- [HTTP Request Tool (legacy)](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md)
 
 ## Prerequisites
 
@@ -26,29 +26,32 @@ If you need to secure the authentication with an SSL certificate, refer to [Prov
 - Custom auth (generic credential type)
 - Digest auth (generic credential type)
 - Header auth (generic credential type)
+- Bearer auth (generic credential type)
 - OAuth1 (generic credential type)
 - OAuth2 (generic credential type)
 - Query auth (generic credential type)
 
-Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication){:target=_blank .external-link} for more information relating to generic credential types.
+Refer to [HTTP authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) for more information relating to generic credential types.
 
 /// note | Predefined credential types
 n8n recommends using predefined credential types whenever there's a credential type available for the service you want to connect to. It offers an easier way to set up and manage credentials, compared to configuring generic credentials.
 
-You can use [Predefined credential types](/integrations/custom-operations/#predefined-credential-types) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom operations](/integrations/custom-operations/) for more information.
+You can use [Predefined credential types](/integrations/custom-operations.md#predefined-credential-types) to perform custom operations with some APIs where n8n has a node for the platform. For example, n8n has an Asana node, and supports using your Asana credentials in the HTTP Request node. Refer to [Custom operations](/integrations/custom-operations.md) for more information.
 ///
 
 ## Using predefined credential type
 
 --8<-- "_snippets/integrations/predefined-credential-type-how-to.md"
 
-Refer to [Custom API operations](/integrations/custom-operations/) for more information.
+Refer to [Custom API operations](/integrations/custom-operations.md) for more information.
 
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/basic-auth.md"
 
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/digest-auth.md"
 
 --8<-- "_snippets/integrations/builtin/credentials/generic-auth/header-auth.md"
+
+--8<-- "_snippets/integrations/builtin/credentials/generic-auth/bearer-auth.md"
 
 ## Using OAuth1
 
@@ -68,7 +71,7 @@ To configure this credential, enter:
 
 For most OAuth1 integrations, you'll need to configure an app, service, or integration to generate the values for most of these fields. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
 
-Read more about [OAuth1](https://oauth.net/1/){:target=_blank .external-link} and the [OAuth1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html){:target=_blank .external-link}.
+Read more about [OAuth1](https://oauth.net/1/) and the [OAuth1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html).
 
 ## Using OAuth2
 
@@ -78,11 +81,11 @@ Requirements to configure this credential depend on the **Grant Type** selected.
 
 For most OAuth2 integrations, you'll need to configure an app, service, or integration. Use the **OAuth Redirect URL** in n8n as the redirect URL or redirect URI for such a service.
 
-Read more about [OAuth2](https://oauth.net/2/){:target=_blank .external-link}.
+Read more about [OAuth2](https://oauth.net/2/).
 
 ### Authorization Code grant type
 
-Use Authorization Code grant type to exchange an authorization code for an access token. The auth flow uses the redirect URL to return the user to the client. Then the application gets the authorization code from the URL and uses it to request an access token. Refer to [Authorization Code Request](https://www.oauth.com/oauth2-servers/access-tokens/authorization-code-request/){:target=_blank .external-link} for more information.
+Use Authorization Code grant type to exchange an authorization code for an access token. The auth flow uses the redirect URL to return the user to the client. Then the application gets the authorization code from the URL and uses it to request an access token. Refer to [Authorization Code Request](https://www.oauth.com/oauth2-servers/access-tokens/authorization-code-request/) for more information.
 
 To configure this credential, select **Authorization Code** as the **Grant Type**.
 
@@ -101,7 +104,7 @@ Then enter:
 
 ### Client Credentials grant type
 
-Use the Client Credentials grant type when applications request an access token to access their own resources, not on behalf of a user. Refer to [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/){:target=_blank .external-link} for more information.
+Use the Client Credentials grant type when applications request an access token to access their own resources, not on behalf of a user. Refer to [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) for more information.
 
 To configure this credential, select **Client Credentials** as the **Grant Type**.
 

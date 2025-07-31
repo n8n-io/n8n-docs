@@ -12,8 +12,8 @@ priority: medium
 
 ## Prerequisites
 
-- Create a [Cisco DevNet developer account](https://developer.cisco.com){:target=_blank .external-link}.
-- A [Cisco Umbrella user account](https://umbrella.cisco.com/){:target=_blank .external-link} with **Full Admin** role.
+- Create a [Cisco DevNet developer account](https://developer.cisco.com).
+- A [Cisco Umbrella user account](https://umbrella.cisco.com/) with **Full Admin** role.
 
 ## Authentication methods
 
@@ -21,9 +21,9 @@ priority: medium
 
 ## Related resources
 
-Refer to [Cisco Umbrella's API documentation](https://developer.cisco.com/docs/cloud-security/){:target=_blank .external-link} for more information about the service.
+Refer to [Cisco Umbrella's API documentation](https://developer.cisco.com/docs/cloud-security/) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-umbrella/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/cisco-umbrella/) on n8n's website.
 
 ## Using API key
 
@@ -32,4 +32,4 @@ To configure this credential, you'll need:
 - An **API Key**
 - A **Secret**: Provided when you generate an API key
 
-Refer to the [Cisco Umbrella Manage API Keys documentation](https://developer.cisco.com/docs/cloud-security/authentication/#manage-api-keys){:target=_blank .external-link} for instructions on creating an Umbrella API key.
+Refer to the [Cisco Umbrella Manage API Keys documentation](https://developer.cisco.com/docs/cloud-security/authentication/#manage-api-keys) for instructions on creating an Umbrella API key.

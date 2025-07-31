@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # Gumroad Trigger node
 
-[Gumroad](https://gumroad.com){:target=_blank .external-link} is an online platform that enables creators to sell products directly to consumers.
+[Gumroad](https://gumroad.com) is an online platform that enables creators to sell products directly to consumers.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/gumroad/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/gumroad.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Gumroad Trigger integrations](https://n8n.io/integrations/gumroad-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Gumroad Trigger integrations](https://n8n.io/integrations/gumroad-trigger/) page.
 ///

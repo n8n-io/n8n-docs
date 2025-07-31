@@ -13,8 +13,10 @@ Use the MongoDB node to automate work in MongoDB, and integrate MongoDB with oth
 On this page, you'll find a list of operations the MongoDB node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MongoDB credentials](/integrations/builtin/credentials/mongodb/) for guidance on setting up authentication. 
+Refer to [MongoDB credentials](/integrations/builtin/credentials/mongodb.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

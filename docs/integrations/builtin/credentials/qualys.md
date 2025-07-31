@@ -11,7 +11,7 @@ contentType: [integration, reference]
 
 ## Prerequisites
 
-Create a [Qualys](https://www.qualys.com/){:target=_blank .external-link} user account with any user role except Contact.
+Create a [Qualys](https://www.qualys.com/) user account with any user role except Contact.
 
 ## Supported authentication methods
 
@@ -19,9 +19,9 @@ Create a [Qualys](https://www.qualys.com/){:target=_blank .external-link} user a
 
 ## Related resources
 
-Refer to [Qualys's documentation](https://qualysguard.qg2.apps.qualys.com/qwebhelp/fo_portal/api_doc/index.htm){:target=_blank .external-link} for more information about the service.
+Refer to [Qualys's documentation](https://qualysguard.qg2.apps.qualys.com/qwebhelp/fo_portal/api_doc/index.htm) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/qualys/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/qualys/) on n8n's website.
 
 ## Using basic auth
 

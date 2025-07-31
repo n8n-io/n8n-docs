@@ -13,8 +13,10 @@ Use the NASA node to automate work in NASA, and integrate NASA with other applic
 On this page, you'll find a list of operations the NASA node supports and links to more resources.
 
 /// note | Credentials
-Refer to [NASA credentials](/integrations/builtin/credentials/nasa/) for guidance on setting up authentication. 
+Refer to [NASA credentials](/integrations/builtin/credentials/nasa.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 

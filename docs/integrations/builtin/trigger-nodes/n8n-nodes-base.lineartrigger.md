@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Linear Trigger node
 
-[Linear](https://linear.app/){:target=_blank .external-link} is a SaaS issue tracking tool.
+[Linear](https://linear.app/) is a SaaS issue tracking tool.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/linear/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/linear.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Linear Trigger integrations](https://n8n.io/integrations/linear-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Linear Trigger integrations](https://n8n.io/integrations/linear-trigger/) page.
 ///
 
 ## Events

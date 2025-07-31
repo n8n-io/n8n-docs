@@ -13,7 +13,7 @@ Use the Google Gemini Chat Model node to use Google's Gemini chat models with co
 On this page, you'll find the node parameters for the Google Gemini Chat Model node, and links to more resources.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/googleai/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/googleai.md).
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -30,7 +30,7 @@ n8n dynamically loads models from the Google Gemini API and you'll only see the 
 * **Sampling Temperature**: Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
 * **Top K**: Enter the number of token choices the model uses to generate the next token.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
-* **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini){:target=_blank .external-link} for information on the available filters and levels.
+* **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini) for information on the available filters and levels.
 
 ## Templates and examples
 
@@ -39,7 +39,7 @@ n8n dynamically loads models from the Google Gemini API and you'll only see the 
 
 ## Related resources
 
-Refer to [LangChain's Google Gemini documentation](https://js.langchain.com/docs/integrations/chat/google_generativeai){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Google Gemini documentation](https://js.langchain.com/docs/integrations/chat/google_generativeai) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

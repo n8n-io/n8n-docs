@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an [AlienVault](https://otx.alienvault.com){:target=_blank .external-link} account.
+Create an [AlienVault](https://otx.alienvault.com) account.
 
 ## Supported authentication methods
 
@@ -20,9 +20,9 @@ Create an [AlienVault](https://otx.alienvault.com){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [AlienVault's documentation](https://otx.alienvault.com/api){:target=_blank .external-link} for more information about the service.
+Refer to [AlienVault's documentation](https://otx.alienvault.com/api) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations/) to learn more. View [example workflows and related content](https://n8n.io/integrations/alienvault/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/alienvault/) on n8n's website.
 
 ## Using API key
 

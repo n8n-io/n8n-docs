@@ -11,10 +11,10 @@ priority: medium
 The FTP node is useful to access and upload files to an FTP or SFTP server.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/ftp/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/ftp.md).
 ///
 
-To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials](/integrations/builtin/credentials/ftp/) for more information.
+To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials](/integrations/builtin/credentials/ftp.md) for more information.
 
 ## Operations
 
@@ -25,7 +25,7 @@ To connect to an SFTP server, use an SFTP credential. Refer to [FTP credentials]
 - [**Upload**](#upload) a file
 
 /// note | Uploading files
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the file as a data property.
 ///
 
 ## Delete
@@ -73,7 +73,7 @@ Configure this operation with these parameters:
     * **File Content**: Displayed if you turn off **Binary File** Enter the text content of the file you'll upload in this field.
 
 /// note | Uploading files
-To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node to pass the file as a data property.
+To attach a file for upload, you'll need to use an extra node such as the [Read/Write Files from Disk](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md) node or the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node to pass the file as a data property.
 ///
 
 ## Templates and examples

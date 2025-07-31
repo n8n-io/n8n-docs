@@ -12,7 +12,7 @@ Use the PagerDuty node to automate work in PagerDuty, and integrate PagerDuty wi
 On this page, you'll find a list of operations the PagerDuty node supports and links to more resources.
 
 /// note | Credentials
-Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty/) for guidance on setting up authentication. 
+Refer to [PagerDuty credentials](/integrations/builtin/credentials/pagerduty.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

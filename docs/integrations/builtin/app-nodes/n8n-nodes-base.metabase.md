@@ -12,7 +12,7 @@ Use the Metabase node to automate work in Metabase, and integrate Metabase with 
 On this page, you'll find a list of operations the Metabase node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Metabase credentials](/integrations/builtin/credentials/metabase/) for guidance on setting up authentication. 
+Refer to [Metabase credentials](/integrations/builtin/credentials/metabase.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

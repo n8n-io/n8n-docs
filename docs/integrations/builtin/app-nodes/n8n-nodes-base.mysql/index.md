@@ -13,8 +13,10 @@ Use the MySQL node to automate work in MySQL, and integrate MySQL with other app
 On this page, you'll find a list of operations the MySQL node supports and links to more resources.
 
 /// note | Credentials
-Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guidance on setting up authentication. 
+Refer to [MySQL credentials](/integrations/builtin/credentials/mysql.md) for guidance on setting up authentication. 
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
 
@@ -32,9 +34,9 @@ Refer to [MySQL credentials](/integrations/builtin/credentials/mysql/) for guida
 
 ## Related resources
 
-Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html){:target=_blank .external-link} for more information about the service.
+Refer to [MySQL's Connectors and APIs documentation](https://dev.mysql.com/doc/index-connectors.html) for more information about the service.
 
-Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html){:target=_blank .external-link} for more information on writing SQL queries.
+Refer to MySQL's [SELECT statement documentation](https://dev.mysql.com/doc/refman/8.4/en/select.html) for more information on writing SQL queries.
 
 ## Use query parameters
 
@@ -72,4 +74,4 @@ users, {{ $json.email }}
 
 ## Common issues
 
-For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues/).
+For common errors or issues and suggested resolution steps, refer to [Common issues](/integrations/builtin/app-nodes/n8n-nodes-base.mysql/common-issues.md).

@@ -8,7 +8,7 @@ priority: high
 
 # Notion node common issues
 
-Here are some common errors and issues with the [Notion node](/integrations/builtin/app-nodes/n8n-nodes-base.notion/) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Notion node](/integrations/builtin/app-nodes/n8n-nodes-base.notion/index.md) and steps to resolve or troubleshoot them.
 
 ## Relation property not displaying
 
@@ -16,7 +16,7 @@ The Notion node only supports displaying the data relation property for [two-way
 
 To enable two-way relations, edit the relation property in Notion and enable the **Show on [name of related database]** option to create a reverse relation. Select a name to use for the relation in the new context. The relation is now accessible in n8n when filtering or selecting.
 
-If you need to work with Notion databases with one-way relationship, you can use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) with your existing Notion credentials. For example, to update a one-way relationship, you can send a `PATCH` request to the following URL:
+If you need to work with Notion databases with one-way relationship, you can use the [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) with your existing Notion credentials. For example, to update a one-way relationship, you can send a `PATCH` request to the following URL:
 
 ```
 https://api.notion.com/v1/pages/<page_id>
@@ -49,10 +49,10 @@ You can work around this be creating a regular heading and then modifying it to 
 	* To add a new page with a heading, select the **Page** or **Database Page** resources with the **Create** operation.
 	* To add a heading to an existing page, select the **Block** resource with the **Append After** operation.
 3. Select **Add Block** and set the **Type Name or ID** to either **Heading 1**, **Heading 2**, or **Heading 3**.
-4. Add an [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) node connected to the Notion node and select the `GET` method.
+4. Add an [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) node connected to the Notion node and select the `GET` method.
 5. Set the **URL** to `https://api.notion.com/v1/blocks/<block_ID>`. For example, if your added the heading to an existing page, you could use the following URL: `https://api.notion.com/v1/blocks/{{ $json.results[0].id }}`. If you created a new page instead of appending a block, you may need to discover the block ID by querying the page contents first.
 6. Select **Predefined Credential Type** and connect your existing Notion credentials.
-7. Add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node after the HTTP Request node.
+7. Add an [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node after the HTTP Request node.
 8. Add `heading_1.is_toggleable` as a new **Boolean** field set to `true`. Swap `heading_1` for a different heading number as necessary.
 9. Add a second HTTP Request node after the Edit Fields (Set) node.
 10. Set the **Method** to `PATCH` and use `https://api.notion.com/v1/blocks/{{ $json.id }}` as the **URL** value.
@@ -69,6 +69,6 @@ You may receive a validation error when working with the Notion node if you subm
 
 To work around this, check for the existence of the field data before sending it to Notion or use a default value.
 
-To check for the data before executing the Notion node, use an [If](/integrations/builtin/core-nodes/n8n-nodes-base.if/) node to check whether the field is unset. This allows you to use the [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set/) node to conditionally remove the field when it doesn't have a valid value.
+To check for the data before executing the Notion node, use an [If](/integrations/builtin/core-nodes/n8n-nodes-base.if.md) node to check whether the field is unset. This allows you to use the [Edit Fields (Set)](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) node to conditionally remove the field when it doesn't have a valid value.
 
-As an alternative, you can set a [default value](/code/cookbook/expressions/check-incoming-data/) if the incoming data doesn't provide one.
+As an alternative, you can set a [default value](/code/cookbook/expressions/check-incoming-data.md) if the incoming data doesn't provide one.

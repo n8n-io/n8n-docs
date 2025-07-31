@@ -12,7 +12,7 @@ Use the Brandfetch node to automate work in Brandfetch, and integrate Brandfetch
 On this page, you'll find a list of operations the Brandfetch node supports and links to more resources.
 
 /// note | Credentials
-Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch/) for guidance on setting up authentication. 
+Refer to [Brandfetch credentials](/integrations/builtin/credentials/brandfetch.md) for guidance on setting up authentication. 
 ///
 
 ## Operations

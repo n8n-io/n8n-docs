@@ -11,7 +11,7 @@ priority: critical
 Use the Convert to File node to take input data and output it as a file. This converts the input JSON data into a binary format.
 
 /// note | Extract From File
-To extract data from a file and convert it to JSON, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/) node.
+To extract data from a file and convert it to JSON, use the [Extract from File](/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile.md) node.
 ///
 
 ## Operations
@@ -71,11 +71,11 @@ You can also configure this operation with these **Options**:
 * **Busy Status**: Use this option to set the busy status for Microsoft applications like Outlook. Choose from:
 	* **Busy**
 	* **Tentative**
-* **Calendar Name**: For Apple and Microsoft calendars, enter the [calendar name](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/1da58449-b97e-46bd-b018-a1ce576f3e6d){:target=_blank .external-link} for the event.
+* **Calendar Name**: For Apple and Microsoft calendars, enter the [calendar name](https://learn.microsoft.com/en-us/openspecs/exchange_server_protocols/ms-oxcical/1da58449-b97e-46bd-b018-a1ce576f3e6d) for the event.
 *  **Description**: Enter an event description.
 * **Geolocation**: Enter the **Latitude** and **Longitude** for the event's location.
 * **Location**: Enter the event's intended venue/location.
-* **Recurrence Rule**: Enter a rule to define the repeat pattern of the event (RRULE). Generate rules using the [iCalendar.org RRULE Tool](https://icalendar.org/rrule-tool.html){:target=_blank .external-link}.
+* **Recurrence Rule**: Enter a rule to define the repeat pattern of the event (RRULE). Generate rules using the [iCalendar.org RRULE Tool](https://icalendar.org/rrule-tool.html).
 * **Organizer**: Enter the organizer's **Name** and **Email**.
 * **Sequence**: If you're sending an update for an event with the same universally unique ID (UID), enter the revision sequence number.
 * **Status**: Set the status of the event. Choose from:
@@ -84,7 +84,7 @@ You can also configure this operation with these **Options**:
 	* **Tentative**
 * **UID**: Enter a universally unique ID (UID) for the event. The UID should be globally unique. The node automatically generates a UID if you don't enter one.
 * **URL**: Enter a URL associated with the event.
-* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings/).
+* **Use Workflow Timezone**: Whether to use UTC time zone (turned off) or the workflow's timezone (turned on). Set the workflow's timezone in the [Workflow Settings](/workflows/settings.md).
 
 ### Convert to JSON
 
@@ -170,7 +170,7 @@ Enter the name of the **Base64 Input Field** that contains the Base64 string to 
 You can also configure this operation with these **Options**:
 
 * **File Name**: Enter the file name for the generated output file.
-* **MIME Type**: Enter the MIME type of the output file. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types){:target=_blank .external-link} for a list of common MIME types and the file extensions they relate to.
+* **MIME Type**: Enter the MIME type of the output file. Refer to [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a list of common MIME types and the file extensions they relate to.
 
 ## Templates and examples
 

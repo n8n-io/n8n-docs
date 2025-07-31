@@ -7,12 +7,12 @@ contentType: [integration, reference]
 
 # SeaTable Trigger node
 
-[SeaTable](https://seatable.co){:target=_blank .external-link} is a collaborative database application with a spreadsheet interface.
+[SeaTable](https://seatable.io/en) is a collaborative database application with a spreadsheet interface.
 
 /// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/seatable/).
+You can find authentication information for this node [here](/integrations/builtin/credentials/seatable.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [SeaTable Trigger integrations](https://n8n.io/integrations/seatable-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [SeaTable Trigger integrations](https://n8n.io/integrations/seatable-trigger/) page.
 ///

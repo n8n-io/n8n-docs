@@ -60,7 +60,7 @@ function submitFeedback() {{
                 'feedback_length': feedbackText.length
             };
             gtag('event', 'feedback_submitted', eventParams);
-            plausible("Feedback Comment", { props: { page: eventParams.page_location, comment: eventParams.event_value } });
+            plausible("Feedback Comment", { props: { page: eventParams.page_location, feedback_comment: eventParams.event_value } });
         }} catch (error) {{
             console.error('Error sending GA event:', error);
         }}

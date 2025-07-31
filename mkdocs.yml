@@ -56,6 +56,15 @@ extra:
   # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
   status:
     beta: This feature is in beta
+  # Additional YAML for n8n-specific templates and functionality
+  n8n_extra:
+    feedback:
+      question: This page was
+      positive_button_text: Helpful
+      negative_button_text: Not helpful
+      comment_input_placeholder: This page needs...
+      comment_input_hint: We read all feedback personally
+      thankyou_message: Thanks for your feedback!
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -67,15 +76,6 @@ extra_css:
 extra_javascript:
   - _extra/javascript/extra.js
   - _extra/javascript/feedback.js
-# Additional YAML for n8n-specific templates and functionality
-n8n_extra:
-  feedback:
-    question: This page was
-    positive_button_text: Helpful
-    negative_button_text: Not helpful
-    comment_input_placeholder: This page needs...
-    comment_input_hint: We read all feedback personally
-    thankyou_message: Thanks for your feedback!
 watch:
   - _glossary
   - _snippets

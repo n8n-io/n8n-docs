@@ -7,8 +7,8 @@
  -->
 
 <!-- Determine feedback configuration -->
-{% if config.n8n_extra.feedback %}
-  {% set feedback = config.n8n_extra.feedback %}
+{% if config.extra.n8n_extra.feedback %}
+  {% set feedback = config.extra.n8n_extra.feedback %}
 {% endif %}
 
 <!-- Determine whether to show feedback -->
@@ -23,10 +23,10 @@
   <div class="n8n-feedback-container">
         <div id="n8n-ratings-feedback" style="display: flex; gap: 1em; align-items: center;">
             <span>{{ feedback.question }}</span>
-            <button type="submit" class="n8n-feedback-button-positive" onclick="handleRating('positive')" >
+            <button type="submit" class="plausible-event-name=Positive+Rating plausible-event-page=/{{ page.url }} n8n-feedback-button-positive" onclick="handleRating('positive')" >
                 <img src="/_images/assets/thumb_up.png" alt="Thumbs up" style="width: 20px; height: 20px; border: none !important;">{{ feedback.positive_button_text }}
             </button>
-            <button type="submit" class="n8n-feedback-button-negative" onclick="handleRating('negative')">
+            <button type="submit" class="plausible-event-name=Negative+Rating plausible-event-page=/{{ page.url }} n8n-feedback-button-negative" onclick="handleRating('negative')">
                 <img src="/_images/assets/thumb_down.png" alt="Thumbs down" style="width: 20px; height: 20px; border: none !important;">{{ feedback.negative_button_text }}
             </button>
         </div>

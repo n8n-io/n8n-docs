@@ -6,7 +6,7 @@ contentType: reference
 # Community node verification guidelines
 
 /// note | Do you want n8n to verify your node?
-Consider following these guidelines while building your node if you want to submit it for verification by n8n. Any user with verified community nodes enabled can discover and install verified nodes from n8n's nodes panel.
+Consider following these guidelines while building your node if you want to submit it for verification by n8n. Any user with verified community nodes enabled can discover and install verified nodes from n8n's nodes panel across all deployment types (self-hosted and n8n Cloud).
 ///
 
 ## Package source verification
@@ -37,3 +37,8 @@ Consider following these guidelines while building your node if you want to subm
 * Use **TypeScript** and follow n8n's [**node development guidelines**](/integrations/creating-nodes/overview.md).
 * Ensure proper error handling and validation.
 * Make sure the linter passes (in other words, make sure running `npx @n8n/scan-community-package n8n-nodes-PACKAGE` passes).
+
+## Use English language only
+
+* Both the node interface and all documentation must be in **English** only.
+* This includes parameter names, descriptions, help text, error messages and **README** content.

@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Ghost](https://ghost.org/){:target=_blank .external-link} account.
+Create a [Ghost](https://ghost.org/) account.
 
 ## Supported authentication methods
 
@@ -24,19 +24,19 @@ The keys are generated following the same steps, but the authorization flows and
 
 ## Related resources
 
-Refer to Ghost's [Admin API documentation](https://ghost.org/docs/admin-api/){:target=_blank .external-link} for more information about the Admin API service. Refer to Ghost's [Content API documentation](https://ghost.org/docs/content-api/){:target=_blank .external-link} for more information about the Content API service.
+Refer to Ghost's [Admin API documentation](https://ghost.org/docs/admin-api/) for more information about the Admin API service. Refer to Ghost's [Content API documentation](https://ghost.org/docs/content-api/) for more information about the Content API service.
 
 ## Using Admin API key
 
 To configure this credential, you'll need:
 
-- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/admin-api/#base-url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
-- An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Admin API Token Authentication Key documentation](https://ghost.org/docs/admin-api/#token-authentication){:target=_blank .external-link} for more detailed instructions. Copy the **Admin API Key** and use this as the **API Key** in the Ghost Admin n8n credential.
+- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/admin-api/#base-url) can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
+- An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Admin API Token Authentication Key documentation](https://ghost.org/docs/admin-api/#token-authentication) for more detailed instructions. Copy the **Admin API Key** and use this as the **API Key** in the Ghost Admin n8n credential.
 
 ## Using Content API key
 
 To configure this credential, you'll need:
 
-- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/content-api/#url){:target=_blank .external-link} can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
-- An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Content API Key documentation](https://ghost.org/docs/content-api/#key){:target=_blank .external-link} for more detailed instructions. Copy the **Content API Key** and use this as the **API Key** in the Ghost Content n8n credential.
+- The **URL** of your Ghost admin domain. Your [admin domain](https://ghost.org/docs/content-api/#url) can be different to your main domain and may include a subdirectory. All Ghost(Pro) blogs have a `*.ghost.io` domain as their admin domain and require https.
+- An **API Key**: To generate a new API key, create a new Custom Integration. Refer to the [Ghost Content API Key documentation](https://ghost.org/docs/content-api/#key) for more detailed instructions. Copy the **Content API Key** and use this as the **API Key** in the Ghost Content n8n credential.
 

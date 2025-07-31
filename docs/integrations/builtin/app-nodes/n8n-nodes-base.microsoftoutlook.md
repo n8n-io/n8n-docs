@@ -76,6 +76,6 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 ## Related resources
 
-Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started){:target=_blank .external-link} for more information about the service.
+Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

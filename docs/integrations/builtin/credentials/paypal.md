@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [PayPal developer](https://developer.paypal.com/home){:target=_blank .external-link} account.
+Create a [PayPal developer](https://developer.paypal.com/home) account.
 
 ## Supported authentication methods
 
@@ -22,7 +22,7 @@ Create a [PayPal developer](https://developer.paypal.com/home){:target=_blank .e
 
 ## Related resources
 
-Refer to [Paypal's API documentation](https://developer.paypal.com/api/rest/){:target=_blank .external-link} for more information about the service.
+Refer to [Paypal's API documentation](https://developer.paypal.com/api/rest/) for more information about the service.
 
 ## Using API client and secret
 
@@ -32,6 +32,6 @@ To configure this credential, you'll need:
 - A **Secret**: Generated when you create an app.
 - An **Environment**: Select **Live** or **Sandbox**.
 
-To generate the **Client ID** and **Secret**, log in to your Paypal [developer dashboard](https://developer.paypal.com/dashboard/). Select **Apps & Credentials > Rest API apps > Create app**. Refer to [Get client ID and client secret](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret){:target=_blank .external-link} for more information.
+To generate the **Client ID** and **Secret**, log in to your Paypal [developer dashboard](https://developer.paypal.com/dashboard/). Select **Apps & Credentials > Rest API apps > Create app**. Refer to [Get client ID and client secret](https://developer.paypal.com/api/rest/#link-getclientidandclientsecret) for more information.
 
 

@@ -74,8 +74,9 @@ extra_css:
   - _extra/css/feedback.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
-  - _extra/javascript/extra.js
   - _extra/javascript/feedback.js
+  - _extra/javascript/init_kapa_widget.js
+
 watch:
   - _glossary
   - _snippets
@@ -154,8 +155,6 @@ plugins:
   # But DO NOT ENABLE IT NORMALLY
   # It causes Netlify builds to fail
   # - info
-  # Search is built in, but must be enabled when you add other plugins
-  - search
   - exclude:
       glob:
        # - integrations/builtin/*

@@ -157,8 +157,6 @@ plugins:
   # But DO NOT ENABLE IT NORMALLY
   # It causes Netlify builds to fail
   # - info
-  # Search is built in, but must be enabled when you add other plugins
-  #- search
   - exclude:
       glob:
        - integrations/builtin/*

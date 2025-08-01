@@ -113,17 +113,9 @@
       </div>
     {% endif %}
 
-    <!-- n8n CUSTOM: replace search with Kapa -->
-     <button
-      class="n8n-kapa-button"
-      onclick="window.Kapa.open({ 
-        mode: 'ai'
-      })" 
-      type="button"
-    >
-      <span class="md-search__icon md-icon">{% set icon = "material/magnify" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Search | Ask AI</span>
-    </button>
-
+    <!-- n8n CUSTOM: fully remove search from header. It should be 
+    disabled due to config, but making sure. 
+    -->
 
     <!-- Repository information -->
 	  <!-- n8n CUSTOM: don't show GitHub link -->

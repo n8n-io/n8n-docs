@@ -113,15 +113,16 @@
       </div>
     {% endif %}
 
-    <!-- Button to open search modal -->
-    {% if "material/search" in config.plugins %}
-      <label class="md-header__button md-icon" for="__search">
-        {% include ".icons/material/magnify.svg" %}
-      </label>
+    <!-- n8n CUSTOM: replace search with Kapa -->
+     <div
+      class="n8n-kapa-button"
+      onclick="window.Kapa.open({ 
+        mode: 'search'
+      })"
+    >
+      <span class="md-search__icon md-icon">{% set icon = "material/magnify" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Search | Ask AI</span>
+    </div>
 
-      <!-- Search interface -->
-      {% include "partials/search.html" %}
-    {% endif %}
 
     <!-- Repository information -->
 	  <!-- n8n CUSTOM: don't show GitHub link -->

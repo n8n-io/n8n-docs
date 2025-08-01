@@ -20,7 +20,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Mautic's API documentation](https://developer.mautic.org/#rest-api){:target=_blank .external-link} for more information about the service.
+Refer to [Mautic's API documentation](https://developer.mautic.org/#rest-api) for more information about the service.
 
 ## Using basic auth
 
@@ -28,7 +28,7 @@ Refer to [Mautic's API documentation](https://developer.mautic.org/#rest-api){:t
 To set up this credential, your Mautic instance must have the API enabled. Refer to [Enable the API](#enable-the-api) for instructions.
 ///
 
-To configure this credential, you'll need an account on a [Mautic](https://www.mautic.org/){:target=_blank .external-link} instance and:
+To configure this credential, you'll need an account on a [Mautic](https://www.mautic.org/) instance and:
 
 - Your **URL**
 - A **Username**
@@ -37,7 +37,7 @@ To configure this credential, you'll need an account on a [Mautic](https://www.m
 To set it up:
 
 1. In Mautic, go to **Configuration > API Settings**.
-2. If **Enable HTTP basic auth?** is set to **No**, change it to **Yes** and save. Refer to the [API Settings documentation](https://docs.mautic.org/en/5.x/configuration/settings.html#api-settings){:target=_blank .external-link} for more information.
+2. If **Enable HTTP basic auth?** is set to **No**, change it to **Yes** and save. Refer to the [API Settings documentation](https://docs.mautic.org/en/5.x/configuration/settings.html#api-settings) for more information.
 1. In n8n, enter the Base **URL** of your Mautic instance.
 2. Enter your Mautic **Username**.
 3. Enter your Mautic **Password**.
@@ -48,7 +48,7 @@ To set it up:
 To set up this credential, your Mautic instance must have the API enabled. Refer to [Enable the API](#enable-the-api) for instructions.
 ///
 
-To configure this credential, you'll need an account on a [Mautic](https://www.mautic.org/){:target=_blank .external-link} instance and:
+To configure this credential, you'll need an account on a [Mautic](https://www.mautic.org/) instance and:
 
 - A **Client ID**: Generated when you create new API credentials.
 - A **Client Secret**: Generated when you create new API credentials.
@@ -60,7 +60,7 @@ To set it up:
 2. Select **API Credentials**.
 
     /// note | No API Credentials menu
-    If you don't see the **API Credentials** option under **Configuration > Settings**, be sure to [Enable the API](#enable-the-api). If you've enabled the API and you still don't see the option, try [manually clearing the cache](https://forum.mautic.org/t/cant-find-api-credentials-menu/10689){:target=_blank .external-link}.
+    If you don't see the **API Credentials** option under **Configuration > Settings**, be sure to [Enable the API](#enable-the-api). If you've enabled the API and you still don't see the option, try [manually clearing the cache](https://forum.mautic.org/t/cant-find-api-credentials-menu/10689).
     ///
 
 2. Select the option to **Create new client**.
@@ -72,7 +72,7 @@ To set it up:
 8. Copy the **Client Secret** from Mautic and enter it in your n8n credential.
 9. Enter the Base **URL** of your Mautic instance.
 
-Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-039%3bs-api.html#mcetoc_1g7n1bgoo0){:target=_blank .external-link} for more information.
+Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-039%3bs-api.html#mcetoc_1g7n1bgoo0) for more information.
 
 ## Enable the API
 
@@ -83,4 +83,4 @@ To enable the API in your Mautic instance:
 3. Set **API enabled?** to **Yes**.
 4. **Save** your changes.
 
-Refer to [How to use the Mautic API](https://kb.mautic.org/article/what-is-mautic-039;s-api.html){:target=_blank .external-link} for more information.
+Refer to [How to use the Mautic API](https://kb.mautic.org/article/what-is-mautic-039;s-api.html) for more information.

@@ -49,8 +49,6 @@ theme:
     - navigation.top
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
-copyright: >
-  <a href="#__consent">Change cookie settings</a>
 extra:
   analytics:
     provider: google
@@ -81,7 +79,7 @@ extra_css:
   - _extra/css/feedback.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
-  - _extra/javascript/extra.js
+  - _extra/javascript/init_kapa_widget.js
 watch:
   - _glossary
   - _snippets
@@ -159,11 +157,9 @@ plugins:
   # But DO NOT ENABLE IT NORMALLY
   # It causes Netlify builds to fail
   # - info
-  # Search is built in, but must be enabled when you add other plugins
-  - search
   - exclude:
       glob:
-      # - integrations/builtin/*
+       #- integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

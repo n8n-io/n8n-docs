@@ -80,6 +80,8 @@ Whether to include document metadata.
 
 You can use this with the [Get Many](#get-many) and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) modes.
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 ## Node options
@@ -174,7 +176,7 @@ Whether to clear the collection or tenant before inserting new data.
 
 ## Related resources
 
-Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/integrations/vectorstores/weaviate/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Weaviate documentation](https://js.langchain.com/docs/integrations/vectorstores/weaviate/) for more information about the service.
 
 Refer to [Weaviate Installation](https://docs.weaviate.io/deploy) for a self hosted Weaviate Cluster.
 

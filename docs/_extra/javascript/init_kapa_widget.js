@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   script.setAttribute("data-search-mode-enabled", true);
   // Hide the Kapa widget
   script.setAttribute("data-button-hide", true);
+  // MkDocs tries to squeeze the modal
+  script.setAttribute("data-modal-size", "900px");
   // Make sure we don't track users, so we don't have to put this behind the cookie widget https://docs.kapa.ai/integrations/website-widget/user-tracking
   script.setAttribute("data-user-analytics-cookie-enabled", false);
   script.async = true;

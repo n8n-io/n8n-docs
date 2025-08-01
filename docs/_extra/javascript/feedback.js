@@ -27,8 +27,7 @@ function handleRating(rating) {{
     if (typeof gtag !== 'undefined') {{
         try {{
             const eventParams = {
-                'event_category': 'page_rating',
-                'event_value': rating,
+                'feedback_rating': rating,
                 'page_location': window.location.href,
                 'page_title': document.title
             };
@@ -53,8 +52,7 @@ function submitFeedback() {{
     if (typeof gtag !== 'undefined') {{
         try {{
             const eventParams = {
-                'event_category': 'page_feedback',
-                'event_value': feedbackText,
+                'feedback_text': feedbackText,
                 'page_location': window.location.href,
                 'page_title': document.title,
                 'feedback_length': feedbackText.length

@@ -150,11 +150,11 @@
     background: var(--color-background-base);
     border-radius: .1rem;
     color: var(--color-text-base);
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     font-size: 1.5em;
-    padding: 0.5em;
- 
+    padding: 0.5em; 
   }
 
   .n8n-search-text {

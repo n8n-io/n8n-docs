@@ -23,8 +23,8 @@ You can select which executions data n8n saves. For example, you can save only e
 # Save executions ending in errors
 export EXECUTIONS_DATA_SAVE_ON_ERROR=all
 
-# Save successful executions
-export EXECUTIONS_DATA_SAVE_ON_SUCCESS=all
+# Don't save successful executions
+export EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
 
 # Don't save node progress for each execution
 export EXECUTIONS_DATA_SAVE_ON_PROGRESS=false

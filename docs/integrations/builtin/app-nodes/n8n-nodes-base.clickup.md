@@ -96,15 +96,10 @@ Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for
 
 ### Get a task
 
-When using the **Get a task** operation, you can enable the **Include Subtasks** option to also fetch and include subtasks for the specified task in the response.
+When using the **Get a task** operation, you can optionally enable the following:
 
-/// note | Include Subtasks parameter
-- **Include Subtasks**: (Boolean, default: false) - When enabled, the node will also fetch and include subtasks for the specified task.
-///
-
-/// note | Include Markdown Description parameter
-- **Include Markdown Description**: (Boolean, default: false) - When enabled, the node will include the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
-///
+- **Include Subtasks**: When enabled, also fetches and includes subtasks for the specified task.
+- **Include Markdown Description**: When enabled, includes the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
 
 ## Templates and examples
 

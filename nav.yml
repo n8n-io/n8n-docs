@@ -979,7 +979,6 @@ nav:
         - integrations/builtin/credentials/openai.md
         - integrations/builtin/credentials/opencti.md
         - integrations/builtin/credentials/openrouter.md
-        - integrations/builtin/credentials/vercel.md
         - integrations/builtin/credentials/openweathermap.md
         - integrations/builtin/credentials/oura.md
         - integrations/builtin/credentials/paddle.md
@@ -1075,6 +1074,7 @@ nav:
         - integrations/builtin/credentials/urlscanio.md
         - integrations/builtin/credentials/venafitlsprotectcloud.md
         - integrations/builtin/credentials/venafitlsprotectdatacenter.md
+        - integrations/builtin/credentials/vercel.md
         - integrations/builtin/credentials/vero.md
         - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md

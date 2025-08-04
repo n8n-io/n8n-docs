@@ -3,6 +3,8 @@
 title: n8n Embed Documentation and Guides
 description: Learn how to white label and integrate n8n into your products with the Embed feature. Includes usage, costs, licensing, and support details.
 contentType: overview
+hide:
+  - feedback
 ---
 
 # n8n Embed

@@ -5,6 +5,8 @@ description: Access n8n public REST API documentation and guides. Find comprehen
 contentType: overview
 search:
     boost: 5
+hide:
+  - feedback
 ---
 
 # n8n public REST API

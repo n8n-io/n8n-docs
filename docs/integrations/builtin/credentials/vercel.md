@@ -33,10 +33,10 @@ To configure this credential, you'll need:
 
 To generate your API Key:
 
-1. Login to your Vercel account or [create](https://vercel.com/) an account.
-2. Go to the Vercel dashboard and click the **AI Gateway** tab.
-3. Click **API keys** on the left side bar
-4. Click **Add key** and proceed with **Create key** from the Dialog
+1. [Login to Vercel](https://vercel.com/login) or [create an account](https://vercel.com/signup).
+2. Go to the Vercel dashboard and select the **AI Gateway** tab.
+3. Select **API keys** on the left side bar.
+4. Select **Add key** and proceed with **Create key** from the Dialog.
 4. Copy your key and add it as the **API Key** in n8n.
 
 ## Using OIDC token
@@ -47,6 +47,6 @@ To configure this credential, you'll need:
 
 To generate your OIDC token:
 
-1. In local development, link your application to a Vercel project with the command `vc link`
-2. Run the command `vercel env pull` to pull the environment variables from Vercel
+1. In local development, link your application to a Vercel project with the `vc link` command.
+2. Run the `vercel env pull` command to pull the environment variables from Vercel.
 3. Copy your token and add it as the **OIDC TOKEN** in n8n.

@@ -32,7 +32,7 @@ Use these options to further refine the node's behavior.
 
 ### Frequency Penalty
 
-Use this option to control the chances of the model repeating itself. Higher values reduce the chance of the model repeating itself.
+Use this option to control the chance of the model repeating itself. Higher values reduce the chance of the model repeating itself.
 
 ### Maximum Number of Tokens
 
@@ -44,7 +44,7 @@ Choose **Text** or **JSON**. **JSON** ensures the model returns valid JSON.
 
 ### Presence Penalty
 
-Use this option to control the chances of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
+Use this option to control the chance of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
 
 ### Sampling Temperature
 

@@ -35,10 +35,37 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.106.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.0...n8n@1.106.0) for this version.<br />
+**Release date:** 2025-08-04
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains performance improvements, core updates, editor improvements, node updates, a new node, and bug fixes.
+
+### Contributors
+
+[baruchiro](https://github.com/baruchiro)  
+[killthekitten](https://github.com/killthekitten)  
+[baileympearson](https://github.com/baileympearson)  
+[Yingrjimsch](https://github.com/Yingrjimsch)  
+[joshualipman123](https://github.com/joshualipman123)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.105.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.1...n8n@1.105.2) for this version.<br />
 **Release date:** 2025-08-01
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
 
 This release contains a bug fix.
 
@@ -82,9 +109,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.104.1) for this version.<br />
 **Release date:** 2025-07-23
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -97,9 +122,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.1...n8n@1.103.2) for this version.<br />
 **Release date:** 2025-07-22
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 
@@ -114,9 +137,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.104.0) for this version.<br />
 **Release date:** 2025-07-21
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 =======
 
@@ -758,7 +779,7 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics). 
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-add-metrics-to-workflow). 
     
 <br>
 

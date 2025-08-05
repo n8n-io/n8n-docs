@@ -779,7 +779,7 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics). 
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-add-metrics-to-workflow). 
     
 <br>
 

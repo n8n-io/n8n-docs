@@ -46,7 +46,7 @@ Configure this operation with these parameters:
 * **Put Output File in Field**: Enter the name of the output binary field to put the file in.
 
 /// Note | Concurrent Reads with SFTP
-When using SFTP you can enable concurrent reads, This will improve download speeds but may not be supported by all SFTP servers.
+When using SFTP, you can enable concurrent reads. This improves download speeds but may not be supported by all SFTP servers.
 ///
 
 ## List

@@ -12,54 +12,11 @@ contentType: howto
 n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier.
 
 /// note | Python support
-Luxon is a JavaScript library. The two convenience [variables](#variables) created by n8n are available when using Python in the Code node, but their functionality is limited:
+Luxon is a JavaScript library. The two convenience [variables](#get-the-current-datetime-or-date) created by n8n are available when using Python in the Code node, but their functionality is limited:
 
 * You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`.
 * The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-luxon), isn't available for Python users.
 ///	
-
-
-## Variables
-
-n8n uses Luxon to provide two custom variables:
-
-- `now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
-- `today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
-
-Note that these variables can return different time formats when cast as a string. This is the same behavior as Luxon's `DateTime.now()`.
-
-=== "Expressions (JavaScript)"
-
-	``` js
-	{{$now}}
-	// n8n displays the ISO formatted timestamp
-	// For example 2022-03-09T14:02:37.065+00:00
-	{{"Today's date is " + $now}}
-	// n8n displays "Today's date is <unix timestamp>"
-	// For example "Today's date is 1646834498755"
-	```
-
-=== "Code node (JavaScript)"
-
-	``` js
-	$now
-	// n8n displays <ISO formatted timestamp>
-	// For example 2022-03-09T14:00:25.058+00:00
-	let rightNow = "Today's date is " + $now
-	// n8n displays "Today's date is <unix timestamp>"
-	// For example "Today's date is 1646834498755"
-	```
-=== "Code node (Python)"
-	``` python
-	_now
-	# n8n displays <ISO formatted timestamp>
-	# For example 2022-03-09T14:00:25.058+00:00
-	rightNow = "Today's date is " + str(_now)
-	# n8n displays "Today's date is <unix timestamp>"
-	# For example "Today's date is 1646834498755"
-	```
-
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
 
 ## Date and time behavior in n8n
 
@@ -80,6 +37,52 @@ Luxon uses the n8n timezone. This value is either:
 
 This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
 
+### Get the current datetime or date
+
+Use the [`$now` and `$today` Luxon objects](/code/builtin/date-time.md) to get the current time or day:
+
+* `now`: a Luxon object containing the current timestamp. Equivalent to `DateTime.now()`.
+* `today`: a Luxon object containing the current timestamp, rounded down to the day. Equivalent to `DateTime.now().set({ hour: 0, minute: 0, second: 0, millisecond: 0 })`.
+
+Note that these variables can return different time formats when cast as a string:
+
+=== "Expressions (JavaScript)"
+	```javascript
+	{{$now}}
+	// n8n displays the ISO formatted timestamp
+	// For example 2022-03-09T14:02:37.065+00:00
+	{{"Today's date is " + $now}}
+	// n8n displays "Today's date is <unix timestamp>"
+	// For example "Today's date is 1646834498755"
+	```
+
+=== "Code node (JavaScript)"
+	```javascript
+	$now
+	// n8n displays <ISO formatted timestamp>
+	// For example 2022-03-09T14:00:25.058+00:00
+	let rightNow = "Today's date is " + $now
+	// n8n displays "Today's date is <unix timestamp>"
+	// For example "Today's date is 1646834498755"
+	```
+=== "Code node (Python)"
+	```python
+	_now
+	# n8n displays <ISO formatted timestamp>
+	# For example 2022-03-09T14:00:25.058+00:00
+	rightNow = "Today's date is " + str(_now)
+	# n8n displays "Today's date is <unix timestamp>"
+	# For example "Today's date is 1646834498755"
+	```
+
+n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
+
+### Convert JavaScript dates to Luxon
+
+To convert a native JavaScript date to a Luxon date:
+
+* In expressions, use the [`.toDateTime()` method](/code/builtin/data-transformation-functions/dates.md#date-toDateTime). For example, `{{ (new Date()).ToDateTime() }}`.
+* In the Code node, use `DateTime.fromJSDate()`. For example, `let luxondate = DateTime.fromJSDate(new Date())`.
 
 ### Convert date string to Luxon
 

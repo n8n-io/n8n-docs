@@ -69,7 +69,7 @@ To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nod
 
 Refer to [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening) for more information.
 
-To provide additional security to your Slack Trigger with request signature verification:
+n8n recommends enabling request signature verification for your Slack Trigger for additional security:
 
 1. Go to [Your Apps](https://api.slack.com/apps/) in Slack and select the app you want to use.
 2. Go to **Settings** > **Basic Information**.

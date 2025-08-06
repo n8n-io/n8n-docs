@@ -10,6 +10,8 @@ priority: high
 
 Use this operation to create, delete, and share folders in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Create a folder
 
 Use this operation to create a new folder in a drive.
@@ -29,7 +31,7 @@ You can find the `driveId` and `folderID` by visiting the shared drive or folder
 - **Simplify Output**: Choose whether to return a simplified version of the response instead of including all fields.
 - **Folder Color**: The color of the folder as an RGB hex string.
 
-Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/insert) API documentation for more information.
 
 ## Delete a folder
 
@@ -48,7 +50,7 @@ Enter these parameters:
 
 - **Delete Permanently**: Choose whether to delete the folder now instead of moving it to the trash.
 
-Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: files.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files/delete) API documentation for more information.
 
 ## Share a folder
 
@@ -80,4 +82,4 @@ Enter these parameters:
 - **Transfer Ownership**: Whether to transfer ownership to the specified user and downgrade the current owner to writer permissions.
 - **Use Domain Admin Access**: Whether to perform the action as a domain administrator.
 
-Refer to the [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files){:target=_blank .external-link} API documentation for more information.
+Refer to the [REST Resources: files | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/files) API documentation for more information.

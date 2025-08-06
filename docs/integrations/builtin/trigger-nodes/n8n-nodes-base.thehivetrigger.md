@@ -14,7 +14,7 @@ n8n provides two nodes for TheHive. Use this node (TheHive Trigger) if you want 
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [TheHive Trigger integrations](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [TheHive Trigger integrations](https://n8n.io/integrations/thehive-trigger/) page.
 ///
 
 ## Events
@@ -44,12 +44,12 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive.md).
 
-View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/) on n8n's website.
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](http://docs.thehive-project.org/thehive/legacy/thehive3/api/){:target=_blank .external-link}
-* [Version 4](http://docs.thehive-project.org/cortex/api/api-guide/){:target=_blank .external-link}
+* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/)
+* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/)
 
 
 ## Configure a webhook in TheHive

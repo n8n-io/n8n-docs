@@ -5,7 +5,7 @@ contentType: explanation
 
 # AI Assistant
 
-The n8n AI Assistant helps you build, debug, and optimize your workflows seamlessly. From answering questions about n8n to providing help with coding and expressions, the AI Assistant can streamline your workflow-building process and support you as you navigate n8n's capabilities.
+The n8n AI Assistant helps you build, debug, and optimize your workflows seamlessly. From answering questions about n8n to providing help with coding and [expressions](/glossary.md#expression-n8n), the AI Assistant can streamline your workflow-building process and support you as you navigate n8n's capabilities.
 
 ## Current capabilities
 
@@ -46,5 +46,5 @@ Any user on a Cloud plan can use the assistant.
 
 ### How does the Assistant work?
 
-The underlying logic of the assistant is build with the advanced AI capabilities of n8n. It uses a combination of different agents, specialized in different areas of n8n, RAG to gather knowledge from the docs and the community forum, and custom prompts, memory and context.
+The underlying logic of the assistant is build with the advanced AI capabilities of n8n. It uses a combination of different [agents](/glossary.md#ai-agent), specialized in different areas of n8n, RAG to gather knowledge from the docs and the community forum, and custom prompts, [memory](/glossary.md#ai-memory) and context.
 <!-- vale from-microsoft.HeadingPunctuation = YES -->

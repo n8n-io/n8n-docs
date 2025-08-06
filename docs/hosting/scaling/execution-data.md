@@ -23,8 +23,8 @@ You can select which executions data n8n saves. For example, you can save only e
 # Save executions ending in errors
 export EXECUTIONS_DATA_SAVE_ON_ERROR=all
 
-# Save successful executions
-export EXECUTIONS_DATA_SAVE_ON_SUCCESS=all
+# Don't save successful executions
+export EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
 
 # Don't save node progress for each execution
 export EXECUTIONS_DATA_SAVE_ON_PROGRESS=false
@@ -51,7 +51,7 @@ docker run -it --rm \
 n8n:
     environment:
       - EXECUTIONS_DATA_SAVE_ON_ERROR=all
- 	  - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
       - EXECUTIONS_DATA_SAVE_ON_PROGRESS=true
       - EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
 ```
@@ -94,7 +94,7 @@ n8n:
 ```
 
 /// note | SQLite
-If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database.md#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html){:target=_blank .external-link} operation.
+If you run n8n using the default SQLite database, the disk space of any pruned data isn't automatically freed up but rather reused for future executions data. To free up this space configure the `DB_SQLITE_VACUUM_ON_STARTUP` [environment variable](/hosting/configuration/environment-variables/database.md#sqlite) or manually run the [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation.
 ///
 
 --8<-- "_snippets/self-hosting/scaling/binary-data-pruning.md"

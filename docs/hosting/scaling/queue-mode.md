@@ -55,7 +55,7 @@ export N8N_ENCRYPTION_KEY=<main_instance_encryption_key>
 n8n recommends using Postgres 13+. Running n8n with execution mode set to `queue` with an SQLite database isn't recommended.
 ///
 
-Set the environment variable `EXECUTIONS_MODE` to `queue` using the following command.
+Set the environment variable `EXECUTIONS_MODE` to `queue` on the main instance and any workers using the following command.
 
 ```bash
 export EXECUTIONS_MODE=queue
@@ -128,7 +128,7 @@ Each worker process runs a server that exposes optional endpoints:
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 ///
 
 You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.
@@ -146,7 +146,7 @@ If you want to migrate data from one database to another, you can use the Export
 ## Webhook processors
 
 /// note | Keep in mind
-Webhook processes rely on Redis too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
+Webhook processes rely on Redis and need the `EXECUTIONS_MODE` environment variable set too. Follow the [configure the workers](#configuring-workers) section above to setup webhook processor nodes.
 ///
 
 Webhook processors are another layer of scaling in n8n. Configuring the webhook processor is optional, and allows you to scale the incoming webhook requests.
@@ -164,7 +164,7 @@ You can start the webhook processor by executing the following command from the 
 If you're using Docker, use the following command:
 
 ```
-docker run --name n8n-queue -p 5679:5678 docker.n8n.io/n8nio/n8n webhook
+docker run --name n8n-queue -p 5679:5678 -e "EXECUTIONS_MODE=queue" docker.n8n.io/n8nio/n8n webhook
 ```
 
 ### Configure webhook URL
@@ -216,7 +216,6 @@ n8n recommends setting concurrency to 5 or higher for your worker instances. Set
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 ///
 
 In queue mode you can run more than one `main` process for high availability.
@@ -251,6 +250,4 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
-/// note | Keep in mind
-In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Running `webhook` processes is neither needed nor allowed in multi-main setup.
-///
+

@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Home Assistant node supports 
 Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassistant.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Camera Proxy
@@ -46,4 +48,4 @@ Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassi
 
 ## Related resources
 
-Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/){:target=_blank .external-link} for more information about the service.
+Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/) for more information about the service.

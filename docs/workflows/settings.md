@@ -17,7 +17,7 @@ To open the settings:
 
 The following settings are available:
 
-* **Execution order**: choose the execution order for multi-branch workflows. **v0 (legacy)** executes the first node of each branch, then the second node of each branch, and so on. **v1 (recommended)** executes each branch in turn, completing one branch before starting another. n8n orders the branches based on their position on the canvas, from topmost to bottommost. If two branches are at the same height, the leftmost branch executes first.
+* **Execution order**: choose the execution order for multi-branch workflows. **v0 (legacy)** executes the first node of each branch, then the second node of each branch, and so on. **v1 (recommended)** executes each branch in turn, completing one branch before starting another. n8n orders the branches based on their position on the [canvas](/glossary.md#canvas-n8n), from topmost to bottommost. If two branches are at the same height, the leftmost branch executes first.
 * **Error Workflow**: select a workflow to trigger if the current workflow fails. See [Error workflows](/flow-logic/error-handling.md) for more details.
 * **This workflow can be called by**: choose whether other workflow can call this workflow.
 * **Timezone**: sets the timezone for the workflow to use. The default timezone is EDT (New York). The timezone setting is  important for the Schedule Trigger node.

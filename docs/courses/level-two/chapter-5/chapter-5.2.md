@@ -50,7 +50,7 @@ The second part of the workflow consists of four nodes:
 3. Use the [**Gmail node**](/integrations/builtin/app-nodes/n8n-nodes-base.gmail/index.md) (or another email node) to send the files using email to an address you have access to. Note that you need to add an attachment with the data property.
 4. Use the [**Discord node**](/integrations/builtin/app-nodes/n8n-nodes-base.discord/index.md) to send a message in the n8n Discord channel `#course-level-two`. In the node, configure the following parameters:
     * **Webhook URL**: The Discord URL you received in the email when you signed up for this course.
-    * **Text**: "I sent the file using email with the label ID `{label ID}`. My ID: " followed by the unique ID emailed to you when you registered for this course. <br/> Note that you need to replace the text in curly braces `{}` with expressions that reference the data from the nodes.
+    * **Text**: "I sent the file using email with the label ID `{label ID}`. My ID: " followed by the unique ID emailed to you when you registered for this course. <br/> Note that you need to replace the text in curly braces `{}` with [expressions](/glossary.md#expression-n8n) that reference the data from the nodes.
 
 /// question | Quiz questions
 * How many orders are assigned to the `Americas` region?
@@ -122,7 +122,7 @@ The third part of the workflow consists of five nodes:
         {
         "parameters": {},
         "id": "c0236456-40be-4f8f-a730-e56cb62b7b5c",
-        "name": "When clicking \"Test workflow\"",
+        "name": "When clicking \"Execute workflow\"",
         "type": "n8n-nodes-base.manualTrigger",
         "typeVersion": 1,
         "position": [
@@ -430,7 +430,7 @@ The third part of the workflow consists of five nodes:
             ]
         ]
         },
-        "When clicking \"Test workflow\"": {
+        "When clicking \"Execute workflow\"": {
         "main": [
             [
             {

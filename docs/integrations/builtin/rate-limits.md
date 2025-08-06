@@ -7,7 +7,7 @@ description: How to handle API rate limits when using n8n integrations.
 
 # Handling API rate limits
 
-API rate limits are restrictions on request frequency. For example, an API may limit the number of requests you can make per minute, or per day.
+[API](/glossary.md#api) rate limits are restrictions on request frequency. For example, an API may limit the number of requests you can make per minute, or per day.
 
 APIs can also limits how much data you can send in one request, or how much data the API sends in a single response.
 

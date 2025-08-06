@@ -1,19 +1,19 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Window Buffer Memory node documentation
-description: Learn how to use the Window Buffer Memory node in n8n. Follow technical documentation to integrate Window Buffer Memory node into your workflows.
+title: Simple Memory node documentation
+description: Learn how to use the Simple Memory node in n8n. Follow technical documentation to integrate Simple Memory node into your workflows.
 contentType: [integration, reference]
 priority: high
 ---
 
-# Window Buffer Memory node
+# Simple Memory node
 
-Use the Window Buffer Memory node to persist chat history in your workflow.
+Use the Simple Memory node to [persist](/glossary.md#ai-memory) chat history in your workflow.
 
-On this page, you'll find a list of operations the Window Buffer Memory node supports, and links to more resources.
+On this page, you'll find a list of operations the Simple Memory node supports, and links to more resources.
 
 /// warning | Don't use this node if running n8n in queue mode
-If your n8n instance uses [queue mode](/hosting/scaling/queue-mode.md), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Window Buffer Memory will go to the same worker.
+If your n8n instance uses [queue mode](/hosting/scaling/queue-mode.md), this node doesn't work in an active production workflow. This is because n8n can't guarantee that every call to Simple Memory will go to the same worker.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -32,7 +32,7 @@ Configure these parameters to configure the node:
 
 ## Related resources
 
-Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

@@ -7,13 +7,13 @@ contentType: explanation
 
 # What's memory in AI?
 
-Memory is a key part of AI chat services. The memory keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
+Memory is a key part of AI chat services. The [memory](/glossary.md#ai-memory) keeps a history of previous messages, allowing for an ongoing conversation with the AI, rather than every interaction starting fresh.
 
 ## AI memory in n8n
 
 To add memory to your AI workflow you can use either:
 
-* [Window Buffer Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md): stores a customizable length of chat history for the current session. This is the easiest to get started with.
+* [Simple Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/index.md): stores a customizable length of chat history for the current session. This is the easiest to get started with.
 * One of the memory services that n8n provides nodes for. These include:
 	* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md)
 	* [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md)

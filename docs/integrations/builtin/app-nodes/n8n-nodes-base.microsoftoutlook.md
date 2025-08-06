@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Microsoft Outlook node suppor
 Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md) for guidance on setting up authentication.
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Calendar
@@ -57,12 +59,15 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 	* Move
 	* Reply
 	* Send
+	* Send and Wait for Response
 	* Update
 * Message Attachment
 	* Add
 	* Download
 	* Get
 	* Get Many
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 
@@ -71,6 +76,6 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 ## Related resources
 
-Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started){:target=_blank .external-link} for more information about the service.
+Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

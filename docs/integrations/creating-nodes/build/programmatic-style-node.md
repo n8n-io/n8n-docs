@@ -18,12 +18,12 @@ You need some understanding of:
 - JavaScript/TypeScript
 - REST APIs
 - git
-- Expressions in n8n
+- [Expressions](/glossary.md#expression-n8n) in n8n
 
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/){:target=_blank .external-link}. You'll create a node that implements one piece of SendGrid functionality: create a contact.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [SendGrid](https://sendgrid.com/). You'll create a node that implements one piece of SendGrid functionality: create a contact.
 
 /// note | Existing node
 n8n has a built-in SendGrid node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -34,7 +34,7 @@ n8n provides a starter repository for node development. Using the starter ensure
 
 Clone the repository and navigate into the directory:
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate){:target=_blank .external-link} from the template repository.
+1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
 2. Clone your new repository:
 		```shell
 		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-friendgrid
@@ -65,7 +65,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg){:target=_blank .external-link} as `friendGrid.svg` in `nodes/FriendGrid/`.
+Save the SendGrid SVG logo from [here](https://github.com/n8n-io/n8n/blob/master/packages/nodes-base/nodes/SendGrid/sendGrid.svg) as `friendGrid.svg` in `nodes/FriendGrid/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -465,7 +465,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 
 
@@ -476,6 +476,6 @@ You need to update the `package.json` to include your own information, such as y
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/index.md).
-* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost){:target=_blank .external-link}. This is an example of a more complex programmatic node structure.
+* View an example of a programmatic node: n8n's [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost). This is an example of a more complex programmatic node structure.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
 * Make sure you understand key concepts: [item linking](/data/data-mapping/data-item-linking/item-linking-concepts.md) and [data structures](/data/data-structure.md).

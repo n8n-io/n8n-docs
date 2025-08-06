@@ -25,7 +25,7 @@ Let's get the title of the latest n8n blog post:
 
 1. Use the **HTTP Request node** to make a GET request to the URL `https://blog.n8n.io/` (this endpoint requires no authentication).
 2. Connect an **HTML node** and configure it to extract the title of the first blog post on the page.
-	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.item-title  a` should help!
+	- Hint: If you're not familiar with CSS selectors or reading HTML, the CSS selector `.post .item-title  a` should help!
 
 ??? note "Show me the solution"
 
@@ -43,7 +43,7 @@ Let's get the title of the latest n8n blog post:
 		- **JSON Property**: data
 		- **Extraction Values**:
 			- **Key**: title
-			- **CSS Selector**: `.item-title  a`
+			- **CSS Selector**: `.post .item-title  a`
 			- **Return Value**: HTML
 
 	You can add more values to extract more data.
@@ -57,17 +57,17 @@ Use the **XML node** to convert XML to JSON and JSON to XML. This operation is u
 
 ### XML Exercise
 
-In the [final exercise of Chapter 1](/courses/level-two/chapter-1.md#exercise_2), you used an **HTTP Request node** to make a request to the Quotable API. In this exercise, we'll return to that same API but we'll convert the output to XML:
+In the [final exercise of Chapter 1](/courses/level-two/chapter-1.md#exercise_2), you used an **HTTP Request node** to make a request to the PokéAPI. In this exercise, we'll return to that same API but we'll convert the output to XML:
 
-1. Add an **HTTP Request node** that makes the same request to the Quotable API at `https://api.quotable.io/quotes`.
+1. Add an **HTTP Request node** that makes the same request to the PokéAPI at `https://pokeapi.co/api/v2/pokemon`.
 2. Use the XML node to convert the JSON output to XML.
 
 ??? note "Show me the solution"
 
-	1. To get the quotes from the Quotable API, execute the **HTTP Request node** with the following parameters:
+	1. To get the pokemon from the PokéAPI, execute the **HTTP Request node** with the following parameters:
 		- **Authentication**: None
 		- **Request Method**: GET
-		- **URL**: https://api.quotable.io/quotes
+		- **URL**: https://pokeapi.co/api/v2/pokemon
 	2. Connect an **XML node** to it with the following parameters:
 		- **Mode**: JSON to XML
 		- **Property name**: data
@@ -158,7 +158,7 @@ To begin:
 		{
 		"parameters": {},
 		"id": "6bf64d5c-4b00-43cf-8439-3cbf5e5f203b",
-		"name": "When clicking \"Test workflow\"",
+		"name": "When clicking \"Execute workflow\"",
 		"type": "n8n-nodes-base.manualTrigger",
 		"typeVersion": 1,
 		"position": [
@@ -293,7 +293,7 @@ To begin:
 	],
 	"pinData": {},
 	"connections": {
-		"When clicking \"Test workflow\"": {
+		"When clicking \"Execute workflow\"": {
 		"main": [
 			[
 			{

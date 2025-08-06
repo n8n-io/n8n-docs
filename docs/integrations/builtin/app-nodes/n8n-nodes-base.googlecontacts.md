@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Google Contacts node supports
 Refer to [Google Contacts credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Contact

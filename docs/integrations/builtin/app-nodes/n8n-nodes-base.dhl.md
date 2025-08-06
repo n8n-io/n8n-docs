@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the DHL node supports and links t
 Refer to [DHL credentials](/integrations/builtin/credentials/dhl.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Shipment

@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the NocoDB node supports and link
 Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Row
@@ -32,6 +34,6 @@ Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for g
 
 ## Relates resources
 
-Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} for more information about the service.
+Refer to [NocoDB's documentation](https://docs.nocodb.com/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

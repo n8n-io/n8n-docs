@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Zendesk node supports and lin
 Refer to [Zendesk credentials](/integrations/builtin/credentials/zendesk.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Ticket

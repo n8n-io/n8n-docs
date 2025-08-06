@@ -22,7 +22,7 @@ In the HTTP Request node, select **Add Option** > **Pagination**.
 If the API returns the URL of the next page in its response:
 
 1. Set **Pagination Mode** to **Response Contains Next URL**. n8n displays the parameters for this option.
-1. In **Next URL**, use an expression to set the URL. The exact expression depends on the data returned by your API. For example, if the API includes a parameter called `next-page` in the response body:
+1. In **Next URL**, use an [expression](/glossary.md#expression-n8n) to set the URL. The exact expression depends on the data returned by your API. For example, if the API includes a parameter called `next-page` in the response body:
 	```javascript
 	{{ $response.body["next-page"] }}
 	```

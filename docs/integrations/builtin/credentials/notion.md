@@ -15,7 +15,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Notion](https://notion.so){:target=_blank .external-link} account with admin level access.
+Create a [Notion](https://notion.so) account with admin level access.
 
 ## Supported authentication methods
 
@@ -28,7 +28,7 @@ Not sure which integration type to use? Refer to [Internal vs. public integratio
 
 ## Related resources
 
-Refer to [Notion's API documentation](https://developers.notion.com/reference/intro){:target=_blank .external-link} for more information about the service.
+Refer to [Notion's API documentation](https://developers.notion.com/reference/intro) for more information about the service.
 
 ## Using API integration token
 
@@ -36,9 +36,9 @@ To configure this credential, you'll need:
 
 - An **Internal Integration Secret**: Generated once you create a Notion integration.
 
-To generate an integration secret, [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} and grab the integration secret from the **Secrets** tab:
+To generate an integration secret, [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion) and grab the integration secret from the **Secrets** tab:
 
-1. Go to your Notion [integration dashboard](https://www.notion.com/my-integrations){:target=_blank .external-link}.
+1. Go to your Notion [integration dashboard](https://www.notion.com/my-integrations).
 2. Select the **+ New integration** button.
 3. Enter a **Name** for your integration, for example `n8n integration`. If desired, add a **Logo**.
 4. Select **Submit** to create your integration.
@@ -51,11 +51,11 @@ To generate an integration secret, [create a Notion integration](https://develop
 7. Select the **Secrets** tab.
 8. Copy the **Internal Integration Token** and add it as your n8n **Internal Integration Secret**.
 
-Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
+Refer to the [Internal integration auth flow setup documentation](https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up) for more information about authenticating to the service.
 
 ### Share Notion page(s) with the integration
 
-For your integration to interact with Notion, you must [give your integration page permission](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions){:target=_blank .external-link} to interact with page(s) in your Notion workspace:
+For your integration to interact with Notion, you must [give your integration page permission](https://developers.notion.com/docs/create-a-notion-integration#give-your-integration-page-permissions) to interact with page(s) in your Notion workspace:
 
 1. Visit the page in your Notion workspace.
 2. Select the triple dot menu at the top right of a page.
@@ -64,7 +64,7 @@ For your integration to interact with Notion, you must [give your integration pa
 
 Once you share at least one page with the integration, you can start making API requests. If the page isn't shared, any API requests made will respond with an error.
 
-Refer to [Integration permissions](https://developers.notion.com/docs/authorization#integration-permissions){:target=_blank .external-link} for more information.
+Refer to [Integration permissions](https://developers.notion.com/docs/authorization#integration-permissions) for more information.
 
 ## Using OAuth2
 
@@ -73,9 +73,9 @@ To configure this credential, you'll need:
 - A **Client ID**: Generated once you configure a public integration.
 - A **Client Secret**: Generated once you configure a public integration.
 
-You must [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion){:target=_blank .external-link} and set it to public distribution:
+You must [create a Notion integration](https://developers.notion.com/docs/create-a-notion-integration#create-your-integration-in-notion) and set it to public distribution:
 
-1. Go to your Notion [integration dashboard](https://www.notion.so/my-integrations){:target=_blank .external-link}.
+1. Go to your Notion [integration dashboard](https://www.notion.so/my-integrations).
 2. Select the **+ New integration** button.
 3. Enter a **Name** for your integration, for example `n8n integration`. If desired, add a **Logo**.
 4. Select **Submit** to create your integration.
@@ -92,7 +92,7 @@ You must [create a Notion integration](https://developers.notion.com/docs/create
 11. Go to the **Secrets** tab.
 12. Copy the **Client ID** and **Client Secret** and add them to your n8n credential.
 
-Refer to Notion's [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up){:target=_blank .external-link} for more information about authenticating to the service.
+Refer to Notion's [public integration auth flow setup](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up) for more information about authenticating to the service.
 
 ## Internal vs. public integrations
 
@@ -112,4 +112,4 @@ Internal integrations use a simpler authentication process (the integration secr
 
 Public integrations use the OAuth 2.0 protocol for authentication. They require a Notion security review before publishing.
 
-For a more detailed breakdown of the two integration types, refer to Notion's [Internal vs. Public Integrations documentation](https://developers.notion.com/docs/getting-started#internal-vs-public-integrations){:target=_blank .external-link}.
+For a more detailed breakdown of the two integration types, refer to Notion's [Internal vs. Public Integrations documentation](https://developers.notion.com/docs/getting-started#internal-vs-public-integrations).

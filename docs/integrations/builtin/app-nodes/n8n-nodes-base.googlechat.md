@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Google Chat node supports and
 Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Member
@@ -25,10 +27,13 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
     * Create a message
     * Delete a message
     * Get a message
+	* Send and Wait for Response
     * Update a message
 * Space
     * Get a space
     * Get all spaces the caller is a member of
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 

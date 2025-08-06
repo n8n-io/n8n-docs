@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Redis node supports and links
 Refer to [Redis credentials](/integrations/builtin/credentials/redis.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Delete a key from Redis.

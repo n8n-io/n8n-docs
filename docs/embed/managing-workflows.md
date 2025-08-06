@@ -25,7 +25,7 @@ The APIs referenced in this document are subject to change at any time. Be sure 
 There are three general steps to follow:
 
 * Obtain the credentials for each user, and any additional parameters that may be required based on the workflow.
-* Create the n8n credentials for this user.
+* Create the [n8n credentials](/glossary.md#credential-n8n) for this user.
 * Create the workflow.
 
 ### 1. Obtain user credentials

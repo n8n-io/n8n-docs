@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Affinity node supports and li
 Refer to [Affinity credentials](/integrations/builtin/credentials/affinity.md) for guidance on setting up authentication.
 ///	
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * List

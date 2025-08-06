@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the ActiveCampaign node supports 
 Refer to [ActiveCampaign credentials](/integrations/builtin/credentials/activecampaign.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Account

@@ -8,17 +8,13 @@ priority: high
 
 # Custom Code Tool node
 
-Use the Custom Code Tool node to write code that an agent can run.
+Use the Custom Code Tool node to write code that an [agent](/glossary.md#ai-agent) can run.
 
 On this page, you'll find the node parameters for the Custom Code Tool node and links to more resources.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 
 ## Node parameters
-
-### Name
-
-Give your custom code a name. It can't contain whitespace.
 
 ### Description
 

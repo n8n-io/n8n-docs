@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the X node supports and links to 
 Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Direct Message
@@ -26,6 +28,10 @@ Refer to [X credentials](/integrations/builtin/credentials/twitter.md) for guida
     * Search tweets
     * Like a tweet
     * Retweet a tweet
+* User
+  	* Get a user
+* List 
+    * Add a member to a list
 
 ## Templates and examples
 

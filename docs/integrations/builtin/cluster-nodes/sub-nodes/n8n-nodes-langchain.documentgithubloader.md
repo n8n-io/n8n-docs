@@ -7,7 +7,7 @@ contentType: [integration, reference]
 
 # GitHub Document Loader node
 
-Use the GitHub Document Loader node to load data from a GitHub repository for vector stores or summarization.
+Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](/glossary.md#ai-vector-store) or summarization.
 
 On this page, you'll find the node parameters for the GitHub Document Loader node, and links to more resources.
 
@@ -19,6 +19,9 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Node parameters
 
+* **Text Splitting**: Choose from:
+	* **Simple**: Uses the [Recursive Character Text Splitter](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md) with a chunk size of 1000 and an overlap of 200.
+    * **Custom**: Allows you to connect a text splitter of your choice.
 * **Repository Link**: Enter the URL of your GitHub repository.
 * **Branch**: Enter the branch name to use.
 

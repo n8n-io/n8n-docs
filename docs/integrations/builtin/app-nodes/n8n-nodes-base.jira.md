@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Jira Software node supports a
 Refer to [Jira credentials](/integrations/builtin/credentials/jira.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Issue

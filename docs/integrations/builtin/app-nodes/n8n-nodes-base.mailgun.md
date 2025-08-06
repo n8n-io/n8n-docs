@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Mailgun node supports and lin
 Refer to [Mailgun credentials](/integrations/builtin/credentials/mailgun.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 - Send an email

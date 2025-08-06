@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the FileMaker node supports and l
 Refer to [FileMaker credentials](/integrations/builtin/credentials/filemaker.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 - Find Records

@@ -37,7 +37,7 @@ To edit or delete a variable:
 
 ## Use variables in workflows
 
-You can access variables in the Code node and in expressions:
+You can access variables in the Code node and in [expressions](/glossary.md#expression-n8n):
 
 ```javascript
 // Access a variable

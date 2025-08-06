@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Mautic node supports and link
 Refer to [Mautic credentials](/integrations/builtin/credentials/mautic.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Campaign Contact

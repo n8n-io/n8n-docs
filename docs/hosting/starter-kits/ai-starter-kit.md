@@ -15,15 +15,15 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 
 ✅ [**Self-hosted n8n**](/hosting/index.md): Low-code platform with over 400 integrations and advanced AI components.
 
-✅ [**Ollama**](https://ollama.com/){:target=_blank .external-link}: Cross-platform LLM platform to install and run the latest local LLMs.
+✅ [**Ollama**](https://ollama.com/): Cross-platform LLM platform to install and run the latest local LLMs.
 
-✅ [**Qdrant**](https://qdrant.tech/){:target=_blank .external-link}: Open-source, high performance vector store with a comprehensive API.
+✅ [**Qdrant**](https://qdrant.tech/): Open-source, high performance vector store with a comprehensive API.
 
-✅ [**PostgreSQL**](https://www.postgresql.org/){:target=_blank .external-link}: The workhorse of the Data Engineering world, handles large amounts of data safely.
+✅ [**PostgreSQL**](https://www.postgresql.org/): The workhorse of the Data Engineering world, handles large amounts of data safely.
 
 ## What you can build
 
-⭐️ AI Agents that can schedule appointments
+⭐️ [AI Agents](/glossary.md#ai-agent){ data-preview} that can schedule appointments
 
 ⭐️ Summaries of company PDFs without leaking data
 
@@ -34,7 +34,7 @@ Curated by [n8n](https://github.com/n8n-io), it combines the self-hosted n8n pla
 ## Get the kit
 
 <!-- vale off -->
-Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter-kit){:target=_blank .external-link} to clone the repo and get started!
+Head to [the GitHub repository](https://github.com/n8n-io/self-hosted-ai-starter-kit) to clone the repo and get started!
 <!-- vale on -->
 
 /// note | For testing only

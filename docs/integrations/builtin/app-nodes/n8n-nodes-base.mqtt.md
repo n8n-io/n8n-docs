@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the MQTT node supports and links 
 Refer to [MQTT credentials](/integrations/builtin/credentials/mqtt.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 Use the MQTT node to send a message. You can set the message topic, and choose whether to send the node input data as part of the message.
@@ -29,4 +31,4 @@ Use the MQTT node to send a message. You can set the message topic, and choose w
 
 n8n provides a trigger node for MQTT. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md).
 
-Refer to [MQTT's documentation](https://mqtt.org/getting-started/){:target=_blank .external-link} for more information about the service.
+Refer to [MQTT's documentation](https://mqtt.org/getting-started/) for more information about the service.

@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Webflow node supports and lin
 Refer to [Webflow credentials](/integrations/builtin/credentials/webflow.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Item

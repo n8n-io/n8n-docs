@@ -15,14 +15,14 @@ Use the n8n Form node to create user-facing forms with multiple steps. You can a
 
 ### Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger URL.
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms) with the initial URL provided by the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger URL.
 
 /// note | Only for production
 Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
 ///
 
 <!-- vale from-microsoft.Percentages = NO -->
-When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding) any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
 
 As an example, imagine you have a form with the following properties:
 
@@ -39,6 +39,24 @@ https://my-account.n8n.cloud/form/my-form?email=jane.doe%40example.com&name=Jane
 
 Here, percent-encoding replaces the at-symbol (`@`) with the string `%40` and the space character (` `) with the string `%20`. This will set the initial value for these fields no matter which page of the form they appear on.
 <!-- vale from-microsoft.Percentages = YES -->
+
+### Displaying custom HTML
+
+You can display custom HTML on your form by adding a **Custom HTML** field to your form. This provides an **HTML** box where you can insert arbitrary HTML code to display as part of the form page.
+
+You can use the HTML field to enrich your form page by including things like links, images, videos, and more. n8n will render the content with the rest of the form fields in the normal document flow.
+
+Because custom HTML content is read-only, these fields aren't included in the form output data by default. To include the raw HTML content in the node output, provide a name for the data using the **Element Name** field.
+
+The HTML field doesn't support `<script>`, `<style>`, or `<input>` elements.
+
+### Including hidden fields
+
+It's possible to include fields in a form without displaying them to users. This is useful when you want to pass extra data to the form that doesn't require interactive user input.
+
+To add fields that won't show up on the form, use the **Hidden Field** form element. There, you can define the **Field Name** and optionally provide a default value by filling out the **Field Value**.
+
+When serving the form, you can pass values for hidden fields using [query parameters](#set-default-selections-with-query-parameters).
 
 ### Defining the form using JSON
 
@@ -128,7 +146,7 @@ An example JSON that shows the general format required and the keys available:
 
 ### Form Ending
 
-Use the **Form Ending** Page Type to end a form and either show a completion page or redirect the user to a URL. Only one Form Ending page is displayed per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
+Use the **Form Ending** Page Type to end a form and either show a completion page, redirect the user to a URL, or display custom HTML or text. Only one Form Ending page displays per execution, even when n8n executes [multiple branches](#forms-with-branches) that contain Form Ending nodes.
 
 Choose between these options when using **On n8n Form Submission**:
 
@@ -138,6 +156,8 @@ Choose between these options when using **On n8n Form Submission**:
 	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
 
 When using **Redirect to URL**, fill in the **URL** field with the page you want to redirect to when users complete the form.
+
+Use **Show Text** to display a final page defined by arbitrary plain text and HTML. Fill in the **Text** field with the HTML or plain text content you wish to show.
 
 ### Forms with branches
 
@@ -166,7 +186,7 @@ This workflow may execute more than one branch during an execution. Here, n8n ex
 Select **Add Option** to view more configuration options: 
 
 - **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
-- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+- **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
 - **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
 
 ## Running the node
@@ -177,8 +197,8 @@ While building or testing a workflow, use the **Test URL** in the [n8n Form Trig
 
 There are two ways to test:
 
-- Select **Test Step**. n8n opens the form. When you submit the form, n8n runs the node and any previous nodes, but not the rest of the workflow.
-- Select **Test Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
+- Select **Execute Step**. n8n opens the form. When you submit the form, n8n runs the node and any previous nodes, but not the rest of the workflow.
+- Select **Execute Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
 
 ### Production workflows
 

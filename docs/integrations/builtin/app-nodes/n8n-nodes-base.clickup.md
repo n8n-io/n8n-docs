@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the ClickUp node supports and lin
 Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Checklist
@@ -89,6 +91,15 @@ Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for
     * Add tag to time entry
     * Get all time entry tags
     * Remove tag from time entry
+
+## Operation details
+
+### Get a task
+
+When using the **Get a task** operation, you can optionally enable the following:
+
+- **Include Subtasks**: When enabled, also fetches and includes subtasks for the specified task.
+- **Include Markdown Description**: When enabled, includes the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
 
 ## Templates and examples
 

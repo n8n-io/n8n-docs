@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the NASA node supports and links 
 Refer to [NASA credentials](/integrations/builtin/credentials/nasa.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Astronomy Picture of the Day

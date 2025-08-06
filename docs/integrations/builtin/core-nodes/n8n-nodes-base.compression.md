@@ -12,6 +12,8 @@ Use the Compression node to compress and decompress files. Supports Zip and Gzip
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 The node parameters depend on which **Operation** you select. Choose to:
 
 * **Compress**: Create a compressed file from your input data.

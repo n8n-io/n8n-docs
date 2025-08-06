@@ -15,6 +15,8 @@ On this page, you'll find a list of operations the Ghost node supports and links
 Refer to [Ghost credentials](/integrations/builtin/credentials/ghost.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 ### Admin API

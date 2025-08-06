@@ -7,8 +7,8 @@ contentType: tutorial
 
 This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It uses:
 
-* [Caddy](http://caddyserver.com){:target="_blank" .external-link} (a reverse proxy) to allow access to the Server from the internet.
-* [Docker Compose](https://docs.docker.com/compose/){:target="_blank" .external-link} to create and define the application components and how they work together.
+* [Caddy](https://caddyserver.com) (a reverse proxy) to allow access to the Server from the internet.
+* [Docker Compose](https://docs.docker.com/compose/) to create and define the application components and how they work together.
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -16,7 +16,7 @@ This hosting guide shows you how to self-host n8n on a Hetzner cloud server. It 
 
 ## Create a server
 
-1. [Log in](https://console.hetzner.cloud/){:target=_blank .external-link} to the Hetzner Cloud Console.
+1. [Log in](https://console.hetzner.cloud/) to the Hetzner Cloud Console.
 2. Select the project to host the server, or create a new project by selecting **+ NEW PROJECT**.
 3. Select **+ CREATE SERVER** on the project tile you want to add it to.
 
@@ -30,7 +30,7 @@ Hetzner lets you choose between SSH and password-based authentication. SSH is mo
 ///
 ## Log in to your server
 
-The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg){:target="_blank" .external-link} for more information. You can find the public IP in the listing of the servers in your project.
+The rest of this guide requires you to log in to the server using a terminal with SSH. Refer to [Access with SSH/rsync/BorgBackup](https://docs.hetzner.com/robot/storage-box/access/access-ssh-rsync-borg) for more information. You can find the public IP in the listing of the servers in your project.
 
 ## Install Docker Compose
 
@@ -43,7 +43,7 @@ apt install docker-compose-plugin
 
 ## Clone configuration repository
 
-Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy){:target=_blank .external-link} into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
+Docker Compose, n8n, and Caddy require a series of folders and configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-docker-caddy) into the root user folder of the server. The following steps will tell you which file to change and what changes to make.
 
 Clone the repository with the following command:
 
@@ -66,7 +66,7 @@ The host operating system (the server) copies the two folders you created to Doc
 
 ### Create Docker volume
 
-To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/){:target="_blank" .external-link} that Docker reuses between restarts:
+To persist the Caddy cache between restarts and speed up start times, create [a Docker volume](https://docs.docker.com/storage/volumes/) that Docker reuses between restarts:
 
 ```shell
 docker volume create caddy_data
@@ -80,7 +80,7 @@ sudo docker volume create n8n_data
 
 ## Set up DNS
 
-n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the server. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts){:target="_blank" .external-link}.
+n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the server. The exact steps for this depend on your DNS provider, but typically you need to create a new "A" record for the n8n subdomain. DigitalOcean provide [An Introduction to DNS Terminology, Components, and Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-dns-terminology-components-and-concepts).
 
 ## Open ports
 

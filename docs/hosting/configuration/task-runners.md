@@ -11,10 +11,6 @@ Task runners are a generic mechanism to execute tasks in a secure and performant
 
 This document describes how task runners work and how you can configure them.
 
-/// note | Experimental feature
-Task runners are currently in public beta testing and might contain undiscovered issues. We don't recommend using them with business critical workflows.
-///
-
 ## How it works
 
 The task runner feature consists of three components: a task runner, a task broker, and a task requester.

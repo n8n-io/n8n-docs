@@ -15,6 +15,8 @@ Refer to [TOTP credentials](/integrations/builtin/credentials/totp.md) for guida
 
 ## Node parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 Configure this node with these parameters.
 
 ### Credential to connect with

@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Trello node supports and link
 Refer to [Trello credentials](/integrations/builtin/credentials/trello.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Attachment

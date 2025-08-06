@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Google BigQuery node supports
 Refer to [Google BigQuery credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 - Execute Query
@@ -28,6 +30,6 @@ Refer to [Google BigQuery credentials](/integrations/builtin/credentials/google/
 
 ## Related resources
 
-Refer to [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest){:target=_blank .external-link} for more information about the service.
+Refer to [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

@@ -8,7 +8,7 @@ priority: medium
 
 # Embeddings HuggingFace Inference node
 
-Use the Embeddings HuggingFace Inference node to generate embeddings for a given text.
+Use the Embeddings HuggingFace Inference node to generate [embeddings](/glossary.md#ai-embedding) for a given text.
 
 On this page, you'll find the node parameters for the Embeddings HuggingFace Inference, and links to more resources.
 
@@ -22,13 +22,13 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Model**: Select the model to use to generate the embedding.
 
-Refer to the [Hugging Face models documentation](https://huggingface.co/models?other=embeddings){:target=_blank .external-link} for available models.
+Refer to the [Hugging Face models documentation](https://huggingface.co/models?other=embeddings) for available models.
 
 ## Node options
 
 * **Custom Inference Endpoint**: Enter the URL of your deployed model, hosted by HuggingFace. If you set this, n8n ignores the **Model Name**.
 
-Refer to [HuggingFace's guide to inference](https://huggingface.co/inference-endpoints){:target=_blank .external-link} for more information.
+Refer to [HuggingFace's guide to inference](https://huggingface.co/inference-endpoints) for more information.
 
 ## Templates and examples
 
@@ -37,7 +37,7 @@ Refer to [HuggingFace's guide to inference](https://huggingface.co/inference-end
 
 ## Related resources
 
-Refer to [Langchain's HuggingFace Inference embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/hugging_face_inference/){:target=_blank .external-link} for more information about the service.
+Refer to [Langchain's HuggingFace Inference embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/hugging_face_inference/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

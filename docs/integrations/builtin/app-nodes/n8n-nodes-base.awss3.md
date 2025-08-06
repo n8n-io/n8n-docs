@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the AWS S3 node supports and link
 Refer to [AWS credentials](/integrations/builtin/credentials/aws.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Bucket

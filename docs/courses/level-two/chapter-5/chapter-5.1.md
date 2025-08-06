@@ -14,7 +14,7 @@ To accomplish this task, you first need to make a copy of this table in your Air
 Next, build a small workflow that merges data from Airtable and a REST Countries API:
 
 1. Use the [**Airtable node**](/integrations/builtin/app-nodes/n8n-nodes-base.airtable/index.md) to list the data in the Airtable table named `customers`.
-2. Use the [**HTTP Request node**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to get data from the REST Countries API: `https://restcountries.com/v3.1/all`. This will return data about world countries, split out into separate items.
+2. Use the [**HTTP Request node**](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md) to get data from the REST Countries API: `https://restcountries.com/v3.1/all`, and send the query parameter name `fields` with the value `name,region,subregion`. This will return data about world countries, split out into separate items.
 3. Use the [**Merge node**](/integrations/builtin/core-nodes/n8n-nodes-base.merge.md) to merge data from Airtable and the Countries API by country name, represented as `customerCountry` in Airtable and `name.common` in the Countries API, respectively.
 4. Use another Airtable node to update the fields `region` and `subregion` in Airtable with the data from the Countries API.
 

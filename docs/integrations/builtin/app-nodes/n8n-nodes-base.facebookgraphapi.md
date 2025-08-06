@@ -30,6 +30,8 @@ Refer to [Facebook Graph API credentials](/integrations/builtin/credentials/face
 
 ### Parameters
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 * **Host URL**: The host URL for the request. The following options are available:
     * **Default**: Requests are passed to the `graph.facebook.com` host URL. Used for the majority of requests.
     * **Video**: Requests are passed to the `graph-video.facebook.com` host URL. Used for video upload requests only.

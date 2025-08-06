@@ -30,7 +30,7 @@ The community edition doesn't include these features:
 
 These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
-See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.
+See [pricing](https://n8n.io/pricing/) for reference.
 
 ## Registered Community Edition
 
@@ -38,7 +38,8 @@ You can unlock extra features by registering your n8n community edition. You reg
 
 Registering unlocks these features for the community edition:
 
-* [Debug in editor](/workflows/executions/debug.md): Copy and pin execution data when working on a workflow
+* [Folders](/release-notes.md#folders): Organize your workflows into tidy folders
+* [Debug in editor](/workflows/executions/debug.md): Copy and [pin](/glossary.md#data-pinning-n8n) execution data when working on a workflow
 * One day of [workflow history](/workflows/history.md): 24 hours of workflow history so you can revert back to previous workflow versions
 * [Custom execution data](/workflows/executions/custom-executions-data.md): Save, find, and annotate execution metadata
 

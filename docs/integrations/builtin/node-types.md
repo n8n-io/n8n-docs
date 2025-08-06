@@ -5,13 +5,13 @@ contentType: overview
 
 # Built-in integrations
 
-This section contains the node library: reference documentation for every built-in node in n8n, and their credentials.
+This section contains the [node](/glossary.md#node-n8n) library: reference documentation for every built-in node in n8n, and their credentials.
 
 --8<-- "_snippets/integrations/builtin/node-operations.md"
 
 ## Core nodes
 
-Core nodes can be actions or triggers. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.
+Core nodes can be actions or [triggers](/glossary.md#trigger-node-n8n). Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls.
 
 ## Cluster nodes
 
@@ -19,7 +19,7 @@ Core nodes can be actions or triggers. Whereas most nodes connect to a specific 
 
 ## Credentials
 
-External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as credentials.
+External services need a way to identify and authenticate users. This data can range from an API key over an email/password combination to a long multi-line private key. You can save these in n8n as [credentials](/glossary.md#credential-n8n).
 
 Nodes in n8n can then request that credential information. As another layer of security, only node types with specific access rights can access the credentials.
 
@@ -31,4 +31,4 @@ To learn more about creating, managing, and sharing credentials, refer to [Manag
 
 n8n supports custom nodes built by the community. Refer to [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on installing and using these nodes.
 
-For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}, refer to [Creating nodes](/integrations/creating-nodes/overview.md) for more information.
+For help building your own custom nodes, and publish them to [npm](https://www.npmjs.com/), refer to [Creating nodes](/integrations/creating-nodes/overview.md) for more information.

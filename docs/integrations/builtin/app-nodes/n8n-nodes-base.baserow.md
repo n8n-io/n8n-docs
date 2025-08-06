@@ -16,6 +16,8 @@ On this page, you'll find a list of operations the Baserow node supports and lin
 Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for guidance on setting up authentication. 
 ///
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Operations
 
 * Row

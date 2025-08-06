@@ -10,6 +10,8 @@ priority: high
 
 Use this operation to create, delete, get, and update shared drives in Google Drive. Refer to [Google Drive](/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/index.md) for more information on the Google Drive node itself.
 
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 ## Create a shared drive
 
 Use this operation to create a new shared drive.
@@ -49,7 +51,7 @@ Enter these parameters:
 	- **Domain Users Only**: Whether to restrict access to this shared drive and items inside this shared drive to users of the domain to which this shared drive belongs.
 	- **Drive Members Only**: Whether to restrict access to items inside this shared drive to its members.
 
-Refer to the [Method: drives.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/insert){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: drives.insert | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/insert) API documentation for more information.
 
 ## Delete a shared drive
 
@@ -64,7 +66,7 @@ Enter these parameters:
     - Select **From list** to choose the title from the dropdown list, **By URL** to enter the URL of the drive, or **By ID** to enter the `driveId`. 
     - You can find the `driveId` in the URL for the shared Google Drive: `https://drive.google.com/drive/u/0/folders/driveID`.
 
-Refer to the [Method: drives.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/delete){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: drives.delete | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/delete) API documentation for more information.
 
 ## Get a shared drive
 
@@ -83,7 +85,7 @@ Enter these parameters:
 
 - **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
 
-Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get) API documentation for more information.
 
 <!-- vale from-write-good.Weasel = NO -->
 ## Get many shared drives
@@ -107,7 +109,7 @@ Enter these parameters:
 - **Query**: The query string to use to search for shared drives. See [Search for shared drives | Google Drive](https://developers.google.com/drive/api/guides/search-shareddrives) for more information.
 - **Use Domain Admin Access**: Whether to issue the request as a domain administrator. When enabled, grants the requester access if they're an administrator of the domain to which the shared drive belongs.
 
-Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: drives.get | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/get) API documentation for more information.
 
 ## Update a shared drive
 
@@ -132,4 +134,4 @@ Enter these parameters:
 	- **Domain Users Only**: Whether to restrict access to this shared drive and items inside this shared drive to users of the domain to which this shared drive belongs.
 	- **Drive Members Only**: Whether to restrict access to items inside this shared drive to its members.
 
-Refer to the [Method: drives.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/update){:target=_blank .external-link} API documentation for more information.
+Refer to the [Method: drives.update | Google Drive](https://developers.google.com/drive/api/reference/rest/v2/drives/update) API documentation for more information.

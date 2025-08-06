@@ -54,7 +54,7 @@ You can further configure the node using these **Options**.
 
 Enter custom email fetching rules to determine which emails the node fetches.
 
-Refer to [node-imap's search function criteria](https://github.com/mscdex/node-imap){:target=_blank .external-link} for more information.
+Refer to [node-imap's search function criteria](https://github.com/mscdex/node-imap) for more information.
 
 ### Force Reconnect Every Minutes
 

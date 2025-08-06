@@ -11,9 +11,14 @@ Use the Medium node to automate work in Medium, and integrate Medium with other 
 
 On this page, you'll find a list of operations the Medium node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Medium credentials](/integrations/builtin/credentials/medium.md) for guidance on setting up authentication. 
+/// warning | Medium API no longer supported
+Medium has stopped supporting the Medium API. The Medium node still appears within n8n, but you won't be able to configure new API keys to authenticate with.
+
+Refer to [Medium credentials](/integrations/builtin/credentials/medium.md) for guidance on setting up existing API keys.
 ///
+
+--8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+
 
 ## Operations
 

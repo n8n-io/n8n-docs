@@ -8,7 +8,7 @@ priority: medium
 
 # Azure OpenAI Chat Model node
 
-Use the Azure OpenAI Chat Model node to use OpenAI's chat models with conversational agents.
+Use the Azure OpenAI Chat Model node to use OpenAI's chat models with conversational [agents](/glossary.md#ai-agent).
 
 On this page, you'll find the node parameters for the Azure OpenAI Chat Model node, and links to more resources.
 
@@ -33,6 +33,10 @@ You can find authentication information for this node [here](/integrations/built
 * **Max Retries**: Enter the maximum number of times to retry a request.
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 
+## Proxy limitations
+
+This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables/deployment.md).
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
@@ -40,7 +44,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

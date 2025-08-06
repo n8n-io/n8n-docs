@@ -28,9 +28,9 @@ You can configure the summarization method and prompts. Select **Add Option** > 
 
 Options in **Summarization Method**:
 
-* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/v0.1/docs/modules/chains/document/map_reduce/){:target=_blank .external-link} in the LangChain documentation.
-* **Refine**: learn more about [Refine](https://js.langchain.com/v0.1/docs/modules/chains/document/refine/){:target=_blank .external-link} in the LangChain documentation.
-* **Stuff**: learn more about [Stuff](https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/){:target=_blank .external-link} in the LangChain documentation.
+* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/v0.1/docs/modules/chains/document/map_reduce/) in the LangChain documentation.
+* **Refine**: learn more about [Refine](https://js.langchain.com/v0.1/docs/modules/chains/document/refine/) in the LangChain documentation.
+* **Stuff**: learn more about [Stuff](https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/) in the LangChain documentation.
 
 You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
@@ -41,7 +41,7 @@ You can customize the **Individual Summary Prompts** and the **Final Prompt to C
 
 ## Related resources
 
-Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/tutorials/summarization/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/tutorials/summarization/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

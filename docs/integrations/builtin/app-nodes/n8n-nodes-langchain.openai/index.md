@@ -52,9 +52,9 @@ Refer to [OpenAI credentials](/integrations/builtin/credentials/openai.md) for g
 
 ## Related resources
 
-Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction) for more information about the service.
 
-Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.
+Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects) for more information about how assistants work.
 
 For help dealing with rate limits, refer to [Handling rate limits](/integrations/builtin/rate-limits.md).
 
@@ -66,7 +66,7 @@ Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced
 
 Select the **Tools** connector to browse the available tools and add them.
 
-Once you add a tool connection, the OpenAI node becomes a root node, allowing it to form a cluster node with the tools sub-nodes. See [Node types](/integrations/builtin/node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
+Once you add a tool connection, the OpenAI node becomes a [root node](/glossary.md#root-node-n8n), allowing it to form a [cluster node](/glossary.md#cluster-node-n8n) with the tools [sub-nodes](/glossary.md#sub-node-n8n). See [Node types](/integrations/builtin/node-types.md#cluster-nodes) for more information on cluster nodes and root nodes.
 
 ### Operations that support tool connectors
 

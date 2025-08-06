@@ -13,7 +13,7 @@ hide:
 
 This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation tool that combines AI capabilities with business process automation.
 
-It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
+It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing8.md) are welcome.
 
 
 ## Where to start

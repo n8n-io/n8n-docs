@@ -1332,8 +1332,8 @@ nav:
       - Workflow management: embed/managing-workflows.md
       - Workflows templates: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
-  - Feature tests:
-     - Main features: docs-site-feature-tests/index.md
+  # - Feature tests:
+  #    - Main features: docs-site-feature-tests/index.md
 
 not_in_nav: |
   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md

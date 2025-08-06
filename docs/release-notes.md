@@ -273,7 +273,7 @@ You can still define your own custom metrics, but for common use cases, the buil
 
 🛠️ **How to:** 
 
-1. Set up your evaluation as described [here](https://docs.n8n.io/advanced-ai/evaluations/metric-based-evaluations/#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
+1. Set up your evaluation as described [here](/advanced-ai/evaluations/metric-based-evaluations.md#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
 2. In the **Set Metrics** node, choose a metric from the dropdown list.
 3. Define any additional parameters required for your selected metric. In most cases, this includes mapping the dataset columns to the appropriate fields.
 
@@ -817,7 +817,7 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 - Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
 - AI Evaluations are not enabled for instances in scaling mode at this time. <br>
 
-You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
+You can find details, tips, and common troubleshooting info [here](/advanced-ai/evaluations/tips-and-common-issues.md). <br><br>
 
  👉 Learn more about the AI evaluation strategies and practical implementation techniques. [Watch now](https://www.youtube.com/live/QkciQpotQBQ?feature=shared).
 
@@ -2763,7 +2763,7 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
+You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
 
 </div>
 

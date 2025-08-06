@@ -71,7 +71,7 @@ The node requires scopes for the [conversations.list](https://api.slack.com/meth
 
 ## Verify the webhook
 
-From version `1.106.0` you can now set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) in the [Slack credentials | Slack Trigger configuration](/integrations/builtin/credentials/slack.md#slack-trigger-configuration), If set the Slack trigger node will automatically verify that the requests are from Slack and are correctly signed. We recommend setting this to ensure you are only processing requests sent from Slack.
+From [version `1.106.0`](/release-notes.md#n8n11060), you can set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) when configuring your [Slack credentials](/integrations/builtin/credentials/slack.md#slack-trigger-configuration). When set, the Slack trigger node automatically verifies that requests are from Slack and include a trusted signature. n8n recommends setting this to ensure you only process requests sent from Slack.
 
 ## Common issues
 

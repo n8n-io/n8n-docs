@@ -5,13 +5,7 @@ contentType: tutorial
 
 # Docker Installation
 
-[Docker](https://www.docker.com/) offers the following advantages:
-
-* Installs n8n in a clean environment.
-* Easier setup for your preferred database.
-* Can avoid issues due to different operating systems, as Docker provides a consistent system.
-* Can avoid compatibility issues due to differences in operating systems and tools.
-* Makes migrating to new hosts or environments more straightforward.
+n8n recommends using [Docker](https://www.docker.com/) for most self-hosting needs. It provides a clean, isolated environment, avoids operating system and tooling incompatibilities, and makes database and environment management simpler.
 
 You can also use n8n in Docker with [Docker Compose](/hosting/installation/server-setups/docker-compose.md). You can find Docker Compose configurations for various architectures in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting).
 
@@ -19,11 +13,10 @@ You can also use n8n in Docker with [Docker Compose](/hosting/installation/serve
 
 ## Prerequisites
 
-Before proceeding, install [Docker Desktop](https://docs.docker.com/get-docker/).
+Before proceeding, install Docker:
 
-/// note | Linux Users
-Docker Desktop is available for Mac and Windows. Linux users must install [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) individually for your distribution.
-///
+* [Docker Desktop](https://docs.docker.com/get-docker/) is available for Mac and Windows.
+* [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) are available as separate packages for Linux.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
@@ -31,13 +24,13 @@ Docker Desktop is available for Mac and Windows. Linux users must install [Docke
 
 From your terminal, run:
 
-```sh
+```shell
 docker volume create n8n_data
 
 docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
 ```
 
-This command creates a volume to store persistent data, downloads the required n8n image, and starts your container, exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n_data`, to persist your data locally.
+This command creates a volume to store persistent data, downloads the required n8n image, and starts your container exposed on port `5678`. To save your work between container restarts, it also mounts a docker volume, `n8n_data`, to persist your data locally.
 
 Once running, you can access n8n by opening:
 [http://localhost:5678](http://localhost:5678)
@@ -46,7 +39,7 @@ Once running, you can access n8n by opening:
 
 By default, n8n uses SQLite to save [credentials](/glossary.md#credential-n8n), past executions, and workflows. n8n also supports PostgreSQL, configurable using environment variables as detailed below.
 
-When using PostgreSQL, it's still important to persist the data stored in the `/home/node/.n8n` folder. This includes n8n user data and, even more importantly, the encryption key for credentials. It's also the name of the webhook when using the [n8n tunnel](#n8n-with-tunnel).
+When using PostgreSQL, you still need to persist the data stored in the `/home/node/.n8n` folder. n8n stores user data and, even more importantly, the encryption key for credentials in this location. It's also the name of the webhook when using the [n8n tunnel](#n8n-with-tunnel).
 
 If n8n can't find the `/home/node/.n8n` directory on startup, it automatically creates one. In this case, all existing credentials that n8n saved with a different encryption key will no longer work.
 

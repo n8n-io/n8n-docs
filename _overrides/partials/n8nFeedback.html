@@ -21,7 +21,7 @@
 <!-- Was this page helpful? -->
 {% if feedback %}
   <div class="n8n-feedback-container">
-        <div id="n8n-ratings-feedback" style="display: flex; gap: 1em; align-items: center;">
+        <div id="n8n-ratings-feedback">
             <span>{{ feedback.question }}</span>
             <button type="submit" class="plausible-event-name=Positive+Rating plausible-event-page=/{{ page.url }} n8n-feedback-button-positive" onclick="handleRating('positive')" >
                 <img src="/_images/assets/thumb_up.png" alt="Thumbs up" style="width: 20px; height: 20px; border: none !important;">{{ feedback.positive_button_text }}

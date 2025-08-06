@@ -5,31 +5,26 @@ contentType: howto
 
 # Expressions
 
---8<-- "_snippets/code/tournament-notes.md"
+Expressions are a powerful feature implemented in all n8n nodes. They allow node parameters to be set dynamically based on data from:
 
-Use [expressions](/glossary.md#expression-n8n) to set node parameters dynamically based on data from:
-
-- Previous nodes
+- Previous node executions
 - The workflow
 - Your n8n environment
 
-You can execute JavaScript within an expression. 
+You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data into useful parameter values without writing extensive extra code.
 
-n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-link}, and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md) that help with common tasks, such as retrieving data from other nodes, or accessing metadata.
+n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament), and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
 
-n8n supports two libraries:
+n8n additionally supports two libraries:
 
-- [Luxon](https://github.com/moment/luxon/){:target=_blank .external-link}, for working with data and time.
-- [JMESPath](https://jmespath.org/){:target=_blank .external-link}, for querying JSON.
+- [Luxon](https://github.com/moment/luxon/), for working with dates and time.
+- [JMESPath](https://jmespath.org/), for querying JSON.
 
-/// note | No Python support
-Expressions must use JavaScript.
-///
 /// note | Data in n8n
 When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
 ///
-## Writing expressions
 
+## Writing expressions
 
 To use an expression to set a parameter value:
 
@@ -79,33 +74,19 @@ This expression:
 
 ### Example: Writing longer JavaScript
 
-An expression contains one line of JavaScript. This means you cannot do things like variable assignments or multiple standalone operations.
-
-To understand the limitations of JavaScript in expressions, and start thinking about workarounds, look at the following two pieces of code. Both code examples use the Luxon date and time library to find the time between two dates in months, and encloses the code in handlebar brackets, like an expression. 
-
-However, the first example isn't a valid n8n expression:
+You can do things like variable assignments or multiple statements in an expression, but you need to wrap your code using the syntax for an IIFE (Immediately Invoked Function Expression).
 
 
-```js
-// This example is split over multiple lines for readability
-// It's still invalid when formatted as a single line
-{{
-  function example() {
-    let end = DateTime.fromISO('2017-03-13');
-    let start = DateTime.fromISO('2017-02-13');
-    let diffInMonths = end.diff(start, 'months');
-    return diffInMonths.toObject();
-  }
-  example();
-}}
-```
-
-
-While the second example is valid:
+The following code use the Luxon date and time library to find the time between two dates in months. We surround the code in both the handlebar brackets for an expression and the IIFE syntax.
 
 
 ```js
-{{DateTime.fromISO('2017-03-13').diff(DateTime.fromISO('2017-02-13'), 'months').toObject()}}
+{{(()=>{
+  let end = DateTime.fromISO('2017-03-13');
+  let start = DateTime.fromISO('2017-02-13');
+  let diffInMonths = end.diff(start, 'months');
+  return diffInMonths.toObject();
+})()}}
 ```
 
 ## Common issues

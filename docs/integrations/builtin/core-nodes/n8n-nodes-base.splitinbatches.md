@@ -8,7 +8,7 @@ priority: critical
 
 # Loop Over Items
 
-The Loop Over Items node helps you loop through data.
+The Loop Over Items node helps you loop through data when needed.
 
 The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
 
@@ -16,12 +16,13 @@ When the node execution completes, it combines all of the processed data and ret
 
 ## When to use the Loop Over Items node
 
-By default, n8n nodes process input items one at a time. Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](/flow-logic/looping.md) page.
+By default, n8n nodes are designed to process a list of input items (with some exceptions, detailed below). Depending on what you're trying to achieve, you often don't need the Loop Over Items node in your workflow. You can learn more about how n8n processes multiple items on the [looping in n8n](/flow-logic/looping.md) page.
 
-In particular, these two sections are of particular interest to the Loop Over Items node:
+These links highlight some of the cases where the Loop Over Items node can be useful:
 
 * [Loop until all items are processed](/flow-logic/looping.md#loop-until-all-items-are-processed): describes how the Loop Over Items node differs from normal item processing and when you might want to incorporate this node.
 * [Node exceptions](/flow-logic/looping.md#node-exceptions): outlines specific cases and nodes where you may need to use the Loop Over Items node to manually build looping logic.
+* [Avoiding rate limiting](/integrations/builtin/rate-limits.md): demonstrates how to batch API requests to avoid rate limits from other services.
 
 ## Node parameters
 
@@ -50,7 +51,7 @@ When enabled, you can adjust the reset conditions by switching the parameter rep
 
 ### Read RSS feed from two different sources
 
-This workflow allows you to read an RSS feed from two different sources using the Loop Over Items node. You need the Loop Over Items node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/){:target=_blank .external-link} on n8n.io.
+This workflow allows you to read an RSS feed from two different sources using the Loop Over Items node. You need the Loop Over Items node in the workflow as the RSS Feed Read node only processes the first item it receives. You can also find the [workflow](https://n8n.io/workflows/687-read-rss-feed-from-two-different-sources/) on n8n.io.
 
 The example walks through building the workflow, but assumes you are already familiar with n8n. To build your first workflow, including learning how to add nodes to a workflow, refer to [Try it out](/try-it-out/index.md).
 
@@ -80,9 +81,9 @@ Copy the workflow file above and paste into your instance, or manually build it 
 4. Add the Loop Over Items node.
 5. Configure Loop Over Items: set the batch size to `1` in the **Batch Size** field.
 6. Add the RSS Feed Read node.
-7. Select **Test Workflow**. This runs the workflow to load data into the RSS Feed Read node.
+7. Select **Execute Workflow**. This runs the workflow to load data into the RSS Feed Read node.
 8. Configure RSS Feed Read: map `url` from the input to the **URL** field. You can do this by dragging and dropping from the **INPUT** panel, or using this expression: `{{ $json.url }}`.
-9. Select **Test Workflow** to run the workflow and see the resulting data.
+9. Select **Execute Workflow** to run the workflow and see the resulting data.
 
 ### Check that the node has processed all items
 

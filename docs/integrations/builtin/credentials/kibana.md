@@ -12,8 +12,8 @@ priority: medium
 
 ## Prerequisites
 
-- Create an [Elasticsearch](https://www.elastic.co/){:target=_blank .external-link} account.
-- If you're creating a new account to test with, load some sample data into Kibana. Refer to the [Kibana quick start](https://www.elastic.co/guide/en/kibana/current/get-started.html){:target=_blank .external-link} for more information.
+- Create an [Elasticsearch](https://www.elastic.co/) account.
+- If you're creating a new account to test with, load some sample data into Kibana. Refer to the [Kibana quick start](https://www.elastic.co/guide/en/kibana/current/get-started.html) for more information.
 
 ## Supported authentication methods
 
@@ -21,9 +21,9 @@ priority: medium
 
 ## Related resources
 
-Refer to [Kibana's API documentation](https://www.elastic.co/guide/en/kibana/current/api.html){:target=_blank .external-link} for more information about the service.
+Refer to [Kibana's API documentation](https://www.elastic.co/guide/en/kibana/current/api.html) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/kibana/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/kibana/) on n8n's website.
 
 ## Using basic auth
 

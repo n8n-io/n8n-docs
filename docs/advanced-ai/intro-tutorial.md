@@ -82,7 +82,7 @@ The AI Agent node is the core of adding AI to your workflows.
 
  1. The editing view of the **AI agent** will now be displayed. 
  
- 1. There are some fields which can be changed. For this tutorial, the default **Agent** should be left at the default (**Tools Agent**). As we are using the **Chat Trigger** node, the other default setting for the source and specification of the prompt don't need to be changed.
+ 1. There are some fields which can be changed. As we're using the **Chat Trigger** node, the default setting for the source and specification of the prompt don't need to be changed.
 
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_02.json") ]]
 
@@ -152,7 +152,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
 
-1. From the panel which appears, select "Window Buffer Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
+1. From the panel which appears, select "Simple Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
 
 1. Repeat the exercise of having a conversation above, and see that the AI Agent now remembers your name.
 
@@ -173,5 +173,5 @@ You have taken your first steps in building useful and effective workflows with 
 Now you have seen how to create a basic AI workflow, there are plenty of resources to build on that knowledge and plenty of examples to give you ideas of where to go next:
 
 * Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction.md).
-* Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}.
+* Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25).
 * Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools.md).

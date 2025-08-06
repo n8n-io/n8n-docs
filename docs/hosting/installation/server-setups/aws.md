@@ -11,13 +11,13 @@ This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS)
 
 AWS offers several ways suitable for hosting n8n, including EC2 (virtual machines), and EKS (containers running with Kubernetes).
 
-This guide uses [EKS](https://aws.amazon.com/eks/){:target=_blank .external-link} as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
+This guide uses [EKS](https://aws.amazon.com/eks/) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
 ## Prerequisites
 
-The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io){:target=_blank .external-link}.
+The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io).
 
-While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html){:target=_blank .external-link}, and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html){:target=_blank .external-link}.
+While not mentioned in the documentation for eksctl, you also need to [install the AWS CLI tool](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and [configure authentication of the tool](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html).
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -38,7 +38,7 @@ Once the cluster is created, eksctl automatically sets the kubectl context to th
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws){:target=_blank .external-link}. The following steps tell you what each file does, and what settings you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws). The following steps tell you what each file does, and what settings you need to change.
 
 Clone the repository with the following command:
 
@@ -58,7 +58,8 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Configure volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2){:target=_blank .external-link}, is suitable for this purpose. This is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2), is suitable for this purpose. This is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
+
 
 ```yaml
 …
@@ -96,7 +97,7 @@ volumes:
 
 ### Pod resources
 
-[Kubernetes](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/){:target=_blank .external-link} lets you specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
+[Kubernetes](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) lets you specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
 
 ```yaml
 …

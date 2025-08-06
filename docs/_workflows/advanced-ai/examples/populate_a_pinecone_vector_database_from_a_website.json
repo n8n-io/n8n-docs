@@ -292,7 +292,7 @@
     },
     {
       "parameters": {
-        "content": "## Try it out \n\n1. Set credentials and choose your Pinecone vector database. See the notes on individual nodes for details.\n2. Select **Test workflow** to run the main workflow and load data into Pinecone.\n3. Select **Chat** and try asking:\n\n_What is the purpose of the n8n demo website?_",
+        "content": "## Try it out \n\n1. Set credentials and choose your Pinecone vector database. See the notes on individual nodes for details.\n2. Select **Execute workflow** to run the main workflow and load data into Pinecone.\n3. Select **Chat** and try asking:\n\n_What is the purpose of the n8n demo website?_",
         "height": 326.49681260818465,
         "color": 4
       },
@@ -453,7 +453,7 @@
     {
       "parameters": {},
       "id": "b43ddbd1-adfd-4bba-bee5-4b81229e88dd",
-      "name": "Start the workflow by clicking \"Test workflow\"",
+      "name": "Start the workflow by clicking \"Execute workflow\"",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
@@ -692,7 +692,7 @@
         ]
       ]
     },
-    "Start the workflow by clicking \"Test workflow\"": {
+    "Start the workflow by clicking \"Execute workflow\"": {
       "main": [
         [
           {

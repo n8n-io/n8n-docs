@@ -143,6 +143,24 @@
 	border-color: var(--md-primary-fg-color);
 	color: var(--color-background-light);
   }
+
+  /* Button to open Kapa search */
+
+  .n8n-kapa-button {
+    background: var(--color-background-dark);
+    border-radius: .1rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.75em;
+    padding: 0.5em 0.6em;
+  }
+
+  .n8n-search-text {
+    align-content: center;
+    margin-left: 0.5em;
+  }
   
   
   /* new features box on release notes */ 

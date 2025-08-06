@@ -108,7 +108,7 @@ If you're [self-hosting](/hosting/index.md) n8n, follow these steps:
 
 * Install the module into your n8n environment.
 	* If you are running n8n with [npm](/hosting/installation/npm.md), install the module in the same environment as n8n.
-	* If you are running n8n with [Docker](/hosting/installation/docker.md), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your module.
+	* If you are running n8n with [Docker](/hosting/installation/docker.md), you need to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/) that includes your module.
 * Set the `NODE_FUNCTION_ALLOW_BUILTIN` and `NODE_FUNCTION_ALLOW_EXTERNAL` [environment variables](/hosting/configuration/configuration-examples/modules-in-code-node.md) to allow importing modules.
 
 ## Using global variables

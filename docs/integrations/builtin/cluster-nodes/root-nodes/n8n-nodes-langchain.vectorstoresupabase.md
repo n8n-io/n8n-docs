@@ -8,7 +8,11 @@ priority: medium
 
 # Supabase Vector Store node
 
-Use the Supabase Vector Store to interact with your Supabase database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
+
+Use the Supabase Vector Store to interact with your Supabase database as vector store. You can insert documents into a vector database, get many documents from a vector database, and retrieve documents to provide them to a retriever connected to a chain. 
+
+Use the Supabase Vector Store to interact with your Supabase database as [vector store](/glossary.md#ai-vector-store). You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool). You can also update an item in a vector store by its ID.
+
 
 On this page, you'll find the node parameters for the Supabase node, and links to more resources.
 
@@ -18,7 +22,7 @@ You can find authentication information for this node [here](/integrations/built
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
 	
-Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}. If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
+Supabase provides a [quickstart for setting up your vector store](https://supabase.com/docs/guides/ai/langchain?database-method=sql). If you use settings other than the defaults in the quickstart, this may affect parameter settings in n8n. Make sure you understand what you're doing.
 
 ## Node usage patterns
 
@@ -32,7 +36,7 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the Supabase Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use vector store as a resource when answering queries.
+You can connect the Supabase Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> Supabase Vector Store node.
 
@@ -50,7 +54,14 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 ## Node parameters
 
+
+### Operation Mode
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode-with-update.md"
+
+### Rerank Results
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
@@ -63,6 +74,7 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 ### Insert Documents parameters
 
 * **Table Name**: Enter the Supabase table to use.
+
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
@@ -80,11 +92,15 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 * **Table Name**: Enter the Supabase table to use.
 * **ID**: The ID of an embedding entry.
 
+Parameters for **Update Documents**
+
+* ID
+
 ## Node options
 
 ### Query Name
 
-The name of the matching function you set up in Supabase. If you follow the [Supabase quickstart](https://supabase.com/docs/guides/ai/langchain?database-method=sql){:target=_blank .external-link}, this will be `match_documents`.
+The name of the matching function you set up in Supabase. If you follow the [Supabase quickstart](https://supabase.com/docs/guides/ai/langchain?database-method=sql), this will be `match_documents`.
 
 ### Metadata Filter
 
@@ -97,7 +113,7 @@ The name of the matching function you set up in Supabase. If you follow the [Sup
 
 ## Related resources
 
-Refer to [LangChain's Supabase documentation](https://js.langchain.com/docs/integrations/vectorstores/supabase/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Supabase documentation](https://js.langchain.com/docs/integrations/vectorstores/supabase/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

@@ -14,7 +14,7 @@ n8n has built its environments feature on top of Git, a version control software
 
 ## Environments: What and why
 
-In software development, the environment is all the infrastructure and tooling around the code, including the tools that run the software, and the specific configuration of those tools. For a more detailed introduction to environments in software development, refer to [Codecademy | Environments](https://www.codecademy.com/article/environments){:target=_blank .external-link}.
+In software development, the environment is all the infrastructure and tooling around the code, including the tools that run the software, and the specific configuration of those tools. For a more detailed introduction to environments in software development, refer to [Codecademy | Environments](https://www.codecademy.com/article/environments).
 
 Low-code development in n8n is similar. n8n is where you build and run your workflows. Your instance may have particular configurations: on Cloud, n8n determines the configuration. On self-hosted instances, there are extensive [configuration options](/hosting/configuration/configuration-methods.md). You may also have made changes to the settings of your instance. This combination of n8n and your instance's specific configuration and settings is the environment your workflows run in.
 
@@ -32,7 +32,7 @@ In n8n, an environment comprises two parts, an n8n instance and a Git branch:
 * The n8n instance is where you build and run workflows.
 * The Git branch stores copies of the workflows, as well as tags, and variable and credential stubs.
 
-n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance. For more information, refer to [Push and pull | What gets committed](/source-control-environments/using/push-pull.md#what-gets-committed) and [Manage variables](/source-control-environments/using/manage-variables.md).
+n8n doesn't sync credentials and variable values with Git. You must set up the credentials and variable values manually when setting up a new instance. For more information, refer to [Push and pull | What gets committed](/source-control-environments/using/push-pull.md#what-gets-committed).
 
 How you copy work between environments depends on your branch and n8n instance configuration:
 

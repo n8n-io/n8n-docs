@@ -22,12 +22,12 @@ Create a [Copper](https://www.copper.com/) account at the **Professional** or **
 
 ## Related resources
 
-Refer to [Copper's API documentation](https://developer.copper.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Copper's API documentation](https://developer.copper.com/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Copper Generating an API key documentation](https://support.copper.com/en/articles/8823347-generating-an-api-key){:target=_blank .external-link} for information on generating an API key.
+- An **API Key**: Refer to the [Copper Generating an API key documentation](https://support.copper.com/en/articles/8823347-generating-an-api-key) for information on generating an API key.
 - An **Email** address: Use the API key creator's email address
 

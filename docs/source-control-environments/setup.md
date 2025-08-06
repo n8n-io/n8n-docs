@@ -36,8 +36,8 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
 The steps depend on your Git provider. Help links for common providers:
 
-* [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link}
-* [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/){:target=_blank .external-link}
+* [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys)
+* [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/)
 
 ## Step 4: Connect n8n and configure your instance
 

@@ -12,9 +12,7 @@ Use this node to save metadata for workflow executions. You can then search by t
 
 You can retrieve custom execution data during workflow execution using the Code node. Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
 
-/// info | Feature availability
-Available on Pro and Enterprise plans.
-///
+--8<-- "_snippets/workflows/executions/custom-execution-data-availability.md"
 
 ## Operations
 

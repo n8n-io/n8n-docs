@@ -37,4 +37,4 @@ To set up the Send Email credential to use Gmail:
     - Enter `587` for TLS.
 5. Turn on the **SSL/TLS** toggle.
 
-Refer to the Outgoing Mail (SMTP) Server settings in [Read Gmail messages on other email clients using POP](https://support.google.com/mail/answer/7104828?hl=en){:target=_blank .external-link} for more information. If the settings above don't work for you, check with your email administrator.
+Refer to the Outgoing Mail (SMTP) Server settings in [Read Gmail messages on other email clients using POP](https://support.google.com/mail/answer/7104828?hl=en) for more information. If the settings above don't work for you, check with your email administrator.

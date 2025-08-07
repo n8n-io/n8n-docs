@@ -14,13 +14,12 @@ In this tutorial, you will:
 * Add a node and configure it using expressions
 * Run your first workflow
 
-## Step one: Sign up for n8n
 
-This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is available for new users. If you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
-
-## Step two: Open a workflow template
+## Step one: Open a workflow template and sign up for n8n Cloud
 
 n8n provides a quickstart template using training nodes. You can use this to work with fake data and avoid setting up [credentials](/glossary.md#credential-n8n).
+
+This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is available for new users.
 
 1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/).
 1. Select **Use for free** to view the options for using the template.

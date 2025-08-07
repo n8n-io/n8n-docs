@@ -12,6 +12,8 @@ Use the Hugging Face Inference Model node to use Hugging Face's models.
 
 On this page, you'll find the node parameters for the Hugging Face Inference Model node, and links to more resources.
 
+This node lacks tools support, so it won't work with the [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) node. Instead, connect it with the [Basic LLM Chain](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.chainllm.md) node.
+
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/huggingface.md).
 ///
@@ -39,7 +41,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

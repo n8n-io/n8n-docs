@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Form.io's API documentation](https://apidocs.form.io/){:target=_blank .external-link} for more information about the service.
+Refer to [Form.io's API documentation](https://apidocs.form.io/) for more information about the service.
 
 ## Using basic auth
 

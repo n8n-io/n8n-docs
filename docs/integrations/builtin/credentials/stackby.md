@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Stackby](https://stackby.com/){:target=_blank .external-link} account.
+Create a [Stackby](https://stackby.com/) account.
 
 ## Supported authentication methods
 
@@ -21,11 +21,11 @@ Create a [Stackby](https://stackby.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Stackby's API documentation](https://documenter.getpostman.com/view/27762116/2s9YBxXvCa){:target=_blank .external-link} for more information about the service.
+Refer to [Stackby's API documentation](https://documenter.getpostman.com/view/27762116/2s9YBxXvCa) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Go to your [**Account Settings > API**](https://www.stackby.com/account){:target=_blank .external-link} to create an API Key. Refer to [API Key](https://help.stackby.com/en/article/95-api-key){:target=_blank .external-link} for more information.
+- An **API Key**: Go to your [**Account Settings > API**](https://www.stackby.com/account) to create an API Key. Refer to [API Key](https://help.stackby.com/en/article/95-api-key) for more information.
 

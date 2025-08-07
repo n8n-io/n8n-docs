@@ -5,4 +5,4 @@
 3. Select **Generate password**.
 4. Copy the generated app password. You'll use this in your n8n credential.
 
-Refer to Yahoo's [Generate and manage 3rd-party app passwords](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html){:target=_blank .external-link} for more information.
+Refer to Yahoo's [Generate and manage 3rd-party app passwords](https://help.yahoo.com/kb/generate-manage-third-party-passwords-sln15241.html) for more information.

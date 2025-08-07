@@ -186,7 +186,7 @@ Refine the Tools Agent node's behavior using these options:
 When enabled, the AI Agent sends data back to the user in real-time as it generates the answer. This is useful for long-running generations. This is enabled by default.
 
 /// info | Streaming requirements
-For streaming to work, your workflow must use a trigger that supports streaming responses, such as the Chat Trigger or Webhook node with **Response Mode** set to **Streaming**.
+For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) or [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node with **Response Mode** set to **Streaming**.
 ///
 
 ## Templates and examples

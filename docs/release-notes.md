@@ -63,6 +63,41 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains performance improvements, core updates, editor improvements, node updates, a new node, and bug fixes.
 
+<div class="n8n-new-features" markdown> 
+### **No more limit of active workflows and new self-hosted Business Plan**
+
+We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.
+<br><br>
+_**What’s new**_
+
+**No more limit of active workflows.**
+
+All n8n plans, from Starter to Enterprise, now include unlimited users, workflows, and steps. Our pricing is based on the volume of executions. Meaning you can build and test as many workflows as you want, including complex, data-heavy, or long-running automations, without worrying about quotas. 
+
+**New self-hosted Business Plan for growing teams**
+
+Designed for SMBs and mid-sized companies, the Business Plan includes features such as: 
+
+- 6 shared projects
+- SSO, SAML and LDAP
+- Different environments
+- Global variables
+- Version control using Git
+- 30 days of Insights
+
+Please note that this plan only includes support from our community forum. For dedicated support we recommend upgrading to our Enterprise plan.
+
+**Enterprise pricing now scales with executions**
+
+Enterprise plans no longer use workflow-based pricing, and is now also based on the volume of executions. 
+<br><br>
+**_What you need to do_**
+
+To ensure these changes apply to your account, update your n8n instance to the latest version.
+
+[Read the blog](https://blog.n8n.io/build-without-limits-everything-you-need-to-know-about-n8ns-new-pricing/) for full details.
+</div> 
+
 ### Contributors
 
 [baruchiro](https://github.com/baruchiro)  
@@ -111,6 +146,24 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.105
 **Release date:** 2025-07-28
 
 This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### **Respond to Chat node**
+
+With the [**Respond to Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md) node**, you can now access Human-in-the-Loop functionality natively in n8n Chat.
+
+Enable conversational experiences where you can ask for clarification, request approval before taking further action, and get back intermediate results — all within a single workflow execution.
+
+This unlocks multi-turn interactions that feel more natural and reduce the number of executions required. It is ideal for building interactive AI use cases like conversational forms, branched workflows based on user replies, and step-by-step approvals. 
+
+🛠️ **How to:** 
+
+- Add a **Chat Trigger** node and select **Using Respond Nodes** for the **Response mode**
+- Place the **Respond to Chat** node anywhere in your workflow to send a message into the Chat and optionally wait for the user to input a response before continuing execution of the workflow steps.
+
+<br>
+<video src="/_video/release-notes/streaming.webm" controls width="100%"></video>
+<br>
+
 
 ### Contributors
 
@@ -228,6 +281,25 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.0...n8n@1.103
 
 
 This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
+
+### **Chat streaming**
+
+No more waiting for full responses to load when using the n8n chat interface. **Streaming** now delivers AI-generated text replies word by word so users can read messages as they’re being generated. It feels faster, smoother, and more like what people expect from chat experiences.
+
+Streaming is available in public chat views (hosted or embedded) and can be used in custom apps via webhook.
+
+🛠️ How-to
+
+Configure streaming in the Node Details View of these nodes:
+
+- Chat Trigger node: Options>Add Field>Response Mode>Streaming
+- Webhook node: Respond>Streaming
+- AI Agent node: Add option> Enable streaming
+
+<br>
+<video src="/_video/release-notes/Respond-to-chat.webm" controls width="100%"></video>
+<br>
+
 
 ### Improved instance user list with more visibility
 

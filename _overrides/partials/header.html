@@ -113,15 +113,9 @@
       </div>
     {% endif %}
 
-    <!-- Button to open search modal -->
-    {% if "material/search" in config.plugins %}
-      <label class="md-header__button md-icon" for="__search">
-        {% include ".icons/material/magnify.svg" %}
-      </label>
-
-      <!-- Search interface -->
-      {% include "partials/search.html" %}
-    {% endif %}
+    <!-- n8n CUSTOM: fully remove search from header. It should be 
+    disabled due to config, but making sure. 
+    -->
 
     <!-- Repository information -->
 	  <!-- n8n CUSTOM: don't show GitHub link -->

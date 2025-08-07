@@ -6,13 +6,14 @@ repo_url: https://github.com/n8n-io/n8n-docs
 edit_uri: edit/main/docs/
 validation:
   nav:
-    omitted_files: info
+    omitted_files: warn
     not_found: warn
-    absolute_links: ignore
+    absolute_links: warn
   links:
     not_found: warn
+    anchors: warn
     absolute_links: relative_to_docs
-    unrecognized_links: info
+    unrecognized_links: warn
 theme:
   name: material
   custom_dir: _overrides
@@ -49,35 +50,22 @@ theme:
     - navigation.top
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=navigation+tabs#anchor-tracking
     - navigation.tracking
-copyright: >
-  <a href="#__consent">Change cookie settings</a>
 extra:
   analytics:
     provider: google
     property: G-0SC4FF2FH9
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page wasn't helpful
-          data: 0
-          note: >-
-            Thanks for your feedback! Help us improve this page by
-            submitting an issue or a fix in our <a href="https://github.com/n8n-io/n8n-docs" target="_blank" rel="noopener">GitHub repo</a>.
-  consent:
-    title: Cookie consent
-    description: >-
-      We use cookies and other tracking technologies to improve your browsing experience,
-      to analyze our website traffic, assist our marketing efforts and to understand where
-      our visitors are coming from. <br /><a href="https://n8n.io/legal/" target=_blank>Privacy policy</a>
   # https://squidfunk.github.io/mkdocs-material/reference/#setting-the-page-status
   status:
     beta: This feature is in beta
+  # Additional YAML for n8n-specific templates and functionality
+  n8n_extra:
+    feedback:
+      question: This page was
+      positive_button_text: Helpful
+      negative_button_text: Not helpful
+      comment_input_placeholder: This page needs...
+      comment_input_hint: We read all feedback personally
+      thankyou_message: Thanks for your feedback!
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
   - _extra/css/extra.css
@@ -87,10 +75,13 @@ extra_css:
   - _extra/css/feedback.css
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-javascript
 extra_javascript:
-  - _extra/javascript/extra.js
+  - _extra/javascript/feedback.js
+  - _extra/javascript/init_kapa_widget.js
+
 watch:
   - _glossary
   - _snippets
+  - _overrides
 markdown_extensions:
   # used for https://squidfunk.github.io/mkdocs-material/reference/tooltips/
   - abbr
@@ -165,11 +156,9 @@ plugins:
   # But DO NOT ENABLE IT NORMALLY
   # It causes Netlify builds to fail
   # - info
-  # Search is built in, but must be enabled when you add other plugins
-  - search
   - exclude:
       glob:
-      # - integrations/builtin/*
+       # - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

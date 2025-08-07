@@ -50,6 +50,10 @@ The [connections flow](https://n8n.io/workflows/2464-scale-deal-flow-with-a-pitc
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->
@@ -66,7 +70,7 @@ This Operation Mode includes one **Node option**, the [Metadata Filter](#metadat
 
 This Operation Mode includes one **Node option**:
 
-* **Collection Config**: Enter JSON options for creating a Qdrant collection creation configuration. Refer to the Qdrant [Collections](https://qdrant.tech/documentation/concepts/collections/){:target=_blank .external-link} documentation for more information.
+* **Collection Config**: Enter JSON options for creating a Qdrant collection creation configuration. Refer to the Qdrant [Collections](https://qdrant.tech/documentation/concepts/collections/) documentation for more information.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
@@ -94,7 +98,7 @@ This Operation Mode includes one **Node option**, the [Metadata Filter](#metadat
 
 ## Related resources
 
-Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

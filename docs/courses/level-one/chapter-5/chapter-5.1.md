@@ -46,7 +46,7 @@ This node will use credentials.
 [Credentials](/glossary.md#credential-n8n) are unique pieces of information that identify a user or a service and allow them to access apps or services (in our case, represented as n8n nodes). A common form of credentials is a username and a password, but they can take other forms depending on the service.
 ///
 
-In this case, you'll need the credentials for the ABCorp data warehouse API included in the email from n8n you received when you signed up for this course. If you haven't signed up yet, [sign up here](https://n8n-community.typeform.com/to/PDEMrevI){:target="_blank" .external-link}.
+In this case, you'll need the credentials for the ABCorp data warehouse API included in the email from n8n you received when you signed up for this course. If you haven't signed up yet, [sign up here](https://n8n-community.typeform.com/to/PDEMrevI).
 
 In the **Parameters** of the HTTP Request node, make the following adjustments:
 
@@ -71,7 +71,7 @@ Once you save, exit out of the Credentials window to return to the HTTP Request 
 
 ## Get the data
 
-Select the **Test step** button in the HTTP Request node window. The table view of the HTTP request results should look like this:
+Select the **Execute step** button in the HTTP Request node window. The table view of the HTTP request results should look like this:
 
 <figure><img src="/_images/courses/level-one/chapter-five/l1-c5-5-1-http-request-node-window.png" alt="HTTP Request node output" style="width:100%"><figcaption align = "center"><i>HTTP Request node output</i></figcaption></figure>
 

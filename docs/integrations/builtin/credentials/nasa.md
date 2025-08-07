@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} for more information about the service.
+Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.gov/) for more information about the service.
 
 ## Using an API key
 
@@ -28,6 +28,6 @@ To configure this credential, you'll need:
 
 To generate an API key:
 
-1. Go to the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} page.
+1. Go to the [NASA Open APIs](https://api.nasa.gov/) page.
 2. Complete the fields in the **Generate API Key** section.
 3. Copy the **API Key** and enter it in your n8n credential.

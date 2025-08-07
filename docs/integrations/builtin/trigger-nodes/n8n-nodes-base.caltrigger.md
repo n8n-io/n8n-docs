@@ -14,7 +14,12 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Cal Trigger integrations](https://n8n.io/integrations/cal-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Cal Trigger integrations](https://n8n.io/integrations/cal-trigger/) page.
 ///
 
+## Events
 
+* Booking cancelled
+* Booking created
+* Booking rescheduled
+* Meeting ended

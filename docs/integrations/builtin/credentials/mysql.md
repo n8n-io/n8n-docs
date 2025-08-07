@@ -19,7 +19,7 @@ The Agent node doesn't support SSH tunnels.
 
 ## Prerequisites
 
-Create a user account on a [MySQL](https://www.mysql.com/){:target=_blank .external-link} server database.
+Create a user account on a [MySQL](https://www.mysql.com/) server database.
 
 ## Supported authentication methods
 
@@ -27,7 +27,7 @@ Create a user account on a [MySQL](https://www.mysql.com/){:target=_blank .exter
 
 ## Related resources
 
-Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/){:target=_blank .external-link} for more information about the service.
+Refer to [MySQL's documentation](https://dev.mysql.com/doc/refman/8.3/en/) for more information about the service.
 
 ## Using database connection
 
@@ -64,7 +64,7 @@ To set up your database connection credential:
     SHOW VARIABLES WHERE Variable_name = 'port';
     ```
 
-6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `1000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 100 before entering it in n8n:
+6. Enter the **Connect Timeout** you'd like the node to use. The Connect Timeout is the number of milliseconds during the initial database connection the node should wait before timing out. n8n defaults to `10000` which is the default used by MySQL of 10 seconds. If you want to match your database's `connect_timeout`, run this query to get it, then multiply by 1000 before entering it in n8n:
 
     ```
     SHOW VARIABLES WHERE Variable_name = 'connect_timeout';
@@ -86,4 +86,4 @@ To set up your database connection credential:
         1. Add the contents of the **Private Key** or identity file used for SSH. This is the same as using the `ssh-identity-file` option with the `shell-connect()` command in MySQL.
         2. If the **Private Key** was created with a passphrase, enter that **Passphrase**. This is the same as using the `ssh-identity-pass` option with the `shell-connect()` command in MySQL. If the **Private Key** has no passphrase, leave this field blank.
 
-Refer to [MySQL | Creating SSL and RSA Certificates and Keys](https://dev.mysql.com/doc/refman/8.0/en/creating-ssl-rsa-files.html){:target=_blank .external-link} for more information on working with SSL certificates in MySQL. Refer to [MySQL | Using an SSH Tunnel](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-connection-ssh.html){:target=_blank .external-link} for more information on working with SSH tunnels in MySQL.
+Refer to [MySQL | Creating SSL and RSA Certificates and Keys](https://dev.mysql.com/doc/refman/8.0/en/creating-ssl-rsa-files.html) for more information on working with SSL certificates in MySQL. Refer to [MySQL | Using an SSH Tunnel](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-connection-ssh.html) for more information on working with SSH tunnels in MySQL.

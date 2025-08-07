@@ -32,6 +32,6 @@ Refer to [Twilio credentials](/integrations/builtin/credentials/twilio.md) for g
 
 ## Related resources
 
-Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api){:target=_blank .external-link} for more information about the service.
+Refer to [Twilio's documentation](https://www.twilio.com/docs/usage/api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

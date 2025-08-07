@@ -21,7 +21,7 @@ You need some understanding of:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/){:target=_blank .external-link}. You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
+In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/). You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
 
 /// note | Existing node
 n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -64,7 +64,7 @@ npm i
 
 ### Step 2: Add an icon
 
-Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg){:target=_blank .external-link} as `nasapics.svg` in `nodes/NasaPics/`.
+Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) as `nasapics.svg` in `nodes/NasaPics/`.
 
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
@@ -453,7 +453,7 @@ Your npm package details are in the `package.json` at the root of the project. I
 }
 ```
 
-You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json){:target=_blank .external-link}.
+You need to update the `package.json` to include your own information, such as your name and repository URL. For more information on npm `package.json` files, refer to [npm's package.json documentation](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 ## Test your node
 
@@ -462,6 +462,6 @@ You need to update the `package.json` to include your own information, such as y
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/index.md).
-* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning.md).
 

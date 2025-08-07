@@ -67,7 +67,7 @@ This release contains performance improvements, core updates, editor improvement
 ### **No more limit of active workflows and new self-hosted Business Plan**
 
 We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.
-
+<br><br>
 _**What’s new**_
 
 **No more limit of active workflows.**
@@ -90,7 +90,7 @@ Please note that this plan only includes support from our community forum. For d
 **Enterprise pricing now scales with executions**
 
 Enterprise plans no longer use workflow-based pricing, and is now also based on the volume of executions. 
-
+<br><br>
 **_What you need to do_**
 
 To ensure these changes apply to your account, update your n8n instance to the latest version.

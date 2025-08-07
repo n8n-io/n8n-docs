@@ -29,7 +29,9 @@ Refer to [Linear's API documentation](https://developers.linear.app/docs/graphql
 
 To configure this credential, you'll need:
 
-- A personal **API Key**: Create an API key in your [**Settings > API**](https://linear.app/n8n/settings/api). Refer to the [Linear Personal API keys documentation](https://developers.linear.app/docs/graphql/working-with-the-graphql-api#personal-api-keys) for more information.
+
+- A personal **API Key**: Create a dedicated personal API key in your [**Settings** > **Security & access**](https://linear.app/n8n/settings/account/security). Refer to the [Linear Personal API keys documentation](https://linear.app/developers/graphql#personal-api-keys) for more information.
+
 
 ## Using OAuth2
 

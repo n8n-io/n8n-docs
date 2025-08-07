@@ -20,16 +20,16 @@ You can use these credentials to authenticate the following nodes:
 - OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
 
 /// warning | API key deprecated
-HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app){:target=_blank .external-link} guide and set up an app token.
+HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app) guide and set up an app token.
 ///
 
 ## Related resources
 
-Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview){:target=_blank .external-link} for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks){:target=_blank .external-link} for more information about that service.
+Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview) for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks) for more information about that service.
 
 ## Using App token
 
-To configure this credential, you'll need a [HubSpot](https://www.hubspot.com/){:target=_blank .external-link} account or [HubSpot developer](https://developers.hubspot.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [HubSpot](https://www.hubspot.com/) account or [HubSpot developer](https://developers.hubspot.com/) account and:
 
 - An **App Token**
 
@@ -47,11 +47,11 @@ To generate an app token, create a private app in HubSpot:
 10. Once your app's created, open the **Access token card** and select **Show token** to reveal the token.
 11. Copy this token and enter it in your n8n credential.
 
-Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps){:target=_blank .external-link} for more information.
+Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps) for more information.
 
 ## Using Developer API key
 
-To configure this credential, you'll need a [HubSpot developer](https://developers.hubspot.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need a [HubSpot developer](https://developers.hubspot.com/) account and:
 
 - A **Client ID**: Generated once you create a public app. 
 - A **Client Secret**: Generated once you create a public app.
@@ -60,7 +60,7 @@ To configure this credential, you'll need a [HubSpot developer](https://develope
 
 To create the public app and set up the credential:
 
-1. Log into your [HubSpot app developer account](https://developers.hubspot.com/){:target=_blank .external-link}.
+1. Log into your [HubSpot app developer account](https://developers.hubspot.com/).
 2. Select **Apps** from the main navigation bar.
 3. Select **Get HubSpot API key**. You may need to select the option to **Show key**.
 4. Copy the key and enter it in n8n as the **Developer API Key**.
@@ -76,7 +76,7 @@ To create the public app and set up the credential:
 11. Copy the n8n **OAuth Redirect URL** and enter it as the **Redirect URL** in your HubSpot app.
 12. Select **Create app** to finish creating the HubSpot app.
 
- Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app){:target=_blank .external-link} for more detailed instructions.
+ Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app) for more detailed instructions.
 
 ### Required scopes for HubSpot Trigger node
 
@@ -102,7 +102,7 @@ Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating 
 
 If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
 
-1. Log into your [HubSpot app developer account](https://developers.hubspot.com/){:target=_blank .external-link}.
+1. Log into your [HubSpot app developer account](https://developers.hubspot.com/).
 2. Select **Apps** from the main navigation bar.
 3. Select **Create app**.
 4. On the **App Info** tab, add an **App name**, **Description**, **Logo**, and any support contact info you want to provide. Anyone encountering the app would see these.
@@ -116,7 +116,7 @@ If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2
 11. Copy the n8n **OAuth Redirect URL** and enter it as the **Redirect URL** in your HubSpot app.
 12. Select **Create app** to finish creating the HubSpot app.
 
-Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app){:target=_blank .external-link} for more detailed instructions. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/api/working-with-oauth){:target=_blank .external-link}.
+Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app) for more detailed instructions. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/api/working-with-oauth).
 
 ## Required scopes for HubSpot node
 

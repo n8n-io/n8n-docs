@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Flow Trigger node
 
-[Flow](https://www.getflow.com/){:target=_blank .external-link} is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
+[Flow](https://www.getflow.com/) is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/flow.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Flow Trigger integrations](https://n8n.io/integrations/flow-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Flow Trigger integrations](https://n8n.io/integrations/flow-trigger/) page.
 ///
 
 ## Events

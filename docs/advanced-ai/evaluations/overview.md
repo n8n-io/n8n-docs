@@ -8,10 +8,6 @@ contentType: overview
 # Overview
 <!-- vale from-microsoft.HeadingPunctuation = NO -->
 
-/// info | Not available in queue mode
-Evaluations aren't yet supported for n8n instances running in [queue mode](/hosting/scaling/queue-mode.md).
-///
-
 ## What are evaluations?
 
 Evaluation is a crucial technique for checking that your AI workflow is reliable. It can be the difference between a flaky proof of concept and a solid production workflow. It's important both in the building phase and after deploying to production. 

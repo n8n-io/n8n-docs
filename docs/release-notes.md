@@ -69,11 +69,11 @@ This release contains performance improvements, core updates, editor improvement
 We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.
 <br><br>
 _**What’s new**_
-
+<br><br>
 **No more limit of active workflows.**
 
 All n8n plans, from Starter to Enterprise, now include unlimited users, workflows, and steps. Our pricing is based on the volume of executions. Meaning you can build and test as many workflows as you want, including complex, data-heavy, or long-running automations, without worrying about quotas. 
-
+<br><br>
 **New self-hosted Business Plan for growing teams**
 
 Designed for SMBs and mid-sized companies, the Business Plan includes features such as: 
@@ -86,6 +86,7 @@ Designed for SMBs and mid-sized companies, the Business Plan includes features s
 - 30 days of Insights
 
 Please note that this plan only includes support from our community forum. For dedicated support we recommend upgrading to our Enterprise plan.
+<br><br>
 
 **Enterprise pricing now scales with executions**
 
@@ -94,8 +95,10 @@ Enterprise plans no longer use workflow-based pricing, and is now also based on 
 **_What you need to do_**
 
 To ensure these changes apply to your account, update your n8n instance to the latest version.
+<br><br>
 
 [Read the blog](https://blog.n8n.io/build-without-limits-everything-you-need-to-know-about-n8ns-new-pricing/) for full details.
+<br><br>
 </div> 
 
 ### Contributors
@@ -161,7 +164,7 @@ This unlocks multi-turn interactions that feel more natural and reduce the numbe
 - Place the **Respond to Chat** node anywhere in your workflow to send a message into the Chat and optionally wait for the user to input a response before continuing execution of the workflow steps.
 
 <br>
-<video src="/_video/release-notes/streaming.webm" controls width="100%"></video>
+<video src="/_video/release-notes/Respond-to-chat.webm" controls width="100%"></video>
 <br>
 
 
@@ -297,7 +300,7 @@ Configure streaming in the Node Details View of these nodes:
 - AI Agent node: Add option> Enable streaming
 
 <br>
-<video src="/_video/release-notes/Respond-to-chat.webm" controls width="100%"></video>
+<video src="/_video/release-notes/streaming.webm" controls width="100%"></video>
 <br>
 
 

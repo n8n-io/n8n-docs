@@ -21,9 +21,9 @@ Create a [Zabbix Cloud](https://www.zabbix.com/) account or self-host your own Z
 
 ## Related resources
 
-Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api){:target=_blank .external-link} for more information about the service.
+Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zabbix/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zabbix/) on n8n's website.
 
 
 ## Using API key
@@ -33,4 +33,4 @@ To configure this credential, you'll need:
 - an **API Token**: An API key for your Zabbix user.
 - the **URL**: The URL of your Zabbix server. Don't include `/zabbix` as part of the URL.
 
-Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api#authentication){:target=_blank .external-link} for more information about authenticating to the service.
+Refer to [Zabbix's API documentation](https://www.zabbix.com/documentation/current/en/manual/api#authentication) for more information about authenticating to the service.

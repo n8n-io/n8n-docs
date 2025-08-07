@@ -29,7 +29,7 @@ You can see an example of this in scenario 1 of [this template](https://n8n.io/w
 
 ### Connect directly to an AI agent as a tool
 
-You can connect the PGVector Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use vector store as a resource when answering queries.
+You can connect the PGVector Vector Store node directly to the tool connector of an [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) to use a vector store as a resource when answering queries.
 
 Here, the connection would be: AI agent (tools connector) -> PGVector Vector Store node.
 
@@ -48,6 +48,10 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 ## Node parameters
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
+
+### Rerank Results
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale off -->
 ### Get Many parameters
@@ -102,7 +106,7 @@ The following options specify the names of the columns to store the vectors and 
 
 ## Related resources
 
-Refer to [LangChain's PGVector documentation](https://js.langchain.com/docs/integrations/vectorstores/pgvector){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's PGVector documentation](https://js.langchain.com/docs/integrations/vectorstores/pgvector) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

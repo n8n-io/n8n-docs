@@ -47,7 +47,7 @@
     {
       "parameters": {},
       "id": "5af4b83b-31b6-4c29-aa55-3449f3851e2a",
-      "name": "When clicking \"Test Workflow\"",
+      "name": "When clicking \"Execute Workflow\"",
       "type": "n8n-nodes-base.manualTrigger",
       "position": [
         300,
@@ -117,7 +117,7 @@
         ]
       ]
     },
-    "When clicking \"Test Workflow\"": {
+    "When clicking \"Execute Workflow\"": {
       "main": [
         [
           {

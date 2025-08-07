@@ -8,14 +8,14 @@ priority: medium
 
 # Trello Trigger node
 
-[Trello](https://trello.com/){:target=_blank .external-link} is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
+[Trello](https://trello.com/) is a web-based Kanban-style list-making application which is a subsidiary of Atlassian. Users can create their task boards with different columns and move the tasks between them.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/trello.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Trello Trigger integrations](https://n8n.io/integrations/trello-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Trello Trigger integrations](https://n8n.io/integrations/trello-trigger/) page.
 ///
 
 ## Find the Model ID

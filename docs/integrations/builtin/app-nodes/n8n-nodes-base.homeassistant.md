@@ -48,4 +48,4 @@ Refer to [Home Assistant credentials](/integrations/builtin/credentials/homeassi
 
 ## Related resources
 
-Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/){:target=_blank .external-link} for more information about the service.
+Refer to [Home Assistant's documentation](https://developers.home-assistant.io/docs/api/rest/) for more information about the service.

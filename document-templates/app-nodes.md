@@ -26,7 +26,7 @@ contentType: [integration, reference]
 <!-- 
 The title should be the name of the integration 
 Match the brand name exactly. For example, GitHub NOT Github
-When you add this node to mkdocs.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
+When you add this node to nav.yml in the navigation, prepend it with the `_Name_:` only, for example ActiveCampaign: _relativepath_
 -->
 # _Name_ node
 

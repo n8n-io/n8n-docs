@@ -121,14 +121,14 @@ Each worker process runs a server that exposes optional endpoints:
 
 - `/healthz`: returns whether the worker is up, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
 - `/healthz/readiness`: returns whether worker's DB and Redis connections are ready, if you enable the `QUEUE_HEALTH_CHECK_ACTIVE` environment variable
-- [credentials overwrite endpoint](https://docs.n8n.io/embed/configuration/#credential-overwrites)
-- [`/metrics`](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/)
+- [credentials overwrite endpoint](/embed/configuration.md#credential-overwrites)
+- [`/metrics`](/hosting/configuration/configuration-examples/prometheus.md)
 
 #### View running workers 
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
+* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 ///
 
 You can view running workers and their performance metrics in n8n by selecting **Settings** > **Workers**.
@@ -216,7 +216,6 @@ n8n recommends setting concurrency to 5 or higher for your worker instances. Set
 
 /// info | Feature availability
 * Available on Self-hosted Enterprise plans.
-* If you want access to this feature on Cloud Enterprise, [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa){:target=_blank .external-link}.
 ///
 
 In queue mode you can run more than one `main` process for high availability.
@@ -251,6 +250,4 @@ If needed, you can adjust the leader key options:
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
 
-/// note | Keep in mind
-In multi-main setup, all `main` processes listen for webhooks, so they fulfill the same purpose as `webhook` processes. Running `webhook` processes is neither needed nor allowed in multi-main setup.
-///
+

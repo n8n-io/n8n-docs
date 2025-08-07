@@ -19,11 +19,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Kafka's documentation](https://kafka.apache.org/documentation/){:target=_blank .external-link} for more information about using the service.
+Refer to [Kafka's documentation](https://kafka.apache.org/documentation/) for more information about using the service.
 
-If you're new to Kafka, refer to the [Apache Kafka Quickstart](https://kafka.apache.org/quickstart){:target=_blank .external-link} for initial setup.
+If you're new to Kafka, refer to the [Apache Kafka Quickstart](https://kafka.apache.org/quickstart) for initial setup.
 
-Refer to [Encryption and Authentication using SSL](https://kafka.apache.org/documentation/#security_ssl){:target=_blank .external-link} for working with SSL in Kafka.
+Refer to [Encryption and Authentication using SSL](https://kafka.apache.org/documentation/#security_ssl) for working with SSL in Kafka.
 
 ## Using client ID
 
@@ -41,7 +41,7 @@ To set it up:
 4. If you've enabled authentication using SASL in your Kafka environment, turn on the **Authentication** toggle. Then add:
     1. The **Username**
     2. The **Password**
-    3. Select the broker's configured **SASL Mechanism**. Refer to [SASL configuration](https://kafka.apache.org/documentation/#security_sasl_config){:target=_blank .external-link} for more information. Options include:
+    3. Select the broker's configured **SASL Mechanism**. Refer to [SASL configuration](https://kafka.apache.org/documentation/#security_sasl_config) for more information. Options include:
         - `Plain`
         - `scram-sha-256`
         - `scram-sha-512`

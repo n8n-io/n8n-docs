@@ -34,10 +34,13 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for
 	- Get Many
 	- React with Emoji
 	- Send
+	* Send and Wait for Response
 - Member
 	- Get Many
 	- Role Add
 	- Role Remove
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 <!-- vale on -->
 
@@ -48,7 +51,7 @@ Refer to [Discord credentials](/integrations/builtin/credentials/discord.md) for
 
 ## Related resources
 
-Refer to [Discord's documentation](https://discord.com/developers/docs/intro){:target=_blank .external-link} for more information about the service.
+Refer to [Discord's documentation](https://discord.com/developers/docs/intro) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

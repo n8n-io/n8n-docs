@@ -34,6 +34,6 @@ Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for g
 
 ## Relates resources
 
-Refer to [NocoDB's documentation](https://docs.nocodb.com/){:target=_blank .external-link} for more information about the service.
+Refer to [NocoDB's documentation](https://docs.nocodb.com/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

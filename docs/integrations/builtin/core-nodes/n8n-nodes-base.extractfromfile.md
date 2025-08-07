@@ -21,7 +21,7 @@ Use the **Operations** drop-down to select the format of the source file to extr
 - **Extract From JSON**: Extract JSON data from a binary file.
 - **Extract From ICS**: Extract fields from iCalendar format files.
 - **Extract From ODS**: Extract fields from ODS spreadsheet files.
-- **Extract From PDF**: Extract fields from Porrtable Document Format files.
+- **Extract From PDF**: Extract fields from Portable Document Format files.
 - **Extract From RTF**: Extract fields from Rich Text Format files.
 - **Extract From Text File**: Extract fields from a standard text file format.
 - **Extract From XLS**: Extract fields from a Microsoft Excel file (older format).

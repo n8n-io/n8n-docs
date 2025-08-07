@@ -26,10 +26,10 @@ From the top navigation bar, select the three dots in the upper right <img alt="
 <figure><img src="/_images/courses/level-one/chapter-six/l1-c6-import-export-menu.png" alt="Import/Export menu" style="width:100%"><figcaption align = "center"><i>Import & Export workflows menu</i></figcaption></figure>
 
 * **Download**: Downloads your current workflow as a JSON file to your computer.
-* **Import from URL**: Imports workflow JSON from a URL, for example, [this workflow JSON file on GitHub](https://raw.githubusercontent.com/n8n-io/demo-setup/main/n8n/backup/workflows/srOnR8PAY3u4RSwb.json){:target=_blank .external-link}. 
+* **Import from URL**: Imports workflow JSON from a URL, for example, [this workflow JSON file on GitHub](https://raw.githubusercontent.com/n8n-io/self-hosted-ai-starter-kit/refs/heads/main/n8n/demo-data/workflows/srOnR8PAY3u4RSwb.json). 
 * **Import from File**: Imports a workflow as a JSON file from your computer.
 
 ## From the command line
 
-* Export: See the [full list of commands ](/hosting/cli-commands.md#export-workflows-and-credentials){:target="_blank" .external} for exporting workflows or credentials.
-* Import: See the [full list of commands ](/hosting/cli-commands.md#import-workflows-and-credentials){:target="_blank" .external} for importing workflows or credentials.
+* Export: See the [full list of commands ](/hosting/cli-commands.md#export-workflows-and-credentials) for exporting workflows or credentials.
+* Import: See the [full list of commands ](/hosting/cli-commands.md#import-workflows-and-credentials) for importing workflows or credentials.

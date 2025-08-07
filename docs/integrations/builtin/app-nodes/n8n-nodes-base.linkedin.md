@@ -42,7 +42,7 @@ Refer to [LinkedIn credentials](/integrations/builtin/credentials/linkedin.md) f
 
 ## Related resources
 
-Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linkedin/){:target=_blank .external-link} for more information about the service.
+Refer to [LinkedIn's API documentation](https://learn.microsoft.com/en-us/linkedin/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

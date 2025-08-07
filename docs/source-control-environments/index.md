@@ -23,7 +23,6 @@ In this section:
 * [Using](/source-control-environments/using/index.md):
 	* [Push and pull](/source-control-environments/using/push-pull.md): Send work to Git, and fetch work from Git to your instance.
 	* [Copy work between environments](/source-control-environments/using/copy-work.md): How to copy work between different n8n instances.
-	* [Manage variables](/source-control-environments/using/manage-variables.md): Manage variable values using the n8n API and source control.
 * [Tutorial: Create environments with source control](/source-control-environments/create-environments.md): An end-to-end tutorial, setting up environments using n8n's recommended configurations.
 
 Related sections:

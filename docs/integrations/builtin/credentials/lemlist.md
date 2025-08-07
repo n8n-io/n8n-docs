@@ -14,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create an account on a [Lemlist](https://www.lemlist.com/){:target=_blank .external-link} instance.
+Create an account on a [Lemlist](https://www.lemlist.com/) instance.
 
 ## Supported authentication methods
 
@@ -22,11 +22,11 @@ Create an account on a [Lemlist](https://www.lemlist.com/){:target=_blank .exter
 
 ## Related resources
 
-Refer to [Lemlist's API documentation](https://developer.lemlist.com/){:target=_blank .external-link} for more information about the service.
+Refer to [Lemlist's API documentation](https://developer.lemlist.com/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Access your API key in **Settings > Integrations**. Refer to the [API Authentication documentation](https://developer.lemlist.com/#authentication){:target=_blank .external-link} for more information.
+- An **API Key**: Access your API key in **Settings > Integrations**. Refer to the [API Authentication documentation](https://developer.lemlist.com/#authentication) for more information.
 

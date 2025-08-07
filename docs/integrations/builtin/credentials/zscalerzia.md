@@ -12,7 +12,7 @@ priority: medium
 
 ## Prerequisites
 
-Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler.com/products/zscaler-internet-access){:target=_blank .external-link} cloud instance.
+Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler.com/products/zscaler-internet-access) cloud instance.
 
 ## Supported authentication methods
 
@@ -20,9 +20,9 @@ Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler
 
 ## Related resources
 
-Refer to [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api){:target=_blank .external-link} for more information about the service.
+Refer to [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api) for more information about the service.
 
-This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/){:target=_blank .external-link} on n8n's website.
+This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/) on n8n's website.
 
 ## Using basic auth and API key combo
 
@@ -33,4 +33,4 @@ To configure this credential, you'll need:
 - A **Password**: Enter your ZIA admin password.
 - An **Api Key**: Get an API key by creating one from **Administration > Cloud Service API Security > Cloud Service API Key**.
 
-Refer to [About Cloud Service API Key](https://help.zscaler.com/zia/about-cloud-service-api-key){:target=_blank .external-link} for more detailed instructions.
+Refer to [About Cloud Service API Key](https://help.zscaler.com/zia/about-cloud-service-api-key) for more detailed instructions.

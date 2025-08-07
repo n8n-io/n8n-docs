@@ -29,4 +29,4 @@ You must use the authentication method required by the app or service you want t
 
 ## Using JWT auth
 
-[**JWT Auth**](https://jwt.io/introduction/){:target=_blank .external-link} is a method of authentication that uses JSON Web Tokens (JWT) to digitally sign data. This authentication method uses the **JWT credential** and can use either a **Passphrase** or **PEM Key** as key type. Refer to [JWT credential](/integrations/builtin/credentials/jwt.md) for more information.
+[**JWT Auth**](https://jwt.io/introduction/) is a method of authentication that uses JSON Web Tokens (JWT) to digitally sign data. This authentication method uses the **JWT credential** and can use either a **Passphrase** or **PEM Key** as key type. Refer to [JWT credential](/integrations/builtin/credentials/jwt.md) for more information.

@@ -35,7 +35,7 @@ The individual pieces in an n8n workflow are called [nodes](/glossary.md#node-n8
 
 ## Step three: Run the workflow
 
-Select **Test Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with Edit Fields. You need this data available in the workflow so that you can work with it in the next step.
+Select **Execute Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with Edit Fields. You need this data available in the workflow so that you can work with it in the next step.
 
 ## Step four: Add a node
 
@@ -53,7 +53,7 @@ Add a third node to message each customer and tell them their description. Use t
         Hi {{ $json.customer_name }}. Your description is: {{ $json.customer_description }}
         ```
 5. Close the expressions editor, then close the **Customer Messenger** node by clicking outside the node or selecting **Back to canvas**.
-6. Select **Test Workflow**. n8n runs the workflow.
+6. Select **Execute Workflow**. n8n runs the workflow.
 
 The complete workflow should look like this:
 
@@ -62,7 +62,7 @@ The complete workflow should look like this:
 
 ## Next steps
 
-* Read n8n's [longer try it out tutorial](/try-it-out/longer-introduction.md) for a more complex workflow, and an introduction to more features and n8n concepts.
+* Read n8n's [longer try it out tutorial](/try-it-out/tutorial-first-workflow.md) for a more complex workflow, and an introduction to more features and n8n concepts.
 * Take the [text courses](/courses/index.md) or [video courses](/video-courses.md).
 
 

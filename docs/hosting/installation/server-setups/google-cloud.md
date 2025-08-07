@@ -55,7 +55,7 @@ git clone https://github.com/n8n-io/n8n-hosting.git
 And change directory:
 
 ```shell
-cd kubernetes
+cd n8n-hosting/kubernetes
 ```
 
 ## Configure Postgres

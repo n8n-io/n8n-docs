@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Autopilot Trigger node
 
-[Autopilot](https://www.autopilothq.com/){:target=_blank .external-link} is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
+[Autopilot](https://www.autopilothq.com/) is a visual marketing software that allows you to automate and personalize your marketing across the entire customer journey.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/autopilot.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Autopilot Trigger integrations](https://n8n.io/integrations/autopilot-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Autopilot Trigger integrations](https://n8n.io/integrations/autopilot-trigger/) page.
 ///
 
 ## Events

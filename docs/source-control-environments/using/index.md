@@ -13,4 +13,3 @@ hide:
 
 * [Push and pull](/source-control-environments/using/push-pull.md): Send work to Git, and fetch work from Git to your instance. Understand what gets committed, and how n8n handles merge conflicts.
 * [Copy work between environments](/source-control-environments/using/copy-work.md): How to copy work between different n8n instances.
-* [Manage variables](/source-control-environments/using/manage-variables.md): Manage variable values using the n8n API and source control.

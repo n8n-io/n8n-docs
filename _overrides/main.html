@@ -31,7 +31,12 @@
 <!--
 https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-extensions
  -->
-<script defer {% if page.meta and page.meta.contentType %}event-content_type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.file-downloads.outbound-links.pageview-props.js"></script>
+
+<script defer {% if page.meta and page.meta.contentType %}event-content_type="{{ page.meta.contentType }}"{% endif %} data-domain="docs.n8n.io" src="https://plausible.io/js/script.file-downloads.outbound-links.pageview-props.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+
+
 
 <!-- n8n Workflow Preview Service -->
 <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
@@ -50,7 +55,6 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-
 {{ super() }}
 
 {% endblock %}
@@ -58,6 +62,7 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 
 {% block scripts %}
   <!-- Add scripts that need to run before here -->
+
   {{ super() }}
   <!-- Add scripts that need to run afterwards here -->
   <script>
@@ -153,4 +158,10 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
   </script>
 
   <!---->
+{% endblock %}
+
+
+{% block content %}
+{{ super() }}
+{% include "partials/n8nFeedback.html" %}
 {% endblock %}

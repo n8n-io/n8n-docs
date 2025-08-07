@@ -24,14 +24,14 @@ This quickstart uses [n8n Cloud](/manage-cloud/overview.md), which is recommende
 
 When you open n8n, you'll see either:
 
-* A window with a welcome message and two large buttons: Choose "Start from Scratch" to create a new workflow.
-* The **Workflows** list on the **Overview** page. Select the <span class="inline-image">![universal create resource icon](/_images/common-icons/universal-resource-button.png){.off-glb}</span> **button** to create a new workflow.
+* A window with a welcome message and two large buttons: Choose **Start from Scratch** to create a new workflow.
+* The **Workflows** list on the **Overview** page. Select the **Create Workflow** to create a new workflow.
 
 ## Step two: Add a trigger node
 
 n8n provides two ways to start a workflow:
 
-* Manually, by selecting **Test Workflow**.
+* Manually, by selecting **Execute Workflow**.
 * Automatically, using a trigger node as the first node. The trigger node runs the workflow in response to an external event, or based on your settings.
 
 For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md). This allows you to run the workflow on a schedule:
@@ -46,7 +46,7 @@ For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-n
 
 ## Step three: Add the NASA node and set up credentials
 
-The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interacts with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link} to fetch useful data. We will use the real-time data from the API to find solar events.
+The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interacts with NASA's [public APIs](https://api.nasa.gov/) to fetch useful data. We will use the real-time data from the API to find solar events.
 
 ??? explanation "Credentials"
     Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n.
@@ -57,8 +57,8 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
 1. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
 1. To access the NASA APIs, you need to set up credentials:
     1. Select the  **Credential for NASA API** dropdown.
-    1. Select **- Create New -**. n8n opens the credentials view.
-    1. Go to [NASA APIs](https://api.nasa.gov/){:target=_blank .external-link} and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
+    1. Select **Create new credential**. n8n opens the credentials view.
+    1. Go to [NASA APIs](https://api.nasa.gov/) and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
     1. Check your email account for the API key. Copy the key, and paste it into **API Key** in n8n.
     1. Select **Save**.
     1. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
@@ -79,7 +79,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
         n8n uses Luxon to work with date and time, and also provides two variables for convenience: `$now` and `$today`. For more information, refer to [Expressions > Luxon](/code/cookbook/luxon.md).
 
 1. Close the **Edit Expression** modal to return to the NASA node.
-1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
+1. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n calls the NASA API and displays details of solar flares in the past seven days in the **OUTPUT** section.
 1. Close the NASA node to return to the workflow canvas.
 
 ## Step four: Add logic with the If node
@@ -100,7 +100,7 @@ Add the If node:
 
     1. Change the comparison operation to **String > Contains**.
     1. In **Value 2**, enter **X**. This is the highest classification of solar flare. In the next step, you will create two reports: one for X class solar flares, and one for all the smaller solar flares.
-1. You can now check that the node is working and returning the expected date: select **Test step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
+1. You can now check that the node is working and returning the expected date: select **Execute step** to run the node manually. n8n tests the data against the condition, and shows which results match true or false in the **OUTPUT** panel.
 
     /// note | Weeks without large solar flares
     In this tutorial, you are working with live data. If you find there aren't any X class solar flares when you run the workflow, try replacing **X** in **Value 2** with either **A**, **B**, **C**, or **M**.
@@ -110,13 +110,13 @@ Add the If node:
 
 ## Step five: Output data from your workflow
 
-The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link}. Postbin is a service that receives data and displays it on a temporary web page.
+The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page.
 
 1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector labeled **true**.
 1. Search for **PostBin**. n8n shows a list of nodes that match the search.
 1. Select **PostBin**.
 1. Select **Send a request**. n8n adds the node to the canvas and opens it.
-1. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
+1. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
 1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 1. In n8n, paste your Postbin ID into **Bin ID**.
 1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
@@ -137,7 +137,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 
 ## Step six: Test the workflow
 
-1. You can now test the entire workflow. Select **Test Workflow**. n8n runs the workflow, showing each stage in progress.
+1. You can now test the entire workflow. Select **Execute Workflow**. n8n runs the workflow, showing each stage in progress.
 1. Go back to your Postbin bin. Refresh the page to see the output.
 1. If you want to use this workflow (in other words, if you want it to run once a week automatically), you need to activate it by selecting the **Active** toggle.
 
@@ -165,4 +165,4 @@ There are plenty of things you could add to this (perhaps add some more credenti
 
 - Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
 - Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
-- Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.
+- Explore more examples in [workflow templates](https://n8n.io/workflows/).

@@ -44,7 +44,7 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 ## Related resources
 
-Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/){:target=_blank .external-link} for more information about the service.
+Refer to [Microsoft's OneDrive API documentation](https://learn.microsoft.com/en-us/onedrive/developer/rest-api/) for more information about the service.
 
 ## Find the folder ID
 
@@ -55,5 +55,5 @@ To perform operations on folders, you need to supply the ID. You can find this:
 	1. Select **Resource** > **Folder**.
 	2. Select **Operation** > **Search**.
 	3. In **Query**, enter the folder name.
-	4. Select **Test step**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
+	4. Select **Execute step**. n8n runs the query and returns data about the folder, including an `id` field containing the folder ID.
 

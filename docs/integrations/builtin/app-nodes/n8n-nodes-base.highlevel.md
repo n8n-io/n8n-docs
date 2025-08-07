@@ -46,6 +46,6 @@ Refer to [HighLevel credentials](/integrations/builtin/credentials/highlevel.md)
 
 ## Related resources
 
-Refer to [HighLevel's API documentation and support forums](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api){:target=_blank .external-link} for more information about the service.
+Refer to [HighLevel's API documentation and support forums](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

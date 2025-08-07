@@ -8,12 +8,17 @@ priority: medium
 
 # Calendly Trigger node
 
-[Calendly](https://calendly.com/){:target=_blank .external-link} is an automated scheduling software that's designed to help find meeting times.
+[Calendly](https://calendly.com/) is an automated scheduling software that's designed to help find meeting times.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/calendly.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Calendly Trigger integrations](https://n8n.io/integrations/calendly-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Calendly Trigger integrations](https://n8n.io/integrations/calendly-trigger/) page.
 ///
+
+## Events
+
+* Event created
+* Event canceled

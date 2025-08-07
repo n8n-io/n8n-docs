@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Onfleet Trigger node
 
-[Onfleet](https://onfleet.com/){:target=_blank .external-link} is a logistics platform offering a last-mile delivery solution.
+[Onfleet](https://onfleet.com/) is a logistics platform offering a last-mile delivery solution.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/onfleet.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Onfleet Trigger integrations](https://n8n.io/integrations/onfleet-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Onfleet Trigger integrations](https://n8n.io/integrations/onfleet-trigger/) page.
 ///
 
 ## Events

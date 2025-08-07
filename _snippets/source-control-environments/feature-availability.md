@@ -1,4 +1,6 @@
 /// info | Feature availability
 * Available on Enterprise.
-* You need to be an n8n instance owner, admin, or project owner to set up source control, and to send work to and from Git.
+* You must be an n8n instance owner or instance admin to enable and configure source control.
+* Instance owners and instance admins can push changes to and pull changes from the connected repository.
+* Project admins can push changes to the connected repository. They can't pull changes from the repository.
 ///

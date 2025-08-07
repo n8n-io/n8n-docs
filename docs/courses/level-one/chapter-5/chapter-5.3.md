@@ -21,20 +21,19 @@ This if-then-else command is conditional logic. In n8n workflows, you can add co
 If you need to filter data on more than boolean values (true and false), use the [Switch node](/integrations/builtin/core-nodes/n8n-nodes-base.switch.md). The Switch node is similar to the If node, but supports multiple output connectors.
 ///
 
-## Remove the connection to the Airtable node
+## Add If node before the Airtable node
 
-First, let's remove the connection between the HTTP Request node and the Airtable node:
+First, let's add an If node between the connection from the HTTP Request node to the Airtable node:
 
 1. Hover over the arrow connection the **HTTP Request** node and the **Airtable** node.
-2. Select the trash icon to remove the connection.
+2. Select the **+** sign between the HTTP Request node and the Airtable node.
 
 ## Configure the If node
 
-With the connection to the Airtable node removed, add an If node connected to the HTTP Request node:
+Selecting the plus removes the connection to the Airtable node to the HTTP request. Now, let's add an If node connected to the HTTP Request node:
 
-1. Select the **+** sign coming off the HTTP Request node.
-2. Search for the If node.
-3. Select it when it appears in the search.
+1. Search for the If node.
+2. Select it when it appears in the search.
 
 For the If node, we'll use an expression.
 
@@ -60,7 +59,7 @@ In the If node window, configure the parameters:
 Make sure to select the correct data type (boolean, date & time, number, or string) when you select the **Operation**.
 ///
 
-Select **Test step** to test the If node.
+Select **Execute step** to test the If node.
 
 Your results should look like this:
 
@@ -80,7 +79,7 @@ Since Nathan only needs the `processing` orders in the table, we'll connect the 
 
 In this case, since the Airtable node is already on our canvas, select the **If node** `true` connector and drag it to the Airtable node.
 
-It's a good idea at this point to retest the Airtable node. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Test step**.
+It's a good idea at this point to retest the Airtable node. Before you do, open your table in Airtable and delete all existing rows. Then open the Airtable node window in n8n and select **Execute step**.
 
 Review your data in Airtable to be sure your workflow only added the correct orders (those with `orderStatus` of `processing`). There should be 14 records now instead of 30.
 

@@ -20,11 +20,14 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 * Message
 	* Send
+	* Send and Wait for Response
 	* Send Template
 * Media
 	* Upload
 	* Download
 	* Delete
+
+--8<-- "_snippets/integrations/builtin/send-and-wait-operation.md"
 
 ## Templates and examples
 
@@ -33,7 +36,7 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
+Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) for details about the operations.
 
 ## Common issues
 

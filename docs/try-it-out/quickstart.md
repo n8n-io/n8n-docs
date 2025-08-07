@@ -32,11 +32,11 @@ This workflow:
 
 The individual pieces in an n8n workflow are called [nodes](/glossary.md#node-n8n). Double click a node to explore its settings and how it processes data.
 
-## Step three: Run the workflow
+## Step two: Run the workflow
 
 Select **Execute Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with Edit Fields. You need this data available in the workflow so that you can work with it in the next step.
 
-## Step four: Add a node
+## Step three: Add a node
 
 Add a third node to message each customer and tell them their description. Use the Customer Messenger node to send a message to fake recipients.
 

@@ -166,6 +166,7 @@ Configure this operation with these parameters:
 	* `connections`
 	* `settings`
 
+<!-- Using absolute link here to avoid link checking false positives over the generated anchor link -->
 Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
 
 ## Templates and examples

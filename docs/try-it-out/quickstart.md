@@ -24,7 +24,7 @@ n8n provides a quickstart template using training nodes. You can use this to wor
 
 1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/).
 1. Select **Use for free** to view the options for using the template.
-1. Select **Get started free with n8n cloud** to load the template into your Cloud instance.
+1. Select **Get started free with n8n cloud** to sign up for a new Cloud instance.
 
 This workflow:
 

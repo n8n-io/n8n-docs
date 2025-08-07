@@ -63,17 +63,18 @@ This is the `next` version. n8n recommends using the `latest` version. The `next
 
 This release contains performance improvements, core updates, editor improvements, node updates, a new node, and bug fixes.
 
+<div class="n8n-new-features" markdown> 
 ### **No more limit of active workflows and new self-hosted Business Plan**
 
 We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.
 
-**What’s new**
+_**What’s new**_
 
-***No more limit of active workflows.*** 
+**No more limit of active workflows.**
 
 All n8n plans, from Starter to Enterprise, now include unlimited users, workflows, and steps. Our pricing is based on the volume of executions. Meaning you can build and test as many workflows as you want, including complex, data-heavy, or long-running automations, without worrying about quotas. 
 
-***New self-hosted Business Plan for growing teams***
+**New self-hosted Business Plan for growing teams**
 
 Designed for SMBs and mid-sized companies, the Business Plan includes features such as: 
 
@@ -86,15 +87,16 @@ Designed for SMBs and mid-sized companies, the Business Plan includes features s
 
 Please note that this plan only includes support from our community forum. For dedicated support we recommend upgrading to our Enterprise plan.
 
-***Enterprise pricing now scales with executions***
+**Enterprise pricing now scales with executions**
 
 Enterprise plans no longer use workflow-based pricing, and is now also based on the volume of executions. 
 
-**What you need to do**
+**_What you need to do_**
 
 To ensure these changes apply to your account, update your n8n instance to the latest version.
 
 [Read the blog](https://blog.n8n.io/build-without-limits-everything-you-need-to-know-about-n8ns-new-pricing/) for full details.
+</div> 
 
 ### Contributors
 
@@ -284,7 +286,7 @@ This release contains core updates, editor improvements, new nodes, node improve
 
 No more waiting for full responses to load when using the n8n chat interface. **Streaming** now delivers AI-generated text replies word by word so users can read messages as they’re being generated. It feels faster, smoother, and more like what people expect from chat experiences.
 
-Streaming is available in public chat views (hosted or embedded) and can be used in custom apps via the Webhook trigger.
+Streaming is available in public chat views (hosted or embedded) and can be used in custom apps via webhook.
 
 🛠️ How-to
 

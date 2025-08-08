@@ -159,7 +159,7 @@ plugins:
   - search
   - exclude:
       glob:
-        - integrations/builtin/*
+       # - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

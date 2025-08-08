@@ -156,6 +156,7 @@ plugins:
   # But DO NOT ENABLE IT NORMALLY
   # It causes Netlify builds to fail
   # - info
+  - search
   - exclude:
       glob:
        # - integrations/builtin/*

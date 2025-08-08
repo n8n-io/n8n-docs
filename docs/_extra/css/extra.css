@@ -147,14 +147,15 @@
   /* Button to open Kapa search */
 
   .n8n-kapa-button {
-    background: var(--color-background-dark);
+    background: var(--color-primary);
     border-radius: .1rem;
     color: white;
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.75em;
-    padding: 0.5em 0.6em;
+    font-size: 1.4em;
+    margin-right: 2em;
+    padding: 0.5em 0.75em;
   }
 
   .n8n-search-text {
@@ -304,12 +305,6 @@
 	.md-header--lifted~.md-container .md-typeset :target {
 		--md-scroll-margin: 9rem;
 	}
-}
-
-@media screen and (max-width: 1220px) {
- .n8n-kapa-button {
-  margin: 1em;
- }
 }
 
 

@@ -43,6 +43,6 @@ If you want to fully prevent all communication with n8n's servers, refer to [Iso
 
 ## Related resources
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) for more information on these environment variables.
+Refer to [Deployment environment variables](/hosting/configuration/environment-variables.md#deployment) for more information on these environment variables.
 
 Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.

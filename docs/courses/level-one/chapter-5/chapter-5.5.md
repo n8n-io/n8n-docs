@@ -75,7 +75,7 @@ With the Code node window open, configure these parameters:
 - **Language**: Select **JavaScript**.
 
 	/// note | Using Python in code nodes
-	While we use JavaScript below, you can also use Python in the Code node. To learn more, refer to the [Code node](/code/code-node.md) documentation.
+	While we use JavaScript below, you can also use Python in the Code node. To learn more, refer to the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) documentation.
 	///
 	
 - Copy the Code below and paste it into the **Code** box to replace the existing code:

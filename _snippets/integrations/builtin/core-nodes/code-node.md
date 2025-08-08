@@ -1,11 +1,11 @@
 Use the Code node to write custom JavaScript or Python and run it as a step in your workflow.
 
 /// note | Coding in n8n
-This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the [Code](/code/index.md) section. It includes:
+This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the following resources:
 
 * Reference documentation on [Built-in methods and variables](/code/builtin/overview.md)
 * Guidance on [Handling dates](/code/cookbook/luxon.md) and [Querying JSON](/code/cookbook/jmespath.md)
-* A growing collection of examples in the [Cookbook](/code/cookbook/code-node/index.md)
+* A collection of examples for the [Code node](/code/cookbook/code-node/index.md)
 ///
 
 /// note | Examples and templates
@@ -15,6 +15,7 @@ For usage examples and templates to help you get started, refer to n8n's [Code i
 /// note | Function and Function Item nodes
 The Code node replaces the Function and Function Item nodes from version 0.198.0. If you're using an older version of n8n, you can still view the [Function node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.function.md) and [Function Item node documentation](https://github.com/n8n-io/n8n-docs/blob/67935ad2528e2e30d7984ea917e4af2910a096ec/docs/integrations/builtin/core-nodes/n8n-nodes-base.functionItem.md).
 ///
+
 ## Usage
 
 How to use the Code node.

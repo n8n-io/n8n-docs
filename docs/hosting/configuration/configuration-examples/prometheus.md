@@ -23,7 +23,7 @@ Both `main` and `worker` instances are able to expose metrics.
 
 To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
 
-Queue metrics are only available for the `main` instance in single-main mode.
+These metrics are gathered from Bull and exposed by main instances. On a multi-main setup, when aggregating queries you can identify the leader using the gauge `instance_role_leader`, set to `1` for the leader main and `0` otherwise.
 
 ```
 # HELP n8n_scaling_mode_queue_jobs_active Current number of jobs being processed across all workers in scaling mode.

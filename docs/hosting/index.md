@@ -5,6 +5,7 @@ description: Access n8n hosting documentation and guides. Find comprehensive res
 contentType: overview
 hide:
   - toc
+  - feedback
 ---
 
 # Self-hosting n8n

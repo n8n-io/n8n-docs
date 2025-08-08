@@ -11,16 +11,11 @@ This document discusses concurrency in n8n Cloud. Read [self-hosted n8n concurre
 
 Too many concurrent executions can cause performance degradation and unresponsiveness. To prevent this and improve instance stability, n8n sets concurrency limits for production executions in regular mode.
 
-Any executions beyond the limits queue for later processing. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order.
+Any executions beyond the limits queue for later processing. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order. 
 
 ## Concurrency limits
 
-n8n limits the number of concurrent executions for Cloud instances according to their plan:
-
-* Starter and Trial: 5
-* Pro (10k workflow executions, 15 active workflows): 20
-* Pro (50k workflow executions, 50 active workflows): 50
-* Enterprise (in regular mode): 200
+n8n limits the number of concurrent executions for Cloud instances according to their plan. Refer to [Pricing](https://n8n.io/pricing/) for details.
 
 You can view the number of active executions and your plan's concurrency limit at the top of a project's or workflow's executions tab.
 

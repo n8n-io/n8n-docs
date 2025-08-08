@@ -78,6 +78,7 @@ Records custom instance settings. These are settings that you can't control usin
 
 * Whether the instance owner is set up
 * Whether the user chose to skip owner and user management setup
+* Whether certain types of authentication, including SAML and LDAP, are on
 * License key
 
 ### shared_credentials

@@ -17,7 +17,7 @@ The release of n8n 1.0 marks a milestone in n8n's journey to make n8n available 
 
 Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
-[PR #4295](https://github.com/n8n-io/n8n/pull/4295){:target=_blank .external link}, [PR #6209](https://github.com/n8n-io/n8n/pull/6209){:target=_blank .external link}
+[PR #4295](https://github.com/n8n-io/n8n/pull/4295), [PR #6209](https://github.com/n8n-io/n8n/pull/6209)
 
 ### Execution order
 
@@ -29,7 +29,7 @@ n8n used to execute multi-input nodes as long as they received data on their fir
 
 Your existing workflows will use the legacy order, while new workflows will execute using the v1 order. You can configure the execution order for each workflow in [workflow settings](/workflows/settings.md).
 
-[PR #4238](https://github.com/n8n-io/n8n/pull/4238){:target=_blank .external link}, [PR #6246](https://github.com/n8n-io/n8n/pull/6246){:target=_blank .external link}, [PR #6507](https://github.com/n8n-io/n8n/pull/6507){:target=_blank .external link}
+[PR #4238](https://github.com/n8n-io/n8n/pull/4238), [PR #6246](https://github.com/n8n-io/n8n/pull/6246), [PR #6507](https://github.com/n8n-io/n8n/pull/6507)
 
 ## Deprecations
 
@@ -37,7 +37,7 @@ Your existing workflows will use the legacy order, while new workflows will exec
 
 n8n has deprecated support for MySQL and MariaDB as storage backends for n8n. These database systems are used by only a few users, yet they require continuous development and maintenance efforts. n8n recommends migrating to PostgreSQL for better compatibility and long-term support.
 
-[PR #6189](https://github.com/n8n-io/n8n/pull/6189){:target=_blank .external link}
+[PR #6189](https://github.com/n8n-io/n8n/pull/6189)
 
 ### EXECUTIONS_PROCESS and "own" mode
 
@@ -45,7 +45,7 @@ Previously, you could use the `EXECUTIONS_PROCESS` environment variable to speci
 
 Note that executions start much faster in `main` mode than in `own` mode. However, if a workflow consumes more memory than is available, it might crash the entire n8n application instead of just the worker thread. To mitigate this, make sure to allocate enough system resources or configure [queue mode](/hosting/scaling/queue-mode.md) to distribute executions among multiple workers.
 
-[PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external link}
+[PR #6196](https://github.com/n8n-io/n8n/pull/6196)
 
 ## Breaking changes
 
@@ -69,48 +69,48 @@ We've removed the Debian and RHEL images. If you were using these you need to ch
 
 The entrypoint for the container has changed and you no longer need to specify the n8n command. If you were previously running `n8n worker --concurrency=5` it's now `worker --concurrency=5`
 
-[PR #6365](https://github.com/n8n-io/n8n/pull/6365){:target=_blank .external link}
+[PR #6365](https://github.com/n8n-io/n8n/pull/6365)
 
 ### Workflow failures due to expression errors
 
 Workflow executions may fail due to syntax or runtime errors in expressions, such as those that reference non-existent nodes. While expressions already throw errors on the frontend, this change ensures that n8n also throws errors on the backend, where they were previously silently ignored. To receive notifications of failing workflows, n8n recommends setting up an "error workflow" under workflow settings.
 
-[PR #6352](https://github.com/n8n-io/n8n/pull/6352){:target=_blank .external link}
+[PR #6352](https://github.com/n8n-io/n8n/pull/6352)
 
 ### Mandatory owner account
 
-This change makes [User Management](/user-management/index.md) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](https://n8n.cloud/){:target=_blank .external link} or custom plans still varies depending on your subscription.
+This change makes [User Management](/user-management/index.md) mandatory and removes support for other authentication methods, such as BasicAuth and External JWT. Note that the number of permitted users on [n8n.cloud](https://n8n.cloud/) or custom plans still varies depending on your subscription.
 
-[PR #6362](https://github.com/n8n-io/n8n/pull/6362){:target=_blank .external link}
+[PR #6362](https://github.com/n8n-io/n8n/pull/6362)
 
 ### Directory for installing custom nodes
 
 n8n will no longer load custom nodes from its global `node_modules` directory. Instead, you must install (or link) them to `~/.n8n/custom` (or a directory defined by `N8N_CUSTOM_EXTENSIONS`). Custom nodes that are npm packages will be located in `~/.n8n/nodes`.
 If you have custom nodes that were linked using `npm link` into the global `node_modules` directory, you need to link them again, into `~/.n8n/nodes` instead.
 
-[PR #6396](https://github.com/n8n-io/n8n/pull/6396){:target=_blank .external link}
+[PR #6396](https://github.com/n8n-io/n8n/pull/6396)
 
 ### WebSockets
 
 The `N8N_PUSH_BACKEND` environment variable can be used to configure one of two available methods for pushing updates to the user interface: `sse` and `websocket`. Starting with n8n 1.0, `websocket` is the default method.
 
-[PR #6196](https://github.com/n8n-io/n8n/pull/6196){:target=_blank .external link}
+[PR #6196](https://github.com/n8n-io/n8n/pull/6196)
 
 ### Date transformation functions
 
 n8n provides various transformation functions that operate on dates. These functions may return either a JavaScript `Date` or a Luxon `DateTime` object. With the new behavior, the return type always matches the input. If you call a date transformation function on a `Date`, it returns a `Date`. Similarly, if you call it on a `DateTime` object, it returns a `DateTime` object.
 
-To identify any workflows and nodes that might be impacted by this change, you can use this [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/){:target=_blank .external link}.
+To identify any workflows and nodes that might be impacted by this change, you can use this [utility workflow](https://n8n.io/workflows/1929-v1-helper-find-params-with-affected-expressions/).
 
 For more information about date transformation functions, please refer to the [official documentation](/code/builtin/data-transformation-functions/dates.md).
 
-[PR #6435](https://github.com/n8n-io/n8n/pull/6435){:target=_blank .external link}
+[PR #6435](https://github.com/n8n-io/n8n/pull/6435)
 
 ### Execution data retention
 
 Starting from n8n 1.0, all successful, failed, and manual workflow executions will be saved by default. These settings can be modified for each workflow under "Workflow Settings," or globally using the respective environment variables. Additionally, the `EXECUTIONS_DATA_PRUNE` setting will be enabled by default, with `EXECUTIONS_DATA_PRUNE_MAX_COUNT` set to 10,000. These default settings are designed to prevent performance degradation when using SQLite. Make sure to configure them according to your individual requirements and system capacity.
 
-[PR #6577](https://github.com/n8n-io/n8n/pull/6577){:target=_blank .external link}
+[PR #6577](https://github.com/n8n-io/n8n/pull/6577)
 
 ### Removed N8N_USE_DEPRECATED_REQUEST_LIB
 
@@ -118,13 +118,13 @@ The legacy `request` library has been deprecated for some time now. As of n8n 1.
 
 If you build custom nodes, refer to [HTTP request helpers](/integrations/creating-nodes/build/reference/http-helpers.md) for more information on migrating to the new interface.
 
-[PR #6413](https://github.com/n8n-io/n8n/pull/6413){:target=_blank .external link}
+[PR #6413](https://github.com/n8n-io/n8n/pull/6413)
 
 ### Removed WEBHOOK_TUNNEL_URL
 
 As of version 0.227.0, n8n has renamed the `WEBHOOK_TUNNEL_URL` configuration option to `WEBHOOK_URL`. In n8n 1.0, `WEBHOOK_TUNNEL_URL` has been removed. Update your setup to reflect the new name. For more information about this configuration option, refer to [the docs](/hosting/configuration/configuration-examples/webhook-url.md).
 
-[PR #1408](https://github.com/n8n-io/n8n/pull/1408){:target=_blank .external link}
+[PR #1408](https://github.com/n8n-io/n8n/pull/1408)
 
 ### Remove Node 16 support
 
@@ -142,7 +142,7 @@ n8n now requires Node 18.17.0 or above.
 
 ## Reporting issues
 
-If you encounter any issues during the process of updating to n8n 1.0, please seek help in the community [forum](https://community.n8n.io/){:target=_blank .external link}.
+If you encounter any issues during the process of updating to n8n 1.0, please seek help in the community [forum](https://community.n8n.io/).
 
 ## Thank you
 

@@ -126,6 +126,7 @@ exclude = [
   '^https://(console|admin)\.mistral\.ai/.*',  # Redirect loop that ends up at login page
   '^https://workable\.com/backend/settings/integrations',  # Redirect loop that ends up at login page
   '^https://www\.trellix\.com/products/epo/',  # timeouts
+  '^https://admin\.google\.com/',  # Too many redirects
   ]
 
 # Exclude these filesystem paths from getting checked.

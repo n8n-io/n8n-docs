@@ -15,7 +15,7 @@ Using service accounts is more complex than OAuth2. Before you begin:
 
 ## Prerequisites
 
-* Create a [Google Cloud](https://cloud.google.com/){:targe=_blank .external-link} account.
+* Create a [Google Cloud](https://cloud.google.com/) account.
 
 ## Set up Service Account
 
@@ -47,14 +47,14 @@ With your project created, enable the APIs you'll need access to:
 	<figcaption>Check the project dropdown in the Google Cloud top navigation</figcaption>
 	</figure>
 
-1. Select the hamburger menu **> APIs & Services > Credentials**. Google takes you to your **Credentials** page.
-2. Select **+ CREATE CREDENTIALS > Service account**.
+1. Open the left navigation menu and go to **APIs & Services > Credentials**. Google takes you to your **Credentials** page.
+2. Select **+ Create credentials > Service account**.
 3. Enter a name in **Service account name** and an ID in **Service account ID**. Refer to [Creating a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating) for more information.
-4. Select **CREATE AND CONTINUE**.
+4. Select **Create and continue**.
 5. Based on your use-case, you may want to **Select a role** and **Grant users access to this service account**  using the corresponding sections.
-6. Select **DONE**.
-7. Select your newly created service account under the **Service Accounts** section. Open the **KEYS** tab.
-8. Select **ADD KEY > Create new key**.
+6. Select **Done**.
+7. Select your newly created service account under the **Service Accounts** section. Open the **Keys** tab.
+8. Select **Add key > Create new key**.
 9. In the modal that appears, select **JSON**, then select **CREATE**. Google saves the file to your computer.
 
 ### Finish your n8n credential

@@ -35,14 +35,176 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.106.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.0...n8n@1.106.1) for this version.<br />
+**Release date:** 2025-08-07
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.105.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.3...n8n@1.105.4) for this version.<br />
+**Release date:** 2025-08-07
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.105.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.2...n8n@1.105.3) for this version.<br />
+**Release date:** 2025-08-05
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.106.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.0...n8n@1.106.0) for this version.<br />
+**Release date:** 2025-08-04
+
+
+
+
+
+This release contains performance improvements, core updates, editor improvements, node updates, a new node, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+### **No more limit of active workflows and new self-hosted Business Plan**
+
+We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.
+<br><br>
+_**What’s new**_
+<br><br>
+**No more limit of active workflows.**
+
+All n8n plans, from Starter to Enterprise, now include unlimited users, workflows, and steps. Our pricing is based on the volume of executions. Meaning you can build and test as many workflows as you want, including complex, data-heavy, or long-running automations, without worrying about quotas. 
+<br><br>
+**New self-hosted Business Plan for growing teams**
+
+Designed for SMBs and mid-sized companies, the Business Plan includes features such as: 
+
+- 6 shared projects
+- SSO, SAML and LDAP
+- Different environments
+- Global variables
+- Version control using Git
+- 30 days of Insights
+
+Please note that this plan only includes support from our community forum. For dedicated support we recommend upgrading to our Enterprise plan.
+<br><br>
+
+**Enterprise pricing now scales with executions**
+
+Enterprise plans no longer use workflow-based pricing, and is now also based on the volume of executions. 
+<br><br>
+**_What you need to do_**
+
+To ensure these changes apply to your account, update your n8n instance to the latest version.
+<br><br>
+
+[Read the blog](https://blog.n8n.io/build-without-limits-everything-you-need-to-know-about-n8ns-new-pricing/) for full details.
+<br><br>
+</div> 
+
+### Contributors
+
+[baruchiro](https://github.com/baruchiro)  
+[killthekitten](https://github.com/killthekitten)  
+[baileympearson](https://github.com/baileympearson)  
+[Yingrjimsch](https://github.com/Yingrjimsch)  
+[joshualipman123](https://github.com/joshualipman123)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.105.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.1...n8n@1.105.2) for this version.<br />
+**Release date:** 2025-08-01
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.105.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.0...n8n@1.105.1) for this version.<br />
+**Release date:** 2025-08-01
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.104.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.1...n8n@1.104.2) for this version.<br />
+**Release date:** 2025-07-31
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.105.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.105.0) for this version.<br />
+**Release date:** 2025-07-28
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### **Respond to Chat node**
+
+With the [**Respond to Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md) node**, you can now access Human-in-the-Loop functionality natively in n8n Chat.
+
+Enable conversational experiences where you can ask for clarification, request approval before taking further action, and get back intermediate results — all within a single workflow execution.
+
+This unlocks multi-turn interactions that feel more natural and reduce the number of executions required. It is ideal for building interactive AI use cases like conversational forms, branched workflows based on user replies, and step-by-step approvals. 
+
+🛠️ **How to:** 
+
+- Add a **Chat Trigger** node and select **Using Respond Nodes** for the **Response mode**
+- Place the **Respond to Chat** node anywhere in your workflow to send a message into the Chat and optionally wait for the user to input a response before continuing execution of the workflow steps.
+
+<br>
+<video src="/_video/release-notes/Respond-to-chat.webm" controls width="100%"></video>
+<br>
+
+
+### Contributors
+
+[dana-gill](https://github.com/dana-gill)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 ## n8n@1.104.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.104.1) for this version.<br />
 **Release date:** 2025-07-23
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12){:target=_blank .external-link}.
-///
+
 
 This release contains bug fixes.
 
@@ -55,9 +217,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.1...n8n@1.103.2) for this version.<br />
 **Release date:** 2025-07-22
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 
@@ -73,9 +233,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.104
 **Release date:** 2025-07-21
 
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 =======
 
 
@@ -151,6 +309,44 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.0...n8n@1.103
 
 This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
 
+### **Chat streaming**
+
+No more waiting for full responses to load when using the n8n chat interface. **Streaming** now delivers AI-generated text replies word by word so users can read messages as they’re being generated. It feels faster, smoother, and more like what people expect from chat experiences.
+
+Streaming is available in public chat views (hosted or embedded) and can be used in custom apps via webhook.
+
+🛠️ How-to
+
+Configure streaming in the Node Details View of these nodes:
+
+- Chat Trigger node: Options>Add Field>Response Mode>Streaming
+- Webhook node: Respond>Streaming
+- AI Agent node: Add option> Enable streaming
+
+<br>
+<video src="/_video/release-notes/streaming.webm" controls width="100%"></video>
+<br>
+
+
+### Improved instance user list with more visibility
+
+The instance user list has been updated with a new table layout and additional details to help admins manage access more easily.
+
+You can now:
+
+- See total users and filter by name or email
+- View which projects each user has access to
+- Whether a user has enabled 2FA and sort based on that
+- See the last active date for each user
+
+This makes it easier to audit user activity, identify inactive accounts, and understand how access is distributed across your instance.
+<br> 
+<figure markdown="span">
+    ![Improved instance user list with more visbility screenshot](/_images/release-notes/instance_user_list.png)
+</figure>
+<br>
+
+
 ### Webhook HTML responses
 
 Starting with this release, if your workflow sends an HTML response to a webhook, n8n automatically wraps the content in an `<iframe>`. This is a security mechanism to protect the instance users.
@@ -176,7 +372,7 @@ You can still define your own custom metrics, but for common use cases, the buil
 
 🛠️ **How to:** 
 
-1. Set up your evaluation as described [here](https://docs.n8n.io/advanced-ai/evaluations/metric-based-evaluations/#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
+1. Set up your evaluation as described [here](/advanced-ai/evaluations/metric-based-evaluations.md#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
 2. In the **Set Metrics** node, choose a metric from the dropdown list.
 3. Define any additional parameters required for your selected metric. In most cases, this includes mapping the dataset columns to the appropriate fields.
 
@@ -207,7 +403,7 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 
 With the **AI Agent Tool** node we are introducing a simplified pattern for multi-agent orchestration that can be run in a single execution and stay entirely on one canvas. You can now connect multiple **AI Agent Tool** nodes to a primary **AI Agent** node, allowing it to supervise and delegate work across other specialized agents. 
 
-This setup is especially useful for building complex systems that function like real-world teams, where a lead agent assigns parts of a task to specialists. It also helps with prompt management by letting you split long, complex instructions into smaller, focused tasks across multiple agents. While similar orchestration was already possible using sub-workflows, AI Agent Tool nodes are a good choice when you want the interaction to happen within a single execution or prefer to manage and debug everything from a single canvas.
+This setup is especially useful for building complex systems that function like real-world teams, where a lead agent assigns parts of a task to specialists. You can even add multiple layers of agents directing other agents, just like you would have in a real multi-tiered organizational structure.  It also helps with prompt management by letting you split long, complex instructions into smaller, focused tasks across multiple agents. While similar orchestration was already possible using sub-workflows, AI Agent Tool nodes are a good choice when you want the interaction to happen within a single execution or prefer to manage and debug everything from a single canvas.
 
 🛠️ **How to:**
 
@@ -697,7 +893,7 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics). 
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-add-metrics-to-workflow). 
     
 <br>
 
@@ -720,7 +916,7 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 - Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
 - AI Evaluations are not enabled for instances in scaling mode at this time. <br>
 
-You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
+You can find details, tips, and common troubleshooting info [here](/advanced-ai/evaluations/tips-and-common-issues.md). <br><br>
 
  👉 Learn more about the AI evaluation strategies and practical implementation techniques. [Watch now](https://www.youtube.com/live/QkciQpotQBQ?feature=shared).
 
@@ -2666,7 +2862,7 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables.md#endpoints).
+You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables.md#endpoints).
 
 </div>
 
@@ -4934,7 +5130,7 @@ This release contains new features, performance improvements, and bug fixes.
 
 #### Tournament
 
-This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament){:target=_blank .external-linmk}. You can now use arrow functions in expressions.<br />
+This releases replaces RiotTmpl, the templating language used in expressions, with n8n's own templating language, [Tournament](https://github.com/n8n-io/tournament). You can now use arrow functions in expressions.<br />
 
 </div>
 
@@ -5350,7 +5546,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide){:target=_blank .external link}. Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 

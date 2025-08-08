@@ -5,6 +5,7 @@ description: Access n8n Docs for comprehensive guides on workflow automation and
 contentType: overview
 hide:
   - path
+  - feedback
 ---
 
 # Welcome to n8n Docs

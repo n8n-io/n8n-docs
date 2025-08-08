@@ -136,7 +136,7 @@ Configure this operation with this parameter:
 	* `connections`
 	* `settings`
 
-Refer to the [n8n API | Create a workflow documentation](/api/api-reference.md/#tag/Workflow/paths/~1workflows/post) for more information.
+Refer to [n8n API reference](/api/api-reference.md) for more information.
 
 ## Get many workflows
 
@@ -166,6 +166,7 @@ Configure this operation with these parameters:
 	* `connections`
 	* `settings`
 
+<!-- Using absolute link here to avoid link checking false positives over the generated anchor link -->
 Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
 
 ## Templates and examples

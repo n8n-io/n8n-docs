@@ -62,6 +62,7 @@ nav:
         - Templates: workflows/templates.md
         - Sharing: workflows/sharing.md
         - Settings: workflows/settings.md
+        - Streaming responses: workflows/streaming.md
         - Workflow history: workflows/history.md
         - Workflow ID: workflows/workflow-id.md
         - Sub-workflow conversion: workflows/subworkflow-conversion.md

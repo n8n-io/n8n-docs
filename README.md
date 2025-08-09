@@ -11,13 +11,13 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 * Python 3.8 or above
 * Pip
-* n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 * Follow the [recommended configuration and auto-complete](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) guidance for the theme. This will help when working with the `mkdocs.yml` file.
 * The repo includes a `.editorconfig` file. Make sure your local editor settings **do not override** these settings. In particular:
 	- Don't allow your editor to replace tabs with spaces. This can affect our code samples (which must retain tabs for people building nodes).
 	- One tab must be equivalent to four spaces.
+* n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 
-### Steps
+### Procedure
 
 #### For members of the n8n GitHub organization:
 
@@ -27,8 +27,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	```bash
 	git clone --recurse-submodules git@github.com:n8n-io/n8n-docs.git
 	cd n8n-docs
- 	# Set up virtual environment if using one (steps depend on your system)
- 	# Install dependencies
+ 	# In the activated virtual env, install dependencies
 	pip install -r requirements.txt
 	pip install _submodules/insiders
 	```
@@ -42,6 +41,7 @@ Fork the repository, then:
 ```
 git clone https://github.com/<your-username>/n8n-docs.git
 cd n8n-docs
+# In the activated virtual env, install dependencies
 pip install -r requirements.txt
 pip install mkdocs-material
 ```
@@ -51,6 +51,29 @@ pip install mkdocs-material
 ```
 mkdocs serve --strict
 ```
+
+**Note for external contributors**: You may receive an error like the following:
+	
+```plaintext
+ERROR   -  Config value 'markdown_extensions': Failed to load extension 'material.extensions.preview'.
+           ModuleNotFoundError: No module named 'material.extensions.preview'
+
+Aborted with a configuration error!
+```
+This is because the `material.extensions.preview` is managed by internal n8n contributors. If you receive such an error, go to the `mkdocs.yml` file and **temporarely** comment the following section of the file:
+```yaml
+- material.extensions.preview:
+      configurations:
+        - sources:
+            include:
+              - release-notes.md
+        - targets:
+            include:
+              - glossary.md
+```
+After that, you should be able to display and use locally the preview of the documentation. 
+
+Before committing any changes,please, remember to **uncomment this section** of the `mkdocs.yml` file.
 
 ## Contributing
 

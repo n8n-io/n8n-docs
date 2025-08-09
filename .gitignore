@@ -18,6 +18,5 @@ __pycache__/
 .python-version
 
 ## Ignore ephemeral doc-tool output
-
 output.csv
 _doctools/*.csv

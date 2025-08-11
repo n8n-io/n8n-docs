@@ -53,21 +53,10 @@
   </label>
 
   <!-- n8n CUSTOM: don't show repo link -->
-  <!-- Repository information -->
-
+  
 
   <!-- Navigation list -->
   <ul class="md-nav__list" data-md-scrollfix>
-    <!-- n8n CUSTOM: replace search with Kapa -->
-    <button
-        class="n8n-kapa-button"
-        onclick="window.Kapa.open({ 
-        mode: 'ai'
-        })" 
-        type="button"
-    >
-        <span class="md-search__icon md-icon">{% set icon = "material/magnify" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Search with AI</span>
-    </button>
     {% for nav_item in nav %}
       {% set path = "__nav_" ~ loop.index %}
       {{ item.render(nav_item, path, 1) }}

@@ -6,13 +6,13 @@ contentType: howto
 
 # Get help with n8n
 
-## Where to get help?
+## Where to get help
 
-n8n provide few different support options depending on the type of help you need:
+n8n provides different support options depending on your plan and the nature of your problem.
 
 ### n8n community forum
 
-n8n provides free community support for all n8n users through our [forum](https://community.n8n.io/).
+n8n provides free community support for all n8n users through the [forum](https://community.n8n.io/).
 
 This is the best source for answers of all kinds, as both the n8n support team and community members can help.
 
@@ -40,10 +40,10 @@ To collect basic information about your n8n instance:
 
 ### Details about your problem
 
-To help resolve your issues more efficiently, here are a few things you can include to provide more context:
+To help resolve your issues more efficiently, here are some things you can include to provide more context:
 
-* :video_camera: **Screenshots or video recordings**: A quick Loom or screen recording can clearly show what's happening.
-* :books: **Relevant documentation**: If you've followed any guides or documentation, let us know which ones.
+* :video_camera: **Screenshots or video recordings**: A quick Loom or screen recording that shows what's happening.
+* :books: **Relevant documentation**: If you've followed any guides or documentation, include links to them in your message.
 * :cloud: **n8n Cloud workspace (if possible)**: If contacting support, provide the workspace URL for your n8n Cloud instance. It looks something like `https://xxxxx.n8n.app.cloud`.
 * :memo: **Steps to reproduce the issue**: A simple step-by-step outline of what you did before encountering the issue.
 * :open_file_folder: **Workflow or Configuration files**: Sharing relevant workflows or configuration files can be a huge help.

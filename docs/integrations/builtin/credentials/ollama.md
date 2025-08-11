@@ -21,7 +21,6 @@ Create and run an [Ollama](https://ollama.com/) instance with one user. Refer to
 ## Supported authentication methods
 
 - Instance URL
-- Instance URL + API Key
 
 ## Related resources
 
@@ -33,23 +32,14 @@ Refer to [Ollama's API documentation](https://github.com/ollama/ollama/blob/main
 
 To configure this credential, you'll need:
 
-- The **Base URL** of your Ollama instance.
+- The **Base URL** of your Ollama instance or remote authenticated Ollama instances.
+- (Optional) The **API Key** for Bearer token authentication if connecting to a remote, authenticated proxy.
 
 The default **Base URL** is `http://localhost:11434`, but if you've set the `OLLAMA_HOST` environment variable, enter that value. If you have issues connecting to a local n8n server, try `127.0.0.1` instead of `localhost`.
 
+If you're connecting to Ollama through authenticated proxy services (such as [Open WebUI](https://docs.openwebui.com/getting-started/api-endpoints/#-ollama-api-proxy-support)) you must include an API key. If you don't need authentication, leave this field empty. When provided, the API key is sent as a Bearer token in the `Authorization` header of the request to the Ollama API.
+
 Refer to [How do I configure Ollama server?](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-configure-ollama-server) for more information.
-
-## Using instance URL + API Key
-To configure this credential for remote authenticated Ollama instances, you'll need:
-
-- The **Base URL** of the authenticated proxy service
-- An **API Key** for Bearer token authentication
-
-This method is used when connecting to Ollama through authenticated proxy services (such as [OpenWebUI](https://docs.openwebui.com/getting-started/api-endpoints/#-ollama-api-proxy-support)) that require API key authentication.
-
-The **API Key** is optional and only needed if your Ollama instance requires authentication. If you don't need authentication, you can leave this field empty.
-
-When provided, the API key is sent as a Bearer token in the `Authorization` header of the request to the Ollama API.
 
 ### Ollama and self-hosted n8n
 

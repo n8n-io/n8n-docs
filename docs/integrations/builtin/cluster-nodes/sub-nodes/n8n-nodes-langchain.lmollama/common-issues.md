@@ -19,7 +19,8 @@ Most nodes, including [root nodes](/glossary.md#root-node-n8n), take any number 
 In sub-nodes, the expression always resolves to the first item. For example, given an input of five name values, the expression `{{ $json.name }}` always resolves to the first name.
 
 ## Can't connect to a remote Ollama instance
-The Ollama Model node supports Bearer token authentication for connecting to remote Ollama instances behind authenticated proxies (such as OpenWebUI).
+
+The Ollama Model node supports Bearer token authentication for connecting to remote Ollama instances behind authenticated proxies (such as Open WebUI).
 
 For remote authenticated connections, configure both the remote URL and API key in your Ollama credentials. 
 

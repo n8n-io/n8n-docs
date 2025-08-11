@@ -15,8 +15,8 @@ You can also use n8n in Docker with [Docker Compose](/hosting/installation/serve
 
 Before proceeding, install Docker:
 
-* [Docker Desktop](https://docs.docker.com/get-docker/) is available for Mac and Windows.
-* [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) are available as separate packages for Linux.
+* [Docker Desktop](https://docs.docker.com/get-docker/) is available for Mac, Windows, and Linux. Docker Desktop includes the Docker Engine and Docker Compose.
+* [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) are also available as separate packages for Linux. Use this for Linux machines without a graphical environment or when you don't want the Docker Desktop UI.
 
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 

@@ -87,9 +87,8 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 The following video demonstrates the steps described above:
 
-
 <div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/gZ6N2H3_vys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/FBGtpWMTppw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Scopes

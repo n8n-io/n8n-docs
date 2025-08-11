@@ -19,7 +19,7 @@ You can find Docker Compose configurations for various architectures in the [n8n
 The way that you install Docker and Docker Compose depends on your Linux distribution. You can find specific instructions for each component in the links below:
 
 * [Docker Engine](https://docs.docker.com/engine/install/)
-* [Docker Compose](https://docs.docker.com/compose/install/)
+* [Docker Compose](https://docs.docker.com/compose/install/linux/)
 
 After following the installation instructions, verify that Docker and Docker Compose are available by typing:
 

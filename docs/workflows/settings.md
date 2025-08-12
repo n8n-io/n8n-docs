@@ -45,7 +45,7 @@ Sets the timezone for this workflow. The timezone setting is important for the S
 You can set your n8n instance's timezone to configure the default timezone workflows use:
 
 * [Set a n8n Cloud instance timezone](/manage-cloud/set-cloud-timezone.md)
-* [Configure the timezone for self-hosted instances](/hosting/configuration/environment-variables.md#timezone-and-localization)
+* [Configure the timezone for self-hosted instances](/hosting/configuration/environment-variables/timezone-localization.md)
 
 If you don't configure the workflow or instance timezone, n8n defaults to the EDT (New York) timezone.
 

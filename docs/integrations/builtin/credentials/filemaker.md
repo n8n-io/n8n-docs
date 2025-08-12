@@ -6,6 +6,7 @@ contentType: [integration, reference]
 priority: medium
 ---
 
+<!-- vale Vale.Spelling["fmrest"] = NO -->
 # FileMaker credentials
 
 You can use these credentials to authenticate the following nodes:

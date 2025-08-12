@@ -5,6 +5,7 @@ description: Use an external secrets vault with n8n.
 contentType: howto
 ---
 
+<!-- vale Vale.Spelling["Userpass"] = NO -->
 # External secrets
 
 /// info | Feature availability

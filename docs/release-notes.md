@@ -1011,7 +1011,7 @@ Learn more about this update and find out which nodes are already installable fr
 
  💻 **Use a verified node**
 
-Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables/nodes.md). In both cases, verified nodes are enabled by default.
+Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables.md#nodes). In both cases, verified nodes are enabled by default.
 
 - Open the **Nodes panel** from the editor
 - Search for the Node. Verified nodes are indicated by a shield 🛡️
@@ -1344,7 +1344,7 @@ Need to reorganize? Just select a workflow or folder and drag it into another fo
 <video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
 <br>
 
-📁 Folders are available to all [registered](/hosting/community-edition-features.md#registered-community-edition) users—jump in and get your workspace in order!
+📁 Folders are available to all [registered](/choose-n8n.md#registered-community-edition-license) users—jump in and get your workspace in order!
 
 ### Contributors
 
@@ -1633,7 +1633,7 @@ Create and manage folders within your personal space or within projects. You can
 </figure>
 <br>
 
-Folders are available for all [registered](/hosting/community-edition-features.md#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+Folders are available for all [registered](/choose-n8n.md#registered-community-edition-license) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
 
 ### Enhancements to Form Trigger Node
 
@@ -2396,7 +2396,7 @@ The Task runner comes in two modes:
 - Internal mode (default): Perfect for getting started, automatically managing task runners as child processes  
 - External mode: For advanced hosting scenarios requiring maximum isolation and security
 
-Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables/task-runners.md). Once stable, it will become the default execution method for Code nodes.
+Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables.md#task-runners). Once stable, it will become the default execution method for Code nodes.
 
 To start using Task runners today, [check out the docs](/hosting/configuration/task-runners.md).
 
@@ -2911,11 +2911,11 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
+You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables.md#endpoints).
 
 </div>
 
-You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints.md) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables.md#endpoints) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates
 Enhanced nodes:
@@ -3169,7 +3169,7 @@ We now also prevent npm downloading community packages from a compromised npm re
 
 #### New node: AI Transform
 
-This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview.md).
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/index.md).
 
 </div>
 
@@ -3217,7 +3217,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0
 This release contains new features, node enhancements, bug fixes and updates to our API.
 
 ### API update
-Our [public REST API](/api/index.md) now supports additional operations:
+Our [public REST API](/api/overview.md) now supports additional operations:
 
 - Create, delete, and edit roles for users
 - Create, read, update and delete projects
@@ -3292,7 +3292,7 @@ Enhanced nodes:
 - [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md)
 
 ### API update
-Our [public REST API](/api/index.md) now supports additional operations:
+Our [public REST API](/api/overview.md) now supports additional operations:
 
 - Create, read, and delete for variables
 - Filtering workflows by project
@@ -3819,7 +3819,7 @@ You can now ask AI to help create API requests in the HTTP Request node:
 1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
 1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
-Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/index.md)
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables.md)
 
 </div>
 
@@ -4352,7 +4352,7 @@ This release includes a new version of the [OpenAI node](/integrations/builtin/a
 Other highlights:
 
 * Support for AI events in [log streaming](/log-streaming.md).
-* Added support for workflow tags in the [public API](/api/index.md).
+* Added support for workflow tags in the [public API](/api/overview.md).
 
 ### Contributors
 
@@ -5165,7 +5165,7 @@ Read more:
 
 * This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
-* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
+* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/ai-nodes.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
 
 ## n8n@1.9.0
 
@@ -5595,7 +5595,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 

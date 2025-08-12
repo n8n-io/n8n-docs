@@ -40,17 +40,17 @@ And nodes for performing common tasks:
 
 You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md).
 
-To split or concatenate binary data items, use the [data transformation nodes](/data/index.md#data-transformation-nodes).
+To split or concatenate binary data items, use the [data transformation nodes](/data/overview.md#data-transformation-nodes).
 
 ### Code
 
-You can use the [Code node](/code/code-node.md) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer.md): get the binary data available in your workflow.
+You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer.md): get the binary data available in your workflow.
 
 
 ## Configure binary data mode when self-hosting
 
-You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables/binary-data.md). This includes tasks such as setting the storage path and choosing how to store binary data.
+You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables.md#binary-data). This includes tasks such as setting the storage path and choosing how to store binary data.
 
 Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data.md).
 
-Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables/nodes.md) for more information.
+Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables.md#nodes) for more information.

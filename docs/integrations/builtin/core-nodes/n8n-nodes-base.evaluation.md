@@ -51,7 +51,7 @@ For each metric you wish to record, you set the following details:
 
 ### Check If Evaluating
 
-The **Check If Evaluating** operation does not have any parameters. This operation provides branching output connectors so that you can conditionally execute logic depending on whether the current execution is an evaluation or not.
+The **Check If Evaluating** operation doesn't have any parameters. This operation provides branching output connectors so that you can conditionally execute logic depending on whether the current execution is an evaluation or not.
 
 ## Templates and examples
 

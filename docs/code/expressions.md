@@ -21,7 +21,7 @@ n8n additionally supports two libraries:
 - [JMESPath](https://jmespath.org/), for querying JSON.
 
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/overview.md) for more information on working with data in your workflows.
 ///
 
 ## Writing expressions
@@ -75,7 +75,6 @@ This expression:
 ### Example: Writing longer JavaScript
 
 You can do things like variable assignments or multiple statements in an expression, but you need to wrap your code using the syntax for an IIFE (Immediately Invoked Function Expression).
-
 
 The following code use the Luxon date and time library to find the time between two dates in months. We surround the code in both the handlebar brackets for an expression and the IIFE syntax.
 

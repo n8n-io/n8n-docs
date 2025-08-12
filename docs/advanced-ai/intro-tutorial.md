@@ -16,7 +16,7 @@ Many people find it easier to take in new information in video format. This tuto
 
 ### What you will need
 
-- **n8n**: For this tutorial we recommend using the [n8n cloud](/manage-cloud/overview.md) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker.md).
+- **n8n**: For this tutorial we recommend using the [n8n cloud](/manage-cloud/index.md) service - there is a free trial for new users! For a self hosted service, refer to the [installation pages](/hosting/installation/docker.md).
 - **Credentials for a chat model**: This tutorial uses OpenAI, but you can easily use DeepSeek, Google Gemini, Groq, Azure, and others (see the [sub-nodes documentation](/integrations/builtin/cluster-nodes/sub-nodes/index.md) for more).
 
 ### What you will learn
@@ -49,7 +49,7 @@ In n8n, the AI agent is represented as a node with some extra connections.
 | Scope               | Generates language         | Performs complex, real-world tasks |
 | Example             | LLM generating a paragraph | An agent scheduling an appointment |
 
-By incorporating the AI agent as a node, n8n can combine AI-driven steps with traditional programming for efficient, real-world workflows. For instance, simpler tasks, like validating an email address, do not require AI, whereas a complex tasks, like processing the _content_ of an email or dealing with multimodal inputs (e.g., images, audio), are excellent uses of an AI agent.
+By incorporating the AI agent as a node, n8n can combine AI-driven steps with traditional programming for efficient, real-world workflows. For instance, simpler tasks, like validating an email address, don't require AI, whereas a complex tasks, like processing the _content_ of an email or dealing with multimodal inputs (for example images, audio), are excellent uses of an AI agent.
 
 ## 1. Create a new workflow
 
@@ -97,7 +97,7 @@ AI agents require a chat model to be attached to process the incoming prompts.
 1. Selecting the **OpenAI Chat model** from the list will attach it to the **AI Agent** node and open the node editor. One of the parameters which can be changed is the 'Model'. Note that for the basic OpenAI accounts, only the 'gpt-4o-mini' model is allowed.
 
 ??? explanation "Which chat model?"
-    As mentioned earlier, the LLM is the component which generates the text according to a prompt it is given. LLMs have to be created and trained, usually an intensive process. Different LLMS may have different capabilities or specialties, depending on the data they were trained with.
+    As mentioned earlier, the LLM is the component which generates the text according to a prompt it's given. LLMs have to be created and trained, usually an intensive process. Different LLMS may have different capabilities or specialties, depending on the data they were trained with.
 
 ## 5. Add credentials (if needed)
 
@@ -128,7 +128,7 @@ Now that the node is connected to the **Chat Trigger** and a chat model, we can 
 
 ??? explanation "Accessing the logs..."
     You can access the logs for the AI node even when you aren't using the chat interface. Open up the **AI Agent** node and click on the **Logs** tab in the right hand panel.
-	![screenshot showing the Logs tab in the AIAgent](/_images/advanced-ai/ai-intro-logs.png)
+	![screenshot showing the Logs tab in the AI Agent](/_images/advanced-ai/ai-intro-logs.png)
 
 ## 7. Changing the prompt
 
@@ -147,7 +147,7 @@ The chat model is now giving us useful output, but there is something wrong with
 
 1. Use the chat and tell the chat model your name, for example "Hi there, my name is Nick".
 
-1. Wait for the response, then type the message "What's my name?". The AI will not be able to tell you, however apologetic it may seem. The reason for this is we are not saving the context. The AI Agent has no [memory](/glossary.md#ai-memory).
+1. Wait for the response, then type the message "What's my name?". The AI won't be able to tell you, however apologetic it may seem. The reason for this is we aren't saving the context. The AI Agent has no [memory](/glossary.md#ai-memory).
    ![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
 
 1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
@@ -164,7 +164,7 @@ Before we leave the workflow editor, remember to save the workflow or all your c
 
 ## Congratulations!
 
-You have taken your first steps in building useful and effective workflows with AI. In this tutorial we have investigated the basic building blocks of an AI workflow, added an **AI Agent** and a chat model, and adjusted the prompt to get the kind of output we wanted. We also added memory so the chat could retain context between messages.
+You've taken your first steps in building useful and effective workflows with AI. In this tutorial we've investigated the basic building blocks of an AI workflow, added an **AI Agent** and a chat model, and adjusted the prompt to get the kind of output we wanted. We also added memory so the chat could retain context between messages.
 
 [[ workflowDemo("file:////advanced-ai/tutorials/chat_complete.json") ]]
 

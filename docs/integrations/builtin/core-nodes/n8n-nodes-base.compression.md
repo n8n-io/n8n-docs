@@ -8,7 +8,9 @@ priority: medium
 
 # Compression
 
+<!-- vale off -->
 Use the Compression node to compress and decompress files. Supports Zip and Gzip formats.
+<!-- vale on -->
 
 ## Node parameters
 

@@ -20,9 +20,11 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 ## Can't connect to a remote Ollama instance
 
-The Ollama Model node is only designed to connect to a locally hosted Ollama instance. It doesn't include the authentication features you'd need to connect to a remotely hosted Ollama instance.
+The Ollama Model node supports Bearer token authentication for connecting to remote Ollama instances behind authenticated proxies (such as Open WebUI).
 
-To use the Ollama Model, follow the [Ollama credentials instructions](/integrations/builtin/credentials/ollama.md) to set up Ollama locally and configure the instance URL in n8n.
+For remote authenticated connections, configure both the remote URL and API key in your Ollama credentials. 
+
+Follow the [Ollama credentials instructions](/integrations/builtin/credentials/ollama.md) for more information.
 
 ## Can't connect to a local Ollama instance when using Docker
 
@@ -77,3 +79,9 @@ If Ollama and n8n are running in the same Docker container, the `localhost` addr
 This error occurs when your computer has IPv6 enabled, but Ollama is listening to an IPv4 address.
 
 To fix this, change the base URL in your [Ollama credentials](/integrations/builtin/credentials/ollama.md) to connect to `127.0.0.1`, the IPv4-specific local address, instead of the `localhost` alias that can resolve to either IPv4 or IPv6: `http://127.0.0.1:11434`.
+
+## Ollama and HTTP/HTTPS proxies
+
+Ollama doesn't support custom HTTP agents in its configuration. This makes it difficult to use Ollama behind custom HTTP/HTTPS proxies. Depending on your proxy configuration, it might not work at all, despite setting the `HTTP_PROXY` or `HTTPS_PROXY` environment variables.
+
+Refer to [Ollama's FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-use-ollama-behind-a-proxy) for more information.

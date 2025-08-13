@@ -20,10 +20,23 @@ The simple vector storage described here is different to the AI memory nodes suc
 This node creates a [vector database](/glossary.md#ai-vector-store) in the app memory.
 ///
 
+## Data safety limitations
 
-/// warning | For development use only
-This node stores data in memory only and isn't recommended for production use. All data is lost when n8n restarts and may also be purged in low-memory conditions.
+Before using the Simple Vector Store node, it's important to understand its limitations and how it works.
+
+/// warning
+n8n recommends using Simple Vector store for development use only.
 ///
+
+### Vector store data isn't persistent
+
+This node stores data in memory only. All data is lost when n8n restarts and may also be purged in low-memory conditions.
+
+### All instance users can access vector store data
+
+Memory keys for the Simple Vector Store node are global, not scoped to individual workflows.
+
+This means that all users of the instance can access vector store data by adding a Simple Vector Store node and selecting the memory key, regardless of the access controls set for the original workflow. Take care not to expose sensitive information when ingesting data with the Simple Vector Store node.
 
 ## Node usage patterns
 
@@ -59,7 +72,6 @@ The Simple Vector Store implements memory management to prevent excessive memory
 
 - Automatically cleans up old vector stores when memory pressure increases
 - Removes inactive stores that haven't been accessed for a configurable amount of time
-- Each workflow gets its own isolated storage space identified by the workflow ID and memory key
 
 ### Configuration Options
 
@@ -76,29 +88,33 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
+--8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
+
 <!-- vale from-write-good.Weasel = NO -->
 ### Get Many parameters
 <!-- vale from-write-good.Weasel = YES -->
 
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Memory Key**: Select or create the key containing the vector memory you want to query.
 * **Prompt**: Enter the search query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 
 ### Insert Documents parameters
 
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Memory Key**: Select or create the key you want to store the vector memory as.
 * **Clear Store**: Use this parameter to control whether to wipe the vector store for the given memory key for this workflow before inserting data (turned on).
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Memory Key**: Select or create the key containing the vector memory you want to query.
 
 ### Retrieve Documents (As Tool for AI Agent) parameters
 
 * **Name**: The name of the vector store.
 * **Description**: Explain to the LLM what this tool does. A good, specific description allows LLMs to produce expected results more often.
-* **Memory Key**: Enter the key to use to store the vector memory in the workflow data. n8n prefixes the key with the workflow ID to avoid collisions.
+* **Memory Key**: Select or create the key containing the vector memory you want to query.
 * **Limit**: Enter how many results to retrieve from the vector store. For example, set this to `10` to get the ten best results.
 
 ## Templates and examples
@@ -108,7 +124,7 @@ On n8n Cloud, these values are preset to 100MB (about 8,000 documents, depending
 
 ## Related resources
 
-Refer to [LangChains's Memory Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/memory/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Memory Vector Store documentation](https://js.langchain.com/docs/integrations/vectorstores/memory/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 --8<-- "_glossary/ai-glossary.md"

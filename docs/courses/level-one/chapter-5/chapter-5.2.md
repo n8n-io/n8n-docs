@@ -21,7 +21,7 @@ After this step, your workflow should look like this:
 
 If we're going to insert data into Airtable, we first need to set up a table there. To do this:
 
-1. [Create an Airtable account](https://airtable.com/signup){:target="_blank" .external}.
+1. [Create an Airtable account](https://airtable.com/signup).
 2. In your Airtable workspace add a new base from scratch and name it, for example, *beginner course*.
 
 	<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>
@@ -78,7 +78,7 @@ In the Airtable node window, configure the following parameters:
 
 ## Test the Airtable node
 
-Once you've finished configuring the Airtable node, execute it by selecting **Test step**. This might take a moment to process, but you can follow the progress by viewing the base in Airtable.
+Once you've finished configuring the Airtable node, execute it by selecting **Execute step**. This might take a moment to process, but you can follow the progress by viewing the base in Airtable.
 
 Your results should look like this:
 

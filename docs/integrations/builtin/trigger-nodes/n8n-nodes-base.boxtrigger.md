@@ -7,14 +7,14 @@ contentType: [integration, reference]
 
 # Box Trigger node
 
-[Box](https://www.box.com/){:target=_blank .external-link} is a cloud computing company which provides file sharing, collaborating, and other tools for working with files uploaded to its servers.
+[Box](https://www.box.com/) is a cloud computing company which provides file sharing, collaborating, and other tools for working with files uploaded to its servers.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/box.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Box Trigger integrations](https://n8n.io/integrations/box-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Box Trigger integrations](https://n8n.io/integrations/box-trigger/) page.
 ///
 
 ## Find your Box Target ID

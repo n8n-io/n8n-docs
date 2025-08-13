@@ -113,14 +113,31 @@
       </div>
     {% endif %}
 
-    <!-- Button to open search modal -->
-    {% if "material/search" in config.plugins %}
-      <label class="md-header__button md-icon" for="__search">
-        {% include ".icons/material/magnify.svg" %}
-      </label>
+  	<!-- n8n CUSTOM: Kapa -->
+	<button
+		class="n8n-kapa-button"
+		onclick="window.Kapa.open({ 
+		mode: 'ai'
+		})" 
+		type="button"
+	>
+		<span class="md-search__icon md-icon">{% set icon = "material/creation" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Chat with the docs</span>
+	</button>
 
-      <!-- Search interface -->
-      {% include "partials/search.html" %}
+  <!-- Button to open search modal -->
+    {% if "material/search" in config.plugins %}
+      {% set search = config.plugins["material/search"] | attr("config") %}
+
+      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search">
+          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </label>
+
+        <!-- Search interface -->
+        {% include "partials/search.html" %}
+      {% endif %}
     {% endif %}
 
     <!-- Repository information -->

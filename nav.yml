@@ -52,6 +52,7 @@ nav:
         - Executions:
           - workflows/executions/index.md
           - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
+          - Dirty nodes: workflows/executions/dirty-nodes.md
           - Workflow-level executions: workflows/executions/single-workflow-executions.md
           - All executions: workflows/executions/all-executions.md
           - Custom executions data: workflows/executions/custom-executions-data.md
@@ -63,6 +64,7 @@ nav:
         - Settings: workflows/settings.md
         - Workflow history: workflows/history.md
         - Workflow ID: workflows/workflow-id.md
+        - Sub-workflow conversion: workflows/subworkflow-conversion.md
       - Manage credentials:
         - credentials/index.md
         - Create and edit: credentials/add-edit-credentials.md
@@ -121,6 +123,7 @@ nav:
       - Glossary: glossary.md
     - n8n Cloud:
       - Overview: manage-cloud/overview.md
+      - Cloud free trial: manage-cloud/cloud-free-trial.md
       - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
       - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
       - Set the timezone: manage-cloud/set-cloud-timezone.md
@@ -128,6 +131,7 @@ nav:
       - Cloud data management: manage-cloud/cloud-data-management.md
       - Change ownership or username: manage-cloud/change-ownership-or-username.md
       - Concurrency: manage-cloud/concurrency.md
+      - Download workflows: manage-cloud/download-workflows.md
       - AI Assistant: manage-cloud/ai-assistant.md
     - Enterprise features:
       - Source control and environments:
@@ -189,6 +193,8 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.editimage.md
         - Email Trigger (IMAP): integrations/builtin/core-nodes/n8n-nodes-base.emailimap.md
         - Error Trigger: integrations/builtin/core-nodes/n8n-nodes-base.errortrigger.md
+        - Evaluation: integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md
+        - Evaluation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md
         - Execute Command:
           - Execute Command: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/index.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.executecommand/common-issues.md
@@ -224,6 +230,7 @@ nav:
           - integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/index.md
           - Templates and examples: integrations/builtin/core-nodes/n8n-nodes-base.removeduplicates/templates-and-examples.md
         - integrations/builtin/core-nodes/n8n-nodes-base.renamekeys.md
+        - Respond to Chat: integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md
         - integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook.md
         - integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread.md
         - RSS Feed Trigger: integrations/builtin/core-nodes/n8n-nodes-base.rssfeedreadtrigger.md
@@ -258,11 +265,13 @@ nav:
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.airtable/common-issues.md
         - Airtop: integrations/builtin/app-nodes/n8n-nodes-base.airtop.md
         - AMQP Sender: integrations/builtin/app-nodes/n8n-nodes-base.amqp.md
+        - Anthropic: integrations/builtin/app-nodes/n8n-nodes-langchain.anthropic.md
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
         - Automizy: integrations/builtin/app-nodes/n8n-nodes-base.automizy.md
         - Autopilot: integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md
         - AWS Certificate Manager: integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md
+        - AWS Cognito: integrations/builtin/app-nodes/n8n-nodes-base.awscognito.md
         - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
         - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
         - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
@@ -360,6 +369,7 @@ nav:
           - Folder operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/folder-operations.md
           - Shared drive operations: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/shared-drive-operations.md
           - Common issues: integrations/builtin/app-nodes/n8n-nodes-base.googledrive/common-issues.md
+        - Google Gemini: integrations/builtin/app-nodes/n8n-nodes-langchain.googlegemini.md
         - Google Perspective: integrations/builtin/app-nodes/n8n-nodes-base.googleperspective.md
         - Google Sheets:
           - Google Sheets: integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/index.md
@@ -387,6 +397,7 @@ nav:
         - Invoice Ninja: integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja.md
         - Iterable: integrations/builtin/app-nodes/n8n-nodes-base.iterable.md
         - Jenkins: integrations/builtin/app-nodes/n8n-nodes-base.jenkins.md
+        - Jina AI: integrations/builtin/app-nodes/n8n-nodes-base.jinaai.md
         - Jira Software: integrations/builtin/app-nodes/n8n-nodes-base.jira.md
         - Kafka: integrations/builtin/app-nodes/n8n-nodes-base.kafka.md
         - Keap: integrations/builtin/app-nodes/n8n-nodes-base.keap.md
@@ -418,11 +429,13 @@ nav:
         - Microsoft Graph Security: integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity.md
         - Microsoft OneDrive: integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive.md
         - Microsoft Outlook: integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook.md
+        - Microsoft SharePoint: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md
         - Microsoft SQL: integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql.md
         - Microsoft Teams: integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
         - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
+        - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
         - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
         - monday.com: integrations/builtin/app-nodes/n8n-nodes-base.mondaycom.md
         - MongoDB: integrations/builtin/app-nodes/n8n-nodes-base.mongodb.md
@@ -462,6 +475,7 @@ nav:
         - PagerDuty: integrations/builtin/app-nodes/n8n-nodes-base.pagerduty.md
         - PayPal: integrations/builtin/app-nodes/n8n-nodes-base.paypal.md
         - Peekalink: integrations/builtin/app-nodes/n8n-nodes-base.peekalink.md
+        - Perplexity: integrations/builtin/app-nodes/n8n-nodes-langchain.perplexity.md
         - PhantomBuster: integrations/builtin/app-nodes/n8n-nodes-base.phantombuster.md
         - Philips Hue: integrations/builtin/app-nodes/n8n-nodes-base.philipshue.md
         - Pipedrive: integrations/builtin/app-nodes/n8n-nodes-base.pipedrive.md
@@ -631,6 +645,7 @@ nav:
         - Mautic Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger.md
         - Microsoft OneDrive Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftonedrivetrigger.md
         - Microsoft Outlook Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md
+        - Microsoft Teams Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
         - MQTT Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md
         - Netlify Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger.md
         - Notion Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md
@@ -697,6 +712,7 @@ nav:
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
           - Supabase Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase.md
+          - Weaviate Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreweaviate.md
           - Zep Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep.md
         - Sub-nodes:
           - integrations/builtin/cluster-nodes/sub-nodes/index.md
@@ -715,6 +731,7 @@ nav:
           - Anthropic Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatanthropic.md
           - AWS Bedrock Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatawsbedrock.md
           - Azure OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+          - Cohere Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcohere.md
           - DeepSeek Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdeepseek.md
           - Google Gemini Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini.md
           - Google Vertex Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
@@ -727,6 +744,8 @@ nav:
             - OpenAI Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/index.md
             - Common issues: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md
           - OpenRouter Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenrouter.md
+          - Vercel AI Gateway Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatvercel.md
+          - xAI Grok Chat Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatxaigrok.md
           - Cohere Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmcohere.md
           - Ollama Model:
             - Ollama Model: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/index.md
@@ -754,6 +773,7 @@ nav:
           - Character Text Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittercharactertextsplitter.md
           - Recursive Character Text Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter.md
           - Token Splitter: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.textsplittertokensplitter.md
+          - AI Agent Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolaiagent.md
           - Calculator: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcalculator.md
           - Custom Code Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolcode.md
           - MCP Client Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp.md
@@ -764,6 +784,8 @@ nav:
           - Wikipedia: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwikipedia.md
           - Wolfram|Alpha: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolwolframalpha.md
           - Call n8n Workflow Tool: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolworkflow.md
+          - Reranker Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md
+          - Model Selector: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md
       - Credentials:
         - integrations/builtin/credentials/index.md
         - integrations/builtin/credentials/actionnetwork.md
@@ -894,6 +916,7 @@ nav:
         - integrations/builtin/credentials/invoiceninja.md
         - integrations/builtin/credentials/iterable.md
         - integrations/builtin/credentials/jenkins.md
+        - integrations/builtin/credentials/jinaai.md
         - integrations/builtin/credentials/jira.md
         - integrations/builtin/credentials/jotform.md
         - integrations/builtin/credentials/jwt.md
@@ -963,6 +986,7 @@ nav:
         - integrations/builtin/credentials/pagerduty.md
         - integrations/builtin/credentials/paypal.md
         - integrations/builtin/credentials/peekalink.md
+        - integrations/builtin/credentials/perplexity.md
         - integrations/builtin/credentials/phantombuster.md
         - integrations/builtin/credentials/philipshue.md
         - integrations/builtin/credentials/pinecone.md
@@ -1051,9 +1075,11 @@ nav:
         - integrations/builtin/credentials/urlscanio.md
         - integrations/builtin/credentials/venafitlsprotectcloud.md
         - integrations/builtin/credentials/venafitlsprotectdatacenter.md
+        - integrations/builtin/credentials/vercel.md
         - integrations/builtin/credentials/vero.md
         - integrations/builtin/credentials/virustotal.md
         - integrations/builtin/credentials/vonage.md
+        - integrations/builtin/credentials/weaviate.md        
         - integrations/builtin/credentials/ciscowebex.md
         - integrations/builtin/credentials/webflow.md
         - integrations/builtin/credentials/webhook.md
@@ -1066,6 +1092,7 @@ nav:
         - integrations/builtin/credentials/workable.md
         - integrations/builtin/credentials/wufoo.md
         - integrations/builtin/credentials/twitter.md
+        - integrations/builtin/credentials/xai.md
         - integrations/builtin/credentials/xata.md
         - integrations/builtin/credentials/xero.md
         - integrations/builtin/credentials/yourls.md
@@ -1082,6 +1109,7 @@ nav:
     - Community nodes:
       - Installation and management:
         - integrations/community-nodes/installation/index.md
+        - Install verified community nodes: integrations/community-nodes/installation/verified-install.md
         - GUI installation: integrations/community-nodes/installation/gui-install.md
         - Manual installation: integrations/community-nodes/installation/manual-install.md
       - Risks: integrations/community-nodes/risks.md
@@ -1106,6 +1134,7 @@ nav:
           - integrations/creating-nodes/build/reference/index.md
           - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
           - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+          - Error handling: integrations/creating-nodes/build/reference/error-handling.md
           - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
           - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
           - Base files:
@@ -1119,6 +1148,8 @@ nav:
           - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
           - Item linking: integrations/creating-nodes/build/reference/paired-items.md
+          - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
+          - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
       - Test your node:
         - integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
@@ -1263,11 +1294,17 @@ nav:
   - Advanced AI:
       - advanced-ai/index.md
       - "Tutorial: Build an AI workflow in n8n": advanced-ai/intro-tutorial.md
+      - RAG in n8n: advanced-ai/rag-in-n8n.md
       - LangChain in n8n:
           - Overview: advanced-ai/langchain/overview.md
           - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
           - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
           - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
+      - Evaluations:
+          - Overview: advanced-ai/evaluations/overview.md
+          - Light evaluations: advanced-ai/evaluations/light-evaluations.md
+          - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
+          - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
       - Examples and concepts:
           - Introduction: advanced-ai/examples/introduction.md
           - What is a chain?: advanced-ai/examples/understand-chains.md
@@ -1295,8 +1332,8 @@ nav:
       - Workflow management: embed/managing-workflows.md
       - Workflows templates: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
-#  - Feature tests:
-#      - Main features: docs-site-feature-tests/index.md
-#
+  # - Feature tests:
+  #    - Main features: docs-site-feature-tests/index.md
+
 not_in_nav: |
   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md

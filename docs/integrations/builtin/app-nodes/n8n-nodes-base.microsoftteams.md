@@ -50,6 +50,6 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 ## Related resources
 
-Refer to [Microsoft Teams' API documentation](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0){:target=_blank .external-link} for more information about the service.
+Refer to [Microsoft Teams' API documentation](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

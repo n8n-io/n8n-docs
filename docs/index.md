@@ -5,12 +5,13 @@ description: Access n8n Docs for comprehensive guides on workflow automation and
 contentType: overview
 hide:
   - path
+  - feedback
 ---
 
 # Welcome to n8n Docs
 
 
-This is the documentation for [n8n](https://n8n.io/){:target=_blank .external-link}, a [fair-code](https://faircode.io){:target=_blank .external-link} licensed workflow automation tool that combines AI capabilities with business process automation.
+This is the documentation for [n8n](https://n8n.io/), a [fair-code](https://faircode.io) licensed workflow automation tool that combines AI capabilities with business process automation.
 
 It covers everything from setup to usage and development. It's a work in progress and all [contributions](/help-community/contributing.md) are welcome.
 

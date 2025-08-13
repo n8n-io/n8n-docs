@@ -202,5 +202,5 @@ plugins:
       # Include all Markdown files in the docs directory and subdirectories
       sections:
         All documentation:
-          - "**/*.md"
+          - "*.md"
 INHERIT: ./nav.yml

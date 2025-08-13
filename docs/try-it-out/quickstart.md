@@ -14,17 +14,16 @@ In this tutorial, you will:
 * Add a node and configure it using expressions
 * Run your first workflow
 
-## Step one: Sign up for n8n
 
-This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is available for new users. If you haven't already done so, [sign up](https://app.n8n.cloud/register) for an account now.
-
-## Step two: Open a workflow template
+## Step one: Open a workflow template and sign up for n8n Cloud
 
 n8n provides a quickstart template using training nodes. You can use this to work with fake data and avoid setting up [credentials](/glossary.md#credential-n8n).
 
+This quickstart uses [n8n Cloud](/manage-cloud/overview.md). A free trial is available for new users.
+
 1. Go to [Templates | Very quick quickstart](https://n8n.io/workflows/1700-very-quick-quickstart/).
-1. Select **Use workflow** to view the options for using the template.
-1. Select **Import template to <name> cloud workspace** to load the template into your Cloud instance.
+1. Select **Use for free** to view the options for using the template.
+1. Select **Get started free with n8n cloud** to sign up for a new Cloud instance.
 
 This workflow:
 
@@ -33,11 +32,11 @@ This workflow:
 
 The individual pieces in an n8n workflow are called [nodes](/glossary.md#node-n8n). Double click a node to explore its settings and how it processes data.
 
-## Step three: Run the workflow
+## Step two: Run the workflow
 
 Select **Execute Workflow**. This runs the workflow, loading the data from the Customer Datastore node, then transforming it with Edit Fields. You need this data available in the workflow so that you can work with it in the next step.
 
-## Step four: Add a node
+## Step three: Add a node
 
 Add a third node to message each customer and tell them their description. Use the Customer Messenger node to send a message to fake recipients.
 

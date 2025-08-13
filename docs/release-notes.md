@@ -35,14 +35,225 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.106.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.2...n8n@1.106.3) for this version.<br />
+**Release date:** 2025-08-11
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains a backported update.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.107.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.0...n8n@1.107.0) for this version.<br />
+**Release date:** 2025-08-11
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+
+
+This release contains bug fixes.
+
+### Contributors
+
+[Amsal1](https://github.com/Amsal1)  
+[andrewzolotukhin](https://github.com/andrewzolotukhin)  
+[DMA902](https://github.com/DMA902)  
+[fkowal](https://github.com/fkowal)  
+[Gulianrdgd](https://github.com/Gulianrdgd)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.106.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.1...n8n@1.106.2) for this version.<br />
+**Release date:** 2025-08-08
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.106.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.0...n8n@1.106.1) for this version.<br />
+**Release date:** 2025-08-07
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.105.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.3...n8n@1.105.4) for this version.<br />
+**Release date:** 2025-08-07
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.105.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.2...n8n@1.105.3) for this version.<br />
+**Release date:** 2025-08-05
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.106.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.0...n8n@1.106.0) for this version.<br />
+**Release date:** 2025-08-04
+
+
+
+
+
+This release contains performance improvements, core updates, editor improvements, node updates, a new node, and bug fixes.
+
+<div class="n8n-new-features" markdown> 
+### **No more limit of active workflows and new self-hosted Business Plan**
+
+We have rolled out a new pricing model to make it easier for builders of all sizes to adopt and scale automation with n8n.
+<br><br>
+_**What’s new**_
+<br><br>
+**No more limit of active workflows.**
+
+All n8n plans, from Starter to Enterprise, now include unlimited users, workflows, and steps. Our pricing is based on the volume of executions. Meaning you can build and test as many workflows as you want, including complex, data-heavy, or long-running automations, without worrying about quotas. 
+<br><br>
+**New self-hosted Business Plan for growing teams**
+
+Designed for SMBs and mid-sized companies, the Business Plan includes features such as: 
+
+- 6 shared projects
+- SSO, SAML and LDAP
+- Different environments
+- Global variables
+- Version control using Git
+- 30 days of Insights
+
+Please note that this plan only includes support from our community forum. For dedicated support we recommend upgrading to our Enterprise plan.
+<br><br>
+
+**Enterprise pricing now scales with executions**
+
+Enterprise plans no longer use workflow-based pricing, and is now also based on the volume of executions. 
+<br><br>
+**_What you need to do_**
+
+To ensure these changes apply to your account, update your n8n instance to the latest version.
+<br><br>
+
+[Read the blog](https://blog.n8n.io/build-without-limits-everything-you-need-to-know-about-n8ns-new-pricing/) for full details.
+<br><br>
+</div> 
+
+### Contributors
+
+[baruchiro](https://github.com/baruchiro)  
+[killthekitten](https://github.com/killthekitten)  
+[baileympearson](https://github.com/baileympearson)  
+[Yingrjimsch](https://github.com/Yingrjimsch)  
+[joshualipman123](https://github.com/joshualipman123)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.105.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.1...n8n@1.105.2) for this version.<br />
+**Release date:** 2025-08-01
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.105.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.105.0...n8n@1.105.1) for this version.<br />
+**Release date:** 2025-08-01
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.104.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.1...n8n@1.104.2) for this version.<br />
+**Release date:** 2025-07-31
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.105.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.105.0) for this version.<br />
+**Release date:** 2025-07-28
+
+This release contains core updates, editor improvements, node updates, and bug fixes.
+
+### **Respond to Chat node**
+
+With the [**Respond to Chat](/integrations/builtin/core-nodes/n8n-nodes-langchain.respondtochat.md) node**, you can now access Human-in-the-Loop functionality natively in n8n Chat.
+
+Enable conversational experiences where you can ask for clarification, request approval before taking further action, and get back intermediate results — all within a single workflow execution.
+
+This unlocks multi-turn interactions that feel more natural and reduce the number of executions required. It is ideal for building interactive AI use cases like conversational forms, branched workflows based on user replies, and step-by-step approvals. 
+
+🛠️ **How to:** 
+
+- Add a **Chat Trigger** node and select **Using Respond Nodes** for the **Response mode**
+- Place the **Respond to Chat** node anywhere in your workflow to send a message into the Chat and optionally wait for the user to input a response before continuing execution of the workflow steps.
+
+<br>
+<video src="/_video/release-notes/Respond-to-chat.webm" controls width="100%"></video>
+<br>
+
+
+### Contributors
+
+[dana-gill](https://github.com/dana-gill)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 ## n8n@1.104.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.104.0...n8n@1.104.1) for this version.<br />
 **Release date:** 2025-07-23
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -55,9 +266,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.1...n8n@1.103.2) for this version.<br />
 **Release date:** 2025-07-22
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 
@@ -72,9 +281,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.103.0...n8n@1.104.0) for this version.<br />
 **Release date:** 2025-07-21
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 =======
 
@@ -151,6 +358,25 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.102.0...n8n@1.103
 
 This release contains core updates, editor improvements, new nodes, node improvements, and bug fixes.
 
+### **Chat streaming**
+
+No more waiting for full responses to load when using the n8n chat interface. **Streaming** now delivers AI-generated text replies word by word so users can read messages as they’re being generated. It feels faster, smoother, and more like what people expect from chat experiences.
+
+Streaming is available in public chat views (hosted or embedded) and can be used in custom apps via webhook.
+
+🛠️ How-to
+
+Configure streaming in the Node Details View of these nodes:
+
+- Chat Trigger node: Options>Add Field>Response Mode>Streaming
+- Webhook node: Respond>Streaming
+- AI Agent node: Add option> Enable streaming
+
+<br>
+<video src="/_video/release-notes/streaming.webm" controls width="100%"></video>
+<br>
+
+
 ### Improved instance user list with more visibility
 
 The instance user list has been updated with a new table layout and additional details to help admins manage access more easily.
@@ -195,7 +421,7 @@ You can still define your own custom metrics, but for common use cases, the buil
 
 🛠️ **How to:** 
 
-1. Set up your evaluation as described [here](https://docs.n8n.io/advanced-ai/evaluations/metric-based-evaluations/#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
+1. Set up your evaluation as described [here](/advanced-ai/evaluations/metric-based-evaluations.md#how-it-works), using an **Evaluation** node as the trigger and another with the **Set Metrics** operation.
 2. In the **Set Metrics** node, choose a metric from the dropdown list.
 3. Define any additional parameters required for your selected metric. In most cases, this includes mapping the dataset columns to the appropriate fields.
 
@@ -716,7 +942,7 @@ Get started by selecting an AI workflow you want to evaluate that includes one o
 2. Add a second **Evaluation** node using the **Set Outputs** operation after the part of the workflow you're testing—typically after an LLM or Agent node. This captures the response and writes it back to your dataset in Google Sheets.
 3. To evaluate output quality, add a third **Evaluation** node with the **Set Metrics** operation at a point after you’ve generated the outputs. You can develop workflow logic, custom calculations, or add an LLM-as-Judge to score the outputs. Map these metrics to your dataset in the node’s parameters. <br>
 
-    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-calculate-metrics). 
+    > 💡 Well-defined metrics = smarter decisions. Scoring your outputs based on similarity, correctness, or categorization can help you track whether changes are actually improving performance. Learn more and get links to example templates [here](/advanced-ai/evaluations/metric-based-evaluations.md/#2-add-metrics-to-workflow). 
     
 <br>
 
@@ -739,7 +965,7 @@ Evaluations for AI Workflows are designed to fit  into your development flow, wi
 - Community Edition supports one single evaluation. Pro and Enterprise plans allow unlimited evaluations.
 - AI Evaluations are not enabled for instances in scaling mode at this time. <br>
 
-You can find details, tips, and common troubleshooting info [here](https://docs.n8n.io/advanced-ai/evaluations/tips-and-common-issues/). <br><br>
+You can find details, tips, and common troubleshooting info [here](/advanced-ai/evaluations/tips-and-common-issues.md). <br><br>
 
  👉 Learn more about the AI evaluation strategies and practical implementation techniques. [Watch now](https://www.youtube.com/live/QkciQpotQBQ?feature=shared).
 
@@ -2685,7 +2911,7 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](https://docs.n8n.io/hosting/configuration/configuration-examples/prometheus/). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
+You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
 
 </div>
 

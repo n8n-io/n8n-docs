@@ -106,7 +106,7 @@ Any code you contribute on GitHub is subject to GitHub's [terms of use](https://
 
 n8n asks every contributor to sign our [Contributor License Agreement](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTOR_LICENSE_AGREEMENT.md). In addition to the above, this gives n8n the ability to change its license without seeking additional permission. It also means you aren't liable for your contributions (e.g. in case they cause damage to someone else's business).
 
-It's easy to get started contributing code to n8n [here](https://github.com/n8n-io), and we've listed broader ways of participating in our community [here](https://docs.n8n.io/reference/contributing.html).
+It's easy to get started contributing code to n8n [here](https://github.com/n8n-io), and we've listed broader ways of participating in our community [here](/help-community/contributing.md).
 
 
 ### Why did you switch to the Sustainable Use License from your previous license arrangement (Apache 2.0 with Commons Clause)?

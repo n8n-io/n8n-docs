@@ -13,15 +13,24 @@ You can change n8n's settings using environment variables. For a full list of av
 
 ### npm
 
-For npm, set your desired environment variables in terminal using the `export` command as shown below:
+For npm, set your desired environment variables in terminal. The command depends on your command line.
+
+Bash CLIs:
 
 ```bash
 export <variable>=<value>
 ```
-If `export` command doesn't work, try use `set` instead as shown below.
+
+In cmd.exe:
 
 ```bash
 set <variable>=<value>
+```
+
+In PowerShell:
+
+```powershell
+$env:<variable>=<value>
 ```
 
 ### Docker

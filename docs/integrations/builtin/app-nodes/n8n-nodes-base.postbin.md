@@ -32,7 +32,7 @@ On this page, you'll find a list of operations the PostBin node supports, and li
 
 To send requests to a PostBin bin:
 
-1. Go to [PostBin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and follow the steps to generate a new bin. PostBin gives you a unique URL, including a bin ID.
+1. Go to [PostBin](https://www.toptal.com/developers/postbin/) and follow the steps to generate a new bin. PostBin gives you a unique URL, including a bin ID.
 2. In the PostBin node, select the **Request** resource.
 3. Choose the type of **Operation** you want to perform.
 4. Enter your bin ID in **Bin ID**.

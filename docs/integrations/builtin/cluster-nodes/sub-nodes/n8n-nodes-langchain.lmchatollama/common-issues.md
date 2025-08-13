@@ -20,9 +20,11 @@ In sub-nodes, the expression always resolves to the first item. For example, giv
 
 ## Can't connect to a remote Ollama instance
 
-The Ollama Chat Model node is only designed to connect to a locally hosted Ollama instance. It doesn't include the authentication features you'd need to connect to a remotely hosted Ollama instance.
+The Ollama Chat Model node supports Bearer token authentication for connecting to remote Ollama instances behind authenticated proxies (such as Open WebUI).
 
-To use the Ollama Chat Model, follow the [Ollama credentials instructions](/integrations/builtin/credentials/ollama.md) to set up Ollama locally and configure the instance URL in n8n.
+For remote authenticated connections, configure both the remote URL and API key in your Ollama credentials. 
+
+Follow the [Ollama credentials instructions](/integrations/builtin/credentials/ollama.md) for more information.
 
 ## Can't connect to a local Ollama instance when using Docker
 

@@ -38,7 +38,7 @@ Use the Code node to merge data from multiple node executions. This is useful in
 /// note | Node executions and workflow executions
 This section describes merging data from multiple node executions. This is when a node executes multiple times during a single workflow execution. 
 ///
-Refer to this [example workflow](https://n8n.io/workflows/1814-merge-multiple-runs-into-one/){:target=_blank .external-link} using Loop Over Items and Wait to artificially create multiple executions.
+Refer to this [example workflow](https://n8n.io/workflows/1814-merge-multiple-runs-into-one/) using Loop Over Items and Wait to artificially create multiple executions.
 
 [[ workflowDemo("https://api.n8n.io/workflows/templates/1814") ]]
 
@@ -46,6 +46,6 @@ Refer to this [example workflow](https://n8n.io/workflows/1814-merge-multiple-ru
 
 The [Compare Datasets](/integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md) node compares data streams before merging them. It outputs up to four different data streams.
 
-Refer to this [example workflow](https://n8n.io/workflows/1943-comparing-data-with-the-compare-datasets-node/){:target=_blank .external-link} for an example.
+Refer to this [example workflow](https://n8n.io/workflows/1943-comparing-data-with-the-compare-datasets-node/) for an example.
 
 [[ workflowDemo("https://api.n8n.io/workflows/templates/1943") ]]

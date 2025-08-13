@@ -8,14 +8,14 @@ priority: medium
 
 # Google Calendar Trigger node
 
-[Google Calendar](https://www.google.com/calendar/){:target=_blank .external-link} is a time-management and scheduling calendar service developed by Google.
+[Google Calendar](https://www.google.com/calendar/) is a time-management and scheduling calendar service developed by Google.
 
 /// note | Credentials
 You can find authentication information for this node [here](/integrations/builtin/credentials/google/index.md).
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Google Calendar Trigger integrations](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Google Calendar Trigger integrations](https://n8n.io/integrations/google-calendar-trigger/) page.
 ///
 
 ## Events
@@ -32,6 +32,6 @@ For usage examples and templates to help you get started, refer to n8n's [Google
 
 n8n provides an app node for Google Calendar. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/index.md).
 
-View [example workflows and related content](https://n8n.io/integrations/google-calendar-trigger/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/google-calendar-trigger/) on n8n's website.
 
-Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference){:target=_blank .external-link} for details about their API.
+Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference) for details about their API.

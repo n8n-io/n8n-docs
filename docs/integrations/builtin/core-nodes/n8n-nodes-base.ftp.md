@@ -45,6 +45,10 @@ Configure this operation with these parameters:
 * **Path**: Enter the remote path that you would like to connect to.
 * **Put Output File in Field**: Enter the name of the output binary field to put the file in.
 
+/// Note | Concurrent Reads with SFTP
+When using SFTP, you can enable concurrent reads. This improves download speeds but may not be supported by all SFTP servers.
+///
+
 ## List
 
 Configure this operation with these parameters:

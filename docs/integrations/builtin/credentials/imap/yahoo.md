@@ -27,4 +27,4 @@ To set up the IMAP credential with a Yahoo Mail account, use these settings:
 5. Turn on the **SSL/TLS** toggle.
 6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
 
-Refer to [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html){:target=_blank .external-link} for more information.
+Refer to [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html) for more information.

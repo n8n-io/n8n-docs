@@ -49,6 +49,7 @@ Citrix
 Clearbit
 Clockify
 Codecademy
+Cognito('s)?
 commenters?
 Cohere
 Combinator
@@ -59,8 +60,10 @@ CPython
 CRM
 Cron
 [Cc]rypto
+[Dd]atacenters?
 Datadog
 Datastore
+[Dd]atetimes?
 [Dd]edupe
 [Dd]eduplication
 DeepL
@@ -107,7 +110,7 @@ Gumroad
 [Gg]zip
 Hetzner
 Homeserver
-[Hh]ostname
+[Hh]ostnames?
 howto
 HubSpot
 Humantic
@@ -154,6 +157,7 @@ Mindee
 Mocean
 Motorhead
 [Mm]ultiple
+[Mm]ultitenan(cy|t)
 n8n
 nanoids
 namespaces?
@@ -167,6 +171,7 @@ Nodelinter
 npm
 NPM
 npx
+nvm
 OAuth
 Odoo
 Okta
@@ -232,6 +237,7 @@ Supabase
 [Ss]ysdig
 [Ss]yslog
 Tapfiliate
+[Tt]emplatiz(e|ed|ing)
 Textract
 There are
 [Tt]imesheet
@@ -249,6 +255,7 @@ Twilio
 Typeform
 [Uu]narchive
 [Uu]ncomment
+[Uu]nencrypted
 [Uu]nformatted
 ([Uu]n)?[Gg]rounded(ness)?
 [Uu]noptimized
@@ -269,6 +276,7 @@ VM
 Vonage
 Vuex
 Wasabi's
+Weaviate('s)?
 Webex
 Webflow
 [Ww]ebsockets?

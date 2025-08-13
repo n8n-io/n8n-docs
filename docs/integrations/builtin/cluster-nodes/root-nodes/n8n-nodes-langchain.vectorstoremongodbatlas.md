@@ -83,6 +83,8 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 <!-- vale off -->
@@ -131,8 +133,8 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 Refer to:
 
-- [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas){:target=_blank .external-link} for more information about the service.
-- [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/){:target=_blank .external-link} for more information about MongoDB Atlas Vector Search.
+- [LangChain's MongoDB Atlas Vector Search documentation](https://js.langchain.com/docs/integrations/vectorstores/mongodb_atlas) for more information about the service.
+- [MongoDB Atlas Vector Search documentation](https://www.mongodb.com/docs/atlas/atlas-vector-search/) for more information about MongoDB Atlas Vector Search.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

@@ -7,7 +7,7 @@ contentType: howto
 
 # Enable Prometheus metrics 
 
-To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client){:target="_blank" .external-link} library.
+To collect and expose metrics, n8n uses the [prom-client](https://www.npmjs.com/package/prom-client) library.
 
 The `/metrics` endpoint is disabled by default, but it's possible to enable it using the `N8N_METRICS` environment variable.
 
@@ -23,7 +23,7 @@ Both `main` and `worker` instances are able to expose metrics.
 
 To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
 
-Queue metrics are only available for the `main` instance in single-main mode.
+n8n gathers these metrics from Bull and exposes them on the main instances. On multi-main setups, when aggregating queries, you can identify the leader using the `instance_role_leader` gauge, set to `1` for the leader main and `0` otherwise.
 
 ```
 # HELP n8n_scaling_mode_queue_jobs_active Current number of jobs being processed across all workers in scaling mode.

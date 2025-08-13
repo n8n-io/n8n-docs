@@ -94,7 +94,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set/) before this node to adjust the format as needed.
+	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert options
 
@@ -123,7 +123,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set/) before this node to adjust the format as needed.
+	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert or Update options
 
@@ -180,7 +180,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.set/) before this node to adjust the format as needed.
+	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Update options
 

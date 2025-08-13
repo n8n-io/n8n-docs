@@ -31,6 +31,6 @@ Refer to [Strapi credentials](/integrations/builtin/credentials/strapi.md) for g
 
 ## Related resources
 
-Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest){:target=_blank .external-link} for more information about the service.
+Refer to [Strapi's documentation](https://docs.strapi.io/dev-docs/api/rest) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

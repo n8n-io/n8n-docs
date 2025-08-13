@@ -29,6 +29,6 @@ Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index
 
 ## Related resources
 
-Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.
+Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

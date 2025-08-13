@@ -139,7 +139,7 @@ Refer to your service's API documentation for detailed guidance on how to format
 
 Use this option to send raw data in the body.
 
-* **Content Type**: Enter the `Content-Type` header to use for the raw body content. Refer to the IANA [Media types](https://www.iana.org/assignments/media-types/media-types.xhtml){:target=_blank .external-link} documentation for a full list of MIME content types.
+* **Content Type**: Enter the `Content-Type` header to use for the raw body content. Refer to the IANA [Media types](https://www.iana.org/assignments/media-types/media-types.xhtml) documentation for a full list of MIME content types.
 * **Body**: Enter the raw body content to send.
 
 Refer to your service's API documentation for detailed guidance.
@@ -226,7 +226,7 @@ n8n provides built-in variables for working with HTTP node requests and response
 
 Use this option if you need to specify an HTTP proxy.
 
-Enter the **Proxy** the request should use.
+Enter the **Proxy** the request should use. This takes precedence over global settings defined with the [`HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables](/hosting/configuration/environment-variables/deployment.md).
 
 ### Timeout
 
@@ -275,7 +275,7 @@ When expecting a generic **Text** response, you can optimize the results with th
 
 ## Import curl command
 
-[curl](https://curl.se/){:target=_blank .external-link} is a command line tool and library for transferring data with URLs.
+[curl](https://curl.se/) is a command line tool and library for transferring data with URLs.
 
 You can use curl to call REST APIs. If the API documentation of the service you want to use provides curl examples, you can copy them out of the documentation and into n8n to configure the HTTP Request node.
 

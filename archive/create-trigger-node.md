@@ -460,5 +460,5 @@ Since our server is running locally, we need a tool that lets us proxy all reque
 ## Next steps
 
 * [Deploy your node](/integrations/creating-nodes/deploy/).
-* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo){:target=_blank .external-link}. Note that the main node is declarative, while the trigger node is in programmatic style.
+* View an example of a declarative node: n8n's [Brevo node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Brevo). Note that the main node is declarative, while the trigger node is in programmatic style.
 * Learn about [node versioning](/integrations/creating-nodes/build/reference/node-versioning/).

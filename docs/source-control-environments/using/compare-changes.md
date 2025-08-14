@@ -19,53 +19,42 @@ Workflow diffs allow you to visually compare changes between the workflow you ha
 You can access workflow diffs from two locations:
 
 1. **When pushing changes**: Click the workflow diff icon in the commit modal alongside the workflow you want to review
-2. **When pulling changes**: Click the workflow diff in the modified changes modal alongside the workflow you want to review
+2. **When pulling changes**: Click the workflow diff icon in the modified changes modal alongside the workflow you want to review
 
 ## Understanding the workflow diff view
 
 When you open a workflow diff, n8n displays two workflows vertically above and below:
 
 ### When pushing
-* **Remote version in Git** (top panel): Latest version in your Git repository
-* **Local Instance version** (bottom panel): Current locally saved version of the workflow
+* **Top panel** (Remote branch): Latest version in your Git repository
+* **Bottom panel** (Local): Current locally saved version of the workflow
 
 ### When pulling  
-* **Local instance version** (top panel): Current version on your n8n instance
-* **Remote version in Git** (bottom panel): Version being pulled from the Git repository
+* **Top panel** (Local): Current version on your n8n instance
+* **Bottom panel** (Remote branch): Version being pulled from the Git repository
+
+Regarldess of whether pushing or pulling, the top panel will always display the workflow that will be modified by the latest changes showing in the bottom panel.
 
 The diff view highlights three types of changes:
 
-* **Added nodes and connectors**: Any new node additions or connectors will show as green
-* **Modified nodes and connectors**: Any modifications to existing nodes or connectors will show as orange
-* **Deleted nodes and connectors**: Any nodes or connectors that have been deleted will show as red
+* **Added nodes and connectors**: Any new node additions or connectors will show as green along with an "N" icon
+* **Modified nodes and connectors**: Any modifications to existing nodes or connectors will show as orange along with a "M" icon
+* **Deleted nodes and connectors**: Any nodes or connectors that have been deleted will show as red along with a "D" icon 
 
 ## Reviewing node changes
 
-For modified nodes, you can also look at the specific changes by doing the following:
-
-1. Click on any modified node
-2. A JSON diff appears showing all changes for that specific node
-3. This allows you to review exactly what configuration changes were made
+For modified nodes, you can also compare any changes that have been made. Firstly, click any modified node to show a JSON diff of any changes. You can then review exactly what the before and after configurations were on that particular node.
 
 ## Viewing summary of changes
 
-In the top right, you will see a "changes" button showing a count of the number of changes:
-
-1. Click the **Changes** button in the top right of the diff view
-2. This shows the total breakdown of changes across:
-   - Node changes
-   - Node connector changes  
-   - General workflow settings changes
+In the top right, you will see a "changes" button showing a count of the number of changes. This shows the total number of changes across node and node connectors and general workflow settings updates.
 
 ## Navigating through each change
 
-Use the navigation controls to review changes systematically:
-
-* **Next/Previous arrows**: Cycle through each individual change
-* **Back button**: Return to the previous view to select a different workflow
+You can use the next and previous arrows in the top right to cylce through your changes in a logical order. Use the back button in the top left to return to the commit or pull modal to select a different workflow to review changes on.
 
 ## Who can use workflow diffs
 
 /// note | Workflow diffs require push or pull permissions
-Only users who can push commits to an instance can access workflow diffs: instance owners, instance admins, and project admins.
+Only users who can push or pull commits to an instance can access workflow diffs: instance owners, instance admins, and project admins. 
 ///

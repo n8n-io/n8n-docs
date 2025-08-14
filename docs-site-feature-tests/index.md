@@ -81,6 +81,6 @@ You should see a list of 5 HTTP Request templates
 
 You should see the AI Glossary below
 
---8<-- "_glossary/ai-glossary.md"
+
 
 Link to [workflows](/glossary.md#workflow-n8n) glossary definition with preview.

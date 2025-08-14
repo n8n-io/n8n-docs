@@ -39,4 +39,4 @@ On this page, you'll find a list of parameters the Default Data Loader node supp
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

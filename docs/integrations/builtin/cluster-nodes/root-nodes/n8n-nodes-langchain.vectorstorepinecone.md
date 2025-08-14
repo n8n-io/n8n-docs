@@ -117,4 +117,4 @@ Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/inte
 Your Pinecone index and namespace are available in your Pinecone account.
 
 ![Screenshot of a Pinecone account, with the Pinecone index labelled](/_images/integrations/builtin/cluster-nodes/vectorstorepinecone/pinecone-index-namespace.png)
---8<-- "_glossary/ai-glossary.md"
+

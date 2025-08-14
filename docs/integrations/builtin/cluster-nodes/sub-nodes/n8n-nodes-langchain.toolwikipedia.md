@@ -23,4 +23,4 @@ The Wikipedia node is a [tool](/glossary.md#ai-tool) that allows an [agent](/glo
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

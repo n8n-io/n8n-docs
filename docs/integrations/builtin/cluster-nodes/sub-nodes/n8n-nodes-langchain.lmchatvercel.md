@@ -73,4 +73,4 @@ As the Vercel AI Gateway is API-compatible with OpenAI, you can refer to [LangCh
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

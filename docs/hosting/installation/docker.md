@@ -44,7 +44,7 @@ This command creates a volume to store persistent data, downloads the required n
 * Sets the timezone for the container:
 	* the `TZ` environment variable sets the system timezone to control what scripts and commands like `date` return.
 	* the [`GENERIC_TIMEZONE` environment variable](/hosting/configuration/environment-variables.md#timezone-and-localization) sets the correct timezone for schedule-oriented nodes like the [Schedule Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/index.md).
-* Enforces secure file permissions for the n8n config file.
+* Enforces secure file permissions for the n8n configuration file.
 * Enables [task runners](/hosting/configuration/task-runners.md), the recommended way of executing tasks in n8n.
 * Mounts the `n8n_data` volume to the `/home/node/.n8n` directory to persist your data across container restarts.
 
@@ -56,7 +56,7 @@ Once running, you can access n8n by opening:
 By default, n8n uses SQLite to save [credentials](/glossary.md#credential-n8n), past executions, and workflows. n8n also supports PostgreSQL, configurable using environment variables as detailed below.
 
 /// note | Persisting the `.n8n` directory still recommended
-When using PostgreSQL, n8n doesn't need to use the `.n8n` directory for the SQLite database file. However, the directory still contains other important data like encyrption keys, instance logs, and source control feature assets. While you can work around some of these requirements, (for example, by setting the [`N8N_ENCRYPTION_KEY` environment variable](/hosting/configuration/environment-variables.md#deployment)), it's best to continue mapping a persistent volume for the directory to avoid potential issues.
+When using PostgreSQL, n8n doesn't need to use the `.n8n` directory for the SQLite database file. However, the directory still contains other important data like encryption keys, instance logs, and source control feature assets. While you can work around some of these requirements, (for example, by setting the [`N8N_ENCRYPTION_KEY` environment variable](/hosting/configuration/environment-variables.md#deployment)), it's best to continue mapping a persistent volume for the directory to avoid potential issues.
 ///
 
 To use n8n with PostgreSQL, execute the following commands, replacing the placeholders (depicted within angled brackets, for example `<POSTGRES_USER>`) with your actual values:

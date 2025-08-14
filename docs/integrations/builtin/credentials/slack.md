@@ -52,9 +52,10 @@ Refer to the Slack API [Quickstart](https://api.slack.com/quickstart) for more i
 
 To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md) node:
 
-1. Go to **Features** > **Event Subscriptions**.
-2. Turn on the **Enable Events** control.
-3. In n8n, copy the **Webhook URL** and enter it as the **Request URL** in your Slack app.
+1. Go to [Your Apps](https://api.slack.com/apps/) in Slack and select the app you want to use.
+2. Go to **Features** > **Event Subscriptions**.
+3. Turn on the **Enable Events** control.
+4. In n8n, copy the **Webhook URL** and enter it as the **Request URL** in your Slack app.
 
     ///  note  | Request URL
     Slack only allows one request URL per app. If you want to test your workflow, you'll need to do one of the following:
@@ -63,10 +64,17 @@ To use your Slack app with the [Slack Trigger](/integrations/builtin/trigger-nod
     - Use the **Production URL** with execution logging.
     ///
 
-4. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests. 
+5. Once verified, select the bot events to subscribe to. Use the **Trigger on** field in n8n to filter these requests. 
     - To use an event not in the list, add it as a bot event and select **Any Event** in the n8n node.
 
 Refer to [Quickstart | Configuring the app for event listening](https://api.slack.com/quickstart#listening) for more information.
+
+n8n recommends enabling request signature verification for your Slack Trigger for additional security:
+
+1. Go to [Your Apps](https://api.slack.com/apps/) in Slack and select the app you want to use.
+2. Go to **Settings** > **Basic Information**.
+3. Copy the value of **Signing**.
+4. In n8n, Paste this value into the **Signature Secret** field for the credential.
 
 ## Using OAuth2
 

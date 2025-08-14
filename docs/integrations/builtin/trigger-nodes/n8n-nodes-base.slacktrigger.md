@@ -69,6 +69,10 @@ You must add the appropriate scopes to your Slack app for this trigger node to w
 
 The node requires scopes for the [conversations.list](https://api.slack.com/methods/conversations.list) and [users.list](https://api.slack.com/methods/users.list) methods at minimum. Check out the [Scopes | Slack credentials](/integrations/builtin/credentials/slack.md#scopes) list for a more complete list of scopes.
 
+## Verify the webhook
+
+From [version `1.106.0`](/release-notes.md#n8n11060), you can set a [Slack Signing Secret](https://api.slack.com/authentication/verifying-requests-from-slack#signing_secrets_admin_page) when configuring your [Slack credentials](/integrations/builtin/credentials/slack.md#slack-trigger-configuration). When set, the Slack trigger node automatically verifies that requests are from Slack and include a trusted signature. n8n recommends setting this to ensure you only process requests sent from Slack.
+
 ## Common issues
 
 Here are some common errors and issues with the Slack Trigger node and steps to resolve or troubleshoot them.

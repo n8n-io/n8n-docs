@@ -38,18 +38,18 @@ Once the cluster is created, eksctl automatically sets the kubectl context to th
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/aws). The following steps tell you what each file does, and what settings you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-hosting). The following steps tell you what each file does, and what settings you need to change.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b aws
+git clone https://github.com/n8n-io/n8n-hosting.git 
 ```
 
-And change directory to the root of the repository you cloned:
+And change directory:
 
 ```shell
-cd n8n-kubernetes-hosting
+cd n8n-hosting/kubernetes
 ```
 
 ## Configure Postgres
@@ -58,7 +58,8 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 
 ### Configure volume for persistent storage
 
-To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2), is suitable for this purpose. This is defined in the `postgres-claaim0-persistentvolumeclaim.yaml` manifest.
+To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default AWS storage class, [gp2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/general-purpose.html#EBSVolumeTypes_gp2), is suitable for this purpose. This is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
+
 
 ```yaml
 …

@@ -8,6 +8,10 @@ priority: critical
 
 # Conversational AI Agent node
 
+/// note | Feature removed
+n8n removed this functionality in February 2025.
+///
+
 The Conversational Agent has human-like conversations. It can maintain context, understand user intent, and provide relevant answers. This agent is typically used for building chatbots, virtual assistants, and customer support systems.
 
 The Conversational Agent describes [tools](/glossary.md#ai-tool) in the system prompt and parses JSON responses for tool calls. If your preferred AI model doesn't support tool calling or you're handling simpler interactions, this agent is a good general option. It's more flexible but may be less accurate than the [Tools Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md).

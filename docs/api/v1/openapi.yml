@@ -1516,6 +1516,38 @@ components:
         executionOrder:
           type: string
           example: v1
+    sharedWorkflow:
+      type: object
+      additionalProperties: false
+      properties:
+        role:
+          type: string
+          example: workflow:owner
+        workflowId:
+          type: string
+          example: 2tUt1wbLX592XDdX
+        projectId:
+          type: string
+          example: 2tUt1wbLX592XDdX
+        project:
+          type: object
+          properties:
+            id:
+              type: string
+              readOnly: true
+            name:
+              type: string
+            type:
+              type: string
+              readOnly: true
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
     workflow:
       type: object
       additionalProperties: false
@@ -1570,6 +1602,10 @@ components:
           items:
             $ref: '#/components/schemas/tag'
           readOnly: true
+        shared:
+          type: array
+          items:
+            $ref: '#/components/schemas/sharedWorkflow'
     workflowList:
       type: object
       properties:

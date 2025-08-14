@@ -49,7 +49,7 @@ pip install mkdocs-material
 #### To serve a local preview:
 
 ```
-mkdocs serve
+mkdocs serve --strict
 ```
 
 **Note for external contributors**: You may receive an error like the following:

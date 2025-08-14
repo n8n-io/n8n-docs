@@ -7,7 +7,7 @@ contentType: howto
 
 # Compare changes with workflow diffs
 
-Workflow diffs allow you to visually compare changes between the workflow you have on an instance with what is currently in the a connected Git repository. This helps you understand exactly what has changed on workflow before you decide to either push or pull a workflow across different environments.
+Workflow diffs allow you to visually compare changes between the workflow you have on an instance and the most recent version saved in your connected Git repository. This helps you understand the exact changes to the workflow before you decide to either push or pull it across different environments.
 
 /// note | Feature availability
 - Available on Enterprise

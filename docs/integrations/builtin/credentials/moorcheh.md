@@ -35,3 +35,4 @@ To set it up:
 3. Enter a custom name, then click "Create".
 4. Copy the API key and enter it in your n8n Moorcheh credential.
 
+Refer to [Moorcheh documentation](https://console.moorcheh.ai/docs) for more information about the service.

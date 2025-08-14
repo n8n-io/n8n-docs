@@ -78,6 +78,12 @@ An example connection flow would be: Question and Answer Chain (Retriever connec
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
+/// note | Examples and templates
+For usage examples and templates to help you get started, you can adapt existing vector store templates by replacing Pinecone with Moorcheh.
+
+For example, check out [this template](https://n8n.io/workflows/2165-chat-with-pdf-docs-using-ai-quoting-sources/) where data is embedded and indexed in a vector store, and the AI Agent uses the vector store as a knowledge tool for question-answering. You can use this template as a reference and simply replace the Pinecone vector store with the Moorcheh Vector Store node.
+///
+
 [[ templatesWidget(page.title, 'moorcheh-vector-store') ]]
 
 ## Related resources

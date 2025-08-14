@@ -41,7 +41,7 @@ The diff view highlights three types of changes:
 
 ## Reviewing node changes
 
-For modified nodes, you can also look at the speciifc changes by doing the following:
+For modified nodes, you can also look at the specific changes by doing the following:
 
 1. Click on any modified node
 2. A JSON diff appears showing all changes for that specific node

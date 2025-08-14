@@ -7,6 +7,10 @@ contentType: [integration, reference]
 
 # Zep Vector Store node
 
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. 
+///
+
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
 
 On this page, you'll find the node parameters for the Zep Vector Store node, and links to more resources.

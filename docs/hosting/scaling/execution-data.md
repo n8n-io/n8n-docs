@@ -58,17 +58,17 @@ n8n:
 
 ## Enable executions pruning
 
-Executions pruning regularly deletes finished executions along with their execution data and binary data. Pruning is enabled by default. For performance reasons, pruning first marks targets for deletion, and then later permanently removes them.
+Executions pruning deletes finished executions along with their execution data and binary data on a regular schedule. n8n enables pruning by default. For performance reasons, pruning first marks targets for deletion, and then later permanently removes them.
 
-Executions are pruned if they meet **either** condition:
+n8n prunes executions when **either** of the following condition occur:
 
-- Age: Finished more than `EXECUTIONS_DATA_MAX_AGE` hours ago (default: 336 hours -> 14 days)
-- Count: Total exceeds `EXECUTIONS_DATA_PRUNE_MAX_COUNT` executions (default: 10,000), deleting from oldest to newest
+- **Age**: The execution finished more than `EXECUTIONS_DATA_MAX_AGE` hours ago (default: 336 hours -> 14 days).
+- **Count**: The total number of executions exceeds `EXECUTIONS_DATA_PRUNE_MAX_COUNT` (default: 10,000). When this occurs, n8n deletes executions from oldest to newest.
 
 Keep in mind:
 
-- Executions whose status is `new`, `running`, or `waiting` are exempted from pruning.
-- Annotated executions are permanently exempted from pruning.
+- Executions with the `new`, `running`, or `waiting` status aren't eligible for pruning.
+- Annotated executions are permanently exempt from pruning.
 - Pruning honors a safety buffer period of `EXECUTIONS_DATA_HARD_DELETE_BUFFER` hours (default: 1h), to ensure recent data remains available while the user is building or debugging a workflow.
 
 ```sh

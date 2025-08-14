@@ -49,6 +49,6 @@ Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+
 
 --8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

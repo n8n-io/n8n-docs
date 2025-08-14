@@ -39,4 +39,4 @@ Refer to [LangChain's Motorhead documentation](https://js.langchain.com/docs/int
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

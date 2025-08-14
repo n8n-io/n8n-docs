@@ -79,7 +79,6 @@ extra_javascript:
   - _extra/javascript/init_kapa_widget.js
 
 watch:
-  - _glossary
   - _snippets
   - _overrides
 markdown_extensions:

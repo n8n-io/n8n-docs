@@ -17,7 +17,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	- One tab must be equivalent to four spaces.
 * n8n recommends using a virtual environment when working with Python, such as [venv](https://docs.python.org/3/tutorial/venv.html).
 
-### Procedure
+### Steps
 
 #### For members of the n8n GitHub organization:
 

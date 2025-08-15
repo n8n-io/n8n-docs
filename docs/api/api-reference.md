@@ -8,6 +8,9 @@ description: API reference for n8n's public REST API.
 contentType: reference
 ---
 
+<!-- Mount point -->
+<div id="app"></div>
+
 <!-- Load the Script -->
 <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
 

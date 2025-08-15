@@ -5,6 +5,7 @@ description: Access documentation and guides on using code and expressions in n8
 contentType: overview
 hide:
   - feedback
+  - kapaButton
 ---
 
 # Code in n8n

@@ -158,6 +158,28 @@
     padding: 0.5em 0.75em;
   }
 
+  /* wraps the Kapa button at the bottom of content pages */
+  .n8n-wrap-kapa {
+    border-top: 1px solid #eee;
+    padding: 1em 0 0 0;
+    margin-top: 2em;
+  }
+
+  .n8n-wrap-kapa > .n8n-kapa-button {
+    justify-content: center;
+    width: 100%;
+  }
+
+ .n8n-wrap-kapa > button > span.md-search__icon.md-icon {
+  align-self: anchor-center;
+ }
+
+  .n8n-wrap-kapa > button > span.md-search__icon.md-icon > svg {
+    border: none;
+    display: inline;
+  }
+
+
   .n8n-search-text {
     align-content: center;
     margin-left: 0.5em;

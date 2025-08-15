@@ -5,6 +5,7 @@ description: Use n8n's LangChain integrations to build AI-powered functionality 
 contentType: overview
 hide:
   - feedback
+  - kapaButton
 ---
 
 # Advanced AI

@@ -4,6 +4,8 @@ template: api.html
 hide:
     - toc
     - navigation
+    - feedback
+    - kapaButton
 description: API reference for n8n's public REST API.
 contentType: reference
 ---

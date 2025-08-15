@@ -1,4 +1,12 @@
+<!-- Determine whether to show feedback -->
+{% if page.meta and page.meta.hide %}
+  {% if "kapaButton" in page.meta.hide %}
+    {% set kapaButton = None %}
+  {% endif %}
+{% endif %}
+
 <!-- n8n CUSTOM: Kapa -->
+{% if kapaButton %}
 <button
     class="n8n-kapa-button"
     onclick="window.Kapa.open({ 
@@ -8,3 +16,4 @@
 >
     <span class="md-search__icon md-icon">{% set icon = "material/creation" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Chat with the docs</span>
 </button>
+{% endif %}

@@ -7,6 +7,7 @@ search:
     boost: 5
 hide:
   - feedback
+  - kapaButton
 ---
 
 # n8n public REST API

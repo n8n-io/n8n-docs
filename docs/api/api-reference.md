@@ -15,6 +15,26 @@ contentType: reference
 <script>
 	Scalar.createApiReference('#app', {
 		url: '/api/v1/openapi.yml',
+		servers: [
+			{
+				url: 'https://{instance}.app.n8n.cloud/api/v1',
+				description: 'n8n cloud instance',
+				variables: {
+					instance: {
+						default: 'your-instance-name',
+					}
+				}
+			},
+			{
+				url: '{url}/api/v1',
+				description: 'self-hosted n8n instance',
+				variables: {
+					url: {
+						default: 'https://example.com',
+					}
+				}
+			},
+		],
 		forceDarkModeState: 'light',
 		hideDarkModeToggle: true,
 	})

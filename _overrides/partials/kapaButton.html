@@ -1,0 +1,10 @@
+<!-- n8n CUSTOM: Kapa -->
+<button
+    class="n8n-kapa-button"
+    onclick="window.Kapa.open({ 
+    mode: 'ai'
+    })" 
+    type="button"
+>
+    <span class="md-search__icon md-icon">{% set icon = "material/creation" %}{% include ".icons/" ~ icon ~ ".svg" %}</span><span class="n8n-search-text">Chat with the docs</span>
+</button>

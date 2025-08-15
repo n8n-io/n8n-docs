@@ -708,6 +708,7 @@ nav:
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
+          - Moorcheh Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremoorcheh.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
           - Pinecone Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone.md
           - Qdrant Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreqdrant.md
@@ -961,6 +962,7 @@ nav:
         - integrations/builtin/credentials/mondaycom.md
         - integrations/builtin/credentials/mongodb.md
         - integrations/builtin/credentials/monicacrm.md
+        - integrations/builtin/credentials/moorcheh.md
         - integrations/builtin/credentials/motorhead.md
         - integrations/builtin/credentials/mqtt.md
         - integrations/builtin/credentials/msg91.md

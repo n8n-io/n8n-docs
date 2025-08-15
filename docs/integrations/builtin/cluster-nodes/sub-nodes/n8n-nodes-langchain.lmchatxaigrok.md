@@ -43,4 +43,4 @@ You can find authentication information for this node [here](/integrations/built
 Refer to [xAI Grok's API documentation](https://docs.x.ai/docs/api-reference) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

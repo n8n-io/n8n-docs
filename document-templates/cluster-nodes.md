@@ -51,7 +51,7 @@ _Description of node option_
 Refer to [_Name_'s documentation]() for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+
 
 ## Common issues
 

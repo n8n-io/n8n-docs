@@ -8,6 +8,10 @@ priority: medium
 
 # Zep node
 
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. 
+///
+
 Use the Zep node to use Zep as a [memory](/glossary.md#ai-memory) server.
 
 On this page, you'll find a list of operations the Zep node supports, and links to more resources.
@@ -37,4 +41,4 @@ Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrati
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

@@ -81,4 +81,4 @@ Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integ
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

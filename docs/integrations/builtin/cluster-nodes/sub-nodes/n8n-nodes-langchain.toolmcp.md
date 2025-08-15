@@ -38,4 +38,4 @@ Refer to the [MCP documentation](https://modelcontextprotocol.io/introduction) a
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

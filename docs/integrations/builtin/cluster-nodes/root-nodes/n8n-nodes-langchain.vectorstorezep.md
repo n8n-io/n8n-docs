@@ -7,6 +7,10 @@ contentType: [integration, reference]
 
 # Zep Vector Store node
 
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. 
+///
+
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
 
 On this page, you'll find the node parameters for the Zep Vector Store node, and links to more resources.
@@ -108,4 +112,4 @@ Disable this to configure your embeddings in Zep instead of in n8n.
 Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/vectorstores/zep/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

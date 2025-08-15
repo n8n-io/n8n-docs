@@ -33,7 +33,7 @@ When you open a workflow diff, n8n displays two workflows vertically above and b
 * **Top panel** (Local): Current version on your n8n instance
 * **Bottom panel** (Remote branch): Version being pulled from the Git repository
 
-Regarldess of whether pushing or pulling, the top panel will always display the workflow that will be modified by the latest changes showing in the bottom panel.
+Regarldess of whether pushing or pulling, the top panel will always display the workflow that will be modified by any changes.
 
 The diff view highlights three types of changes:
 

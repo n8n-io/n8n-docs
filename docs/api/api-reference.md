@@ -40,5 +40,6 @@ contentType: reference
 		],
 		forceDarkModeState: 'light',
 		hideDarkModeToggle: true,
+		hideClientButton: true,
 	})
 </script>

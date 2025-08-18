@@ -5,6 +5,7 @@ description: Learn how to white label and integrate n8n into your products with 
 contentType: overview
 hide:
   - feedback
+  - kapaButton
 ---
 
 # n8n Embed

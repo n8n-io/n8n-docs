@@ -192,6 +192,8 @@ Select **Add Option** to view more configuration options:
 - **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
 - **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
 - **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
+- **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
+- **Completion Page Title**: The title for the final completion page of the form.
 
 ## Running the node
 

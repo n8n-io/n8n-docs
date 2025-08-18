@@ -119,11 +119,11 @@ Choose when n8n sends a response to the form submission. You can respond when:
 Select **Add Option** to view more configuration options: 
 
 - **Append n8n Attribution**: Turn off to hide the **Form automated with n8n** attribute at the bottom of the form.
-- **Form Response**: Choose how to respond when the user submits the form. 
-    - **Respond With** > **Form Submitted Text**: Show a message to the user.
-    - **Respond With** > **Redirect URL**: Send the user to a new page.
+- **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
+- **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component.
 - **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers. 
 - **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/workflows/settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output. 
+- **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
 
 ## Templates and examples
 

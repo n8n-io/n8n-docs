@@ -154,10 +154,14 @@ Choose between these options when using **On n8n Form Submission**:
 	- Fill in **Completion Title** to set the `h1` title on the form.
 	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
 	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
-
-When using **Redirect to URL**, fill in the **URL** field with the page you want to redirect to when users complete the form.
-
-Use **Show Text** to display a final page defined by arbitrary plain text and HTML. Fill in the **Text** field with the HTML or plain text content you wish to show.
+- **Redirect to URL**: Redirect the user to a specified URL when the form completes.
+	- Fill in the **URL** field with the page you want to redirect to when users complete the form.
+- **Show Text**: Display a final page defined by arbitrary plain text and HTML.
+	- Fill in the **Text** field with the HTML or plain text content you wish to show.
+- **Return Binary File**: Return a binary file upon completion.
+	- Fill in **Completion Title** to set the `h1` title on the form.
+	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+	- Provide the **Input Data Field Name** containing the binary file to return to the user.
 
 ### Forms with branches
 

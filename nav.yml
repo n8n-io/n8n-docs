@@ -275,6 +275,7 @@ nav:
         - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
         - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
         - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
+        - AWS IAM: integrations/builtin/app-nodes/n8n-nodes-base.awsiam.md
         - AWS Lambda: integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md
         - AWS Rekognition: integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition.md
         - AWS S3: integrations/builtin/app-nodes/n8n-nodes-base.awss3.md

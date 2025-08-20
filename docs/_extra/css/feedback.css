@@ -5,7 +5,7 @@ This file contains the styling for the n8nFeedback.html partial
 .n8n-feedback-container {
     border-top: 1px solid #eee;
     color: #666;
-    margin-top: 2em; 
+    margin-top: 1em; 
     padding-top: 1em; 
 }
 

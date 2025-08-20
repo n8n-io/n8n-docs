@@ -154,10 +154,14 @@ Choose between these options when using **On n8n Form Submission**:
 	- Fill in **Completion Title** to set the `h1` title on the form.
 	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
 	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
-
-When using **Redirect to URL**, fill in the **URL** field with the page you want to redirect to when users complete the form.
-
-Use **Show Text** to display a final page defined by arbitrary plain text and HTML. Fill in the **Text** field with the HTML or plain text content you wish to show.
+- **Redirect to URL**: Redirect the user to a specified URL when the form completes.
+	- Fill in the **URL** field with the page you want to redirect to when users complete the form.
+- **Show Text**: Display a final page defined by arbitrary plain text and HTML.
+	- Fill in the **Text** field with the HTML or plain text content you wish to show.
+- **Return Binary File**: Return a binary file upon completion.
+	- Fill in **Completion Title** to set the `h1` title on the form.
+	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+	- Provide the **Input Data Field Name** containing the binary file to return to the user.
 
 ### Forms with branches
 
@@ -188,6 +192,8 @@ Select **Add Option** to view more configuration options:
 - **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
 - **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
 - **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
+- **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
+- **Completion Page Title**: The title for the final completion page of the form.
 
 ## Running the node
 

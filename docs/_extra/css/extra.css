@@ -189,7 +189,7 @@ button:nth-child(1) > svg, button:nth-child(2) > svg
 /* Button to open Kapa search */
 
 .n8n-kapa-button {
-  background: var(--color-primary);
+  background: linear-gradient(180deg, #A13355 0%, #530092 100%);
   border-radius: .1rem;
   color: white;
   cursor: pointer;

@@ -55,13 +55,13 @@ The `n8n-node` tool will create your project file structure and optionally insta
 
 ### build
 
-The `build` command compiles your node and copies all the required assets.
+The `build` command compiles your node and copies all the required assets. Learn more about how to use the `build` command in the [building your node section](#building-your-node).
 
 <!-- vale Vale.Spelling = NO -->
 ### dev
 <!-- vale Vale.Spelling = YES -->
 
-The `dev` command runs n8n with your node. It monitors your project directory and automatically rebuilds the live preview when it detects changes.
+The `dev` command runs n8n with your node. It monitors your project directory and automatically rebuilds the live preview when it detects changes. Learn more about how to use the `dev` command in the [testing your node in n8n section](#testing-your-node-in-n8n).
 
 ## Creating a new node
 

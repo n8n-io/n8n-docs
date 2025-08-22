@@ -6,13 +6,14 @@ Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
 
-* View the [`n8n-node` CLI tool documentation](/integrations/community-nodes/n8n-node.md) and [n8n's own nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for some examples.
+* You must use the [`n8n-node` CLI tool](/integrations/creating-nodes/build/n8n-node.md) to build and test your node. This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
+* View [n8n's own nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for examples of patterns you can use in your nodes.
 * Refer to the documentation on [building your own nodes](/integrations/creating-nodes/overview.md).
 * Make sure your node follows the [standards](#standards) for community nodes.
 
 ## Standards
 
-Developing with the [`n8n-node` tool](/integrations/community-nodes/n8n-node.md) will ensure that your node adheres to the following standards required to make your node available in the n8n community node repository:
+Developing with the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) ensures that your node adheres to the following standards required to make your node available in the n8n community node repository:
 
 * Make sure the package name starts with `n8n-nodes-` or `@<scope>/n8n-nodes-`. For example, `n8n-nodes-weather` or `@weatherPlugins/n8n-nodes-weather`.
 * Include `n8n-community-node-package` in your package keywords.

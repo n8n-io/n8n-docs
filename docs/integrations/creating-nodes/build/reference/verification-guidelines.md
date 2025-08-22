@@ -11,7 +11,7 @@ Consider following these guidelines while building your node if you want to subm
 
 ## Must use the n8n-node tool
 
-All verified community nodes must use the [`n8n-node` tool](/integrations/community-nodes/n8n-node.md) to create and check their package. This helps n8n ensure quality and consistency by:
+All verified community nodes must use the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) to create and check their package. This helps n8n ensure quality and consistency by:
 
 * Generating the expected package file structure
 * Adding the required metadata and configuration to the `package.json` file

@@ -3,7 +3,7 @@
 contentType: howto
 ---
 
-# Using n8n-node tool
+# Using the n8n-node tool
 
 The `n8n-node` tool is the official CLI for developing community nodes for n8n. You can use it to scaffold out new nodes, build your projects, and run your node as you develop it.
 
@@ -11,7 +11,7 @@ Using `n8n-node`, you can create nodes that adhere to the
 
 ## Prerequisites
 
-Before you can use the `n8n-node` tool, you must [install n8n locally with `npm`](hosting/installation/npm.md). The `n8n-node` tool runs the local n8n instance with your community node loaded to provide live previews.
+Before you can use the `n8n-node` tool, you must [install n8n locally with `npm`](/hosting/installation/npm.md). The `n8n-node` tool runs the local n8n instance with your community node loaded to provide live previews.
 
 ## Get n8n-node
 

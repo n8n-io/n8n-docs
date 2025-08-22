@@ -13,13 +13,13 @@ The file and directory structure of your node depends on:
 * Whether you use node versioning.
 * How many nodes you include in the npm package.
 
-n8n recommends using the [`n8n-node` tool](/integrations/community-nodes/n8n-node.md) to create the expected node file structure. You can modify the generated scaffolding as required to meet more complex needs.
+n8n recommends using the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) to create the expected node file structure. You can customize the generated scaffolding as required to meet more complex needs.
 
 ## Required files and directories
 
 Your node must include:
 
-* A `package.json` file at the root of the project. This is required for any npm module.
+* A `package.json` file at the root of the project. Every npm module requires this.
 * A `nodes` directory, containing the code for your node:
     * This directory must contain the [base file](/integrations/creating-nodes/build/reference/node-base-files/index.md), in the format `<node-name>.node.ts`. For example, `MyNode.node.ts`.
     * n8n recommends including a [codex file](/integrations/creating-nodes/build/reference/node-codex-files.md), containing metadata for your node. The codex filename must match the node base filename. For example, given a node base file named `MyNode.node.ts`, the codex name is `MyNode.node.json`.

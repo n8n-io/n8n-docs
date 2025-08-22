@@ -21,6 +21,8 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 #### For members of the n8n GitHub organization:
 
+n8n members have access to the full Insiders version of the site theme.
+
 1. Set up an SSH token and add it to your GitHub account. Refer to [GitHub | About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) for guidance.
 2. Then run these commands:
 
@@ -35,7 +37,7 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 
 #### For external contributors:
 
-Rely on the preview builds on pull requests, or use the free version of Material for MkDocs (most things are the same, some formatting may be missing)
+External contributors don't have access to the full Insiders version of the site theme. You can rely on the preview builds on pull requests, or use the free version of Material for MkDocs.
 
 Fork the repository, then:
 

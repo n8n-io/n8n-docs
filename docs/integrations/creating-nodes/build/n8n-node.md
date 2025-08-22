@@ -49,19 +49,23 @@ The `n8n-node` tool provides the following commands:
 
 The `new` command creates the file system structure and metadata for a new node.
 
-When called, it interactively prompts for details about your project to customize your starting code. You'll provide the project name, choose a node type, and select the starting template that best matches your needs.
+When called, it interactively prompts for details about your project to customize your starting code. You'll provide the project name, choose a node type, and select the starting template that best matches your needs. The `n8n-node` tool will create your project file structure and optionally install your initial project dependencies.
 
-The `n8n-node` tool will create your project file structure and optionally install your initial project dependencies. Learn more about how to use the `new` command in the [creating a new node section](#creating-a-new-node).
+Learn more about how to use the `new` command in the [creating a new node section](#creating-a-new-node).
 
 ### build
 
-The `build` command compiles your node and copies all the required assets. Learn more about how to use the `build` command in the [building your node section](#building-your-node).
+The `build` command compiles your node and copies all the required assets.
+
+Learn more about how to use the `build` command in the [building your node section](#building-your-node).
 
 <!-- vale Vale.Spelling = NO -->
 ### dev
 <!-- vale Vale.Spelling = YES -->
 
-The `dev` command runs n8n with your node. It monitors your project directory and automatically rebuilds the live preview when it detects changes. Learn more about how to use the `dev` command in the [testing your node in n8n section](#testing-your-node-in-n8n).
+The `dev` command runs n8n with your node. It monitors your project directory and automatically rebuilds the live preview when it detects changes.
+
+Learn more about how to use the `dev` command in the [testing your node in n8n section](#testing-your-node-in-n8n).
 
 ## Creating a new node
 

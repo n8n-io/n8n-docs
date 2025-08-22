@@ -13,6 +13,8 @@ The file and directory structure of your node depends on:
 * Whether you use node versioning.
 * How many nodes you include in the npm package.
 
+n8n recommends using the [`n8n-node` tool](/integrations/community-nodes/n8n-node.md) to create the expected node file structure. You can modify the generated scaffolding as required to meet more complex needs.
+
 ## Required files and directories
 
 Your node must include:
@@ -25,6 +27,7 @@ Your node must include:
 * A `credentials` directory, containing your credentials code. This code lives in a single [credentials file](/integrations/creating-nodes/build/reference/credentials-files.md). The filename format is `<node-name>.credentials.ts`. For example, `MyNode.credentials.ts`.
 
 ## Modular structure
+
 <!-- vale off -->
 You can choose whether to place all your node's functionality in one file, or split it out into a base file and other modules, which the base file then imports. Unless your node is very simple, it's a best practice to split it out.
 <!-- vale on -->

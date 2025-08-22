@@ -39,10 +39,11 @@ Rely on the preview builds on pull requests, or use the free version of Material
 
 Fork the repository, then:
 
-```
+```bash
 git clone https://github.com/<your-username>/n8n-docs.git
 cd n8n-docs
-# In the activated virtual env, install dependencies
+# Set up a virtual environment (steps depend on your system) and activate it
+# Install dependencies
 pip install -r requirements.txt
 pip install mkdocs-material
 ```

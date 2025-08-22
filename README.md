@@ -52,28 +52,42 @@ pip install mkdocs-material
 mkdocs serve --strict
 ```
 
-**Note for external contributors**: You may receive an error like the following:
-	
-```plaintext
-ERROR   -  Config value 'markdown_extensions': Failed to load extension 'material.extensions.preview'.
-           ModuleNotFoundError: No module named 'material.extensions.preview'
+## Troubleshooting
 
-Aborted with a configuration error!
-```
-This is because the `material.extensions.preview` is managed by internal n8n contributors. If you receive such an error, go to the `mkdocs.yml` file and **temporarely** comment the following section of the file:
-```yaml
-- material.extensions.preview:
-      configurations:
-        - sources:
-            include:
-              - release-notes.md
-        - targets:
-            include:
-              - glossary.md
-```
-After that, you should be able to display and use locally the preview of the documentation. 
+### Errors due to missing extensions or features
 
-Before committing any changes,please, remember to **uncomment this section** of the `mkdocs.yml` file.
+n8n's docs use the Insiders version of the Material theme. This is not available to external contributors. The standard (free) version has most of the features, but you may get errors if the site is relying on features currently in Insiders. The feature set is constantly changing, as the theme creator gradually moves features out of Insiders to general availability. You can view the currently restricted feautres here: [Material Insiders Benefits](https://squidfunk.github.io/mkdocs-material/insiders/benefits/).
+
+To work around this, you can either:
+
+- Rely on the preview builds when you open a PR.
+- Temporarily comment out features in the `mkdocs.yml`. Before committing any changes, remember to uncomment any sections you commented out of the `mkdocs.yml` file.
+
+### Build times
+
+If you find the build times are slow when working with local previews, you can temporarily speed up build times by ignoring parts of the site you're not working on.
+
+#### Dirty builds
+
+`mkdocs serve --strict --dirty`
+
+The first build will still be a full build, but subsequently it will only rebuild files that you change.
+
+#### Temporarily exclude the integrations library
+
+In `mkdocs.yml`, find the `exclude` plugin. Uncomment `- integrations/builtin/*`. Remember to comment it out again before committing.
+
+#### Skip pulling in data for integrations macros
+
+One of the factors that slows down the builds is pulling fresh data for the trending workflows in the integrations pages. You can skip this when previewing locally.
+
+```
+# Bash
+export NO_TEMPLATE=true && mkdocs serve --strict
+
+# PowerShell
+$env:NO_TEMPLATE='true'; mkdocs serve --strict
+```
 
 ## Contributing
 

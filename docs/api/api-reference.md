@@ -10,6 +10,7 @@ description: API reference for n8n's public REST API.
 contentType: reference
 ---
 
+
 <!-- Mount point -->
 <div id="app"></div>
 

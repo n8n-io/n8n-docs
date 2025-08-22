@@ -27,7 +27,8 @@ This repository hosts the documentation for [n8n](https://n8n.io/), an extendabl
 	```bash
 	git clone --recurse-submodules git@github.com:n8n-io/n8n-docs.git
 	cd n8n-docs
- 	# In the activated virtual env, install dependencies
+ 	# Set up a virtual environment (steps depend on your system) and activate it
+ 	# Install dependencies
 	pip install -r requirements.txt
 	pip install _submodules/insiders
 	```

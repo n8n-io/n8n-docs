@@ -20,6 +20,8 @@ contentType: reference
 <script>
 	Scalar.createApiReference('#app', {
 		url: '/api/v1/openapi.yml',
+		// Avoid CORS issues
+        proxyUrl: 'https://proxy.scalar.com',
 		servers: [
 			{
 				url: 'https://{instance}.app.n8n.cloud/api/v1',

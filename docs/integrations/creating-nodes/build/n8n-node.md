@@ -49,15 +49,17 @@ The `n8n-node` tool provides the following commands:
 
 The `new` command creates the file system structure and metadata for a new node.
 
-When called, it interactively prompts for details about your project to customize your starting code. You'll provide the project name, choose a type of node to build, and select the starting template that best matches your needs.
+When called, it interactively prompts for details about your project to customize your starting code. You'll provide the project name, choose a node type, and select the starting template that best matches your needs.
 
 The `n8n-node` tool will create your project file structure and optionally install your initial project dependencies. Learn more about how to use the `new` command in the [creating a new node section](#creating-a-new-node).
 
 ### build
 
-The `build` command compiles your node and copies all of the required assets.
+The `build` command compiles your node and copies all the required assets.
 
+<!-- vale Vale.Spelling = NO -->
 ### dev
+<!-- vale Vale.Spelling = YES -->
 
 The `dev` command runs n8n with your node. It monitors your project directory and automatically rebuilds the live preview when it detects changes.
 
@@ -80,17 +82,17 @@ This will start an interactive prompt where you can define the details of your p
 * **What is your node called?** The name of your node. This impacts the name of your project directory, package name, and the n8n node itself. The name must use one of the following formats:
     * `n8n-nodes-<YOUR_NODE_NAME>`
     * `@<YOUR_ORG>/n8n-nodes-<YOUR_NODE_NAME>`
-* **What kind of node are you building?** The [type of node](/integrations/creating-nodes/plan/choose-node-method.md) you want to build:
+* **What kind of node are you building?** The [node type](/integrations/creating-nodes/plan/choose-node-method.md) you want to build:
     * **HTTP API**: A low-code, declarative node structure that's designed for faster approval for n8n Cloud.
     * **Other**: A programmatic style node with full flexibility.
 * **What template do you want to use?** When using the HTTP API, you can choose the template to start from:
     * **GitHub Issues API**: A demo node that includes multiple operations and credentials. This can help you get familiar with the node structure and conventions.
-    * **Start from scratch**: A blank template that will guide you through your custom setup with some additional prompts.
+    * **Start from scratch**: A blank template that will guide you through your custom setup with some further prompts.
 
-When choosing HTTP API > Start from scratch, you'll be asked for the following:
+When choosing HTTP API > Start from scratch, `n8n-node` will ask you the following:
 
 * **What's the base URL of the API?** The root URL for the API you plan to integrate with.
-* **What type of authentication does your API use?** What type of authentication your node should provide:
+* **What type of authentication does your API use?** The authentication your node should provide:
     * **API Key**: Send a secret key using headers, query parameters, or the request body.
     * **Bearer Token**: Send a token using the Authorization header (`Authorization: Bearer <token>`).
     * **OAuth2**: Use an OAuth 2.0 flow to get access tokens on behalf of a user or app.
@@ -126,7 +128,7 @@ n8n-node new --template declarative/custom
 The template must be one of the following:
 
 * `declarative/github-issues`: A demo node that includes multiple operations and credentials. This can help you get familiar with the node structure and conventions.
-* `declarative/custom`: A blank template that will guide you through your custom setup with some additional prompts.
+* `declarative/custom`: A blank template that will guide you through your custom setup with some further prompts.
 * `programmatic/example`: A programmatic style node with full flexibility.
 
 ## Building your node
@@ -137,7 +139,7 @@ You can build your node by running the `build` command in your project's root di
 n8n-node build
 ```
 
-`n8n-node` will compile your TypeScript files and bundle your other project assets. You can also call the `build` script from your package manager. For instance, for `npm`, this is the equivalent command:
+`n8n-node` will compile your TypeScript files and bundle your other project assets. You can also call the `build` script from your package manager. For instance, if you're using `npm`, this works the same:
 
 ```shell
 npm run build

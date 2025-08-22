@@ -1324,7 +1324,7 @@ nav:
       - api/index.md
       - Authentication: api/authentication.md
       - Pagination: api/pagination.md
-      - Using the API playground: api/using-api-playground.md
+      - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
   - Embed:
       - embed/index.md

@@ -41,15 +41,16 @@ On the left side of the **Editor UI**, there is a panel which contains the core 
 
 The panel contains the following sections:
 
+The panel contains the following sections:
+
 - **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
-- **Projects**: (Not available on Community edition) Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default.
-- **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
+- **Personal**: Your default project where workflows and credentials are stored.
+- **Admin Panel**: Access instance usage, billing, and version settings (available in n8n Cloud).
 - **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
-- **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
-- **All executions**: Contains information about your workflow executions.
-- **Help**: Contains resources around n8n product and community.
-- **Update**: (When updates are available) Indicator for any recent product updates.
-- **Settings**: Under the ellipsis (`...`) menu by your username. Manage users and access settings for a variety of features.
+- **Variables**: Used to store and access fixed data across your workflows.
+- **Insights**: Provides analytics and monitoring of your workflows.
+- **Help**: Contains resources around the n8n product and community.
+- **What’s New**: Shows the latest product updates and announcements.
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 

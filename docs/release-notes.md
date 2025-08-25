@@ -35,6 +35,23 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.109.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.108.0...n8n@1.109.0) for this version.<br />
+**Release date:** 2025-08-25
+
+This release contains bug fixes.
+
+### Contributors
+
+[naXa777](https://github.com/naXa777)  
+[prettycode2022](https://github.com/prettycode2022)  
+[oppai](https://github.com/oppai)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.107.4
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.3...n8n@1.107.4) for this version.<br />

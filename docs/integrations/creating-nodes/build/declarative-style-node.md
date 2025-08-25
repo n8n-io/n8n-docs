@@ -21,7 +21,7 @@ You need some understanding of:
 
 ## Build your node
 
-In this section, you'll clone n8n's node starter repository, and build a node that integrates the [NASA API](https://api.nasa.gov/). You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
+In this section, you'll generate a node structure with the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md), and build a node that integrates the [NASA API](https://api.nasa.gov/). You'll create a node that uses two of NASA's services: APOD (Astronomy Picture of the Day) and Mars Rover Photos. To keep the code examples short, the node won't implement every available option for the Mars Rover Photos endpoint.
 
 /// note | Existing node
 n8n has a built-in NASA node. To avoid clashing with the existing node, you'll give your version a different name.
@@ -29,48 +29,53 @@ n8n has a built-in NASA node. To avoid clashing with the existing node, you'll g
 ### Step 1: Set up the project
 
 
-n8n provides a starter repository for node development. Using the starter ensures you have all necessary dependencies. It also provides a linter. 
+The `n8n-node` tool can generate a package structure for node development. This ensures you have all necessary dependencies. It also provides a linter. 
 
-Clone the repository and navigate into the directory:
+Create the package structure and navigate into the directory:
 
-1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from the template repository.
-2. Clone your new repository:
-		```shell
-		git clone https://github.com/<your-organization>/<your-repo-name>.git n8n-nodes-nasa-pics
-		cd n8n-nodes-nasa-pics
-		```
+1. Create the project with `n8n-node`:
+	1. Run the following command to begin setting up a custom declarative node:
+	```shell
+	n8n-node create n8n-nodes-nasa-pics --template declarative/custom
+	```
+	1. **What's the base URL of the API?** `https://api.nasa.gov`
+	1. **What type of authentication does your API use?** `API Key (Send a secret key via headers, query, or body)`
+1. Navigate into your new project directory:
+	```shell
+	cd n8n-nodes-nasa-pics
+	```
+1. Initialize a Git repository to track your changes and commit the starting state:
+	```shell
+	git init
+	git add :/
+	git commit -m 'Initial commit'
+	```
 
-The starter contains example nodes and credentials. Delete the following directories and files:
+### Step 2: Replace the icon
 
-* `nodes/ExampleNode`
-* `nodes/HTTPBin`
-* `credentials/ExampleCredentials.credentials.ts`
-* `credentials/HttpBinApi.credentials.ts`
+The `n8n-node` tool automatically includes a generic icon for your node. You should replace it with a more relevant icon.
 
-Now create the following directories and files:
-
-`nodes/NasaPics`  
-`nodes/NasaPics/NasaPics.node.json`  
-`nodes/NasaPics/NasaPics.node.ts`  
-`credentials/NasaPicsApi.credentials.ts`  
-
-These are the key files required for any node. Refer to [Node file structure](/integrations/creating-nodes/build/reference/node-file-structure.md) for more information on required files and recommended organization.
-
-Now install the project dependencies:
-
-```shell
-npm i
-```
-
-### Step 2: Add an icon
-
-Save the NASA SVG logo from [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) as `nasapics.svg` in `nodes/NasaPics/`.
-
+1. Remove the two `.svg` files in the `nodes/NasaPics` directory:
+	```shell
+	rm nodes/NasaPics/nasaPics.svg
+	rm nodes/NasaPics/nasaPics.dark.svg
+	```
+1. Download an `.svg` file of the NASA logo [here](https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg) and save it as `nasaPics.svg` in `nodes/NasaPics/`.
+1. Open the `nodes/NasaPics/NasaPics.node.ts` file and update the `icon` configuration:
+	```diff
+	        description: INodeTypeDescription = {
+					displayName: 'Nasa Pics',
+					name: 'nasaPics',
+	-               icon: { light: 'file:nasaPics.svg', dark: 'file:nasaPics.dark.svg' },
+	+               icon: 'file:nasaPics.svg',
+					group: ['transform'],
+					version: 1,
+					subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+	```
 
 --8<-- "_snippets/integrations/creating-nodes/node-icons.md"
 
-
-### Step 3: Create the node
+### Step 3: Update the node details
 
 Every node must have a base file. Refer to [Node base file](/integrations/creating-nodes/build/reference/node-base-files/index.md) for detailed information about base file parameters.
 

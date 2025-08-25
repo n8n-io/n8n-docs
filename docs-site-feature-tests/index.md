@@ -39,7 +39,7 @@ This is some danger box contents.
 
 ### Inline images
 
-Inline images like this should **not** expand on click: <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span>
+Inline images like this should **not** expand on click: <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span>
 
 If it expands on click, first check that the `off-glb` class has been applied. Refer to [MkDocs GLightbox | Disable by image](https://blueswen.github.io/mkdocs-glightbox/disable/image/) for more information.
 

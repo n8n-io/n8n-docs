@@ -8,7 +8,7 @@ priority: high
 
 # Baserow node
 
-Use the Baserow node to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows.
+Use the Baserow node to automate work in Baserow, and integrate Baserow with other applications. n8n has built-in support for a wide range of Baserow features, including creating, getting, retrieving, and updating rows or uploading files.
 
 On this page, you'll find a list of operations the Baserow node supports and links to more resources.
 
@@ -19,6 +19,9 @@ Refer to [Baserow credentials](/integrations/builtin/credentials/baserow.md) for
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
 
 ## Operations
+
+* File
+    * Upload a file via URL
 
 * Row
     * Create a row

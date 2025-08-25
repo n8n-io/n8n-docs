@@ -85,6 +85,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 /// note | Using Response Nodes
 This mode replaces the 'Using Respond to Webhook Node' mode from version 1.2 of the Chat Trigger node.
 ///
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support in the workflow (for example, the [AI agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) node).
 
 #### Require Button Click to Start Chat
 
@@ -121,6 +122,7 @@ Use this option when building a workflow with steps after the agent or chain tha
 /// note | Using Response Nodes
 This mode replaces the 'Using Respond to Webhook Node' mode from version 1.2 of the Chat Trigger node.
 ///
+* **Streaming response**: Enables real-time data streaming back to the user as the workflow processes. Requires nodes with streaming support enabled.
 
 ## Templates and examples
 

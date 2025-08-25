@@ -69,7 +69,7 @@ To configure the webhook for your TheHive instance:
 		{
 			name: TESTING_WEBHOOK_NAME
 			url: TESTING_WEBHOOK_URL
-			version: 0
+			version: 1
 			wsConfig: {}
 			includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
 			excludedTheHiveOrganisations: []
@@ -77,7 +77,7 @@ To configure the webhook for your TheHive instance:
 		{
 			name: PRODUCTION_WEBHOOK_NAME
 			url: PRODUCTION_WEBHOOK_URL
-			version: 0
+			version: 1
 			wsConfig: {}
 			includedTheHiveOrganisations: ["ORGANIZATION_NAME"]
 			excludedTheHiveOrganisations: []

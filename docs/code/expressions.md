@@ -81,7 +81,7 @@ The following code use the Luxon date and time library to find the time between 
 
 
 ```js
-{{(()=>{
+{{return (()=>{
   let end = DateTime.fromISO('2017-03-13');
   let start = DateTime.fromISO('2017-02-13');
   let diffInMonths = end.diff(start, 'months');

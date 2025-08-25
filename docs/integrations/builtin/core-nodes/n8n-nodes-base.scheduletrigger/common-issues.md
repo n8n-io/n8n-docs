@@ -34,7 +34,7 @@ If you're [self hosting](/hosting/index.md), set your global timezone using the 
 To set the timezone for an individual workflow:
 
 1. Open the workflow on the canvas.
-1. Select the <span class="inline-image">![three dots menu](/_images/common-icons/three-dots-horizontal.png)</span> **Three dots icon** in the upper-right corner.
+1. Select the <span class="n8n-inline-image">![three dots menu](/_images/common-icons/three-dots-horizontal.png)</span> **Three dots icon** in the upper-right corner.
 1. Select **Settings**.
 1. Change the **Timezone** setting.
 1. Select **Save**.

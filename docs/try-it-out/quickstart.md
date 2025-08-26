@@ -40,13 +40,13 @@ Select **Execute Workflow**. This runs the workflow, loading the data from the C
 
 Add a third node to message each customer and tell them their description. Use the Customer Messenger node to send a message to fake recipients.
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Edit Fields node.
+1. Select the **Add node** <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Edit Fields node.
 2. Search for **Customer Messenger**. n8n shows a list of nodes that match the search.
 3. Select **Customer Messenger (n8n training)** to add the node to the [canvas](/glossary.md#canvas-n8n). n8n opens the node automatically.
 4. Use [expressions](/code/expressions.md) to map in the **Customer ID** and create the **Message**:
 	1. In the **INPUT** panel select the **Schema** tab.
 	2. Drag **Edit Fields1** > **customer_id** into the **Customer ID** field in the node settings.
-    2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
+    2. Hover over **Message**. Select the **Expression** tab, then select the expand button <span class="n8n-inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
     3. Copy this expression into the editor:
         ```
         Hi {{ $json.customer_name }}. Your description is: {{ $json.customer_description }}

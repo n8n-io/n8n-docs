@@ -108,3 +108,12 @@ If you receive a message that the path and method you chose are already in use, 
 
 * Deactivate the workflow with the conflicting webhook.
 * Change the webhook path and/or method for one of the conflicting webhooks.
+
+## Timeouts on n8n Cloud
+
+n8n Cloud uses Cloudflare to protect against malicious traffic. If no response is sent within 100 seconds, incoming requests will fail with a [524 status code](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/).
+
+Therefore, for very long-running processes, it may be necessary to implement polling logic using two separate webhook nodes:
+
+* One webhook to start the long-running process and send an immediate response.
+* A second webhook that can be called at regular intervals to query the status of the process and retrieve the result once it is complete.

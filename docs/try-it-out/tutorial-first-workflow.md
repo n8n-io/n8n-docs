@@ -42,6 +42,9 @@ For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-n
 1. For **Trigger Interval**, select **Weeks**.
 1. For **Weeks Between Triggers**, enter `1`.
 1. Enter a time and day. For this example, select **Monday** in **Trigger on Weekdays**, select **9am** in **Trigger at Hour**, and enter `0` in **Trigger at Minute**.
+
+![Screenshot showing Schedule Trigger setup](/_images/try-it-out/schedule-trigger-setup.png)
+
 1. Close the node details view to return to the canvas.
 
 ## Step three: Add the NASA node and set up credentials

@@ -92,13 +92,7 @@ The following video demonstrates the steps described above.
 /// danger | No access to my drive
 Google no longer allows Service Accounts created after April 15, 2025 to access `my drive`. Service Accounts now only have access to shared drives.
 
-While not recommended, if you need to use a Service Account to access `my drive`, you can do so by [enabling domain-wide delegation](#enable-domain-wide-delegation) and adding the following scopes:
-
-* `https://www.googleapis.com/auth/drive`
-* `https://www.googleapis.com/auth/drive.appdata`
-* `https://www.googleapis.com/auth/drive.photos.readonly`
-
-You can learn more in [this post in the community](https://community.n8n.io/t/please-please-help-upload-file-google-drive-node-with-service-account-not-working/147750/15).
+While not recommended, if you need to use a Service Account to access `my drive`, you can do so by [enabling domain-wide delegation](#enable-domain-wide-delegation). You can learn more in [this post in the community](https://community.n8n.io/t/please-please-help-upload-file-google-drive-node-with-service-account-not-working/147750/15).
 ///
 <!-- vale from-microsoft.FirstPerson = YES -->
 

@@ -43,7 +43,7 @@ The panel contains the following sections:
 
 - **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
 
-- **Projects**: (Community edition shows this as personal) Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default.
+- **Projects**:  Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default. Projects aren't available on the Community edition.
 - **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
 - **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
 - **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
@@ -70,11 +70,11 @@ The top bar of the **Editor UI** contains the following information:
 
 The **canvas** is the gray dotted grid background in the Editor UI. It displays several icons and a node with different functionalities:
 
-- Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas,reset zoom and tidy up the nodes on screen.
+- Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, reset zoom, and tidy up the nodes on screen.
 - A button to **Execute workflow** once you add your first node. When you click on it, n8n executes all nodes on the canvas in sequence.
 - A button with a **+** sign inside. This button opens the nodes panel.
 - A button with a note icon inside. This button adds a [sticky note](/workflows/components/sticky-notes.md) to the canvas (visible when hovering on the top right + icon).
-- A button labeled **Ask Assistant** appears on the right side of the canvas.You can ask the AI Assistant for help with building workflows.
+- A button labeled **Ask Assistant** appears on the right side of the canvas. You can ask the AI Assistant for help with building workflows.
 - A dotted square with the text "Add first step." This is where you add your first node.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>

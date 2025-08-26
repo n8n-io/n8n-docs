@@ -35,7 +35,7 @@ You can edit existing tags. Instance owners can delete tags.
 
 1. Select **Manage tags**. This is available from **Filters** > **Tags** on the **Workflows** page, or in the **+ Add tag** modal in your workflow.
 2. Hover over the tag you want to change.
-3. Select **Edit** <span class="inline-image">![Add node icon](/_images/common-icons/edit.png){.off-glb}</span> to rename it, or **Delete** <span class="inline-image">![Add node icon](/_images/common-icons/delete.png){.off-glb}</span> to delete it.
+3. Select **Edit** <span class="n8n-inline-image">![Add node icon](/_images/common-icons/edit.png){.off-glb}</span> to rename it, or **Delete** <span class="n8n-inline-image">![Add node icon](/_images/common-icons/delete.png){.off-glb}</span> to delete it.
 
 /// warning | Global tags
 Tags are global. If you edit or delete a tag, this affects all users of your n8n instance.

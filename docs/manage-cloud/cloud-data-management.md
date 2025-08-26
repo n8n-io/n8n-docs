@@ -58,7 +58,7 @@ In the admin dashboard:
 
 In your workflow settings:
 
-1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu.
+1. Select the **Options** <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu.
 1. Select **Settings**. n8n opens the **Workflow settings** modal.
 1. Change **Save successful production executions** to **Do not save**.
 

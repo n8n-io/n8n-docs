@@ -51,7 +51,7 @@ The panel contains the following sections:
 - **Help**: Contains resources around n8n product and community.
 - **What’s New**: Shows the latest product updates and features.  
 
-<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
+<figure style="text-align: center;"><img src="/docs/_images/courses/level-one/chapter-one/update-l1-c1-side-panel.PNG" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
 ### Top bar
 

@@ -57,7 +57,7 @@ The panel contains the following sections:
 
 The top bar of the **Editor UI** contains the following information:
 
-- **Project/Workspace**: Shows the project or workspace that the workflow belongs to, for example **Personal** in a trial account.
+- **Project/Workspace**: Shows the project or workspace that the workflow belongs to, for example "Personal" in a trial account.
 - **Workflow Name**: By default, n8n names a new workflow as "My workflow", but you can edit the name at any time.
 - **+ Add Tag**: Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
 - **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.

@@ -22,15 +22,15 @@ After this step, your workflow should look like this:
 If we're going to insert data into Airtable, we first need to set up a table there. To do this:
 
 1. [Create an Airtable account](https://airtable.com/signup).
-2. In your Airtable workspace add a new base from scratch and name it, for example, *beginner course*.
+2. In your Airtable workspace, click Create, choose Build an app on your own, and name it, for example, *beginner course*.
 
 	<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>
 
-3. In the beginner course base, by default, you have a table called **Table 1** with four fields: `Name`, `Notes`, `Assignee`, and `Status`.  These fields aren't relevant for us since they aren't in our "orders" data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result. Prepare the table by doing the following:
+3. In the beginner course base, by default, you have a table called **Table 1** with four fields: `Name`, `Notes`, `Assignee`, `Status`, `Attachments`, and `Attachment Summary`.  These fields aren't relevant for us since they aren't in our "orders" data set. This brings us to the next point: the names of the fields in Airtable have to match the names of the columns in the node result. Prepare the table by doing the following:
 
 	* Rename the table from **Table 1** to **orders** to make it easier to identify.
 	* Delete the 3 blank records created by default.
-	* Delete the `Notes`, `Assignee`, and `Status` fields.
+	* Delete the `Notes`, `Assignee`, `Status`, `Attachments`, and `Attachment Summary` fields.
 	* Edit the `Name` field (the primary field) to read `orderID`, with the **Number** field type.
 	* Add the rest of the fields, and their field types, using the table below as a reference:
 

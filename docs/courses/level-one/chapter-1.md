@@ -77,7 +77,20 @@ The **canvas** is the gray dotted grid background in the Editor UI. It displays 
 - A button labeled **Ask Assistant** appears on the right side of the canvas. You can ask the AI Assistant for help with building workflows.
 - A dotted square with the text "Add first step." This is where you add your first node.
 
+### Logs tab (editor canvas)
+
+A **Logs** pane may appear along the bottom edge of the canvas in many n8n deployments. This pane displays recent execution logs, node outputs and error messages for runs performed from the editor — making it easier to peek at node outputs and debug workflows without leaving the Editor UI.
+
+- Shows recent workflow runs, node outputs and errors so you can inspect what each node returned.  
+- Expand the pane to read detailed output or collapse it to get more canvas space.  
+- Useful for quick verification of data flow and for finding failing nodes while you build or test a workflow.
+
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
+
+<figure>
+  <img src="/_images/courses/level-one/chapter-one/l1-c1-canvas-logs.png" alt="Workflow canvas showing the bottom Logs pane" style="width:100%">
+  <figcaption align="center"><i>Workflow canvas showing the bottom Logs pane</i></figcaption>
+</figure>
 
 /// note | Moving the canvas
 You can move the workflow canvas around in three ways:

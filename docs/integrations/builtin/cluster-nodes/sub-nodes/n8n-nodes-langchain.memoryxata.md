@@ -36,4 +36,4 @@ Refer to [LangChain's Xata documentation](https://js.langchain.com/docs/integrat
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

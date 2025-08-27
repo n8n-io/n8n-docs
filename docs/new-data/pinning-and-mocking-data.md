@@ -31,7 +31,7 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 	To pin data in a node:
 
 	1. Run the node to load data.
-	2. In the **OUTPUT** view, select **Pin data** <span class="inline-image">![Pin data icon](/_images/data/data-pinning/data-pinning-button.png){.off-glb}</span>. When data pinning is active, the button is disabled and a "This data is pinned" banner is displayed in the **OUTPUT** view.
+	2. In the **OUTPUT** view, select **Pin data** <span class="n8n-inline-image">![Pin data icon](/_images/data/data-pinning/data-pinning-button.png){.off-glb}</span>. When data pinning is active, the button is disabled and a "This data is pinned" banner is displayed in the **OUTPUT** view.
 
 
 ??? info "How to edit pinned data"
@@ -40,7 +40,7 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 	To edit output data:
 
 	1. Run the node to load data.
-	2. Select the **Edit icon** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png){.off-glb}</span>.
+	2. Select the **Edit icon** <span class="n8n-inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png){.off-glb}</span>.
 	3. Edit your data.
 	4. Select **Save**. n8n saves your data changes and pins your data.
 
@@ -54,11 +54,11 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 	2. Browse the workflow executions list to find the one with the data you want to copy.
 	3. Double click the node whose data you want to copy.
 	4. In the **Output** panel, select **JSON** to switch to JSON view.
-	5. Hover over the JSON and select the **Copy** <span class="inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png){.off-glb}</span> icon.
+	5. Hover over the JSON and select the **Copy** <span class="n8n-inline-image">![Copy data icon](/_images/data/data-pinning/copy-data.png){.off-glb}</span> icon.
 	6. Select the **Editor** tab on the top of the canvas.
 	7. Open the node where you want to use the copied data.
 	8. If the node doesn't already have data, run the node to load data.
-	9. In the **Output** panel, select the **Edit** <span class="inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png){.off-glb}</span> icon.
+	9. In the **Output** panel, select the **Edit** <span class="n8n-inline-image">![Edit data icon](/_images/data/data-pinning/edit-data.png){.off-glb}</span> icon.
 	10. Paste in the data from the previous execution.
 	11. Select **Save**. n8n saves your data changes and pins your data.
 

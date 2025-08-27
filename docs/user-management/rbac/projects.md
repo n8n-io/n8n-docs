@@ -17,7 +17,7 @@ Instance owners and instance admins can create projects.
 
 To create a project:
 
-1. Select <span class="inline-image">![Plus icon](/_images/common-icons/plus.png)</span> **Add project**.
+1. Select <span class="n8n-inline-image">![Plus icon](/_images/common-icons/plus.png)</span> **Add project**.
 1. Fill out the project settings.
 1. Select **Save**.
 
@@ -60,7 +60,7 @@ Workflow and credential owners can move workflows or credentials (changing owner
 Moving workflows or credentials removes all existing sharing. Be aware that this could impact other workflows currently sharing these resources.
 ///
 
-1. Select **Workflow menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
+1. Select **Workflow menu** <span class="n8n-inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> or **Credential menu** <span class="n8n-inline-image">![Workflow menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> > **Move**.
 
 	/// info | Moving workflows with credentials
 	When moving a workflow with credentials you have permission to share, you can choose to share the credentials as well. This ensures that the workflow continues to have access to the credentials it needs to execute. n8n will note any credentials that can't be moved (credentials you don't have permission to share).

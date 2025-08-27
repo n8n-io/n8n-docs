@@ -27,4 +27,4 @@ Refer to [Wolfram|Alpha's documentation](https://products.wolframalpha.com/api) 
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

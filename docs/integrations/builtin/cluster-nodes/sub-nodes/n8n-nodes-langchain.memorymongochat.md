@@ -34,4 +34,4 @@ Refer to [LangChain's MongoDB Chat Message History documentation](https://js.lan
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

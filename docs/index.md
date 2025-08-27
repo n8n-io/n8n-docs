@@ -6,6 +6,7 @@ contentType: overview
 hide:
   - path
   - feedback
+  - kapaButton
 ---
 
 # Welcome to n8n Docs

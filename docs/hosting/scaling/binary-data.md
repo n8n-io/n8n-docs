@@ -19,6 +19,6 @@ If you're using queue mode, keep this to `default`. n8n doesn't support filesyst
 
 ## Binary data pruning
 
-n8n executes binary data pruning as part of execution data pruning. Refer to [Execution data | Enable data pruning](/hosting/scaling/execution-data.md#enable-data-pruning) for details. 
+n8n executes binary data pruning as part of execution data pruning. Refer to [Execution data | Enable executions pruning](/hosting/scaling/execution-data.md#enable-executions-pruning) for details. 
 
 If you configure multiple binary data modes, binary data pruning operates on the active binary data mode. For example, if your instance stored data in S3, and you later switched to filesystem mode, n8n only prunes binary data in the filesystem. Refer to [External storage](/hosting/scaling/external-storage.md#usage) for details. 

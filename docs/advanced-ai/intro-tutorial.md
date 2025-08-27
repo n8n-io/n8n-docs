@@ -76,7 +76,7 @@ Every workflow needs somewhere to start. In n8n these are called ['trigger nodes
 
 The AI Agent node is the core of adding AI to your workflows.
 
- 1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the trigger node to bring up the node search.
+ 1. Select the **Add node** <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the trigger node to bring up the node search.
 
  1. Start typing "AI" and choose the **AI agent** node to add it.
 
@@ -90,7 +90,7 @@ The AI Agent node is the core of adding AI to your workflows.
   
 AI agents require a chat model to be attached to process the incoming prompts.
 
-1. Add a chat model by clicking the plus <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneath the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
+1. Add a chat model by clicking the plus <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> button underneath the **Chat Model** connection on the **AI Agent** node (it's the first connection along the bottom of the node).
 
 1. The search dialog will appear, filtered on 'Language Models'. These are the models with built-in support in n8n. For this tutorial we will use **OpenAI Chat Model**.
 
@@ -150,7 +150,7 @@ The chat model is now giving us useful output, but there is something wrong with
 1. Wait for the response, then type the message "What's my name?". The AI won't be able to tell you, however apologetic it may seem. The reason for this is we aren't saving the context. The AI Agent has no [memory](/glossary.md#ai-memory).
    ![image showing a conversation illustrating the above](/_images/advanced-ai/ai-intro-memory.png)
 
-1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
+1. In order to remember what has happened in the conversation, the AI Agent needs to preserve context. We can do this by adding memory to the **AI Agent** node. On the canvas click on the <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> on the bottom of the **AI Agent** node labeled "Memory".
 
 1. From the panel which appears, select "Simple Memory". This will use the memory from the instance running n8n, and is usually sufficient for simple usage. The default value of 5 interactions should be sufficient here, but remember where this option is if you may want to change it later.
 

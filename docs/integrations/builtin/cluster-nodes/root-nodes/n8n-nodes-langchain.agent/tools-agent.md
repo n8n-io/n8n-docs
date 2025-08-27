@@ -193,4 +193,4 @@ To learn how to dynamically populate parameters for app node tools, refer to [Le
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

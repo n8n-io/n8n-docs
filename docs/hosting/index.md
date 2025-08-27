@@ -6,6 +6,7 @@ contentType: overview
 hide:
   - toc
   - feedback
+  - kapaButton
 ---
 
 # Self-hosting n8n

@@ -97,11 +97,11 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 
     1. In GitHub, create a pull request to merge development into production.
     1. Merge the pull request.
-    1. In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+    1. In your production instance, select **Pull** <span class="n8n-inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 === "Single-branch"
 
-    In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+    In your production instance, select **Pull** <span class="n8n-inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 

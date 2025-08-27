@@ -40,4 +40,4 @@ Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.lan
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

@@ -5,6 +5,7 @@ description: Access n8n integrations documentation and guides. Find comprehensiv
 contentType: overview
 hide:
   - feedback
+  - kapaButton
 ---
 
 # Integrations

@@ -35,14 +35,128 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.108.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.108.1...n8n@1.108.2) for this version.<br />
+**Release date:** 2025-08-27
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.109.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.108.0...n8n@1.109.0) for this version.<br />
+**Release date:** 2025-08-25
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains core updates, editor improvements, node updates, performance improvements, and bug fixes.
+
+### Contributors
+
+[naXa777](https://github.com/naXa777)  
+[prettycode2022](https://github.com/prettycode2022)  
+[oppai](https://github.com/oppai)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.107.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.3...n8n@1.107.4) for this version.<br />
+**Release date:** 2025-08-20
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.108.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.108.0...n8n@1.108.1) for this version.<br />
+**Release date:** 2025-08-20
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.107.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.2...n8n@1.107.3) for this version.<br />
+**Release date:** 2025-08-18
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.108.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.0...n8n@1.108.0) for this version.<br />
+**Release date:** 2025-08-18
+
+This release contains a new CLI tool, editor improvements, node updates, performance improvements, and bug fixes.
+
+### Contributors
+
+[ManuLasker](https://github.com/ManuLasker)  
+[EternalDeiwos](https://github.com/EternalDeiwos)  
+[jreyesr](https://github.com/jreyesr)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.107.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.1...n8n@1.107.2) for this version.<br />
+**Release date:** 2025-08-15
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.107.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.0...n8n@1.107.1) for this version.<br />
+**Release date:** 2025-08-14
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.106.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.2...n8n@1.106.3) for this version.<br />
 **Release date:** 2025-08-11
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
+
+
+
 
 This release contains a backported update.
 
@@ -55,9 +169,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.106.0...n8n@1.107.0) for this version.<br />
 **Release date:** 2025-08-11
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 

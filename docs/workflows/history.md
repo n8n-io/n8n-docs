@@ -37,13 +37,13 @@ Workflow history is previous versions of the workflow: for example, a version wi
 To view a workflow's history:
 
 1. Open the workflow.
-1. Select **Workflow history** <span class="inline-image">![Workflow history icon](/_images/common-icons/workflow-history.png){.off-glb}</span>. n8n opens a menu showing the saved workflow versions, and a canvas with a preview of the selected version.
+1. Select **Workflow history** <span class="n8n-inline-image">![Workflow history icon](/_images/common-icons/workflow-history.png){.off-glb}</span>. n8n opens a menu showing the saved workflow versions, and a canvas with a preview of the selected version.
 
 ## Restore or copy previous versions
 
 You can restore a previous workflow version, or make a copy of it:
 
-1. On the version you want to restore or copy, select **Options** <span class="inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
+1. On the version you want to restore or copy, select **Options** <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 1. Choose what you want to do:
 	* **Restore this version**: replace your current workflow with the selected version.
 	* **Clone to new workflow**: create a new workflow based on the selected version.

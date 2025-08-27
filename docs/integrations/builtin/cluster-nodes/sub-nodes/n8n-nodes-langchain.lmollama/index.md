@@ -51,6 +51,6 @@ Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/integ
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmollama/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+
 
 --8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

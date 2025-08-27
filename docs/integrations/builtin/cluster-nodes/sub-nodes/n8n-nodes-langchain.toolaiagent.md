@@ -46,4 +46,4 @@ Refine the AI Agent Tool node's behavior using these options:
 
 To learn how to dynamically populate parameters for app node tools, refer to [Let AI specify tool parameters with `$fromAI()`](/advanced-ai/examples/using-the-fromai-function.md).
 
---8<-- "_glossary/ai-glossary.md"
+

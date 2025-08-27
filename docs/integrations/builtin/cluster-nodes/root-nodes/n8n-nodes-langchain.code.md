@@ -68,4 +68,4 @@ n8n provides these methods to make it easier to perform common tasks in the Lang
 ## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

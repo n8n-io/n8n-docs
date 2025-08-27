@@ -35,4 +35,4 @@ New to AI Agents? Read the [n8n blog introduction to AI agents](https://blog.n8n
 
 For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

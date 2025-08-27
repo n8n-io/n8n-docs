@@ -108,6 +108,7 @@ nav:
         - Using:
           - source-control-environments/using/index.md
           - Push and pull: source-control-environments/using/push-pull.md
+          - Compare workflow changes: source-control-environments/using/compare-changes.md
           - Copy work between environments: source-control-environments/using/copy-work.md
         - Create environments with source control: source-control-environments/create-environments.md
       - External secrets: external-secrets.md
@@ -255,7 +256,7 @@ nav:
     - API:
       - Authentication: api/authentication.md
       - Pagination: api/pagination.md
-      - Using the API playground: api/using-api-playground.md
+      - Using an API playground: api/using-api-playground.md
     - Node development:
       - Install n8n with npm: hosting/installation/npm.md
       - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
@@ -461,6 +462,7 @@ nav:
         - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
         - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
         - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
+        - AWS IAM: integrations/builtin/app-nodes/n8n-nodes-base.awsiam.md
         - AWS Lambda: integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md
         - AWS Rekognition: integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition.md
         - AWS S3: integrations/builtin/app-nodes/n8n-nodes-base.awss3.md

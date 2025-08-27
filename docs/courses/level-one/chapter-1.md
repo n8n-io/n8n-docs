@@ -29,7 +29,7 @@ Once you have n8n running, open the Editor UI in a browser window. Log in to you
 
 It should look like this:
 
-<figure><img src="/docs/_images/courses/level-one/chapter-one/update_l1-c1-editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/update_l1-c1-editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
 ## Editor UI settings
 
@@ -51,7 +51,7 @@ The panel contains the following sections:
 - **Help**: Contains resources around n8n product and community.
 - **What’s New**: Shows the latest product updates and features.  
 
-<figure style="text-align: center;"><img src="/docs/_images/courses/level-one/chapter-one/update-l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
+<figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/update-l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
 ### Top bar
 

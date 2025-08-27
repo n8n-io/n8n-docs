@@ -102,7 +102,7 @@ Based on their function, n8n classifies nodes into four types:
 
 - **App** or **Action Nodes** add, remove, and edit data; request and send external data; and trigger events in other systems. Refer to the [Action nodes library](/integrations/builtin/app-nodes/index.md) for a full list of these nodes.
 - **Trigger Nodes** start a workflow and supply the initial data. Refer to the [Trigger nodes library](/integrations/builtin/trigger-nodes/index.md) for a list of trigger nodes.
-- **Core Nodes** can be trigger or app nodes. Whereas most nodes connect to a specific external service, core nodes provide functionality such as logic, scheduling, or generic API calls. Refer to the [Core Nodes library](/integrations/builtin/core-nodes/index.md) for a full list of core nodes.
+- **Core Nodes** they are universal, built-in nodes that provide flow control, data transformation, and basic utilities. They are the foundation for building any workflow, while integration nodes connect to external apps. [Core Nodes library](/integrations/builtin/core-nodes/index.md) for a full list of core nodes.
 - **Cluster Nodes** are node groups that work together to provide functionality in a workflow, primarily for AI workflows. Refer to [Cluster nodes](/integrations/builtin/cluster-nodes/index.md) for more information.
 
 /// note | Learn more

@@ -17,15 +17,19 @@ Before you can use the `n8n-node` tool, you must [install n8n locally with `npm`
 
 ### Run n8n-node without installing
 
-You can run `n8n-node` directly without installing with `npx`.
-
-For example, to run the `n8n-node new` command, you can type:
+You can run `n8n-node` directly without installing with `npx`. For example, to view the command's help information, you can type:
 
 ```shell
-npx n8n-node new
+npx --package=@n8n/node-cli n8n-node --help
 ```
 
-To follow along with the rest of the page, prepend `npx` in front of each `n8n-node` command.
+To follow along with the rest of the page, prepend `npx --package=@n8n/node-cli` in front of each `n8n-node` command.
+
+If you're using `pnpm`, you can run the same command with:
+
+```shell
+pnpm dlx --package=@n8n/node-cli n8n-node --help
+```
 
 ### Install n8n-node globally
 

@@ -14,6 +14,8 @@ The Execute Command node runs shell commands on the host machine that runs n8n.
 This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
 
 If you run n8n with Docker, your command will run in the n8n container and not the Docker host.
+
+If you're using [queue mode](/hosting/scaling/queue-mode.md), the command only runs on the worker that's executing the task.
 ///
 
 /// note | Not available on Cloud

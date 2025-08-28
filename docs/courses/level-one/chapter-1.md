@@ -41,7 +41,8 @@ On the left side of the **Editor UI**, there is a panel which contains the core 
 
 The panel contains the following sections:
 
-- **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
+- **Overview**: Contains all the workflows, credentials, and executions you have access to. Workflows let you create and manage automations, credentials store your API keys and logins securely, and executions show the history of workflow runs (status, duration, and detailed logs). During this course, you will mainly create new workflows here.
+.
 
 - **Projects**:  Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default. Projects aren't available on the Community edition.
 - **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.

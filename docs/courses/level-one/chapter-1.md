@@ -41,7 +41,7 @@ On the left side of the **Editor UI**, there is a panel which contains the core 
 
 The panel contains the following sections:
 
-- **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
+**Overview**: Contains all the workflows, credentials, and executions you have access to. During this course, create new workflows here.
 
 - **Projects**:  Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default. Projects aren't available on the Community edition.
 - **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
@@ -63,6 +63,17 @@ The top bar of the **Editor UI** contains the following information:
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
+- **More options (⋮)**: The three dots menu provides additional actions for managing the current workflow:
+
+  - **Duplicate**: Create a copy of the workflow.
+  - **Download**: Export the workflow as a JSON file.
+  - **Change owner**: Reassign the workflow to another user (if your plan supports multiple users).
+  - **Rename**: Update the workflow name.
+  - **Import from URL...**: Import a workflow definition directly from a URL.
+  - **Import from File...**: Import a workflow from a local JSON file.
+  - **Push to Git**: Push the workflow to a connected Git repository (if Git integration is enabled).
+  - **Settings**: Configure workflow settings such as error handling and execution options.
+  - **Archive**: Move the workflow to the archive. Archived workflows are hidden from the main list but can be restored later.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

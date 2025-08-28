@@ -36,7 +36,6 @@ nav:
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
     - Self-hosted n8n:
       - hosting/index.md
-      - Why self host?: key-concepts/self-hosting.md
       - Configuration methods: hosting/configuration/configuration-methods.md
       - Configuration examples:
         - hosting/configuration/configuration-examples/index.md

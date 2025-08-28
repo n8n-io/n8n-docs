@@ -51,7 +51,7 @@ Environment variables are organized into the following sections:
 
 ## Binary data
 
-By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data. 
+By default, n8n uses memory to store binary data. Enterprise users can choose to use an external service instead. Refer to [external storage](/hosting/scaling/binary-data.md#enable-external-storage) for more information on using external storage for binary data. 
 
 
 | Variable                          | Type   | Default                      | Description                                                                                                                                                                                                                                                                                                                                                                      |
@@ -218,7 +218,7 @@ This section lists environment variables to configure workflow execution setting
 
 ## External data storage
 
-Refer to [External storage](/hosting/scaling/external-storage.md) for more information on using external storage for binary data.
+Refer to [External storage](/hosting/scaling/binary-data.md#enable-external-storage) for more information on using external storage for binary data.
 
 | Variable                                   | Type    | Default | Description                                                                                                                                                                                                                                                                                     |
 |:-------------------------------------------|:--------|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

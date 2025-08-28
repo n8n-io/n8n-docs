@@ -5216,7 +5216,7 @@ This release contains new features and bug fixes.
 
 #### External storage for binary files
 
-Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/external-storage.md).
+Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/binary-data.md#enable-external-storage).
 
 If you're using n8n Cloud and are interested in this feature, please [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 

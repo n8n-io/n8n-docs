@@ -60,7 +60,6 @@ nav:
         - Configuring queue mode: hosting/scaling/queue-mode.md
         - Execution data: hosting/scaling/execution-data.md
         - Binary data: hosting/scaling/binary-data.md
-        - External storage for binary data: hosting/scaling/external-storage.md
       - Securing n8n:
         - Overview: hosting/securing/overview.md
         - Set up SSL: hosting/securing/set-up-ssl.md

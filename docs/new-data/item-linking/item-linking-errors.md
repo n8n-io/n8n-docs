@@ -41,7 +41,7 @@ This error occurs when there's a node in the chain that doesn't return pairing i
 
 The solution depends on the type of the previous node:
 
-- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [item linking in the code node](/new-data/item-linking/item-linking-code-node.md) for more information.
+- Code nodes: make sure you return which input items the node used to produce each output item. Refer to [item linking in the code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/item-linking-code-node.md) for more information.
 - Custom or community nodes: the node creator needs to update the node to return which input items it uses to produce each output item. Refer to [item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md) for more information.
 
 ### Fix for "Branch not found: Paired item references non-existent branch"

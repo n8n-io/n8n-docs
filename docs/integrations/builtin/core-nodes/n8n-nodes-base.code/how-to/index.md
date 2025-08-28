@@ -1,10 +1,10 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-description: Code examples you can use in the Code node.
+description: How to do tasks in the Code node.
 contentType: overview
 ---
 
-# Code node cookbook
+# Code node how to
 
 This section contains examples and recipes for tasks you can do with the Code node.
 

@@ -44,7 +44,7 @@ To split or concatenate binary data items, use the [data transformation nodes](/
 
 ### Code
 
-You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/code/cookbook/code-node/get-binary-data-buffer.md): get the binary data available in your workflow.
+You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) to manipulate binary data in your workflows. For example, [Get the binary data buffer](/integrations/builtin/core-nodes/n8n-nodes-base.code/how-to/get-binary-data-buffer.md): get the binary data available in your workflow.
 
 
 ## Configure binary data mode when self-hosting

@@ -214,7 +214,7 @@ Configure the pagination settings:
     * **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
     * **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
-For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md).
+For example setups, refer to [HTTP Request node pagination](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/pagination.md).
 
 n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 

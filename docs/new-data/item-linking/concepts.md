@@ -46,7 +46,7 @@ You may have to manually link items when n8n can't determine which input item ge
 
 You can find out more about manually linking your items on the following pages:
 
-* [Item linking in the Code node](/new-data/item-linking/item-linking-code-node.md): learn how to handle item linking in the Code node.
+* [Item linking in the Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/item-linking-code-node.md): learn how to handle item linking in the Code node.
 * [Item linking errors](/new-data/item-linking/item-linking-errors.md), to understand the errors you may encounter in the editor UI.
 
 If you're creating your own nodes, you can find more information about how to implement item linking on the [item linking for node creators](/data/data-mapping/data-item-linking/item-linking-node-building.md) page.

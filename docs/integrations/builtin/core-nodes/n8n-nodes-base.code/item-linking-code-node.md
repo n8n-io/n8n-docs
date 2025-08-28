@@ -259,3 +259,7 @@ This item pairing allows the **Restore names** Edit Fields (Set) node to match i
 	}
 ]
 ```
+
+## Item linking errors
+
+To learn more about how to troubleshoot problems with item linking, take a look at the [item linking errors](/new-data/item-linking/item-linking-errors.md) page.

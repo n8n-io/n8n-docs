@@ -165,12 +165,6 @@ nav:
           - Waiting: flow-logic/waiting.md
           - Sub-workflows: flow-logic/subworkflows.md
           - Error handling: flow-logic/error-handling.md
-        - Code node:
-          - code/cookbook/code-node/index.md
-          - Get number of items returned by last node: code/cookbook/code-node/number-items-last-node.md
-          - Get the binary data buffer: code/cookbook/code-node/get-binary-data-buffer.md
-          - Output to the browser console: code/cookbook/code-node/console-log.md
-        - HTTP Request node pagination: code/cookbook/http-node/pagination.md
         - Handle rate limits: integrations/builtin/rate-limits.md
         - Using community nodes:
           - Installation and management:
@@ -359,6 +353,12 @@ nav:
         - Code:
           - Code: integrations/builtin/core-nodes/n8n-nodes-base.code/index.md
           - Keyboard shortcuts: integrations/builtin/core-nodes/n8n-nodes-base.code/keyboard-shortcuts.md
+          - Item linking in the Code node: integrations/builtin/core-nodes/n8n-nodes-base.code/item-linking-code-node.md
+          - How to:
+            - integrations/builtin/core-nodes/n8n-nodes-base.code/how-to/index.md
+            - Get number of items returned by last node: integrations/builtin/core-nodes/n8n-nodes-base.code/how-to/number-items-last-node.md
+            - Get the binary data buffer: integrations/builtin/core-nodes/n8n-nodes-base.code/how-to/get-binary-data-buffer.md
+            - Output to the browser console: integrations/builtin/core-nodes/n8n-nodes-base.code/how-to/console-log.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.code/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.comparedatasets.md
         - integrations/builtin/core-nodes/n8n-nodes-base.compression.md
@@ -389,6 +389,7 @@ nav:
         - integrations/builtin/core-nodes/n8n-nodes-base.html.md
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
+          - HTTP Request node pagination: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/pagination.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
@@ -1288,7 +1289,6 @@ nav:
       - Role types: user-management/rbac/role-types.md
     - Item linking:
       - Concepts: new-data/item-linking/concepts.md
-      - Item linking in the Code node: new-data/item-linking/item-linking-code-node.md
       - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
       - Item linking errors: new-data/item-linking/item-linking-errors.md
     - Architecture:

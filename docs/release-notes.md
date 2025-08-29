@@ -129,6 +129,33 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.107.0...n8n@1.108
 **Release date:** 2025-08-18
 
 This release contains a new CLI tool, editor improvements, node updates, performance improvements, and bug fixes.
+### Workflow Diff
+
+For teams working across different environments, deployments often involve multiple people making changes at different times. Without a clear view of those changes, it’s easy to miss something important.
+
+[Workflow Diff](/source-control-environments/using/compare-changes.md) gives you an easy and visual way to review workflow changes before you deploy them between environments.
+
+With it, you can:
+
+- Quickly see what’s been added, changed, or deleted, with clear colour highlights.
+- Easily see important settings changes on a workflow.
+- Check changes inside each node, and spot connector updates, with a side-by-side view of its settings.
+- Get a quick count of all changes to understand the size of a deployment.
+
+<br> 
+<figure markdown="span">
+    ![Workflow diffs](/_images/release-notes/Diffs2.png)
+    <figcaption></figcaption>
+</figure>
+<br> 
+<figure markdown="span">
+    ![](/_images/release-notes/Diffs1.png)
+    <figcaption>Workflow Diff</figcaption>
+</figure>
+<br>
+Workflow Diff eases the review and approval of changes before deployment, enabling teams to collaborate on workflows without breaking existing automations or disrupting production. It’s one step further in integrating DevOps best practices in n8n. 
+
+Now available for Enterprise customers using Environments.
 
 ### Contributors
 

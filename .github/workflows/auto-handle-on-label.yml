@@ -10,7 +10,7 @@ on:
       - labeled
 jobs:
   handle-labels:
-    if: contains(fromJSON('["spam", "ai-slop", "low-effort-bad", "duplicate"]'), github.event.label.name)
+    if: contains(fromJSON('["spam", "ai-slop", "low-effort-bad", "duplicate", "dev-cancelled", "pending-dev", "in-next-release"]'), github.event.label.name)
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -19,9 +19,10 @@ jobs:
       - name: Set label config
         id: config
         run: |
+          AUTHOR="${{ github.event.issue.user.login || github.event.pull_request.user.login }}"
           case "${{ github.event.label.name }}" in
             "spam")
-              echo "comment=This appears to be spam. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=@$AUTHOR This appears to be spam. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "ai-slop")
@@ -35,6 +36,18 @@ jobs:
             "duplicate")
               echo "comment=This duplicates another issue or PR. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+            "dev-cancelled")
+              echo "comment=Hi @$AUTHOR, thanks for the pull request! \n It looks like the PR in the main repo was closed. I'm going to go ahead and close this one too since this depends on the main repo submission being accepted. Please let me know if the status changes, however, and we can re-open as needed." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+            "pending-dev")
+              echo "comment=Thanks @AUTHOR! We'll hold off on reviewing this until the PR is ready to go in the main repo." >> $GITHUB_OUTPUT
+              echo "should_close=false" >> $GITHUB_OUTPUT
+              ;;
+            "in-next-release")
+              echo "comment=Holding off on merging until this is released." >> $GITHUB_OUTPUT
+              echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
           esac
       - name: Add comment

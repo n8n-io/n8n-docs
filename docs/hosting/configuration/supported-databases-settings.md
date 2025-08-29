@@ -39,7 +39,7 @@ export DB_POSTGRESDB_PASSWORD=n8n
 export DB_POSTGRESDB_SCHEMA=n8n
 
 # optional:
-export DB_POSTGRESDB_SSL_CA=$(pwd)/ca.crt
+export DB_POSTGRESDB_SSL_CA_FILE=$(pwd)/ca.crt
 export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
 
 n8n start

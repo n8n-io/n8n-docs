@@ -138,51 +138,6 @@ n8n uses a specific JSON structure for passing data between nodes:
 }
 ```
 
-## Security Architecture
-
-### Credential Management
-
-n8n encrypts all credentials using AES-256 encryption before storing them in the database. The encryption key must be set via the `N8N_ENCRYPTION_KEY` environment variable.
-
-**Encryption Flow:**
-```
-User Input → AES-256 Encryption → Database Storage
-                ↑
-         Encryption Key
-         (from env variable)
-```
-
-### Authentication Layers
-
-- **Basic Authentication**: Username/password for UI access
-- **JWT Tokens**: API access authentication
-- **OAuth2**: External service integration
-- **SSO/SAML**: Enterprise authentication (Enterprise Edition)
-
-## Performance Optimization
-
-### Memory Management
-
-**Workflow Size Limits:**
-- Default max payload: 16MB
-- Configurable via `N8N_PAYLOAD_SIZE_MAX`
-
-**Optimization Strategies:**
-- Stream large files instead of loading into memory
-- Use pagination for large datasets
-- Split complex workflows into smaller sub-workflows
-
-### Database Optimization
-
-**Execution Data Pruning:**
-```bash
-# Environment variables for automatic cleanup
-EXECUTIONS_DATA_MAX_AGE=336  # Hours
-EXECUTIONS_DATA_PRUNE=true
-EXECUTIONS_DATA_SAVE_ON_ERROR=all
-EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
-```
-
 ## Scaling Guidelines
 
 ### Vertical Scaling

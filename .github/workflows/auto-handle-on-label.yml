@@ -1,0 +1,24 @@
+name: Auto-comment and handle PRs and issues on label
+on:
+  issues:
+    types:
+      - labeled
+  pull_request:
+    types:
+      - labeled
+jobs:
+  add-comment:
+    if: github.event.label.name == 'spam'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Add comment
+        run: gh issue comment "$NUMBER" --body "$BODY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+          BODY: >
+            This appears to be spam. Please review n8n's [contributing](CONTRIBUTING.md) guidelines.

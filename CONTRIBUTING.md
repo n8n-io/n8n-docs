@@ -2,6 +2,10 @@
 
 If you want to contribute to this repository - thank you! Before you start, have a look at the existing documentation to get an idea of the structure and writing conventions n8n uses. In writing your documentation, please follow the guidelines described below, to ensure quality and consistency with n8n styles.
 
+## No course contributions
+
+We are working on replacing the course. We are not accepting reports or changes to the current course.
+
 ## Docs issues only
 
 This repo is for the documentation site.

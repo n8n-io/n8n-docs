@@ -34,7 +34,7 @@ jobs:
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "duplicate")
-              echo "comment=@$AUTHOR This duplicates another issue or PR. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=@$AUTHOR This duplicates another issue or PR, or the work was already done elsewhere. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "dev-cancelled")

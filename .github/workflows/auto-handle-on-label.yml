@@ -7,7 +7,7 @@ on:
     types:
       - labeled
 jobs:
-  add-comment:
+  handle-spam:
     if: github.event.label.name == 'spam'
     runs-on: ubuntu-latest
     permissions:
@@ -22,3 +22,10 @@ jobs:
           NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
           BODY: >
             This appears to be spam. Please review n8n's [contributing](CONTRIBUTING.md) guidelines.
+      - name: Close issue or PR
+        run: gh issue close "$NUMBER"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
+

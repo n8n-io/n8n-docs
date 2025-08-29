@@ -55,16 +55,26 @@ The panel contains the following sections:
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 
-### Top bar
+### Top Bar
 
 The top bar of the **Editor UI** contains the following information:
 
-- **Workflow Name**: By default, n8n names a new workflow as "My workflow", but you can edit the name at any time.
-- **+ Add Tag**: Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
-- **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
-- **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
-- **Save**: This button saves the current workflow.
-- **History**: Once you save your workflow, you can view previous versions here.
+- **Personal / Account:** Displays the currently logged-in user.
+- **Workflow Name:** By default, n8n names a new workflow as "My workflow", but you can edit the name at any time.
+- **+ Add Tag:** Tags help you organise your workflows by category, use case, or whatever is relevant for you. Tags are optional.
+- **Inactive/active toggle:** This button activates or deactivates the current workflow. By default, workflows are deactivated.
+- **Share:** You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
+- **Save:** This button saves the current workflow.
+- **History:** Once you save your workflow, you can view previous versions here.
+- **More Options (three dots):** Provides additional workflow actions:
+  - **Duplicate:** Create a copy of the current workflow.
+  - **Download:** Export the workflow as a JSON file.
+  - **Change Owner:** Transfer workflow ownership to another user.
+  - **Rename:** Edit the workflow name.
+  - **Import from URL:** Import a workflow from a specified URL.
+  - **Import from File:** Import a workflow from a local JSON file.
+  - **Settings:** Access workflow-specific settings and configurations.
+
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

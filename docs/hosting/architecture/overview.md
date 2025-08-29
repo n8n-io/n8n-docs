@@ -85,21 +85,6 @@ In the default configuration, n8n runs everything in a single process.
 - Single point of failure
 - Memory constraints for large workflows
 
-### Queue Mode (Scalable)
-
-For production environments requiring high availability and scalability. See [Queue Mode documentation](queue-mode.md) for detailed setup.
-
-**Components:**
-- Main Instance: Handles UI, API, and webhook reception
-- Worker Instances: Execute workflows
-- Redis Queue: Coordinates job distribution
-
-**Benefits:**
-- Horizontal scaling capability
-- Fault tolerance
-- Better resource utilization
-- Separation of concerns
-
 ## Data Flow
 
 ### Workflow Execution Flow

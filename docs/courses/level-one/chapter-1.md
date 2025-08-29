@@ -146,6 +146,19 @@ There will also be an ellipsis icon, which opens a context menu containing other
 /// note | Moving a workflow
 To move a workflow around the canvas, select all nodes with your mouse or ++ctrl+a++, select and hold on a node, then drag it to any point you want on the canvas.
 ///
+### Log panel
+
+The **Log panel** is located at the bottom of the Editor UI.  
+It provides visibility into workflow execution and helps developers debug and monitor workflows in real time.
+
+The log panel includes:
+
+- **Execution logs**: A detailed record of each workflow run.
+- **Error messages**: Clear error details shown whenever a workflow fails.
+- **Execution progress**: Live updates of currently running workflows.
+- **Status indicators**: Visual signals (running, success, or failed) for quick monitoring.
+
+You can expand or collapse the panel as needed, making it easier to keep track of executions without leaving the canvas.
 
 ## Summary
 

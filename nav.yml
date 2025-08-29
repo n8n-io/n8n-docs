@@ -1130,6 +1130,7 @@ nav:
       - Build your node:
         - integrations/creating-nodes/build/index.md
         - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
+        - Using the n8n-node tool: integrations/creating-nodes/build/n8n-node.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
         - Reference:

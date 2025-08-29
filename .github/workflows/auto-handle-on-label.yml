@@ -53,6 +53,18 @@ jobs:
               echo "comment=Hi @AUTHOR! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
+            "dev-cancelled")
+              echo "comment=Hi @$AUTHOR, thanks for the pull request! \n It looks like the PR in the main repo was closed. I'm going to go ahead and close this one too since this depends on the main repo submission being accepted. Please let me know if the status changes, however, and we can re-open as needed." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+            "pending-dev")
+              echo "comment=Thanks @AUTHOR! We'll hold off on reviewing this until the PR is ready to go in the main repo." >> $GITHUB_OUTPUT
+              echo "should_close=false" >> $GITHUB_OUTPUT
+              ;;
+            "in-next-release")
+              echo "comment=Holding off on merging until this is released." >> $GITHUB_OUTPUT
+              echo "should_close=false" >> $GITHUB_OUTPUT
+              ;;
           esac
       - name: Add comment
         run: gh issue comment "$NUMBER" --body "$BODY"

@@ -49,6 +49,10 @@ jobs:
               echo "comment=Holding off on merging until this is released." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
+            "old-course")
+              echo "comment=Hi @AUTHOR! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
           esac
       - name: Add comment
         run: gh issue comment "$NUMBER" --body "$BODY"

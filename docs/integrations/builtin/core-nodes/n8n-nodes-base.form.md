@@ -140,6 +140,46 @@ An example JSON that shows the general format required and the keys available:
 	{
 		"fieldLabel": "Textarea",
 		"fieldType": "textarea"
+	},
+	{
+    "fieldLabel": "Html",
+    "fieldType": "html",
+    "requiredField": true,
+		"elementName": "content" // Optional field. It can be used to include the html in the output.
+    "placeholder": "<div>Custom element</div>"
+  },
+	{
+    "fieldLabel": "Checkboxes",
+    "fieldType": "checkbox",
+     "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    }
+  },
+  {
+    "fieldLabel": "Radio",
+    "fieldType": "radio",
+     "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    }
+  },
+	{
+  	"fieldLabel": "label label",
+  	"fieldType": "hiddenField",
+  	"fieldValue": "hidden"
 	}
 ]
 ```

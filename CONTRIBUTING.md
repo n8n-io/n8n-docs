@@ -2,7 +2,16 @@
 
 If you want to contribute to this repository - thank you! Before you start, have a look at the existing documentation to get an idea of the structure and writing conventions n8n uses. In writing your documentation, please follow the guidelines described below, to ensure quality and consistency with n8n styles.
 
-## Avoid getting your contribution rejected
+## Docs issues only
+
+This repo is for the documentation site.
+
+- Need help? [Ask on the forum](https://community.n8n.io/c/questions/12).
+- Got a feature request or product idea? [Propose it on the forum](https://community.n8n.io/c/feature-requests/5).
+- Found a bug in the product? [Product repo](https://github.com/n8n-io/n8n)
+
+
+## Why we might reject your contribution
 
 Due to an increase in spam and poor quality contributions, we've introduced new criteria and processes. 
 
@@ -14,15 +23,13 @@ Due to an increase in spam and poor quality contributions, we've introduced new 
 | `duplicate` |	Close PR/issue; comment with contribution guidance; a second `duplicate` leads to a block. | To avoid this, check existing issues and PRs |
 
 
-## Before you start
-
-### Style
+## Style
 
 n8n uses the [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/).
 
 Refer to [Styles](https://github.com/n8n-io/n8n-docs/wiki/Styles/) for a quickstart, and guidance on style linting.
 
-### n8n's license
+## n8n's license
 
 Be aware that n8n is fair code licensed. For more information, refer to the [License](https://docs.n8n.io/reference/license/) documentation.
 
@@ -61,7 +68,7 @@ You can build the docs locally to preview them, or submit a pull request. All pu
 
 For instructions on previewing the docs locally, refer to the [README](https://github.com/n8n-io/n8n-docs/blob/main/README.md).
 
-### General checklist
+## General checklist
 
 Before submitting a PR, make sure your contribution ticks all these boxes:
 

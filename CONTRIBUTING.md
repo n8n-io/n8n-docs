@@ -13,7 +13,7 @@ This repo is for the documentation site.
 
 ## Why we might reject your contribution
 
-Due to an increase in spam and poor quality contributions, we've introduced new criteria and processes. 
+Due to an increase in spam and poor quality contributions, we've introduced new criteria and processes. We will close issues and PRs that are low-effort and poor quality.
 
 | Label | Action | Notes |
 | ----- | ------ | ----- |

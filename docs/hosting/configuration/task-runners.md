@@ -56,7 +56,7 @@ You can configure n8n to use external task runners by setting the following envi
 | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker. |
 | `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0` | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
 
-For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md).
+For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables.md#task-runners).
 
 ### Configuring task runners in external mode
 
@@ -80,6 +80,6 @@ Set the following environment variables for the container, adjusted to fit your 
 | `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679` | The address of the task broker server within the n8n instance. |
 | `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15` | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |
 | `NODE_OPTIONS=--max-old-space-size=<limit>` | The memory limit for the task runner Node.js process. This should be lower than the limit for container so that the runner runs out of memory before the container. That way, the launcher is able to monitor the runner. |
-| `GENERIC_TIMEZONE` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables/timezone-localization.md). |
+| `GENERIC_TIMEZONE` | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables.md#timezone-and-localization). |
 
-For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md).
+For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables.md#task-runners).

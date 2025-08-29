@@ -1,4 +1,6 @@
 name: Auto-comment and handle PRs and issues on label
+ env:
+  CONTRIBUTING_LINK: https://github.com/n8n-io/n8n-docs/blob/main/CONTRIBUTING.md
 on:
   issues:
     types:
@@ -19,19 +21,19 @@ jobs:
         run: |
           case "${{ github.event.label.name }}" in
             "spam")
-              echo "comment=This appears to be spam. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=This appears to be spam. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "ai-slop")
-              echo "comment=This appears to be AI generated, and has quality or accuracy problems. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=This appears to be AI generated, and has quality or accuracy problems. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "low-effort-bad")
-              echo "comment=This is a minor contribution with quality problems. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=This is a minor contribution with quality problems. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "duplicate")
-              echo "comment=This duplicates another issue or PR. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=This duplicates another issue or PR. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
           esac

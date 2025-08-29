@@ -70,14 +70,18 @@ The top bar of the **Editor UI** contains the following information:
 
 ### Canvas
 
-The **canvas** is the gray dotted grid background in the Editor UI. It displays several icons and a node with different functionalities:
+The **canvas** is the gray dotted grid background in the Editor UI. It displays icons and nodes with different functionalities:
 
-- Buttons to zoom the canvas to fit the screen, zoom in or out of the canvas, reset zoom, and tidy up the nodes on screen.
-- A button to **Execute workflow** once you add your first node. When you click on it, n8n executes all nodes on the canvas in sequence.
-- A button with a **+** sign inside. This button opens the nodes panel.
-- A button with a note icon inside. This button adds a [sticky note](/workflows/components/sticky-notes.md) to the canvas (visible when hovering on the top right + icon).
-- A button labeled **Ask Assistant** appears on the right side of the canvas. You can ask the AI Assistant for help with building workflows.
-- A dotted square with the text "Add first step." This is where you add your first node.
+- **Open nodes panel**: Click **+** to open the nodes panel. From there, you can search for and add nodes to your workflow.  
+- **Add sticky note**: Click the **sticky note** button to add a [sticky note](/workflows/components/sticky-notes.md). Use sticky notes to add comments and reminders.  
+- **Open focus panel**: Open a panel that helps you focus on specific parts of your workflow.  
+- **Ask Assistant**: Get help with building and debugging workflows.  
+- **Zoom to fit**: Fit all nodes on the canvas to the screen.  
+- **Zoom in/out**: Manually adjust the canvas zoom level.  
+- **Tidy up**: Automatically organize the nodes on your canvas.  
+- **Execute workflow**: Run all nodes on the canvas in sequence.  
+- **Add first step**: Add your first node when starting a new workflow.  
+
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-canvas.png" alt="Workflow canvas" style="width:100%"><figcaption align = "center"><i>Workflow canvas</i></figcaption></figure>
 

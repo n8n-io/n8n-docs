@@ -1,5 +1,5 @@
 name: Auto-comment and handle PRs and issues on label
- env:
+env:
   CONTRIBUTING_LINK: https://github.com/n8n-io/n8n-docs/blob/main/CONTRIBUTING.md
 on:
   issues:

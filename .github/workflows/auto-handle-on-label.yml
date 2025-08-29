@@ -23,9 +23,13 @@ jobs:
           BODY: >
             This appears to be spam. Please review n8n's [contributing](CONTRIBUTING.md) guidelines.
       - name: Close issue or PR
-        run: gh issue close "$NUMBER"
+        run: |
+          if [ "${{ github.event_name }}" = "issues" ]; then
+            gh issue close "$NUMBER"
+          else
+            gh pr close "$NUMBER"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
-

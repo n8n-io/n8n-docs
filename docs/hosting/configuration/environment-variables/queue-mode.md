@@ -18,6 +18,7 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
+| `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` | Boolean | `false` | Set to `true` if you want manual executions to run on the worker rather than on main. |
 | `QUEUE_BULL_PREFIX` | String | - | Prefix to use for all queue keys. |
 | `QUEUE_BULL_REDIS_DB` | Number | `0` | The Redis database used. |
 | `QUEUE_BULL_REDIS_HOST` | String | `localhost` | The Redis host. |

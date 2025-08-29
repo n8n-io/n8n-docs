@@ -146,6 +146,17 @@ There will also be an ellipsis icon, which opens a context menu containing other
 /// note | Moving a workflow
 To move a workflow around the canvas, select all nodes with your mouse or ++ctrl+a++, select and hold on a node, then drag it to any point you want on the canvas.
 ///
+### Main status bar
+
+The **main status bar** is located at the bottom of the Editor UI.  
+It provides real-time information and quick access to execution details, including:
+
+- **Execution logs**: View detailed logs of workflow runs.  
+- **Error messages**: See errors immediately when a workflow fails.  
+- **Execution progress**: Track the progress of currently running workflows.  
+- **Status indicators**: Quickly identify whether a workflow succeeded, failed, or is still running.  
+
+This bar helps you monitor workflows without leaving the canvas, ensuring you have visibility into what’s happening during execution.
 
 ## Summary
 

@@ -7,22 +7,43 @@ on:
     types:
       - labeled
 jobs:
-  handle-spam:
-    if: github.event.label.name == 'spam'
+  handle-labels:
+    if: contains(fromJSON('["spam", "ai-slop", "low-effort-bad", "duplicate"]'), github.event.label.name)
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
     steps:
+      - name: Set label config
+        id: config
+        run: |
+          case "${{ github.event.label.name }}" in
+            "spam")
+              echo "comment=This appears to be spam. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+            "ai-slop")
+              echo "comment=This appears to be AI generated, and has quality or accuracy problems. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+            "low-effort-bad")
+              echo "comment=This is a minor contribution with quality problems. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+            "duplicate")
+              echo "comment=This duplicates another issue or PR. Please review n8n's [contributing](CONTRIBUTING.md) guidelines." >> $GITHUB_OUTPUT
+              echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
+          esac
       - name: Add comment
         run: gh issue comment "$NUMBER" --body "$BODY"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
-          BODY: >
-            This appears to be spam. Please review n8n's [contributing](CONTRIBUTING.md) guidelines.
+          BODY: ${{ steps.config.outputs.comment }}
       - name: Close issue or PR
+        if: steps.config.outputs.should_close == 'true'
         run: |
           if [ "${{ github.event_name }}" = "issues" ]; then
             gh issue close "$NUMBER"

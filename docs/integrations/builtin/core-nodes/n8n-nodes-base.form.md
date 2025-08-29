@@ -78,80 +78,79 @@ An example JSON that shows the general format required and the keys available:
 //     except 'dropdown', 'date' and 'file'
 
 [
-	{
-		"fieldLabel": "Date Field",
-		"fieldType": "date",
-		"formatDate": "mm/dd/yyyy", // how to format received date in n8n
-		"requiredField": true
-	},
-	{
-		"fieldLabel": "Dropdown Options",
-		"fieldType": "dropdown",
-		"fieldOptions": {
-			"values": [
-				{
-					"option": "option 1"
-				},
-				{
-					"option": "option 2"
-				}
-			]
-		},
-		"requiredField": true
-	},
-	{
-		"fieldLabel": "Multiselect",
-		"fieldType": "dropdown",
-		"fieldOptions": {
-			"values": [
-				{
-					"option": "option 1"
-				},
-				{
-					"option": "option 2"
-				}
-			]
-		},
-		"multiselect": true // setting to true allows multi-select
-	},
-	{
-		"fieldLabel": "Email",
-		"fieldType": "email",
-		"placeholder": "me@mail.con"
-	},
-	{
-		"fieldLabel": "File",
-		"fieldType": "file",
-		"multipleFiles": true, // setting to true allows multiple files selection
-		"acceptFileTypes": ".jpg, .png" // allowed file types
-	},
-	{
-		"fieldLabel": "Number",
-		"fieldType": "number"
-	},
-	{
-		"fieldLabel": "Password",
-		"fieldType": "password"
-	},
-	{
-		// "fieldType": "text" can be omitted since it's the default type
-		"fieldLabel": "Text"
-	},
-	{
-		"fieldLabel": "Textarea",
-		"fieldType": "textarea"
-	},
-	{
-    "fieldLabel": "Html",
+  {
+    "fieldLabel": "Date Field",
+    "fieldType": "date",
+    "formatDate": "mm/dd/yyyy", // how to format received date in n8n
+    "requiredField": true
+  },
+  {
+    "fieldLabel": "Dropdown Options",
+    "fieldType": "dropdown",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    },
+    "requiredField": true
+  },
+  {
+    "fieldLabel": "Multiselect",
+    "fieldType": "dropdown",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    },
+    "multiselect": true // setting to true allows multi-select
+  },
+  {
+    "fieldLabel": "Email",
+    "fieldType": "email",
+    "placeholder": "me@mail.con"
+  },
+  {
+    "fieldLabel": "File",
+    "fieldType": "file",
+    "multipleFiles": true, // setting to true allows multiple files selection
+    "acceptFileTypes": ".jpg, .png" // allowed file types
+  },
+  {
+    "fieldLabel": "Number",
+    "fieldType": "number"
+  },
+  {
+    "fieldLabel": "Password",
+    "fieldType": "password"
+  },
+  {
+    // "fieldType": "text" can be omitted since it's the default type
+    "fieldLabel": "Text"
+  },
+  {
+    "fieldLabel": "Textarea",
+    "fieldType": "textarea"
+  },
+  {
     "fieldType": "html",
     "requiredField": true,
-		"elementName": "content" // Optional field. It can be used to include the html in the output.
-    "placeholder": "<div>Custom element</div>"
+    "elementName": "content", // Optional field. It can be used to include the html in the output.
+    "html": "<div>Custom element</div>"
   },
-	{
+  {
     "fieldLabel": "Checkboxes",
     "fieldType": "checkbox",
-     "fieldOptions": {
+    "fieldOptions": {
       "values": [
         {
           "option": "option 1"
@@ -165,7 +164,7 @@ An example JSON that shows the general format required and the keys available:
   {
     "fieldLabel": "Radio",
     "fieldType": "radio",
-     "fieldOptions": {
+    "fieldOptions": {
       "values": [
         {
           "option": "option 1"
@@ -176,11 +175,11 @@ An example JSON that shows the general format required and the keys available:
       ]
     }
   },
-	{
-  	"fieldLabel": "label label",
-  	"fieldType": "hiddenField",
-  	"fieldValue": "hidden"
-	}
+  {
+    "fieldLabel": "hidden label",
+    "fieldType": "hiddenField",
+    "fieldValue": "extra form data"
+  }
 ]
 ```
 

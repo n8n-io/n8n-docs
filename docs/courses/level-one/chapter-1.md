@@ -147,6 +147,19 @@ There will also be an ellipsis icon, which opens a context menu containing other
 To move a workflow around the canvas, select all nodes with your mouse or ++ctrl+a++, select and hold on a node, then drag it to any point you want on the canvas.
 ///
 
+## Log Panel
+
+The **Log Panel** is located at the bottom of the Editor UI. It provides real-time visibility into workflow execution and helps you debug efficiently without leaving the canvas.
+
+Key features:
+
+- **Execution logs:** Shows a detailed record of workflow runs.  
+- **Error messages:** Displays clear information when a workflow fails.  
+- **Execution progress:** Provides live updates of currently running workflows.  
+- **Status indicators:** Visual signals for success, failure, or running state.  
+
+This panel is essential for monitoring workflows and troubleshooting issues quickly.
+
 ## Summary
 
 In this lesson you learned how to navigate the Editor UI, what the icons mean, how to access the left-side and node panels, and how to add nodes to the canvas.

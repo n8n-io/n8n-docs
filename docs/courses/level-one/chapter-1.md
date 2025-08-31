@@ -29,7 +29,7 @@ Once you have n8n running, open the Editor UI in a browser window. Log in to you
 
 It should look like this:
 
-<figure><img src="/_images/courses/level-one/chapter-one/l1-c1-editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/level-one-course-editor-ui.png" alt="Editor UI" style="width:100%"><figcaption align = "center"><i>Editor UI</i></figcaption></figure>
 
 ## Editor UI settings
 

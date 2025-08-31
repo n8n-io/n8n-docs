@@ -53,6 +53,11 @@ Let's get the title of the latest n8n blog post:
 	<figure><img src="/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png" alt="Result of HTML Extract node" style="width:100%"><figcaption align = "center"><i>Result of HTML Extract node</i></figcaption></figure>
 
 
+The finished workflow will look like this:
+
+[[ workflowDemo("file:////courses/level-two/chapter-2.json") ]]
+
+
 Use the **XML node** to convert XML to JSON and JSON to XML. This operation is useful if you work with different web services that use either XML or JSON and need to get and submit data between them in the two formats.
 
 ### XML Exercise
@@ -78,6 +83,10 @@ In the [final exercise of Chapter 1](/courses/level-two/chapter-1.md#exercise_2)
 
 	To transform data the other way around, select the mode **XML to JSON**.
 
+
+The finished workflow will look like this:
+
+[[ workflowDemo("file:////courses/level-two/chapter-2-xml-node.json") ]]
 
 ## Date, time, and interval data
 

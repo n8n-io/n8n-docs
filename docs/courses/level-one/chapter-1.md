@@ -92,6 +92,25 @@ You can move the workflow canvas around in three ways:
 
 Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
 
+### Logs panel
+
+The **Logs panel** appears at the bottom of the Editor UI when you execute a workflow.  
+It provides detailed feedback on each step of your workflow:
+
+- **Execution time**: Shows how long the workflow took to run.
+- **Node status**:
+  - ✅ Green: Node executed successfully.
+  - ⚠️ Yellow: Node was skipped or conditional.
+  - ❌ Red: Node failed to execute.
+- **Step-by-step results**: Each node’s input and output data is listed in execution order.
+- **Error details**: If a node fails, the error is highlighted in red with details you can expand.
+- **Clear execution**: Removes the current execution log from the panel.
+
+The logs help you debug workflows by showing exactly where and why an error occurred.
+
+![Logs panel example](/_images/courses/level-one/chapter-one/logs-panel.jpeg)
+
+
 ## Nodes
 
 You can think of nodes as building blocks that serve different functions that, when put together, make up a functioning machine: an automated workflow.

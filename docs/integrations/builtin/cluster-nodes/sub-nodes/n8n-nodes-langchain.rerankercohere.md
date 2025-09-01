@@ -33,4 +33,4 @@ Choose the reranking model to use. You can find out more about the available mod
 ## Related resources
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

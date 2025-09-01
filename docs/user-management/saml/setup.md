@@ -47,11 +47,11 @@ Documentation links for common IdPs.
 
 | IdP | Documentation |
 | --- | ------------- |
-| Auth0 | [Configure Auth0 as SAML Identity Provider: Manually configure SSO integrations](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-identity-provider#manually-configure-sso-integrations){:target=_blank .external-link} |
-| Authentik | [Applications](https://goauthentik.io/docs/applications){:target=_blank .external-link} and the [SAML Provider](https://goauthentik.io/docs/providers/saml/){:target=_blank .external-link} |
-| Azure AD | [SAML authentication with Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml){:target=_blank .external-link} |
-| JumpCloud | [How to setup SAML (SSO) applications with JumpCloud](https://jumpcloud.com/support/integrate-with-zoom#configuring-the-sso-integration){:target=_blank .external-link} (using `Zoom` as an example) |
-| Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started){:target=_blank .external-link} guide depending on your hosting. |
+| Auth0 | [Configure Auth0 as SAML Identity Provider: Manually configure SSO integrations](https://auth0.com/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-identity-provider#manually-configure-sso-integrations) |
+| Authentik | [Applications](https://goauthentik.io/docs/applications) and the [SAML Provider](https://goauthentik.io/docs/providers/saml/) |
+| Azure AD | [SAML authentication with Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml) |
+| JumpCloud | [How to setup SAML (SSO) applications with JumpCloud](https://jumpcloud.com/support/integrate-with-zoom#configuring-the-sso-integration) (using `Zoom` as an example) |
+| Keycloak | Choose a [Getting Started](https://www.keycloak.org/guides#getting-started) guide depending on your hosting. |
 | Okta | n8n provides a [Workforce Identity setup guide](/user-management/saml/okta.md) |
-| PingIdentity | [PingOne SSO](https://docs.pingidentity.com/pingone/getting_started_with_pingone/p1_p1sso_start.html){:target=_blank .external-link} |
+| PingIdentity | [PingOne SSO](https://docs.pingidentity.com/pingone/getting_started_with_pingone/p1_p1sso_start.html) |
 

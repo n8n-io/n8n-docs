@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Grist](https://getgrist.com/){:target=_blank .external-link} account.
+Create a [Grist](https://getgrist.com/) account.
 
 ## Supported authentication methods
 
@@ -21,13 +21,13 @@ Create a [Grist](https://getgrist.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Grist's API documentation](https://support.getgrist.com/api/){:target=_blank .external-link} for more information about the service.
+Refer to [Grist's API documentation](https://support.getgrist.com/api/) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Grist API authentication documentation](https://support.getgrist.com/rest-api/#authentication){:target=_blank .external-link} for instructions on creating an API key.
+- An **API Key**: Refer to the [Grist API authentication documentation](https://support.getgrist.com/rest-api/#authentication) for instructions on creating an API key.
 - To select your Grist **Plan Type**. Options include:
     - Free
     - Paid: If selected, provide your Grist **Custom Subdomain**. This is the portion that comes before `.getgrist.com`. For example, if our full Grist domain was `n8n.getgrist.com`, we'd enter `n8n` here.

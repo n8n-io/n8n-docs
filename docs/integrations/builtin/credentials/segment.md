@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Segment](https://segment.com/){:target=_blank .external-link} account.
+Create a [Segment](https://segment.com/) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [Segment](https://segment.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Segment's Sources documentation](https://segment.com/docs/connections/sources/){:target=_blank .external-link} for more information about the service.
+Refer to [Segment's Sources documentation](https://segment.com/docs/connections/sources/) for more information about the service.
 
 ## Using API key
 
@@ -29,5 +29,5 @@ To configure this credential, you'll need:
 
 - A **Write Key**: To get a Write Key, go to **Sources > Add Source**. Add a **Node.js** source and copy that write key to add to your n8n credential.
 
-Refer to [Locate your Write Key](https://segment.com/docs/connections/find-writekey/){:target=_blank .external-link} for more information.
+Refer to [Locate your Write Key](https://segment.com/docs/connections/find-writekey/) for more information.
 

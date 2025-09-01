@@ -26,7 +26,7 @@ On this page, you'll find the node parameters for the Token Splitter node, and l
 
 ## Related resources
 
-Refer to [LangChain's token documentation](https://js.langchain.com/docs/concepts/tokens/){:target=_blank .external-link} and [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's token documentation](https://js.langchain.com/docs/concepts/tokens/) and [LangChain's text splitter documentation](https://js.langchain.com/docs/concepts/text_splitters/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

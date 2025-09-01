@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the Structured Output Parser n
 
 ## Related resources
 
-Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -35,4 +35,4 @@ Refer to [LangChain's output parser documentation](https://js.langchain.com/docs
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserstructured/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

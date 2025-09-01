@@ -3,6 +3,9 @@
 title: Code in n8n Documentation and Guides
 description: Access documentation and guides on using code and expressions in n8n and other developer resources.
 contentType: overview
+hide:
+  - feedback
+  - kapaButton
 ---
 
 # Code in n8n
@@ -44,7 +47,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 	The [HTTP Request](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md), [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md), and [Code](/code/code-node.md) nodes help you make API calls, respond to webhooks, and write any JavaScript in your workflow.
 
-	Use this do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/){:target=_blank .external-link}.
+	Use this do things like [Create an API endpoint](https://n8n.io/workflows/1750-creating-an-api-endpoint/).
 
 	[:octicons-arrow-right-24: Core nodes](/integrations/builtin/core-nodes/index.md)
 
@@ -74,7 +77,7 @@ n8n provides core nodes, which simplify adding key functionality such as API req
 
 - __Build your own nodes__
 
-	You can build custom nodes, install them on your n8n instance, and publish them to [npm](https://www.npmjs.com/){:target=_blank .external-link}.
+	You can build custom nodes, install them on your n8n instance, and publish them to [npm](https://www.npmjs.com/).
 
 	[:octicons-arrow-right-24: Creating nodes](/integrations/creating-nodes/overview.md)
 

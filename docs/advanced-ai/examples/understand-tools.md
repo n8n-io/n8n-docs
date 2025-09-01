@@ -11,11 +11,11 @@ In AI, 'tools' has a specific meaning. Tools act like addons that your AI can us
 
 Here are a couple of other ways of expressing it:
 
-> Tools are interfaces that an agent can use to interact with the world ([source](https://langchain-ai.github.io/langgraphjs/how-tos/tool-calling/){:target=_blank .external-link})
+> Tools are interfaces that an agent can use to interact with the world ([source](https://langchain-ai.github.io/langgraphjs/how-tos/tool-calling/))
 
 <!--  -->
 
-> We can think of these tools as being almost like functions that your AI model can call ([source](https://www.udemy.com/course/chatgpt-and-langchain-the-complete-developers-masterclass/){:target=_blank .external-link})
+> We can think of these tools as being almost like functions that your AI model can call ([source](https://www.udemy.com/course/chatgpt-and-langchain-the-complete-developers-masterclass/))
 
 ## AI tools in n8n
 

@@ -25,7 +25,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChain's Postgres Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/postgres){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Postgres Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/postgres) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -33,4 +33,4 @@ Refer to [LangChain's Postgres Chat Message History documentation](https://js.la
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

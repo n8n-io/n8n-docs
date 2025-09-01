@@ -30,7 +30,7 @@ The community edition doesn't include these features:
 
 These features are available on the Enterprise Cloud plan, including the self-hosted Enterprise edition. Some of these features are available on the Starter and Pro Cloud plan. 
 
-See [pricing](https://n8n.io/pricing/){:target=_blank .external-link} for reference.
+See [pricing](https://n8n.io/pricing/) for reference.
 
 ## Registered Community Edition
 
@@ -47,7 +47,7 @@ To register a new community edition instance, select the option during your init
 
 To register an existing community edition instance:
 
-1. Select the **three dots icon** <span class="inline-image">![three dots icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> in the lower-left corner.
+1. Select the **three dots icon** <span class="n8n-inline-image">![three dots icon](/_images/common-icons/three-dots-horizontal.png){.off-glb}</span> in the lower-left corner.
 1. Select **Settings** and then **Usage and plan**.
 1. Select **Unlock** to enter your email and then select **Send me a free license key**.
 1. Check your email for the account you entered.

@@ -18,8 +18,8 @@ While building or testing a workflow, use the **Test URL**. Using a test URL ens
 
 There are two ways to test:
 
-- Select **Test Step**. n8n opens the form. When you submit the form, n8n runs the node, but not the rest of the workflow.
-- Select **Test Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
+- Select **Execute Step**. n8n opens the form. When you submit the form, n8n runs the node, but not the rest of the workflow.
+- Select **Execute Workflow**. n8n opens the form. When you submit the form, n8n runs the workflow.
 
 ## Production workflows
 
@@ -29,14 +29,14 @@ When working with a production URL, ensure that you have saved and activated the
 
 ## Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) receives the same query parameters sent to the n8n Form Trigger URL.
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms) with the initial URL provided by the n8n Form Trigger. Every [page in the form](/integrations/builtin/core-nodes/n8n-nodes-base.form.md) receives the same query parameters sent to the n8n Form Trigger URL.
 
 /// note | Only for production
 Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
 ///
 
 <!-- vale from-microsoft.Percentages = NO -->
-When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding) any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
 
 As an example, imagine you have a form with the following properties:
 
@@ -76,7 +76,7 @@ The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n dis
 
 ![Screenshot of the form URLs](/_images/integrations/builtin/core-nodes/form-trigger/form-urls.png)
 
-- **Test URL**: n8n registers a test webhook when you select **Test Step** or **Test Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
+- **Test URL**: n8n registers a test webhook when you select **Execute Step** or **Execute Workflow**, if the workflow isn't active. When you call the URL, n8n displays the data in the workflow.
 - **Production URL**: n8n registers a production webhook when you activate the workflow. When using the production URL, n8n doesn't display the data in the workflow. You can still view workflow data for a production execution. Select the **Executions** tab in the workflow, then select the workflow execution you want to view.
 
 ### Form Path
@@ -119,11 +119,11 @@ Choose when n8n sends a response to the form submission. You can respond when:
 Select **Add Option** to view more configuration options: 
 
 - **Append n8n Attribution**: Turn off to hide the **Form automated with n8n** attribute at the bottom of the form.
-- **Form Response**: Choose how to respond when the user submits the form. 
-    - **Respond With** > **Form Submitted Text**: Show a message to the user.
-    - **Respond With** > **Redirect URL**: Send the user to a new page.
+- **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
+- **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component.
 - **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers. 
 - **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](/workflows/settings.md) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output. 
+- **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
 
 ## Templates and examples
 

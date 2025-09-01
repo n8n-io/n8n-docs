@@ -32,7 +32,7 @@ You will learn all this by completing short practical exercises after the theore
 To follow along this course (at a comfortable pace) you will need the following:
 
 - **n8n set up**: You can use the [self-hosted version](/hosting/installation/npm.md) or [n8n Cloud](/manage-cloud/overview.md).
-- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg){:target="_blank" .external-link} to get your unique ID and other credentials you will need in the course.
+- **A user ID**: [Sign up here](https://n8n-community.typeform.com/to/HQoQ7nXg) to get your unique ID and other credentials you will need in this course (Level 2). If you're a Level 1 finisher, please sign up again as you'll get different credentials for the Level 2 workflows.
 - **Basic n8n skills**: We strongly recommend taking the [Level 1 course](/courses/level-one/index.md) before this one.
 - **Basic JavaScript understanding**
 
@@ -45,10 +45,10 @@ Completing the course should take around **two hours**. You don't have to comple
 There are two milestones in this course that test your knowledge of what you have learned in the lessons:
 
 - [x] Building the [main workflow](/courses/level-two/chapter-5/chapter-5.0.md)
-- [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg){:target="_blank" .external} at the end of the course
+- [x] Passing the [quiz](https://n8n-community.typeform.com/to/r9hDbytg) at the end of the course
 
-You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify){:target="_blank" .external-link}.
+You can always **check your progress** throughout the course by entering your unique ID [here](https://internal.users.n8n.cloud/webhook/course-level-2/verify).
 
-If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2){:target="_blank" .external} in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
+If you successfully complete the milestones above, you will get [**a badge and an avatar**](https://community.n8n.io/badges/105/completed-n8n-course-level-2) in your forum profile. You can then share your profile and course verification ID to showcase your n8n skills to others.
 
 [Let's get started!](/courses/level-two/chapter-1.md){ .md-button }

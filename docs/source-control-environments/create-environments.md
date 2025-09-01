@@ -41,15 +41,15 @@ Once you've chosen your pattern, you need to set up your GitHub repository.
 
 === "Multi-branch"
 
-    1. [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}. 
+    1. [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository). 
 	    * Make sure the repository is private, unless you want your workflows, tags, and variable and credential stubs exposed to the internet.
 	    * Create the new repository with a README so you can immediately create branches. 
-    1. Create one branch named `production` and another named `development`. Refer to [Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository){:target=_blank .external-link} for guidance.
+    1. Create one branch named `production` and another named `development`. Refer to [Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) for guidance.
 			
 
 === "Single-branch"
 
-    [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository){:target=_blank .external-link}. 
+    [Create a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository). 
 
       * Make sure the repository is private, unless you want your workflows, tags, and variable and credential stubs exposed to the internet.  
       * Create the new repository with a README. This creates the `main` branch, which you'll connect to. 		
@@ -65,7 +65,7 @@ Create two n8n instances, one for development, one for production.
 
 ### Set up a deploy key
 
-Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. Refer to [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link} for guidance.
+Set up SSH access by creating a deploy key for the repository using the SSH key from n8n. The key must have write access. Refer to [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys) for guidance.
 
 ### Connect n8n and configure your instance
 
@@ -97,17 +97,17 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 
     1. In GitHub, create a pull request to merge development into production.
     1. Merge the pull request.
-    1. In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+    1. In your production instance, select **Pull** <span class="n8n-inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 === "Single-branch"
 
-    In your production instance, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+    In your production instance, select **Pull** <span class="n8n-inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 
 ### Optional: Use a GitHub Action to automate pulls
 
-If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions){:target=_blank .external-link} and the [n8n API](/api/index.md) to automatically pull every time you push new work to your production or main branch.
+If you want to avoid logging in to your production instance to pull, you can use a [GitHub Action](https://docs.github.com/en/actions/creating-actions/about-custom-actions) and the [n8n API](/api/index.md) to automatically pull every time you push new work to your production or main branch.
 
 --8<-- "_snippets/source-control-environments/github-action.md"
 

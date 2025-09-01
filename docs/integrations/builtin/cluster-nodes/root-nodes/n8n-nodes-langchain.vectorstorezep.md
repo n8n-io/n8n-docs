@@ -7,6 +7,10 @@ contentType: [integration, reference]
 
 # Zep Vector Store node
 
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. 
+///
+
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).
 
 On this page, you'll find the node parameters for the Zep Vector Store node, and links to more resources.
@@ -16,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Zep Vector Store integrations](https://n8n.io/integrations/zep-vector-store/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Zep Vector Store integrations](https://n8n.io/integrations/zep-vector-store/) page.
 ///
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -53,6 +57,8 @@ The [connections flow](https://n8n.io/workflows/2621-ai-agent-to-chat-with-files
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-mode.md"
 
+### Rerank Results
+
 --8<-- "_snippets/integrations/builtin/cluster-nodes/vector-store-rerank-results.md"
 
 ### Insert Documents parameters
@@ -86,8 +92,6 @@ Must be the same when embedding the data and when querying it.
 
 This sets the size of the array of floats used to represent the semantic meaning of a text document.
 
-Read more about Zep embeddings in [Zep's embeddings documentation](https://docs.getzep.com/deployment/embeddings/){:target=_blank .external-link}.
-
 ### Is Auto Embedded
 
 Available in the **Insert Documents** Operation Mode, enabled by default.
@@ -105,7 +109,7 @@ Disable this to configure your embeddings in Zep instead of in n8n.
 
 ## Related resources
 
-Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/vectorstores/zep/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/vectorstores/zep/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

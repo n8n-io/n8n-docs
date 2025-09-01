@@ -3,6 +3,9 @@
 title: n8n Integrations Documentation and Guides
 description: Access n8n integrations documentation and guides. Find comprehensive resources to help you master app integrations using different types of nodes to improve your automation workflows.
 contentType: overview
+hide:
+  - feedback
+  - kapaButton
 ---
 
 # Integrations

@@ -56,4 +56,4 @@ To get started with the `$fromAI()` function, select the "Let the model define t
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

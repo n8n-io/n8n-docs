@@ -12,7 +12,7 @@ The Vector Store Question Answer node is a [tool](/glossary.md#ai-tool) that all
 On this page, you'll find the node parameters for the Vector Store Question Answer node, and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Vector Store Question Answer Tool integrations](https://n8n.io/integrations/vector-store-tool/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Vector Store Question Answer Tool integrations](https://n8n.io/integrations/vector-store-tool/) page.
 ///	
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/sub-node-expression-resolution.md"
@@ -45,9 +45,9 @@ Use only alphanumeric characters, spaces, dashes, and underscores in node names.
 
 ## Related resources
 
-View [example workflows and related content](https://n8n.io/integrations/vector-store-tool/){:target=_blank .external-link} on n8n's website.
+View [example workflows and related content](https://n8n.io/integrations/vector-store-tool/) on n8n's website.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/tools-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

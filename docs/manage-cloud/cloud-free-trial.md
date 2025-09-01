@@ -14,7 +14,7 @@ When you create a new n8n cloud trial, you have 14 days to try all the features 
 - Execution search
 - 5 days workflow history to rollback
 
-The trial gives you Pro plan features with limits of 1000 executions, 5 active workflows, and the same computing power as the [Starter plan](https://n8n.io/pricing/).
+The trial gives you Pro plan features with limits of 1000 executions and the same computing power as the [Starter plan](https://n8n.io/pricing/).
 
 ## Upgrade to a paid account
 

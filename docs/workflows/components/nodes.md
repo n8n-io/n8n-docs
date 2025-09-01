@@ -72,7 +72,6 @@ When active or set, they do the following:
     - **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
     - **Continue**: Proceeds to the next node despite the error, using the last valid data.
     - **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
-
 You can document your workflow using node notes:
 
 * **Notes**: Note to save with the node.

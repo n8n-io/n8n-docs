@@ -48,7 +48,7 @@ The panel contains the following sections:
 -   **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
 -   **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
 -   **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
--   **Insights**: Provides analytics and insights about your workflows.
+-   **Insights**: Provides analytics and insights about your workflows. This feature is available on the Pro and Enterprise Plans.
 -   **Help**: Contains resources around n8n product and community.
 -   **What’s New**: Shows the latest product updates and features.
 
@@ -64,7 +64,7 @@ The top bar of the **Editor UI** contains the following information:
 - **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
-- **History**: Once you save your workflow, you can view previous versions here.
+- **History**: Once you save your workflow, you can view previous versions here.This feature is available on the Pro and Enterprise Plans.
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

@@ -21,7 +21,7 @@ n8n's current OIDC implementation doesn't handle the `state` parameter that some
 
 For now, the only work around is to configure your OIDC provider to disable the `state` parameter if possible.
 
-n8n plans on adding full support for the OIDC `state` parameter in a future release.
+n8n is currently working on adding full support for the OIDC `state` parameter in a future release.
 
 ### PKCE not supported
 

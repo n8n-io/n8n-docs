@@ -116,7 +116,6 @@ nav:
     - using-n8n/index.md
     - Using workflows:
       - workflows/index.md
-      - Learn about workflows: key-concepts/workflows.md
       - Create: workflows/create.md
       - Share: workflows/sharing.md
       - Connections: workflows/components/connections.md

@@ -83,7 +83,7 @@ nav:
         - OIDC:
           - user-management/oidc/index.md
           - Set up OIDC: user-management/oidc/setup.md
-          - Troubleshooting & FAQs: user-management/oidc/troubleshooting.md
+          - Troubleshooting: user-management/oidc/troubleshooting.md
         - SAML:
           - user-management/saml/index.md
           - Set up SAML: user-management/saml/setup.md

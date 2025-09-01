@@ -5,21 +5,21 @@ description: Set up instructions for enabling OIDC SSO with n8n.
 contentType: howto
 ---
 
-This page tells you how to enable OIDC SSO (single sign-on) in n8n. It assumes you're familiar with OIDC. If you're not, [OpenID Connect explained](https://openid.net/connect/) can help you understand how OIDC works, and its benefits.
+This section tells you how to enable OIDC SSO (single sign-on) in n8n. It assumes you're familiar with OIDC. If you're not, [OpenID Connect explained](https://openid.net/connect/) can help you understand how OIDC works, and its benefits.
 
 ## Setting up and enabling OIDC
 
 1. In n8n, go to **Settings** > **SSO**.
 2. Under **Select Authentication Protocol**, choose **OIDC** from the dropdown.
-3. Copy the **redirect URL** shown (e.g., `https://yourworkspace.app.n8n.cloud/rest/sso/oidc/callback`)
-   1. **Optional**: if you are running n8n behind a load balancer, make sure you have `N8N_EDITOR_BASE_URL` configured.
-4. Set up OIDC with your IdP (identity provider). You'll need to:
+3. Copy the **redirect URL** shown (for example, `https://yourworkspace.app.n8n.cloud/rest/sso/oidc/callback`)
+   1. If you are running n8n behind a load balancer, make sure you set the [`N8N_EDITOR_BASE_URL` environment variable](/hosting/configuration/environment-variables/deployment.md).
+4. Set up OIDC with your identity provider (IdP). You'll need to:
    
    - Create a new OIDC client/application in your IdP
    - Configure the redirect URL from step 3
    - Note down the **Client ID** and **Client Secret** provided by your IdP
 
-5. In your IdP, locate the **Discovery Endpoint** (also called the well-known configuration endpoint). This is typically in the format:
+5. In your IdP, locate the **Discovery Endpoint** (also called the well-known configuration endpoint). This is typically in the following format:
    ```
    https://your-idp-domain/.well-known/openid-configuration
 

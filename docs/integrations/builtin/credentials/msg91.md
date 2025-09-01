@@ -27,7 +27,7 @@ Refer to [MSG91's API documentation](https://docs.msg91.com/overview) for more i
 
 To configure this credential, you'll need:
 
-- An **Authentication Key**: To get your Authentication Key, go to the user menu and select **Authkey**. Refer to MSG91's [Where can I find my authentication key? documentation](https://msg91.com/help/where-can-i-find-my-authentication-key) for more information.
+- An **Authentication Key**: To get your Authentication Key, go to the user menu and select **Authkey**. Refer to MSG91's [Where can I find my authentication key? documentation](https://msg91.com/help/api/where-can-i-find-my-authentication-ke) for more information.
 
 ## IP Security
 

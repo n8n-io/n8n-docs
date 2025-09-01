@@ -13,14 +13,14 @@ hide:
 # n8n public REST API
 
 /// info | Feature availability
-The n8n API isn't available during the free trial. Please upgrade to access this feature.  
+The n8n API isn't available during the free Cloud trial. Please upgrade to access this feature.  
 ///
 
 Using n8n's public [API](/glossary.md#api), you can programmatically perform many of the same tasks as you can in the GUI. This section introduces n8n's REST API, including:
 
 * How to [authenticate](/api/authentication.md)
 * [Paginating](/api/pagination.md) results
-* Using the [built-in API playground](/api/using-api-playground.md) (self-hosted n8n only)
+* Using the [built-in API playground](/api/using-api-playground.md)
 * [Endpoint reference](/api/api-reference.md)
 
 n8n provides an [n8n API node](/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md) to access the API in your workflows.

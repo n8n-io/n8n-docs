@@ -164,6 +164,7 @@ nav:
           - Sub-workflows: flow-logic/subworkflows.md
           - Error handling: flow-logic/error-handling.md
         - Handle rate limits: integrations/builtin/rate-limits.md
+        - Custom API actions for existing nodes: integrations/custom-operations.md
         - Using community nodes:
           - Installation and management:
             - integrations/community-nodes/installation/index.md
@@ -240,12 +241,14 @@ nav:
         - Light evaluations: advanced-ai/evaluations/light-evaluations.md
         - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
         - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
+      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
       - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
       - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
       - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
       - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
       - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
     - API:
+      - Overview: api/overview.md
       - Authentication: api/authentication.md
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
@@ -265,10 +268,9 @@ nav:
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Tutorials and courses:
     - tutorials/index.md
-    - Your first workflow: tutorials/tutorial-first-workflow.md
-    - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
-    - AI examples:
-      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
+    - Getting started:
+      - Your first workflow: tutorials/tutorial-first-workflow.md
+      - Build an AI workflow in n8n: advanced-ai/intro-tutorial.md
     - Text courses:
       - Level one:
         - courses/level-one/index.md
@@ -299,9 +301,8 @@ nav:
           - Workflow 2: courses/level-two/chapter-5/chapter-5.2.md
           - Workflow 3: courses/level-two/chapter-5/chapter-5.3.md
         - Test your knowledge: courses/level-two/chapter-6.md
-    - Using nodes:
-      - Custom API actions for existing nodes: integrations/custom-operations.md
-    - Video courses: video-courses.md
+    - Video courses:
+      - Video courses index: video-courses.md
     - Creating nodes:
       - integrations/creating-nodes/overview.md
       - Plan your node:
@@ -336,6 +337,7 @@ nav:
     - reference/index.md
     - n8n CLI commands: hosting/cli-commands.md
     - Keyboard shortcuts: keyboard-shortcuts.md
+    - API reference: api/api-reference.md
     - Cloud IP addresses: manage-cloud/cloud-ip.md
     - Glossary: glossary.md
     - Configuration:
@@ -1315,9 +1317,6 @@ nav:
         - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
         - (node-name).all: code/cookbook/builtin/all.md
         - vars: code/cookbook/builtin/vars.md
-    - API:
-      - Overview: api/overview.md
-      - API reference: api/api-reference.md
     - Releases:
       - Release notes:
         - 1.x: release-notes.md

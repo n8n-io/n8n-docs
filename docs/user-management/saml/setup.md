@@ -7,7 +7,7 @@ contentType: howto
 
 # Set up SAML
 
---8<-- "_snippets/user-management/sso-saml-overview.md"
+--8<-- "_snippets/user-management/sso-saml-availability.md"
 
 ## Enable SAML
 

@@ -5,7 +5,12 @@ description: Set up instructions for enabling OIDC SSO with n8n.
 contentType: howto
 ---
 
+# Set up OIDC
+
+--8<-- "_snippets/user-management/sso-oidc-availability.md"
+
 ## Setting up and enabling OIDC
+
 
 1. In n8n, go to **Settings** > **SSO**.
 2. Under **Select Authentication Protocol**, choose **OIDC** from the dropdown.

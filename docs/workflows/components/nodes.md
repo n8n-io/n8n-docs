@@ -55,8 +55,6 @@ To view node controls, hover over the node on the canvas:
 	* Pin node
 	* Copy node
 	* Duplicate node
-	* Tidy up workflow
-	* Convert node to sub-workflow
 	* Select all
 	* Clear selection
 	* Delete node
@@ -71,9 +69,9 @@ When active or set, they do the following:
 * **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
 * **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 
 * **On Error**: 
-    * **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
-    * **Continue**: Proceeds to the next node despite the error, using the last valid data.
-    * **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
+    - **Stop Workflow**: Halts the entire workflow when an error occurs, preventing further node execution.
+    - **Continue**: Proceeds to the next node despite the error, using the last valid data.
+    - **Continue (using error output)**: Continues workflow execution, passing error information to the next node for potential handling.
 
 You can document your workflow using node notes:
 

@@ -70,3 +70,4 @@ This page tells you how to enable OIDC SSO (single sign-on) in n8n. It assumes y
 - **Microsoft Azure AD**: Discovery endpoint example `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`
 - **Auth0**: Discovery endpoint example `https://{your-domain}.auth0.com/.well-known/openid-configuration`
 - **Okta**: Discovery endpoint example `https://{your-domain}.okta.com/.well-known/openid-configuration`
+

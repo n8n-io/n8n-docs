@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Travis CI](https://travis-ci.org/) account.
+Create a [Travis CI](https://travis-ci.com/) account.
 
 ## Supported authentication methods
 

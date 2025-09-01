@@ -5,8 +5,6 @@ description: Set up instructions for enabling OIDC SSO with n8n.
 contentType: howto
 ---
 
-This section tells you how to enable OIDC SSO (single sign-on) in n8n. It assumes you're familiar with OIDC. If you're not, [OpenID Connect explained](https://openid.net/connect/) can help you understand how OIDC works, and its benefits.
-
 ## Setting up and enabling OIDC
 
 1. In n8n, go to **Settings** > **SSO**.

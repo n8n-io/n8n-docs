@@ -89,11 +89,15 @@ nav:
         - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
+        - OIDC:
+          - user-management/oidc/index.md
+          - Set up OIDC: user-management/oidc/setup.md
+          - Troubleshooting: user-management/oidc/troubleshooting.md
         - SAML:
           - user-management/saml/index.md
           - Set up SAML: user-management/saml/setup.md
-          - Manage users with SAML: user-management/saml/managing.md
           - Set up SAML with Okta Workforce Identity: user-management/saml/okta.md
+          - Manage users with SAML: user-management/saml/managing.md
           - Troubleshooting: user-management/saml/troubleshooting.md
       - Source control and environments:
         - source-control-environments/index.md

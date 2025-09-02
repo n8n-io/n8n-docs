@@ -759,9 +759,7 @@ paths:
                     format: email
                   role:
                     type: string
-                    enum:
-                      - global:admin
-                      - global:member
+                    example: global:member
                 required:
                   - email
       responses:
@@ -847,9 +845,7 @@ paths:
               properties:
                 newRoleName:
                   type: string
-                  enum:
-                    - global:admin
-                    - global:member
+                  example: global:member
               required:
                 - newRoleName
       responses:

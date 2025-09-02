@@ -65,6 +65,20 @@ The top bar of the **Editor UI** contains the following information:
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
+- **More options menu (⋮)**:
+
+Clicking the three vertical dots in the top bar's right corner opens a dropdown with the following options (in order):
+
+1. **Duplicate**: Creates a copy of the current workflow.  
+2. **Download**: Exports/Download the workflow as a JSON file.  
+3. **Change owner**: Transfers workflow ownership to another user.  
+4. **Rename**: Updates name of workflow.  
+5. **Import from URL**: Imports a workflow directly from a public URL.  
+6. **Import from file**: Imports a workflow from a local `.json` file.  
+7. **Push to Git**: Pushes the workflow to a connected Git repository.  
+8. **Settings**: Opens workflow-level configuration options (edit settings related to workflow).  
+9. **Archive**: Moves the workflow to the archive (it can be restored later if needed).  
+
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

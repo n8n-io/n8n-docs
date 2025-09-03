@@ -50,8 +50,8 @@ nav:
         - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
         - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
         - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
+      - Set up user management: hosting/configuration/user-management-self-hosted.md
       - Task runners: hosting/configuration/task-runners.md
-      - User management: hosting/configuration/user-management-self-hosted.md
       - Logging and monitoring:
         - Logging: hosting/logging-monitoring/logging.md
         - Monitoring: hosting/logging-monitoring/monitoring.md
@@ -78,27 +78,17 @@ nav:
       - Workflow management: embed/managing-workflows.md
       - Workflows templates: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
-    - Paid Cloud features (enterprise + Cloud):
-      - Manage users and access:
-        - user-management/index.md
-        - Cloud setup: user-management/cloud-setup.md
-        - Manage users: user-management/manage-users.md
-        - Role-based access control:
-          - user-management/rbac/index.md
-          - Projects: user-management/rbac/projects.md
-        - Best practices: user-management/best-practices.md
-        - 2FA: user-management/two-factor-auth.md
-        - LDAP: user-management/ldap.md
-        - OIDC:
-          - user-management/oidc/index.md
-          - Set up OIDC: user-management/oidc/setup.md
-          - Troubleshooting: user-management/oidc/troubleshooting.md
-        - SAML:
-          - user-management/saml/index.md
-          - Set up SAML: user-management/saml/setup.md
-          - Set up SAML with Okta Workforce Identity: user-management/saml/okta.md
-          - Manage users with SAML: user-management/saml/managing.md
-          - Troubleshooting: user-management/saml/troubleshooting.md
+    - Users and access:
+      - user-management/index.md
+      - Manage users: user-management/manage-users.md
+      - Account types: user-management/account-types.md
+      - Best practices for user management: user-management/best-practices.md
+      - Two-factor authentication (2FA): user-management/two-factor-auth.md
+      - Role-based access control:
+        - user-management/rbac/index.md
+        - Role types: user-management/rbac/role-types.md
+        - Projects: user-management/rbac/projects.md
+    - Pro and Enterprise features:
       - Source control and environments:
         - source-control-environments/index.md
         - Concepts:
@@ -113,7 +103,21 @@ nav:
           - Compare workflow changes: source-control-environments/using/compare-changes.md
           - Copy work between environments: source-control-environments/using/copy-work.md
         - Create environments with source control: source-control-environments/create-environments.md
+      - Single sign-on (SSO):
+        - user-management/sso/index.md
+        - LDAP: user-management/ldap.md
+        - OIDC:
+          - user-management/oidc/index.md
+          - Set up OIDC: user-management/oidc/setup.md
+          - Troubleshooting: user-management/oidc/troubleshooting.md
+        - SAML:
+          - user-management/saml/index.md
+          - Set up SAML: user-management/saml/setup.md
+          - Set up SAML with Okta Workforce Identity: user-management/saml/okta.md
+          - Manage users with SAML: user-management/saml/managing.md
+          - Troubleshooting: user-management/saml/troubleshooting.md
       - External secrets: external-secrets.md
+      - Custom variables: code/variables.md
       - Log streaming: log-streaming.md
       - Insights: insights.md
   - Using n8n:
@@ -131,7 +135,6 @@ nav:
       - Workflow templates: workflows/templates.md
       - Workflow ID: workflows/workflow-id.md
       - Sub-workflow conversion: workflows/subworkflow-conversion.md
-      - Create custom variables: code/variables.md
       - Manage executions:
         - workflows/executions/index.md
         - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
@@ -1287,9 +1290,6 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
-    - User management:
-      - Account types: user-management/account-types.md
-      - Role types: user-management/rbac/role-types.md
     - Item linking:
       - Concepts: new-data/item-linking/concepts.md
       - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md

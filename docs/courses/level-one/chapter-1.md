@@ -64,7 +64,9 @@ The top bar of the **Editor UI** contains the following information:
 - **Inactive/active toggle**: This button activates or deactivates the current workflow. By default, workflows are deactivated.
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
-- **History**: Once you save your workflow, you can view previous versions here.
+- **History**: Once you save your workflow, you can view previous versions here.  
+  *Note: History is only available for upgraded members.*
+
 
 <figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 

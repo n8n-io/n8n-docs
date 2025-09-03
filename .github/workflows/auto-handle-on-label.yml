@@ -36,6 +36,7 @@ jobs:
             "duplicate")
               echo "comment=@$AUTHOR This duplicates another issue or PR, or the work was already done elsewhere. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
             "old-course")
               echo "comment=Hi @AUTHOR! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT

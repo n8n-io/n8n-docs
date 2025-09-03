@@ -65,8 +65,11 @@ The top bar of the **Editor UI** contains the following information:
 - **Share**: You can share and collaborate with others on workflows on the Starter, Pro, and Enterprise plans.
 - **Save**: This button saves the current workflow.
 - **History**: Once you save your workflow, you can view previous versions here.
+- **Executions** — View the run history and logs of this workflow. Useful for testing and debugging.
+- **Evaluations** — For AI workflows: run test cases (light evaluations) and record metrics/datasets.
+- **More options (…)** — Opens a dropdown menu with workflow management actions such as Duplicate, Download, Change owner, Rename, Import from URL/File, Push to Git, Settings, and Archive.
 
-<figure><img src="/_images/courses/level-one/chapter-one/l1-c1-top-bar.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
+<figure><img src="/_images/courses/level-one/chapter-one/editor-ui-top-bar-updated.png" alt="Editor UI top bar" style="width:100%"><figcaption align = "center"><i>Editor UI top bar</i></figcaption></figure>
 
 ### Canvas
 
@@ -91,6 +94,11 @@ You can move the workflow canvas around in three ways:
 
 
 Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
+
+> **Note:** You’ll explore executions later in the **Executions** section of the docs.  
+> If you are working with AI workflows, you can test outputs with **Evaluations**.
+
+
 
 ## Nodes
 

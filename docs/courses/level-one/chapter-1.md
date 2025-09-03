@@ -111,13 +111,15 @@ Based on their function, n8n classifies nodes into four types:
 Refer to [Node types](/integrations/builtin/node-types.md) for a more detailed explanation of all node types.
 ///
 
-### Finding nodes
+Finding nodes#
 
-You can find all available nodes in the **nodes panel** on the right side of the Editor UI. There are three ways in which you can open the nodes panel:
+You can find all available nodes in the nodes panel on the right side of the Editor UI. There are four ways in which you can open the nodes panel:
 
-- Click the **+** icon in the top right corner of the canvas.
-- Click the **+** icon on the right side of an existing node on the canvas (the node to which you want to add another one).
-- Click the ++tab++ key on your keyboard.
+- Click the + icon in the top right corner of the canvas.
+- Click the + icon on the right side of an existing node on the canvas (the node to which you want to add another one).
+- Click the Tab key on your keyboard.
+- When adding your first node, click the + icon in the center of the canvas.
+
 
 <figure style="text-align: center; width:50%; margin:auto;"><img src="/_images/courses/level-one/chapter-one/l1-c1-node-menu-drilldown.gif" alt="Nodes panel"><figcaption align = "center"><i>Nodes panel</i></figcaption></figure>
 

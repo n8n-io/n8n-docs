@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   script.setAttribute("data-project-name", "n8n");
   script.setAttribute("data-project-color", "#EA4B71");
   script.setAttribute("data-project-logo", "/_images/assets/n8n-icon-kapa-modal.png");
-  // Enable non-AI search https://docs.kapa.ai/integrations/website-widget/search
-  script.setAttribute("data-search-mode-enabled", true);
   // Hide the Kapa widget
   script.setAttribute("data-button-hide", true);
   // MkDocs tries to squeeze the modal

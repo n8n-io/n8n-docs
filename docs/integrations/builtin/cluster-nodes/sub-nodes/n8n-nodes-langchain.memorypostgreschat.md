@@ -33,4 +33,4 @@ Refer to [LangChain's Postgres Chat Message History documentation](https://js.la
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

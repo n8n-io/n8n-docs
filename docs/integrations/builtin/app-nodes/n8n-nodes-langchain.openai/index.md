@@ -62,7 +62,7 @@ For help dealing with rate limits, refer to [Handling rate limits](/integrations
 
 ## Using tools with OpenAI assistants
 
-Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced-ai/examples/understand-tools/) act like addons that your AI can use to access extra context or resources.
+Some operations allow you to connect tools. [Tools](/advanced-ai/examples/understand-tools.md) act like addons that your AI can use to access extra context or resources.
 
 Select the **Tools** connector to browse the available tools and add them.
 

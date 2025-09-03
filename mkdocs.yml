@@ -6,13 +6,14 @@ repo_url: https://github.com/n8n-io/n8n-docs
 edit_uri: edit/main/docs/
 validation:
   nav:
-    omitted_files: info
+    omitted_files: warn
     not_found: warn
-    absolute_links: ignore
+    absolute_links: warn
   links:
     not_found: warn
+    anchors: warn
     absolute_links: relative_to_docs
-    unrecognized_links: info
+    unrecognized_links: warn
 theme:
   name: material
   custom_dir: _overrides
@@ -78,7 +79,6 @@ extra_javascript:
   - _extra/javascript/init_kapa_widget.js
 
 watch:
-  - _glossary
   - _snippets
   - _overrides
 markdown_extensions:
@@ -155,9 +155,10 @@ plugins:
   # But DO NOT ENABLE IT NORMALLY
   # It causes Netlify builds to fail
   # - info
+  - search
   - exclude:
       glob:
-       # - integrations/builtin/*
+      # - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false
@@ -192,4 +193,13 @@ plugins:
       links_attr_map:
         target: _blank
         rel: external
+  # https://github.com/pawamoy/mkdocs-llmstxt
+  - llmstxt:
+      markdown_description: |
+        Documentation for n8n, a workflow automation platform. This file helps LLMs understand and use the documentation more effectively.
+      full_output: llms-full.txt
+      # Include all Markdown files in the docs directory and subdirectories
+      sections:
+        All documentation:
+          - "*.md"
 INHERIT: ./nav.yml

@@ -27,6 +27,12 @@ Refer to [Supabase credentials](/integrations/builtin/credentials/supabase.md) f
     * Get all rows
     * Update a row
 
+## Using custom schemas
+
+By default, the Supabase node only fetches the `public` schema. To fetch [custom schemas](https://supabase.com/docs/guides/api/using-custom-schemas), enable **Use Custom Schema**.
+
+In the new **Schema** field, provide the custom schema the Supabase node should use.
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

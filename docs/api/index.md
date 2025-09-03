@@ -7,6 +7,7 @@ search:
     boost: 5
 hide:
   - feedback
+  - kapaButton
 ---
 
 # n8n public REST API
@@ -33,6 +34,6 @@ The API documentation assumes you are familiar with REST APIs. If you're not, th
 * [IBM Cloud Learn Hub - What is a REST API?](https://www.ibm.com/cloud/learn/rest-apis): more detailed information about REST APIs.
 * [MDN web docs - An overview of HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview): REST APIs work over HTTP and use HTTP verbs, or methods, to specify the action to perform.
 
-/// tip | Use the API playground (self-hosted n8n only)
+/// tip | Use the API playground
 Trying out the API in the [playground](/api/using-api-playground.md) can help you understand how APIs work. If you're worried about changing live data, consider setting up a test workflow, or test n8n instance, to explore safely.
 ///

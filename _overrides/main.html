@@ -47,7 +47,6 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 {% endblock %}
 
 
-
 {% block container %}
 
 <!-- Google Tag Manager (noscript) -->
@@ -163,5 +162,8 @@ https://plausible.io/docs/script-extensions?ref=ryansechrest.com#all-our-script-
 
 {% block content %}
 {{ super() }}
+{% with inContent=true %}
+	{% include "partials/kapaButton.html" %}
+{% endwith %}
 {% include "partials/n8nFeedback.html" %}
 {% endblock %}

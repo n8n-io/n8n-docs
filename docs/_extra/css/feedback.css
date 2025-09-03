@@ -5,7 +5,7 @@ This file contains the styling for the n8nFeedback.html partial
 .n8n-feedback-container {
     border-top: 1px solid #eee;
     color: #666;
-    margin-top: 2em; 
+    margin-top: 1em; 
     padding-top: 1em; 
 }
 
@@ -57,4 +57,23 @@ This file contains the styling for the n8nFeedback.html partial
 
 .n8n-feedback-comment-hint {
     font-size: 0.75em;
+}
+
+#n8n-ratings-feedback {
+    display: flex; 
+    gap: 1em; 
+    align-items: center;
+}
+
+@media screen and (max-width: 475px) {
+
+#n8n-ratings-feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.n8n-feedback-button-positive, .n8n-feedback-button-negative {
+    min-width: 8.5em;
+}
+
 }

@@ -81,12 +81,16 @@ nav:
         - Best practices: user-management/best-practices.md
         - 2FA: user-management/two-factor-auth.md
         - LDAP: user-management/ldap.md
+        - OIDC:
+          - user-management/oidc/index.md
+          - Set up OIDC: user-management/oidc/setup.md
+          - Troubleshooting: user-management/oidc/troubleshooting.md
         - SAML:
           - user-management/saml/index.md
           - Set up SAML: user-management/saml/setup.md
           - Okta Workforce Identity SAML setup: user-management/saml/okta.md
-          - Troubleshooting: user-management/saml/troubleshooting.md
           - Manage users with SAML: user-management/saml/managing.md
+          - Troubleshooting: user-management/saml/troubleshooting.md
       - Keyboard shortcuts: keyboard-shortcuts.md
     - Key concepts:
       - Flow logic:
@@ -145,6 +149,7 @@ nav:
         - Using:
           - source-control-environments/using/index.md
           - Push and pull: source-control-environments/using/push-pull.md
+          - Compare workflow changes: source-control-environments/using/compare-changes.md
           - Copy work between environments: source-control-environments/using/copy-work.md
         - "Tutorial: Create environments with source control": source-control-environments/create-environments.md
       - External secrets: external-secrets.md
@@ -275,6 +280,7 @@ nav:
         - AWS Comprehend: integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md
         - AWS DynamoDB: integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md
         - AWS Elastic Load Balancing: integrations/builtin/app-nodes/n8n-nodes-base.awselb.md
+        - AWS IAM: integrations/builtin/app-nodes/n8n-nodes-base.awsiam.md
         - AWS Lambda: integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md
         - AWS Rekognition: integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition.md
         - AWS S3: integrations/builtin/app-nodes/n8n-nodes-base.awss3.md
@@ -1322,7 +1328,7 @@ nav:
       - api/index.md
       - Authentication: api/authentication.md
       - Pagination: api/pagination.md
-      - Using the API playground: api/using-api-playground.md
+      - Using an API playground: api/using-api-playground.md
       - API reference: api/api-reference.md
   - Embed:
       - embed/index.md
@@ -1332,8 +1338,8 @@ nav:
       - Workflow management: embed/managing-workflows.md
       - Workflows templates: embed/workflow-templates.md
       - White labelling: embed/white-labelling.md
-#  - Feature tests:
-#      - Main features: docs-site-feature-tests/index.md
-#
+  # - Feature tests:
+  #    - Main features: docs-site-feature-tests/index.md
+
 not_in_nav: |
   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolhttprequest.md

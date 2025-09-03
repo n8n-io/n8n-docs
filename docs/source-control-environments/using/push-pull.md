@@ -19,7 +19,7 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 You must be an instance owner or instance admin to pull changes from git.
 ///
 
-To pull work from Git, select **Pull** <span class="inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
+To pull work from Git, select **Pull** <span class="n8n-inline-image">![Pull icon](/_images/source-control-environments/pull-icon.png){.off-glb}</span> in the main menu.
 
 --8<-- "_snippets/source-control-environments/push-pull-menu-state.md"
 

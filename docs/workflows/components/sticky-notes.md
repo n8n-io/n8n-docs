@@ -31,7 +31,7 @@ Sticky Notes are a core node. To add a new Sticky Note:
 To change the Sticky Note color:
 
 1. Hover over the Sticky Note
-1. Select **Change color** <span class="inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
+1. Select **Change color** <span class="n8n-inline-image">![Change Sticky Note color icon](/_images/common-icons/change-color.png){.off-glb}</span>
 
 ## Sticky Note positioning
 
@@ -40,7 +40,7 @@ You can:
 * Drag a Sticky Note anywhere on the canvas.
 * Drag Sticky Notes behind nodes. You can use this to visually group nodes.
 * Resize Sticky Notes by hovering over the edge of the note and dragging to resize.
-* Change the color: select **Options** <span class="inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> to open the color selector.
+* Change the color: select **Options** <span class="n8n-inline-image">![Options icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> to open the color selector.
 
 ## Writing in Markdown
 

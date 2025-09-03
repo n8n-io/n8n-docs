@@ -44,4 +44,4 @@ Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/in
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

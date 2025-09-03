@@ -17,11 +17,14 @@ Refer to [Linear credentials](/integrations/builtin/credentials/linear.md) for g
 
 ## Operations
 
+* Comment
+	* Add Comment
 * Issue
+	* Add Link
     * Create
     * Delete
     * Get
-    * Get All
+    * Get Many
     * Update
 
 ## Templates and examples

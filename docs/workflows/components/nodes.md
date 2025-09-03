@@ -65,11 +65,6 @@ The node settings under the **Settings** tab allow you to control node behaviors
 
 When active or set, they do the following:
 
-* **Request Options**: Select **Add Option** to view and select these options. 
-	- **Batching**: Control how to batch large numbers of input items.
-	- **Ignore SSL Issues**: Download the response even if SSL validation isn't possible.
-	- **Proxy**: Use this if you need to specify an HTTP proxy.
-	- **Timeout**: Set a timeout for the request in ms. 
 * **Always Output Data**: The node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
 * **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
 * **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 

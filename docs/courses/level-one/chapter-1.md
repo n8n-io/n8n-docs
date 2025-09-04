@@ -99,7 +99,7 @@ Don't worry about workflow execution and activation for now; we'll explain these
 - **Additional Features**: Supports "Sync selection with canvas" (aligns log entries with corresponding nodes) and "Pop out panel" (provides a detachable view for enhanced usability).
 - **Note**: Execution logs are retained for 24 hours in the Community Edition; extended retention is available in paid plans.
 - **Visual Reference**:  
-  ![Logs Panel in Action](/content/courses/level-one/chapter-one/images/logs-panel-populated.png)  
+  ![Logs Panel in Action](/_images/courses/level-one/chapter-one/logs-panel-populated.png)
   *Figure: Logs panel displaying execution data after workflow execution.*
 
 ## Nodes

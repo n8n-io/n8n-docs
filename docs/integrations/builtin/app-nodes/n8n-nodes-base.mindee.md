@@ -1,11 +1,16 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Mindee node documentation
+title: Mindee node documentation (Deprecated)
 description: Learn how to use the Mindee node in n8n. Follow technical documentation to integrate Mindee node into your workflows.
 contentType: [integration, reference]
 ---
 
 # Mindee node
+
+/// warning | Deprecated
+This page documents the usage for the **Mindee V1 node**, which is now considered **deprecated**.
+For new workflows, please use the **[MindeeV2 node](/integrations/builtin/app-nodes/n8n-nodes-base.mindeev2.md)** instead.
+///
 
 Use the Mindee node to automate work in Mindee, and integrate Mindee with other applications. n8n has built-in support for a wide range of Mindee features, including predicting invoices. 
 

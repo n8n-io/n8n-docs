@@ -52,6 +52,15 @@ The panel contains the following sections:
 -   **Help**: Contains resources around n8n product and community.
 -   **What’s New**: Shows the latest product updates and features.
 
+- **Overview**: Contains all the workflows and credentials you have access to. During this course, create new workflows here.
+
+- **Projects**:  Projects group workflows and credentials. You can assign [roles](/user-management/rbac/role-types.md) to users in a project to control what they can do in a project. A **Personal** project is available by default. Projects aren't available on the Community edition.
+- **Admin Panel**: n8n Cloud only. Access your n8n instance usage, billing, and version settings.
+- **Templates**: A collection of pre-made workflows. Great place to get started with common use cases.
+- **Variables**: Used to store and access fixed data across your workflows. This feature is available on the Pro and Enterprise Plans.
+- **Insights**: Provides analytics and insights about your workflows. 
+- **Help**: Contains resources around n8n product and community.
+- **What’s New**: Shows the latest product updates and features.  
 
 <figure style="text-align: center;"><img src="/_images/courses/level-one/chapter-one/l1-c1-side-panel.png" alt="Editor UI left-side menu" style="height: 600px;"><figcaption align = "center"><i>Editor UI left-side menu</i></figcaption></figure>
 

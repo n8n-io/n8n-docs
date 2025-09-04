@@ -1,5 +1,5 @@
 <!-- vale off -->
-# Referencing data (Data mapping)
+# Referencing data
 
 The primary method of referencing data in n8n is with [expressions](/glossary.md#expression-n8n).
 

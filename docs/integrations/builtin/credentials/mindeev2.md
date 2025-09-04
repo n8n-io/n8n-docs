@@ -7,7 +7,7 @@ contentType: [integration, reference]
 # Mindee V2 credentials
 
 You can use these credentials to authenticate the following nodes:
-- [Mindee V2](/integrations/nodes/n8n-nodes-base.mindeeV2/)
+- [Mindee V2](/integrations/nodes/n8n-nodes-base.mindeev2/)
 
 ## Prerequisites
 

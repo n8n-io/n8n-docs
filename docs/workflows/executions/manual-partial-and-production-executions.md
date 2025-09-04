@@ -16,7 +16,7 @@ Manual executions allow you to run workflows directly from the [canvas](/glossar
 Manual executions make building workflows easier by allowing you to iteratively test as you go, following the flow logic and seeing data transformations. You can test conditional branching, data formatting changes, and loop behavior by providing different input items and modifying node options.
 
 /// note | Pinning execution data
-When performing manual executions, you can use [data pinning](/data/data-pinning.md) to "pin" or "freeze" the output data of a node. You can optionally [edit the pinned data](/data/data-editing.md) as well.
+When performing manual executions, you can use [data pinning](/data/pinning-and-mocking-data.md#data-pinning) to "pin" or "freeze" the output data of a node. You can optionally edit the pinned data as well.
 
 On future runs, instead of executing the pinned node, n8n will substitute the pinned data and continue following the flow logic. This allows you to iterate without operating on variable data or repeating queries to external services. Production executions ignore all pinned data.
 ///

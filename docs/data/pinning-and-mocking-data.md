@@ -35,7 +35,7 @@ You can only pin data for nodes that have a single main output ("error" outputs 
 
 
 ??? info "How to edit pinned data"
-	n8n allows you to edit [pinned data](/data/data-pinning.md). You can use this to test different data without seeding and sending the data from an external system. This makes it easier to test edge cases.
+	n8n allows you to edit pinned data. You can use this to test different data without seeding and sending the data from an external system. This makes it easier to test edge cases.
 
 	To edit output data:
 
@@ -80,7 +80,7 @@ In both cases, you can switch the field to **Expression** mode to add dynamic va
 
 ### Code node
 
-In the Code node, you can create any dataset you want. Just format it according to [n8n's data structure](/new-data/how-n8n-structures-data.md) and return it to set the node's output.
+In the Code node, you can create any dataset you want. Just format it according to [n8n's data structure](/data/data-structure.md) and return it to set the node's output.
 
 ## Work with sample datasets
 

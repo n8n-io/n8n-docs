@@ -1,35 +1,22 @@
----
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: Date and time with Luxon
-description: Use Luxon to work with date and time in n8n.
-contentType: howto
----
+# Handling date and time data
 
-# Date and time with Luxon
+The following recommendations make it easier to work with dates and times in n8n.
 
-[Luxon](https://github.com/moment/luxon/) is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon). 
+## Use the Date & Time node
 
-n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier. n8n recommends using Luxon dates over native JavaScript dates (created with `new Date()`) in most cases.
+The [Date & Time](/integrations/builtin/core-nodes/n8n-nodes-base.datetime.md) node can manipulate date and time data and convert between various formats.
+
+This is a good choice if you want to perform high-level operations to change or create date fields in the formats that later nodes expect.
+
+## Handling time and dates in expressions and code
+
+n8n passes dates between nodes as strings, so you need to parse them. To make this easier, n8n uses a JavaScript library called [Luxon](https://github.com/moment/luxon/). n8n recommends using Luxon dates over native JavaScript dates (created with `new Date()`) in most cases.
 
 /// warning | Don't mix native JavaScript and Luxon dates
-While you can use both native JavaScript dates and Luxon dates in n8n, they aren't directly interoperable. It's best to [convert JavaScript dates to Luxon](#convert-javascript-dates-to-luxon) to avoid problems.
+While you can use both native JavaScript dates and Luxon dates in n8n, they aren't directly interoperable. It's best to [convert JavaScript dates to Luxon](#converting-from-javascript-dates) to avoid problems.
 ///
 
-/// note | Python support
-Luxon is a JavaScript library. The two convenience [variables](#get-the-current-datetime-or-date) created by n8n are available when using Python in the Code node, but their functionality is limited:
-
-* You can't perform Luxon operations on these variables. For example, there is no Python equivalent for `$today.minus(...)`.
-* The generic Luxon functionality, such as [Convert date string to Luxon](#convert-date-string-to-luxon), isn't available for Python users.
-///	
-
-## Date and time behavior in n8n
-
-Be aware of the following:
-
-* In a workflow, n8n converts dates and times to strings between nodes. Keep this in mind when doing arithmetic on dates and times from other nodes.
-* With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
-
-## Setting the timezone in n8n
+### Setting the timezone in n8n
 
 Luxon uses the n8n timezone. This value is either:
 
@@ -37,11 +24,11 @@ Luxon uses the n8n timezone. This value is either:
 * A custom timezone for your n8n instance, set using the `GENERIC_TIMEZONE` environment variable.
 * A custom timezone for an individual workflow, configured in workflow settings.
 
-## Common tasks
+### Common tasks
 
 This section provides examples for some common operations. More examples, and detailed guidance, are available in [Luxon's own documentation](https://moment.github.io/luxon/#/?id=luxon).
 
-### Get the current datetime or date
+#### Getting the current datetime or date
 
 Use the [`$now` and `$today` Luxon objects](/code/builtin/date-time.md) to get the current time or day:
 
@@ -79,64 +66,21 @@ Note that these variables can return different time formats when cast as a strin
 	# For example "Today's date is 1646834498755"
 	```
 
-n8n provides built-in convenience functions to support data transformation in expressions for dates. Refer to [Data transformation functions | Dates](/code/builtin/data-transformation-functions/dates.md) for more information.
-
-### Convert JavaScript dates to Luxon
+#### Converting from JavaScript dates
 
 To convert a native JavaScript date to a Luxon date:
 
-* In expressions, use the [`.toDateTime()` method](/code/builtin/data-transformation-functions/dates.md#date-toDateTime). For example, `{{ (new Date()).ToDateTime() }}`.
+* In expressions, use the [`.toDateTime()` method](/code/builtin/data-transformation-functions/dates.md#date-toDateTime). For example, `(new Date()).ToDateTime()`.
 * In the Code node, use `DateTime.fromJSDate()`. For example, `let luxondate = DateTime.fromJSDate(new Date())`.
 
-### Convert date string to Luxon
+#### Parsing date strings
 
-To parse strings into a Luxon DateTime object, use Luxon's `fromISO()` or `fromFormat()` methods. You can convert from standard formats and from arbitrary strings.
+To parse strings into Luxon dates, use Luxon's `fromISO()` or `fromFormat()` methods:
 
-/// note | A difference between Luxon DateTime and JavaScript Date
-With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.
-///
-#### If you have a date in a supported standard technical format: 
+* Use `fromISO()` to create a Luxon date from an [ISO 8601-formatted string](https://moment.github.io/luxon/#/parsing?id=iso-8601), like `DateTime.fromISO('2024-12-31T00:00:00.0')`.
+* Use `fromFormat()` to [specify the format](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing) Luxon should use to parse the string, like `DateTime.fromFormat("31-12-2024", "dd-MM-yyyy")`.
 
-Most dates use `fromISO()`. This creates a Luxon DateTime from an ISO 8601 string. For example:
-
-=== "Expressions (JavaScript)"
-
-	```js
-	{{DateTime.fromISO('2019-06-23T00:00:00.00')}}
-	```
-
-=== "Code node (JavaScript)"
-
-	```js
-	let luxonDateTime = DateTime.fromISO('2019-06-23T00:00:00.00')
-	```
-
-
-Luxon's API documentation has more information on [fromISO](https://moment.github.io/luxon/api-docs/index.html#datetimefromiso).
-
-Luxon provides functions to handle conversions for a range of formats. Refer to Luxon's guide to [Parsing technical formats](https://moment.github.io/luxon/#/parsing?id=parsing-technical-formats) for details.
-
-#### If you have a date as a string that doesn't use a standard format: 
-
-Use Luxon's [Ad-hoc parsing](https://moment.github.io/luxon/#/parsing?id=ad-hoc-parsing). To do this, use the `fromFormat()` function, providing the string and a set of [tokens](https://moment.github.io/luxon/#/parsing?id=table-of-tokens) that describe the format.
-
-For example, you have n8n's founding date, 23rd June 2019, formatted as `23-06-2019`. You want to turn this into a Luxon object:
-
-=== "Expressions (JavaScript)"
-
-	```js
-	{{DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")}}
-	```
-
-=== "Code node (JavaScript)"
-
-	```js
-	let newFormat = DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")
-	```
-
-When using ad-hoc parsing, note Luxon's warning about [Limitations](https://moment.github.io/luxon/#/parsing?id=limitations). If you see unexpected results, try their [Debugging](https://moment.github.io/luxon/#/parsing?id=debugging) guide.
-
-### Get n days from today
+#### Get n days from today
 
 Get a number of days before or after today. 
 
@@ -174,7 +118,7 @@ For more detailed information and examples, refer to:
 * Luxon's [guide to math](https://moment.github.io/luxon/#/math)
 * Their API documentation on [DateTime plus](https://moment.github.io/luxon/api-docs/index.html#datetimeplus) and [DateTime minus](https://moment.github.io/luxon/api-docs/index.html#datetimeminus)
 
-### Create human-readable dates
+#### Create human-readable dates
 
 In [Get n days from today](#get-n-days-from-today), the example gets the date seven days before the current date, and returns it as `[Object: "yyyy-mm-dd-T00:00:00.000+00:00"]` (for expressions) or `yyyy-mm-dd-T00:00:00.000+00:00` (in the Code node). To make this more readable, you can use Luxon's formatting functions.
 
@@ -215,7 +159,7 @@ You can alter the format. For example:
 Refer to Luxon's guide on [toLocaleString (strings for humans)](https://moment.github.io/luxon/#/formatting?id=tolocalestring-strings-for-humans) for more information.
 
 
-### Get the time between two dates
+#### Get the time between two dates
 
 To get the time between two dates, use Luxon's diffs feature. This subtracts one date from another and returns a duration.
 
@@ -239,7 +183,7 @@ For example, get the number of months between two dates:
 
 Refer to Luxon's [Diffs](https://moment.github.io/luxon/#/math?id=diffs) for more information.
 
-### A longer example: How many days to Christmas?
+#### A longer example: How many days to Christmas?
 
 This example brings together several Luxon features, uses JMESPath, and does some basic string manipulation. 
 

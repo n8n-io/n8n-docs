@@ -149,19 +149,14 @@ nav:
       - Concepts:
         - Node types: integrations/builtin/node-types.md
         - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
-  #      - Trigger nodes: placeholder.md
-  #      - App nodes: placeholder.md
         - Node connections: workflows/components/connections.md
+        - Data flow within nodes: data/data-flow-nodes.md
         - Execution order in multi-branch workflows: flow-logic/execution-order.md
         - Data transformation nodes: data/transforming-data.md
         - AI nodes: integrations/builtin/cluster-nodes/ai-nodes.md
-  #      - Human in the loop nodes: placeholder.md
         - Community nodes:
           - Risks: integrations/community-nodes/risks.md
           - Blocklist: integrations/community-nodes/blocklist.md
-  #    - Execution: key-concepts/executions.md
-  #        - Pinning and mocking
-  #        - Debugging executions
       - Working with nodes:
         - Manage nodes: workflows/components/nodes.md
         - Flow control nodes:
@@ -188,47 +183,25 @@ nav:
       - credentials/index.md
       - Create and edit: credentials/add-edit-credentials.md
       - Credential sharing: credentials/credential-sharing.md
-    - NEW Working with data:
-      - How n8n structures data: new-data/how-n8n-structures-data.md
-      - Referencing data:
-        - new-data/referencing-data/index.md
-        - Reference linked items in previous nodes: new-data/referencing-data/itemmatching.md
-        - Current node input: new-data/referencing-data/current-node-input.md
-        - Output of other nodes: new-data/referencing-data/output-other-nodes.md
-      - Transforming data: new-data/transforming-data.md
-      - Date and time data: new-data/date-and-time-data.md
-      - Binary data: new-data/binary-data.md
-      - Pinning and mocking data: new-data/pinning-and-mocking-data.md
     - Working with data:
-      - Overview: data/overview.md
-      - Concepts:
-        - Data structure: data/data-structure.md
-        - Data item linking: data/data-mapping/data-item-linking/item-linking-concepts.md
-        - Data flow within nodes: data/data-flow-nodes.md
+      - How n8n structures data: data/data-structure.md
+      - Using expressions:
+        - Overview: code/expressions.md
+        - Check incoming data: code/cookbook/expressions/check-incoming-data.md
+        - Referencing data:
+          - data/referencing-data/index.md
+          - Reference linked items in previous nodes: data/referencing-data/itemmatching.md
+          - Current node input: data/referencing-data/current-node-input.md
+          - Output of other nodes: data/referencing-data/output-other-nodes.md
+          - Item linking: data/referencing-data/item-linking.md
+        - Common issues:  code/cookbook/expressions/common-issues.md
+      - Filtering data: data/data-filtering.md
+      - Pinning and mocking data: data/pinning-and-mocking-data.md
+      - Specific data types:
+        #- Date and time data: data/date-and-time-data.md
+        - Time and dates: code/cookbook/luxon.md
         - Binary data: data/binary-data.md
-      - Transforming data: data/transforming-data.md
-      - Data pinning: data/data-pinning.md
-      - Data editing: data/data-editing.md
-      - Data filtering: data/data-filtering.md
-      - Data mocking: data/data-mocking.md
-      - Schema preview: data/schema-preview.md
-      - Data mapping:
-        - data/data-mapping/index.md
-        - Data mapping in the UI: data/data-mapping/data-mapping-ui.md
-        - Data mapping in the expressions editor: data/data-mapping/data-mapping-expressions.md
-        - Item linking:
-          - data/data-mapping/data-item-linking/index.md
-          - Item linking in the Code node: data/data-mapping/data-item-linking/item-linking-code-node.md
-          - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
-          - Retrieve linked items from earlier in the workflow: code/cookbook/builtin/itemmatching.md
-          - Item linking errors: data/data-mapping/data-item-linking/item-linking-errors.md
-      - Handling dates: code/cookbook/luxon.md
-      - Querying JSON: code/cookbook/jmespath.md
-    - Using expressions:
-      - Expressions: code/expressions.md
-      - code/cookbook/expressions/index.md
-      - Check incoming data: code/cookbook/expressions/check-incoming-data.md
-      - Common issues:  code/cookbook/expressions/common-issues.md
+        - Querying JSON: code/cookbook/jmespath.md
     - Using AI:
       - advanced-ai/index.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
@@ -306,24 +279,6 @@ nav:
         - integrations/creating-nodes/build/index.md
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
-        - Reference:
-          - integrations/creating-nodes/build/reference/index.md
-          - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
-          - Code standards: integrations/creating-nodes/build/reference/code-standards.md
-          - Error handling: integrations/creating-nodes/build/reference/error-handling.md
-          - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
-          - Base files:
-            - integrations/creating-nodes/build/reference/node-base-files/index.md
-            - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
-            - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
-            - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
-            - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
-            - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
-          - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
-          - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
-          - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
-          - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
-          - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
   - Development:
     - API:
       - Overview: api/overview.md
@@ -334,7 +289,6 @@ nav:
       - Install n8n with npm: hosting/installation/npm.md
       - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
       - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
-      - Item linking: integrations/creating-nodes/build/reference/paired-items.md
       - Test your node:
         - integrations/creating-nodes/test/index.md
         - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
@@ -344,6 +298,25 @@ nav:
         - integrations/creating-nodes/deploy/index.md
         - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
         - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
+      - Reference:
+        - integrations/creating-nodes/build/reference/index.md
+        - Node UI elements: integrations/creating-nodes/build/reference/ui-elements.md
+        - Code standards: integrations/creating-nodes/build/reference/code-standards.md
+        - Error handling: integrations/creating-nodes/build/reference/error-handling.md
+        - File structure: integrations/creating-nodes/build/reference/node-file-structure.md
+        - Base files:
+          - integrations/creating-nodes/build/reference/node-base-files/index.md
+          - Structure: integrations/creating-nodes/build/reference/node-base-files/structure.md
+          - Standard parameters: integrations/creating-nodes/build/reference/node-base-files/standard-parameters.md
+          - Declarative-style parameters: integrations/creating-nodes/build/reference/node-base-files/declarative-style-parameters.md
+          - Programmatic-style parameters: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-parameters.md
+          - Programmatic-style execute method: integrations/creating-nodes/build/reference/node-base-files/programmatic-style-execute-method.md
+        - Codex files: integrations/creating-nodes/build/reference/node-codex-files.md
+        - Item linking: integrations/creating-nodes/build/reference/paired-items.md
+        - Credentials files: integrations/creating-nodes/build/reference/credentials-files.md
+        - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
+        - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
+        - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
   - Reference:
     - reference/index.md
     - n8n CLI commands: hosting/cli-commands.md
@@ -1294,10 +1267,6 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
-    - Item linking:
-      - Concepts: new-data/item-linking/concepts.md
-      - Item linking for node creators: data/data-mapping/data-item-linking/item-linking-node-building.md
-      - Item linking errors: new-data/item-linking/item-linking-errors.md
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md
@@ -1340,9 +1309,6 @@ nav:
 
 #  - Feature tests:
 #      - Main features: docs-site-feature-tests/index.md
-
-# Pages not to build
-#exclude_docs: |
 
 # Pages to build but not include in the nav
 not_in_nav: |

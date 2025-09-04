@@ -15,7 +15,7 @@ You need to manually link items when you:
 * Return new items.
 * Want to manually control or change the default item linking.
 
-[n8n's automatic item linking](/new-data/item-linking/concepts.md) handles the other scenarios.
+[n8n's automatic item linking](/data/referencing-data/item-linking.md#automatic-item-linking) handles the other scenarios.
 
 ## How to link items in the Code node
 
@@ -262,4 +262,4 @@ This item pairing allows the **Restore names** Edit Fields (Set) node to match i
 
 ## Item linking errors
 
-To learn more about how to troubleshoot problems with item linking, take a look at the [item linking errors](/new-data/item-linking/item-linking-errors.md) page.
+To learn more about how to troubleshoot problems with item linking, take a look at [item linking errors](/data/referencing-data/item-linking.md).

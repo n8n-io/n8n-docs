@@ -15,8 +15,8 @@ To access items from nodes earlier in the execution chain, use the `$("<name_of_
 The most common method for accessing a node's output are:
 
 * `$("<node-name>").item.json`: Access the given node's data properties.
-* `$("<node-name>").first()`: access the given node's first input item. This is most useful when working around [item linking problems]().
-* `$("<node-name>").last()`: access the given node's last input item. This is most useful when working around [item linking problems]().
+* `$("<node-name>").first()`: access the given node's first input item. This is most useful when working around [item linking problems](/data/referencing-data/item-linking.md#item-linking-errors).
+* `$("<node-name>").last()`: access the given node's last input item. This is most useful when working around [item linking problems](/data/referencing-data/item-linking.md#item-linking-errors).
 
 The following table lists the `$("<node-name")` accessor's methods and properties:
 
@@ -29,7 +29,7 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `$("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | :white_check_mark: |
 	| `$("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | :white_check_mark: |
 	| `$("<node-name>").last(branchIndex?, runIndex?)` | The last item output by the given node. If `branchIndex` isn't given it will default to the output that connects `node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `$("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on item linking. | :x: |
+	| `$("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/referencing-data/item-linking.md) for more information on item linking. | :x: |
 	| `$("<node-name>").params` | Object containing the query settings of the given node. This includes data such as the operation it ran, result limits, and so on. | :white_check_mark: |
 	| `$("<node-name>").context` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | :white_check_mark: |
 	| `$("<node-name>").itemMatching(currentNodeInputIndex)` | Use instead of `$("<node-name>").item` in the Code node if you need to trace back from an input item. | :white_check_mark: |
@@ -39,7 +39,7 @@ You can use Python in the Code node. It isn't available in expressions.
 	| `_("<node-name>").all(branchIndex?, runIndex?)` | Returns all items from a given node. If `branchIndex` isn't given it will default to the output that connects`node-name` with the node where you use the expression or code. | :white_check_mark: |
 	| `_("<node-name>").first(branchIndex?, runIndex?)` | The first item output by the given node. If `branchIndex` isn't given it will default to the output that connects`node-name` with the node where you use the expression or code. | :white_check_mark: |
 	| `_("<node-name>").last(branchIndex?, runIndex?)` | The last item output by the given node. If `branchIndex` isn't given it will default to the output that connects`node-name` with the node where you use the expression or code. | :white_check_mark: |
-	| `_("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on item linking. | :x: |
+	| `_("<node-name>").item` | The linked item. This is the item in the specified node used to produce the current item. Refer to [Item linking](/data/referencing-data/item-linking.md) for more information on item linking. | :x: |
 	| `_("<node-name>").params` | Object containing the query settings of the given node. This includes data such as the operation it ran, result limits, and so on. | :white_check_mark: |
 	| `_("<node-name>").context` | Boolean. Only available when working with the Loop Over Items node. Provides information about what's happening in the node. Use this to determine whether the node is still processing items. | :white_check_mark: |
-	| `_("<node-name>").itemMatching(currentNodeInputIndex)` | Use instead of `_("<node-name>").item` in the Code node if you need to trace back from an input item. Refer to [Retrieve linked items from earlier in the workflow](/code/cookbook/builtin/itemmatching.md) for an example. | :white_check_mark: |
+	| `_("<node-name>").itemMatching(currentNodeInputIndex)` | Use instead of `_("<node-name>").item` in the Code node if you need to trace back from an input item. Refer to [Retrieve linked items from earlier in the workflow](/data/referencing-data/itemmatching.md) for an example. | :white_check_mark: |

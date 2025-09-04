@@ -16,7 +16,7 @@ search:
 
 Binary data is any file-type data, such as image files or documents generated or processed during the execution of a workflow. 
 
-To learn how to work with binary data, take a look at the [binary data usage](/new-data/binary-data.md) page.
+To learn how to work with binary data, take a look at the [binary data usage](/data/binary-data.md) page.
 
 ## Choose the binary data mode
 

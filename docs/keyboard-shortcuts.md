@@ -62,7 +62,7 @@ n8n provides keyboard shortcuts for some actions.
  - **Delete**: delete
  - **Enter**: open
  - **F2**: rename
- - **P**: pin data in node. Refer to [Data pinning](/data/data-pinning.md) for more information.
+ - **P**: pin data in node. Refer to [Data pinning](/data/pinning-and-mocking-data.md#data-pinning) for more information.
  - **Shift** + **ArrowLeft**: select all nodes left of the current one
  - **Shift** + **ArrowRight**: select all nodes right of the current one
  - **Ctrl/Cmd** + **Shift** + **o** on a sub-workflow node: open the sub-workflow in a new tab 

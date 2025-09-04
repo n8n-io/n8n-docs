@@ -9,6 +9,7 @@ hide:
   - tags
 ---
 
+<!-- vale off -->
 # Binary data
 
 Binary data is any file-type data, such as image files or documents.
@@ -40,7 +41,7 @@ And nodes for performing common tasks:
 
 You can trigger a workflow based on changes to a local file using the [Local File trigger](/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger.md).
 
-To split or concatenate binary data items, use the [data transformation nodes](/data/overview.md#data-transformation-nodes).
+To split or concatenate binary data items, use the [data transformation nodes](/data/transforming-data.md).
 
 ### Code
 
@@ -51,6 +52,6 @@ You can use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code
 
 You can configure how your self-hosted n8n instance handles binary data using the [Binary data environment variables](/hosting/configuration/environment-variables.md#binary-data). This includes tasks such as setting the storage path and choosing how to store binary data.
 
-Your configuration affects how well n8n scales: [Scaling | Binary data filesystem mode](/hosting/scaling/binary-data.md).
+Your configuration affects how well n8n scales: [Scaling | Binary data](/hosting/scaling/binary-data.md).
 
 Reading and writing binary files can have security implications. If you want to disable reading and writing binary data, use the `NODES_EXCLUDE` environment variable. Refer to [Environment variables | Nodes](/hosting/configuration/environment-variables.md#nodes) for more information.

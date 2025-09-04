@@ -60,7 +60,7 @@ Supported certificate types:
 You must use PEM format:
 
 - Text-based format with BEGIN/END markers
-- Supported file extensions: .pem, .crt, .cer
+- Supported file extensions: `.pem`, `.crt`, `.cer`
 - Contains the public certificate (no private key needed)
 
 For example:

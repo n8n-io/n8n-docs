@@ -24,22 +24,22 @@ Refer to [Mindee V2 credentials](/integrations/builtin/credentials/mindeev2Api.m
 
 Mindee V2 currently exposes one generic operation:
 
-| Resource  | Operation           | Description                                                                                                           |
-|-----------|---------------------|-----------------------------------------------------------------------------------------------------------------------|
-| Inference | **Enqueue and Get** | Upload a document (PDF, image, etc.), run the selected model, poll the server for results, and return the parsed data |
+| Resource  | Operation           | Description                                                                                                                |
+|-----------|---------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Inference | **Enqueue and Get** | Upload a document file (PDF, image, etc.), run the selected model, poll the server for results, and return the parsed data |
 
 ### Predict
 
-| Parameter                 | Description                                                                                                                     |
-|---------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| **Binary Property Name**  | Name of the binary field that contains the file (default: `data`).                                                              |
-| **Model ID**              | The identifier of the model to run (*e.g.* `expense_receipts`, `invoice`, `your_custom_model`).                                 |
-| **File Alias (optional)** | Friendly filename displayed in Mindee web app.                                                                                  |
-| **Enable RAG**            | `Enabled` / `Disabled` or `Use Model Default`. Adds Retrieval-Augmented Generation for higher accuracy (supported models only). |
-| **Enable Polygons**       | Return location polygons for all extracted fields.                                                                              |
-| **Enable Confidence**     | Return confidence score for each field.                                                                                         |
-| **Enable Raw Text**       | Return full raw text of each page.                                                                                              |
-| **Polling Timeout (s)**   | How long n8n should poll Mindee for results (default 120 s).                                                                    |
+| Parameter                 | Description                                                                                     |
+|---------------------------|-------------------------------------------------------------------------------------------------|
+| **Binary Property Name**  | Name of the binary field that contains the file (default: `data`).                              |
+| **Model ID**              | The identifier of the model to run (*e.g.* `expense_receipts`, `invoice`, `your_custom_model`). |
+| **File Alias (optional)** | An alias for the filename, useful for linking back to your system.                              |
+| **Enable RAG**            | Enable Retrieval-Augmented Generation for higher accuracy (supported plans only).               |
+| **Enable Polygons**       | Return location polygons for all extracted fields (supported plans only).                       |
+| **Enable Confidence**     | Return confidence score for each field (supported plans only).                                  |
+| **Enable Raw Text**       | Return full raw text of each page (supported plans only).                                       |
+| **Polling Timeout (sec)** | How long n8n should poll Mindee for results (default 120 s).                                    |
 
 ## How it works
 

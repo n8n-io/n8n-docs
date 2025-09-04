@@ -92,6 +92,16 @@ You can move the workflow canvas around in three ways:
 
 Don't worry about workflow execution and activation for now; we'll explain these concepts later on in the course.
 
+#### Logs Panel
+- **Location**: Positioned at the bottom of the canvas.
+- **Purpose**: Displays execution logs, including node inputs, outputs, statuses (e.g., success, error), and error messages, enabling effective workflow debugging.
+- **Activation**: Populates with data after executing a workflow using the "Execute workflow" button or an active trigger.
+- **Additional Features**: Supports "Sync selection with canvas" (aligns log entries with corresponding nodes) and "Pop out panel" (provides a detachable view for enhanced usability).
+- **Note**: Execution logs are retained for 24 hours in the Community Edition; extended retention is available in paid plans.
+- **Visual Reference**:  
+  ![Logs Panel in Action](/content/courses/level-one/chapter-one/images/logs-panel-populated.png)  
+  *Figure: Logs panel displaying execution data after workflow execution.*
+
 ## Nodes
 
 You can think of nodes as building blocks that serve different functions that, when put together, make up a functioning machine: an automated workflow.

@@ -13,7 +13,7 @@ You can add your own certificate authority (CA) or self-signed certificate to n8
 This feature is only available in version 1.42.0+.
 ///
 
-To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container.
+To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container.
 
 ## Docker
 

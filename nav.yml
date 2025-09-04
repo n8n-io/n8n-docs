@@ -441,6 +441,7 @@ nav:
         - Microsoft Teams: integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
         - Microsoft To Do: integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo.md
         - Mindee: integrations/builtin/app-nodes/n8n-nodes-base.mindee.md
+        - MindeeV2: integrations/builtin/app-nodes/n8n-nodes-base.mindeev2.md
         - MISP: integrations/builtin/app-nodes/n8n-nodes-base.misp.md
         - Mistral AI: integrations/builtin/app-nodes/n8n-nodes-base.mistralai.md
         - Mocean: integrations/builtin/app-nodes/n8n-nodes-base.mocean.md
@@ -960,6 +961,7 @@ nav:
         - integrations/builtin/credentials/microsoftsql.md
         - integrations/builtin/credentials/milvus.md
         - integrations/builtin/credentials/mindee.md
+        - integrations/builtin/credentials/mindeev2.md
         - integrations/builtin/credentials/miro.md
         - integrations/builtin/credentials/misp.md
         - integrations/builtin/credentials/mist.md

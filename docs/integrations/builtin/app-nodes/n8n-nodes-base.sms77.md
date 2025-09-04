@@ -21,6 +21,8 @@ Refer to [seven credentials](/integrations/builtin/credentials/sms77.md) for gui
     * Send SMS
 * Voice Call
     * Converts text to voice and calls a given number
+* RCS
+	* Send RCS
 
 ## Templates and examples
 

@@ -24,6 +24,7 @@ Due to an increase in spam and poor quality contributions, we've introduced new 
 | `spam` | Close PR/issue; account blocked | This label is applied to things like empty issues. |
 | `ai-slop` |	Close PR/issue; account blocked | This label is applied when content is bad, wrong, and looks like it's probably the result of using AI. n8n isn't banning use of AI in contributions, so long as the contributions are high quality. |
 | `low-effort-bad` |	Close PR/issue; comment with contribution guidance; a second `low-effort-bad` leads to a block. | To avoid this, test your work to make sure it's accurate; follow the [style guide](https://github.com/n8n-io/n8n-docs/wiki/Styles); write meaningful titles and descriptions on your PR/issue. |
+| `low-effort-usable` |	No action initially. Block after three occurences in one month. | A low-effort contribution that is usable (no edits required). We'll accept these, but not in large quantities. |
 | `duplicate` |	Close PR/issue; comment with contribution guidance; a second `duplicate` leads to a block. | To avoid this, check existing issues and PRs |
 
 

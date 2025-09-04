@@ -16,6 +16,6 @@ User management in n8n allows you to invite people to work in your n8n instance.
 * Adding and removing users
 * Three [account types](/user-management/account-types.md): **Owner** and **Member** (and **Admin** for Pro & Enterprise plans)
 
-/// info | Single sign-on availability
-n8n offers single sign-on (SSO) user management in enterprise plans. To learn more about how to manage users with LDAP, SAML, and OIDC, visit the [single sign-on section](/user-management/sso/index.md).
+/// info | Single sign-on and LDAP availability
+n8n offers [single sign-on (SSO)](/user-management/sso/index.md) and [LDAP](/user-management/ldap.md) user management for enterprise plans.
 ///

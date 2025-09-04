@@ -170,6 +170,7 @@ nav:
           - Sub-workflows: flow-logic/subworkflows.md
           - Error handling: flow-logic/error-handling.md
         - Handle rate limits: integrations/builtin/rate-limits.md
+        - Streaming responsees: workflows/streaming.md
         - Custom API actions for existing nodes: integrations/custom-operations.md
         - Using community nodes:
           - Installation and management:

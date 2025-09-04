@@ -103,9 +103,9 @@ nav:
           - Compare workflow changes: source-control-environments/using/compare-changes.md
           - Copy work between environments: source-control-environments/using/copy-work.md
         - Create environments with source control: source-control-environments/create-environments.md
+      - LDAP: user-management/ldap.md
       - Single sign-on (SSO):
         - user-management/sso/index.md
-        - LDAP: user-management/ldap.md
         - OIDC:
           - user-management/oidc/index.md
           - Set up OIDC: user-management/oidc/setup.md

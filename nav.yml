@@ -31,7 +31,7 @@ nav:
       - Cloud data management: manage-cloud/cloud-data-management.md
       - Change ownership or username: manage-cloud/change-ownership-or-username.md
       - Download workflows: manage-cloud/download-workflows.md
-      - Concurrency: manage-cloud/concurrency.md
+      - Cloud concurrency: manage-cloud/concurrency.md
       - AI assistant: manage-cloud/ai-assistant.md
       - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
     - Self-hosted n8n:
@@ -122,33 +122,36 @@ nav:
       - Insights: insights.md
   - Using n8n:
     - using-n8n/index.md
-    - Using workflows:
+    - Workflows:
       - workflows/index.md
-      - Create: workflows/create.md
-      - Share: workflows/sharing.md
-      - Connections: workflows/components/connections.md
-      - Sticky notes: workflows/components/sticky-notes.md
-      - Tags: workflows/tags.md
-      - Export and import: workflows/export-import.md
-      - Workflow settings: workflows/settings.md
-      - Workflow history: workflows/history.md
+      - Actions:
+        - Create workflows: workflows/create.md
+        - Sharing Workflows: workflows/sharing.md
+        - Export and import: workflows/export-import.md
+        - Sub-workflow conversion: workflows/subworkflow-conversion.md
       - Workflow templates: workflows/templates.md
-      - Workflow ID: workflows/workflow-id.md
-      - Sub-workflow conversion: workflows/subworkflow-conversion.md
-      - Manage executions:
+      - Workflow tags: workflows/tags.md
+      - Sticky notes: workflows/components/sticky-notes.md
+      - Settings and information:
+        - Finding a workflow's ID: workflows/workflow-id.md
+        - Workflow settings: workflows/settings.md
+        - Workflow history: workflows/history.md
+      - Workflow executions:
         - workflows/executions/index.md
         - Manual, partial, and production executions: workflows/executions/manual-partial-and-production-executions.md
-        - Dirty nodes: workflows/executions/dirty-nodes.md
-        - Workflow-level executions: workflows/executions/single-workflow-executions.md
-        - All executions: workflows/executions/all-executions.md
-        - Custom executions data: workflows/executions/custom-executions-data.md
-        - Debug executions: workflows/executions/debug.md
-    - Using nodes:
+        - Dirty nodes in executions: workflows/executions/dirty-nodes.md
+        - Viewing executions:
+          - Workflow-level executions list: workflows/executions/single-workflow-executions.md
+          - All executions list: workflows/executions/all-executions.md
+        - Debugging executions: workflows/executions/debug.md
+        - Using custom executions data: workflows/executions/custom-executions-data.md
+    - Nodes:
       - Concepts:
-        - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
         - Node types: integrations/builtin/node-types.md
+        - Builtin vs community vs custom nodes: integrations/builtin-vs-community-vs-custom.md
   #      - Trigger nodes: placeholder.md
   #      - App nodes: placeholder.md
+        - Node connections: workflows/components/connections.md
         - Execution order in multi-branch workflows: flow-logic/execution-order.md
         - Data transformation nodes: data/transforming-data.md
         - AI nodes: integrations/builtin/cluster-nodes/ai-nodes.md
@@ -181,7 +184,7 @@ nav:
           - Using community nodes: integrations/community-nodes/usage.md
           - Building community nodes: integrations/community-nodes/build-community-nodes.md
           - Troubleshooting: integrations/community-nodes/troubleshooting.md
-    - Using credentials:
+    - Credentials:
       - credentials/index.md
       - Create and edit: credentials/add-edit-credentials.md
       - Credential sharing: credentials/credential-sharing.md
@@ -254,25 +257,6 @@ nav:
       - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
       - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
       - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
-    - API:
-      - Overview: api/overview.md
-      - Authentication: api/authentication.md
-      - Pagination: api/pagination.md
-      - Using an API playground: api/using-api-playground.md
-    - Node development:
-      - Install n8n with npm: hosting/installation/npm.md
-      - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
-      - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
-      - Item linking: integrations/creating-nodes/build/reference/paired-items.md
-      - Test your node:
-        - integrations/creating-nodes/test/index.md
-        - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
-        - Node linter: integrations/creating-nodes/test/node-linter.md
-        - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
-      - Deploy your node:
-        - integrations/creating-nodes/deploy/index.md
-        - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
-        - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Tutorials and courses:
     - tutorials/index.md
     - Getting started:
@@ -340,6 +324,26 @@ nav:
           - HTTP request helpers: integrations/creating-nodes/build/reference/http-helpers.md
           - UX guidelines: integrations/creating-nodes/build/reference/ux-guidelines.md
           - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
+  - Development:
+    - API:
+      - Overview: api/overview.md
+      - Authentication: api/authentication.md
+      - Pagination: api/pagination.md
+      - Using an API playground: api/using-api-playground.md
+    - Node development:
+      - Install n8n with npm: hosting/installation/npm.md
+      - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
+      - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
+      - Item linking: integrations/creating-nodes/build/reference/paired-items.md
+      - Test your node:
+        - integrations/creating-nodes/test/index.md
+        - Run your node locally: integrations/creating-nodes/test/run-node-locally.md
+        - Node linter: integrations/creating-nodes/test/node-linter.md
+        - Troubleshooting: integrations/creating-nodes/test/troubleshooting-node-development.md
+      - Deploy your node:
+        - integrations/creating-nodes/deploy/index.md
+        - Submit community nodes: integrations/creating-nodes/deploy/submit-community-nodes.md
+        - Install private nodes: integrations/creating-nodes/deploy/install-private-nodes.md
   - Reference:
     - reference/index.md
     - n8n CLI commands: hosting/cli-commands.md
@@ -351,7 +355,6 @@ nav:
       - Environment variables: hosting/configuration/environment-variables.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
     - Built-in nodes:
-      - integrations/builtin/node-types.md
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
         - Activation Trigger: integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger.md

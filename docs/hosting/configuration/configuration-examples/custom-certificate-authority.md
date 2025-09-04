@@ -9,11 +9,11 @@ contentType: howto
 
 You can add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
 
-/// note | Available in version 1.42.0
-This feature is only available in version 1.42.0+.
+/// note | Added in version 1.42.0
+This feature is available in version 1.42.0 and above.
 ///
 
-To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container.
+To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container. n8n supports the following certificate formats: `pem`, `crt`, `cer`, and `crl`.
 
 ## Docker
 

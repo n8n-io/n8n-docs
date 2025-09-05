@@ -19,107 +19,6 @@ nav:
     - Help and community:
       - Where to get help: help-community/help.md
       - Contributing: help-community/contributing.md
-  - Managing n8n:
-    - managing-n8n/index.md
-    - License key: license-key.md
-    - n8n Cloud:
-      - manage-cloud/index.md
-      - Cloud free trial: manage-cloud/cloud-free-trial.md
-      - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
-      - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
-      - Set the timezone: manage-cloud/set-cloud-timezone.md
-      - Cloud data management: manage-cloud/cloud-data-management.md
-      - Change ownership or username: manage-cloud/change-ownership-or-username.md
-      - Download workflows: manage-cloud/download-workflows.md
-      - Cloud concurrency: manage-cloud/concurrency.md
-      - AI assistant: manage-cloud/ai-assistant.md
-      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
-    - Self-hosted n8n:
-      - hosting/index.md
-      - Configuration methods: hosting/configuration/configuration-methods.md
-      - Configuration examples:
-        - hosting/configuration/configuration-examples/index.md
-        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
-        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
-        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
-        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
-        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
-        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
-        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
-        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
-        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
-        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
-        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
-      - Set up user management: hosting/configuration/user-management-self-hosted.md
-      - Task runners: hosting/configuration/task-runners.md
-      - Logging and monitoring:
-        - Logging: hosting/logging-monitoring/logging.md
-        - Monitoring: hosting/logging-monitoring/monitoring.md
-      - Scaling and performance:
-        - Overview: hosting/scaling/overview.md
-        - Configuring queue mode: hosting/scaling/queue-mode.md
-        - Execution data: hosting/scaling/execution-data.md
-        - Binary data: hosting/scaling/binary-data.md
-      - Securing n8n:
-        - Overview: hosting/securing/overview.md
-        - Set up SSL: hosting/securing/set-up-ssl.md
-        - Set up SSO: hosting/securing/set-up-sso.md
-        - Security audit: hosting/securing/security-audit.md
-        - Disable the API: hosting/securing/disable-public-api.md
-        - Opt out of data collection: hosting/securing/telemetry-opt-out.md
-        - Blocking nodes: hosting/securing/blocking-nodes.md
-        - Hardening task runners: hosting/securing/hardening-task-runners.md
-      - Concurrency control: hosting/scaling/concurrency-control.md
-      - Memory-related errors: hosting/scaling/memory-errors.md
-    - n8n Embed:
-      - embed/index.md
-      - Deployment: embed/deployment.md
-      - Manage configuration: embed/configuration.md
-      - Workflow management: embed/managing-workflows.md
-      - Workflows templates: embed/workflow-templates.md
-      - White labelling: embed/white-labelling.md
-    - Users and access:
-      - user-management/index.md
-      - Manage users: user-management/manage-users.md
-      - Account types: user-management/account-types.md
-      - Best practices for user management: user-management/best-practices.md
-      - Two-factor authentication (2FA): user-management/two-factor-auth.md
-      - Role-based access control:
-        - user-management/rbac/index.md
-        - Role types: user-management/rbac/role-types.md
-        - Projects: user-management/rbac/projects.md
-    - Pro and Enterprise features:
-      - Source control and environments:
-        - source-control-environments/index.md
-        - Concepts:
-          - What is source control?: source-control-environments/understand/index.md
-          - Environments: source-control-environments/understand/environments.md
-          - Git in n8n: source-control-environments/understand/git.md
-          - Branch patterns: source-control-environments/understand/patterns.md
-        - Set up: source-control-environments/setup.md
-        - Using:
-          - source-control-environments/using/index.md
-          - Push and pull: source-control-environments/using/push-pull.md
-          - Compare workflow changes: source-control-environments/using/compare-changes.md
-          - Copy work between environments: source-control-environments/using/copy-work.md
-        - Create environments with source control: source-control-environments/create-environments.md
-      - LDAP: user-management/ldap.md
-      - Single sign-on (SSO):
-        - user-management/sso/index.md
-        - OIDC:
-          - user-management/oidc/index.md
-          - Set up OIDC: user-management/oidc/setup.md
-          - Troubleshooting: user-management/oidc/troubleshooting.md
-        - SAML:
-          - user-management/saml/index.md
-          - Set up SAML: user-management/saml/setup.md
-          - Set up SAML with Okta Workforce Identity: user-management/saml/okta.md
-          - Manage users with SAML: user-management/saml/managing.md
-          - Troubleshooting: user-management/saml/troubleshooting.md
-      - External secrets: external-secrets.md
-      - Custom variables: code/variables.md
-      - Log streaming: log-streaming.md
-      - Insights: insights.md
   - Using n8n:
     - using-n8n/index.md
     - Workflows:
@@ -232,6 +131,107 @@ nav:
         - advanced-ai/langchain/index.md
         - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
         - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+  - Managing n8n:
+    - managing-n8n/index.md
+    - License key: license-key.md
+    - n8n Cloud:
+      - manage-cloud/index.md
+      - Cloud free trial: manage-cloud/cloud-free-trial.md
+      - Access the Cloud admin dashboard: manage-cloud/cloud-admin-dashboard.md
+      - Update your n8n Cloud version: manage-cloud/update-cloud-version.md
+      - Set the timezone: manage-cloud/set-cloud-timezone.md
+      - Cloud data management: manage-cloud/cloud-data-management.md
+      - Change ownership or username: manage-cloud/change-ownership-or-username.md
+      - Download workflows: manage-cloud/download-workflows.md
+      - Cloud concurrency: manage-cloud/concurrency.md
+      - AI assistant: manage-cloud/ai-assistant.md
+      - Performance and benchmarking: hosting/scaling/performance-benchmarking.md
+    - Self-hosted n8n:
+      - hosting/index.md
+      - Configuration methods: hosting/configuration/configuration-methods.md
+      - Configuration examples:
+        - hosting/configuration/configuration-examples/index.md
+        - Isolate n8n: hosting/configuration/configuration-examples/isolation.md
+        - Configure the Base URL: hosting/configuration/configuration-examples/base-url.md
+        - Configure custom SSL certificate authorities: hosting/configuration/configuration-examples/custom-certificate-authority.md
+        - Set a custom encryption key: hosting/configuration/configuration-examples/encryption-key.md
+        - Configure workflow timeouts: hosting/configuration/configuration-examples/execution-timeout.md
+        - Specify custom nodes location: hosting/configuration/configuration-examples/custom-nodes-location.md
+        - Enable modules in Code node: hosting/configuration/configuration-examples/modules-in-code-node.md
+        - Set the timezone: hosting/configuration/configuration-examples/time-zone.md
+        - Specify user folder path: hosting/configuration/configuration-examples/user-folder.md
+        - Configure webhook URLs with reverse proxy: hosting/configuration/configuration-examples/webhook-url.md
+        - Enable Prometheus metrics: hosting/configuration/configuration-examples/prometheus.md
+      - Set up user management: hosting/configuration/user-management-self-hosted.md
+      - Task runners: hosting/configuration/task-runners.md
+      - Logging and monitoring:
+        - Logging: hosting/logging-monitoring/logging.md
+        - Monitoring: hosting/logging-monitoring/monitoring.md
+      - Scaling and performance:
+        - Overview: hosting/scaling/overview.md
+        - Configuring queue mode: hosting/scaling/queue-mode.md
+        - Execution data: hosting/scaling/execution-data.md
+        - Binary data: hosting/scaling/binary-data.md
+      - Securing n8n:
+        - Overview: hosting/securing/overview.md
+        - Set up SSL: hosting/securing/set-up-ssl.md
+        - Set up SSO: hosting/securing/set-up-sso.md
+        - Security audit: hosting/securing/security-audit.md
+        - Disable the API: hosting/securing/disable-public-api.md
+        - Opt out of data collection: hosting/securing/telemetry-opt-out.md
+        - Blocking nodes: hosting/securing/blocking-nodes.md
+        - Hardening task runners: hosting/securing/hardening-task-runners.md
+      - Concurrency control: hosting/scaling/concurrency-control.md
+      - Memory-related errors: hosting/scaling/memory-errors.md
+    - n8n Embed:
+      - embed/index.md
+      - Deployment: embed/deployment.md
+      - Manage configuration: embed/configuration.md
+      - Workflow management: embed/managing-workflows.md
+      - Workflows templates: embed/workflow-templates.md
+      - White labelling: embed/white-labelling.md
+    - Users and access:
+      - user-management/index.md
+      - Manage users: user-management/manage-users.md
+      - Account types: user-management/account-types.md
+      - Best practices for user management: user-management/best-practices.md
+      - Two-factor authentication (2FA): user-management/two-factor-auth.md
+      - Role-based access control:
+        - user-management/rbac/index.md
+        - Role types: user-management/rbac/role-types.md
+        - Projects: user-management/rbac/projects.md
+    - Pro and Enterprise features:
+      - Source control and environments:
+        - source-control-environments/index.md
+        - Concepts:
+          - What is source control?: source-control-environments/understand/index.md
+          - Environments: source-control-environments/understand/environments.md
+          - Git in n8n: source-control-environments/understand/git.md
+          - Branch patterns: source-control-environments/understand/patterns.md
+        - Set up: source-control-environments/setup.md
+        - Using:
+          - source-control-environments/using/index.md
+          - Push and pull: source-control-environments/using/push-pull.md
+          - Compare workflow changes: source-control-environments/using/compare-changes.md
+          - Copy work between environments: source-control-environments/using/copy-work.md
+        - Create environments with source control: source-control-environments/create-environments.md
+      - LDAP: user-management/ldap.md
+      - Single sign-on (SSO):
+        - user-management/sso/index.md
+        - OIDC:
+          - user-management/oidc/index.md
+          - Set up OIDC: user-management/oidc/setup.md
+          - Troubleshooting: user-management/oidc/troubleshooting.md
+        - SAML:
+          - user-management/saml/index.md
+          - Set up SAML: user-management/saml/setup.md
+          - Set up SAML with Okta Workforce Identity: user-management/saml/okta.md
+          - Manage users with SAML: user-management/saml/managing.md
+          - Troubleshooting: user-management/saml/troubleshooting.md
+      - External secrets: external-secrets.md
+      - Custom variables: code/variables.md
+      - Log streaming: log-streaming.md
+      - Insights: insights.md
   - Tutorials and courses:
     - tutorials/index.md
     - Getting started:

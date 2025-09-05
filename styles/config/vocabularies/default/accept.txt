@@ -43,7 +43,7 @@ Calendly
 Capterra
 cartesian
 Chargebee
-[Cc]hatbot
+[Cc]hatbots?
 ChromeOS
 Citrix
 Clearbit

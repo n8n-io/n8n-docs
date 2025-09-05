@@ -1,0 +1,79 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        -64
+      ],
+      "id": "64d9bef9-d2f3-4eb1-b80c-8527f27b13a7",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://pokeapi.co/api/v2/pokemon",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        -64
+      ],
+      "id": "f07f1544-e6a2-4905-866c-8c35abe5f90c",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "mode": "jsonToxml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -64
+      ],
+      "id": "b9dc143d-4d3d-4f3b-8aa8-675b97611eb9",
+      "name": "XML"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bb1b4024-7326-4747-8e48-ae9a0fff59d4",
+  "meta": {
+    "instanceId": "710be9ee229a3ddcf917e926782dde029a4fcfb94e8e57a48ed9b5520f72263d"
+  },
+  "id": "UAjZxFzAGSNDTKtV",
+  "tags": []
+}

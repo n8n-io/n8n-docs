@@ -17,7 +17,7 @@ You can use Python in the Code node. It isn't available in expressions.
 	| Method | Description | Available in Code node? |
 	| ------ | ----------- | :-------------------------: |
 	| `$binary` | Shorthand for `$input.item.binary`. Incoming binary data from a node | :x: |
-	| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on paired items and item linking. | :white_check_mark: |
+	| `$input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/referencing-data/item-linking.md) for more information on paired items and item linking. | :white_check_mark: |
 	| `$input.all()` | All input items in current node. | :white_check_mark: |
 	| `$input.first()` | First input item in current node. | :white_check_mark: |
 	| `$input.last()` | Last input item in current node. | :white_check_mark: |
@@ -27,7 +27,7 @@ You can use Python in the Code node. It isn't available in expressions.
 === "Python"
 	| Method | Description | 
 	| ------ | ----------- | 
-	| `_input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/data-mapping/data-item-linking/index.md) for more information on paired items and item linking. | 
+	| `_input.item` | The input item of the current node that's being processed. Refer to [Item linking](/data/referencing-data/item-linking.md) for more information on paired items and item linking. | 
 	| `_input.all()` | All input items in current node. | 
 	| `_input.first()` | First input item in current node. | 
 	| `_input.last()` | Last input item in current node. | 

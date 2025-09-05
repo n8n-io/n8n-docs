@@ -3,7 +3,7 @@
 contentType: howto
 ---
 
-# Data filtering
+# Filtering data
 
 /// info | Feature availability
 Available on Cloud Pro and Enterprise plans.

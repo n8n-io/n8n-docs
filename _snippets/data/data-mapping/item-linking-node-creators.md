@@ -6,7 +6,7 @@ Use n8n's item linking to access data from items that precede the current item. 
 
 This applies to programmatic nodes (including trigger nodes). You don't need to consider item linking when building a declarative-style node. Refer to [Choose your node building approach](/integrations/creating-nodes/plan/choose-node-method.md) for more information on node styles.
 
-Start by reading [Item linking concepts](/data/data-mapping/data-item-linking/item-linking-concepts.md), which provides a conceptual overview of item linking, and details of the scenarios where n8n can handle the linking automatically.
+Start by reading [item linking](/data/referencing-data/item-linking.md), which provides a conceptual overview of item linking, and details of the scenarios where n8n can handle the linking automatically.
 
 If you need to handle item linking manually, do this by setting `pairedItem` on each item your node returns:
 

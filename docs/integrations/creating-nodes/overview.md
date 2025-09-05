@@ -22,4 +22,4 @@ This section assumes the following:
 * Some familiarity with JavaScript and TypeScript.
 * Ability to manage your own development environment, including git.
 * Knowledge of npm, including creating and submitting packages.
-* Familiarity with n8n, including a good understanding of [data structures](/data/data-structure.md) and [item linking](/data/data-mapping/data-item-linking/index.md).
+* Familiarity with n8n, including a good understanding of [data structures](/data/data-structure.md) and [item linking](/data/referencing-data/item-linking.md).

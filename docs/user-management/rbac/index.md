@@ -21,7 +21,3 @@ RBAC is a way of managing access to workflows and [credentials](/glossary.md#cre
 
 [[ sectionToc.sectionToc(page) ]]
 
-
-
-
-

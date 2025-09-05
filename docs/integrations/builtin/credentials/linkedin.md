@@ -46,9 +46,10 @@ To create a new developer app and set up the credential:
 4. Add an **App logo**.
 5. Check the box to agree to the **Legal agreement**.
 6. Select **Create app**.
-7. This should open the **Products** tab. Select the products/APIs you want to enable for your app. For the LinkedIn node to work properly, you must include:
+7. This should open the **Products** tab. Select the products/APIs you want to enable for your app. For the LinkedIn node to work properly, you must include and configure:
 	- **Share on LinkedIn**
 	- **Sign In with LinkedIn using OpenID Connect**
+ 	- **Advertising API** 
 8. Once you've requested access to the products you need, open the **Auth** tab.
 9. Copy the **Client ID** and enter it in your n8n credential.
 10. Select the icon to **Copy** the **Primary Client Secret**. Enter this in your n8n credential as the **Client Secret**.

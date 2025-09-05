@@ -204,32 +204,34 @@ nav:
         - Querying JSON: code/cookbook/jmespath.md
     - Using AI:
       - advanced-ai/index.md
-      - RAG in n8n: advanced-ai/rag-in-n8n.md
       - AI Starter Kit: hosting/starter-kits/ai-starter-kit.md
-      - AI coding: code/ai-code.md
       - AI concepts:
-        - advanced-ai/examples/introduction.md
+        - advanced-ai/examples/index.md
         - What is a chain?: advanced-ai/examples/understand-chains.md
         - What is an agent?: advanced-ai/examples/understand-agents.md
-        - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
         - What is memory?: advanced-ai/examples/understand-memory.md
         - What is a tool?: advanced-ai/examples/understand-tools.md
         - What is a vector database?: advanced-ai/examples/understand-vector-databases.md
-      - LangChain in n8n:
-        - advanced-ai/langchain/overview.md
-        - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
-        - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
+        - Examples:
+          - Agents vs chains example: advanced-ai/examples/agent-chain-comparison.md
+          - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
+          - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
+          - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
+          - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
+      - Writing code with AI assistance: code/ai-code.md
+      - RAG in n8n: advanced-ai/rag-in-n8n.md
       - Evaluations:
         - Overview: advanced-ai/evaluations/overview.md
         - Light evaluations: advanced-ai/evaluations/light-evaluations.md
         - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
         - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
-      - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
-      - Set a human fallback for AI workflows: advanced-ai/examples/human-fallback.md
-      - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
-      - Call an API to fetch data: advanced-ai/examples/api-workflow-tool.md
-      - Use Google Sheets as a data source: advanced-ai/examples/data-google-sheets.md
-      - Populate a Pinecone vector database from a website: advanced-ai/examples/vector-store-website.md
+      - How to guides:
+        - Let AI specify tool parameters: advanced-ai/examples/using-the-fromai-function.md
+        - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
+      - LangChain in n8n:
+        - advanced-ai/langchain/index.md
+        - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
+        - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
   - Tutorials and courses:
     - tutorials/index.md
     - Getting started:
@@ -280,11 +282,13 @@ nav:
         - "Tutorial: Build a declarative-style node": integrations/creating-nodes/build/declarative-style-node.md
         - "Tutorial: Build a programmatic-style node": integrations/creating-nodes/build/programmatic-style-node.md
   - Development:
+    - development/index.md
     - API:
       - Overview: api/overview.md
       - Authentication: api/authentication.md
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
+      - API reference: api/api-reference.md
     - Node development:
       - Install n8n with npm: hosting/installation/npm.md
       - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
@@ -321,7 +325,6 @@ nav:
     - reference/index.md
     - n8n CLI commands: hosting/cli-commands.md
     - Keyboard shortcuts: keyboard-shortcuts.md
-    - API reference: api/api-reference.md
     - Cloud IP addresses: manage-cloud/cloud-ip.md
     - Glossary: glossary.md
     - Configuration:

@@ -4980,7 +4980,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### LangChain general availability
 
-This release adds LangChain support to the main n8n version. Refer to [LangChain](/advanced-ai/langchain/overview.md) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
+This release adds LangChain support to the main n8n version. Refer to [LangChain](/advanced-ai/langchain/index.md) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
 
 </div>
 
@@ -5365,7 +5365,7 @@ With n8n's LangChain nodes you can build AI-powered functionality within your wo
 
 Read more:
 
-* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
+* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/index.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
 * Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/ai-nodes.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
 

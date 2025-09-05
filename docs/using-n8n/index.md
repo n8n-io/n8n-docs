@@ -5,6 +5,4 @@ contentType: overview
 
 # Using n8n
 
-This section contains step-by-step instructions for common tasks and operations in n8n. This includes configuring n8n instances, using workflows, nodes, and credentials, working with data and expressions, and more.
-
-Many of the topics in this section link to supporting material in the [reference](/reference/index.md) section. Check out those resources for more context around the features used, and for details about specific parameters and options.
+This section contains details about how to use n8n to create workflows and automate your tasks. It includes information on working with nodes and credentials, building and running workflows, ingesting and manipulating data, and using AI.

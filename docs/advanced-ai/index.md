@@ -1,6 +1,6 @@
 ---
 #https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
-title: n8n Advanced AI Documentation and Guides
+title: n8n AI Documentation and Guides
 description: Use n8n's LangChain integrations to build AI-powered functionality within your workflows. Connect your LangChain functionality to other data sources and services.
 contentType: overview
 hide:
@@ -8,7 +8,7 @@ hide:
   - kapaButton
 ---
 
-# Advanced AI
+# Using AI
 
 Build AI functionality using n8n: from creating your own chat bot, to using AI to process documents and data from other sources.
 
@@ -34,19 +34,19 @@ This feature is available on Cloud and self-hosted n8n, in version 1.19.4 and ab
 
 	Browse examples and workflow templates to help you build. Includes explanations of important AI concepts.
 
-    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/introduction.md)
+    [:octicons-arrow-right-24: Examples](/advanced-ai/examples/index.md)
 
 -   __How n8n uses LangChain__
 
     Learn more about how n8n builds on LangChain.
 
-    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/overview.md)
+    [:octicons-arrow-right-24: LangChain in n8n](/advanced-ai/langchain/index.md)
 
 -   __Browse AI templates__
 
     Explore a wide range of AI workflow templates on the n8n website.
 
-    [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/?categories=25)
+    [:octicons-arrow-right-24: AI workflows on n8n.io](https://n8n.io/workflows/categories/ai/)
 
 </div>
 

@@ -145,7 +145,6 @@ An example JSON that shows the general format required and the keys available:
   },
   {
     "fieldType": "html",
-    "requiredField": true,
     "elementName": "content", // Optional field. It can be used to include the html in the output.
     "html": "<div>Custom element</div>"
   },

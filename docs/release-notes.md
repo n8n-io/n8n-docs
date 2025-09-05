@@ -2436,7 +2436,7 @@ Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure 
 ### Node updates
 
 - [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): Vector stores can now be directly used as tools for the agent
-- [Code](/code/builtin/overview.md): Tons of new speed and convenience features, see above for details  
+- [Code](/code/builtin/index.md): Tons of new speed and convenience features, see above for details  
 - [Google Vertex Chat](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md): Added option to specify the GCP region for the Google API credentials  
 - [HighLevel](/integrations/builtin/app-nodes/n8n-nodes-base.highlevel.md): Added support for calendar items  
 

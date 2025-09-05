@@ -13,7 +13,7 @@ Expressions are a powerful feature implemented in all n8n nodes. They allow node
 
 You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data into useful parameter values without writing extensive extra code.
 
-n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament), and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
+n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament), and extends it with [custom methods and variables](/code/builtin/index.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
 
 n8n additionally supports two libraries:
 

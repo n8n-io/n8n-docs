@@ -376,6 +376,7 @@ nav:
         - HTTP Request:
           - HTTP Request: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/index.md
           - HTTP Request node pagination: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/pagination.md
+          - HTTP Request node variables: code/builtin/http-node-variables.md
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-base.httprequest/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.if.md
         - integrations/builtin/core-nodes/n8n-nodes-base.jwt.md
@@ -869,7 +870,9 @@ nav:
           - Information Extractor: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.information-extractor.md
           - Text Classifier: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.text-classifier.md
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
-          - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
+          - LangChain Code:
+            - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code/index.md
+            - LangChain Code node methods: code/builtin/langchain-methods.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
@@ -1270,17 +1273,12 @@ nav:
         - integrations/builtin/credentials/zoom.md
         - integrations/builtin/credentials/zscalerzia.md
         - integrations/builtin/credentials/zulip.md
-    - Architecture:
-      - Overview: hosting/architecture/overview.md
-      - Database structure: hosting/architecture/database-structure.md
     - Methods and variables:
-      - Overview: code/builtin/overview.md
+      - code/builtin/index.md
       - Current node input: code/builtin/current-node-input.md
       - Output of other nodes: code/builtin/output-other-nodes.md
       - Date and time: code/builtin/date-time.md
       - JMESPath: code/builtin/jmespath.md
-      - HTTP node: code/builtin/http-node-variables.md
-      - LangChain Code node: code/builtin/langchain-methods.md
       - n8n metadata: code/builtin/n8n-metadata.md
       - Convenience methods: code/builtin/convenience.md
       - Data transformation functions:
@@ -1296,6 +1294,9 @@ nav:
         - getWorkflowStaticData: code/cookbook/builtin/get-workflow-static-data.md
         - (node-name).all: code/cookbook/builtin/all.md
         - vars: code/cookbook/builtin/vars.md
+    - Architecture:
+      - Overview: hosting/architecture/overview.md
+      - Database structure: hosting/architecture/database-structure.md
     - Releases:
       - Release notes:
         - 1.x: release-notes.md

@@ -68,7 +68,7 @@ Learn more about [Vector stores in LangChain](https://js.langchain.com/docs/conc
 
 Utility nodes.
 
-[LangChain Code](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md): import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it.
+[LangChain Code](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code/index.md): import LangChain. This means if there is functionality you need that n8n hasn't created a node for, you can still use it.
 
 ### Sub-nodes
 

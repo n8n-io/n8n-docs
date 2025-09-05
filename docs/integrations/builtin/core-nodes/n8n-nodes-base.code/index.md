@@ -20,7 +20,7 @@ Use the Code node to write custom JavaScript or Python and run it as a step in y
 /// note | Coding in n8n
 This page gives usage information about the Code node. For more guidance on coding in n8n, refer to the following resources:
 
-* Reference documentation on [Built-in methods and variables](/code/builtin/overview.md)
+* Reference documentation on [Built-in methods and variables](/code/builtin/index.md)
 * Guidance on [Handling dates](/code/cookbook/luxon.md) and [Querying JSON](/code/cookbook/jmespath.md)
 * A collection of examples for the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/how-to/index.md)
 ///
@@ -66,7 +66,7 @@ If you use n8n Cloud, you can't import external npm modules. n8n makes two modul
 
 ### Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview.md) for more information.
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/index.md) for more information.
 
 The syntax to use the built-in methods and variables is `$variableName` or `$methodName()`. Type `$` in the Code node or expressions editor to see a list of suggested methods and variables.
 
@@ -83,7 +83,7 @@ The Code node takes longer to process Python than JavaScript. This is due to the
 ///
 ### Built-in methods and variables
 
-n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/overview.md) for more information.
+n8n provides built-in methods and variables for working with data and accessing n8n data. Refer to [Built-in methods and variables](/code/builtin/index.md) for more information.
 
 The syntax to use the built-in methods and variables is `_variableName` or `_methodName()`. Type `_` in the Code node to see a list of suggested methods and variables.
 
@@ -117,7 +117,7 @@ n8n includes built-in methods and variables. These provide support for:
 * Accessing data about workflows, executions, and your n8n environment
 * Convenience variables to help with data and time
 
-Refer to [Built-in methods and variables](/code/builtin/overview.md) for more information.
+Refer to [Built-in methods and variables](/code/builtin/index.md) for more information.
 
 
 ## Use AI in the Code node

@@ -198,6 +198,7 @@ paths:
           schema:
             type: string
             enum:
+              - canceled
               - error
               - success
               - waiting
@@ -759,9 +760,7 @@ paths:
                     format: email
                   role:
                     type: string
-                    enum:
-                      - global:admin
-                      - global:member
+                    example: global:member
                 required:
                   - email
       responses:
@@ -847,9 +846,7 @@ paths:
               properties:
                 newRoleName:
                   type: string
-                  enum:
-                    - global:admin
-                    - global:member
+                  example: global:member
               required:
                 - newRoleName
       responses:
@@ -1369,6 +1366,17 @@ components:
           format: date-time
         customData:
           type: object
+        status:
+          type: string
+          enum:
+            - canceled
+            - crashed
+            - error
+            - new
+            - running
+            - success
+            - unknown
+            - waiting
     executionList:
       type: object
       properties:
@@ -1434,7 +1442,7 @@ components:
           type: string
         type:
           type: string
-          example: n8n-nodes-base.Jira
+          example: n8n-nodes-base.jira
         typeVersion:
           type: number
           example: 1
@@ -1582,10 +1590,11 @@ components:
         connections:
           type: object
           example:
-            main:
-              - node: Jira
-                type: main
-                index: 0
+            Jira:
+              main:
+                - - node: Jira
+                    type: main
+                    index: 0
         settings:
           $ref: '#/components/schemas/workflowSettings'
         staticData:

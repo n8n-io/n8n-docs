@@ -7,6 +7,8 @@ contentType: howto
 
 # Manage users with SAML
 
+--8<-- "_snippets/user-management/sso-saml-availability.md"
+
 There are some user management tasks that are affected by SAML.
 
 ## Exempt users from SAML

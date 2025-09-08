@@ -59,7 +59,7 @@ To set up your database connection credential:
 1. Enter your database's username as the **User** in your n8n credential. Run this query to confirm the username:
 
     ```
-    SELECT SYS_CONTEXT('USERENV', 'SESSION_USER')   AS session_user FROM dual;
+    SELECT SYS_CONTEXT('USERENV', 'SESSION_USER') AS session_user FROM dual;
     ```
 
 2. Enter your database's connection string as the **Connection String** in your n8n credential. Run this query to confirm the database name:
@@ -69,6 +69,14 @@ To set up your database connection credential:
     ```
 
 3. If your database uses SSL and you'd like to use **SSL** for the connection, turn this option on in the credential. If you turn it on, enter the information of your OracleDB SSL certificate in these fields:
-    1. Enter the output of PEM-encoded wallet file, **ewallet.pem** contents after retaining the new lines. The command `node -e "console.log('{{\"' + require('fs').readFileSync('ewallet.pem', 'utf8').split('\n').join('\\\\n') + '\"}}')"` can be used to dump file contents in the **Wallet Content** field.
+      1. Enter the output of PEM-encoded wallet file, **ewallet.pem** contents after retaining the new lines. The command
+
+
+
+       ```bash
+       node -e "console.log('{{\"' + require('fs').readFileSync('ewallet.pem', 'utf8').split('\n').join('\\\\n') + '\"}}')"
+       ```
+
+       can be used to dump file contents in the **Wallet Content** field.
 
 Refer to [Node OracleDB ](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html#mutual-tls-connections-to-oracle-cloud-autonomous-database) for more information on working with TLS connections.

@@ -21,6 +21,21 @@ Users can share workflows they created. Instance owners, and users with the admi
 3. In **Add users**, find and select the users you want to share with.
 4. Select **Save**.
 
+### Workflow options menu
+
+Next to the **Save** button, there is an options menu (three dots).  
+This menu includes the following actions:
+
+- **Duplicate**: Create a copy of the workflow  
+- **Download**: Export the workflow as a file  
+- **Change owner**: Assign the workflow to another user  
+- **Rename**: Rename the workflow  
+- **Import from URL...**: Import a workflow directly from a URL  
+- **Import from File...**: Import a workflow from a local file  
+- **Push to Git**: Push the workflow to a connected Git repository (if configured)  
+- **Settings**: Configure workflow-level settings  
+- **Archive**: Archive the workflow  
+
 ## View shared workflows
 
 You can browse and search workflows on the **Workflows** list. The workflows in the list depend on the project:

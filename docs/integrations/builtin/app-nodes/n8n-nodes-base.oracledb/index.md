@@ -82,7 +82,7 @@ Enter these parameters:
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
-	- **Map Each Column Manually**: Select the values to use for each column.
+	- **Map Each Column Manually**: Select the values to use for each column [n8n Expressions for values](#use-n8n-expressions-for-bindvalues).
 	- **Map Automatically**: Automatically map incoming data to matching column names in Oracle Database. The incoming data field names must match the column names in Oracle Database for this to work. If necessary, consider using the [edit fields (set) node](/docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert options
@@ -105,7 +105,7 @@ Enter these parameters:
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
-	- **Map Each Column Manually**: Select the values to use for each column.
+	- **Map Each Column Manually**: Select the values to use for each column [n8n Expressions for values](#use-n8n-expressions-for-bindvalues)
 	- **Map Automatically**: Automatically map incoming data to matching column names in Oracle Database. The incoming data field names must match the column names in Oracle Database for this to work. If necessary, consider using the [edit fields (set) node](/docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert or Update options
@@ -150,7 +150,7 @@ Enter these parameters:
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Mapping Column Mode**: How to map column names to incoming data:
-	- **Map Each Column Manually**: Select the values to use for each column.
+	- **Map Each Column Manually**: Select the values to use for each column [n8n Expressions for values](#use-n8n-expressions-for-bindvalues)
 	- **Map Automatically**: Automatically map incoming data to matching column names in Oracle Database. The incoming data field names must match the column names in Oracle Database for this to work. If necessary, consider using the [edit fields (set) node](/docs/integrations/builtin/core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Update options
@@ -203,3 +203,37 @@ Then in **Bind Variable Placeholder Values**, provide the field values to use. Y
 // fruits is an example table name
 fruits, {{ $json.color }} 
 ```
+
+## use-n8n-expressions-for-bindvalues
+For **Values to Send**, you can provide inputs using n8n Expressions. Below are examples for different data types — you can either enter constant values or reference fields from previous items ($json):
+- **JSON**: Enter a JSON object. For example, you can use a constant value like:
+{{ { k: "v1", k2: "v2" } }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_JSON }}
+- **VECTOR**: Enter a VECTOR array. For example, you can use a constant value for 4 dimensional VECTOR like :
+{{ [1, 2, 3, 4.5] }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_VECTOR }}
+- **BLOB**: Enter a BLOB data. For example, you can use a constant value like :
+{{ [94, 87, 34] }}
+Or {{ 'BLOB data' }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_BLOB }}
+- **RAW**: Enter a RAW data. For example, you can use a constant value like :
+{{ [94, 87, 34] }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_RAW }}
+- **BOOLEAN**: Enter Boolean data. For example, you can use a constant value like :
+{{ true }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_BOOLEAN }}
+- **NUMBER**: Enter number data. For example, you can use a constant value like :
+{{ 1234 }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_NUMBER }}
+- **VARCHAR**: Enter number data. For example, you can use a constant value like :
+{{ ' Hello World ' }}
+Or reference data from a previous item, e.g.:
+{{ $json.COL_CHAR }}
+
+These examples assume JSON keys (e.g. COL_JSON, COL_VECTOR) map directly to the respective SQL column types.

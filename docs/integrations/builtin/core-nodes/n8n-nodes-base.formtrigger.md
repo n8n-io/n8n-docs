@@ -98,12 +98,14 @@ Create the question fields for your form. Select **Add Form Element** to add a n
 Every field has the following settings:
 
 - **Field Label**: Enter the label that appears above the input field. 
-- **Element Type**: Choose from **Custom HTML**, **Date**, **Dropdown List**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Text**, or **Textarea**.
+- **Element Type**: Choose from **Checkboxes**, **Custom HTML**, **Date**, **Dropdown**, **Email**, **File**, **Hidden Field**, **Number**, **Password**, **Radio Buttons**, **Text**, or **Textarea**.
+	- Select **Checkboxes** to include checkbox elements in the form. By default, there is no limit on how many checboxes a form user can select. You can set the limit by specifying a value for the **Limit Selection** option as **Exact Number**, **Range**, or **Unlimited**.
 	- Select **Custom HTML** to insert arbitrary HTML.
 		- You can include elements like links, images, video, and more. You can't include `<script>`, `<style>`, or `<input>` elements.
 		- By default, Custom HTML fields aren't included in the node output. To include the Custom HTML content in the output, fill out the associated **Element Name** field.
     - Select **Date** to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
-	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**. 
+	- Select **Dropdown List** > **Add Field Option** to add multiple options. By default, the dropdown is single-choice. To make it multiple-choice, turn on **Multiple Choice**.
+	- Select **Radio Buttons** to include radio button elements in the form.
 	- Select **Hidden Field** to include a form element without displaying it on the form. You can set a default value using the **Field Value** parameter or pass values for the field using [query parameters](#set-default-selections-with-query-parameters).
 - **Required Field**: Turn on to require users to complete this field on the form. 
 

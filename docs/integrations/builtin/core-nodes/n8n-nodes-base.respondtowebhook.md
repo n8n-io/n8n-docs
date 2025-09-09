@@ -46,6 +46,7 @@ Select **Add Option** to view and set the options.
 - **Response Code**: Set the [response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to use.
 - **Response Headers**: Define the response headers to send.
 - **Put Response in Field**: Available when you respond with **All Incoming Items** or **First Incoming Item**. Set the field name for the field containing the response data.
+- **Enable Streaming**: When enabled, sends the data back to the user using streaming. Requires a trigger configured with the **Response mode** **Streaming**.
 
 ## How n8n secures HTML responses
 

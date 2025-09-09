@@ -6,7 +6,7 @@ Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
 
-* You must use the [`n8n-node` CLI tool](/integrations/creating-nodes/build/n8n-node.md) to build and test your node. This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
+* We recommend using the [`n8n-node` CLI tool](/integrations/creating-nodes/build/n8n-node.md) to build and test your node. This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing. If you plan on [submitting your node for verification](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n), you must use the `n8n-node` CLI tool.
 * View [n8n's own nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for examples of patterns you can use in your nodes.
 * Refer to the documentation on [building your own nodes](/integrations/creating-nodes/overview.md).
 * Make sure your node follows the [standards](#standards) for community nodes.

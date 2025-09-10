@@ -1,5 +1,4 @@
 ---
-
 tags:
   - "static data"
   - "global variables"

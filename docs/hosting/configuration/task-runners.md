@@ -6,13 +6,15 @@ contentType: howto
 
 # Task runners
 
-Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
+Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript and Python code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
+
+**Important:** Task runner support for native Python is currently in beta.
 
 This document describes how task runners work and how you can configure them.
 
 ## How it works
 
-The task runner feature consists of three components: a task runner, a task broker, and a task requester.
+The task runner feature consists of these components: one or more task runners, a task broker, and a task requester.
 
 ![Task runner overview](/_images/hosting/configuration/task-runner-concept.png)
 
@@ -32,17 +34,51 @@ In internal mode, the n8n instance launches the task runner as a child process. 
 
 ### External mode
 
-In external mode, an external orchestrator (for example, Kubernetes) launches the task runner instead of n8n. Typically, this means you would configure the task runner to run as a side-car container next to n8n.
+In external mode, a [launcher](https://github.com/n8n-io/task-runner-launcher) launches one or more task runners on demand and manages their lifecycle. Typically, this means you add a sidecar container next to n8n running the [`n8nio/runners`](https://hub.docker.com/r/n8nio/runners) image containing the launcher, the JS task runner and the Python task runner. This sidecar container is fully isolated from the n8n instance. 
 
 ![Task runner deployed as a side-car container](/_images/hosting/configuration/task-runner-external-mode.png)
 
-In this mode, the orchestrator monitors and manages the life cycle of the task runner container. The task runner is fully isolated from the n8n instance.
-
-When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container (main and workers) needs to have its own task runner.
+When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container (main and workers) needs to have its own sidecar container
 
 ## Setting up external mode
 
-Use the following details to configure task runners in external mode
+Use the following docker compose as a reference to add a task runner sidecar container to your n8n deployment.
+
+Keep in mind:
+
+- The `n8nio/runners` image version must match that of the `n8nio/n8n` image.
+- The n8n version must be >=1.111.0.
+
+```yaml
+services:
+  n8n:
+    image: n8nio/n8n:1.111.0
+    container_name: n8n-main
+    environment:
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_RUNNERS_MODE=external
+      - N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0
+      - N8N_RUNNERS_AUTH_TOKEN=your-secret-here
+      - N8N_NATIVE_PYTHON_RUNNER=true
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    # etc.
+
+  task-runners:
+    image: n8nio/runners:1.111.0
+    container_name: n8n-runners
+    environment:
+      - N8N_RUNNERS_TASK_BROKER_URI=http://n8n-main:5679
+      - N8N_RUNNERS_AUTH_TOKEN=your-secret-here
+      # etc.
+    depends_on:
+      - n8n
+
+volumes:
+  n8n_data:
+```
 
 ### Configuring n8n instance in external mode
 

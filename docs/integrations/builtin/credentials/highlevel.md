@@ -33,7 +33,7 @@ For existing integrations with the API v1.0, refer to [HighLevel's API 1.0 docum
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [HighLevel API 1.0 Welcome documentation](https://public-api.gohighlevel.com/) for instructions on getting your API key.
+- An **API Key**: Refer to the [HighLevel API 1.0 Welcome documentation](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api) for instructions on getting your API key.
 
 ## Using OAuth2
 

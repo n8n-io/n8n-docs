@@ -56,4 +56,4 @@ For example, the expression in this JSON includes a trailing period, which resul
 
 ```
 
-To resolve this error, check your [expression syntax](https://www.notion.so/code/expressions/) to make sure they follow the expected format.
+To resolve this error, check your [expression syntax](/code/expressions.md) to make sure they follow the expected format.

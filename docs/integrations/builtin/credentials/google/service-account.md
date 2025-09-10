@@ -77,10 +77,8 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 ## Video
 
-The following video demonstrates the steps described above.
-
 <div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/ArXVlpo3y1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/FzQzGODb5Gk?si=YR9vDaTet8vsj-y2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Troubleshooting

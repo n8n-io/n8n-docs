@@ -11,27 +11,17 @@ The `n8n-node` tool is the official CLI for developing community nodes for n8n. 
 
 Using `n8n-node`, you can create nodes that adhere to the 
 
-## Prerequisites
-
-Before you can use the `n8n-node` tool, you must [install n8n locally with `npm`](/hosting/installation/npm.md). The `n8n-node` tool runs the local n8n instance with your community node loaded to provide live previews.
-
 ## Get n8n-node
 
 ### Run n8n-node without installing
 
-You can run `n8n-node` directly without installing with `npx`. For example, to view the command's help information, you can type:
+You can create an `n8n-node` project directly without installing by using the [`@n8n/create-node` initializer](https://www.npmjs.com/package/@n8n/create-node) with your package manager:
 
 ```shell
-npx --package=@n8n/node-cli n8n-node --help
+npm create @n8n/node@latest
 ```
 
-To follow along with the rest of the page, prepend `npx --package=@n8n/node-cli` in front of each `n8n-node` command.
-
-If you're using `pnpm`, you can run the same command with:
-
-```shell
-pnpm dlx --package=@n8n/node-cli n8n-node --help
-```
+This sets up the initial project files locally (an alternative to installing `n8n-node` locally and explicitly running the [`new` command](#new)). Afterward, you run the rest of the `n8n-node` commands through your package manager's script runner inside the project directory (for example, `npm run dev`).
 
 ### Install n8n-node globally
 
@@ -53,7 +43,7 @@ The `n8n-node` tool provides the following commands:
 
 ### new
 
-The `new` command creates the file system structure and metadata for a new node.
+The `new` command creates the file system structure and metadata for a new node. This command initializes the same structure as outlined in [run n8n-node without installing](#run-n8n-node-without-installing).
 
 When called, it interactively prompts for details about your project to customize your starting code. You'll provide the project name, choose a node type, and select the starting template that best matches your needs. The `n8n-node` tool will create your project file structure and optionally install your initial project dependencies.
 
@@ -73,9 +63,31 @@ The `dev` command runs n8n with your node. It monitors your project directory an
 
 Learn more about how to use the `dev` command in the [testing your node in n8n section](#testing-your-node-in-n8n).
 
+### lint
+
+The `lint` command checks the code for the node in the current directory. You can optionally use with the `--fix` option to attempt to automatically fix any issues it identifies.
+
+Learn more about how to use the `lint` command in the [lint your node section](#lint-your-node).
+
+### release
+
+The `release` command publishes your community node package to npm. It uses [`release-it`](https://github.com/release-it/release-it) to clean, check and cleanly build your package before publishing it to npm.
+
+Learn more about how to use the `release` command in the [release your node section](#release-your-node).
+
 ## Creating a new node
 
 To create a new node with `n8n-node`, call `n8n-node new`. You can call this command entirely interactively or provide details on the command line.
+
+/// note | Create new node without installing
+You can optionally create an `n8n-node` project directly without installing `n8n-node` by using the [`@n8n/create-node` initializer](https://www.npmjs.com/package/@n8n/create-node) with your package manager.
+
+In the commands below, substitute `n8n-node new` with `npm create @n8n/node@latest`. When using this form, you must add a double dash (`--`) before including any options (like `--template`). For example:
+
+```shell
+npm create @n8n/node@latest n8n-nodes-mynode -- --template declarative/custom
+```
+///
 
 The command will prompt for any missing information about your node and then generate a project structure to get you started. By default, it will follow up by installing the initial project dependencies (you can disable this by passing the `--skip-install` flag).
 
@@ -160,7 +172,19 @@ npm run build
 The `n8n-node` tool automatically creates a `lint` script for your project as well. You can run with your package manager. For example:
 
 ```shell
+n8n-node lint
+```
+
+You can also run through your package manager's script runner:
+
+```shell
 npm run lint
+```
+
+If you include the `--fix` option (also callable with `npm run lint:fix`), `n8n-node` will attempt to fix the issues that it identifies:
+
+```shell
+n8n-node lint --fix
 ```
 
 ## Testing your node in n8n
@@ -184,3 +208,30 @@ Visit your `localhost:5678` to sign in to your n8n instance. If you open a workf
 ![node in nodes panel](/_images/integrations/creating-nodes/n8n-node/node_in_nodes_panel.png)
 
 From there, you can add it to your workflow and test the node's functionality as you develop.
+
+## Release your node
+
+To publish your node, run the `release` command in your project directory. This command uses [`release-it`](https://github.com/release-it/release-it) to build and publish your node.
+
+/// note | Log in to npm
+To use the `release` command, you must log in to npm using `npm login` command. Without this, `n8n-node` won't have authorization to publish your project files.
+///
+
+```shell
+n8n-node release
+```
+
+To run with `npm`, type:
+
+```shell
+npm run release
+```
+
+When you run the `release` command, `n8n-node` will perform the following actions:
+
+* build the node
+* run lint checks against your files
+* update the changelog
+* create git tags
+* create a GitHub release
+* publish the package to npm

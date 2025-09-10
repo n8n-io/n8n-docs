@@ -118,6 +118,7 @@ Imperva
 indexable
 invalid
 Infisical
+[Ii]nitializers?
 Intuit
 IP
 [Ii]terable

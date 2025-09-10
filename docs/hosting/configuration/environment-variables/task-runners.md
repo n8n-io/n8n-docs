@@ -72,4 +72,4 @@ hide:
 
 | `N8N_RUNNERS_STDLIB_ALLOW` | String | - | Permit users to import specific Python standard library modules in the Code node. Use `*` to allow all. n8n disables all Python standard library imports by default. |
 | `N8N_RUNNERS_EXTERNAL_ALLOW` | String | - | Permit users to import specific third-party Python modules (if available in the `n8nio/runners` image) in the Code node. Use `*` to allow all. n8n disables all third-party Python modules by default. |
-| `N8N_RUNNERS_BUILTINS_DENY` | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__` | List of insecure Python built-ins whose usage is disallowed. Set to an empty string to allow all. | 
+| `N8N_RUNNERS_BUILTINS_DENY` | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__` | List of insecure Python built-ins aren't allowed. Set to an empty string to allow all. | 

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Formstack Trigger credentials
 description: Documentation for Formstack Trigger credentials. Use these credentials to authenticate Formstack Trigger in n8n, a workflow automation platform.
 contentType: [integration, reference]

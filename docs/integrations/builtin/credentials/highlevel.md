@@ -27,7 +27,7 @@ HighLevel deprecated API v1.0 and no longer maintains it. Use OAuth2 to set up n
 
 Refer to [HighLevel's API 2.0 documentation](https://highlevel.stoplight.io/docs/integrations/0443d7d1a4bd0-overview) for more information about the service.
 
-For existing integrations with the API v1.0, refer to [HighLevel's API 1.0 documentation](https://public-api.gohighlevel.com/).
+For existing integrations with the API v1.0, refer to [HighLevel's API 1.0 documentation](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api).
 
 ## Using API key
 

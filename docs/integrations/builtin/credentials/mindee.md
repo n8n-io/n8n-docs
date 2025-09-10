@@ -17,7 +17,7 @@ Create a [Mindee](https://mindee.com) account.
 ## Supported authentication methods
 
 - Invoice API key: For use with the [Invoice OCR API](https://www.mindee.com/product/invoice-ocr-api)
-- Receipt API key: For use with the [Receipt OCR API](https://www.mindee.com/product/receipt-ocr-api-copy)
+- Receipt API key: For use with the [Receipt OCR API](https://www.mindee.com/product/receipt-ocr-api)
 
 ## Related resources
 

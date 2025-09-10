@@ -127,6 +127,7 @@ exclude = [
   '^https://www\.trellix\.com/products/epo/',  # timeouts
   '^https://admin\.google\.com/',  # Too many redirects
   '^https://(docs\.)?msg91.com/',  # Throws 500 error on automated checks
+  '^https://api\.mist\.com/'  # Only works when logged in
   ]
 
 # Exclude these filesystem paths from getting checked.

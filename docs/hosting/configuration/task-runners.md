@@ -8,7 +8,7 @@ contentType: howto
 
 Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript and Python code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
-**Important:** Task runner support for native Python is currently in beta.
+**Important:** Task runner support for native Python is currently in beta. Until this feature is stable, you can use the env var `N8N_NATIVE_PYTHON_RUNNER=true` to enable the Python runner.
 
 This document describes how task runners work and how you can configure them.
 

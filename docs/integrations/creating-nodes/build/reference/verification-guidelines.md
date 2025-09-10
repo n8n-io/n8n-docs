@@ -9,9 +9,9 @@ contentType: reference
 Consider following these guidelines while building your node if you want to submit it for verification by n8n. Any user with verified community nodes enabled can discover and install verified nodes from n8n's nodes panel across all deployment types (self-hosted and n8n Cloud).
 ///
 
-## Must use the n8n-node tool
+## Use the n8n-node tool
 
-All verified community nodes must use the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) to create and check their package. This helps n8n ensure quality and consistency by:
+All verified community node authors should strongly consider using the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) to create and check their package. This helps n8n ensure quality and consistency by:
 
 * Generating the expected package file structure
 * Adding the required metadata and configuration to the `package.json` file

@@ -6,7 +6,7 @@ Community nodes are npm packages, hosted in the npm registry.
 
 When building a node to submit to the community node repository, use the following resources to make sure your node setup is correct:
 
-* n8n recommends using the [`n8n-node` CLI tool](/integrations/creating-nodes/build/n8n-node.md) to build and test your node, especially if you plan on [submitting your node for verification](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
+* n8n recommends using the [`n8n-node` CLI tool](/integrations/creating-nodes/build/n8n-node.md) to build and test your node. This is particularly important if you plan on [submitting your node for verification](/integrations/creating-nodes/deploy/submit-community-nodes.md#submit-your-node-for-verification-by-n8n). This ensures that your node has the correct structure and follows community node requirements. It also simplifies linting and testing.
 * View [n8n's own nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for examples of patterns you can use in your nodes.
 * Refer to the documentation on [building your own nodes](/integrations/creating-nodes/overview.md).
 * Make sure your node follows the [standards](#standards) for community nodes.
@@ -27,7 +27,7 @@ n8n vets verified community nodes. Users can discover and install verified commu
 
 Before submitting your node for review by n8n, you must:
 
-* Start from the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) generated scaffolding. While this is not a strict requirement, we strongly encourage using the `n8n-node` CLI tool for any community node you plan to submit for verification. Using the tool ensures that your node follows the expected conventions and adheres to the community node requirements.
+* Start from the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) generated scaffolding. While this isn't strictly required, n8n strongly suggests using the `n8n-node` CLI tool for any community node you plan to submit for verification. Using the tool ensures that your node follows the expected conventions and adheres to the community node requirements.
 * Make sure that your node follows the [technical guidelines for verified community nodes](/integrations/creating-nodes/build/reference/verification-guidelines.md) and that all automated checks pass. Specifically, verified community nodes aren't allowed to use any run-time dependencies.
 * Ensure that your node follows the [UX guidelines](/integrations/creating-nodes/build/reference/ux-guidelines.md).
 * Make sure that the node has appropriate documentation in the form of a README in the [npm package](https://docs.npmjs.com/about-package-readme-files) or a related public repository.

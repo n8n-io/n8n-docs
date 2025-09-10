@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: DHL credentials
 description: Documentation for DHL credentials. Use these credentials to authenticate DHL in n8n, a workflow automation platform.
 contentType: [integration, reference]

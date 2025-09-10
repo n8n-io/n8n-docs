@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Set the self-hosted instance timezone
 description: Change the default timezone for your self-hosted n8n instance.
 contentType: howto

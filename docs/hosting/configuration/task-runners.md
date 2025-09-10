@@ -8,7 +8,7 @@ contentType: howto
 
 Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript and Python code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
-**Important:** Task runner support for native Python is currently in beta. Until this feature is stable, you can use the env var `N8N_NATIVE_PYTHON_RUNNER=true` to enable the Python runner.
+**Important:** Task runner support for native Python and the `n8nio/runners` image are currently in beta. Until this feature is stable, you can use the env var `N8N_NATIVE_PYTHON_RUNNER=true` to enable the Python runner.
 
 This document describes how task runners work and how you can configure them.
 
@@ -42,7 +42,7 @@ When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container 
 
 ## Setting up external mode
 
-In external mode, yuo run the `n8nio/runners` image as a sidecar container next to n8n. Below you will find a a docker compose as a reference. Keep in mind that the `n8nio/runners` image version must match that of the `n8nio/n8n` image, and the n8n version must be >=1.111.0.
+In external mode, you run the `n8nio/runners` image as a sidecar container next to n8n. Below you will find a a docker compose as a reference. Keep in mind that the `n8nio/runners` image version must match that of the `n8nio/n8n` image, and the n8n version must be >=1.111.0.
 
 ```yaml
 services:
@@ -102,7 +102,7 @@ For full list of environment variables see [task runner environment variables](/
 
 ### Configuring launcher in runners container in external mode
 
-The runners container will pass along env vars to each runner (JS and/or Python) as defined in the [default launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json), located in the container at `/etc/task-runners.json`. To customize the launcher config file, mount your config file to this path.
+The launcher will read env vars from runners container environment, and will pass along env vars to each runner as defined in the [default launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json), located in the container at `/etc/task-runners.json`. To customize the launcher config file, mount to this path.
 
 ## Adding extra dependencies 
 

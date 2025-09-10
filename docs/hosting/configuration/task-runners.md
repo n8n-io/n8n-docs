@@ -38,7 +38,7 @@ In external mode, a [launcher application](https://github.com/n8n-io/task-runner
 
 ![Task runner deployed as a side-car container](/_images/hosting/configuration/task-runner-external-mode.png)
 
-When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container (main and workers) needs to have its own sidecar container
+When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container (main and workers) needs to have its own sidecar task runners container.
 
 ## Setting up external mode
 

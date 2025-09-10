@@ -104,6 +104,8 @@ For full list of environment variables see [task runner environment variables](/
 
 The launcher will read env vars from runners container environment, and will pass along env vars to each runner as defined in the [default launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json), located in the container at `/etc/task-runners.json`. To customize the launcher config file, mount to this path.
 
+For further information about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
+
 ## Adding extra dependencies 
 
 You can customize the `n8nio/runners` image. To do so, you will find the runners Dockerfile at [this directory](https://github.com/n8n-io/n8n/tree/master/docker/images/runners) in the n8n repository. The manifests referred to below are also found in this directory.

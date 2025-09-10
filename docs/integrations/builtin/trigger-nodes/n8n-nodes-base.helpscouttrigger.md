@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Help Scout Trigger node documentation
 description: Learn how to use the Help Scout Trigger node in n8n. Follow technical documentation to integrate Help Scout Trigger node into your workflows.
 contentType: [integration, reference]

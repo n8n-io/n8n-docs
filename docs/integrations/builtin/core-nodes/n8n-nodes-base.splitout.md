@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Split Out
 description: Documentation for the Split Out node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

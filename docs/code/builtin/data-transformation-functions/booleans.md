@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Data transformation functions for booleans
 description: A reference document listing built-in convenience functions to support data transformation in expressions for booleans.
 contentType: reference

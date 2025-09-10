@@ -1,11 +1,12 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Manage users with SAML
 description: How to manage users and user logins with SAML enabled.
 contentType: howto
 ---
 
 # Manage users with SAML
+
+--8<-- "_snippets/user-management/sso-saml-availability.md"
 
 There are some user management tasks that are affected by SAML.
 

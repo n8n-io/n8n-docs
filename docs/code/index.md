@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Code in n8n Documentation and Guides
 description: Access documentation and guides on using code and expressions in n8n and other developer resources.
 contentType: overview

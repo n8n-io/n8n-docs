@@ -36,8 +36,9 @@ jobs:
             "duplicate")
               echo "comment=@$AUTHOR This duplicates another issue or PR, or the work was already done elsewhere. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
+              ;;
             "old-course")
-              echo "comment=Hi @AUTHOR! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
+              echo "comment=Hi @$AUTHOR! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "dev-cancelled")
@@ -45,7 +46,7 @@ jobs:
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "pending-dev")
-              echo "comment=Thanks @AUTHOR! We'll hold off on reviewing this until the PR is ready to go in the main repo." >> $GITHUB_OUTPUT
+              echo "comment=Thanks @$AUTHOR! We'll hold off on reviewing this until the PR is ready to go in the main repo." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
             "in-next-release")

@@ -1,3 +1,8 @@
+---
+description: Understand n8n's architecture
+contentType: overview
+---
+
 # Architecture Overview
 
 This document provides a comprehensive overview of n8n's architecture, designed to help developers, system administrators, and technical users understand how n8n works under the hood.

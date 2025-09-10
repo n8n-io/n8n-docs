@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Salesmate credentials
 description: Documentation for Salesmate credentials. Use these credentials to authenticate Salesmate in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Service Account
 description: Documentation for service account Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -78,10 +77,8 @@ With the Google project and credentials fully configured, finish the n8n credent
 
 ## Video
 
-The following video demonstrates the steps described above.
-
 <div class="video-container">
-<iframe width="840" height="472.5" src="https://www.youtube.com/embed/ArXVlpo3y1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="840" height="472.5" src="https://www.youtube.com/embed/FzQzGODb5Gk?si=YR9vDaTet8vsj-y2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Troubleshooting

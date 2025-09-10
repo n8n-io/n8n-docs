@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail Trigger node poll mode options documentation
 description: Learn about the poll mode options available to the Gmail Trigger node in n8n and how to configure them.
 contentType: howto

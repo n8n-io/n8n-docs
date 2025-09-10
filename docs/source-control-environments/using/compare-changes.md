@@ -1,5 +1,5 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+
 title: Compare changes with workflow diffs
 description: Use workflow diffs to compare local and remote changes 
 contentType: howto

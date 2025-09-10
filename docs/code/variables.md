@@ -1,5 +1,5 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
+
 
 description: Custom variables allow you to store and reuse values in n8n workflows.
 contentType: howto

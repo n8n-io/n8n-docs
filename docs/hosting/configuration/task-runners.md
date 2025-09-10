@@ -8,7 +8,9 @@ contentType: howto
 
 Task runners are a generic mechanism to execute tasks in a secure and performant way. They're used to execute user-provided JavaScript and Python code in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
-**Important:** Task runner support for native Python and the `n8nio/runners` image are currently in beta. Until this feature is stable, you can use the env var `N8N_NATIVE_PYTHON_RUNNER=true` to enable the Python runner.
+/// note | In beta
+Task runner support for native Python and the `n8nio/runners` image are in beta. Until this feature is stable, you must use the `N8N_NATIVE_PYTHON_RUNNER=true` environment variable to enable the Python runner.
+///
 
 This document describes how task runners work and how you can configure them.
 
@@ -42,7 +44,7 @@ When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container 
 
 ## Setting up external mode
 
-In external mode, you run the `n8nio/runners` image as a sidecar container next to n8n. Below you will find a a docker compose as a reference. Keep in mind that the `n8nio/runners` image version must match that of the `n8nio/n8n` image, and the n8n version must be >=1.111.0.
+In external mode, you run the `n8nio/runners` image as a sidecar container next to n8n. Below you will find a docker compose as a reference. Keep in mind that the `n8nio/runners` image version must match that of the `n8nio/n8n` image, and the n8n version must be >=1.111.0.
 
 ```yaml
 services:
@@ -110,11 +112,11 @@ For further information about the launcher config file, see [here](https://githu
 
 You can customize the `n8nio/runners` image. To do so, you will find the runners Dockerfile at [this directory](https://github.com/n8n-io/n8n/tree/master/docker/images/runners) in the n8n repository. The manifests referred to below are also found in this directory.
 
-To make additional packages available on the Code node, you can bake extra packages into your custom runners image at build time.
+To make additional packages available on the Code node, you can bake extra packages into your custom runners image at build time:
 
-* **JavaScript** — edit `docker/images/runners/package.json`
+* JavaScript: edit `docker/images/runners/package.json`
   (package.json manifest used to install runtime-only deps into the JS runner)
-* **Python (Native)** — edit `docker/images/runners/extras.txt`
+* Python (Native): edit `docker/images/runners/extras.txt`
   (requirements.txt-style list installed into the Python runner venv)
 
 > Important: for security, any external libraries must be explicitly allowed for Code node use. Update `n8n-task-runners.json` to allowlist what you add.
@@ -154,7 +156,7 @@ numpy==2.3.2
 # pandas==2.2.2
 ```
 
-> Tip: pin versions (e.g., `==2.3.2`) for deterministic builds.
+Pin versions (for example, `==2.3.2`) for deterministic builds.
 
 ### 3) Allowlist packages for the Code node
 
@@ -182,10 +184,10 @@ Open `docker/images/runners/n8n-task-runners.json` and add your packages to the 
 }
 ```
 
-* `NODE_FUNCTION_ALLOW_BUILTIN` — comma-separated list of allowed node builtin modules.
-* `NODE_FUNCTION_ALLOW_EXTERNAL` — comma-separated list of allowed JS packages.
-* `N8N_RUNNERS_STDLIB_ALLOW` — comma-separated list of allowed Python standard library packages.
-* `N8N_RUNNERS_EXTERNAL_ALLOW` — comma-separated list of allowed Python packages.
+* `NODE_FUNCTION_ALLOW_BUILTIN`: comma-separated list of allowed node builtin modules.
+* `NODE_FUNCTION_ALLOW_EXTERNAL`: comma-separated list of allowed JS packages.
+* `N8N_RUNNERS_STDLIB_ALLOW`: comma-separated list of allowed Python standard library packages.
+* `N8N_RUNNERS_EXTERNAL_ALLOW`: comma-separated list of allowed Python packages.
 
 ### 4) Build your custom image
 

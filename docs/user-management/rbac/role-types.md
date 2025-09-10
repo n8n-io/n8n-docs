@@ -1,5 +1,4 @@
 ---
-
 title: RBAC role types
 description: Understand the RBAC roles available in n8n, and the access they have.
 contentType: reference

@@ -1,5 +1,4 @@
 ---
-
 title: Vector Store Retriever node documentation
 description: Learn how to use the Vector Store Retriever node in n8n. Follow technical documentation to integrate Vector Store Retriever node into your workflows.
 contentType: [integration, reference]

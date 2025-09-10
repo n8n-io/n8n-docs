@@ -1,5 +1,4 @@
 ---
-
 title: Autopilot node documentation
 description: Learn how to use the Autopilot node in n8n. Follow technical documentation to integrate Autopilot node into your workflows.
 contentType: [integration, reference]

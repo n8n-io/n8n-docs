@@ -1,5 +1,4 @@
 ---
-
 title: Help Scout Trigger node documentation
 description: Learn how to use the Help Scout Trigger node in n8n. Follow technical documentation to integrate Help Scout Trigger node into your workflows.
 contentType: [integration, reference]

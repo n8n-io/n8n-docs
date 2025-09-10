@@ -1,5 +1,4 @@
 ---
-
 title: Item List Output Parser node documentation
 description: Learn how to use the Item List Output Parser node in n8n. Follow technical documentation to integrate Item List Output Parser node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Zoho CRM node documentation
 description: Learn how to use the Zoho CRM node in n8n. Follow technical documentation to integrate Zoho CRM node into your workflows.
 contentType: [integration, reference]

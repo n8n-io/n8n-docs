@@ -1,5 +1,4 @@
 ---
-
 title: Nextcloud node documentation
 description: Learn how to use the Nextcloud node in n8n. Follow technical documentation to integrate Nextcloud node into your workflows.
 contentType: [integration, reference]

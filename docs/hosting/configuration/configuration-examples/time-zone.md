@@ -1,5 +1,4 @@
 ---
-
 title: Set the self-hosted instance timezone
 description: Change the default timezone for your self-hosted n8n instance.
 contentType: howto

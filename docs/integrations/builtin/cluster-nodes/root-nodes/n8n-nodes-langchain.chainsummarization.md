@@ -1,5 +1,4 @@
 ---
-
 title: Summarization Chain node documentation
 description: Learn how to use the Summarize Chain node in n8n. Follow technical documentation to integrate Summarize Chain node into your workflows.
 contentType: [integration, reference]

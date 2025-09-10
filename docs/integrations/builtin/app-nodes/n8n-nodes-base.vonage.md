@@ -1,5 +1,4 @@
 ---
-
 title: Vonage node documentation
 description: Learn how to use the Vonage node in n8n. Follow technical documentation to integrate Vonage node into your workflows.
 contentType: [integration, reference]

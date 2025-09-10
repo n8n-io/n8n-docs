@@ -1,5 +1,4 @@
 ---
-
 title: Gmail node Label Operations documentation
 description: Learn how to use the Label Operations of the Gmail node in n8n. Follow technical documentation to integrate Label Operations into your workflows.
 contentType: [integration, reference]

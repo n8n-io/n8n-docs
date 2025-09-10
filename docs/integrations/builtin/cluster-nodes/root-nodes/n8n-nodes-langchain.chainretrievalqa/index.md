@@ -1,5 +1,4 @@
 ---
-
 title: Question and Answer Chain node documentation
 description: Learn how to use the Question and Answer Chain node in n8n. Follow technical documentation to integrate Question and Answer Chain node into your workflows.
 contentType: [integration, reference]

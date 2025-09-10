@@ -1,5 +1,4 @@
 ---
-
 title: Salesforce credentials
 description: Documentation for Salesforce credentials. Use these credentials to authenticate Salesforce in n8n, a workflow automation platform.
 contentType: [integration, reference]

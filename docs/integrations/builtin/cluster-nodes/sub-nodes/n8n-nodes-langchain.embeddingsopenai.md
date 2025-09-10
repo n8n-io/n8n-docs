@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings OpenAI node documentation
 description: Learn how to use the Embeddings OpenAI node in n8n. Follow technical documentation to integrate Embeddings OpenAI node into your workflows.
 contentType: [integration, reference]

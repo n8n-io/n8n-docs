@@ -1,5 +1,4 @@
 ---
-
 title: Google Gemini node documentation
 description: Learn how to use the Google Gemini node in n8n. Follow technical documentation to integrate Google Gemini node into your workflows.
 contentType: [integration, reference]

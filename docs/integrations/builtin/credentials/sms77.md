@@ -1,5 +1,4 @@
 ---
-
 title: seven credentials
 description: Documentation for seven credentials. Use these credentials to authenticate seven in n8n, a workflow automation platform.
 contentType: [integration, reference]

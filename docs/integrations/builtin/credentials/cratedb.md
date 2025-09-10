@@ -1,5 +1,4 @@
 ---
-
 title: CrateDB credentials
 description: Documentation for CrateDB credentials. Use these credentials to authenticate CrateDB in n8n, a workflow automation platform.
 contentType: [integration, reference]

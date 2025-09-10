@@ -1,5 +1,4 @@
 ---
-
 title: Cal.com credentials
 description: Documentation for Cal.com credentials. Use these credentials to authenticate Cal.com in n8n, a workflow automation platform.
 contentType: [integration, reference]

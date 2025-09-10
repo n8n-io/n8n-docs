@@ -1,5 +1,4 @@
 ---
-
 title: Spontit node documentation
 description: Learn how to use the Spontit node in n8n. Follow technical documentation to integrate Spontit node into your workflows.
 contentType: [integration, reference]

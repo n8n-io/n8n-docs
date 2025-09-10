@@ -1,5 +1,4 @@
 ---
-
 title: AWS Textract node documentation
 description: Learn how to use the AWS Textract node in n8n. Follow technical documentation to integrate AWS Textract node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Securing n8n
 contentType: overview
 ---

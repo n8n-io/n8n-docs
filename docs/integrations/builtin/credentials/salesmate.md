@@ -1,5 +1,4 @@
 ---
-
 title: Salesmate credentials
 description: Documentation for Salesmate credentials. Use these credentials to authenticate Salesmate in n8n, a workflow automation platform.
 contentType: [integration, reference]

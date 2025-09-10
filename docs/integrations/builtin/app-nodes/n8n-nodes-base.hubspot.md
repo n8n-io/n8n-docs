@@ -1,5 +1,4 @@
 ---
-
 title: HubSpot node documentation
 description: Learn how to use the HubSpot node in n8n. Follow technical documentation to integrate HubSpot node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Yourls credentials
 description: Documentation for Yourls credentials. Use these credentials to authenticate Yourls in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft Dynamics CRM node documentation
 description: Learn how to use the Microsoft Dynamics CRM node in n8n. Follow technical documentation to integrate Microsoft Dynamics CRM node into your workflows.
 contentType: [integration, reference]

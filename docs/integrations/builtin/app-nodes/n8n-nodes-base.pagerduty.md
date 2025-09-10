@@ -1,5 +1,4 @@
 ---
-
 title: PagerDuty node documentation
 description: Learn how to use the PagerDuty node in n8n. Follow technical documentation to integrate PagerDuty node into your workflows.
 contentType: [integration, reference]

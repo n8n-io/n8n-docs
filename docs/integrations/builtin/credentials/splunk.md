@@ -1,5 +1,4 @@
 ---
-
 title: Splunk credentials
 description: Documentation for Splunk credentials. Use these credentials to authenticate Splunk in n8n, a workflow automation platform.
 contentType: [integration, reference]

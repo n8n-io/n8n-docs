@@ -1,5 +1,4 @@
 ---
-
 title: Troubleshooting for OIDC SSO
 description: Things to be aware of and troubleshooting OIDC within n8n
 contentType: howto

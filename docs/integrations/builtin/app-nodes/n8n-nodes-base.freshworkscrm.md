@@ -1,5 +1,4 @@
 ---
-
 title: Freshworks CRM node documentation
 description: Learn how to use the Freshworks CRM node in n8n. Follow technical documentation to integrate Freshworks CRM node into your workflows.
 contentType: [integration, reference]

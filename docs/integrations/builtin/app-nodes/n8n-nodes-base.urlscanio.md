@@ -1,5 +1,4 @@
 ---
-
 title: urlscan.io node documentation
 description: Learn how to use the urlscan.io node in n8n. Follow technical documentation to integrate urlscan.io node into your workflows.
 contentType: [integration, reference]

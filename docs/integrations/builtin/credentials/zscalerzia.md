@@ -1,5 +1,4 @@
 ---
-
 title: Zscaler ZIA credentials
 description: Documentation for the Zscaler ZIA credentials. Use these credentials to authenticate Zscaler ZIA in n8n, a workflow automation platform.
 contentType: [integration, reference]

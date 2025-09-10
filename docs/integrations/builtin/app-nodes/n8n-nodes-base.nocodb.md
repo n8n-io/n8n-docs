@@ -1,5 +1,4 @@
 ---
-
 title: NocoDB node documentation
 description: Learn how to use the NocoDB node in n8n. Follow technical documentation to integrate NocoDB node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Carbon Black credentials
 description: Documentation for the Carbon Black credentials. Use these credentials to authenticate Carbon Black in n8n, a workflow automation platform.
 contentType: [integration, reference]

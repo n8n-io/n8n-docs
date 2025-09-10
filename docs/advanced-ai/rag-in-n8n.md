@@ -1,5 +1,4 @@
 ---
-
 title: RAG in n8n
 description: With Retrieval-Augmented Generation (RAG), you can give your models access to context-specific resources to help generate relevant answers. Learn how it works and how to use RAG in n8n.
 contentType: overview

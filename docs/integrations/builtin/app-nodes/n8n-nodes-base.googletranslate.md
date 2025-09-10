@@ -1,5 +1,4 @@
 ---
-
 title: Google Translate node documentation
 description: Learn how to use the Google Translate node in n8n. Follow technical documentation to integrate Google Translate node into your workflows.
 contentType: [integration, reference]

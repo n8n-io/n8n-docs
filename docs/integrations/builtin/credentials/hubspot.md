@@ -1,5 +1,4 @@
 ---
-
 title: HubSpot credentials
 description: Documentation for HubSpot credentials. Use these credentials to authenticate HubSpot in n8n, a workflow automation platform.
 contentType: [integration, reference]

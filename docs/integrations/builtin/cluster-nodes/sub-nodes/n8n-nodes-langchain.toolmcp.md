@@ -1,5 +1,4 @@
 ---
-
 title: MCP Client Tool node documentation
 description: Learn how to use the MCP Client Tool node in n8n. Follow technical documentation to integrate MCP Client Tool node into your workflows.
 contentType: [integration, reference]

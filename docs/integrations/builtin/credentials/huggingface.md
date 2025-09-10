@@ -1,5 +1,4 @@
 ---
-
 title: Hugging Face credentials
 description: Documentation for the Hugging Face credentials. Use these credentials to authenticate Hugging Face in n8n, a workflow automation platform.
 contentType: [integration, reference]

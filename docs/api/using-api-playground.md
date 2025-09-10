@@ -1,5 +1,4 @@
 ---
-
 description: How to use an API playground to try out n8n's public REST API.
 contentType: howto
 ---

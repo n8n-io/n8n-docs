@@ -1,5 +1,4 @@
 ---
-
 title: Home Assistant node documentation
 description: Learn how to use the Home Assistant node in n8n. Follow technical documentation to integrate Home Assistant node into your workflows.
 contentType: [integration, reference]

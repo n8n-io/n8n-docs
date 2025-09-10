@@ -1,5 +1,4 @@
 ---
-
 title: Nodes environment variables
 description: Environment variable to configure nodes management in self-hosted n8n instance.
 contentType: reference

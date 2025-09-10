@@ -1,5 +1,4 @@
 ---
-
 description: Learn how to contribute to n8n.
 contentType: howto
 ---

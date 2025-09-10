@@ -1,5 +1,4 @@
 ---
-
 title: TheHive 5 Trigger node documentation
 description: Learn how to use the TheHive 5 Trigger node in n8n. Follow technical documentation to integrate TheHive 5 Trigger node into your workflows.
 contentType: [integration, reference]

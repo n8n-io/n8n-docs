@@ -1,5 +1,4 @@
 ---
-
 title: Netscaler ADC credentials
 description: Documentation for Netscaler ADC credentials. Use these credentials to authenticate Netscaler ADC in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Gmail
 description: Documentation for Gmail IMAP credentials. Use these credentials to authenticate Gmail IMAP in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft credentials
 description: Documentation for Microsoft credentials. Use these credentials to authenticate Microsoft in n8n, a workflow automation platform.
 contentType: [integration, reference]

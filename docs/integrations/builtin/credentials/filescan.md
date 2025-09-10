@@ -1,5 +1,4 @@
 ---
-
 title: Filescan credentials
 description: Documentation for the Filescan credentials. Use these credentials to authenticate Filescan in n8n, a workflow automation platform.
 contentType: [integration, reference]

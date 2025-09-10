@@ -1,5 +1,4 @@
 ---
-
 title: Venafi TLS Protect Cloud Trigger node documentation
 description: Learn how to use the Venafi TLS Protect Cloud Trigger node in n8n. Follow technical documentation to integrate Venafi TLS Protect Cloud Trigger node into your workflows.
 contentType: [integration, reference]

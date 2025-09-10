@@ -1,5 +1,4 @@
 ---
-
 title: Customer Datastore (n8n Training) node documentation
 description: Learn how to use the Customer Datastore (n8n Training) node in n8n. Follow technical documentation to integrate Customer Datastore (n8n Training) node into your workflows.
 contentType: [integration, reference]

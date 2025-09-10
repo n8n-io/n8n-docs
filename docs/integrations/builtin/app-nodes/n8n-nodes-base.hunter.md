@@ -1,5 +1,4 @@
 ---
-
 title: Hunter node documentation
 description: Learn how to use the Hunter node in n8n. Follow technical documentation to integrate Hunter node into your workflows.
 contentType: [integration, reference]

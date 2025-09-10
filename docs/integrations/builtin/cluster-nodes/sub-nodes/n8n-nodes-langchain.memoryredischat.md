@@ -1,5 +1,4 @@
 ---
-
 title: Redis Chat Memory node documentation
 description: Learn how to use the Redis Chat Memory node in n8n. Follow technical documentation to integrate Redis Chat Memory node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Structured Output Parser node documentation
 description: Learn how to use the Structured Output Parser node in n8n. Follow technical documentation to integrate Structured Output Parser node into your workflows.
 contentType: [integration, reference]

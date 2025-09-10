@@ -1,5 +1,4 @@
 ---
-
 title: Google Workspace Admin node documentation
 description: Learn how to use the Google Workspace Admin node in n8n. Follow technical documentation to integrate Google Workspace Admin node into your workflows.
 contentType: [integration, reference]

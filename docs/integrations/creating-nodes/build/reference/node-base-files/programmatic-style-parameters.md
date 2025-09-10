@@ -1,5 +1,4 @@
 ---
-
 title: Programmatic-style parameters
 description: A reference document listing the programmatic-style parameters of the node base file.
 contentType: reference

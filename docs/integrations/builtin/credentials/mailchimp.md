@@ -1,5 +1,4 @@
 ---
-
 title: Mailchimp credentials
 description: Documentation for Mailchimp credentials. Use these credentials to authenticate Mailchimp in n8n, a workflow automation platform.
 contentType: [integration, reference]

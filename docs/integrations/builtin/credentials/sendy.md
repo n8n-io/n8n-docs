@@ -1,5 +1,4 @@
 ---
-
 title: Sendy credentials
 description: Documentation for Sendy credentials. Use these credentials to authenticate Sendy in n8n, a workflow automation platform.
 contentType: [integration, reference]

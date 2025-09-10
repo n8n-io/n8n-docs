@@ -1,5 +1,4 @@
 ---
-
 title: LinkedIn node documentation
 description: Learn how to use the LinkedIn node in n8n. Follow technical documentation to integrate LinkedIn node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Gotify credentials
 description: Documentation for Gotify credentials. Use these credentials to authenticate Gotify in n8n, a workflow automation platform.
 contentType: [integration, reference]

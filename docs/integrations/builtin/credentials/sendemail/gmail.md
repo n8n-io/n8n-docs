@@ -1,5 +1,4 @@
 ---
-
 title: Gmail
 description: Documentation for Gmail Send Email credentials. Use these credentials to authenticate Send Email with Gmail in n8n, a workflow automation platform.
 contentType: [integration, reference]

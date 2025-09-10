@@ -1,5 +1,4 @@
 ---
-
 title: Kafka credentials
 description: Documentation for Kafka credentials. Use these credentials to authenticate Kafka in n8n, a workflow automation platform.
 contentType: [integration, reference]

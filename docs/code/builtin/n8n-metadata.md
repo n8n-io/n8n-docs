@@ -1,5 +1,4 @@
 ---
-
 description: Methods for working with n8n metadata.
 contentType: reference
 hide:

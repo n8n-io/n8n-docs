@@ -1,5 +1,4 @@
 ---
-
 contentType: overview
 title: Role-based access control (RBAC)
 description: Set up and use role-based access control (RBAC) in n8n.

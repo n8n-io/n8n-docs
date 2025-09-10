@@ -1,5 +1,4 @@
 ---
-
 title: Google Slides node documentation
 description: Learn how to use the Google Slides node in n8n. Follow technical documentation to integrate Google Slides node into your workflows.
 contentType: [integration, reference]

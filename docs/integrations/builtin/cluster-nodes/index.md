@@ -1,5 +1,4 @@
 ---
-
 contentType: overview
 title: Cluster nodes
 description: Understand cluster nodes in n8n, and browse the cluster nodes library.

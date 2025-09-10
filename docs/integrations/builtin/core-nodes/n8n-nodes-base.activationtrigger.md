@@ -1,5 +1,4 @@
 ---
-
 title: Activation Trigger node documentation
 description: Learn how to use the Activation Trigger node in n8n. Follow technical documentation to integrate Activation Trigger node into your workflows.
 contentType: [integration, reference]

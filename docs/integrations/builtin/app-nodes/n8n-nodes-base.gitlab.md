@@ -1,5 +1,4 @@
 ---
-
 title: GitLab node documentation
 description: Learn how to use the GitLab node in n8n. Follow technical documentation to integrate GitLab node into your workflows.
 contentType: [integration, reference]

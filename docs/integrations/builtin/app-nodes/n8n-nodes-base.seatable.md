@@ -1,5 +1,4 @@
 ---
-
 title: SeaTable node documentation
 description: Learn how to use the SeaTable node in n8n. Follow technical documentation to integrate SeaTable node into your workflows.
 contentType: [integration, reference]

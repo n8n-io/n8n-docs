@@ -1,5 +1,4 @@
 ---
-
 title: Wufoo Trigger node documentation
 description: Learn how to use the Wufoo Trigger node in n8n. Follow technical documentation to integrate Wufoo Trigger node into your workflows.
 contentType: [integration, reference]

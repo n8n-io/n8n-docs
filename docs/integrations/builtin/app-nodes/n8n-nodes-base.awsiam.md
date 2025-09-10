@@ -1,5 +1,4 @@
 ---
-
 title: AWS IAM node documentation
 description: Learn how to use the AWS IAM node in n8n. Follow technical documentation to integrate AWS IAM node into your workflows.
 contentType: [integration, reference]

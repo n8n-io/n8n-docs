@@ -1,5 +1,4 @@
 ---
-
 title: Mocean node documentation
 description: Learn how to use the Mocean node in n8n. Follow technical documentation to integrate Mocean node into your workflows.
 contentType: [integration, reference]

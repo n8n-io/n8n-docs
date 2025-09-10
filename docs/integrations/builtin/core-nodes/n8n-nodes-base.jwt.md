@@ -1,5 +1,4 @@
 ---
-
 title: JWT
 description: Documentation for the JWT node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

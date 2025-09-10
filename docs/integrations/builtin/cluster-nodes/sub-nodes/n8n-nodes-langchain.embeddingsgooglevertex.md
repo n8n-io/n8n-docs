@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings Google Vertex node documentation
 description: Learn how to use the Embeddings Google Vertex node in n8n. Follow technical documentation to integrate Embeddings Google Gemini node into your workflows.
 contentType: [integration, reference]

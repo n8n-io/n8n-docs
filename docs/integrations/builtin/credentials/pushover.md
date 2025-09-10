@@ -1,5 +1,4 @@
 ---
-
 title: Pushover credentials
 description: Documentation for Pushover credentials. Use these credentials to authenticate Pushover in n8n, a workflow automation platform.
 contentType: [integration, reference]

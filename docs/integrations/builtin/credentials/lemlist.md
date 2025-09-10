@@ -1,5 +1,4 @@
 ---
-
 title: Lemlist credentials
 description: Documentation for Lemlist credentials. Use these credentials to authenticate Lemlist in n8n, a workflow automation platform.
 contentType: [integration, reference]

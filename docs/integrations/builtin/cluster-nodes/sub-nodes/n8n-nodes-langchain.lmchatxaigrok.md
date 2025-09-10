@@ -1,5 +1,4 @@
 ---
-
 title: xAI Grok Chat Model node documentation
 description: Learn how to use the xAI Grok Chat Model node in n8n. Follow technical documentation to integrate xAI Grok Chat Model node into your workflows.
 contentType: [integration, reference]

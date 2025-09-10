@@ -1,5 +1,4 @@
 ---
-
 title: Anthropic node documentation
 description: Learn how to use the Anthropic node in n8n. Follow technical documentation to integrate Anthropic node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: seven node documentation
 description: Learn how to use the seven node in n8n. Follow technical documentation to integrate seven node into your workflows.
 contentType: [integration, reference]

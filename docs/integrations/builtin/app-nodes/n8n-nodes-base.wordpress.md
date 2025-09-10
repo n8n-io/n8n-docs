@@ -1,5 +1,4 @@
 ---
-
 title: WordPress node documentation
 description: Learn how to use the WordPress node in n8n. Follow technical documentation to integrate WordPress node into your workflows.
 contentType: [integration, reference]

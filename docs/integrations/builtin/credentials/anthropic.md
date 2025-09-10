@@ -1,5 +1,4 @@
 ---
-
 title: Anthropic credentials
 description: Documentation for the Anthropic credentials. Use these credentials to authenticate Anthropic in n8n, a workflow automation platform.
 contentType: [integration, reference]

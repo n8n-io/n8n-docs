@@ -1,5 +1,4 @@
 ---
-
 title: Executions environment variables
 description: Environment variables to configure settings related to workflow executions. 
 contentType: reference

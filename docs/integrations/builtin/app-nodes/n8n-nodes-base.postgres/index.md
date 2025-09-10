@@ -1,5 +1,4 @@
 ---
-
 title: Postgres node documentation
 description: Learn how to use the Postgres node in n8n. Follow technical documentation to integrate Postgres node into your workflows.
 contentType: [integration, reference]

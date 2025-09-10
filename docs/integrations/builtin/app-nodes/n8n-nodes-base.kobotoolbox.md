@@ -1,5 +1,4 @@
 ---
-
 title: KoboToolbox node documentation
 description: Learn how to use the KoboToolbox node in n8n. Follow technical documentation to integrate KoboToolbox node into your workflows.
 contentType: [integration, reference]

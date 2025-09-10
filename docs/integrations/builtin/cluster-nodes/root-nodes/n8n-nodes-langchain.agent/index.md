@@ -1,5 +1,4 @@
 ---
-
 title: AI Agent node documentation
 description: Learn how to use the AI Agent node in n8n. Follow technical documentation to integrate AI Agent node into your workflows.
 contentType: [integration, reference]

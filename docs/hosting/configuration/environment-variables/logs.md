@@ -1,5 +1,4 @@
 ---
-
 title: Logs environment variables
 description: Environment variables to configure logging and diagnostic data. 
 contentType: reference

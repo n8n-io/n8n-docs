@@ -1,5 +1,4 @@
 ---
-
 title: Pinecone Vector Store node documentation
 description: Learn how to use the Pinecone Vector Store node in n8n. Follow technical documentation to integrate Pinecone Vector Store node into your workflows.
 contentType: [integration, reference]

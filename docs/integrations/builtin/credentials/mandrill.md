@@ -1,5 +1,4 @@
 ---
-
 title: Mandrill credentials
 description: Documentation for Mandrill credentials. Use these credentials to authenticate Mandrill in n8n, a workflow automation platform.
 contentType: [integration, reference]

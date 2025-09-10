@@ -1,5 +1,4 @@
 ---
-
 title: Execution Data
 description: Documentation for the Execution Data node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

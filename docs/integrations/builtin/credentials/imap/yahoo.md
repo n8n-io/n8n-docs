@@ -1,5 +1,4 @@
 ---
-
 title: Yahoo
 description: Documentation for Yahoo IMAP credentials. Use these credentials to authenticate Yahoo IMAP in n8n, a workflow automation platform.
 contentType: [integration, reference]

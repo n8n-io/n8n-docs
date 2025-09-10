@@ -1,5 +1,4 @@
 ---
-
 title: Stripe Trigger node documentation
 description: Learn how to use the Stripe Trigger node in n8n. Follow technical documentation to integrate Stripe Trigger node into your workflows.
 contentType: [integration, reference]

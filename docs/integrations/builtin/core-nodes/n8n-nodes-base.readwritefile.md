@@ -1,5 +1,4 @@
 ---
-
 title: Read/Write Files from Disk
 description: Documentation for the Read/Write Files from Disk node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

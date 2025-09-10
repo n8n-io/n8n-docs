@@ -1,5 +1,4 @@
 ---
-
 title: Azure Cosmos DB node documentation
 description: Learn how to use the Azure Cosmos DB node in n8n. Follow technical documentation to integrate Azure Cosmos DB node into your workflows.
 contentType: [integration, reference]

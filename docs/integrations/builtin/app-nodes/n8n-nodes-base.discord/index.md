@@ -1,5 +1,4 @@
 ---
-
 title: Discord node documentation
 description: Learn how to use the Discord node in n8n. Follow technical documentation to integrate Discord node into your workflows.
 contentType: [integration, reference]

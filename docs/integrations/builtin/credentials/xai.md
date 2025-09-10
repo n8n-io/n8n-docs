@@ -1,5 +1,4 @@
 ---
-
 title: xAI credentials
 description: Documentation for xAI credentials. Use these credentials to authenticate xAI in n8n, a workflow automation platform.
 contentType: [integration, reference]

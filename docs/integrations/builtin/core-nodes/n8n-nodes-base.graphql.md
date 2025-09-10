@@ -1,5 +1,4 @@
 ---
-
 title: GraphQL
 description: Documentation for the GraphQL node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

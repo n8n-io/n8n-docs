@@ -1,5 +1,4 @@
 ---
-
 title: Configuration examples
 description: An overview containing different configuration examples.
 contentType: overview

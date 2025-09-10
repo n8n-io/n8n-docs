@@ -1,5 +1,4 @@
 ---
-
 title: Jina AI credentials
 description: Documentation for the Jina AI credentials. Use these credentials to authenticate Jina AI in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Onfleet node documentation
 description: Learn how to use the Onfleet node in n8n. Follow technical documentation to integrate Onfleet node into your workflows.
 contentType: [integration, reference]

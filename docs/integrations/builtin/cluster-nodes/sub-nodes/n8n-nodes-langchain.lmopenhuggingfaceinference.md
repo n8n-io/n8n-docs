@@ -1,5 +1,4 @@
 ---
-
 title: Hugging Face Inference Model node documentation
 description: Learn how to use the Hugging Face Inference Model node in n8n. Follow technical documentation to integrate Hugging Face Inference Model node into your workflows.
 contentType: [integration, reference]

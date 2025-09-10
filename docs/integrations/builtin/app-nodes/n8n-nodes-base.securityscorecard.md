@@ -1,5 +1,4 @@
 ---
-
 title: SecurityScorecard node documentation
 description: Learn how to use the SecurityScorecard node in n8n. Follow technical documentation to integrate SecurityScorecard node into your workflows.
 contentType: [integration, reference]

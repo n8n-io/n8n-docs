@@ -1,5 +1,4 @@
 ---
-
 title: Set up SAML
 description: Generic setup instructions for using SAML SSO with n8n.
 contentType: howto

@@ -1,5 +1,4 @@
 ---
-
 title: Set up OIDC
 description: Set up instructions for enabling OIDC SSO with n8n.
 contentType: howto

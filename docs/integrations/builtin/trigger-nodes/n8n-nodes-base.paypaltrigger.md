@@ -1,5 +1,4 @@
 ---
-
 title: PayPal Trigger node documentation
 description: Learn how to use the PayPal Trigger node in n8n. Follow technical documentation to integrate PayPal Trigger node into your workflows.
 contentType: [integration, reference]

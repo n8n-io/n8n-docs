@@ -1,5 +1,4 @@
 ---
-
 title: Drift credentials
 description: Documentation for Drift credentials. Use these credentials to authenticate Drift in n8n, a workflow automation platform.
 contentType: [integration, reference]

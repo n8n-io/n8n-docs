@@ -1,5 +1,4 @@
 ---
-
 title: Quick Base node documentation
 description: Learn how to use the Quick Base node in n8n. Follow technical documentation to integrate Quick Base node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: HTTP Request Tool node documentation
 description: Learn how to use the HTTP Request Tool node in n8n. Follow technical documentation to integrate HTTP Request Tool node into your workflows.
 search:

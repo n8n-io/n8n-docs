@@ -1,5 +1,4 @@
 ---
-
 title: Matrix node documentation
 description: Learn how to use the Matrix node in n8n. Follow technical documentation to integrate Matrix node into your workflows.
 contentType: [integration, reference]

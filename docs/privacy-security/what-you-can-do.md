@@ -1,5 +1,4 @@
 ---
-
 title: What you can do
 description: What you can do to improve privacy and data security when using n8n.
 contentType: howto

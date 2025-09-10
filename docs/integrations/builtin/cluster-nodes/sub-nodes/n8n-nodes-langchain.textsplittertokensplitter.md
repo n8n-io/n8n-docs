@@ -1,5 +1,4 @@
 ---
-
 title: Token Splitter node documentation
 description: Learn how to use the Token Splitter node in n8n. Follow technical documentation to integrate Token Splitter node into your workflows.
 contentType: [integration, reference]

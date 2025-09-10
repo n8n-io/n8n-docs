@@ -1,5 +1,4 @@
 ---
-
 title: WooCommerce node documentation
 description: Learn how to use the WooCommerce node in n8n. Follow technical documentation to integrate WooCommerce node into your workflows.
 contentType: [integration, reference]

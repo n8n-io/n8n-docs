@@ -1,5 +1,4 @@
 ---
-
 title: Edit Fields (Set)
 description: Documentation for the Edit Fields node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: OpenAI Functions Agent node documentation
 description: Learn how to use the OpenAI Functions Agent of the AI Agent node in n8n. Follow technical documentation to integrate the OpenAI Functions Agent into your workflows.
 contentType: [integration, reference]

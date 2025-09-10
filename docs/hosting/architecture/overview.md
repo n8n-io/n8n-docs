@@ -1,5 +1,4 @@
 ---
-
 description: Understand n8n's architecture
 contentType: overview
 ---

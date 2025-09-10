@@ -1,5 +1,4 @@
 ---
-
 title: OpenAI Text operations 
 description: Documentation for the Text operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]

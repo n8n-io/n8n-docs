@@ -1,5 +1,4 @@
 ---
-
 description: How to enable 2FA for your n8n account
 contentType: howto
 ---

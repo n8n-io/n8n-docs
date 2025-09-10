@@ -1,5 +1,4 @@
 ---
-
 title: SolarWinds IPAM credentials
 description: Documentation for the SolarWinds IPAM credentials. Use these credentials to authenticate SolarWinds IPAM in n8n, a workflow automation platform.
 contentType: [integration, reference]

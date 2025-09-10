@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Trigger WhatsApp Business Account object documentation
 description: Learn how to use the WhatsApp Business Account object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's WhatsApp Business Account object into your workflows.
 contentType: [integration, reference]

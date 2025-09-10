@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings AWS Bedrock node documentation
 description: Learn how to use the Embeddings AWS Bedrock node in n8n. Follow technical documentation to integrate Embeddings AWS Bedrock node into your workflows.
 contentType: [integration, reference]

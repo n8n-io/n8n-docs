@@ -1,5 +1,4 @@
 ---
-
 title: Dynatrace credentials
 description: Documentation for the Dynatrace credentials. Use these credentials to authenticate Dynatrace in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Zendesk Trigger node documentation
 description: Learn how to use the Zendesk Trigger node in n8n. Follow technical documentation to integrate Zendesk Trigger node into your workflows.
 contentType: [integration, reference]

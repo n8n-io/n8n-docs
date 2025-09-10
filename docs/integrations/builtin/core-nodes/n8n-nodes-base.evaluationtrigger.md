@@ -1,5 +1,4 @@
 ---
-
 title: Evaluation Trigger node documentation
 description: Learn how to use the Evaluation Trigger node in n8n. Follow technical documentation to integrate Evaluation Trigger node into your workflows.
 contentType: [integration, reference]

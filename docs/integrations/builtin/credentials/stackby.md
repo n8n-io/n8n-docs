@@ -1,5 +1,4 @@
 ---
-
 title: Stackby credentials
 description: Documentation for Stackby credentials. Use these credentials to authenticate Stackby in n8n, a workflow automation platform.
 contentType: [integration, reference]

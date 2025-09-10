@@ -1,5 +1,4 @@
 ---
-
 title: Google Gemini Chat Model node documentation
 description: Learn how to use the Google Gemini Chat Model node in n8n. Follow technical documentation to integrate Google Gemini Chat Model node into your workflows.
 contentType: [integration, reference]

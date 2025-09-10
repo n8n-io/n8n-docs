@@ -1,5 +1,4 @@
 ---
-
 title: Kafka Trigger node documentation
 description: Learn how to use the Kafka Trigger node in n8n. Follow technical documentation to integrate Kafka Trigger node into your workflows.
 contentType: [integration, reference]

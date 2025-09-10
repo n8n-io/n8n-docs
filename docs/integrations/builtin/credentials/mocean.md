@@ -1,5 +1,4 @@
 ---
-
 title: Mocean credentials
 description: Documentation for Mocean credentials. Use these credentials to authenticate Mocean in n8n, a workflow automation platform.
 contentType: [integration, reference]

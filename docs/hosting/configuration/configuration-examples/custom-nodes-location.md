@@ -1,5 +1,4 @@
 ---
-
 title: Specify location for your custom nodes
 description: Add folders and specify paths for your custom nodes. 
 contentType: howto

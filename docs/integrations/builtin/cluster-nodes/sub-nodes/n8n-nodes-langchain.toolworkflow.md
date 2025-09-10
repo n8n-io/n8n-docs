@@ -1,5 +1,4 @@
 ---
-
 title: Call n8n Workflow Tool node documentation
 description: Learn how to use the Call n8n Workflow Tool node in n8n. Follow technical documentation to integrate Call n8n Workflow Tool node into your workflows.
 contentType: [integration, reference]

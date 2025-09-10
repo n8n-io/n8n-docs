@@ -1,5 +1,4 @@
 ---
-
 title: Magento 2 node documentation
 description: Learn how to use the Magento 2 node in n8n. Follow technical documentation to integrate Magento 2 node into your workflows.
 contentType: [integration, reference]

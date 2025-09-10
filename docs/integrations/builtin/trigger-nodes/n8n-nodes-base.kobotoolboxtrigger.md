@@ -1,5 +1,4 @@
 ---
-
 title: KoboToolbox Trigger node documentation
 description: Learn how to use the KoboToolbox Trigger node in n8n. Follow technical documentation to integrate KoboToolbox Trigger node into your workflows.
 contentType: [integration, reference]

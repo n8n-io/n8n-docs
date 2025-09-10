@@ -1,5 +1,4 @@
 ---
-
 title: Gmail Trigger node documentation
 description: Learn how to use the Gmail Trigger node in n8n. Follow technical documentation to integrate Gmail Trigger node into your workflows.
 contentType: [integration, reference]

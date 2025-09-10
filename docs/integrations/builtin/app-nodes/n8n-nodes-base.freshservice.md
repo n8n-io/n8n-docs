@@ -1,5 +1,4 @@
 ---
-
 title: Freshservice node documentation
 description: Learn how to use the Freshservice node in n8n. Follow technical documentation to integrate Freshservice node into your workflows.
 contentType: [integration, reference]

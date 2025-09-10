@@ -1,5 +1,4 @@
 ---
-
 title: Compare changes with workflow diffs
 description: Use workflow diffs to compare local and remote changes 
 contentType: howto

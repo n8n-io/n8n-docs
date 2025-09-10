@@ -1,5 +1,4 @@
 ---
-
 title: Pushcut Trigger node documentation
 description: Learn how to use the Pushcut Trigger node in n8n. Follow technical documentation to integrate Pushcut Trigger node into your workflows.
 contentType: [integration, reference]

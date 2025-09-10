@@ -1,5 +1,4 @@
 ---
-
 title: AWS SNS Trigger node documentation
 description: Learn how to use the AWS SNS Trigger node in n8n. Follow technical documentation to integrate AWS SNS Trigger node into your workflows.
 contentType: [integration, reference]

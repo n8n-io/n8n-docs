@@ -1,5 +1,4 @@
 ---
-
 title: Ghost node documentation
 description: Learn how to use the Ghost node in n8n. Follow technical documentation to integrate Ghost node into your workflows.
 contentType: [integration, reference]

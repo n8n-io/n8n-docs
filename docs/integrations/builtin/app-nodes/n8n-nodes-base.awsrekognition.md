@@ -1,5 +1,4 @@
 ---
-
 title: AWS Rekognition node documentation
 description: Learn how to use the AWS Rekognition node in n8n. Follow technical documentation to integrate AWS Rekognition node into your workflows.
 contentType: [integration, reference]

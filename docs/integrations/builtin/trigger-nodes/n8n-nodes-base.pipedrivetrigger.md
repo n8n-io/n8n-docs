@@ -1,5 +1,4 @@
 ---
-
 title: Pipedrive Trigger node documentation
 description: Learn how to use the Pipedrive Trigger node in n8n. Follow technical documentation to integrate Pipedrive Trigger node into your workflows.
 contentType: [integration, reference]

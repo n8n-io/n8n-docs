@@ -1,5 +1,4 @@
 ---
-
 description: How to use `("<node-name>").itemMatching(currentNodeinputIndex)`
 contentType: howto
 ---

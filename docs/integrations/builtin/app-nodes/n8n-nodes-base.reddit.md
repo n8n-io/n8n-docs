@@ -1,5 +1,4 @@
 ---
-
 title: Reddit node documentation
 description: Learn how to use the Reddit node in n8n. Follow technical documentation to integrate Reddit node into your workflows.
 contentType: [integration, reference]

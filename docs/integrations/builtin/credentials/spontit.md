@@ -1,5 +1,4 @@
 ---
-
 title: Spontit credentials
 description: Documentation for Spontit credentials. Use these credentials to authenticate Spontit in n8n, a workflow automation platform.
 contentType: [integration, reference]

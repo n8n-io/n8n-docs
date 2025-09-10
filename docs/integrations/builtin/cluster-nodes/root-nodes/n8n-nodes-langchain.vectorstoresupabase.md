@@ -1,5 +1,4 @@
 ---
-
 title: Supabase Vector Store node documentation
 description: Learn how to use the Supabase Vector Store node in n8n. Follow technical documentation to integrate Supabase Vector Store node into your workflows.
 contentType: [integration, reference]

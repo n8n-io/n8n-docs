@@ -1,5 +1,4 @@
 ---
-
 title: PagerDuty credentials
 description: Documentation for PagerDuty credentials. Use these credentials to authenticate PagerDuty in n8n, a workflow automation platform.
 contentType: [integration, reference]

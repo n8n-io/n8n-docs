@@ -1,5 +1,4 @@
 ---
-
 title: Strava node documentation
 description: Learn how to use the Strava node in n8n. Follow technical documentation to integrate Strava node into your workflows.
 contentType: [integration, reference]

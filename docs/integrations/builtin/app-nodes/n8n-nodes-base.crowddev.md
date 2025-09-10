@@ -1,5 +1,4 @@
 ---
-
 title: crowd.dev node documentation
 description: Learn how to use the crowd.dev node in n8n. Follow technical documentation to integrate crowd.dev node into your workflows.
 contentType: [integration, reference]

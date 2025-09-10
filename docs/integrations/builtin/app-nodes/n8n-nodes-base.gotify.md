@@ -1,5 +1,4 @@
 ---
-
 title: Gotify node documentation
 description: Learn how to use the Gotify node in n8n. Follow technical documentation to integrate Gotify node into your workflows.
 contentType: [integration, reference]

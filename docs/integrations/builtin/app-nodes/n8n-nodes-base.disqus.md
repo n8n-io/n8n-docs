@@ -1,5 +1,4 @@
 ---
-
 title: Disqus node documentation
 description: Learn how to use the Disqus node in n8n. Follow technical documentation to integrate Disqus node into your workflows.
 contentType: [integration, reference]

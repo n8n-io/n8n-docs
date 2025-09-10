@@ -1,5 +1,4 @@
 ---
-
 title: OpenAI Chat Model node documentation
 description: Learn how to use the OpenAI Chat Model node in n8n. Follow technical documentation to integrate OpenAI Chat Model node into your workflows.
 contentType: [integration, reference]

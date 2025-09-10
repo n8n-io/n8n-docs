@@ -1,5 +1,4 @@
 ---
-
 title: Wise node documentation
 description: Learn how to use the Wise node in n8n. Follow technical documentation to integrate Wise node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: _Name_ node documentation
 description: Learn how to use the _Name_ node in n8n. Follow technical documentation to integrate _Name_ node into your workflows.
 contentType: [integration, reference]

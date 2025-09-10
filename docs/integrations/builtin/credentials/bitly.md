@@ -1,5 +1,4 @@
 ---
-
 title: Bitly credentials
 description: Documentation for Bitly credentials. Use these credentials to authenticate Bitly in n8n, a workflow automation platform.
 contentType: [integration, reference]

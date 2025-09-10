@@ -1,5 +1,4 @@
 ---
-
 contentType: overview
 title: LangChain in n8n
 description: Understand how n8n uses LangChain to provide advanced AI functionality.

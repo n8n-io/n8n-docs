@@ -1,5 +1,4 @@
 ---
-
 title: Webhook node documentation
 description: Learn how to use the Webhook node in n8n. Follow technical documentation to integrate Webhook node into your workflows.
 priority: critical

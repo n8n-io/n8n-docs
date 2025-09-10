@@ -1,5 +1,4 @@
 ---
-
 title: Venafi TLS Protect Datacenter node documentation
 description: Learn how to use the Venafi TLS Protect Datacenter node in n8n. Follow technical documentation to integrate Venafi TLS Protect Datacenter node into your workflows.
 contentType: [integration, reference]

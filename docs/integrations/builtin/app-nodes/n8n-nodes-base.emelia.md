@@ -1,5 +1,4 @@
 ---
-
 title: Emelia node documentation
 description: Learn how to use the Emelia node in n8n. Follow technical documentation to integrate Emelia node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: CrowdStrike credentials
 description: Documentation for the CrowdStrike credentials. Use these credentials to authenticate CrowdStrike in n8n, a workflow automation platform.
 contentType: [integration, reference]

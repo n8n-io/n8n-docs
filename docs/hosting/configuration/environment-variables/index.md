@@ -1,5 +1,4 @@
 ---
-
 title: Environment Variables Overview
 description: An overview of configuration environment variables for self-hosted n8n. 
 contentType: overview

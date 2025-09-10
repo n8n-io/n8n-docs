@@ -1,5 +1,4 @@
 ---
-
 title: Google Cloud Storage node documentation
 description: Learn how to use the Google Cloud Storage node in n8n. Follow technical documentation to integrate Google Cloud Storage node into your workflows.
 contentType: [integration, reference]

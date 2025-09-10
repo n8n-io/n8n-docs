@@ -1,5 +1,4 @@
 ---
-
 title: Clearbit node documentation
 description: Learn how to use the Clearbit node in n8n. Follow technical documentation to integrate Clearbit node into your workflows.
 contentType: [integration, reference]

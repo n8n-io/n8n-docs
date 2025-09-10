@@ -1,5 +1,4 @@
 ---
-
 title: Gong node documentation
 description: Learn how to use the Gong node in n8n. Follow technical documentation to integrate Gong node into your workflows.
 contentType: [integration, reference]

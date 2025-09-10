@@ -1,5 +1,4 @@
 ---
-
 title: Customer.io Trigger node documentation
 description: Learn how to use the Customer.io Trigger node in n8n. Follow technical documentation to integrate Customer.io Trigger node into your workflows.
 contentType: [integration, reference]

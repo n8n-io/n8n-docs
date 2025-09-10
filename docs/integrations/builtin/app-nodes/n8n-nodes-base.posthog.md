@@ -1,5 +1,4 @@
 ---
-
 title: PostHog node documentation
 description: Learn how to use the PostHog node in n8n. Follow technical documentation to integrate PostHog node into your workflows.
 contentType: [integration, reference]

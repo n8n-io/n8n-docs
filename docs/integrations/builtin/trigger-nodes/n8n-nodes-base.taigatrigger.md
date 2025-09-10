@@ -1,5 +1,4 @@
 ---
-
 title: Taiga Trigger node documentation
 description: Learn how to use the Taiga Trigger node in n8n. Follow technical documentation to integrate Taiga Trigger node into your workflows.
 contentType: [integration, reference]

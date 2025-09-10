@@ -1,5 +1,4 @@
 ---
-
 title: Brevo Trigger node documentation
 description: Learn how to use the Brevo Trigger node in n8n. Follow technical documentation to integrate Brevo Trigger node into your workflows.
 contentType: [integration, reference]

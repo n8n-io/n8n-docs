@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Graph API node documentation
 description: Learn how to use the Facebook Graph API node in n8n. Follow technical documentation to integrate Facebook Graph API node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Vercel AI Gateway credentials
 description: Documentation for the Vercel AI Gateway credentials. Use these credentials to authenticate the Vercel AI Gateway in n8n, a workflow automation platform.
 contentType: [integration, reference]

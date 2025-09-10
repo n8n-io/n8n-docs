@@ -1,5 +1,4 @@
 ---
-
 title: Airtop credentials
 description: Documentation for the Airtop credentials. Use these credentials to authenticate Airtop in n8n, a workflow automation platform.
 contentType: [integration, reference]

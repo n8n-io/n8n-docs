@@ -1,5 +1,4 @@
 ---
-
 title: Datadog credentials
 description: Documentation for the Datadog credentials. Use these credentials to authenticate Datadog in n8n, a workflow automation platform.
 contentType: [integration, reference]

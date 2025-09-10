@@ -1,5 +1,4 @@
 ---
-
 title: TheHive 5 node documentation
 description: Learn how to use the TheHive 5 node in n8n. Follow technical documentation to integrate TheHive 5 node into your workflows.
 contentType: [integration, reference]

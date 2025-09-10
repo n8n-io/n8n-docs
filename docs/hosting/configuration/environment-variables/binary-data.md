@@ -1,5 +1,4 @@
 ---
-
 title: Binary data environment variables
 description: Customize binary data storage modes and paths with environment variables for your self-hosted n8n instance. 
 contentType: reference

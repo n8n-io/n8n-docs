@@ -1,5 +1,4 @@
 ---
-
 title: Reranker Cohere
 description: Learn how to use the Reranker Cohere node in n8n. Follow technical documentation to integrate Cohere reranking into your workflows.
 contentType: [integration, reference]

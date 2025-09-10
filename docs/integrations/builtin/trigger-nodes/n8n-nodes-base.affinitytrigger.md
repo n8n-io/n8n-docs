@@ -1,5 +1,4 @@
 ---
-
 title: Affinity Trigger node documentation
 description: Learn how to use the Affinity Trigger node in n8n. Follow technical documentation to integrate Affinity Trigger node into your workflows.
 contentType: [integration, reference]

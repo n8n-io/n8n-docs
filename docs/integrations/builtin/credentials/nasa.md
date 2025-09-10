@@ -1,5 +1,4 @@
 ---
-
 title: NASA credentials
 description: Documentation for NASA credentials. Use these credentials to authenticate NASA in n8n, a workflow automation platform.
 contentType: [integration, reference]

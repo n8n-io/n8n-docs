@@ -1,5 +1,4 @@
 ---
-
 title: Google Analytics node documentation
 description: Learn how to use the Google Analytics node in n8n. Follow technical documentation to integrate Google Analytics node into your workflows.
 contentType: [integration, reference]

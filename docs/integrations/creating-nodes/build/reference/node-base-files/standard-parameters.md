@@ -1,5 +1,4 @@
 ---
-
 title: Standard parameters
 description: A reference document listing the standard parameters of the node base file.
 contentType: reference

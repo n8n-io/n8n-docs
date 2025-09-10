@@ -1,5 +1,4 @@
 ---
-
 contentType: [integration, reference]
 tags:
   - code node

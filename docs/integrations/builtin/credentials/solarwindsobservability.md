@@ -1,5 +1,4 @@
 ---
-
 title: SolarWinds Observability SaaS credentials
 description: Documentation for the SolarWinds Observability SaaS credential, Use these credentials to authenticate SolarWinds Observability SaaS in n8n, a workflow automation platform
 contentType: [integration, reference]

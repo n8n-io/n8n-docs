@@ -1,5 +1,4 @@
 ---
-
 title: Bubble credentials
 description: Documentation for Bubble credentials. Use these credentials to authenticate Bubble in n8n, a workflow automation platform.
 contentType: [integration, reference]

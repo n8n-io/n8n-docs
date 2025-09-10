@@ -1,5 +1,4 @@
 ---
-
 title: Action Network node documentation
 description: Learn how to use the Action Network node in n8n. Follow technical documentation to integrate Action Network node into your workflows.
 contentType: [integration, reference]

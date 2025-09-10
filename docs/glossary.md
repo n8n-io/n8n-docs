@@ -1,5 +1,4 @@
 ---
-
 title: n8n Glossary
 description: A glossary of terms commonly used when working with n8n and related software.
 contentType: reference

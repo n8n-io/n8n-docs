@@ -1,5 +1,4 @@
 ---
-
 title: ClickUp Trigger node documentation
 description: Learn how to use the ClickUp Trigger node in n8n. Follow technical documentation to integrate ClickUp Trigger node into your workflows.
 contentType: [integration, reference]

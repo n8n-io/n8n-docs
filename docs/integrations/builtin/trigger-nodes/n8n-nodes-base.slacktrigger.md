@@ -1,5 +1,4 @@
 ---
-
 title: Slack Trigger node documentation
 description: Learn how to use the Slack Trigger node in n8n. Follow technical documentation to integrate Slack Trigger node into your workflows.
 contentType: [integration, reference]

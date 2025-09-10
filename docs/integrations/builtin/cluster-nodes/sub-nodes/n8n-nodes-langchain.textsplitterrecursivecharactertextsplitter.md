@@ -1,5 +1,4 @@
 ---
-
 title: Recursive Character Text Splitter node documentation
 description: Learn how to use the Recursive Character Text Splitter node in n8n. Follow technical documentation to integrate Recursive Character Text Splitter node into your workflows.
 contentType: [integration, reference]

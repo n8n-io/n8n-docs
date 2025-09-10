@@ -1,5 +1,4 @@
 ---
-
 title: LoneScale node documentation
 description: Learn how to use the LoneScale node in n8n. Follow technical documentation to integrate LoneScale node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Execution order in multi-branch workflows
 description: How n8n decides the node execution order in multi-branch workflows.
 contentType: explanation

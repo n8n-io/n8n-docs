@@ -1,5 +1,4 @@
 ---
-
 title: Cohere credentials
 description: Documentation for the Cohere credentials. Use these credentials to authenticate Cohere in n8n, a workflow automation platform.
 contentType: [integration, reference]

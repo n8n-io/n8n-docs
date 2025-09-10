@@ -1,5 +1,4 @@
 ---
-
 contentType: explanation
 ---
 

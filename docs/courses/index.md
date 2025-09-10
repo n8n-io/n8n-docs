@@ -1,5 +1,4 @@
 ---
-
 title: Text courses
 description: Access n8n text courses. Find beginner and intermediate courses to learn how to build automation workflows using n8n. 
 contentType: overview

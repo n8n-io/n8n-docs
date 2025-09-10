@@ -1,5 +1,4 @@
 ---
-
 title: Motorhead node documentation
 description: Learn how to use the Motorhead node in n8n. Follow technical documentation to integrate Motorhead node into your workflows.
 contentType: [integration, reference]

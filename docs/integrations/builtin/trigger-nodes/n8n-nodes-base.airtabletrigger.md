@@ -1,5 +1,4 @@
 ---
-
 title: Airtable Trigger node documentation
 description: Learn how to use the Airtable Trigger node in n8n. Follow technical documentation to integrate Airtable Trigger node into your workflows.
 contentType: [integration, reference]

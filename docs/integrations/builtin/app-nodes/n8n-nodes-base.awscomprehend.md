@@ -1,5 +1,4 @@
 ---
-
 title: AWS Comprehend node documentation
 description: Learn how to use the AWS Comprehend node in n8n. Follow technical documentation to integrate AWS Comprehend node into your workflows.
 contentType: [integration, reference]

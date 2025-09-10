@@ -1,5 +1,4 @@
 ---
-
 title: Chat Trigger node documentation
 description: Learn how to use the Chat Trigger node in n8n. Follow technical documentation to integrate Chat Trigger node into your workflows.
 priority: critical

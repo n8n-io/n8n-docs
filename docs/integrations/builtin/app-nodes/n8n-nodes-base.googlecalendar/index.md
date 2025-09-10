@@ -1,5 +1,4 @@
 ---
-
 title: Google Calendar node documentation
 description: Learn how to use the Google Calendar node in n8n. Follow technical documentation to integrate Google Calendar node into your workflows.
 contentType: [integration, reference]

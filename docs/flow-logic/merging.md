@@ -1,5 +1,4 @@
 ---
-
 contentType: howto
 description: Merge data streams in you n8n workflows.
 ---

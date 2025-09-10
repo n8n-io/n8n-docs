@@ -1,5 +1,4 @@
 ---
-
 title: Mailchimp node documentation
 description: Learn how to use the Mailchimp node in n8n. Follow technical documentation to integrate Mailchimp node into your workflows.
 contentType: [integration, reference]

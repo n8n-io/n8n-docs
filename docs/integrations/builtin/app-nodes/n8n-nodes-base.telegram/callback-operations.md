@@ -1,5 +1,4 @@
 ---
-
 title: Telegram node Callback operations documentation
 description: Documentation for the Callback operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Callback operations.
 contentType: [integration, reference]

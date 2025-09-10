@@ -1,5 +1,4 @@
 ---
-
 title: Wolfram|Alpha tool node documentation
 description: Learn how to use the Wolfram|Alpha tool node in n8n. Follow technical documentation to integrate Wolfram|Alpha tool node into your workflows.
 contentType: [integration, reference]

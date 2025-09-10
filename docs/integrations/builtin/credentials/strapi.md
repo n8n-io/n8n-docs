@@ -1,5 +1,4 @@
 ---
-
 title: Strapi credentials
 description: Documentation for Strapi credentials. Use these credentials to authenticate Strapi in n8n, a workflow automation platform.
 contentType: [integration, reference]

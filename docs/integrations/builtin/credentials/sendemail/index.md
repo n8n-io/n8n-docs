@@ -1,5 +1,4 @@
 ---
-
 title: Send Email credentials
 description: Documentation for Send Email credentials. Use these credentials to authenticate Send Email in n8n, a workflow automation platform.
 contentType: [integration, reference]

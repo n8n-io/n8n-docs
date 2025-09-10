@@ -1,5 +1,4 @@
 ---
-
 title: Rundeck credentials
 description: Documentation for Rundeck credentials. Use these credentials to authenticate Rundeck in n8n, a workflow automation platform.
 contentType: [integration, reference]

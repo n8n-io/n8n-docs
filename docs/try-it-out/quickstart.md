@@ -1,5 +1,4 @@
 ---
-
 description: A quick example to try out n8n.
 contentType: tutorial
 ---

@@ -1,5 +1,4 @@
 ---
-
 description: "Learn about the key components of automation in n8n."
 contentType: overview
 ---

@@ -1,5 +1,4 @@
 ---
-
 title: One Simple API node documentation
 description: Learn how to use the One Simple API node in n8n. Follow technical documentation to integrate One Simple API node into your workflows.
 contentType: [integration, reference]

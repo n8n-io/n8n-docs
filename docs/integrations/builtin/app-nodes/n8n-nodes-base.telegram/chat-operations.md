@@ -1,5 +1,4 @@
 ---
-
 title: Telegram node Chat operations documentation
 description: Documentation for the Chat operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Chat operations.
 contentType: [integration, reference]

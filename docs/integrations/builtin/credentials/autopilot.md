@@ -1,5 +1,4 @@
 ---
-
 title: Autopilot credentials
 description: Documentation for Autopilot credentials. Use these credentials to authenticate Autopilot in n8n, a workflow automation platform.
 contentType: [integration, reference]

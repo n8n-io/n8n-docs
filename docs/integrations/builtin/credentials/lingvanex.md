@@ -1,5 +1,4 @@
 ---
-
 title: LingvaNex credentials
 description: Documentation for LingvaNex credentials. Use these credentials to authenticate LingvaNex in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: MQTT Trigger node documentation
 description: Learn how to use the MQTT Trigger node in n8n. Follow technical documentation to integrate MQTT Trigger node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: npm credentials
 description: Documentation for the npm credentials. Use these credentials to authenticate npm in n8n, a workflow automation platform.
 contentType: [integration, reference]

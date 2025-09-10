@@ -1,5 +1,4 @@
 ---
-
 title: Asana node documentation
 description: Learn how to use the Asana node in n8n. Follow technical documentation to integrate Asana node into your workflows.
 contentType: [integration, reference]

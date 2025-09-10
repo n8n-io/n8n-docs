@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Trigger User object documentation
 description: Learn how to use the User object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's User object into your workflows.
 contentType: [integration, reference]

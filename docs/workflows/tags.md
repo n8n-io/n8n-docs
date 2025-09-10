@@ -1,5 +1,4 @@
 ---
-
 title: Workflow tags
 description: Use tags to label workflows, making it easier to browse your workflows.
 contentType: howto

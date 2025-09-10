@@ -1,5 +1,4 @@
 ---
-
 title: Source control environment variables
 description: Environment variable to set the default SSH key type for source control setup.
 contentType: reference

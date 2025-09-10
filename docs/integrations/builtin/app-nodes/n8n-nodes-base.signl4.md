@@ -1,5 +1,4 @@
 ---
-
 title: SIGNL4 node documentation
 description: Learn how to use the SIGNL4 node in n8n. Follow technical documentation to integrate SIGNL4 node into your workflows.
 contentType: [integration, reference]

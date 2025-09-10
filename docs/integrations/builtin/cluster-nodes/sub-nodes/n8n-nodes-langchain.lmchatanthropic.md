@@ -1,5 +1,4 @@
 ---
-
 title: Anthropic Chat Model node documentation
 description: Learn how to use the Anthropic Chat Model node in n8n. Follow technical documentation to integrate Anthropic Chat Model node into your workflows.
 contentType: [integration, reference]

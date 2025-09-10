@@ -1,5 +1,4 @@
 ---
-
 title: Coda credentials
 description: Documentation for Coda credentials. Use these credentials to authenticate Coda in n8n, a workflow automation platform.
 contentType: [integration, reference]

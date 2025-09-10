@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Trigger Certificate Transparency object documentation
 description: Learn how to use the Certificate Transparency object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Certificate Transparency object into your workflows.
 contentType: [integration, reference]

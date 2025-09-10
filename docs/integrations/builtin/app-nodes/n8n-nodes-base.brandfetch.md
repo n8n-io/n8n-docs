@@ -1,5 +1,4 @@
 ---
-
 title: Brandfetch node documentation
 description: Learn how to use the Brandfetch node in n8n. Follow technical documentation to integrate Brandfetch node into your workflows.
 contentType: [integration, reference]

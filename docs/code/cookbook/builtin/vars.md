@@ -1,5 +1,4 @@
 ---
-
 description: Access your environment's custom variables.
 contentType: reference
 ---

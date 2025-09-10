@@ -1,5 +1,4 @@
 ---
-
 title: Bitwarden node documentation
 description: Learn how to use the Bitwarden node in n8n. Follow technical documentation to integrate Bitwarden node into your workflows.
 contentType: [integration, reference]

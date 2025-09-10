@@ -1,5 +1,4 @@
 ---
-
 title: Google Tasks node documentation
 description: Learn how to use the Google Tasks node in n8n. Follow technical documentation to integrate Google Tasks node into your workflows.
 contentType: [integration, reference]

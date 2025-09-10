@@ -1,5 +1,4 @@
 ---
-
 title: Salesmate node documentation
 description: Learn how to use the Salesmate node in n8n. Follow technical documentation to integrate Salesmate node into your workflows.
 contentType: [integration, reference]

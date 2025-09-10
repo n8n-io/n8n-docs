@@ -1,5 +1,4 @@
 ---
-
 title: n8n Embed Configuration
 description: Learn how to configure your n8n Embed.
 contentType: howto

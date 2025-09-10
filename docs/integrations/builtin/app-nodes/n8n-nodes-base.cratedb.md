@@ -1,5 +1,4 @@
 ---
-
 title: CrateDB node documentation
 description: Learn how to use the CrateDB node in n8n. Follow technical documentation to integrate CrateDB node into your workflows.
 contentType: [integration, reference]

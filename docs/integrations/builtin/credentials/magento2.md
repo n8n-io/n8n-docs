@@ -1,5 +1,4 @@
 ---
-
 title: Magento 2 credentials
 description: Documentation for Magento 2 credentials. Use these credentials to authenticate Magento 2 in n8n, a workflow automation platform.
 contentType: [integration, reference]

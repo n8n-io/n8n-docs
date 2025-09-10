@@ -1,5 +1,4 @@
 ---
-
 title: Iterable credentials
 description: Documentation for Iterable credentials. Use these credentials to authenticate Iterable in n8n, a workflow automation platform.
 contentType: [integration, reference]

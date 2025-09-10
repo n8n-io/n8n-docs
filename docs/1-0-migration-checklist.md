@@ -1,5 +1,4 @@
 ---
-
 title: n8n v1.0 migration guide
 description: What's new in version 1
 contentType: reference

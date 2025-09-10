@@ -1,5 +1,4 @@
 ---
-
 title: OpenAI credentials
 description: Documentation for OpenAI credentials. Use these credentials to authenticate OpenAI in n8n, a workflow automation platform.
 contentType: [integration, reference]

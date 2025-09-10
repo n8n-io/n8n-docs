@@ -1,5 +1,4 @@
 ---
-
 title: Calendly Trigger node documentation
 description: Learn how to use the Calendly Trigger node in n8n. Follow technical documentation to integrate Calendly Trigger node into your workflows.
 contentType: [integration, reference]

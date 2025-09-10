@@ -1,5 +1,4 @@
 ---
-
 title: Milvus credentials
 description: Documentation for the Milvus credentials. Use these credentials to authenticate Milvus in n8n, a workflow automation platform.
 contentType: [integration, reference]

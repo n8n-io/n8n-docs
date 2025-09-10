@@ -1,5 +1,4 @@
 ---
-
 title: IMAP credentials
 description: Documentation for IMAP credentials. Use these credentials to authenticate IMAP in n8n, a workflow automation platform.
 contentType: [integration, reference]

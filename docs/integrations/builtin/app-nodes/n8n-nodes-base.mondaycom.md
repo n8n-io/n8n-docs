@@ -1,5 +1,4 @@
 ---
-
 title: monday.com node documentation
 description: Learn how to use the monday.com node in n8n. Follow technical documentation to integrate monday.com node into your workflows.
 contentType: [integration, reference]

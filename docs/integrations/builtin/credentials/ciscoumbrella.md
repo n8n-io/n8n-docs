@@ -1,5 +1,4 @@
 ---
-
 title: Cisco Umbrella credentials
 description: Documentation for the Cisco Umbrella credentials. Use these credentials to authenticate Cisco Umbrella in n8n, a workflow automation platform.
 contentType: [integration, reference]

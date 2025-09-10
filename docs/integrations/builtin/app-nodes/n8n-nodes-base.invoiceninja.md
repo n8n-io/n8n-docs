@@ -1,5 +1,4 @@
 ---
-
 title: Invoice Ninja node documentation
 description: Learn how to use the Invoice Ninja node in n8n. Follow technical documentation to integrate Invoice Ninja node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Milvus Vector Store node documentation
 description: Learn how to use the Milvus Vector Store node in n8n. Follow technical documentation to integrate Milvus Vector Store node into your workflows.
 contentType: [integration, reference]

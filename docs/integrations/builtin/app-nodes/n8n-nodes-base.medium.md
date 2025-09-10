@@ -1,5 +1,4 @@
 ---
-
 title: Medium node documentation
 description: Learn how to use the Medium node in n8n. Follow technical documentation to integrate Medium node into your workflows.
 contentType: [integration, reference]

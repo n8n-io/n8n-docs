@@ -1,5 +1,4 @@
 ---
-
 title: crowd.dev Trigger node documentation
 description: Learn how to use the crowd.dev Trigger node in n8n. Follow technical documentation to integrate crowd.dev Trigger node into your workflows.
 contentType: [integration, reference]

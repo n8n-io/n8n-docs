@@ -1,5 +1,4 @@
 ---
-
 title: n8n public REST API Documentation and Guides
 description: Access n8n public REST API documentation and guides. Find comprehensive resources to programmatically perform tasks with the public API instead of the GUI.
 contentType: overview

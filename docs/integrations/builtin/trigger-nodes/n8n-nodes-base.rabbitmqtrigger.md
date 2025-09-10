@@ -1,5 +1,4 @@
 ---
-
 title: RabbitMQ Trigger node documentation
 description: Learn how to use the RabbitMQ Trigger node in n8n. Follow technical documentation to integrate RabbitMQ Trigger node into your workflows.
 contentType: [integration, reference]

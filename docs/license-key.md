@@ -1,5 +1,4 @@
 ---
-
 title: License key
 description: How to activate your license key.
 contentType: howto

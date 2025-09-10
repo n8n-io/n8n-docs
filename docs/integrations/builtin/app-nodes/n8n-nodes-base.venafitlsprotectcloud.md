@@ -1,5 +1,4 @@
 ---
-
 title: Venafi TLS Protect Cloud node documentation
 description: Learn how to use the Venafi TLS Protect Cloud node in n8n. Follow technical documentation to integrate Venafi TLS Protect Cloud node into your workflows.
 contentType: [integration, reference]

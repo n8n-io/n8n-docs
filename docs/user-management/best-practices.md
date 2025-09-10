@@ -1,5 +1,4 @@
 ---
-
 description: User management best practices.
 contentType: explanation
 ---

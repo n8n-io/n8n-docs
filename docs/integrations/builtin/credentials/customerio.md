@@ -1,5 +1,4 @@
 ---
-
 title: Customer.io credentials
 description: Documentation for Customer.io credentials. Use these credentials to authenticate Customer.io in n8n, a workflow automation platform.
 contentType: [integration, reference]

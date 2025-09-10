@@ -1,5 +1,4 @@
 ---
-
 title: Set up SSL
 description: "Set up SSL for your self-hosted n8n instance."
 contentType: howto

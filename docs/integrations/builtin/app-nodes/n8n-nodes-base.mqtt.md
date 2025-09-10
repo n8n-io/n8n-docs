@@ -1,5 +1,4 @@
 ---
-
 title: MQTT node documentation
 description: Learn how to use the MQTT node in n8n. Follow technical documentation to integrate MQTT node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: SendGrid node documentation
 description: Learn how to use the SendGrid node in n8n. Follow technical documentation to integrate SendGrid node into your workflows.
 contentType: [integration, reference]

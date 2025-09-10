@@ -1,5 +1,4 @@
 ---
-
 title: Travis CI node documentation
 description: Learn how to use the Travis CI node in n8n. Follow technical documentation to integrate Travis CI node into your workflows.
 contentType: [integration, reference]

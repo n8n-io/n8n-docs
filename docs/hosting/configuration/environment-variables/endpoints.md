@@ -1,5 +1,4 @@
 ---
-
 title: Endpoints environment variables
 description: Customize the application's API and webhook endpoints with environment variables for your self-hosted n8n instance. 
 contentType: reference

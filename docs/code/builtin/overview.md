@@ -1,5 +1,4 @@
 ---
-
 description: n8n's built-in custom methods and variables.
 contentType: overview
 ---

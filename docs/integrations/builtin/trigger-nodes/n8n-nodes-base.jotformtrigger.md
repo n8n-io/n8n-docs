@@ -1,5 +1,4 @@
 ---
-
 title: JotForm Trigger node documentation
 description: Learn how to use the JotForm Trigger node in n8n. Follow technical documentation to integrate JotForm Trigger node into your workflows.
 contentType: [integration, reference]

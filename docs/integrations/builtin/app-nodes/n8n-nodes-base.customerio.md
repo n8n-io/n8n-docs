@@ -1,5 +1,4 @@
 ---
-
 title: Customer.io node documentation
 description: Learn how to use the Customer.io node in n8n. Follow technical documentation to integrate Customer.io node into your workflows.
 contentType: [integration, reference]

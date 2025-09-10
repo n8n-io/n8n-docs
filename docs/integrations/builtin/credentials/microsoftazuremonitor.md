@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft Azure Monitor credentials
 description: Documentation for the Microsoft Azure Monitor credentials. Use these credentials to authenticate Microsoft Azure Monitor in n8n, a workflow automation platform.
 contentType: [integration, reference]

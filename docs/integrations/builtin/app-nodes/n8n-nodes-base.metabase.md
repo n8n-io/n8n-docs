@@ -1,5 +1,4 @@
 ---
-
 title: Metabase node documentation
 description: Learn how to use the Metabase node in n8n. Follow technical documentation to integrate Metabase node into your workflows.
 contentType: [integration, reference]

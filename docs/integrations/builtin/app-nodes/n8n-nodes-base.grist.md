@@ -1,5 +1,4 @@
 ---
-
 title: Grist node documentation
 description: Learn how to use the Grist node in n8n. Follow technical documentation to integrate Grist node into your workflows.
 contentType: [integration, reference]

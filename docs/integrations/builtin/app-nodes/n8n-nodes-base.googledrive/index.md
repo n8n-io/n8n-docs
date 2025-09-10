@@ -1,5 +1,4 @@
 ---
-
 title: Google Drive node documentation
 description: Learn how to use the Google Drive node in n8n. Follow technical documentation to integrate Google Drive node into your workflows.
 contentType: [integration, reference]

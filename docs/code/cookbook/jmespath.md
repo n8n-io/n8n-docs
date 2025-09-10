@@ -1,5 +1,4 @@
 ---
-
 title: Query JSON with JMESPath
 description: n8n supports the JMESPath library, to simplify working with JSON formatted data.
 contentType: howto

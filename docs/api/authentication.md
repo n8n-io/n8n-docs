@@ -1,5 +1,4 @@
 ---
-
 description: Authentication for n8n's public REST API.
 contentType: howto
 ---

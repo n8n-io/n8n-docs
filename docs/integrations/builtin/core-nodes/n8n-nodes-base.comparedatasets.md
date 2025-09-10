@@ -1,5 +1,4 @@
 ---
-
 title: Compare Datasets
 description: Documentation for the Compare Datasets node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

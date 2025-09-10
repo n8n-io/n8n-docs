@@ -1,5 +1,4 @@
 ---
-
 title: Netlify node documentation
 description: Learn how to use the Netlify node in n8n. Follow technical documentation to integrate Netlify node into your workflows.
 contentType: [integration, reference]

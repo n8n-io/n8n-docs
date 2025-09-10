@@ -1,5 +1,4 @@
 ---
-
 title: FTP credentials
 description: Documentation for FTP credentials. Use these credentials to authenticate FTP in n8n, a workflow automation platform.
 contentType: [integration, reference]

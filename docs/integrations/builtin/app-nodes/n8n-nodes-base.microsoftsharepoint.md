@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft SharePoint node documentation
 description: Learn how to use the Microsoft SharePoint node in n8n. Follow technical documentation to integrate Microsoft SharePoint node into your workflows.
 contentType: [integration, reference]

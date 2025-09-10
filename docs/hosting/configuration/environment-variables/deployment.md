@@ -1,5 +1,4 @@
 ---
-
 title: Deployment environment variables
 description: Configure deployment options and application accessibility with environment variables for your self-hosted n8n instance. 
 contentType: reference

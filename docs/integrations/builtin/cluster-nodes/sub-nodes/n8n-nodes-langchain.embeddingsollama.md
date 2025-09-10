@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings Ollama node documentation
 description: Learn how to use the Embeddings Ollama node in n8n. Follow technical documentation to integrate Embeddings Ollama node into your workflows.
 contentType: [integration, reference]

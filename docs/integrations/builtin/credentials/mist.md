@@ -1,5 +1,4 @@
 ---
-
 title: Mist credentials
 description: Documentation for the Mist credentials. Use these credentials to authenticate Mist in n8n, a workflow automation platform.
 contentType: [integration, reference]

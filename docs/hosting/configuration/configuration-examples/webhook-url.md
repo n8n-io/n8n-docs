@@ -1,5 +1,4 @@
 ---
-
 title: Configure webhook URLs with reverse proxy
 description: Customize n8n webhook URLs for compatibility with reverse proxy setups.
 contentType: howto

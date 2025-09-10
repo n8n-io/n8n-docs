@@ -1,5 +1,4 @@
 ---
-
 title: Sentry.io credentials
 description: Documentation for Sentry.io credentials. Use these credentials to authenticate Sentry.io in n8n, a workflow automation platform.
 contentType: [integration, reference]

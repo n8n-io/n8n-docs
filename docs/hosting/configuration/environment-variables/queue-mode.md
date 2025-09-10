@@ -1,5 +1,4 @@
 ---
-
 title: Queue mode environment variables
 description: Environment variables to configure queue mode on your self-hosted n8n instance.
 contentType: reference

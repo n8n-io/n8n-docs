@@ -1,5 +1,4 @@
 ---
-
 title: Azure Cosmos DB credentials
 description: Documentation for the Azure Cosmos DB credentials. Use these credentials to authenticate Azure Cosmos DB in n8n, a workflow automation platform.
 contentType: [integration, reference]

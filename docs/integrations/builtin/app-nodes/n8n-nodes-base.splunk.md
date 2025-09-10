@@ -1,5 +1,4 @@
 ---
-
 title: Splunk node documentation
 description: Learn how to use the Splunk node in n8n. Follow technical documentation to integrate Splunk node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Workflow Trigger node documentation
 description: Learn how to use the Workflow Trigger node in n8n. Follow technical documentation to integrate Workflow Trigger node into your workflows.
 contentType: [integration, reference]

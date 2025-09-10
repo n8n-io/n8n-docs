@@ -1,5 +1,4 @@
 ---
-
 title: HTTP Request node documentation
 description: Learn how to use the HTTP Request node in n8n. Follow technical documentation to integrate HTTP Request node into your workflows.
 contentType: [integration, reference]

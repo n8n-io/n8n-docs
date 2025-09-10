@@ -1,5 +1,4 @@
 ---
-
 title: Onfleet Trigger node documentation
 description: Learn how to use the Onfleet Trigger node in n8n. Follow technical documentation to integrate Onfleet Trigger node into your workflows.
 contentType: [integration, reference]

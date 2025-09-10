@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft OneDrive Trigger node documentation
 description: Learn how to use the Microsoft OneDrive Trigger node in n8n. Follow technical documentation to integrate Microsoft OneDrive Trigger node into your workflows.
 contentType: [integration, reference]

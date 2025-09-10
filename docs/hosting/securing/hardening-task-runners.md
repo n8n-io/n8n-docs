@@ -1,5 +1,4 @@
 ---
-
 title: Hardening task runners
 description: "Harden task runners for better isolation for your self-hosted n8n instance."
 contentType: howto

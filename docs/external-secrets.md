@@ -1,5 +1,4 @@
 ---
-
 title: External secrets
 description: Use an external secrets vault with n8n.
 contentType: howto

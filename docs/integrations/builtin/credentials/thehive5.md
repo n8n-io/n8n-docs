@@ -1,5 +1,4 @@
 ---
-
 title: TheHive 5 credentials
 description: Documentation for TheHive 5 credentials. Use these credentials to authenticate TheHive in n8n, a workflow automation platform.
 contentType: [integration, reference]

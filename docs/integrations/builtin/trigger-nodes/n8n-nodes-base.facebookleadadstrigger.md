@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Lead Ads Trigger node documentation
 description: Learn how to use the Facebook Lead Ads Trigger node in n8n. Follow technical documentation to integrate Facebook Lead Ads Trigger node into your workflows.
 contentType: [integration, reference]

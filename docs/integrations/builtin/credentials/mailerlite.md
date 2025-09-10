@@ -1,5 +1,4 @@
 ---
-
 title: MailerLite credentials
 description: Documentation for MailerLite credentials. Use these credentials to authenticate MailerLite in n8n, a workflow automation platform.
 contentType: [integration, reference]

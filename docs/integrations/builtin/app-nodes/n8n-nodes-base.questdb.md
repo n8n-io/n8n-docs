@@ -1,5 +1,4 @@
 ---
-
 title: QuestDB node documentation
 description: Learn how to use the QuestDB node in n8n. Follow technical documentation to integrate QuestDB node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Bubble node documentation
 description: Learn how to use the Bubble node in n8n. Follow technical documentation to integrate Bubble node into your workflows.
 contentType: [integration, reference]

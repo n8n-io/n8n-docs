@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Lead Ads credentials
 description: Documentation for the Facebook Lead Ads credentials. Use these credentials to authenticate Facebook Lead Ads in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: AWS Certificate Manager node documentation
 description: Learn how to use the AWS Certificate Manager node in n8n. Follow technical documentation to integrate AAWS Certificage Manager node into your workflows.
 contentType: [integration, reference]

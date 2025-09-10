@@ -1,5 +1,4 @@
 ---
-
 title: Dirty nodes
 description: What dirty nodes are and how they affect workflow execution.
 contentType: explanation

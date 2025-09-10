@@ -1,5 +1,4 @@
 ---
-
 description: Get metrics for a health check
 contentType: howto
 ---

@@ -1,5 +1,4 @@
 ---
-
 title: Default Data Loader node documentation
 description: Learn how to use the Default Data Loader node in n8n. Follow technical documentation to integrate Default Data Loader node into your workflows.
 contentType: [integration, reference]

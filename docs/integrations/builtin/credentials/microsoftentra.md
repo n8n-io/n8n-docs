@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft Entra ID credentials
 description: Documentation for the Microsoft Entra ID credentials. Use these credentials to authenticate Microsoft Entra ID in n8n, a workflow automation platform.
 contentType: [integration, reference]

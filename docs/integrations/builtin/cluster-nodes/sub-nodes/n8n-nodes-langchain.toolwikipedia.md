@@ -1,5 +1,4 @@
 ---
-
 title: Wikipedia node documentation
 description: Learn how to use the Wikipedia node in n8n. Follow technical documentation to integrate Wikipedia node into your workflows.
 contentType: [integration, reference]

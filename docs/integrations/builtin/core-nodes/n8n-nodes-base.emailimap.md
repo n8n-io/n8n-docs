@@ -1,5 +1,4 @@
 ---
-
 title: Email Trigger (IMAP) node documentation
 description: Learn how to use the Email Trigger (IMAP) Trigger node in n8n. Follow technical documentation to integrate Email Trigger (IMAP) Trigger node into your workflows.
 contentType: [integration, reference]

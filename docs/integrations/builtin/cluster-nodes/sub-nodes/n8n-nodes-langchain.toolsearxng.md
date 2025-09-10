@@ -1,5 +1,4 @@
 ---
-
 title: SearXNG Tool node documentation
 description: Learn how to use the SearXNG Tool node in n8n. Follow technical documentation to integrate SearXNG Tool node into your workflows.
 contentType: [integration, reference]

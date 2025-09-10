@@ -1,5 +1,4 @@
 ---
-
 title: Freshservice credentials
 description: Documentation for Freshservice credentials. Use these credentials to authenticate Freshservice in n8n, a workflow automation platform.
 contentType: [integration, reference]

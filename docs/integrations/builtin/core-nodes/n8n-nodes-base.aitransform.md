@@ -1,5 +1,4 @@
 ---
-
 title: AI Transform
 description: Documentation for the AI Transform node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

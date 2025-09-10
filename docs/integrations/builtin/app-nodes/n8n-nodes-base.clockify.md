@@ -1,5 +1,4 @@
 ---
-
 title: Clockify node documentation
 description: Learn how to use the Clockify node in n8n. Follow technical documentation to integrate Clockify node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: AWS Cognito node documentation
 description: Learn how to use the AWS Cognito node in n8n. Follow technical documentation to integrate AWS Cognito node into your workflows.
 contentType: [integration, reference]

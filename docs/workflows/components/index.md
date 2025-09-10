@@ -1,5 +1,4 @@
 ---
-
 description: Learn about the building blocks of workflows.
 contentType: overview
 ---

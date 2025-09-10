@@ -1,5 +1,4 @@
 ---
-
 title: Manage users with SAML
 description: How to manage users and user logins with SAML enabled.
 contentType: howto

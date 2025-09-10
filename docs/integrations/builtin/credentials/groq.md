@@ -1,5 +1,4 @@
 ---
-
 title: Groq credentials
 description: Documentation for the Groq credentials. Use these credentials to authenticate Groq in n8n, a workflow automation platform.
 contentType: [integration, reference]

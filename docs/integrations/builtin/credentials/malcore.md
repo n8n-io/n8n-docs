@@ -1,5 +1,4 @@
 ---
-
 title: Malcore credentials
 description: Documentation for the Malcore credentials. Use these credentials to authenticate Malcore in n8n, a workflow automation platform.
 contentType: [integration, reference]

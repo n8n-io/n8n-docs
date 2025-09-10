@@ -1,5 +1,4 @@
 ---
-
 title: Iterable node documentation
 description: Learn how to use the Iterable node in n8n. Follow technical documentation to integrate Iterable node into your workflows.
 contentType: [integration, reference]

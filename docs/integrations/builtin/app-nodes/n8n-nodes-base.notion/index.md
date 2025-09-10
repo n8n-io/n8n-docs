@@ -1,5 +1,4 @@
 ---
-
 title: Notion node documentation
 description: Learn how to use the Notion node in n8n. Follow technical documentation to integrate Notion node into your workflows.
 contentType: [integration, reference]

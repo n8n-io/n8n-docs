@@ -1,5 +1,4 @@
 ---
-
 contentType: explanation
 title: LangChain concepts in n8n
 description: How LangChain concepts map to n8n, and which n8n nodes to use.

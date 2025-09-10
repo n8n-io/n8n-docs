@@ -1,5 +1,4 @@
 ---
-
 title: Shuffler credentials
 description: Documentation for the Shuffler credentials. Use these credentials to authenticate Shuffle in n8n, a workflow automation platform.
 contentType: [integration, reference]

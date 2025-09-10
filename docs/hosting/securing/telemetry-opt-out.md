@@ -1,5 +1,4 @@
 ---
-
 title: Opt out of data collection
 description: "Opt out of data telemetry collection on your n8n instance."
 contentType: howto

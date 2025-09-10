@@ -1,5 +1,4 @@
 ---
-
 title: n8n Form node documentation
 description: Documentation for the n8n Form node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: [integration, reference]

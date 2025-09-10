@@ -1,5 +1,4 @@
 ---
-
 title: Data mocking
 description: Ways to mock data in your n8n workflow.
 contentType: howto

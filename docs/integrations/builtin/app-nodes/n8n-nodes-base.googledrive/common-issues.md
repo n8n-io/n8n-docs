@@ -1,5 +1,4 @@
 ---
-
 title: Google Drive node common issues 
 description: Documentation for common questions and solutions in the Google Drive node in n8n, a workflow automation platform. Includes details of the issue and suggested resolutions.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Zabbix credentials
 description: Documentation for the Zabbix credentials. Use these credentials to authenticate Zabbix in n8n, a workflow automation platform.
 contentType: [integration, reference]

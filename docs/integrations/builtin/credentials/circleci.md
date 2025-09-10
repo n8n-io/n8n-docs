@@ -1,5 +1,4 @@
 ---
-
 title: CircleCI credentials
 description: Documentation for CircleCI credentials. Use these credentials to authenticate CircleCI in n8n, a workflow automation platform.
 contentType: [integration, reference]

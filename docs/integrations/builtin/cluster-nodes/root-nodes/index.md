@@ -1,5 +1,4 @@
 ---
-
 contentType: overview
 title: Root nodes
 description: Understand root nodes in n8n, and browse the root nodes library.

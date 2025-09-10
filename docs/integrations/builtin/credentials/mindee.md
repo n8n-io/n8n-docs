@@ -1,5 +1,4 @@
 ---
-
 title: Mindee credentials
 description: Documentation for Mindee credentials. Use these credentials to authenticate Mindee in n8n, a workflow automation platform.
 contentType: [integration, reference]

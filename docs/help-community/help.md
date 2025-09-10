@@ -1,5 +1,4 @@
 ---
-
 description: How to get help and support with n8n.
 contentType: howto
 ---

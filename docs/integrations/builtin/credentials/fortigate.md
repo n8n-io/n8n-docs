@@ -1,5 +1,4 @@
 ---
-
 title: Fortinet FortiGate credentials
 description: Documentation for the Fortinet FortiGate credentials. Use these credentials to authenticate Fortinet FortiGate in n8n, a workflow automation platform.
 contentType: [integration, reference]

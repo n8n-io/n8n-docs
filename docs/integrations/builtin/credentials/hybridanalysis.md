@@ -1,5 +1,4 @@
 ---
-
 title: Hybrid Analysis credentials
 description: Documentation for the Hybrid Analysis credentials. Use these credentials to authenticate Hybrid Analysis in n8n, a workflow automation platform.
 contentType: [integration, reference]

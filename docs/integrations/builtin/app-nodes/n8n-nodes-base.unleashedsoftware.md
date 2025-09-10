@@ -1,5 +1,4 @@
 ---
-
 title: Unleashed Software node documentation
 description: Learn how to use the Unleashed Software node in n8n. Follow technical documentation to integrate Unleashed Software node into your workflows.
 contentType: [integration, reference]

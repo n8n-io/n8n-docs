@@ -1,5 +1,4 @@
 ---
-
 title: n8n Trigger node documentation
 description: Learn how to use the n8n Trigger node in n8n. Follow technical documentation to integrate n8n Trigger node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Line node documentation
 description: Learn how to use the Line node in n8n. Follow technical documentation to integrate Line node into your workflows.
 contentType: [integration, reference]

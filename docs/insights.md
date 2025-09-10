@@ -1,5 +1,4 @@
 ---
-
 description: Insights
 contentType: explanation
 ---

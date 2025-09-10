@@ -1,5 +1,4 @@
 ---
-
 description: A node is an entry point for retrieving data, a function to process data, or an exit for sending data.
 contentType: howto
 ---

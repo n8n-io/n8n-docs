@@ -1,5 +1,4 @@
 ---
-
 title: Snowflake node documentation
 description: Learn how to use the Snowflake node in n8n. Follow technical documentation to integrate Snowflake node into your workflows.
 contentType: [integration, reference]

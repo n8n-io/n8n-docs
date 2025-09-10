@@ -1,5 +1,4 @@
 ---
-
 title: Workflow history
 description: View and restore previous versions of your workflow.
 contentType: howto

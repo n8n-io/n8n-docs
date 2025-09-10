@@ -1,5 +1,4 @@
 ---
-
 title: Eventbrite Trigger node documentation
 description: Learn how to use the Eventbrite Trigger node in n8n. Follow technical documentation to integrate Eventbrite Trigger node into your workflows.
 contentType: [integration, reference]

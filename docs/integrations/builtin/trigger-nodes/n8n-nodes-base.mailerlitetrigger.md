@@ -1,5 +1,4 @@
 ---
-
 title: MailerLite Trigger node documentation
 description: Learn how to use the MailerLite Trigger node in n8n. Follow technical documentation to integrate MailerLite Trigger node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Peekalink credentials
 description: Documentation for Peekalink credentials. Use these credentials to authenticate Peekalink in n8n, a workflow automation platform.
 contentType: [integration, reference]

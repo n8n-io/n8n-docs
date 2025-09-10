@@ -1,5 +1,4 @@
 ---
-
 title: Branch patterns
 description: Understand the different relationships between n8n instances and Git branches that are possible with source control.
 contentType: explanation

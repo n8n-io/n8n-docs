@@ -1,5 +1,4 @@
 ---
-
 title: Odoo credentials
 description: Documentation for Odoo credentials. Use these credentials to authenticate Odoo in n8n, a workflow automation platform.
 contentType: [integration, reference]

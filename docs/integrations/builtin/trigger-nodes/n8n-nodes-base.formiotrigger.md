@@ -1,5 +1,4 @@
 ---
-
 title: Form.io Trigger node documentation
 description: Learn how to use the Form.io Trigger node in n8n. Follow technical documentation to integrate Form.io Trigger node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Copper node documentation
 description: Learn how to use the Copper node in n8n. Follow technical documentation to integrate Copper node into your workflows.
 contentType: [integration, reference]

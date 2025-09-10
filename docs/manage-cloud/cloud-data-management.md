@@ -1,5 +1,4 @@
 ---
-
 description: How to manage your data on Cloud.
 contentType: howto
 ---

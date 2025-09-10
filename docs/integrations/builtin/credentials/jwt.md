@@ -1,5 +1,4 @@
 ---
-
 title: JWT credentials
 description: Documentation for the JWT credentials. Use these credentials to authenticate JWT in n8n, a workflow automation platform.
 contentType: [integration, reference]

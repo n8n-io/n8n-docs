@@ -1,5 +1,4 @@
 ---
-
 title: Twake credentials
 description: Documentation for Twake credentials. Use these credentials to authenticate Twake in n8n, a workflow automation platform.
 contentType: [integration, reference]

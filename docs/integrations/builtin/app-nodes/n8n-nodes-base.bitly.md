@@ -1,5 +1,4 @@
 ---
-
 title: Bitly node documentation
 description: Learn how to use the Bitly node in n8n. Follow technical documentation to integrate Bitly node into your workflows.
 contentType: [integration, reference]

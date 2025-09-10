@@ -1,5 +1,4 @@
 ---
-
 title: Stackby node documentation
 description: Learn how to use the Stackby node in n8n. Follow technical documentation to integrate Stackby node into your workflows.
 contentType: [integration, reference]

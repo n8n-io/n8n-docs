@@ -1,5 +1,4 @@
 ---
-
 title: DeepL credentials
 description: Documentation for DeepL credentials. Use these credentials to authenticate DeepL in n8n, a workflow automation platform.
 contentType: [integration, reference]

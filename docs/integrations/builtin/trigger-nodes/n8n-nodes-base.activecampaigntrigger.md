@@ -1,5 +1,4 @@
 ---
-
 title: ActiveCampaign Trigger node documentation
 description: Learn how to use the ActiveCampaign Trigger node in n8n. Follow technical documentation to integrate ActiveCampaign Trigger node into your workflows.
 contentType: [integration, reference]

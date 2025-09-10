@@ -1,5 +1,4 @@
 ---
-
 title: AI coding
 description: Use GPT to generate code in the Code node.
 contentType: explanation

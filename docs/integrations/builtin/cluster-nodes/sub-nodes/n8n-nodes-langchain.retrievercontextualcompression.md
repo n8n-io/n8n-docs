@@ -1,5 +1,4 @@
 ---
-
 title: Contextual Compression Retriever node documentation
 description: Learn how to use the Contextual Compression Retriever node in n8n. Follow technical documentation to integrate Contextual Compression Retriever node into your workflows.
 contentType: [integration, reference]

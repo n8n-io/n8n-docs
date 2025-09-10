@@ -1,5 +1,4 @@
 ---
-
 title: Zep node documentation
 description: Learn how to use the Zep node in n8n. Follow technical documentation to integrate Zep node into your workflows.
 contentType: [integration, reference]

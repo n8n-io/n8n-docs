@@ -1,5 +1,4 @@
 ---
-
 title: Trellix ePO credentials
 description: Documentation for the Trellix ePO credentials. Use these credentials to authenticate Trellix ePO in n8n, a workflow automation platform.
 contentType: [integration, reference]

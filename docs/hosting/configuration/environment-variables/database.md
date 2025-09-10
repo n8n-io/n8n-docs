@@ -1,5 +1,4 @@
 ---
-
 title: Database environment variables
 description: Set up and configure databases with environment variables for your self-hosted n8n instance.
 contentType: reference

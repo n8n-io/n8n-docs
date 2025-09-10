@@ -1,5 +1,4 @@
 ---
-
 title: Text Classifier node documentation
 description: Learn how to use the Text Classifier node in n8n. Follow technical documentation to integrate Text Classifier node into your workflows.
 contentType: [integration, reference]

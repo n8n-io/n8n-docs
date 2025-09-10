@@ -1,5 +1,4 @@
 ---
-
 title: GoToWebinar credentials
 description: Documentation for GoToWebinar credentials. Use these credentials to authenticate GoToWebinar in n8n, a workflow automation platform.
 contentType: [integration, reference]

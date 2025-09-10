@@ -1,5 +1,4 @@
 ---
-
 title: Flow node documentation
 description: Learn how to use the Flow node in n8n. Follow technical documentation to integrate Flow node into your workflows.
 contentType: [integration, reference]

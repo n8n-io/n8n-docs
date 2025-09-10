@@ -1,5 +1,4 @@
 ---
-
 title: Grafana node documentation
 description: Learn how to use the Grafana node in n8n. Follow technical documentation to integrate Grafana node into your workflows.
 contentType: [integration, reference]

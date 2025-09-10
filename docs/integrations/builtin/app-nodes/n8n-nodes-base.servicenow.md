@@ -1,5 +1,4 @@
 ---
-
 title: ServiceNow node documentation
 description: Learn how to use the ServiceNow node in n8n. Follow technical documentation to integrate ServiceNow node into your workflows.
 contentType: [integration, reference]

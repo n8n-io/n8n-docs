@@ -1,5 +1,4 @@
 ---
-
 title: Salesforce node documentation
 description: Learn how to use the Salesforce node in n8n. Follow technical documentation to integrate Salesforce node into your workflows.
 contentType: [integration, reference]

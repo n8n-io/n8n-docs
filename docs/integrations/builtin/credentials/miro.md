@@ -1,5 +1,4 @@
 ---
-
 title: Miro credentials
 description: Documentation for the Miro credentials. Use these credentials to authenticate Miro in n8n, a workflow automation platform.
 contentType: [integration, reference]

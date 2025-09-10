@@ -2,7 +2,6 @@ Please include frontmatter indicating a tutorial with a relevant description, fo
 
 ```
 ---
-
 description: Learn how to build AI workflows with n8n
 type: tutorial
 ---

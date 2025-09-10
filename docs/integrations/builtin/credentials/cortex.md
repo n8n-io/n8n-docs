@@ -1,5 +1,4 @@
 ---
-
 title: Cortex credentials
 description: Documentation for the Cortex credentials. Use these credentials to authenticate Cortex in n8n, a workflow automation platform.
 contentType: [integration, reference]

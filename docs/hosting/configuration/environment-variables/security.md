@@ -1,5 +1,4 @@
 ---
-
 title: Security environment variables
 description: Configure authentication and environment variable access in self-hosted n8n instance.
 contentType: reference

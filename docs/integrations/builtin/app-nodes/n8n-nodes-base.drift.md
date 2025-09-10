@@ -1,5 +1,4 @@
 ---
-
 title: Drift node documentation
 description: Learn how to use the Drift node in n8n. Follow technical documentation to integrate Drift node into your workflows.
 contentType: [integration, reference]

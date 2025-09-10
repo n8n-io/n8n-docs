@@ -1,5 +1,4 @@
 ---
-
 title: Webflow node documentation
 description: Learn how to use the Webflow node in n8n. Follow technical documentation to integrate Webflow node into your workflows.
 contentType: [integration, reference]

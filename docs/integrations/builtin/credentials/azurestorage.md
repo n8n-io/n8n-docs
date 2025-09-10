@@ -1,5 +1,4 @@
 ---
-
 title: Azure Storage credentials
 description: Documentation for the Azure Storage credentials. Use these credentials to authenticate Azure Storage in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Community edition features
 description: Differences in available features between the Community edition and other paid plans.
 contentType: explanation

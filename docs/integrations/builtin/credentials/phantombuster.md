@@ -1,5 +1,4 @@
 ---
-
 title: PhantomBuster credentials
 description: Documentation for PhantomBuster credentials. Use these credentials to authenticate PhantomBuster in n8n, a workflow automation platform.
 contentType: [integration, reference]

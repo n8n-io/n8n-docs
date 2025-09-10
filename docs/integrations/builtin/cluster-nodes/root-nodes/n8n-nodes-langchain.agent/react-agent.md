@@ -1,5 +1,4 @@
 ---
-
 title: ReAct AI Agent node documentation
 description: Learn how to use the ReAct Agent of the AI Agent node in n8n. Follow technical documentation to integrate the ReAct Agent into your workflows.
 contentType: [integration, reference]

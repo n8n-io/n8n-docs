@@ -1,5 +1,4 @@
 ---
-
 title: PGVector Vector Store node documentation
 description: Learn how to use the PGVector Vector Store node in n8n. Follow technical documentation to integrate PGVector Vector Store node into your workflows.
 priority: medium

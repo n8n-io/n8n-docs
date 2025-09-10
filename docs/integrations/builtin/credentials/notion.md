@@ -1,5 +1,4 @@
 ---
-
 title: Notion credentials
 description: Documentation for Notion credentials. Use these credentials to authenticate Notion in n8n, a workflow automation platform.
 contentType: [integration, reference]

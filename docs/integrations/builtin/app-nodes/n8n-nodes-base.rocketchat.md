@@ -1,5 +1,4 @@
 ---
-
 title: Rocket.Chat node documentation
 description: Learn how to use the Rocket.Chat node in n8n. Follow technical documentation to integrate Rocket.Chat node into your workflows.
 contentType: [integration, reference]

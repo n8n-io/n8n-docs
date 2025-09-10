@@ -1,5 +1,4 @@
 ---
-
 title: Emelia Trigger node documentation
 description: Learn how to use the Emelia Trigger node in n8n. Follow technical documentation to integrate Emelia Trigger node into your workflows.
 contentType: [integration, reference]

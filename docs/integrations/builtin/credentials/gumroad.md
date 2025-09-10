@@ -1,5 +1,4 @@
 ---
-
 title: Gumroad credentials
 description: Documentation for Gumroad credentials. Use these credentials to authenticate Gumroad in n8n, a workflow automation platform.
 contentType: [integration, reference]

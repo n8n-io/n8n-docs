@@ -1,5 +1,4 @@
 ---
-
 title: Data transformation functions for numbers
 description: A reference document listing built-in convenience functions to support data transformation in expressions for numbers.
 contentType: reference

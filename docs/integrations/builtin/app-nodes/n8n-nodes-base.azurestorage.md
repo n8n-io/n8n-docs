@@ -1,5 +1,4 @@
 ---
-
 title: Azure Storage node documentation
 description: Learn how to use the Azure Storage node in n8n. Follow technical documentation to integrate Azure Storage node into your workflows.
 contentType: [integration, reference]

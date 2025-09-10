@@ -1,5 +1,4 @@
 ---
-
 title: Figma Trigger (Beta) node documentation
 description: Learn how to use the Figma Trigger node in n8n. Follow technical documentation to integrate Figma Trigger node into your workflows.
 contentType: [integration, reference]

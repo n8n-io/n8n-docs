@@ -1,5 +1,4 @@
 ---
-
 title: Postmark credentials
 description: Documentation for Postmark credentials. Use these credentials to authenticate Postmark in n8n, a workflow automation platform.
 contentType: [integration, reference]

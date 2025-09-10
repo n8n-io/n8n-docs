@@ -1,5 +1,4 @@
 ---
-
 title: GetResponse credentials
 description: Documentation for GetResponse credentials. Use these credentials to authenticate GetResponse in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Cisco Secure Endpoint credentials
 description: Documentation for the Cisco Secure Endpoint credentials. Use these credentials to authenticate Cisco Secure Endpoint in n8n, a workflow automation platform.
 contentType: [integration, reference]

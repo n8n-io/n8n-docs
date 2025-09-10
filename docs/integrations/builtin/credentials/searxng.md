@@ -1,5 +1,4 @@
 ---
-
 title: SearXNG credentials
 description: Documentation for the SearXNG credentials. Use these credentials to authenticate SearXNG in n8n, a workflow automation platform.
 contentType: [integration, reference]

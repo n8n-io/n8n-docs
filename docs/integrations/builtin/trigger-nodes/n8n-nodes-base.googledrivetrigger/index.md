@@ -1,5 +1,4 @@
 ---
-
 title: Google Drive Trigger node documentation
 description: Learn how to use the Google Drive Trigger node in n8n. Follow technical documentation to integrate Google Drive Trigger node into your workflows.
 contentType: [integration, reference]

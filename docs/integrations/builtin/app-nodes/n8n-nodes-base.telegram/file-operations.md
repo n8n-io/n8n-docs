@@ -1,5 +1,4 @@
 ---
-
 title: Telegram node File operations documentation
 description: Documentation for the File operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all File operations.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Chargebee credentials
 description: Documentation for Chargebee credentials. Use these credentials to authenticate Chargebee in n8n, a workflow automation platform.
 contentType: [integration, reference]

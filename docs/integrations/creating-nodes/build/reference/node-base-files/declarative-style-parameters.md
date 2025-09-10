@@ -1,5 +1,4 @@
 ---
-
 title: Declarative-style parameters
 description: A reference document listing the declarative-style parameters of the node base file.
 contentType: reference

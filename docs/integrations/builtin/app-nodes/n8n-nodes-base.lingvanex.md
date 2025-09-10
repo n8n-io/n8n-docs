@@ -1,5 +1,4 @@
 ---
-
 title: LingvaNex node documentation
 description: Learn how to use the LingvaNex node in n8n. Follow technical documentation to integrate LingvaNex node into your workflows.
 contentType: [integration, reference]

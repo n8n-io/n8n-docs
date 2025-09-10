@@ -1,5 +1,4 @@
 ---
-
 title: Manual, partial, and production executions
 description: How manual, partial, and automatic workflow executions differ.
 contentType: explanation

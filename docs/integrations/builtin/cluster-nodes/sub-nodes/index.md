@@ -1,5 +1,4 @@
 ---
-
 contentType: overview
 title: Sub-nodes
 description: Understand sub-nodes in n8n, and browse the sub-nodes library.

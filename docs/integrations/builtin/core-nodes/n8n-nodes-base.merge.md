@@ -1,5 +1,4 @@
 ---
-
 title: Merge
 description: Documentation for the Merge node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

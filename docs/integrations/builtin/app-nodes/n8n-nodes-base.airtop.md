@@ -1,5 +1,4 @@
 ---
-
 title: Airtop node documentation
 description: Learn how to use the Airtop node in n8n. Follow technical documentation to integrate Airtop node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Let AI specify tool parameters
 description: Understand how n8n's `$fromAI()` function works and how to use it to dynamically populate parameters for AI app tools, or use the built-in automation to complete them instead.
 contentType: explanation

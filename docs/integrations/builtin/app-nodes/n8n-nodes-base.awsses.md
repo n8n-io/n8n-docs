@@ -1,5 +1,4 @@
 ---
-
 title: AWS SES node documentation
 description: Learn how to use the AWS SES node in n8n. Follow technical documentation to integrate AWS SES node into your workflows.
 contentType: [integration, reference]

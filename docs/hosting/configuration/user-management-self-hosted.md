@@ -1,5 +1,4 @@
 ---
-
 description: Configure self-hosted n8n for user management
 contentType: howto
 ---

@@ -1,5 +1,4 @@
 ---
-
 title: Configure n8n to use your own certificate authority
 description: Customize the n8n container to work with self signed certificates when connecting to services.
 contentType: howto

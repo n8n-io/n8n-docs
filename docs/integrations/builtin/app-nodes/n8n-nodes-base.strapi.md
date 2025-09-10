@@ -1,5 +1,4 @@
 ---
-
 title: Strapi node documentation
 description: Learn how to use the Strapi node in n8n. Follow technical documentation to integrate Strapi node into your workflows.
 contentType: [integration, reference]

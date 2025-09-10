@@ -1,5 +1,4 @@
 ---
-
 title: Mautic node documentation
 description: Learn how to use the Mautic node in n8n. Follow technical documentation to integrate Mautic node into your workflows.
 contentType: [integration, reference]

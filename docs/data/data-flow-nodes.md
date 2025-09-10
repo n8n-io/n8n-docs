@@ -1,5 +1,4 @@
 ---
-
 title: Data flow within nodes
 description: How nodes process data items.
 contentType: explanation

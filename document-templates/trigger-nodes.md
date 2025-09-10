@@ -17,7 +17,6 @@ Set the meta title and meta description in the frontmatter
 -->
 
 ---
-
 title: _Name_ Trigger node documentation
 description: Learn how to use the _Name_ Trigger node in n8n. Follow technical documentation to integrate _Name_ Trigger node into your workflows.
 contentType: [integration, reference]

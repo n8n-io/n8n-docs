@@ -1,5 +1,4 @@
 ---
-
 title: Perplexity credentials
 description: Documentation for the Perplexity credentials. Use these credentials to authenticate Perplexity in n8n, a workflow automation platform.
 contentType: [integration, reference]

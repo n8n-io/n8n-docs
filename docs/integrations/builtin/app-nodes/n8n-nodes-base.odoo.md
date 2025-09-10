@@ -1,5 +1,4 @@
 ---
-
 title: Odoo node documentation
 description: Learn how to use the Odoo node in n8n. Follow technical documentation to integrate Odoo node into your workflows.
 contentType: [integration, reference]

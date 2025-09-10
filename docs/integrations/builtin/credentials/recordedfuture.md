@@ -1,5 +1,4 @@
 ---
-
 title: Recorded Future credentials
 description: Documentation for the Recorded Future credentials. Use these credentials to authenticate Recorded Future in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: X (formerly Twitter) credentials
 description: Documentation for X credentials. Use these credentials to authenticate X in n8n, a workflow automation platform.
 contentType: [integration, reference]

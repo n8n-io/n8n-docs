@@ -1,5 +1,4 @@
 ---
-
 title: Sustainable Use License
 description: The n8n Sustainable Use License.
 contentType: explanation

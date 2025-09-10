@@ -1,5 +1,4 @@
 ---
-
 title: ConvertKit node documentation
 description: Learn how to use the ConvertKit node in n8n. Follow technical documentation to integrate ConvertKit node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 description: Stream events from n8n to your logging tools.
 contentType: howto
 ---

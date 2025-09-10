@@ -1,5 +1,4 @@
 ---
-
 title: DHL node documentation
 description: Learn how to use the DHL node in n8n. Follow technical documentation to integrate DHL node into your workflows.
 contentType: [integration, reference]

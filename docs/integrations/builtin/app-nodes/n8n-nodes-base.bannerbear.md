@@ -1,5 +1,4 @@
 ---
-
 title: Bannerbear node documentation
 description: Learn how to use the Bannerbear node in n8n. Follow technical documentation to integrate Bannerbear node into your workflows.
 contentType: [integration, reference]

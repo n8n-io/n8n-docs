@@ -1,5 +1,4 @@
 ---
-
 title: HubSpot Trigger node documentation
 description: Learn how to use the HubSpot Trigger node in n8n. Follow technical documentation to integrate HubSpot Trigger node into your workflows.
 contentType: [integration, reference]

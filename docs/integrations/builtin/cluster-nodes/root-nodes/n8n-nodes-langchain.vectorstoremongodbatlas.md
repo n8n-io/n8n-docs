@@ -1,5 +1,4 @@
 ---
-
 title: MongoDB Atlas Vector Store node documentation
 description: Learn how to use the MongoDB Atlas Vector Store node in n8n. Follow technical documentation to integrate MongoDB Atlas Vector Store node into your workflows.
 contentType: [integration, reference]

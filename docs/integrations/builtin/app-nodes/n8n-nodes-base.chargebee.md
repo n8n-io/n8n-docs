@@ -1,5 +1,4 @@
 ---
-
 title: Chargebee node documentation
 description: Learn how to use the Chargebee node in n8n. Follow technical documentation to integrate Chargebee node into your workflows.
 contentType: [integration, reference]

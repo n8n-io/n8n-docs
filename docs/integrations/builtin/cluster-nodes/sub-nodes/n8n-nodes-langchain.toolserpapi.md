@@ -1,5 +1,4 @@
 ---
-
 title: SerpApi (Google Search) node documentation
 description: Learn how to use the SerpApi (Google Search) node in n8n. Follow technical documentation to integrate SerpApi (Google Search) node into your workflows.
 contentType: [integration, reference]

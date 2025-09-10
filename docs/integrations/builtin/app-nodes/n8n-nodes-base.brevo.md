@@ -1,5 +1,4 @@
 ---
-
 title: Brevo node documentation
 description: Learn how to use the Brevo node in n8n. Follow technical documentation to integrate Brevo node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 description: A method for working with the JMESPath library in n8n.
 contentType: reference
 hide:

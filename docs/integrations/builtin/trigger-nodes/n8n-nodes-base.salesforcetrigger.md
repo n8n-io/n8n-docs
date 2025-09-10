@@ -1,5 +1,4 @@
 ---
-
 title: Salesforce Trigger node documentation
 description: Learn how to use the Salesforce Trigger node in n8n. Follow technical documentation to integrate Salesforce Trigger node into your workflows.
 contentType: [integration, reference]

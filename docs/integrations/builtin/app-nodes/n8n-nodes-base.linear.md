@@ -1,5 +1,4 @@
 ---
-
 title: Linear node documentation
 description: Learn how to use the Linear node in n8n. Follow technical documentation to integrate Linear node into your workflows.
 contentType: [integration, reference]

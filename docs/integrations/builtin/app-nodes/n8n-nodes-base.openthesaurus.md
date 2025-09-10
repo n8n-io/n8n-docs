@@ -1,5 +1,4 @@
 ---
-
 title: OpenThesaurus node documentation
 description: Learn how to use the OpenThesaurus node in n8n. Follow technical documentation to integrate OpenThesaurus node into your workflows.
 contentType: [integration, reference]

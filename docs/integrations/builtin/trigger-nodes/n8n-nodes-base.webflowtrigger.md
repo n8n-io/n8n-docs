@@ -1,5 +1,4 @@
 ---
-
 title: Webflow Trigger node documentation
 description: Learn how to use the Webflow Trigger node in n8n. Follow technical documentation to integrate Webflow Trigger node into your workflows.
 contentType: [integration, reference]

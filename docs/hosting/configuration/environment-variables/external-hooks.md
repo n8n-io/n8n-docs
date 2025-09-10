@@ -1,5 +1,4 @@
 ---
-
 title: External hooks environment variables
 description: Environment variables to integrate external hooks into your self-hosted n8n instance. 
 contentType: reference

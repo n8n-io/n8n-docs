@@ -1,5 +1,4 @@
 ---
-
 title: Storyblok credentials
 description: Documentation for Storyblok credentials. Use these credentials to authenticate Storyblok in n8n, a workflow automation platform.
 contentType: [integration, reference]

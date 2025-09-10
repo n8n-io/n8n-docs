@@ -1,5 +1,4 @@
 ---
-
 title: Rocket.Chat credentials
 description: Documentation for Rocket.Chat credentials. Use these credentials to authenticate Rocket.Chat in n8n, a workflow automation platform.
 contentType: [integration, reference]

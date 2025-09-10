@@ -1,5 +1,4 @@
 ---
-
 title: MailerLite node documentation
 description: Learn how to use the MailerLite node in n8n. Follow technical documentation to integrate MailerLite node into your workflows.
 contentType: [integration, reference]

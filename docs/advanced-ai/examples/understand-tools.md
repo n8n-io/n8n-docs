@@ -1,5 +1,4 @@
 ---
-
 title: What's a tool in AI?
 description: Understand tools in the context of AI. Learn what's special about tools in n8n.
 contentType: explanation

@@ -1,5 +1,4 @@
 ---
-
 title: marketstack node documentation
 description: Learn how to use the marketstack node in n8n. Follow technical documentation to integrate marketstack node into your workflows.
 contentType: [integration, reference]

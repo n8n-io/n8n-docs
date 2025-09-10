@@ -1,5 +1,4 @@
 ---
-
 title: Supabase node documentation
 description: Learn how to use the Supabase node in n8n. Follow technical documentation to integrate Supabase node into your workflows.
 contentType: [integration, reference]

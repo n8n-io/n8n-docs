@@ -1,5 +1,4 @@
 ---
-
 title: Google Perspective node documentation
 description: Learn how to use the Google Perspective node in n8n. Follow technical documentation to integrate Google Perspective node into your workflows.
 contentType: [integration, reference]

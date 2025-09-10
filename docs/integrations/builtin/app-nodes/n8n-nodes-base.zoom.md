@@ -1,5 +1,4 @@
 ---
-
 title: Zoom node documentation
 description: Learn how to use the Zoom node in n8n. Follow technical documentation to integrate Zoom node into your workflows.
 contentType: [integration, reference]

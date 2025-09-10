@@ -1,5 +1,4 @@
 ---
-
 title: urlscan.io credentials
 description: Documentation for urlscan.io credentials. Use these credentials to authenticate urlscan.io in n8n, a workflow automation platform.
 contentType: [integration, reference]

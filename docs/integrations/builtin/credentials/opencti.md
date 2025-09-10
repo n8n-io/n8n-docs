@@ -1,5 +1,4 @@
 ---
-
 title: OpenCTI credentials
 description: Documentation for the OpenCTI credentials. Use these credentials to authenticate OpenCTI in n8n, a workflow automation platform.
 contentType: [integration, reference]

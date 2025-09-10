@@ -1,5 +1,4 @@
 ---
-
 title: Cloud free trial
 description: Explanation on how the n8n Cloud trial works and the features included
 contentType: Overview

@@ -1,5 +1,4 @@
 ---
-
 title: Monica CRM node documentation
 description: Learn how to use the Monica CRM node in n8n. Follow technical documentation to integrate Monica CRM node into your workflows.
 contentType: [integration, reference]

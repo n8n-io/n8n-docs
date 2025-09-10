@@ -1,5 +1,4 @@
 ---
-
 title: Set a custom encryption key
 description: Set a custom encryption key for n8n to securely encrypt credentials.
 contentType: howto

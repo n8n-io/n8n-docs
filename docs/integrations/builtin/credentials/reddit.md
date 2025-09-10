@@ -1,5 +1,4 @@
 ---
-
 title: Reddit credentials
 description: Documentation for Reddit credentials. Use these credentials to authenticate Reddit in n8n, a workflow automation platform.
 contentType: [integration, reference]

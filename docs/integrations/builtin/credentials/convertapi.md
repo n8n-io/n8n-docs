@@ -1,5 +1,4 @@
 ---
-
 title: ConvertAPI credentials
 description: Documentation for the ConvertAPI credentials. Use these credentials to authenticate ConvertAPI in n8n, a workflow automation platform.
 contentType: [integration, reference]

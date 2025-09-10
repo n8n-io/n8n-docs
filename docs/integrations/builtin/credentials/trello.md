@@ -1,5 +1,4 @@
 ---
-
 title: Trello credentials
 description: Documentation for Trello credentials. Use these credentials to authenticate Trello in n8n, a workflow automation platform.
 contentType: [integration, reference]

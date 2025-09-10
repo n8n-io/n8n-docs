@@ -1,5 +1,4 @@
 ---
-
 title: Groq Chat Model node documentation
 description: Learn how to use the Groq Chat Model node in n8n. Follow technical documentation to integrate Groq Chat Model node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Mailchimp Trigger node documentation
 description: Learn how to use the Mailchimp Trigger node in n8n. Follow technical documentation to integrate Mailchimp Trigger node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Convert to File
 description: Documentation for the Convert to File node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

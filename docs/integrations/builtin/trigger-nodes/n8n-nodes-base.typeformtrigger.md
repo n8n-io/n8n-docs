@@ -1,5 +1,4 @@
 ---
-
 title: Typeform Trigger node documentation
 description: Learn how to use the Typeform Trigger node in n8n. Follow technical documentation to integrate Typeform Trigger node into your workflows.
 contentType: [integration, reference]

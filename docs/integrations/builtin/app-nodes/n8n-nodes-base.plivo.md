@@ -1,5 +1,4 @@
 ---
-
 title: Plivo node documentation
 description: Learn how to use the Plivo node in n8n. Follow technical documentation to integrate Plivo node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft Graph Security node documentation
 description: Learn how to use the Microsoft Graph Security node in n8n. Follow technical documentation to integrate Microsoft Graph Security node into your workflows.
 contentType: [integration, reference]

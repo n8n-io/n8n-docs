@@ -1,5 +1,4 @@
 ---
-
 title: Zendesk node documentation
 description: Learn how to use the Zendesk node in n8n. Follow technical documentation to integrate Zendesk node into your workflows.
 contentType: [integration, reference]

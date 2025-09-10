@@ -1,5 +1,4 @@
 ---
-
 title: Copper credentials
 description: Documentation for Copper credentials. Use these credentials to authenticate Copper in n8n, a workflow automation platform.
 contentType: [integration, reference]

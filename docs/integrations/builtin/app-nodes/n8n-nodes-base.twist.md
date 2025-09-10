@@ -1,5 +1,4 @@
 ---
-
 title: Twist node documentation
 description: Learn how to use the Twist node in n8n. Follow technical documentation to integrate Twist node into your workflows.
 contentType: [integration, reference]

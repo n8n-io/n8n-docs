@@ -1,5 +1,4 @@
 ---
-
 title: Google Cloud Realtime Database node documentation
 description: Learn how to use the Google Cloud Realtime Database node in n8n. Follow technical documentation to integrate Google Cloud Realtime Database node into your workflows.
 contentType: [integration, reference]

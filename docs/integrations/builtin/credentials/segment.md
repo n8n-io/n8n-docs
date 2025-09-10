@@ -1,5 +1,4 @@
 ---
-
 title: Segment credentials
 description: Documentation for Segment credentials. Use these credentials to authenticate Segment in n8n, a workflow automation platform.
 contentType: [integration, reference]

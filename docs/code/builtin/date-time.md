@@ -1,5 +1,4 @@
 ---
-
 description: Methods for working with date and time.
 contentType: reference
 hide:

@@ -1,5 +1,4 @@
 ---
-
 title: Question and Answer Chain node common issues
 description: Documentation for common issues and questions in the Question and Answer Chain node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]

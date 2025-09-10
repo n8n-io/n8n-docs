@@ -1,5 +1,4 @@
 ---
-
 title: Ollama Model node documentation
 description: Learn how to use the Ollama Model node in n8n. Follow technical documentation to integrate Ollama Model node into your workflows.
 contentType: [integration, reference]

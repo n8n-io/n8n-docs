@@ -1,5 +1,4 @@
 ---
-
 title: VirusTotal credentials
 description: Documentation for the VirusTotal credentials. Use these credentials to authenticate VirusTotal in n8n, a workflow automation platform.
 contentType: [integration, reference]

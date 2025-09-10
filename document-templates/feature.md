@@ -19,7 +19,6 @@ The title here sets the title used in the browser window or tab, or when sharing
 -->
 
 ---
-
 title: _Feature_
 description: Documentation for common issues and questions in the _Name_ node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: explanation

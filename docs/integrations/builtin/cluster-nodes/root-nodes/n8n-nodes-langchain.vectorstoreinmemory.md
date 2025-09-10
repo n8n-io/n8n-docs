@@ -1,5 +1,4 @@
 ---
-
 title: Simple Vector Store node documentation
 description: Learn how to use the Simple Vector Store node in n8n. Follow technical documentation to integrate Simple Vector Store node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Insights environment variables
 description: Configure insights metrics collection with environment variables for your self-hosted n8n instance. 
 contentType: reference

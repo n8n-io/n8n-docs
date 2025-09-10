@@ -1,5 +1,4 @@
 ---
-
 title: Schema preview
 description: 
 contentType: overview

@@ -1,5 +1,4 @@
 ---
-
 contentType: overview
 title: Advanced AI examples and concepts
 description: Example workflows and use cases for building AI functionality using n8n.

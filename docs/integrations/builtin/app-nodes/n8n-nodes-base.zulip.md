@@ -1,5 +1,4 @@
 ---
-
 title: Zulip node documentation
 description: Learn how to use the Zulip node in n8n. Follow technical documentation to integrate Zulip node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Structure of the node base file
 description: A reference document detailing the basic structure of the node base file.
 contentType: reference

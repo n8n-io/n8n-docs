@@ -1,5 +1,4 @@
 ---
-
 title: PhantomBuster node documentation
 description: Learn how to use the PhantomBuster node in n8n. Follow technical documentation to integrate PhantomBuster node into your workflows.
 contentType: [integration, reference]

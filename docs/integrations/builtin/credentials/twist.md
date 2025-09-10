@@ -1,5 +1,4 @@
 ---
-
 title: Twist credentials
 description: Documentation for Twist credentials. Use these credentials to authenticate Twist in n8n, a workflow automation platform.
 contentType: [integration, reference]

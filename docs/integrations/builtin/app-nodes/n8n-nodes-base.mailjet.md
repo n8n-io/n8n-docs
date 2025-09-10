@@ -1,5 +1,4 @@
 ---
-
 title: Mailjet node documentation
 description: Learn how to use the Mailjet node in n8n. Follow technical documentation to integrate Mailjet node into your workflows.
 contentType: [integration, reference]

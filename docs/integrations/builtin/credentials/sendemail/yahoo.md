@@ -1,5 +1,4 @@
 ---
-
 title: Yahoo
 description: Documentation for Yahoo Send Email credentials. Use these credentials to authenticate Send Email with Yahoo in n8n, a workflow automation platform.
 contentType: [integration, reference]

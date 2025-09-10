@@ -1,5 +1,4 @@
 ---
-
 title: uProc node documentation
 description: Learn how to use the uProc node in n8n. Follow technical documentation to integrate uProc node into your workflows.
 contentType: [integration, reference]

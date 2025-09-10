@@ -1,5 +1,4 @@
 ---
-
 title: Mattermost node documentation
 description: Learn how to use the Mattermost node in n8n. Follow technical documentation to integrate Mattermost node into your workflows.
 contentType: [integration, reference]

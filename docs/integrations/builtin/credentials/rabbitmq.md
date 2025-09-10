@@ -1,5 +1,4 @@
 ---
-
 title: RabbitMQ credentials
 description: Documentation for RabbitMQ credentials. Use these credentials to authenticate RabbitMQ in n8n, a workflow automation platform.
 contentType: [integration, reference]

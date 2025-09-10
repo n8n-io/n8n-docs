@@ -1,5 +1,4 @@
 ---
-
 title: LinkedIn credentials
 description: Documentation for LinkedIn credentials. Use these credentials to authenticate LinkedIn in n8n, a workflow automation platform.
 contentType: [integration, reference]

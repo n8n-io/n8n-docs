@@ -1,5 +1,4 @@
 ---
-
 title: Self-hosted AI Starter Kit
 description: Use n8n's curated self-hosted AI Starter Kit to get a list of AI elements to quickly start building AI workflows.
 contentType: howto

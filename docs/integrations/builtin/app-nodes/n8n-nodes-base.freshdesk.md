@@ -1,5 +1,4 @@
 ---
-
 title: Freshdesk node documentation
 description: Learn how to use the Freshdesk node in n8n. Follow technical documentation to integrate Freshdesk node into your workflows.
 contentType: [integration, reference]

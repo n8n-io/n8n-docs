@@ -1,5 +1,4 @@
 ---
-
 title: Simple Memory node common issues 
 description: Documentation for common issues and questions in the Simple Memory node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: AWS Bedrock Chat Model node documentation
 description: Learn how to use the AWS Bedrock Chat Model node in n8n. Follow technical documentation to integrate AWS Bedrock Chat Model node into your workflows.
 contentType: [integration, reference]

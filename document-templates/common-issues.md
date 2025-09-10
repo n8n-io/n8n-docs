@@ -18,7 +18,6 @@ Set the meta title and meta description in the frontmatter
 -->
 
 ---
-
 title: _Name_ node common issues 
 description: Documentation for common issues and questions in the _Name_ node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]

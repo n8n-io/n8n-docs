@@ -1,5 +1,4 @@
 ---
-
 title: Simple Memory node documentation
 description: Learn how to use the Simple Memory node in n8n. Follow technical documentation to integrate Simple Memory node into your workflows.
 contentType: [integration, reference]

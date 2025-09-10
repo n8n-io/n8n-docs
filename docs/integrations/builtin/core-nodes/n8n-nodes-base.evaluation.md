@@ -1,5 +1,4 @@
 ---
-
 title: Evaluation node documentation
 description: Documentation for the Evaluation node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: [integration, reference]

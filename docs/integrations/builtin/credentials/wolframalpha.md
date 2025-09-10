@@ -1,5 +1,4 @@
 ---
-
 title: Wolfram|Alpha credentials
 description: Documentation for the Wolfram|Alpha credentials. Use these credentials to authenticate Wolfram|Alpha in n8n, a workflow automation platform.
 contentType: [integration, reference]

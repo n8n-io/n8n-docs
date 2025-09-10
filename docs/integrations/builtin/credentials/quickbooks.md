@@ -1,5 +1,4 @@
 ---
-
 title: QuickBooks credentials
 description: Documentation for QuickBooks credentials. Use these credentials to authenticate QuickBooks in n8n, a workflow automation platform.
 contentType: [integration, reference]

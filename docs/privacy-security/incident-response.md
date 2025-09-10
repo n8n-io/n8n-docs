@@ -1,5 +1,4 @@
 ---
-
 title: Incident response
 description: n8n's incident response procedures.
 contentType: explanation

@@ -1,5 +1,4 @@
 ---
-
 title: Gmail node Thread Operations documentation
 description: Learn how to use the Thread Operations of the Gmail node in n8n. Follow technical documentation to integrate Thread Operations into your workflows.
 contentType: [integration, reference]

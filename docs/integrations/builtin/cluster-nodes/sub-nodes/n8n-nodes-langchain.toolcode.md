@@ -1,5 +1,4 @@
 ---
-
 title: Custom Code Tool node documentation
 description: Learn how to use the Custom Code Tool node in n8n. Follow technical documentation to integrate Custom Code Tool node into your workflows.
 contentType: [integration, reference]

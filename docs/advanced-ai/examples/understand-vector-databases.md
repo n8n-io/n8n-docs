@@ -1,5 +1,4 @@
 ---
-
 title: What are vector databases?
 description: Understand vector databases. Learn how n8n provides vector databases, along with the key components to work with them, including embeddings, retrievers, and document loaders.
 contentType: explanation

@@ -1,5 +1,4 @@
 ---
-
 title: Timezone and localization environment variables
 description: Set the timezone and default language locale for self-hosted n8n instance.
 contentType: reference

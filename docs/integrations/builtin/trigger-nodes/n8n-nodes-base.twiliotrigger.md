@@ -1,5 +1,4 @@
 ---
-
 title: Twilio Trigger node documentation
 description: Learn how to use the Twilio Trigger node in n8n. Follow technical documentation to integrate Twilio Trigger node into your workflows.
 contentType: [integration, reference]

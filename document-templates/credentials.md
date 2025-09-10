@@ -17,7 +17,6 @@ Set the meta title and meta description in the frontmatter
 -->
 
 ---
-
 title: _Name_ credentials
 description: Documentation for the _Name_ credentials. Use these credentials to authenticate _Name_ in n8n, a workflow automation platform.
 contentType: [integration, reference]

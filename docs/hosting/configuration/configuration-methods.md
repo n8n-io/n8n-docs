@@ -1,5 +1,4 @@
 ---
-
 title: Configuration methods
 description: How to set environment variables for n8n.
 contentType: howto

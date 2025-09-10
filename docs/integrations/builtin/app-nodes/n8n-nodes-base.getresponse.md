@@ -1,5 +1,4 @@
 ---
-
 title: GetResponse node documentation
 description: Learn how to use the GetResponse node in n8n. Follow technical documentation to integrate GetResponse node into your workflows.
 contentType: [integration, reference]

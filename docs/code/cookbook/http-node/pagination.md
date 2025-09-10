@@ -1,5 +1,4 @@
 ---
-
 description: Pagination examples for the HTTP Request node.
 contentType: howto
 ---

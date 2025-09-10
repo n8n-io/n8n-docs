@@ -1,5 +1,4 @@
 ---
-
 title: Elastic Security node documentation
 description: Learn how to use the Elastic Security node in n8n. Follow technical documentation to integrate Elastic Security node into your workflows.
 contentType: [integration, reference]

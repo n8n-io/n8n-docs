@@ -1,5 +1,4 @@
 ---
-
 title: Sendy node documentation
 description: Learn how to use the Sendy node in n8n. Follow technical documentation to integrate Sendy node into your workflows.
 contentType: [integration, reference]

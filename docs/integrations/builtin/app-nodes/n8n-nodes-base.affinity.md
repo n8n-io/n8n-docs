@@ -1,5 +1,4 @@
 ---
-
 title: Affinity node documentation
 description: Learn how to use the Affinity node in n8n. Follow technical documentation to integrate Affinity node into your workflows.
 contentType: [integration, reference]

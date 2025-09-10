@@ -1,5 +1,4 @@
 ---
-
 title: AWS S3 node documentation
 description: Learn how to use the AWS S3 node in n8n. Follow technical documentation to integrate AWS S3 node into your workflows.
 contentType: [integration, reference]

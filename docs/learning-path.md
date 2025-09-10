@@ -1,5 +1,4 @@
 ---
-
 description: A suggested learning path to get started with n8n through tutorials, courses, and step-by-step guides.
 contentType: overview
 ---

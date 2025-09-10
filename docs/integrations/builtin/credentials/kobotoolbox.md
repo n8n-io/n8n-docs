@@ -1,5 +1,4 @@
 ---
-
 title: KoboToolbox credentials
 description: Documentation for KoboToolbox credentials. Use these credentials to authenticate KoboToolbox in n8n, a workflow automation platform.
 contentType: [integration, reference]

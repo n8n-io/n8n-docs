@@ -1,5 +1,4 @@
 ---
-
 title: Gmail node Message Operations documentation
 description: Learn how to use the Message Operations of the Gmail node in n8n. Follow technical documentation to integrate Message Operations into your workflows.
 contentType: [integration, reference]

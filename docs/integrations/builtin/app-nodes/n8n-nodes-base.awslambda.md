@@ -1,5 +1,4 @@
 ---
-
 title: AWS Lambda node documentation
 description: Learn how to use the AWS Lambda node in n8n. Follow technical documentation to integrate AWS Lambda node into your workflows.
 contentType: [integration, reference]

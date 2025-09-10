@@ -1,5 +1,4 @@
 ---
-
 title: SQL AI Agent node documentation
 description: Learn how to use the SQL Agent of the AI Agent node in n8n. Follow technical documentation to integrate the SQL Agent into your workflows.
 contentType: [integration, reference]

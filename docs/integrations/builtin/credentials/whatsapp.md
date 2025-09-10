@@ -1,5 +1,4 @@
 ---
-
 title: WhatsApp Business Cloud credentials
 description: Documentation for WhatsApp Business Cloud credentials. Use these credentials to authenticate WhatsApp Business Cloud in n8n, a workflow automation platform.
 contentType: [integration, reference]

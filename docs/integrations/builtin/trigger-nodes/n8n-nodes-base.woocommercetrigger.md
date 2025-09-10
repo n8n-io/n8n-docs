@@ -1,5 +1,4 @@
 ---
-
 title: WooCommerce Trigger node documentation
 description: Learn how to use the WooCommerce Trigger node in n8n. Follow technical documentation to integrate WooCommerce Trigger node into your workflows.
 contentType: [integration, reference]

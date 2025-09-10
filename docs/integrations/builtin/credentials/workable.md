@@ -1,5 +1,4 @@
 ---
-
 title: Workable credentials
 description: Documentation for Workable credentials. Use these credentials to authenticate Workable in n8n, a workflow automation platform.
 contentType: [integration, reference]

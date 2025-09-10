@@ -1,5 +1,4 @@
 ---
-
 title: Box node documentation
 description: Learn how to use the Box node in n8n. Follow technical documentation to integrate Box node into your workflows.
 contentType: [integration, reference]

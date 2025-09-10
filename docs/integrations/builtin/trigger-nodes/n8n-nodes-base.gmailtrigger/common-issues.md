@@ -1,5 +1,4 @@
 ---
-
 title: Gmail Trigger node common issues
 description: Documentation for common issues and questions in the Gmail Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: NASA node documentation
 description: Learn how to use the NASA node in n8n. Follow technical documentation to integrate NASA node into your workflows.
 contentType: [integration, reference]

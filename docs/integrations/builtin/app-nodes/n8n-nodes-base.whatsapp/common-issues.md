@@ -1,5 +1,4 @@
 ---
-
 title: WhatsApp Business Cloud node common issues
 description: Documentation for common issues and questions in the WhatsApp Business Cloud node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]

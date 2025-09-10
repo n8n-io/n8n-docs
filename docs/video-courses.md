@@ -1,5 +1,4 @@
 ---
-
 title: Video courses
 description: Links to n8n's video courses on YouTube.
 contentType: overview

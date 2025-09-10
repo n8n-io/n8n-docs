@@ -1,5 +1,4 @@
 ---
-
 title: Vonage credentials
 description: Documentation for Vonage credentials. Use these credentials to authenticate Vonage in n8n, a workflow automation platform.
 contentType: [integration, reference]

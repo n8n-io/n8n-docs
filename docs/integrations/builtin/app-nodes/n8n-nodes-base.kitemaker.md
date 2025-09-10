@@ -1,5 +1,4 @@
 ---
-
 title: Kitemaker node documentation
 description: Learn how to use the Kitemaker node in n8n. Follow technical documentation to integrate Kitemaker node into your workflows.
 contentType: [integration, reference]

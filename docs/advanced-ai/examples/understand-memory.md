@@ -1,5 +1,4 @@
 ---
-
 title: What's memory in AI?
 description: Understand memory in the context of AI. Learn what's special about memory in n8n.
 contentType: explanation

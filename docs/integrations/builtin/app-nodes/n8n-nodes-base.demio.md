@@ -1,5 +1,4 @@
 ---
-
 title: Demio node documentation
 description: Learn how to use the Demio node in n8n. Follow technical documentation to integrate Demio node into your workflows.
 contentType: [integration, reference]

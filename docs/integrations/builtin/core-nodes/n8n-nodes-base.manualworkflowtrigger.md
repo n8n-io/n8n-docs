@@ -1,5 +1,4 @@
 ---
-
 title: Manual Trigger node documentation
 description: Learn how to use the Manual Trigger node in n8n. Follow technical documentation to integrate Manual Trigger node into your workflows.
 contentType: [integration, reference]

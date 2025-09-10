@@ -1,5 +1,4 @@
 ---
-
 description: Create your first workflow in n8n and learn some key concepts.
 contentType: tutorial
 ---

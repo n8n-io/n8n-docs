@@ -1,5 +1,4 @@
 ---
-
 title: Contentful node documentation
 description: Learn how to use the Contentful node in n8n. Follow technical documentation to integrate Contentful node into your workflows.
 contentType: [integration, reference]

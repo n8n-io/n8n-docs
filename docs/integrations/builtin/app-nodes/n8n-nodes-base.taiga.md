@@ -1,5 +1,4 @@
 ---
-
 title: Taiga node documentation
 description: Learn how to use the Taiga node in n8n. Follow technical documentation to integrate Taiga node into your workflows.
 contentType: [integration, reference]

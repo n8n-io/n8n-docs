@@ -1,5 +1,4 @@
 ---
-
 title: Mistral Cloud credentials
 description: Documentation for the Mistral Cloud credentials. Use these credentials to authenticate Mistral Cloud in n8n, a workflow automation platform.
 contentType: [integration, reference]

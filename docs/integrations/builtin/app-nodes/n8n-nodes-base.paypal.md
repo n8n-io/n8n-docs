@@ -1,5 +1,4 @@
 ---
-
 title: PayPal node documentation
 description: Learn how to use the PayPal node in n8n. Follow technical documentation to integrate PayPal node into your workflows.
 contentType: [integration, reference]

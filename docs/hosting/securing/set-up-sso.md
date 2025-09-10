@@ -1,5 +1,4 @@
 ---
-
 title: Set up Single Sign-On (SSO)
 description: "Set up SAML or OIDC Single Sign-On for your self-hosted n8n instance."
 contentType: howto

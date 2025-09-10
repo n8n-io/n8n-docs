@@ -1,5 +1,4 @@
 ---
-
 title: License environment variables
 description: Environment variables to configure license settings in n8n, including options to hide the usage page, manage license activation and auto-renewal settings, and specify the server URL for license retrieval.
 contentType: reference

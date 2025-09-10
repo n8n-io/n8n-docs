@@ -1,5 +1,4 @@
 ---
-
 description: n8n's privacy policies
 tags:
   - gdpr

@@ -1,5 +1,4 @@
 ---
-
 title: If
 description: Documentation for the If node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

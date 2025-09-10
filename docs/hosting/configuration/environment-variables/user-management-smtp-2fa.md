@@ -1,5 +1,4 @@
 ---
-
 title: User management SMTP, and two-factor authentication environment variables
 description: Environment variables to set up user management and emails.
 contentType: reference

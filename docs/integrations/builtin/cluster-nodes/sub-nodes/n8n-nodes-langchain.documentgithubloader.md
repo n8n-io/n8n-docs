@@ -1,5 +1,4 @@
 ---
-
 title: GitHub Document Loader node documentation
 description: Learn how to use the GitHub Document Loader node in n8n. Follow technical documentation to integrate GitHub Document Loader node into your workflows.
 contentType: [integration, reference]

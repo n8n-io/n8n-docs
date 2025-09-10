@@ -1,5 +1,4 @@
 ---
-
 title: Disable the public REST API
 description: "Disable the n8n public REST API to prevent others from using it."
 contentType: howto

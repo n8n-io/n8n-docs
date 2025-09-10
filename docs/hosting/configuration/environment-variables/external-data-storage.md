@@ -1,5 +1,4 @@
 ---
-
 title: External data storage environment variables
 description: Environment variables to configure external data storage for your self-hosted n8n instance. 
 contentType: reference

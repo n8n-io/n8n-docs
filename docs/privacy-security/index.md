@@ -1,5 +1,4 @@
 ---
-
 title: n8n Privacy and security
 description: Learn about privacy and security at n8n. Explore how n8n handles and secures your data, with an overview of key policies and procedures.
 contentType: overview

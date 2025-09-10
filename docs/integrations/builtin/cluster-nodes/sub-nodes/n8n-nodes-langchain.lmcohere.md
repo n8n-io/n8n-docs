@@ -1,5 +1,4 @@
 ---
-
 title: Cohere Model node documentation
 description: Learn how to use the Cohere Model node in n8n. Follow technical documentation to integrate Cohere Model node into your workflows.
 contentType: [integration, reference]

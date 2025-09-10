@@ -1,5 +1,4 @@
 ---
-
 title: Configure the Base URL for n8n's front end access
 description: Configure the Base URL environment variable to define the front end's access path to the back end's REST API for n8n.
 contentType: howto

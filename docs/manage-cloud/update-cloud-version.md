@@ -1,5 +1,4 @@
 ---
-
 description: How to update your n8n version on Cloud.
 contentType: howto
 ---

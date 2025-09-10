@@ -1,5 +1,4 @@
 ---
-
 title: Workflows environment variables
 description: Environment variables to configure workflows in n8n, including default naming, onboarding flow preferences, tag management, and caller policy settings.
 contentType: reference

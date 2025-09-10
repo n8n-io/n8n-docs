@@ -1,5 +1,4 @@
 ---
-
 title: SSE Trigger node documentation
 description: Learn how to use the SSE Trigger node in n8n. Follow technical documentation to integrate SSE Trigger node into your workflows.
 contentType: [integration, reference]

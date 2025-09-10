@@ -1,5 +1,4 @@
 ---
-
 title: Google Ads node documentation
 description: Learn how to use the Google Ads node in n8n. Follow technical documentation to integrate Google Ads node into your workflows.
 contentType: [integration, reference]

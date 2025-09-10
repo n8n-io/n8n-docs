@@ -1,5 +1,4 @@
 ---
-
 title: Workflow Retriever node documentation
 description: Learn how to use the Workflow Retriever node in n8n. Follow technical documentation to integrate Workflow Retriever node into your workflows.
 contentType: [integration, reference]

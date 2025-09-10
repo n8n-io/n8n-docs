@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings HuggingFace Inference node documentation
 description: Learn how to use the Embeddings HuggingFace Inference node in n8n. Follow technical documentation to integrate Embeddings HuggingFace Inference node into your workflows.
 contentType: [integration, reference]

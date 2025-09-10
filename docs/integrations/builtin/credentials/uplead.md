@@ -1,5 +1,4 @@
 ---
-
 title: UpLead credentials
 description: Documentation for UpLead credentials. Use these credentials to authenticate UpLead in n8n, a workflow automation platform.
 contentType: [integration, reference]

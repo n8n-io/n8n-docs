@@ -1,5 +1,4 @@
 ---
-
 title: Pushcut node documentation
 description: Learn how to use the Pushcut node in n8n. Follow technical documentation to integrate Pushcut node into your workflows.
 contentType: [integration, reference]

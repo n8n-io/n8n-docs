@@ -1,5 +1,4 @@
 ---
-
 description: Creating and editing credentials.
 contentType: howto
 ---

@@ -1,5 +1,4 @@
 ---
-
 title: Webex by Cisco Trigger node documentation
 description: Learn how to use the Webex by Cisco Trigger node in n8n. Follow technical documentation to integrate Webex by Cisco Trigger node into your workflows.
 contentType: [integration, reference]

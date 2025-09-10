@@ -1,5 +1,4 @@
 ---
-
 title: TimescaleDB credentials
 description: Documentation for TimescaleDB credentials. Use these credentials to authenticate TimescaleDB in n8n, a workflow automation platform.
 contentType: [integration, reference]

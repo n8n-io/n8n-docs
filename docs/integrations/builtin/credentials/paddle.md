@@ -1,5 +1,4 @@
 ---
-
 title: Paddle credentials
 description: Documentation for Paddle credentials. Use these credentials to authenticate Paddle in n8n, a workflow automation platform.
 contentType: [integration, reference]

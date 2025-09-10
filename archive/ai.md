@@ -1,5 +1,4 @@
 ---
-
 title: AI environment variables
 description: Manage AI features in your n8n instance.
 contentType: reference

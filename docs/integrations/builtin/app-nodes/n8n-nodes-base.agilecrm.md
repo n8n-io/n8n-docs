@@ -1,5 +1,4 @@
 ---
-
 title: Agile CRM node documentation
 description: Learn how to use the Agile CRM node in n8n. Follow technical documentation to integrate Agile CRM node into your workflows.
 contentType: [integration, reference]

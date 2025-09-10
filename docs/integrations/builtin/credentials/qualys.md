@@ -1,5 +1,4 @@
 ---
-
 title: Qualys credentials
 description: Documentation for the Qualys credentials. Use these credentials to authenticate Qualys in n8n, a workflow automation platform.
 contentType: [integration, reference]

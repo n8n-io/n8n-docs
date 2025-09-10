@@ -1,5 +1,4 @@
 ---
-
 title: Pinecone credentials
 description: Documentation for the Pinecone credentials. Use these credentials to authenticate Pinecone in n8n, a workflow automation platform.
 contentType: [integration, reference]

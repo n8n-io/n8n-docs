@@ -1,5 +1,4 @@
 ---
-
 title: Action Network credentials
 description: Documentation for Action Network credentials. Use these credentials to authenticate Action Network in n8n, a workflow automation platform.
 contentType: [integration, reference]

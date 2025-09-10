@@ -1,5 +1,4 @@
 ---
-
 title: Model Selector
 description: Learn how to use the Model Selector node in n8n. Follow technical documentation to integrate Model Selector node into your workflows.
 contentType: [integration, reference]

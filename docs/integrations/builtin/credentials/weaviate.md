@@ -1,5 +1,4 @@
 ---
-
 title: Weaviate credentials
 description: Documentation for Weaviate credentials. Use these credentials to authenticate Weaviate in n8n, a workflow automation platform.
 contentType: [integration, reference]

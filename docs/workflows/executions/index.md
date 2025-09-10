@@ -1,5 +1,4 @@
 ---
-
 description: An execution is a single run of a workflow.
 contentType: overview
 ---

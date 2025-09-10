@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Trigger Instagram object documentation
 description: Learn how to use the Instagram object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Instagram object into your workflows.
 contentType: [integration, reference]

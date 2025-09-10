@@ -1,5 +1,4 @@
 ---
-
 title: HighLevel node documentation
 description: Learn how to use the HighLevel node in n8n. Follow technical documentation to integrate HighLevel node into your workflows.
 contentType: [integration, reference]

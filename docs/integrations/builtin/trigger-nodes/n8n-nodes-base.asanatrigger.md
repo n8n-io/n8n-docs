@@ -1,5 +1,4 @@
 ---
-
 title: Asana Trigger node documentation
 description: Learn how to use the Asana Trigger node in n8n. Follow technical documentation to integrate Asana Trigger node into your workflows.
 contentType: [integration, reference]

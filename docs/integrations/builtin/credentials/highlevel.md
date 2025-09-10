@@ -1,5 +1,4 @@
 ---
-
 title: HighLevel credentials
 description: Documentation for HighLevel credentials. Use these credentials to authenticate HighLevel in n8n, a workflow automation platform.
 contentType: [integration, reference]

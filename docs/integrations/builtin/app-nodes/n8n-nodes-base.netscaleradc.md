@@ -1,5 +1,4 @@
 ---
-
 title: Netscaler ADC node documentation
 description: Learn how to use the Netscaler ADC node in n8n. Follow technical documentation to integrate Netscaler ADC node into your workflows.
 contentType: [integration, reference]

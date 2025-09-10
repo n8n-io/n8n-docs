@@ -1,5 +1,4 @@
 ---
-
 title: Adalo node documentation
 description: Learn how to use the Adalo node in n8n. Follow technical documentation to integrate Adalo node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: CoinGecko node documentation
 description: Learn how to use the CoinGecko node in n8n. Follow technical documentation to integrate CoinGecko node into your workflows.
 contentType: [integration, reference]

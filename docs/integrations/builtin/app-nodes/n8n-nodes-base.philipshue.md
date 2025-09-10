@@ -1,5 +1,4 @@
 ---
-
 title: Philips Hue node documentation
 description: Learn how to use the Philips Hue node in n8n. Follow technical documentation to integrate Philips Hue node into your workflows.
 contentType: [integration, reference]

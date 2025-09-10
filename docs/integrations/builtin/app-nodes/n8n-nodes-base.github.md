@@ -1,5 +1,4 @@
 ---
-
 title: GitHub node documentation
 description: Learn how to use the GitHub node in n8n. Follow technical documentation to integrate GitHub node into your workflows.
 contentType: [integration, reference]

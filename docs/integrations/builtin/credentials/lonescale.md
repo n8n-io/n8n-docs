@@ -1,5 +1,4 @@
 ---
-
 title: LoneScale credentials
 description: Documentation for LoneScale credentials. Use these credentials to authenticate LoneScale in n8n, a workflow automation platform.
 contentType: [integration, reference]

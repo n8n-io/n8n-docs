@@ -1,5 +1,4 @@
 ---
-
 title: Postgres Chat Memory node documentation
 description: Learn how to use the Postgres Chat Memory node in n8n. Follow technical documentation to integrate Postgres Chat Memory node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: MCP Server Trigger node documentation
 description: Learn how to use the MCP Server Trigger node in n8n. Follow technical documentation to integrate the MCP Server Trigger node into your workflows.
 contentType: [integration, reference]

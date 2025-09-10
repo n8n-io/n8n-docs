@@ -1,5 +1,4 @@
 ---
-
 title: Webex by Cisco node documentation
 description: Learn how to use the Webex by Cisco node in n8n. Follow technical documentation to integrate Webex by Cisco node into your workflows.
 contentType: [integration, reference]

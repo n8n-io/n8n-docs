@@ -1,5 +1,4 @@
 ---
-
 title: What's an agent in AI?
 description: Understand agents in the context of AI. Learn how n8n provides agents.
 contentType: explanation

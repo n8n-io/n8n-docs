@@ -1,5 +1,4 @@
 ---
-
 title: Postmark Trigger node documentation
 description: Learn how to use the Postmark Trigger node in n8n. Follow technical documentation to integrate Postmark Trigger node into your workflows.
 contentType: [integration, reference]

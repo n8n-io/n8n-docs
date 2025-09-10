@@ -1,5 +1,4 @@
 ---
-
 title: Pushbullet node documentation
 description: Learn how to use the Pushbullet node in n8n. Follow technical documentation to integrate Pushbullet node into your workflows.
 contentType: [integration, reference]

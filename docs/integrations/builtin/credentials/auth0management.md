@@ -1,5 +1,4 @@
 ---
-
 title: Auth0 Management credentials
 description: Documentation for the Auth0 Management credentials. Use these credentials to authenticate Auth0 Management in n8n, a workflow automation platform.
 contentType: [integration, reference]

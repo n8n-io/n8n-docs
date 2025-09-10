@@ -1,5 +1,4 @@
 ---
-
 title: Credentials environment variables
 description: Manage default credentials and override them through environment variables your self-hosted n8n instance.
 contentType: reference

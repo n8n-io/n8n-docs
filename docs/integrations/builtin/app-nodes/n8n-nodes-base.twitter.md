@@ -1,5 +1,4 @@
 ---
-
 title: X (Formerly Twitter) node documentation
 description: Learn how to use the X (Formerly Twitter) node in n8n. Follow technical documentation to integrate X (Formerly Twitter) node into your workflows.
 contentType: [integration, reference]

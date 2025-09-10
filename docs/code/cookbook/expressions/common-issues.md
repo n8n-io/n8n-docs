@@ -1,5 +1,4 @@
 ---
-
 title: Expressions common issues
 description: Documentation for common issues and questions related to expressions in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: howto

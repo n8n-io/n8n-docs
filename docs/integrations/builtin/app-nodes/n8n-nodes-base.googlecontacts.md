@@ -1,5 +1,4 @@
 ---
-
 title: Google Contacts node documentation
 description: Learn how to use the Google Contacts node in n8n. Follow technical documentation to integrate Google Contacts node into your workflows.
 contentType: [integration, reference]

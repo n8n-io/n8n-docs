@@ -1,5 +1,4 @@
 ---
-
 title: E-goi node documentation
 description: Learn how to use the E=goi node in n8n. Follow technical documentation to integrate E=goi node into your workflows.
 contentType: [integration, reference]

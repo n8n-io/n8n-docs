@@ -1,5 +1,4 @@
 ---
-
 title: Streaming responses
 description: Build a workflow with streaming responses
 contentType: howto

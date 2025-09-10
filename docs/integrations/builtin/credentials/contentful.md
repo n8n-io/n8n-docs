@@ -1,5 +1,4 @@
 ---
-
 title: Contentful credentials
 description: Documentation for Contentful credentials. Use these credentials to authenticate Contentful in n8n, a workflow automation platform.
 contentType: [integration, reference]

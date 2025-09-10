@@ -1,5 +1,4 @@
 ---
-
 title: Loop Over Items (Split in Batches)
 description: Documentation for the Loop Over Items node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]

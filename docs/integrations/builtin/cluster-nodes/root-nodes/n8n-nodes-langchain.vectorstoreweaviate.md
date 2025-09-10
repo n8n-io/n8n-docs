@@ -1,5 +1,4 @@
 ---
-
 title: Weaviate Vector Store node documentation
 description: Learn how to use the Weaviate Vector Store node in n8n. Follow technical documentation to integrate Weaviate Vector Store node into your workflows.
 contentType: [integration, reference]

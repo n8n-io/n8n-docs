@@ -1,5 +1,4 @@
 ---
-
 title: Kibana credentials
 description: Documentation for the Kibana credentials. Use these credentials to authenticate Kibana in n8n, a workflow automation platform.
 contentType: [integration, reference]

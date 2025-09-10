@@ -1,5 +1,4 @@
 ---
-
 title: Cisco Meraki credentials
 description: Documentation for the Cisco Meraki credentials. Use these credentials to authenticate Cisco Meraki in n8n, a workflow automation platform.
 contentType: [integration, reference]

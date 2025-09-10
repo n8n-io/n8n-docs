@@ -1,5 +1,4 @@
 ---
-
 title: Sentiment Analysis node documentation
 description: Learn how to use the Sentiment Analysis node in n8n. Follow technical documentation to integrate Sentiment Analysis node into your workflows.
 contentType: [integration, reference]

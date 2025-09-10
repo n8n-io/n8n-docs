@@ -1,5 +1,4 @@
 ---
-
 title: Segment node documentation
 description: Learn how to use the Segment node in n8n. Follow technical documentation to integrate Segment node into your workflows.
 contentType: [integration, reference]

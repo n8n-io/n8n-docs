@@ -1,5 +1,4 @@
 ---
-
 title: uProc credentials
 description: Documentation for uProc credentials. Use these credentials to authenticate uProc in n8n, a workflow automation platform.
 contentType: [integration, reference]

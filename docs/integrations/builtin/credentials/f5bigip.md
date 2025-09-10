@@ -1,5 +1,4 @@
 ---
-
 title: F5 Big-IP credentials
 description: Documentation for the F5 Big-IP credentials. Use these credentials to authenticate F5 Big-IP in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Gmail node Draft Operations documentation
 description: Learn how to use the Draft Operations of the Gmail node in n8n. Follow technical documentation to integrate Draft Operations into your workflows.
 contentType: [integration, reference]

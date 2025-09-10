@@ -1,5 +1,4 @@
 ---
-
 title: Mailgun node documentation
 description: Learn how to use the Mailgun node in n8n. Follow technical documentation to integrate Mailgun node into your workflows.
 contentType: [integration, reference]

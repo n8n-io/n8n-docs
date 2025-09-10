@@ -1,5 +1,4 @@
 ---
-
 title: Dropbox node documentation
 description: Learn how to use the Dropbox node in n8n. Follow technical documentation to integrate Dropbox node into your workflows.
 contentType: [integration, reference]

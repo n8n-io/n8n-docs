@@ -1,5 +1,4 @@
 ---
-
 title: Trello node documentation
 description: Learn how to use the Trello node in n8n. Follow technical documentation to integrate Trello node into your workflows.
 contentType: [integration, reference]

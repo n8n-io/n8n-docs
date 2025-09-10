@@ -1,5 +1,4 @@
 ---
-
 title: Sysdig credentials
 description: Documentation for the Sysdig credentials. Use these credentials to authenticate Sysdig in n8n, a workflow automation platform.
 contentType: [integration, reference]

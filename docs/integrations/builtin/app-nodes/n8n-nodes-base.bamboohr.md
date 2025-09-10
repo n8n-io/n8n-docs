@@ -1,5 +1,4 @@
 ---
-
 title: BambooHR node documentation
 description: Learn how to use the BambooHR node in n8n. Follow technical documentation to integrate BambooHR node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: GoToWebinar node documentation
 description: Learn how to use the GoToWebinar node in n8n. Follow technical documentation to integrate GoToWebinar node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Twake node documentation
 description: Learn how to use the Twake node in n8n. Follow technical documentation to integrate Twake node into your workflows.
 contentType: [integration, reference]

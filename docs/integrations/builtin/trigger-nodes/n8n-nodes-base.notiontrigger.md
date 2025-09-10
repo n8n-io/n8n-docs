@@ -1,5 +1,4 @@
 ---
-
 title: Notion Trigger node documentation
 description: Learn how to use the Notion Trigger node in n8n. Follow technical documentation to integrate Notion Trigger node into your workflows.
 contentType: [integration, reference]

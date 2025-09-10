@@ -1,5 +1,4 @@
 ---
-
 title: Handling API rate limits
 contentType: howto
 description: How to handle API rate limits when using n8n integrations.

@@ -1,5 +1,4 @@
 ---
-
 title: Stripe node documentation
 description: Learn how to use the Stripe node in n8n. Follow technical documentation to integrate Stripe node into your workflows.
 contentType: [integration, reference]

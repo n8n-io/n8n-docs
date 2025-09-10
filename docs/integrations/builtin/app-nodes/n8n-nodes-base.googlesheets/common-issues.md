@@ -1,5 +1,4 @@
 ---
-
 title: Google Sheets node common issues 
 description: Documentation for common questions and solutions in the Google Sheets node in n8n, a workflow automation platform. Includes details of the issue and suggested resolutions.
 contentType: [integration, reference]

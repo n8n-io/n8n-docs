@@ -1,5 +1,4 @@
 ---
-
 title: Jenkins node documentation
 description: Learn how to use the Jenkins node in n8n. Follow technical documentation to integrate Jenkins node into your workflows.
 contentType: [integration, reference]

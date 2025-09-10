@@ -1,5 +1,4 @@
 ---
-
 title: Credential sharing
 description: Share credentials within an organization.
 contentType: howto

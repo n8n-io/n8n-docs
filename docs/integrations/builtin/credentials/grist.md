@@ -1,5 +1,4 @@
 ---
-
 title: Grist credentials
 description: Documentation for Grist credentials. Use these credentials to authenticate Grist in n8n, a workflow automation platform.
 contentType: [integration, reference]

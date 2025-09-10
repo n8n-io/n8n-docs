@@ -1,5 +1,4 @@
 ---
-
 title: Oura node documentation
 description: Learn how to use the Oura node in n8n. Follow technical documentation to integrate Oura node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Block access to nodes
 description: "Prevent your n8n users from accessing specific nodes."
 contentType: howto

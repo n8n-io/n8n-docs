@@ -1,5 +1,4 @@
 ---
-
 title: Wekan node documentation
 description: Learn how to use the Wekan node in n8n. Follow technical documentation to integrate Wekan node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Google Chat node documentation
 description: Learn how to use the Google Chat node in n8n. Follow technical documentation to integrate Google Chat node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Vector Store Question Answer Tool node documentation
 description: Learn how to use the Vector Store Question Answer Tool node in n8n. Follow technical documentation to integrate Vector Store Question Answer Tool node into your workflows.
 contentType: [integration, reference]

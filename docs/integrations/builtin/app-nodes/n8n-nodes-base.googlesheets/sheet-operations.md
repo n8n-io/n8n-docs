@@ -1,5 +1,4 @@
 ---
-
 title: Google Sheets Sheet Within Document operations
 description: Documentation for the Sheet operations in Google Sheets node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]

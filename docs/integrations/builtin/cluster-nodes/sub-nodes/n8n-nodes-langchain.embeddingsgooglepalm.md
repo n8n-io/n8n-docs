@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings Google PaLM node documentation
 description: Learn how to use the Embeddings Google PaLM node in n8n. Follow technical documentation to integrate Embeddings Google PaLM node into your workflows.
 contentType: [integration, reference]

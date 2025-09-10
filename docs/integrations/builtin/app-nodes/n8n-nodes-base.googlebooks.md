@@ -1,5 +1,4 @@
 ---
-
 title: Google Books node documentation
 description: Learn how to use the Google Books node in n8n. Follow technical documentation to integrate Google Books node into your workflows.
 contentType: [integration, reference]

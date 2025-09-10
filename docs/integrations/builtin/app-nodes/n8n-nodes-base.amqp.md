@@ -1,5 +1,4 @@
 ---
-
 title: AMQP Sender node documentation
 description: Learn how to use the AMQP Sender node in n8n. Follow technical documentation to integrate AMQP Sender node into your workflows.
 contentType: [integration, reference]

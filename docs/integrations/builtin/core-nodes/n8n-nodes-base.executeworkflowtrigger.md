@@ -1,5 +1,4 @@
 ---
-
 title: Execute Sub-workflow Trigger node documentation
 description: Learn how to use the Execute Sub-workflow Trigger node in n8n. Follow technical documentation to integrate Execute Sub-workflow Trigger node into your workflows.
 contentType: [integration, reference]

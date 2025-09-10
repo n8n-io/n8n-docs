@@ -1,5 +1,4 @@
 ---
-
 contentType: tutorial
 description: Install and run n8n using Docker Compose
 ---

@@ -1,5 +1,4 @@
 ---
-
 title: Xata credentials
 description: Documentation for the Xata credentials. Use these credentials to authenticate Xata in n8n, a workflow automation platform.
 contentType: [integration, reference]

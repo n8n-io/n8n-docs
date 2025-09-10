@@ -1,5 +1,4 @@
 ---
-
 title: Telegram node Message operations documentation
 description: Documentation for the Message operations in the Telegram node in n8n, a workflow automation platform. Includes details to configure all Message operations.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 description: Using LDAP with n8n.
 contentType: howto
 ---

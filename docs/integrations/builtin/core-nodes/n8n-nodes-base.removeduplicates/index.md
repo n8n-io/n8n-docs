@@ -1,5 +1,4 @@
 ---
-
 title: Remove Duplicates node documentation
 description: Documentation for the Remove Duplicates node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: FileMaker node documentation
 description: Learn how to use the FileMaker node in n8n. Follow technical documentation to integrate FileMaker node into your workflows.
 contentType: [integration, reference]

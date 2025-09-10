@@ -1,5 +1,4 @@
 ---
-
 title: CircleCI node documentation
 description: Learn how to use the CircleCI node in n8n. Follow technical documentation to integrate CircleCI node into your workflows.
 contentType: [integration, reference]

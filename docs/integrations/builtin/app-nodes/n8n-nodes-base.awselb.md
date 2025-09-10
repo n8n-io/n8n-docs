@@ -1,5 +1,4 @@
 ---
-
 title: AWS Elastic Load Balancing node documentation
 description: Learn how to use the AWS Elastic Load Balancing node in n8n. Follow technical documentation to integrate AWS Elastic Load Balancing node into your workflows.
 contentType: [integration, reference]

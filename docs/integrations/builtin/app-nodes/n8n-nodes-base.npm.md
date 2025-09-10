@@ -1,5 +1,4 @@
 ---
-
 title: npm node documentation
 description: Learn how to use the npm node in n8n. Follow technical documentation to integrate npm node into your workflows.
 contentType: [integration, reference]

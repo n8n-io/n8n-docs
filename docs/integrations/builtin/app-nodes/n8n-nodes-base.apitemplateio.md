@@ -1,5 +1,4 @@
 ---
-
 title: APITemplate.io node documentation
 description: Learn how to use the APITemplate.io node in n8n. Follow technical documentation to integrate APITemplate.io node into your workflows.
 contentType: [integration, reference]

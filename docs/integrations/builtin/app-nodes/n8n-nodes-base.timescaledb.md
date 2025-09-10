@@ -1,5 +1,4 @@
 ---
-
 title: TimescaleDB node documentation
 description: Learn how to use the TimescaleDB node in n8n. Follow technical documentation to integrate TimescaleDB node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Trigger Workplace Security object documentation
 description: Learn how to use the Workplace Security object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Workplace Security object into your workflows.
 contentType: [integration, reference]

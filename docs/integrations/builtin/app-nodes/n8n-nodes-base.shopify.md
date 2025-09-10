@@ -1,5 +1,4 @@
 ---
-
 title: Shopify node documentation
 description: Learn how to use the Shopify node in n8n. Follow technical documentation to integrate Shopify node into your workflows.
 contentType: [integration, reference]

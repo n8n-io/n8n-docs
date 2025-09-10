@@ -1,5 +1,4 @@
 ---
-
 title: AlienVault credentials
 description: Documentation for the AlienVault credentials. Use these credentials to authenticate AlienVault in n8n, a workflow automation platform.
 contentType: [integration, reference]

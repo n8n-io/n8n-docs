@@ -1,5 +1,4 @@
 ---
-
 title: Gong credentials
 description: Documentation for the Gong credentials. Use these credentials to authenticate Gong in n8n, a workflow automation platform.
 contentType: [integration, reference]

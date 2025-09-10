@@ -1,5 +1,4 @@
 ---
-
 title: RBAC projects
 description: Understand how n8n uses project for RBAC. Learn how to create and manage projects.
 contentType: howto

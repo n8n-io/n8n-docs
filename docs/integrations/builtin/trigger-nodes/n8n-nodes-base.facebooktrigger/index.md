@@ -1,5 +1,4 @@
 ---
-
 title: Facebook Trigger
 description: Learn how to use the Facebook Trigger node in n8n. Follow technical documentation to integrate Facebook Trigger node into your workflows.
 contentType: [integration, reference]

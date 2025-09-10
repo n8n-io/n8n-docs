@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft OneDrive node documentation
 description: Learn how to use the Microsoft OneDrive node in n8n. Follow technical documentation to integrate Microsoft OneDrive node into your workflows.
 contentType: [integration, reference]

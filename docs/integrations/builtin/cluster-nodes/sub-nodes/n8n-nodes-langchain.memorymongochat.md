@@ -1,5 +1,4 @@
 ---
-
 title: MongoDB Chat Memory node documentation
 description: Learn how to use the MongoDB Chat Memory node in n8n. Follow technical documentation to integrate MongoDB Chat Memory node into your workflows.
 contentType: [integration, reference]

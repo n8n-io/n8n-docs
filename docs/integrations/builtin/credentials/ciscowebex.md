@@ -1,5 +1,4 @@
 ---
-
 title: Webex by Cisco credentials
 description: Documentation for Webex by Cisco credentials. Use these credentials to authenticate Webex by Cisco in n8n, a workflow automation platform.
 contentType: [integration, reference]

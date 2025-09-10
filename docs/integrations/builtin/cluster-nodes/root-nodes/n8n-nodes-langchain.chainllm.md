@@ -1,5 +1,4 @@
 ---
-
 title: Basic LLM Chain node documentation
 description: Learn how to use the Basic LLM Chain node in n8n. Follow technical documentation to integrate Basic LLM Chain node into your workflows.
 contentType: [integration, reference]

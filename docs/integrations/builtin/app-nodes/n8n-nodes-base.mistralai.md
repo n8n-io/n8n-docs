@@ -1,5 +1,4 @@
 ---
-
 title: MistralAI node documentation
 description: Learn how to use the Mistral AI node in n8n. Follow technical documentation to integrate Mistral AI node into your workflows.
 contentType: [integration, reference]

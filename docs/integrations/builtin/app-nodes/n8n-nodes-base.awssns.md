@@ -1,5 +1,4 @@
 ---
-
 title: AWS SNS node documentation
 description: Learn how to use the AWS SNS node in n8n. Follow technical documentation to integrate AWS SNS node into your workflows.
 contentType: [integration, reference]

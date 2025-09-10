@@ -1,5 +1,4 @@
 ---
-
 title: Kitemaker credentials
 description: Documentation for Kitemaker credentials. Use these credentials to authenticate Kitemaker in n8n, a workflow automation platform.
 contentType: [integration, reference]

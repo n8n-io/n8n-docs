@@ -1,5 +1,4 @@
 ---
-
 title: QuickBooks Online node documentation
 description: Learn how to use the QuickBooks Online node in n8n. Follow technical documentation to integrate QuickBooks Online node into your workflows.
 contentType: [integration, reference]

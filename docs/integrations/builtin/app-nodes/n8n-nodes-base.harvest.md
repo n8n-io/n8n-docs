@@ -1,5 +1,4 @@
 ---
-
 title: Harvest node documentation
 description: Learn how to use the Harvest node in n8n. Follow technical documentation to integrate Harvest node into your workflows.
 contentType: [integration, reference]

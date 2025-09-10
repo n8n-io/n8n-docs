@@ -1,5 +1,4 @@
 ---
-
 title: Chat Memory Manager node documentation
 description: Learn how to use the Chat Memory Manager node in n8n. Follow technical documentation to integrate Chat Memory Manager node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 description: How to use console.log() or print()
 contentType: howto
 ---

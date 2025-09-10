@@ -1,5 +1,4 @@
 ---
-
 contentType: howto
 title: Chat with a Google Sheet using AI
 description: Use the n8n workflow tool to load data from Google Sheets into your AI workflow.

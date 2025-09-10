@@ -1,5 +1,4 @@
 ---
-
 title: Okta node documentation
 description: Learn how to use the Okta node in n8n. Follow technical documentation to integrate Okta node into your workflows.
 contentType: [integration, reference]

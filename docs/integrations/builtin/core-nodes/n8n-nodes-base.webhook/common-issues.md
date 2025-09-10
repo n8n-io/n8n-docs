@@ -1,5 +1,4 @@
 ---
-
 title: Webhook node common issues 
 description: Documentation for common issues and questions in the Webhook node in n8n, a workflow automation platform. Includes details of the issues and suggested solutions.
 contentType: [integration, reference]

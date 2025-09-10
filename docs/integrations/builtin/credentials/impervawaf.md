@@ -1,5 +1,4 @@
 ---
-
 title: Imperva WAF credentials
 description: Documentation for the Imperva WAF credentials. Use these credentials to authenticate Imperva WAF in n8n, a workflow automation platform.
 contentType: [integration, reference]

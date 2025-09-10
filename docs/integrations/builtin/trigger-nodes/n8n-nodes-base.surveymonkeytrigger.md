@@ -1,5 +1,4 @@
 ---
-
 title: SurveyMonkey Trigger node documentation
 description: Learn how to use the SurveyMonkey Trigger node in n8n. Follow technical documentation to integrate SurveyMonkey Trigger node into your workflows.
 contentType: [integration, reference]

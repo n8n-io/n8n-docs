@@ -1,5 +1,4 @@
 ---
-
 title: Cloudflare node documentation
 description: Learn how to use the Cloudflare node in n8n. Follow technical documentation to integrate Cloudflare node into your workflows.
 contentType: [integration, reference]

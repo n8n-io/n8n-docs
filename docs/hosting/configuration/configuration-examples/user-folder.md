@@ -1,5 +1,4 @@
 ---
-
 title: Specify user folder path
 description: Specify location of the folder that stores user-specific data. 
 contentType: howto

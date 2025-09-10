@@ -1,5 +1,4 @@
 ---
-
 title: Microsoft Teams node documentation
 description: Learn how to use the Microsoft Teams node in n8n. Follow technical documentation to integrate Microsoft Teams node into your workflows.
 contentType: [integration, reference]

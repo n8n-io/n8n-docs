@@ -1,5 +1,4 @@
 ---
-
 title: Outlook.com
 description: Documentation for Outlook.com IMAP credentials. Use these credentials to authenticate Outlook.com IMAP in n8n, a workflow automation platform.
 contentType: [integration, reference]

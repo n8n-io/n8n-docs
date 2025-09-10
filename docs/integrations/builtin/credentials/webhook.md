@@ -1,5 +1,4 @@
 ---
-
 title: Webhook credentials
 description: Documentation for Webhook credentials. Use these credentials to authenticate Webhook in n8n, a workflow automation platform.
 contentType: [integration, reference]

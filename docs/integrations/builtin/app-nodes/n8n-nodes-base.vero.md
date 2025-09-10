@@ -1,5 +1,4 @@
 ---
-
 title: Vero node documentation
 description: Learn how to use the Vero node in n8n. Follow technical documentation to integrate Vero node into your workflows.
 contentType: [integration, reference]

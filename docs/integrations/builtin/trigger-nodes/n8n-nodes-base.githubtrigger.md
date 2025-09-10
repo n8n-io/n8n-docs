@@ -1,5 +1,4 @@
 ---
-
 title: GitHub Trigger node documentation
 description: Learn how to use the GitHub Trigger node in n8n. Follow technical documentation to integrate GitHub Trigger node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Cohere Chat Model node documentation
 description: Learn how to use the Cohere Chat Model node in n8n. Follow technical documentation to integrate Cohere Chat Model node into your workflows.
 contentType: [integration, reference]

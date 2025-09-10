@@ -1,5 +1,4 @@
 ---
-
 title: Remove Duplicates node templates and Examples
 description: Documentation for templates and examples in the Remove Duplicates node in n8n, a workflow automation platform. Includes templates using the node and examples of how to use it.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Cal Trigger node documentation
 description: Learn how to use the Cal Trigger node in n8n. Follow technical documentation to integrate Cal Trigger node into your workflows.
 contentType: [integration, reference]

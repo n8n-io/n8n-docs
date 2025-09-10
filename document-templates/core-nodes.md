@@ -13,7 +13,6 @@ You can find more info on working with the docs project in the README: https://g
 -->
 
 ---
-
 title: _Name_ node documentation
 description: Documentation for the _Name_ node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: [integration, reference]

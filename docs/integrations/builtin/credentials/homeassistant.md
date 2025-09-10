@@ -1,5 +1,4 @@
 ---
-
 title: Home Assistant credentials
 description: Documentation for Home Assistant credentials. Use these credentials to authenticate Home Assistant in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: QuickChart node documentation
 description: Learn how to use the QuickChart node in n8n. Follow technical documentation to integrate QuickChart node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Postgres Trigger node documentation
 description: Learn how to use the Postgres Trigger node in n8n. Follow technical documentation to integrate Postgres Trigger node into your workflows.
 contentType: [integration, reference]

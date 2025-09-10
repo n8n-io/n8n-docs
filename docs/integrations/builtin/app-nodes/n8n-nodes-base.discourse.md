@@ -1,5 +1,4 @@
 ---
-
 title: Discourse node documentation
 description: Learn how to use the Discourse node in n8n. Follow technical documentation to integrate Discourse node into your workflows.
 contentType: [integration, reference]

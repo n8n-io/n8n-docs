@@ -1,5 +1,4 @@
 ---
-
 title: Postgres node common issues
 description: Documentation for common issues and questions in the Postgres node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: OpenWeatherMap credentials
 description: Documentation for OpenWeatherMap credentials. Use these credentials to authenticate OpenWeatherMap in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 contentType: howto
 title: Populate a Pinecone vector database from a website
 description: Scrape a website, load the data into Pinecone, then query it using a chat workflow.

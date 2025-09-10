@@ -1,5 +1,4 @@
 ---
-
 title: QRadar credentials
 description: Documentation for the QRadar credentials. Use these credentials to authenticate QRadar in n8n, a workflow automation platform.
 contentType: [integration, reference]

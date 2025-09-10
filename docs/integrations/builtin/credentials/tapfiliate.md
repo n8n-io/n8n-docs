@@ -1,5 +1,4 @@
 ---
-
 title: Tapfiliate credentials
 description: Documentation for Tapfiliate credentials. Use these credentials to authenticate Tapfiliate in n8n, a workflow automation platform.
 contentType: [integration, reference]

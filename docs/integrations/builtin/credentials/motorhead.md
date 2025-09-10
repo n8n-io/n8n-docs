@@ -1,5 +1,4 @@
 ---
-
 title: Motorhead credentials
 description: Documentation for the Motorhead credentials. Use these credentials to authenticate Motorhead in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Outlook.com
 description: Documentation for Outlook.com Send Email credentials. Use these credentials to authenticate Send Email with Outlook.com in n8n, a workflow automation platform.
 contentType: [integration, reference]

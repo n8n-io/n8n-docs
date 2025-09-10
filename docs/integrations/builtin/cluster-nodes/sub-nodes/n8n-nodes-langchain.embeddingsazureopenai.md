@@ -1,5 +1,4 @@
 ---
-
 title: Embeddings Azure OpenAI node documentation
 description: Learn how to use the Embeddings Azure OpenAI node in n8n. Follow technical documentation to integrate Embeddings Azure OpenAI node into your workflows.
 contentType: [integration, reference]

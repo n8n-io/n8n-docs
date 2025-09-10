@@ -1,5 +1,4 @@
 ---
-
 title: Google Calendar Trigger node documentation
 description: Learn how to use the Google Calendar Trigger node in n8n. Follow technical documentation to integrate Google Calendar Trigger node into your workflows.
 contentType: [integration, reference]

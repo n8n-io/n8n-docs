@@ -1,5 +1,4 @@
 ---
-
 title: Okta credentials
 description: Documentation for the Okta credentials. Use these credentials to authenticate Okta in n8n, a workflow automation platform.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: Keap node documentation
 description: Learn how to use the Keap node in n8n. Follow technical documentation to integrate Keap node into your workflows.
 contentType: [integration, reference]

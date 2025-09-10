@@ -1,5 +1,4 @@
 ---
-
 title: Pipedrive node documentation
 description: Learn how to use the Pipedrive node in n8n. Follow technical documentation to integrate Pipedrive node into your workflows.
 contentType: [integration, reference]

@@ -1,5 +1,4 @@
 ---
-
 title: External secrets environment variables
 description: Configure the interval for checking updates to external secrets in self-hosted n8n instance. 
 contentType: reference

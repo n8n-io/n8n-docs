@@ -1,5 +1,4 @@
 ---
-
 title: Sekoia credentials
 description: Documentation for the Sekoia credentials. Use these credentials to authenticate Sekoia in n8n, a workflow automation platform.
 contentType: [integration, reference]

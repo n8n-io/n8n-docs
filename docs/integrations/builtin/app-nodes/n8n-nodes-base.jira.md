@@ -1,5 +1,4 @@
 ---
-
 title: Jira Software node documentation
 description: Learn how to use the Jira Software node in n8n. Follow technical documentation to integrate Jira Software node into your workflows.
 contentType: [integration, reference]

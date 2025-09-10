@@ -1,5 +1,4 @@
 ---
-
 title: Enable Prometheus metrics 
 description: Enable Prometheus metrics endpoint.
 contentType: howto

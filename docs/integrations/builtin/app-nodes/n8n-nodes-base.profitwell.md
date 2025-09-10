@@ -1,5 +1,4 @@
 ---
-
 title: ProfitWell node documentation
 description: Learn how to use the ProfitWell node in n8n. Follow technical documentation to integrate ProfitWell node into your workflows.
 contentType: [integration, reference]

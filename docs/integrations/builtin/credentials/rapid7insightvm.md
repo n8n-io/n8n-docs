@@ -1,5 +1,4 @@
 ---
-
 title: Rapid7 InsightVM credentials
 description: Documentation for the Rapid7 InsightVM credentials. Use these credentials to authenticate Rapid7 InsightVm in n8n, a workflow automation platform.
 contentType: [integration, reference]

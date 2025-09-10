@@ -1,5 +1,4 @@
 ---
-
 title: Information Extractor node documentation
 description: Learn how to use the Information Extractor node in n8n. Follow technical documentation to integrate Information Extractor node into your workflows.
 contentType: [integration, reference]

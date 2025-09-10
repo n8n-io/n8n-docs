@@ -1,5 +1,4 @@
 ---
-
 description: External storage of binary data for your n8n instance.
 contentType: howto
 tags:

@@ -1,5 +1,4 @@
 ---
-
 title: Conversational AI Agent node documentation
 description: Learn how to use the Conversational Agent of the AI Agent node in n8n. Follow technical documentation to integrate the Conversational Agent into your workflows.
 contentType: [integration, reference]

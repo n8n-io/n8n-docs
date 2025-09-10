@@ -1,5 +1,4 @@
 ---
-
 title: Mindee node documentation
 description: Learn how to use the Mindee node in n8n. Follow technical documentation to integrate Mindee node into your workflows.
 contentType: [integration, reference]

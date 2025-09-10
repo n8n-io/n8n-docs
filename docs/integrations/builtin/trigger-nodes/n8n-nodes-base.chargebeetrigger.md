@@ -1,5 +1,4 @@
 ---
-
 title: Chargebee Trigger node documentation
 description: Learn how to use the Chargebee Trigger node in n8n. Follow technical documentation to integrate Chargebee Trigger node into your workflows.
 contentType: [integration, reference]

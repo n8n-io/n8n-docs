@@ -2,10 +2,6 @@
 
 If you want to contribute to this repository - thank you! Before you start, have a look at the existing documentation to get an idea of the structure and writing conventions n8n uses. In writing your documentation, please follow the guidelines described below, to ensure quality and consistency with n8n styles.
 
-## No course contributions
-
-We are working on replacing the course. We are not accepting reports or changes to the current course.
-
 ## Docs issues only
 
 This repo is for the documentation site.
@@ -14,17 +10,20 @@ This repo is for the documentation site.
 - Got a feature request or product idea? [Propose it on the forum](https://community.n8n.io/c/feature-requests/5).
 - Found a bug in the product? [Product repo](https://github.com/n8n-io/n8n)
 
+## No course contributions
 
-## Why we might reject your contribution
+n8n is working on replacing the course. n8n isn't accepting reports or changes to the current course.
 
-Due to an increase in spam and poor quality contributions, we've introduced new criteria and processes. We will close issues and PRs that are low-effort and poor quality.
+## Why n8n might reject your contribution
+
+Due to an increase in spam and poor quality contributions, n8n has introduced new criteria and processes. n8n will close issues and PRs that are low-effort and poor quality.
 
 | Label | Action | Notes |
 | ----- | ------ | ----- |
-| `spam` | Close PR/issue; account blocked | This label is applied to things like empty issues. |
-| `ai-slop` |	Close PR/issue; account blocked | This label is applied when content is bad, wrong, and looks like it's probably the result of using AI. n8n isn't banning use of AI in contributions, so long as the contributions are high quality. |
+| `spam` | Close PR/issue; account blocked | This label is for things like empty issues. |
+| `ai-slop` |	Close PR/issue; account blocked | This label is for when content is bad, wrong, and looks like it's probably the result of using AI. n8n isn't banning use of AI in contributions, so long as the contributions are high quality. |
 | `low-effort-unusable` |	Close PR/issue; comment with contribution guidance; a second `low-effort-unusable` leads to a block. | To avoid this, test your work to make sure it's accurate; follow the [style guide](https://github.com/n8n-io/n8n-docs/wiki/Styles); write meaningful titles and descriptions on your PR/issue. |
-| `low-effort-usable` |	No action initially. Block after three occurences in one month. | A low-effort contribution that is usable (no edits required). We'll accept these, but not in large quantities. |
+| `low-effort-usable` |	No action initially. Block after three occurences in one month. | A low-effort contribution that's usable (no edits required). n8n will accept these, but not in large quantities. The limit resets each calendar month. |
 | `duplicate` |	Close PR/issue; comment with contribution guidance; a second `duplicate` leads to a block. | To avoid this, check existing issues and PRs |
 
 

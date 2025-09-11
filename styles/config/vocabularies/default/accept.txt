@@ -160,6 +160,7 @@ Motorhead
 [Mm]ultiple
 [Mm]ultitenan(cy|t)
 n8n
+Astra('s)?
 nanoids
 namespaces?
 NASA

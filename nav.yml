@@ -711,6 +711,7 @@ nav:
           - Sentiment Analysis: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.sentimentanalysis.md
           - LangChain Code: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.code.md
           - Simple Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory.md
+          - Astra DB Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreastradb.md
           - Milvus Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md
           - MongoDB Atlas Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremongodbatlas.md
           - PGVector Vector Store: integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepgvector.md
@@ -806,6 +807,7 @@ nav:
         - integrations/builtin/credentials/anthropic.md
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
+        - integrations/builtin/credentials/astra-db.md
         - integrations/builtin/credentials/auth0management.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md

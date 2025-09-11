@@ -6,7 +6,7 @@ Adalo
 [Aa]ggregate
 Airtable
 Airtop
-[Aa]llowlist
+[Aa]llowlists?
 Anthropic
 APIs
 ARNs
@@ -118,6 +118,7 @@ Imperva
 indexable
 invalid
 Infisical
+[Ii]nitializers?
 Intuit
 IP
 [Ii]terable

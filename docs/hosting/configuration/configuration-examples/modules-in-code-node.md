@@ -26,7 +26,7 @@ export NODE_FUNCTION_ALLOW_BUILTIN=crypto,fs
 export NODE_FUNCTION_ALLOW_EXTERNAL=moment,lodash
 ```
 /// note | If using Task Runners
-If n8n instance is setup with [Task Runners](/hosting/configuration/task-runners.md) you have to add the environment variables to the Task Runners instead to the main n8n node.
+If n8n instance is setup with [Task Runners](/hosting/configuration/task-runners.md), add the environment variables to the Task Runners instead to the main n8n node.
 ///
 
 Refer to [Environment variables reference](/hosting/configuration/environment-variables/nodes.md) for more information on these variables.

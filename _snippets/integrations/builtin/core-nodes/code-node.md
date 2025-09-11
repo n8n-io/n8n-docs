@@ -89,13 +89,13 @@ n8n added native Python support using task runners (beta) in version 1.111.0.
 Main differences from Pyodide:
 
 - Native Python supports only `_items` in all-items mode and `_item` in per-item mode. It doesn't support other n8n built-in methods and variables.
-- Native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [task runners](/hosting/configuration/task-runners.md) for more details.
-- Denies insecure built-ins by default. See [task runners environment variables](/hosting/configuration/environment-variables/task-runners.md) for more details.
+- Native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [task runners](/hosting/configuration/task-runners.md/#adding-extra-dependencies) for more details.
+- Native Python denies insecure built-ins by default. See [task runners environment variables](/hosting/configuration/environment-variables/task-runners.md) for more details.
 - Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
 
 Keep in mind upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner. 
 
-This feature is in beta and is subject to change. As it becomes stable, n8n will roll it out progressively to n8n cloud users during 2025. Self-hosting users can [try it out](/hosting/configuration/environment-variables/task-runners.md) and provide feedback.
+This feature is in beta and is subject to change. As it becomes stable, n8n will roll it out progressively to n8n cloud users during 2025. Self-hosting users can [try it out](/hosting/configuration/task-runners.md) and provide feedback.
 
 ## Coding in n8n
 

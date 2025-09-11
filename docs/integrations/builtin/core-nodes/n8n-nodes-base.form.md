@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n Form node documentation
 description: Documentation for the n8n Form node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: [integration, reference]
@@ -63,10 +62,12 @@ When serving the form, you can pass values for hidden fields using [query parame
 Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](/data/data-structure.md). Each object defines a single field by using a combination of these keys:
 
 - `fieldLabel`: The label that appears above the input field. 
-- `fieldType`: Choose from `date`, `dropdown`, `email`, `file`, `number`, `password`, `text`, or `textarea`.
+- `fieldType`: Choose from `checkbox`, `date`, `dropdown`, `email`, `file`, `hiddenField`, `html`, `number`, `password`, `radio`, `text`, or `textarea`.
     - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
-	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`.
+	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`. As an alternative, you can use `checkbox` or `radio` together with `fieldOptions` too.
 	- When using `file`, set `multipleFiles` to `true` to allow users to select more than one file. To define the file types to allow, set `acceptFileTypes` to a string containing a comma-separated list of file extensions (reference the example below).
+	- Use `hiddenField` to add a hidden field to your form. Refer to [Including hidden fields](#including-hidden-fields) for more information.
+	- Use `html` to display custom HTML on your form. Refer to [Displaying custom HTML](#displaying-custom-html) for more information.
 - `placeholder`: Specify placeholder data for the field. You can use this for every `fieldType` except `dropdown`, `date`, and `file`.
 - `requiredField`: Require users to complete this field on the form.
 
@@ -78,69 +79,107 @@ An example JSON that shows the general format required and the keys available:
 //     except 'dropdown', 'date' and 'file'
 
 [
-	{
-		"fieldLabel": "Date Field",
-		"fieldType": "date",
-		"formatDate": "mm/dd/yyyy", // how to format received date in n8n
-		"requiredField": true
-	},
-	{
-		"fieldLabel": "Dropdown Options",
-		"fieldType": "dropdown",
-		"fieldOptions": {
-			"values": [
-				{
-					"option": "option 1"
-				},
-				{
-					"option": "option 2"
-				}
-			]
-		},
-		"requiredField": true
-	},
-	{
-		"fieldLabel": "Multiselect",
-		"fieldType": "dropdown",
-		"fieldOptions": {
-			"values": [
-				{
-					"option": "option 1"
-				},
-				{
-					"option": "option 2"
-				}
-			]
-		},
-		"multiselect": true // setting to true allows multi-select
-	},
-	{
-		"fieldLabel": "Email",
-		"fieldType": "email",
-		"placeholder": "me@mail.con"
-	},
-	{
-		"fieldLabel": "File",
-		"fieldType": "file",
-		"multipleFiles": true, // setting to true allows multiple files selection
-		"acceptFileTypes": ".jpg, .png" // allowed file types
-	},
-	{
-		"fieldLabel": "Number",
-		"fieldType": "number"
-	},
-	{
-		"fieldLabel": "Password",
-		"fieldType": "password"
-	},
-	{
-		// "fieldType": "text" can be omitted since it's the default type
-		"fieldLabel": "Text"
-	},
-	{
-		"fieldLabel": "Textarea",
-		"fieldType": "textarea"
-	}
+  {
+    "fieldLabel": "Date Field",
+    "fieldType": "date",
+    "formatDate": "mm/dd/yyyy", // how to format received date in n8n
+    "requiredField": true
+  },
+  {
+    "fieldLabel": "Dropdown Options",
+    "fieldType": "dropdown",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    },
+    "requiredField": true
+  },
+  {
+    "fieldLabel": "Multiselect",
+    "fieldType": "dropdown",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    },
+    "multiselect": true // setting to true allows multi-select
+  },
+  {
+    "fieldLabel": "Email",
+    "fieldType": "email",
+    "placeholder": "me@mail.con"
+  },
+  {
+    "fieldLabel": "File",
+    "fieldType": "file",
+    "multipleFiles": true, // setting to true allows multiple files selection
+    "acceptFileTypes": ".jpg, .png" // allowed file types
+  },
+  {
+    "fieldLabel": "Number",
+    "fieldType": "number"
+  },
+  {
+    "fieldLabel": "Password",
+    "fieldType": "password"
+  },
+  {
+    // "fieldType": "text" can be omitted since it's the default type
+    "fieldLabel": "Text"
+  },
+  {
+    "fieldLabel": "Textarea",
+    "fieldType": "textarea"
+  },
+  {
+    "fieldType": "html",
+    "elementName": "content", // Optional field. It can be used to include the html in the output.
+    "html": "<div>Custom element</div>"
+  },
+  {
+    "fieldLabel": "Checkboxes",
+    "fieldType": "checkbox",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    }
+  },
+  {
+    "fieldLabel": "Radio",
+    "fieldType": "radio",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    }
+  },
+  {
+    "fieldLabel": "hidden label",
+    "fieldType": "hiddenField",
+    "fieldValue": "extra form data"
+  }
 ]
 ```
 

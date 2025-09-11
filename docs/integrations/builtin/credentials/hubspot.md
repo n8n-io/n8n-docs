@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HubSpot credentials
 description: Documentation for HubSpot credentials. Use these credentials to authenticate HubSpot in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -20,12 +19,12 @@ You can use these credentials to authenticate the following nodes:
 - OAuth2: Use with the [HubSpot](/integrations/builtin/app-nodes/n8n-nodes-base.hubspot.md) node.
 
 /// warning | API key deprecated
-HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app) guide and set up an app token.
+HubSpot deprecated the regular **API Key** authentication method. The option still appears in n8n, but you should use the authentication methods listed above instead. If you have existing integrations using this API key method, refer to HubSpot's [Migrate an API key integration to a private app](https://web.archive.org/web/20240106022147/https://developers.hubspot.com/docs/api/migrate-an-api-key-integration-to-a-private-app) guide and set up an app token.
 ///
 
 ## Related resources
 
-Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview) for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api/webhooks) for more information about that service.
+Refer to [HubSpot's API documentation](https://developers.hubspot.com/docs/api/overview) for more information about the service. The [HubSpot Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger.md) node uses the Webhooks API; refer to [HubSpot's Webhooks API documentation](https://developers.hubspot.com/docs/api-reference/webhooks-webhooks-v3/guide) for more information about that service.
 
 ## Using App token
 
@@ -47,7 +46,7 @@ To generate an app token, create a private app in HubSpot:
 10. Once your app's created, open the **Access token card** and select **Show token** to reveal the token.
 11. Copy this token and enter it in your n8n credential.
 
-Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/api/private-apps) for more information.
+Refer to the [HubSpot Private Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview) for more information.
 
 ## Using Developer API key
 
@@ -76,7 +75,7 @@ To create the public app and set up the credential:
 11. Copy the n8n **OAuth Redirect URL** and enter it as the **Redirect URL** in your HubSpot app.
 12. Select **Create app** to finish creating the HubSpot app.
 
- Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app) for more detailed instructions.
+ Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/public-apps/overview) for more detailed instructions.
 
 ### Required scopes for HubSpot Trigger node
 
@@ -116,7 +115,7 @@ If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2
 11. Copy the n8n **OAuth Redirect URL** and enter it as the **Redirect URL** in your HubSpot app.
 12. Select **Create app** to finish creating the HubSpot app.
 
-Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/api/creating-an-app) for more detailed instructions. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/api/working-with-oauth).
+Refer to the [HubSpot Public Apps documentation](https://developers.hubspot.com/docs/apps/legacy-apps/public-apps/overview) for more detailed instructions. If you need more detail on what's happening in the OAuth web flow, refer to the [HubSpot Working with OAuth documentation](https://developers.hubspot.com/docs/apps/legacy-apps/authentication/working-with-oauth).
 
 ## Required scopes for HubSpot node
 

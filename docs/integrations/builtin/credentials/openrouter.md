@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenRouter credentials
 description: Documentation for OpenRouter credentials. Use these credentials to authenticate OpenRouter in n8n, a workflow automation platform.
 contentType: [integration, reference]

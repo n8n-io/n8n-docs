@@ -26,11 +26,27 @@ Refer to the sections below for more information on configuring the node for eac
 Configure this operation with these parameters:
 
 * **File(s) Selector**: Enter the path of the file you want to read.
-	- To enter multiple files, enter a page path pattern. You can use these characters to define a path pattern:
+	- To enter multiple files, enter a file path pattern. You can use these characters to define a path pattern:
 		- `*`: Matches any character zero or more times, excluding path separators.
-		- `**`: Matches any character zero or more times, include path separators.
+			- Example: `*.txt` matches `file.txt`, `document.txt`, but not `folder/file.txt`
+			- Example: `data-*` matches `data-2023`, `data-backup`, `data-final`
+		- `**`: Matches any character zero or more times, including path separators.
+			- Example: `**/*.json` matches `config.json`, `src/config.json`, `src/utils/config.json`
+			- Example: `logs/**` matches all files in the `logs` directory and subdirectories
 		- `?`: Matches any character except for path separators one time.
-		- `[]`: Matches any characters inside the brackets. For example, `[abc]` would match the characters `a`, `b`, or `c`, and nothing else.
+			- Example: `file?.txt` matches `file1.txt`, `fileA.txt`, but not `file10.txt`
+			- Example: `log-202?-??.txt` matches `log-2023-01.txt`, `log-2024-12.txt`
+		- `[]`: Matches any characters inside the brackets.
+			- Example: `[abc]` matches `a`, `b`, or `c`, and nothing else
+			- Example: `file[0-9].txt` matches `file0.txt`, `file5.txt`, `file9.txt`
+			- Example: `backup-[A-Z][0-9].log` matches `backup-A1.log`, `backup-Z9.log`
+
+	**Common Pattern Examples:**
+	- `*.csv` - All CSV files in the current directory
+	- `**/*.pdf` - All PDF files in current and all subdirectories
+	- `data/2023/**/*.json` - All JSON files in any subdirectory of `data/2023/`
+	- `logs/app-????.log` - Log files like `app-2023.log`, `app-prod.log`
+	- `backup-[0-9][0-9][0-9].zip` - Backup files like `backup-001.zip`, `backup-999.zip`
 
 Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing) documentation for more information on these characters and their expected behavior.
 

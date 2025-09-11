@@ -42,7 +42,7 @@ jobs:
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "dev-cancelled")
-              echo "comment=Hi @$AUTHOR, thanks for the pull request! \n It looks like the PR in the main repo was closed. I'm going to go ahead and close this one too since this depends on the main repo submission being accepted. Please let me know if the status changes, however, and we can re-open as needed." >> $GITHUB_OUTPUT
+              echo "comment=Hi @$AUTHOR, thanks for the pull request! It looks like the PR in the main repo was closed. I'm going to go ahead and close this one too since this depends on the main repo submission being accepted. Please let me know if the status changes, however, and we can re-open as needed." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;
             "pending-dev")

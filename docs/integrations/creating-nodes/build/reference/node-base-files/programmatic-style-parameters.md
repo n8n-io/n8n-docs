@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Programmatic-style parameters
 description: A reference document listing the programmatic-style parameters of the node base file.
 contentType: reference

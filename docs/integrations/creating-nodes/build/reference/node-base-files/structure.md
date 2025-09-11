@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Structure of the node base file
 description: A reference document detailing the basic structure of the node base file.
 contentType: reference

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Self-hosted AI Starter Kit
 description: Use n8n's curated self-hosted AI Starter Kit to get a list of AI elements to quickly start building AI workflows.
 contentType: howto

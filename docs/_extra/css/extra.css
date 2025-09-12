@@ -43,6 +43,11 @@
   --color-background-light: #FDF6EC;
 }
 
+/* This snippet targets the navigation nodes labled as data-md-level = 1 in the HTML.
+   These are the first-level headings in each section of the Docs site.
+   For example, Getting Started, which is under Using n8n
+*/
+
 nav[data-md-level="1"] > .md-nav__list > .md-nav__item {
   border-bottom: 1px solid;
   border-color: #EEEEEE;

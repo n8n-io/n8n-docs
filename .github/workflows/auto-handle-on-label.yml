@@ -56,7 +56,7 @@ jobs:
               response=$(curl -s -X POST \
               -u "${{ secrets.WEBHOOK_USER}}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
-              -d '{"user": "${{ env.AUTHOR }}", "label": "low-effort-unusable"}' \
+              -d "$(printf '{"user": %s, "label": "low-effort-unusable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
               "${{ secrets.WEBHOOK_URL}}")
               if [ "$response" = "true" ]; then
                 echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution with quality or accuracy problems. Due to multiple low-effort contributions, you are now blocked. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines to understand more" >> $GITHUB_OUTPUT
@@ -69,14 +69,14 @@ jobs:
                 "https://api.github.com/orgs/${{ env.ORG_NAME }}/blocks/${{ env.AUTHOR }}"
               elif [ "$response" = "false" ]; then
                 echo "comment=@${{ env.AUTHOR }} This is a minor contribution with quality or accuracy problems. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
-                echo "should_close=false" >> $GITHUB_OUTPUT              
+                echo "should_close=true" >> $GITHUB_OUTPUT              
               fi
               ;;
             "low-effort-usable")
               response=$(curl -s -X POST \
               -u "${{ secrets.WEBHOOK_USER}}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
-              -d '{"user": "${{ env.AUTHOR }}", "label": "low-effort-usable"}' \
+              -d "$(printf '{"user": %s, "label": "low-effort-usable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
               "${{ secrets.WEBHOOK_URL}}")
               if [ "$response" = "true" ]; then
                 echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution, but good quality. However, due to multiple low-effort contributions, you are now blocked. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines to understand more" >> $GITHUB_OUTPUT

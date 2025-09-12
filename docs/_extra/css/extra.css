@@ -10,16 +10,43 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'geomanistmedium';
+    src: url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.eot');
+    src: url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.woff2') format('woff2'),
+         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.woff') format('woff'),
+         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.ttf') format('truetype'),
+         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.svg#geomanistmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geomanistbold';
+    src: url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.eot');
+    src: url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.woff2') format('woff2'),
+         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.woff') format('woff'),
+         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf') format('truetype'),
+         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.svg#geomanistbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
   --md-text-font: "geomanistregular";
-
   --color-primary: #530092;
   --color-text-base: #58585F;
   --color-text-light: #FDF6EC;
   --color-background-dark: #040506;
   --color-background-light: #FDF6EC;
+}
 
-  
+nav[data-md-level="1"] > .md-nav__list > .md-nav__item {
+  border-bottom: 1px solid;
+  border-color: #EEEEEE;
+  padding-bottom: 1.25em !important;
 }
 
 /* light mode */

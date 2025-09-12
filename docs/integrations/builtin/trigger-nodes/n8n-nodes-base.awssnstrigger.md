@@ -26,4 +26,4 @@ n8n provides an app node for AWS SNS. You can find the node docs [here](/integra
 
 View [example workflows and related content](https://n8n.io/integrations/aws-sns-trigger/) on n8n's website.
 
-Refer to [AWS SNS's documentation](https://docs.aws.amazon.com/sns/latest/api/welcome.html) for details about their API.
+Refer to the [AWS SNS documentation](https://docs.aws.amazon.com/sns/latest/api/welcome.html) for details about their API.

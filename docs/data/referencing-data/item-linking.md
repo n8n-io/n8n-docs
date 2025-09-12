@@ -89,7 +89,7 @@ To resolve this error, check any manually linked items to make sure the branches
 
 #### Fix for "Paired item resolution failed: Unable to find paired item source"
 
-This error occurs when n8n can't trace back the item lineage back to the referenced node.  Sometimes n8n uses multiple items to create a single item. Examples include the Summarize, Aggregate, and Merge nodes. These nodes can combine information from multiple items.
+This error occurs when n8n can't trace back the item lineage back to the referenced node. Sometimes n8n uses multiple items to create a single item. Examples include the Summarize, Aggregate, and Merge nodes. These nodes can combine information from multiple items.
 
 When you use `.item` and there are multiple possible matches, n8n doesn't know which one to use. To solve this you can either:
 

@@ -111,6 +111,7 @@ geocodes
 [Gg]eospatial
 GIMP
 [Gg]lob(bing)?
+Gollum
 Gotify
 Grafana
 Grok('s)?
@@ -231,6 +232,7 @@ reusability
 Rundeck
 Salesmate
 [Ss]andboxed
+Scalar('s)?
 Sekoia
 Sendy
 Serp
@@ -295,6 +297,7 @@ URL
 [Vv]alidator
 VCert
 Venafi
+Vercel
 VERO
 Vhost
 VMs?

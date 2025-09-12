@@ -14,7 +14,7 @@ You can change n8n's settings using environment variables. For a full list of av
 
 For npm, set your desired environment variables in terminal. The command depends on your command line.
 
-Bash CLIs:
+In Bash:
 
 ```bash
 export <variable>=<value>

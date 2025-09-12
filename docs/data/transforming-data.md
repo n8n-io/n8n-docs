@@ -33,7 +33,7 @@ Expressions also play a role in transforming data. They can be used to set dynam
 You call data transformation function inside of functions using the dot notation:
 
 ```js
-{{ {{ dataItem.function() }}
+{{ dataItem.function() }}
 ```
 
 For example, to check if a string is an email:

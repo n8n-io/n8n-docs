@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following node:
 
 ## Prerequisites
 
-- Create a [Magento](https://magento.com/) account.
+- Create a [Magento (Adobe Commerce)](https://business.adobe.com/products/commerce.html) account.
 - Set your store to **Allow OAuth Access Tokens to be used as standalone Bearer tokens**.
     - Go to **Admin > Stores > Configuration > Services > OAuth > Consumer Settings**.
     - Set the **Allow OAuth Access Tokens to be used as standalone Bearer tokens** option to **Yes**.
@@ -30,7 +30,7 @@ This step is necessary until n8n updates the Magento 2 credentials to use OAuth.
 
 ## Related resources
 
-Refer to [Magento's API documentation](https://devdocs.magento.com/redoc/2.3/) for more information about the service.
+Refer to [Magento's API documentation](https://developer.adobe.com/commerce/docs/) for more information about the service.
 
 ## Using API access token
 

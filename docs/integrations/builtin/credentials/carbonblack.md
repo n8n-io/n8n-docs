@@ -11,7 +11,7 @@ priority: medium
 
 ## Prerequisites
 
-- Create a [Carbon Black subscription](https://www.vmware.com/products/carbon-black-cloud.html).
+- Create a [Carbon Black subscription](https://www.broadcom.com/products/carbon-black/threat-prevention/carbon-black-cloud).
 - Create a [Carbon Black developer account](https://developer.carbonblack.com/).
 
 ## Authentication methods

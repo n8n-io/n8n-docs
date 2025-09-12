@@ -29,7 +29,7 @@ Refer to [Webflow's API documentation](https://developers.webflow.com/data/refer
 
 To configure this credential, you'll need:
 
-- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Get a Site Token](https://developers.webflow.com/data/docs/get-a-site-token) for more information.
+- A Site **Access Token**: Access tokens are site-specific. Go to your site's **Site Settings > Apps & integrations > API access** and select **Generate API token**. Refer to [Get a Site Token](https://developers.webflow.com/data/v1.0.0/docs/get-a-site-token) for more information.
 
 ## Using OAuth2
 

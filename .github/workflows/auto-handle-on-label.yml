@@ -74,7 +74,7 @@ jobs:
               ;;
             "low-effort-usable")
               curl -s -X POST \
-              -u "${{ secrets.WEBHOOK_USER}}:${{ secrets.WEBHOOK_PASSWORD }}" \
+              -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
               -d "$(printf '{"user": %s, "label": "low-effort-usable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
               "${{ secrets.WEBHOOK_URL}}"

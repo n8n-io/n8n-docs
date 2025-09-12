@@ -26,7 +26,7 @@ After following the installation instructions, verify that Docker and Docker Com
 
 ```shell
 docker --version
-docker compose version
+docker-compose version
 ```
 
 ## 2. Optional: Non-root user access
@@ -185,13 +185,13 @@ It also creates and mounts two [Docker Volumes](https://docs.docker.com/engine/s
 Start n8n by typing:
 
 ```shell
-sudo docker compose up -d
+sudo docker-compose up -d
 ```
 
 To stop the containers, type:
 
 ```shell
-sudo docker compose stop
+sudo docker-compose stop
 ```
 
 ## 8. Done

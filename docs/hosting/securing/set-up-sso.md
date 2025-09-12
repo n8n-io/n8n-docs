@@ -1,7 +1,6 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Single Sign-On (SSO)
-description: "Configuring single sign-on for your self-hosted n8n instance."
+description: "Configuring SAML or OIDC single sign-on for your self-hosted n8n instance."
 ---
 
 # Set up Single Sign-On (SSO)

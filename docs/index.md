@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: "Explore n8n Docs: Your Resource for Workflow Automation and Integrations"
 description: Access n8n Docs for comprehensive guides on workflow automation and integrations. Learn how to integrate apps and enhance your automation capabilities.
 contentType: overview

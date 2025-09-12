@@ -67,7 +67,7 @@ nav:
           - Sub-workflows: flow-logic/subworkflows.md
           - Error handling: flow-logic/error-handling.md
         - Handle rate limits: integrations/builtin/rate-limits.md
-        - Streaming responsees: workflows/streaming.md
+        - Streaming responses: workflows/streaming.md
         - Custom API actions for existing nodes: integrations/custom-operations.md
         - Using community nodes:
           - Installation and management:
@@ -292,6 +292,7 @@ nav:
     - Node development:
       - Install n8n with npm: hosting/installation/npm.md
       - Set up your development environment: integrations/creating-nodes/build/node-development-environment.md
+      - Using the n8n-node tool: integrations/creating-nodes/build/n8n-node.md
       - Versioning: integrations/creating-nodes/build/reference/node-versioning.md
       - Test your node:
         - integrations/creating-nodes/test/index.md
@@ -442,7 +443,6 @@ nav:
         - APITemplate.io: integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio.md
         - Asana: integrations/builtin/app-nodes/n8n-nodes-base.asana.md
         - Asana Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger.md
-        - Automizy: integrations/builtin/app-nodes/n8n-nodes-base.automizy.md
         - Autopilot: integrations/builtin/app-nodes/n8n-nodes-base.autopilot.md
         - Autopilot Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger.md
         - AWS Certificate Manager: integrations/builtin/app-nodes/n8n-nodes-base.awscertificatemanager.md
@@ -772,7 +772,6 @@ nav:
         - Slack Trigger: integrations/builtin/trigger-nodes/n8n-nodes-base.slacktrigger.md
         - Snowflake: integrations/builtin/app-nodes/n8n-nodes-base.snowflake.md
         - Splunk: integrations/builtin/app-nodes/n8n-nodes-base.splunk.md
-        - Spontit: integrations/builtin/app-nodes/n8n-nodes-base.spontit.md
         - Spotify: integrations/builtin/app-nodes/n8n-nodes-base.spotify.md
         - Stackby: integrations/builtin/app-nodes/n8n-nodes-base.stackby.md
         - Storyblok: integrations/builtin/app-nodes/n8n-nodes-base.storyblok.md
@@ -971,7 +970,6 @@ nav:
         - integrations/builtin/credentials/apitemplateio.md
         - integrations/builtin/credentials/asana.md
         - integrations/builtin/credentials/auth0management.md
-        - integrations/builtin/credentials/automizy.md
         - integrations/builtin/credentials/autopilot.md
         - integrations/builtin/credentials/aws.md
         - integrations/builtin/credentials/azureopenai.md
@@ -1209,7 +1207,6 @@ nav:
         - integrations/builtin/credentials/solarwindsipam.md
         - integrations/builtin/credentials/solarwindsobservability.md
         - integrations/builtin/credentials/splunk.md
-        - integrations/builtin/credentials/spontit.md
         - integrations/builtin/credentials/spotify.md
         - integrations/builtin/credentials/ssh.md
         - integrations/builtin/credentials/stackby.md

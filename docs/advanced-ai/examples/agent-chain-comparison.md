@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
 title: Agents vs chains
 description: A workflow example that demonstrates key differences between agents and chains.

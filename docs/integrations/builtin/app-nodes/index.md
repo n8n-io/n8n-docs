@@ -1,10 +1,9 @@
 ---
 title: App nodes library
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: overview
 ---
 
-# Actions library
+# App nodes library
 
 This section provides information about n8n's App nodes.
 

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HaloPSA credentials
 description: Documentation for HaloPSA credentials. Use these credentials to authenticate HaloPSA in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -21,7 +20,7 @@ Create a [HaloPSA](https://halopsa.com/) account.
 
 ## Related resources
 
-Refer to [HaloPSA's API documentation](https://halopsa.com/apidoc/info) for more information about the service.
+Refer to [HaloPSA's API documentation](https://usehalo.com/halopsa/guides/1823/) for more information about the service.
 
 ## Using API key
 
@@ -32,7 +31,7 @@ To configure this credential, you'll need:
     - **Hosted Solution Of Halo**: Choose this option if your application is hosted by Halo. If this option is selected, you'll need to provide your **Tenant**.
 - The **HaloPSA Authorisation Server URL**: Your Authorisation Server URL is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737).
 - The **Resource Server** URL: Your Resource Server is displayed within HaloPSA in **Configuration > Integrations > Halo API** in [API Details](https://halopsa.com/guides/article/?kbid=1737).
-- A **Client ID**: Obtained by registering the application in the Halo API settings. Refer to [HaloPSA's Authorisation documentation](https://halopsa.com/apidoc/authorisation) for detailed instructions. n8n recommends using these settings:
+- A **Client ID**: Obtained by registering the application in the Halo API settings. Refer to [HaloPSA's Authorisation documentation](https://usehalo.com/halopsa/guides/1823/) for detailed instructions. n8n recommends using these settings:
     - Choose `Client Credentials` as your **Authentication Method**.
     - Use the `all` permission.
 - A **Client Secret**: Obtained by registering the application in the Halo API settings.

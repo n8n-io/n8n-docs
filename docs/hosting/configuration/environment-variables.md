@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Environment Variables
 description: An overview of configuration environment variables for self-hosted n8n. 
 contentType: reference
@@ -43,8 +42,10 @@ Environment variables are organized into the following sections:
 * [Source control](#source-control)
 * [Task runners](#task-runners)
 	* [n8n instance](#n8n-instance)
-	* [Task runner](#task-runner)
 	* [Task runner launcher](#task-runner-launcher)
+	* [Task runner (all languages)](#task-runner-all-languages)
+	* [Task runner (JavaScript)](#task-runner-javascript)
+	* [Task runner (Python)](#task-runner-python)
 * [Timezone and localization](#timezone-and-localization)
 * [User management, SMTP, and two-factor authentication](#user-management-smtp-and-two-factor-authentication)
 * [Workflows](#workflows)
@@ -288,7 +289,7 @@ This section lists environment variables to set up logging for debugging. Refer 
 | `CODE_ENABLE_STDOUT`            | Boolean                                                        | `false`                             | Set to `true` to send Code node logs to process's stdout for debugging, monitoring, or logging purposes.                                                                                                                        |
 | `DB_LOGGING_ENABLED`            | Boolean                                                        | `false`                             | Whether to enable database-specific logging.                                                                                                                                                                                    |
 | `DB_LOGGING_MAX_EXECUTION_TIME` | Number                                                         | `1000`                              | Maximum execution time (in milliseconds) before n8n logs a warning. Set to `0` to disable long running query warning.                                                                                                           |
-| `DB_LOGGING_OPTIONS`            | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log` | `error`                             | Database log output level. To enable all logging, specify `all`. Refer to [TypeORM logging options](https://orkhan.gitbook.io/typeorm/docs/docs/advanced-topics/5-logging#logging-options)                                      |
+| `DB_LOGGING_OPTIONS`            | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log` | `error`                             | Database log output level. To enable all logging, specify `all`. Refer to [TypeORM logging options](https://orkhan.gitbook.io/typeorm/docs/docs/advanced-topics/5-logging#logging-options).                                     |
 | `N8N_LOG_CRON_ACTIVE_INTERVAL`  | Number                                                         | `0`                                 | Interval in minutes to log currently active cron jobs. Set to `0` to disable.                                                                                                                                                   |
 | `N8N_LOG_FILE_COUNT_MAX`        | Number                                                         | `100`                               | Max number of log files to keep.                                                                                                                                                                                                |
 | `N8N_LOG_FILE_LOCATION`         | String                                                         | `<n8n-directory-path>/logs/n8n.log` | Log file location. Requires N8N_LOG_OUTPUT set to `file`.                                                                                                                                                                       |
@@ -408,7 +409,6 @@ n8n uses Git-based source control to support environments. Refer to [Source cont
 | `N8N_RUNNERS_MODE`                  | Enum string: `internal`, `external` | `internal`      | How to launch and run the task runner. `internal` means n8n will launch a task runner as child process. `external` means an external orchestrator will launch the task runner. |
 | `N8N_RUNNERS_TASK_TIMEOUT`          | Number                              | `60`            | How long (in seconds) a task can take to complete before the task aborts and the runner restarts. Must be greater than 0.                                                      |
 
-
 ### Task runner launcher
 
 | Variable                                 | Type                                          | Default                 | Description                                                                              |
@@ -420,24 +420,37 @@ n8n uses Git-based source control to support environments. Refer to [Source cont
 | `N8N_RUNNERS_MAX_CONCURRENCY`            | Number                                        | `5`                     | The number of concurrent tasks a task runner can execute at a time.                      |
 | `N8N_RUNNERS_MAX_PAYLOAD`                | Number                                        | `1 073 741 824`         | Maximum payload size in bytes for communication between a task broker and a task runner. |
 | `N8N_RUNNERS_TASK_BROKER_URI`            | String                                        | `http://127.0.0.1:5679` | The URI of the task broker server (n8n instance).                                        |
-| `NODE_OPTIONS`                           | String                                        | -                       | [Options](https://nodejs.org/api/cli.html#node_optionsoptions) for Node.js.              |
 
 
-### Task runner
+### Task runner (all languages)
 
 | Variable                                 | Type    | Default                 | Description                                                                                                                                                                                                          |
 |:-----------------------------------------|:--------|:------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `GENERIC_TIMEZONE`                       | *       | `America/New_York`      | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables.md#timezone-and-localization).                                                                           |
-| `N8N_RUNNERS_ALLOW_PROTOTYPE_MUTATION`   | Boolean | `false`                 | Whether to allow prototype mutation for external libraries. Set to `true` to allow modules that rely on runtime prototype mutation (for example, [`puppeteer`](https://pptr.dev/)) at the cost of relaxing security. |
 | `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT`      | Number  | `15`                    | The number of seconds to wait before shutting down an idle runner.                                                                                                                                                   |
 | `N8N_RUNNERS_GRANT_TOKEN`                | String  | Random string           | Token the runner uses to authenticate with the task broker. This is automatically provided by the launcher.                                                                                                          |
 | `N8N_RUNNERS_LAUNCHER_HEALTH_CHECK_PORT` | Number  | `5680`                  | Port for the launcher's health check server.                                                                                                                                                                         |
 | `N8N_RUNNERS_MAX_CONCURRENCY`            | Number  | `5`                     | The number of concurrent tasks a task runner can execute at a time.                                                                                                                                                  |
 | `N8N_RUNNERS_MAX_PAYLOAD`                | Number  | `1 073 741 824`         | Maximum payload size in bytes for communication between a task broker and a task runner.                                                                                                                             |
 | `N8N_RUNNERS_TASK_BROKER_URI`            | String  | `http://127.0.0.1:5679` | The URI of the task broker server (n8n instance).                                                                                                                                                                    |
+
+### Task runner (JavaScript)
+
+| Variable                                 | Type    | Default                 | Description                                                                                                                                                                                                          |
+|:-----------------------------------------|:--------|:------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `GENERIC_TIMEZONE`                       | *       | `America/New_York`      | The [same default timezone as configured for the n8n instance](/hosting/configuration/environment-variables.md#timezone-and-localization).                                                                           |
+| `N8N_RUNNERS_ALLOW_PROTOTYPE_MUTATION`   | Boolean | `false`                 | Whether to allow prototype mutation for external libraries. Set to `true` to allow modules that rely on runtime prototype mutation (for example, [`puppeteer`](https://pptr.dev/)) at the cost of relaxing security. |
 | `NODE_FUNCTION_ALLOW_BUILTIN`            | String  | -                       | Permit users to import specific built-in modules in the Code node. Use * to allow all. n8n disables importing modules by default.                                                                                    |
 | `NODE_FUNCTION_ALLOW_EXTERNAL`           | String  | -                       | Permit users to import specific external modules (from `n8n/node_modules`) in the Code node. n8n disables importing modules by default.                                                                              |
+| `NODE_OPTIONS`                           | String  | -                       | [Options](https://nodejs.org/api/cli.html#node_optionsoptions) for Node.js.                                                                                                                                          |
+| `N8N_RUNNERS_MAX_OLD_SPACE_SIZE`         | String  |                         | The `--max-old-space-size` option to use for a task runner (in MB). By default, Node.js will set this based on available memory.                                                                                     |
 
+## Task runner (Python)
+
+| Variable                     | Type   | Default                                                                                                                   | Description                                                                                                                                                                                            |
+|:-----------------------------|:-------|:--------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `N8N_RUNNERS_BUILTINS_DENY`  | String | `eval,exec,compile,open,input,breakpoint,getattr,object,type,vars,setattr,delattr,hasattr,dir,memoryview,__build_class__` | List of insecure Python built-ins aren't allowed. Set to an empty string to allow all.                                                                                                                 | 
+| `N8N_RUNNERS_EXTERNAL_ALLOW` | String | -                                                                                                                         | Permit users to import specific third-party Python modules (if available in the `n8nio/runners` image) in the Code node. Use `*` to allow all. n8n disables all third-party Python modules by default. |
+| `N8N_RUNNERS_STDLIB_ALLOW`   | String | -                                                                                                                         | Permit users to import specific Python standard library modules in the Code node. Use `*` to allow all. n8n disables all Python standard library imports by default.                                   |
 
 ## Timezone and localization
 

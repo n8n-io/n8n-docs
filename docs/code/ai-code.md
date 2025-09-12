@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AI coding
 description: Use GPT to generate code in the Code node.
 contentType: explanation

@@ -11,6 +11,7 @@ You can use these credentials to authenticate the following nodes:
 
 - [Redis](/integrations/builtin/app-nodes/n8n-nodes-base.redis.md)
 - [Redis Chat Memory](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md)
+- [Redis Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreredis.md)
 
 ## Supported authentication methods
 

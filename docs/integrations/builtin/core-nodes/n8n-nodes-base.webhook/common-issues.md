@@ -97,7 +97,7 @@ Refer to [Workflow development](/integrations/builtin/core-nodes/n8n-nodes-base.
 
 If you're unable to connect from IP addresses in your IP whitelist, check if you are running n8n behind a reverse proxy.
 
-If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables/index.md) to the number of reverse-proxies n8n is running behind.
+If so, set the `N8N_PROXY_HOPS` [environment variable](/hosting/configuration/environment-variables.md) to the number of reverse-proxies n8n is running behind.
 
 ## Only one webhook per path and method
 

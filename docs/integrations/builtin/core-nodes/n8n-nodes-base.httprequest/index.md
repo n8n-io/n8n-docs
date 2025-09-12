@@ -213,7 +213,7 @@ Configure the pagination settings:
     * **Update a Parameter in Each Request**: Use this when you need to dynamically set parameters for each request.
     * **Response Contains Next URL**: Use this when the API response includes the URL of the next page. Use an expression to set **Next URL**.
 
-For example setups, refer to [HTTP Request node cookbook | Pagination](/code/cookbook/http-node/pagination.md).
+For example setups, refer to [HTTP Request node pagination](/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/pagination.md).
 
 n8n provides built-in variables for working with HTTP node requests and responses when using pagination:
 
@@ -225,7 +225,7 @@ n8n provides built-in variables for working with HTTP node requests and response
 
 Use this option if you need to specify an HTTP proxy.
 
-Enter the **Proxy** the request should use. This takes precedence over global settings defined with the [`HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables](/hosting/configuration/environment-variables/deployment.md).
+Enter the **Proxy** the request should use. This takes precedence over global settings defined with the [`HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables](/hosting/configuration/environment-variables.md#deployment).
 
 ### Timeout
 

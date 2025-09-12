@@ -5,6 +5,7 @@ contentType: [integration, reference]
 priority: critical
 ---
 
+<!-- vale Vale.Spelling["getChat", "leaveChat"] = NO -->
 # Telegram node Chat operations
 
 Use these operations to get information about chats, members, administrators, leave chat, and set chat titles and descriptions. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.

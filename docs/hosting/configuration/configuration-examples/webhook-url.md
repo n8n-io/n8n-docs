@@ -21,4 +21,4 @@ When running n8n behind a reverse proxy, it's important to do the following:
 export WEBHOOK_URL=https://n8n.example.com/
 export N8N_PROXY_HOPS=1
 ```
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/endpoints.md) for more information on this variable.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables.md#endpoints) for more information on this variable.

@@ -71,7 +71,9 @@ To set it up:
 8. Copy the **Client Secret** from Mautic and enter it in your n8n credential.
 9. Enter the Base **URL** of your Mautic instance.
 
-Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-039%3bs-api.html#mcetoc_1g7n1bgoo0) for more information.
+<!-- vale from-microsoft.Contractions = NO -->
+Refer to [What is Mautic's API?](https://kb.mautic.org/article/what-is-mautic-039%3bs-api.html) for more information.
+<!-- vale from-microsoft.Contractions = YES -->
 
 ## Enable the API
 

@@ -4,11 +4,15 @@ description: Use GPT to generate code in the Code node.
 contentType: explanation
 ---
 
-# AI coding with GPT
+# Writing code with AI assistance
 
-Not available on self-hosted.  
+In n8n Cloud, you can use a chat-based AI to generate code within the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md).
 
-Python isn't supported.
+/// note | Availability
+AI assistance in the Code node is only available:
+
+* for n8n Cloud
+* for JavaScript code. Python isn't supported.
 ///
 
 ## Use AI in the Code node

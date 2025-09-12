@@ -5,6 +5,7 @@ contentType: [integration, reference]
 priority: critical
 ---
 
+<!-- vale Vale.Spelling["Moderations"] = NO -->
 # OpenAI Text operations
 
 Use this operation to message a model or classify text for violations in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.

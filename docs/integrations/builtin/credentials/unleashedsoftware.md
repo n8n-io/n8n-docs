@@ -20,7 +20,7 @@ Create an [Unleashed Software](https://www.unleashedsoftware.com/) account.
 
 ## Related resources
 
-Refer to [Unleashed's API documentation](https://apidocs.unleashedsoftware.com/) for more information about the service.
+Refer to the [Unleashed API documentation](https://apidocs.unleashedsoftware.com/) for more information about the service.
 
 ## Using API key
 

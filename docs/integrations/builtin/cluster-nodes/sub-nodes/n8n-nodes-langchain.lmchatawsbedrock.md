@@ -29,7 +29,7 @@ Learn more about available models in the [Amazon Bedrock model documentation](ht
 
 ## Proxy limitations
 
-This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables/deployment.md).
+This node doesn't support the [`NO_PROXY` environment variable](/hosting/configuration/environment-variables.md#deployment).
 
 ## Templates and examples
 

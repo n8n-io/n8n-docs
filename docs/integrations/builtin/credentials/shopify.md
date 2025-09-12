@@ -68,7 +68,7 @@ To configure this credential, you'll need a [Shopify partner](https://www.shopif
 To set up the credential, you'll need to create and install a custom app:
 
 /// note | Custom app development
-Shopify provides templates for creating new apps. The instructions below only cover the elements necessary to set up your n8n credential. Refer to Shopify's [Build dev docs](https://shopify.dev/docs/apps/build) for more information on building apps and working with app templates.
+Shopify provides templates for creating new apps. The instructions below only cover the elements necessary to set up your n8n credential. Refer to the [Shopify Build developer documentation](https://shopify.dev/docs/apps/build) for more information on building apps and working with app templates.
 ///
 
 1. Open your [Shopify Partner dashboard](https://partners.shopify.com/).

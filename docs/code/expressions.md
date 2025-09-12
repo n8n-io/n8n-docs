@@ -12,7 +12,7 @@ Expressions are a powerful feature implemented in all n8n nodes. They allow node
 
 You can also execute JavaScript within an expression, making this a convenient and easy way to manipulate data into useful parameter values without writing extensive extra code.
 
-n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament), and extends it with [custom methods and variables](/code/builtin/overview.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
+n8n created and uses a templating language called [Tournament](https://github.com/n8n-io/tournament), and extends it with [custom methods and variables](/code/builtin/index.md) and [data transformation functions](/code/builtin/data-transformation-functions/index.md). These features make it easier to perform common tasks like getting data from other nodes or accessing workflow metadata.
 
 n8n additionally supports two libraries:
 
@@ -20,7 +20,7 @@ n8n additionally supports two libraries:
 - [JMESPath](https://jmespath.org/), for querying JSON.
 
 /// note | Data in n8n
-When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/index.md) for more information on working with data in your workflows.
+When writing expressions, it's helpful to understand data structure and behavior in n8n. Refer to [Data](/data/data-structure.md) for more information on working with data in your workflows.
 ///
 
 ## Writing expressions
@@ -31,6 +31,16 @@ To use an expression to set a parameter value:
 2. Select **Expressions** in the **Fixed/Expression** toggle.
 3. Write your expression in the parameter, or select **Open expression editor** <span class="n8n-inline-image">![Open expressions editor icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the expressions editor. If you use the expressions editor, you can browse the available data in the **Variable selector**. All expressions have the format `{{ your expression here }}`.
 
+### Building expressions with drag and drop
+
+Each non-trigger node contains an **Input pane** that displays the output of preceding nodes as well as data related to the instance, execution, variables, and other details. By default, the output from nodes directly connected to the current node are expanded. 
+
+To build an expression referencing data in the Input pane:
+
+1. Hover over the parameter where you want to use an expression.
+1. Select **Expressions** in the **Fixed/Expression** toggle.
+1. Drill down and expand the properties in the **Input pane** to find the data you're interested in.
+1. Drag the data from the Input pane into the parameter.
 
 ### Example: Get data from webhook body
 
@@ -74,7 +84,6 @@ This expression:
 ### Example: Writing longer JavaScript
 
 You can do things like variable assignments or multiple statements in an expression, but you need to wrap your code using the syntax for an IIFE (Immediately Invoked Function Expression).
-
 
 The following code use the Luxon date and time library to find the time between two dates in months. We surround the code in both the handlebar brackets for an expression and the IIFE syntax.
 

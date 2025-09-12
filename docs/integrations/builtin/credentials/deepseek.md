@@ -1,6 +1,6 @@
 ---
 title: DeepSeek credentials
-description: Documentation for DeepSeek credentials. Use these credentials to authenticate Deepseek in n8n, a workflow automation platform.
+description: Documentation for DeepSeek credentials. Use these credentials to authenticate DeepSeek in n8n, a workflow automation platform.
 contentType: [integration, reference]
 priority: critical
 ---

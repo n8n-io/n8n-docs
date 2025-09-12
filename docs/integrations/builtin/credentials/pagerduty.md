@@ -33,7 +33,7 @@ To configure this credential, you'll need:
 
 --8<-- "_snippets/integrations/builtin/credentials/cloud-oauth-button.md"
 
-If you need to configure OAuth2 from scratch, [register a new Pagerduty app](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app).
+If you need to configure OAuth2 from scratch, [register a new PagerDuty app](https://developer.pagerduty.com/docs/dd91fbd09a1a1-register-an-app).
 
 Use these settings for registering your app:
 

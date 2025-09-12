@@ -35,15 +35,15 @@ Viewers aren't able to manually execute any workflows that exist in a project.
 Role types and [account types](/user-management/account-types.md) are different things. Every account has one type. The account can have different role types for different [projects](/user-management/rbac/projects.md).
 ///
 
-| Permission | Admin | Editor | Viewer | 
-| ---------- |------ | ------ | ------ | 
-| View workflows in the project | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Permission                      | Admin              | Editor             | Viewer             |
+|---------------------------------|--------------------|--------------------|--------------------|
+| View workflows in the project   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | View credentials in the project | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| View executions | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
-| Edit credentials and workflows | :white_check_mark: | :white_check_mark: | :x: | 
-| Add workflows and credentials | :white_check_mark: | :white_check_mark: | :x: | 
-| Execute workflows | :white_check_mark: | :white_check_mark: | :x: | 
-| Manage members | :white_check_mark: | :x: | :x: | 
-| Modify the project | :white_check_mark: | :x: | :x: | 
+| View executions                 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Edit credentials and workflows  | :white_check_mark: | :white_check_mark: | :x:                |
+| Add workflows and credentials   | :white_check_mark: | :white_check_mark: | :x:                |
+| Execute workflows               | :white_check_mark: | :white_check_mark: | :x:                |
+| Manage members                  | :white_check_mark: | :x:                | :x:                |
+| Modify the project              | :white_check_mark: | :x:                | :x:                |
 
 [Variables](/code/variables.md) and [tags](/workflows/tags.md) aren't affected by RBAC: they're global across the n8n instance.

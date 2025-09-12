@@ -29,7 +29,7 @@ n8n dynamically loads models from the Google PaLM API and you'll only see the mo
 
 ## Related resources
 
-Refer to [Langchain's Google PaLM embeddings documentation](https://js.langchain.com/v0.2/docs/integrations/text_embedding/google_palm/) for more information about the service.
+Refer to the [LangChain Google PaLM embeddings documentation](https://js.langchain.com/v0.2/docs/integrations/text_embedding/google_palm/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

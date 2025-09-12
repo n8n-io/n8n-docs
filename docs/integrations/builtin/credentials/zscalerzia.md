@@ -19,7 +19,7 @@ Create an admin account on a [Zscaler Internet Access (ZIA)](https://www.zscaler
 
 ## Related resources
 
-Refer to [Zscaler ZIA's documentation](https://help.zscaler.com/zia/getting-started-zia-api) for more information about the service.
+Refer to the [Zscaler ZIA documentation](https://help.zscaler.com/zia/getting-started-zia-api) for more information about the service.
 
 This is a credential-only node. Refer to [Custom API operations](/integrations/custom-operations.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/zscaler-zia/) on n8n's website.
 

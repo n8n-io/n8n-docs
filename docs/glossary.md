@@ -86,6 +86,10 @@ In n8n, evaluation allows you to tag and organize execution history and compare 
 
 In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
 
+#### item (n8n)
+
+In n8n, an item is a bundle of related data represented by a JSON object. The item stores its main key-value properties in child object called `json`, leaving room to encode metadata, binary data, and other properties in sibling keys. n8n workflows pass arrays of items between nodes for processing. Individual nodes typically perform their action on each item sent to their input in sequence.
+
 #### LangChain
 
 LangChain is an AI-development framework used to work with large language models (LLMs). LangChain provides a standardized system for working with a wide variety of models and other resources and linking different components together to build complex applications.

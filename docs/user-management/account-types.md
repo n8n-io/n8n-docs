@@ -22,18 +22,16 @@ n8n recommends that owners create a member-level account for themselves. Owners 
 ///
 
 
-| Permission | Owner | Admin | Member |
-| ---------- |------ | ----- | ------ |
-| Manage own email and password | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Manage own workflows | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| View, create, and use tags | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Delete tags | :white_check_mark: | :white_check_mark: | :x: |
-| View and share all workflows | :white_check_mark: | :white_check_mark: | :x: |
-| View, edit, and share all credentials | :white_check_mark: | :white_check_mark: | :x: |
-| Set up and use [Source control](/source-control-environments/index.md) | :white_check_mark: | :white_check_mark: | :x: |
-| Create [projects](/user-management/rbac/projects.md) | :white_check_mark: | :white_check_mark: | :x: |
-| View all projects | :white_check_mark: | :white_check_mark: | :x: |
-| Add and remove users | :white_check_mark: | :white_check_mark: | :x: |
-| Access the Cloud dashboard | :white_check_mark: | :x: | :x: |
-
-
+| Permission                                                             | Owner              | Admin              | Member             |
+|------------------------------------------------------------------------|--------------------|--------------------|--------------------|
+| Manage own email and password                                          | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Manage own workflows                                                   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| View, create, and use tags                                             | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Delete tags                                                            | :white_check_mark: | :white_check_mark: | :x:                |
+| View and share all workflows                                           | :white_check_mark: | :white_check_mark: | :x:                |
+| View, edit, and share all credentials                                  | :white_check_mark: | :white_check_mark: | :x:                |
+| Set up and use [Source control](/source-control-environments/index.md) | :white_check_mark: | :white_check_mark: | :x:                |
+| Create [projects](/user-management/rbac/projects.md)                   | :white_check_mark: | :white_check_mark: | :x:                |
+| View all projects                                                      | :white_check_mark: | :white_check_mark: | :x:                |
+| Add and remove users                                                   | :white_check_mark: | :white_check_mark: | :x:                |
+| Access the Cloud dashboard                                             | :white_check_mark: | :x:                | :x:                |

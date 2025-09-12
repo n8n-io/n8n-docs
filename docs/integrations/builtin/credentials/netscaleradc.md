@@ -20,7 +20,7 @@ Install a [NetScaler/Citrix ADC appliance](https://docs.netscaler.com/en-us/citr
 
 ## Related resources
 
-Refer to [Netscaler ADC's 14.1 NITRO API documentation](https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release) for more information about the service.
+Refer to the [Netscaler ADC 14.1 NITRO API documentation](https://developer-docs.netscaler.com/en-us/adc-nitro-api/current-release) for more information about the service.
 
 ## Using basic auth
 

@@ -4,22 +4,22 @@ contentType: howto
 
 # Logging in n8n
 
-Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
+Logging is an important feature for debugging. n8n uses the [`winston`](https://www.npmjs.com/package/winston) logging library.
 
 /// note | Log streaming
 n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming.md), in addition to the logging options described in this document.
 ///
 ## Setup
 
-To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/environment-variables/index.md))
+To set up logging in n8n, you need to set the following environment variables (you can also set the values in the [configuration file](/hosting/configuration/configuration-methods.md#set-environment-variables-using-a-file)).
 
-| Setting in the configuration file | Using environment variables | Description |
-|-----------------------------------|-----------------------------|-------------|
-| n8n.log.level | N8N_LOG_LEVEL | The log output level. The available options are (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
-| n8n.log.output | N8N_LOG_OUTPUT | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default. |
-| n8n.log.file.location | N8N_LOG_FILE_LOCATION | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used. |
-| n8n.log.file.maxsize | N8N_LOG_FILE_SIZE_MAX | The maximum size (in MB) for each log file. By default, n8n uses 16 MB. |
-| n8n.log.file.maxcount | N8N_LOG_FILE_COUNT_MAX | The maximum number of log files to keep. The default value is 100. This value should be set when using workers. |
+| Setting in the configuration file | Using environment variables | Description                                                                                                                                                                                               |
+|-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `n8n.log.level`                   | `N8N_LOG_LEVEL`             | The log output level. The available options are (from lowest to highest level) are error, warn, info, and debug. The default value is `info`. You can learn more about these options [here](#log-levels). |
+| `n8n.log.output`                  | `N8N_LOG_OUTPUT`            | Where to output logs. The available options are `console` and `file`. Multiple values can be used separated by a comma (`,`). `console` is used by default.                                               |
+| `n8n.log.file.location`           | `N8N_LOG_FILE_LOCATION`     | The log file location, used only if log output is set to file. By default, `<n8nFolderPath>/logs/n8n.log` is used.                                                                                        |
+| `n8n.log.file.maxsize`            | `N8N_LOG_FILE_SIZE_MAX`     | The maximum size (in MB) for each log file. By default, n8n uses 16 MB.                                                                                                                                   |
+| `n8n.log.file.maxcount`           | `N8N_LOG_FILE_COUNT_MAX`    | The maximum number of log files to keep. The default value is 100. This value should be set when using workers.                                                                                           |
 
 
 ```bash

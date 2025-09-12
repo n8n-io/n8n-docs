@@ -23,7 +23,7 @@ Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance o
 
 Refer to [Baserow's documentation](https://baserow.io/docs/index) for more information about the service.
 
-Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs) for more information about the API specifically.
+Refer to [Baserow's automatically generated API documentation](https://baserow.io/api-docs) for more information about the API specifically.
 
 ## Using basic auth
 

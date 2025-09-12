@@ -5,6 +5,8 @@ contentType: [integration, reference]
 priority: medium
 ---
 
+<!-- vale Vale.Spelling["iss", "jti", "nbf"] = NO -->
+
 # JWT
 
 Work with JSON web tokens in your n8n workflows.

@@ -27,4 +27,4 @@ For usage examples and templates to help you get started, refer to n8n's [Workab
 
 View [example workflows and related content](https://n8n.io/integrations/workable-trigger/) on n8n's website.
 
-Refer to [Workable's API documentation](https://developers.workable.com/) for details about using the service.
+Refer to the [Workable API documentation](https://developers.workable.com/) for details about using the service.

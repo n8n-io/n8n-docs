@@ -19,7 +19,7 @@ There are two execution modes:
 
 n8n provides two execution lists:
 
-* [Workflow-level executions](/workflows/executions/single-workflow-executions.md): this execution list shows the executions for a single workflow.
-* [All executions](/workflows/executions/all-executions.md): this list shows all executions for all your workflows.
+* [Workflow-level executions list](/workflows/executions/single-workflow-executions.md): this execution list shows the executions for a single workflow.
+* [All executions list](/workflows/executions/all-executions.md): this list shows all executions for all your workflows.
 
 n8n supports [adding custom data to executions](/workflows/executions/custom-executions-data.md).

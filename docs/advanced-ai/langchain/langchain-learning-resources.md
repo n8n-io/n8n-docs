@@ -4,6 +4,7 @@ title: LangChain learning resources
 description: External resources to learn more about LangChain and AI.
 ---
 
+<!-- vale Vale.Spelling["Kamradt"] = NO -->
 # LangChain learning resources
 
 You don't need to know details about LangChain to use n8n, but it can be helpful to learn a few concepts. This pages lists some learning resources that people at n8n have found helpful.

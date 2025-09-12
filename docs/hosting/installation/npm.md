@@ -6,12 +6,17 @@ contentType: tutorial
 
 npm is a quick way to get started with n8n on your local machine. You must have [Node.js](https://nodejs.org/en/) installed. n8n requires a Node.js version between 20.19 and 24.x, inclusive.
 
+/// warning | Recommended for development only
+n8n recommends using [Docker](/hosting/installation/docker.md), [Docker Compose](/hosting/installation/server-setups/docker-compose.md), or other [container-based deployments](https://github.com/n8n-io/n8n-hosting) for most self-hosted deployments. These methods offer improved security, isolation from the host's packages and environment, straightforward version control and rollbacks, and more. Most users have fewer issues and an easier time debugging when deploying with these methods.
+
+Installing with npm is still necessary if you want to develop nodes or make changes to n8n itself.
+///
+
 --8<-- "_snippets/self-hosting/installation/latest-next-version.md"
 
 ## Try n8n with npx
 
 You can try n8n without installing it using npx.
-
 
 From the terminal, run:
 
@@ -52,7 +57,7 @@ n8n start
 
 ### Next steps
 
-Try out n8n using the [Quickstarts](/try-it-out/index.md).
+Try out n8n using the [Tutorials](/tutorials/index.md).
 
 ## Updating
 

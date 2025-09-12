@@ -8,7 +8,11 @@ contentType: howto
 
 [Luxon](https://github.com/moment/luxon/) is a JavaScript library that makes it easier to work with date and time. For full details of how to use Luxon, refer to [Luxon's documentation](https://moment.github.io/luxon/#/?id=luxon). 
 
-n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier.
+n8n passes dates between nodes as strings, so you need to parse them. Luxon makes this easier. n8n recommends using Luxon dates over native JavaScript dates (created with `new Date()`) in most cases.
+
+/// warning | Don't mix native JavaScript and Luxon dates
+While you can use both native JavaScript dates and Luxon dates in n8n, they aren't directly interoperable. It's best to [convert JavaScript dates to Luxon](#convert-javascript-dates-to-luxon) to avoid problems.
+///
 
 /// note | Python support
 Luxon is a JavaScript library. The two convenience [variables](#get-the-current-datetime-or-date) created by n8n are available when using Python in the Code node, but their functionality is limited:
@@ -85,7 +89,7 @@ To convert a native JavaScript date to a Luxon date:
 
 ### Convert date string to Luxon
 
-You can convert date strings and other date formats to a Luxon DateTime object. You can convert from standard formats and from arbitrary strings.
+To parse strings into a Luxon DateTime object, use Luxon's `fromISO()` or `fromFormat()` methods. You can convert from standard formats and from arbitrary strings.
 
 /// note | A difference between Luxon DateTime and JavaScript Date
 With vanilla JavaScript, you can convert a string to a date with `new Date('2019-06-23')`. In Luxon, you must use a function explicitly stating the format, such as `DateTime.fromISO('2019-06-23')` or `DateTime.fromFormat("23-06-2019", "dd-MM-yyyy")`.

@@ -32,7 +32,7 @@ To configure this credential, you'll need:
 
 MSG91 enables [IP Security](https://msg91.com/help/api/what-do-you-mean-by-api-security) by default for authkeys.
 
-For the n8n credentials to function with this setting enabled, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) as whitelisted IPs in MSG91. You can add them in one of two places, depending on your desired security level:
+For the n8n credentials to function with this setting enabled, add all the [n8n IP addresses](/manage-cloud/cloud-ip.md) as whitelisted IP addresses in MSG91. You can add them in one of two places, depending on your desired security level:
 
 - To allow any/all authkeys in the account to work with n8n, add the n8n IP addresses in the **Company's whitelisted IPs** section of the **Authkey** page.
 - To allow only specific authkeys to work with n8n, add the n8n IP addresses in the **Whitelisted IPs** section of an authkey's details.

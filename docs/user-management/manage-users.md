@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
@@ -9,7 +8,7 @@ The **Settings** > **Users** page shows all users, including ones with pending i
 
 ## Delete a user
 
-1. Select the menu icon by the user you want to delete.
+1. Open the **Account Type** drop down for the user you want to delete and select **Remove user**.
 2. Confirm you want to delete them.
 3. If they're an active user, choose whether to copy their workflow data and credentials to a new user, or permanently delete their workflows and credentials.
 

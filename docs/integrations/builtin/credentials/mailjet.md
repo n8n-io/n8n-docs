@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mailjet credentials
 description: Documentation for Mailjet credentials. Use these credentials to authenticate Mailjet in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -23,14 +22,14 @@ Create a [Mailjet](https://www.mailjet.com/) account.
 
 ## Related resources
 
-Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/sms/guides/) for more information about each service.
+Refer to [Mailjet's Email API documentation](https://dev.mailjet.com/email/guides/) and [Mailjet's SMS API documentation](https://dev.mailjet.com/sms/reference/send-message/) for more information about each service.
 
 ## Using Email API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: View and generate API keys in your Mailjet [API Key Management](https://app.mailjet.com/account/api_keys) page.
-- A **Secret Key**: View your API Secret Keys in your Mailjet [API Key Management](https://app.mailjet.com/account/api_keys) page.
+- An **API Key**: View and generate API keys in your Mailjet [API Key Management](https://app.mailjet.com/signin) page.
+- A **Secret Key**: View your API Secret Keys in your Mailjet [API Key Management](https://app.mailjet.com/signin) page.
 - _Optional:_ Select whether to use **Sandbox Mode** for calls made using this credential. When turned on, all API calls use Sandbox mode: the API will still validate the payloads but won't deliver the actual messages. This can be useful to troubleshoot any payload error messages without actually sending messages. Refer to Mailjet's [Sandbox Mode documentation](https://dev.mailjet.com/email/guides/send-api-v31/#sandbox-mode) for more information.
 
 For this credential, you can use either:
@@ -44,5 +43,5 @@ Refer to Mailjet's [How to create a subaccount (or additional API key) documenta
 
 To configure this credential, you'll need:
 
-- An access **Token**: Generate a new token from Mailjet's [SMS Dashboard](https://app.mailjet.com/sms). Refer to the [SMS API Getting Started guide](https://dev.mailjet.com/sms/guides/getting-started/) for more detailed instructions.
+- An access **Token**: Generate a new token from Mailjet's [SMS Dashboard](https://app.mailjet.com/sms).
 

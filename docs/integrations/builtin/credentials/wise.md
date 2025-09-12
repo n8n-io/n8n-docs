@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wise credentials
 description: Documentation for Wise credentials. Use these credentials to authenticate Wise in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -55,5 +54,5 @@ To use endpoints requiring SCA, generate an RSA key pair and add the relevant ke
 2. Add the content of the public key `public.pem` to your Wise **user menu > Settings > API tokens > Manage public keys**.
 3. Add the content of the private key `private.pem` in n8n to the **Private Key (Optional)**.
 
-Refer to [Personal Token SCA](https://docs.wise.com/api-docs/features/strong-customer-authentication-2fa/personal-token-sca) for more information.
+Refer to [Personal Token SCA](https://docs.wise.com/api-docs/guides/strong-customer-authentication-2fa/personal-token-sca) for more information.
 

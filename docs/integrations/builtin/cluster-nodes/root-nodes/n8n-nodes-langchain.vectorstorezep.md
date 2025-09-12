@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zep Vector Store node documentation
 description: Learn how to use the Zep Vector Store node in n8n. Follow technical documentation to integrate Zep Vector Store node into your workflows.
 contentType: [integration, reference]

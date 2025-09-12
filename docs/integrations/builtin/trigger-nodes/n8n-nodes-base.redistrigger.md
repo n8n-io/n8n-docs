@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Redis Trigger node documentation
 description: Learn how to use the Redis Trigger node in n8n. Follow technical documentation to integrate Redis Trigger node into your workflows.
 contentType: [integration, reference]

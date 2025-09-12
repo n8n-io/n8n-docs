@@ -6,7 +6,7 @@ Adalo
 [Aa]ggregate
 Airtable
 Airtop
-[Aa]llowlist
+[Aa]llowlists?
 Anthropic
 APIs
 ARNs

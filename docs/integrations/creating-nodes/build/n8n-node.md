@@ -9,7 +9,7 @@ search:
 
 The `n8n-node` tool is the official CLI for developing community nodes for n8n. You can use it to scaffold out new nodes, build your projects, and run your node as you develop it.
 
-Using `n8n-node`, you can create nodes that adhere to the 
+Using `n8n-node`, you can create nodes that adhere to the [guidelines for verified community nodes](/integrations/creating-nodes/build/reference/verification-guidelines.md).
 
 ## Get n8n-node
 
@@ -201,7 +201,7 @@ As with the `build` command, you can also run this through your package manager.
 npm run dev
 ```
 
-`n8n-node` will compile your project and start your local `npm`-installed n8n instance with your node loaded.
+`n8n-node` will compile your project and then start up a local n8n instance through `npm` with your node loaded.
 
 Visit your `localhost:5678` to sign in to your n8n instance. If you open a workflow, your node appears in the nodes panel:
 

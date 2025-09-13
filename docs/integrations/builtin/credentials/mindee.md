@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Mindee credentials
 description: Documentation for Mindee credentials. Use these credentials to authenticate Mindee in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -18,7 +17,7 @@ Create a [Mindee](https://mindee.com) account.
 ## Supported authentication methods
 
 - Invoice API key: For use with the [Invoice OCR API](https://www.mindee.com/product/invoice-ocr-api)
-- Receipt API key: For use with the [Receipt OCR API](https://www.mindee.com/product/receipt-ocr-api-copy)
+- Receipt API key: For use with the [Receipt OCR API](https://www.mindee.com/product/receipt-ocr-api)
 
 ## Related resources
 

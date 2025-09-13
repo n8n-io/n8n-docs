@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Timezone and localization environment variables
 description: Set the timezone and default language locale for self-hosted n8n instance.
 contentType: reference

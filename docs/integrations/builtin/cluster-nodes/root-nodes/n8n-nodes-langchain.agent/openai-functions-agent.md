@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Functions Agent node documentation
 description: Learn how to use the OpenAI Functions Agent of the AI Agent node in n8n. Follow technical documentation to integrate the OpenAI Functions Agent into your workflows.
 contentType: [integration, reference]

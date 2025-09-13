@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Release notes
 description: Release notes detailing new features and bug fixes for n8n.
 tags:
@@ -35,14 +34,62 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.111.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.0...n8n@1.111.0) for this version.<br />
+**Release date:** 2025-09-08
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains core updates, API improvements, node updates, and bug fixes.
+
+### Contributors
+
+[abellion](https://github.com/abellion)  
+[cesars-gh](https://github.com/cesars-gh)  
+[durran](https://github.com/durran)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.110.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.0...n8n@1.110.1) for this version.<br />
+**Release date:** 2025-09-03
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.109.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.109.1...n8n@1.109.2) for this version.<br />
+**Release date:** 2025-09-03
+
+
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.110.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.109.0...n8n@1.110.0) for this version.<br />
 **Release date:** 2025-09-01
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains core updates, editor improvements, node updates, performance improvements, and bug fixes.
 
@@ -59,9 +106,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.109.0...n8n@1.109.1) for this version.<br />
 **Release date:** 2025-08-27
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 

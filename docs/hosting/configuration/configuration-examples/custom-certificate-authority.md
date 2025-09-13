@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Configure n8n to use your own certificate authority
 description: Customize the n8n container to work with self signed certificates when connecting to services.
 contentType: howto
@@ -9,11 +8,11 @@ contentType: howto
 
 You can add your own certificate authority (CA) or self-signed certificate to n8n. This means you are able to trust a certain SSL certificate instead of trusting all invalid certificates, which is a potential security risk.
 
-/// note | Available in version 1.42.0
-This feature is only available in version 1.42.0+.
+/// note | Added in version 1.42.0
+This feature is available in version 1.42.0 and above.
 ///
 
-To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container.
+To use this feature you need to place your certificates in a folder and mount the folder to `/opt/custom-certificates` in the container. The external path that you map to `/opt/custom-certificates` must be writable by the container. 
 
 ## Docker
 
@@ -49,3 +48,33 @@ You should also give the right permissions to the imported certs. You can do thi
 ```bash
 docker exec --user 0 n8n chown -R 1000:1000 /opt/custom-certificates
 ```
+
+## Certificate requirements for Custom Trust Store
+
+Supported certificate types:
+
+- Root CA Certificates: these are certificates from Certificate Authorities that sign other certificates. Trust these to accept all certificates signed by that CA.
+- Self-Signed Certificates: certificates that servers create and sign themselves. Trust these to accept connections to that specific server only.
+
+You must use PEM format:
+
+- Text-based format with BEGIN/END markers
+- Supported file extensions: `.pem`, `.crt`, `.cer`
+- Contains the public certificate (no private key needed)
+
+For example:
+
+```
+-----BEGIN CERTIFICATE-----
+MIIDXTCCAkWgAwIBAgIJAKoK/heBjcOuMA0GCSqGSIb3DQEBBQUAMEUxCzAJBgNV
+[base64 encoded data]
+-----END CERTIFICATE-----
+```
+
+The system doesn't accept:
+
+- DER/binary format files
+- PKCS#7 (.p7b) files
+- PKCS#12 (.pfx, .p12) files
+- Private key files
+- Convert these formats to PEM before use.

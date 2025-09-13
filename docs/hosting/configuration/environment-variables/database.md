@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Database environment variables
 description: Set up and configure databases with environment variables for your self-hosted n8n instance.
 contentType: reference

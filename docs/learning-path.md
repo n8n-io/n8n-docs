@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: A suggested learning path to get started with n8n through tutorials, courses, and step-by-step guides.
 contentType: overview
 ---

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SolarWinds IPAM credentials
 description: Documentation for the SolarWinds IPAM credentials. Use these credentials to authenticate SolarWinds IPAM in n8n, a workflow automation platform.
 contentType: [integration, reference]

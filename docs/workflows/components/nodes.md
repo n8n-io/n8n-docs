@@ -54,9 +54,11 @@ To view node controls, hover over the node on the canvas:
 	* Pin node
 	* Copy node
 	* Duplicate node
+	* Tidy up workflow
+	* Convert node to sub-workflow
 	* Select all
 	* Clear selection
-	* Delete node
+    * Delete node
 
 ## Node settings
 

@@ -59,7 +59,7 @@ To view node controls, hover over the node on the canvas:
 	* Convert node to sub-workflow
 	* Select all
 	* Clear selection
-	* Delete node
+    * Delete node
 
 ## Node settings
 

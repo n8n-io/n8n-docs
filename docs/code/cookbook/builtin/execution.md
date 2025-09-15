@@ -57,3 +57,15 @@ This is only available in the Code node.
 	```
 
 Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
+
+---
+
+## Not applicable in MCP Server Trigger node
+
+* `execution.resumeUrl`:  
+  MCP does not expose a webhook-based "resume URL" for pausing or resuming executions. 
+
+* **Model Context Protocol (MCP)** is **stateful within a session**, but **not workflow-execution stateful like n8n**.  
+  * An MCP client opens a session with a server.  
+  * That session can hold **memory, context, and active resources**.  
+  * But it does not support *waiting on a webhook and resuming an execution by URL*.  

@@ -64,7 +64,6 @@ extra:
       positive_button_text: Helpful
       negative_button_text: Not helpful
       comment_input_placeholder: This page needs...
-      comment_input_hint: We read all feedback personally
       thankyou_message: Thanks for your feedback!
 # https://squidfunk.github.io/mkdocs-material/customization/?h=#additional-css
 extra_css:
@@ -158,7 +157,7 @@ plugins:
   - search
   - exclude:
       glob:
-      # - integrations/builtin/*
+       # - integrations/builtin/*
   # https://squidfunk.github.io/mkdocs-material/reference/images/#lightbox
   - glightbox:
       touchNavigation: false

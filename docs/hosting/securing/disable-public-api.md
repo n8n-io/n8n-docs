@@ -6,11 +6,11 @@ contentType: howto
 
 # Disable the public REST API
 
-The [n8n public REST API](/api/overview.md) allows you to programmatically perform many of the same tasks as you can in the n8n GUI.
+The [n8n public REST API](/api/index.md) allows you to programmatically perform many of the same tasks as you can in the n8n GUI.
 
 If you don't plan on using this API, n8n recommends disabling it to improve the security of your n8n installation.
 
-To disable the [public REST API](/api/overview.md), set the `N8N_PUBLIC_API_DISABLED` environment variable to `true`, for example:
+To disable the [public REST API](/api/index.md), set the `N8N_PUBLIC_API_DISABLED` environment variable to `true`, for example:
 
 ```bash
 export N8N_PUBLIC_API_DISABLED=true

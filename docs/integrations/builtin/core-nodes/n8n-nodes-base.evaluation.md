@@ -6,7 +6,7 @@ contentType: [integration, reference]
 
 # Evaluation node
 
-The Evaluation node performs various operations related to [evaluations](/advanced-ai/evaluations/overview.md) to validate your AI workflow reliability. You can use the Evaluation node to conditionally execute logic based on whether the workflow is under evaluation, to write evaluation outcomes back to a Google Sheet dataset, or to log scoring metrics for your evaluation performance to n8n's evaluations tab.
+The Evaluation node performs various operations related to [evaluations](/advanced-ai/evaluations/index.md) to validate your AI workflow reliability. You can use the Evaluation node to conditionally execute logic based on whether the workflow is under evaluation, to write evaluation outcomes back to a Google Sheet dataset, or to log scoring metrics for your evaluation performance to n8n's evaluations tab.
 
 /// note | Credentials
 The Evaluation node's **Set Outputs** operation uses Google Sheets to record evaluation outcomes. To use that operation, you must configure a [Google Sheets credential](/integrations/builtin/credentials/google/index.md).
@@ -59,7 +59,7 @@ The **Check If Evaluating** operation doesn't have any parameters. This operatio
 
 ## Related resources
 
-To learn more about n8n evaluations, check out the [evaluations documentation](/advanced-ai/evaluations/overview.md)
+To learn more about n8n evaluations, check out the [evaluations documentation](/advanced-ai/evaluations/index.md)
 
 n8n provides a trigger node for evaluations. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.evaluationtrigger.md).
 

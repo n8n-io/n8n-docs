@@ -35,7 +35,7 @@ The following video demonstrates the steps of sharing workflows on the community
 
 ## Build a node
 
-Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/overview.md) for guidance on how to create and publish a community node.
+Create an integration for a third party service. Check out [the node creation docs](/integrations/creating-nodes/index.md) for guidance on how to create and publish a community node.
 
 ## Contribute to the code
 

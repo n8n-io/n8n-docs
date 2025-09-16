@@ -9,7 +9,7 @@ contentType: reference
 A reference document listing built-in convenience functions to support data transformation in [expressions](/glossary.md#expression-n8n) for numbers.
 
 /// note | JavaScript in expressions
-You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions.md) for more information.
+You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions/index.md) for more information.
 ///
 [[% import "_macros/data-functions.html" as dataFunctions %]]
 

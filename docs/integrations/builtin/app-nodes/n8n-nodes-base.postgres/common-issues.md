@@ -17,7 +17,7 @@ In Postgres, you can use the SQL [`IN` comparison construct](https://www.postgre
 SELECT color, shirt_size FROM shirts WHERE shirt_size IN ('small', 'medium', 'large');
 ```
 
-While you can use n8n [expressions](/code/expressions.md) in your query to dynamically populate the values in an `IN` group, combining this with [query parameters](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md#use-query-parameters) provides extra protection by automatically sanitizing input.
+While you can use n8n [expressions](/code/expressions/index.md) in your query to dynamically populate the values in an `IN` group, combining this with [query parameters](/integrations/builtin/app-nodes/n8n-nodes-base.postgres/index.md#use-query-parameters) provides extra protection by automatically sanitizing input.
 
 To construct an `IN` group query with query parameters:
 

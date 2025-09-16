@@ -42,7 +42,7 @@ All verified community node authors should strongly consider using the [`n8n-nod
 ## Follow n8n best practices
 
 * Maintain a clear and consistent coding style.
-* Use **TypeScript** and follow n8n's [**node development guidelines**](/integrations/creating-nodes/overview.md).
+* Use **TypeScript** and follow n8n's [**node development guidelines**](/integrations/creating-nodes/index.md).
 * Ensure proper error handling and validation.
 * Make sure the linter passes (in other words, make sure running `npx @n8n/scan-community-package n8n-nodes-PACKAGE` passes).
 

@@ -688,7 +688,7 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 </figure>
 <br>
 
-[Learn more](/advanced-ai/evaluations/overview.md) about setting up and customizing evaluations.
+[Learn more](/advanced-ai/evaluations/index.md) about setting up and customizing evaluations.
 </div> 
 
 ### AI Agent Tool node
@@ -1273,7 +1273,7 @@ Once an Owner installs a node, everyone on the instance can start using it—jus
 Want your node to be verified and discoverable from the editor? Here’s how to get involved:
 
 1. Review the [community node verification guidelines](/integrations/creating-nodes/build/reference/verification-guidelines.md).
-2. If you’re building something new, follow the recommendations for [creating nodes](/integrations/creating-nodes/overview.md).
+2. If you’re building something new, follow the recommendations for [creating nodes](/integrations/creating-nodes/index.md).
 3. Check your design against the [UX guidelines](/integrations/creating-nodes/build/reference/ux-guidelines.md).
 4. [Submit your node](/integrations/creating-nodes/deploy/submit-community-nodes.md) to npm.
 5. Request verification by filling out [this form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
@@ -3460,7 +3460,7 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.53.1...n8n@1.54.0
 This release contains new features, node enhancements, bug fixes and updates to our API.
 
 ### API update
-Our [public REST API](/api/overview.md) now supports additional operations:
+Our [public REST API](/api/index.md) now supports additional operations:
 
 - Create, delete, and edit roles for users
 - Create, read, update and delete projects
@@ -3535,7 +3535,7 @@ Enhanced nodes:
 - [Shopify](/integrations/builtin/app-nodes/n8n-nodes-base.shopify.md)
 
 ### API update
-Our [public REST API](/api/overview.md) now supports additional operations:
+Our [public REST API](/api/index.md) now supports additional operations:
 
 - Create, read, and delete for variables
 - Filtering workflows by project
@@ -4595,7 +4595,7 @@ This release includes a new version of the [OpenAI node](/integrations/builtin/a
 Other highlights:
 
 * Support for AI events in [log streaming](/log-streaming.md).
-* Added support for workflow tags in the [public API](/api/overview.md).
+* Added support for workflow tags in the [public API](/api/index.md).
 
 ### Contributors
 

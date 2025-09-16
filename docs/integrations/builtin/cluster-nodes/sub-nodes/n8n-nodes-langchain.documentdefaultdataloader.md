@@ -21,7 +21,7 @@ On this page, you'll find a list of parameters the Default Data Loader node supp
 * **Type of Data**: Select **Binary** or **JSON**.
 * **Mode**: Choose from:
 	* **Load All Input Data**: Use all the node's input data.
-	* **Load Specific Data**: Use [expressions](/code/expressions.md) to define the data you want to load. You can add text as well as expressions. This means you can create a custom document from a mix of text and expressions.
+	* **Load Specific Data**: Use [expressions](/code/expressions/index.md) to define the data you want to load. You can add text as well as expressions. This means you can create a custom document from a mix of text and expressions.
 * **Data Format**: Displays when you set **Type of Data** to **Binary**. Select the file MIME type for your binary data. Set to **Automatically Detect by MIME Type** if you want n8n to set the data format for you. If you set a specific data format and the incoming file MIME type doesn't match it, the node errors. If you use **Automatically Detect by MIME Type**, the node falls back to text format if it can't match the file MIME type to a supported data format.
 
 ## Node options

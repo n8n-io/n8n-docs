@@ -85,7 +85,7 @@ nav:
     - Working with data:
       - How n8n structures data: data/data-structure.md
       - Using expressions:
-        - Overview: code/expressions.md
+        - code/expressions/index.md
         - Check incoming data: code/cookbook/expressions/check-incoming-data.md
         - Referencing data:
           - data/referencing-data/index.md
@@ -120,7 +120,7 @@ nav:
       - Writing code with AI assistance: code/ai-code.md
       - RAG in n8n: advanced-ai/rag-in-n8n.md
       - Evaluations:
-        - Overview: advanced-ai/evaluations/overview.md
+        - advanced-ai/evaluations/index.md
         - Light evaluations: advanced-ai/evaluations/light-evaluations.md
         - Metric-based evaluations: advanced-ai/evaluations/metric-based-evaluations.md
         - Tips and common issues: advanced-ai/evaluations/tips-and-common-issues.md
@@ -168,12 +168,12 @@ nav:
         - Logging: hosting/logging-monitoring/logging.md
         - Monitoring: hosting/logging-monitoring/monitoring.md
       - Scaling and performance:
-        - Overview: hosting/scaling/overview.md
+        - hosting/scaling/index.md
         - Configuring queue mode: hosting/scaling/queue-mode.md
         - Execution data: hosting/scaling/execution-data.md
         - Binary data: hosting/scaling/binary-data.md
       - Securing n8n:
-        - Overview: hosting/securing/overview.md
+        - hosting/securing/index.md
         - Set up SSL: hosting/securing/set-up-ssl.md
         - Set up SSO: hosting/securing/set-up-sso.md
         - Security audit: hosting/securing/security-audit.md
@@ -270,7 +270,7 @@ nav:
     - Video courses:
       - Video courses index: video-courses.md
     - Creating nodes:
-      - integrations/creating-nodes/overview.md
+      - integrations/creating-nodes/index.md
       - Plan your node:
         - integrations/creating-nodes/plan/index.md
         - Choose a node type: integrations/creating-nodes/plan/node-types.md
@@ -284,7 +284,7 @@ nav:
   - Development:
     - development/index.md
     - API:
-      - Overview: api/overview.md
+      - api/index.md
       - Authentication: api/authentication.md
       - Pagination: api/pagination.md
       - Using an API playground: api/using-api-playground.md
@@ -952,7 +952,7 @@ nav:
           - Reranker Cohere: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.rerankercohere.md
           - Model Selector: integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.modelselector.md
     - Credentials:
-      - Overview: integrations/builtin/credentials/overview.md
+      - integrations/builtin/credentials/index.md
       - Built-in credentials:
         - integrations/builtin/credentials/actionnetwork.md
         - integrations/builtin/credentials/activecampaign.md
@@ -1290,7 +1290,7 @@ nav:
         - (node-name).all: code/cookbook/builtin/all.md
         - vars: code/cookbook/builtin/vars.md
     - Architecture:
-      - Overview: hosting/architecture/overview.md
+      - hosting/architecture/index.md
       - Database structure: hosting/architecture/database-structure.md
     - Interface and usability:
       - Keyboard shortcuts: keyboard-shortcuts.md

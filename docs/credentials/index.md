@@ -22,6 +22,6 @@ The specifics of each credential depend on the service being authenticated to. S
 
 * [Create and edit credentials](/credentials/add-edit-credentials.md).
 * Learn about [credential sharing](/credentials/credential-sharing.md).
-* Find information on setting up credentials for your services in the [credentials library](/integrations/builtin/credentials/overview.md).
+* Find information on setting up credentials for your services in the [credentials library](/integrations/builtin/credentials/index.md).
 
 

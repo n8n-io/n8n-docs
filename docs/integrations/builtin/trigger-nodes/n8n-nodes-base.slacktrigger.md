@@ -50,7 +50,7 @@ Once you've set the events to trigger on, use the remaining parameters to furthe
 You can further refine the node's behavior when you **Add Option**s:
 
 * **Resolve IDs**: Whether to resolve the IDs to their respective names and return them (turned on) or not (turned off, default).
-* **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/code/expressions.md).
+* **Usernames or IDs to ignore**: Select usernames or enter a comma-separated string of encoded user IDs to ignore events from. Choose from the list, or specify IDs using an [expression](/code/expressions/index.md).
 
 ## Related resources
 

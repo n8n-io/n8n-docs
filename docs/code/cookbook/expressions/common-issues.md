@@ -6,7 +6,7 @@ contentType: howto
 
 # Expressions common issues
 
-Here are some common errors and issues related to [expressions](/code/expressions.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues related to [expressions](/code/expressions/index.md) and steps to resolve or troubleshoot them.
 
 ## The 'JSON Output' in item 0 contains invalid JSON
 
@@ -56,4 +56,4 @@ For example, the expression in this JSON includes a trailing period, which resul
 
 ```
 
-To resolve this error, check your [expression syntax](/code/expressions.md) to make sure they follow the expected format.
+To resolve this error, check your [expression syntax](/code/expressions/index.md) to make sure they follow the expected format.

@@ -1,0 +1,104 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "31f69869-8aaf-468b-8725-07eb583f4167",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [\n  {\n    \"name\": \"Jay Gatsby\",\n    \"personal_email\": \"gatsby@west-egg.com\",\n    \"work_email\": \"jgatsby@company.com\"\n  },\n  {\n    \"name\": \"José Arcadio Buendía\",\n    \"personal_email\": \"jab@macondo.co\",\n    \"work_email\": \"jbuendia@company.com\"\n  }\n]"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "8dfad815-2d92-46f1-aded-77932d028b62",
+      "name": "Initial data"
+    },
+    {
+      "parameters": {
+        "jsCode": "emails = [];\n\nfor (let i=0; i<items.length; i++) {\n  emails.push({\n    \"json\": {\n      \"email\": items[i].json.personal_email\n    }\n  },\n  {\n    \"json\": {\n      \"email\": items[i].json.work_email\n    }\n  })\n}\n\nreturn emails"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "3be5500c-681a-4fec-a854-84d2901d3366",
+      "name": "Extract emails"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0356f579-22af-4f08-8817-1fc1b31bdff2",
+              "name": "restoredName",
+              "value": "={{ $('Initial data').item.json.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        672,
+        0
+      ],
+      "id": "7aa3fd4b-c07c-4c22-b811-e35f0cff2fe3",
+      "name": "Restore names"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Initial data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Initial data": {
+      "main": [
+        [
+          {
+            "node": "Extract emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract emails": {
+      "main": [
+        [
+          {
+            "node": "Restore names",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "cb484ba7b742928a2048bf8829668bed5b5ad9787579adea888f05980292a4a7"
+  }
+}

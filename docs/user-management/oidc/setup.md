@@ -16,7 +16,7 @@ contentType: howto
 1. Copy the **redirect URL** shown (for example, `https://yourworkspace.app.n8n.cloud/rest/sso/oidc/callback`).
 
 	/// note | Extra configuration for load balancers or proxies
-	If you are running n8n behind a load balancer, make sure you set the [`N8N_EDITOR_BASE_URL` environment variable](/hosting/configuration/environment-variables/deployment.md).
+	If you are running n8n behind a load balancer, make sure you set the [`N8N_EDITOR_BASE_URL` environment variable](/hosting/configuration/environment-variables.md#deployment).
 	///
 
 1. Set up OIDC with your identity provider (IdP). You'll need to:

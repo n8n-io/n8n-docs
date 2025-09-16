@@ -20,7 +20,7 @@ Create an account on [GitHub](https://github.com), [GitLab](https://about.gitlab
 
 ## Related resources
 
-Refer to [Git's documentation](https://git-scm.com/doc) for more information about the service.
+Refer to the [Git documentation](https://git-scm.com/doc) for more information about the service.
 
 ## Using basic auth
 

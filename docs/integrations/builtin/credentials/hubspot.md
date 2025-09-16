@@ -59,7 +59,7 @@ To configure this credential, you'll need a [HubSpot developer](https://develope
 
 To create the public app and set up the credential:
 
-1. Log into your [HubSpot app developer account](https://developers.hubspot.com/).
+1. Log into your [HubSpot developer account](https://developers.hubspot.com/).
 2. Select **Apps** from the main navigation bar.
 3. Select **Get HubSpot API key**. You may need to select the option to **Show key**.
 4. Copy the key and enter it in n8n as the **Developer API Key**.
@@ -101,7 +101,7 @@ Some HubSpot accounts don't have access to all the scopes. HubSpot is migrating 
 
 If you're [self-hosting](/hosting/index.md) n8n, you'll need to configure OAuth2 from scratch by creating a new public app:
 
-1. Log into your [HubSpot app developer account](https://developers.hubspot.com/).
+1. Log into your [HubSpot developer account](https://developers.hubspot.com/).
 2. Select **Apps** from the main navigation bar.
 3. Select **Create app**.
 4. On the **App Info** tab, add an **App name**, **Description**, **Logo**, and any support contact info you want to provide. Anyone encountering the app would see these.

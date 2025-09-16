@@ -23,7 +23,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Line Notify's API documentation](https://notify-bot.line.me/doc/en/) for more information about the service.
+Refer to the [Line Notify API documentation](https://notify-bot.line.me/doc/en/) for more information about the service.
 
 ## Using Notify OAuth2
 
@@ -52,4 +52,4 @@ To generate both, connect Line with [Line Notify](https://notify-bot.line.me/en/
 1. Select the option to **Display** the **Client Secret**. Copy the **Client Secret** and enter it in your n8n credential.
 1. In n8n, select **Connect my account** and follow the on-screen prompts to finish the credential.
 
-Refer to the Authentication section of [Line Notify's API documentation](https://notify-bot.line.me/doc/en/) for more information.
+Refer to the Authentication section of the [Line Notify API documentation](https://notify-bot.line.me/doc/en/) for more information.

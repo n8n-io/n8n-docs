@@ -30,7 +30,7 @@ In n8n, all data passed between nodes is an array of objects. Each of these obje
 To troubleshoot this error, check the following:
 
 * Read the [data structure](/data/data-structure.md) to understand the data you receive in the Code node and the requirements for outputting data from the node.
-* Understand how data items work and how to connect data items from previous nodes with [item linking](/data/data-mapping/data-item-linking/index.md).
+* Understand how data items work and how to connect data items from previous nodes with [item linking](/data/referencing-data/item-linking.md).
 
 <!-- vale off -->
 ## A 'json' property isn't an object
@@ -100,7 +100,7 @@ const express = require("express");
 This error occurs if you try to use `require` in the Code node and n8n can't find the module.
 
 /// warning | Only for self-hosted
-n8n doesn't support importing modules in the [Cloud](/manage-cloud/overview.md) version.
+n8n doesn't support importing modules in the [Cloud](/manage-cloud/index.md) version.
 ///
 
 If you're [self-hosting](/hosting/index.md) n8n, follow these steps:

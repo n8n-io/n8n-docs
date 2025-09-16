@@ -3,8 +3,7 @@ title: Filescan credentials
 description: Documentation for the Filescan credentials. Use these credentials to authenticate Filescan in n8n, a workflow automation platform.
 contentType: [integration, reference]
 ---
-<!-- vale off -->
-<!-- Not adding "Filescan" as an exception generally. -->
+
 # Filescan credentials
 
 --8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"

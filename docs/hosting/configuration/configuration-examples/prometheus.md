@@ -14,13 +14,13 @@ The `/metrics` endpoint is disabled by default, but it's possible to enable it u
 export N8N_METRICS=true
 ```
 
-Refer to the respective [Environment Variables](/hosting/configuration/environment-variables/endpoints.md) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.
+Refer to the respective [Environment Variables](/hosting/configuration/environment-variables.md#endpoints) (`N8N_METRICS_INCLUDE_*`) for configuring which metrics and labels should get exposed.
 
 Both `main` and `worker` instances are able to expose metrics.
 
 ## Queue metrics
 
-To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
+To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` environment variable to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
 
 n8n gathers these metrics from Bull and exposes them on the main instances. On multi-main setups, when aggregating queries, you can identify the leader using the `instance_role_leader` gauge, set to `1` for the leader main and `0` otherwise.
 

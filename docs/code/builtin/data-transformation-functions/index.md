@@ -9,7 +9,7 @@ contentType: overview
 Data transformation functions are helper functions to make data transformation easier in [expressions](/glossary.md#expression-n8n).
 
 /// note | JavaScript in expressions
-You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions.md) for more information.
+You can use any JavaScript in expressions. Refer to [Expressions](/code/expressions/index.md) for more information.
 ///
 For a list of available functions, refer to the page for your data type:
 

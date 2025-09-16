@@ -18,7 +18,7 @@ This course is for you if you:
 - Are looking for some extra help creating your first workflow.
 - Want to automate processes in your personal or working life.
 
-This course introduces n8n concepts and demonstrates practical workflow building without assuming any prior familiarity with n8n. If you'd like to get a feel for the basics without as much explanation, consult our [quickstart guide](/try-it-out/tutorial-first-workflow.md).
+This course introduces n8n concepts and demonstrates practical workflow building without assuming any prior familiarity with n8n. If you'd like to get a feel for the basics without as much explanation, consult our [quickstart guide](/tutorials/tutorial-first-workflow.md).
 
 ## What will I learn in this course?
 
@@ -40,7 +40,7 @@ You will build two workflows:
 
 ## What do I need to get started?
 
-1. **n8n set up**: You can use [n8n Cloud](/manage-cloud/overview.md) (or the [self-hosted version](/hosting/installation/docker.md) if you have experience hosting services).
+1. **n8n set up**: You can use [n8n Cloud](/manage-cloud/index.md) (or the [self-hosted version](/hosting/installation/docker.md) if you have experience hosting services).
 2. **A course user ID**: [Sign up here](https://n8n-community.typeform.com/to/PDEMrevI) to get your unique ID and other credentials you will need in this course (Level 1).
 3. Basic knowledge of JavaScript and [APIs](https://blog.n8n.io/what-are-apis-how-to-use-them-with-no-code/) would be helpful, but isn't necessary.
 4. An [account on the n8n community forum](https://community.n8n.io/) if you wish to receive a profile badge and avatar upon successful completion.

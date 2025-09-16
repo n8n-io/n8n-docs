@@ -34,4 +34,6 @@ Enter these parameters:
 	- **RAW**: Returns the RAW data from the API.
 - **Timezone**: The timezone used in the response. By default, uses the n8n timezone.
 
+<!-- vale Vale.Spelling["Freebusy"] = NO -->
 Refer to the [Freebusy: query | Google Calendar](https://developers.google.com/calendar/api/v3/reference/freebusy/query) API documentation for more information.
+<!-- vale Vale.Spelling["Freebusy"] = YES -->

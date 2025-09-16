@@ -26,6 +26,6 @@ export N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
 
 ## Related resources
 
-Refer to [Deployment environment variables](/hosting/configuration/environment-variables/deployment.md) for more information on these environment variables.
+Refer to [Deployment environment variables](/hosting/configuration/environment-variables.md#deployment) for more information on these environment variables.
 
 Refer to [Configuration](/hosting/configuration/configuration-methods.md) for more information on setting environment variables.

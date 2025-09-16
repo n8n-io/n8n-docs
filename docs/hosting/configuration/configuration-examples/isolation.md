@@ -24,4 +24,4 @@ N8N_DIAGNOSTICS_CONFIG_FRONTEND=
 N8N_DIAGNOSTICS_CONFIG_BACKEND=
 ```
 
-Refer to [Environment variables reference](/hosting/configuration/environment-variables/deployment.md) for more information on these variables.
+Refer to [Environment variables reference](/hosting/configuration/environment-variables.md#deployment) for more information on these variables.

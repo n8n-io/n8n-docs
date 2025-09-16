@@ -192,7 +192,7 @@ Refer to [Node options](#node-options) for optional configuration options.
 	- **tiff**
 	- **WebP**
 
-The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](/code/expressions.md).
+The **Text** operation also includes the option for **Font Name or ID**. Select the text font from the dropdown or specify an ID using an [expression](/code/expressions/index.md).
 
 ## Templates and examples
 

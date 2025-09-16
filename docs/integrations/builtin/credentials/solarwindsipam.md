@@ -13,7 +13,7 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about the service.
+Refer to the [SolarWinds IPAM API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about the service.
 
 ## Using Username & Password
 
@@ -23,4 +23,4 @@ To configure this credential, you'll need a SolarWinds IPAM account and:
 - **Username**: The username you use to access SolarWinds IPAM
 - **Password**: The password you use to access SolarWinds IPAM
 
-Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about authenticating to the service.
+Refer to the [SolarWinds IPAM API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about authenticating to the service.

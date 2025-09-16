@@ -5,6 +5,8 @@ contentType: [integration, reference]
 priority: critical
 ---
 
+<!-- vale Vale.Spelling["deleteMessage", "sendAnimation", "sendAudio", "sendDocument", "sendLocation", "sendMessage", "sendPhoto", "sendSticker", "sendVideo"] = NO -->
+
 # Telegram node Message operations
 
 Use these operations to send, edit, and delete messages in a chat; send files to a chat; and pin/unpin message from a chat. Refer to [Telegram](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/index.md) for more information on the Telegram node itself.

@@ -14,7 +14,7 @@ contentType: [integration, reference]
 
 ## Related resources
 
-Refer to [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/api/api-swagger.htm) for more information about the service.
+Refer to the [SolarWinds Observability SaaS API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/api/api-swagger.htm) for more information about the service.
 
 
 ## Using API Token
@@ -24,4 +24,4 @@ To configure this credential, you'll need a SolarWinds Observability SaaS accoun
 - **URL**: The URL you use to access the SolarWinds Observability SaaS platform
 - **API Token**: An API token found in the SolarWinds Observability SaaS platform under **Settings > Api Tokens**
 
-Refer to [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/settings/api-tokens.htm) for more information about authenticating to the service.
+Refer to the [SolarWinds Observability SaaS API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/settings/api-tokens.htm) for more information about authenticating to the service.

@@ -12,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Bannerbear](https://www.BannerBear.com/) account.
+Create a [Bannerbear](https://www.bannerbear.com/) account.
 
 ## Supported authentication methods
 

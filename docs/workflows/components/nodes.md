@@ -3,7 +3,7 @@ description: A node is an entry point for retrieving data, a function to process
 contentType: howto
 ---
 
-# Nodes
+# Manage nodes
 
 [Nodes](/glossary.md#node-n8n) are the key building blocks of a [workflow](/glossary.md#workflow-n8n). They perform a range of actions, including:
 
@@ -15,7 +15,7 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 
 * [Built-in integrations](/integrations/builtin/node-types.md) to browse the node library.
 * [Community nodes](/integrations/community-nodes/installation/index.md) for guidance on finding and installing community-created nodes.
-* [Creating nodes](/integrations/creating-nodes/overview.md) to start building your own nodes.
+* [Creating nodes](/integrations/creating-nodes/index.md) to start building your own nodes.
 
 
 ## Add a node to your workflow

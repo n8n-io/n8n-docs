@@ -24,7 +24,7 @@ MQTT provides a list of Servers/Brokers at [MQTT Software](https://mqtt.org/soft
 
 ## Related resources
 
-Refer to [MQTT's documentation](https://mqtt.org/) for more information about the MQTT protocol.
+Refer to the [MQTT documentation](https://mqtt.org/) for more information about the MQTT protocol.
 
 Refer to your broker provider's documentation for more detailed configuration and details.
 

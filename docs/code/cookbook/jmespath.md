@@ -236,7 +236,7 @@ Get a list of the dogs' ages using [object projections](https://jmespath.org/tut
 
 ### Select multiple elements and create a new list or object
 
-Use [Multiselect](https://jmespath.org/tutorial.html#multiselect) to select elements from a JSON object and combine them into a new list or object.
+Use [MultiSelect](https://jmespath.org/tutorial.html#multiselect) to select elements from a JSON object and combine them into a new list or object.
 
 Given this JSON from a webhook node:
 

@@ -31,7 +31,7 @@ Configure this operation with these parameters:
 		- `?`: Matches any character except for path separators one time.
 		- `[]`: Matches any characters inside the brackets. For example, `[abc]` would match the characters `a`, `b`, or `c`, and nothing else.
 
-Refer to [Picomatch's Basic globbing](https://github.com/micromatch/picomatch#basic-globbing) documentation for more information on these characters and their expected behavior.
+Refer to the [Picomatch Basic globbing](https://github.com/micromatch/picomatch#basic-globbing) documentation for more information on these characters and their expected behavior.
 
 ### Read File(s) From Disk options
 

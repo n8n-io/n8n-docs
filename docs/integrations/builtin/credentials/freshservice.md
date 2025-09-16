@@ -26,6 +26,6 @@ Refer to [Freshservice's API documentation](https://api.freshservice.com/v2/) fo
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to the [Freshservice API authenticaton documentation](https://api.freshservice.com/v2/#authentication) for detailed instructions on getting your API key.
+- An **API Key**: Refer to the [Freshservice API authentication documentation](https://api.freshservice.com/v2/#authentication) for detailed instructions on getting your API key.
 - Your Freshservice **Domain**: Use the subdomain of your Freshservice account. This is part of the URL, for example `https://<subdomain>.freshservice.com`. So if you access Freshservice through `https://n8n.freshservice.com`, enter `n8n` as your **Domain**.
 

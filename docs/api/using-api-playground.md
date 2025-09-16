@@ -25,7 +25,7 @@ You have access to your live data. This is useful for trying out requests. Be aw
 ## Built-in playground
 
 /// info | Feature availability
-The API playground isn't available on Cloud. It's available for all self-hosted pricing tiers.
+The built-in API playground isn't available on Cloud. It's available for all self-hosted pricing tiers.
 ///
 
 The n8n API comes with a built-in Swagger UI playground in self-hosted versions. This provides interactive documentation, where you can try out requests. The path to access the playground depends on your hosting.
@@ -41,6 +41,7 @@ The API version number is `1`. There may be multiple versions available in the f
 /// warning | Real data
 If you select **Authorize** and enter your API key in the API playground, you have access to your live data. This is useful for trying out requests. Be aware you can change or delete real data.
 ///
+
 The API includes built-in documentation about credential formats. This is available using the `credentials` endpoint:
 
 ```shell

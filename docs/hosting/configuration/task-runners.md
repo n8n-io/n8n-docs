@@ -81,30 +81,30 @@ volumes:
 
 These are the main environment variables that you can set on the n8n container running in external mode:
 
-| Environment variables                                  | Description                                                |
-|--------------------------------------------------------|------------------------------------------------------------|
-| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners.                                      |
-| `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                         |
-| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker. |
-| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0` | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
+| Environment variables                                  | Description                                                                                                                                                                   |
+|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `N8N_RUNNERS_ENABLED=true`                             | Enables task runners.                                                                                                                                                         |
+| `N8N_RUNNERS_MODE=external`                            | Use task runners in external mode.                                                                                                                                            |
+| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | A shared secret task runners use to connect to the broker.                                                                                                                    |
+| `N8N_RUNNERS_BROKER_LISTEN_ADDRESS=0.0.0.0`            | By default, the task broker only listens to localhost. When using multiple containers (for example, with Docker Compose), it needs to be able to accept external connections. |
 
-For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md).
+For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables.md#task-runners).
 
 ### Configuring runners container in external mode
 
 These are the main environment variables that you can set on the runners container running in external mode:
 
-| Environment variables | Description |
-| ------ | ----- |
-| `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | The shared secret the task runner uses to connect to the broker. |
-| `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679` | The address of the task broker server within the n8n instance. |
-| `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15` | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |
+ | Environment variables                                  | Description                                                                                                                                                                                                                 |
+ |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ | `N8N_RUNNERS_AUTH_TOKEN=<random secure shared secret>` | The shared secret the task runner uses to connect to the broker.                                                                                                                                                            |
+ | `N8N_RUNNERS_AUTO_SHUTDOWN_TIMEOUT=15`                 | Number of seconds of inactivity to wait before shutting down the task runner process. The launcher will automatically start the runner again when there are new tasks to execute. Set to `0` to disable automatic shutdown. |
+ | `N8N_RUNNERS_TASK_BROKER_URI=localhost:5679`           | The address of the task broker server within the n8n instance.                                                                                                                                                              |
 
-For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables/task-runners.md).
+For full list of environment variables see [task runner environment variables](/hosting/configuration/environment-variables.md#task-runners).
 
 ### Configuring launcher in runners container in external mode
 
-The launcher will read env vars from runners container environment, and will pass along env vars to each runner as defined in the [default launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json), located in the container at `/etc/task-runners.json`. To customize the launcher config file, mount to this path.
+The launcher will read environment variables from runners container environment, and will pass along environment variables to each runner as defined in the [default launcher config file](https://github.com/n8n-io/n8n/blob/master/docker/images/runners/n8n-task-runners.json), located in the container at `/etc/task-runners.json`. To customize the launcher config file, mount to this path.
 
 For further information about the launcher config file, see [here](https://github.com/n8n-io/task-runner-launcher/blob/main/docs/setup.md#config-file).
 
@@ -115,9 +115,9 @@ You can customize the `n8nio/runners` image. To do so, you will find the runners
 To make additional packages available on the Code node, you can bake extra packages into your custom runners image at build time:
 
 * JavaScript: edit `docker/images/runners/package.json`
-  (package.json manifest used to install runtime-only deps into the JS runner)
+  (package.json manifest used to install runtime-only dependencies into the JS runner)
 * Python (Native): edit `docker/images/runners/extras.txt`
-  (requirements.txt-style list installed into the Python runner venv)
+  (requirements.txt-style list installed into the Python runner `venv`)
 
 > Important: for security, any external libraries must be explicitly allowed for Code node use. Update `n8n-task-runners.json` to allowlist what you add.
 
@@ -160,7 +160,7 @@ Pin versions (for example, `==2.3.2`) for deterministic builds.
 
 ### 3) Allowlist packages for the Code node
 
-Open `docker/images/runners/n8n-task-runners.json` and add your packages to the env overrides:
+Open `docker/images/runners/n8n-task-runners.json` and add your packages to the `env` overrides:
 
 ```json
 {
@@ -212,4 +212,3 @@ docker run --rm -it \
   -p 5680:5680 \
   n8nio/runners:custom
 ```
-

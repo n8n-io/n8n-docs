@@ -1,6 +1,39 @@
 ### THESE REDIRECTS ARE HANDLED BY NETLIFY, SEE DOC FOR DETAILS ###
 ### https://docs.netlify.com/routing/redirects/redirect-options/ ###
 
+## Redirects from docs reorg
+/learning-path/ /tutorials/
+/code/ /using-n8n/
+/code/code-node/ /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/code/cookbook/builtin/ /code/builtin/overview/
+/code/cookbook/http-node/ /code/cookbook/http-node/pagination/
+/courses/ /tutorials/
+/data/code/ /integrations/builtin/core-nodes/n8n-nodes-base.code/
+/hosting/community-edition-features/ /choosing-n8n/#feature-comparison
+/hosting/community-edition-features/#registered-community-edition /choosing-n8n/#registered-community-edition-license
+/hosting/configuration/environment-variables/binary-data/ /hosting/configuration/environment-variables/#binary-data
+/hosting/configuration/environment-variables/credentials/ /hosting/configuration/environment-variables/#credentials
+/hosting/configuration/environment-variables/database/ /hosting/configuration/environment-variables/#databases
+/hosting/configuration/environment-variables/deployment/ /hosting/configuration/environment-variables/#deployment
+/hosting/configuration/environment-variables/endpoints/ /hosting/configuration/environment-variables/#endpoints
+/hosting/configuration/environment-variables/executions/ /hosting/configuration/environment-variables/#executions
+/hosting/configuration/environment-variables/external-data-storage/ /hosting/configuration/environment-variables/#external-data-storage
+/hosting/configuration/environment-variables/external-hooks/ /hosting/configuration/environment-variables/#external-hooks
+/hosting/configuration/environment-variables/external-secrets/ /hosting/configuration/environment-variables/#external-secrets
+/hosting/configuration/environment-variables/licenses/ /hosting/configuration/environment-variables/#licenses
+/hosting/configuration/environment-variables/logs/ /hosting/configuration/environment-variables/#logs
+/hosting/configuration/environment-variables/nodes/ /hosting/configuration/environment-variables/#nodes
+/hosting/configuration/environment-variables/queue-mode/ /hosting/configuration/environment-variables/#queue-mode
+/hosting/configuration/environment-variables/security/ /hosting/configuration/environment-variables/#security
+/hosting/configuration/environment-variables/source-control/ /hosting/configuration/environment-variables/#source-control
+/hosting/configuration/environment-variables/task-runners/ /hosting/configuration/environment-variables/#task-runners
+/hosting/configuration/environment-variables/timezone-localization/ /hosting/configuration/environment-variables/#timezone-and-localization
+/hosting/configuration/environment-variables/user-management-smtp-2fa/ /hosting/configuration/environment-variables/#user-management-smtp-and-two-factor-authentication
+/hosting/configuration/environment-variables/workflows/ /hosting/configuration/environment-variables/#workflows
+/integrations/builtin/trigger-nodes/ /integrations/builtin/app-nodes/
+/workflows/components/ /workflows/
+/hosting/installation/updating/ /hosting/
+
 ## Redirect from initial path used in product
 /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/
 

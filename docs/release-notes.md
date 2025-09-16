@@ -688,7 +688,7 @@ To enable this, make sure **Return Intermediate Steps** is turned on in your age
 </figure>
 <br>
 
-[Learn more](/advanced-ai/evaluations/overview.md) about setting up and customizing evaluations.
+[Learn more](/advanced-ai/evaluations/index.md) about setting up and customizing evaluations.
 </div> 
 
 ### AI Agent Tool node
@@ -1254,7 +1254,7 @@ Learn more about this update and find out which nodes are already installable fr
 
  💻 **Use a verified node**
 
-Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables/nodes.md). In both cases, verified nodes are enabled by default.
+Make sure you're on **n8n version 1.94.0** or later and the instance Owner has enabled verified community nodes. On Cloud, this can be done from the Admin Panel. For self-hosted instances, please refer to [documentation](/hosting/configuration/environment-variables.md#nodes). In both cases, verified nodes are enabled by default.
 
 - Open the **Nodes panel** from the editor
 - Search for the Node. Verified nodes are indicated by a shield 🛡️
@@ -1273,7 +1273,7 @@ Once an Owner installs a node, everyone on the instance can start using it—jus
 Want your node to be verified and discoverable from the editor? Here’s how to get involved:
 
 1. Review the [community node verification guidelines](/integrations/creating-nodes/build/reference/verification-guidelines.md).
-2. If you’re building something new, follow the recommendations for [creating nodes](/integrations/creating-nodes/overview.md).
+2. If you’re building something new, follow the recommendations for [creating nodes](/integrations/creating-nodes/index.md).
 3. Check your design against the [UX guidelines](/integrations/creating-nodes/build/reference/ux-guidelines.md).
 4. [Submit your node](/integrations/creating-nodes/deploy/submit-community-nodes.md) to npm.
 5. Request verification by filling out [this form](https://internal.users.n8n.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b).
@@ -1587,7 +1587,7 @@ Need to reorganize? Just select a workflow or folder and drag it into another fo
 <video src="/_video/release-notes/Drag-and-drop-folders.mp4" controls width="100%"></video>
 <br>
 
-📁 Folders are available to all [registered](/hosting/community-edition-features.md#registered-community-edition) users—jump in and get your workspace in order!
+📁 Folders are available to all [registered](/choose-n8n.md#registered-community-edition-license) users—jump in and get your workspace in order!
 
 ### Contributors
 
@@ -1876,7 +1876,7 @@ Create and manage folders within your personal space or within projects. You can
 </figure>
 <br>
 
-Folders are available for all [registered](/hosting/community-edition-features.md#registered-community-edition) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
+Folders are available for all [registered](/choose-n8n.md#registered-community-edition-license) users so get started with decluttering your workspace now and look for more features (like drag and drop) to organize your instances soon.
 
 ### Enhancements to Form Trigger Node
 
@@ -2477,7 +2477,7 @@ Microsoft Entra ID (formerly known as Microsoft Azure Active Directory or Azure 
 ### Node updates
 
 - [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md): Vector stores can now be directly used as tools for the agent
-- [Code](/code/builtin/overview.md): Tons of new speed and convenience features, see above for details  
+- [Code](/code/builtin/index.md): Tons of new speed and convenience features, see above for details  
 - [Google Vertex Chat](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md): Added option to specify the GCP region for the Google API credentials  
 - [HighLevel](/integrations/builtin/app-nodes/n8n-nodes-base.highlevel.md): Added support for calendar items  
 
@@ -2639,7 +2639,7 @@ The Task runner comes in two modes:
 - Internal mode (default): Perfect for getting started, automatically managing task runners as child processes  
 - External mode: For advanced hosting scenarios requiring maximum isolation and security
 
-Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables/task-runners.md). Once stable, it will become the default execution method for Code nodes.
+Currently, this feature is opt-in and can be enabled using [environment variables](/hosting/configuration/environment-variables.md#task-runners). Once stable, it will become the default execution method for Code nodes.
 
 To start using Task runners today, [check out the docs](/hosting/configuration/task-runners.md).
 
@@ -3154,11 +3154,11 @@ This release contains new features, node enhancements and bug fixes.
 
 #### Queue metrics for workers
 
-You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables/endpoints.md).
+You can now [expose and consume metrics from your workers](/hosting/configuration/configuration-examples/prometheus.md). The worker instances have the same metrics available as the main instance(s) and can be configured with [environment variables](/hosting/configuration/environment-variables.md#endpoints).
 
 </div>
 
-You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables/endpoints.md) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
+You can now customize the maximum file size when uploading files within forms to webhooks. The [environment variable to set](/hosting/configuration/environment-variables.md#endpoints) for this is `N8N_FORMDATA_FILE_SIZE_MAX`. The default setting is 200MiB.
 
 ### Node updates
 Enhanced nodes:
@@ -3412,7 +3412,7 @@ We now also prevent npm downloading community packages from a compromised npm re
 
 #### New node: AI Transform
 
-This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/overview.md).
+This release adds the [AI Transform node](/integrations/builtin/core-nodes/n8n-nodes-base.aitransform.md). Use the AI Transform node to generate code snippets based on your prompt. The AI is context-aware, understanding the workflow’s nodes and their data types. The node is only available on [Cloud plans](/manage-cloud/index.md).
 
 </div>
 
@@ -4062,7 +4062,7 @@ You can now ask AI to help create API requests in the HTTP Request node:
 1. Enter the **Service** and **Request** you want to use. For example, to use the NASA API to get their picture of the day, enter `NASA` in **Service** and `get picture of the day` in **Request**.
 1. Check the parameters: the AI tries to fill them out, but you may still need to adjust or correct the configuration.
 
-Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables/index.md)
+Self-hosted users need to [enable AI features and provide their own API keys](/hosting/configuration/environment-variables.md)
 
 </div>
 
@@ -5021,7 +5021,7 @@ This release contains new features, node enhancements, and bug fixes.
 
 #### LangChain general availability
 
-This release adds LangChain support to the main n8n version. Refer to [LangChain](/advanced-ai/langchain/overview.md) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
+This release adds LangChain support to the main n8n version. Refer to [LangChain](/advanced-ai/langchain/index.md) for more information on how to build AI tools in n8n, the new nodes n8n has introduced, and related learning resources.
 
 </div>
 
@@ -5332,7 +5332,7 @@ This release contains new features and bug fixes.
 
 #### External storage for binary files
 
-Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/external-storage.md).
+Self-hosted users can now use an external service to store binary data. Learn more in [External storage](/hosting/scaling/binary-data.md#enable-external-storage).
 
 If you're using n8n Cloud and are interested in this feature, please [contact n8n](https://n8n-community.typeform.com/to/y9X2YuGa).
 
@@ -5406,9 +5406,9 @@ With n8n's LangChain nodes you can build AI-powered functionality within your wo
 
 Read more:
 
-* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/overview.md) to try it out. Self-hosted and Cloud options are available.
+* This is a beta release, and not yet available in the main product. Follow the instructions in [Access LangChain in n8n](/advanced-ai/langchain/index.md) to try it out. Self-hosted and Cloud options are available.
 * Learn how LangChain concepts map to n8n nodes in [LangChain concepts in n8n](/advanced-ai/langchain/langchain-n8n.md).
-* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/index.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
+* Browse n8n's new [Cluster nodes](/integrations/builtin/cluster-nodes/ai-nodes.md). This is a new set of node types that allows for multiple nodes to work together to configure each other.
 
 ## n8n@1.9.0
 
@@ -5838,7 +5838,7 @@ For full details, refer to the [n8n v1.0 migration guide](/1-0-migration-checkli
 
 #### Python support
 
-Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/code/code-node.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
+Although JavaScript remains the default language, you can now also select Python as an option in the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) and even make use of [many Python modules](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). Note that Python is unavailable in Code nodes added to a workflow before v1.0.
 
 </div>
 

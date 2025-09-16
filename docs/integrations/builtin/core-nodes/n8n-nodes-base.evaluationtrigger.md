@@ -6,7 +6,7 @@ contentType: [integration, reference]
 
 # Evaluation Trigger node
 
-Use the Evaluation Trigger node when setting up [evaluations](/advanced-ai/evaluations/overview.md) to validate your AI workflow reliability. During evaluation, the Evaluation Trigger node reads your evaluation dataset from Google Sheets, sending the items through the workflow one at a time, in sequence.
+Use the Evaluation Trigger node when setting up [evaluations](/advanced-ai/evaluations/index.md) to validate your AI workflow reliability. During evaluation, the Evaluation Trigger node reads your evaluation dataset from Google Sheets, sending the items through the workflow one at a time, in sequence.
 
 On this page, you'll find the Evaluation Trigger node parameters and 
 
@@ -30,7 +30,7 @@ The Evaluation Trigger node uses Google Sheets to store the test dataset. To use
 
 Optionally filter the evaluation dataset based on column values.
 
-* **Column**: Choose a sheet column you want to filter by. Select **From list** to choose the column name from the dropdown list, or **By ID** to specify an ID using an [expression](/code/expressions.md).
+* **Column**: Choose a sheet column you want to filter by. Select **From list** to choose the column name from the dropdown list, or **By ID** to specify an ID using an [expression](/code/expressions/index.md).
 * **Value**: The column value you want to filter by. The evaluation will only process rows with the given value for the selected column.
 
 ## Templates and examples
@@ -40,7 +40,7 @@ Optionally filter the evaluation dataset based on column values.
 
 ## Related resources
 
-To learn more about n8n evaluations, check out the [evaluations documentation](/advanced-ai/evaluations/overview.md)
+To learn more about n8n evaluations, check out the [evaluations documentation](/advanced-ai/evaluations/index.md)
 
 n8n provides an app node for evaluations. You can find the node docs [here](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md).
 

@@ -20,13 +20,13 @@ Install and run a [MISP](https://misp.github.io/MISP/) instance.
 
 ## Related resources
 
-Refer to [MISP's Automation API documentation](https://www.circl.lu/doc/misp/automation) for more information about the service.
+Refer to the [MISP Automation API documentation](https://www.circl.lu/doc/misp/automation) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: In MISP, these are called Automation keys. Get an automation key from **Event Actions > Automation**. Refer to [MISP's automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key) for instructions on generating more keys.
+- An **API Key**: In MISP, these are called Automation keys. Get an automation key from **Event Actions > Automation**. Refer to the [MISP automation keys documentation](https://www.circl.lu/doc/misp/automation/#automation-key) for instructions on generating more keys.
 - A **Base URL**: Your MISP URL.
 - Select whether to **Allow Unauthorized Certificates**: If turned on, the credential will connect even if SSL certificate validation fails.
 

@@ -5,13 +5,7 @@ contentType: overview
 
 # Workflows
 
-A [workflow](/glossary.md#workflow-n8n) is a collection of nodes connected together to automate a process.
+In n8n, a [workflow](/glossary.md#workflow-n8n) is simply a sequence of steps, each of which represents some operation which fetches, stores, evaluates or processes data. These steps are represented by n8n **nodes**, which can represent various operations like retrieving information from services, manipulating data, or sending notifications.
 
+!["Screenshot of the completed workflow"](/_images/try-it-out/tutorial-first.png)
 
-* [Create](/workflows/create.md) a workflow.
-* Use [Workflow templates](/workflows/templates.md) to help you get started.
-* Learn about the key [components](/workflows/components/index.md) of an automation in n8n.
-* Debug using the [Executions](/workflows/executions/index.md) list.
-* [Share](/workflows/sharing.md) workflows between users.
-
-If it's your first time building a workflow, you may want to use the [quickstart guides](/try-it-out/index.md) to quickly try out n8n features.

@@ -27,6 +27,7 @@ same in the whole workflow. Every node in the workflow can access it. The node s
 
 Example with global data:
 
+<!-- vale Vale.Spelling = NO -->
 === "JavaScript"
 	```javascript
 	// Get the global workflow static data
@@ -59,7 +60,7 @@ Example with global data:
 Example with node data:
 
 === "JavaScript"
-	```js
+	```javascript
 	// Get the static data of the node
 	const nodeStaticData = $getWorkflowStaticData('node');
 
@@ -86,6 +87,7 @@ Example with node data:
 	# Delete data
 	delete nodeStaticData.lastExecution
 	```
+<!-- vale Vale.Spelling = YES -->
 
 ## Templates and examples
 

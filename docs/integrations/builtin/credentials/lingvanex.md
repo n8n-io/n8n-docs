@@ -20,7 +20,7 @@ Create a [LingvaNex](https://lingvanex.com) account.
 
 ## Related resources
 
-Refer to [Lingvanex's Cloud API documentation](https://docs.lingvanex.com/reference/overview) for more information about the service.
+Refer to the [LingvaNex Cloud API documentation](https://docs.lingvanex.com/reference/overview) for more information about the service.
 
 ## Using API key
 

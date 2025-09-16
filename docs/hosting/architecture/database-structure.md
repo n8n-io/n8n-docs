@@ -13,7 +13,7 @@ By default, n8n uses SQLite as the database. If you are using another database t
 
 n8n uses [TypeORM](https://github.com/typeorm/typeorm) for queries and migrations.
 
-To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), which is an open-source universal database tool.
+To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), an open-source universal database tool.
 
 ## Tables
 

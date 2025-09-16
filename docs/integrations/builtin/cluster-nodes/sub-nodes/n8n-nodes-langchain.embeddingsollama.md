@@ -32,7 +32,7 @@ Learn more about available models in [Ollama's models documentation](https://oll
 
 ## Related resources
 
-Refer to [Langchain's Ollama embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/ollama/) for more information about the service.
+Refer to the [LangChain Ollama embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/ollama/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

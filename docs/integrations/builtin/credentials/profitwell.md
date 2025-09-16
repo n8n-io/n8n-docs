@@ -20,7 +20,7 @@ Create a [ProfitWell](https://www2.profitwell.com/signup/start) account.
 
 ## Related resources
 
-Refer to [Profitwell's API documentation](https://profitwellapiv2.docs.apiary.io/) for more information about the service.
+Refer to the [ProfitWell API documentation](https://profitwellapiv2.docs.apiary.io/) for more information about the service.
 
 ## Using API token
 

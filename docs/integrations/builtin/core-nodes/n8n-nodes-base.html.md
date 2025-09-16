@@ -35,7 +35,7 @@ You can include:
 * JavaScript in `<script>` tags. n8n doesn't execute the JavaScript.
 * Expressions, wrapped in `{{}}`.
 
-You can use [Expressions](/code/expressions.md) in the template, including n8n's [Built-in methods and variables](/code/builtin/overview.md). 
+You can use [Expressions](/code/expressions/index.md) in the template, including n8n's [Built-in methods and variables](/code/builtin/index.md). 
 
 ## Extract HTML Content
 

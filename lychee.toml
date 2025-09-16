@@ -121,6 +121,7 @@ exclude = [
   '^https://support\.onfleet\.com/hc/en-us/.*',
   '^https://help\.shopify\.com/.*',
   '^https://www\.goto\.com/.*',
+  '^https://(developer|docs)\.rocket\.chat/.*',			 # Added to avoid too many CDN redirects
   '^https://internal\.users\.n8n\.cloud/form/f0ff9304-f34a-420e-99da-6103a2f8ac5b',  # Node submission form, it has the 'ignore bots' option enabled
   '^https://(console|admin)\.mistral\.ai/.*',  # Redirect loop that ends up at login page
   '^https://workable\.com/backend/settings/integrations',  # Redirect loop that ends up at login page

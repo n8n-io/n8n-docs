@@ -20,12 +20,12 @@ Install [Yourls](https://github.com/YOURLS/YOURLS) on your server.
 
 ## Related resources
 
-Refer to [Yourl's documentation](https://yourls.org/docs) for more information about the service.
+Refer to [Yourls' documentation](https://yourls.org/docs) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- A **Signature** token: Go to **Tools > Secure passwordless API call** to get your **Signature** token. Refer to [Yourl's Passworldess API documentation](https://yourls.org/docs/guide/advanced/passwordless-api) for more information.
+- A **Signature** token: Go to **Tools > Secure passwordless API call** to get your **Signature** token. Refer to [Yourls' Passwordless API documentation](https://yourls.org/docs/guide/advanced/passwordless-api) for more information.
 - A **URL**: Enter the URL of your Yourls instance.
 

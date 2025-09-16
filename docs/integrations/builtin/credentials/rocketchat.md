@@ -4,6 +4,7 @@ description: Documentation for Rocket.Chat credentials. Use these credentials to
 contentType: [integration, reference]
 ---
 
+<!--vale from-microsoft.Spacing = NO-->
 # Rocket.Chat credentials
 
 You can use these credentials to authenticate the following nodes:
@@ -21,9 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-<!--vale off-->
-Refer to [Rocket.Chat's API documentation](https://developer.rocket.chat/reference/api/rest-api) for more information about the service.
-<!--vale on-->
+Refer to [Rocket.Chat's API documentation](https://developer.rocket.chat/apidocs) for more information about the service.
 
 ## Using API access token
 

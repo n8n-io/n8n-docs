@@ -20,7 +20,7 @@ Create a [Workable](https://www.workable.com/) account.
 
 ## Related resources
 
-Refer to [Workable's API documentation](https://workable.readme.io/reference/generate-an-access-token) for more information about the service.
+Refer to the [Workable API documentation](https://workable.readme.io/reference/generate-an-access-token) for more information about the service.
 
 ## Using API key
 

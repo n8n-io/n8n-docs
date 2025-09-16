@@ -81,7 +81,7 @@ The `postgres-deployment.yaml` manifest then uses the values from this manifest 
 
 ### Create a volume for file storage
 
-While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](/hosting/configuration/environment-variables/deployment.md) between restarts, which saves a file containing the key into file storage during startup.
+While not essential for running n8n, using persistent volumes helps maintain files uploaded while using n8n and if you want to persist [manual n8n encryption keys](/hosting/configuration/environment-variables.md#deployment) between restarts, which saves a file containing the key into file storage during startup.
 
 The `n8n-claim0-persistentvolumeclaim.yaml` manifest creates this, and the n8n Deployment mounts that claim in the `volumes` section of the `n8n-deployment.yaml` manifest.
 
@@ -116,7 +116,7 @@ This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kube
 
 You can configure n8n settings and behaviors using environment variables.
 
-Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables/index.md) for n8n environment variables details.
+Create an `n8n-secret.yaml` file. Refer to [Environment variables](/hosting/configuration/environment-variables.md) for n8n environment variables details.
 
 ## Deployments
 

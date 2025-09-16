@@ -17,7 +17,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [DHL's Developer documentation](https://support-developer.dhl.com/support/home) for more information about the service.
+Refer to the [DHL Developer documentation](https://support-developer.dhl.com/support/home) for more information about the service.
 
 ## Using API key
 

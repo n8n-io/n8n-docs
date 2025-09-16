@@ -324,13 +324,11 @@ nav:
         - Verification guidelines: integrations/creating-nodes/build/reference/verification-guidelines.md
   - Reference:
     - reference/index.md
-    - n8n CLI commands: hosting/cli-commands.md
-    - Keyboard shortcuts: keyboard-shortcuts.md
-    - Cloud IP addresses: manage-cloud/cloud-ip.md
     - Glossary: glossary.md
     - Configuration:
       - Environment variables: hosting/configuration/environment-variables.md
       - Supported databases and settings: hosting/configuration/supported-databases-settings.md
+      - Cloud IP addresses: manage-cloud/cloud-ip.md
     - Built-in nodes:
       - Core nodes:
         - integrations/builtin/core-nodes/index.md
@@ -1294,6 +1292,9 @@ nav:
     - Architecture:
       - Overview: hosting/architecture/overview.md
       - Database structure: hosting/architecture/database-structure.md
+    - Interface and usability:
+      - Keyboard shortcuts: keyboard-shortcuts.md
+      - n8n CLI commands: hosting/cli-commands.md
     - Releases:
       - Release notes:
         - 1.x: release-notes.md

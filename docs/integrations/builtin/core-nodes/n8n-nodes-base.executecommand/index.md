@@ -10,7 +10,7 @@ priority: high
 The Execute Command node runs shell commands on the host machine that runs n8n.
 
 /// warning | Security considerations
-The functionality of this node can introduce significant security risks in environments where not all n8n users are trusted. We therefore recommend [disabling](/hosting/securing/blocking-nodes/#exclude-nodes) it in such setups.
+The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, n8n recommends [disabling](/hosting/securing/blocking-nodes/#exclude-nodes) it in such setups.
 ///
 
 /// note | Which shell runs the command?

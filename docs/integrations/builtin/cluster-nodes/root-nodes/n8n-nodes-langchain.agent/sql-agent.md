@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SQL AI Agent node documentation
 description: Learn how to use the SQL Agent of the AI Agent node in n8n. Follow technical documentation to integrate the SQL Agent into your workflows.
 contentType: [integration, reference]
@@ -7,6 +6,10 @@ priority: critical
 ---
 
 # SQL AI Agent node
+
+/// note | Feature removed
+n8n removed this functionality in February 2025.
+///
 
 The SQL Agent uses a SQL database as a data source. It can understand natural language questions, convert them into SQL queries, execute the queries, and present the results in a user-friendly format. This agent is valuable for building natural language interfaces to databases.
 
@@ -90,4 +93,4 @@ Refer to the main AI Agent node's [Templates and examples](/integrations/builtin
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

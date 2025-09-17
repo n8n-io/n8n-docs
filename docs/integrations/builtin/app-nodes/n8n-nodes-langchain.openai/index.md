@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI node documentation
 description: Learn how to use the OpenAI node in n8n. Follow technical documentation to integrate OpenAI node into your workflows.
 contentType: [integration, reference]
@@ -52,9 +51,9 @@ Refer to [OpenAI credentials](/integrations/builtin/credentials/openai.md) for g
 
 ## Related resources
 
-Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [OpenAI's documentation](https://beta.openai.com/docs/introduction) for more information about the service.
 
-Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects){:target=_blank .external-link} for more information about how assistants work.
+Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/assistants/how-it-works/objects) for more information about how assistants work.
 
 For help dealing with rate limits, refer to [Handling rate limits](/integrations/builtin/rate-limits.md).
 
@@ -62,7 +61,7 @@ For help dealing with rate limits, refer to [Handling rate limits](/integrations
 
 ## Using tools with OpenAI assistants
 
-Some operations allow you to connect tools. [Tools](https://docs.n8n.io/advanced-ai/examples/understand-tools/) act like addons that your AI can use to access extra context or resources.
+Some operations allow you to connect tools. [Tools](/advanced-ai/examples/understand-tools.md) act like addons that your AI can use to access extra context or resources.
 
 Select the **Tools** connector to browse the available tools and add them.
 

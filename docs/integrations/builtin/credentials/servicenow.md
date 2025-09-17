@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ServiceNow credentials
 description: Documentation for ServiceNow credentials. Use these credentials to authenticate ServiceNow in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [ServiceNow](https://developer.servicenow.com/dev.do#!/reference){:target=_blank .external-link} developer account.
+Create a [ServiceNow](https://developer.servicenow.com/dev.do#!/reference) developer account.
 
 ## Supported authentication methods
 
@@ -22,7 +21,7 @@ Create a [ServiceNow](https://developer.servicenow.com/dev.do#!/reference){:targ
 
 ## Related resources
 
-Refer to [ServiceNow's API documentation](https://developer.servicenow.com/dev.do#!/reference/api/washingtondc/rest/){:target=_blank .external-link} for more information about the service.
+Refer to [ServiceNow's API documentation](https://developer.servicenow.com/dev.do#!/reference/api/washingtondc/rest/) for more information about the service.
 
 ## Using basic auth
 
@@ -46,5 +45,5 @@ To generate your **Client ID** and **Client Secret**, register a new app in **Sy
 - Enter a **Client Secret** or leave it blank to automatically generate a random secret. Add this secret to your n8n credential.
 - Copy the n8n **OAuth Redirect URL** and add it as a **Redirect URL**.
 
-Refer to [How to setup OAuth2 authentication for RESTMessageV2 integrations](https://www.servicenow.com/community/in-other-news/how-to-setup-oauth2-authentication-for-restmessagev2/ba-p/2271823){:target=_blank .external-link} for more information.
+Refer to [How to setup OAuth2 authentication for RESTMessageV2 integrations](https://www.servicenow.com/community/in-other-news/how-to-setup-oauth2-authentication-for-restmessagev2/ba-p/2271823) for more information.
 

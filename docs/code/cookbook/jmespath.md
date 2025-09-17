@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Query JSON with JMESPath
 description: n8n supports the JMESPath library, to simplify working with JSON formatted data.
 contentType: howto
@@ -7,7 +6,7 @@ contentType: howto
 
 # Query JSON with JMESPath
 
-[JMESPath](https://jmespath.org/){:target=_blank .external-link} is a query language for JSON that you can use to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html){:target=_blank .external-link}.
+[JMESPath](https://jmespath.org/) is a query language for JSON that you can use to extract and transform elements from a JSON document. For full details of how to use JMESPath, refer to the [JMESPath documentation](https://jmespath.org/tutorial.html).
 
 
 ## The `jmespath()` method
@@ -38,21 +37,21 @@ jmespath.search(object, searchString);
 The longer code example doesn't work in Expressions, as they must be single-line.
 ///
 
-`object` is a JSON object, such as the output of a previous node. `searchString` is an expression written in the JMESPath query language. The [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification){:target=_blank .external-link} provides a list of supported expressions, while their [Tutorial](https://jmespath.org/tutorial.html) and [Examples](https://jmespath.org/examples.html){:target=_blank .external-link} provide interactive examples.
+`object` is a JSON object, such as the output of a previous node. `searchString` is an expression written in the JMESPath query language. The [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) provides a list of supported expressions, while their [Tutorial](https://jmespath.org/tutorial.html) and [Examples](https://jmespath.org/examples.html) provide interactive examples.
 
 /// warning | Search parameter order
-The examples in the [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification){:target=_blank .external-link} follow the pattern `search(searchString, object)`. The [JMESPath JavaScript library](https://github.com/jmespath/jmespath.js/){:target=_blank .external-link}, which n8n uses, supports `search(object, searchString)` instead. This means that when using examples from the JMESPath documentation, you may need to change the order of the search function parameters.
+The examples in the [JMESPath Specification](https://jmespath.org/specification.html#jmespath-specification) follow the pattern `search(searchString, object)`. The [JMESPath JavaScript library](https://github.com/jmespath/jmespath.js/), which n8n uses, supports `search(object, searchString)` instead. This means that when using examples from the JMESPath documentation, you may need to change the order of the search function parameters.
 ///
 
 ## Common tasks
 
-This section provides examples for some common operations. More examples, and detailed guidance, are available in [JMESPath's own documentation](https://jmespath.org/tutorial.html){:target=_blank .external-link}.
+This section provides examples for some common operations. More examples, and detailed guidance, are available in [JMESPath's own documentation](https://jmespath.org/tutorial.html).
 
 When trying out these examples, you need to set the Code node **Mode** to **Run Once for Each Item**.
 
 ### Apply a JMESPath expression to a collection of elements with projections
 
-From the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections){:target=_blank .external-link}:
+From the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections):
 
 > Projections are one of the key features of JMESPath. Use it to apply an expression to a collection of elements. JMESPath supports five kinds of projections:
 > 
@@ -62,7 +61,7 @@ From the [JMESPath projections documentation](https://jmespath.org/tutorial.html
 > * Flatten Projections
 > * Filter Projections
 
-The following example shows basic usage of list, slice, and object projections. Refer to the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections){:target=_blank .external-link} for detailed explanations of each projection type, and more examples.
+The following example shows basic usage of list, slice, and object projections. Refer to the [JMESPath projections documentation](https://jmespath.org/tutorial.html#projections) for detailed explanations of each projection type, and more examples.
 
 Given this JSON from a webhook node:
 
@@ -108,7 +107,7 @@ Given this JSON from a webhook node:
 ```
 
 
-Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections){:target=_blank .external-link} of all the people's first names:
+Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections) of all the people's first names:
 
 === "Expressions (JavaScript)"
 
@@ -152,7 +151,7 @@ Retrieve a [list](https://jmespath.org/tutorial.html#list-and-slice-projections)
 	"""
 	```
 
-Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections){:target=_blank .external-link} of the first names:
+Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections) of the first names:
 
 === "Expressions (JavaScript)"
 
@@ -194,7 +193,7 @@ Get a [slice](https://jmespath.org/tutorial.html#list-and-slice-projections){:ta
 	"""
 	```
 
-Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections){:target=_blank .external-link}:
+Get a list of the dogs' ages using [object projections](https://jmespath.org/tutorial.html#object-projections):
 
 === "Expressions (JavaScript)"
 
@@ -237,7 +236,7 @@ Get a list of the dogs' ages using [object projections](https://jmespath.org/tut
 
 ### Select multiple elements and create a new list or object
 
-Use [Multiselect](https://jmespath.org/tutorial.html#multiselect){:target=_blank .external-link} to select elements from a JSON object and combine them into a new list or object.
+Use [Multiselect](https://jmespath.org/tutorial.html#multiselect) to select elements from a JSON object and combine them into a new list or object.
 
 Given this JSON from a webhook node:
 

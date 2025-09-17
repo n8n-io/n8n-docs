@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: n8n performance and resource consumption benchmarking.
 contentType: explanation
 ---
@@ -21,7 +20,7 @@ The performance of n8n depends on factors including:
 
 ## Run your own benchmarking
 
-To get an accurate estimate for your use case, run n8n's [benchmarking framework](https://github.com/n8n-io/n8n/tree/master/packages/%40n8n/benchmark){:target=_blank .external-link}. The repository contains more information about the benchmarking.
+To get an accurate estimate for your use case, run n8n's [benchmarking framework](https://github.com/n8n-io/n8n/tree/master/packages/%40n8n/benchmark). The repository contains more information about the benchmarking.
 
 ## Example: Single instance performance
 

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: One Simple API node documentation
 description: Learn how to use the One Simple API node in n8n. Follow technical documentation to integrate One Simple API node into your workflows.
 contentType: [integration, reference]
@@ -40,6 +39,6 @@ Refer to [One Simple API credentials](/integrations/builtin/credentials/onesimpl
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+Refer to [One Simple API's documentation](https://onesimpleapi.com/docs) for more information about the service.
 
 <!-- vale on -->

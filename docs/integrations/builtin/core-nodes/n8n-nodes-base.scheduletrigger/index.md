@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Schedule Trigger node documentation
 description: Learn how to use the Schedule Trigger node in n8n. Follow technical documentation to integrate Schedule Trigger node into your workflows.
 contentType: [integration, reference]
@@ -81,7 +80,7 @@ For example, if you enter `3` **Months Between Triggers**, `28` **Trigger at Day
 
 Enter a custom cron **Expression** to set the schedule for the trigger.
 
-To generate a Cron expression, you can use [crontab guru](https://crontab.guru){:target=_blank .external-link}. Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
+To generate a Cron expression, you can use [crontab guru](https://crontab.guru). Paste the Cron expression that you generated using crontab guru in the **Expression** field in n8n.
 
 #### Examples
 

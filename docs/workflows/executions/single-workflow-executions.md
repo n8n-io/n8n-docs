@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: View and filter all executions for the workflow currently open on the canvas.
 contentType: howto
 ---
@@ -44,5 +43,5 @@ You can filter the executions list.
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
 1. Open the **Executions** list.
-2. For the workflow execution you want to retry, select **Refresh** <span class="inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>.
+2. For the workflow execution you want to retry, select **Refresh** <span class="n8n-inline-image">![Refresh icon](/_images/common-icons/refresh.png){.off-glb}</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"

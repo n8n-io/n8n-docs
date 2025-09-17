@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings AWS Bedrock node documentation
 description: Learn how to use the Embeddings AWS Bedrock node in n8n. Follow technical documentation to integrate Embeddings AWS Bedrock node into your workflows.
 contentType: [integration, reference]
@@ -21,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Model**: Select the model to use to generate the embedding.
 
-Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html){:target=_blank .external-link}. 
+Learn more about available models in the [Amazon Bedrock documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html). 
 
 ## Templates and examples
 
@@ -30,7 +29,7 @@ Learn more about available models in the [Amazon Bedrock documentation](https://
 
 ## Related resources
 
-Refer to [LangChains's AWS Bedrock embeddings documentation](https://js.langchain.com/docs/integrations/platforms/aws/#text-embedding-models){:target=_blank .external-link} and the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/){:target=_blank .external-link} for more information about AWS Bedrock.
+Refer to [LangChains's AWS Bedrock embeddings documentation](https://js.langchain.com/docs/integrations/platforms/aws/#text-embedding-models) and the [AWS Bedrock documentation](https://docs.aws.amazon.com/bedrock/) for more information about AWS Bedrock.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

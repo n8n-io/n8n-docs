@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Expressions common issues
 description: Documentation for common issues and questions related to expressions in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: howto
@@ -57,4 +56,4 @@ For example, the expression in this JSON includes a trailing period, which resul
 
 ```
 
-To resolve this error, check your [expression syntax](https://www.notion.so/code/expressions/) to make sure they follow the expected format.
+To resolve this error, check your [expression syntax](/code/expressions.md) to make sure they follow the expected format.

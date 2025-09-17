@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Metric-based evaluations
 description: Use metric-based evaluations to measure, score, and improve production AI-based workflow performance over time.
 contentType: howto
@@ -31,9 +30,8 @@ Evaluations use Google Sheets to store the test dataset. To use evaluations, you
 ///
 
 1. Set up [light evaluation](/advanced-ai/evaluations/light-evaluations.md)
-2. Calculate metrics
-3. Write metrics back to evaluation
-4. Run evaluation and view results
+2. Add metrics to workflow
+3. Run evaluation and view results
 
 ### 1. Set up light evaluation
 
@@ -43,35 +41,31 @@ The following steps use the same support ticket classification workflow from the
 
 ![Light evaluation workflow](/_images/advanced-ai/evaluations/light-evaluation-workflow.png)
 
-### 2. Calculate metrics
+### 2. Add metrics to workflow
 
 Metrics are dimensions used to score the output of your workflow. They often compare the actual workflow output with a reference output. It's common to use AI to calculate metrics, although it's sometimes possible to just use code. In n8n, metrics are always numbers.
 
 You need to add the logic to calculate the metrics for your workflow, at a point after it has produced the outputs. You can add any reference outputs your metric uses as a column in your dataset. This makes sure they it will be available in the workflow, since they will be output by the evaluation trigger.
 
-Examples:
+Use the **Set Metrics** operation to calculate:
 
-* [Correctness](https://n8n.io/workflows/4271): whether the output's meaning is consistent with a reference output.
-* [Categorization](https://n8n.io/workflows/4269): whether the output exactly matches the expected output.
-* Helpfulness: whether the answer addresses the question.
-* [String similarity](https://n8n.io/workflows/4274): how close the output is to a reference output, measured character-by-character.
-* [Tool calling](https://n8n.io/workflows/4268): whether the agent called the right tool.
+* **Correctness (AI-based)**: Whether the answer's meaning is consistent with a supplied reference answer. Uses a scale of 1 to 5, with 5 being the best.
+* **Helpfulness (AI-based)**: Whether the response answers the given query. Uses a scale of 1 to 5, with 5 being the best.
+* **String Similarity**: How close the answer is to the reference answer, measured character-by-character (edit distance). Returns a score between 0 and 1.
+* **Categorization**: Whether the answer is an exact match with the reference answer. Returns 1 when matching and 0 otherwise.
+* **Tools Used**: Whether the execution used tools or not. Returns a score between 0 and 1.
+
+You can also add custom metrics. Just calculate the metrics within the workflow and then map them into an Evaluation node. Use the **Set Metrics** operation and choose **Custom Metrics** as the Metric. You can then set the names and values for the metrics you want to return.
+
+For example:
+
 * [RAG document relevance](https://n8n.io/workflows/4273): when working with a vector database, whether the documents retrieved are relevant to the question.
-* RAG answer groundedness: when working with a vector database, whether the answer is ["grounded"](https://www.deepset.ai/blog/rag-llm-evaluation-groundedness) in the documents retrieved.
 
 Calculating metrics can add latency and cost, so you may only want to do it when running an evaluation and avoid it when making a production execution. You can do this by putting the metric logic after a ['check if evaluating' operation](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md#check-if-evaluating).
 
 ![Check if evaluating node](/_images/advanced-ai/evaluations/check-if-evaluating.png)
 
-### 3. Write metrics back to evaluation
-
-n8n needs to know how to extract the metrics you calculated in step 2. Do this by adding an evaluation node with the ['Set metrics' operation](/integrations/builtin/core-nodes/n8n-nodes-base.evaluation.md#set-metrics) and mapping your metrics into it.
-
-![Add set metrics node](/_images/advanced-ai/evaluations/add-set-metrics.png)
-
-This support ticket classification workflow shows the 'Set outputs' operation added and wired up. Since the metrics in this workflow just check whether the actual output is an exact match of the expected one, the workflow calculates them in an expression in the 'Set metrics' node rather than adding any further nodes to the workflow.
-
-### 4. Run evaluation and view results
+### 3. Run evaluation and view results
 
 Switch to the **Evaluations** tab on your workflow and click the **Run evaluation** button. An evaluation will start. Once the evaluation has finished, it will display a summary score for each metric.
 

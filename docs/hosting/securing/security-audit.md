@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Security audit
 description: "Run a security audit on your n8n instance."
 contentType: howto
@@ -54,7 +53,7 @@ This report lists nodes that interact with the file system.
 
 This report shows:
 
-* Official risky nodes. These are n8n built in nodes. You can use them to fetch and run any code on the host system, which exposes the instance to exploits. You can view the list in [n8n code | Audit constants](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/security-audit/constants.ts#L51){:target=_blank .external-link}, under `OFFICIAL_RISKY_NODE_TYPES`.
+* Official risky nodes. These are n8n built in nodes. You can use them to fetch and run any code on the host system, which exposes the instance to exploits. You can view the list in [n8n code | Audit constants](https://github.com/n8n-io/n8n/blob/master/packages/cli/src/security-audit/constants.ts#L51), under `OFFICIAL_RISKY_NODE_TYPES`.
 * Community nodes.
 * Custom nodes.
 

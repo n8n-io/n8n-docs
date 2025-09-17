@@ -1,10 +1,11 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 description: Install and run n8n using Docker Compose
 ---
 
 # Docker-Compose
+
+These instructions cover how to run n8n on a Linux server using Docker Compose.
 
 If you have already installed Docker and Docker-Compose, then you can start with [step 3](#3-dns-setup).
 
@@ -16,29 +17,14 @@ You can find Docker Compose configurations for various architectures in the [n8n
 
 ## 1. Install Docker and Docker Compose
 
-How you install Docker and Docker Compose can vary depending on the Linux distribution you use. You can find detailed instructions in both the [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installation documentation. The following example is for Ubuntu:
+The way that you install Docker and Docker Compose depends on your Linux distribution. You can find specific instructions for each component in the links below:
 
-```bash
-# Remove incompatible or out of date Docker implementations if they exist
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
-# Install prereq packages
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-# Download the repo signing key
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-# Configure the repository
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+* [Docker Engine](https://docs.docker.com/engine/install/)
+* [Docker Compose](https://docs.docker.com/compose/install/linux/)
 
-# Update and install Docker and Docker Compose
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
+After following the installation instructions, verify that Docker and Docker Compose are available by typing:
 
-Verify that Docker and Docker Compose are available by typing:
-
-```bash
+```shell
 docker --version
 docker compose version
 ```
@@ -49,15 +35,15 @@ You can optionally grant access to run Docker without the `sudo` command.
 
 To grant access to the user that you're currently logged in with (assuming they have `sudo` access), run:
 
-```bash
+```shell
 sudo usermod -aG docker ${USER}
-# Register the `docker` group memebership with current session without changing your primary group
+# Register the `docker` group membership with current session without changing your primary group
 exec sg docker newgrp
 ```
 
 To grant access to a different user, type the following, substituting `<USER_TO_RUN_DOCKER>` with the appropriate username:
 
-```bash
+```shell
 sudo usermod -aG docker <USER_TO_RUN_DOCKER>
 ```
 
@@ -65,7 +51,7 @@ You will need to run `exec sg docker newgrp` from any of that user's existing se
 
 You can verify that your current session recognizes the `docker` group by typing:
 
-```bash
+```shell
 groups
 ```
 
@@ -75,22 +61,22 @@ To host n8n online or on a network, create a dedicated subdomain pointed at your
 
 Add an A record to route the subdomain accordingly:
 
-* **Type**: A
-* **Name**: `n8n` (or the desired subdomain)
-* **IP address**: (your server's IP address)
+| Record type | Name                              | Destination                |
+|-------------|-----------------------------------|----------------------------|
+| A           | `n8n` (or your desired subdomain) | `<your_server_IP_address>` |
 
 ## 4. Create an `.env` file
 
 Create a project directory to store your n8n environment configuration and Docker Compose files and navigate inside:
 
-```bash
+```shell
 mkdir n8n-compose
 cd n8n-compose
 ```
 
 Inside the `n8n-compose` directory, create an `.env` file to customize your n8n instance's details. Change it to match your own information:
 
-```bash title=".env file"
+```shell title=".env file"
 # DOMAIN_NAME and SUBDOMAIN together determine where n8n will be reachable from
 # The top level domain to serve from
 DOMAIN_NAME=example.com
@@ -112,7 +98,7 @@ SSL_EMAIL=user@example.com
 
 Inside your project directory, create a directory called `local-files` for sharing files between the n8n instance and the host system (for example, using the [Read/Write Files from Disk node](/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile.md)):
 
-```bash
+```shell
 mkdir local-files
 ```
 
@@ -166,12 +152,15 @@ services:
       - traefik.http.middlewares.n8n.headers.STSPreload=true
       - traefik.http.routers.n8n.middlewares=n8n@docker
     environment:
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
       - N8N_PORT=5678
       - N8N_PROTOCOL=https
+      - N8N_RUNNERS_ENABLED=true
       - NODE_ENV=production
       - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
+      - TZ=${GENERIC_TIMEZONE}
     volumes:
       - n8n_data:/home/node/.n8n
       - ./local-files:/files
@@ -181,27 +170,27 @@ volumes:
   traefik_data:
 ```
 
-The above Docker Compose file configures two containers: one for n8n, and one to run [traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
+The Docker Compose file above configures two containers: one for n8n, and one to run [traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
 
 It also creates and mounts two [Docker Volumes](https://docs.docker.com/engine/storage/volumes/) and mounts the `local-files` directory you created earlier:
 
-   | Name            | Type                                                        | Container mount   | Description                                                                                                                         |
-   |-----------------|-------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-   | `n8n_data`      | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/home/node/.n8n` | Where n8n saves its SQLite database file and encryption key.                                                                        |
-   | `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | Where traefik saves the TLS/SSL certificate data.                                                                                   |
-   | `./local-files` | [Bind](https://docs.docker.com/engine/storage/bind-mounts/) | `/files`          | A local directory shared between the n8n instance and host. In n8n, use the `/files` path to read from and write to this directory. |
+| Name            | Type                                                        | Container mount   | Description                                                                                                                         |
+|-----------------|-------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `n8n_data`      | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/home/node/.n8n` | Where n8n saves its SQLite database file and encryption key.                                                                        |
+| `traefik_data`  | [Volume](https://docs.docker.com/engine/storage/volumes/)   | `/letsencrypt`    | Where traefik saves TLS/SSL certificate data.                                                                                       |
+| `./local-files` | [Bind](https://docs.docker.com/engine/storage/bind-mounts/) | `/files`          | A local directory shared between the n8n instance and host. In n8n, use the `/files` path to read from and write to this directory. |
 
 ## 7. Start Docker Compose
 
-You can now start n8n by typing:
+Start n8n by typing:
 
-```bash
+```shell
 sudo docker compose up -d
 ```
 
-To stop the container, type:
+To stop the containers, type:
 
-```bash
+```shell
 sudo docker compose stop
 ```
 
@@ -210,6 +199,8 @@ sudo docker compose stop
 You can now reach n8n using the subdomain + domain combination you defined in your `.env` file configuration. The above example would result in `https://n8n.example.com`.
 
 n8n is only accessible using secure HTTPS, not over plain HTTP.
+
+If you have trouble reaching your instance, check your server's firewall settings and your DNS configuration.
 
 ## Next steps
 

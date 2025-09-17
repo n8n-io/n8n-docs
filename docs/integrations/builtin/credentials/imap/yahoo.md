@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Yahoo
 description: Documentation for Yahoo IMAP credentials. Use these credentials to authenticate Yahoo IMAP in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -27,4 +26,4 @@ To set up the IMAP credential with a Yahoo Mail account, use these settings:
 5. Turn on the **SSL/TLS** toggle.
 6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
 
-Refer to [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html){:target=_blank .external-link} for more information.
+Refer to [Set up IMAP for Yahoo mail account](https://help.yahoo.com/kb/sln4075.html) for more information.

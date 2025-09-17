@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
 ---
 
@@ -36,7 +35,7 @@ The AI Assistant offers a range of tools to support you:
 <!-- vale from-microsoft.HeadingPunctuation = NO -->
 ### What context does the Assistant have?
 
-The AI Assistant has access to all elements displayed on your n8n screen, excluding actual input and output data values (like customer information). To learn more about what data n8n shares with the Assistant, refer to [AI in n8n](https://docs.n8n.io/privacy-security/privacy/#ai-in-n8n).
+The AI Assistant has access to all elements displayed on your n8n screen, excluding actual input and output data values (like customer information). To learn more about what data n8n shares with the Assistant, refer to [AI in n8n](/privacy-security/privacy.md#ai-in-n8n).
 
 <!-- vale from-microsoft.FirstPerson = NO -->
 ### Who can use the Assistant?

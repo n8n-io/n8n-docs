@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Tools AI Agent node documentation
 description: Learn how to use the Tools Agent of the AI Agent node in n8n. Follow technical documentation to integrate the Tools Agent into your workflows.
 contentType: [integration, reference]
@@ -12,7 +11,7 @@ The Tools Agent uses external [tools](/glossary.md#ai-tool) and APIs to perform 
 
 This agent has an enhanced ability to work with tools and can ensure a standard output format.
 
-The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/concepts/tool_calling/){:target=_blank .external-link} interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
+The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/concepts/tool_calling/) interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
 
 Refer to [AI Agent](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md) for more information on the AI Agent node itself.
 
@@ -181,6 +180,14 @@ Refine the Tools Agent node's behavior using these options:
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-root-nodes/binary-images.md"
 
+### Enable Streaming
+
+When enabled, the AI Agent sends data back to the user in real-time as it generates the answer. This is useful for long-running generations. This is enabled by default.
+
+/// info | Streaming requirements
+For streaming to work, your workflow must use a trigger that supports streaming responses, such as the [Chat Trigger](/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/index.md) or [Webhook](/integrations/builtin/core-nodes/n8n-nodes-base.webhook/index.md) node with **Response Mode** set to **Streaming**.
+///
+
 ## Templates and examples
 
 Refer to the main AI Agent node's [Templates and examples](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md#templates-and-examples) section.
@@ -193,4 +200,4 @@ To learn how to dynamically populate parameters for app node tools, refer to [Le
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+

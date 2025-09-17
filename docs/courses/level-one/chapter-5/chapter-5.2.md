@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -21,7 +20,7 @@ After this step, your workflow should look like this:
 
 If we're going to insert data into Airtable, we first need to set up a table there. To do this:
 
-1. [Create an Airtable account](https://airtable.com/signup){:target="_blank" .external}.
+1. [Create an Airtable account](https://airtable.com/signup).
 2. In your Airtable workspace add a new base from scratch and name it, for example, *beginner course*.
 
 	<figure><img src="/_images/courses/level-one/chapter-five/l1-c5-2-create-airtable-base.png" alt="Create an Airtable base" style="width:100%"><figcaption align = "center"><i>Create an Airtable base</i></figcaption></figure>

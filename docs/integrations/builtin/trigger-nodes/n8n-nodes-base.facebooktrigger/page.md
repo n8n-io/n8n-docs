@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Facebook Trigger Page object documentation
 description: Learn how to use the Page object of the Facebook Trigger node in n8n. Follow technical documentation to integrate the Facebook Trigger node's Page object into your workflows.
 contentType: [integration, reference]
@@ -15,7 +14,7 @@ You can find authentication information for this node [here](/integrations/built
 ///
 
 ///  note  | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Facebook Trigger integrations](https://n8n.io/integrations/facebook-trigger/) page.
 ///
 
 ## Prerequisites
@@ -24,7 +23,7 @@ This Object requires some configuration in your app and page before you can use 
 
 1. At least one page admin needs to grant the `manage_pages` permission to your app.
 1. The page admin needs to have at least moderator privileges. If they don't, they won't receive all content.
-1. You'll also need to add the app to your page, and you may need to go to the [Graph API explorer](https://developers.facebook.com/tools/explorer/){:target=_blank .external-link} and execute this call with your app token:
+1. You'll also need to add the app to your page, and you may need to go to the [Graph API explorer](https://developers.facebook.com/tools/explorer/) and execute this call with your app token:
 
     ```
     {page-id}/subscribed_apps?subscribed_fields=feed
@@ -52,4 +51,4 @@ To configure the trigger with this Object:
 
 ## Related resources
 
-Refer to [Webhooks for Pages](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-pages){:target=_blank .external-link} and Meta's [Page](https://developers.facebook.com/docs/graph-api/webhooks/reference/page/){:target=_blank .external-link} Graph API reference for more information.
+Refer to [Webhooks for Pages](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-pages) and Meta's [Page](https://developers.facebook.com/docs/graph-api/webhooks/reference/page/) Graph API reference for more information.

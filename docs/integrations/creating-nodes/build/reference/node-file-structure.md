@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
 ---
 
@@ -13,11 +12,13 @@ The file and directory structure of your node depends on:
 * Whether you use node versioning.
 * How many nodes you include in the npm package.
 
+n8n recommends using the [`n8n-node` tool](/integrations/creating-nodes/build/n8n-node.md) to create the expected node file structure. You can customize the generated scaffolding as required to meet more complex needs.
+
 ## Required files and directories
 
 Your node must include:
 
-* A `package.json` file at the root of the project. This is required for any npm module.
+* A `package.json` file at the root of the project. Every npm module requires this.
 * A `nodes` directory, containing the code for your node:
     * This directory must contain the [base file](/integrations/creating-nodes/build/reference/node-base-files/index.md), in the format `<node-name>.node.ts`. For example, `MyNode.node.ts`.
     * n8n recommends including a [codex file](/integrations/creating-nodes/build/reference/node-codex-files.md), containing metadata for your node. The codex filename must match the node base filename. For example, given a node base file named `MyNode.node.ts`, the codex name is `MyNode.node.json`.
@@ -25,13 +26,14 @@ Your node must include:
 * A `credentials` directory, containing your credentials code. This code lives in a single [credentials file](/integrations/creating-nodes/build/reference/credentials-files.md). The filename format is `<node-name>.credentials.ts`. For example, `MyNode.credentials.ts`.
 
 ## Modular structure
+
 <!-- vale off -->
 You can choose whether to place all your node's functionality in one file, or split it out into a base file and other modules, which the base file then imports. Unless your node is very simple, it's a best practice to split it out.
 <!-- vale on -->
 
-A basic pattern is to separate out operations. Refer to the [HttpBin starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/HttpBin){:target=_blank .external-link} for an example of this.
+A basic pattern is to separate out operations. Refer to the [HttpBin starter node](https://github.com/n8n-io/n8n-nodes-starter/tree/master/nodes/HttpBin) for an example of this.
 
-For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable){:target=_blank .external-class} or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook){:target=_blank .external-link} as examples. 
+For more complex nodes, n8n recommends a directory structure. Refer to the [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) or [Microsoft Outlook node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Microsoft/Outlook) as examples. 
 
   * `actions`: a directory containing sub-directories that represent resources.
     * Each sub-directory should contain two types of files: 
@@ -56,6 +58,6 @@ n8n supports both approaches. If you include more than one node, each node shoul
 
 ## A best-practice example for programmatic nodes
 
-n8n's built-in [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable){:target=_blank .external-class} implements a modular structure and versioning, following recommended patterns.
+n8n's built-in [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) implements a modular structure and versioning, following recommended patterns.
 
 

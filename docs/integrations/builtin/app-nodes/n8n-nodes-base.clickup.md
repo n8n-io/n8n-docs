@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: ClickUp node documentation
 description: Learn how to use the ClickUp node in n8n. Follow technical documentation to integrate ClickUp node into your workflows.
 contentType: [integration, reference]
@@ -91,6 +90,15 @@ Refer to [ClickUp credentials](/integrations/builtin/credentials/clickup.md) for
     * Add tag to time entry
     * Get all time entry tags
     * Remove tag from time entry
+
+## Operation details
+
+### Get a task
+
+When using the **Get a task** operation, you can optionally enable the following:
+
+- **Include Subtasks**: When enabled, also fetches and includes subtasks for the specified task.
+- **Include Markdown Description**: When enabled, includes the `markdown_description` field in the response, which preserves links and formatting in the task description. This is useful if your task descriptions contain links or rich formatting.
 
 ## Templates and examples
 

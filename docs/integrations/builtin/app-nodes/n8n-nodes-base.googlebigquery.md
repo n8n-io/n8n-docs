@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google BigQuery node documentation
 description: Learn how to use the Google BigQuery node in n8n. Follow technical documentation to integrate Google BigQuery node into your workflows.
 contentType: [integration, reference]
@@ -30,6 +29,6 @@ Refer to [Google BigQuery credentials](/integrations/builtin/credentials/google/
 
 ## Related resources
 
-Refer to [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest){:target=_blank .external-link} for more information about the service.
+Refer to [Google BigQuery's documentation](https://cloud.google.com/bigquery/docs/reference/rest) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

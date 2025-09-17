@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Ads node documentation
 description: Learn how to use the Google Ads node in n8n. Follow technical documentation to integrate Google Ads node into your workflows.
 contentType: [integration, reference]
@@ -29,6 +28,6 @@ Refer to [Google Ads credentials](/integrations/builtin/credentials/google/index
 
 ## Related resources
 
-Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start){:target=_blank .external-link} for more information about the service.
+Refer to [Google Ads' documentation](https://developers.google.com/google-ads/api/docs/start) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

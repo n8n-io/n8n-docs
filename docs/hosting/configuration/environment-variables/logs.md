@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Logs environment variables
 description: Environment variables to configure logging and diagnostic data. 
 contentType: reference
@@ -24,14 +23,15 @@ This page lists environment variables to set up logging for debugging. Refer to 
 | `N8N_LOG_LEVEL` | Enum string: `info`, `warn`, `error`, `debug` | `info` | Log output level. Refer to [Log levels](/hosting/logging-monitoring/logging.md#log-levels) for details. |
 | `N8N_LOG_OUTPUT` | Enum string: `console`, `file` | `console` | Where to output logs. Provide multiple values as a comma-separated list. |
 | `N8N_LOG_FORMAT` | Enum string: `text`, `json` | `text` | The log format to use. `text` prints human readable messages. `json` prints one JSON object per line containing the message, level, timestamp, and all metadata. This is useful for production monitoring as well as debugging. |
+| `N8N_LOG_CRON_ACTIVE_INTERVAL` | Number | `0` | Interval in minutes to log currently active cron jobs. Set to `0` to disable. |
 | `N8N_LOG_FILE_COUNT_MAX` | Number | `100` | Max number of log files to keep. |
 | `N8N_LOG_FILE_SIZE_MAX` | Number | `16` | Max size of each log file in MB. |
 | `N8N_LOG_FILE_LOCATION` | String | `<n8n-directory-path>/logs/n8n.log` | Log file location. Requires N8N_LOG_OUTPUT set to `file`. |
 | `DB_LOGGING_ENABLED` | Boolean | `false` | Whether to enable database-specific logging. |
-| `DB_LOGGING_OPTIONS` | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log`  | `error` | Database log output level. To enable all logging, specify `all`. Refer to [TypeORM logging options](https://orkhan.gitbook.io/typeorm/docs/logging#logging-options){:target=_blank .external-link} |
+| `DB_LOGGING_OPTIONS` | Enum string: `query`, `error`, `schema`, `warn`, `info`, `log`  | `error` | Database log output level. To enable all logging, specify `all`. Refer to [TypeORM logging options](https://orkhan.gitbook.io/typeorm/docs/docs/advanced-topics/5-logging#logging-options) |
 | `DB_LOGGING_MAX_EXECUTION_TIME` | Number | `1000` | Maximum execution time (in milliseconds) before n8n logs a warning. Set to `0` to disable long running query warning. |
 | `CODE_ENABLE_STDOUT` | Boolean | `false` | Set to `true` to send Code node logs to process's stdout for debugging, monitoring, or logging purposes. |
-| `NO_COLOR` | any | `undefined` | Set to any value to output logs without ANSI colors. For more information, see the [no-color.org website](https://no-color.org/){:target=_blank .external-link}. |
+| `NO_COLOR` | any | `undefined` | Set to any value to output logs without ANSI colors. For more information, see the [no-color.org website](https://no-color.org/). |
 <!-- vale on -->
 
 ## Log streaming

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: explanation
 ---
 
@@ -7,7 +6,7 @@ contentType: explanation
 
 --8<-- "_snippets/embed-license.md"
 
-See the [hosting documentation](https://docs.n8n.io/reference/server-setup.html) for detailed setup options.
+See the [hosting documentation](/hosting/installation/server-setups/index.md) for detailed setup options.
 
 ## User data
 

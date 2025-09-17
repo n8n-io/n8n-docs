@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
@@ -9,7 +8,7 @@ This hosting guide shows you how to self-host n8n on Azure. It uses n8n with Pos
 
 ## Prerequisites
 
-You need [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli){:target="_blank" .external-link}
+You need [The Azure command line tool](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 --8<-- "_snippets/self-hosting/warning.md"
 
@@ -25,7 +24,7 @@ The steps in this guide use a mix of the Azure UI and command line tool, but you
 
 ## Open the Azure Kubernetes Service
 
-From [the Azure portal](https://portal.azure.com/){:target="_blank" .external-link} select **Kubernetes services**.
+From [the Azure portal](https://portal.azure.com/) select **Kubernetes services**.
 
 ## Create a cluster
 
@@ -39,18 +38,18 @@ The remainder of the steps in this guide require you to set the Azure instance a
 
 ## Clone configuration repository
 
-Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-kubernetes-hosting/tree/azure){:target=_blank .external-link}. The following steps tell you which file configures what and what you need to change.
+Kubernetes and n8n require a series of configuration files. You can clone these from [this repository](https://github.com/n8n-io/n8n-hosting). The following steps tell you which file configures what and what you need to change.
 
 Clone the repository with the following command:
 
 ```shell
-git clone https://github.com/n8n-io/n8n-kubernetes-hosting.git -b azure
+git clone https://github.com/n8n-io/n8n-hosting.git
 ```
 
-And change directory to the root of the repository you cloned:
+And change directory:
 
 ```shell
-cd azure
+cd n8n-hosting/kubernetes
 ```
 
 ## Configure Postgres
@@ -62,7 +61,7 @@ For larger scale n8n deployments, Postgres provides a more robust database backe
 To maintain data between pod restarts, the Postgres deployment needs a persistent volume. The default storage class is suitable for this purpose and is defined in the `postgres-claim0-persistentvolumeclaim.yaml` manifest.
 
 /// note | Specialized storage classes
-If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes){:target="_blank" .external-link}.
+If you have specialised or higher requirements for storage classes, [read more on the options Azure offers in the documentation](https://learn.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes).
 ///
 ### Postgres environment variables
 
@@ -94,7 +93,7 @@ volumes:
 
 ### Pod resources
 
-[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/){:target="_blank" .external-link} optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
+[Kubernetes lets you](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) optionally specify the minimum resources application containers need and the limits they can run to. The example YAML files cloned above contain the following in the `resources` section of the `n8n-deployment.yaml` file:
 
 ```yaml
 …
@@ -154,7 +153,7 @@ kubectl apply -f namespace.yaml
 n8n typically operates on a subdomain. Create a DNS record with your provider for the subdomain and point it to the IP address of the n8n service. Find the IP address of the n8n service from the **Services & ingresses** menu item of the cluster you want to use under the **External IP** column. You need to add the n8n port, "5678" to the URL.
 
 /// note | Static IP addresses with AKS
-[Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip){:target="_blank" .external-link} for more details on how to use a static IP address with AKS.
+[Read this tutorial](https://learn.microsoft.com/en-us/azure/aks/static-ip) for more details on how to use a static IP address with AKS.
 ///
 ## Delete resources
 

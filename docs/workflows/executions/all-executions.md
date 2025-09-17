@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: View and filter all executions for all workflows.
 contentType: howto
 ---
@@ -33,7 +32,7 @@ You can filter the executions list:
 If your workflow execution fails, you can retry the execution. To retry a failed workflow:
 
 1. Select the **Executions** tab from within either the **Overview** page or a specific **project** to open the list. 
-2. On the execution you want to retry, select **Retry execution** <span class="inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
+2. On the execution you want to retry, select **Retry execution** <span class="n8n-inline-image">![Options menu icon](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 --8<-- "_snippets/workflows/executions/retry-options.md"
 
 ## Load data from previous executions into your current workflow

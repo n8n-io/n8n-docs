@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google credentials
 description: Documentation for Google credentials. Use these credentials to authenticate Google in n8n, a workflow automation platform.
 contentType: overview
@@ -11,7 +10,7 @@ This section contains:
 
 * [OAuth2 single service](/integrations/builtin/credentials/google/oauth-single-service.md): Create an OAuth2 credential for a specific service node, such as the Gmail node.
 * [OAuth2 generic](/integrations/builtin/credentials/google/oauth-generic.md): Create an OAuth2 credential for use with [custom operations](/integrations/custom-operations.md).
-* [Service Account](/integrations/builtin/credentials/google/service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview){:target=_blank .external-link} credential for some specific service nodes.
+* [Service Account](/integrations/builtin/credentials/google/service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview) credential for some specific service nodes.
 * [Google PaLM and Gemini](/integrations/builtin/credentials/googleai.md): Get a Google Gemini/Google PaLM API key.
 
 
@@ -19,8 +18,8 @@ This section contains:
 
 There are two authentication methods available for Google services nodes:
 
-* [OAuth2](https://developers.google.com/identity/protocols/oauth2){:target=_blank .external-link}: Recommended because it's more widely available and easier to set up.
-* [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link}: Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts){:target=_blank .external-link} for guidance on when you need a service account.
+* [OAuth2](https://developers.google.com/identity/protocols/oauth2): Recommended because it's more widely available and easier to set up.
+* [Service Account](https://cloud.google.com/iam/docs/understanding-service-accounts): Refer to the [Google documentation: Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts) for guidance on when you need a service account.
 
 --8<-- "_snippets/integrations/managed-google-oauth.md"
 

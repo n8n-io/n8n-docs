@@ -1,39 +1,79 @@
-/* form itself */
-.md-feedback {
-	background-color: var(--color-primary-tint-1);
-	padding: 10px;
+/*
+This file contains the styling for the n8nFeedback.html partial
+*/
+
+.n8n-feedback-container {
+    border-top: 1px solid #eee;
+    color: #666;
+    margin-top: 1em; 
+    padding-top: 1em; 
 }
 
-.md-feedback fieldset {
+.n8n-feedback-button-positive, .n8n-feedback-button-negative, .n8n-feedback-submit-button {
+    align-items: center;    
+    border: none;
+    border-radius: .1rem; 
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+    padding: 0.5em 1em;
 }
 
-/* form title */
-.md-feedback__title {
-	color: var(--color-primary);
-	font-size: 1.3rem;
+.n8n-feedback-button-positive {
+    background: #90EE90;
 }
 
-/* container for vote buttons and note */
-.md-feedback__inner {
+.n8n-feedback-button-negative {
+    background: #FFB6C1;
 }
 
-/* list of rating buttons */
-.md-feedback__list {
+.n8n-feedback-submit-button {
+    background: var(--color-primary);
+    color: white;
 }
 
-/* rating button icons */
-.md-feedback__icon {
+#n8n-feedback-comment {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.4em; 
+    width: 100%;
 }
 
-.md-feedback__icon:enabled.md-icon[data-md-value="0"]:hover {
-	color: var(--color-feedback-negative);
+.n8n-feedback-comment-inner {
+    display: flex; 
+    gap: 1em; 
+    align-items: center; 
+    width: 100%;
 }
 
-.md-feedback__icon svg {
-	width: 1.5rem;
-	height: 1.5rem;
+#n8n-feedback-input {
+    flex: 1; 
+    font-size: 1em; 
+    padding: 0.5em; 
+    border: 1px solid #ddd; 
+    border-radius: 0.1rem;
 }
 
-/* post-submission note */
-.md-feedback__note {
+.n8n-feedback-comment-hint {
+    font-size: 0.75em;
+}
+
+#n8n-ratings-feedback {
+    display: flex; 
+    gap: 1em; 
+    align-items: center;
+}
+
+@media screen and (max-width: 475px) {
+
+#n8n-ratings-feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.n8n-feedback-button-positive, .n8n-feedback-button-negative {
+    min-width: 8.5em;
+}
+
 }

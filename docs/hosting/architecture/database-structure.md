@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Understand the n8n database structure
 contentType: explanation
 ---
@@ -12,9 +11,9 @@ This page describes the purpose of each table in the n8n database.
 
 By default, n8n uses SQLite as the database. If you are using another database the structure will be similar, but the data-types may be different depending on the database.
 
-n8n uses [TypeORM](https://github.com/typeorm/typeorm){:target=_blank .external-link} for queries and migrations.
+n8n uses [TypeORM](https://github.com/typeorm/typeorm) for queries and migrations.
 
-To inspect the n8n database, you can use [DBeaver](https://dbeaver.io){:target=_blank .external-link}, which is an open-source universal database tool.
+To inspect the n8n database, you can use [DBeaver](https://dbeaver.io), which is an open-source universal database tool.
 
 ## Tables
 
@@ -58,7 +57,7 @@ Details of npm community nodes packages installed in your n8n instance. [install
 
 ### migrations
 
-A log of all database migrations. Read more about [Migrations](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md){:target=_blank .external-link} in TypeORM's documentation.
+A log of all database migrations. Read more about [Migrations](https://typeorm.io/docs/advanced-topics/migrations/) in TypeORM's documentation.
 
 ### project
 
@@ -78,6 +77,7 @@ Records custom instance settings. These are settings that you can't control usin
 
 * Whether the instance owner is set up
 * Whether the user chose to skip owner and user management setup
+* Whether certain types of authentication, including SAML and LDAP, are on
 * License key
 
 ### shared_credentials

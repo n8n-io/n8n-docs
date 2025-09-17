@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Anthropic Chat Model node documentation
 description: Learn how to use the Anthropic Chat Model node in n8n. Follow technical documentation to integrate Anthropic Chat Model node into your workflows.
 contentType: [integration, reference]
@@ -24,7 +23,7 @@ You can find authentication information for this node [here](/integrations/built
 	* **Claude**
 	* **Claude Instant**
 
-Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model){:target=_blank .external-link}.
+Learn more in the [Anthropic model documentation](https://docs.anthropic.com/claude/reference/selecting-a-model).
 
 ## Node options
 
@@ -40,8 +39,8 @@ Learn more in the [Anthropic model documentation](https://docs.anthropic.com/cla
 
 ## Related resources
 
-Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Telegram node documentation
 description: Documentation for the Telegram node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]
@@ -8,7 +7,7 @@ priority: critical
 
 # Telegram node
 
-Use the Telegram node to automate work in [Telegram](https://telegram.org/){:target=_blank .external-link} and integrate Telegram with other applications. n8n has built-in support for a wide range of Telegram features, including getting files as well as deleting and editing messages. 
+Use the Telegram node to automate work in [Telegram](https://telegram.org/) and integrate Telegram with other applications. n8n has built-in support for a wide range of Telegram features, including getting files as well as deleting and editing messages. 
 
 On this page, you'll find a list of operations the Telegram node supports and links to more resources.
 
@@ -26,7 +25,7 @@ Refer to [Telegram credentials](/integrations/builtin/credentials/telegram.md) f
     * [**Set Description**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md#set-description) of a chat.
     * [**Set Title**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/chat-operations.md#set-title) of a chat.
 * [**Callback** operations](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md)
-    * [**Answer Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md#answer-query): Send answers to callback queries sent from [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards){:target=_blank .external-link}.
+    * [**Answer Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md#answer-query): Send answers to callback queries sent from [inline keyboards](https://core.telegram.org/bots/features#inline-keyboards).
     * [**Answer Inline Query**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/callback-operations.md#answer-inline-query): Send answers to callback queries sent from inline queries.
 * [**File** operations](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md)
     * [**Get File**](/integrations/builtin/app-nodes/n8n-nodes-base.telegram/file-operations.md#get-file) from Telegram.
@@ -59,7 +58,7 @@ Refer to [Telegram credentials](/integrations/builtin/credentials/telegram.md) f
 
 ## Related resources
 
-Refer to [Telegram's API documentation](https://core.telegram.org/bots/api){:target=_blank .external-link} for more information about the service.
+Refer to [Telegram's API documentation](https://core.telegram.org/bots/api) for more information about the service.
 
 n8n provides a trigger node for Telegram. Refer to the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/index.md) for more information.
 

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
@@ -10,7 +9,7 @@ You can manually install community nodes from the npm registry on self-hosted n8
 You need to manually install community nodes in the following circumstances:
 
 * Your n8n instance runs in queue mode.
-* You want to install [private packages](https://docs.npmjs.com/creating-and-publishing-private-packages){:target=_blank .external-link}.
+* You want to install [private packages](https://docs.npmjs.com/creating-and-publishing-private-packages).
 
 ## Install a community node
 

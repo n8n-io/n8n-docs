@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: OpenAI Image operations 
 description: Documentation for the Image operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
 contentType: [integration, reference]
@@ -30,7 +29,7 @@ Enter these parameters:
 - **Detail**: Specify the balance between response time versus token usage. 
 - **Length of Description (Max Tokens)**: Defaults to 300. Fewer tokens will result in shorter, less detailed image description.
 
-Refer to [Images | OpenAI](https://platform.openai.com/docs/api-reference/images){:target=_blank .external-link} documentation for more information.
+Refer to [Images | OpenAI](https://platform.openai.com/docs/api-reference/images) documentation for more information.
 
 ## Generate an Image
 
@@ -54,7 +53,7 @@ Enter these parameters:
 - **Respond with image URL(s)**: Whether to return image URL(s) instead of binary file(s).
 - **Put Output in Field**: Defaults to `data`. Enter the name of the output field to put the binary file data in. Only available if **Respond with image URL(s)** is turned off.
 
-Refer to [Create image | OpenAI](https://platform.openai.com/docs/api-reference/images/create){:target=_blank .external-link} documentation for more information.
+Refer to [Create image | OpenAI](https://platform.openai.com/docs/api-reference/images/create) documentation for more information.
 
 ## Common issues
 

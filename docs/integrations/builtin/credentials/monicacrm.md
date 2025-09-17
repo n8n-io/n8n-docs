@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Monica CRM credentials
 description: Documentation for Monica CRM credentials. Use these credentials to authenticate Monica CRM in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Sign up for a [Monica CRM](https://www.monicahq.com/){:target=_blank .external-link} account or self-host an instance.
+Sign up for a [Monica CRM](https://www.monicahq.com/) account or self-host an instance.
 
 ## Supported authentication methods
 
@@ -21,7 +20,7 @@ Sign up for a [Monica CRM](https://www.monicahq.com/){:target=_blank .external-l
 
 ## Related resources
 
-Refer to [Monica's API documentation](https://www.monicahq.com/api){:target=_blank .external-link} for more information about the service.
+Refer to [Monica's API documentation](https://www.monicahq.com/api) for more information about the service.
 
 ## Using API token
 

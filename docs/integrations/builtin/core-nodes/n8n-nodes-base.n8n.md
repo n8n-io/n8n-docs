@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n
 description: Documentation for the n8n node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -136,7 +135,7 @@ Configure this operation with this parameter:
 	* `connections`
 	* `settings`
 
-Refer to the [n8n API | Create a workflow documentation](/api/api-reference.md/#tag/Workflow/paths/~1workflows/post) for more information.
+Refer to [n8n API reference](/api/api-reference.md) for more information.
 
 ## Get many workflows
 
@@ -166,6 +165,7 @@ Configure this operation with these parameters:
 	* `connections`
 	* `settings`
 
+<!-- Using absolute link here to avoid link checking false positives over the generated anchor link -->
 Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
 
 ## Templates and examples

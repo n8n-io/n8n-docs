@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Adalo node documentation
 description: Learn how to use the Adalo node in n8n. Follow technical documentation to integrate Adalo node into your workflows.
 contentType: [integration, reference]
@@ -32,7 +31,7 @@ Refer to [Adalo credentials](/integrations/builtin/credentials/adalo.md) for gui
 
 ## Related resources
 
-Refer to [Adalo's documentation](https://help.adalo.com/){:target=_blank .external-link} for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis){:target=_blank .external-link} page gives more detail about what you can do with Adalo collections.
+Refer to [Adalo's documentation](https://help.adalo.com/) for more information on using Adalo. Their [External Collections with APIs](https://help.adalo.com/integrations/external-collections-with-apis) page gives more detail about what you can do with Adalo collections.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

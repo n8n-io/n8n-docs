@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Notion node documentation
 description: Learn how to use the Notion node in n8n. Follow technical documentation to integrate Notion node into your workflows.
 contentType: [integration, reference]
@@ -49,7 +48,7 @@ Refer to [Notion credentials](/integrations/builtin/credentials/notion.md) for g
 
 n8n provides an app node for Notion. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger.md).
 
-Refer to [Notion's documentation](https://developers.notion.com/){:target=_blank .external-link} for details about their API.
+Refer to [Notion's documentation](https://developers.notion.com/) for details about their API.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

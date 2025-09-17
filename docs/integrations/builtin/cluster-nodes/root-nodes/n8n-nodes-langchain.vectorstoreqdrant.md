@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Qdrant Vector Store node documentation
 description: Learn how to use the Qdrant Vector Store node in n8n. Follow technical documentation to integrate Qdrant Vector Store node into your workflows.
 contentType: [integration, reference]
@@ -70,7 +69,7 @@ This Operation Mode includes one **Node option**, the [Metadata Filter](#metadat
 
 This Operation Mode includes one **Node option**:
 
-* **Collection Config**: Enter JSON options for creating a Qdrant collection creation configuration. Refer to the Qdrant [Collections](https://qdrant.tech/documentation/concepts/collections/){:target=_blank .external-link} documentation for more information.
+* **Collection Config**: Enter JSON options for creating a Qdrant collection creation configuration. Refer to the Qdrant [Collections](https://qdrant.tech/documentation/concepts/collections/) documentation for more information.
 
 ### Retrieve Documents (As Vector Store for Chain/Tool) parameters
 
@@ -98,7 +97,7 @@ This Operation Mode includes one **Node option**, the [Metadata Filter](#metadat
 
 ## Related resources
 
-Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

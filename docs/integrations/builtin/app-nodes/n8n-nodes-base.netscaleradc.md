@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Netscaler ADC node documentation
 description: Learn how to use the Netscaler ADC node in n8n. Follow technical documentation to integrate Netscaler ADC node into your workflows.
 contentType: [integration, reference]
@@ -32,7 +31,7 @@ Refer to [Netscaler ADC credentials](/integrations/builtin/credentials/netscaler
 
 ## Related resources
 
-Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/){:target=_blank .external-link} for more information about the service.
+Refer to [Netscaler ADC's documentation](https://docs.citrix.com/en-us/citrix-adc/current-release/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
 

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: LDAP credentials
 description: Documentation for the LDAP credentials. Use these credentials to authenticate LDAP in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -17,9 +16,9 @@ Create a server directory using Lightweight Directory Access Protocol (LDAP).
 
 Some common LDAP providers include:
 
-* [Jumpcloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap){:target=_blank .external-link}
-* [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps){:target=_blank .external-link}
-* [Okta](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-connection-settings.htm){:target=_blank .external-link}
+* [Jumpcloud](https://jumpcloud.com/blog/how-to-connect-your-application-to-ldap)
+* [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps)
+* [Okta](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-connection-settings.htm)
 
 ## Supported authentication methods
 
@@ -29,7 +28,7 @@ Some common LDAP providers include:
 
 Refer to your LDAP provider's own documentation for detailed information.
 
-For general LDAP information, refer to [Basic LDAP concepts](https://ldap.com/basic-ldap-concepts/){:target=_blank .external-link} for a basic overview and [The LDAP Bind Operation](https://ldap.com/the-ldap-bind-operation/){:target=_blank .external-link} for information on how the bind operation and authentication work.
+For general LDAP information, refer to [Basic LDAP concepts](https://ldap.com/basic-ldap-concepts/) for a basic overview and [The LDAP Bind Operation](https://ldap.com/the-ldap-bind-operation/) for information on how the bind operation and authentication work.
 
 ## Using LDAP server details
 

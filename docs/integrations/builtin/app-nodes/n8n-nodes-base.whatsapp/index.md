@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: WhatsApp Business Cloud node documentation
 description: Learn how to use the WhatsApp Business Cloud node in n8n. Follow technical documentation to integrate WhatsApp Business Cloud node into your workflows.
 contentType: [integration, reference]
@@ -36,7 +35,7 @@ Refer to [WhatsApp Business Cloud credentials](/integrations/builtin/credentials
 
 ## Related resources
 
-Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api){:target=_blank} for details about the operations.
+Refer to [WhatsApp Business Platform's Cloud API documentation](https://developers.facebook.com/docs/whatsapp/cloud-api) for details about the operations.
 
 ## Common issues
 

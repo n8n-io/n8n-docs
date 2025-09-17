@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Postgres credentials
 description: Documentation for Postgres credentials. Use these credentials to authenticate Postgres in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -29,7 +28,7 @@ The Agent node doesn't support SSH tunnels.
 
 ## Related resources
 
-Refer to [Postgres's documentation](https://www.postgresql.org/docs/16/index.html){:target=_blank .external-link} for more information about the service.
+Refer to [Postgres's documentation](https://www.postgresql.org/docs/16/index.html) for more information about the service.
 
 ## Using database connection
 
@@ -56,7 +55,7 @@ To set up the database connection:
 3. Enter the **User** name of the user you wish to connect as.
 4. Enter the user's **Password**.
 5. **Ignore SSL Issues**: If you turn this on, the credential will connect even if SSL validation fails.
-6. **SSL**: Choose whether to use SSL in your connection. Refer to Postgres [SSL Support](https://www.postgresql.org/docs/16/libpq-ssl.html){:target=_blank .external-link} for more information. Options include:
+6. **SSL**: Choose whether to use SSL in your connection. Refer to Postgres [SSL Support](https://www.postgresql.org/docs/16/libpq-ssl.html) for more information. Options include:
     - **Allow**: Sets the `ssl-mode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
     - **Disable**: Sets the `ssl-mode` parameter to `disable`. Only try a non-SSL connection.
     - **Require**: Sets the `ssl-mode` parameter to `require`. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
@@ -79,7 +78,7 @@ To set up the database connection:
         1. Add the contents of the **Private Key** or identity file used for SSH.
         2. If the **Private Key** was created with a passphrase, enter that **Passphrase**. If the **Private Ke**y has no passphrase, leave this field blank.
 
-Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/16/ssh-tunnels.html){:target=_blank .external-link} for more information.
+Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/16/ssh-tunnels.html) for more information.
 
 ### SSH tunnel limitations
 

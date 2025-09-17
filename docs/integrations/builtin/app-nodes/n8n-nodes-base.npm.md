@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: npm node documentation
 description: Learn how to use the npm node in n8n. Follow technical documentation to integrate npm node into your workflows.
 contentType: [integration, reference]
@@ -32,6 +31,6 @@ Refer to [npm credentials](/integrations/builtin/credentials/npm.md) for guidanc
 
 ## Related resources
 
-Refer to [npm's documentation](https://docs.npmjs.com/){:target=_blank .external-link} for more information about the service.
+Refer to [npm's documentation](https://docs.npmjs.com/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

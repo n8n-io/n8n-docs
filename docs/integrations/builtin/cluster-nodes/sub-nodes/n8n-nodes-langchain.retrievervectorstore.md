@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Vector Store Retriever node documentation
 description: Learn how to use the Vector Store Retriever node in n8n. Follow technical documentation to integrate Vector Store Retriever node into your workflows.
 contentType: [integration, reference]
@@ -25,7 +24,7 @@ On this page, you'll find the node parameters for the Vector Store Retriever nod
 
 ## Related resources
 
-Refer to [LangChain's vector store retriever documentation](https://js.langchain.com/docs/how_to/vectorstore_retriever/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's vector store retriever documentation](https://js.langchain.com/docs/how_to/vectorstore_retriever/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

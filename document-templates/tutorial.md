@@ -2,7 +2,6 @@ Please include frontmatter indicating a tutorial with a relevant description, fo
 
 ```
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Learn how to build AI workflows with n8n
 type: tutorial
 ---
@@ -73,7 +72,7 @@ The tutorial should end with a section indicating more resources for the user (o
 Now you have seen how to create a basic AI workflow, there are plenty of resources to build on that knowledge and plenty of examples to give you ideas of where to go next:
 
 * Learn more about AI concepts and view examples in [Examples and concepts](/advanced-ai/examples/introduction.md).
-* Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25){:target=_blank .external-link}.
+* Browse AI [Workflow templates](https://n8n.io/workflows/?categories=25).
 * Find out how to [enhance the AI agent with tools](/advanced-ai/examples/understand-tools.md).
 ```
 

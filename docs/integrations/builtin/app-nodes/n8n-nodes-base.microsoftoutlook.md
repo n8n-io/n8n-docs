@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Microsoft Outlook node documentation
 description: Learn how to use the Microsoft Outlook node in n8n. Follow technical documentation to integrate Microsoft Outlook node into your workflows.
 contentType: [integration, reference]
@@ -76,6 +75,6 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 
 ## Related resources
 
-Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started){:target=_blank .external-link} for more information about the service.
+Refer to [Outlook's API documentation](https://learn.microsoft.com/en-us/outlook/rest/get-started) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

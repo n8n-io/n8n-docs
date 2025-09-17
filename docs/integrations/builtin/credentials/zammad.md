@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zammad credentials
 description: Documentation for Zammad credentials. Use these credentials to authenticate Zammad in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,8 +12,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a hosted [Zammad](https://zammad.com/){:target=_blank .external-link} account or set up your own Zammad instance.
-- For token authentication, enable **API Token Access** in **Settings > System > API**. Refer to [Setting up a Zammad](https://admin-docs.zammad.org/en/latest/system/integrations/zabbix.html?#setting-up-a-zammad){:target=_blank .external-link} for more information.
+- Create a hosted [Zammad](https://zammad.com/) account or set up your own Zammad instance.
+- For token authentication, enable **API Token Access** in **Settings > System > API**. Refer to [Setting up a Zammad](https://admin-docs.zammad.org/en/latest/system/integrations/zabbix.html?#setting-up-a-zammad) for more information.
 
 ## Supported authentication methods
 
@@ -23,7 +22,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Zammad's API Authentication documentation](https://docs.zammad.org/en/latest/api/intro.html?#authentication){:target=_blank .external-link} for more information about authenticating with the service.
+Refer to [Zammad's API Authentication documentation](https://docs.zammad.org/en/latest/api/intro.html?#authentication) for more information about authenticating with the service.
 
 ## Using basic auth
 

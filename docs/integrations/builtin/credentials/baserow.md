@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Baserow credentials
 description: Documentation for Baserow credentials. Use these credentials to authenticate Baserow in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -14,7 +13,7 @@ You can use these credentials to authenticate the following node:
 
 ## Prerequisites
 
-Create a [Baserow](https://baserow.io/){:target=_blank .external-link} account on any hosted Baserow instance or a self-hosted instance.
+Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance or a self-hosted instance.
 
 ## Supported authentication methods
 
@@ -22,9 +21,9 @@ Create a [Baserow](https://baserow.io/){:target=_blank .external-link} account o
 
 ## Related resources
 
-Refer to [Baserow's documentation](https://baserow.io/docs/index){:target=_blank .external-link} for more information about the service.
+Refer to [Baserow's documentation](https://baserow.io/docs/index) for more information about the service.
 
-Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs){:target=_blank .external-link} for more information about the API specifically.
+Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs) for more information about the API specifically.
 
 ## Using basic auth
 

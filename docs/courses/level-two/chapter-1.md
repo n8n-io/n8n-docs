@@ -1,11 +1,10 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: tutorial
 ---
 
 # Understanding the data structure
 
-In this chapter, you will learn about the data structure of n8n and how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md){:target="_blank"} to transform data and simulate node outputs.
+In this chapter, you will learn about the data structure of n8n and how to use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) to transform data and simulate node outputs.
 
 
 ## Data structure of n8n
@@ -64,7 +63,7 @@ An n8n node performs its action on each item of incoming data.
 
 ## Creating data sets with the Code node
 
-Now that you are familiar with the n8n data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md){:target="_blank"} to write JavaScript code defining your array of objects with the following structure:
+Now that you are familiar with the n8n data structure, you can use it to create your own data sets or simulate node outputs. To do this, use the [Code node](/integrations/builtin/core-nodes/n8n-nodes-base.code/index.md) to write JavaScript code defining your array of objects with the following structure:
 
 ```javascript
 return [
@@ -162,7 +161,7 @@ Let's build on the previous exercise, in which you used the Code node to create 
 
 ## Transforming data
 
-The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data.md){:target="_blank" .external}, so that each item can be processed individually.
+The incoming data from some nodes may have a different data structure than the one used in n8n. In this case, you need to [transform the data](/data/transforming-data.md), so that each item can be processed individually.
 
 The two most common operations for data transformation are:
 

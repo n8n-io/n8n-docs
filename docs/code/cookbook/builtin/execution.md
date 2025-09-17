@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: reference
 ---
 
@@ -23,6 +22,8 @@ Contains the unique ID of the current workflow execution.
 The webhook URL to call to resume a [waiting](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) workflow.
 
 See the [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md#on-webhook-call) documentation to learn more.
+
+`execution.resumeUrl` is available in workflows containing a Wait node, along with a node that waits for a webhook response.
 
 ## `execution.customData`
 
@@ -58,3 +59,7 @@ This is only available in the Code node.
 	```
 
 Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
+
+---
+
+

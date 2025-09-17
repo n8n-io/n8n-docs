@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Credential sharing
 description: Share credentials within an organization.
 contentType: howto
@@ -40,5 +39,5 @@ To unshare a credential:
 2. Select **Credentials** to see a list of your credentials.
 3. Select the credential you want to unshare.
 4. Select **Sharing**.
-5. Select **trash icon**<span class="inline-image">![Trash icon](/_images/common-icons/delete-node.png){.off-glb}</span> on the user or project you want to remove from the list of shared users and projects.
+5. Select **trash icon**<span class="n8n-inline-image">![Trash icon](/_images/common-icons/delete-node.png){.off-glb}</span> on the user or project you want to remove from the list of shared users and projects.
 6. Select **Save** to apply the changes.

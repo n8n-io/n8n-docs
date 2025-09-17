@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Pinecone Vector Store node documentation
 description: Learn how to use the Pinecone Vector Store node in n8n. Follow technical documentation to integrate Pinecone Vector Store node into your workflows.
 contentType: [integration, reference]
@@ -108,7 +107,7 @@ Available in **Insert Documents** mode. Deletes all data from the namespace befo
 
 ## Related resources
 
-Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -117,4 +116,4 @@ Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/inte
 Your Pinecone index and namespace are available in your Pinecone account.
 
 ![Screenshot of a Pinecone account, with the Pinecone index labelled](/_images/integrations/builtin/cluster-nodes/vectorstorepinecone/pinecone-index-namespace.png)
---8<-- "_glossary/ai-glossary.md"
+

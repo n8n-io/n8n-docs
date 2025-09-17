@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: Create your first workflow in n8n and learn some key concepts.
 contentType: tutorial
 ---
@@ -46,19 +45,19 @@ For this tutorial, we'll use the [Schedule trigger](/integrations/builtin/core-n
 
 ## Step three: Add the NASA node and set up credentials
 
-The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interacts with NASA's [public APIs](https://api.nasa.gov/){:target=_blank .external-link} to fetch useful data. We will use the real-time data from the API to find solar events.
+The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interacts with NASA's [public APIs](https://api.nasa.gov/) to fetch useful data. We will use the real-time data from the API to find solar events.
 
 ??? explanation "Credentials"
     Credentials are private pieces of information issued by apps and services to authenticate you as a user and allow you to connect and share information between the app or service and the n8n node. The type of information required varies depending on the app/service concerned. You should be careful about sharing or revealing the credentials outside of n8n.
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Schedule Trigger node.
+1. Select the **Add node** <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the Schedule Trigger node.
 1. Search for **NASA**. n8n shows a list of nodes that match the search.
 1. Select **NASA** to view a list of operations.
 1. Search for and select **Get a DONKI solar flare**. This operation returns a report about recent solar flares. When you select the operation, n8n adds the node to the canvas and opens it.
 1. To access the NASA APIs, you need to set up credentials:
     1. Select the  **Credential for NASA API** dropdown.
     1. Select **Create new credential**. n8n opens the credentials view.
-    1. Go to [NASA APIs](https://api.nasa.gov/){:target=_blank .external-link} and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
+    1. Go to [NASA APIs](https://api.nasa.gov/) and fill out the form from the **Generate API Key** link. The NASA site generates the key and emails it to the address you entered.
     1. Check your email account for the API key. Copy the key, and paste it into **API Key** in n8n.
     1. Select **Save**.
     1. Close the credentials screen. n8n returns to the node. The new credentials should be automatically selected in **Credential for NASA API**.
@@ -66,7 +65,7 @@ The [NASA node](/integrations/builtin/app-nodes/n8n-nodes-base.nasa.md) interact
 1. By default, DONKI Solar Flare provides data for the past 30 days. To limit it to just the last week, use **Additional Fields**:
     1. Select **Add field**.
     1. Select **Start date**.
-    1. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
+    1. To get a report starting from a week ago, you can use an expression: next to **Start date**, select the **Expression** tab, then select the expand button <span class="n8n-inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
     1. In the **Expression** field, enter the following expression:
     ```js
     {{ $today.minus(7, 'days') }}
@@ -88,7 +87,7 @@ n8n supports complex logic in workflows. In this tutorial we will use the [If no
 
 Add the If node:
 
-1. Select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the NASA node.
+1. Select the **Add node** <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector on the NASA node.
 1. Search for **If**. n8n shows a list of nodes that match the search.
 1. Select **If** to add the node to the canvas. n8n opens the node.
 1. You need to check the value of the `classType` property in the NASA data. To do this:
@@ -110,16 +109,16 @@ Add the If node:
 
 ## Step five: Output data from your workflow
 
-The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link}. Postbin is a service that receives data and displays it on a temporary web page.
+The last step of the workflow is to send the two reports about solar flares. For this example, you'll send data to [Postbin](https://www.toptal.com/developers/postbin/). Postbin is a service that receives data and displays it on a temporary web page.
 
-1. On the If node, select the **Add node** <span class="inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector labeled **true**.
+1. On the If node, select the **Add node** <span class="n8n-inline-image">![Add node icon](/_images/try-it-out/add-node-small.png){.off-glb}</span> connector labeled **true**.
 1. Search for **PostBin**. n8n shows a list of nodes that match the search.
 1. Select **PostBin**.
 1. Select **Send a request**. n8n adds the node to the canvas and opens it.
-1. Go to [Postbin](https://www.toptal.com/developers/postbin/){:target=_blank .external-link} and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
+1. Go to [Postbin](https://www.toptal.com/developers/postbin/) and select **Create Bin**. Leave the tab open so you can come back to it when testing the workflow.
 1. Copy the bin ID. It looks similar to `1651063625300-2016451240051`.
 1. In n8n, paste your Postbin ID into **Bin ID**.
-1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
+1. Now, configure the data to send to Postbin. Next to **Bin Content**, select the **Expression** tab (you will need to mouse-over the **Bin Content** for the tab to appear), then select the expand button <span class="n8n-inline-image">![Add node icon](/_images/common-icons/open-expression-editor.png){.off-glb}</span> to open the full expressions editor.
 1. You can now click and drag the correct field from the If Node output into the expressions editor to automatically create a reference for this label. In this case the input we want is 'classType'.
 1. Once dropped into the expressions editor it will transform into this reference: `{{$json["classType"]}}`. Add a message to it, so that the full expression is:
 
@@ -132,7 +131,7 @@ The last step of the workflow is to send the two reports about solar flares. For
 1. Close the expressions editor to return to the node.
 1. Close the Postbin node to return to the canvas.
 1. Add another Postbin node, to handle the **false** output path from the If node:
-    1. Hover over the Postbin node, then select **Node context menu** <span class="inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** to duplicate the first Postbin node.
+    1. Hover over the Postbin node, then select **Node context menu** <span class="n8n-inline-image">![Node context menu icon](/_images/common-icons/node-context-menu.png){.off-glb}</span> > **Duplicate node** to duplicate the first Postbin node.
     1. Drag the **false** connector from the If node to the left side of the new Postbin node.
 
 ## Step six: Test the workflow
@@ -165,4 +164,4 @@ There are plenty of things you could add to this (perhaps add some more credenti
 
 - Interested in what you could do with AI? Find out [how to build an AI chat agent with n8n](/advanced-ai/intro-tutorial.md).
 - Take n8n's [text courses](/courses/index.md) or [video courses](/video-courses.md).
-- Explore more examples in [workflow templates](https://n8n.io/workflows/){:target=_blank .external-link}.
+- Explore more examples in [workflow templates](https://n8n.io/workflows/).

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AWS credentials
 description: Documentation for AWS credentials. Use these credentials to authenticate AWS in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -16,6 +15,7 @@ You can use these credentials to authenticate the following nodes:
 - [AWS Comprehend](/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend.md)
 - [AWS DynamoDB](/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb.md)
 - [AWS Elastic Load Balancing](/integrations/builtin/app-nodes/n8n-nodes-base.awselb.md)
+- [AWS IAM](/integrations/builtin/app-nodes/n8n-nodes-base.awsiam.md)
 - [AWS Lambda](/integrations/builtin/app-nodes/n8n-nodes-base.awslambda.md)
 - [AWS Rekognition](/integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition.md)
 - [AWS S3](/integrations/builtin/app-nodes/n8n-nodes-base.awss3.md)
@@ -33,11 +33,11 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [AWS's Identity and Access Management documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html){:target=_blank .external-link} for more information about the service.
+Refer to [AWS's Identity and Access Management documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html) for more information about the service.
 
 ## Using API access key
 
-To configure this credential, you'll need an [AWS](https://aws.amazon.com/){:target=_blank .external-link} account and:
+To configure this credential, you'll need an [AWS](https://aws.amazon.com/) account and:
 
 - Your AWS **Region**
 - The **Access Key ID**: Generated when you create an access key.
@@ -46,7 +46,7 @@ To configure this credential, you'll need an [AWS](https://aws.amazon.com/){:tar
 To create an access key and set up the credential:
 
 1. In your n8n credential, select your AWS **Region**.
-1. Log in to the [IAM console](https://console.aws.amazon.com/iam){:target=_blank .external-link}.
+1. Log in to the [IAM console](https://console.aws.amazon.com/iam).
 2. In the navigation bar on the upper right, select your user name and then select **Security credentials**.
 3. In the **Access keys** section, select **Create access key**.
 4. On the **Access key best practices & alternatives page**, choose your use case. If it doesn't prompt you to create an access key, select **Other**.
@@ -54,8 +54,8 @@ To create an access key and set up the credential:
 6. Set a **description** tag value for the access key to make it easier to identify, for example `n8n integration`.
 7. Select **Create access key**.
 8. Reveal the **Access Key ID** and **Secret Access Key** and enter them in n8n.
-10. To use a **Temporary security credential**, turn that option on and add a **Session token**. Refer to the [AWS Temporary security credential documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html){:target=_blank .external-link} for more information on working with temporary security credentials.
-11. If you use [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/){:target=_blank .external-link} to host n8n, you can establish a connection between your VPC and some apps. Use **Custom Endpoints** to enter relevant custom endpoint(s) for this connection. This setup works with these apps:
+10. To use a **Temporary security credential**, turn that option on and add a **Session token**. Refer to the [AWS Temporary security credential documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html) for more information on working with temporary security credentials.
+11. If you use [Amazon Virtual Private Cloud (VPC)](https://aws.amazon.com/vpc/) to host n8n, you can establish a connection between your VPC and some apps. Use **Custom Endpoints** to enter relevant custom endpoint(s) for this connection. This setup works with these apps:
     - Rekognition
     - Lambda
     - SNS
@@ -63,5 +63,5 @@ To create an access key and set up the credential:
     - SQS
     - S3
 
-You can also generate access keys through the AWS CLI and AWS API. Refer to the [AWS Managing Access Keys documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html){:target=_blank .external-link} for instructions on generating access keys using these methods.
+You can also generate access keys through the AWS CLI and AWS API. Refer to the [AWS Managing Access Keys documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) for instructions on generating access keys using these methods.
 

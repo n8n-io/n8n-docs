@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: HighLevel node documentation
 description: Learn how to use the HighLevel node in n8n. Follow technical documentation to integrate HighLevel node into your workflows.
 contentType: [integration, reference]
@@ -46,6 +45,6 @@ Refer to [HighLevel credentials](/integrations/builtin/credentials/highlevel.md)
 
 ## Related resources
 
-Refer to [HighLevel's API documentation and support forums](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api){:target=_blank .external-link} for more information about the service.
+Refer to [HighLevel's API documentation and support forums](https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

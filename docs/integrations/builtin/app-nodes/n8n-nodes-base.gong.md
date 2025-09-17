@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gong node documentation
 description: Learn how to use the Gong node in n8n. Follow technical documentation to integrate Gong node into your workflows.
 contentType: [integration, reference]
@@ -34,6 +33,6 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [Gong's documentation](https://gong.app.gong.io/settings/api/documentation){:target=_blank .external-link} for more information about the service.
+Refer to [Gong's documentation](https://gong.app.gong.io/settings/api/documentation) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

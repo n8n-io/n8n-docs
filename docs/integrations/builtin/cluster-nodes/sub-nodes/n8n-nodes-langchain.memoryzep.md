@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Zep node documentation
 description: Learn how to use the Zep node in n8n. Follow technical documentation to integrate Zep node into your workflows.
 contentType: [integration, reference]
@@ -7,6 +6,10 @@ priority: medium
 ---
 
 # Zep node
+
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. 
+///
 
 Use the Zep node to use Zep as a [memory](/glossary.md#ai-memory) server.
 
@@ -29,7 +32,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Related resources
 
-Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/memory/zep_memory){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/memory/zep_memory) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -37,4 +40,4 @@ Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrati
 
 [[% include "_includes/integrations/cluster-nodes/memory-shared.html" %]]
 
---8<-- "_glossary/ai-glossary.md"
+

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: GitHub Document Loader node documentation
 description: Learn how to use the GitHub Document Loader node in n8n. Follow technical documentation to integrate GitHub Document Loader node into your workflows.
 contentType: [integration, reference]
@@ -40,4 +39,4 @@ You can find authentication information for this node [here](/integrations/built
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-doc-loaders-link.md"
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

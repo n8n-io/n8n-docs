@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: AMQP credentials
 description: Documentation for AMQP credentials. Use these credentials to authenticate AMQP in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -15,7 +14,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.apache.org/){:target=_blank .external-link}. Refer to [AMQP Products](https://www.amqp.org/about/examples){:target=_blank .external-link} for a list of options.
+Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.apache.org/). Refer to [AMQP Products](https://www.amqp.org/about/examples) for a list of options.
 
 ## Supported authentication methods
 
@@ -23,9 +22,9 @@ Install an AMQP 1.0-compatible message broker like [ActiveMQ](https://activemq.a
 
 ## Related resources
 
-Advanced Message Queuing Protocol (AMQP) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. Refer to the [OASIS AMQP Version 1.0 Standard](https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html){:target=_blank .external-link} for more information.
+Advanced Message Queuing Protocol (AMQP) is an open standard application layer protocol for message-oriented middleware. The defining features of AMQP are message orientation, queuing, routing, reliability and security. Refer to the [OASIS AMQP Version 1.0 Standard](https://docs.oasis-open.org/amqp/core/v1.0/amqp-core-overview-v1.0.html) for more information.
 
-Refer to your provider's documentation for more information about the service. Refer to [ActiveMQ's API documentation](https://activemq.apache.org/components/classic/documentation/rest){:target=_blank .external-link} as one example.
+Refer to your provider's documentation for more information about the service. Refer to [ActiveMQ's API documentation](https://activemq.apache.org/components/classic/documentation/rest) as one example.
 
 ## Using AMQP connection
 

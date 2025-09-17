@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: S3 node documentation
 description: Learn how to use the S3 node in n8n. Follow technical documentation to integrate S3 node into your workflows.
 contentType: [integration, reference]
@@ -12,9 +11,9 @@ Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with oth
 
 Use the S3 node for non-AWS S3 solutions like:
 
-* [MinIO](https://min.io/){:target="_blank" .external-link}
-* [Wasabi](https://wasabi.com/){:target="_blank" .external-link}
-* [Digital Ocean spaces](https://www.digitalocean.com/products/spaces){:target="_blank" .external-link}
+* [MinIO](https://min.io/)
+* [Wasabi](https://wasabi.com/)
+* [Digital Ocean spaces](https://www.digitalocean.com/products/spaces)
 
 On this page, you'll find a list of operations the S3 node supports and links to more resources.
 
@@ -56,6 +55,6 @@ Refer to [S3 credentials](/integrations/builtin/credentials/s3.md) for guidance 
 
 ### Setting file permissions in Wasabi
 
-When uploading files to [Wasabi](https://wasabi.com/){:target="_blank" .external-link}, you must set permissions for the files using the **ACL** dropdown and not the toggles.
+When uploading files to [Wasabi](https://wasabi.com/), you must set permissions for the files using the **ACL** dropdown and not the toggles.
 
 ![File permissions when using the S3 node with Wasabi](/_images/integrations/builtin/app-nodes/s3/acl_dropdown.png)

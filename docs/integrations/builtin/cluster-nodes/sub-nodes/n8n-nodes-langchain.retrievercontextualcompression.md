@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Contextual Compression Retriever node documentation
 description: Learn how to use the Contextual Compression Retriever node in n8n. Follow technical documentation to integrate Contextual Compression Retriever node into your workflows.
 contentType: [integration, reference]
@@ -19,7 +18,7 @@ The Contextual Compression Retriever node improves the answers returned from [ve
 
 ## Related resources
 
-Refer to [LangChain's contextual compression retriever documentation](https://js.langchain.com/docs/how_to/contextual_compression/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's contextual compression retriever documentation](https://js.langchain.com/docs/how_to/contextual_compression/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

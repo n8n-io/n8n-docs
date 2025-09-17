@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: How to use `("<node-name>").itemMatching(currentNodeinputIndex)`
 contentType: howto
 ---
@@ -79,4 +78,4 @@ The Code node does this using the following code:
 	return _input.all();
 	```
 
-You can view and download the example workflow from [n8n website | itemMatchin usage example ](https://n8n.io/workflows/1966-itemmatching-usage-example/){:target=_blank .external-link}.
+You can view and download the example workflow from [n8n website | itemMatchin usage example ](https://n8n.io/workflows/1966-itemmatching-usage-example/).

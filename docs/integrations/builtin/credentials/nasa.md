@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: NASA credentials
 description: Documentation for NASA credentials. Use these credentials to authenticate NASA in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -18,7 +17,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} for more information about the service.
+Refer to the **Browse APIs** section of the [NASA Open APIs](https://api.nasa.gov/) for more information about the service.
 
 ## Using an API key
 
@@ -28,6 +27,6 @@ To configure this credential, you'll need:
 
 To generate an API key:
 
-1. Go to the [NASA Open APIs](https://api.nasa.gov/){:target=_blank .external-link} page.
+1. Go to the [NASA Open APIs](https://api.nasa.gov/) page.
 2. Complete the fields in the **Generate API Key** section.
 3. Copy the **API Key** and enter it in your n8n credential.

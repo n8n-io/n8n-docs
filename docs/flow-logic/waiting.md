@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Waiting
 description: How to make your workflow execution wait.
 contentType: howto
@@ -11,4 +10,4 @@ Waiting allows you to pause a workflow mid-execution, then resume where the work
 
 Making a workflow wait uses the [Wait](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md) node. Refer to the node documentation for usage details.
 
-n8n provides a workflow template with a basic example of [Rate limiting and waiting for external events](https://n8n.io/workflows/1749-rate-limiting-and-waiting-for-external-events/){:target=_blank .external-link}.
+n8n provides a workflow template with a basic example of [Rate limiting and waiting for external events](https://n8n.io/workflows/1749-rate-limiting-and-waiting-for-external-events/).

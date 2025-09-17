@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Date & Time
 description: Documentation for the Date & Time node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -66,7 +65,7 @@ Configure the node for this operation using these parameters:
 
 * **Date**: Enter the date you want to format.
 * **Format**: Select the format you want to change the date to. Choose from:
-    * **Custom Format**: Enter your own custom format using Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens){:target=_blank .external-link}. Tokens are case-sensitive.
+    * **Custom Format**: Enter your own custom format using Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens). Tokens are case-sensitive.
     * **MM/DD/YYYY**: For `4 September 1986`, this formats the date as `09/04/1986`.
     * **YYYY/MM/DD**: For `4 September 1986`, this formats the date as `1986/09/04`.
     * **MMMM DD YYYY**: For `4 September 1986`, this formats the date as `September 04 1986`.
@@ -79,7 +78,7 @@ Configure the node for this operation using these parameters:
 This operation includes these options:
 
 * **Include Input Fields**: If you'd like to include all of the input fields in the output, turn this option on. If turned off, only the **Output Field Name** and its contents are output.
-* **From Date Format**: If the node isn't recognizing the **Date** format correctly, enter the format for that **Date** here so the node can process it properly. Use Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens){:target=_blank .external-link} to enter the format. Tokens are case-sensitive
+* **From Date Format**: If the node isn't recognizing the **Date** format correctly, enter the format for that **Date** here so the node can process it properly. Use Luxon's [special tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) to enter the format. Tokens are case-sensitive
 * **Use Workflow Timezone**: Whether to use the input's time zone (turned off) or the workflow's timezone (turned on).
 
 ## Get Current Date
@@ -182,8 +181,8 @@ This operation has one option: **Include Input Fields**. If you'd like to includ
 
 ## Related resources
 
-The Date & Time node uses [Luxon](https://moment.github.io/luxon){:target=_blank .external-link}. You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/code/expressions.md). Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
+The Date & Time node uses [Luxon](https://moment.github.io/luxon). You can also use Luxon in the [Code](/code/code-node.md) node and [expressions](/code/expressions.md). Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information.
 
 ### Supported date formats
 
-n8n supports all date formats [supported by Luxon](https://moment.github.io/luxon/#/formatting?id=table-of-tokens){:target=_blank .external-link}. Tokens are case-sensitive.
+n8n supports all date formats [supported by Luxon](https://moment.github.io/luxon/#/formatting?id=table-of-tokens). Tokens are case-sensitive.

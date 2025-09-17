@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n Form node documentation
 description: Documentation for the n8n Form node in n8n, a workflow automation platform. Includes guidance on usage and links to examples.
 contentType: [integration, reference]
@@ -7,7 +6,7 @@ contentType: [integration, reference]
 
 # n8n Form node
 
-Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md).
+Use the n8n Form node to create user-facing forms with multiple steps. You can add other nodes with custom logic between to process user input. You must start the workflow with the [n8n Form Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md).
 
 [[ workflowDemo("file:///integrations/builtin/core-nodes/n8n-nodes-base.form/mutually-exclusive-branching.json") ]]
 
@@ -15,14 +14,14 @@ Use the n8n Form node to create user-facing forms with multiple steps. You can a
 
 ### Set default selections with query parameters
 
-You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms){:target=_blank .external-link} with the initial URL provided by the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger URL.
+You can set the initial values for fields by using [query parameters](https://en.wikipedia.org/wiki/Query_string#Web_forms) with the initial URL provided by the [n8n Form Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Every page in the form receives the same query parameters sent to the n8n Form Trigger node URL.
 
 /// note | Only for production
 Query parameters are only available when using the form in production mode. n8n won't populate field values from query parameters in testing mode.
 ///
 
 <!-- vale from-microsoft.Percentages = NO -->
-When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding){:target=_blank .external-link} any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
+When using query parameters, [percent-encode](https://en.wikipedia.org/wiki/Percent-encoding) any field names or values that use special characters. This ensures n8n uses the initial values for the given fields. You can use tools like [URL Encode/Decode](https://www.url-encode-decode.com/) to format your query parameters using percent-encoding.
 
 As an example, imagine you have a form with the following properties:
 
@@ -63,10 +62,12 @@ When serving the form, you can pass values for hidden fields using [query parame
 Use **Define Form** > **Using JSON** to define the fields of your form with a [JSON array of objects](/data/data-structure.md). Each object defines a single field by using a combination of these keys:
 
 - `fieldLabel`: The label that appears above the input field. 
-- `fieldType`: Choose from `date`, `dropdown`, `email`, `file`, `number`, `password`, `text`, or `textarea`.
+- `fieldType`: Choose from `checkbox`, `date`, `dropdown`, `email`, `file`, `hiddenField`, `html`, `number`, `password`, `radio`, `text`, or `textarea`.
     - Use `date` to include a date picker in the form. Refer to [Date and time with Luxon](/code/cookbook/luxon.md) for more information on formatting dates.
-	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`.
+	- When using `dropdown`, set the choices with `fieldOptions` (reference the example below). By default, the dropdown is single-choice. To make it multiple-choice, set `multiselect` to `true`. As an alternative, you can use `checkbox` or `radio` together with `fieldOptions` too.
 	- When using `file`, set `multipleFiles` to `true` to allow users to select more than one file. To define the file types to allow, set `acceptFileTypes` to a string containing a comma-separated list of file extensions (reference the example below).
+	- Use `hiddenField` to add a hidden field to your form. Refer to [Including hidden fields](#including-hidden-fields) for more information.
+	- Use `html` to display custom HTML on your form. Refer to [Displaying custom HTML](#displaying-custom-html) for more information.
 - `placeholder`: Specify placeholder data for the field. You can use this for every `fieldType` except `dropdown`, `date`, and `file`.
 - `requiredField`: Require users to complete this field on the form.
 
@@ -75,72 +76,110 @@ An example JSON that shows the general format required and the keys available:
 ```javascript
 // Use the "requiredField" key on any field to mark it as mandatory
 // Use the "placeholder" key to specify placeholder data for all fields
-//     except 'dropdown', 'date' and 'file'
+// except 'dropdown', 'date' and 'file'
 
 [
-	{
-		"fieldLabel": "Date Field",
-		"fieldType": "date",
-		"formatDate": "mm/dd/yyyy", // how to format received date in n8n
-		"requiredField": true
-	},
-	{
-		"fieldLabel": "Dropdown Options",
-		"fieldType": "dropdown",
-		"fieldOptions": {
-			"values": [
-				{
-					"option": "option 1"
-				},
-				{
-					"option": "option 2"
-				}
-			]
-		},
-		"requiredField": true
-	},
-	{
-		"fieldLabel": "Multiselect",
-		"fieldType": "dropdown",
-		"fieldOptions": {
-			"values": [
-				{
-					"option": "option 1"
-				},
-				{
-					"option": "option 2"
-				}
-			]
-		},
-		"multiselect": true // setting to true allows multi-select
-	},
-	{
-		"fieldLabel": "Email",
-		"fieldType": "email",
-		"placeholder": "me@mail.con"
-	},
-	{
-		"fieldLabel": "File",
-		"fieldType": "file",
-		"multipleFiles": true, // setting to true allows multiple files selection
-		"acceptFileTypes": ".jpg, .png" // allowed file types
-	},
-	{
-		"fieldLabel": "Number",
-		"fieldType": "number"
-	},
-	{
-		"fieldLabel": "Password",
-		"fieldType": "password"
-	},
-	{
-		// "fieldType": "text" can be omitted since it's the default type
-		"fieldLabel": "Text"
-	},
-	{
-		"fieldLabel": "Textarea",
-		"fieldType": "textarea"
-	}
+  {
+    "fieldLabel": "Date Field",
+    "fieldType": "date",
+    "formatDate": "mm/dd/yyyy", // how to format received date in n8n
+    "requiredField": true
+  },
+  {
+    "fieldLabel": "Dropdown Options",
+    "fieldType": "dropdown",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    },
+    "requiredField": true
+  },
+  {
+    "fieldLabel": "Multiselect",
+    "fieldType": "dropdown",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    },
+    "multiselect": true // setting to true allows multi-select
+  },
+  {
+    "fieldLabel": "Email",
+    "fieldType": "email",
+    "placeholder": "me@mail.con"
+  },
+  {
+    "fieldLabel": "File",
+    "fieldType": "file",
+    "multipleFiles": true, // setting to true allows multiple files selection
+    "acceptFileTypes": ".jpg, .png" // allowed file types
+  },
+  {
+    "fieldLabel": "Number",
+    "fieldType": "number"
+  },
+  {
+    "fieldLabel": "Password",
+    "fieldType": "password"
+  },
+  {
+    // "fieldType": "text" can be omitted since it's the default type
+    "fieldLabel": "Text"
+  },
+  {
+    "fieldLabel": "Textarea",
+    "fieldType": "textarea"
+  },
+  {
+    "fieldType": "html",
+    "elementName": "content", // Optional field. It can be used to include the html in the output.
+    "html": "<div>Custom element</div>"
+  },
+  {
+    "fieldLabel": "Checkboxes",
+    "fieldType": "checkbox",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    }
+  },
+  {
+    "fieldLabel": "Radio",
+    "fieldType": "radio",
+    "fieldOptions": {
+      "values": [
+        {
+          "option": "option 1"
+        },
+        {
+          "option": "option 2"
+        }
+      ]
+    }
+  },
+  {
+    "fieldLabel": "hidden label",
+    "fieldType": "hiddenField",
+    "fieldValue": "extra form data"
+  }
 ]
 ```
 
@@ -154,10 +193,14 @@ Choose between these options when using **On n8n Form Submission**:
 	- Fill in **Completion Title** to set the `h1` title on the form.
 	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
 	- Select **Add option** and fill in **Completion Page Title** to set the page's title in the browser tab.
-
-When using **Redirect to URL**, fill in the **URL** field with the page you want to redirect to when users complete the form.
-
-Use **Show Text** to display a final page defined by arbitrary plain text and HTML. Fill in the **Text** field with the HTML or plain text content you wish to show.
+- **Redirect to URL**: Redirect the user to a specified URL when the form completes.
+	- Fill in the **URL** field with the page you want to redirect to when users complete the form.
+- **Show Text**: Display a final page defined by arbitrary plain text and HTML.
+	- Fill in the **Text** field with the HTML or plain text content you wish to show.
+- **Return Binary File**: Return a binary file upon completion.
+	- Fill in **Completion Title** to set the `h1` title on the form.
+	- n8n displays the **Completion Message** as a subtitle below the main `h1` title on the form. Use `\n` or `<br>` to add a line break. 
+	- Provide the **Input Data Field Name** containing the binary file to return to the user.
 
 ### Forms with branches
 
@@ -188,12 +231,14 @@ Select **Add Option** to view more configuration options:
 - **Form Title**: The title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
 - **Form Description**: The description for your form. n8n displays the **Form Description** as a subtitle below the main `h1` title on the form. This field supports HTML. Use `\n` or `<br>` to add a line break. The Form Description also populates the [HTML meta description](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name#standard_metadata_names_defined_in_the_html_specification) for the page.
 - **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
+- **Custom Form Styling**: Override the default styling of the public form interface with CSS. The field pre-populates with the default styling so you can change only what you need to.
+- **Completion Page Title**: The title for the final completion page of the form.
 
 ## Running the node
 
 ### Build and test workflows
 
-While building or testing a workflow, use the **Test URL** in the [n8n Form Trigger](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
+While building or testing a workflow, use the **Test URL** in the [n8n Form Trigger node](/integrations/builtin/core-nodes/n8n-nodes-base.formtrigger.md). Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
 
 There are two ways to test:
 

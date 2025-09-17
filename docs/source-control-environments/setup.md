@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Set up source control
 description: Link n8n to your Git provider.
 contentType: howto
@@ -36,8 +35,8 @@ Set up SSH access by creating a deploy key for the repository using the SSH key 
 
 The steps depend on your Git provider. Help links for common providers:
 
-* [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys){:target=_blank .external-link}
-* [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/){:target=_blank .external-link}
+* [GitHub | Managing deploy keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys)
+* [GitLab | Deploy keys](https://docs.gitlab.com/ee/user/project/deploy_keys/)
 
 ## Step 4: Connect n8n and configure your instance
 

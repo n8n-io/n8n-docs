@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: MQTT node documentation
 description: Learn how to use the MQTT node in n8n. Follow technical documentation to integrate MQTT node into your workflows.
 contentType: [integration, reference]
@@ -31,4 +30,4 @@ Use the MQTT node to send a message. You can set the message topic, and choose w
 
 n8n provides a trigger node for MQTT. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger.md).
 
-Refer to [MQTT's documentation](https://mqtt.org/getting-started/){:target=_blank .external-link} for more information about the service.
+Refer to [MQTT's documentation](https://mqtt.org/getting-started/) for more information about the service.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Google Gemini(PaLM) credentials
 description: Documentation for the Google Gemini(PaLM) credentials. Use these credentials to authenticate Google Gemini and Google PaLM AI nodes in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -35,7 +34,7 @@ Refer to [Google's Gemini API documentation](https://ai.google.dev/gemini-api/do
 To configure this credential, you'll need:
 
 - The API **Host** URL: Both PaLM and Gemini use the default `https://generativelanguage.googleapis.com`.
-- An **API Key**: Create a key in [Google AI Studio](https://makersuite.google.com/app/apikey).
+- An **API Key**: Create a key in [Google AI Studio](https://aistudio.google.com/apikey).
 
 /// warning | Custom hosts not supported
 The related nodes don't yet support custom hosts or proxies for the API host and must use `https://generativelanguage.googleapis.com`.
@@ -43,7 +42,7 @@ The related nodes don't yet support custom hosts or proxies for the API host and
 
 To create an API key:
 
-1. Go to the API Key page in Google AI Studio: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey).
+1. Go to the API Key page in Google AI Studio: [https://aistudio.google.com/apikey](https://aistudio.google.com/apikey).
 2. Select **Create API Key**.
 3. You can choose whether to **Create API key in new project** or search for an existing Google Cloud project to **Create API key in existing project**.
 4. Copy the generated API key and add it to your n8n credential.

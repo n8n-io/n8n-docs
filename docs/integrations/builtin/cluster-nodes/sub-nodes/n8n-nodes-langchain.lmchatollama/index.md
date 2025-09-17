@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Ollama Chat Model node documentation
 description: Learn how to use the Ollama Chat Model node in n8n. Follow technical documentation to integrate Ollama Chat Model node into your workflows.
 contentType: [integration, reference]
@@ -26,7 +25,7 @@ You can find authentication information for this node [here](/integrations/built
 	* **Llama2 70B**
 	* **Llama2 Uncensored**
 
-Refer to the Ollama [Models Library documentation](https://ollama.com/library){:target=_blank .external-link} for more information about available models.
+Refer to the Ollama [Models Library documentation](https://ollama.com/library) for more information about available models.
 
 ## Node options
 
@@ -41,7 +40,7 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library){:
 
 ## Related resources
 
-Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com/docs/integrations/chat/ollama/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -49,6 +48,6 @@ Refer to [LangChains's Ollama Chat Model documentation](https://js.langchain.com
 
 For common questions or issues and suggested solutions, refer to [Common issues](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md).
 
---8<-- "_glossary/ai-glossary.md"
+
 
 --8<-- "_snippets/self-hosting/starter-kits/self-hosted-ai-starter-kit.md"

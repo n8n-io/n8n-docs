@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Embeddings Google Vertex node documentation
 description: Learn how to use the Embeddings Google Vertex node in n8n. Follow technical documentation to integrate Embeddings Google Gemini node into your workflows.
 contentType: [integration, reference]
@@ -35,4 +34,4 @@ Learn more about available embedding models in [Google VertexAI embeddings API d
 Refer to [LangChain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+

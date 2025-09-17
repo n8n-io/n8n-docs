@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Autopilot credentials
 description: Documentation for Autopilot credentials. Use these credentials to authenticate Autopilot in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -19,7 +18,7 @@ Autopilot has become Ortto. The Autopilot credentials and nodes are only compati
 
 ## Prerequisites
 
-Create an [Autopilot](https://app.autopilothq.com){:target=_blank .external-link} account.
+Create an [Autopilot](https://app.autopilothq.com) account.
 
 ## Supported authentication methods
 
@@ -27,11 +26,11 @@ Create an [Autopilot](https://app.autopilothq.com){:target=_blank .external-link
 
 ## Related resources
 
-Refer to [Autopilot's API documentation](https://autopilot.docs.apiary.io/#){:target=_blank .external-link} for more information about the service.
+Refer to [Autopilot's API documentation](https://autopilot.docs.apiary.io/#) for more information about the service.
 
 ## Using API key
 
 To configure this credential, you'll need:
 
-- An **API Key**: Generate an API key in **Settings > Autopilot API**. Refer to [Autopilot API authentication](https://autopilot.docs.apiary.io/#reference/authentication){:target=_blank .external-link} for more information.
+- An **API Key**: Generate an API key in **Settings > Autopilot API**. Refer to [Autopilot API authentication](https://autopilot.docs.apiary.io/#reference/authentication) for more information.
 

@@ -1,11 +1,10 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
 # Logging in n8n
 
-Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston){:target=_blank .external-link} logging library.
+Logging is an important feature for debugging. n8n uses the [winston](https://www.npmjs.com/package/winston) logging library.
 
 /// note | Log streaming
 n8n Self-hosted Enterprise tier includes [Log streaming](/log-streaming.md), in addition to the logging options described in this document.

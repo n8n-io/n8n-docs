@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Local File Trigger node documentation
 description: Learn how to use the Local File Trigger node in n8n. Follow technical documentation to integrate Local File Trigger node into your workflows.
 contentType: [integration, reference]
@@ -39,7 +38,7 @@ Configure these parameters:
 Use the node **Options** to include or exclude files and folders.
 
 - **Include Linked Files/Folders**: also watch for changes to linked files or folders.
-- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch){:target=_blank .external-link} syntax.
+- **Ignore**: files or paths to ignore. n8n tests the whole path, not just the filename. Supports the [Anymatch](https://github.com/micromatch/anymatch) syntax.
 - **Max Folder Depth**: how deep into the folder structure to watch for changes.
 
 ### Examples for Ignore

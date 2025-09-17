@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Gmail node Message Operations documentation
 description: Learn how to use the Message Operations of the Gmail node in n8n. Follow technical documentation to integrate Message Operations into your workflows.
 contentType: [integration, reference]
@@ -23,7 +22,7 @@ Enter these parameters:
 * **Label Names or IDs**: Select the Label names you want to add or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
 <!-- vale on -->
 
 ## Delete a message
@@ -41,7 +40,7 @@ Enter these parameters:
 * **Operation**: Select **Delete**.
 * **Message ID**: Enter the ID of the message you want to delete.
 
-Refer to the [Gmail API Method: users.messages.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/delete){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.delete](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/delete) documentation for more information.
 
 ## Get a message
 
@@ -56,7 +55,7 @@ Enter these parameters:
 * **Simplify**: Choose whether to return a simplified version of the response (turned on) or the raw data (turned off). Default is on.
     * This is the same as setting the `format` for the API call to `metadata`, which returns email message IDs, labels, and email headers, including: From, To, CC, BCC, and Subject.
 
-Refer to the [Gmail API Method: users.messages.get](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/get){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.get](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/get) documentation for more information.
 
 <!-- vale off -->
 ## Get Many messages
@@ -82,13 +81,13 @@ Use these filters to further refine the node's behavior:
 
 * **Include Spam and Trash**: Select whether the node should get messages in the Spam and Trash folders (turned on) or not (turned off).
 * **Label Names or IDs**: Only return messages with the selected labels added to them. Select the Label names you want to apply or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
-* **Search**: Enter Gmail search refine filters, like `from:`, to filter the messages returned. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en){:target=_blank .external-link} for more information.
+* **Search**: Enter Gmail search refine filters, like `from:`, to filter the messages returned. Refer to [Refine searches in Gmail](https://support.google.com/mail/answer/7190?hl=en) for more information.
 * **Read Status**: Choose whether to receive **Unread and read emails**, **Unread emails only** (default), or **Read emails only**.
-* **Received After**: Return only those emails received after the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} for more information on formatting the string.
-* **Received Before**: Return only those emails received before the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601){:target=_blank .external-link} for more information on formatting the string.
+* **Received After**: Return only those emails received after the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) for more information on formatting the string.
+* **Received Before**: Return only those emails received before the specified date and time. Use the date picker to select the day and time or enter an expression to set a date as a string in ISO format or a timestamp in milliseconds. Refer to [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) for more information on formatting the string.
 * **Sender**: Enter an email or a part of a sender name to return messages from only that sender.
 
-Refer to the [Gmail API Method: users.messages.list](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/list){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.list](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/list) documentation for more information.
 
 ## Mark as Read
 
@@ -102,7 +101,7 @@ Enter these parameters:
 * **Message ID**: Enter the ID of the message you wish to mark as read.
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
 <!-- vale on -->
 
 ## Mark as Unread
@@ -117,7 +116,7 @@ Enter these parameters:
 * **Message ID**: Enter the ID of the message you wish to mark as unread.
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
 <!-- vale on -->
 
 ## Remove Label from a message
@@ -133,7 +132,7 @@ Enter these parameters:
 * **Label Names or IDs**: Select the Label names you want to remove or enter an expression to specify IDs. The dropdown populates based on the **Credential** you selected.
 
 <!-- vale off -->
-Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.modify](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify) documentation for more information.
 <!-- vale on -->
 
 ## Reply to a message
@@ -161,7 +160,7 @@ Use these options to further refine the node's behavior:
 * **Sender Name**: Enter the name you want displayed in your recipients' email as the sender.
 * **Reply to Sender Only**: Choose whether to reply all (turned off) or reply to the sender only (turned on).
 
-Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
 ## Send a message
 
@@ -190,7 +189,7 @@ Use these options to further refine the node's behavior:
 * **Send Replies To**: Enter an email address to set as the reply to address.
 * **Reply to Sender Only**: Choose whether to reply all (turned off) or reply to the sender only (turned on).
 
-Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
 ## Send a message and wait for approval
 
@@ -219,7 +218,7 @@ Use these options to further refine the node's behavior:
 * **Disapprove Button Label**: The label to use for the disapproval button (**Decline** by default). Only visible when you set **Type of Approval** to **Approve and Disapprove**.
 * **Disapprove Button Style**: Whether to style the disapproval button as a **Primary** or **Secondary** (default) button. Only visible when you set **Type of Approval** to **Approve and Disapprove**.
 
-Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send){:target=_blank .external-link} documentation for more information.
+Refer to the [Gmail API Method: users.messages.send](https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send) documentation for more information.
 
 ## Common issues
 

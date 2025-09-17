@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Execute Command
 description: Documentation for the Execute Command node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
@@ -10,10 +9,16 @@ priority: high
 
 The Execute Command node runs shell commands on the host machine that runs n8n.
 
+/// warning | Security considerations
+The Execute Command node can introduce significant security risks in environments that operate with untrusted users. Because of this, n8n recommends [disabling](/hosting/securing/blocking-nodes.md#exclude-nodes) it in such setups.
+///
+
 /// note | Which shell runs the command?
 This node executes the command in the default shell of the host machine. For example, `cmd` on Windows and `zsh` on macOS.
 
 If you run n8n with Docker, your command will run in the n8n container and not the Docker host.
+
+If you're using [queue mode](/hosting/scaling/queue-mode.md), the command runs on the worker that's executing the task in production mode. When running manual executions, it runs on the main instance, unless you set `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` to `true`.
 ///
 
 /// note | Not available on Cloud

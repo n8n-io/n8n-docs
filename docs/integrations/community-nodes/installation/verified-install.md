@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 contentType: howto
 ---
 
@@ -30,6 +29,6 @@ Some users may not want to show verified community nodes in the nodes panel of t
 To uninstall a community node:
 
 1. Go to **Settings** > **Community nodes**.
-2. On the node you want to install, select **Options** <span class="inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
+2. On the node you want to install, select **Options** <span class="n8n-inline-image">![Three dots options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span>.
 3. Select **Uninstall package**.
 4. Select **Uninstall Package** in the confirmation modal.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Groq credentials
 description: Documentation for the Groq credentials. Use these credentials to authenticate Groq in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -14,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Groq](https://groq.com/){:target=_blank .external-link} account.
+Create a [Groq](https://groq.com/) account.
 
 ## Supported authentication methods
 
@@ -22,7 +21,7 @@ Create a [Groq](https://groq.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Groq's documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information about the service.
+Refer to [Groq's documentation](https://console.groq.com/docs/quickstart) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
@@ -39,7 +38,7 @@ To get your API key:
 3. Enter a **display name** for the key, like `n8n integration`, and select **Submit**.
 4. Copy the key and paste it into your n8n credential.
 
-Refer to [Groq's API Keys documentation](https://console.groq.com/docs/quickstart){:target=_blank .external-link} for more information.
+Refer to [Groq's API Keys documentation](https://console.groq.com/docs/quickstart) for more information.
 
 /// note | Groq API keys
 Groq binds API keys to the organization, not the user.

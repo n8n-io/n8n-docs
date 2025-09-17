@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Yahoo
 description: Documentation for Yahoo Send Email credentials. Use these credentials to authenticate Send Email with Yahoo in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -28,4 +27,4 @@ To configure the Send Email credential to use Yahoo Mail:
     - Enter `587` for TLS.
 5. Turn on the **SSL/TLS** toggle.
 
-Refer to [IMAP server settings for Yahoo Mail](https://help.yahoo.com/kb/sln4075.html){:target=_blank .external-link} for more information. If the settings above don't work for you, check with your email administrator.
+Refer to [IMAP server settings for Yahoo Mail](https://help.yahoo.com/kb/sln4075.html) for more information. If the settings above don't work for you, check with your email administrator.

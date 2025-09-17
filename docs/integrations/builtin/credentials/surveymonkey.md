@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: SurveyMonkey credentials
 description: Documentation for SurveyMonkey credentials. Use these credentials to authenticate SurveyMonkey in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -14,8 +13,8 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-- Create a [SurveyMonkey](https://www.surveymonkey.com){:target=_blank .external-link} account.
-- [Register an app](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app){:target=_blank .external-link} from your [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/){:target=_blank .external-link}.
+- Create a [SurveyMonkey](https://www.surveymonkey.com) account.
+- [Register an app](https://api.surveymonkey.com/v3/docs?api_key=3yr7n6m8sjwvm48x8nhxej52#registering-an-app) from your [**Developer dashboard > My apps**](https://developer.surveymonkey.com/apps/).
     - Refer to [Required app scopes](#required-app-scopes) for information on the scopes you must use.
 
 ## Supported authentication methods
@@ -25,7 +24,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api){:target=_blank .external-link} for more information about the service.
+Refer to [SurveyMonkey's API documentation](https://developer.surveymonkey.com/api/v3/#SurveyMonkey-Api) for more information about the service.
 
 ## Using API access token
 

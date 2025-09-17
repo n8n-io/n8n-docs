@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Travis CI credentials
 description: Documentation for Travis CI credentials. Use these credentials to authenticate Travis CI in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites
 
-Create a [Travis CI](https://travis-ci.org/){:target=_blank .external-link} account.
+Create a [Travis CI](https://travis-ci.com/) account.
 
 ## Supported authentication methods
 
@@ -21,11 +20,11 @@ Create a [Travis CI](https://travis-ci.org/){:target=_blank .external-link} acco
 
 ## Related resources
 
-Refer to [Travis CI's API documentation](https://docs.travis-ci.com/user/developer/){:target=_blank .external-link} for more information about the service.
+Refer to [Travis CI's API documentation](https://docs.travis-ci.com/user/developer/) for more information about the service.
 
 ## Using API token
 
 To configure this credential, you'll need:
 
-- An **API Token**: Get your API token from **Account Settings >** [**API Token**](https://packagecloud.io/api_token){:target=_blank .external-link} or generate one through the Travis CI [command line client](https://github.com/travis-ci/travis.rb#installation){:target=_blank .external-link} .
+- An **API Token**: Get your API token from **Account Settings >** [**API Token**](https://packagecloud.io/api_token) or generate one through the Travis CI [command line client](https://github.com/travis-ci/travis.rb#installation) .
 

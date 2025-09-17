@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Basic LLM Chain node documentation
 description: Learn how to use the Basic LLM Chain node in n8n. Follow technical documentation to integrate Basic LLM Chain node into your workflows.
 contentType: [integration, reference]
@@ -13,7 +12,7 @@ Use the Basic LLM Chain node to set the prompt that the model will use along wit
 On this page, you'll find the node parameters for the Basic LLM Chain node and links to more resources.
 
 /// note | Examples and templates
-For usage examples and templates to help you get started, refer to n8n's [Basic LLM Chain integrations](https://n8n.io/integrations/basic-llm-chain/){:target=_blank .external-link} page.
+For usage examples and templates to help you get started, refer to n8n's [Basic LLM Chain integrations](https://n8n.io/integrations/basic-llm-chain/) page.
 ///	
 
 ## Node parameters
@@ -65,10 +64,10 @@ For both the **Image** types, select the **Image Details** to control how the mo
 
 ## Related resources
 
-Refer to [LangChain's documentation on Basic LLM Chains](https://js.langchain.com/docs/tutorials/llm_chain/){:target=_blank .external-link} for more information about the service.
+Refer to [LangChain's documentation on Basic LLM Chains](https://js.langchain.com/docs/tutorials/llm_chain/) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
---8<-- "_glossary/ai-glossary.md"
+
 
 ## Common issues
 

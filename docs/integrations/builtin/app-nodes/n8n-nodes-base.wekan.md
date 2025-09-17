@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Wekan node documentation
 description: Learn how to use the Wekan node in n8n. Follow technical documentation to integrate Wekan node into your workflows.
 contentType: [integration, reference]
@@ -57,5 +56,5 @@ Refer to [Wekan credentials](/integrations/builtin/credentials/wekan.md) for gui
 
 ## Load all the parameters for the node
 
-To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only){:target=_blank .external-link} to learn how to change permissions.
+To load all the parameters, for example, Author ID, you need to give admin permissions to the user. Refer to the [Wekan documentation](https://github.com/wekan/wekan/wiki/Features#members-click-member-initials-or-avatar--permissions-adminnormalcomment-only) to learn how to change permissions.
 

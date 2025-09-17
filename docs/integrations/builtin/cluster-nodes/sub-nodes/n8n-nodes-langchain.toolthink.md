@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Think Tool node documentation
 description: Learn how to use the Think Tool node in n8n. Follow technical documentation to integrate the Tool Think node into your workflows.
 contentType: [integration, reference]
@@ -56,4 +55,4 @@ and then afterward provide the answer:
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
---8<-- "_glossary/ai-glossary.md"
+

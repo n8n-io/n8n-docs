@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Execute Command node common issues 
 description: Documentation for common issues and questions in the Execute Command node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
 contentType: [integration, reference]
@@ -20,7 +19,7 @@ To fix this error, review the following:
 
 * Check that the command and its arguments don't have typos in the **Command** parameter.
 * Check that the command is in the `PATH` of the user running n8n. 
-* If you are running n8n with Docker, check if the command is available within the container by trying to run it manually. If your command isn't included in the container, you might have to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/){:target=_blank .external-link} that includes your command.
+* If you are running n8n with Docker, check if the command is available within the container by trying to run it manually. If your command isn't included in the container, you might have to extend the official n8n image with a [custom image](https://docs.docker.com/build/building/base-images/) that includes your command.
 	* If n8n is already running:
 		```sh
 		# Find n8n's container ID, it will be the first column

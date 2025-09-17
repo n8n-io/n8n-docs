@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Bubble credentials
 description: Documentation for Bubble credentials. Use these credentials to authenticate Bubble in n8n, a workflow automation platform.
 contentType: [integration, reference]
@@ -52,6 +51,6 @@ To set it up, you'll need to create an app:
     - Select **Live** for an app that you've [deployed](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/deploying-your-app), accessed at `https://appname.bubbleapps.io` or `https://www.mydomain.com`.
 1. In n8n, select your **Hosting**:
     - If you haven't set up a custom domain, select **Bubble Hosting**.
-    - If you've set up a [custom domain](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/tabs-and-sections/settings-tab/custom-domain-and-dns), select **Self Hosted** and enter your custom **Domain**.
+    - If you've set up a [custom domain](https://manual.bubble.io/help-guides/getting-started/navigating-the-bubble-editor/tabs-and-sections/settings-tab/web-app/custom-domain-and-dns), select **Self Hosted** and enter your custom **Domain**.
 
 Refer to Bubble's [Creating and managing apps](https://manual.bubble.io/help-guides/getting-started/creating-and-managing-apps) documentation for more information.

@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 description: A node is an entry point for retrieving data, a function to process data, or an exit for sending data.
 contentType: howto
 ---
@@ -55,9 +54,11 @@ To view node controls, hover over the node on the canvas:
 	* Pin node
 	* Copy node
 	* Duplicate node
+	* Tidy up workflow
+	* Convert node to sub-workflow
 	* Select all
 	* Clear selection
-	* Delete node
+    * Delete node
 
 ## Node settings
 
@@ -65,11 +66,6 @@ The node settings under the **Settings** tab allow you to control node behaviors
 
 When active or set, they do the following:
 
-* **Request Options**: Select **Add Option** to view and select these options. 
-	- **Batching**: Control how to batch large numbers of input items.
-	- **Ignore SSL Issues**: Download the response even if SSL validation isn't possible.
-	- **Proxy**: Use this if you need to specify an HTTP proxy.
-	- **Timeout**: Set a timeout for the request in ms. 
 * **Always Output Data**: The node returns an empty item even if the node returns no data during execution. Be careful setting this on IF nodes, as it could cause an infinite loop.
 * **Execute Once**: The node executes once, with data from the first item it receives. It doesn't process any extra items.
 * **Retry On Fail**: When an execution fails, the node reruns until it succeeds. 

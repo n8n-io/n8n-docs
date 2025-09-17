@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: Fortinet FortiGate credentials
 description: Documentation for the Fortinet FortiGate credentials. Use these credentials to authenticate Fortinet FortiGate in n8n, a workflow automation platform.
 contentType: [integration, reference]

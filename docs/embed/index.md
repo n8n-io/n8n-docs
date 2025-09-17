@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: n8n Embed Documentation and Guides
 description: Learn how to white label and integrate n8n into your products with the Embed feature. Includes usage, costs, licensing, and support details.
 contentType: overview

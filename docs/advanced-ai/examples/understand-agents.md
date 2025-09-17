@@ -1,5 +1,4 @@
 ---
-#https://www.notion.so/n8n/Frontmatter-432c2b8dff1f43d4b1c8d20075510fe4
 title: What's an agent in AI?
 description: Understand agents in the context of AI. Learn how n8n provides agents.
 contentType: explanation

@@ -54,10 +54,10 @@ jobs:
               ;;
             "low-effort-unusable")
               response=$(curl -s -X POST \
-              -u "${{ secrets.WEBHOOK_USER}}:${{ secrets.WEBHOOK_PASSWORD }}" \
+              -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
               -d "$(printf '{"user": %s, "label": "low-effort-unusable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
-              "${{ secrets.WEBHOOK_URL}}")
+              "${{ secrets.WEBHOOK_URL }}")
               if [ "$response" = "true" ]; then
                 echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution with quality or accuracy problems. Due to multiple low-effort-unusable contributions, you are now blocked. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines to understand more." >> $GITHUB_OUTPUT
                 echo "should_close=true" >> $GITHUB_OUTPUT
@@ -77,7 +77,7 @@ jobs:
               -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
               -d "$(printf '{"user": %s, "label": "low-effort-usable"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
-              "${{ secrets.WEBHOOK_URL}}"
+              "${{ secrets.WEBHOOK_URL }}"
               echo "comment=@${{ env.AUTHOR }} Thank you for contributing. This is a minor contribution, but good quality. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines, and keep low-effort contributions to a minimum." >> $GITHUB_OUTPUT
               echo "should_close=false" >> $GITHUB_OUTPUT
               ;;
@@ -87,10 +87,10 @@ jobs:
               ;;
             "old-course")
               curl -s -X POST \
-              -u "${{ secrets.WEBHOOK_USER}}:${{ secrets.WEBHOOK_PASSWORD }}" \
+              -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
               -H "Content-Type: application/json" \
               -d "$(printf '{"user": %s, "label": "old-course"}' "$(printf '%s' "${{ env.AUTHOR }}" | jq -Rs .)")" \
-              "${{ secrets.WEBHOOK_URL}}"
+              "${{ secrets.WEBHOOK_URL }}"
               echo "comment=Hi @${{ env.AUTHOR }}! Thanks for your contribution, but we are no longer updating the course. We expect to fully replace it in the coming months. Please review n8n's [contributing](${{ env.CONTRIBUTING_LINK }}) guidelines." >> $GITHUB_OUTPUT
               echo "should_close=true" >> $GITHUB_OUTPUT
               ;;

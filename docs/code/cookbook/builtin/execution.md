@@ -23,6 +23,8 @@ The webhook URL to call to resume a [waiting](/integrations/builtin/core-nodes/n
 
 See the [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md#on-webhook-call) documentation to learn more.
 
+`execution.resumeUrl` is available in workflows containing a Wait node, along with a node that waits for a webhook response.
+
 ## `execution.customData`
 
 This is only available in the Code node.
@@ -60,12 +62,4 @@ Refer to [Custom executions data](/workflows/executions/custom-executions-data.m
 
 ---
 
-## Not applicable in MCP Server Trigger node
 
-* `execution.resumeUrl`:  
-  MCP does not expose a webhook-based "resume URL" for pausing or resuming executions. 
-
-* **Model Context Protocol (MCP)** is **stateful within a session**, but **not workflow-execution stateful like n8n**.  
-  * An MCP client opens a session with a server.  
-  * That session can hold **memory, context, and active resources**.  
-  * But it does not support *waiting on a webhook and resuming an execution by URL*.  

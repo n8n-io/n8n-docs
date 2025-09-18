@@ -1,41 +1,13 @@
 @font-face {
-    font-family: 'geomanistregular';
-    src: url('./Geomanist-Regular-Webfont/geomanist-regular-webfont.eot');
-    src: url('./Geomanist-Regular-Webfont/geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./Geomanist-Regular-Webfont/geomanist-regular-webfont.woff2') format('woff2'),
-         url('./Geomanist-Regular-Webfont/geomanist-regular-webfont.woff') format('woff'),
-         url('./Geomanist-Regular-Webfont/geomanist-regular-webfont.ttf') format('truetype'),
-         url('./Geomanist-Regular-Webfont/geomanist-regular-webfont.svg#geomanistregular') format('svg');
+    font-family: 'Lexend-Regular';
+    src: url('./Lexend/Lexend-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'geomanistmedium';
-    src: url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.eot');
-    src: url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.woff2') format('woff2'),
-         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.woff') format('woff'),
-         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.ttf') format('truetype'),
-         url('./Geomanist-Medium-Webfont/geomanist-medium-webfont.svg#geomanistmedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'geomanistbold';
-    src: url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.eot');
-    src: url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.woff2') format('woff2'),
-         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.woff') format('woff'),
-         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.ttf') format('truetype'),
-         url('./Geomanist-Bold-Webfont/geomanist-bold-webfont.svg#geomanistbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 :root {
-  --md-text-font: "geomanistregular";
+  --md-text-font: "Lexend-Regular";
   --color-primary: #530092;
   --color-text-base: #58585F;
   --color-text-light: #FDF6EC;

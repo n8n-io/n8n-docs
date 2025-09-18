@@ -27,8 +27,8 @@ You can test your node as you build it by running it in a local n8n instance.
 
     Windows:
 
-    - `C:\Users\<user-profile>\.n8n\nodes`
-    - `C:\Users\<user-profile>\.n8n\<your-custom-name>`
+    - `%userprofile%\.n8n\nodes`
+    - `%userprofile%\.n8n\<your-custom-name>`
 
     If you've done a fresh n8n install, you need to start n8n for it to create the `.n8n` directory.
     ///

@@ -1,6 +1,6 @@
 ---
-title: Data table node documentation
-description: Documentation for the Data table node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
+title: Data table
+description: Documentation for the data table node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
 contentType: [integration, reference]
 priority: critical
 tags:
@@ -12,7 +12,7 @@ search:
   boost: 1.5
 ---
 
-# Data table node
+# Data table
 
 The Data Table node allows you to permanently save data across workflow executions in a table format. It provides functionality to perform various data operations on stored data.
 

@@ -49,7 +49,7 @@ Admin keys provide full access to the search service, including the ability to c
 
 ## Using Managed Identity (System-Assigned)
 
-System-assigned managed identity is automatically created and managed by Azure. To configure:
+System-assigned managed identity (SAMI) is automatically created and managed by Azure for your specific resource. This identity is tied directly to the Azure resource lifecycle and is recommended for single-resource scenarios. To configure:
 
 1. Enable system-assigned managed identity on your Azure resource (e.g., Azure VM, App Service, Function App).
 2. In your Azure AI Search service:
@@ -62,9 +62,13 @@ System-assigned managed identity is automatically created and managed by Azure. 
 3. In n8n, enter only the **Endpoint** URL.
 4. Select **Managed Identity (System-Assigned)** as the authentication method.
 
+/// note | When to use System-Assigned Managed Identity
+Use SAMI when your n8n instance runs on a single Azure resource and you want the identity to be automatically managed with the resource lifecycle. The identity is automatically deleted when the resource is deleted.
+///
+
 ## Using Managed Identity (User-Assigned)
 
-User-assigned managed identity allows you to create and manage the identity separately from the Azure resource. To configure:
+User-assigned managed identity (UAMI) allows you to create and manage the identity separately from Azure resources. This identity can be shared across multiple resources and persists independently of resource lifecycles. To configure:
 
 1. Create a user-assigned managed identity in the [Azure Portal](https://portal.azure.com/):
    1. Search for "Managed Identities" and select **Create**.
@@ -83,9 +87,24 @@ User-assigned managed identity allows you to create and manage the identity sepa
    2. Select **Managed Identity (User-Assigned)** as the authentication method.
    3. Enter the **Client ID** of your user-assigned managed identity.
 
+/// note | When to use User-Assigned Managed Identity
+Use UAMI when you need to share the same identity across multiple Azure resources, when you want the identity to persist beyond the lifecycle of individual resources, or when you need more granular control over identity management. This is ideal for enterprise scenarios with multiple n8n instances or complex multi-resource deployments.
+///
+
 /// note | Managed Identity availability
 Managed identity authentication is only available when n8n is running on Azure infrastructure (Azure VM, App Service, Container Instances, etc.). It won't work for local development or non-Azure deployments.
 ///
+
+## Understanding Microsoft Entra ID Integration
+
+Managed identity authentication uses Microsoft Entra ID (formerly Azure Active Directory) as the underlying identity platform. When you configure managed identity for Azure AI Search:
+
+- The identity is registered in your Microsoft Entra ID tenant
+- Role assignments are managed through Entra ID's Role-Based Access Control (RBAC)
+- Authentication tokens are issued by the Microsoft Entra ID token service
+- This provides enterprise-grade security with centralized identity management
+
+This integration ensures that your n8n workflows benefit from the same identity and access management policies that govern your organization's other Azure resources.
 
 ## Troubleshooting
 
@@ -94,7 +113,8 @@ Managed identity authentication is only available when n8n is running on Azure i
 If you encounter authentication errors:
 
 - **API key**: Verify the key is correct and hasn't been regenerated in Azure Portal.
-- **Managed Identity**: Ensure the identity has the correct role assignments and that n8n is running on an Azure resource with the identity enabled.
+- **System-Assigned Managed Identity**: Ensure the identity is enabled on your Azure resource and has the correct role assignments in both Azure AI Search and Microsoft Entra ID.
+- **User-Assigned Managed Identity**: Verify the Client ID is correct, the identity is assigned to your Azure resource, and has proper role assignments. Check that the identity exists in your Microsoft Entra ID tenant.
 
 ### Connection issues
 

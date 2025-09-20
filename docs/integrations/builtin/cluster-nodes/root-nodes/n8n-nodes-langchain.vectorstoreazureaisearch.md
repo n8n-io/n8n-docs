@@ -72,11 +72,13 @@ Before using this node, create a [Vector Search index](https://learn.microsoft.c
 
 6. Note down your service endpoint URL and index name for configuration.
 
+7. (Optional) If using managed identity authentication, ensure your Microsoft Entra ID (formerly Azure AD) tenant is properly configured with the necessary role assignments for your managed identities.
+
 Make sure to note the following values which are required when configuring the node:
 
 - Azure AI Search endpoint URL
 - Index name
-- API key or managed identity configuration
+- Authentication method (API key, system-assigned managed identity, or user-assigned managed identity)
 
 ## Node usage patterns
 

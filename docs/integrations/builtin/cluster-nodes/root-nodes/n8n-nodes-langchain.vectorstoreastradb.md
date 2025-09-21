@@ -13,7 +13,7 @@ Use the Astra DB node to interact with your Astra DB collection as a [vector sto
 On this page, you'll find the node parameters for the Astra DB node, and links to more resources.
 
 /// note | Credentials
-You need to configure credentials for the Astra DB node. For more information, see [Astra DB credentials](/integrations/builtin/credentials/astra-db/).
+You need to configure credentials for the Astra DB node. For more information, see [Astra DB credentials](/integrations/builtin/credentials/astra-db.md).
 ///
 
 ## Node parameters
@@ -176,3 +176,5 @@ Whether to clear the collection before inserting new data.
 - [AI Tool Glossary](/glossary.md#ai-tool)
 
 For community support, refer to [Astra DB Community Forums](https://community.datastax.com/).
+
+

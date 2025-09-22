@@ -123,6 +123,7 @@ nav:
         - Data editing: data/data-editing.md
         - Data filtering: data/data-filtering.md
         - Data mocking: data/data-mocking.md
+        - Data tables: data/data-tables.md
         - Binary data: data/binary-data.md
         - Schema preview: data/schema-preview.md
       - Glossary: glossary.md
@@ -193,6 +194,7 @@ nav:
           - Common issues: integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/common-issues.md
         - integrations/builtin/core-nodes/n8n-nodes-base.converttofile.md
         - integrations/builtin/core-nodes/n8n-nodes-base.crypto.md
+        - integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md
         - integrations/builtin/core-nodes/n8n-nodes-base.datetime.md
         - integrations/builtin/core-nodes/n8n-nodes-base.debughelper.md
         - integrations/builtin/core-nodes/n8n-nodes-base.set.md

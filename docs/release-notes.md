@@ -51,7 +51,7 @@ Previously, persisting data meant provisioning and connecting to an external sto
 <br><br>
 Data tables are available today on all plans. They currently support numbers, strings, and datetimes with JSON support coming soon.  On Cloud, each instance can store up to 50 MB. On self-hosted setups, the default is also 50 MB, but this limit can be adjusted if your infrastructure allows.
 <br><br>
-[![Studio](/_images/release-notes/data-tables.jpg)](https://www.youtube.com/watch?v=ljkiIkt6lZ4))
+[![Data tables](/_images/release-notes/data-tables.jpg)](https://www.youtube.com/watch?v=ljkiIkt6lZ4))
 <figure markdown="span">
     <figcaption>[Overview of data tables](https://www.youtube.com/watch?v=ljkiIkt6lZ4)</figcaption>
 </figure>
@@ -76,7 +76,7 @@ Data tables are available today on all plans. They currently support numbers, st
 - Data tables don’t currently support foreign keys or default values.
 - For now, all data tables are accessible to everyone in a project.  More granular permissions and sharing options are planned.
 <br><br>
-Learn more about [**data tables**](/data/data-tables.md) and the [**Data table node**](/integrations/builtin/core-nodes/n8n-nodes-base.datatable.md).
+Learn more about [**data tables**](/data/data-tables.md) and the [**Data table node**](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md).
 <br><br>
 </div> 
 ### Contributors

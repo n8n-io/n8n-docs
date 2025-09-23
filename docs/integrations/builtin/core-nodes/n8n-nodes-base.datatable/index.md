@@ -15,7 +15,7 @@ status: beta
 
 # Data table
 
-The Data Table node allows you to permanently save data across workflow executions in a table format. It provides functionality to perform various data operations on stored data. See [Data tables](/data/data-tables.md).
+Use the Data Table node to permanently save data across workflow executions in a table format. It provides functionality to perform various data operations on stored data. See [Data tables](/data/data-tables.md).
 
 ## Node parameters
 

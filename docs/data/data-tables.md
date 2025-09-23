@@ -14,11 +14,11 @@ hide:
 
 Data tables integrate data storage within your n8n environment. Using data tables, you can save, manage, and interact with data directly inside your workflows without relying on external database systems for scenarios such as:
 
-- Storing data generated from workflow executions
-- Persisting data aross workflows in the same project
+- Persisting data across workflows in the same project
 - Storing markers to prevent duplicate runs or control workflow triggers
 - Reusing prompts or messages across workflows
 - Storing evaluation data for AI workflows
+- Storing data generated from workflow executions
 - Combining data from different sources to enrich your datasets
 - Creating lookup tables as quick reference points within workflows
 
@@ -37,9 +37,9 @@ There are two parts to working with data tables: creating them and interacting w
    
    In the table view that appears, you can:
    
-   * add and reorder columns to organize your data
+   * Add and reorder columns to organize your data
    * Add, delete, and update rows
-   * edit existing data
+   * Edit existing data
 
 ### Step 2: Interacting with Data tables in workflows
 

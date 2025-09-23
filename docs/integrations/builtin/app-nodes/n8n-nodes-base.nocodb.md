@@ -19,12 +19,22 @@ Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for g
 
 ## Operations
 
-* Row
-    * Create
-    * Delete
+* Base
     * Get
     * Get Many
-    * Update a row
+* Row
+    * Create
+    * Update
+    * Create or Update
+    * Delete
+    * Get
+    * Search
+    * Count
+    * Upload Attachment to Cell
+* Linked Row
+    * List
+    * Link
+    * Unlink
 
 ## Templates and examples
 
@@ -34,5 +44,7 @@ Refer to [NocoDB credentials](/integrations/builtin/credentials/nocodb.md) for g
 ## Relates resources
 
 Refer to [NocoDB's documentation](https://docs.nocodb.com/) for more information about the service.
+
+n8n provides a trigger node for NocoDB. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.nocodbtrigger.md).
 
 --8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"

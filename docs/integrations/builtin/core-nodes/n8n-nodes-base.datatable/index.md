@@ -10,6 +10,7 @@ hide:
   - tags
 search:
   boost: 1.5
+status: beta
 ---
 
 # Data table

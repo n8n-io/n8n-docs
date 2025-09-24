@@ -20,8 +20,8 @@ Light evaluation allows you to run the examples in a test dataset through your w
 
 ## How it works
 
-/// note | Requires Google Sheets
-Evaluations use Google Sheets to store the test dataset. To use evaluations, you must configure a [Google Sheets credential](/integrations/builtin/credentials/google/index.md).
+/// note | Credentials for Google Sheets
+Evaluations use data tables or Google Sheets to store the test dataset. To use Google Sheets as a dataset source, configure a [Google Sheets credential](/integrations/builtin/credentials/google/index.md).
 ///
 
 Light evaluations take place in the 'Editor' tab of your workflow, although you’ll find instructions on how to set it up in the 'Evaluations' tab.
@@ -39,7 +39,7 @@ The following explanation will use a sample workflow that assigns a category and
 
 ### 1. Create a dataset
 
-Create a Google Sheet with a handful of examples for your workflow. Your sheet should contain column(s) for:
+Create a data table or Google Sheet with a handful of examples for your workflow. Your dataset should contain columns for:
 
 - The workflow input
 - (Optional) The expected or correct workflow output
@@ -95,6 +95,6 @@ Click on the **Execute workflow** button to the left of the evaluation trigger. 
 
 ![Execute workflow button](/_images/advanced-ai/evaluations/execute-workflow-button.png)
 
-Review the outputs of each execution in the Google Sheet, and examine the execution details using the workflow's 'executions' tab if you need to.
+Review the outputs of each execution in the data table or Google Sheet, and examine the execution details using the workflow's 'executions' tab if you need to.
 
 Once your dataset grows past a handful of examples, consider [metric-based evaluation](/advanced-ai/evaluations/metric-based-evaluations.md) to get a numerical view of performance. See also [tips and common issues](/advanced-ai/evaluations/tips-and-common-issues.md).

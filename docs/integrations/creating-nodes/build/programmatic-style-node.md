@@ -90,6 +90,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+    NodeConnectionType
 } from 'n8n-workflow';
 
 import {
@@ -132,8 +133,8 @@ description: 'Consume SendGrid API',
 defaults: {
 	name: 'FriendGrid',
 },
-inputs: ['main'],
-outputs: ['main'],
+inputs: [NodeConnectionType.Main],
+outputs: [NodeConnectionType.Main],
 credentials: [
 	{
 		name: 'friendGridApi',

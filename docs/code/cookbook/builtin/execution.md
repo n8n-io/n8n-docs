@@ -23,6 +23,8 @@ The webhook URL to call to resume a [waiting](/integrations/builtin/core-nodes/n
 
 See the [Wait > On webhook call](/integrations/builtin/core-nodes/n8n-nodes-base.wait.md#on-webhook-call) documentation to learn more.
 
+`execution.resumeUrl` is available in workflows containing a Wait node, along with a node that waits for a webhook response.
+
 ## `execution.customData`
 
 This is only available in the Code node.
@@ -57,3 +59,7 @@ This is only available in the Code node.
 	```
 
 Refer to [Custom executions data](/workflows/executions/custom-executions-data.md) for more information.
+
+---
+
+

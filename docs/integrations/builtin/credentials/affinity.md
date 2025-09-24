@@ -22,7 +22,7 @@ Create an [Affinity](https://www.affinity.co/) account at the Scale, Advanced, o
 
 ## Related resources
 
-Refer to [Affinity's API documentation](https://support.affinity.co/hc/en-us/sections/360010294532-External-API) for more information about working with the service.
+Refer to [Affinity's API documentation](https://support.affinity.co/s/article/Getting-started-with-the-Affinity-API-FAQs) for more information about working with the service.
 
 ## Using API key
 

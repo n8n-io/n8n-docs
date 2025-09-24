@@ -42,7 +42,9 @@
                     Submit
                 </button>
             </div>
+            {% if feedback.comment_input_hint %}
             <div class="n8n-feedback-comment-hint">{{ feedback.comment_input_hint }}</div>
+            {% endif %}
         </div>
     </div>
 {% endif %}

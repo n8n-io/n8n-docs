@@ -24,7 +24,7 @@ For Cloud versions of n8n, n8n is considered both a Controller and a Processor a
 
 The n8n Data Processing Agreement includes the [Standard Contractual Clauses (SCCs)](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en). These clarify how n8n handles your data, and they update n8n's GDPR policies to cover the latest standards set by the European Commission.
 
-You can find a list of n8n sub-processors [here](https://n8n.io/legal/#subprocessors).
+You can find a list of n8n sub-processors [here](#sub-processors).
 
 /// note | Self-hosted n8n
 For self-hosted versions, n8n is neither a Controller nor a Processor, as we don't manage your data

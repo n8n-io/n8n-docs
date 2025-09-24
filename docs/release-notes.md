@@ -34,14 +34,168 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.113.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.0...n8n@1.113.1) for this version.<br />
+**Release date:** 2025-09-23
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+<div class="n8n-new-features" markdown> 
+### Data tables
+
+We’re excited to introduce **data tables**, bringing built-in data storage to n8n. You can now store and query structured data directly inside the platform, without relying on external databases for many common automation scenarios. Track workflow state between runs, store tokens or session data, keep product or customer reference tables, or stage intermediate results for multi-step processes.
+<br/><br/>
+Previously, persisting data meant provisioning and connecting to an external store such as Redis or Google Sheets. That added credential setup, infrastructure overhead, latency, and constant context switching. **Data tables** eliminate that friction and keeps your data easily editable and close to your workflows.
+<br/><br/>
+Data tables are available today on all plans. They currently support numbers, strings, and datetimes with JSON support coming soon.  On Cloud, each instance can store up to 50 MB. On self-hosted setups, the default is also 50 MB, but this limit can be adjusted if your infrastructure allows.
+<br/><br/>
+<figure markdown="span">
+[![Data tables](/_images/release-notes/data-tables.jpg)](https://www.youtube.com/watch?v=ljkiIkt6lZ4)
+    <figcaption>[Overview of data tables](https://www.youtube.com/watch?v=ljkiIkt6lZ4)</figcaption>
+</figure>
+
+### How to
+
+#### Create a data table
+
+- From the canvas, open the **Create workflow** dropdown and select **Create Data table**.
+- Or, go to the **Overview** panel on the left-side navigation bar and open the **Data tables** tab.
+
+#### Use a data table in your workflow
+
+- Add the **Data table node** to your workflow to get, update, insert, upsert, or delete rows.
+
+#### Adjust the storage limit (self-hosted only)
+
+- Change the default 50 MB limit with the environment variable: `N8N_DATA_TABLES_MAX_SIZE_BYTES`. [See configuration docs](https://docs.n8n.io/hosting/configuration/configuration-methods/).
+
+### Keep in mind
+
+- Data tables don’t currently support foreign keys or default values.
+- For now, all data tables are accessible to everyone in a project.  More granular permissions and sharing options are planned.
+
+Learn more about [**data tables**](/data/data-tables.md) and the [**Data table node**](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md).
+
+</div> 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.112.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.3...n8n@1.112.4) for this version.<br />
+**Release date:** 2025-09-23
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains an editor improvement.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.113.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.0...n8n@1.113.0) for this version.<br />
+**Release date:** 2025-09-22
+
+
+
+This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
+
+### Contributors
+
+[ongdisheng](https://github.com/ongdisheng)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.112.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.2...n8n@1.112.3) for this version.<br />
+**Release date:** 2025-09-19
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.111.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.111.0...n8n@1.111.1) for this version.<br />
+**Release date:** 2025-09-19
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.110.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.1...n8n@1.110.2) for this version.<br />
+**Release date:** 2025-09-19
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.112.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.1...n8n@1.112.2) for this version.<br />
+**Release date:** 2025-09-18
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.112.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.0...n8n@1.112.1) for this version.<br />
+**Release date:** 2025-09-17
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.112.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.111.0...n8n@1.112.0) for this version.<br />
+**Release date:** 2025-09-15
+
+
+
+This release contains API improvements, core updates, editor improvements, node updates, and bug fixes.
+
+### Contributors
+
+[GuraaseesSingh](https://github.com/GuraaseesSingh)  
+[jabbson](https://github.com/jabbson)  
+[ongdisheng](https://github.com/ongdisheng)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.111.0
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.0...n8n@1.111.0) for this version.<br />
 **Release date:** 2025-09-08
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
+
+
 
 This release contains core updates, API improvements, node updates, and bug fixes.
 
@@ -60,9 +214,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.0...n8n@1.110.1) for this version.<br />
 **Release date:** 2025-09-03
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 

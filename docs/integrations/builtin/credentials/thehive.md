@@ -16,7 +16,7 @@ n8n provides two nodes for TheHive. Use these credentials with TheHive node for 
 
 ## Prerequisites
 
-Install [TheHive](https://github.com/TheHive-Project/TheHiveDocs/blob/master/installation/install-guide.md) on your server.
+Install [TheHive](https://docs.strangebee.com/thehive/installation/installation-methods/) on your server.
 
 ## Supported authentication methods
 

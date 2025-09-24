@@ -49,6 +49,8 @@ Because custom HTML content is read-only, these fields aren't included in the fo
 
 The HTML field doesn't support `<script>`, `<style>`, or `<input>` elements.
 
+If you're using the [Form Ending](#form-ending) Page Type, you can fully customize the final page that you send users (including the use of `<script>`, `<style>`, and `<input>` elements) by selecting the **On n8n Form Submission** parameter to **Show Text**.
+
 ### Including hidden fields
 
 It's possible to include fields in a form without displaying them to users. This is useful when you want to pass extra data to the form that doesn't require interactive user input.

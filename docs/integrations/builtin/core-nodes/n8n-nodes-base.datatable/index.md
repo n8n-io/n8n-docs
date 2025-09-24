@@ -17,6 +17,7 @@ status: beta
 
 Use the Data Table node to permanently save data across workflow executions in a table format. It provides functionality to perform various data operations on stored data. See [Data tables](/data/data-tables.md).
 
+
 ## Node parameters
 
 ### Resource
@@ -41,3 +42,7 @@ Select the operation you want to run on the resource:
 * **Update:** Update one or more rows.
 * **Upsert:** Upsert one or more rows. If the row exists, it's updated; otherwise, a new row is created.
 
+
+## Related resources
+
+[Data tables](/data/data-tables.md) explains how to create and manage data tables. 

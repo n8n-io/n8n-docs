@@ -10,11 +10,12 @@ hide:
   - tags
 search:
   boost: 1.5
+status: beta
 ---
 
 # Data table
 
-The Data Table node allows you to permanently save data across workflow executions in a table format. It provides functionality to perform various data operations on stored data.
+Use the Data Table node to permanently save data across workflow executions in a table format. It provides functionality to perform various data operations on stored data.
 
 ## Node parameters
 
@@ -35,3 +36,7 @@ Select the operation you want to run on the resource:
 | **Insert** | Insert rows into an existing table. | **Optimize Bulk**: Optimize the speed of insertions when working with many rows. If you switch on this option, n8n won't return the data that was inserted. Default state is `off`. |
 | **Upsert** | Upsert one or more rows. If the row exists, it's updated; otherwise, a new row is created. | |
 | **Delete** | Delete one or more rows. | **Dry Run:** Simulate a deletion before finalizing it. If you switch on this option, n8n returns the rows that will be deleted by the operation. Default state is `off`. |
+
+## Related resources
+
+[Data tables](/data/data-tables.md) explains how to create and manage data tables. 

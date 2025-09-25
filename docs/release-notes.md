@@ -39,6 +39,10 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.1...n8n@1.113.2) for this version.<br />
 **Release date:** 2025-09-24
 
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
 This release contains bug fixes.
 
 For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
@@ -48,6 +52,10 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.4...n8n@1.112.5) for this version.<br />
 **Release date:** 2025-09-24
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
 
 This release contains bug fixes.
 
@@ -59,9 +67,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.0...n8n@1.113.1) for this version.<br />
 **Release date:** 2025-09-23
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains bug fixes.
 
@@ -111,9 +117,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.3...n8n@1.112.4) for this version.<br />
 **Release date:** 2025-09-23
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains an editor improvement.
 

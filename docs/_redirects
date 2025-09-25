@@ -84,11 +84,11 @@
 /n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/
 /contributing/   /help-community/contributing/
 /manage-cloud/   /manage-cloud/overview/
-/hosting/environment-variables/*   /hosting/configuration/:splat
-/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
-/hosting/installation/   /hosting/
-/hosting/logging-monitoring/   /hosting/
-/hosting/environment-variables/   /hosting/
+/hosting/environment-variables/   /hosting/  301
+/hosting/environment-variables/*   /hosting/configuration/:splat  301
+/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/  301
+/hosting/installation/   /hosting/  301
+/hosting/logging-monitoring/   /hosting/  301
 /hosting/architecture/   /hosting/architecture/overview/
 /hosting/scaling/   /hosting/scaling/overview/
 /hosting/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/
@@ -160,7 +160,7 @@
 
 /code-examples/ /code/
 /code-examples/methods-variables-reference/   /code/builtin/
-/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat
+/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat  301
 /code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/
 /code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/
 /code-examples/javascript-functions/get-binary-data-buffer/   /code/cookbook/code-node/get-binary-data-buffer/
@@ -233,7 +233,7 @@
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /manage-cloud/overview/
 /hosting/installation/desktop-app/   /choose-n8n/
-/hosting/server-setups/*   /hosting/installation/server-setups/:splat
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
 /hosting/configuration/   /hosting/configuration/environment-variables/
 /hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /manage-cloud/update-cloud-version/
@@ -292,10 +292,10 @@
 
 # Integrations menu refactor
 
-/integrations/nodes/*  /integrations/builtin/app-nodes/:splat
-/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat
-/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat
-/integrations/credentials/*   /integrations/builtin/credentials/:splat
+/integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
+/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
+/integrations/credentials/*   /integrations/builtin/credentials/:splat  301
 
 # Creating nodes overhaul
 
@@ -352,7 +352,7 @@
 /credentials/smtp/  /integrations/builtin/credentials/sendemail/
 /credentials/facebookGraphApp   /integrations/builtin/credentials/facebookapp
 
-/credentials/* /integrations/builtin/credentials/:splat
+/credentials/* /integrations/builtin/credentials/:splat  301
 
 /nodes/creating-nodes/      /integrations/creating-nodes/
 /nodes/creating-nodes/general-guidelines.html        /integrations/creating-nodes/code/standards/

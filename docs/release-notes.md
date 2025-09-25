@@ -46,7 +46,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 <div class="n8n-new-features" markdown> 
 ### Python task runner
 
-This version introduces the **Python task runner** as a beta feature. This feature secures n8n's Python sandbox and enables users to run real Python modules in n8n workflows. The original Pyodide-based implementation will be phased out. 
+This version introduces the **Python task runner** as a beta feature. This feature secures n8n's Python sandbox and enables users to run real Python modules in n8n workflows. The original Pyodide-based implementation will be phased out. <br/><br/>
 
 This is a **breaking change** that replaces Pyodide - see [here](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/#python-native-beta) for a list of differences. Any Code node set to the legacy `python` parameter will need to be manually updated to use the new `pythonNative` parameter. Any Code node script set to `python` and relying on Pyodide syntax is likely to need to be manually adjusted to account for breaking changes.
 

@@ -71,7 +71,7 @@
 /editor-ui/admin-panel  /manage-cloud/update-cloud-version/  301
 # /#what-is-n8n   /  301
 /getting-started/tutorials.html#blogposts   https://n8n.io/blog/tag/tutorial/  301
-/#server-setup     /hosting/installation/server-setups/  301
+# /#server-setup     /hosting/installation/server-setups/  301
 /code-examples/expressions/expressions.html     /code/expressions/  301
 /hosting/configuration/#use-built-in-and-external-modules-in-function-nodes     /hosting/configuration/configuration-examples/modules-in-code-node/  301
 /hosting/configuration/#use-built-in-and-external-modules-in-the-code-node      /hosting/configuration/configuration-examples/modules-in-code-node/  301

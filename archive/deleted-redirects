@@ -1,0 +1,908 @@
+# 2024 SEO audit
+/nodes/nodes.html    /integrations/builtin/node-types/  301
+/getting-started/installation/advanced/server-setup.html    /hosting/installation/server-setups/  301
+/getting-started/installation/advanced/server-setup.html#server-setups  /hosting/installation/server-setups/  301
+/getting-started/key-components.html    /workflows/  301
+/integrations/buil%20%20%20%20%20%20%20%20%20%20%205tin/core-nodes/n8n-nodes-base.start/    /integrations/builtin/core-nodes/n8n-nodes-base.start/  301
+/getting-started/create-your-first-workflow/*    /try-it-out/  301
+/reference/security/   https://n8n.io/legal/#security  301
+# /reference/reference.html   /  301
+/integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/  301
+/reference/security.html    https://n8n.io/legal/#security  301
+
+# Moved from 404.html
+/getting-started/key-concepts/   /flow-logic/  301
+/getting-started/key-concepts/#expression   /code/expressions/  301
+/getting-started/key-concepts/#item   /data/data-structure/  301
+/getting-started/key-concepts/#function   /data/code/  301
+/getting-started/key-concepts/#data   /data/  301
+/getting-started/key-concepts/#data-structure   /data/data-structure/  301
+/key-concepts/#data-flow   /data/data-structure/  301
+/key-concepts/#error-workflow   /flow-logic/error-handling/  301
+/key-concepts/#security   /hosting/configuration/user-management-self-hosted/  301
+/getting-started/whats-next.html    /try-it-out/quickstart/#next-steps  301
+/getting-started/installation/advanced/server-setup.html#docker-compose-examples    /hosting/installation/server-setups/docker-compose/  301
+/reference/faq.html#Integrations    /integrations/  301
+/reference/faq.html     /sustainable-use-license/  301
+/reference/faq.html#License     /sustainable-use-license/  301
+/reference/faq.html#n8n-cloud   /manage-cloud/overview/  301
+/nodes/expressions.html#expressions     /code/expressions/  301
+/editor-ui/workflows    /workflows/  301
+/editor-ui/credentials     /credentials/  301
+/editor-ui/executions   /workflows/executions/  301
+/editor-ui/admin-panel  /manage-cloud/update-cloud-version/  301
+# /#what-is-n8n   /  301
+/getting-started/tutorials.html#blogposts   https://n8n.io/blog/tag/tutorial/  301
+# /#server-setup     /hosting/installation/server-setups/  301
+/code-examples/expressions/expressions.html     /code/expressions/  301
+/hosting/configuration/#use-built-in-and-external-modules-in-function-nodes     /hosting/configuration/configuration-examples/modules-in-code-node/  301
+/hosting/configuration/#use-built-in-and-external-modules-in-the-code-node      /hosting/configuration/configuration-examples/modules-in-code-node/  301
+
+
+/integrations/builtin/core-nodes/n8n-nodes-base.interval/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/  301
+/integrations/builtin/credentials/google/googlepalm/   /integrations/builtin/credentials/googleai/  301
+
+/n8n-nodes-langchain.openaiassistant.md/   /n8n-nodes-langchain.openai/  301
+/n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/  301
+/contributing/   /help-community/contributing/  301
+/manage-cloud/   /manage-cloud/overview/  301
+/hosting/environment-variables/   /hosting/  301
+/hosting/environment-variables/*   /hosting/configuration/:splat  301
+/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/  301
+/hosting/installation/   /hosting/  301
+/hosting/logging-monitoring/   /hosting/  301
+/hosting/architecture/   /hosting/architecture/overview/  301
+/hosting/scaling/   /hosting/scaling/overview/  301
+/hosting/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/  301
+/hosting/external-storage/   /hosting/scaling/external-storage/  301
+/integrations/builtin/   /integrations/builtin/node-types/  301
+/integrations/community-nodes/   /integrations/  301
+/integrations/creating-nodes/   /integrations/creating-nodes/overview/  301
+/code/builtin/   /code/builtin/overview/  301
+/code/cookbook/   /code/  301
+/code/luxon/  /code/cookbook/luxon/  301
+/code/jmespath/   /code/cookbook/jmespath/  301
+/advanced-ai/examples/   /advanced-ai/examples/introduction/  301
+/advanced-ai/langchain/   /advanced-ai/langchain/overview/  301
+
+/langchain/   /advanced-ai/  301
+/langchain/langchain-tutorial/   /advanced-ai/intro-tutorial/  301
+/langchain/learning-resources/   /advanced-ai/langchain/langchain-learning-resources/  301
+/langchain/langchain-n8n/   /advanced-ai/langchain/langchain-n8n/  301
+/langchain/access-langchain/   /advanced-ai/  301
+
+
+/choose-n8n/cloud/   /manage-cloud/overview/  301
+/choose-n8n/faircode-license/   /sustainable-use-license/  301
+/cloud-admin-dashboard/   /manage-cloud/cloud-admin-dashboard/  301
+/hosting/scaling/execution-modes-processes/   /hosting/scaling/queue-mode/  301
+
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorychatretriever/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymanager/  301
+/choose-n8n/desktop-app/   /choose-n8n/  301
+
+/integrations/builtin/core-nodes/n8n-nodes-base.spreadsheetfile/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.ical/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.movebinarydata/   /integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.readpdf/   /integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfiles/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.writebinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.filesreadwrite/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentbinaryinputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentjsoninputloader/   /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader/  301
+
+
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/  301
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/  301
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezepinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/  301
+/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemoryinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/  301
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreload/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/  301
+
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorepineconeinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorepinecone/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoresupabaseinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoresupabase/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstorezepinsert/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstorezep/  301
+/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.vectorstoreinmemory/   /integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoreinmemory/  301
+
+
+
+/variables/   /code/variables/  301
+/integrations/builtin/core-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/  301
+/integrations/builtin/trigger-nodes/n8n-nodes-langchain.manualchattrigger/   /integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger/  301
+
+/flow-logic/error-handling/error-workflows/   /flow-logic/error-handling/  301
+/flow-logic/error-handling/memory-errors/   /hosting/scaling/memory-errors/  301
+
+# Code into own tab
+
+/code-examples/ /code/  301
+/code-examples/methods-variables-reference/   /code/builtin/  301
+/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat  301
+/code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/  301
+/code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/  301
+/code-examples/javascript-functions/get-binary-data-buffer/   /code/cookbook/code-node/get-binary-data-buffer/  301
+/code-examples/javascript-functions/console-log/   /code/cookbook/code-node/console-log/  301
+/code-examples/ai-code/   /code/ai-code/  301
+/code-examples/expressions/check-incoming-data/   /code/cookbook/expressions/check-incoming-data/  301
+/code-examples/expressions/   /code/expressions/  301
+/code-examples/expressions/expressions/   /code/expressions/  301
+/code-examples/javascript-functions/   /code/code-node/  301
+/code-examples/javascript-functions/code-node/   /code/code-node/  301
+/code-examples/expressions/luxon/   /code/luxon/  301
+/code-examples/javascript-functions/luxon/   /code/luxon/  301
+/code-examples/expressions/jmespath/   /code/jmespath/  301
+/code-examples/javascript-functions/jmespath/   /code/jmespath/  301
+/code-examples/methods-variables-examples/all/   /code/cookbook/builtin/all/  301
+/code-examples/methods-variables-examples/execution/   /code/cookbook/builtin/execution/  301
+/code-examples/methods-variables-examples/get-workflow-static-data/   /code/cookbook/builtin/get-workflow-static-data/  301
+/code-examples/methods-variables-examples/vars/   /code/cookbook/builtin/vars/  301
+/code-examples/methods-variables-examples/evaluate-expression/   /code/builtin/advanced/  301
+/code-examples/methods-variables-examples/node/   /code/builtin/output-other-nodes/  301
+/code-examples/methods-variables-examples/run-index/   /code/builtin/n8n-metadata/  301
+/code-examples/methods-variables-examples/workflow/   /code/builtin/n8n-metadata/  301
+
+
+
+
+/hosting/authentication/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/  301
+/hosting/authentication/jwt/   /hosting/configuration/user-management-self-hosted/  301
+/hosting/authentication/basic-auth/   /hosting/configuration/user-management-self-hosted/  301
+
+/environments/variables/   /variables/  301
+
+/1-0-preview/   /1-0-migration-checklist/  301
+
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/  301
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/  301
+/integrations/builtin/credentials/sendinblue/   /integrations/builtin/credentials/brevo/  301
+
+
+/hosting/logging/   /hosting/logging-monitoring/logging/  301
+/code-examples/console-log/   /code/cookbook/code-node/console-log/  301
+
+# /reference/   /  301
+/reference/keyboard-shortcuts/   /keyboard-shortcuts/  301
+/reference/cli-commands/   /hosting/cli-commands/  301
+/reference/update/   /release-notes/  301
+/security-audit/   /hosting/securing/security-audit/  301
+/reference/data-collection/   /privacy-security/privacy/  301
+
+/integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+
+/reference/release-notes/   /release-notes/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.htmlextract/   /integrations/builtin/core-nodes/n8n-nodes-base.html/  301
+
+# License release 2022/2023
+
+/reference/license/   /sustainable-use-license/  301
+
+# Workflows refactor 2022
+
+/workflows/workflows/   /workflows/  301
+/workflows/items/   /data/data-structure/  301
+/workflows/nodes/   /workflows/components/nodes/  301
+/workflows/connections/   /workflows/components/connections/  301
+/workflows/sticky-notes/   /workflows/components/sticky-notes/  301
+
+
+# Hosting user paths 2022
+
+/hosting/options/   /choose-n8n/  301
+/hosting/installation/cloud/   /manage-cloud/overview/  301
+/hosting/installation/desktop-app/   /choose-n8n/  301
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
+/hosting/configuration/   /hosting/configuration/environment-variables/  301
+/hosting/updating/   /reference/update/  301
+/hosting/updating/cloud/   /manage-cloud/update-cloud-version/  301
+/hosting/updating/desktop/   /choose-n8n/  301
+/hosting/updating/npm/   /hosting/installation/npm/  301
+/hosting/databases/supported-databases-settings/   /hosting/configuration/supported-databases-settings/  301
+/hosting/databases/structure/   /hosting/architecture/database-structure/  301
+/hosting/security/   /hosting/user-management/  301
+/hosting/user-management/   /user-management/  301
+
+
+# 2022 SEO audit
+
+/nodes/expressions/expressions.html   /code/expressions/  301
+/nodes/expressions.html   /code/expressions/  301
+/reference/configuration.html  /hosting/configuration/configuration-methods/  301
+/getting-started/installation/index.html   /hosting/options/  301
+/getting-started/create-your-first-workflow/    /try-it-out/  301
+/reference/scaling-n8n.html   /hosting/scaling/  301
+/reference/workflow.html   /workflows/  301
+/nodes/nodes-library/core-nodes/   /integrations/builtin/core-nodes/  301
+/reference/data/data-structure.html   /data/data-structure/  301
+/nodes/credentials/Google/   /integrations/builtin/credentials/google/  301
+/nodes/credentials/ActiveCampaign/   /integrations/builtin/credentials/activecampaign/  301
+/getting-started/quickstart.html   /try-it-out/  301
+/nodes/node-basics.html   /workflows/nodes/  301
+/nodes/nodes-library/core-nodes/IMAPEmail/   /integrations/builtin/core-nodes/n8n-nodes-base.emailimap/  301
+/getting-started/key-concepts.html   /flow-logic/  301
+/nodes/n8n-nodes-base.editimage/   /integrations/builtin/core-nodes/n8n-nodes-base.editimage/  301
+/nodes/nodes-library/trigger-nodes/HubSpotTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/  301
+
+
+# 2022 UI changes
+
+/integrations/builtin/core-nodes/n8n-nodes-base.imapemail/   /integrations/builtin/core-nodes/n8n-nodes-base.emailimap/  301
+
+# code schedule start nodes
+
+/data/data-mapping/data-item-linking/item-linking-function-node/   /data/data-mapping/data-item-linking/item-linking-code-node/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.function/   /integrations/builtin/core-nodes/n8n-nodes-base.code/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.functionItem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.functionitem/   /integrations/builtin/core-nodes/n8n-nodes-base.code/  301
+/integrations/builtin/core-nodes/n8n-nodes-base.cron/   /integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/  301
+
+# methods / vars / paired items
+
+/code-examples/expressions/methods/   /code/builtin/  301
+/code-examples/expressions/variables/   /code/builtin/  301
+/code-examples/javascript-functions/methods/   /code/builtin/  301
+/code-examples/javascript-functions/variables/  /code/builtin/  301
+/data/data-mapping/   /data/data-mapping/  301
+
+# Editor UI
+
+# /editor-ui/   /  301
+
+# Integrations menu refactor
+
+/integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
+/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
+/integrations/credentials/*   /integrations/builtin/credentials/:splat  301
+
+# Creating nodes overhaul
+
+/integrations/creating-nodes/code/create-first-node/   /integrations/creating-nodes/build/  301
+/integrations/creating-nodes/code/standards/   /integrations/creating-nodes/build/reference/  301
+/integrations/creating-nodes/code/create-trigger-node/   /integrations/creating-nodes/build/create-trigger-node/  301
+/integrations/creating-nodes/code/ui-elements/   /integrations/creating-nodes/build/reference/ui-elements/  301
+/integrations/creating-nodes/code/node-linter/   /integrations/creating-nodes/test/node-linter/  301
+/integrations/creating-nodes/code/review-checklist/   /integrations/creating-nodes/build/reference/  301
+/integrations/creating-nodes/code/troubleshooting-node-development/   /integrations/creating-nodes/test/troubleshooting-node-development/  301
+/integrations/creating-nodes/code/http-helpers/   /integrations/creating-nodes/build/reference/http-helpers/  301
+/integrations/creating-nodes/code/create-n8n-nodes-module/   /integrations/creating-nodes/deploy/install-private-nodes/  301
+
+
+# Quickstart overhaul
+
+/quickstart/      /try-it-out/  301
+
+
+# Weird ones after IA launch
+
+
+# Updated during IA work
+/getting-started/key-components/                     /workflows/  301
+/getting-started/key-components/connection.html      /workflows/connections/  301
+# /getting-started/key-components/editor-ui.html       /  301
+/getting-started/key-components/node.html            /workflows/nodes/  301
+/getting-started/key-components/workflow.html        /workflows/workflows/  301
+/getting-started/key-concepts/looping.html            /flow-logic/looping/  301
+/getting-started/key-concepts/modes.html             /hosting/scaling/execution-modes-processes/  301
+/getting-started/key-concepts/transforming-data.html /data/  301
+/getting-started/installation/                       /hosting/options/  301
+/getting-started/installation/docker-quickstart.html /hosting/installation/docker/  301
+/getting-started/installation/updating.html          /hosting/updating/  301
+/getting-started/installation/advanced/configuration.html /hosting/configuration/configuration-methods/  301
+/getting-started/installation/advanced/maintenance.html /hosting/scaling/execution-data/  301
+/getting-started/installation/advanced/scaling-n8n.html /hosting/scaling/queue-mode/  301
+/getting-started/tutorials.html                      https://n8n.io/blog/  301
+/reference/user-management.html                      /user-management/  301
+/reference/environment-variables.html                /hosting/configuration/configuration-methods/  301
+/reference/start-workflows-via-cli.html              /hosting/cli-commands/  301
+/reference/javascript-code-snippets.html             /code-examples/javascript-functions/  301
+/reference/data/database.html                        /hosting/databases/  301
+/reference/data/understanding-database.html          /hosting/configuration/supported-databases-settings/  301
+/reference/logging.html                              /hosting/logging/  301
+/reference/telemetry.html                            /privacy-security/privacy/data-collection/  301
+/reference/troubleshooting.html                      /hosting/installation/npm/  301
+/reference/contributing.html                         /help-community/contributing/  301
+/reference/release-notes.html                        /reference/release-notes/  301
+/reference/server-setup.html                         /hosting/installation/server-setups/  301
+
+# The nodes library . . . may the odds be ever in your favour
+
+/credentials/smtp/  /integrations/builtin/credentials/sendemail/  301
+/credentials/facebookGraphApp   /integrations/builtin/credentials/facebookapp  301
+
+/credentials/* /integrations/builtin/credentials/:splat  301
+
+/nodes/creating-nodes/      /integrations/creating-nodes/  301
+/nodes/creating-nodes/general-guidelines.html        /integrations/creating-nodes/code/standards/  301
+/nodes/creating-nodes/create-node.html      /integrations/creating-nodes/code/create-first-node/  301
+/nodes/creating-nodes/create-n8n-nodes-module.html      /integrations/creating-nodes/code/create-n8n-nodes-module/  301
+/nodes/creating-nodes/create-trigger-node.html      /integrations/creating-nodes/code/create-trigger-node/  301
+/nodes/creating-nodes/node-dev-cli.html     /integrations/creating-nodes/code/node-developer-cli/  301
+/nodes/creating-nodes/node-elements.html      /integrations/creating-nodes/code/ui-elements/  301
+/nodes/creating-nodes/making-http-requests.html     /integrations/creating-nodes/code/http-helpers/  301
+/nodes/creating-nodes/node-linter.html      /integrations/creating-nodes/code/node-linter/  301
+/nodes/creating-nodes/node-review-checklist.html     /integrations/creating-nodes/code/review-checklist/  301
+/nodes/creating-nodes/troubleshooting.html     /integrations/creating-nodes/code/troubleshooting-node-development/  301
+
+/nodes/node-basics/ /integrations/  301
+/nodes/creating-nodes/		/integrations/creating-nodes/  301
+/nodes/credentials/		/integrations/builtin/credentials/  301
+/nodes/n8n-nodes-base.actionNetwork/		/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/  301
+/nodes/n8n-nodes-base.actionnetwork/		/integrations/builtin/app-nodes/n8n-nodes-base.actionnetwork/  301
+/nodes/n8n-nodes-base.activationTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger/  301
+/nodes/n8n-nodes-base.activationtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.activationtrigger/  301
+/nodes/n8n-nodes-base.activeCampaign/		/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign/  301
+/nodes/n8n-nodes-base.activecampaign/		/integrations/builtin/app-nodes/n8n-nodes-base.activecampaign/  301
+/nodes/n8n-nodes-base.activeCampaignTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger/  301
+/nodes/n8n-nodes-base.activecampaigntrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.activecampaigntrigger/  301
+/nodes/n8n-nodes-base.acuitySchedulingTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger/  301
+/nodes/n8n-nodes-base.acuityschedulingtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.acuityschedulingtrigger/  301
+/nodes/n8n-nodes-base.adalo/   /integrations/builtin/app-nodes.n8n-nodes-base.adalo/  301
+/nodes/n8n-nodes-base.affinity/		/integrations/builtin/app-nodes/n8n-nodes-base.affinity/  301
+/nodes/n8n-nodes-base.affinityTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger/  301
+/nodes/n8n-nodes-base.affinitytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.affinitytrigger/  301
+/nodes/n8n-nodes-base.agilecrm/		/integrations/builtin/app-nodes/n8n-nodes-base.agileCrm/  301
+/nodes/n8n-nodes-base.agilecrm/		/integrations/builtin/app-nodes/n8n-nodes-base.agilecrm/  301
+/nodes/n8n-nodes-base.airtable/		/integrations/builtin/app-nodes/n8n-nodes-base.airtable/  301
+/nodes/n8n-nodes-base.airtableTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/  301
+/nodes/n8n-nodes-base.airtabletrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.airtabletrigger/  301
+/nodes/n8n-nodes-base.amqp/		/integrations/builtin/app-nodes/n8n-nodes-base.amqp/  301
+/nodes/n8n-nodes-base.amqpTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger/  301
+/nodes/n8n-nodes-base.amqptrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.amqptrigger/  301
+/nodes/n8n-nodes-base.apiTemplateIo/		/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/  301
+/nodes/n8n-nodes-base.apitemplateio/		/integrations/builtin/app-nodes/n8n-nodes-base.apitemplateio/  301
+/nodes/n8n-nodes-base.asana/		/integrations/builtin/app-nodes/n8n-nodes-base.asana/  301
+/nodes/n8n-nodes-base.asanaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger/  301
+/nodes/n8n-nodes-base.asanatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.asanatrigger/  301
+/nodes/n8n-nodes-base.automizy/		/integrations/builtin/app-nodes/n8n-nodes-base.automizy/  301
+/nodes/n8n-nodes-base.autopilot/		/integrations/builtin/app-nodes/n8n-nodes-base.autopilot/  301
+/nodes/n8n-nodes-base.autopilotTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger/  301
+/nodes/n8n-nodes-base.autopilottrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.autopilottrigger/  301
+/nodes/n8n-nodes-base.awsComprehend/		/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend/  301
+/nodes/n8n-nodes-base.awscomprehend/		/integrations/builtin/app-nodes/n8n-nodes-base.awscomprehend/  301
+/nodes/n8n-nodes-base.awsDynamoDb/		/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/  301
+/nodes/n8n-nodes-base.awsdynamodb/		/integrations/builtin/app-nodes/n8n-nodes-base.awsdynamodb/  301
+/nodes/n8n-nodes-base.awsLambda/		/integrations/builtin/app-nodes/n8n-nodes-base.awslambda/  301
+/nodes/n8n-nodes-base.awslambda/		/integrations/builtin/app-nodes/n8n-nodes-base.awslambda/  301
+/nodes/n8n-nodes-base.awsRekognition/		/integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition/  301
+/nodes/n8n-nodes-base.awsrekognition/		/integrations/builtin/app-nodes/n8n-nodes-base.awsrekognition/  301
+/nodes/n8n-nodes-base.awsS3/		/integrations/builtin/app-nodes/n8n-nodes-base.awss3/  301
+/nodes/n8n-nodes-base.aws3/		/integrations/builtin/app-nodes/n8n-nodes-base.awss3/  301
+/nodes/n8n-nodes-base.awsSes/		/integrations/builtin/app-nodes/n8n-nodes-base.awsses/  301
+/nodes/n8n-nodes-base.awsses/		/integrations/builtin/app-nodes/n8n-nodes-base.awsses/  301
+/nodes/n8n-nodes-base.awsSns/		/integrations/builtin/app-nodes/n8n-nodes-base.awssns/  301
+/nodes/n8n-nodes-base.awssns/		/integrations/builtin/app-nodes/n8n-nodes-base.awssns/  301
+/nodes/n8n-nodes-base.awsSnsTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger/  301
+/nodes/n8n-nodes-base.awssnstrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.awssnstrigger/  301
+/nodes/n8n-nodes-base.awsSqs/		/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/  301
+/nodes/n8n-nodes-base.awssqs/		/integrations/builtin/app-nodes/n8n-nodes-base.awssqs/  301
+/nodes/n8n-nodes-base.awsTextract/		/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/  301
+/nodes/n8n-nodes-base.awstextract/		/integrations/builtin/app-nodes/n8n-nodes-base.awstextract/  301
+/nodes/n8n-nodes-base.awsTranscribe/		/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/  301
+/nodes/n8n-nodes-base.awstranscribe/		/integrations/builtin/app-nodes/n8n-nodes-base.awstranscribe/  301
+/nodes/n8n-nodes-base.bambooHr/		/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr/  301
+/nodes/n8n-nodes-base.bamboohr/		/integrations/builtin/app-nodes/n8n-nodes-base.bamboohr/  301
+/nodes/n8n-nodes-base.bannerbear/		/integrations/builtin/app-nodes/n8n-nodes-base.bannerbear/  301
+/nodes/n8n-nodes-base.baserow/		/integrations/builtin/app-nodes/n8n-nodes-base.baserow/  301
+/nodes/n8n-nodes-base.beeminder/		/integrations/builtin/app-nodes/n8n-nodes-base.beeminder/  301
+/nodes/n8n-nodes-base.bitbucketTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger/  301
+/nodes/n8n-nodes-base.bitbuckettrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.bitbuckettrigger/  301
+/nodes/n8n-nodes-base.bitly/		/integrations/builtin/app-nodes/n8n-nodes-base.bitly/  301
+/nodes/n8n-nodes-base.bitwarden/		/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden/  301
+/nodes/n8n-nodes-base.box/		/integrations/builtin/app-nodes/n8n-nodes-base.box/  301
+/nodes/n8n-nodes-base.boxTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger/  301
+/nodes/n8n-nodes-base.boxtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.boxtrigger/  301
+/nodes/n8n-nodes-base.Brandfetch/		/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/  301
+/nodes/n8n-nodes-base.brandfetch/		/integrations/builtin/app-nodes/n8n-nodes-base.brandfetch/  301
+/nodes/n8n-nodes-base.bubble/		/integrations/builtin/app-nodes/n8n-nodes-base.bubble/  301
+/nodes/n8n-nodes-base/calTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger/  301
+/nodes/n8n-nodes-base/caltrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.caltrigger/  301
+/nodes/n8n-nodes-base.calendlyTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/  301
+/nodes/n8n-nodes-base.calendlytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.calendlytrigger/  301
+/nodes/n8n-nodes-base.chargebee/		/integrations/builtin/app-nodes/n8n-nodes-base.chargebee/  301
+/nodes/n8n-nodes-base.chargebeeTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger/  301
+/nodes/n8n-nodes-base.chargebeetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger/  301
+/nodes/n8n-nodes-base.circleCi/		/integrations/builtin/app-nodes/n8n-nodes-base.circleci/  301
+/nodes/n8n-nodes-base.circleci/		/integrations/builtin/app-nodes/n8n-nodes-base.circleci/  301
+/nodes/n8n-nodes-base.ciscoWebex/		/integrations/builtin/app-nodes/n8n-nodes-base.ciscowebex/  301
+/nodes/n8n-nodes-base.ciscoWebexTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger/  301
+/nodes/n8n-nodes-base.ciscoWebextrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.ciscowebextrigger/  301
+/nodes/n8n-nodes-base.clearbit/		/integrations/builtin/app-nodes/n8n-nodes-base.clearbit/  301
+/nodes/n8n-nodes-base.clickUp/		/integrations/builtin/app-nodes/n8n-nodes-base.clickup/  301
+/nodes/n8n-nodes-base.clickup/		/integrations/builtin/app-nodes/n8n-nodes-base.clickup/  301
+/nodes/n8n-nodes-base.clickUpTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger/  301
+/nodes/n8n-nodes-base.clickUptrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger/  301
+/nodes/n8n-nodes-base.clockify/		/integrations/builtin/app-nodes/n8n-nodes-base.clockify/  301
+/nodes/n8n-nodes-base.clockifyTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger/  301
+/nodes/n8n-nodes-base.clockifytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.clockifytrigger/  301
+/nodes/n8n-nodes-base.cockpit/		/integrations/builtin/app-nodes/n8n-nodes-base.cockpit/  301
+/nodes/n8n-nodes-base.coda/		/integrations/builtin/app-nodes/n8n-nodes-base.coda/  301
+/nodes/n8n-nodes-base.coinGecko/		/integrations/builtin/app-nodes/n8n-nodes-base.coingecko/  301
+/nodes/n8n-nodes-base.coingecko/		/integrations/builtin/app-nodes/n8n-nodes-base.coingecko/  301
+/nodes/n8n-nodes-base.compression/		/integrations/builtin/core-nodes/n8n-nodes-base.compression/  301
+/nodes/n8n-nodes-base.contentful/		/integrations/builtin/app-nodes/n8n-nodes-base.contentful/  301
+/nodes/n8n-nodes-base.convertKit/		/integrations/builtin/app-nodes/n8n-nodes-base.convertkit/  301
+/nodes/n8n-nodes-base.convertkit/		/integrations/builtin/app-nodes/n8n-nodes-base.convertkit/  301
+/nodes/n8n-nodes-base.convertKitTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger/  301
+/nodes/n8n-nodes-base.convertkittrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.convertkittrigger/  301
+/nodes/n8n-nodes-base.copper/		/integrations/builtin/app-nodes/n8n-nodes-base.copper/  301
+/nodes/n8n-nodes-base.copperTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger/  301
+/nodes/n8n-nodes-base.coppertrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.coppertrigger/  301
+/nodes/n8n-nodes-base.cortex/		/integrations/builtin/app-nodes/n8n-nodes-base.cortex/  301
+/nodes/n8n-nodes-base.crateDb/		/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/  301
+/nodes/n8n-nodes-base.cratedb/		/integrations/builtin/app-nodes/n8n-nodes-base.cratedb/  301
+/nodes/n8n-nodes-base.cron/		/integrations/builtin/core-nodes/n8n-nodes-base.cron/  301
+/nodes/n8n-nodes-base.crypto/		/integrations/builtin/core-nodes/n8n-nodes-base.crypto/  301
+/nodes/n8n-nodes-base.customerIo/		/integrations/builtin/app-nodes/n8n-nodes-base.customerio/  301
+/nodes/n8n-nodes-base.customerio/		/integrations/builtin/app-nodes/n8n-nodes-base.customerio/  301
+/nodes/n8n-nodes-base.customerIoTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger/  301
+/nodes/n8n-nodes-base.customeriotrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.customeriotrigger/  301
+/nodes/n8n-nodes-base.dateTime/		/integrations/builtin/core-nodes/n8n-nodes-base.datetime/  301
+/nodes/n8n-nodes-base.datetime/     /integrations/builtin/app-nodes/n8n-nodes-base.datetime/  301
+/nodes/n8n-nodes-base.deepL/		/integrations/builtin/app-nodes/n8n-nodes-base.deepl/  301
+/nodes/n8n-nodes-base.deepl/		/integrations/builtin/app-nodes/n8n-nodes-base.deepl/  301
+/nodes/n8n-nodes-base.demio/		/integrations/builtin/app-nodes/n8n-nodes-base.demio/  301
+/nodes/n8n-nodes-base.dhl/		/integrations/builtin/app-nodes/n8n-nodes-base.dhl/  301
+/nodes/n8n-nodes-base.discord/		/integrations/builtin/app-nodes/n8n-nodes-base.discord/  301
+/nodes/n8n-nodes-base.discourse/		/integrations/builtin/app-nodes/n8n-nodes-base.discourse/  301
+/nodes/n8n-nodes-base.disqus/		/integrations/builtin/app-nodes/n8n-nodes-base.disqus/  301
+/nodes/n8n-nodes-base.drift/		/integrations/builtin/app-nodes/n8n-nodes-base.drift/  301
+/nodes/n8n-nodes-base.dropbox/		/integrations/builtin/app-nodes/n8n-nodes-base.dropbox/  301
+/nodes/n8n-nodes-base.dropcontact/		/integrations/builtin/app-nodes/n8n-nodes-base.dropcontact/  301
+/nodes/n8n-nodes-base.editImage/		/integrations/builtin/core-nodes/n8n-nodes-base.editimage/  301
+/nodes/n8n-nodes-base.egoi/		/integrations/builtin/app-nodes/n8n-nodes-base.egoi/  301
+/nodes/n8n-nodes-base.elasticsearch/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticsearch/  301
+/nodes/n8n-nodes-base.elasticSecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity/  301
+/nodes/n8n-nodes-base.elasticsecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.elasticsecurity/  301
+/nodes/n8n-nodes-base.emailReadImap/		/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/  301
+/nodes/n8n-nodes-base.emailreadimap/		/integrations/builtin/core-nodes/n8n-nodes-base.emailimap/  301
+/nodes/n8n-nodes-base.emailSend/		/integrations/builtin/core-nodes/n8n-nodes-base.sendemail/  301
+/nodes/n8n-nodes-base.emailsend/        /integrations/builtin/core-nodes/n8n-nodes-base.sendemail/  301
+/nodes/n8n-nodes-base.emelia/		/integrations/builtin/app-nodes/n8n-nodes-base.emelia/  301
+/nodes/n8n-nodes-base.emeliaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger/  301
+/nodes/n8n-nodes-base.emeliatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.emeliatrigger/  301
+/nodes/n8n-nodes-base.erpNext/		/integrations/builtin/app-nodes/n8n-nodes-base.erpnext/  301
+/nodes/n8n-nodes-base.errorTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/  301
+/nodes/n8n-nodes-base.errortrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.errortrigger/  301
+/nodes/n8n-nodes-base.eventbriteTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger/  301
+/nodes/n8n-nodes-base.eventbritetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.eventbritetrigger/  301
+/nodes/n8n-nodes-base.executeCommand/		/integrations/builtin/core-nodes/n8n-nodes-base.executecommand/  301
+/nodes/n8n-nodes-base.executecommand/       /integrations/builtin/core-nodes/n8n-nodes-base.executecommand/  301
+/nodes/n8n-nodes-base.executeWorkflow/		/integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/  301
+/nodes/n8n-nodes-base.executeworkflow/      /integrations/builtin/core-nodes/n8n-nodes-base.executeworkflow/  301
+/nodes/n8n-nodes-base.facebookGraphApi/		/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/  301
+/nodes/n8n-nodes-base.facebookgraphapi/		/integrations/builtin/app-nodes/n8n-nodes-base.facebookgraphapi/  301
+/nodes/n8n-nodes-base.facebookTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/  301
+/nodes/n8n-nodes-base.facebooktrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.facebooktrigger/  301
+/nodes/n8n-nodes-base.figmaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger/  301
+/nodes/n8n-nodes-base.figmatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.figmatrigger/  301
+/nodes/n8n-nodes-base.filemaker/		/integrations/builtin/app-nodes/n8n-nodes-base.filemaker/  301
+/nodes/n8n-nodes-base.flow/		/integrations/builtin/app-nodes/n8n-nodes-base.flow/  301
+/nodes/n8n-nodes-base.flowtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/  301
+/nodes/n8n-nodes-base.flowtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.flowtrigger/  301
+/nodes/n8n-nodes-base.formIotrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger/  301
+/nodes/n8n-nodes-base.formiotrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.formiotrigger/  301
+/nodes/n8n-nodes-base.formstackTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger/  301
+/nodes/n8n-nodes-base.formstacktrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger/  301
+/nodes/n8n-nodes-base.freshdesk/		/integrations/builtin/app-nodes/n8n-nodes-base.freshdesk/  301
+/nodes/n8n-nodes-base.freshservice/		/integrations/builtin/app-nodes/n8n-nodes-base.freshservice/  301
+/nodes/n8n-nodes-base.freshworksCrm/		/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm/  301
+/nodes/n8n-nodes-base.freshworkscrm/		/integrations/builtin/app-nodes/n8n-nodes-base.freshworkscrm/  301
+/nodes/n8n-nodes-base.ftp/		/integrations/builtin/core-nodes/n8n-nodes-base.ftp/  301
+/nodes/n8n-nodes-base.function/		/integrations/builtin/core-nodes/n8n-nodes-base.code/  301
+/nodes/n8n-nodes-base.functionItem/		/integrations/builtin/core-nodes/n8n-nodes-base.code/  301
+/nodes/n8n-nodes-base.functionitem/     /integrations/builtin/core-nodes/n8n-nodes-base.code/  301
+/nodes/n8n-nodes-base.getResponse/		/integrations/builtin/app-nodes/n8n-nodes-base.getresponse/  301
+/nodes/n8n-nodes-base.getresponse/		/integrations/builtin/app-nodes/n8n-nodes-base.getresponse/  301
+/nodes/n8n-nodes-base.getResponseTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger/  301
+/nodes/n8n-nodes-base.getresponsetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.getresponsetrigger/  301
+/nodes/n8n-nodes-base.ghost/		/integrations/builtin/app-nodes/n8n-nodes-base.ghost/  301
+/nodes/n8n-nodes-base.git/		/integrations/builtin/core-nodes/n8n-nodes-base.git/  301
+/nodes/n8n-nodes-base.github/		/integrations/builtin/app-nodes/n8n-nodes-base.github/  301
+/nodes/n8n-nodes-base.githubTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/  301
+/nodes/n8n-nodes-base.githubtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.githubtrigger/  301
+/nodes/n8n-nodes-base.gitlab/		/integrations/builtin/app-nodes/n8n-nodes-base.gitlab/  301
+/nodes/n8n-nodes-base.gitlabTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/  301
+/nodes/n8n-nodes-base.gitlabtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger/  301
+/nodes/n8n-nodes-base.gmail/		/integrations/builtin/app-nodes/n8n-nodes-base.gmail/  301
+/nodes/n8n-nodes-base.gmailTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.gmailtrigger/  301
+/nodes/n8n-nodes-base.googleAds/      /integrations/builtin/app-nodes/n8n-nodes-base.googleads/  301
+/nodes/n8n-nodes-base.googleads/      /integrations/builtin/app-nodes/n8n-nodes-base.googleads/  301
+/nodes/n8n-nodes-base.googleAnalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/  301
+/nodes/n8n-nodes-base.googleanalytics/		/integrations/builtin/app-nodes/n8n-nodes-base.googleanalytics/  301
+/nodes/n8n-nodes-base.googleBigQuery/		/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/  301
+/nodes/n8n-nodes-base.googlebigquery/		/integrations/builtin/app-nodes/n8n-nodes-base.googlebigquery/  301
+/nodes/n8n-nodes-base.googleBooks/		/integrations/builtin/app-nodes/n8n-nodes-base.googlebooks/  301
+/nodes/n8n-nodes-base.googlebooks/		/integrations/builtin/app-nodes/n8n-nodes-base.googlebooks/  301
+/nodes/n8n-nodes-base.googleCalendar/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/  301
+/nodes/n8n-nodes-base.googlecalendar/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecalendar/  301
+/nodes/n8n-nodes-base.googleCalendarTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger/  301
+/nodes/n8n-nodes-base.googlecalendartrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googlecalendartrigger/  301
+/nodes/n8n-nodes-base.googleCloudStorage/   /integrations/builtin/app-nodes/n8n-nodes-base.googlecloudstorage/  301
+/nodes/n8n-nodes-base.googleChat/		/integrations/builtin/app-nodes/n8n-nodes-base.googlechat/  301
+/nodes/n8n-nodes-base.googlechat/		/integrations/builtin/app-nodes/n8n-nodes-base.googlechat/  301
+/nodes/n8n-nodes-base.googleCloudNaturalLanguage/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudnaturallanguage/  301
+/nodes/n8n-nodes-base.googlecloudnaturallanguage/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudnaturallanguage/  301
+/nodes/n8n-nodes-base.googleContacts/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/  301
+/nodes/n8n-nodes-base.googlecontacts/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecontacts/  301
+/nodes/n8n-nodes-base.googleDocs/		/integrations/builtin/app-nodes/n8n-nodes-base.googledocs/  301
+/nodes/n8n-nodes-base.googledocs/		/integrations/builtin/app-nodes/n8n-nodes-base.googledocs/  301
+/nodes/n8n-nodes-base.googleDrive/		/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/  301
+/nodes/n8n-nodes-base.googledrive/		/integrations/builtin/app-nodes/n8n-nodes-base.googledrive/  301
+/nodes/n8n-nodes-base.googleDriveTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/  301
+/nodes/n8n-nodes-base.googledrivetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.googledrivetrigger/  301
+/nodes/n8n-nodes-base.googleFirebaseCloudFirestore/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/  301
+/nodes/n8n-nodes-base.googlefirebasecloudfirestore/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore/  301
+/nodes/n8n-nodes-base.googleFirebaseRealtimeDatabase/		/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudrealtimedatabase/  301
+/nodes/n8n-nodes-base.googlefirebaserealtimedatabase/		/integrations/builtin/app-nodes/n8n-nodes-base.googlefirebaserealtimedatabase/  301
+/nodes/n8n-nodes-base.googlePerspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/  301
+/nodes/n8n-nodes-base.googleperspective/		/integrations/builtin/app-nodes/n8n-nodes-base.googleperspective/  301
+/nodes/n8n-nodes-base.googleSheets/		/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/  301
+/nodes/n8n-nodes-base.googlesheets/     /integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/  301
+/nodes/n8n-nodes-base.googleSlides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/  301
+/nodes/n8n-nodes-base.googleslides/		/integrations/builtin/app-nodes/n8n-nodes-base.googleslides/  301
+/nodes/n8n-nodes-base.googleTasks/		/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/  301
+/nodes/n8n-nodes-base.googletasks/		/integrations/builtin/app-nodes/n8n-nodes-base.googletasks/  301
+/nodes/n8n-nodes-base.googleTranslate/		/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/  301
+/nodes/n8n-nodes-base.googletranslate/		/integrations/builtin/app-nodes/n8n-nodes-base.googletranslate/  301
+/nodes/n8n-nodes-base.gotify/		/integrations/builtin/app-nodes/n8n-nodes-base.gotify/  301
+/nodes/n8n-nodes-base.goToWebinar/		/integrations/builtin/app-nodes/n8n-nodes-base.gotowebinar/  301
+/nodes/n8n-nodes-base.gotowebinar/		/integrations/builtin/app-nodes/n8n-nodes-base.gotowebinar/  301
+/nodes/n8n-nodes-base.grafana/		/integrations/builtin/app-nodes/n8n-nodes-base.grafana/  301
+/nodes/n8n-nodes-base.graphql/		/integrations/builtin/core-nodes/n8n-nodes-base.graphql/  301
+/nodes/n8n-nodes-base.grist/		/integrations/builtin/app-nodes/n8n-nodes-base.grist/  301
+/nodes/n8n-nodes-base.gSuiteAdmin/		/integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin/  301
+/nodes/n8n-nodes-base.gsuiteadmin/		/integrations/builtin/app-nodes/n8n-nodes-base.gsuiteadmin/  301
+/nodes/n8n-nodes-base.gumroadTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger/  301
+/nodes/n8n-nodes-base.gumroadtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.gumroadtrigger/  301
+/nodes/n8n-nodes-base.hackerNews/		/integrations/builtin/app-nodes/n8n-nodes-base.hackernews/  301
+/nodes/n8n-nodes-base.hackernews/		/integrations/builtin/app-nodes/n8n-nodes-base.hackernews/  301
+/nodes/n8n-nodes-base.haloPSA/		/integrations/builtin/app-nodes/n8n-nodes-base.halopsa/  301
+/nodes/n8n-nodes-base.halopsa/		/integrations/builtin/app-nodes/n8n-nodes-base.halopsa/  301
+/nodes/n8n-nodes-base.harvest/		/integrations/builtin/app-nodes/n8n-nodes-base.harvest/  301
+/nodes/n8n-nodes-base.helpScout/		/integrations/builtin/app-nodes/n8n-nodes-base.helpscout/  301
+/nodes/n8n-nodes-base.helpscout/		/integrations/builtin/app-nodes/n8n-nodes-base.helpscout/  301
+/nodes/n8n-nodes-base.helpScoutTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger/  301
+/nodes/n8n-nodes-base.helpscouttrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.helpscouttrigger/  301
+/nodes/n8n-nodes-base.highLevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highlevel/  301
+/nodes/n8n-nodes-base.highlevel/       /integrations/builtin/app-nodes/n8n-nodes-base.highlevel/  301
+/nodes/n8n-nodes-base.homeAssistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/  301
+/nodes/n8n-nodes-base.homeassistant/		/integrations/builtin/app-nodes/n8n-nodes-base.homeassistant/  301
+/nodes/n8n-nodes-base.htmlExtract/		/integrations/builtin/core-nodes/n8n-nodes-base.html/  301
+/nodes/n8n-nodes-base.htmlextract/		/integrations/builtin/core-nodes/n8n-nodes-base.html/  301
+/nodes/n8n-nodes-base.httpRequest/		/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/  301
+/nodes/n8n-nodes-base.httprequest/      /integrations/builtin/core-nodes/n8n-nodes-base.httprequest/  301
+/nodes/n8n-nodes-base.hubspot/		/integrations/builtin/app-nodes/n8n-nodes-base.hubspot/  301
+/nodes/n8n-nodes-base.hubspotTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/  301
+/nodes/n8n-nodes-base.hubspottrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.hubspottrigger/  301
+/nodes/n8n-nodes-base.humanticAi/		/integrations/builtin/app-nodes/n8n-nodes-base.humanticai/  301
+/nodes/n8n-nodes-base.humanticai/		/integrations/builtin/app-nodes/n8n-nodes-base.humanticai/  301
+/nodes/n8n-nodes-base.hunter/		/integrations/builtin/app-nodes/n8n-nodes-base.hunter/  301
+/nodes/n8n-nodes-base.iCal/		/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/nodes/n8n-nodes-base.if/		/integrations/builtin/core-nodes/n8n-nodes-base.if/  301
+/nodes/n8n-nodes-base.intercom/		/integrations/builtin/app-nodes/n8n-nodes-base.intercom/  301
+/nodes/n8n-nodes-base.interval/		/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/  301
+/nodes/n8n-nodes-base.invoiceNinja/		/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/  301
+/nodes/n8n-nodes-base.invoiceninja/		/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/  301
+/nodes/n8n-nodes-base.invoiceNinjaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/  301
+/nodes/n8n-nodes-base.invoiceninjatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/  301
+/nodes/n8n-nodes-base.itemLists/		/data/transforming-data/  301
+/nodes/n8n-nodes-base.itemlists/        /data/transforming-data/  301
+/nodes/n8n-nodes-base.iterable/		/integrations/builtin/app-nodes/n8n-nodes-base.iterable/  301
+/nodes/n8n-nodes-base.jenkins/		/integrations/builtin/app-nodes/n8n-nodes-base.jenkins/  301
+/nodes/n8n-nodes-base.jira/		/integrations/builtin/app-nodes/n8n-nodes-base.jira/  301
+/nodes/n8n-nodes-base.jiraTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger/  301
+/nodes/n8n-nodes-base.jiratrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.jiratrigger/  301
+/nodes/n8n-nodes-base.jotFormTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger/  301
+/nodes/n8n-nodes-base.jotformtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.jotformtrigger/  301
+/nodes/n8n-nodes-base.kafka/		/integrations/builtin/app-nodes/n8n-nodes-base.kafka/  301
+/nodes/n8n-nodes-base.kafkaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/  301
+/nodes/n8n-nodes-base.kafkatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.kafkatrigger/  301
+/nodes/n8n-nodes-base.keap/		/integrations/builtin/app-nodes/n8n-nodes-base.keap/  301
+/nodes/n8n-nodes-base.keapTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger/  301
+/nodes/n8n-nodes-base.keaptrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.keaptrigger/  301
+/nodes/n8n-nodes-base.kitemaker/		/integrations/builtin/app-nodes/n8n-nodes-base.kitemaker/  301
+/nodes/n8n-nodes-base.koBoToolbox/      /integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/  301
+/nodes/n8n-nodes-base.kobotoolbox/      /integrations/builtin/app-nodes/n8n-nodes-base.kobotoolbox/  301
+/nodes/n8n-nodes-base.koBoToolboxTrigger/  /integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger/  301
+/nodes/n8n-nodes-base.kobotoolboxtrigger/  /integrations/builtin/trigger-nodes/n8n-nodes-base.kobotoolboxtrigger/  301
+/nodes/n8n-nodes-base.lemlist/		/integrations/builtin/app-nodes/n8n-nodes-base.lemlist/  301
+/nodes/n8n-nodes-base.lemlistTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger/  301
+/nodes/n8n-nodes-base.lemlisttrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger/  301
+/nodes/n8n-nodes-base.line/		/integrations/builtin/app-nodes/n8n-nodes-base.line/  301
+/nodes/n8n-nodes-base.linear/       /integrations/builtin/app-nodes/n8n-nodes-base.linear/  301
+/nodes/n8n-nodes-base.linearTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger/  301
+/nodes/n8n-nodes-base.lineartrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.lineartrigger/  301
+/nodes/n8n-nodes-base.lingvaNex/		/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex/  301
+/nodes/n8n-nodes-base.lingvanex/		/integrations/builtin/app-nodes/n8n-nodes-base.lingvanex/  301
+/nodes/n8n-nodes-base.linkedIn/		/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/  301
+/nodes/n8n-nodes-base.linkedin/		/integrations/builtin/app-nodes/n8n-nodes-base.linkedin/  301
+/nodes/n8n-nodes-base.localFileTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/  301
+/nodes/n8n-nodes-base.localfiletrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.localfiletrigger/  301
+/nodes/n8n-nodes-base.magento2/		/integrations/builtin/app-nodes/n8n-nodes-base.magento2/  301
+/nodes/n8n-nodes-base.mailcheck/		/integrations/builtin/app-nodes/n8n-nodes-base.mailcheck/  301
+/nodes/n8n-nodes-base.mailchimp/		/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp/  301
+/nodes/n8n-nodes-base.mailchimpTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger/  301
+/nodes/n8n-nodes-base.mailchimptrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mailchimptrigger/  301
+/nodes/n8n-nodes-base.mailerLite/		/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/  301
+/nodes/n8n-nodes-base.mailerlite/		/integrations/builtin/app-nodes/n8n-nodes-base.mailerlite/  301
+/nodes/n8n-nodes-base.mailerLiteTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger/  301
+/nodes/n8n-nodes-base.mailerlitetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mailerlitetrigger/  301
+/nodes/n8n-nodes-base.mailgun/		/integrations/builtin/app-nodes/n8n-nodes-base.mailgun/  301
+/nodes/n8n-nodes-base.mailjet/		/integrations/builtin/app-nodes/n8n-nodes-base.mailjet/  301
+/nodes/n8n-nodes-base.mailjetTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger/  301
+/nodes/n8n-nodes-base.mailjettrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mailjettrigger/  301
+/nodes/n8n-nodes-base.mandrill/		/integrations/builtin/app-nodes/n8n-nodes-base.mandrill/  301
+/nodes/n8n-nodes-base.markdown/      /integrations/builtin/core-nodes/n8n-nodes-base.markdown/  301
+/nodes/n8n-nodes-base.marketstack/		/integrations/builtin/app-nodes/n8n-nodes-base.marketstack/  301
+/nodes/n8n-nodes-base.matrix/		/integrations/builtin/app-nodes/n8n-nodes-base.matrix/  301
+/nodes/n8n-nodes-base.mattermost/		/integrations/builtin/app-nodes/n8n-nodes-base.mattermost/  301
+/nodes/n8n-nodes-base.mautic/		/integrations/builtin/app-nodes/n8n-nodes-base.mautic/  301
+/nodes/n8n-nodes-base.mauticTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger/  301
+/nodes/n8n-nodes-base.mautictrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mautictrigger/  301
+/nodes/n8n-nodes-base.medium/		/integrations/builtin/app-nodes/n8n-nodes-base.medium/  301
+/nodes/n8n-nodes-base.merge/		/integrations/builtin/core-nodes/n8n-nodes-base.merge/  301
+/nodes/n8n-nodes-base.messageBird/		/integrations/builtin/app-nodes/n8n-nodes-base.messagebird/  301
+/nodes/n8n-nodes-base.messagebird/		/integrations/builtin/app-nodes/n8n-nodes-base.messagebird/  301
+/nodes/n8n-nodes-base.metabase/		/integrations/builtin/app-nodes/n8n-nodes-base.metabase/  301
+/nodes/n8n-nodes-base.microsoftDynamicsCrm/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm/  301
+/nodes/n8n-nodes-base.microsoftdynamicscrm/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdynamicscrm/  301
+/nodes/n8n-nodes-base.microsoftExcel/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel/  301
+/nodes/n8n-nodes-base.microsoftexcel/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftexcel/  301
+/nodes/n8n-nodes-base.microsoftGraphSecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity/  301
+/nodes/n8n-nodes-base.microsoftgraphsecurity/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftgraphsecurity/  301
+/nodes/n8n-nodes-base.microsoftOneDrive/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/  301
+/nodes/n8n-nodes-base.microsoftonedrive/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftonedrive/  301
+/nodes/n8n-nodes-base.microsoftOutlook/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/  301
+/nodes/n8n-nodes-base.microsoftoutlook/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftoutlook/  301
+/nodes/n8n-nodes-base.microsoftSql/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/  301
+/nodes/n8n-nodes-base.microsoftsql/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsql/  301
+/nodes/n8n-nodes-base.microsoftTeams/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/  301
+/nodes/n8n-nodes-base.microsoftteams/		/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams/  301
+/nodes/n8n-nodes-base.microsoftToDo/		/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/  301
+/nodes/n8n-nodes-base.microsofttodo/		/integrations/builtin/app-nodes/n8n-nodes-base.microsofttodo/  301
+/nodes/n8n-nodes-base.mindee/		/integrations/builtin/app-nodes/n8n-nodes-base.mindee/  301
+/nodes/n8n-nodes-base.misp/		/integrations/builtin/app-nodes/n8n-nodes-base.misp/  301
+/nodes/n8n-nodes-base.mocean/		/integrations/builtin/app-nodes/n8n-nodes-base.mocean/  301
+/nodes/n8n-nodes-base.mondayCom/		/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/  301
+/nodes/n8n-nodes-base.mondaycom/		/integrations/builtin/app-nodes/n8n-nodes-base.mondaycom/  301
+/nodes/n8n-nodes-base.mongoDb/		/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/  301
+/nodes/n8n-nodes-base.mongodb/		/integrations/builtin/app-nodes/n8n-nodes-base.mongodb/  301
+/nodes/n8n-nodes-base.monicaCrm/		/integrations/builtin/app-nodes/n8n-nodes-base.monicacrm/  301
+/nodes/n8n-nodes-base.monicacrm/		/integrations/builtin/app-nodes/n8n-nodes-base.monicacrm/  301
+/nodes/n8n-nodes-base.moveBinaryData/		/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/nodes/n8n-nodes-base.movebinarydata/		/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/nodes/n8n-nodes-base.mqtt/		/integrations/builtin/app-nodes/n8n-nodes-base.mqtt/  301
+/nodes/n8n-nodes-base.mqttTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger/  301
+/nodes/n8n-nodes-base.mqtttrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.mqtttrigger/  301
+/nodes/n8n-nodes-base.msg91/		/integrations/builtin/app-nodes/n8n-nodes-base.msg91/  301
+/nodes/n8n-nodes-base.mySql/		/integrations/builtin/app-nodes/n8n-nodes-base.mysql/  301
+/nodes/n8n-nodes-base.mysql/		/integrations/builtin/app-nodes/n8n-nodes-base.mysql/  301
+/nodes/n8n-nodes-base.n8nTrainingCustomerMessenger/		/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger/  301
+/nodes/n8n-nodes-base.n8ntrainingcustomermessenger/		/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomermessenger/  301
+/nodes/n8n-nodes-base.n8nTrainingCustomerDatastore/		/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore/  301
+/nodes/n8n-nodes-base.n8ntrainingcustomercatastore/		/integrations/builtin/app-nodes/n8n-nodes-base.n8ntrainingcustomerdatastore/  301
+/nodes/n8n-nodes-base.n8nTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger/  301
+/nodes/n8n-nodes-base.n8ntrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.n8ntrigger/  301
+/nodes/n8n-nodes-base.nasa/		/integrations/builtin/app-nodes/n8n-nodes-base.nasa/  301
+/nodes/n8n-nodes-base.netlify/		/integrations/builtin/app-nodes/n8n-nodes-base.netlify/  301
+/nodes/n8n-nodes-base.netlifyTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger/  301
+/nodes/n8n-nodes-base.netlifytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.netlifytrigger/  301
+/nodes/n8n-nodes-base.nextCloud/		/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/  301
+/nodes/n8n-nodes-base.nextcloud/		/integrations/builtin/app-nodes/n8n-nodes-base.nextcloud/  301
+/nodes/n8n-nodes-base.nocoDb/		/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/  301
+/nodes/n8n-nodes-base.nocodb/		/integrations/builtin/app-nodes/n8n-nodes-base.nocodb/  301
+/nodes/n8n-nodes-base.noOp/		/integrations/builtin/core-nodes/n8n-nodes-base.noop/  301
+/nodes/n8n-nodes-base.noop/		/integrations/builtin/core-nodes/n8n-nodes-base.noop/  301
+/nodes/n8n-nodes-base.notion/		/integrations/builtin/app-nodes/n8n-nodes-base.notion/  301
+/nodes/n8n-nodes-base.notionTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/  301
+/nodes/n8n-nodes-base.notiontrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.notiontrigger/  301
+/nodes/n8n-nodes-base.odoo/		/integrations/builtin/app-nodes/n8n-nodes-base.odoo/  301
+/nodes/n8n-nodes-base.oneSimpleApi/		/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/  301
+/nodes/n8n-nodes-base.onesimpleapi/		/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/  301
+/nodes/n8n-nodes-base.onfleet/		/integrations/builtin/app-nodes/n8n-nodes-base.onfleet/  301
+/nodes/n8n-nodes-base.onfleetTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger/  301
+/nodes/n8n-nodes-base.onfleettrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.onfleettrigger/  301
+/nodes/n8n-nodes-base.openThesaurus/		/integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus/  301
+/nodes/n8n-nodes-base.openthesaurus/		/integrations/builtin/app-nodes/n8n-nodes-base.openthesaurus/  301
+/nodes/n8n-nodes-base.openWeatherMap/		/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/  301
+/nodes/n8n-nodes-base.openweathermap/		/integrations/builtin/app-nodes/n8n-nodes-base.openweathermap/  301
+/nodes/n8n-nodes-base.oura/		/integrations/builtin/app-nodes/n8n-nodes-base.oura/  301
+/nodes/n8n-nodes-base.paddle/		/integrations/builtin/app-nodes/n8n-nodes-base.paddle/  301
+/nodes/n8n-nodes-base.pagerDuty/		/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/  301
+/nodes/n8n-nodes-base.pagerduty/		/integrations/builtin/app-nodes/n8n-nodes-base.pagerduty/  301
+/nodes/n8n-nodes-base.payPal/		/integrations/builtin/app-nodes/n8n-nodes-base.paypal/  301
+/nodes/n8n-nodes-base.paypal/		/integrations/builtin/app-nodes/n8n-nodes-base.paypal/  301
+/nodes/n8n-nodes-base.payPalTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger/  301
+/nodes/n8n-nodes-base.paypaltrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.paypaltrigger/  301
+/nodes/n8n-nodes-base.peekalink/		/integrations/builtin/app-nodes/n8n-nodes-base.peekalink/  301
+/nodes/n8n-nodes-base.phantombuster/		/integrations/builtin/app-nodes/n8n-nodes-base.phantombuster/  301
+/nodes/n8n-nodes-base.philipsHue/		/integrations/builtin/app-nodes/n8n-nodes-base.philipshue/  301
+/nodes/n8n-nodes-base.philipsHue/		/integrations/builtin/app-nodes/n8n-nodes-base.philipshue/  301
+/nodes/n8n-nodes-base.pipedrive/		/integrations/builtin/app-nodes/n8n-nodes-base.pipedrive/  301
+/nodes/n8n-nodes-base.pipedriveTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/  301
+/nodes/n8n-nodes-base.pipedrivetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.pipedrivetrigger/  301
+/nodes/n8n-nodes-base.plivo/		/integrations/builtin/app-nodes/n8n-nodes-base.plivo/  301
+/nodes/n8n-nodes-base.postbin/	/integrations/builtin/app-nodes/n8n-nodes-base.postbin/  301
+/nodes/n8n-nodes-base.postgres/		/integrations/builtin/app-nodes/n8n-nodes-base.postgres/  301
+/nodes/n8n-nodes-base.postHog/		/integrations/builtin/app-nodes/n8n-nodes-base.posthog/  301
+/nodes/n8n-nodes-base.postmarkTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger/  301
+/nodes/n8n-nodes-base.postmarktrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.postmarktrigger/  301
+/nodes/n8n-nodes-base.profitWell/		/integrations/builtin/app-nodes/n8n-nodes-base.profitwell/  301
+/nodes/n8n-nodes-base.profitwell/		/integrations/builtin/app-nodes/n8n-nodes-base.profitwell/  301
+/nodes/n8n-nodes-base.pushbullet/		/integrations/builtin/app-nodes/n8n-nodes-base.pushbullet/  301
+/nodes/n8n-nodes-base.pushcut/		/integrations/builtin/app-nodes/n8n-nodes-base.pushcut/  301
+/nodes/n8n-nodes-base.pushcutTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger/  301
+/nodes/n8n-nodes-base.pushcuttrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.pushcuttrigger/  301
+/nodes/n8n-nodes-base.pushover/		/integrations/builtin/app-nodes/n8n-nodes-base.pushover/  301
+/nodes/n8n-nodes-base.questDb/		/integrations/builtin/app-nodes/n8n-nodes-base.questdb/  301
+/nodes/n8n-nodes-base.questdb/		/integrations/builtin/app-nodes/n8n-nodes-base.questdb/  301
+/nodes/n8n-nodes-base.quickbase/		/integrations/builtin/app-nodes/n8n-nodes-base.quickbase/  301
+/nodes/n8n-nodes-base.quickbooks/		/integrations/builtin/app-nodes/n8n-nodes-base.quickbooks/  301
+/nodes/n8n-nodes-base.rabbitmq/		/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq/  301
+/nodes/n8n-nodes-base.rabbitmqTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/  301
+/nodes/n8n-nodes-base.rabbitmqtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger/  301
+/nodes/n8n-nodes-base.raindrop/		/integrations/builtin/app-nodes/n8n-nodes-base.raindrop/  301
+/nodes/n8n-nodes-base.readBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/nodes/n8n-nodes-base.readbinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/nodes/n8n-nodes-base.readBinaryFiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/nodes/n8n-nodes-base.readbinaryfiles/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/nodes/n8n-nodes-base.readPDF/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/  301
+/nodes/n8n-nodes-base.readpdf/		/integrations/builtin/core-nodes/n8n-nodes-base.extractfromfile/  301
+/nodes/n8n-nodes-base.reddit/		/integrations/builtin/app-nodes/n8n-nodes-base.reddit/  301
+/nodes/n8n-nodes-base.redis/		/integrations/builtin/app-nodes/n8n-nodes-base.redis/  301
+/nodes/n8n-nodes-base.redisTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger/  301
+/nodes/n8n-nodes-base.redistrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.redistrigger/  301
+/nodes/n8n-nodes-base.renameKeys/		/integrations/builtin/core-nodes/n8n-nodes-base.renamekeys/  301
+/nodes/n8n-nodes-base.renamekeys/		/integrations/builtin/core-nodes/n8n-nodes-base.renamekeys/  301
+/nodes/n8n-nodes-base.respondToWebhook/		/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/  301
+/nodes/n8n-nodes-base.respondtowebhook/		/integrations/builtin/core-nodes/n8n-nodes-base.respondtowebhook/  301
+/nodes/n8n-nodes-base.rocketchat/		/integrations/builtin/app-nodes/n8n-nodes-base.rocketchat/  301
+/nodes/n8n-nodes-base.rssFeedRead/		/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/  301
+/nodes/n8n-nodes-base.rssfeedread/		/integrations/builtin/core-nodes/n8n-nodes-base.rssfeedread/  301
+/nodes/n8n-nodes-base.rundeck/		/integrations/builtin/app-nodes/n8n-nodes-base.rundeck/  301
+/nodes/n8n-nodes-base.s3/		/integrations/builtin/app-nodes/n8n-nodes-base.s3/  301
+/nodes/n8n-nodes-base.salesforce/		/integrations/builtin/app-nodes/n8n-nodes-base.salesforce/  301
+/nodes/n8n-nodes-base.salesmate/		/integrations/builtin/app-nodes/n8n-nodes-base.salesmate/  301
+/nodes/n8n-nodes-base.seaTable/		/integrations/builtin/app-nodes/n8n-nodes-base.seatable/  301
+/nodes/n8n-nodes-base.seatable/		/integrations/builtin/app-nodes/n8n-nodes-base.seatable/  301
+/nodes/n8n-nodes-base.seaTableTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger/  301
+/nodes/n8n-nodes-base.seatabletrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.seatabletrigger/  301
+/nodes/n8n-nodes-base.securityScorecard/		/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard/  301
+/nodes/n8n-nodes-base.securityscorecard/		/integrations/builtin/app-nodes/n8n-nodes-base.securityscorecard/  301
+/nodes/n8n-nodes-base.segment/		/integrations/builtin/app-nodes/n8n-nodes-base.segment/  301
+/nodes/n8n-nodes-base.sendGrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/  301
+/nodes/n8n-nodes-base.sendgrid/		/integrations/builtin/app-nodes/n8n-nodes-base.sendgrid/  301
+/nodes/n8n--nodes-base.sendInBlue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/  301
+/nodes/n8n--nodes-base.sendinblue/   /integrations/builtin/app-nodes/n8n-nodes-base.brevo/  301
+/nodes/n8n--nodes-base.sendInBlueTrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/  301
+/nodes/n8n--nodes-base.sendinbluetrigger/   /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/  301
+/nodes/n8n-nodes-base.sendy/		/integrations/builtin/app-nodes/n8n-nodes-base.sendy/  301
+/nodes/n8n-nodes-base.sentryIo/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/  301
+/nodes/n8n-nodes-base.sentryio/		/integrations/builtin/app-nodes/n8n-nodes-base.sentryio/  301
+/nodes/n8n-nodes-base.serviceNow/		/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/  301
+/nodes/n8n-nodes-base.servicenow/		/integrations/builtin/app-nodes/n8n-nodes-base.servicenow/  301
+/nodes/n8n-nodes-base.set/		/integrations/builtin/core-nodes/n8n-nodes-base.set/  301
+/nodes/n8n-nodes-base.shopify/		/integrations/builtin/app-nodes/n8n-nodes-base.shopify/  301
+/nodes/n8n-nodes-base.shopifyTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger/  301
+/nodes/n8n-nodes-base.shopifytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.shopifytrigger/  301
+/nodes/n8n-nodes-base.signl4/		/integrations/builtin/app-nodes/n8n-nodes-base.signl4/  301
+/nodes/n8n-nodes-base.slack/		/integrations/builtin/app-nodes/n8n-nodes-base.slack/  301
+/nodes/n8n-nodes-base.sms77/		/integrations/builtin/app-nodes/n8n-nodes-base.sms77/  301
+/nodes/n8n-nodes-base.snowflake/		/integrations/builtin/app-nodes/n8n-nodes-base.snowflake/  301
+/nodes/n8n-nodes-base.splitInBatches/		/integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/  301
+/nodes/n8n-nodes-base.splitinbatches/       /integrations/builtin/core-nodes/n8n-nodes-base.splitinbatches/  301
+/nodes/n8n-nodes-base.splunk/		/integrations/builtin/app-nodes/n8n-nodes-base.splunk/  301
+/nodes/n8n-nodes-base.spontit/		/integrations/builtin/app-nodes/n8n-nodes-base.spontit/  301
+/nodes/n8n-nodes-base.spotify/		/integrations/builtin/app-nodes/n8n-nodes-base.spotify/  301
+/nodes/n8n-nodes-base.spreadsheetFile/		/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/nodes/n8n-nodes-base.spreadsheetfile/		/integrations/builtin/core-nodes/n8n-nodes-base.converttofile/  301
+/nodes/n8n-nodes-base.sseTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger/  301
+/nodes/n8n-nodes-base.ssetrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.ssetrigger/  301
+/nodes/n8n-nodes-base.ssh/		/integrations/builtin/core-nodes/n8n-nodes-base.ssh/  301
+/nodes/n8n-nodes-base.stackby/		/integrations/builtin/app-nodes/n8n-nodes-base.stackby/  301
+/nodes/n8n-nodes-base.start/		/integrations/builtin/core-nodes/n8n-nodes-base.start/  301
+/nodes/n8n-nodes-base.stopAndError/		/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror/  301
+/nodes/n8n-nodes-base.stopanderror/		/integrations/builtin/core-nodes/n8n-nodes-base.stopanderror/  301
+/nodes/n8n-nodes-base.storyblok/		/integrations/builtin/app-nodes/n8n-nodes-base.storyblok/  301
+/nodes/n8n-nodes-base.strapi/		/integrations/builtin/app-nodes/n8n-nodes-base.strapi/  301
+/nodes/n8n-nodes-base.strava/		/integrations/builtin/app-nodes/n8n-nodes-base.strava/  301
+/nodes/n8n-nodes-base.stravaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger/  301
+/nodes/n8n-nodes-base.stravatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.stravatrigger/  301
+/nodes/n8n-nodes-base.stripe/		/integrations/builtin/app-nodes/n8n-nodes-base.stripe/  301
+/nodes/n8n-nodes-base.stripeTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger/  301
+/nodes/n8n-nodes-base.stripetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.stripetrigger/  301
+/nodes/n8n-nodes-base.supabase/		/integrations/builtin/app-nodes/n8n-nodes-base.supabase/  301
+/nodes/n8n-nodes-base.surveyMonkeyTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger/  301
+/nodes/n8n-nodes-base.surveymonkeytrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.surveymonkeytrigger/  301
+/nodes/n8n-nodes-base.switch/		/integrations/builtin/core-nodes/n8n-nodes-base.switch/  301
+/nodes/n8n-nodes-base.syncroMsp/		/integrations/builtin/app-nodes/n8n-nodes-base.syncromsp/  301
+/nodes/n8n-nodes-base.syncromsp/		/integrations/builtin/app-nodes/n8n-nodes-base.syncromsp/  301
+/nodes/n8n-nodes-base.taiga/		/integrations/builtin/app-nodes/n8n-nodes-base.taiga/  301
+/nodes/n8n-nodes-base.taigaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger/  301
+/nodes/n8n-nodes-base.taigatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.taigatrigger/  301
+/nodes/n8n-nodes-base.tapfiliate/		/integrations/builtin/app-nodes/n8n-nodes-base.tapfiliate/  301
+/nodes/n8n-nodes-base.telegram/		/integrations/builtin/app-nodes/n8n-nodes-base.telegram/  301
+/nodes/n8n-nodes-base.telegramTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/  301
+/nodes/n8n-nodes-base.telegramtrigger/      /integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/  301
+/nodes/n8n-nodes-base.theHive/		/integrations/builtin/app-nodes/n8n-nodes-base.thehive/  301
+/nodes/n8n-nodes-base.thehive/		/integrations/builtin/app-nodes/n8n-nodes-base.thehive/  301
+/nodes/n8n-nodes-base.theHiveTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/  301
+/nodes/n8n-nodes-base.thehivetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger/  301
+/nodes/n8n-nodes-base.timescaleDb/		/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/  301
+/nodes/n8n-nodes-base.timescaledb/		/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb/  301
+/nodes/n8n-nodes-base.todoist/		/integrations/builtin/app-nodes/n8n-nodes-base.todoist/  301
+/nodes/n8n-nodes-base.togglTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger/  301
+/nodes/n8n-nodes-base.toggltrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.toggltrigger/  301
+/nodes/n8n-nodes-base.travisCi/		/integrations/builtin/app-nodes/n8n-nodes-base.travisci/  301
+/nodes/n8n-nodes-base.travisci/		/integrations/builtin/app-nodes/n8n-nodes-base.travisci/  301
+/nodes/n8n-nodes-base.trello/		/integrations/builtin/app-nodes/n8n-nodes-base.trello/  301
+/nodes/n8n-nodes-base.trelloTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger/  301
+/nodes/n8n-nodes-base.trellotrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.trellotrigger/  301
+/nodes/n8n-nodes-base.twake/		/integrations/builtin/app-nodes/n8n-nodes-base.twake/  301
+/nodes/n8n-nodes-base.twilio/		/integrations/builtin/app-nodes/n8n-nodes-base.twilio/  301
+/nodes/n8n-nodes-base.twist/		/integrations/builtin/app-nodes/n8n-nodes-base.twist/  301
+/nodes/n8n-nodes-base.twitter/		/integrations/builtin/app-nodes/n8n-nodes-base.twitter/  301
+/nodes/n8n-nodes-base.typeformTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/  301
+/nodes/n8n-nodes-base.typeformtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.typeformtrigger/  301
+/nodes/n8n-nodes-base.unleashedSoftware/		/integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware/  301
+/nodes/n8n-nodes-base.unleashedsoftware/		/integrations/builtin/app-nodes/n8n-nodes-base.unleashedsoftware/  301
+/nodes/n8n-nodes-base.uplead/		/integrations/builtin/app-nodes/n8n-nodes-base.uplead/  301
+/nodes/n8n-nodes-base.uproc/		/integrations/builtin/app-nodes/n8n-nodes-base.uproc/  301
+/nodes/n8n-nodes-base.uptimeRobot/		/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot/  301
+/nodes/n8n-nodes-base.uptimerobot/		/integrations/builtin/app-nodes/n8n-nodes-base.uptimerobot/  301
+/nodes/n8n-nodes-base.urlScanIo/		/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio/  301
+/nodes/n8n-nodes-base.urlscanio/		/integrations/builtin/app-nodes/n8n-nodes-base.urlscanio/  301
+/nodes/n8n-nodes-base.vero/		/integrations/builtin/app-nodes/n8n-nodes-base.vero/  301
+/nodes/n8n-nodes-base.vonage/		/integrations/builtin/app-nodes/n8n-nodes-base.vonage/  301
+/nodes/n8n-nodes-base.wait/		/integrations/builtin/core-nodes/n8n-nodes-base.wait/  301
+/nodes/n8n-nodes-base.webflow/		/integrations/builtin/app-nodes/n8n-nodes-base.webflow/  301
+/nodes/n8n-nodes-base.webflowTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/  301
+/nodes/n8n-nodes-base.webflowtrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.webflowtrigger/  301
+/nodes/n8n-nodes-base.webhook/		/integrations/builtin/core-nodes/n8n-nodes-base.webhook/  301
+/nodes/n8n-nodes-base.wekan/		/integrations/builtin/app-nodes/n8n-nodes-base.wekan/  301
+/nodes/n8n-nodes-base.wise/		/integrations/builtin/app-nodes/n8n-nodes-base.wise/  301
+/nodes/n8n-nodes-base.wiseTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger/  301
+/nodes/n8n-nodes-base.wisetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wisetrigger/  301
+/nodes/n8n-nodes-base.wooCommerce/		/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/  301
+/nodes/n8n-nodes-base.woocommerce/		/integrations/builtin/app-nodes/n8n-nodes-base.woocommerce/  301
+/nodes/n8n-nodes-base.wooCommerceTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger/  301
+/nodes/n8n-nodes-base.woocommercetrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.woocommercetrigger/  301
+/nodes/n8n-nodes-base.wordpress/		/integrations/builtin/app-nodes/n8n-nodes-base.wordpress/  301
+/nodes/n8n-nodes-base.workableTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger/  301
+/nodes/n8n-nodes-base.workabletrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.workabletrigger/  301
+/nodes/n8n-nodes-base.workflowTrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/  301
+/nodes/n8n-nodes-base.workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/  301
+/nodes/n8n-nodes-base.Workflowtrigger/		/integrations/builtin/core-nodes/n8n-nodes-base.workflowtrigger/  301
+/nodes/n8n-nodes-base.writeBinaryFile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/nodes/n8n-nodes-base.writebinaryfile/		/integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
+/nodes/n8n-nodes-base.wufooTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/  301
+/nodes/n8n-nodes-base.wufootrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.wufootrigger/  301
+/nodes/n8n-nodes-base.xero/		/integrations/builtin/app-nodes/n8n-nodes-base.xero/  301
+/nodes/n8n-nodes-base.xml/		/integrations/builtin/core-nodes/n8n-nodes-base.xml/  301
+/nodes/n8n-nodes-base.yourls/		/integrations/builtin/app-nodes/n8n-nodes-base.yourls/  301
+/nodes/n8n-nodes-base.youTube/		/integrations/builtin/app-nodes/n8n-nodes-base.youtube/  301
+/nodes/n8n-nodes-base.youtube/		/integrations/builtin/app-nodes/n8n-nodes-base.youtube/  301
+/nodes/n8n-nodes-base.zammad/		/integrations/builtin/app-nodes/n8n-nodes-base.zammad/  301
+/nodes/n8n-nodes-base.zendesk/		/integrations/builtin/app-nodes/n8n-nodes-base.zendesk/  301
+/nodes/n8n-nodes-base.zendeskTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger/  301
+/nodes/n8n-nodes-base.zendesktrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.zendesktrigger/  301
+/nodes/n8n-nodes-base.zohoCrm/		/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/  301
+/nodes/n8n-nodes-base.zohocrm/		/integrations/builtin/app-nodes/n8n-nodes-base.zohocrm/  301
+/nodes/n8n-nodes-base.zoom/		/integrations/builtin/app-nodes/n8n-nodes-base.zoom/  301
+/nodes/n8n-nodes-base.zulip/		/integrations/builtin/app-nodes/n8n-nodes-base.zulip/  301
+/nodes/nodes-library/		/integrations/  301
+/nodes/		/integrations/builtin/app-nodes/  301
+
+# Old redirects
+
+/reference/changelog.html   /release-notes/  301
+
+# Send in Blue Rebrand
+/integrations/builtin/app-nodes/n8n-nodes-base.sendinblue/ /integrations/builtin/app-nodes/n8n-nodes-base.brevo/  301
+/integrations/builtin/trigger-nodes/n8n-nodes-base.sendinbluetrigger/ /integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger/  301
+/integrations/builtin/credentials/sendinblue/ /integrations/builtin/credentials/brevo/  301

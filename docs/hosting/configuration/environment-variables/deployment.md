@@ -30,7 +30,7 @@ To learn more about proxy environment variables, check the [environment variable
 | `ALL_PROXY` | String | - | A URL to proxy both unencrypted and encrypted HTTP requests through. When set, n8n uses this value when more specific variables (`HTTP_PROXY` or `HTTPS_PROXY`) aren't present. |
 | `NO_PROXY` | String | - | A comma-separated list of hostnames or URLs that should bypass the proxy. When using `HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY`, n8n will connect directly to the URLs or hostnames defined here instead of using the proxy. |
 | `N8N_EDITOR_BASE_URL` | String | - | Public URL where users can access the editor. Also used for emails sent from n8n and the redirect URL for SAML based authentication. |
-| `N8N_CONFIG_FILES` | String | - | Use to provide the path to any JSON [configuration file](/hosting/configuration/configuration-methods.md). |
+| `N8N_CONFIG_FILES` (deprecated) | String | - | Use to provide the path to a JSON configuration file. This option is deprecated and will be removed in a future version. Use `.env` files or `*_FILE` environment variables instead. |
 | `N8N_DISABLE_UI` | Boolean | `false` | Set to `true` to disable the UI. |
 | `N8N_PREVIEW_MODE` | Boolean | `false` | Set to `true` to run in preview mode. |
 | `N8N_TEMPLATES_ENABLED` | Boolean | `false` | Enables [workflow templates](/glossary.md#template-n8n) (true) or disable (false). |

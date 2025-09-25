@@ -43,10 +43,10 @@
 /getting-started/key-components.html    /workflows/
 /integrations/buil%20%20%20%20%20%20%20%20%20%20%205tin/core-nodes/n8n-nodes-base.start/    /integrations/builtin/core-nodes/n8n-nodes-base.start/
 /getting-started/create-your-first-workflow/*    /try-it-out/
-/reference/security/   /privacy-security/security/
+/reference/security/   https://n8n.io/legal/#security
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-/reference/security.html    /privacy-security/security/
+/reference/security.html    https://n8n.io/legal/#security
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/
@@ -86,7 +86,6 @@
 /manage-cloud/   /manage-cloud/overview/
 /hosting/environment-variables/*   /hosting/configuration/:splat
 /hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
-/hosting/logging-monitoring/security-audit/   /hosting/logging-monitoring/security-audit/
 /hosting/installation/   /hosting/
 /hosting/logging-monitoring/   /hosting/
 /hosting/environment-variables/   /hosting/
@@ -208,7 +207,7 @@
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/
 /reference/cli-commands/   /hosting/cli-commands/
 /reference/update/   /release-notes/
-/security-audit/   /hosting/logging-monitoring/security-audit/
+/security-audit/   /hosting/securing/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
@@ -629,8 +628,8 @@
 /nodes/n8n-nodes-base.invoiceninja/		/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/
 /nodes/n8n-nodes-base.invoiceNinjaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/
 /nodes/n8n-nodes-base.invoiceninjatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/
-/nodes/n8n-nodes-base.itemLists/		/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/
-/nodes/n8n-nodes-base.itemlists/        /integrations/builtin/core-nodes/n8n-nodes-base.itemlists/
+/nodes/n8n-nodes-base.itemLists/		/data/transforming-data/
+/nodes/n8n-nodes-base.itemlists/        /data/transforming-data/
 /nodes/n8n-nodes-base.iterable/		/integrations/builtin/app-nodes/n8n-nodes-base.iterable/
 /nodes/n8n-nodes-base.jenkins/		/integrations/builtin/app-nodes/n8n-nodes-base.jenkins/
 /nodes/n8n-nodes-base.jira/		/integrations/builtin/app-nodes/n8n-nodes-base.jira/

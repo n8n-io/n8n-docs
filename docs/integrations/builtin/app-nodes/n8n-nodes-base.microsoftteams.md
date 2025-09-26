@@ -28,6 +28,8 @@ Refer to [Microsoft credentials](/integrations/builtin/credentials/microsoft.md)
 * Channel Message
     * Create
     * Get Many
+* Chat
+	* Create
 * Chat Message
 	* Create
 	* Get

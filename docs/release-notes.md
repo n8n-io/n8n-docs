@@ -149,7 +149,7 @@ This release contains core updates, editor improvements, a new node, node update
 
 We’ve made updates to strengthen Single Sign-On (SSO) reliability and security, especially for enterprise and multi-instance setups.
 
-- OIDC and SAML sync in multi-main setups [version: 1.113.0] In multi-main deployments, updates to SSO settings are now synchronized across all instances, ensuring consistent login behavior everywhere.
+- OIDC and SAML sync in multi-main setups [version: 1.113.0]: In multi-main deployments, updates to SSO settings are now synchronized across all instances, ensuring consistent login behavior everywhere.
 - Enhanced OIDC integration [version 1.111.0]: n8n now supports OIDC providers that enforce state and nonce parameters. These are validated during login, providing smoother and more secure Single Sign-On.
 
 ### Filter insights by project
@@ -235,7 +235,7 @@ This release contains API improvements, core updates, editor improvements, node 
 
 We’ve made several updates to the Executions API:
 
-- Execution details: GET /executions now includes *status* and *workflow_name* in the response.
+- Execution details: `GET /executions` now includes *status* and *workflow_name* in the response.
 - Retry execution endpoint: Added new public API endpoints to retry failed executions.
 - Additional filters: You can now filter executions by running or canceled status.
 

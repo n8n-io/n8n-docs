@@ -43,10 +43,10 @@
 /getting-started/key-components.html    /workflows/
 /integrations/buil%20%20%20%20%20%20%20%20%20%20%205tin/core-nodes/n8n-nodes-base.start/    /integrations/builtin/core-nodes/n8n-nodes-base.start/
 /getting-started/create-your-first-workflow/*    /try-it-out/
-/reference/security/   /privacy-security/security/
+/reference/security/   https://n8n.io/legal/#security
 /reference/reference.html   /
 /integrations/builtin/core-nodes/n8n-nodes-base.executionData  /integrations/builtin/core-nodes/n8n-nodes-base.executiondata/
-/reference/security.html    /privacy-security/security/
+/reference/security.html    https://n8n.io/legal/#security
 
 # Moved from 404.html
 /getting-started/key-concepts/   /flow-logic/
@@ -84,12 +84,11 @@
 /n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/
 /contributing/   /help-community/contributing/
 /manage-cloud/   /manage-cloud/overview/
-/hosting/environment-variables/*   /hosting/configuration/:splat
-/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/
-/hosting/logging-monitoring/security-audit/   /hosting/logging-monitoring/security-audit/
-/hosting/installation/   /hosting/
-/hosting/logging-monitoring/   /hosting/
-/hosting/environment-variables/   /hosting/
+/hosting/environment-variables/   /hosting/  301
+/hosting/environment-variables/*   /hosting/configuration/:splat  301
+/hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/  301
+/hosting/installation/   /hosting/  301
+/hosting/logging-monitoring/   /hosting/  301
 /hosting/architecture/   /hosting/architecture/overview/
 /hosting/scaling/   /hosting/scaling/overview/
 /hosting/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/
@@ -161,7 +160,7 @@
 
 /code-examples/ /code/
 /code-examples/methods-variables-reference/   /code/builtin/
-/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat
+/code-examples/expressions/data-transformation-functions/*   /code/builtin/data-transformation-functions/:splat  301
 /code-examples/javascript-functions/number-items-last-node/   /code/cookbook/code-node/number-items-last-node/
 /code-examples/javascript-functions/split-binary-file-data/   /code/cookbook/code-node/split-binary-file-data/
 /code-examples/javascript-functions/get-binary-data-buffer/   /code/cookbook/code-node/get-binary-data-buffer/
@@ -208,7 +207,7 @@
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/
 /reference/cli-commands/   /hosting/cli-commands/
 /reference/update/   /release-notes/
-/security-audit/   /hosting/logging-monitoring/security-audit/
+/security-audit/   /hosting/securing/security-audit/
 /reference/data-collection/   /privacy-security/privacy/
 
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/
@@ -234,7 +233,7 @@
 /hosting/options/   /choose-n8n/
 /hosting/installation/cloud/   /manage-cloud/overview/
 /hosting/installation/desktop-app/   /choose-n8n/
-/hosting/server-setups/*   /hosting/installation/server-setups/:splat
+/hosting/server-setups/*   /hosting/installation/server-setups/:splat  301
 /hosting/configuration/   /hosting/configuration/environment-variables/
 /hosting/updating/   /reference/update/
 /hosting/updating/cloud/   /manage-cloud/update-cloud-version/
@@ -293,10 +292,10 @@
 
 # Integrations menu refactor
 
-/integrations/nodes/*  /integrations/builtin/app-nodes/:splat
-/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat
-/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat
-/integrations/credentials/*   /integrations/builtin/credentials/:splat
+/integrations/nodes/*  /integrations/builtin/app-nodes/:splat  301
+/integrations/trigger-nodes/*   /integrations/builtin/trigger-nodes/:splat  301
+/integrations/core-nodes/*   /integrations/builtin/core-nodes/:splat  301
+/integrations/credentials/*   /integrations/builtin/credentials/:splat  301
 
 # Creating nodes overhaul
 
@@ -353,7 +352,7 @@
 /credentials/smtp/  /integrations/builtin/credentials/sendemail/
 /credentials/facebookGraphApp   /integrations/builtin/credentials/facebookapp
 
-/credentials/* /integrations/builtin/credentials/:splat
+/credentials/* /integrations/builtin/credentials/:splat  301
 
 /nodes/creating-nodes/      /integrations/creating-nodes/
 /nodes/creating-nodes/general-guidelines.html        /integrations/creating-nodes/code/standards/
@@ -629,8 +628,8 @@
 /nodes/n8n-nodes-base.invoiceninja/		/integrations/builtin/app-nodes/n8n-nodes-base.invoiceninja/
 /nodes/n8n-nodes-base.invoiceNinjaTrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/
 /nodes/n8n-nodes-base.invoiceninjatrigger/		/integrations/builtin/trigger-nodes/n8n-nodes-base.invoiceninjatrigger/
-/nodes/n8n-nodes-base.itemLists/		/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/
-/nodes/n8n-nodes-base.itemlists/        /integrations/builtin/core-nodes/n8n-nodes-base.itemlists/
+/nodes/n8n-nodes-base.itemLists/		/data/transforming-data/
+/nodes/n8n-nodes-base.itemlists/        /data/transforming-data/
 /nodes/n8n-nodes-base.iterable/		/integrations/builtin/app-nodes/n8n-nodes-base.iterable/
 /nodes/n8n-nodes-base.jenkins/		/integrations/builtin/app-nodes/n8n-nodes-base.jenkins/
 /nodes/n8n-nodes-base.jira/		/integrations/builtin/app-nodes/n8n-nodes-base.jira/

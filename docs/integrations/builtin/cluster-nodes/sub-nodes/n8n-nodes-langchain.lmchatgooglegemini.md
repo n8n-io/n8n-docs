@@ -31,6 +31,16 @@ n8n dynamically loads models from the Google Gemini API and you'll only see the 
 * **Top P**: Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. 
 * **Safety Settings**: Gemini supports adjustable safety settings. Refer to Google's [Gemini API safety settings](https://ai.google.dev/docs/safety_setting_gemini) for information on the available filters and levels.
 
+## Limitations
+
+###  No proxy support
+
+The Google Gemini Chat Model node uses Google's SDK, which doesn't support proxy configuration.
+
+If you need to proxy your connection, as a work around, you can set up a dedicated reverse proxy for Gemini requests and change the **Host** parameter in your [Google Gemini credentials](/integrations/builtin/credentials/googleai.md) to point to your proxy address:
+
+![Google Gemini credentials proxy configuration](/_images/integrations/builtin/cluster-nodes/google-gemini-proxy-config.png)
+
 ## Templates and examples
 
 <!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->

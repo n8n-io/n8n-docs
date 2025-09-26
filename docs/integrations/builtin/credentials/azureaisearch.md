@@ -25,7 +25,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Related resources
 
-Refer to [Azure AI Search documentation](https://learn.microsoft.com/en-us/azure/search/) for more information about the service.
+Refer to [Azure AI Search documentation](https://learn.microsoft.com/azure/search/) for more information about the service.
 
 ## Using API key
 

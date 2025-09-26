@@ -19,7 +19,7 @@ You can find authentication information for this node [here](/integrations/built
 
 ## Prerequisites
 
-Before using this node, create a [Vector Search index](https://learn.microsoft.com/en-us/azure/search/vector-search-overview) in your Azure AI Search service. Follow these steps to create one:
+Before using this node, create a [Vector Search index](https://learn.microsoft.com/azure/search/vector-search-overview) in your Azure AI Search service. Follow these steps to create one:
 
 1. Log in to the [Azure Portal](https://portal.azure.com/).
 
@@ -128,6 +128,7 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 - **Endpoint**: Enter the Azure AI Search endpoint URL (e.g., `https://your-service.search.windows.net`).
 - **Index Name**: Enter the name of the Azure AI Search index to use.
+- **Batch Size**: Controls the number of documents uploaded to Azure AI Search in each indexing batch. This parameter manages document upload batching to the search service, not embedding generation batching (which is configured in upstream embedding nodes).
 
 ### Update Documents parameters
 
@@ -151,13 +152,13 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 ### Options
 
-- **Filter**: Use [OData filter expressions](https://learn.microsoft.com/en-us/azure/search/search-query-odata-filter) to filter results based on metadata fields.
+- **Filter**: Use [OData filter expressions](https://learn.microsoft.com/azure/search/search-query-odata-filter) to filter results based on metadata fields.
 - **Query Mode**: Choose how to search the index:
   - **Vector**: Use only vector search
   - **Keyword**: Use only keyword search
   - **Hybrid** (default): Combine vector and keyword search
-  - **Semantic Hybrid**: Combine vector, keyword, and semantic ranking (requires semantic configuration)
-- **Semantic Configuration**: Enter the name of the semantic configuration (required when using Semantic Hybrid query mode).
+  - **Semantic Hybrid**: Combine vector, keyword, and semantic ranking (optional semantic configuration can enhance results)
+- **Semantic Configuration**: (Optional) Enter the name of the semantic configuration if you want to use semantic ranking with Semantic Hybrid query mode.
 
 ## Templates and examples
 
@@ -168,9 +169,9 @@ The [connections flow](https://n8n.io/workflows/2465-building-your-first-whatsap
 
 Refer to:
 
-- [Azure AI Search Vector Search documentation](https://learn.microsoft.com/en-us/azure/search/vector-search-overview) for more information about the service.
+- [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview) for more information about the service.
 - [LangChain's Azure AI Search documentation](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch) for more information about the integration.
-- [Azure AI Search REST API reference](https://learn.microsoft.com/en-us/rest/api/searchservice/) for detailed API information.
+- [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/) for detailed API information.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 

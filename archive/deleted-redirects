@@ -1,43 +1,4 @@
-### THESE REDIRECTS ARE HANDLED BY CLOUDFLARE PAGES, SEE DOC FOR DETAILS ###
-### https://developers.cloudflare.com/pages/configuration/redirects/ ###
-
-## Redirect from initial path used in product
-/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.mcpclienttool/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/  301
-
-## Follow up to https://github.com/n8n-io/n8n-docs/pull/3033
-/enterprise-key/ /license-key/  301
-
-## Remove item lists (hidden for over a year)
-/integrations/builtin/core-nodes/n8n-nodes-base.itemlists/ /data/transforming-data/  301
-
-## tutorials refresh
-
-/try-it-out/longer-introduction/ /try-it-out/tutorial-first-workflow/  301
-
-## DOC-994
-/privacy-security/security/ https://n8n.io/legal/#security  301
-
-## DOC-979
-/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmopenai/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/  301
-/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/  301
-/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmgooglepalm/ /integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglegemini/  301
-
-# Remove Ask AI
-/hosting/configuration/environment-variables/ai/ /hosting/configuration/environment-variables/  301
-
-## DOC-993
-/faircode-license/  /sustainable-use-license/  301
-
-# NODE-1462
-/integrations/builtin/credentials/citrixadc/ /integrations/builtin/credentials/netscaleradc/  301
-/integrations/builtin/app-nodes/n8n-nodes-base.citrixadc/ /integrations/builtin/app-nodes/n8n-nodes-base.netscaleradc/  301
-/integrations/builtin/app-nodes/n8n-nodes-base.orbit/ /integrations/  301
-/hosting/logging-monitoring/security-audit/     /hosting/securing/security-audit/  301
-/integrations/builtin/core-nodes/n8n-nodes-base.start/   /integrations/builtin/core-nodes/n8n-nodes-base.manualworkflowtrigger/  301
-/integrations/builtin/credentials/orbit/ /integrations/  301
-
 # 2024 SEO audit
-
 /nodes/nodes.html    /integrations/builtin/node-types/  301
 /getting-started/installation/advanced/server-setup.html    /hosting/installation/server-setups/  301
 /getting-started/installation/advanced/server-setup.html#server-setups  /hosting/installation/server-setups/  301
@@ -85,13 +46,11 @@
 /n8n-nodes-base.openai/   /n8n-nodes-langchain.openai/  301
 /contributing/   /help-community/contributing/  301
 /manage-cloud/   /manage-cloud/overview/  301
-
 /hosting/environment-variables/   /hosting/  301
 /hosting/environment-variables/*   /hosting/configuration/:splat  301
 /hosting/supported-databases-settings/   /hosting/configuration/supported-databases-settings/  301
 /hosting/installation/   /hosting/  301
 /hosting/logging-monitoring/   /hosting/  301
-
 /hosting/architecture/   /hosting/architecture/overview/  301
 /hosting/scaling/   /hosting/scaling/overview/  301
 /hosting/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/  301
@@ -190,7 +149,6 @@
 
 
 
-
 /hosting/authentication/user-management-self-hosted/   /hosting/configuration/user-management-self-hosted/  301
 /hosting/authentication/jwt/   /hosting/configuration/user-management-self-hosted/  301
 /hosting/authentication/basic-auth/   /hosting/configuration/user-management-self-hosted/  301
@@ -207,14 +165,12 @@
 /hosting/logging/   /hosting/logging-monitoring/logging/  301
 /code-examples/console-log/   /code/cookbook/code-node/console-log/  301
 
-
 # /reference/   /  301
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/  301
 /reference/cli-commands/   /hosting/cli-commands/  301
 /reference/update/   /release-notes/  301
 /security-audit/   /hosting/securing/security-audit/  301
 /reference/data-collection/   /privacy-security/privacy/  301
-
 
 /integrations/builtin/core-nodes/n8n-nodes-base.readbinaryfile/   /integrations/builtin/core-nodes/n8n-nodes-base.readwritefile/  301
 
@@ -236,7 +192,6 @@
 
 # Hosting user paths 2022
 
-
 /hosting/options/   /choose-n8n/  301
 /hosting/installation/cloud/   /manage-cloud/overview/  301
 /hosting/installation/desktop-app/   /choose-n8n/  301
@@ -250,7 +205,6 @@
 /hosting/databases/structure/   /hosting/architecture/database-structure/  301
 /hosting/security/   /hosting/user-management/  301
 /hosting/user-management/   /user-management/  301
-
 
 
 # 2022 SEO audit
@@ -356,7 +310,6 @@
 /reference/server-setup.html                         /hosting/installation/server-setups/  301
 
 # The nodes library . . . may the odds be ever in your favour
-
 
 /credentials/smtp/  /integrations/builtin/credentials/sendemail/  301
 /credentials/facebookGraphApp   /integrations/builtin/credentials/facebookapp  301
@@ -944,10 +897,6 @@
 /nodes/n8n-nodes-base.zulip/		/integrations/builtin/app-nodes/n8n-nodes-base.zulip/  301
 /nodes/nodes-library/		/integrations/  301
 /nodes/		/integrations/builtin/app-nodes/  301
-
-
-
-
 
 # Old redirects
 

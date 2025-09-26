@@ -34,6 +34,183 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.113.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.1...n8n@1.113.2) for this version.<br />
+**Release date:** 2025-09-24
+
+/// note | Next version
+This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+<div class="n8n-new-features" markdown> 
+### Python task runner
+
+This version introduces the **Python task runner** as a beta feature. This feature secures n8n's Python sandbox and enables users to run real Python modules in n8n workflows. The original Pyodide-based implementation will be phased out. <br/><br/>
+
+This is a **breaking change** that replaces Pyodide - see [here](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.code/#python-native-beta) for a list of differences. Any Code node set to the legacy `python` parameter will need to be manually updated to use the new `pythonNative` parameter. Any Code node script set to `python` and relying on Pyodide syntax is likely to need to be manually adjusted to account for breaking changes.
+
+- For self-hosting users, see [here](https://docs.n8n.io/hosting/configuration/task-runners/#setting-up-external-mode) for deployment instructions for task runners going forward and how to install extra dependencies.
+- On n8n Cloud, this will be a gradual transition. If in your n8n Cloud instance the Code node offers an option named "Python (Native) (Beta)", then your instance has been transitioned to native Python and you will need to look out for any breaking changes. Imports are disabled for security reasons at this time.
+
+The native Python runner is currently in beta and is subject to change as we find a balance between security and usability. Your feedback is welcome.
+</div> 
+
+## n8n@1.112.5
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.4...n8n@1.112.5) for this version.<br />
+**Release date:** 2025-09-24
+
+/// note | Latest version
+This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
+///
+
+This release contains bug fixes.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.113.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.0...n8n@1.113.1) for this version.<br />
+**Release date:** 2025-09-23
+
+
+
+This release contains bug fixes.
+
+<div class="n8n-new-features" markdown> 
+### Data tables
+
+We’re excited to introduce **data tables**, bringing built-in data storage to n8n. You can now store and query structured data directly inside the platform, without relying on external databases for many common automation scenarios. Track workflow state between runs, store tokens or session data, keep product or customer reference tables, or stage intermediate results for multi-step processes.
+<br/><br/>
+Previously, persisting data meant provisioning and connecting to an external store such as Redis or Google Sheets. That added credential setup, infrastructure overhead, latency, and constant context switching. **Data tables** eliminate that friction and keeps your data easily editable and close to your workflows.
+<br/><br/>
+Data tables are available today on all plans. They currently support numbers, strings, and datetimes with JSON support coming soon.  On Cloud, each instance can store up to 50 MB. On self-hosted setups, the default is also 50 MB, but this limit can be adjusted if your infrastructure allows.
+<br/><br/>
+<figure markdown="span">
+[![Data tables](/_images/release-notes/data-tables.jpg)](https://www.youtube.com/watch?v=ljkiIkt6lZ4)
+    <figcaption>[Overview of data tables](https://www.youtube.com/watch?v=ljkiIkt6lZ4)</figcaption>
+</figure>
+
+### How to
+
+#### Create a data table
+
+- From the canvas, open the **Create workflow** dropdown and select **Create Data table**.
+- Or, go to the **Overview** panel on the left-side navigation bar and open the **Data tables** tab.
+
+#### Use a data table in your workflow
+
+- Add the **Data table node** to your workflow to get, update, insert, upsert, or delete rows.
+
+#### Adjust the storage limit (self-hosted only)
+
+- Change the default 50 MB limit with the environment variable: `N8N_DATA_TABLES_MAX_SIZE_BYTES`. [See configuration docs](https://docs.n8n.io/hosting/configuration/configuration-methods/).
+
+### Keep in mind
+
+- Data tables don’t currently support foreign keys or default values.
+- For now, all data tables are accessible to everyone in a project.  More granular permissions and sharing options are planned.
+
+Learn more about [**data tables**](/data/data-tables.md) and the [**Data table node**](/integrations/builtin/core-nodes/n8n-nodes-base.datatable/index.md).
+
+</div> 
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.112.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.3...n8n@1.112.4) for this version.<br />
+**Release date:** 2025-09-23
+
+
+
+This release contains an editor improvement.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.113.0
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.0...n8n@1.113.0) for this version.<br />
+**Release date:** 2025-09-22
+
+
+
+This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
+
+### SSO improvements
+
+We’ve made updates to strengthen Single Sign-On (SSO) reliability and security, especially for enterprise and multi-instance setups.
+
+- OIDC and SAML sync in multi-main setups [version: 1.113.0]: In multi-main deployments, updates to SSO settings are now synchronized across all instances, ensuring consistent login behavior everywhere.
+- Enhanced OIDC integration [version 1.111.0]: n8n now supports OIDC providers that enforce state and nonce parameters. These are validated during login, providing smoother and more secure Single Sign-On.
+
+### Filter insights by project
+
+We've added project filtering to insights, enabling more granular reporting and visibility into individual project performance.
+<br>
+<figure markdown="span">
+    ![Insights](/_images/release-notes/filter-insights.png)
+<figcaption>Filter insights</figcaption>
+</figure>
+<br>
+
+### Contributors
+
+[ongdisheng](https://github.com/ongdisheng)  
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
+## n8n@1.112.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.2...n8n@1.112.3) for this version.<br />
+**Release date:** 2025-09-19
+
+
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.111.1
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.111.0...n8n@1.111.1) for this version.<br />
+**Release date:** 2025-09-19
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.110.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.1...n8n@1.110.2) for this version.<br />
+**Release date:** 2025-09-19
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+## n8n@1.112.2
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.1...n8n@1.112.2) for this version.<br />
+**Release date:** 2025-09-18
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
 ## n8n@1.112.1
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.0...n8n@1.112.1) for this version.<br />
@@ -50,11 +227,30 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.111.0...n8n@1.112.0) for this version.<br />
 **Release date:** 2025-09-15
 
-/// note | Next version
-This is the `next` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 This release contains API improvements, core updates, editor improvements, node updates, and bug fixes.
+
+### Additional API Endpoints versions
+
+We’ve made several updates to the Executions API:
+
+- Execution details: `GET /executions` now includes *status* and *workflow_name* in the response.
+- Retry execution endpoint: Added new public API endpoints to retry failed executions.
+- Additional filters: You can now filter executions by running or canceled status.
+
+### Enhancements to workflow diff
+
+We added a several updates on workflows diffs as well:
+
+- Better view in Code nodes and Stickies: Workflow diffs now highlight changes per line instead of per block, making edits easier to review and understand.
+- Enable/Disable sync: You can now enable or disable sync in the viewport, letting you compare a workflow change in one view without affecting the other.
+<br>
+<figure markdown="span">
+    ![Workflow diff](/_images/release-notes/workflow-diff-plus.png)
+<figcaption>Workflow diff</figcaption>
+</figure>
+<br>
 
 ### Contributors
 
@@ -71,9 +267,7 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.110.0...n8n@1.111.0) for this version.<br />
 **Release date:** 2025-09-08
 
-/// note | Latest version
-This is the `latest` version. n8n recommends using the `latest` version. The `next` version may be unstable. To report issues, use the [forum](https://community.n8n.io/c/questions/12).
-///
+
 
 
 

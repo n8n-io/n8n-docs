@@ -65,7 +65,7 @@ Build a workflow that merges data from the Customer Datastore node and Code node
 
 	If you merge data with the option **Keep Matches** using the name as the input fields to match, the result should look like this (note this example only contains Jay Gatsby; yours might look different depending on which characters you selected):
 
-	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_kkm.png" alt="Output of Merge node with option to keep matches" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep matches</i></figcaption></figure>
+	<figure><img src="/_images/courses/level-two/chapter-three/exercise_merge_node.png" alt="Output of Merge node with option to keep matches" style="width:100%"><figcaption align = "center"><i>Output of Merge node with option to keep matches</i></figcaption></figure>
 
 	To check the configuration of the nodes, you can copy the JSON workflow code below and paste it into your Editor UI:
 

@@ -34,6 +34,26 @@ You can find the release notes for older versions of n8n [here](/release-notes/0
 
 
 
+## n8n@1.113.3
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.2...n8n@1.113.3) for this version.<br />
+**Release date:** 2025-09-26
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+## n8n@1.112.6
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.5...n8n@1.112.6) for this version.<br />
+**Release date:** 2025-09-26
+
+This release contains a bug fix.
+
+For full release details, refer to [Releases](https://github.com/n8n-io/n8n/releases) on GitHub.
+
+
+
 ## n8n@1.113.2
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.113.1...n8n@1.113.2) for this version.<br />
@@ -145,6 +165,23 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.112.0...n8n@1.113
 
 This release contains core updates, editor improvements, a new node, node updates, and bug fixes.
 
+### SSO improvements
+
+We’ve made updates to strengthen Single Sign-On (SSO) reliability and security, especially for enterprise and multi-instance setups.
+
+- OIDC and SAML sync in multi-main setups [version: 1.113.0]: In multi-main deployments, updates to SSO settings are now synchronized across all instances, ensuring consistent login behavior everywhere.
+- Enhanced OIDC integration [version 1.111.0]: n8n now supports OIDC providers that enforce state and nonce parameters. These are validated during login, providing smoother and more secure Single Sign-On.
+
+### Filter insights by project
+
+We've added project filtering to insights, enabling more granular reporting and visibility into individual project performance.
+<br>
+<figure markdown="span">
+    ![Insights](/_images/release-notes/filter-insights.png)
+<figcaption>Filter insights</figcaption>
+</figure>
+<br>
+
 ### Contributors
 
 [ongdisheng](https://github.com/ongdisheng)  
@@ -213,6 +250,27 @@ View the [commits](https://github.com/n8n-io/n8n/compare/n8n@1.111.0...n8n@1.112
 
 
 This release contains API improvements, core updates, editor improvements, node updates, and bug fixes.
+
+### Additional API Endpoints versions
+
+We’ve made several updates to the Executions API:
+
+- Execution details: `GET /executions` now includes *status* and *workflow_name* in the response.
+- Retry execution endpoint: Added new public API endpoints to retry failed executions.
+- Additional filters: You can now filter executions by running or canceled status.
+
+### Enhancements to workflow diff
+
+We added a several updates on workflows diffs as well:
+
+- Better view in Code nodes and Stickies: Workflow diffs now highlight changes per line instead of per block, making edits easier to review and understand.
+- Enable/Disable sync: You can now enable or disable sync in the viewport, letting you compare a workflow change in one view without affecting the other.
+<br>
+<figure markdown="span">
+    ![Workflow diff](/_images/release-notes/workflow-diff-plus.png)
+<figcaption>Workflow diff</figcaption>
+</figure>
+<br>
 
 ### Contributors
 

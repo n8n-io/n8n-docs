@@ -6,4 +6,4 @@
 	- **For SSH**: n8n supports ED25519 and RSA public key algorithms. ED25519 is the default. Select **RSA** under **SSH Key** if your git host requires RSA. Copy the SSH key.
 	- **For HTTPS**: Enter your credentials:
 		- **Username**: Your Git provider username.
-		- **Password/Token**: Your Personal Access Token (PAT) from your Git provider.
+		- **Token**: Your Personal Access Token (PAT) from your Git provider.

@@ -47,7 +47,7 @@ The steps depend on your Git provider. Help links for common providers:
 
 ### HTTPS authentication (using Personal Access Tokens)
 
-Create a Personal Access Token (PAT) with repository access permissions. You'll need both your username and the token to authenticate with n8n.
+Create a Personal Access Token (PAT) with repository access permissions.
 
 Help links for creating PATs with common providers:
 

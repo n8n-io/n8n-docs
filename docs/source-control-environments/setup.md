@@ -13,6 +13,7 @@ n8n uses source control to provide environments. Refer to [Environments in n8n](
 ## Prerequisites
 
 To use source control with n8n, you need a Git repository with either:
+
 - SSH access (using deploy keys), or 
 - HTTPS access (using Personal Access Tokens)
 
@@ -33,7 +34,7 @@ To help decide what branches you need for your use case, refer to [Branch patter
 
 ## Step 3: Set up authentication
 
-Configure authentication based on your chosen connection method:
+Configure authentication based on your chosen connection method.
 
 ### SSH authentication (using deploy keys)
 
@@ -54,7 +55,8 @@ Help links for creating PATs with common providers:
 * [GitLab | Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
 * [Bitbucket | App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/)
 
-**Required permissions for your token:**
+Required permissions for your token:
+
 - Repository read/write access
 - Contents read/write (for GitHub)
 - Source code pull/push (for GitLab)

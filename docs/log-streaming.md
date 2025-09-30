@@ -6,7 +6,7 @@ contentType: howto
 # Log streaming
 
 /// info | Feature availability
-Log Streaming is available on both Self-Hosted and Cloud Enterprise plans.
+Log Streaming is available on all Enterprise plans.
 ///
 
 Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.

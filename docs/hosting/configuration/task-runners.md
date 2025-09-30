@@ -40,7 +40,9 @@ In external mode, a [launcher application](https://github.com/n8n-io/task-runner
 
 ![Task runner deployed as a side-car container](/_images/hosting/configuration/task-runner-external-mode.png)
 
-When using the [Queue mode](/hosting/scaling/queue-mode.md), each n8n container (main and workers) needs to have its own sidecar task runners container.
+When using [Queue mode](/hosting/scaling/queue-mode.md), each worker needs to have its own sidecar container for task runners. 
+
+Additionally, if you have not enabled offloading manual executions to workers, i.e. if you are not setting `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=true`, then main runs manual executions and so main will need to have its own sidecar container for task runners as well. Please note that running n8n with offloading disabled is not recommended for production.
 
 ## Setting up external mode
 

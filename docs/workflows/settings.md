@@ -77,3 +77,5 @@ When enabled, the **Timeout After** option appears. Here, you can set the time (
 An estimate of the number of minutes each of execution of this workflow saves you.
 
 Setting this lets n8n calculate the amount of time saved for [insights](/insights.md).
+
+> **Note:** Access to *Insights* requires an active subscription (Pro/Enterprise) or the latest version of n8n.

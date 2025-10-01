@@ -125,6 +125,7 @@
 
 /reference/   /
 /reference/keyboard-shortcuts/   /keyboard-shortcuts/
+/reference/mcp-access/ /mcp-access/
 /reference/cli-commands/   /hosting/cli-commands/
 /reference/update/   /release-notes/
 /security-audit/   /hosting/logging-monitoring/security-audit/

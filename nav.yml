@@ -93,6 +93,7 @@ nav:
           - Manage users with SAML: user-management/saml/managing.md
           - Troubleshooting: user-management/saml/troubleshooting.md
       - Keyboard shortcuts: keyboard-shortcuts.md
+      - MCP Access: mcp-access.md
     - Key concepts:
       - Flow logic:
         - flow-logic/index.md
